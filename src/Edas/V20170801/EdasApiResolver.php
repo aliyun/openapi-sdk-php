@@ -8,119 +8,110 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeDeployGroup changeDeployGroup(array $options = [])
  * @method GetCluster getCluster(array $options = [])
  * @method QueryRegionConfig queryRegionConfig(array $options = [])
- * @method CsbListRegions csbListRegions(array $options = [])
+ * @method SynchronizeResource synchronizeResource(array $options = [])
  * @method CreateServerlessApplication createServerlessApplication(array $options = [])
- * @method BindServerlessSlb bindServerlessSlb(array $options = [])
- * @method DeleteServerlessApplication deleteServerlessApplication(array $options = [])
  * @method DeployServerlessApplication deployServerlessApplication(array $options = [])
  * @method GetServerlessAppConfigDetail getServerlessAppConfigDetail(array $options = [])
  * @method InsertServerlessApplication insertServerlessApplication(array $options = [])
  * @method ScaleServerlessApplication scaleServerlessApplication(array $options = [])
  * @method UnbindServerlessSlb unbindServerlessSlb(array $options = [])
+ * @method DeleteServerlessApplication deleteServerlessApplication(array $options = [])
+ * @method BindServerlessSlb bindServerlessSlb(array $options = [])
  * @method InstallAgent installAgent(array $options = [])
  * @method ListComponents listComponents(array $options = [])
  * @method GetPackageStorageCredential getPackageStorageCredential(array $options = [])
  * @method ListEcsNotInCluster listEcsNotInCluster(array $options = [])
- * @method UpdateK8sSlb updateK8sSlb(array $options = [])
- * @method BindK8sSlb bindK8sSlb(array $options = [])
- * @method ListScalingRecords listScalingRecords(array $options = [])
- * @method UnbindK8sSlb unbindK8sSlb(array $options = [])
- * @method UpdateK8sApplicationConfig updateK8sApplicationConfig(array $options = [])
- * @method ImportK8sCluster importK8sCluster(array $options = [])
  * @method InsertK8sApplication insertK8sApplication(array $options = [])
+ * @method ImportK8sCluster importK8sCluster(array $options = [])
+ * @method UpdateK8sApplicationConfig updateK8sApplicationConfig(array $options = [])
  * @method DeployK8sApplication deployK8sApplication(array $options = [])
  * @method ScaleK8sApplication scaleK8sApplication(array $options = [])
  * @method DeleteK8sApplication deleteK8sApplication(array $options = [])
- * @method ListScalingRules listScalingRules(array $options = [])
- * @method InsertScalingRule insertScalingRule(array $options = [])
- * @method DeleteResourceGroup deleteResourceGroup(array $options = [])
- * @method InsertResourceGroup insertResourceGroup(array $options = [])
+ * @method UnbindK8sSlb unbindK8sSlb(array $options = [])
+ * @method BindK8sSlb bindK8sSlb(array $options = [])
+ * @method UpdateK8sSlb updateK8sSlb(array $options = [])
  * @method GetSecureToken getSecureToken(array $options = [])
  * @method TransformClusterMember transformClusterMember(array $options = [])
  * @method ListConvertableEcu listConvertableEcu(array $options = [])
  * @method InsertClusterMember insertClusterMember(array $options = [])
- * @method ListScaleOutEcu listScaleOutEcu(array $options = [])
- * @method ListEcuByRegion listEcuByRegion(array $options = [])
- * @method QueryMigrateEcuList queryMigrateEcuList(array $options = [])
- * @method QueryMigrateRegionList queryMigrateRegionList(array $options = [])
- * @method MigrateEcu migrateEcu(array $options = [])
- * @method MigrateToRegion migrateToRegion(array $options = [])
- * @method ListUserDefineRegion listUserDefineRegion(array $options = [])
- * @method ListAliyunRegion listAliyunRegion(array $options = [])
- * @method InsertOrUpdateRegion insertOrUpdateRegion(array $options = [])
- * @method DeleteUserDefineRegion deleteUserDefineRegion(array $options = [])
- * @method QueryMonitorInfo queryMonitorInfo(array $options = [])
- * @method ListVpc listVpc(array $options = [])
- * @method UpdateHealthCheckUrl updateHealthCheckUrl(array $options = [])
+ * @method UpdateRole updateRole(array $options = [])
  * @method UpdateJvmConfiguration updateJvmConfiguration(array $options = [])
+ * @method UpdateHealthCheckUrl updateHealthCheckUrl(array $options = [])
+ * @method UpdateFlowControl updateFlowControl(array $options = [])
+ * @method UpdateDegradeControl updateDegradeControl(array $options = [])
  * @method UpdateContainerConfiguration updateContainerConfiguration(array $options = [])
  * @method UpdateApplicationBaseInfo updateApplicationBaseInfo(array $options = [])
- * @method GetContainerConfiguration getContainerConfiguration(array $options = [])
- * @method GetJvmConfiguration getJvmConfiguration(array $options = [])
- * @method InsertDeployGroup insertDeployGroup(array $options = [])
- * @method GetApplication getApplication(array $options = [])
- * @method DeleteDeployGroup deleteDeployGroup(array $options = [])
- * @method QueryApplicationStatus queryApplicationStatus(array $options = [])
- * @method SynchronizeResource synchronizeResource(array $options = [])
- * @method ListRecentChangeOrder listRecentChangeOrder(array $options = [])
- * @method DeleteEcu deleteEcu(array $options = [])
- * @method ListSlb listSlb(array $options = [])
- * @method ListHistoryDeployVersion listHistoryDeployVersion(array $options = [])
- * @method ListResourceGroup listResourceGroup(array $options = [])
  * @method UpdateAccountInfo updateAccountInfo(array $options = [])
- * @method UpdateRole updateRole(array $options = [])
  * @method UnbindSlb unbindSlb(array $options = [])
- * @method UnbindSubAccount unbindSubAccount(array $options = [])
- * @method ListRole listRole(array $options = [])
+ * @method RollbackApplication rollbackApplication(array $options = [])
+ * @method QueryMonitorInfo queryMonitorInfo(array $options = [])
+ * @method QueryMigrateRegionList queryMigrateRegionList(array $options = [])
+ * @method QueryMigrateEcuList queryMigrateEcuList(array $options = [])
+ * @method QueryConfigCenter queryConfigCenter(array $options = [])
+ * @method QueryApplicationStatus queryApplicationStatus(array $options = [])
+ * @method MigrateEcu migrateEcu(array $options = [])
+ * @method ListUserDefineRegion listUserDefineRegion(array $options = [])
  * @method ListSubAccount listSubAccount(array $options = [])
+ * @method ListSlb listSlb(array $options = [])
+ * @method ListServiceGroups listServiceGroups(array $options = [])
+ * @method ListScaleOutEcu listScaleOutEcu(array $options = [])
+ * @method ListRole listRole(array $options = [])
+ * @method ListResourceGroup listResourceGroup(array $options = [])
+ * @method ListRecentChangeOrder listRecentChangeOrder(array $options = [])
+ * @method ListPublishedServices listPublishedServices(array $options = [])
+ * @method ListHistoryDeployVersion listHistoryDeployVersion(array $options = [])
+ * @method ListFlowControls listFlowControls(array $options = [])
+ * @method ListEcuByRegion listEcuByRegion(array $options = [])
+ * @method ListDegradeControls listDegradeControls(array $options = [])
+ * @method ListConsumedServices listConsumedServices(array $options = [])
+ * @method ListConfigCenters listConfigCenters(array $options = [])
  * @method ListClusterMembers listClusterMembers(array $options = [])
  * @method ListAuthority listAuthority(array $options = [])
- * @method InsertCluster insertCluster(array $options = [])
+ * @method ListAliyunRegion listAliyunRegion(array $options = [])
+ * @method InsertServiceGroup insertServiceGroup(array $options = [])
  * @method InsertRole insertRole(array $options = [])
+ * @method InsertOrUpdateRegion insertOrUpdateRegion(array $options = [])
+ * @method InsertConfigCenter insertConfigCenter(array $options = [])
+ * @method InsertFlowControl insertFlowControl(array $options = [])
+ * @method InsertDeployGroup insertDeployGroup(array $options = [])
+ * @method InsertDegradeControl insertDegradeControl(array $options = [])
+ * @method InsertCluster insertCluster(array $options = [])
+ * @method GetJvmConfiguration getJvmConfiguration(array $options = [])
+ * @method GetContainerConfiguration getContainerConfiguration(array $options = [])
+ * @method GetApplication getApplication(array $options = [])
+ * @method EnableFlowControl enableFlowControl(array $options = [])
  * @method EnableDegradeControl enableDegradeControl(array $options = [])
- * @method DeleteClusterMember deleteClusterMember(array $options = [])
+ * @method DisableFlowControl disableFlowControl(array $options = [])
+ * @method DisableDegradeControl disableDegradeControl(array $options = [])
+ * @method DeleteUserDefineRegion deleteUserDefineRegion(array $options = [])
+ * @method DeleteServiceGroup deleteServiceGroup(array $options = [])
  * @method DeleteRole deleteRole(array $options = [])
- * @method AuthorizeRole authorizeRole(array $options = [])
- * @method BindSlb bindSlb(array $options = [])
- * @method BindSubAccount bindSubAccount(array $options = [])
+ * @method DeleteFlowControl deleteFlowControl(array $options = [])
+ * @method DeleteEcu deleteEcu(array $options = [])
+ * @method DeleteDeployGroup deleteDeployGroup(array $options = [])
+ * @method DeleteDegradeControl deleteDegradeControl(array $options = [])
+ * @method DeleteConfigCenter deleteConfigCenter(array $options = [])
+ * @method DeleteClusterMember deleteClusterMember(array $options = [])
  * @method DeleteCluster deleteCluster(array $options = [])
- * @method AuthorizeApplication authorizeApplication(array $options = [])
+ * @method BindSlb bindSlb(array $options = [])
+ * @method AuthorizeRole authorizeRole(array $options = [])
  * @method AuthorizeResourceGroup authorizeResourceGroup(array $options = [])
+ * @method AuthorizeApplication authorizeApplication(array $options = [])
+ * @method ListVpc listVpc(array $options = [])
+ * @method ScaleOutApplication scaleOutApplication(array $options = [])
+ * @method ScaleInApplication scaleInApplication(array $options = [])
+ * @method DeployApplication deployApplication(array $options = [])
+ * @method InsertApplication insertApplication(array $options = [])
+ * @method DeleteApplication deleteApplication(array $options = [])
+ * @method UpdateContainer updateContainer(array $options = [])
+ * @method StopApplication stopApplication(array $options = [])
+ * @method StartApplication startApplication(array $options = [])
+ * @method ResetApplication resetApplication(array $options = [])
+ * @method ListDeployGroup listDeployGroup(array $options = [])
+ * @method ListBuildPack listBuildPack(array $options = [])
+ * @method ListApplicationEcu listApplicationEcu(array $options = [])
  * @method GetChangeOrderInfo getChangeOrderInfo(array $options = [])
  * @method ListCluster listCluster(array $options = [])
- * @method DeleteApplication deleteApplication(array $options = [])
- * @method RollbackApplication rollbackApplication(array $options = [])
- * @method ScaleInApplication scaleInApplication(array $options = [])
- * @method ScaleOutApplication scaleOutApplication(array $options = [])
- * @method StartApplication startApplication(array $options = [])
- * @method StopApplication stopApplication(array $options = [])
- * @method ResetApplication resetApplication(array $options = [])
- * @method InsertApplication insertApplication(array $options = [])
- * @method DeployApplication deployApplication(array $options = [])
- * @method UpdateContainer updateContainer(array $options = [])
- * @method ListApplicationEcu listApplicationEcu(array $options = [])
- * @method ListBuildPack listBuildPack(array $options = [])
- * @method ListDeployGroup listDeployGroup(array $options = [])
- * @method QueryConfigCenter queryConfigCenter(array $options = [])
- * @method UpdateDegradeControl updateDegradeControl(array $options = [])
- * @method UpdateFlowControl updateFlowControl(array $options = [])
- * @method ListFlowControls listFlowControls(array $options = [])
- * @method ListPublishedServices listPublishedServices(array $options = [])
- * @method ListServiceGroups listServiceGroups(array $options = [])
- * @method InsertFlowControl insertFlowControl(array $options = [])
- * @method InsertServiceGroup insertServiceGroup(array $options = [])
- * @method ListConfigCenters listConfigCenters(array $options = [])
- * @method ListConsumedServices listConsumedServices(array $options = [])
- * @method ListDegradeControls listDegradeControls(array $options = [])
- * @method DisableDegradeControl disableDegradeControl(array $options = [])
- * @method DisableFlowControl disableFlowControl(array $options = [])
- * @method EnableFlowControl enableFlowControl(array $options = [])
- * @method InsertConfigCenter insertConfigCenter(array $options = [])
- * @method InsertDegradeControl insertDegradeControl(array $options = [])
- * @method DeleteConfigCenter deleteConfigCenter(array $options = [])
- * @method DeleteDegradeControl deleteDegradeControl(array $options = [])
- * @method DeleteFlowControl deleteFlowControl(array $options = [])
- * @method DeleteServiceGroup deleteServiceGroup(array $options = [])
  * @method ListApplication listApplication(array $options = [])
  */
 class EdasApiResolver extends ApiResolver
@@ -240,13 +231,29 @@ class QueryRegionConfig extends Roa
     public $method = 'GET';
 }
 
-class CsbListRegions extends Roa
+/**
+ * @method string getType()
+ */
+class SynchronizeResource extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/authgw/csb/api/edas/list_regions';
+    public $pathPattern = '/pop/v5/resource/pop_sync_resource';
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['Type'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -588,95 +595,6 @@ class CreateServerlessApplication extends Roa
     {
         $this->data['PackageType'] = $value;
         $this->options['query']['PackageType'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getIntranet()
- * @method string getAppId()
- * @method string getInternet()
- */
-class BindServerlessSlb extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/k8s/acs/serverless_slb_binding';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIntranet($value)
-    {
-        $this->data['Intranet'] = $value;
-        $this->options['query']['Intranet'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInternet($value)
-    {
-        $this->data['Internet'] = $value;
-        $this->options['query']['Internet'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAct()
- * @method string getAppId()
- */
-class DeleteServerlessApplication extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_delete';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAct($value)
-    {
-        $this->data['Act'] = $value;
-        $this->options['query']['Act'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
 
         return $this;
     }
@@ -1390,6 +1308,95 @@ class UnbindServerlessSlb extends Roa
 }
 
 /**
+ * @method string getAct()
+ * @method string getAppId()
+ */
+class DeleteServerlessApplication extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/k8s/pop/pop_serverless_app_delete';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAct($value)
+    {
+        $this->data['Act'] = $value;
+        $this->options['query']['Act'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIntranet()
+ * @method string getAppId()
+ * @method string getInternet()
+ */
+class BindServerlessSlb extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/k8s/acs/serverless_slb_binding';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIntranet($value)
+    {
+        $this->data['Intranet'] = $value;
+        $this->options['query']['Intranet'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInternet($value)
+    {
+        $this->data['Internet'] = $value;
+        $this->options['query']['Internet'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceIds()
  * @method string getDoAsync()
  * @method string getClusterId()
@@ -1497,406 +1504,9 @@ class ListEcsNotInCluster extends Roa
 }
 
 /**
- * @method string getSlbProtocol()
- * @method string getPort()
- * @method string getAppId()
- * @method string getClusterId()
- * @method string getType()
- * @method string getTargetPort()
- */
-class UpdateK8sSlb extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSlbProtocol($value)
-    {
-        $this->data['SlbProtocol'] = $value;
-        $this->options['query']['SlbProtocol'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPort($value)
-    {
-        $this->data['Port'] = $value;
-        $this->options['query']['Port'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['query']['Type'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetPort($value)
-    {
-        $this->data['TargetPort'] = $value;
-        $this->options['query']['TargetPort'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getSlbId()
- * @method string getSlbProtocol()
- * @method string getPort()
- * @method string getAppId()
- * @method string getClusterId()
- * @method string getType()
- * @method string getTargetPort()
- */
-class BindK8sSlb extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSlbId($value)
-    {
-        $this->data['SlbId'] = $value;
-        $this->options['query']['SlbId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSlbProtocol($value)
-    {
-        $this->data['SlbProtocol'] = $value;
-        $this->options['query']['SlbProtocol'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPort($value)
-    {
-        $this->data['Port'] = $value;
-        $this->options['query']['Port'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['query']['Type'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetPort($value)
-    {
-        $this->data['TargetPort'] = $value;
-        $this->options['query']['TargetPort'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getGroupId()
- */
-class ListScalingRecords extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/scaling_records';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getClusterId()
- * @method string getType()
- */
-class UnbindK8sSlb extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['query']['Type'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getMemoryLimit()
- * @method string getClusterId()
- * @method string getCpuLimit()
- */
-class UpdateK8sApplicationConfig extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/k8s/acs/k8s_app_configuration';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMemoryLimit($value)
-    {
-        $this->data['MemoryLimit'] = $value;
-        $this->options['query']['MemoryLimit'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCpuLimit($value)
-    {
-        $this->data['CpuLimit'] = $value;
-        $this->options['query']['CpuLimit'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getNamespaceId()
- * @method string getClusterId()
- */
-class ImportK8sCluster extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/import_k8s_cluster';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNamespaceId($value)
-    {
-        $this->data['NamespaceId'] = $value;
-        $this->options['query']['NamespaceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getNasId()
  * @method string getRepoId()
  * @method string getInternetTargetPort()
- * @method string getWebContainer()
  * @method string getIntranetSlbId()
  * @method string getCommandArgs()
  * @method string getReadiness()
@@ -1904,14 +1514,11 @@ class ImportK8sCluster extends Roa
  * @method string getInternetSlbPort()
  * @method string getEnvs()
  * @method string getRequestsMem()
- * @method string getPackageVersion()
  * @method string getStorageType()
  * @method string getLimitMem()
- * @method string getEdasContainerVersion()
  * @method string getAppName()
  * @method string getInternetSlbId()
  * @method string getLogicalRegionId()
- * @method string getPackageUrl()
  * @method string getInternetSlbProtocol()
  * @method string getIntranetSlbPort()
  * @method string getPreStop()
@@ -1922,12 +1529,10 @@ class ImportK8sCluster extends Roa
  * @method string getIntranetTargetPort()
  * @method string getLocalVolume()
  * @method string getCommand()
- * @method string getJDK()
  * @method string getIntranetSlbProtocol()
  * @method string getImageUrl()
  * @method string getNamespace()
  * @method string getApplicationDescription()
- * @method string getPackageType()
  * @method string getRequestsCpu()
  * @method string getPostStart()
  */
@@ -1971,19 +1576,6 @@ class InsertK8sApplication extends Roa
     {
         $this->data['InternetTargetPort'] = $value;
         $this->options['query']['InternetTargetPort'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWebContainer($value)
-    {
-        $this->data['WebContainer'] = $value;
-        $this->options['query']['WebContainer'] = $value;
 
         return $this;
     }
@@ -2084,19 +1676,6 @@ class InsertK8sApplication extends Roa
      *
      * @return $this
      */
-    public function withPackageVersion($value)
-    {
-        $this->data['PackageVersion'] = $value;
-        $this->options['query']['PackageVersion'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withStorageType($value)
     {
         $this->data['StorageType'] = $value;
@@ -2114,19 +1693,6 @@ class InsertK8sApplication extends Roa
     {
         $this->data['LimitMem'] = $value;
         $this->options['query']['LimitMem'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEdasContainerVersion($value)
-    {
-        $this->data['EdasContainerVersion'] = $value;
-        $this->options['query']['EdasContainerVersion'] = $value;
 
         return $this;
     }
@@ -2166,19 +1732,6 @@ class InsertK8sApplication extends Roa
     {
         $this->data['LogicalRegionId'] = $value;
         $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageUrl($value)
-    {
-        $this->data['PackageUrl'] = $value;
-        $this->options['query']['PackageUrl'] = $value;
 
         return $this;
     }
@@ -2318,19 +1871,6 @@ class InsertK8sApplication extends Roa
      *
      * @return $this
      */
-    public function withJDK($value)
-    {
-        $this->data['JDK'] = $value;
-        $this->options['query']['JDK'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withIntranetSlbProtocol($value)
     {
         $this->data['IntranetSlbProtocol'] = $value;
@@ -2383,19 +1923,6 @@ class InsertK8sApplication extends Roa
      *
      * @return $this
      */
-    public function withPackageType($value)
-    {
-        $this->data['PackageType'] = $value;
-        $this->options['query']['PackageType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withRequestsCpu($value)
     {
         $this->data['RequestsCpu'] = $value;
@@ -2413,6 +1940,109 @@ class InsertK8sApplication extends Roa
     {
         $this->data['PostStart'] = $value;
         $this->options['query']['PostStart'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNamespaceId()
+ * @method string getClusterId()
+ */
+class ImportK8sCluster extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/import_k8s_cluster';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespaceId($value)
+    {
+        $this->data['NamespaceId'] = $value;
+        $this->options['query']['NamespaceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['ClusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getMemoryLimit()
+ * @method string getClusterId()
+ * @method string getCpuLimit()
+ */
+class UpdateK8sApplicationConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/k8s/acs/k8s_app_configuration';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMemoryLimit($value)
+    {
+        $this->data['MemoryLimit'] = $value;
+        $this->options['query']['MemoryLimit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCpuLimit($value)
+    {
+        $this->data['CpuLimit'] = $value;
+        $this->options['query']['CpuLimit'] = $value;
 
         return $this;
     }
@@ -2842,310 +2472,13 @@ class DeleteK8sApplication extends Roa
 
 /**
  * @method string getAppId()
- * @method string getGroupId()
+ * @method string getClusterId()
+ * @method string getType()
  */
-class ListScalingRules extends Roa
+class UnbindK8sSlb extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/app/scaling_records';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getInStep()
- * @method string getOutDuration()
- * @method string getOutInstanceNum()
- * @method string getOutRt()
- * @method string getOutLoad()
- * @method string getInInstanceNum()
- * @method string getInLoad()
- * @method string getGroupId()
- * @method string getOutStep()
- * @method string getOutCpu()
- * @method string getOutEnable()
- * @method string getOutCondition()
- * @method string getInDuration()
- * @method string getInCondition()
- * @method string getInEnable()
- * @method string getInRt()
- * @method string getAppId()
- * @method string getInCpu()
- */
-class InsertScalingRule extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/scaling_rules';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInStep($value)
-    {
-        $this->data['InStep'] = $value;
-        $this->options['query']['InStep'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutDuration($value)
-    {
-        $this->data['OutDuration'] = $value;
-        $this->options['query']['OutDuration'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutInstanceNum($value)
-    {
-        $this->data['OutInstanceNum'] = $value;
-        $this->options['query']['OutInstanceNum'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutRt($value)
-    {
-        $this->data['OutRt'] = $value;
-        $this->options['query']['OutRt'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutLoad($value)
-    {
-        $this->data['OutLoad'] = $value;
-        $this->options['query']['OutLoad'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInInstanceNum($value)
-    {
-        $this->data['InInstanceNum'] = $value;
-        $this->options['query']['InInstanceNum'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInLoad($value)
-    {
-        $this->data['InLoad'] = $value;
-        $this->options['query']['InLoad'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutStep($value)
-    {
-        $this->data['OutStep'] = $value;
-        $this->options['query']['OutStep'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutCpu($value)
-    {
-        $this->data['OutCpu'] = $value;
-        $this->options['query']['OutCpu'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutEnable($value)
-    {
-        $this->data['OutEnable'] = $value;
-        $this->options['query']['OutEnable'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutCondition($value)
-    {
-        $this->data['OutCondition'] = $value;
-        $this->options['query']['OutCondition'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInDuration($value)
-    {
-        $this->data['InDuration'] = $value;
-        $this->options['query']['InDuration'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInCondition($value)
-    {
-        $this->data['InCondition'] = $value;
-        $this->options['query']['InCondition'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInEnable($value)
-    {
-        $this->data['InEnable'] = $value;
-        $this->options['query']['InEnable'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInRt($value)
-    {
-        $this->data['InRt'] = $value;
-        $this->options['query']['InRt'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInCpu($value)
-    {
-        $this->data['InCpu'] = $value;
-        $this->options['query']['InCpu'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getId()
- */
-class DeleteResourceGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/res_group';
+    public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
 
     /** @var string */
     public $method = 'DELETE';
@@ -3155,33 +2488,64 @@ class DeleteResourceGroup extends Roa
      *
      * @return $this
      */
-    public function withId($value)
+    public function withAppId($value)
     {
-        $this->data['Id'] = $value;
-        $this->options['query']['Id'] = $value;
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['Type'] = $value;
 
         return $this;
     }
 }
 
 /**
- * @method string getName()
- * @method string getDescription()
+ * @method string getSlbId()
+ * @method string getSlbProtocol()
+ * @method string getPort()
+ * @method string getAppId()
+ * @method string getClusterId()
+ * @method string getType()
+ * @method string getTargetPort()
  */
-class InsertResourceGroup extends Roa
+class BindK8sSlb extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/res_group';
+    public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withName($value)
+    public function withSlbId($value)
     {
-        $this->data['Name'] = $value;
-        $this->options['query']['Name'] = $value;
+        $this->data['SlbId'] = $value;
+        $this->options['query']['SlbId'] = $value;
 
         return $this;
     }
@@ -3191,10 +2555,170 @@ class InsertResourceGroup extends Roa
      *
      * @return $this
      */
-    public function withDescription($value)
+    public function withSlbProtocol($value)
     {
-        $this->data['Description'] = $value;
-        $this->options['query']['Description'] = $value;
+        $this->data['SlbProtocol'] = $value;
+        $this->options['query']['SlbProtocol'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPort($value)
+    {
+        $this->data['Port'] = $value;
+        $this->options['query']['Port'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetPort($value)
+    {
+        $this->data['TargetPort'] = $value;
+        $this->options['query']['TargetPort'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSlbProtocol()
+ * @method string getPort()
+ * @method string getAppId()
+ * @method string getClusterId()
+ * @method string getType()
+ * @method string getTargetPort()
+ */
+class UpdateK8sSlb extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/k8s/acs/k8s_slb_binding';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSlbProtocol($value)
+    {
+        $this->data['SlbProtocol'] = $value;
+        $this->options['query']['SlbProtocol'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPort($value)
+    {
+        $this->data['Port'] = $value;
+        $this->options['query']['Port'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetPort($value)
+    {
+        $this->data['TargetPort'] = $value;
+        $this->options['query']['TargetPort'] = $value;
 
         return $this;
     }
@@ -3351,28 +2875,23 @@ class InsertClusterMember extends Roa
 }
 
 /**
- * @method string getMem()
- * @method string getLogicalRegionId()
- * @method string getAppId()
- * @method string getGroupId()
- * @method string getInstanceNum()
- * @method string getCpu()
- * @method string getClusterId()
+ * @method string getRoleId()
+ * @method string getActionData()
  */
-class ListScaleOutEcu extends Roa
+class UpdateRole extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/resource/scale_out_ecu_list';
+    public $pathPattern = '/pop/v5/account/edit_role';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withMem($value)
+    public function withRoleId($value)
     {
-        $this->data['Mem'] = $value;
-        $this->options['query']['Mem'] = $value;
+        $this->data['RoleId'] = $value;
+        $this->options['query']['RoleId'] = $value;
 
         return $this;
     }
@@ -3382,552 +2901,10 @@ class ListScaleOutEcu extends Roa
      *
      * @return $this
      */
-    public function withLogicalRegionId($value)
+    public function withActionData($value)
     {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceNum($value)
-    {
-        $this->data['InstanceNum'] = $value;
-        $this->options['query']['InstanceNum'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCpu($value)
-    {
-        $this->data['Cpu'] = $value;
-        $this->options['query']['Cpu'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAct()
- * @method string getLogicalRegionId()
- */
-class ListEcuByRegion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/ecu_list';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAct($value)
-    {
-        $this->data['Act'] = $value;
-        $this->options['query']['Act'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLogicalRegionId($value)
-    {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getLogicalRegionId()
- */
-class QueryMigrateEcuList extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/migrate_ecu_list';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLogicalRegionId($value)
-    {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getLogicalRegionId()
- */
-class QueryMigrateRegionList extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/migrate_region_select';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLogicalRegionId($value)
-    {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getInstanceIds()
- * @method string getLogicalRegionId()
- */
-class MigrateEcu extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/migrate_ecu';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceIds($value)
-    {
-        $this->data['InstanceIds'] = $value;
-        $this->options['query']['InstanceIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLogicalRegionId($value)
-    {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getPassword()
- * @method string getInstanceId()
- * @method string getAct()
- * @method string getClusterId()
- */
-class MigrateToRegion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/ecus';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPassword($value)
-    {
-        $this->data['Password'] = $value;
-        $this->options['query']['Password'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['query']['InstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAct($value)
-    {
-        $this->data['Act'] = $value;
-        $this->options['query']['Act'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDebugEnable()
- */
-class ListUserDefineRegion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/user_region_defs';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDebugEnable($value)
-    {
-        $this->data['DebugEnable'] = $value;
-        $this->options['query']['DebugEnable'] = $value;
-
-        return $this;
-    }
-}
-
-class ListAliyunRegion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/region_list';
-}
-
-/**
- * @method string getDebugEnable()
- * @method string getRegionTag()
- * @method string getRegionName()
- * @method string getDescription()
- * @method string getId()
- */
-class InsertOrUpdateRegion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/user_region_def';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDebugEnable($value)
-    {
-        $this->data['DebugEnable'] = $value;
-        $this->options['query']['DebugEnable'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegionTag($value)
-    {
-        $this->data['RegionTag'] = $value;
-        $this->options['query']['RegionTag'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegionName($value)
-    {
-        $this->data['RegionName'] = $value;
-        $this->options['query']['RegionName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['query']['Description'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withId($value)
-    {
-        $this->data['Id'] = $value;
-        $this->options['query']['Id'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getRegionTag()
- * @method string getId()
- */
-class DeleteUserDefineRegion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/user_region_def';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegionTag($value)
-    {
-        $this->data['RegionTag'] = $value;
-        $this->options['query']['RegionTag'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withId($value)
-    {
-        $this->data['Id'] = $value;
-        $this->options['query']['Id'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getMetric()
- * @method string getAggregator()
- * @method string getStart()
- * @method string getEnd()
- * @method string getInterval()
- * @method string getTags()
- */
-class QueryMonitorInfo extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/monitor/queryMonitorInfo';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMetric($value)
-    {
-        $this->data['Metric'] = $value;
-        $this->options['query']['Metric'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAggregator($value)
-    {
-        $this->data['Aggregator'] = $value;
-        $this->options['query']['Aggregator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStart($value)
-    {
-        $this->data['Start'] = $value;
-        $this->options['query']['Start'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEnd($value)
-    {
-        $this->data['End'] = $value;
-        $this->options['query']['End'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInterval($value)
-    {
-        $this->data['Interval'] = $value;
-        $this->options['query']['Interval'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTags($value)
-    {
-        $this->data['Tags'] = $value;
-        $this->options['query']['Tags'] = $value;
-
-        return $this;
-    }
-}
-
-class ListVpc extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/vpc_list';
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getAppId()
- * @method string getHcURL()
- */
-class UpdateHealthCheckUrl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/modify_hc_url';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHcURL($value)
-    {
-        $this->data['HcURL'] = $value;
-        $this->options['query']['hcURL'] = $value;
+        $this->data['ActionData'] = $value;
+        $this->options['query']['ActionData'] = $value;
 
         return $this;
     }
@@ -4020,6 +2997,316 @@ class UpdateJvmConfiguration extends Roa
     {
         $this->data['MaxHeapSize'] = $value;
         $this->options['query']['MaxHeapSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getHcURL()
+ */
+class UpdateHealthCheckUrl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/app/modify_hc_url';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHcURL($value)
+    {
+        $this->data['HcURL'] = $value;
+        $this->options['query']['hcURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getConsumerAppId()
+ * @method string getGranularity()
+ * @method string getRuleType()
+ * @method string getAppId()
+ * @method string getUrlVar()
+ * @method string getServiceName()
+ * @method string getThreshold()
+ * @method string getRuleId()
+ * @method string getStrategy()
+ * @method string getMethodName()
+ */
+class UpdateFlowControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/flowControl';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConsumerAppId($value)
+    {
+        $this->data['ConsumerAppId'] = $value;
+        $this->options['query']['ConsumerAppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGranularity($value)
+    {
+        $this->data['Granularity'] = $value;
+        $this->options['query']['Granularity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleType($value)
+    {
+        $this->data['RuleType'] = $value;
+        $this->options['query']['RuleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrlVar($value)
+    {
+        $this->data['UrlVar'] = $value;
+        $this->options['query']['UrlVar'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceName($value)
+    {
+        $this->data['ServiceName'] = $value;
+        $this->options['query']['ServiceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withThreshold($value)
+    {
+        $this->data['Threshold'] = $value;
+        $this->options['query']['Threshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleId($value)
+    {
+        $this->data['RuleId'] = $value;
+        $this->options['query']['RuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStrategy($value)
+    {
+        $this->data['Strategy'] = $value;
+        $this->options['query']['Strategy'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethodName($value)
+    {
+        $this->data['MethodName'] = $value;
+        $this->options['query']['MethodName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDuration()
+ * @method string getRuleType()
+ * @method string getAppId()
+ * @method string getUrlVar()
+ * @method string getRtThreshold()
+ * @method string getServiceName()
+ * @method string getRuleId()
+ * @method string getMethodName()
+ */
+class UpdateDegradeControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/degradeControl';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDuration($value)
+    {
+        $this->data['Duration'] = $value;
+        $this->options['query']['Duration'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleType($value)
+    {
+        $this->data['RuleType'] = $value;
+        $this->options['query']['RuleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrlVar($value)
+    {
+        $this->data['UrlVar'] = $value;
+        $this->options['query']['UrlVar'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRtThreshold($value)
+    {
+        $this->data['RtThreshold'] = $value;
+        $this->options['query']['RtThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceName($value)
+    {
+        $this->data['ServiceName'] = $value;
+        $this->options['query']['ServiceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleId($value)
+    {
+        $this->data['RuleId'] = $value;
+        $this->options['query']['RuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethodName($value)
+    {
+        $this->data['MethodName'] = $value;
+        $this->options['query']['MethodName'] = $value;
 
         return $this;
     }
@@ -4182,315 +3469,6 @@ class UpdateApplicationBaseInfo extends Roa
 }
 
 /**
- * @method string getAppId()
- * @method string getGroupId()
- */
-class GetContainerConfiguration extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/container_config';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getGroupId()
- */
-class GetJvmConfiguration extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/app_jvm_config';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getGroupName()
- */
-class InsertDeployGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/deploy_group';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupName($value)
-    {
-        $this->data['GroupName'] = $value;
-        $this->options['query']['GroupName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- */
-class GetApplication extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/app_info';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getGroupName()
- */
-class DeleteDeployGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/deploy_group';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupName($value)
-    {
-        $this->data['GroupName'] = $value;
-        $this->options['query']['GroupName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- */
-class QueryApplicationStatus extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/app_status';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getType()
- */
-class SynchronizeResource extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/pop_sync_resource';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['query']['Type'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- */
-class ListRecentChangeOrder extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/change_order_list';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getEcuId()
- */
-class DeleteEcu extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/delete_ecu';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcuId($value)
-    {
-        $this->data['EcuId'] = $value;
-        $this->options['query']['EcuId'] = $value;
-
-        return $this;
-    }
-}
-
-class ListSlb extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/slb_list';
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getAppId()
- */
-class ListHistoryDeployVersion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/deploy_history_version_list';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-class ListResourceGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/reg_group_list';
-}
-
-/**
  * @method string getName()
  * @method string getTelephone()
  * @method string getEmail()
@@ -4535,42 +3513,6 @@ class UpdateAccountInfo extends Roa
     {
         $this->data['Email'] = $value;
         $this->options['query']['Email'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getRoleId()
- * @method string getActionData()
- */
-class UpdateRole extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/account/edit_role';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRoleId($value)
-    {
-        $this->data['RoleId'] = $value;
-        $this->options['query']['RoleId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withActionData($value)
-    {
-        $this->data['ActionData'] = $value;
-        $this->options['query']['ActionData'] = $value;
 
         return $this;
     }
@@ -4627,22 +3569,489 @@ class UnbindSlb extends Roa
 }
 
 /**
- * @method string getTargetUserIds()
+ * @method string getAppId()
+ * @method string getGroupId()
+ * @method string getBatchWaitTime()
+ * @method string getBatch()
+ * @method string getHistoryVersion()
  */
-class UnbindSubAccount extends Roa
+class RollbackApplication extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/account/unbindSubAccount';
+    public $pathPattern = '/pop/v5/changeorder/co_rollback';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withTargetUserIds($value)
+    public function withAppId($value)
     {
-        $this->data['TargetUserIds'] = $value;
-        $this->options['query']['TargetUserIds'] = $value;
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['query']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchWaitTime($value)
+    {
+        $this->data['BatchWaitTime'] = $value;
+        $this->options['query']['BatchWaitTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatch($value)
+    {
+        $this->data['Batch'] = $value;
+        $this->options['query']['Batch'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHistoryVersion($value)
+    {
+        $this->data['HistoryVersion'] = $value;
+        $this->options['query']['HistoryVersion'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMetric()
+ * @method string getAggregator()
+ * @method string getStart()
+ * @method string getEnd()
+ * @method string getInterval()
+ * @method string getTags()
+ */
+class QueryMonitorInfo extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/monitor/queryMonitorInfo';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetric($value)
+    {
+        $this->data['Metric'] = $value;
+        $this->options['query']['Metric'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAggregator($value)
+    {
+        $this->data['Aggregator'] = $value;
+        $this->options['query']['Aggregator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStart($value)
+    {
+        $this->data['Start'] = $value;
+        $this->options['query']['Start'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnd($value)
+    {
+        $this->data['End'] = $value;
+        $this->options['query']['End'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInterval($value)
+    {
+        $this->data['Interval'] = $value;
+        $this->options['query']['Interval'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['query']['Tags'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLogicalRegionId()
+ */
+class QueryMigrateRegionList extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/migrate_region_select';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLogicalRegionId()
+ */
+class QueryMigrateEcuList extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/migrate_ecu_list';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDataId()
+ * @method string getLogicalRegionId()
+ * @method string getGroup()
+ */
+class QueryConfigCenter extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/configCenter';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataId($value)
+    {
+        $this->data['DataId'] = $value;
+        $this->options['query']['DataId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroup($value)
+    {
+        $this->data['Group'] = $value;
+        $this->options['query']['Group'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class QueryApplicationStatus extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/app/app_status';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceIds()
+ * @method string getLogicalRegionId()
+ */
+class MigrateEcu extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/migrate_ecu';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceIds($value)
+    {
+        $this->data['InstanceIds'] = $value;
+        $this->options['query']['InstanceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDebugEnable()
+ */
+class ListUserDefineRegion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/user_region_defs';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDebugEnable($value)
+    {
+        $this->data['DebugEnable'] = $value;
+        $this->options['query']['DebugEnable'] = $value;
+
+        return $this;
+    }
+}
+
+class ListSubAccount extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/account/sub_account_list';
+}
+
+class ListSlb extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/slb_list';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+class ListServiceGroups extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/service/serviceGroups';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getMem()
+ * @method string getLogicalRegionId()
+ * @method string getAppId()
+ * @method string getGroupId()
+ * @method string getInstanceNum()
+ * @method string getCpu()
+ * @method string getClusterId()
+ */
+class ListScaleOutEcu extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/scale_out_ecu_list';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMem($value)
+    {
+        $this->data['Mem'] = $value;
+        $this->options['query']['Mem'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['query']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceNum($value)
+    {
+        $this->data['InstanceNum'] = $value;
+        $this->options['query']['InstanceNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCpu($value)
+    {
+        $this->data['Cpu'] = $value;
+        $this->options['query']['Cpu'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['ClusterId'] = $value;
 
         return $this;
     }
@@ -4654,10 +4063,263 @@ class ListRole extends Roa
     public $pathPattern = '/pop/v5/account/role_list';
 }
 
-class ListSubAccount extends Roa
+class ListResourceGroup extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/account/sub_account_list';
+    public $pathPattern = '/pop/v5/resource/reg_group_list';
+}
+
+/**
+ * @method string getAppId()
+ */
+class ListRecentChangeOrder extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/changeorder/change_order_list';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class ListPublishedServices extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/service/listPublishedServices';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class ListHistoryDeployVersion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/app/deploy_history_version_list';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class ListFlowControls extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/app/flowControls';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAct()
+ * @method string getLogicalRegionId()
+ */
+class ListEcuByRegion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/ecu_list';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAct($value)
+    {
+        $this->data['Act'] = $value;
+        $this->options['query']['Act'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class ListDegradeControls extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/app/degradeControls';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class ListConsumedServices extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/service/listConsumedServices';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppName()
+ * @method string getLogicalRegionId()
+ * @method string getDataIdPattern()
+ * @method string getGroup()
+ */
+class ListConfigCenters extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/configCenters';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['query']['AppName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataIdPattern($value)
+    {
+        $this->data['DataIdPattern'] = $value;
+        $this->options['query']['DataIdPattern'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroup($value)
+    {
+        $this->data['Group'] = $value;
+        $this->options['query']['Group'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4717,6 +4379,502 @@ class ListAuthority extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/account/authority_list';
+}
+
+class ListAliyunRegion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/region_list';
+}
+
+/**
+ * @method string getGroupName()
+ */
+class InsertServiceGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/service/serviceGroups';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupName($value)
+    {
+        $this->data['GroupName'] = $value;
+        $this->options['query']['GroupName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRoleName()
+ * @method string getActionData()
+ */
+class InsertRole extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/account/create_role';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleName($value)
+    {
+        $this->data['RoleName'] = $value;
+        $this->options['query']['RoleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActionData($value)
+    {
+        $this->data['ActionData'] = $value;
+        $this->options['query']['ActionData'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDebugEnable()
+ * @method string getRegionTag()
+ * @method string getRegionName()
+ * @method string getDescription()
+ * @method string getId()
+ */
+class InsertOrUpdateRegion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/user_region_def';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDebugEnable($value)
+    {
+        $this->data['DebugEnable'] = $value;
+        $this->options['query']['DebugEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionTag($value)
+    {
+        $this->data['RegionTag'] = $value;
+        $this->options['query']['RegionTag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionName($value)
+    {
+        $this->data['RegionName'] = $value;
+        $this->options['query']['RegionName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['query']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['query']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDataId()
+ * @method string getData()
+ * @method string getAppName()
+ * @method string getLogicalRegionId()
+ * @method string getGroup()
+ */
+class InsertConfigCenter extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/configCenter';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataId($value)
+    {
+        $this->data['DataId'] = $value;
+        $this->options['query']['DataId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['query']['Data'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['query']['AppName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroup($value)
+    {
+        $this->data['Group'] = $value;
+        $this->options['query']['Group'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getConsumerAppId()
+ * @method string getGranularity()
+ * @method string getRuleType()
+ * @method string getAppId()
+ * @method string getUrlVar()
+ * @method string getServiceName()
+ * @method string getThreshold()
+ * @method string getStrategy()
+ * @method string getMethodName()
+ */
+class InsertFlowControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/flowControl';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConsumerAppId($value)
+    {
+        $this->data['ConsumerAppId'] = $value;
+        $this->options['query']['ConsumerAppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGranularity($value)
+    {
+        $this->data['Granularity'] = $value;
+        $this->options['query']['Granularity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleType($value)
+    {
+        $this->data['RuleType'] = $value;
+        $this->options['query']['RuleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrlVar($value)
+    {
+        $this->data['UrlVar'] = $value;
+        $this->options['query']['UrlVar'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceName($value)
+    {
+        $this->data['ServiceName'] = $value;
+        $this->options['query']['ServiceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withThreshold($value)
+    {
+        $this->data['Threshold'] = $value;
+        $this->options['query']['Threshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStrategy($value)
+    {
+        $this->data['Strategy'] = $value;
+        $this->options['query']['Strategy'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethodName($value)
+    {
+        $this->data['MethodName'] = $value;
+        $this->options['query']['MethodName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getGroupName()
+ */
+class InsertDeployGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/deploy_group';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupName($value)
+    {
+        $this->data['GroupName'] = $value;
+        $this->options['query']['GroupName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDuration()
+ * @method string getRuleType()
+ * @method string getAppId()
+ * @method string getUrlVar()
+ * @method string getRtThreshold()
+ * @method string getServiceName()
+ * @method string getMethodName()
+ */
+class InsertDegradeControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/degradeControl';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDuration($value)
+    {
+        $this->data['Duration'] = $value;
+        $this->options['query']['Duration'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleType($value)
+    {
+        $this->data['RuleType'] = $value;
+        $this->options['query']['RuleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrlVar($value)
+    {
+        $this->data['UrlVar'] = $value;
+        $this->options['query']['UrlVar'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRtThreshold($value)
+    {
+        $this->data['RtThreshold'] = $value;
+        $this->options['query']['RtThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceName($value)
+    {
+        $this->data['ServiceName'] = $value;
+        $this->options['query']['ServiceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethodName($value)
+    {
+        $this->data['MethodName'] = $value;
+        $this->options['query']['MethodName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4826,23 +4984,26 @@ class InsertCluster extends Roa
 }
 
 /**
- * @method string getRoleName()
- * @method string getActionData()
+ * @method string getAppId()
+ * @method string getGroupId()
  */
-class InsertRole extends Roa
+class GetJvmConfiguration extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/account/create_role';
+    public $pathPattern = '/pop/v5/app/app_jvm_config';
+
+    /** @var string */
+    public $method = 'GET';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withRoleName($value)
+    public function withAppId($value)
     {
-        $this->data['RoleName'] = $value;
-        $this->options['query']['RoleName'] = $value;
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
 
         return $this;
     }
@@ -4852,10 +5013,110 @@ class InsertRole extends Roa
      *
      * @return $this
      */
-    public function withActionData($value)
+    public function withGroupId($value)
     {
-        $this->data['ActionData'] = $value;
-        $this->options['query']['ActionData'] = $value;
+        $this->data['GroupId'] = $value;
+        $this->options['query']['GroupId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getGroupId()
+ */
+class GetContainerConfiguration extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/app/container_config';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['query']['GroupId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class GetApplication extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/app/app_info';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getRuleId()
+ */
+class EnableFlowControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/flowcontrol/enable';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleId($value)
+    {
+        $this->data['RuleId'] = $value;
+        $this->options['query']['RuleId'] = $value;
 
         return $this;
     }
@@ -4901,6 +5162,362 @@ class EnableDegradeControl extends Roa
 }
 
 /**
+ * @method string getAppId()
+ * @method string getRuleId()
+ */
+class DisableFlowControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/flowcontrol/disable';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleId($value)
+    {
+        $this->data['RuleId'] = $value;
+        $this->options['query']['RuleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getRuleId()
+ */
+class DisableDegradeControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/degradecontrol/disable';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleId($value)
+    {
+        $this->data['RuleId'] = $value;
+        $this->options['query']['RuleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRegionTag()
+ * @method string getId()
+ */
+class DeleteUserDefineRegion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/user_region_def';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionTag($value)
+    {
+        $this->data['RegionTag'] = $value;
+        $this->options['query']['RegionTag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['query']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGroupId()
+ */
+class DeleteServiceGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/service/serviceGroups';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['query']['GroupId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRoleId()
+ */
+class DeleteRole extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/account/delete_role';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleId($value)
+    {
+        $this->data['RoleId'] = $value;
+        $this->options['query']['RoleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getRuleId()
+ */
+class DeleteFlowControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/flowControl';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleId($value)
+    {
+        $this->data['RuleId'] = $value;
+        $this->options['query']['RuleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEcuId()
+ */
+class DeleteEcu extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/delete_ecu';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcuId($value)
+    {
+        $this->data['EcuId'] = $value;
+        $this->options['query']['EcuId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getGroupName()
+ */
+class DeleteDeployGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/deploy_group';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupName($value)
+    {
+        $this->data['GroupName'] = $value;
+        $this->options['query']['GroupName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getRuleId()
+ */
+class DeleteDegradeControl extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/degradeControl';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleId($value)
+    {
+        $this->data['RuleId'] = $value;
+        $this->options['query']['RuleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDataId()
+ * @method string getLogicalRegionId()
+ * @method string getGroup()
+ */
+class DeleteConfigCenter extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/configCenter';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataId($value)
+    {
+        $this->data['DataId'] = $value;
+        $this->options['query']['DataId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogicalRegionId($value)
+    {
+        $this->data['LogicalRegionId'] = $value;
+        $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroup($value)
+    {
+        $this->data['Group'] = $value;
+        $this->options['query']['Group'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClusterMemberId()
  * @method string getClusterId()
  */
@@ -4940,58 +5557,25 @@ class DeleteClusterMember extends Roa
 }
 
 /**
- * @method string getRoleId()
+ * @method string getClusterId()
  */
-class DeleteRole extends Roa
+class DeleteCluster extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/account/delete_role';
+    public $pathPattern = '/pop/v5/resource/cluster';
 
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRoleId($value)
-    {
-        $this->data['RoleId'] = $value;
-        $this->options['query']['RoleId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getRoleIds()
- * @method string getTargetUserId()
- */
-class AuthorizeRole extends Roa
-{
     /** @var string */
-    public $pathPattern = '/pop/v5/account/authorize_role';
+    public $method = 'DELETE';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withRoleIds($value)
+    public function withClusterId($value)
     {
-        $this->data['RoleIds'] = $value;
-        $this->options['query']['RoleIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetUserId($value)
-    {
-        $this->data['TargetUserId'] = $value;
-        $this->options['query']['TargetUserId'] = $value;
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['ClusterId'] = $value;
 
         return $this;
     }
@@ -5090,70 +5674,23 @@ class BindSlb extends Roa
 }
 
 /**
- * @method string getTargetUserIds()
- */
-class BindSubAccount extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/account/bindSubAccount';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetUserIds($value)
-    {
-        $this->data['TargetUserIds'] = $value;
-        $this->options['query']['TargetUserIds'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- */
-class DeleteCluster extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/cluster';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['ClusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppIds()
+ * @method string getRoleIds()
  * @method string getTargetUserId()
  */
-class AuthorizeApplication extends Roa
+class AuthorizeRole extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/account/authorize_app';
+    public $pathPattern = '/pop/v5/account/authorize_role';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withAppIds($value)
+    public function withRoleIds($value)
     {
-        $this->data['AppIds'] = $value;
-        $this->options['query']['AppIds'] = $value;
+        $this->data['RoleIds'] = $value;
+        $this->options['query']['RoleIds'] = $value;
 
         return $this;
     }
@@ -5209,59 +5746,85 @@ class AuthorizeResourceGroup extends Roa
 }
 
 /**
- * @method string getChangeOrderId()
+ * @method string getAppIds()
+ * @method string getTargetUserId()
  */
-class GetChangeOrderInfo extends Roa
+class AuthorizeApplication extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/change_order_info';
+    public $pathPattern = '/pop/v5/account/authorize_app';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withChangeOrderId($value)
+    public function withAppIds($value)
     {
-        $this->data['ChangeOrderId'] = $value;
-        $this->options['query']['ChangeOrderId'] = $value;
+        $this->data['AppIds'] = $value;
+        $this->options['query']['AppIds'] = $value;
 
         return $this;
     }
-}
-
-/**
- * @method string getLogicalRegionId()
- */
-class ListCluster extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/resource/cluster_list';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withLogicalRegionId($value)
+    public function withTargetUserId($value)
     {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
+        $this->data['TargetUserId'] = $value;
+        $this->options['query']['TargetUserId'] = $value;
 
         return $this;
     }
 }
 
+class ListVpc extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/vpc_list';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
 /**
+ * @method string getEcuInfo()
+ * @method string getDeployGroup()
  * @method string getAppId()
  */
-class DeleteApplication extends Roa
+class ScaleOutApplication extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_delete_app';
+    public $pathPattern = '/pop/v5/changeorder/co_scale_out';
 
-    /** @var string */
-    public $method = 'DELETE';
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcuInfo($value)
+    {
+        $this->data['EcuInfo'] = $value;
+        $this->options['query']['EcuInfo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeployGroup($value)
+    {
+        $this->data['DeployGroup'] = $value;
+        $this->options['query']['DeployGroup'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -5272,84 +5835,6 @@ class DeleteApplication extends Roa
     {
         $this->data['AppId'] = $value;
         $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getGroupId()
- * @method string getBatchWaitTime()
- * @method string getBatch()
- * @method string getHistoryVersion()
- */
-class RollbackApplication extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_rollback';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBatchWaitTime($value)
-    {
-        $this->data['BatchWaitTime'] = $value;
-        $this->options['query']['BatchWaitTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBatch($value)
-    {
-        $this->data['Batch'] = $value;
-        $this->options['query']['Batch'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHistoryVersion($value)
-    {
-        $this->data['HistoryVersion'] = $value;
-        $this->options['query']['HistoryVersion'] = $value;
 
         return $this;
     }
@@ -5406,24 +5891,33 @@ class ScaleInApplication extends Roa
 }
 
 /**
- * @method string getEcuInfo()
- * @method string getDeployGroup()
+ * @method string getBuildPackId()
+ * @method string getComponentIds()
  * @method string getAppId()
+ * @method string getImageUrl()
+ * @method string getGroupId()
+ * @method string getBatchWaitTime()
+ * @method string getBatch()
+ * @method string getAppEnv()
+ * @method string getWarUrl()
+ * @method string getPackageVersion()
+ * @method string getDesc()
+ * @method string getDeployType()
  */
-class ScaleOutApplication extends Roa
+class DeployApplication extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_scale_out';
+    public $pathPattern = '/pop/v5/changeorder/co_deploy';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withEcuInfo($value)
+    public function withBuildPackId($value)
     {
-        $this->data['EcuInfo'] = $value;
-        $this->options['query']['EcuInfo'] = $value;
+        $this->data['BuildPackId'] = $value;
+        $this->options['query']['BuildPackId'] = $value;
 
         return $this;
     }
@@ -5433,36 +5927,13 @@ class ScaleOutApplication extends Roa
      *
      * @return $this
      */
-    public function withDeployGroup($value)
+    public function withComponentIds($value)
     {
-        $this->data['DeployGroup'] = $value;
-        $this->options['query']['DeployGroup'] = $value;
+        $this->data['ComponentIds'] = $value;
+        $this->options['query']['ComponentIds'] = $value;
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getEccInfo()
- */
-class StartApplication extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_start';
 
     /**
      * @param string $value
@@ -5482,33 +5953,10 @@ class StartApplication extends Roa
      *
      * @return $this
      */
-    public function withEccInfo($value)
+    public function withImageUrl($value)
     {
-        $this->data['EccInfo'] = $value;
-        $this->options['query']['EccInfo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getEccInfo()
- */
-class StopApplication extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_stop';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
+        $this->data['ImageUrl'] = $value;
+        $this->options['query']['ImageUrl'] = $value;
 
         return $this;
     }
@@ -5518,33 +5966,10 @@ class StopApplication extends Roa
      *
      * @return $this
      */
-    public function withEccInfo($value)
+    public function withGroupId($value)
     {
-        $this->data['EccInfo'] = $value;
-        $this->options['query']['EccInfo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getEccInfo()
- */
-class ResetApplication extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_reset';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
+        $this->data['GroupId'] = $value;
+        $this->options['query']['GroupId'] = $value;
 
         return $this;
     }
@@ -5554,10 +5979,88 @@ class ResetApplication extends Roa
      *
      * @return $this
      */
-    public function withEccInfo($value)
+    public function withBatchWaitTime($value)
     {
-        $this->data['EccInfo'] = $value;
-        $this->options['query']['EccInfo'] = $value;
+        $this->data['BatchWaitTime'] = $value;
+        $this->options['query']['BatchWaitTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatch($value)
+    {
+        $this->data['Batch'] = $value;
+        $this->options['query']['Batch'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppEnv($value)
+    {
+        $this->data['AppEnv'] = $value;
+        $this->options['query']['AppEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWarUrl($value)
+    {
+        $this->data['WarUrl'] = $value;
+        $this->options['query']['WarUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageVersion($value)
+    {
+        $this->data['PackageVersion'] = $value;
+        $this->options['query']['PackageVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDesc($value)
+    {
+        $this->data['Desc'] = $value;
+        $this->options['query']['Desc'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeployType($value)
+    {
+        $this->data['DeployType'] = $value;
+        $this->options['query']['DeployType'] = $value;
 
         return $this;
     }
@@ -5754,49 +6257,15 @@ class InsertApplication extends Roa
 }
 
 /**
- * @method string getBuildPackId()
- * @method string getComponentIds()
  * @method string getAppId()
- * @method string getImageUrl()
- * @method string getGroupId()
- * @method string getBatchWaitTime()
- * @method string getBatch()
- * @method string getAppEnv()
- * @method string getWarUrl()
- * @method string getPackageVersion()
- * @method string getDesc()
- * @method string getDeployType()
  */
-class DeployApplication extends Roa
+class DeleteApplication extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/changeorder/co_deploy';
+    public $pathPattern = '/pop/v5/changeorder/co_delete_app';
 
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBuildPackId($value)
-    {
-        $this->data['BuildPackId'] = $value;
-        $this->options['query']['BuildPackId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withComponentIds($value)
-    {
-        $this->data['ComponentIds'] = $value;
-        $this->options['query']['ComponentIds'] = $value;
-
-        return $this;
-    }
+    /** @var string */
+    public $method = 'DELETE';
 
     /**
      * @param string $value
@@ -5807,123 +6276,6 @@ class DeployApplication extends Roa
     {
         $this->data['AppId'] = $value;
         $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageUrl($value)
-    {
-        $this->data['ImageUrl'] = $value;
-        $this->options['query']['ImageUrl'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBatchWaitTime($value)
-    {
-        $this->data['BatchWaitTime'] = $value;
-        $this->options['query']['BatchWaitTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBatch($value)
-    {
-        $this->data['Batch'] = $value;
-        $this->options['query']['Batch'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppEnv($value)
-    {
-        $this->data['AppEnv'] = $value;
-        $this->options['query']['AppEnv'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWarUrl($value)
-    {
-        $this->data['WarUrl'] = $value;
-        $this->options['query']['WarUrl'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageVersion($value)
-    {
-        $this->data['PackageVersion'] = $value;
-        $this->options['query']['PackageVersion'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDesc($value)
-    {
-        $this->data['Desc'] = $value;
-        $this->options['query']['Desc'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeployType($value)
-    {
-        $this->data['DeployType'] = $value;
-        $this->options['query']['DeployType'] = $value;
 
         return $this;
     }
@@ -5965,16 +6317,112 @@ class UpdateContainer extends Roa
     }
 }
 
-class ListApplicationEcu extends Roa
+/**
+ * @method string getAppId()
+ * @method string getEccInfo()
+ */
+class StopApplication extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/resource/ecu_list';
+    public $pathPattern = '/pop/v5/changeorder/co_stop';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEccInfo($value)
+    {
+        $this->data['EccInfo'] = $value;
+        $this->options['query']['EccInfo'] = $value;
+
+        return $this;
+    }
 }
 
-class ListBuildPack extends Roa
+/**
+ * @method string getAppId()
+ * @method string getEccInfo()
+ */
+class StartApplication extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/app/build_pack_list';
+    public $pathPattern = '/pop/v5/changeorder/co_start';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEccInfo($value)
+    {
+        $this->data['EccInfo'] = $value;
+        $this->options['query']['EccInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getEccInfo()
+ */
+class ResetApplication extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/changeorder/co_reset';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEccInfo($value)
+    {
+        $this->data['EccInfo'] = $value;
+        $this->options['query']['EccInfo'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5999,31 +6447,47 @@ class ListDeployGroup extends Roa
     }
 }
 
-/**
- * @method string getDataId()
- * @method string getLogicalRegionId()
- * @method string getGroup()
- */
-class QueryConfigCenter extends Roa
+class ListBuildPack extends Roa
 {
     /** @var string */
-    public $pathPattern = '/pop/v5/configCenter';
+    public $pathPattern = '/pop/v5/app/build_pack_list';
+}
 
+class ListApplicationEcu extends Roa
+{
     /** @var string */
-    public $method = 'GET';
+    public $pathPattern = '/pop/v5/resource/ecu_list';
+}
+
+/**
+ * @method string getChangeOrderId()
+ */
+class GetChangeOrderInfo extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/changeorder/change_order_info';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withDataId($value)
+    public function withChangeOrderId($value)
     {
-        $this->data['DataId'] = $value;
-        $this->options['query']['DataId'] = $value;
+        $this->data['ChangeOrderId'] = $value;
+        $this->options['query']['ChangeOrderId'] = $value;
 
         return $this;
     }
+}
+
+/**
+ * @method string getLogicalRegionId()
+ */
+class ListCluster extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/resource/cluster_list';
 
     /**
      * @param string $value
@@ -6034,1082 +6498,6 @@ class QueryConfigCenter extends Roa
     {
         $this->data['LogicalRegionId'] = $value;
         $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroup($value)
-    {
-        $this->data['Group'] = $value;
-        $this->options['query']['Group'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDuration()
- * @method string getRuleType()
- * @method string getAppId()
- * @method string getUrlVar()
- * @method string getRtThreshold()
- * @method string getServiceName()
- * @method string getRuleId()
- * @method string getMethodName()
- */
-class UpdateDegradeControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/degradeControl';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDuration($value)
-    {
-        $this->data['Duration'] = $value;
-        $this->options['query']['Duration'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleType($value)
-    {
-        $this->data['RuleType'] = $value;
-        $this->options['query']['RuleType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUrlVar($value)
-    {
-        $this->data['UrlVar'] = $value;
-        $this->options['query']['UrlVar'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRtThreshold($value)
-    {
-        $this->data['RtThreshold'] = $value;
-        $this->options['query']['RtThreshold'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withServiceName($value)
-    {
-        $this->data['ServiceName'] = $value;
-        $this->options['query']['ServiceName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleId($value)
-    {
-        $this->data['RuleId'] = $value;
-        $this->options['query']['RuleId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMethodName($value)
-    {
-        $this->data['MethodName'] = $value;
-        $this->options['query']['MethodName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getConsumerAppId()
- * @method string getGranularity()
- * @method string getRuleType()
- * @method string getAppId()
- * @method string getUrlVar()
- * @method string getServiceName()
- * @method string getThreshold()
- * @method string getRuleId()
- * @method string getStrategy()
- * @method string getMethodName()
- */
-class UpdateFlowControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/flowControl';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withConsumerAppId($value)
-    {
-        $this->data['ConsumerAppId'] = $value;
-        $this->options['query']['ConsumerAppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGranularity($value)
-    {
-        $this->data['Granularity'] = $value;
-        $this->options['query']['Granularity'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleType($value)
-    {
-        $this->data['RuleType'] = $value;
-        $this->options['query']['RuleType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUrlVar($value)
-    {
-        $this->data['UrlVar'] = $value;
-        $this->options['query']['UrlVar'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withServiceName($value)
-    {
-        $this->data['ServiceName'] = $value;
-        $this->options['query']['ServiceName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withThreshold($value)
-    {
-        $this->data['Threshold'] = $value;
-        $this->options['query']['Threshold'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleId($value)
-    {
-        $this->data['RuleId'] = $value;
-        $this->options['query']['RuleId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStrategy($value)
-    {
-        $this->data['Strategy'] = $value;
-        $this->options['query']['Strategy'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMethodName($value)
-    {
-        $this->data['MethodName'] = $value;
-        $this->options['query']['MethodName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- */
-class ListFlowControls extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/flowControls';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- */
-class ListPublishedServices extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/service/listPublishedServices';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-class ListServiceGroups extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/service/serviceGroups';
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getConsumerAppId()
- * @method string getGranularity()
- * @method string getRuleType()
- * @method string getAppId()
- * @method string getUrlVar()
- * @method string getServiceName()
- * @method string getThreshold()
- * @method string getStrategy()
- * @method string getMethodName()
- */
-class InsertFlowControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/flowControl';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withConsumerAppId($value)
-    {
-        $this->data['ConsumerAppId'] = $value;
-        $this->options['query']['ConsumerAppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGranularity($value)
-    {
-        $this->data['Granularity'] = $value;
-        $this->options['query']['Granularity'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleType($value)
-    {
-        $this->data['RuleType'] = $value;
-        $this->options['query']['RuleType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUrlVar($value)
-    {
-        $this->data['UrlVar'] = $value;
-        $this->options['query']['UrlVar'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withServiceName($value)
-    {
-        $this->data['ServiceName'] = $value;
-        $this->options['query']['ServiceName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withThreshold($value)
-    {
-        $this->data['Threshold'] = $value;
-        $this->options['query']['Threshold'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStrategy($value)
-    {
-        $this->data['Strategy'] = $value;
-        $this->options['query']['Strategy'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMethodName($value)
-    {
-        $this->data['MethodName'] = $value;
-        $this->options['query']['MethodName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getGroupName()
- */
-class InsertServiceGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/service/serviceGroups';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupName($value)
-    {
-        $this->data['GroupName'] = $value;
-        $this->options['query']['GroupName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppName()
- * @method string getLogicalRegionId()
- * @method string getDataIdPattern()
- * @method string getGroup()
- */
-class ListConfigCenters extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/configCenters';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppName($value)
-    {
-        $this->data['AppName'] = $value;
-        $this->options['query']['AppName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLogicalRegionId($value)
-    {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDataIdPattern($value)
-    {
-        $this->data['DataIdPattern'] = $value;
-        $this->options['query']['DataIdPattern'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroup($value)
-    {
-        $this->data['Group'] = $value;
-        $this->options['query']['Group'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- */
-class ListConsumedServices extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/service/listConsumedServices';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- */
-class ListDegradeControls extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/app/degradeControls';
-
-    /** @var string */
-    public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getRuleId()
- */
-class DisableDegradeControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/degradecontrol/disable';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleId($value)
-    {
-        $this->data['RuleId'] = $value;
-        $this->options['query']['RuleId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getRuleId()
- */
-class DisableFlowControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/flowcontrol/disable';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleId($value)
-    {
-        $this->data['RuleId'] = $value;
-        $this->options['query']['RuleId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getRuleId()
- */
-class EnableFlowControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/flowcontrol/enable';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleId($value)
-    {
-        $this->data['RuleId'] = $value;
-        $this->options['query']['RuleId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDataId()
- * @method string getData()
- * @method string getAppName()
- * @method string getLogicalRegionId()
- * @method string getGroup()
- */
-class InsertConfigCenter extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/configCenter';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDataId($value)
-    {
-        $this->data['DataId'] = $value;
-        $this->options['query']['DataId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withData($value)
-    {
-        $this->data['Data'] = $value;
-        $this->options['query']['Data'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppName($value)
-    {
-        $this->data['AppName'] = $value;
-        $this->options['query']['AppName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLogicalRegionId($value)
-    {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroup($value)
-    {
-        $this->data['Group'] = $value;
-        $this->options['query']['Group'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDuration()
- * @method string getRuleType()
- * @method string getAppId()
- * @method string getUrlVar()
- * @method string getRtThreshold()
- * @method string getServiceName()
- * @method string getMethodName()
- */
-class InsertDegradeControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/degradeControl';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDuration($value)
-    {
-        $this->data['Duration'] = $value;
-        $this->options['query']['Duration'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleType($value)
-    {
-        $this->data['RuleType'] = $value;
-        $this->options['query']['RuleType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUrlVar($value)
-    {
-        $this->data['UrlVar'] = $value;
-        $this->options['query']['UrlVar'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRtThreshold($value)
-    {
-        $this->data['RtThreshold'] = $value;
-        $this->options['query']['RtThreshold'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withServiceName($value)
-    {
-        $this->data['ServiceName'] = $value;
-        $this->options['query']['ServiceName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMethodName($value)
-    {
-        $this->data['MethodName'] = $value;
-        $this->options['query']['MethodName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDataId()
- * @method string getLogicalRegionId()
- * @method string getGroup()
- */
-class DeleteConfigCenter extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/configCenter';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDataId($value)
-    {
-        $this->data['DataId'] = $value;
-        $this->options['query']['DataId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLogicalRegionId($value)
-    {
-        $this->data['LogicalRegionId'] = $value;
-        $this->options['query']['LogicalRegionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroup($value)
-    {
-        $this->data['Group'] = $value;
-        $this->options['query']['Group'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getRuleId()
- */
-class DeleteDegradeControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/degradeControl';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleId($value)
-    {
-        $this->data['RuleId'] = $value;
-        $this->options['query']['RuleId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAppId()
- * @method string getRuleId()
- */
-class DeleteFlowControl extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/flowControl';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleId($value)
-    {
-        $this->data['RuleId'] = $value;
-        $this->options['query']['RuleId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getGroupId()
- */
-class DeleteServiceGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/pop/v5/service/serviceGroups';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['query']['GroupId'] = $value;
 
         return $this;
     }

@@ -5,10 +5,10 @@ namespace AlibabaCloud\Lubancloud\V20180509;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
  * @method SubmitCutoutTask submitCutoutTask(array $options = [])
- * @method QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
+ * @method QueryCutoutTaskResult queryCutoutTaskResult(array $options = [])
  * @method SubmitGenerateTask submitGenerateTask(array $options = [])
+ * @method QueryGenerateTaskResult queryGenerateTaskResult(array $options = [])
  * @method GetStyles getStyles(array $options = [])
  * @method BuyOriginPictures buyOriginPictures(array $options = [])
  */
@@ -29,14 +29,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'luban';
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class QueryCutoutTaskResult extends Rpc
-{
 }
 
 /**
@@ -65,7 +57,7 @@ class SubmitCutoutTask extends Rpc
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
-class QueryGenerateTaskResult extends Rpc
+class QueryCutoutTaskResult extends Rpc
 {
 }
 
@@ -133,6 +125,14 @@ class SubmitGenerateTask extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class QueryGenerateTaskResult extends Rpc
+{
 }
 
 class GetStyles extends Rpc

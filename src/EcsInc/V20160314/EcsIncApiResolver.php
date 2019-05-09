@@ -5,248 +5,192 @@ namespace AlibabaCloud\EcsInc\V20160314;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method InnerAuthorizeImagesToBids innerAuthorizeImagesToBids(array $options = [])
  * @method InnerUnlinkNetworkInterfaces innerUnlinkNetworkInterfaces(array $options = [])
  * @method InnerLinkNetworkInterfaces innerLinkNetworkInterfaces(array $options = [])
+ * @method InnerAuthorizeImagesToBids innerAuthorizeImagesToBids(array $options = [])
  * @method InnerCopyImageAtSameRegion innerCopyImageAtSameRegion(array $options = [])
- * @method TagResourcesSystemTags tagResourcesSystemTags(array $options = [])
- * @method UntagResourcesSystemTags untagResourcesSystemTags(array $options = [])
- * @method ListTagResources listTagResources(array $options = [])
  * @method InnerDescribeEniBdf innerDescribeEniBdf(array $options = [])
+ * @method UntagResourcesSystemTags untagResourcesSystemTags(array $options = [])
+ * @method TagResourcesSystemTags tagResourcesSystemTags(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method InnerQueryInstanceCreatedByProduct innerQueryInstanceCreatedByProduct(array $options = [])
- * @method DescribeResourceRecommendFilters describeResourceRecommendFilters(array $options = [])
- * @method DescribeResources describeResources(array $options = [])
- * @method DescribeResourceFilterAttributes describeResourceFilterAttributes(array $options = [])
  * @method InnerSendMessage innerSendMessage(array $options = [])
  * @method InnerReleaseDedicatedHost innerReleaseDedicatedHost(array $options = [])
- * @method InnerQueryEniQosGroupByEni innerQueryEniQosGroupByEni(array $options = [])
- * @method InnerQueryEniQosGroupByInstance innerQueryEniQosGroupByInstance(array $options = [])
- * @method DescribeAdvisorCheckSummaries describeAdvisorCheckSummaries(array $options = [])
- * @method DescribeAdvisorChecks describeAdvisorChecks(array $options = [])
- * @method DescribeAdvisorCheckItems describeAdvisorCheckItems(array $options = [])
- * @method DescribeResourcesBySystemTag describeResourcesBySystemTag(array $options = [])
  * @method RemoveSystemTags removeSystemTags(array $options = [])
  * @method InnerDescribeTags innerDescribeTags(array $options = [])
- * @method TagResourceVSwitch tagResourceVSwitch(array $options = [])
- * @method InnerDeleteTags innerDeleteTags(array $options = [])
+ * @method DescribeResourcesBySystemTag describeResourcesBySystemTag(array $options = [])
  * @method AddSystemTag addSystemTag(array $options = [])
- * @method DescribeResourcesByTagVsw describeResourcesByTagVsw(array $options = [])
- * @method OpsDescribeAccountAttributes opsDescribeAccountAttributes(array $options = [])
- * @method InnerModifyEniQosGroup innerModifyEniQosGroup(array $options = [])
- * @method InnerDescribeEniQosGroupInfo innerDescribeEniQosGroupInfo(array $options = [])
- * @method InnerJoinEniQosGroup innerJoinEniQosGroup(array $options = [])
- * @method InnerLeaveEniQosGroup innerLeaveEniQosGroup(array $options = [])
- * @method InnerDescribeEniQosGroupByEni innerDescribeEniQosGroupByEni(array $options = [])
- * @method InnerDescribeEniQosGroupByInstance innerDescribeEniQosGroupByInstance(array $options = [])
- * @method InnerCreateEniQosGroup innerCreateEniQosGroup(array $options = [])
- * @method InnerDeleteEniQosGroup innerDeleteEniQosGroup(array $options = [])
- * @method AddSystemTags addSystemTags(array $options = [])
- * @method InnerEcsInstanceQueryByParam4QT innerEcsInstanceQueryByParam4QT(array $options = [])
+ * @method QueryEcsElasticUpgradeInfo queryEcsElasticUpgradeInfo(array $options = [])
  * @method InnerQueryRetainVcpu innerQueryRetainVcpu(array $options = [])
  * @method InnerCheckEniEipOperate innerCheckEniEipOperate(array $options = [])
  * @method InnerCheckEniBindEip innerCheckEniBindEip(array $options = [])
- * @method InnerCheckEniUnbindEip innerCheckEniUnbindEip(array $options = [])
  * @method DescribeGroupHighRiskStat describeGroupHighRiskStat(array $options = [])
  * @method DescribeGroupHighRiskAcl describeGroupHighRiskAcl(array $options = [])
- * @method DescribeHighRiskGroupInfo describeHighRiskGroupInfo(array $options = [])
- * @method DescribeHighRiskGroupAcl describeHighRiskGroupAcl(array $options = [])
- * @method DescribeHighRiskGroupAclStat describeHighRiskGroupAclStat(array $options = [])
- * @method QueryEcsElasticUpgradeInfo queryEcsElasticUpgradeInfo(array $options = [])
- * @method DescribeDangerGroupInfo describeDangerGroupInfo(array $options = [])
- * @method DescribeElasticUpgradeInfo describeElasticUpgradeInfo(array $options = [])
- * @method DescribeDangerGroupAclStat describeDangerGroupAclStat(array $options = [])
- * @method DescribeDangerGroupAcl describeDangerGroupAcl(array $options = [])
- * @method DescribeAccountAttributes describeAccountAttributes(array $options = [])
- * @method InnerEcsDescribeDangerGroupVmCount innerEcsDescribeDangerGroupVmCount(array $options = [])
- * @method InnerEcsDescribeDangerGroupAcl innerEcsDescribeDangerGroupAcl(array $options = [])
- * @method GdprLogicalDeleteResource gdprLogicalDeleteResource(array $options = [])
+ * @method InnerQueryLazyLoadProgress innerQueryLazyLoadProgress(array $options = [])
  * @method GdprPhysicalDeleteResource gdprPhysicalDeleteResource(array $options = [])
+ * @method GdprLogicalDeleteResource gdprLogicalDeleteResource(array $options = [])
  * @method GdprCheckResource gdprCheckResource(array $options = [])
- * @method InnerEcsDescribeDangerAcl innerEcsDescribeDangerAcl(array $options = [])
+ * @method InnerInstallCloudAssistant innerInstallCloudAssistant(array $options = [])
  * @method DescribeEvents describeEvents(array $options = [])
  * @method DescribeEventDetail describeEventDetail(array $options = [])
- * @method InnerEcsQueryByHpcClusterId innerEcsQueryByHpcClusterId(array $options = [])
- * @method LaunchBazaarInstance launchBazaarInstance(array $options = [])
- * @method TerminateBazaarInstance terminateBazaarInstance(array $options = [])
- * @method DescribeBazaarInstances describeBazaarInstances(array $options = [])
- * @method InnerCreateNcExpression innerCreateNcExpression(array $options = [])
- * @method InnerDeleteNcExpression innerDeleteNcExpression(array $options = [])
- * @method InnerDescribeNcExpression innerDescribeNcExpression(array $options = [])
- * @method InnerDescribeEni innerDescribeEni(array $options = [])
- * @method InnerInstallCloudAssistant innerInstallCloudAssistant(array $options = [])
  * @method DescribeRenewalPrice describeRenewalPrice(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
+ * @method InnerEcsQueryByHpcClusterId innerEcsQueryByHpcClusterId(array $options = [])
+ * @method InnerDescribeNcExpression innerDescribeNcExpression(array $options = [])
+ * @method InnerDeleteNcExpression innerDeleteNcExpression(array $options = [])
+ * @method InnerCreateNcExpression innerCreateNcExpression(array $options = [])
+ * @method InnerDescribeEni innerDescribeEni(array $options = [])
  * @method InnerRefundVcpuQuery innerRefundVcpuQuery(array $options = [])
  * @method InnerRefundVcpuCallBack innerRefundVcpuCallBack(array $options = [])
  * @method ModifySystemEventAttribute modifySystemEventAttribute(array $options = [])
+ * @method CreateSystemEvent createSystemEvent(array $options = [])
+ * @method CancelSystemEvent cancelSystemEvent(array $options = [])
  * @method DescribeResourceModificationCapacity describeResourceModificationCapacity(array $options = [])
- * @method DescribeResourceCreationCapacity describeResourceCreationCapacity(array $options = [])
  * @method InnerQueryEcsCountByCondition innerQueryEcsCountByCondition(array $options = [])
  * @method InnerModifyEntityConstraints innerModifyEntityConstraints(array $options = [])
- * @method InnerAddEntityConstraints innerAddEntityConstraints(array $options = [])
- * @method InnerDeleteEntityConstraints innerDeleteEntityConstraints(array $options = [])
- * @method InnerUpdateEntityConstraints innerUpdateEntityConstraints(array $options = [])
+ * @method DescribeResourceCreationCapacity describeResourceCreationCapacity(array $options = [])
  * @method ResourceOwnershipTransfer resourceOwnershipTransfer(array $options = [])
- * @method InstanceOwnershipTransfer instanceOwnershipTransfer(array $options = [])
- * @method InnerQueryLazyLoadProgress innerQueryLazyLoadProgress(array $options = [])
- * @method InnerListClusterFlowCtrls innerListClusterFlowCtrls(array $options = [])
- * @method CreateSystemEvent createSystemEvent(array $options = [])
- * @method InnerQueryConstraints innerQueryConstraints(array $options = [])
  * @method InnerQueryExplanation innerQueryExplanation(array $options = [])
+ * @method InnerQueryConstraints innerQueryConstraints(array $options = [])
  * @method DescribeResourcesModification describeResourcesModification(array $options = [])
- * @method DescribeAvailableResourceForModify describeAvailableResourceForModify(array $options = [])
- * @method InnerQueryEcsPermit innerQueryEcsPermit(array $options = [])
- * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method DescribeBandwidthLimitation describeBandwidthLimitation(array $options = [])
- * @method CancelSystemEvent cancelSystemEvent(array $options = [])
- * @method ModifySystemEventPlanTime modifySystemEventPlanTime(array $options = [])
+ * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method InnerDetailInstanceFamilyDefine innerDetailInstanceFamilyDefine(array $options = [])
- * @method InnerBatchAttachClassicLinkVpc innerBatchAttachClassicLinkVpc(array $options = [])
- * @method ModifyInstanceAutoRenewAttributeInner modifyInstanceAutoRenewAttributeInner(array $options = [])
- * @method InnerBatchAttchClassicLinkVpc innerBatchAttchClassicLinkVpc(array $options = [])
  * @method InnerRegionSupportInstancetypes innerRegionSupportInstancetypes(array $options = [])
  * @method CheckIsDefaultVpcUser checkIsDefaultVpcUser(array $options = [])
- * @method InnerCheckIsDefaultVpcUser innerCheckIsDefaultVpcUser(array $options = [])
  * @method InnerEcsDescribeVPortInfo innerEcsDescribeVPortInfo(array $options = [])
- * @method InnerQueryCopyImageSupportRegions innerQueryCopyImageSupportRegions(array $options = [])
- * @method CancelAgreement cancelAgreement(array $options = [])
- * @method SignAgreement signAgreement(array $options = [])
  * @method QueryEcsInstanceOrderInfo queryEcsInstanceOrderInfo(array $options = [])
+ * @method InnerQueryCopyImageSupportRegions innerQueryCopyImageSupportRegions(array $options = [])
+ * @method SignAgreement signAgreement(array $options = [])
+ * @method CancelAgreement cancelAgreement(array $options = [])
  * @method InnerEcsDescribeIpsInGroup innerEcsDescribeIpsInGroup(array $options = [])
  * @method InnerDescribeInstanceTypes innerDescribeInstanceTypes(array $options = [])
- * @method DescribeInstanceTypesInner describeInstanceTypesInner(array $options = [])
- * @method InnerEcsResourceGroupQueryByResources innerEcsResourceGroupQueryByResources(array $options = [])
- * @method InnerDescribeSnapshotBusinessStatus innerDescribeSnapshotBusinessStatus(array $options = [])
  * @method InnerModifySnapshotBusinessStatus innerModifySnapshotBusinessStatus(array $options = [])
- * @method QueryRecommendInstanceType queryRecommendInstanceType(array $options = [])
- * @method QueryResourceModify queryResourceModify(array $options = [])
- * @method ReInitDisks reInitDisks(array $options = [])
+ * @method InnerDescribeSnapshotBusinessStatus innerDescribeSnapshotBusinessStatus(array $options = [])
+ * @method InnerEcsResourceGroupQueryByResources innerEcsResourceGroupQueryByResources(array $options = [])
  * @method ListImageBinding listImageBinding(array $options = [])
  * @method InnerEcsRegionQueryByBid innerEcsRegionQueryByBid(array $options = [])
- * @method ListBoundMarketImage listBoundMarketImage(array $options = [])
+ * @method QueryResourceModify queryResourceModify(array $options = [])
+ * @method ReInitDisks reInitDisks(array $options = [])
  * @method InnerEcsIsClassicLinkVpcUser innerEcsIsClassicLinkVpcUser(array $options = [])
+ * @method InnerEcsTransitionQuery innerEcsTransitionQuery(array $options = [])
+ * @method InnerEcsTransitionModify innerEcsTransitionModify(array $options = [])
+ * @method InnerEcsExpireRegionQuery innerEcsExpireRegionQuery(array $options = [])
  * @method GetCommodityProxy getCommodityProxy(array $options = [])
  * @method InnerEcsQueryIpThreshold innerEcsQueryIpThreshold(array $options = [])
  * @method InnerAntInstanceConvertToPrepaid innerAntInstanceConvertToPrepaid(array $options = [])
- * @method InnerEcsExpireRegionQuery innerEcsExpireRegionQuery(array $options = [])
- * @method InnerEcsTransitionModify innerEcsTransitionModify(array $options = [])
- * @method InnerEcsTransitionQuery innerEcsTransitionQuery(array $options = [])
  * @method InnerRemedyRenewInstance innerRemedyRenewInstance(array $options = [])
+ * @method CopyImageAtTarget copyImageAtTarget(array $options = [])
  * @method InnerConstraintDataPush innerConstraintDataPush(array $options = [])
  * @method InnerReleasePublicIpAddress innerReleasePublicIpAddress(array $options = [])
- * @method InnerModifyPublicIpAddress innerModifyPublicIpAddress(array $options = [])
  * @method InnerMarketplaceImageExpire innerMarketplaceImageExpire(array $options = [])
  * @method InnerModifyInstanceChargeType innerModifyInstanceChargeType(array $options = [])
  * @method CheckImageSupportCloudinit checkImageSupportCloudinit(array $options = [])
- * @method UploadSystemImageAtOrigin uploadSystemImageAtOrigin(array $options = [])
- * @method CopySystemImageAtTarget copySystemImageAtTarget(array $options = [])
- * @method QueryImageCopyProgress queryImageCopyProgress(array $options = [])
- * @method QueryResourceTransit queryResourceTransit(array $options = [])
- * @method CopySystemImage copySystemImage(array $options = [])
- * @method InnerCheckOpenSnapshotService innerCheckOpenSnapshotService(array $options = [])
  * @method InnerOpenSnapshotService innerOpenSnapshotService(array $options = [])
+ * @method InnerCheckOpenSnapshotService innerCheckOpenSnapshotService(array $options = [])
+ * @method UploadSystemImageAtOrigin uploadSystemImageAtOrigin(array $options = [])
+ * @method QueryResourceTransit queryResourceTransit(array $options = [])
+ * @method QueryImageCopyProgress queryImageCopyProgress(array $options = [])
+ * @method DescribeCopyProgressAtOrigin describeCopyProgressAtOrigin(array $options = [])
+ * @method CopySystemImageAtTarget copySystemImageAtTarget(array $options = [])
+ * @method CopySystemImage copySystemImage(array $options = [])
  * @method InnerQueryImageBindByInstance innerQueryImageBindByInstance(array $options = [])
  * @method InnerRenewInstance innerRenewInstance(array $options = [])
- * @method InnerCheckProduce innerCheckProduce(array $options = [])
  * @method InnerProduce innerProduce(array $options = [])
+ * @method InnerCheckProduce innerCheckProduce(array $options = [])
  * @method QueryInstanceInfo queryInstanceInfo(array $options = [])
- * @method InnerInstanceSetEndTime innerInstanceSetEndTime(array $options = [])
  * @method InnerNetworkModifyValidation innerNetworkModifyValidation(array $options = [])
+ * @method InnerInstanceSetEndTime innerInstanceSetEndTime(array $options = [])
  * @method InnerDiskResizeByParam innerDiskResizeByParam(array $options = [])
  * @method InnerInstanceGetInstanceTypeModelByType innerInstanceGetInstanceTypeModelByType(array $options = [])
- * @method InnerImageModifyProductCapacity innerImageModifyProductCapacity(array $options = [])
- * @method InnerImageQueryImgsByParam innerImageQueryImgsByParam(array $options = [])
  * @method InnerImageQueryProductQuota innerImageQueryProductQuota(array $options = [])
- * @method InnerEcsInstanceDetailForConsole innerEcsInstanceDetailForConsole(array $options = [])
- * @method InnerDiskQueryByParamForConsole innerDiskQueryByParamForConsole(array $options = [])
- * @method InnerSnapshotIsUserAutoSnapshotPause innerSnapshotIsUserAutoSnapshotPause(array $options = [])
+ * @method InnerImageQueryImgsByParam innerImageQueryImgsByParam(array $options = [])
+ * @method InnerImageModifyProductCapacity innerImageModifyProductCapacity(array $options = [])
  * @method InnerVncQueryPasswd innerVncQueryPasswd(array $options = [])
- * @method InnerEcsReleaseByDriver innerEcsReleaseByDriver(array $options = [])
- * @method InnerImageKeepUsing innerImageKeepUsing(array $options = [])
+ * @method InnerSnapshotIsUserAutoSnapshotPause innerSnapshotIsUserAutoSnapshotPause(array $options = [])
  * @method InnerImageQueryNeedKeepUsing innerImageQueryNeedKeepUsing(array $options = [])
- * @method InnerDiskFindDiskByDiskId innerDiskFindDiskByDiskId(array $options = [])
- * @method InnerDiskQueryUserDiskSummary innerDiskQueryUserDiskSummary(array $options = [])
+ * @method InnerImageKeepUsing innerImageKeepUsing(array $options = [])
+ * @method InnerEcsReleaseByDriver innerEcsReleaseByDriver(array $options = [])
+ * @method InnerEcsInstanceDetailForConsole innerEcsInstanceDetailForConsole(array $options = [])
  * @method InnerDiskReset innerDiskReset(array $options = [])
+ * @method InnerDiskQueryUserDiskSummary innerDiskQueryUserDiskSummary(array $options = [])
+ * @method InnerDiskQueryByParamForConsole innerDiskQueryByParamForConsole(array $options = [])
+ * @method InnerDiskFindDiskByDiskId innerDiskFindDiskByDiskId(array $options = [])
  * @method FiveDaysRefund fiveDaysRefund(array $options = [])
- * @method InnerInstanceQueryByParamBackyard innerInstanceQueryByParamBackyard(array $options = [])
- * @method InnerIpLoad innerIpLoad(array $options = [])
- * @method InnerEcsSnapshotQueryAllSnapshotsByEcsId innerEcsSnapshotQueryAllSnapshotsByEcsId(array $options = [])
- * @method InnerIzQueryForVmSale innerIzQueryForVmSale(array $options = [])
- * @method InnerStockListUsedVms innerStockListUsedVms(array $options = [])
  * @method InnerGetZoneVendibleDataAndStatusById innerGetZoneVendibleDataAndStatusById(array $options = [])
- * @method InnerGroupFindDefaultSystemGroup innerGroupFindDefaultSystemGroup(array $options = [])
- * @method InnerImageConvert2Product innerImageConvert2Product(array $options = [])
- * @method InnerImageModify innerImageModify(array $options = [])
- * @method InnerImageQueryAvailableImgs innerImageQueryAvailableImgs(array $options = [])
+ * @method InnerStockListUsedVms innerStockListUsedVms(array $options = [])
+ * @method InnerIzQueryForVmSale innerIzQueryForVmSale(array $options = [])
+ * @method InnerIpLoad innerIpLoad(array $options = [])
  * @method InnerInstanceQueryEcsByImgPc innerInstanceQueryEcsByImgPc(array $options = [])
- * @method InnerEcsGetBflagByBidAndUid innerEcsGetBflagByBidAndUid(array $options = [])
- * @method InnerEcsInstanceQueryRegionNoFilter innerEcsInstanceQueryRegionNoFilter(array $options = [])
- * @method InnerEcsInstanceQueryRegions innerEcsInstanceQueryRegions(array $options = [])
- * @method InnerGetInstanceTypeModelByType innerGetInstanceTypeModelByType(array $options = [])
+ * @method InnerInstanceQueryByParamBackyard innerInstanceQueryByParamBackyard(array $options = [])
+ * @method InnerImageQueryAvailableImgs innerImageQueryAvailableImgs(array $options = [])
+ * @method InnerImageModify innerImageModify(array $options = [])
+ * @method InnerImageConvert2Product innerImageConvert2Product(array $options = [])
+ * @method InnerGroupFindDefaultSystemGroup innerGroupFindDefaultSystemGroup(array $options = [])
+ * @method InnerEcsSnapshotQueryAllSnapshotsByEcsId innerEcsSnapshotQueryAllSnapshotsByEcsId(array $options = [])
  * @method InnerEcsQuerySecurity innerEcsQuerySecurity(array $options = [])
- * @method InnerEcsRiskControlPunish innerEcsRiskControlPunish(array $options = [])
- * @method InnerEcsRiskControlPunishRemove innerEcsRiskControlPunishRemove(array $options = [])
- * @method InnerEcsRiskControlQuery innerEcsRiskControlQuery(array $options = [])
- * @method InnerMonitor innerMonitor(array $options = [])
- * @method InnerEcsFindById innerEcsFindById(array $options = [])
- * @method CopyToCenterAtOrigin copyToCenterAtOrigin(array $options = [])
- * @method DescribeCopyProgressAtOrigin describeCopyProgressAtOrigin(array $options = [])
- * @method DetailCenterResourceAtOrigin detailCenterResourceAtOrigin(array $options = [])
- * @method CancelCopyImageAtOrigin cancelCopyImageAtOrigin(array $options = [])
- * @method CopyImageAtTarget copyImageAtTarget(array $options = [])
- * @method InnerMonitorDataDescribeInstance innerMonitorDataDescribeInstance(array $options = [])
- * @method InnerSnapshotDescribeMountedSnapshots innerSnapshotDescribeMountedSnapshots(array $options = [])
- * @method InnerSnapshotQueryUserSnapshots innerSnapshotQueryUserSnapshots(array $options = [])
- * @method InnerSnapshotSecurityMount innerSnapshotSecurityMount(array $options = [])
+ * @method InnerGetInstanceTypeModelByType innerGetInstanceTypeModelByType(array $options = [])
+ * @method InnerEcsInstanceQueryRegions innerEcsInstanceQueryRegions(array $options = [])
+ * @method InnerEcsInstanceQueryRegionNoFilter innerEcsInstanceQueryRegionNoFilter(array $options = [])
+ * @method InnerEcsGetBflagByBidAndUid innerEcsGetBflagByBidAndUid(array $options = [])
  * @method InnerSnapshotSecurityUnmount innerSnapshotSecurityUnmount(array $options = [])
- * @method InnerMaliceEcsLock innerMaliceEcsLock(array $options = [])
- * @method InnerMaliceEcsUnlock innerMaliceEcsUnlock(array $options = [])
+ * @method InnerSnapshotSecurityMount innerSnapshotSecurityMount(array $options = [])
+ * @method InnerSnapshotQueryUserSnapshots innerSnapshotQueryUserSnapshots(array $options = [])
+ * @method InnerSnapshotDescribeMountedSnapshots innerSnapshotDescribeMountedSnapshots(array $options = [])
+ * @method InnerMonitorDataDescribeInstance innerMonitorDataDescribeInstance(array $options = [])
  * @method InnerMonitorDataDescribeDisk innerMonitorDataDescribeDisk(array $options = [])
- * @method InnerInstanceDisableSLBFlow innerInstanceDisableSLBFlow(array $options = [])
- * @method InnerInstanceEnableSLBFlow innerInstanceEnableSLBFlow(array $options = [])
+ * @method InnerMonitor innerMonitor(array $options = [])
+ * @method InnerMaliceEcsUnlock innerMaliceEcsUnlock(array $options = [])
+ * @method InnerMaliceEcsLock innerMaliceEcsLock(array $options = [])
  * @method InnerInstanceQueryByParam innerInstanceQueryByParam(array $options = [])
- * @method InnerImageDetail innerImageDetail(array $options = [])
- * @method InnerImageQueryUserImages innerImageQueryUserImages(array $options = [])
+ * @method InnerInstanceEnableSLBFlow innerInstanceEnableSLBFlow(array $options = [])
+ * @method InnerInstanceDisableSLBFlow innerInstanceDisableSLBFlow(array $options = [])
  * @method InnerInstanceDetail innerInstanceDetail(array $options = [])
- * @method InnerGroupQuery innerGroupQuery(array $options = [])
- * @method InnerGroupQueryVm innerGroupQueryVm(array $options = [])
- * @method InnerGroupRemove innerGroupRemove(array $options = [])
+ * @method InnerImageQueryUserImages innerImageQueryUserImages(array $options = [])
+ * @method InnerImageDetail innerImageDetail(array $options = [])
  * @method InnerGroupRevoke innerGroupRevoke(array $options = [])
- * @method InnerGroupCreate innerGroupCreate(array $options = [])
- * @method InnerGroupDetail innerGroupDetail(array $options = [])
- * @method InnerGroupJoin innerGroupJoin(array $options = [])
+ * @method InnerGroupRemove innerGroupRemove(array $options = [])
+ * @method InnerGroupQueryVm innerGroupQueryVm(array $options = [])
+ * @method InnerGroupQuery innerGroupQuery(array $options = [])
  * @method InnerGroupLeave innerGroupLeave(array $options = [])
- * @method InnerEcsQueryNcInfoByInstanceId innerEcsQueryNcInfoByInstanceId(array $options = [])
- * @method InnerEcsRegionQueryActive innerEcsRegionQueryActive(array $options = [])
- * @method InnerEcsRegionQueryAll innerEcsRegionQueryAll(array $options = [])
+ * @method InnerGroupJoin innerGroupJoin(array $options = [])
+ * @method InnerGroupDetail innerGroupDetail(array $options = [])
+ * @method InnerGroupCreate innerGroupCreate(array $options = [])
  * @method InnerGroupAuthorize innerGroupAuthorize(array $options = [])
+ * @method InnerEcsRiskControlQuery innerEcsRiskControlQuery(array $options = [])
+ * @method InnerEcsRiskControlPunishRemove innerEcsRiskControlPunishRemove(array $options = [])
+ * @method InnerEcsRiskControlPunish innerEcsRiskControlPunish(array $options = [])
+ * @method InnerEcsRegionQueryAll innerEcsRegionQueryAll(array $options = [])
+ * @method InnerEcsRegionQueryActive innerEcsRegionQueryActive(array $options = [])
+ * @method InnerEcsQueryNcInfoByInstanceId innerEcsQueryNcInfoByInstanceId(array $options = [])
  * @method InnerEcsQueryBySerialNumber innerEcsQueryBySerialNumber(array $options = [])
- * @method InnerEcsQueryByIp innerEcsQueryByIp(array $options = [])
  * @method InnerEcsQueryByParam innerEcsQueryByParam(array $options = [])
- * @method InnerEcsQueryByInternetIp innerEcsQueryByInternetIp(array $options = [])
+ * @method InnerEcsQueryByIp innerEcsQueryByIp(array $options = [])
  * @method InnerEcsQueryByIntranetIp innerEcsQueryByIntranetIp(array $options = [])
- * @method InnerEcsIsChannelMerchant innerEcsIsChannelMerchant(array $options = [])
+ * @method InnerEcsQueryByInternetIp innerEcsQueryByInternetIp(array $options = [])
  * @method InnerEcsQueryByInstanceId innerEcsQueryByInstanceId(array $options = [])
+ * @method InnerEcsIsChannelMerchant innerEcsIsChannelMerchant(array $options = [])
  * @method InnerEcsInstanceQueryByParam innerEcsInstanceQueryByParam(array $options = [])
- * @method InnerDiskQueryByParam innerDiskQueryByParam(array $options = [])
- * @method InnerEcsCountInRegion innerEcsCountInRegion(array $options = [])
  * @method InnerEcsInstanceDetail innerEcsInstanceDetail(array $options = [])
- * @method QueryNeedKeepUsing queryNeedKeepUsing(array $options = [])
- * @method QueryUsableSnapshots queryUsableSnapshots(array $options = [])
- * @method QueryUserInfo queryUserInfo(array $options = [])
+ * @method InnerEcsFindById innerEcsFindById(array $options = [])
+ * @method InnerEcsCountInRegion innerEcsCountInRegion(array $options = [])
+ * @method InnerDiskQueryByParam innerDiskQueryByParam(array $options = [])
  * @method ReopenInstance reopenInstance(array $options = [])
- * @method NotifyRefund notifyRefund(array $options = [])
- * @method QueryAvailableRegion queryAvailableRegion(array $options = [])
- * @method QueryImageByImageId queryImageByImageId(array $options = [])
- * @method QueryImageIdByRegion queryImageIdByRegion(array $options = [])
- * @method QueryMarketImageCategory queryMarketImageCategory(array $options = [])
+ * @method QueryUserInfo queryUserInfo(array $options = [])
+ * @method QueryUsableSnapshots queryUsableSnapshots(array $options = [])
+ * @method QueryNeedKeepUsing queryNeedKeepUsing(array $options = [])
  * @method QueryMarketImages queryMarketImages(array $options = [])
- * @method KeepUsing keepUsing(array $options = [])
- * @method ListAllIzMap listAllIzMap(array $options = [])
- * @method ListBandwidthHistory listBandwidthHistory(array $options = [])
+ * @method QueryMarketImageCategory queryMarketImageCategory(array $options = [])
+ * @method QueryImageIdByRegion queryImageIdByRegion(array $options = [])
+ * @method QueryImageByImageId queryImageByImageId(array $options = [])
+ * @method QueryAvailableRegion queryAvailableRegion(array $options = [])
+ * @method NotifyRefund notifyRefund(array $options = [])
  * @method ListEcsInstanceOrderInfo listEcsInstanceOrderInfo(array $options = [])
- * @method GetActiveRegions getActiveRegions(array $options = [])
+ * @method ListBandwidthHistory listBandwidthHistory(array $options = [])
+ * @method ListAllIzMap listAllIzMap(array $options = [])
+ * @method KeepUsing keepUsing(array $options = [])
  * @method GetCommodity getCommodity(array $options = [])
+ * @method GetActiveRegions getActiveRegions(array $options = [])
  * @method DescribeEipPrice describeEipPrice(array $options = [])
  * @method CheckOrderNotPaid checkOrderNotPaid(array $options = [])
  */
@@ -267,56 +211,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ecs';
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getImageId()
- * @method string getMode()
- * @method $this withMode($value)
- * @method string getDryRun()
- * @method $this withDryRun($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method array getBid()
- */
-class InnerAuthorizeImagesToBids extends Rpc
-{
-
-    /**
-     * @param array $imageId
-     *
-     * @return $this
-     */
-    public function withImageId(array $imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        foreach ($imageId as $i => $iValue) {
-            $this->options['query']['ImageId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $bid
-     *
-     * @return $this
-     */
-    public function withBid(array $bid)
-    {
-        $this->data['Bid'] = $bid;
-        foreach ($bid as $i => $iValue) {
-            $this->options['query']['Bid.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
 }
 
 /**
@@ -387,6 +281,56 @@ class InnerLinkNetworkInterfaces extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method array getImageId()
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getBid()
+ */
+class InnerAuthorizeImagesToBids extends Rpc
+{
+
+    /**
+     * @param array $imageId
+     *
+     * @return $this
+     */
+    public function withImageId(array $imageId)
+    {
+        $this->data['ImageId'] = $imageId;
+        foreach ($imageId as $i => $iValue) {
+            $this->options['query']['ImageId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $bid
+     *
+     * @return $this
+     */
+    public function withBid(array $bid)
+    {
+        $this->data['Bid'] = $bid;
+        foreach ($bid as $i => $iValue) {
+            $this->options['query']['Bid.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getResourceOwnerAccount()
@@ -403,52 +347,31 @@ class InnerCopyImageAtSameRegion extends Rpc
 }
 
 /**
- * @method string getTagOwnerUid()
- * @method $this withTagOwnerUid($value)
- * @method string getScope()
- * @method $this withScope($value)
- * @method array getTag()
- * @method string getTagOwnerBid()
- * @method $this withTagOwnerBid($value)
- * @method array getResourceId()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getNetworkInterfaceId()
  */
-class TagResourcesSystemTags extends Rpc
+class InnerDescribeEniBdf extends Rpc
 {
 
     /**
-     * @param array $tag
+     * @param array $networkInterfaceId
      *
      * @return $this
      */
-    public function withTag(array $tag)
+    public function withNetworkInterfaceId(array $networkInterfaceId)
     {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        $this->data['NetworkInterfaceId'] = $networkInterfaceId;
+        foreach ($networkInterfaceId as $i => $iValue) {
+            $this->options['query']['NetworkInterfaceId.' . ($i + 1)] = $iValue;
         }
 
         return $this;
@@ -510,6 +433,59 @@ class UntagResourcesSystemTags extends Rpc
 }
 
 /**
+ * @method string getTagOwnerUid()
+ * @method $this withTagOwnerUid($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method array getTag()
+ * @method string getTagOwnerBid()
+ * @method $this withTagOwnerBid($value)
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class TagResourcesSystemTags extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getTagOwnerUid()
@@ -560,38 +536,6 @@ class ListTagResources extends Rpc
         $this->data['ResourceId'] = $resourceId;
         foreach ($resourceId as $i => $iValue) {
             $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method array getNetworkInterfaceId()
- */
-class InnerDescribeEniBdf extends Rpc
-{
-
-    /**
-     * @param array $networkInterfaceId
-     *
-     * @return $this
-     */
-    public function withNetworkInterfaceId(array $networkInterfaceId)
-    {
-        $this->data['NetworkInterfaceId'] = $networkInterfaceId;
-        foreach ($networkInterfaceId as $i => $iValue) {
-            $this->options['query']['NetworkInterfaceId.' . ($i + 1)] = $iValue;
         }
 
         return $this;
@@ -741,66 +685,6 @@ class InnerQueryInstanceCreatedByProduct extends Rpc
 }
 
 /**
- * @method string getProduct()
- * @method $this withProduct($value)
- * @method string getAttributeValue()
- * @method $this withAttributeValue($value)
- * @method string getAttributeName()
- * @method $this withAttributeName($value)
- * @method string getMaxItems()
- * @method $this withMaxItems($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class DescribeResourceRecommendFilters extends Rpc
-{
-}
-
-/**
- * @method array getFilter()
- * @method string getProduct()
- * @method $this withProduct($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
- * @method string getMaxItems()
- * @method $this withMaxItems($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class DescribeResources extends Rpc
-{
-
-    /**
-     * @param array $filter
-     *
-     * @return $this
-     */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.AttributeValue'] = $depth1Value['AttributeValue'];
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.AttributeName'] = $depth1Value['AttributeName'];
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Operation'] = $depth1Value['Operation'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProduct()
- * @method $this withProduct($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class DescribeResourceFilterAttributes extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
@@ -831,326 +715,6 @@ class InnerSendMessage extends Rpc
  * @method $this withOwnerId($value)
  */
 class InnerReleaseDedicatedHost extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getEniNo()
- * @method $this withEniNo($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- */
-class InnerQueryEniQosGroupByEni extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class InnerQueryEniQosGroupByInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method array getCheckId()
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeAdvisorCheckSummaries extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $checkId
-     *
-     * @return $this
-     */
-    public function withCheckId(array $checkId)
-    {
-        $this->data['CheckId'] = $checkId;
-        foreach ($checkId as $i => $iValue) {
-            $this->options['query']['CheckId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getLanguage()
- * @method $this withLanguage($value)
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method array getCheckId()
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- */
-class DescribeAdvisorChecks extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $checkId
-     *
-     * @return $this
-     */
-    public function withCheckId(array $checkId)
-    {
-        $this->data['CheckId'] = $checkId;
-        foreach ($checkId as $i => $iValue) {
-            $this->options['query']['CheckId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCheckId()
- * @method $this withCheckId($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeAdvisorCheckItems extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getOwnerBid()
- * @method $this withOwnerBid($value)
- * @method string getOwnerUid()
- * @method $this withOwnerUid($value)
- * @method string getTagValue()
- * @method $this withTagValue($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getRelatedKey()
- * @method $this withRelatedKey($value)
- */
-class DescribeResourcesBySystemTag extends Rpc
 {
 }
 
@@ -1271,92 +835,21 @@ class InnerDescribeTags extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getOwnerBid()
  * @method $this withOwnerBid($value)
- * @method string getScope()
- * @method $this withScope($value)
  * @method string getOwnerUid()
  * @method $this withOwnerUid($value)
- * @method array getResourceId()
+ * @method string getTagValue()
+ * @method $this withTagValue($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getRelatedResourceId()
- * @method $this withRelatedResourceId($value)
- * @method string getRelatedProduct()
- * @method $this withRelatedProduct($value)
+ * @method string getRelatedKey()
+ * @method $this withRelatedKey($value)
  */
-class TagResourceVSwitch extends Rpc
+class DescribeResourcesBySystemTag extends Rpc
 {
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getOwnerBid()
- * @method $this withOwnerBid($value)
- * @method array getTag()
- * @method string getOwnerUid()
- * @method $this withOwnerUid($value)
- * @method array getResourceId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class InnerDeleteTags extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
 }
 
 /**
@@ -1402,331 +895,18 @@ class AddSystemTag extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getOwnerBid()
- * @method $this withOwnerBid($value)
- * @method string getOwnerUid()
- * @method $this withOwnerUid($value)
- * @method array getResourceId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getRelatedResourceId()
- * @method $this withRelatedResourceId($value)
- * @method string getRelatedProduct()
- * @method $this withRelatedProduct($value)
- */
-class DescribeResourcesByTagVsw extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getAttributeName()
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getBid()
- * @method $this withBid($value)
- */
-class OpsDescribeAccountAttributes extends Rpc
-{
-
-    /**
-     * @param array $attributeName
-     *
-     * @return $this
-     */
-    public function withAttributeName(array $attributeName)
-    {
-        $this->data['AttributeName'] = $attributeName;
-        foreach ($attributeName as $i => $iValue) {
-            $this->options['query']['AttributeName.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTx()
- * @method $this withTx($value)
- * @method string getRx()
- * @method $this withRx($value)
- * @method string getRxPps()
- * @method $this withRxPps($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getQosGroupName()
- * @method $this withQosGroupName($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- * @method string getTxPps()
- * @method $this withTxPps($value)
- */
-class InnerModifyEniQosGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getQosGroupName()
- * @method $this withQosGroupName($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- */
-class InnerDescribeEniQosGroupInfo extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getEniNo()
- * @method $this withEniNo($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getQosGroupName()
- * @method $this withQosGroupName($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- */
-class InnerJoinEniQosGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getEniNo()
- * @method $this withEniNo($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- */
-class InnerLeaveEniQosGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getEniNo()
- * @method $this withEniNo($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- */
-class InnerDescribeEniQosGroupByEni extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class InnerDescribeEniQosGroupByInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTx()
- * @method $this withTx($value)
- * @method string getRx()
- * @method $this withRx($value)
- * @method string getRxPps()
- * @method $this withRxPps($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getQosGroupName()
- * @method $this withQosGroupName($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getTxPps()
- * @method $this withTxPps($value)
- */
-class InnerCreateEniQosGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getQosGroupName()
- * @method $this withQosGroupName($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- */
-class InnerDeleteEniQosGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getScope()
- * @method $this withScope($value)
- * @method array getTag()
- * @method string getOwnerUid()
- * @method $this withOwnerUid($value)
- * @method array getResourceId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class AddSystemTags extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getIzNo()
- * @method string getImageId()
- * @method string getIsNeedDetail()
- * @method string getIoOptimized()
- * @method string getChannel()
- * @method string getVpcInstanceId()
- * @method string getOperator()
- * @method string getVswInstanceId()
- * @method string getInnerIps()
- * @method string getBizStatus()
- * @method string getDeviceAvailable()
- * @method string getPageSize()
- * @method string getInstanceType()
- * @method string getAliUid()
- * @method string getPublicIps()
- * @method string getProxyId()
- * @method string getPrivateIps()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getInstanceTypeFamily()
+ * @method string getCallerBid()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getTags()
- * @method string getEcsNetworkType()
- * @method string getAsync()
- * @method string getInstanceIds()
- * @method string getPageNo()
- * @method string getFuzzyInstanceName()
- * @method string getBid()
- * @method string getGroupNo()
- * @method string getStatus()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCallerUid()
  */
-class InnerEcsInstanceQueryByParam4QT extends Rpc
+class QueryEcsElasticUpgradeInfo extends Rpc
 {
 
     /**
@@ -1734,10 +914,10 @@ class InnerEcsInstanceQueryByParam4QT extends Rpc
      *
      * @return $this
      */
-    public function withIzNo($value)
+    public function withCallerBid($value)
     {
-        $this->data['IzNo'] = $value;
-        $this->options['query']['izNo'] = $value;
+        $this->data['CallerBid'] = $value;
+        $this->options['query']['callerBid'] = $value;
 
         return $this;
     }
@@ -1747,348 +927,10 @@ class InnerEcsInstanceQueryByParam4QT extends Rpc
      *
      * @return $this
      */
-    public function withImageId($value)
+    public function withCallerUid($value)
     {
-        $this->data['ImageId'] = $value;
-        $this->options['query']['imageId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIsNeedDetail($value)
-    {
-        $this->data['IsNeedDetail'] = $value;
-        $this->options['query']['isNeedDetail'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIoOptimized($value)
-    {
-        $this->data['IoOptimized'] = $value;
-        $this->options['query']['ioOptimized'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVpcInstanceId($value)
-    {
-        $this->data['VpcInstanceId'] = $value;
-        $this->options['query']['vpcInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVswInstanceId($value)
-    {
-        $this->data['VswInstanceId'] = $value;
-        $this->options['query']['vswInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInnerIps($value)
-    {
-        $this->data['InnerIps'] = $value;
-        $this->options['query']['innerIps'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBizStatus($value)
-    {
-        $this->data['BizStatus'] = $value;
-        $this->options['query']['bizStatus'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeviceAvailable($value)
-    {
-        $this->data['DeviceAvailable'] = $value;
-        $this->options['query']['deviceAvailable'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceType($value)
-    {
-        $this->data['InstanceType'] = $value;
-        $this->options['query']['instanceType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPublicIps($value)
-    {
-        $this->data['PublicIps'] = $value;
-        $this->options['query']['publicIps'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPrivateIps($value)
-    {
-        $this->data['PrivateIps'] = $value;
-        $this->options['query']['privateIps'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceTypeFamily($value)
-    {
-        $this->data['InstanceTypeFamily'] = $value;
-        $this->options['query']['instanceTypeFamily'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTags($value)
-    {
-        $this->data['Tags'] = $value;
-        $this->options['query']['tags'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcsNetworkType($value)
-    {
-        $this->data['EcsNetworkType'] = $value;
-        $this->options['query']['ecsNetworkType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceIds($value)
-    {
-        $this->data['InstanceIds'] = $value;
-        $this->options['query']['instanceIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNo($value)
-    {
-        $this->data['PageNo'] = $value;
-        $this->options['query']['pageNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFuzzyInstanceName($value)
-    {
-        $this->data['FuzzyInstanceName'] = $value;
-        $this->options['query']['fuzzyInstanceName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupNo($value)
-    {
-        $this->data['GroupNo'] = $value;
-        $this->options['query']['groupNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStatus($value)
-    {
-        $this->data['Status'] = $value;
-        $this->options['query']['status'] = $value;
+        $this->data['CallerUid'] = $value;
+        $this->options['query']['callerUid'] = $value;
 
         return $this;
     }
@@ -2151,22 +993,6 @@ class InnerCheckEniEipOperate extends Rpc
  * @method $this withOperateType($value)
  */
 class InnerCheckEniBindEip extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getEniNo()
- * @method $this withEniNo($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class InnerCheckEniUnbindEip extends Rpc
 {
 }
 
@@ -2331,751 +1157,31 @@ class DescribeGroupHighRiskAcl extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getProxyId()
+ * @method array getDiskId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getToken()
  */
-class DescribeHighRiskGroupInfo extends Rpc
+class InnerQueryLazyLoadProgress extends Rpc
 {
 
     /**
-     * @param string $value
+     * @param array $diskId
      *
      * @return $this
      */
-    public function withChannel($value)
+    public function withDiskId(array $diskId)
     {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getAlarmLevel()
- * @method $this withAlarmLevel($value)
- */
-class DescribeHighRiskGroupAcl extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- */
-class DescribeHighRiskGroupAclStat extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCallerBid()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getCallerUid()
- */
-class QueryEcsElasticUpgradeInfo extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerBid($value)
-    {
-        $this->data['CallerBid'] = $value;
-        $this->options['query']['callerBid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerUid($value)
-    {
-        $this->data['CallerUid'] = $value;
-        $this->options['query']['callerUid'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- */
-class DescribeDangerGroupInfo extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCallerBid()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getCallerUid()
- */
-class DescribeElasticUpgradeInfo extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerBid($value)
-    {
-        $this->data['CallerBid'] = $value;
-        $this->options['query']['callerBid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerUid($value)
-    {
-        $this->data['CallerUid'] = $value;
-        $this->options['query']['callerUid'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- */
-class DescribeDangerGroupAclStat extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getAlarmLevel()
- * @method $this withAlarmLevel($value)
- */
-class DescribeDangerGroupAcl extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getAttributeName()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- */
-class DescribeAccountAttributes extends Rpc
-{
-
-    /**
-     * @param array $attributeName
-     *
-     * @return $this
-     */
-    public function withAttributeName(array $attributeName)
-    {
-        $this->data['AttributeName'] = $attributeName;
-        foreach ($attributeName as $i => $iValue) {
-            $this->options['query']['AttributeName.' . ($i + 1)] = $iValue;
+        $this->data['DiskId'] = $diskId;
+        foreach ($diskId as $i => $iValue) {
+            $this->options['query']['DiskId.' . ($i + 1)] = $iValue;
         }
 
         return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getAlarmLevel()
- * @method $this withAlarmLevel($value)
- */
-class InnerEcsDescribeDangerGroupVmCount extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getAlarmLevel()
- * @method $this withAlarmLevel($value)
- */
-class InnerEcsDescribeDangerGroupAcl extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCountry()
- * @method $this withCountry($value)
- * @method string getHid()
- * @method $this withHid($value)
- * @method string getSuccess()
- * @method $this withSuccess($value)
- * @method string getInterrupt()
- * @method $this withInterrupt($value)
- * @method string getGmtWakeup()
- * @method $this withGmtWakeup($value)
- * @method string getPk()
- * @method $this withPk($value)
- * @method string getInvoker()
- * @method $this withInvoker($value)
- * @method string getBid()
- * @method $this withBid($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- * @method string getTaskExtraData()
- * @method $this withTaskExtraData($value)
- * @method string getTaskIdentifier()
- * @method $this withTaskIdentifier($value)
- */
-class GdprLogicalDeleteResource extends Rpc
-{
 }
 
 /**
@@ -3103,6 +1209,34 @@ class GdprLogicalDeleteResource extends Rpc
  * @method $this withTaskIdentifier($value)
  */
 class GdprPhysicalDeleteResource extends Rpc
+{
+}
+
+/**
+ * @method string getCountry()
+ * @method $this withCountry($value)
+ * @method string getHid()
+ * @method $this withHid($value)
+ * @method string getSuccess()
+ * @method $this withSuccess($value)
+ * @method string getInterrupt()
+ * @method $this withInterrupt($value)
+ * @method string getGmtWakeup()
+ * @method $this withGmtWakeup($value)
+ * @method string getPk()
+ * @method $this withPk($value)
+ * @method string getInvoker()
+ * @method $this withInvoker($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getTaskExtraData()
+ * @method $this withTaskExtraData($value)
+ * @method string getTaskIdentifier()
+ * @method $this withTaskIdentifier($value)
+ */
+class GdprLogicalDeleteResource extends Rpc
 {
 }
 
@@ -3143,493 +1277,6 @@ class GdprCheckResource extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getBigRegion()
- * @method $this withBigRegion($value)
- * @method string getDstGroupId()
- * @method $this withDstGroupId($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getDs()
- * @method $this withDs($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getProxyId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getAlarmLevel()
- * @method $this withAlarmLevel($value)
- */
-class InnerEcsDescribeDangerAcl extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getEventId()
- * @method $this withEventId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEffectTime()
- * @method $this withEffectTime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimitTime()
- * @method $this withLimitTime($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPlanTime()
- * @method $this withPlanTime($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getExpireTime()
- * @method $this withExpireTime($value)
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEventType()
- * @method $this withEventType($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeEvents extends Rpc
-{
-}
-
-/**
- * @method string getEventId()
- * @method $this withEventId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBid()
- * @method $this withBid($value)
- */
-class DescribeEventDetail extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getHpcClusterId()
- * @method $this withHpcClusterId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getPageNo()
- * @method $this withPageNo($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getProxyId()
- */
-class InnerEcsQueryByHpcClusterId extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getLaunchData()
- * @method $this withLaunchData($value)
- * @method string getLinkedSecurityGroupId()
- * @method $this withLinkedSecurityGroupId($value)
- * @method string getAssumeRoleAccessKeySecret()
- * @method $this withAssumeRoleAccessKeySecret($value)
- * @method string getAssumeRoleSecurityToken()
- * @method $this withAssumeRoleSecurityToken($value)
- * @method string getHostName()
- * @method $this withHostName($value)
- * @method string getPassword()
- * @method $this withPassword($value)
- * @method string getMem()
- * @method $this withMem($value)
- * @method array getTag()
- * @method string getAssumeRoleAccessKeyId()
- * @method $this withAssumeRoleAccessKeyId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCpu()
- * @method $this withCpu($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceName()
- * @method $this withInstanceName($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getLinkedVSwitchId()
- * @method $this withLinkedVSwitchId($value)
- */
-class LaunchBazaarInstance extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class TerminateBazaarInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceIds()
- * @method $this withInstanceIds($value)
- */
-class DescribeBazaarInstances extends Rpc
-{
-}
-
-/**
- * @method string getGrayBid()
- * @method $this withGrayBid($value)
- * @method string getGrayAliUid()
- * @method $this withGrayAliUid($value)
- * @method array getEcsInstanceId()
- * @method string getExpression()
- * @method $this withExpression($value)
- * @method array getVSwitchId()
- */
-class InnerCreateNcExpression extends Rpc
-{
-
-    /**
-     * @param array $ecsInstanceId
-     *
-     * @return $this
-     */
-    public function withEcsInstanceId(array $ecsInstanceId)
-    {
-        $this->data['EcsInstanceId'] = $ecsInstanceId;
-        foreach ($ecsInstanceId as $i => $iValue) {
-            $this->options['query']['EcsInstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId(array $vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        foreach ($vSwitchId as $i => $iValue) {
-            $this->options['query']['VSwitchId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getGrayBid()
- * @method $this withGrayBid($value)
- * @method string getGrayAliUid()
- * @method $this withGrayAliUid($value)
- * @method array getEcsInstanceId()
- * @method array getVSwitchId()
- */
-class InnerDeleteNcExpression extends Rpc
-{
-
-    /**
-     * @param array $ecsInstanceId
-     *
-     * @return $this
-     */
-    public function withEcsInstanceId(array $ecsInstanceId)
-    {
-        $this->data['EcsInstanceId'] = $ecsInstanceId;
-        foreach ($ecsInstanceId as $i => $iValue) {
-            $this->options['query']['EcsInstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId(array $vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        foreach ($vSwitchId as $i => $iValue) {
-            $this->options['query']['VSwitchId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getGrayBid()
- * @method $this withGrayBid($value)
- * @method string getGrayAliUid()
- * @method $this withGrayAliUid($value)
- * @method array getEcsInstanceId()
- * @method string getExpression()
- * @method $this withExpression($value)
- * @method array getVSwitchId()
- */
-class InnerDescribeNcExpression extends Rpc
-{
-
-    /**
-     * @param array $ecsInstanceId
-     *
-     * @return $this
-     */
-    public function withEcsInstanceId(array $ecsInstanceId)
-    {
-        $this->data['EcsInstanceId'] = $ecsInstanceId;
-        foreach ($ecsInstanceId as $i => $iValue) {
-            $this->options['query']['EcsInstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $vSwitchId
-     *
-     * @return $this
-     */
-    public function withVSwitchId(array $vSwitchId)
-    {
-        $this->data['VSwitchId'] = $vSwitchId;
-        foreach ($vSwitchId as $i => $iValue) {
-            $this->options['query']['VSwitchId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getNetworkInterfaceName()
- * @method $this withNetworkInterfaceName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getPrimaryIpAddress()
- * @method $this withPrimaryIpAddress($value)
- * @method array getNetworkInterfaceId()
- * @method string getBid()
- * @method $this withBid($value)
- */
-class InnerDescribeEni extends Rpc
-{
-
-    /**
-     * @param array $networkInterfaceId
-     *
-     * @return $this
-     */
-    public function withNetworkInterfaceId(array $networkInterfaceId)
-    {
-        $this->data['NetworkInterfaceId'] = $networkInterfaceId;
-        foreach ($networkInterfaceId as $i => $iValue) {
-            $this->options['query']['NetworkInterfaceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getInstanceOwnerId()
  * @method $this withInstanceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -3657,6 +1304,56 @@ class InnerInstallCloudAssistant extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getEventId()
+ * @method $this withEventId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPlanTime()
+ * @method $this withPlanTime($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getExpireTime()
+ * @method $this withExpireTime($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEventType()
+ * @method $this withEventType($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeEvents extends Rpc
+{
+}
+
+/**
+ * @method string getEventId()
+ * @method $this withEventId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ */
+class DescribeEventDetail extends Rpc
+{
 }
 
 /**
@@ -3866,6 +1563,264 @@ class DescribePrice extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getHpcClusterId()
+ * @method $this withHpcClusterId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getProxyId()
+ */
+class InnerEcsQueryByHpcClusterId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGrayBid()
+ * @method $this withGrayBid($value)
+ * @method string getGrayAliUid()
+ * @method $this withGrayAliUid($value)
+ * @method array getEcsInstanceId()
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method array getVSwitchId()
+ */
+class InnerDescribeNcExpression extends Rpc
+{
+
+    /**
+     * @param array $ecsInstanceId
+     *
+     * @return $this
+     */
+    public function withEcsInstanceId(array $ecsInstanceId)
+    {
+        $this->data['EcsInstanceId'] = $ecsInstanceId;
+        foreach ($ecsInstanceId as $i => $iValue) {
+            $this->options['query']['EcsInstanceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $vSwitchId
+     *
+     * @return $this
+     */
+    public function withVSwitchId(array $vSwitchId)
+    {
+        $this->data['VSwitchId'] = $vSwitchId;
+        foreach ($vSwitchId as $i => $iValue) {
+            $this->options['query']['VSwitchId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGrayBid()
+ * @method $this withGrayBid($value)
+ * @method string getGrayAliUid()
+ * @method $this withGrayAliUid($value)
+ * @method array getEcsInstanceId()
+ * @method array getVSwitchId()
+ */
+class InnerDeleteNcExpression extends Rpc
+{
+
+    /**
+     * @param array $ecsInstanceId
+     *
+     * @return $this
+     */
+    public function withEcsInstanceId(array $ecsInstanceId)
+    {
+        $this->data['EcsInstanceId'] = $ecsInstanceId;
+        foreach ($ecsInstanceId as $i => $iValue) {
+            $this->options['query']['EcsInstanceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $vSwitchId
+     *
+     * @return $this
+     */
+    public function withVSwitchId(array $vSwitchId)
+    {
+        $this->data['VSwitchId'] = $vSwitchId;
+        foreach ($vSwitchId as $i => $iValue) {
+            $this->options['query']['VSwitchId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGrayBid()
+ * @method $this withGrayBid($value)
+ * @method string getGrayAliUid()
+ * @method $this withGrayAliUid($value)
+ * @method array getEcsInstanceId()
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method array getVSwitchId()
+ */
+class InnerCreateNcExpression extends Rpc
+{
+
+    /**
+     * @param array $ecsInstanceId
+     *
+     * @return $this
+     */
+    public function withEcsInstanceId(array $ecsInstanceId)
+    {
+        $this->data['EcsInstanceId'] = $ecsInstanceId;
+        foreach ($ecsInstanceId as $i => $iValue) {
+            $this->options['query']['EcsInstanceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $vSwitchId
+     *
+     * @return $this
+     */
+    public function withVSwitchId(array $vSwitchId)
+    {
+        $this->data['VSwitchId'] = $vSwitchId;
+        foreach ($vSwitchId as $i => $iValue) {
+            $this->options['query']['VSwitchId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getNetworkInterfaceName()
+ * @method $this withNetworkInterfaceName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPrimaryIpAddress()
+ * @method $this withPrimaryIpAddress($value)
+ * @method array getNetworkInterfaceId()
+ * @method string getBid()
+ * @method $this withBid($value)
+ */
+class InnerDescribeEni extends Rpc
+{
+
+    /**
+     * @param array $networkInterfaceId
+     *
+     * @return $this
+     */
+    public function withNetworkInterfaceId(array $networkInterfaceId)
+    {
+        $this->data['NetworkInterfaceId'] = $networkInterfaceId;
+        foreach ($networkInterfaceId as $i => $iValue) {
+            $this->options['query']['NetworkInterfaceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAliUid()
  * @method $this withAliUid($value)
  * @method string getTimestamp()
@@ -3946,6 +1901,46 @@ class ModifySystemEventAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEffectTime()
+ * @method $this withEffectTime($value)
+ * @method string getLimitTime()
+ * @method $this withLimitTime($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEventType()
+ * @method $this withEventType($value)
+ */
+class CreateSystemEvent extends Rpc
+{
+}
+
+/**
+ * @method string getEventId()
+ * @method $this withEventId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CancelSystemEvent extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTargetInstanceType()
  * @method $this withTargetInstanceType($value)
  * @method string getMigrateAcrossZone()
@@ -3977,56 +1972,6 @@ class DescribeResourceModificationCapacity extends Rpc
         $this->data['InstanceId'] = $instanceId;
         foreach ($instanceId as $i => $iValue) {
             $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getIoOptimized()
- * @method $this withIoOptimized($value)
- * @method array getDataDiskCategory()
- * @method string getSystemDiskCategory()
- * @method $this withSystemDiskCategory($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getNetworkCategory()
- * @method $this withNetworkCategory($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
- * @method string getAmount()
- * @method $this withAmount($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSpotStrategy()
- * @method $this withSpotStrategy($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getBid()
- * @method $this withBid($value)
- */
-class DescribeResourceCreationCapacity extends Rpc
-{
-
-    /**
-     * @param array $dataDiskCategory
-     *
-     * @return $this
-     */
-    public function withDataDiskCategory(array $dataDiskCategory)
-    {
-        $this->data['DataDiskCategory'] = $dataDiskCategory;
-        foreach ($dataDiskCategory as $i => $iValue) {
-            $this->options['query']['DataDiskCategory.' . ($i + 1)] = $iValue;
         }
 
         return $this;
@@ -4114,63 +2059,53 @@ class InnerModifyEntityConstraints extends Rpc
 }
 
 /**
- * @method string getEntityKey()
- * @method $this withEntityKey($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getEntityProperties()
- * @method $this withEntityProperties($value)
+ * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
+ * @method array getDataDiskCategory()
+ * @method string getSystemDiskCategory()
+ * @method $this withSystemDiskCategory($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getNetworkCategory()
+ * @method $this withNetworkCategory($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getAmount()
+ * @method $this withAmount($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
+ * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getBid()
+ * @method $this withBid($value)
  */
-class InnerAddEntityConstraints extends Rpc
+class DescribeResourceCreationCapacity extends Rpc
 {
-}
 
-/**
- * @method string getEntityKey()
- * @method $this withEntityKey($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class InnerDeleteEntityConstraints extends Rpc
-{
-}
+    /**
+     * @param array $dataDiskCategory
+     *
+     * @return $this
+     */
+    public function withDataDiskCategory(array $dataDiskCategory)
+    {
+        $this->data['DataDiskCategory'] = $dataDiskCategory;
+        foreach ($dataDiskCategory as $i => $iValue) {
+            $this->options['query']['DataDiskCategory.' . ($i + 1)] = $iValue;
+        }
 
-/**
- * @method string getEntityKey()
- * @method $this withEntityKey($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEntityProperties()
- * @method $this withEntityProperties($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getReplaceAll()
- * @method $this withReplaceAll($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class InnerUpdateEntityConstraints extends Rpc
-{
+        return $this;
+    }
 }
 
 /**
@@ -4308,226 +2243,6 @@ class ResourceOwnershipTransfer extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getToVSwitchId()
- * @method $this withToVSwitchId($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getChannel()
- * @method string getOperator()
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getProxyId()
- * @method string getDryRun()
- * @method $this withDryRun($value)
- * @method array getPrivateIps()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getKeepPublicIp()
- * @method $this withKeepPublicIp($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToken()
- * @method string getNewOwnerId()
- * @method $this withNewOwnerId($value)
- * @method string getToSecurityGroupId()
- * @method $this withToSecurityGroupId($value)
- * @method array getInstanceIds()
- * @method string getAppKey()
- * @method string getBid()
- * @method $this withBid($value)
- */
-class InstanceOwnershipTransfer extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $privateIps
-     *
-     * @return $this
-     */
-    public function withPrivateIps(array $privateIps)
-    {
-        $this->data['PrivateIps'] = $privateIps;
-        foreach ($privateIps as $i => $iValue) {
-            $this->options['query']['PrivateIps.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $instanceIds
-     *
-     * @return $this
-     */
-    public function withInstanceIds(array $instanceIds)
-    {
-        $this->data['InstanceIds'] = $instanceIds;
-        foreach ($instanceIds as $i => $iValue) {
-            $this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppKey($value)
-    {
-        $this->data['AppKey'] = $value;
-        $this->options['query']['appKey'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getDiskId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class InnerQueryLazyLoadProgress extends Rpc
-{
-
-    /**
-     * @param array $diskId
-     *
-     * @return $this
-     */
-    public function withDiskId(array $diskId)
-    {
-        $this->data['DiskId'] = $diskId;
-        foreach ($diskId as $i => $iValue) {
-            $this->options['query']['DiskId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getAvailableZoneId()
- * @method $this withAvailableZoneId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class InnerListClusterFlowCtrls extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEffectTime()
- * @method $this withEffectTime($value)
- * @method string getLimitTime()
- * @method $this withLimitTime($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEventType()
- * @method $this withEventType($value)
- */
-class CreateSystemEvent extends Rpc
-{
-}
-
-/**
- * @method string getActionType()
- * @method $this withActionType($value)
- * @method string getEntityKey()
- * @method $this withEntityKey($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class InnerQueryConstraints extends Rpc
-{
-}
-
-/**
  * @method string getActionType()
  * @method $this withActionType($value)
  * @method string getResourceOwnerId()
@@ -4560,6 +2275,26 @@ class InnerQueryExplanation extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getActionType()
+ * @method $this withActionType($value)
+ * @method string getEntityKey()
+ * @method $this withEntityKey($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEntityType()
+ * @method $this withEntityType($value)
+ */
+class InnerQueryConstraints extends Rpc
+{
 }
 
 /**
@@ -4599,16 +2334,12 @@ class DescribeResourcesModification extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getDataDiskCategory()
- * @method $this withDataDiskCategory($value)
- * @method string getSystemDiskCategory()
- * @method $this withSystemDiskCategory($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
- * @method string getNetworkCategory()
- * @method $this withNetworkCategory($value)
- * @method string getFrom()
- * @method $this withFrom($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -4617,34 +2348,8 @@ class DescribeResourcesModification extends Rpc
  * @method $this withOperationType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDestinationResource()
- * @method $this withDestinationResource($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getMigrate()
- * @method $this withMigrate($value)
  */
-class DescribeAvailableResourceForModify extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBid()
- * @method $this withBid($value)
- */
-class InnerQueryEcsPermit extends Rpc
+class DescribeBandwidthLimitation extends Rpc
 {
 }
 
@@ -4693,68 +2398,6 @@ class DescribeAvailableResource extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOperationType()
- * @method $this withOperationType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeBandwidthLimitation extends Rpc
-{
-}
-
-/**
- * @method string getEventId()
- * @method $this withEventId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CancelSystemEvent extends Rpc
-{
-}
-
-/**
- * @method string getEventId()
- * @method $this withEventId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNewPlanTime()
- * @method $this withNewPlanTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getNewExpireTime()
- * @method $this withNewExpireTime($value)
- */
-class ModifySystemEventPlanTime extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getResourceOwnerAccount()
@@ -4782,72 +2425,6 @@ class InnerDetailInstanceFamilyDefine extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- */
-class InnerBatchAttachClassicLinkVpc extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDuration()
- * @method $this withDuration($value)
- * @method string getPeriodUnit()
- * @method $this withPeriodUnit($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAutoRenew()
- * @method $this withAutoRenew($value)
- * @method string getRenewalStatus()
- * @method $this withRenewalStatus($value)
- * @method string getAliuid()
- * @method $this withAliuid($value)
- * @method string getBid()
- * @method $this withBid($value)
- */
-class ModifyInstanceAutoRenewAttributeInner extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getGroupNo()
- * @method $this withGroupNo($value)
- */
-class InnerBatchAttchClassicLinkVpc extends Rpc
-{
 }
 
 /**
@@ -4951,90 +2528,6 @@ class CheckIsDefaultVpcUser extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getAppKey()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerCheckIsDefaultVpcUser extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppKey($value)
-    {
-        $this->data['AppKey'] = $value;
-        $this->options['query']['appKey'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getChannel()
  * @method string getOperator()
  * @method string getAliUid()
@@ -5127,62 +2620,6 @@ class InnerEcsDescribeVPortInfo extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- */
-class InnerQueryCopyImageSupportRegions extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getArgeementType()
- * @method $this withArgeementType($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBid()
- * @method $this withBid($value)
- */
-class CancelAgreement extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getArgeementType()
- * @method $this withArgeementType($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBid()
- * @method $this withBid($value)
- */
-class SignAgreement extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getCallerBid()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
@@ -5218,6 +2655,62 @@ class QueryEcsInstanceOrderInfo extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegionNo()
+ * @method $this withRegionNo($value)
+ */
+class InnerQueryCopyImageSupportRegions extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getArgeementType()
+ * @method $this withArgeementType($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ */
+class SignAgreement extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getArgeementType()
+ * @method $this withArgeementType($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ */
+class CancelAgreement extends Rpc
+{
 }
 
 /**
@@ -5325,12 +2818,26 @@ class InnerDescribeInstanceTypes extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getInstanceTypeFamily()
- * @method $this withInstanceTypeFamily($value)
+ * @method string getModifyType()
+ * @method $this withModifyType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeInstanceTypesInner extends Rpc
+class InnerModifySnapshotBusinessStatus extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class InnerDescribeSnapshotBusinessStatus extends Rpc
 {
 }
 
@@ -5412,162 +2919,6 @@ class InnerEcsResourceGroupQueryByResources extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class InnerDescribeSnapshotBusinessStatus extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getModifyType()
- * @method $this withModifyType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class InnerModifySnapshotBusinessStatus extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getNetworkType()
- * @method $this withNetworkType($value)
- * @method string getCommodityCode()
- * @method $this withCommodityCode($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getScene()
- * @method $this withScene($value)
- * @method string getRegionNo()
- * @method $this withRegionNo($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getBid()
- * @method $this withBid($value)
- * @method string getProxyId()
- */
-class QueryRecommendInstanceType extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getMigrate()
- * @method $this withMigrate($value)
- */
-class QueryResourceModify extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPassword()
- * @method $this withPassword($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getAutoStartInstance()
- * @method $this withAutoStartInstance($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDiskIds()
- * @method $this withDiskIds($value)
- * @method string getSecurityEnhancementStrategy()
- * @method $this withSecurityEnhancementStrategy($value)
- * @method string getKeyPairName()
- * @method $this withKeyPairName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ReInitDisks extends Rpc
-{
 }
 
 /**
@@ -5677,31 +3028,43 @@ class InnerEcsRegionQueryByBid extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method array getInstanceId()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getMigrate()
+ * @method $this withMigrate($value)
  */
-class ListBoundMarketImage extends Rpc
+class QueryResourceModify extends Rpc
 {
+}
 
-    /**
-     * @param array $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId(array $instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        foreach ($instanceId as $i => $iValue) {
-            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAutoStartInstance()
+ * @method $this withAutoStartInstance($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDiskIds()
+ * @method $this withDiskIds($value)
+ * @method string getSecurityEnhancementStrategy()
+ * @method $this withSecurityEnhancementStrategy($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ReInitDisks extends Rpc
+{
 }
 
 /**
@@ -5733,6 +3096,312 @@ class InnerEcsIsClassicLinkVpcUser extends Rpc
     {
         $this->data['SerialNumber'] = $value;
         $this->options['query']['serialNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTransitionTime()
+ * @method $this withTransitionTime($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIsQueryUnAppointed()
+ * @method $this withIsQueryUnAppointed($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getNetworkTransType()
+ * @method $this withNetworkTransType($value)
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ * @method string getIsExpireTransition()
+ * @method $this withIsExpireTransition($value)
+ * @method string getProxyId()
+ */
+class InnerEcsTransitionQuery extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTransitionTime()
+ * @method $this withTransitionTime($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getNetworkTransType()
+ * @method $this withNetworkTransType($value)
+ * @method string getAsync()
+ * @method array getInstanceId()
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method string getBid()
+ * @method $this withBid($value)
+ * @method string getIsExpireTransition()
+ * @method $this withIsExpireTransition($value)
+ * @method string getProxyId()
+ */
+class InnerEcsTransitionModify extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+    public function withInstanceId(array $instanceId)
+    {
+        $this->data['InstanceId'] = $instanceId;
+        foreach ($instanceId as $i => $iValue) {
+            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsExpireRegionQuery extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
 
         return $this;
     }
@@ -6095,312 +3764,6 @@ class InnerAntInstanceConvertToPrepaid extends Rpc
 }
 
 /**
- * @method string getAsync()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRequestId()
- * @method $this withRequestId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsExpireRegionQuery extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTransitionTime()
- * @method $this withTransitionTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getNetworkTransType()
- * @method $this withNetworkTransType($value)
- * @method string getAsync()
- * @method array getInstanceId()
- * @method string getRequestId()
- * @method $this withRequestId($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getBid()
- * @method $this withBid($value)
- * @method string getIsExpireTransition()
- * @method $this withIsExpireTransition($value)
- * @method string getProxyId()
- */
-class InnerEcsTransitionModify extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId(array $instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        foreach ($instanceId as $i => $iValue) {
-            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTransitionTime()
- * @method $this withTransitionTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getIsQueryUnAppointed()
- * @method $this withIsQueryUnAppointed($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getNetworkTransType()
- * @method $this withNetworkTransType($value)
- * @method string getAsync()
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getRequestId()
- * @method $this withRequestId($value)
- * @method string getPageNo()
- * @method $this withPageNo($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method string getBid()
- * @method $this withBid($value)
- * @method string getIsExpireTransition()
- * @method $this withIsExpireTransition($value)
- * @method string getProxyId()
- */
-class InnerEcsTransitionQuery extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getCommodity()
  * @method $this withCommodity($value)
  * @method string getResourceOwnerId()
@@ -6423,6 +3786,48 @@ class InnerEcsTransitionQuery extends Rpc
  * @method $this withOrderType($value)
  */
 class InnerRemedyRenewInstance extends Rpc
+{
+}
+
+/**
+ * @method string getToEncrypted()
+ * @method $this withToEncrypted($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFromSnapshotListBase64()
+ * @method $this withFromSnapshotListBase64($value)
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getImageSnapshotMappingsBase64()
+ * @method $this withImageSnapshotMappingsBase64($value)
+ * @method string getDestinationImageName()
+ * @method $this withDestinationImageName($value)
+ * @method string getResourceMetaMappingsBase64()
+ * @method $this withResourceMetaMappingsBase64($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDestinationRegionId()
+ * @method $this withDestinationRegionId($value)
+ * @method string getArnsBase64()
+ * @method $this withArnsBase64($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFromRegionId()
+ * @method $this withFromRegionId($value)
+ * @method string getFromRegionName()
+ * @method $this withFromRegionName($value)
+ * @method string getFromImageBase64()
+ * @method $this withFromImageBase64($value)
+ * @method string getDestinationRegionPriId()
+ * @method $this withDestinationRegionPriId($value)
+ * @method string getKmsKeyId()
+ * @method $this withKmsKeyId($value)
+ * @method string getDestinationDescription()
+ * @method $this withDestinationDescription($value)
+ */
+class CopyImageAtTarget extends Rpc
 {
 }
 
@@ -6547,110 +3952,6 @@ class InnerConstraintDataPush extends Rpc
  * @method string getProxyId()
  */
 class InnerReleasePublicIpAddress extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDryRun()
- * @method $this withDryRun($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getPublicIpAddress()
- * @method $this withPublicIpAddress($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerModifyPublicIpAddress extends Rpc
 {
 
     /**
@@ -6981,6 +4282,66 @@ class CheckImageSupportCloudinit extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method array getOrderIds()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class InnerOpenSnapshotService extends Rpc
+{
+
+    /**
+     * @param array $orderIds
+     *
+     * @return $this
+     */
+    public function withOrderIds(array $orderIds)
+    {
+        $this->data['OrderIds'] = $orderIds;
+        foreach ($orderIds as $i => $iValue) {
+            $this->options['query']['OrderIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method array getOrderIds()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class InnerCheckOpenSnapshotService extends Rpc
+{
+
+    /**
+     * @param array $orderIds
+     *
+     * @return $this
+     */
+    public function withOrderIds(array $orderIds)
+    {
+        $this->data['OrderIds'] = $orderIds;
+        foreach ($orderIds as $i => $iValue) {
+            $this->options['query']['OrderIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getMetaData()
  * @method $this withMetaData($value)
  * @method string getResourceOwnerId()
@@ -7006,84 +4367,6 @@ class CheckImageSupportCloudinit extends Rpc
  * @method $this withMD5($value)
  */
 class UploadSystemImageAtOrigin extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getImageCenterResourceId()
- * @method $this withImageCenterResourceId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getToImageName()
- * @method $this withToImageName($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getToImageDesc()
- * @method $this withToImageDesc($value)
- * @method array getTag()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getToRegionNo()
- * @method $this withToRegionNo($value)
- * @method string getResourceTransitInBase64()
- * @method $this withResourceTransitInBase64($value)
- */
-class CopySystemImageAtTarget extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getImageNo()
- * @method $this withImageNo($value)
- * @method string getAliUid()
- * @method $this withAliUid($value)
- * @method array getTag()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getImageRegionNo()
- * @method $this withImageRegionNo($value)
- */
-class QueryImageCopyProgress extends Rpc
 {
 
     /**
@@ -7183,6 +4466,244 @@ class QueryResourceTransit extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getImageNo()
+ * @method $this withImageNo($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ * @method array getTag()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getImageRegionNo()
+ * @method $this withImageRegionNo($value)
+ */
+class QueryImageCopyProgress extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTag4Value()
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTag2Key()
+ * @method string getTag5Key()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getFromRegionNo()
+ * @method $this withFromRegionNo($value)
+ * @method string getTag3Key()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTag5Value()
+ * @method string getTag1Key()
+ * @method string getTag1Value()
+ * @method string getTag2Value()
+ * @method string getTag4Key()
+ * @method string getTag3Value()
+ */
+class DescribeCopyProgressAtOrigin extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag4Value($value)
+    {
+        $this->data['Tag4Value'] = $value;
+        $this->options['query']['Tag.4.Value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag2Key($value)
+    {
+        $this->data['Tag2Key'] = $value;
+        $this->options['query']['Tag.2.Key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag5Key($value)
+    {
+        $this->data['Tag5Key'] = $value;
+        $this->options['query']['Tag.5.Key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag3Key($value)
+    {
+        $this->data['Tag3Key'] = $value;
+        $this->options['query']['Tag.3.Key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag5Value($value)
+    {
+        $this->data['Tag5Value'] = $value;
+        $this->options['query']['Tag.5.Value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag1Key($value)
+    {
+        $this->data['Tag1Key'] = $value;
+        $this->options['query']['Tag.1.Key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag1Value($value)
+    {
+        $this->data['Tag1Value'] = $value;
+        $this->options['query']['Tag.1.Value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag2Value($value)
+    {
+        $this->data['Tag2Value'] = $value;
+        $this->options['query']['Tag.2.Value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag4Key($value)
+    {
+        $this->data['Tag4Key'] = $value;
+        $this->options['query']['Tag.4.Key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag3Value($value)
+    {
+        $this->data['Tag3Value'] = $value;
+        $this->options['query']['Tag.3.Value'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageCenterResourceId()
+ * @method $this withImageCenterResourceId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getToImageName()
+ * @method $this withToImageName($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getToImageDesc()
+ * @method $this withToImageDesc($value)
+ * @method array getTag()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getToRegionNo()
+ * @method $this withToRegionNo($value)
+ * @method string getResourceTransitInBase64()
+ * @method $this withResourceTransitInBase64($value)
+ */
+class CopySystemImageAtTarget extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTransitId()
  * @method $this withTransitId($value)
  * @method string getResourceOwnerId()
@@ -7229,66 +4750,6 @@ class CopySystemImage extends Rpc
         foreach ($tag as $depth1 => $depth1Value) {
             $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
             $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method array getOrderIds()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class InnerCheckOpenSnapshotService extends Rpc
-{
-
-    /**
-     * @param array $orderIds
-     *
-     * @return $this
-     */
-    public function withOrderIds(array $orderIds)
-    {
-        $this->data['OrderIds'] = $orderIds;
-        foreach ($orderIds as $i => $iValue) {
-            $this->options['query']['OrderIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method array getOrderIds()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class InnerOpenSnapshotService extends Rpc
-{
-
-    /**
-     * @param array $orderIds
-     *
-     * @return $this
-     */
-    public function withOrderIds(array $orderIds)
-    {
-        $this->data['OrderIds'] = $orderIds;
-        foreach ($orderIds as $i => $iValue) {
-            $this->options['query']['OrderIds.' . ($i + 1)] = $iValue;
         }
 
         return $this;
@@ -7433,7 +4894,7 @@ class InnerRenewInstance extends Rpc
  * @method string getAppKey()
  * @method string getProxyId()
  */
-class InnerCheckProduce extends Rpc
+class InnerProduce extends Rpc
 {
 
     /**
@@ -7535,7 +4996,7 @@ class InnerCheckProduce extends Rpc
  * @method string getAppKey()
  * @method string getProxyId()
  */
-class InnerProduce extends Rpc
+class InnerCheckProduce extends Rpc
 {
 
     /**
@@ -7732,6 +5193,118 @@ class QueryInstanceInfo extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getAppKey()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ * @method string getNetworkValidation()
+ */
+class InnerNetworkModifyValidation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppKey($value)
+    {
+        $this->data['AppKey'] = $value;
+        $this->options['query']['appKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNetworkValidation($value)
+    {
+        $this->data['NetworkValidation'] = $value;
+        $this->options['query']['networkValidation'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -7892,118 +5465,6 @@ class InnerInstanceSetEndTime extends Rpc
     {
         $this->data['ProxyId'] = $value;
         $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getAppKey()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- * @method string getNetworkValidation()
- */
-class InnerNetworkModifyValidation extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['query']['instanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppKey($value)
-    {
-        $this->data['AppKey'] = $value;
-        $this->options['query']['appKey'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNetworkValidation($value)
-    {
-        $this->data['NetworkValidation'] = $value;
-        $this->options['query']['networkValidation'] = $value;
 
         return $this;
     }
@@ -8250,7 +5711,6 @@ class InnerInstanceGetInstanceTypeModelByType extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getProductCode()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -8260,26 +5720,13 @@ class InnerInstanceGetInstanceTypeModelByType extends Rpc
  * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
+ * @method string getImageProductCodes()
  * @method string getAliUid()
  * @method string getBid()
- * @method string getValue()
  * @method string getProxyId()
  */
-class InnerImageModifyProductCapacity extends Rpc
+class InnerImageQueryProductQuota extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProductCode($value)
-    {
-        $this->data['ProductCode'] = $value;
-        $this->options['query']['productCode'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -8325,6 +5772,19 @@ class InnerImageModifyProductCapacity extends Rpc
      *
      * @return $this
      */
+    public function withImageProductCodes($value)
+    {
+        $this->data['ImageProductCodes'] = $value;
+        $this->options['query']['imageProductCodes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withAliUid($value)
     {
         $this->data['AliUid'] = $value;
@@ -8342,19 +5802,6 @@ class InnerImageModifyProductCapacity extends Rpc
     {
         $this->data['Bid'] = $value;
         $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withValue($value)
-    {
-        $this->data['Value'] = $value;
-        $this->options['query']['value'] = $value;
 
         return $this;
     }
@@ -8586,6 +6033,7 @@ class InnerImageQueryImgsByParam extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getProductCode()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -8595,12 +6043,137 @@ class InnerImageQueryImgsByParam extends Rpc
  * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
- * @method string getImageProductCodes()
  * @method string getAliUid()
  * @method string getBid()
+ * @method string getValue()
  * @method string getProxyId()
  */
-class InnerImageQueryProductQuota extends Rpc
+class InnerImageModifyProductCapacity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['query']['productCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValue($value)
+    {
+        $this->data['Value'] = $value;
+        $this->options['query']['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getUserData()
+ * @method string getInstanceId()
+ * @method string getProxyId()
+ */
+class InnerVncQueryPasswd extends Rpc
 {
 
     /**
@@ -8647,10 +6220,10 @@ class InnerImageQueryProductQuota extends Rpc
      *
      * @return $this
      */
-    public function withImageProductCodes($value)
+    public function withAsync($value)
     {
-        $this->data['ImageProductCodes'] = $value;
-        $this->options['query']['imageProductCodes'] = $value;
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
 
         return $this;
     }
@@ -8660,10 +6233,10 @@ class InnerImageQueryProductQuota extends Rpc
      *
      * @return $this
      */
-    public function withAliUid($value)
+    public function withUserData($value)
     {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
+        $this->data['UserData'] = $value;
+        $this->options['query']['userData'] = $value;
 
         return $this;
     }
@@ -8673,10 +6246,376 @@ class InnerImageQueryProductQuota extends Rpc
      *
      * @return $this
      */
-    public function withBid($value)
+    public function withInstanceId($value)
     {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerSnapshotIsUserAutoSnapshotPause extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerImageQueryNeedKeepUsing extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getRemark()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getPlatform()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerImageKeepUsing extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemark($value)
+    {
+        $this->data['Remark'] = $value;
+        $this->options['query']['remark'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlatform($value)
+    {
+        $this->data['Platform'] = $value;
+        $this->options['query']['platform'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsReleaseByDriver extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['query']['resourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
 
         return $this;
     }
@@ -8713,6 +6652,258 @@ class InnerImageQueryProductQuota extends Rpc
  * @method string getProxyId()
  */
 class InnerEcsInstanceDetailForConsole extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEcsInstanceId()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDiskType()
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getPasswd()
+ * @method string getInstanceIds()
+ * @method string getUseImagePasswd()
+ * @method string getKeepDiskSize()
+ * @method string getProxyId()
+ */
+class InnerDiskReset extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsInstanceId($value)
+    {
+        $this->data['EcsInstanceId'] = $value;
+        $this->options['query']['ecsInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDiskType($value)
+    {
+        $this->data['DiskType'] = $value;
+        $this->options['query']['diskType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPasswd($value)
+    {
+        $this->data['Passwd'] = $value;
+        $this->options['query']['passwd'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceIds($value)
+    {
+        $this->data['InstanceIds'] = $value;
+        $this->options['query']['instanceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUseImagePasswd($value)
+    {
+        $this->data['UseImagePasswd'] = $value;
+        $this->options['query']['useImagePasswd'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKeepDiskSize($value)
+    {
+        $this->data['KeepDiskSize'] = $value;
+        $this->options['query']['keepDiskSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerDiskQueryUserDiskSummary extends Rpc
 {
 
     /**
@@ -9216,484 +7407,6 @@ class InnerDiskQueryByParamForConsole extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerSnapshotIsUserAutoSnapshotPause extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getUserData()
- * @method string getInstanceId()
- * @method string getProxyId()
- */
-class InnerVncQueryPasswd extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserData($value)
-    {
-        $this->data['UserData'] = $value;
-        $this->options['query']['userData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['query']['instanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAsync()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsReleaseByDriver extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceType($value)
-    {
-        $this->data['ResourceType'] = $value;
-        $this->options['query']['resourceType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAsync()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getRemark()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getPlatform()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerImageKeepUsing extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRemark($value)
-    {
-        $this->data['Remark'] = $value;
-        $this->options['query']['remark'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPlatform($value)
-    {
-        $this->data['Platform'] = $value;
-        $this->options['query']['platform'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAsync()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerImageQueryNeedKeepUsing extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getAsync()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
@@ -9780,258 +7493,6 @@ class InnerDiskFindDiskByDiskId extends Rpc
 }
 
 /**
- * @method string getAsync()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerDiskQueryUserDiskSummary extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getEcsInstanceId()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDiskType()
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getPasswd()
- * @method string getInstanceIds()
- * @method string getUseImagePasswd()
- * @method string getKeepDiskSize()
- * @method string getProxyId()
- */
-class InnerDiskReset extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcsInstanceId($value)
-    {
-        $this->data['EcsInstanceId'] = $value;
-        $this->options['query']['ecsInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDiskType($value)
-    {
-        $this->data['DiskType'] = $value;
-        $this->options['query']['diskType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPasswd($value)
-    {
-        $this->data['Passwd'] = $value;
-        $this->options['query']['passwd'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceIds($value)
-    {
-        $this->data['InstanceIds'] = $value;
-        $this->options['query']['instanceIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUseImagePasswd($value)
-    {
-        $this->data['UseImagePasswd'] = $value;
-        $this->options['query']['useImagePasswd'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withKeepDiskSize($value)
-    {
-        $this->data['KeepDiskSize'] = $value;
-        $this->options['query']['keepDiskSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getInstanceId()
@@ -10045,6 +7506,608 @@ class InnerDiskReset extends Rpc
  */
 class FiveDaysRefund extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getZoneId()
+ * @method string getAppKey()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ * @method string getRegionNo()
+ */
+class InnerGetZoneVendibleDataAndStatusById extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withZoneId($value)
+    {
+        $this->data['ZoneId'] = $value;
+        $this->options['query']['zoneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppKey($value)
+    {
+        $this->data['AppKey'] = $value;
+        $this->options['query']['appKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionNo($value)
+    {
+        $this->data['RegionNo'] = $value;
+        $this->options['query']['regionNo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getZoneId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ * @method string getRegionNo()
+ */
+class InnerStockListUsedVms extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withZoneId($value)
+    {
+        $this->data['ZoneId'] = $value;
+        $this->options['query']['zoneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionNo($value)
+    {
+        $this->data['RegionNo'] = $value;
+        $this->options['query']['regionNo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getRegionNos()
+ * @method string getAsync()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerIzQueryForVmSale extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionNos($value)
+    {
+        $this->data['RegionNos'] = $value;
+        $this->options['query']['regionNos'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getNextToken()
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getIpCategory()
+ * @method string getChannel()
+ * @method string getCount()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerIpLoad extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNextToken($value)
+    {
+        $this->data['NextToken'] = $value;
+        $this->options['query']['nextToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIpCategory($value)
+    {
+        $this->data['IpCategory'] = $value;
+        $this->options['query']['ipCategory'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCount($value)
+    {
+        $this->data['Count'] = $value;
+        $this->options['query']['count'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getImgPc()
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getPageNo()
+ * @method string getPageSize()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerInstanceQueryEcsByImgPc extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImgPc($value)
+    {
+        $this->data['ImgPc'] = $value;
+        $this->options['query']['imgPc'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNo($value)
+    {
+        $this->data['PageNo'] = $value;
+        $this->options['query']['pageNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -10624,1030 +8687,6 @@ class InnerInstanceQueryByParamBackyard extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNextToken()
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getIpCategory()
- * @method string getChannel()
- * @method string getCount()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerIpLoad extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNextToken($value)
-    {
-        $this->data['NextToken'] = $value;
-        $this->options['query']['nextToken'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIpCategory($value)
-    {
-        $this->data['IpCategory'] = $value;
-        $this->options['query']['ipCategory'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCount($value)
-    {
-        $this->data['Count'] = $value;
-        $this->options['query']['count'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getEcsId()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsSnapshotQueryAllSnapshotsByEcsId extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcsId($value)
-    {
-        $this->data['EcsId'] = $value;
-        $this->options['query']['ecsId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getRegionNos()
- * @method string getAsync()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerIzQueryForVmSale extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegionNos($value)
-    {
-        $this->data['RegionNos'] = $value;
-        $this->options['query']['regionNos'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getZoneId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- * @method string getRegionNo()
- */
-class InnerStockListUsedVms extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withZoneId($value)
-    {
-        $this->data['ZoneId'] = $value;
-        $this->options['query']['zoneId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegionNo($value)
-    {
-        $this->data['RegionNo'] = $value;
-        $this->options['query']['regionNo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getZoneId()
- * @method string getAppKey()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- * @method string getRegionNo()
- */
-class InnerGetZoneVendibleDataAndStatusById extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withZoneId($value)
-    {
-        $this->data['ZoneId'] = $value;
-        $this->options['query']['zoneId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppKey($value)
-    {
-        $this->data['AppKey'] = $value;
-        $this->options['query']['appKey'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegionNo($value)
-    {
-        $this->data['RegionNo'] = $value;
-        $this->options['query']['regionNo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getVpcInstanceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerGroupFindDefaultSystemGroup extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVpcInstanceId($value)
-    {
-        $this->data['VpcInstanceId'] = $value;
-        $this->options['query']['vpcInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getProductCode()
- * @method string getImageId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerImageConvert2Product extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProductCode($value)
-    {
-        $this->data['ProductCode'] = $value;
-        $this->options['query']['productCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageId($value)
-    {
-        $this->data['ImageId'] = $value;
-        $this->options['query']['imageId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getImageId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOsTypeId()
- * @method string getChannel()
- * @method string getRemark()
- * @method string getImageSize()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVirtBaseImageId()
- * @method string getOperator()
- * @method string getImageCategory()
- * @method string getToken()
- * @method string getAsync()
- * @method string getImageName()
- * @method string getIsPublic()
- * @method string getImageVersion()
- * @method $this withImageVersion($value)
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerImageModify extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageId($value)
-    {
-        $this->data['ImageId'] = $value;
-        $this->options['query']['imageId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOsTypeId($value)
-    {
-        $this->data['OsTypeId'] = $value;
-        $this->options['query']['osTypeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRemark($value)
-    {
-        $this->data['Remark'] = $value;
-        $this->options['query']['remark'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageSize($value)
-    {
-        $this->data['ImageSize'] = $value;
-        $this->options['query']['imageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVirtBaseImageId($value)
-    {
-        $this->data['VirtBaseImageId'] = $value;
-        $this->options['query']['virtBaseImageId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageCategory($value)
-    {
-        $this->data['ImageCategory'] = $value;
-        $this->options['query']['imageCategory'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageName($value)
-    {
-        $this->data['ImageName'] = $value;
-        $this->options['query']['imageName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIsPublic($value)
-    {
-        $this->data['IsPublic'] = $value;
-        $this->options['query']['isPublic'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getSnapshotId()
  * @method string getIoOptimized()
  * @method string getChannel()
@@ -12026,25 +9065,58 @@ class InnerImageQueryAvailableImgs extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getImageId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOsTypeId()
  * @method string getChannel()
+ * @method string getRemark()
+ * @method string getImageSize()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getImgPc()
+ * @method string getVirtBaseImageId()
  * @method string getOperator()
+ * @method string getImageCategory()
  * @method string getToken()
  * @method string getAsync()
- * @method string getPageNo()
- * @method string getPageSize()
+ * @method string getImageName()
+ * @method string getIsPublic()
+ * @method string getImageVersion()
+ * @method $this withImageVersion($value)
  * @method string getAliUid()
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerInstanceQueryEcsByImgPc extends Rpc
+class InnerImageModify extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageId($value)
+    {
+        $this->data['ImageId'] = $value;
+        $this->options['query']['imageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOsTypeId($value)
+    {
+        $this->data['OsTypeId'] = $value;
+        $this->options['query']['osTypeId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -12064,10 +9136,215 @@ class InnerInstanceQueryEcsByImgPc extends Rpc
      *
      * @return $this
      */
-    public function withImgPc($value)
+    public function withRemark($value)
     {
-        $this->data['ImgPc'] = $value;
-        $this->options['query']['imgPc'] = $value;
+        $this->data['Remark'] = $value;
+        $this->options['query']['remark'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageSize($value)
+    {
+        $this->data['ImageSize'] = $value;
+        $this->options['query']['imageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVirtBaseImageId($value)
+    {
+        $this->data['VirtBaseImageId'] = $value;
+        $this->options['query']['virtBaseImageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageCategory($value)
+    {
+        $this->data['ImageCategory'] = $value;
+        $this->options['query']['imageCategory'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageName($value)
+    {
+        $this->data['ImageName'] = $value;
+        $this->options['query']['imageName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsPublic($value)
+    {
+        $this->data['IsPublic'] = $value;
+        $this->options['query']['isPublic'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getProductCode()
+ * @method string getImageId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerImageConvert2Product extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['query']['productCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageId($value)
+    {
+        $this->data['ImageId'] = $value;
+        $this->options['query']['imageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
 
         return $this;
     }
@@ -12107,32 +9384,6 @@ class InnerInstanceQueryEcsByImgPc extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNo($value)
-    {
-        $this->data['PageNo'] = $value;
-        $this->options['query']['pageNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
 
         return $this;
     }
@@ -12185,6 +9436,401 @@ class InnerInstanceQueryEcsByImgPc extends Rpc
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getChannel()
+ * @method string getVpcInstanceId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerGroupFindDefaultSystemGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcInstanceId($value)
+    {
+        $this->data['VpcInstanceId'] = $value;
+        $this->options['query']['vpcInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getEcsId()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsSnapshotQueryAllSnapshotsByEcsId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsId($value)
+    {
+        $this->data['EcsId'] = $value;
+        $this->options['query']['ecsId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getEcsGroupNic()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getAliUid()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsQuerySecurity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsGroupNic($value)
+    {
+        $this->data['EcsGroupNic'] = $value;
+        $this->options['query']['ecsGroupNic'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getInstanceType()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerGetInstanceTypeModelByType extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceType($value)
+    {
+        $this->data['InstanceType'] = $value;
+        $this->options['query']['instanceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
  * @method string getAliUid()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
@@ -12193,8 +9839,21 @@ class InnerInstanceQueryEcsByImgPc extends Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsGetBflagByBidAndUid extends Rpc
+class InnerEcsInstanceQueryRegions extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -12388,7 +10047,6 @@ class InnerEcsInstanceQueryRegionNoFilter extends Rpc
 }
 
 /**
- * @method string getAsync()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -12404,21 +10062,8 @@ class InnerEcsInstanceQueryRegionNoFilter extends Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsInstanceQueryRegions extends Rpc
+class InnerEcsGetBflagByBidAndUid extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -12494,1848 +10139,6 @@ class InnerEcsInstanceQueryRegions extends Rpc
     {
         $this->data['ProxyId'] = $value;
         $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getInstanceType()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerGetInstanceTypeModelByType extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceType($value)
-    {
-        $this->data['InstanceType'] = $value;
-        $this->options['query']['instanceType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEcsGroupNic()
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getAliUid()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsQuerySecurity extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcsGroupNic($value)
-    {
-        $this->data['EcsGroupNic'] = $value;
-        $this->options['query']['ecsGroupNic'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getReason()
- * @method string getBussinessCode()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getCoordinate()
- * @method string getSignatureCode()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getActionCode()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerEcsRiskControlPunish extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withReason($value)
-    {
-        $this->data['Reason'] = $value;
-        $this->options['query']['reason'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBussinessCode($value)
-    {
-        $this->data['BussinessCode'] = $value;
-        $this->options['query']['bussinessCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCoordinate($value)
-    {
-        $this->data['Coordinate'] = $value;
-        $this->options['query']['coordinate'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSignatureCode($value)
-    {
-        $this->data['SignatureCode'] = $value;
-        $this->options['query']['signatureCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withActionCode($value)
-    {
-        $this->data['ActionCode'] = $value;
-        $this->options['query']['actionCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getReason()
- * @method string getBussinessCode()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getCoordinate()
- * @method string getSignatureCode()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getPunishResult()
- * @method string getActionCode()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerEcsRiskControlPunishRemove extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withReason($value)
-    {
-        $this->data['Reason'] = $value;
-        $this->options['query']['reason'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBussinessCode($value)
-    {
-        $this->data['BussinessCode'] = $value;
-        $this->options['query']['bussinessCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCoordinate($value)
-    {
-        $this->data['Coordinate'] = $value;
-        $this->options['query']['coordinate'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSignatureCode($value)
-    {
-        $this->data['SignatureCode'] = $value;
-        $this->options['query']['signatureCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPunishResult($value)
-    {
-        $this->data['PunishResult'] = $value;
-        $this->options['query']['punishResult'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withActionCode($value)
-    {
-        $this->data['ActionCode'] = $value;
-        $this->options['query']['actionCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getBussinessCode()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getIp()
- * @method string getChannel()
- * @method string getExtras()
- * @method string getRiskyUrl()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getDomain()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerEcsRiskControlQuery extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBussinessCode($value)
-    {
-        $this->data['BussinessCode'] = $value;
-        $this->options['query']['bussinessCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIp($value)
-    {
-        $this->data['Ip'] = $value;
-        $this->options['query']['ip'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtras($value)
-    {
-        $this->data['Extras'] = $value;
-        $this->options['query']['extras'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRiskyUrl($value)
-    {
-        $this->data['RiskyUrl'] = $value;
-        $this->options['query']['riskyUrl'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomain($value)
-    {
-        $this->data['Domain'] = $value;
-        $this->options['query']['domain'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerMonitor extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInternetIp()
- * @method string getSerialNumber()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getIp()
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getInstanceId()
- * @method string getAliUid()
- * @method string getAuthedEcsIds()
- * @method string getId()
- * @method string getBid()
- * @method string getProxyId()
- * @method string getIntranetIp()
- */
-class InnerEcsFindById extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInternetIp($value)
-    {
-        $this->data['InternetIp'] = $value;
-        $this->options['query']['internetIp'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSerialNumber($value)
-    {
-        $this->data['SerialNumber'] = $value;
-        $this->options['query']['serialNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIp($value)
-    {
-        $this->data['Ip'] = $value;
-        $this->options['query']['ip'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['query']['instanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAuthedEcsIds($value)
-    {
-        $this->data['AuthedEcsIds'] = $value;
-        $this->options['query']['authedEcsIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withId($value)
-    {
-        $this->data['Id'] = $value;
-        $this->options['query']['id'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIntranetIp($value)
-    {
-        $this->data['IntranetIp'] = $value;
-        $this->options['query']['intranetIp'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getTag4Value()
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag2Key()
- * @method string getTag5Key()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTag3Key()
- * @method string getFromRegionId()
- * @method $this withFromRegionId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getTag5Value()
- * @method string getTag1Key()
- * @method string getTag1Value()
- * @method string getTag2Value()
- * @method string getTag4Key()
- * @method string getTag3Value()
- */
-class CopyToCenterAtOrigin extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Value($value)
-    {
-        $this->data['Tag4Value'] = $value;
-        $this->options['query']['Tag.4.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Key($value)
-    {
-        $this->data['Tag2Key'] = $value;
-        $this->options['query']['Tag.2.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Key($value)
-    {
-        $this->data['Tag5Key'] = $value;
-        $this->options['query']['Tag.5.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Key($value)
-    {
-        $this->data['Tag3Key'] = $value;
-        $this->options['query']['Tag.3.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Value($value)
-    {
-        $this->data['Tag5Value'] = $value;
-        $this->options['query']['Tag.5.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Key($value)
-    {
-        $this->data['Tag1Key'] = $value;
-        $this->options['query']['Tag.1.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Value($value)
-    {
-        $this->data['Tag1Value'] = $value;
-        $this->options['query']['Tag.1.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Value($value)
-    {
-        $this->data['Tag2Value'] = $value;
-        $this->options['query']['Tag.2.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Key($value)
-    {
-        $this->data['Tag4Key'] = $value;
-        $this->options['query']['Tag.4.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Value($value)
-    {
-        $this->data['Tag3Value'] = $value;
-        $this->options['query']['Tag.3.Value'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getTag4Value()
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag2Key()
- * @method string getTag5Key()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getFromRegionNo()
- * @method $this withFromRegionNo($value)
- * @method string getTag3Key()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getTag5Value()
- * @method string getTag1Key()
- * @method string getTag1Value()
- * @method string getTag2Value()
- * @method string getTag4Key()
- * @method string getTag3Value()
- */
-class DescribeCopyProgressAtOrigin extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Value($value)
-    {
-        $this->data['Tag4Value'] = $value;
-        $this->options['query']['Tag.4.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Key($value)
-    {
-        $this->data['Tag2Key'] = $value;
-        $this->options['query']['Tag.2.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Key($value)
-    {
-        $this->data['Tag5Key'] = $value;
-        $this->options['query']['Tag.5.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Key($value)
-    {
-        $this->data['Tag3Key'] = $value;
-        $this->options['query']['Tag.3.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Value($value)
-    {
-        $this->data['Tag5Value'] = $value;
-        $this->options['query']['Tag.5.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Key($value)
-    {
-        $this->data['Tag1Key'] = $value;
-        $this->options['query']['Tag.1.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Value($value)
-    {
-        $this->data['Tag1Value'] = $value;
-        $this->options['query']['Tag.1.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Value($value)
-    {
-        $this->data['Tag2Value'] = $value;
-        $this->options['query']['Tag.2.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Key($value)
-    {
-        $this->data['Tag4Key'] = $value;
-        $this->options['query']['Tag.4.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Value($value)
-    {
-        $this->data['Tag3Value'] = $value;
-        $this->options['query']['Tag.3.Value'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCenterResourceId()
- * @method $this withCenterResourceId($value)
- * @method string getTag4Value()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag2Key()
- * @method string getTag5Key()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTag3Key()
- * @method string getFromRegionId()
- * @method $this withFromRegionId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getTag5Value()
- * @method string getTag1Key()
- * @method string getTag1Value()
- * @method string getTag2Value()
- * @method string getTag4Key()
- * @method string getTag3Value()
- */
-class DetailCenterResourceAtOrigin extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Value($value)
-    {
-        $this->data['Tag4Value'] = $value;
-        $this->options['query']['Tag.4.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Key($value)
-    {
-        $this->data['Tag2Key'] = $value;
-        $this->options['query']['Tag.2.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Key($value)
-    {
-        $this->data['Tag5Key'] = $value;
-        $this->options['query']['Tag.5.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Key($value)
-    {
-        $this->data['Tag3Key'] = $value;
-        $this->options['query']['Tag.3.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Value($value)
-    {
-        $this->data['Tag5Value'] = $value;
-        $this->options['query']['Tag.5.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Key($value)
-    {
-        $this->data['Tag1Key'] = $value;
-        $this->options['query']['Tag.1.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Value($value)
-    {
-        $this->data['Tag1Value'] = $value;
-        $this->options['query']['Tag.1.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Value($value)
-    {
-        $this->data['Tag2Value'] = $value;
-        $this->options['query']['Tag.2.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Key($value)
-    {
-        $this->data['Tag4Key'] = $value;
-        $this->options['query']['Tag.4.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Value($value)
-    {
-        $this->data['Tag3Value'] = $value;
-        $this->options['query']['Tag.3.Value'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getTag4Value()
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag2Key()
- * @method string getTag5Key()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTag3Key()
- * @method string getFromRegionId()
- * @method $this withFromRegionId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getTag5Value()
- * @method string getTag1Key()
- * @method string getTag1Value()
- * @method string getCopyAction()
- * @method $this withCopyAction($value)
- * @method string getTag2Value()
- * @method string getTag4Key()
- * @method string getTag3Value()
- */
-class CancelCopyImageAtOrigin extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Value($value)
-    {
-        $this->data['Tag4Value'] = $value;
-        $this->options['query']['Tag.4.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Key($value)
-    {
-        $this->data['Tag2Key'] = $value;
-        $this->options['query']['Tag.2.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Key($value)
-    {
-        $this->data['Tag5Key'] = $value;
-        $this->options['query']['Tag.5.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Key($value)
-    {
-        $this->data['Tag3Key'] = $value;
-        $this->options['query']['Tag.3.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Value($value)
-    {
-        $this->data['Tag5Value'] = $value;
-        $this->options['query']['Tag.5.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Key($value)
-    {
-        $this->data['Tag1Key'] = $value;
-        $this->options['query']['Tag.1.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Value($value)
-    {
-        $this->data['Tag1Value'] = $value;
-        $this->options['query']['Tag.1.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Value($value)
-    {
-        $this->data['Tag2Value'] = $value;
-        $this->options['query']['Tag.2.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Key($value)
-    {
-        $this->data['Tag4Key'] = $value;
-        $this->options['query']['Tag.4.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Value($value)
-    {
-        $this->data['Tag3Value'] = $value;
-        $this->options['query']['Tag.3.Value'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getToEncrypted()
- * @method $this withToEncrypted($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getFromSnapshotListBase64()
- * @method $this withFromSnapshotListBase64($value)
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getImageSnapshotMappingsBase64()
- * @method $this withImageSnapshotMappingsBase64($value)
- * @method string getDestinationImageName()
- * @method $this withDestinationImageName($value)
- * @method string getResourceMetaMappingsBase64()
- * @method $this withResourceMetaMappingsBase64($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDestinationRegionId()
- * @method $this withDestinationRegionId($value)
- * @method string getArnsBase64()
- * @method $this withArnsBase64($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFromRegionId()
- * @method $this withFromRegionId($value)
- * @method string getFromRegionName()
- * @method $this withFromRegionName($value)
- * @method string getFromImageBase64()
- * @method $this withFromImageBase64($value)
- * @method string getDestinationRegionPriId()
- * @method $this withDestinationRegionPriId($value)
- * @method string getKmsKeyId()
- * @method $this withKmsKeyId($value)
- * @method string getDestinationDescription()
- * @method $this withDestinationDescription($value)
- */
-class CopyImageAtTarget extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method string getAliUid()
- * @method string getPeriod()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getMetrics()
- * @method string getBid()
- */
-class InnerMonitorDataDescribeInstance extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['query']['startTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPeriod($value)
-    {
-        $this->data['Period'] = $value;
-        $this->options['query']['period'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['query']['endTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMetrics($value)
-    {
-        $this->data['Metrics'] = $value;
-        $this->options['query']['metrics'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
 
         return $this;
     }
@@ -14357,15 +10160,13 @@ class InnerMonitorDataDescribeInstance extends Rpc
  * @method string getAsync()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getPageNo()
- * @method string getPageSize()
  * @method string getAliUid()
  * @method string getBid()
  * @method string getSnapshotOwnerAliUid()
  * @method string getProxyId()
  * @method string getSnapshotIndexId()
  */
-class InnerSnapshotDescribeMountedSnapshots extends Rpc
+class InnerSnapshotSecurityUnmount extends Rpc
 {
 
     /**
@@ -14438,10 +10239,10 @@ class InnerSnapshotDescribeMountedSnapshots extends Rpc
      *
      * @return $this
      */
-    public function withPageNo($value)
+    public function withAliUid($value)
     {
-        $this->data['PageNo'] = $value;
-        $this->options['query']['pageNo'] = $value;
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
 
         return $this;
     }
@@ -14451,10 +10252,140 @@ class InnerSnapshotDescribeMountedSnapshots extends Rpc
      *
      * @return $this
      */
-    public function withPageSize($value)
+    public function withBid($value)
     {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSnapshotOwnerAliUid($value)
+    {
+        $this->data['SnapshotOwnerAliUid'] = $value;
+        $this->options['query']['snapshotOwnerAliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSnapshotIndexId($value)
+    {
+        $this->data['SnapshotIndexId'] = $value;
+        $this->options['query']['snapshotIndexId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getEcsOwnerAliUid()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getSnapshotOwnerAliUid()
+ * @method string getProxyId()
+ * @method string getSnapshotIndexId()
+ */
+class InnerSnapshotSecurityMount extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsOwnerAliUid($value)
+    {
+        $this->data['EcsOwnerAliUid'] = $value;
+        $this->options['query']['ecsOwnerAliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
 
         return $this;
     }
@@ -14975,13 +10906,15 @@ class InnerSnapshotQueryUserSnapshots extends Rpc
  * @method string getAsync()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getPageNo()
+ * @method string getPageSize()
  * @method string getAliUid()
  * @method string getBid()
  * @method string getSnapshotOwnerAliUid()
  * @method string getProxyId()
  * @method string getSnapshotIndexId()
  */
-class InnerSnapshotSecurityMount extends Rpc
+class InnerSnapshotDescribeMountedSnapshots extends Rpc
 {
 
     /**
@@ -15045,6 +10978,32 @@ class InnerSnapshotSecurityMount extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNo($value)
+    {
+        $this->data['PageNo'] = $value;
+        $this->options['query']['pageNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
 
         return $this;
     }
@@ -15118,7 +11077,206 @@ class InnerSnapshotSecurityMount extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getEcsOwnerAliUid()
+ * @method string getStartTime()
+ * @method string getAliUid()
+ * @method string getPeriod()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMetrics()
+ * @method string getBid()
+ */
+class InnerMonitorDataDescribeInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPeriod($value)
+    {
+        $this->data['Period'] = $value;
+        $this->options['query']['period'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetrics($value)
+    {
+        $this->data['Metrics'] = $value;
+        $this->options['query']['metrics'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ * @method string getAliUid()
+ * @method string getPeriod()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMetrics()
+ * @method string getBid()
+ */
+class InnerMonitorDataDescribeDisk extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPeriod($value)
+    {
+        $this->data['Period'] = $value;
+        $this->options['query']['period'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetrics($value)
+    {
+        $this->data['Metrics'] = $value;
+        $this->options['query']['metrics'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -15133,25 +11291,10 @@ class InnerSnapshotSecurityMount extends Rpc
  * @method $this withInstanceId($value)
  * @method string getAliUid()
  * @method string getBid()
- * @method string getSnapshotOwnerAliUid()
  * @method string getProxyId()
- * @method string getSnapshotIndexId()
  */
-class InnerSnapshotSecurityUnmount extends Rpc
+class InnerMonitor extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcsOwnerAliUid($value)
-    {
-        $this->data['EcsOwnerAliUid'] = $value;
-        $this->options['query']['ecsOwnerAliUid'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -15227,174 +11370,6 @@ class InnerSnapshotSecurityUnmount extends Rpc
     {
         $this->data['Bid'] = $value;
         $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSnapshotOwnerAliUid($value)
-    {
-        $this->data['SnapshotOwnerAliUid'] = $value;
-        $this->options['query']['snapshotOwnerAliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSnapshotIndexId($value)
-    {
-        $this->data['SnapshotIndexId'] = $value;
-        $this->options['query']['snapshotIndexId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getReason()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInternetIp()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getLockType()
- * @method string getId()
- * @method string getProof()
- * @method string getProxyId()
- */
-class InnerMaliceEcsLock extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withReason($value)
-    {
-        $this->data['Reason'] = $value;
-        $this->options['query']['reason'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInternetIp($value)
-    {
-        $this->data['InternetIp'] = $value;
-        $this->options['query']['internetIp'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLockType($value)
-    {
-        $this->data['LockType'] = $value;
-        $this->options['query']['lockType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withId($value)
-    {
-        $this->data['Id'] = $value;
-        $this->options['query']['id'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProof($value)
-    {
-        $this->data['Proof'] = $value;
-        $this->options['query']['proof'] = $value;
 
         return $this;
     }
@@ -15556,108 +11531,10 @@ class InnerMaliceEcsUnlock extends Rpc
 }
 
 /**
+ * @method string getReason()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method string getDiskId()
- * @method $this withDiskId($value)
- * @method string getAliUid()
- * @method string getPeriod()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getMetrics()
- * @method string getBid()
- */
-class InnerMonitorDataDescribeDisk extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['query']['startTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPeriod($value)
-    {
-        $this->data['Period'] = $value;
-        $this->options['query']['period'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['query']['endTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMetrics($value)
-    {
-        $this->data['Metrics'] = $value;
-        $this->options['query']['metrics'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getInternetIp()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -15667,15 +11544,41 @@ class InnerMonitorDataDescribeDisk extends Rpc
  * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
- * @method string getAsync()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getAliUid()
- * @method string getBid()
+ * @method string getLockType()
+ * @method string getId()
+ * @method string getProof()
  * @method string getProxyId()
  */
-class InnerInstanceDisableSLBFlow extends Rpc
+class InnerMaliceEcsLock extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReason($value)
+    {
+        $this->data['Reason'] = $value;
+        $this->options['query']['reason'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInternetIp($value)
+    {
+        $this->data['InternetIp'] = $value;
+        $this->options['query']['internetIp'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -15721,10 +11624,10 @@ class InnerInstanceDisableSLBFlow extends Rpc
      *
      * @return $this
      */
-    public function withAsync($value)
+    public function withLockType($value)
     {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
+        $this->data['LockType'] = $value;
+        $this->options['query']['lockType'] = $value;
 
         return $this;
     }
@@ -15734,10 +11637,10 @@ class InnerInstanceDisableSLBFlow extends Rpc
      *
      * @return $this
      */
-    public function withAliUid($value)
+    public function withId($value)
     {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
+        $this->data['Id'] = $value;
+        $this->options['query']['id'] = $value;
 
         return $this;
     }
@@ -15747,124 +11650,10 @@ class InnerInstanceDisableSLBFlow extends Rpc
      *
      * @return $this
      */
-    public function withBid($value)
+    public function withProof($value)
     {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerInstanceEnableSLBFlow extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
+        $this->data['Proof'] = $value;
+        $this->options['query']['proof'] = $value;
 
         return $this;
     }
@@ -16348,7 +12137,6 @@ class InnerInstanceQueryByParam extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getImageId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -16357,27 +12145,16 @@ class InnerInstanceQueryByParam extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getOperator()
- * @method string getIncludeDeleted()
  * @method string getToken()
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getAliUid()
  * @method string getBid()
  * @method string getProxyId()
  */
-class InnerImageDetail extends Rpc
+class InnerInstanceEnableSLBFlow extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageId($value)
-    {
-        $this->data['ImageId'] = $value;
-        $this->options['query']['imageId'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -16410,10 +12187,10 @@ class InnerImageDetail extends Rpc
      *
      * @return $this
      */
-    public function withIncludeDeleted($value)
+    public function withToken($value)
     {
-        $this->data['IncludeDeleted'] = $value;
-        $this->options['query']['includeDeleted'] = $value;
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
 
         return $this;
     }
@@ -16423,10 +12200,10 @@ class InnerImageDetail extends Rpc
      *
      * @return $this
      */
-    public function withToken($value)
+    public function withAsync($value)
     {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
 
         return $this;
     }
@@ -16453,6 +12230,220 @@ class InnerImageDetail extends Rpc
     {
         $this->data['Bid'] = $value;
         $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerInstanceDisableSLBFlow extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getAliUid()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBid()
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerInstanceDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
 
         return $this;
     }
@@ -16686,23 +12677,36 @@ class InnerImageQueryUserImages extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getImageId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getChannel()
- * @method string getAliUid()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getBid()
  * @method string getOperator()
+ * @method string getIncludeDeleted()
  * @method string getToken()
+ * @method string getAliUid()
+ * @method string getBid()
  * @method string getProxyId()
  */
-class InnerInstanceDetail extends Rpc
+class InnerImageDetail extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageId($value)
+    {
+        $this->data['ImageId'] = $value;
+        $this->options['query']['imageId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -16713,6 +12717,45 @@ class InnerInstanceDetail extends Rpc
     {
         $this->data['Channel'] = $value;
         $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIncludeDeleted($value)
+    {
+        $this->data['IncludeDeleted'] = $value;
+        $this->options['query']['includeDeleted'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
 
         return $this;
     }
@@ -16748,6 +12791,168 @@ class InnerInstanceDetail extends Rpc
      *
      * @return $this
      */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSourceGroupNo()
+ * @method string getPortRange()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getLevel()
+ * @method string getIpProtocol()
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getSourceCidrIp()
+ * @method string getChannel()
+ * @method string getNic()
+ * @method string getVpcInstanceId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDestCidrIp()
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getSourceGroupOwnerAliUid()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getGroupNo()
+ * @method string getProxyId()
+ * @method string getPolicy()
+ */
+class InnerGroupRevoke extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceGroupNo($value)
+    {
+        $this->data['SourceGroupNo'] = $value;
+        $this->options['query']['sourceGroupNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPortRange($value)
+    {
+        $this->data['PortRange'] = $value;
+        $this->options['query']['portRange'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLevel($value)
+    {
+        $this->data['Level'] = $value;
+        $this->options['query']['level'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIpProtocol($value)
+    {
+        $this->data['IpProtocol'] = $value;
+        $this->options['query']['ipProtocol'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceCidrIp($value)
+    {
+        $this->data['SourceCidrIp'] = $value;
+        $this->options['query']['sourceCidrIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNic($value)
+    {
+        $this->data['Nic'] = $value;
+        $this->options['query']['nic'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcInstanceId($value)
+    {
+        $this->data['VpcInstanceId'] = $value;
+        $this->options['query']['vpcInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDestCidrIp($value)
+    {
+        $this->data['DestCidrIp'] = $value;
+        $this->options['query']['destCidrIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withOperator($value)
     {
         $this->data['Operator'] = $value;
@@ -16765,6 +12970,378 @@ class InnerInstanceDetail extends Rpc
     {
         $this->data['Token'] = $value;
         $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceGroupOwnerAliUid($value)
+    {
+        $this->data['SourceGroupOwnerAliUid'] = $value;
+        $this->options['query']['sourceGroupOwnerAliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupNo($value)
+    {
+        $this->data['GroupNo'] = $value;
+        $this->options['query']['groupNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPolicy($value)
+    {
+        $this->data['Policy'] = $value;
+        $this->options['query']['policy'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getVpcInstanceId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getGroupNo()
+ * @method string getProxyId()
+ */
+class InnerGroupRemove extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcInstanceId($value)
+    {
+        $this->data['VpcInstanceId'] = $value;
+        $this->options['query']['vpcInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupNo($value)
+    {
+        $this->data['GroupNo'] = $value;
+        $this->options['query']['groupNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getPageNo()
+ * @method string getPageSize()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getGroupNo()
+ * @method string getProxyId()
+ */
+class InnerGroupQueryVm extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNo($value)
+    {
+        $this->data['PageNo'] = $value;
+        $this->options['query']['pageNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupNo($value)
+    {
+        $this->data['GroupNo'] = $value;
+        $this->options['query']['groupNo'] = $value;
 
         return $this;
     }
@@ -17078,160 +13655,7 @@ class InnerGroupQuery extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getPageNo()
- * @method string getPageSize()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getGroupNo()
- * @method string getProxyId()
- */
-class InnerGroupQueryVm extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNo($value)
-    {
-        $this->data['PageNo'] = $value;
-        $this->options['query']['pageNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupNo($value)
-    {
-        $this->data['GroupNo'] = $value;
-        $this->options['query']['groupNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
+ * @method string getEcsInstanceId()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -17250,8 +13674,21 @@ class InnerGroupQueryVm extends Rpc
  * @method string getGroupNo()
  * @method string getProxyId()
  */
-class InnerGroupRemove extends Rpc
+class InnerGroupLeave extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsInstanceId($value)
+    {
+        $this->data['EcsInstanceId'] = $value;
+        $this->options['query']['ecsInstanceId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -17372,34 +13809,26 @@ class InnerGroupRemove extends Rpc
 }
 
 /**
+ * @method string getEcsInstanceId()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getSourceGroupNo()
- * @method string getPortRange()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getLevel()
- * @method string getIpProtocol()
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSourceCidrIp()
  * @method string getChannel()
- * @method string getNic()
  * @method string getVpcInstanceId()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDestCidrIp()
  * @method string getOperator()
  * @method string getToken()
  * @method string getAsync()
- * @method string getSourceGroupOwnerAliUid()
  * @method string getAliUid()
  * @method string getBid()
  * @method string getGroupNo()
  * @method string getProxyId()
- * @method string getPolicy()
  */
-class InnerGroupRevoke extends Rpc
+class InnerGroupJoin extends Rpc
 {
 
     /**
@@ -17407,62 +13836,10 @@ class InnerGroupRevoke extends Rpc
      *
      * @return $this
      */
-    public function withSourceGroupNo($value)
+    public function withEcsInstanceId($value)
     {
-        $this->data['SourceGroupNo'] = $value;
-        $this->options['query']['sourceGroupNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPortRange($value)
-    {
-        $this->data['PortRange'] = $value;
-        $this->options['query']['portRange'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLevel($value)
-    {
-        $this->data['Level'] = $value;
-        $this->options['query']['level'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIpProtocol($value)
-    {
-        $this->data['IpProtocol'] = $value;
-        $this->options['query']['ipProtocol'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceCidrIp($value)
-    {
-        $this->data['SourceCidrIp'] = $value;
-        $this->options['query']['sourceCidrIp'] = $value;
+        $this->data['EcsInstanceId'] = $value;
+        $this->options['query']['ecsInstanceId'] = $value;
 
         return $this;
     }
@@ -17485,36 +13862,10 @@ class InnerGroupRevoke extends Rpc
      *
      * @return $this
      */
-    public function withNic($value)
-    {
-        $this->data['Nic'] = $value;
-        $this->options['query']['nic'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withVpcInstanceId($value)
     {
         $this->data['VpcInstanceId'] = $value;
         $this->options['query']['vpcInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDestCidrIp($value)
-    {
-        $this->data['DestCidrIp'] = $value;
-        $this->options['query']['destCidrIp'] = $value;
 
         return $this;
     }
@@ -17554,19 +13905,6 @@ class InnerGroupRevoke extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceGroupOwnerAliUid($value)
-    {
-        $this->data['SourceGroupOwnerAliUid'] = $value;
-        $this->options['query']['sourceGroupOwnerAliUid'] = $value;
 
         return $this;
     }
@@ -17606,187 +13944,6 @@ class InnerGroupRevoke extends Rpc
     {
         $this->data['GroupNo'] = $value;
         $this->options['query']['groupNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPolicy($value)
-    {
-        $this->data['Policy'] = $value;
-        $this->options['query']['policy'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getVpcInstanceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getGroupName()
- * @method string getOperator()
- * @method string getToken()
- * @method string getTags()
- * @method string getAsync()
- * @method string getGroupDesc()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerGroupCreate extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVpcInstanceId($value)
-    {
-        $this->data['VpcInstanceId'] = $value;
-        $this->options['query']['vpcInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupName($value)
-    {
-        $this->data['GroupName'] = $value;
-        $this->options['query']['groupName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTags($value)
-    {
-        $this->data['Tags'] = $value;
-        $this->options['query']['tags'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupDesc($value)
-    {
-        $this->data['GroupDesc'] = $value;
-        $this->options['query']['groupDesc'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
 
         return $this;
     }
@@ -17974,7 +14131,6 @@ class InnerGroupDetail extends Rpc
 }
 
 /**
- * @method string getEcsInstanceId()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -17985,29 +14141,18 @@ class InnerGroupDetail extends Rpc
  * @method string getVpcInstanceId()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getGroupName()
  * @method string getOperator()
  * @method string getToken()
+ * @method string getTags()
  * @method string getAsync()
+ * @method string getGroupDesc()
  * @method string getAliUid()
  * @method string getBid()
- * @method string getGroupNo()
  * @method string getProxyId()
  */
-class InnerGroupJoin extends Rpc
+class InnerGroupCreate extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcsInstanceId($value)
-    {
-        $this->data['EcsInstanceId'] = $value;
-        $this->options['query']['ecsInstanceId'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -18040,6 +14185,19 @@ class InnerGroupJoin extends Rpc
      *
      * @return $this
      */
+    public function withGroupName($value)
+    {
+        $this->data['GroupName'] = $value;
+        $this->options['query']['groupName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withOperator($value)
     {
         $this->data['Operator'] = $value;
@@ -18057,6 +14215,19 @@ class InnerGroupJoin extends Rpc
     {
         $this->data['Token'] = $value;
         $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['query']['tags'] = $value;
 
         return $this;
     }
@@ -18079,151 +14250,10 @@ class InnerGroupJoin extends Rpc
      *
      * @return $this
      */
-    public function withAliUid($value)
+    public function withGroupDesc($value)
     {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupNo($value)
-    {
-        $this->data['GroupNo'] = $value;
-        $this->options['query']['groupNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getEcsInstanceId()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getVpcInstanceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getGroupNo()
- * @method string getProxyId()
- */
-class InnerGroupLeave extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEcsInstanceId($value)
-    {
-        $this->data['EcsInstanceId'] = $value;
-        $this->options['query']['ecsInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVpcInstanceId($value)
-    {
-        $this->data['VpcInstanceId'] = $value;
-        $this->options['query']['vpcInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
+        $this->data['GroupDesc'] = $value;
+        $this->options['query']['groupDesc'] = $value;
 
         return $this;
     }
@@ -18250,273 +14280,6 @@ class InnerGroupLeave extends Rpc
     {
         $this->data['Bid'] = $value;
         $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupNo($value)
-    {
-        $this->data['GroupNo'] = $value;
-        $this->options['query']['groupNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getAliUid()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsQueryNcInfoByInstanceId extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getAliUid()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBid()
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsRegionQueryActive extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsRegionQueryAll extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
 
         return $this;
     }
@@ -18816,6 +14579,824 @@ class InnerGroupAuthorize extends Rpc
 }
 
 /**
+ * @method string getBussinessCode()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getIp()
+ * @method string getChannel()
+ * @method string getExtras()
+ * @method string getRiskyUrl()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getDomain()
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerEcsRiskControlQuery extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBussinessCode($value)
+    {
+        $this->data['BussinessCode'] = $value;
+        $this->options['query']['bussinessCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['query']['ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtras($value)
+    {
+        $this->data['Extras'] = $value;
+        $this->options['query']['extras'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRiskyUrl($value)
+    {
+        $this->data['RiskyUrl'] = $value;
+        $this->options['query']['riskyUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomain($value)
+    {
+        $this->data['Domain'] = $value;
+        $this->options['query']['domain'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getReason()
+ * @method string getBussinessCode()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCoordinate()
+ * @method string getSignatureCode()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getPunishResult()
+ * @method string getActionCode()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerEcsRiskControlPunishRemove extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReason($value)
+    {
+        $this->data['Reason'] = $value;
+        $this->options['query']['reason'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBussinessCode($value)
+    {
+        $this->data['BussinessCode'] = $value;
+        $this->options['query']['bussinessCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCoordinate($value)
+    {
+        $this->data['Coordinate'] = $value;
+        $this->options['query']['coordinate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSignatureCode($value)
+    {
+        $this->data['SignatureCode'] = $value;
+        $this->options['query']['signatureCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPunishResult($value)
+    {
+        $this->data['PunishResult'] = $value;
+        $this->options['query']['punishResult'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActionCode($value)
+    {
+        $this->data['ActionCode'] = $value;
+        $this->options['query']['actionCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getReason()
+ * @method string getBussinessCode()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCoordinate()
+ * @method string getSignatureCode()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getActionCode()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerEcsRiskControlPunish extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReason($value)
+    {
+        $this->data['Reason'] = $value;
+        $this->options['query']['reason'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBussinessCode($value)
+    {
+        $this->data['BussinessCode'] = $value;
+        $this->options['query']['bussinessCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCoordinate($value)
+    {
+        $this->data['Coordinate'] = $value;
+        $this->options['query']['coordinate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSignatureCode($value)
+    {
+        $this->data['SignatureCode'] = $value;
+        $this->options['query']['signatureCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActionCode($value)
+    {
+        $this->data['ActionCode'] = $value;
+        $this->options['query']['actionCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsRegionQueryAll extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getAliUid()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBid()
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsRegionQueryActive extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getAliUid()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsQueryNcInfoByInstanceId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getSerialNumber()
@@ -18900,146 +15481,6 @@ class InnerEcsQueryBySerialNumber extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getIp()
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getRegionNo()
- * @method string getAuthedEcsIds()
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
- */
-class InnerEcsQueryByIp extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIp($value)
-    {
-        $this->data['Ip'] = $value;
-        $this->options['query']['ip'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegionNo($value)
-    {
-        $this->data['RegionNo'] = $value;
-        $this->options['query']['regionNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAuthedEcsIds($value)
-    {
-        $this->data['AuthedEcsIds'] = $value;
-        $this->options['query']['authedEcsIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getStartOfInternetTx()
  * @method string getEcsIds()
  * @method string getResourceOwnerId()
@@ -19082,7 +15523,6 @@ class InnerEcsQueryByIp extends Rpc
  * @method string getInstanceIds()
  * @method string getPageNo()
  * @method string getZoneId()
- * @method string getCreationTime()
  * @method string getBid()
  * @method string getIzId()
  * @method string getStatus()
@@ -19539,19 +15979,6 @@ class InnerEcsQueryByParam extends Rpc
      *
      * @return $this
      */
-    public function withCreationTime($value)
-    {
-        $this->data['CreationTime'] = $value;
-        $this->options['query']['creationTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withBid($value)
     {
         $this->data['Bid'] = $value;
@@ -19616,19 +16043,23 @@ class InnerEcsQueryByParam extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInternetIp()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getIp()
  * @method string getChannel()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getOperator()
  * @method string getToken()
+ * @method string getRegionNo()
+ * @method string getAuthedEcsIds()
+ * @method string getAliUid()
+ * @method string getBid()
  * @method string getProxyId()
  */
-class InnerEcsQueryByInternetIp extends Rpc
+class InnerEcsQueryByIp extends Rpc
 {
 
     /**
@@ -19636,10 +16067,10 @@ class InnerEcsQueryByInternetIp extends Rpc
      *
      * @return $this
      */
-    public function withInternetIp($value)
+    public function withIp($value)
     {
-        $this->data['InternetIp'] = $value;
-        $this->options['query']['internetIp'] = $value;
+        $this->data['Ip'] = $value;
+        $this->options['query']['ip'] = $value;
 
         return $this;
     }
@@ -19679,6 +16110,58 @@ class InnerEcsQueryByInternetIp extends Rpc
     {
         $this->data['Token'] = $value;
         $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionNo($value)
+    {
+        $this->data['RegionNo'] = $value;
+        $this->options['query']['regionNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuthedEcsIds($value)
+    {
+        $this->data['AuthedEcsIds'] = $value;
+        $this->options['query']['authedEcsIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
 
         return $this;
     }
@@ -19784,11 +16267,11 @@ class InnerEcsQueryByIntranetIp extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getInternetIp()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIp()
  * @method string getChannel()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
@@ -19796,7 +16279,7 @@ class InnerEcsQueryByIntranetIp extends Rpc
  * @method string getToken()
  * @method string getProxyId()
  */
-class InnerEcsIsChannelMerchant extends Rpc
+class InnerEcsQueryByInternetIp extends Rpc
 {
 
     /**
@@ -19804,10 +16287,10 @@ class InnerEcsIsChannelMerchant extends Rpc
      *
      * @return $this
      */
-    public function withIp($value)
+    public function withInternetIp($value)
     {
-        $this->data['Ip'] = $value;
-        $this->options['query']['ip'] = $value;
+        $this->data['InternetIp'] = $value;
+        $this->options['query']['internetIp'] = $value;
 
         return $this;
     }
@@ -19883,6 +16366,90 @@ class InnerEcsIsChannelMerchant extends Rpc
  */
 class InnerEcsQueryByInstanceId extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getIp()
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsIsChannelMerchant extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['query']['ip'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -20338,6 +16905,414 @@ class InnerEcsInstanceQueryByParam extends Rpc
     {
         $this->data['Status'] = $value;
         $this->options['query']['status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getAsync()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAliUid()
+ * @method string getBid()
+ * @method string getProxyId()
+ */
+class InnerEcsInstanceDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['query']['async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInternetIp()
+ * @method string getSerialNumber()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getIp()
+ * @method string getChannel()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getInstanceId()
+ * @method string getAliUid()
+ * @method string getAuthedEcsIds()
+ * @method string getId()
+ * @method string getBid()
+ * @method string getProxyId()
+ * @method string getIntranetIp()
+ */
+class InnerEcsFindById extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInternetIp($value)
+    {
+        $this->data['InternetIp'] = $value;
+        $this->options['query']['internetIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSerialNumber($value)
+    {
+        $this->data['SerialNumber'] = $value;
+        $this->options['query']['serialNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['query']['ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuthedEcsIds($value)
+    {
+        $this->data['AuthedEcsIds'] = $value;
+        $this->options['query']['authedEcsIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['query']['id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIntranetIp($value)
+    {
+        $this->data['IntranetIp'] = $value;
+        $this->options['query']['intranetIp'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChannel()
+ * @method string getAliUid()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBid()
+ * @method string getOperator()
+ * @method string getToken()
+ * @method string getProxyId()
+ */
+class InnerEcsCountInRegion extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannel($value)
+    {
+        $this->data['Channel'] = $value;
+        $this->options['query']['channel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliUid($value)
+    {
+        $this->data['AliUid'] = $value;
+        $this->options['query']['aliUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['query']['bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperator($value)
+    {
+        $this->data['Operator'] = $value;
+        $this->options['query']['operator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
 
         return $this;
     }
@@ -20806,215 +17781,21 @@ class InnerDiskQueryByParam extends Rpc
 }
 
 /**
+ * @method string getExpectedReleaseTime()
+ * @method $this withExpectedReleaseTime($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getAliUid()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBid()
- * @method string getOperator()
- * @method string getToken()
- * @method string getProxyId()
- */
-class InnerEcsCountInRegion extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChannel()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getOperator()
- * @method string getToken()
- * @method string getAsync()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getAliUid()
- * @method string getBid()
- * @method string getProxyId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
-class InnerEcsInstanceDetail extends Rpc
+class ReopenInstance extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withChannel($value)
-    {
-        $this->data['Channel'] = $value;
-        $this->options['query']['channel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperator($value)
-    {
-        $this->data['Operator'] = $value;
-        $this->options['query']['operator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['query']['async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAliUid($value)
-    {
-        $this->data['AliUid'] = $value;
-        $this->options['query']['aliUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBid($value)
-    {
-        $this->data['Bid'] = $value;
-        $this->options['query']['bid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -21027,7 +17808,7 @@ class InnerEcsInstanceDetail extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryNeedKeepUsing extends Rpc
+class QueryUserInfo extends Rpc
 {
 }
 
@@ -21067,17 +17848,39 @@ class QueryUsableSnapshots extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class QueryUserInfo extends Rpc
+class QueryNeedKeepUsing extends Rpc
 {
 }
 
 /**
- * @method string getExpectedReleaseTime()
- * @method $this withExpectedReleaseTime($value)
+ * @method string getSupportIoOptimized()
+ * @method $this withSupportIoOptimized($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getExtra()
+ * @method $this withExtra($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getMarketImageCategory()
+ * @method $this withMarketImageCategory($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryMarketImages extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -21085,7 +17888,75 @@ class QueryUserInfo extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReopenInstance extends Rpc
+class QueryMarketImageCategory extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getProductVersion()
+ * @method $this withProductVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryImageIdByRegion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getImageId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryImageByImageId extends Rpc
+{
+
+    /**
+     * @param array $imageId
+     *
+     * @return $this
+     */
+    public function withImageId(array $imageId)
+    {
+        $this->data['ImageId'] = $imageId;
+        foreach ($imageId as $i => $iValue) {
+            $this->options['query']['ImageId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryAvailableRegion extends Rpc
 {
 }
 
@@ -21130,162 +18001,6 @@ class NotifyRefund extends Rpc
 }
 
 /**
- * @method string getSpotStrategy()
- * @method $this withSpotStrategy($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCommodityCode()
- * @method $this withCommodityCode($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryAvailableRegion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getImageId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getChargeType()
- * @method $this withChargeType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryImageByImageId extends Rpc
-{
-
-    /**
-     * @param array $imageId
-     *
-     * @return $this
-     */
-    public function withImageId(array $imageId)
-    {
-        $this->data['ImageId'] = $imageId;
-        foreach ($imageId as $i => $iValue) {
-            $this->options['query']['ImageId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getProductCode()
- * @method $this withProductCode($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getProductVersion()
- * @method $this withProductVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryImageIdByRegion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryMarketImageCategory extends Rpc
-{
-}
-
-/**
- * @method string getSupportIoOptimized()
- * @method $this withSupportIoOptimized($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPageNo()
- * @method $this withPageNo($value)
- * @method string getExtra()
- * @method $this withExtra($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getMarketImageCategory()
- * @method $this withMarketImageCategory($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryMarketImages extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getRemark()
- * @method $this withRemark($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPlatform()
- * @method $this withPlatform($value)
- */
-class KeepUsing extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ListAllIzMap extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ListBandwidthHistory extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method array getInstanceId()
@@ -21318,16 +18033,48 @@ class ListEcsInstanceOrderInfo extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getCommodityCode()
- * @method $this withCommodityCode($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class GetActiveRegions extends Rpc
+class ListBandwidthHistory extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListAllIzMap extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
+ */
+class KeepUsing extends Rpc
 {
 }
 
@@ -21348,6 +18095,22 @@ class GetActiveRegions extends Rpc
  * @method $this withOrderType($value)
  */
 class GetCommodity extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetActiveRegions extends Rpc
 {
 }
 

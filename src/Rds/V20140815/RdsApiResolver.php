@@ -5,163 +5,146 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method ModifyInstanceDdrPolicy modifyInstanceDdrPolicy(array $options = [])
- * @method DescribeInstanceDdrPolicy describeInstanceDdrPolicy(array $options = [])
- * @method DescribeCrossRegionLogBackupFiles describeCrossRegionLogBackupFiles(array $options = [])
- * @method DescribeCrossRegionBackups describeCrossRegionBackups(array $options = [])
- * @method DescribeAvailableRecoveryTime describeAvailableRecoveryTime(array $options = [])
- * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
- * @method EvaluateSupportByokShow evaluateSupportByokShow(array $options = [])
- * @method EvaluteSupportByokShow evaluteSupportByokShow(array $options = [])
- * @method GetServiceSecurityList getServiceSecurityList(array $options = [])
- * @method GetServiceUseSecirityIP getServiceUseSecirityIP(array $options = [])
  * @method DescribeInstanceVpcMigrateInfo describeInstanceVpcMigrateInfo(array $options = [])
  * @method DescribeReadDBInstanceDelay describeReadDBInstanceDelay(array $options = [])
- * @method RestoreTable restoreTable(array $options = [])
  * @method AllocateInstanceVpcNetworkType allocateInstanceVpcNetworkType(array $options = [])
+ * @method RestoreTable restoreTable(array $options = [])
  * @method MigrateToOtherRegion migrateToOtherRegion(array $options = [])
- * @method ModifyActiveOperationPendingTask modifyActiveOperationPendingTask(array $options = [])
- * @method DescribeTargetAVZ describeTargetAVZ(array $options = [])
- * @method DescribeAvailableInstanceClass describeAvailableInstanceClass(array $options = [])
- * @method ListTagResources listTagResources(array $options = [])
- * @method UntagResources untagResources(array $options = [])
- * @method TagResources tagResources(array $options = [])
- * @method DescribeProxyFunctionSupport describeProxyFunctionSupport(array $options = [])
  * @method DescribeMetaList describeMetaList(array $options = [])
+ * @method DescribeProxyFunctionSupport describeProxyFunctionSupport(array $options = [])
+ * @method DescribeAvailableInstanceClass describeAvailableInstanceClass(array $options = [])
  * @method RequestServiceOfCloudDBExpert requestServiceOfCloudDBExpert(array $options = [])
  * @method DescribeCloudDbExpertService describeCloudDbExpertService(array $options = [])
- * @method AddDBInstanceNetworkType addDBInstanceNetworkType(array $options = [])
- * @method CheckInstanceExist checkInstanceExist(array $options = [])
  * @method DescribeTemplatesList describeTemplatesList(array $options = [])
+ * @method ModifyMySQLDBInstanceDelay modifyMySQLDBInstanceDelay(array $options = [])
+ * @method CheckInstanceExist checkInstanceExist(array $options = [])
  * @method DescribeLogBackupFiles describeLogBackupFiles(array $options = [])
- * @method DescribeActiveOperationTask describeActiveOperationTask(array $options = [])
- * @method SwitchDBInstanceVpc switchDBInstanceVpc(array $options = [])
  * @method MigrateSecurityIPMode migrateSecurityIPMode(array $options = [])
+ * @method SwitchDBInstanceVpc switchDBInstanceVpc(array $options = [])
  * @method DescribeCollationTimeZones describeCollationTimeZones(array $options = [])
  * @method ModifyCollationTimeZone modifyCollationTimeZone(array $options = [])
- * @method CopyDatabaseBetweenInstances copyDatabaseBetweenInstances(array $options = [])
  * @method DescribeBackupDatabase describeBackupDatabase(array $options = [])
+ * @method CopyDatabaseBetweenInstances copyDatabaseBetweenInstances(array $options = [])
  * @method RecoveryDBInstance recoveryDBInstance(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method ModifyReadonlyInstanceDelayReplicationTime modifyReadonlyInstanceDelayReplicationTime(array $options = [])
- * @method ModifyMySQLDBInstanceDelay modifyMySQLDBInstanceDelay(array $options = [])
+ * @method DescribeDBInstanceProxyConfiguration describeDBInstanceProxyConfiguration(array $options = [])
  * @method CreateOnlineDatabaseTask createOnlineDatabaseTask(array $options = [])
  * @method UpgradeDBInstanceKernelVersion upgradeDBInstanceKernelVersion(array $options = [])
  * @method ModifyDBInstanceProxyConfiguration modifyDBInstanceProxyConfiguration(array $options = [])
- * @method DescribeDBInstanceProxyConfiguration describeDBInstanceProxyConfiguration(array $options = [])
  * @method DescribeSecurityGroupConfiguration describeSecurityGroupConfiguration(array $options = [])
  * @method ModifySecurityGroupConfiguration modifySecurityGroupConfiguration(array $options = [])
- * @method DescribeMigrateTasks describeMigrateTasks(array $options = [])
- * @method DescribeOssDownloads describeOssDownloads(array $options = [])
- * @method CreateMigrateTask createMigrateTask(array $options = [])
- * @method CreateMigrateTaskForSQLServer createMigrateTaskForSQLServer(array $options = [])
- * @method DescribeMigrateTasksForSQLServer describeMigrateTasksForSQLServer(array $options = [])
  * @method DescribeOssDownloadsForSQLServer describeOssDownloadsForSQLServer(array $options = [])
- * @method ResetAccount resetAccount(array $options = [])
+ * @method DescribeMigrateTasksForSQLServer describeMigrateTasksForSQLServer(array $options = [])
+ * @method CreateMigrateTaskForSQLServer createMigrateTaskForSQLServer(array $options = [])
+ * @method CreateMigrateTask createMigrateTask(array $options = [])
+ * @method DescribeOssDownloads describeOssDownloads(array $options = [])
+ * @method DescribeMigrateTasks describeMigrateTasks(array $options = [])
  * @method CopyDatabase copyDatabase(array $options = [])
+ * @method ResetAccount resetAccount(array $options = [])
  * @method DescribeDBInstancesAsCsv describeDBInstancesAsCsv(array $options = [])
  * @method ModifyDBInstanceNetworkExpireTime modifyDBInstanceNetworkExpireTime(array $options = [])
- * @method CreateDBInstanceReplica createDBInstanceReplica(array $options = [])
- * @method DescribePrice describePrice(array $options = [])
- * @method DescribeRenewalPrice describeRenewalPrice(array $options = [])
+ * @method ModifyResourceGroup modifyResourceGroup(array $options = [])
  * @method ModifyReplicaDescription modifyReplicaDescription(array $options = [])
+ * @method CreateDBInstanceReplica createDBInstanceReplica(array $options = [])
+ * @method DescribeRenewalPrice describeRenewalPrice(array $options = [])
+ * @method DescribePrice describePrice(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
- * @method CheckRecoveryConditions checkRecoveryConditions(array $options = [])
  * @method DescribeTaskInfo describeTaskInfo(array $options = [])
+ * @method CheckRecoveryConditions checkRecoveryConditions(array $options = [])
  * @method ModifyInstanceAutoRenewalAttribute modifyInstanceAutoRenewalAttribute(array $options = [])
  * @method DescribeInstanceAutoRenewalAttribute describeInstanceAutoRenewalAttribute(array $options = [])
- * @method ModifyResourceGroup modifyResourceGroup(array $options = [])
- * @method AllocateReadWriteSplittingConnection allocateReadWriteSplittingConnection(array $options = [])
- * @method ModifyReadWriteSplittingConnection modifyReadWriteSplittingConnection(array $options = [])
  * @method ReleaseReadWriteSplittingConnection releaseReadWriteSplittingConnection(array $options = [])
+ * @method ModifyReadWriteSplittingConnection modifyReadWriteSplittingConnection(array $options = [])
  * @method CalculateDBInstanceWeight calculateDBInstanceWeight(array $options = [])
+ * @method AllocateReadWriteSplittingConnection allocateReadWriteSplittingConnection(array $options = [])
  * @method CheckResource checkResource(array $options = [])
  * @method DescribeCharacterSetName describeCharacterSetName(array $options = [])
  * @method DeleteBackup deleteBackup(array $options = [])
  * @method DescribeDiagnosticReportList describeDiagnosticReportList(array $options = [])
  * @method CreateDiagnosticReport createDiagnosticReport(array $options = [])
  * @method CloneDBInstance cloneDBInstance(array $options = [])
- * @method RevokeOperatorPermission revokeOperatorPermission(array $options = [])
- * @method DescribeDBInstanceByTags describeDBInstanceByTags(array $options = [])
  * @method DescribeTags describeTags(array $options = [])
+ * @method DescribeDBInstanceByTags describeDBInstanceByTags(array $options = [])
+ * @method RevokeOperatorPermission revokeOperatorPermission(array $options = [])
  * @method ModifyDBInstanceTDE modifyDBInstanceTDE(array $options = [])
- * @method DescribeDBInstanceSSL describeDBInstanceSSL(array $options = [])
- * @method DescribeDBInstanceTDE describeDBInstanceTDE(array $options = [])
- * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
  * @method ModifyDBInstanceSSL modifyDBInstanceSSL(array $options = [])
+ * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
+ * @method DescribeDBInstanceTDE describeDBInstanceTDE(array $options = [])
+ * @method DescribeDBInstanceSSL describeDBInstanceSSL(array $options = [])
  * @method DescribeSQLLogFiles describeSQLLogFiles(array $options = [])
  * @method ModifyDBInstanceMonitor modifyDBInstanceMonitor(array $options = [])
- * @method ModifySQLCollectorPolicy modifySQLCollectorPolicy(array $options = [])
- * @method DescribeDBInstanceMonitor describeDBInstanceMonitor(array $options = [])
- * @method DescribeSQLReports describeSQLReports(array $options = [])
  * @method SwitchDBInstanceHA switchDBInstanceHA(array $options = [])
+ * @method DescribeDBInstanceMonitor describeDBInstanceMonitor(array $options = [])
+ * @method ModifySQLCollectorPolicy modifySQLCollectorPolicy(array $options = [])
  * @method ModifyDBInstanceHAConfig modifyDBInstanceHAConfig(array $options = [])
  * @method DescribeDBInstanceHAConfig describeDBInstanceHAConfig(array $options = [])
+ * @method DescribeSQLReports describeSQLReports(array $options = [])
  * @method DescribeDBInstanceIPArrayList describeDBInstanceIPArrayList(array $options = [])
  * @method DescribeSQLLogReportList describeSQLLogReportList(array $options = [])
- * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
- * @method DescribeDBInstancesByPerformance describeDBInstancesByPerformance(array $options = [])
- * @method DescribeDBInstancesByExpireTime describeDBInstancesByExpireTime(array $options = [])
- * @method DescribeDBInstances describeDBInstances(array $options = [])
- * @method CreateReadOnlyDBInstance createReadOnlyDBInstance(array $options = [])
- * @method CreateDBInstance createDBInstance(array $options = [])
- * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])
- * @method ModifyDBInstanceConnectionMode modifyDBInstanceConnectionMode(array $options = [])
- * @method DescribeDBInstanceNetInfo describeDBInstanceNetInfo(array $options = [])
- * @method SwitchDBInstanceNetType switchDBInstanceNetType(array $options = [])
- * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
- * @method ModifyDBInstanceNetworkType modifyDBInstanceNetworkType(array $options = [])
- * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
- * @method AddTagsToResource addTagsToResource(array $options = [])
- * @method CreateAccount createAccount(array $options = [])
- * @method CheckAccountNameAvailable checkAccountNameAvailable(array $options = [])
- * @method CancelImport cancelImport(array $options = [])
- * @method CreateDatabase createDatabase(array $options = [])
- * @method CreateBackup createBackup(array $options = [])
- * @method DeleteDatabase deleteDatabase(array $options = [])
- * @method DeleteAccount deleteAccount(array $options = [])
- * @method CreateTempDBInstance createTempDBInstance(array $options = [])
- * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
- * @method DescribeAccounts describeAccounts(array $options = [])
- * @method DescibeImportsFromDatabase descibeImportsFromDatabase(array $options = [])
- * @method DeleteDBInstance deleteDBInstance(array $options = [])
- * @method DescribeBinlogFiles describeBinlogFiles(array $options = [])
- * @method DescribeBackupTasks describeBackupTasks(array $options = [])
- * @method DescribeBackups describeBackups(array $options = [])
- * @method DescribeErrorLogs describeErrorLogs(array $options = [])
- * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
- * @method DescribeDatabases describeDatabases(array $options = [])
- * @method DescribeModifyParameterLog describeModifyParameterLog(array $options = [])
- * @method DescribeParameters describeParameters(array $options = [])
- * @method DescribeRegions describeRegions(array $options = [])
- * @method DescribeParameterTemplates describeParameterTemplates(array $options = [])
- * @method DescribeSlowLogs describeSlowLogs(array $options = [])
- * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
- * @method DescribeResourceUsage describeResourceUsage(array $options = [])
- * @method DescribeTasks describeTasks(array $options = [])
- * @method DescribeSQLLogReports describeSQLLogReports(array $options = [])
- * @method DescribeSQLLogRecords describeSQLLogRecords(array $options = [])
- * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
- * @method MigrateToOtherZone migrateToOtherZone(array $options = [])
- * @method ImportDataForSQLServer importDataForSQLServer(array $options = [])
- * @method ImportDatabaseBetweenInstances importDatabaseBetweenInstances(array $options = [])
+ * @method ResetAccountForPG resetAccountForPG(array $options = [])
+ * @method AllocateInstancePrivateConnection allocateInstancePrivateConnection(array $options = [])
+ * @method UpgradeDBInstanceEngineVersion upgradeDBInstanceEngineVersion(array $options = [])
+ * @method RevokeAccountPrivilege revokeAccountPrivilege(array $options = [])
+ * @method RestoreDBInstance restoreDBInstance(array $options = [])
+ * @method RestartDBInstance restartDBInstance(array $options = [])
+ * @method ResetAccountPassword resetAccountPassword(array $options = [])
+ * @method RemoveTagsFromResource removeTagsFromResource(array $options = [])
+ * @method PurgeDBInstanceLog purgeDBInstanceLog(array $options = [])
+ * @method ModifySecurityIps modifySecurityIps(array $options = [])
+ * @method ModifyParameter modifyParameter(array $options = [])
+ * @method ModifyDBInstanceSpec modifyDBInstanceSpec(array $options = [])
+ * @method ModifyDBInstanceMaintainTime modifyDBInstanceMaintainTime(array $options = [])
  * @method ModifyDBInstanceDescription modifyDBInstanceDescription(array $options = [])
  * @method ModifyDBDescription modifyDBDescription(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
- * @method ModifyParameter modifyParameter(array $options = [])
- * @method ModifyDBInstanceSpec modifyDBInstanceSpec(array $options = [])
- * @method ModifyDBInstanceMaintainTime modifyDBInstanceMaintainTime(array $options = [])
- * @method PurgeDBInstanceLog purgeDBInstanceLog(array $options = [])
- * @method ModifySecurityIps modifySecurityIps(array $options = [])
- * @method RestartDBInstance restartDBInstance(array $options = [])
- * @method ResetAccountPassword resetAccountPassword(array $options = [])
- * @method RemoveTagsFromResource removeTagsFromResource(array $options = [])
- * @method UpgradeDBInstanceEngineVersion upgradeDBInstanceEngineVersion(array $options = [])
- * @method RevokeAccountPrivilege revokeAccountPrivilege(array $options = [])
- * @method RestoreDBInstance restoreDBInstance(array $options = [])
- * @method ResetAccountForPG resetAccountForPG(array $options = [])
- * @method AllocateInstancePrivateConnection allocateInstancePrivateConnection(array $options = [])
+ * @method MigrateToOtherZone migrateToOtherZone(array $options = [])
+ * @method ImportDataForSQLServer importDataForSQLServer(array $options = [])
+ * @method ImportDatabaseBetweenInstances importDatabaseBetweenInstances(array $options = [])
+ * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
+ * @method DescribeTasks describeTasks(array $options = [])
+ * @method DescribeSQLLogReports describeSQLLogReports(array $options = [])
+ * @method DescribeSQLLogRecords describeSQLLogRecords(array $options = [])
+ * @method DescribeSlowLogs describeSlowLogs(array $options = [])
+ * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
+ * @method DescribeResourceUsage describeResourceUsage(array $options = [])
+ * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeParameterTemplates describeParameterTemplates(array $options = [])
+ * @method DescribeParameters describeParameters(array $options = [])
+ * @method DescribeModifyParameterLog describeModifyParameterLog(array $options = [])
+ * @method DescribeErrorLogs describeErrorLogs(array $options = [])
+ * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
+ * @method DescribeDatabases describeDatabases(array $options = [])
+ * @method DescribeBinlogFiles describeBinlogFiles(array $options = [])
+ * @method DescribeBackupTasks describeBackupTasks(array $options = [])
+ * @method DescribeBackups describeBackups(array $options = [])
+ * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
+ * @method DescribeAccounts describeAccounts(array $options = [])
+ * @method DescibeImportsFromDatabase descibeImportsFromDatabase(array $options = [])
+ * @method DeleteDBInstance deleteDBInstance(array $options = [])
+ * @method DeleteDatabase deleteDatabase(array $options = [])
+ * @method DeleteAccount deleteAccount(array $options = [])
+ * @method CreateTempDBInstance createTempDBInstance(array $options = [])
+ * @method CreateDatabase createDatabase(array $options = [])
+ * @method CreateBackup createBackup(array $options = [])
+ * @method CreateAccount createAccount(array $options = [])
+ * @method CheckAccountNameAvailable checkAccountNameAvailable(array $options = [])
+ * @method CancelImport cancelImport(array $options = [])
+ * @method AddTagsToResource addTagsToResource(array $options = [])
+ * @method SwitchDBInstanceNetType switchDBInstanceNetType(array $options = [])
+ * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
+ * @method ModifyDBInstanceNetworkType modifyDBInstanceNetworkType(array $options = [])
+ * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
+ * @method ModifyDBInstanceConnectionMode modifyDBInstanceConnectionMode(array $options = [])
+ * @method DescribeDBInstanceNetInfo describeDBInstanceNetInfo(array $options = [])
+ * @method CreateReadOnlyDBInstance createReadOnlyDBInstance(array $options = [])
+ * @method CreateDBInstance createDBInstance(array $options = [])
+ * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])
+ * @method DescribeDBInstancesByPerformance describeDBInstancesByPerformance(array $options = [])
+ * @method DescribeDBInstancesByExpireTime describeDBInstancesByExpireTime(array $options = [])
+ * @method DescribeDBInstances describeDBInstances(array $options = [])
+ * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
  */
 class RdsApiResolver extends ApiResolver
 {
@@ -180,216 +163,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'rds';
-}
-
-/**
- * @method string getDBInstanceName()
- * @method $this withDBInstanceName($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getRetentType()
- * @method $this withRetentType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getLogBackupEnabled()
- * @method $this withLogBackupEnabled($value)
- * @method string getBackupEnabled()
- * @method $this withBackupEnabled($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getStorageType()
- * @method $this withStorageType($value)
- * @method string getEndpoint()
- * @method $this withEndpoint($value)
- * @method string getDdrRegion()
- * @method $this withDdrRegion($value)
- * @method string getStorageOwner()
- * @method $this withStorageOwner($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- * @method string getDdrType()
- * @method $this withDdrType($value)
- * @method string getRetention()
- * @method $this withRetention($value)
- */
-class ModifyInstanceDdrPolicy extends Rpc
-{
-}
-
-/**
- * @method string getDBInstanceName()
- * @method $this withDBInstanceName($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeInstanceDdrPolicy extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCrossBackupRegion()
- * @method $this withCrossBackupRegion($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeCrossRegionLogBackupFiles extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumbers()
- * @method $this withPageNumbers($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCrossBackupRegion()
- * @method $this withCrossBackupRegion($value)
- */
-class DescribeCrossRegionBackups extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCrossBackupId()
- * @method $this withCrossBackupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeAvailableRecoveryTime extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeAvailableCrossRegion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getNodeType()
- * @method $this withNodeType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getTargetRegionId()
- * @method $this withTargetRegionId($value)
- * @method string getDbInstanceStorageType()
- * @method $this withDbInstanceStorageType($value)
- */
-class EvaluateSupportByokShow extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getNodeType()
- * @method $this withNodeType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getDbInstanceStorageType()
- * @method $this withDbInstanceStorageType($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class EvaluteSupportByokShow extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetServiceSecurityList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetServiceUseSecirityIP extends Rpc
-{
 }
 
 /**
@@ -433,30 +206,6 @@ class DescribeReadDBInstanceDelay extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getRestoreTime()
- * @method $this withRestoreTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTableMeta()
- * @method $this withTableMeta($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RestoreTable extends Rpc
-{
-}
-
-/**
  * @method string getTargetVpcId()
  * @method $this withTargetVpcId($value)
  * @method string getResourceOwnerId()
@@ -477,6 +226,30 @@ class RestoreTable extends Rpc
  * @method $this withOwnerId($value)
  */
 class AllocateInstanceVpcNetworkType extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getTableMeta()
+ * @method $this withTableMeta($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RestoreTable extends Rpc
 {
 }
 
@@ -505,3760 +278,6 @@ class AllocateInstanceVpcNetworkType extends Rpc
  * @method $this withSwitchTime($value)
  */
 class MigrateToOtherRegion extends Rpc
-{
-}
-
-/**
- * @method string getVpcTaskIdList()
- * @method $this withVpcTaskIdList($value)
- * @method string getIpAddress()
- * @method $this withIpAddress($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTaskIdList()
- * @method $this withTaskIdList($value)
- * @method string getVpcInstanceId()
- * @method $this withVpcInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getTunnelId()
- * @method $this withTunnelId($value)
- * @method string getSwitchTime()
- * @method $this withSwitchTime($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class ModifyActiveOperationPendingTask extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCurrentAVZ()
- * @method $this withCurrentAVZ($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeTargetAVZ extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
- * @method string getOrderType()
- * @method $this withOrderType($value)
- */
-class DescribeAvailableInstanceClass extends Rpc
-{
-}
-
-/**
- * @method string getResourceId47()
- * @method string getResourceId48()
- * @method string getResourceId49()
- * @method string getTag2Key()
- * @method string getTag12Value()
- * @method string getResourceId40()
- * @method string getResourceId41()
- * @method string getResourceId42()
- * @method string getResourceId1()
- * @method string getResourceId43()
- * @method string getResourceId2()
- * @method string getResourceId44()
- * @method string getResourceId3()
- * @method string getResourceId45()
- * @method string getResourceId4()
- * @method string getResourceId46()
- * @method string getResourceId5()
- * @method string getResourceId6()
- * @method string getResourceId7()
- * @method string getResourceId8()
- * @method string getResourceId9()
- * @method string getTag15Value()
- * @method string getTag18Key()
- * @method string getTag8Value()
- * @method string getTag18Value()
- * @method string getResourceId36()
- * @method string getResourceId37()
- * @method string getResourceId38()
- * @method string getResourceId39()
- * @method string getResourceId30()
- * @method string getResourceId31()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceId32()
- * @method string getResourceId33()
- * @method string getResourceId34()
- * @method string getResourceId35()
- * @method string getTag16Key()
- * @method string getTag4Key()
- * @method string getResourceId25()
- * @method string getResourceId26()
- * @method string getResourceId27()
- * @method string getResourceId28()
- * @method string getResourceId29()
- * @method string getTag7Key()
- * @method string getTag12Key()
- * @method string getTag6Value()
- * @method string getResourceId20()
- * @method string getResourceId21()
- * @method string getTag21Key()
- * @method string getResourceId22()
- * @method string getResourceId23()
- * @method string getResourceId24()
- * @method string getTag14Key()
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method string getTag13Value()
- * @method string getResourceId14()
- * @method string getResourceId15()
- * @method string getTag10Key()
- * @method string getResourceId16()
- * @method string getResourceId17()
- * @method string getResourceId18()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getResourceId19()
- * @method string getTag19Key()
- * @method string getResourceId10()
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getResourceId11()
- * @method string getTag5Value()
- * @method string getResourceId12()
- * @method string getResourceId13()
- * @method string getTag9Key()
- * @method string getTag19Value()
- * @method string getTag4Value()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag17Key()
- * @method string getTag3Key()
- * @method string getTag1Value()
- * @method string getTag15Key()
- * @method string getTag11Value()
- * @method string getTag5Key()
- * @method string getTag14Value()
- * @method string getTag7Value()
- * @method string getTag20Key()
- * @method string getTag20Value()
- * @method string getTag17Value()
- * @method string getTag13Key()
- * @method string getTag9Value()
- * @method string getTag6Key()
- * @method string getTag10Value()
- * @method string getTag3Value()
- * @method string getTag21Value()
- * @method string getResourceId50()
- * @method string getTag16Value()
- * @method string getResourceId51()
- * @method string getTag1Key()
- * @method string getTag8Key()
- * @method string getTag11Key()
- * @method string getTag2Value()
- */
-class ListTagResources extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId47($value)
-    {
-        $this->data['ResourceId47'] = $value;
-        $this->options['query']['ResourceId.47'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId48($value)
-    {
-        $this->data['ResourceId48'] = $value;
-        $this->options['query']['ResourceId.48'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId49($value)
-    {
-        $this->data['ResourceId49'] = $value;
-        $this->options['query']['ResourceId.49'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Key($value)
-    {
-        $this->data['Tag2Key'] = $value;
-        $this->options['query']['Tag.2.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag12Value($value)
-    {
-        $this->data['Tag12Value'] = $value;
-        $this->options['query']['Tag.12.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId40($value)
-    {
-        $this->data['ResourceId40'] = $value;
-        $this->options['query']['ResourceId.40'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId41($value)
-    {
-        $this->data['ResourceId41'] = $value;
-        $this->options['query']['ResourceId.41'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId42($value)
-    {
-        $this->data['ResourceId42'] = $value;
-        $this->options['query']['ResourceId.42'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId1($value)
-    {
-        $this->data['ResourceId1'] = $value;
-        $this->options['query']['ResourceId.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId43($value)
-    {
-        $this->data['ResourceId43'] = $value;
-        $this->options['query']['ResourceId.43'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId2($value)
-    {
-        $this->data['ResourceId2'] = $value;
-        $this->options['query']['ResourceId.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId44($value)
-    {
-        $this->data['ResourceId44'] = $value;
-        $this->options['query']['ResourceId.44'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId3($value)
-    {
-        $this->data['ResourceId3'] = $value;
-        $this->options['query']['ResourceId.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId45($value)
-    {
-        $this->data['ResourceId45'] = $value;
-        $this->options['query']['ResourceId.45'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId4($value)
-    {
-        $this->data['ResourceId4'] = $value;
-        $this->options['query']['ResourceId.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId46($value)
-    {
-        $this->data['ResourceId46'] = $value;
-        $this->options['query']['ResourceId.46'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId5($value)
-    {
-        $this->data['ResourceId5'] = $value;
-        $this->options['query']['ResourceId.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId6($value)
-    {
-        $this->data['ResourceId6'] = $value;
-        $this->options['query']['ResourceId.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId7($value)
-    {
-        $this->data['ResourceId7'] = $value;
-        $this->options['query']['ResourceId.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId8($value)
-    {
-        $this->data['ResourceId8'] = $value;
-        $this->options['query']['ResourceId.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId9($value)
-    {
-        $this->data['ResourceId9'] = $value;
-        $this->options['query']['ResourceId.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag15Value($value)
-    {
-        $this->data['Tag15Value'] = $value;
-        $this->options['query']['Tag.15.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag18Key($value)
-    {
-        $this->data['Tag18Key'] = $value;
-        $this->options['query']['Tag.18.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag8Value($value)
-    {
-        $this->data['Tag8Value'] = $value;
-        $this->options['query']['Tag.8.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag18Value($value)
-    {
-        $this->data['Tag18Value'] = $value;
-        $this->options['query']['Tag.18.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId36($value)
-    {
-        $this->data['ResourceId36'] = $value;
-        $this->options['query']['ResourceId.36'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId37($value)
-    {
-        $this->data['ResourceId37'] = $value;
-        $this->options['query']['ResourceId.37'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId38($value)
-    {
-        $this->data['ResourceId38'] = $value;
-        $this->options['query']['ResourceId.38'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId39($value)
-    {
-        $this->data['ResourceId39'] = $value;
-        $this->options['query']['ResourceId.39'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId30($value)
-    {
-        $this->data['ResourceId30'] = $value;
-        $this->options['query']['ResourceId.30'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId31($value)
-    {
-        $this->data['ResourceId31'] = $value;
-        $this->options['query']['ResourceId.31'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId32($value)
-    {
-        $this->data['ResourceId32'] = $value;
-        $this->options['query']['ResourceId.32'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId33($value)
-    {
-        $this->data['ResourceId33'] = $value;
-        $this->options['query']['ResourceId.33'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId34($value)
-    {
-        $this->data['ResourceId34'] = $value;
-        $this->options['query']['ResourceId.34'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId35($value)
-    {
-        $this->data['ResourceId35'] = $value;
-        $this->options['query']['ResourceId.35'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag16Key($value)
-    {
-        $this->data['Tag16Key'] = $value;
-        $this->options['query']['Tag.16.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Key($value)
-    {
-        $this->data['Tag4Key'] = $value;
-        $this->options['query']['Tag.4.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId25($value)
-    {
-        $this->data['ResourceId25'] = $value;
-        $this->options['query']['ResourceId.25'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId26($value)
-    {
-        $this->data['ResourceId26'] = $value;
-        $this->options['query']['ResourceId.26'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId27($value)
-    {
-        $this->data['ResourceId27'] = $value;
-        $this->options['query']['ResourceId.27'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId28($value)
-    {
-        $this->data['ResourceId28'] = $value;
-        $this->options['query']['ResourceId.28'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId29($value)
-    {
-        $this->data['ResourceId29'] = $value;
-        $this->options['query']['ResourceId.29'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag7Key($value)
-    {
-        $this->data['Tag7Key'] = $value;
-        $this->options['query']['Tag.7.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag12Key($value)
-    {
-        $this->data['Tag12Key'] = $value;
-        $this->options['query']['Tag.12.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag6Value($value)
-    {
-        $this->data['Tag6Value'] = $value;
-        $this->options['query']['Tag.6.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId20($value)
-    {
-        $this->data['ResourceId20'] = $value;
-        $this->options['query']['ResourceId.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId21($value)
-    {
-        $this->data['ResourceId21'] = $value;
-        $this->options['query']['ResourceId.21'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag21Key($value)
-    {
-        $this->data['Tag21Key'] = $value;
-        $this->options['query']['Tag.21.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId22($value)
-    {
-        $this->data['ResourceId22'] = $value;
-        $this->options['query']['ResourceId.22'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId23($value)
-    {
-        $this->data['ResourceId23'] = $value;
-        $this->options['query']['ResourceId.23'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId24($value)
-    {
-        $this->data['ResourceId24'] = $value;
-        $this->options['query']['ResourceId.24'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag14Key($value)
-    {
-        $this->data['Tag14Key'] = $value;
-        $this->options['query']['Tag.14.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag13Value($value)
-    {
-        $this->data['Tag13Value'] = $value;
-        $this->options['query']['Tag.13.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId14($value)
-    {
-        $this->data['ResourceId14'] = $value;
-        $this->options['query']['ResourceId.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId15($value)
-    {
-        $this->data['ResourceId15'] = $value;
-        $this->options['query']['ResourceId.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag10Key($value)
-    {
-        $this->data['Tag10Key'] = $value;
-        $this->options['query']['Tag.10.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId16($value)
-    {
-        $this->data['ResourceId16'] = $value;
-        $this->options['query']['ResourceId.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId17($value)
-    {
-        $this->data['ResourceId17'] = $value;
-        $this->options['query']['ResourceId.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId18($value)
-    {
-        $this->data['ResourceId18'] = $value;
-        $this->options['query']['ResourceId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId19($value)
-    {
-        $this->data['ResourceId19'] = $value;
-        $this->options['query']['ResourceId.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag19Key($value)
-    {
-        $this->data['Tag19Key'] = $value;
-        $this->options['query']['Tag.19.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId10($value)
-    {
-        $this->data['ResourceId10'] = $value;
-        $this->options['query']['ResourceId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId11($value)
-    {
-        $this->data['ResourceId11'] = $value;
-        $this->options['query']['ResourceId.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Value($value)
-    {
-        $this->data['Tag5Value'] = $value;
-        $this->options['query']['Tag.5.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId12($value)
-    {
-        $this->data['ResourceId12'] = $value;
-        $this->options['query']['ResourceId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId13($value)
-    {
-        $this->data['ResourceId13'] = $value;
-        $this->options['query']['ResourceId.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag9Key($value)
-    {
-        $this->data['Tag9Key'] = $value;
-        $this->options['query']['Tag.9.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag19Value($value)
-    {
-        $this->data['Tag19Value'] = $value;
-        $this->options['query']['Tag.19.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Value($value)
-    {
-        $this->data['Tag4Value'] = $value;
-        $this->options['query']['Tag.4.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag17Key($value)
-    {
-        $this->data['Tag17Key'] = $value;
-        $this->options['query']['Tag.17.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Key($value)
-    {
-        $this->data['Tag3Key'] = $value;
-        $this->options['query']['Tag.3.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Value($value)
-    {
-        $this->data['Tag1Value'] = $value;
-        $this->options['query']['Tag.1.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag15Key($value)
-    {
-        $this->data['Tag15Key'] = $value;
-        $this->options['query']['Tag.15.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag11Value($value)
-    {
-        $this->data['Tag11Value'] = $value;
-        $this->options['query']['Tag.11.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Key($value)
-    {
-        $this->data['Tag5Key'] = $value;
-        $this->options['query']['Tag.5.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag14Value($value)
-    {
-        $this->data['Tag14Value'] = $value;
-        $this->options['query']['Tag.14.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag7Value($value)
-    {
-        $this->data['Tag7Value'] = $value;
-        $this->options['query']['Tag.7.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag20Key($value)
-    {
-        $this->data['Tag20Key'] = $value;
-        $this->options['query']['Tag.20.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag20Value($value)
-    {
-        $this->data['Tag20Value'] = $value;
-        $this->options['query']['Tag.20.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag17Value($value)
-    {
-        $this->data['Tag17Value'] = $value;
-        $this->options['query']['Tag.17.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag13Key($value)
-    {
-        $this->data['Tag13Key'] = $value;
-        $this->options['query']['Tag.13.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag9Value($value)
-    {
-        $this->data['Tag9Value'] = $value;
-        $this->options['query']['Tag.9.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag6Key($value)
-    {
-        $this->data['Tag6Key'] = $value;
-        $this->options['query']['Tag.6.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag10Value($value)
-    {
-        $this->data['Tag10Value'] = $value;
-        $this->options['query']['Tag.10.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Value($value)
-    {
-        $this->data['Tag3Value'] = $value;
-        $this->options['query']['Tag.3.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag21Value($value)
-    {
-        $this->data['Tag21Value'] = $value;
-        $this->options['query']['Tag.21.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId50($value)
-    {
-        $this->data['ResourceId50'] = $value;
-        $this->options['query']['ResourceId.50'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag16Value($value)
-    {
-        $this->data['Tag16Value'] = $value;
-        $this->options['query']['Tag.16.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId51($value)
-    {
-        $this->data['ResourceId51'] = $value;
-        $this->options['query']['ResourceId.51'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Key($value)
-    {
-        $this->data['Tag1Key'] = $value;
-        $this->options['query']['Tag.1.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag8Key($value)
-    {
-        $this->data['Tag8Key'] = $value;
-        $this->options['query']['Tag.8.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag11Key($value)
-    {
-        $this->data['Tag11Key'] = $value;
-        $this->options['query']['Tag.11.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Value($value)
-    {
-        $this->data['Tag2Value'] = $value;
-        $this->options['query']['Tag.2.Value'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceId47()
- * @method string getResourceId48()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceId49()
- * @method string getResourceId40()
- * @method string getResourceId41()
- * @method string getResourceId42()
- * @method string getTagKey9()
- * @method string getResourceId1()
- * @method string getResourceId43()
- * @method string getResourceId2()
- * @method string getResourceId44()
- * @method string getResourceId3()
- * @method string getResourceId45()
- * @method string getResourceId4()
- * @method string getResourceId46()
- * @method string getResourceId5()
- * @method string getTagKey4()
- * @method string getResourceId6()
- * @method string getTagKey3()
- * @method string getResourceId7()
- * @method string getTagKey2()
- * @method string getResourceId8()
- * @method string getTagKey1()
- * @method string getResourceId9()
- * @method string getTagKey8()
- * @method string getTagKey20()
- * @method string getTagKey7()
- * @method string getTagKey6()
- * @method string getTagKey5()
- * @method string getTagKey21()
- * @method string getResourceId36()
- * @method string getAll()
- * @method $this withAll($value)
- * @method string getResourceId37()
- * @method string getResourceId38()
- * @method string getResourceId39()
- * @method string getResourceId30()
- * @method string getResourceId31()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceId32()
- * @method string getResourceId33()
- * @method string getResourceId34()
- * @method string getResourceId35()
- * @method string getResourceId25()
- * @method string getResourceId26()
- * @method string getResourceId27()
- * @method string getResourceId28()
- * @method string getResourceId29()
- * @method string getResourceId20()
- * @method string getResourceId21()
- * @method string getResourceId22()
- * @method string getResourceId23()
- * @method string getResourceId24()
- * @method string getResourceId14()
- * @method string getResourceId15()
- * @method string getResourceId16()
- * @method string getTagKey19()
- * @method string getResourceId17()
- * @method string getTagKey18()
- * @method string getResourceId18()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getResourceId19()
- * @method string getResourceId50()
- * @method string getResourceId51()
- * @method string getResourceId10()
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getResourceId11()
- * @method string getResourceId12()
- * @method string getResourceId13()
- * @method string getTagKey13()
- * @method string getTagKey12()
- * @method string getTagKey11()
- * @method string getTagKey10()
- * @method string getTagKey17()
- * @method string getTagKey16()
- * @method string getTagKey15()
- * @method string getTagKey14()
- */
-class UntagResources extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId47($value)
-    {
-        $this->data['ResourceId47'] = $value;
-        $this->options['query']['ResourceId.47'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId48($value)
-    {
-        $this->data['ResourceId48'] = $value;
-        $this->options['query']['ResourceId.48'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId49($value)
-    {
-        $this->data['ResourceId49'] = $value;
-        $this->options['query']['ResourceId.49'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId40($value)
-    {
-        $this->data['ResourceId40'] = $value;
-        $this->options['query']['ResourceId.40'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId41($value)
-    {
-        $this->data['ResourceId41'] = $value;
-        $this->options['query']['ResourceId.41'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId42($value)
-    {
-        $this->data['ResourceId42'] = $value;
-        $this->options['query']['ResourceId.42'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey9($value)
-    {
-        $this->data['TagKey9'] = $value;
-        $this->options['query']['TagKey.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId1($value)
-    {
-        $this->data['ResourceId1'] = $value;
-        $this->options['query']['ResourceId.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId43($value)
-    {
-        $this->data['ResourceId43'] = $value;
-        $this->options['query']['ResourceId.43'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId2($value)
-    {
-        $this->data['ResourceId2'] = $value;
-        $this->options['query']['ResourceId.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId44($value)
-    {
-        $this->data['ResourceId44'] = $value;
-        $this->options['query']['ResourceId.44'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId3($value)
-    {
-        $this->data['ResourceId3'] = $value;
-        $this->options['query']['ResourceId.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId45($value)
-    {
-        $this->data['ResourceId45'] = $value;
-        $this->options['query']['ResourceId.45'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId4($value)
-    {
-        $this->data['ResourceId4'] = $value;
-        $this->options['query']['ResourceId.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId46($value)
-    {
-        $this->data['ResourceId46'] = $value;
-        $this->options['query']['ResourceId.46'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId5($value)
-    {
-        $this->data['ResourceId5'] = $value;
-        $this->options['query']['ResourceId.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey4($value)
-    {
-        $this->data['TagKey4'] = $value;
-        $this->options['query']['TagKey.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId6($value)
-    {
-        $this->data['ResourceId6'] = $value;
-        $this->options['query']['ResourceId.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey3($value)
-    {
-        $this->data['TagKey3'] = $value;
-        $this->options['query']['TagKey.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId7($value)
-    {
-        $this->data['ResourceId7'] = $value;
-        $this->options['query']['ResourceId.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey2($value)
-    {
-        $this->data['TagKey2'] = $value;
-        $this->options['query']['TagKey.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId8($value)
-    {
-        $this->data['ResourceId8'] = $value;
-        $this->options['query']['ResourceId.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey1($value)
-    {
-        $this->data['TagKey1'] = $value;
-        $this->options['query']['TagKey.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId9($value)
-    {
-        $this->data['ResourceId9'] = $value;
-        $this->options['query']['ResourceId.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey8($value)
-    {
-        $this->data['TagKey8'] = $value;
-        $this->options['query']['TagKey.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey20($value)
-    {
-        $this->data['TagKey20'] = $value;
-        $this->options['query']['TagKey.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey7($value)
-    {
-        $this->data['TagKey7'] = $value;
-        $this->options['query']['TagKey.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey6($value)
-    {
-        $this->data['TagKey6'] = $value;
-        $this->options['query']['TagKey.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey5($value)
-    {
-        $this->data['TagKey5'] = $value;
-        $this->options['query']['TagKey.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey21($value)
-    {
-        $this->data['TagKey21'] = $value;
-        $this->options['query']['TagKey.21'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId36($value)
-    {
-        $this->data['ResourceId36'] = $value;
-        $this->options['query']['ResourceId.36'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId37($value)
-    {
-        $this->data['ResourceId37'] = $value;
-        $this->options['query']['ResourceId.37'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId38($value)
-    {
-        $this->data['ResourceId38'] = $value;
-        $this->options['query']['ResourceId.38'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId39($value)
-    {
-        $this->data['ResourceId39'] = $value;
-        $this->options['query']['ResourceId.39'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId30($value)
-    {
-        $this->data['ResourceId30'] = $value;
-        $this->options['query']['ResourceId.30'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId31($value)
-    {
-        $this->data['ResourceId31'] = $value;
-        $this->options['query']['ResourceId.31'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId32($value)
-    {
-        $this->data['ResourceId32'] = $value;
-        $this->options['query']['ResourceId.32'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId33($value)
-    {
-        $this->data['ResourceId33'] = $value;
-        $this->options['query']['ResourceId.33'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId34($value)
-    {
-        $this->data['ResourceId34'] = $value;
-        $this->options['query']['ResourceId.34'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId35($value)
-    {
-        $this->data['ResourceId35'] = $value;
-        $this->options['query']['ResourceId.35'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId25($value)
-    {
-        $this->data['ResourceId25'] = $value;
-        $this->options['query']['ResourceId.25'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId26($value)
-    {
-        $this->data['ResourceId26'] = $value;
-        $this->options['query']['ResourceId.26'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId27($value)
-    {
-        $this->data['ResourceId27'] = $value;
-        $this->options['query']['ResourceId.27'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId28($value)
-    {
-        $this->data['ResourceId28'] = $value;
-        $this->options['query']['ResourceId.28'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId29($value)
-    {
-        $this->data['ResourceId29'] = $value;
-        $this->options['query']['ResourceId.29'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId20($value)
-    {
-        $this->data['ResourceId20'] = $value;
-        $this->options['query']['ResourceId.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId21($value)
-    {
-        $this->data['ResourceId21'] = $value;
-        $this->options['query']['ResourceId.21'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId22($value)
-    {
-        $this->data['ResourceId22'] = $value;
-        $this->options['query']['ResourceId.22'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId23($value)
-    {
-        $this->data['ResourceId23'] = $value;
-        $this->options['query']['ResourceId.23'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId24($value)
-    {
-        $this->data['ResourceId24'] = $value;
-        $this->options['query']['ResourceId.24'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId14($value)
-    {
-        $this->data['ResourceId14'] = $value;
-        $this->options['query']['ResourceId.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId15($value)
-    {
-        $this->data['ResourceId15'] = $value;
-        $this->options['query']['ResourceId.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId16($value)
-    {
-        $this->data['ResourceId16'] = $value;
-        $this->options['query']['ResourceId.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey19($value)
-    {
-        $this->data['TagKey19'] = $value;
-        $this->options['query']['TagKey.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId17($value)
-    {
-        $this->data['ResourceId17'] = $value;
-        $this->options['query']['ResourceId.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey18($value)
-    {
-        $this->data['TagKey18'] = $value;
-        $this->options['query']['TagKey.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId18($value)
-    {
-        $this->data['ResourceId18'] = $value;
-        $this->options['query']['ResourceId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId19($value)
-    {
-        $this->data['ResourceId19'] = $value;
-        $this->options['query']['ResourceId.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId50($value)
-    {
-        $this->data['ResourceId50'] = $value;
-        $this->options['query']['ResourceId.50'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId51($value)
-    {
-        $this->data['ResourceId51'] = $value;
-        $this->options['query']['ResourceId.51'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId10($value)
-    {
-        $this->data['ResourceId10'] = $value;
-        $this->options['query']['ResourceId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId11($value)
-    {
-        $this->data['ResourceId11'] = $value;
-        $this->options['query']['ResourceId.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId12($value)
-    {
-        $this->data['ResourceId12'] = $value;
-        $this->options['query']['ResourceId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId13($value)
-    {
-        $this->data['ResourceId13'] = $value;
-        $this->options['query']['ResourceId.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey13($value)
-    {
-        $this->data['TagKey13'] = $value;
-        $this->options['query']['TagKey.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey12($value)
-    {
-        $this->data['TagKey12'] = $value;
-        $this->options['query']['TagKey.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey11($value)
-    {
-        $this->data['TagKey11'] = $value;
-        $this->options['query']['TagKey.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey10($value)
-    {
-        $this->data['TagKey10'] = $value;
-        $this->options['query']['TagKey.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey17($value)
-    {
-        $this->data['TagKey17'] = $value;
-        $this->options['query']['TagKey.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey16($value)
-    {
-        $this->data['TagKey16'] = $value;
-        $this->options['query']['TagKey.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey15($value)
-    {
-        $this->data['TagKey15'] = $value;
-        $this->options['query']['TagKey.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTagKey14($value)
-    {
-        $this->data['TagKey14'] = $value;
-        $this->options['query']['TagKey.14'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceId47()
- * @method string getResourceId48()
- * @method string getResourceId49()
- * @method string getTag2Key()
- * @method string getTag12Value()
- * @method string getResourceId40()
- * @method string getResourceId41()
- * @method string getResourceId42()
- * @method string getResourceId1()
- * @method string getResourceId43()
- * @method string getResourceId2()
- * @method string getResourceId44()
- * @method string getResourceId3()
- * @method string getResourceId45()
- * @method string getResourceId4()
- * @method string getResourceId46()
- * @method string getResourceId5()
- * @method string getResourceId6()
- * @method string getResourceId7()
- * @method string getResourceId8()
- * @method string getResourceId9()
- * @method string getTag15Value()
- * @method string getTag18Key()
- * @method string getTag8Value()
- * @method string getTag18Value()
- * @method string getResourceId36()
- * @method string getResourceId37()
- * @method string getResourceId38()
- * @method string getResourceId39()
- * @method string getResourceId30()
- * @method string getResourceId31()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceId32()
- * @method string getResourceId33()
- * @method string getResourceId34()
- * @method string getResourceId35()
- * @method string getTag16Key()
- * @method string getTag4Key()
- * @method string getResourceId25()
- * @method string getResourceId26()
- * @method string getResourceId27()
- * @method string getResourceId28()
- * @method string getResourceId29()
- * @method string getTag7Key()
- * @method string getTag12Key()
- * @method string getTag6Value()
- * @method string getResourceId20()
- * @method string getResourceId21()
- * @method string getTag21Key()
- * @method string getResourceId22()
- * @method string getResourceId23()
- * @method string getResourceId24()
- * @method string getTag14Key()
- * @method string getTag13Value()
- * @method string getResourceId14()
- * @method string getResourceId15()
- * @method string getTag10Key()
- * @method string getResourceId16()
- * @method string getResourceId17()
- * @method string getResourceId18()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getResourceId19()
- * @method string getTag19Key()
- * @method string getResourceId10()
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getResourceId11()
- * @method string getTag5Value()
- * @method string getResourceId12()
- * @method string getResourceId13()
- * @method string getTag9Key()
- * @method string getTag19Value()
- * @method string getTag4Value()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag17Key()
- * @method string getTag3Key()
- * @method string getTag1Value()
- * @method string getTag15Key()
- * @method string getTag11Value()
- * @method string getTag5Key()
- * @method string getTag14Value()
- * @method string getTag7Value()
- * @method string getTag20Key()
- * @method string getTag20Value()
- * @method string getTag17Value()
- * @method string getTag13Key()
- * @method string getTag9Value()
- * @method string getTag6Key()
- * @method string getTag10Value()
- * @method string getTag3Value()
- * @method string getTag21Value()
- * @method string getResourceId50()
- * @method string getTag16Value()
- * @method string getResourceId51()
- * @method string getTag1Key()
- * @method string getTag8Key()
- * @method string getTag11Key()
- * @method string getTag2Value()
- */
-class TagResources extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId47($value)
-    {
-        $this->data['ResourceId47'] = $value;
-        $this->options['query']['ResourceId.47'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId48($value)
-    {
-        $this->data['ResourceId48'] = $value;
-        $this->options['query']['ResourceId.48'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId49($value)
-    {
-        $this->data['ResourceId49'] = $value;
-        $this->options['query']['ResourceId.49'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Key($value)
-    {
-        $this->data['Tag2Key'] = $value;
-        $this->options['query']['Tag.2.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag12Value($value)
-    {
-        $this->data['Tag12Value'] = $value;
-        $this->options['query']['Tag.12.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId40($value)
-    {
-        $this->data['ResourceId40'] = $value;
-        $this->options['query']['ResourceId.40'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId41($value)
-    {
-        $this->data['ResourceId41'] = $value;
-        $this->options['query']['ResourceId.41'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId42($value)
-    {
-        $this->data['ResourceId42'] = $value;
-        $this->options['query']['ResourceId.42'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId1($value)
-    {
-        $this->data['ResourceId1'] = $value;
-        $this->options['query']['ResourceId.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId43($value)
-    {
-        $this->data['ResourceId43'] = $value;
-        $this->options['query']['ResourceId.43'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId2($value)
-    {
-        $this->data['ResourceId2'] = $value;
-        $this->options['query']['ResourceId.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId44($value)
-    {
-        $this->data['ResourceId44'] = $value;
-        $this->options['query']['ResourceId.44'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId3($value)
-    {
-        $this->data['ResourceId3'] = $value;
-        $this->options['query']['ResourceId.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId45($value)
-    {
-        $this->data['ResourceId45'] = $value;
-        $this->options['query']['ResourceId.45'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId4($value)
-    {
-        $this->data['ResourceId4'] = $value;
-        $this->options['query']['ResourceId.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId46($value)
-    {
-        $this->data['ResourceId46'] = $value;
-        $this->options['query']['ResourceId.46'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId5($value)
-    {
-        $this->data['ResourceId5'] = $value;
-        $this->options['query']['ResourceId.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId6($value)
-    {
-        $this->data['ResourceId6'] = $value;
-        $this->options['query']['ResourceId.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId7($value)
-    {
-        $this->data['ResourceId7'] = $value;
-        $this->options['query']['ResourceId.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId8($value)
-    {
-        $this->data['ResourceId8'] = $value;
-        $this->options['query']['ResourceId.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId9($value)
-    {
-        $this->data['ResourceId9'] = $value;
-        $this->options['query']['ResourceId.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag15Value($value)
-    {
-        $this->data['Tag15Value'] = $value;
-        $this->options['query']['Tag.15.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag18Key($value)
-    {
-        $this->data['Tag18Key'] = $value;
-        $this->options['query']['Tag.18.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag8Value($value)
-    {
-        $this->data['Tag8Value'] = $value;
-        $this->options['query']['Tag.8.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag18Value($value)
-    {
-        $this->data['Tag18Value'] = $value;
-        $this->options['query']['Tag.18.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId36($value)
-    {
-        $this->data['ResourceId36'] = $value;
-        $this->options['query']['ResourceId.36'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId37($value)
-    {
-        $this->data['ResourceId37'] = $value;
-        $this->options['query']['ResourceId.37'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId38($value)
-    {
-        $this->data['ResourceId38'] = $value;
-        $this->options['query']['ResourceId.38'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId39($value)
-    {
-        $this->data['ResourceId39'] = $value;
-        $this->options['query']['ResourceId.39'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId30($value)
-    {
-        $this->data['ResourceId30'] = $value;
-        $this->options['query']['ResourceId.30'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId31($value)
-    {
-        $this->data['ResourceId31'] = $value;
-        $this->options['query']['ResourceId.31'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId32($value)
-    {
-        $this->data['ResourceId32'] = $value;
-        $this->options['query']['ResourceId.32'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId33($value)
-    {
-        $this->data['ResourceId33'] = $value;
-        $this->options['query']['ResourceId.33'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId34($value)
-    {
-        $this->data['ResourceId34'] = $value;
-        $this->options['query']['ResourceId.34'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId35($value)
-    {
-        $this->data['ResourceId35'] = $value;
-        $this->options['query']['ResourceId.35'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag16Key($value)
-    {
-        $this->data['Tag16Key'] = $value;
-        $this->options['query']['Tag.16.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Key($value)
-    {
-        $this->data['Tag4Key'] = $value;
-        $this->options['query']['Tag.4.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId25($value)
-    {
-        $this->data['ResourceId25'] = $value;
-        $this->options['query']['ResourceId.25'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId26($value)
-    {
-        $this->data['ResourceId26'] = $value;
-        $this->options['query']['ResourceId.26'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId27($value)
-    {
-        $this->data['ResourceId27'] = $value;
-        $this->options['query']['ResourceId.27'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId28($value)
-    {
-        $this->data['ResourceId28'] = $value;
-        $this->options['query']['ResourceId.28'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId29($value)
-    {
-        $this->data['ResourceId29'] = $value;
-        $this->options['query']['ResourceId.29'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag7Key($value)
-    {
-        $this->data['Tag7Key'] = $value;
-        $this->options['query']['Tag.7.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag12Key($value)
-    {
-        $this->data['Tag12Key'] = $value;
-        $this->options['query']['Tag.12.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag6Value($value)
-    {
-        $this->data['Tag6Value'] = $value;
-        $this->options['query']['Tag.6.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId20($value)
-    {
-        $this->data['ResourceId20'] = $value;
-        $this->options['query']['ResourceId.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId21($value)
-    {
-        $this->data['ResourceId21'] = $value;
-        $this->options['query']['ResourceId.21'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag21Key($value)
-    {
-        $this->data['Tag21Key'] = $value;
-        $this->options['query']['Tag.21.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId22($value)
-    {
-        $this->data['ResourceId22'] = $value;
-        $this->options['query']['ResourceId.22'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId23($value)
-    {
-        $this->data['ResourceId23'] = $value;
-        $this->options['query']['ResourceId.23'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId24($value)
-    {
-        $this->data['ResourceId24'] = $value;
-        $this->options['query']['ResourceId.24'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag14Key($value)
-    {
-        $this->data['Tag14Key'] = $value;
-        $this->options['query']['Tag.14.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag13Value($value)
-    {
-        $this->data['Tag13Value'] = $value;
-        $this->options['query']['Tag.13.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId14($value)
-    {
-        $this->data['ResourceId14'] = $value;
-        $this->options['query']['ResourceId.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId15($value)
-    {
-        $this->data['ResourceId15'] = $value;
-        $this->options['query']['ResourceId.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag10Key($value)
-    {
-        $this->data['Tag10Key'] = $value;
-        $this->options['query']['Tag.10.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId16($value)
-    {
-        $this->data['ResourceId16'] = $value;
-        $this->options['query']['ResourceId.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId17($value)
-    {
-        $this->data['ResourceId17'] = $value;
-        $this->options['query']['ResourceId.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId18($value)
-    {
-        $this->data['ResourceId18'] = $value;
-        $this->options['query']['ResourceId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId19($value)
-    {
-        $this->data['ResourceId19'] = $value;
-        $this->options['query']['ResourceId.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag19Key($value)
-    {
-        $this->data['Tag19Key'] = $value;
-        $this->options['query']['Tag.19.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId10($value)
-    {
-        $this->data['ResourceId10'] = $value;
-        $this->options['query']['ResourceId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId11($value)
-    {
-        $this->data['ResourceId11'] = $value;
-        $this->options['query']['ResourceId.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Value($value)
-    {
-        $this->data['Tag5Value'] = $value;
-        $this->options['query']['Tag.5.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId12($value)
-    {
-        $this->data['ResourceId12'] = $value;
-        $this->options['query']['ResourceId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId13($value)
-    {
-        $this->data['ResourceId13'] = $value;
-        $this->options['query']['ResourceId.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag9Key($value)
-    {
-        $this->data['Tag9Key'] = $value;
-        $this->options['query']['Tag.9.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag19Value($value)
-    {
-        $this->data['Tag19Value'] = $value;
-        $this->options['query']['Tag.19.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4Value($value)
-    {
-        $this->data['Tag4Value'] = $value;
-        $this->options['query']['Tag.4.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag17Key($value)
-    {
-        $this->data['Tag17Key'] = $value;
-        $this->options['query']['Tag.17.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Key($value)
-    {
-        $this->data['Tag3Key'] = $value;
-        $this->options['query']['Tag.3.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Value($value)
-    {
-        $this->data['Tag1Value'] = $value;
-        $this->options['query']['Tag.1.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag15Key($value)
-    {
-        $this->data['Tag15Key'] = $value;
-        $this->options['query']['Tag.15.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag11Value($value)
-    {
-        $this->data['Tag11Value'] = $value;
-        $this->options['query']['Tag.11.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5Key($value)
-    {
-        $this->data['Tag5Key'] = $value;
-        $this->options['query']['Tag.5.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag14Value($value)
-    {
-        $this->data['Tag14Value'] = $value;
-        $this->options['query']['Tag.14.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag7Value($value)
-    {
-        $this->data['Tag7Value'] = $value;
-        $this->options['query']['Tag.7.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag20Key($value)
-    {
-        $this->data['Tag20Key'] = $value;
-        $this->options['query']['Tag.20.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag20Value($value)
-    {
-        $this->data['Tag20Value'] = $value;
-        $this->options['query']['Tag.20.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag17Value($value)
-    {
-        $this->data['Tag17Value'] = $value;
-        $this->options['query']['Tag.17.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag13Key($value)
-    {
-        $this->data['Tag13Key'] = $value;
-        $this->options['query']['Tag.13.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag9Value($value)
-    {
-        $this->data['Tag9Value'] = $value;
-        $this->options['query']['Tag.9.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag6Key($value)
-    {
-        $this->data['Tag6Key'] = $value;
-        $this->options['query']['Tag.6.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag10Value($value)
-    {
-        $this->data['Tag10Value'] = $value;
-        $this->options['query']['Tag.10.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3Value($value)
-    {
-        $this->data['Tag3Value'] = $value;
-        $this->options['query']['Tag.3.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag21Value($value)
-    {
-        $this->data['Tag21Value'] = $value;
-        $this->options['query']['Tag.21.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId50($value)
-    {
-        $this->data['ResourceId50'] = $value;
-        $this->options['query']['ResourceId.50'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag16Value($value)
-    {
-        $this->data['Tag16Value'] = $value;
-        $this->options['query']['Tag.16.Value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withResourceId51($value)
-    {
-        $this->data['ResourceId51'] = $value;
-        $this->options['query']['ResourceId.51'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1Key($value)
-    {
-        $this->data['Tag1Key'] = $value;
-        $this->options['query']['Tag.1.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag8Key($value)
-    {
-        $this->data['Tag8Key'] = $value;
-        $this->options['query']['Tag.8.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag11Key($value)
-    {
-        $this->data['Tag11Key'] = $value;
-        $this->options['query']['Tag.11.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2Value($value)
-    {
-        $this->data['Tag2Value'] = $value;
-        $this->options['query']['Tag.2.Value'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeProxyFunctionSupport extends Rpc
 {
 }
 
@@ -4293,6 +312,50 @@ class DescribeMetaList extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeProxyFunctionSupport extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeAvailableInstanceClass extends Rpc
+{
+}
+
+/**
  * @method string getServiceRequestParam()
  * @method $this withServiceRequestParam($value)
  * @method string getDBInstanceId()
@@ -4323,40 +386,6 @@ class RequestServiceOfCloudDBExpert extends Rpc
  * @method $this withServiceRequestType($value)
  */
 class DescribeCloudDbExpertService extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRetainClassic()
- * @method $this withRetainClassic($value)
- * @method string getClassicExpiredDays()
- * @method $this withClassicExpiredDays($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
- */
-class AddDBInstanceNetworkType extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CheckInstanceExist extends Rpc
 {
 }
 
@@ -4407,6 +436,36 @@ class DescribeTemplatesList extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getSqlDelay()
+ * @method $this withSqlDelay($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyMySQLDBInstanceDelay extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CheckInstanceExist extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getPageSize()
@@ -4429,26 +488,14 @@ class DescribeLogBackupFiles extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getTaskType()
- * @method $this withTaskType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getIsHistory()
- * @method $this withIsHistory($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getRegion()
- * @method $this withRegion($value)
  */
-class DescribeActiveOperationTask extends Rpc
+class MigrateSecurityIPMode extends Rpc
 {
 }
 
@@ -4471,20 +518,6 @@ class DescribeActiveOperationTask extends Rpc
  * @method $this withOwnerId($value)
  */
 class SwitchDBInstanceVpc extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class MigrateSecurityIPMode extends Rpc
 {
 }
 
@@ -4521,6 +554,22 @@ class ModifyCollationTimeZone extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeBackupDatabase extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getRestoreTime()
  * @method $this withRestoreTime($value)
  * @method string getResourceOwnerAccount()
@@ -4547,22 +596,6 @@ class ModifyCollationTimeZone extends Rpc
  * @method $this withPayType($value)
  */
 class CopyDatabaseBetweenInstances extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeBackupDatabase extends Rpc
 {
 }
 
@@ -4661,14 +694,12 @@ class ModifyReadonlyInstanceDelayReplicationTime extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getSqlDelay()
- * @method $this withSqlDelay($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyMySQLDBInstanceDelay extends Rpc
+class DescribeDBInstanceProxyConfiguration extends Rpc
 {
 }
 
@@ -4742,20 +773,6 @@ class ModifyDBInstanceProxyConfiguration extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceProxyConfiguration extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeSecurityGroupConfiguration extends Rpc
 {
 }
@@ -4779,6 +796,22 @@ class ModifySecurityGroupConfiguration extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getMigrateTaskId()
+ * @method $this withMigrateTaskId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeOssDownloadsForSQLServer extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getPageSize()
@@ -4794,23 +827,29 @@ class ModifySecurityGroupConfiguration extends Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeMigrateTasks extends Rpc
+class DescribeMigrateTasksForSQLServer extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getMigrateTaskId()
- * @method $this withMigrateTaskId($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getIsOnlineDB()
+ * @method $this withIsOnlineDB($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getOSSUrls()
+ * @method $this withOSSUrls($value)
  */
-class DescribeOssDownloads extends Rpc
+class CreateMigrateTaskForSQLServer extends Rpc
 {
 }
 
@@ -4845,22 +884,16 @@ class CreateMigrateTask extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getTaskType()
- * @method $this withTaskType($value)
- * @method string getDBName()
- * @method $this withDBName($value)
+ * @method string getMigrateTaskId()
+ * @method $this withMigrateTaskId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getIsOnlineDB()
- * @method $this withIsOnlineDB($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getOSSUrls()
- * @method $this withOSSUrls($value)
  */
-class CreateMigrateTaskForSQLServer extends Rpc
+class DescribeOssDownloads extends Rpc
 {
 }
 
@@ -4882,23 +915,19 @@ class CreateMigrateTaskForSQLServer extends Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class DescribeMigrateTasksForSQLServer extends Rpc
+class DescribeMigrateTasks extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getMigrateTaskId()
- * @method $this withMigrateTaskId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeOssDownloadsForSQLServer extends Rpc
+class CopyDatabase extends Rpc
 {
 }
 
@@ -4919,18 +948,6 @@ class DescribeOssDownloadsForSQLServer extends Rpc
  * @method $this withOwnerId($value)
  */
 class ResetAccount extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CopyDatabase extends Rpc
 {
 }
 
@@ -4965,6 +982,46 @@ class DescribeDBInstancesAsCsv extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifyDBInstanceNetworkExpireTime extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyResourceGroup extends Rpc
+{
+}
+
+/**
+ * @method string getReplicaDescription()
+ * @method $this withReplicaDescription($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getReplicaId()
+ * @method $this withReplicaId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyReplicaDescription extends Rpc
 {
 }
 
@@ -5029,6 +1086,42 @@ class CreateDBInstanceReplica extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getQuantity()
+ * @method $this withQuantity($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
+ * @method string getPromotionCode()
+ * @method $this withPromotionCode($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getTimeType()
+ * @method $this withTimeType($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeRenewalPrice extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceStorage()
  * @method $this withDBInstanceStorage($value)
  * @method string getQuantity()
@@ -5069,62 +1162,6 @@ class DescribePrice extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getQuantity()
- * @method $this withQuantity($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCommodityCode()
- * @method $this withCommodityCode($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUsedTime()
- * @method $this withUsedTime($value)
- * @method string getDBInstanceClass()
- * @method $this withDBInstanceClass($value)
- * @method string getPromotionCode()
- * @method $this withPromotionCode($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getTimeType()
- * @method $this withTimeType($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getBusinessInfo()
- * @method $this withBusinessInfo($value)
- * @method string getOrderType()
- * @method $this withOrderType($value)
- */
-class DescribeRenewalPrice extends Rpc
-{
-}
-
-/**
- * @method string getReplicaDescription()
- * @method $this withReplicaDescription($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getReplicaId()
- * @method $this withReplicaId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyReplicaDescription extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getAutoPay()
@@ -5147,6 +1184,26 @@ class RenewInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DescribeTaskInfo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getRestoreTime()
  * @method $this withRestoreTime($value)
  * @method string getResourceOwnerAccount()
@@ -5163,26 +1220,6 @@ class RenewInstance extends Rpc
  * @method $this withOwnerId($value)
  */
 class CheckRecoveryConditions extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeTaskInfo extends Rpc
 {
 }
 
@@ -5245,14 +1282,10 @@ class DescribeInstanceAutoRenewalAttribute extends Rpc
 }
 
 /**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
@@ -5260,35 +1293,7 @@ class DescribeInstanceAutoRenewalAttribute extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyResourceGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getConnectionStringPrefix()
- * @method $this withConnectionStringPrefix($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getWeight()
- * @method $this withWeight($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getDistributionType()
- * @method $this withDistributionType($value)
- * @method string getNetType()
- * @method $this withNetType($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getMaxDelayTime()
- * @method $this withMaxDelayTime($value)
- */
-class AllocateReadWriteSplittingConnection extends Rpc
+class ReleaseReadWriteSplittingConnection extends Rpc
 {
 }
 
@@ -5330,23 +1335,35 @@ class ModifyReadWriteSplittingConnection extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ReleaseReadWriteSplittingConnection extends Rpc
+class CalculateDBInstanceWeight extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getConnectionStringPrefix()
+ * @method $this withConnectionStringPrefix($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
+ * @method string getWeight()
+ * @method $this withWeight($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getDistributionType()
+ * @method $this withDistributionType($value)
+ * @method string getNetType()
+ * @method $this withNetType($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getMaxDelayTime()
+ * @method $this withMaxDelayTime($value)
  */
-class CalculateDBInstanceWeight extends Rpc
+class AllocateReadWriteSplittingConnection extends Rpc
 {
 }
 
@@ -5435,26 +1452,16 @@ class CreateDiagnosticReport extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceStorage()
- * @method $this withDBInstanceStorage($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getZoneIdSlave1()
- * @method $this withZoneIdSlave1($value)
- * @method string getZoneIdSlave2()
- * @method $this withZoneIdSlave2($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
  * @method string getRestoreTime()
  * @method $this withRestoreTime($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getDBInstanceStorage()
+ * @method $this withDBInstanceStorage($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getBackupId()
  * @method $this withBackupId($value)
  * @method string getOwnerAccount()
@@ -5471,12 +1478,16 @@ class CreateDiagnosticReport extends Rpc
  * @method $this withVSwitchId($value)
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getVPCId()
  * @method $this withVPCId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
+ * @method string getDBInstanceDescription()
+ * @method $this withDBInstanceDescription($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  * @method string getInstanceNetworkType()
@@ -5487,62 +1498,6 @@ class CloneDBInstance extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RevokeOperatorPermission extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getProxyId()
- */
-class DescribeDBInstanceByTags extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -5579,6 +1534,58 @@ class DescribeTags extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getProxyId()
+ */
+class DescribeDBInstanceByTags extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RevokeOperatorPermission extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDBName()
  * @method $this withDBName($value)
  * @method string getResourceOwnerAccount()
@@ -5605,6 +1612,8 @@ class ModifyDBInstanceTDE extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getConnectionString()
+ * @method $this withConnectionString($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
@@ -5612,23 +1621,7 @@ class ModifyDBInstanceTDE extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceSSL extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDBInstanceTDE extends Rpc
+class ModifyDBInstanceSSL extends Rpc
 {
 }
 
@@ -5657,8 +1650,6 @@ class GrantOperatorPermission extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getConnectionString()
- * @method $this withConnectionString($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
@@ -5666,7 +1657,23 @@ class GrantOperatorPermission extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceSSL extends Rpc
+class DescribeDBInstanceTDE extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBInstanceSSL extends Rpc
 {
 }
 
@@ -5715,22 +1722,24 @@ class ModifyDBInstanceMonitor extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getStoragePeriod()
- * @method $this withStoragePeriod($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getSQLCollectorStatus()
- * @method $this withSQLCollectorStatus($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getOperation()
+ * @method $this withOperation($value)
  */
-class ModifySQLCollectorPolicy extends Rpc
+class SwitchDBInstanceHA extends Rpc
 {
 }
 
@@ -5755,48 +1764,22 @@ class DescribeDBInstanceMonitor extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getStoragePeriod()
+ * @method $this withStoragePeriod($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeSQLReports extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getEffectiveTime()
- * @method $this withEffectiveTime($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSQLCollectorStatus()
+ * @method $this withSQLCollectorStatus($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
- * @method string getForce()
- * @method $this withForce($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getNodeId()
- * @method $this withNodeId($value)
- * @method string getOperation()
- * @method $this withOperation($value)
  */
-class SwitchDBInstanceHA extends Rpc
+class ModifySQLCollectorPolicy extends Rpc
 {
 }
 
@@ -5833,6 +1816,30 @@ class ModifyDBInstanceHAConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDBInstanceHAConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeSQLReports extends Rpc
 {
 }
 
@@ -5879,12 +1886,12 @@ class DescribeSQLLogReportList extends Rpc
 }
 
 /**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getExpired()
- * @method $this withExpired($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -5894,7 +1901,1699 @@ class DescribeSQLLogReportList extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceAttribute extends Rpc
+class ResetAccountForPG extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getConnectionStringPrefix()
+ * @method $this withConnectionStringPrefix($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AllocateInstancePrivateConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UpgradeDBInstanceEngineVersion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RevokeAccountPrivilege extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RestoreDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RestartDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ResetAccountPassword extends Rpc
+{
+}
+
+/**
+ * @method string getTag4value()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTag2key()
+ * @method string getTag5key()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getTag3key()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTag5value()
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getTag1key()
+ * @method string getTag1value()
+ * @method string getTag2value()
+ * @method string getTag4key()
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getTag3value()
+ * @method string getProxyId()
+ */
+class RemoveTagsFromResource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag4value($value)
+    {
+        $this->data['Tag4value'] = $value;
+        $this->options['query']['Tag.4.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag2key($value)
+    {
+        $this->data['Tag2key'] = $value;
+        $this->options['query']['Tag.2.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag5key($value)
+    {
+        $this->data['Tag5key'] = $value;
+        $this->options['query']['Tag.5.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag3key($value)
+    {
+        $this->data['Tag3key'] = $value;
+        $this->options['query']['Tag.3.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag5value($value)
+    {
+        $this->data['Tag5value'] = $value;
+        $this->options['query']['Tag.5.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag1key($value)
+    {
+        $this->data['Tag1key'] = $value;
+        $this->options['query']['Tag.1.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag1value($value)
+    {
+        $this->data['Tag1value'] = $value;
+        $this->options['query']['Tag.1.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag2value($value)
+    {
+        $this->data['Tag2value'] = $value;
+        $this->options['query']['Tag.2.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag4key($value)
+    {
+        $this->data['Tag4key'] = $value;
+        $this->options['query']['Tag.4.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag3value($value)
+    {
+        $this->data['Tag3value'] = $value;
+        $this->options['query']['Tag.3.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class PurgeDBInstanceLog extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceIPArrayName()
+ * @method $this withDBInstanceIPArrayName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getModifyMode()
+ * @method $this withModifyMode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getSecurityIps()
+ * @method $this withSecurityIps($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getWhitelistNetworkType()
+ * @method $this withWhitelistNetworkType($value)
+ * @method string getDBInstanceIPArrayAttribute()
+ * @method $this withDBInstanceIPArrayAttribute($value)
+ * @method string getSecurityIPType()
+ * @method $this withSecurityIPType($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class ModifySecurityIps extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getForcerestart()
+ * @method $this withForcerestart($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class ModifyParameter extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBInstanceStorage()
+ * @method $this withDBInstanceStorage($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class ModifyDBInstanceSpec extends Rpc
+{
+}
+
+/**
+ * @method string getMaintainTime()
+ * @method $this withMaintainTime($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBInstanceMaintainTime extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getDBInstanceDescription()
+ * @method $this withDBInstanceDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBInstanceDescription extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getDBDescription()
+ * @method $this withDBDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBDescription extends Rpc
+{
+}
+
+/**
+ * @method string getPreferredBackupPeriod()
+ * @method $this withPreferredBackupPeriod($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getLocalLogRetentionHours()
+ * @method $this withLocalLogRetentionHours($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getLogBackupFrequency()
+ * @method $this withLogBackupFrequency($value)
+ * @method string getCompressType()
+ * @method $this withCompressType($value)
+ * @method string getBackupLog()
+ * @method $this withBackupLog($value)
+ * @method string getLocalLogRetentionSpace()
+ * @method $this withLocalLogRetentionSpace($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDuplication()
+ * @method $this withDuplication($value)
+ * @method string getPreferredBackupTime()
+ * @method $this withPreferredBackupTime($value)
+ * @method string getBackupRetentionPeriod()
+ * @method $this withBackupRetentionPeriod($value)
+ * @method string getDuplicationContent()
+ * @method $this withDuplicationContent($value)
+ * @method string getHighSpaceUsageProtection()
+ * @method $this withHighSpaceUsageProtection($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getDuplicationLocation()
+ * @method $this withDuplicationLocation($value)
+ * @method string getLogBackupRetentionPeriod()
+ * @method $this withLogBackupRetentionPeriod($value)
+ * @method string getEnableBackupLog()
+ * @method $this withEnableBackupLog($value)
+ * @method string getBackupPolicyMode()
+ * @method $this withBackupPolicyMode($value)
+ */
+class ModifyBackupPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccountDescription()
+ * @method $this withAccountDescription($value)
+ */
+class ModifyAccountDescription extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getZoneIdSlave1()
+ * @method $this withZoneIdSlave1($value)
+ * @method string getZoneIdSlave2()
+ * @method $this withZoneIdSlave2($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getVPCId()
+ * @method $this withVPCId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class MigrateToOtherZone extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ImportDataForSQLServer extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSourceDBInstanceId()
+ * @method $this withSourceDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBInfo()
+ * @method $this withDBInfo($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ImportDatabaseBetweenInstances extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccountPrivilege()
+ * @method $this withAccountPrivilege($value)
+ */
+class GrantAccountPrivilege extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getTaskAction()
+ * @method $this withTaskAction($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeTasks extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeSQLLogReports extends Rpc
+{
+}
+
+/**
+ * @method string getSQLId()
+ * @method $this withSQLId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getQueryKeywords()
+ * @method $this withQueryKeywords($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getDatabase()
+ * @method $this withDatabase($value)
+ * @method string getForm()
+ * @method $this withForm($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getUser()
+ * @method $this withUser($value)
+ */
+class DescribeSQLLogRecords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSortKey()
+ * @method $this withSortKey($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DescribeSlowLogs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getSQLHASH()
+ * @method $this withSQLHASH($value)
+ */
+class DescribeSlowLogRecords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeResourceUsage extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeRegions extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class DescribeParameterTemplates extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeParameters extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeModifyParameterLog extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeErrorLogs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class DescribeDBInstancePerformance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBStatus()
+ * @method $this withDBStatus($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeDatabases extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeBinlogFiles extends Rpc
+{
+}
+
+/**
+ * @method string getBackupJobId()
+ * @method $this withBackupJobId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFlag()
+ * @method $this withFlag($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getBackupMode()
+ * @method $this withBackupMode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBackupJobStatus()
+ * @method $this withBackupJobStatus($value)
+ */
+class DescribeBackupTasks extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getBackupStatus()
+ * @method $this withBackupStatus($value)
+ * @method string getBackupLocation()
+ * @method $this withBackupLocation($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getBackupMode()
+ * @method $this withBackupMode($value)
+ */
+class DescribeBackups extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCompressType()
+ * @method $this withCompressType($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBackupPolicyMode()
+ * @method $this withBackupPolicyMode($value)
+ */
+class DescribeBackupPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeAccounts extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getImportId()
+ * @method $this withImportId($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DescibeImportsFromDatabase extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteDatabase extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateTempDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getDBDescription()
+ * @method $this withDBDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCharacterSetName()
+ * @method $this withCharacterSetName($value)
+ */
+class CreateDatabase extends Rpc
+{
+}
+
+/**
+ * @method string getBackupMethod()
+ * @method $this withBackupMethod($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBackupStrategy()
+ * @method $this withBackupStrategy($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBackupType()
+ * @method $this withBackupType($value)
+ */
+class CreateBackup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccountDescription()
+ * @method $this withAccountDescription($value)
+ */
+class CreateAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CheckAccountNameAvailable extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getImportId()
+ * @method $this withImportId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CancelImport extends Rpc
+{
+}
+
+/**
+ * @method string getTag4value()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTag2key()
+ * @method string getTag5key()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getTag3key()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTag5value()
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getTag1key()
+ * @method string getTag1value()
+ * @method string getTag2value()
+ * @method string getTag4key()
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getTag3value()
+ * @method string getProxyId()
+ */
+class AddTagsToResource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag4value($value)
+    {
+        $this->data['Tag4value'] = $value;
+        $this->options['query']['Tag.4.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag2key($value)
+    {
+        $this->data['Tag2key'] = $value;
+        $this->options['query']['Tag.2.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag5key($value)
+    {
+        $this->data['Tag5key'] = $value;
+        $this->options['query']['Tag.5.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag3key($value)
+    {
+        $this->data['Tag3key'] = $value;
+        $this->options['query']['Tag.3.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag5value($value)
+    {
+        $this->data['Tag5value'] = $value;
+        $this->options['query']['Tag.5.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag1key($value)
+    {
+        $this->data['Tag1key'] = $value;
+        $this->options['query']['Tag.1.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag1value($value)
+    {
+        $this->data['Tag1value'] = $value;
+        $this->options['query']['Tag.1.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag2value($value)
+    {
+        $this->data['Tag2value'] = $value;
+        $this->options['query']['Tag.2.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag4key($value)
+    {
+        $this->data['Tag4key'] = $value;
+        $this->options['query']['Tag.4.key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag3value($value)
+    {
+        $this->data['Tag3value'] = $value;
+        $this->options['query']['Tag.3.value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyId($value)
+    {
+        $this->data['ProxyId'] = $value;
+        $this->options['query']['proxyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getConnectionStringPrefix()
+ * @method $this withConnectionStringPrefix($value)
+ * @method string getConnectionStringType()
+ * @method $this withConnectionStringType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SwitchDBInstanceNetType extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCurrentConnectionString()
+ * @method $this withCurrentConnectionString($value)
+ */
+class ReleaseInstancePublicConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getRetainClassic()
+ * @method $this withRetainClassic($value)
+ * @method string getClassicExpiredDays()
+ * @method $this withClassicExpiredDays($value)
+ * @method string getVPCId()
+ * @method $this withVPCId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getReadWriteSplittingPrivateIpAddress()
+ * @method $this withReadWriteSplittingPrivateIpAddress($value)
+ * @method string getInstanceNetworkType()
+ * @method $this withInstanceNetworkType($value)
+ * @method string getReadWriteSplittingClassicExpiredDays()
+ * @method $this withReadWriteSplittingClassicExpiredDays($value)
+ */
+class ModifyDBInstanceNetworkType extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getConnectionStringPrefix()
+ * @method $this withConnectionStringPrefix($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCurrentConnectionString()
+ * @method $this withCurrentConnectionString($value)
+ */
+class ModifyDBInstanceConnectionString extends Rpc
+{
+}
+
+/**
+ * @method string getConnectionMode()
+ * @method $this withConnectionMode($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBInstanceConnectionMode extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFlag()
+ * @method $this withFlag($value)
+ * @method string getDBInstanceNetRWSplitType()
+ * @method $this withDBInstanceNetRWSplitType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBInstanceNetInfo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBInstanceStorage()
+ * @method $this withDBInstanceStorage($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getVPCId()
+ * @method $this withVPCId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getDBInstanceDescription()
+ * @method $this withDBInstanceDescription($value)
+ * @method string getDBInstanceStorageType()
+ * @method $this withDBInstanceStorageType($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ * @method string getInstanceNetworkType()
+ * @method $this withInstanceNetworkType($value)
+ */
+class CreateReadOnlyDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getConnectionMode()
+ * @method $this withConnectionMode($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBInstanceStorage()
+ * @method $this withDBInstanceStorage($value)
+ * @method string getSystemDBCharset()
+ * @method $this withSystemDBCharset($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getDBInstanceDescription()
+ * @method $this withDBInstanceDescription($value)
+ * @method string getDBInstanceStorageType()
+ * @method $this withDBInstanceStorageType($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getDBInstanceNetType()
+ * @method $this withDBInstanceNetType($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
+ * @method string getSecurityIPList()
+ * @method $this withSecurityIPList($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getVPCId()
+ * @method $this withVPCId($value)
+ * @method string getTunnelId()
+ * @method $this withTunnelId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ * @method string getInstanceNetworkType()
+ * @method $this withInstanceNetworkType($value)
+ */
+class CreateDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getConnectionStringPrefix()
+ * @method $this withConnectionStringPrefix($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AllocateInstancePublicConnection extends Rpc
 {
 }
 
@@ -6325,136 +4024,12 @@ class DescribeDBInstances extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceStorage()
- * @method $this withDBInstanceStorage($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDBInstanceClass()
- * @method $this withDBInstanceClass($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getPrivateIpAddress()
- * @method $this withPrivateIpAddress($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
- * @method string getVPCId()
- * @method $this withVPCId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- * @method string getDBInstanceStorageType()
- * @method $this withDBInstanceStorageType($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
- */
-class CreateReadOnlyDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getConnectionMode()
- * @method $this withConnectionMode($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceStorage()
- * @method $this withDBInstanceStorage($value)
- * @method string getSystemDBCharset()
- * @method $this withSystemDBCharset($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- * @method string getDBInstanceStorageType()
- * @method $this withDBInstanceStorageType($value)
- * @method string getBusinessInfo()
- * @method $this withBusinessInfo($value)
- * @method string getDBInstanceNetType()
- * @method $this withDBInstanceNetType($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEncryptionKey()
- * @method $this withEncryptionKey($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUsedTime()
- * @method $this withUsedTime($value)
- * @method string getDBInstanceClass()
- * @method $this withDBInstanceClass($value)
- * @method string getSecurityIPList()
- * @method $this withSecurityIPList($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getPrivateIpAddress()
- * @method $this withPrivateIpAddress($value)
- * @method string getRoleARN()
- * @method $this withRoleARN($value)
- * @method string getVPCId()
- * @method $this withVPCId($value)
- * @method string getTunnelId()
- * @method $this withTunnelId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
- */
-class CreateDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getConnectionStringPrefix()
- * @method $this withConnectionStringPrefix($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class AllocateInstancePublicConnection extends Rpc
-{
-}
-
-/**
- * @method string getConnectionMode()
- * @method $this withConnectionMode($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getExpired()
+ * @method $this withExpired($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -6464,1596 +4039,6 @@ class AllocateInstancePublicConnection extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class ModifyDBInstanceConnectionMode extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getFlag()
- * @method $this withFlag($value)
- * @method string getDBInstanceNetRWSplitType()
- * @method $this withDBInstanceNetRWSplitType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDBInstanceNetInfo extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getConnectionStringPrefix()
- * @method $this withConnectionStringPrefix($value)
- * @method string getConnectionStringType()
- * @method $this withConnectionStringType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SwitchDBInstanceNetType extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCurrentConnectionString()
- * @method $this withCurrentConnectionString($value)
- */
-class ReleaseInstancePublicConnection extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getPrivateIpAddress()
- * @method $this withPrivateIpAddress($value)
- * @method string getRetainClassic()
- * @method $this withRetainClassic($value)
- * @method string getClassicExpiredDays()
- * @method $this withClassicExpiredDays($value)
- * @method string getVPCId()
- * @method $this withVPCId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getReadWriteSplittingPrivateIpAddress()
- * @method $this withReadWriteSplittingPrivateIpAddress($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
- * @method string getReadWriteSplittingClassicExpiredDays()
- * @method $this withReadWriteSplittingClassicExpiredDays($value)
- */
-class ModifyDBInstanceNetworkType extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getConnectionStringPrefix()
- * @method $this withConnectionStringPrefix($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCurrentConnectionString()
- * @method $this withCurrentConnectionString($value)
- */
-class ModifyDBInstanceConnectionString extends Rpc
-{
-}
-
-/**
- * @method string getTag4value()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag2key()
- * @method string getTag5key()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTag3key()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTag5value()
- * @method string getTags()
- * @method $this withTags($value)
- * @method string getTag1key()
- * @method string getTag1value()
- * @method string getTag2value()
- * @method string getTag4key()
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getTag3value()
- * @method string getProxyId()
- */
-class AddTagsToResource extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4value($value)
-    {
-        $this->data['Tag4value'] = $value;
-        $this->options['query']['Tag.4.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2key($value)
-    {
-        $this->data['Tag2key'] = $value;
-        $this->options['query']['Tag.2.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5key($value)
-    {
-        $this->data['Tag5key'] = $value;
-        $this->options['query']['Tag.5.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3key($value)
-    {
-        $this->data['Tag3key'] = $value;
-        $this->options['query']['Tag.3.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5value($value)
-    {
-        $this->data['Tag5value'] = $value;
-        $this->options['query']['Tag.5.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1key($value)
-    {
-        $this->data['Tag1key'] = $value;
-        $this->options['query']['Tag.1.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1value($value)
-    {
-        $this->data['Tag1value'] = $value;
-        $this->options['query']['Tag.1.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2value($value)
-    {
-        $this->data['Tag2value'] = $value;
-        $this->options['query']['Tag.2.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4key($value)
-    {
-        $this->data['Tag4key'] = $value;
-        $this->options['query']['Tag.4.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3value($value)
-    {
-        $this->data['Tag3value'] = $value;
-        $this->options['query']['Tag.3.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountPassword()
- * @method $this withAccountPassword($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getAccountType()
- * @method $this withAccountType($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAccountDescription()
- * @method $this withAccountDescription($value)
- */
-class CreateAccount extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CheckAccountNameAvailable extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getImportId()
- * @method $this withImportId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CancelImport extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getDBDescription()
- * @method $this withDBDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCharacterSetName()
- * @method $this withCharacterSetName($value)
- */
-class CreateDatabase extends Rpc
-{
-}
-
-/**
- * @method string getBackupMethod()
- * @method $this withBackupMethod($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getBackupStrategy()
- * @method $this withBackupStrategy($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBackupType()
- * @method $this withBackupType($value)
- */
-class CreateBackup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteDatabase extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteAccount extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getRestoreTime()
- * @method $this withRestoreTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateTempDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBackupPolicyMode()
- * @method $this withBackupPolicyMode($value)
- */
-class DescribeBackupPolicy extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeAccounts extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getImportId()
- * @method $this withImportId($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class DescibeImportsFromDatabase extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeBinlogFiles extends Rpc
-{
-}
-
-/**
- * @method string getBackupJobId()
- * @method $this withBackupJobId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getFlag()
- * @method $this withFlag($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getBackupMode()
- * @method $this withBackupMode($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getBackupJobStatus()
- * @method $this withBackupJobStatus($value)
- */
-class DescribeBackupTasks extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getBackupStatus()
- * @method $this withBackupStatus($value)
- * @method string getBackupLocation()
- * @method $this withBackupLocation($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getBackupMode()
- * @method $this withBackupMode($value)
- */
-class DescribeBackups extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeErrorLogs extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getKey()
- * @method $this withKey($value)
- */
-class DescribeDBInstancePerformance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBStatus()
- * @method $this withDBStatus($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeDatabases extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeModifyParameterLog extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeParameters extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeRegions extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class DescribeParameterTemplates extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getSortKey()
- * @method $this withSortKey($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class DescribeSlowLogs extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getSQLHASH()
- * @method $this withSQLHASH($value)
- */
-class DescribeSlowLogRecords extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeResourceUsage extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getTaskAction()
- * @method $this withTaskAction($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeTasks extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeSQLLogReports extends Rpc
-{
-}
-
-/**
- * @method string getSQLId()
- * @method $this withSQLId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getQueryKeywords()
- * @method $this withQueryKeywords($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getDatabase()
- * @method $this withDatabase($value)
- * @method string getForm()
- * @method $this withForm($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class DescribeSQLLogRecords extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAccountPrivilege()
- * @method $this withAccountPrivilege($value)
- */
-class GrantAccountPrivilege extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getZoneIdSlave1()
- * @method $this withZoneIdSlave1($value)
- * @method string getZoneIdSlave2()
- * @method $this withZoneIdSlave2($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getEffectiveTime()
- * @method $this withEffectiveTime($value)
- * @method string getVPCId()
- * @method $this withVPCId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class MigrateToOtherZone extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getFileName()
- * @method $this withFileName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ImportDataForSQLServer extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSourceDBInstanceId()
- * @method $this withSourceDBInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBInfo()
- * @method $this withDBInfo($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ImportDatabaseBetweenInstances extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyDBInstanceDescription extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getDBDescription()
- * @method $this withDBDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyDBDescription extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getLocalLogRetentionHours()
- * @method $this withLocalLogRetentionHours($value)
- * @method string getLogBackupFrequency()
- * @method $this withLogBackupFrequency($value)
- * @method string getBackupLog()
- * @method $this withBackupLog($value)
- * @method string getDuplicationContent()
- * @method $this withDuplicationContent($value)
- * @method string getHighSpaceUsageProtection()
- * @method $this withHighSpaceUsageProtection($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getEnableBackupLog()
- * @method $this withEnableBackupLog($value)
- * @method string getEnableCrossRegionLogBackup()
- * @method $this withEnableCrossRegionLogBackup($value)
- * @method string getBackupPolicyMode()
- * @method $this withBackupPolicyMode($value)
- * @method string getPreferredBackupPeriod()
- * @method $this withPreferredBackupPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCompressType()
- * @method $this withCompressType($value)
- * @method string getLocalLogRetentionSpace()
- * @method $this withLocalLogRetentionSpace($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCrossBackupRegion()
- * @method $this withCrossBackupRegion($value)
- * @method string getDuplication()
- * @method $this withDuplication($value)
- * @method string getPreferredBackupTime()
- * @method $this withPreferredBackupTime($value)
- * @method string getBackupRetentionPeriod()
- * @method $this withBackupRetentionPeriod($value)
- * @method string getCrossRegionBackupRetention()
- * @method $this withCrossRegionBackupRetention($value)
- * @method string getEnableCrossRegionBackup()
- * @method $this withEnableCrossRegionBackup($value)
- * @method string getDuplicationLocation()
- * @method $this withDuplicationLocation($value)
- * @method string getLogBackupRetentionPeriod()
- * @method $this withLogBackupRetentionPeriod($value)
- */
-class ModifyBackupPolicy extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAccountDescription()
- * @method $this withAccountDescription($value)
- */
-class ModifyAccountDescription extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getForcerestart()
- * @method $this withForcerestart($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getParameters()
- * @method $this withParameters($value)
- */
-class ModifyParameter extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceStorage()
- * @method $this withDBInstanceStorage($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDBInstanceClass()
- * @method $this withDBInstanceClass($value)
- * @method string getEffectiveTime()
- * @method $this withEffectiveTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- */
-class ModifyDBInstanceSpec extends Rpc
-{
-}
-
-/**
- * @method string getMaintainTime()
- * @method $this withMaintainTime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyDBInstanceMaintainTime extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class PurgeDBInstanceLog extends Rpc
-{
-}
-
-/**
- * @method string getDBInstanceIPArrayName()
- * @method $this withDBInstanceIPArrayName($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getModifyMode()
- * @method $this withModifyMode($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSecurityIps()
- * @method $this withSecurityIps($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getWhitelistNetworkType()
- * @method $this withWhitelistNetworkType($value)
- * @method string getDBInstanceIPArrayAttribute()
- * @method $this withDBInstanceIPArrayAttribute($value)
- * @method string getSecurityIPType()
- * @method $this withSecurityIPType($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class ModifySecurityIps extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RestartDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountPassword()
- * @method $this withAccountPassword($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ResetAccountPassword extends Rpc
-{
-}
-
-/**
- * @method string getTag4value()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTag2key()
- * @method string getTag5key()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getTag3key()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTag5value()
- * @method string getTags()
- * @method $this withTags($value)
- * @method string getTag1key()
- * @method string getTag1value()
- * @method string getTag2value()
- * @method string getTag4key()
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getTag3value()
- * @method string getProxyId()
- */
-class RemoveTagsFromResource extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4value($value)
-    {
-        $this->data['Tag4value'] = $value;
-        $this->options['query']['Tag.4.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2key($value)
-    {
-        $this->data['Tag2key'] = $value;
-        $this->options['query']['Tag.2.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5key($value)
-    {
-        $this->data['Tag5key'] = $value;
-        $this->options['query']['Tag.5.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3key($value)
-    {
-        $this->data['Tag3key'] = $value;
-        $this->options['query']['Tag.3.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag5value($value)
-    {
-        $this->data['Tag5value'] = $value;
-        $this->options['query']['Tag.5.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1key($value)
-    {
-        $this->data['Tag1key'] = $value;
-        $this->options['query']['Tag.1.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag1value($value)
-    {
-        $this->data['Tag1value'] = $value;
-        $this->options['query']['Tag.1.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag2value($value)
-    {
-        $this->data['Tag2value'] = $value;
-        $this->options['query']['Tag.2.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag4key($value)
-    {
-        $this->data['Tag4key'] = $value;
-        $this->options['query']['Tag.4.key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag3value($value)
-    {
-        $this->data['Tag3value'] = $value;
-        $this->options['query']['Tag.3.value'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyId($value)
-    {
-        $this->data['ProxyId'] = $value;
-        $this->options['query']['proxyId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDBInstanceClass()
- * @method $this withDBInstanceClass($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getEffectiveTime()
- * @method $this withEffectiveTime($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getDBInstanceStorageType()
- * @method $this withDBInstanceStorageType($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
- */
-class UpgradeDBInstanceEngineVersion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RevokeAccountPrivilege extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getRestoreTime()
- * @method $this withRestoreTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RestoreDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountPassword()
- * @method $this withAccountPassword($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ResetAccountForPG extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getConnectionStringPrefix()
- * @method $this withConnectionStringPrefix($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class AllocateInstancePrivateConnection extends Rpc
+class DescribeDBInstanceAttribute extends Rpc
 {
 }

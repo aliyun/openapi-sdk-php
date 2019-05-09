@@ -5,8 +5,8 @@ namespace AlibabaCloud\Commondriver\V20151229;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method GetOrderIdByCheckBeforePay getOrderIdByCheckBeforePay(array $options = [])
  * @method GetOrderIdByQueryPurchase getOrderIdByQueryPurchase(array $options = [])
+ * @method GetOrderIdByCheckBeforePay getOrderIdByCheckBeforePay(array $options = [])
  */
 class CommondriverApiResolver extends ApiResolver
 {
@@ -27,7 +27,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getOrderId()
  */
-class GetOrderIdByCheckBeforePay extends Rpc
+class GetOrderIdByQueryPurchase extends Rpc
 {
 
     /**
@@ -47,7 +47,7 @@ class GetOrderIdByCheckBeforePay extends Rpc
 /**
  * @method string getOrderId()
  */
-class GetOrderIdByQueryPurchase extends Rpc
+class GetOrderIdByCheckBeforePay extends Rpc
 {
 
     /**

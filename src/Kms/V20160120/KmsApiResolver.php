@@ -14,8 +14,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAliasesByKeyId listAliasesByKeyId(array $options = [])
  * @method ListAliases listAliases(array $options = [])
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
- * @method GenerateDataKey generateDataKey(array $options = [])
  * @method GetParametersForImport getParametersForImport(array $options = [])
+ * @method GenerateDataKey generateDataKey(array $options = [])
  * @method Encrypt encrypt(array $options = [])
  * @method EnableKey enableKey(array $options = [])
  * @method DisableKey disableKey(array $options = [])
@@ -145,6 +145,18 @@ class ImportKeyMaterial extends Rpc
 }
 
 /**
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getWrappingAlgorithm()
+ * @method $this withWrappingAlgorithm($value)
+ * @method string getWrappingKeySpec()
+ * @method $this withWrappingKeySpec($value)
+ */
+class GetParametersForImport extends Rpc
+{
+}
+
+/**
  * @method string getEncryptionContext()
  * @method $this withEncryptionContext($value)
  * @method string getKeyId()
@@ -155,18 +167,6 @@ class ImportKeyMaterial extends Rpc
  * @method $this withNumberOfBytes($value)
  */
 class GenerateDataKey extends Rpc
-{
-}
-
-/**
- * @method string getKeyId()
- * @method $this withKeyId($value)
- * @method string getWrappingAlgorithm()
- * @method $this withWrappingAlgorithm($value)
- * @method string getWrappingKeySpec()
- * @method $this withWrappingKeySpec($value)
- */
-class GetParametersForImport extends Rpc
 {
 }
 

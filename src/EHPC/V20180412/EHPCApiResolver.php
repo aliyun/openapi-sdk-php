@@ -6,20 +6,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryServicePackAndPrice queryServicePackAndPrice(array $options = [])
- * @method DescribeJob describeJob(array $options = [])
- * @method GetClusterVolumes getClusterVolumes(array $options = [])
  * @method UpdateClusterVolumes updateClusterVolumes(array $options = [])
- * @method GetAccountingReport getAccountingReport(array $options = [])
+ * @method GetClusterVolumes getClusterVolumes(array $options = [])
+ * @method DescribeJob describeJob(array $options = [])
  * @method InstallSoftware installSoftware(array $options = [])
+ * @method GetAccountingReport getAccountingReport(array $options = [])
  * @method UninstallSoftware uninstallSoftware(array $options = [])
  * @method ListInstalledSoftware listInstalledSoftware(array $options = [])
- * @method ListNodesByQueue listNodesByQueue(array $options = [])
- * @method SetQueue setQueue(array $options = [])
- * @method DeleteQueue deleteQueue(array $options = [])
  * @method AddQueue addQueue(array $options = [])
+ * @method DeleteQueue deleteQueue(array $options = [])
+ * @method SetQueue setQueue(array $options = [])
+ * @method ListNodesByQueue listNodesByQueue(array $options = [])
+ * @method StopVisualService stopVisualService(array $options = [])
  * @method ListCpfsFileSystems listCpfsFileSystems(array $options = [])
  * @method ListAvailableFileSystemTypes listAvailableFileSystemTypes(array $options = [])
- * @method StopVisualService stopVisualService(array $options = [])
  * @method StartVisualService startVisualService(array $options = [])
  * @method GetVisualServiceStatus getVisualServiceStatus(array $options = [])
  * @method ModifyVisualServicePasswd modifyVisualServicePasswd(array $options = [])
@@ -28,72 +28,72 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListFileSystemWithMountTargets listFileSystemWithMountTargets(array $options = [])
  * @method ListAvailableEcsTypes listAvailableEcsTypes(array $options = [])
  * @method ListQueues listQueues(array $options = [])
- * @method DescribeImagePrice describeImagePrice(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
- * @method ListCloudMetricProfilings listCloudMetricProfilings(array $options = [])
- * @method RunCloudMetricProfiling runCloudMetricProfiling(array $options = [])
+ * @method DescribeImagePrice describeImagePrice(array $options = [])
  * @method GetCloudMetricProfiling getCloudMetricProfiling(array $options = [])
+ * @method RunCloudMetricProfiling runCloudMetricProfiling(array $options = [])
+ * @method ListCloudMetricProfilings listCloudMetricProfilings(array $options = [])
+ * @method DeleteImage deleteImage(array $options = [])
+ * @method DescribeImage describeImage(array $options = [])
+ * @method ModifyImageGatewayConfig modifyImageGatewayConfig(array $options = [])
  * @method AddLocalNodes addLocalNodes(array $options = [])
  * @method GetCloudMetricLogs getCloudMetricLogs(array $options = [])
- * @method PullImage pullImage(array $options = [])
- * @method ModifyImageGatewayConfig modifyImageGatewayConfig(array $options = [])
- * @method ListContainerImages listContainerImages(array $options = [])
- * @method DescribeImage describeImage(array $options = [])
  * @method DescribeImageGatewayConfig describeImageGatewayConfig(array $options = [])
- * @method DeleteImage deleteImage(array $options = [])
- * @method CreateHybridCluster createHybridCluster(array $options = [])
- * @method GetHybridClusterConfig getHybridClusterConfig(array $options = [])
+ * @method PullImage pullImage(array $options = [])
+ * @method ListContainerImages listContainerImages(array $options = [])
  * @method ModifyContainerAppAttributes modifyContainerAppAttributes(array $options = [])
  * @method ListContainerApps listContainerApps(array $options = [])
+ * @method GetHybridClusterConfig getHybridClusterConfig(array $options = [])
  * @method DescribeContainerApp describeContainerApp(array $options = [])
  * @method DeleteContainerApps deleteContainerApps(array $options = [])
+ * @method CreateHybridCluster createHybridCluster(array $options = [])
  * @method AddContainerApp addContainerApp(array $options = [])
  * @method ListCommands listCommands(array $options = [])
  * @method ListInvocationStatus listInvocationStatus(array $options = [])
  * @method ListInvocationResults listInvocationResults(array $options = [])
  * @method InvokeShellCommand invokeShellCommand(array $options = [])
  * @method DescribeAutoScaleConfig describeAutoScaleConfig(array $options = [])
- * @method RecoverCluster recoverCluster(array $options = [])
- * @method StopNodes stopNodes(array $options = [])
- * @method StartCluster startCluster(array $options = [])
- * @method StartNodes startNodes(array $options = [])
  * @method StopCluster stopCluster(array $options = [])
+ * @method StartNodes startNodes(array $options = [])
+ * @method StartCluster startCluster(array $options = [])
+ * @method StopNodes stopNodes(array $options = [])
+ * @method RecoverCluster recoverCluster(array $options = [])
  * @method StopJobs stopJobs(array $options = [])
- * @method ListClusters listClusters(array $options = [])
- * @method ListRegions listRegions(array $options = [])
  * @method ListNodesNoPaging listNodesNoPaging(array $options = [])
- * @method ListJobs listJobs(array $options = [])
+ * @method ListRegions listRegions(array $options = [])
+ * @method ListClusters listClusters(array $options = [])
  * @method ModifyUserPasswords modifyUserPasswords(array $options = [])
- * @method ListPreferredEcsTypes listPreferredEcsTypes(array $options = [])
- * @method GetAutoScaleConfig getAutoScaleConfig(array $options = [])
+ * @method ListJobs listJobs(array $options = [])
  * @method ModifyUserGroups modifyUserGroups(array $options = [])
- * @method SetAutoScaleConfig setAutoScaleConfig(array $options = [])
- * @method EditJobTemplate editJobTemplate(array $options = [])
+ * @method GetAutoScaleConfig getAutoScaleConfig(array $options = [])
+ * @method ListPreferredEcsTypes listPreferredEcsTypes(array $options = [])
  * @method AddNodes addNodes(array $options = [])
- * @method DeleteUsers deleteUsers(array $options = [])
- * @method ListImages listImages(array $options = [])
- * @method DeleteJobs deleteJobs(array $options = [])
+ * @method EditJobTemplate editJobTemplate(array $options = [])
+ * @method SetAutoScaleConfig setAutoScaleConfig(array $options = [])
  * @method DeleteNodes deleteNodes(array $options = [])
- * @method ListCustomImages listCustomImages(array $options = [])
- * @method ResetNodes resetNodes(array $options = [])
+ * @method DeleteJobs deleteJobs(array $options = [])
+ * @method ListImages listImages(array $options = [])
+ * @method DeleteUsers deleteUsers(array $options = [])
  * @method SetJobUser setJobUser(array $options = [])
- * @method ListJobTemplates listJobTemplates(array $options = [])
- * @method ListSoftwares listSoftwares(array $options = [])
+ * @method ResetNodes resetNodes(array $options = [])
+ * @method ListCustomImages listCustomImages(array $options = [])
  * @method AddUsers addUsers(array $options = [])
- * @method DescribeCluster describeCluster(array $options = [])
- * @method ListCurrentClientVersion listCurrentClientVersion(array $options = [])
+ * @method ListSoftwares listSoftwares(array $options = [])
+ * @method ListJobTemplates listJobTemplates(array $options = [])
  * @method SubmitJob submitJob(array $options = [])
- * @method ListVolumes listVolumes(array $options = [])
+ * @method ListCurrentClientVersion listCurrentClientVersion(array $options = [])
+ * @method DescribeCluster describeCluster(array $options = [])
  * @method ListNodes listNodes(array $options = [])
- * @method UpgradeClient upgradeClient(array $options = [])
- * @method ModifyClusterAttributes modifyClusterAttributes(array $options = [])
+ * @method ListVolumes listVolumes(array $options = [])
  * @method CreateJobTemplate createJobTemplate(array $options = [])
- * @method CreateCluster createCluster(array $options = [])
- * @method DeleteCluster deleteCluster(array $options = [])
+ * @method ModifyClusterAttributes modifyClusterAttributes(array $options = [])
+ * @method UpgradeClient upgradeClient(array $options = [])
  * @method ListUsers listUsers(array $options = [])
- * @method ListClusterLogs listClusterLogs(array $options = [])
- * @method DeleteJobTemplates deleteJobTemplates(array $options = [])
+ * @method DeleteCluster deleteCluster(array $options = [])
+ * @method CreateCluster createCluster(array $options = [])
  * @method RerunJobs rerunJobs(array $options = [])
+ * @method DeleteJobTemplates deleteJobTemplates(array $options = [])
+ * @method ListClusterLogs listClusterLogs(array $options = [])
  */
 class EHPCApiResolver extends ApiResolver
 {
@@ -112,24 +112,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 class QueryServicePackAndPrice extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class DescribeJob extends Rpc
-{
-}
-
-/**
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class GetClusterVolumes extends Rpc
 {
 }
 
@@ -168,16 +150,20 @@ class UpdateClusterVolumes extends Rpc
 }
 
 /**
- * @method string getReportType()
- * @method $this withReportType($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  */
-class GetAccountingReport extends Rpc
+class GetClusterVolumes extends Rpc
+{
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeJob extends Rpc
 {
 }
 
@@ -188,6 +174,20 @@ class GetAccountingReport extends Rpc
  * @method $this withClusterId($value)
  */
 class InstallSoftware extends Rpc
+{
+}
+
+/**
+ * @method string getReportType()
+ * @method $this withReportType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ */
+class GetAccountingReport extends Rpc
 {
 }
 
@@ -212,14 +212,20 @@ class ListInstalledSoftware extends Rpc
 /**
  * @method string getQueueName()
  * @method $this withQueueName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class ListNodesByQueue extends Rpc
+class AddQueue extends Rpc
+{
+}
+
+/**
+ * @method string getQueueName()
+ * @method $this withQueueName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DeleteQueue extends Rpc
 {
 }
 
@@ -252,20 +258,26 @@ class SetQueue extends Rpc
 /**
  * @method string getQueueName()
  * @method $this withQueueName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class DeleteQueue extends Rpc
+class ListNodesByQueue extends Rpc
 {
 }
 
 /**
- * @method string getQueueName()
- * @method $this withQueueName($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getCidrIp()
+ * @method $this withCidrIp($value)
  */
-class AddQueue extends Rpc
+class StopVisualService extends Rpc
 {
 }
 
@@ -282,18 +294,6 @@ class ListCpfsFileSystems extends Rpc
 }
 
 class ListAvailableFileSystemTypes extends Rpc
-{
-}
-
-/**
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getCidrIp()
- * @method $this withCidrIp($value)
- */
-class StopVisualService extends Rpc
 {
 }
 
@@ -372,8 +372,6 @@ class ListFileSystemWithMountTargets extends Rpc
  * @method $this withSpotStrategy($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getShowSoldOut()
- * @method $this withShowSoldOut($value)
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  */
@@ -386,24 +384,6 @@ class ListAvailableEcsTypes extends Rpc
  * @method $this withClusterId($value)
  */
 class ListQueues extends Rpc
-{
-}
-
-/**
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getAmount()
- * @method $this withAmount($value)
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getPriceUnit()
- * @method $this withPriceUnit($value)
- * @method string getSkuCode()
- * @method $this withSkuCode($value)
- * @method string getOrderType()
- * @method $this withOrderType($value)
- */
-class DescribeImagePrice extends Rpc
 {
 }
 
@@ -442,14 +422,30 @@ class DescribePrice extends Rpc
 }
 
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAmount()
+ * @method $this withAmount($value)
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getPriceUnit()
+ * @method $this withPriceUnit($value)
+ * @method string getSkuCode()
+ * @method $this withSkuCode($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeImagePrice extends Rpc
+{
+}
+
+/**
+ * @method string getProfilingId()
+ * @method $this withProfilingId($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class ListCloudMetricProfilings extends Rpc
+class GetCloudMetricProfiling extends Rpc
 {
 }
 
@@ -470,46 +466,14 @@ class RunCloudMetricProfiling extends Rpc
 }
 
 /**
- * @method string getProfilingId()
- * @method $this withProfilingId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class GetCloudMetricProfiling extends Rpc
-{
-}
-
-/**
- * @method string getNodes()
- * @method $this withNodes($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class AddLocalNodes extends Rpc
-{
-}
-
-/**
- * @method string getAggregationType()
- * @method $this withAggregationType($value)
- * @method string getFilter()
- * @method $this withFilter($value)
- * @method string getMetricCategories()
- * @method $this withMetricCategories($value)
- * @method string getMetricScope()
- * @method $this withMetricScope($value)
- * @method string getFrom()
- * @method $this withFrom($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getTo()
- * @method $this withTo($value)
- * @method string getAggregationInterval()
- * @method $this withAggregationInterval($value)
- * @method string getReverse()
- * @method $this withReverse($value)
- */
-class GetCloudMetricLogs extends Rpc
+class ListCloudMetricProfilings extends Rpc
 {
 }
 
@@ -523,7 +487,21 @@ class GetCloudMetricLogs extends Rpc
  * @method string getImageTag()
  * @method $this withImageTag($value)
  */
-class PullImage extends Rpc
+class DeleteImage extends Rpc
+{
+}
+
+/**
+ * @method string getContainerType()
+ * @method $this withContainerType($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getRepository()
+ * @method $this withRepository($value)
+ * @method string getImageTag()
+ * @method $this withImageTag($value)
+ */
+class DescribeImage extends Rpc
 {
 }
 
@@ -568,30 +546,36 @@ class ModifyImageGatewayConfig extends Rpc
 }
 
 /**
- * @method string getContainerType()
- * @method $this withContainerType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
+ * @method string getNodes()
+ * @method $this withNodes($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class ListContainerImages extends Rpc
+class AddLocalNodes extends Rpc
 {
 }
 
 /**
- * @method string getContainerType()
- * @method $this withContainerType($value)
+ * @method string getAggregationType()
+ * @method $this withAggregationType($value)
+ * @method string getFilter()
+ * @method $this withFilter($value)
+ * @method string getMetricCategories()
+ * @method $this withMetricCategories($value)
+ * @method string getMetricScope()
+ * @method $this withMetricScope($value)
+ * @method string getFrom()
+ * @method $this withFrom($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getRepository()
- * @method $this withRepository($value)
- * @method string getImageTag()
- * @method $this withImageTag($value)
+ * @method string getTo()
+ * @method $this withTo($value)
+ * @method string getAggregationInterval()
+ * @method $this withAggregationInterval($value)
+ * @method string getReverse()
+ * @method $this withReverse($value)
  */
-class DescribeImage extends Rpc
+class GetCloudMetricLogs extends Rpc
 {
 }
 
@@ -613,8 +597,82 @@ class DescribeImageGatewayConfig extends Rpc
  * @method string getImageTag()
  * @method $this withImageTag($value)
  */
-class DeleteImage extends Rpc
+class PullImage extends Rpc
 {
+}
+
+/**
+ * @method string getContainerType()
+ * @method $this withContainerType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListContainerImages extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getContainerId()
+ * @method $this withContainerId($value)
+ */
+class ModifyContainerAppAttributes extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListContainerApps extends Rpc
+{
+}
+
+/**
+ * @method string getNode()
+ * @method $this withNode($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class GetHybridClusterConfig extends Rpc
+{
+}
+
+/**
+ * @method string getContainerId()
+ * @method $this withContainerId($value)
+ */
+class DescribeContainerApp extends Rpc
+{
+}
+
+/**
+ * @method array getContainerApp()
+ */
+class DeleteContainerApps extends Rpc
+{
+
+    /**
+     * @param array $containerApp
+     *
+     * @return $this
+     */
+    public function withContainerApp(array $containerApp)
+    {
+        $this->data['ContainerApp'] = $containerApp;
+        foreach ($containerApp as $depth1 => $depth1Value) {
+            $this->options['query']['ContainerApp.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -716,66 +774,6 @@ class CreateHybridCluster extends Rpc
         $this->data['Application'] = $application;
         foreach ($application as $depth1 => $depth1Value) {
             $this->options['query']['Application.' . ($depth1 + 1) . '.Tag'] = $depth1Value['Tag'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getNode()
- * @method $this withNode($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class GetHybridClusterConfig extends Rpc
-{
-}
-
-/**
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getContainerId()
- * @method $this withContainerId($value)
- */
-class ModifyContainerAppAttributes extends Rpc
-{
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListContainerApps extends Rpc
-{
-}
-
-/**
- * @method string getContainerId()
- * @method $this withContainerId($value)
- */
-class DescribeContainerApp extends Rpc
-{
-}
-
-/**
- * @method array getContainerApp()
- */
-class DeleteContainerApps extends Rpc
-{
-
-    /**
-     * @param array $containerApp
-     *
-     * @return $this
-     */
-    public function withContainerApp(array $containerApp)
-    {
-        $this->data['ContainerApp'] = $containerApp;
-        foreach ($containerApp as $depth1 => $depth1Value) {
-            $this->options['query']['ContainerApp.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
         }
 
         return $this;
@@ -893,56 +891,10 @@ class DescribeAutoScaleConfig extends Rpc
 }
 
 /**
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getOsTag()
- * @method $this withOsTag($value)
- * @method string getClientVersion()
- * @method $this withClientVersion($value)
- * @method string getAccountType()
- * @method $this withAccountType($value)
- * @method string getSchedulerType()
- * @method $this withSchedulerType($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getImageOwnerAlias()
- * @method $this withImageOwnerAlias($value)
- */
-class RecoverCluster extends Rpc
-{
-}
-
-/**
- * @method string getRole()
- * @method $this withRole($value)
- * @method array getInstance()
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class StopNodes extends Rpc
-{
-
-    /**
-     * @param array $instance
-     *
-     * @return $this
-     */
-    public function withInstance(array $instance)
-    {
-        $this->data['Instance'] = $instance;
-        foreach ($instance as $depth1 => $depth1Value) {
-            $this->options['query']['Instance.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class StartCluster extends Rpc
+class StopCluster extends Rpc
 {
 }
 
@@ -976,7 +928,53 @@ class StartNodes extends Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class StopCluster extends Rpc
+class StartCluster extends Rpc
+{
+}
+
+/**
+ * @method string getRole()
+ * @method $this withRole($value)
+ * @method array getInstance()
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class StopNodes extends Rpc
+{
+
+    /**
+     * @param array $instance
+     *
+     * @return $this
+     */
+    public function withInstance(array $instance)
+    {
+        $this->data['Instance'] = $instance;
+        foreach ($instance as $depth1 => $depth1Value) {
+            $this->options['query']['Instance.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getOsTag()
+ * @method $this withOsTag($value)
+ * @method string getClientVersion()
+ * @method $this withClientVersion($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getSchedulerType()
+ * @method $this withSchedulerType($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getImageOwnerAlias()
+ * @method $this withImageOwnerAlias($value)
+ */
+class RecoverCluster extends Rpc
 {
 }
 
@@ -987,20 +985,6 @@ class StopCluster extends Rpc
  * @method $this withClusterId($value)
  */
 class StopJobs extends Rpc
-{
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListClusters extends Rpc
-{
-}
-
-class ListRegions extends Rpc
 {
 }
 
@@ -1018,21 +1002,17 @@ class ListNodesNoPaging extends Rpc
 {
 }
 
+class ListRegions extends Rpc
+{
+}
+
 /**
- * @method string getOwner()
- * @method $this withOwner($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getRerunable()
- * @method $this withRerunable($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
-class ListJobs extends Rpc
+class ListClusters extends Rpc
 {
 }
 
@@ -1062,22 +1042,20 @@ class ModifyUserPasswords extends Rpc
 }
 
 /**
- * @method string getSpotStrategy()
- * @method $this withSpotStrategy($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
- */
-class ListPreferredEcsTypes extends Rpc
-{
-}
-
-/**
+ * @method string getOwner()
+ * @method $this withOwner($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getRerunable()
+ * @method $this withRerunable($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class GetAutoScaleConfig extends Rpc
+class ListJobs extends Rpc
 {
 }
 
@@ -1104,6 +1082,96 @@ class ModifyUserGroups extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class GetAutoScaleConfig extends Rpc
+{
+}
+
+/**
+ * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ */
+class ListPreferredEcsTypes extends Rpc
+{
+}
+
+/**
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getCount()
+ * @method $this withCount($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getComputeSpotStrategy()
+ * @method $this withComputeSpotStrategy($value)
+ * @method string getJobQueue()
+ * @method $this withJobQueue($value)
+ * @method string getImageOwnerAlias()
+ * @method $this withImageOwnerAlias($value)
+ * @method string getSystemDiskType()
+ * @method $this withSystemDiskType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
+ * @method string getEcsChargeType()
+ * @method $this withEcsChargeType($value)
+ * @method string getCreateMode()
+ * @method $this withCreateMode($value)
+ * @method string getSystemDiskSize()
+ * @method $this withSystemDiskSize($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getComputeSpotPriceLimit()
+ * @method $this withComputeSpotPriceLimit($value)
+ */
+class AddNodes extends Rpc
+{
+}
+
+/**
+ * @method string getStderrRedirectPath()
+ * @method $this withStderrRedirectPath($value)
+ * @method string getVariables()
+ * @method $this withVariables($value)
+ * @method string getRunasUser()
+ * @method $this withRunasUser($value)
+ * @method string getReRunable()
+ * @method $this withReRunable($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getCommandLine()
+ * @method $this withCommandLine($value)
+ * @method string getArrayRequest()
+ * @method $this withArrayRequest($value)
+ * @method string getPackagePath()
+ * @method $this withPackagePath($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getStdoutRedirectPath()
+ * @method $this withStdoutRedirectPath($value)
+ */
+class EditJobTemplate extends Rpc
+{
 }
 
 /**
@@ -1167,72 +1235,42 @@ class SetAutoScaleConfig extends Rpc
 }
 
 /**
- * @method string getStderrRedirectPath()
- * @method $this withStderrRedirectPath($value)
- * @method string getVariables()
- * @method $this withVariables($value)
- * @method string getRunasUser()
- * @method $this withRunasUser($value)
- * @method string getReRunable()
- * @method $this withReRunable($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- * @method string getCommandLine()
- * @method $this withCommandLine($value)
- * @method string getArrayRequest()
- * @method $this withArrayRequest($value)
- * @method string getPackagePath()
- * @method $this withPackagePath($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getStdoutRedirectPath()
- * @method $this withStdoutRedirectPath($value)
+ * @method string getReleaseInstance()
+ * @method $this withReleaseInstance($value)
+ * @method array getInstance()
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
-class EditJobTemplate extends Rpc
+class DeleteNodes extends Rpc
 {
+
+    /**
+     * @param array $instance
+     *
+     * @return $this
+     */
+    public function withInstance(array $instance)
+    {
+        $this->data['Instance'] = $instance;
+        foreach ($instance as $depth1 => $depth1Value) {
+            $this->options['query']['Instance.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+        }
+
+        return $this;
+    }
 }
 
 /**
- * @method string getAutoRenewPeriod()
- * @method $this withAutoRenewPeriod($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getCount()
- * @method $this withCount($value)
+ * @method string getJobs()
+ * @method $this withJobs($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getComputeSpotStrategy()
- * @method $this withComputeSpotStrategy($value)
- * @method string getJobQueue()
- * @method $this withJobQueue($value)
- * @method string getImageOwnerAlias()
- * @method $this withImageOwnerAlias($value)
- * @method string getSystemDiskType()
- * @method $this withSystemDiskType($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getPeriodUnit()
- * @method $this withPeriodUnit($value)
- * @method string getAutoRenew()
- * @method $this withAutoRenew($value)
- * @method string getEcsChargeType()
- * @method $this withEcsChargeType($value)
- * @method string getCreateMode()
- * @method $this withCreateMode($value)
- * @method string getSystemDiskSize()
- * @method $this withSystemDiskSize($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getComputeSpotPriceLimit()
- * @method $this withComputeSpotPriceLimit($value)
  */
-class AddNodes extends Rpc
+class DeleteJobs extends Rpc
+{
+}
+
+class ListImages extends Rpc
 {
 }
 
@@ -1260,53 +1298,15 @@ class DeleteUsers extends Rpc
     }
 }
 
-class ListImages extends Rpc
-{
-}
-
 /**
- * @method string getJobs()
- * @method $this withJobs($value)
+ * @method string getRunasUserPassword()
+ * @method $this withRunasUserPassword($value)
+ * @method string getRunasUser()
+ * @method $this withRunasUser($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteJobs extends Rpc
-{
-}
-
-/**
- * @method string getReleaseInstance()
- * @method $this withReleaseInstance($value)
- * @method array getInstance()
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class DeleteNodes extends Rpc
-{
-
-    /**
-     * @param array $instance
-     *
-     * @return $this
-     */
-    public function withInstance(array $instance)
-    {
-        $this->data['Instance'] = $instance;
-        foreach ($instance as $depth1 => $depth1Value) {
-            $this->options['query']['Instance.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getBaseOsTag()
- * @method $this withBaseOsTag($value)
- * @method string getImageOwnerAlias()
- * @method $this withImageOwnerAlias($value)
- */
-class ListCustomImages extends Rpc
+class SetJobUser extends Rpc
 {
 }
 
@@ -1335,34 +1335,12 @@ class ResetNodes extends Rpc
 }
 
 /**
- * @method string getRunasUserPassword()
- * @method $this withRunasUserPassword($value)
- * @method string getRunasUser()
- * @method $this withRunasUser($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
+ * @method string getBaseOsTag()
+ * @method $this withBaseOsTag($value)
+ * @method string getImageOwnerAlias()
+ * @method $this withImageOwnerAlias($value)
  */
-class SetJobUser extends Rpc
-{
-}
-
-/**
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListJobTemplates extends Rpc
-{
-}
-
-/**
- * @method string getEhpcVersion()
- * @method $this withEhpcVersion($value)
- */
-class ListSoftwares extends Rpc
+class ListCustomImages extends Rpc
 {
 }
 
@@ -1393,14 +1371,22 @@ class AddUsers extends Rpc
 }
 
 /**
- * @method string getClusterId()
- * @method $this withClusterId($value)
+ * @method string getEhpcVersion()
+ * @method $this withEhpcVersion($value)
  */
-class DescribeCluster extends Rpc
+class ListSoftwares extends Rpc
 {
 }
 
-class ListCurrentClientVersion extends Rpc
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListJobTemplates extends Rpc
 {
 }
 
@@ -1444,13 +1430,15 @@ class SubmitJob extends Rpc
 {
 }
 
+class ListCurrentClientVersion extends Rpc
+{
+}
+
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
-class ListVolumes extends Rpc
+class DescribeCluster extends Rpc
 {
 }
 
@@ -1471,24 +1459,12 @@ class ListNodes extends Rpc
 }
 
 /**
- * @method string getClientVersion()
- * @method $this withClientVersion($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class UpgradeClient extends Rpc
-{
-}
-
-/**
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class ModifyClusterAttributes extends Rpc
+class ListVolumes extends Rpc
 {
 }
 
@@ -1515,6 +1491,50 @@ class ModifyClusterAttributes extends Rpc
  * @method $this withCommandLine($value)
  */
 class CreateJobTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ModifyClusterAttributes extends Rpc
+{
+}
+
+/**
+ * @method string getClientVersion()
+ * @method $this withClientVersion($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class UpgradeClient extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListUsers extends Rpc
+{
+}
+
+/**
+ * @method string getReleaseInstance()
+ * @method $this withReleaseInstance($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DeleteCluster extends Rpc
 {
 }
 
@@ -1742,36 +1762,12 @@ class CreateCluster extends Rpc
 }
 
 /**
- * @method string getReleaseInstance()
- * @method $this withReleaseInstance($value)
+ * @method string getJobs()
+ * @method $this withJobs($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
-class DeleteCluster extends Rpc
-{
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListUsers extends Rpc
-{
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListClusterLogs extends Rpc
+class RerunJobs extends Rpc
 {
 }
 
@@ -1784,11 +1780,13 @@ class DeleteJobTemplates extends Rpc
 }
 
 /**
- * @method string getJobs()
- * @method $this withJobs($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class RerunJobs extends Rpc
+class ListClusterLogs extends Rpc
 {
 }

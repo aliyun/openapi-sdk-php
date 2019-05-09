@@ -6,19 +6,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeMultiContainerGroupMetric describeMultiContainerGroupMetric(array $options = [])
- * @method UpdateContainerGroupByTemplate updateContainerGroupByTemplate(array $options = [])
- * @method ExportContainerGroupTemplate exportContainerGroupTemplate(array $options = [])
- * @method CreateContainerGroupFromTemplate createContainerGroupFromTemplate(array $options = [])
  * @method DescribeContainerGroupMetric describeContainerGroupMetric(array $options = [])
- * @method UpdateContainerGroup updateContainerGroup(array $options = [])
+ * @method UpdateContainerGroupByTemplate updateContainerGroupByTemplate(array $options = [])
+ * @method CreateContainerGroupFromTemplate createContainerGroupFromTemplate(array $options = [])
+ * @method ExportContainerGroupTemplate exportContainerGroupTemplate(array $options = [])
  * @method RestartContainerGroup restartContainerGroup(array $options = [])
+ * @method UpdateContainerGroup updateContainerGroup(array $options = [])
  * @method DescribeContainerGroupPrice describeContainerGroupPrice(array $options = [])
  * @method ExecContainerCommand execContainerCommand(array $options = [])
- * @method DescribeContainerExecUri describeContainerExecUri(array $options = [])
- * @method DeleteContainerGroup deleteContainerGroup(array $options = [])
- * @method DescribeContainerGroups describeContainerGroups(array $options = [])
  * @method DescribeContainerLog describeContainerLog(array $options = [])
  * @method CreateContainerGroup createContainerGroup(array $options = [])
+ * @method DescribeContainerGroups describeContainerGroups(array $options = [])
+ * @method DeleteContainerGroup deleteContainerGroup(array $options = [])
  */
 class EciApiResolver extends ApiResolver
 {
@@ -58,6 +57,28 @@ class DescribeMultiContainerGroupMetric extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getContainerGroupId()
+ * @method $this withContainerGroupId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeContainerGroupMetric extends Rpc
+{
+}
+
+/**
  * @method string getTemplate()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
@@ -85,22 +106,6 @@ class UpdateContainerGroupByTemplate extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getContainerGroupId()
- * @method $this withContainerGroupId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ExportContainerGroupTemplate extends Rpc
-{
 }
 
 /**
@@ -136,22 +141,34 @@ class CreateContainerGroupFromTemplate extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getContainerGroupId()
  * @method $this withContainerGroupId($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeContainerGroupMetric extends Rpc
+class ExportContainerGroupTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getContainerGroupId()
+ * @method $this withContainerGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RestartContainerGroup extends Rpc
 {
 }
 
@@ -410,24 +427,6 @@ class UpdateContainerGroup extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getContainerGroupId()
- * @method $this withContainerGroupId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RestartContainerGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getMemory()
  * @method $this withMemory($value)
  * @method string getResourceOwnerAccount()
@@ -461,89 +460,6 @@ class DescribeContainerGroupPrice extends Rpc
  */
 class ExecContainerCommand extends Rpc
 {
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getContainerName()
- * @method $this withContainerName($value)
- * @method string getContainerGroupId()
- * @method $this withContainerGroupId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCommand()
- * @method $this withCommand($value)
- */
-class DescribeContainerExecUri extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getContainerGroupId()
- * @method $this withContainerGroupId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteContainerGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getContainerGroupIds()
- * @method $this withContainerGroupIds($value)
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method array getTag()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getContainerGroupName()
- * @method $this withContainerGroupName($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeContainerGroups extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
-
-        return $this;
-    }
 }
 
 /**
@@ -890,4 +806,67 @@ class CreateContainerGroup extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getContainerGroupIds()
+ * @method $this withContainerGroupIds($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getContainerGroupName()
+ * @method $this withContainerGroupName($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeContainerGroups extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getContainerGroupId()
+ * @method $this withContainerGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteContainerGroup extends Rpc
+{
 }

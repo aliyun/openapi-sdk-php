@@ -6,7 +6,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetUserLabel getUserLabel(array $options = [])
- * @method CheckHavanaIdConvert checkHavanaIdConvert(array $options = [])
  * @method ResetAccountPwdInWhiteList resetAccountPwdInWhiteList(array $options = [])
  * @method HavanaIdConvert havanaIdConvert(array $options = [])
  * @method CheckCloudUser checkCloudUser(array $options = [])
@@ -32,14 +31,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withUid($value)
  */
 class GetUserLabel extends Rpc
-{
-}
-
-/**
- * @method string getUid()
- * @method $this withUid($value)
- */
-class CheckHavanaIdConvert extends Rpc
 {
 }
 

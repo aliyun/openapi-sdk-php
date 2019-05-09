@@ -5,73 +5,67 @@ namespace AlibabaCloud\Ess\V20140828;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CheckScalingGroupAvailability checkScalingGroupAvailability(array $options = [])
  * @method DetachVServerGroups detachVServerGroups(array $options = [])
  * @method AttachVServerGroups attachVServerGroups(array $options = [])
+ * @method ModifyAlarm modifyAlarm(array $options = [])
+ * @method EnableAlarm enableAlarm(array $options = [])
+ * @method DisableAlarm disableAlarm(array $options = [])
+ * @method DescribeAlarms describeAlarms(array $options = [])
+ * @method DeleteAlarm deleteAlarm(array $options = [])
+ * @method CreateAlarm createAlarm(array $options = [])
  * @method DetachDBInstances detachDBInstances(array $options = [])
  * @method AttachDBInstances attachDBInstances(array $options = [])
- * @method ModifyScalingConfiguration modifyScalingConfiguration(array $options = [])
- * @method DescribeLoadBalancers describeLoadBalancers(array $options = [])
  * @method DetachLoadBalancers detachLoadBalancers(array $options = [])
  * @method AttachLoadBalancers attachLoadBalancers(array $options = [])
- * @method CreateAlarm createAlarm(array $options = [])
- * @method EnableAlarm enableAlarm(array $options = [])
- * @method ModifyAlarm modifyAlarm(array $options = [])
- * @method DeleteAlarm deleteAlarm(array $options = [])
- * @method DescribeAlarms describeAlarms(array $options = [])
- * @method DisableAlarm disableAlarm(array $options = [])
- * @method RebalanceInstances rebalanceInstances(array $options = [])
- * @method ModifyNotificationConfiguration modifyNotificationConfiguration(array $options = [])
- * @method SetInstancesProtection setInstancesProtection(array $options = [])
- * @method DeleteNotificationConfiguration deleteNotificationConfiguration(array $options = [])
- * @method DescribeNotificationTypes describeNotificationTypes(array $options = [])
- * @method DescribeNotificationConfigurations describeNotificationConfigurations(array $options = [])
- * @method CreateNotificationConfiguration createNotificationConfiguration(array $options = [])
+ * @method ModifyScalingConfiguration modifyScalingConfiguration(array $options = [])
  * @method DescribeLifecycleHooks describeLifecycleHooks(array $options = [])
  * @method ModifyLifecycleHook modifyLifecycleHook(array $options = [])
- * @method CompleteLifecycleAction completeLifecycleAction(array $options = [])
  * @method DeleteLifecycleHook deleteLifecycleHook(array $options = [])
- * @method RecordLifecycleActionHeartbeat recordLifecycleActionHeartbeat(array $options = [])
+ * @method CompleteLifecycleAction completeLifecycleAction(array $options = [])
  * @method CreateLifecycleHook createLifecycleHook(array $options = [])
- * @method EnterStandby enterStandby(array $options = [])
+ * @method RecordLifecycleActionHeartbeat recordLifecycleActionHeartbeat(array $options = [])
+ * @method SetInstancesProtection setInstancesProtection(array $options = [])
+ * @method RebalanceInstances rebalanceInstances(array $options = [])
+ * @method DeleteNotificationConfiguration deleteNotificationConfiguration(array $options = [])
+ * @method ModifyNotificationConfiguration modifyNotificationConfiguration(array $options = [])
+ * @method DescribeNotificationConfigurations describeNotificationConfigurations(array $options = [])
+ * @method DescribeNotificationTypes describeNotificationTypes(array $options = [])
+ * @method CreateNotificationConfiguration createNotificationConfiguration(array $options = [])
  * @method ExitStandby exitStandby(array $options = [])
+ * @method EnterStandby enterStandby(array $options = [])
  * @method DeactivateScalingConfiguration deactivateScalingConfiguration(array $options = [])
- * @method OrderSucceededCallback orderSucceededCallback(array $options = [])
  * @method ModifyAlertConfig modifyAlertConfig(array $options = [])
  * @method DescribeAlertConfig describeAlertConfig(array $options = [])
- * @method SpiCallExecuteScalingRule spiCallExecuteScalingRule(array $options = [])
- * @method UserOperation userOperation(array $options = [])
- * @method CountScalingActivitiesInWorker countScalingActivitiesInWorker(array $options = [])
  * @method VerifyAuthentication verifyAuthentication(array $options = [])
  * @method VerifyUser verifyUser(array $options = [])
- * @method DescribeAccountAttributes describeAccountAttributes(array $options = [])
- * @method DescribeScalingActivityDetail describeScalingActivityDetail(array $options = [])
- * @method DescribeLimitation describeLimitation(array $options = [])
- * @method DescribeCapacityHistory describeCapacityHistory(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
- * @method AttachInstances attachInstances(array $options = [])
- * @method CreateScalingRule createScalingRule(array $options = [])
- * @method CreateScalingGroup createScalingGroup(array $options = [])
- * @method CreateScalingConfiguration createScalingConfiguration(array $options = [])
- * @method DeleteScalingRule deleteScalingRule(array $options = [])
- * @method DeleteScalingGroup deleteScalingGroup(array $options = [])
- * @method DeleteScalingConfiguration deleteScalingConfiguration(array $options = [])
- * @method CreateScheduledTask createScheduledTask(array $options = [])
- * @method DescribeScalingConfigurations describeScalingConfigurations(array $options = [])
- * @method DescribeScalingActivities describeScalingActivities(array $options = [])
- * @method DeleteScheduledTask deleteScheduledTask(array $options = [])
- * @method DescribeScalingRules describeScalingRules(array $options = [])
- * @method DescribeScalingInstances describeScalingInstances(array $options = [])
- * @method DescribeScalingGroups describeScalingGroups(array $options = [])
- * @method DisableScalingGroup disableScalingGroup(array $options = [])
- * @method DetachInstances detachInstances(array $options = [])
- * @method DescribeScheduledTasks describeScheduledTasks(array $options = [])
+ * @method DescribeCapacityHistory describeCapacityHistory(array $options = [])
+ * @method DescribeLimitation describeLimitation(array $options = [])
+ * @method DescribeScalingActivityDetail describeScalingActivityDetail(array $options = [])
+ * @method DescribeAccountAttributes describeAccountAttributes(array $options = [])
+ * @method RemoveInstances removeInstances(array $options = [])
+ * @method ModifyScheduledTask modifyScheduledTask(array $options = [])
  * @method ModifyScalingRule modifyScalingRule(array $options = [])
  * @method ModifyScalingGroup modifyScalingGroup(array $options = [])
  * @method ExecuteScalingRule executeScalingRule(array $options = [])
  * @method EnableScalingGroup enableScalingGroup(array $options = [])
- * @method RemoveInstances removeInstances(array $options = [])
- * @method ModifyScheduledTask modifyScheduledTask(array $options = [])
+ * @method DisableScalingGroup disableScalingGroup(array $options = [])
+ * @method DetachInstances detachInstances(array $options = [])
+ * @method DescribeScheduledTasks describeScheduledTasks(array $options = [])
+ * @method DescribeScalingRules describeScalingRules(array $options = [])
+ * @method DescribeScalingInstances describeScalingInstances(array $options = [])
+ * @method DescribeScalingGroups describeScalingGroups(array $options = [])
+ * @method DescribeScalingConfigurations describeScalingConfigurations(array $options = [])
+ * @method DescribeScalingActivities describeScalingActivities(array $options = [])
+ * @method DeleteScheduledTask deleteScheduledTask(array $options = [])
+ * @method DeleteScalingRule deleteScalingRule(array $options = [])
+ * @method DeleteScalingGroup deleteScalingGroup(array $options = [])
+ * @method DeleteScalingConfiguration deleteScalingConfiguration(array $options = [])
+ * @method CreateScheduledTask createScheduledTask(array $options = [])
+ * @method CreateScalingRule createScalingRule(array $options = [])
+ * @method CreateScalingGroup createScalingGroup(array $options = [])
+ * @method CreateScalingConfiguration createScalingConfiguration(array $options = [])
+ * @method AttachInstances attachInstances(array $options = [])
  */
 class EssApiResolver extends ApiResolver
 {
@@ -90,18 +84,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ess';
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CheckScalingGroupAvailability extends Rpc
-{
 }
 
 /**
@@ -174,6 +156,196 @@ class AttachVServerGroups extends Rpc
 }
 
 /**
+ * @method string getMetricType()
+ * @method $this withMetricType($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method array getAlarmAction()
+ * @method string getThreshold()
+ * @method $this withThreshold($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAlarmTaskId()
+ * @method $this withAlarmTaskId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getComparisonOperator()
+ * @method $this withComparisonOperator($value)
+ * @method array getDimension()
+ * @method string getStatistics()
+ * @method $this withStatistics($value)
+ */
+class ModifyAlarm extends Rpc
+{
+
+    /**
+     * @param array $alarmAction
+     *
+     * @return $this
+     */
+    public function withAlarmAction(array $alarmAction)
+    {
+        $this->data['AlarmAction'] = $alarmAction;
+        foreach ($alarmAction as $i => $iValue) {
+            $this->options['query']['AlarmAction.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $dimension
+     *
+     * @return $this
+     */
+    public function withDimension(array $dimension)
+    {
+        $this->data['Dimension'] = $dimension;
+        foreach ($dimension as $depth1 => $depth1Value) {
+            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionValue'] = $depth1Value['DimensionValue'];
+            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionKey'] = $depth1Value['DimensionKey'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAlarmTaskId()
+ * @method $this withAlarmTaskId($value)
+ */
+class EnableAlarm extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAlarmTaskId()
+ * @method $this withAlarmTaskId($value)
+ */
+class DisableAlarm extends Rpc
+{
+}
+
+/**
+ * @method string getIsEnable()
+ * @method $this withIsEnable($value)
+ * @method string getMetricType()
+ * @method $this withMetricType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAlarmTaskId()
+ * @method $this withAlarmTaskId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeAlarms extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAlarmTaskId()
+ * @method $this withAlarmTaskId($value)
+ */
+class DeleteAlarm extends Rpc
+{
+}
+
+/**
+ * @method string getMetricType()
+ * @method $this withMetricType($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method array getAlarmAction()
+ * @method string getThreshold()
+ * @method $this withThreshold($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getComparisonOperator()
+ * @method $this withComparisonOperator($value)
+ * @method array getDimension()
+ * @method string getStatistics()
+ * @method $this withStatistics($value)
+ */
+class CreateAlarm extends Rpc
+{
+
+    /**
+     * @param array $alarmAction
+     *
+     * @return $this
+     */
+    public function withAlarmAction(array $alarmAction)
+    {
+        $this->data['AlarmAction'] = $alarmAction;
+        foreach ($alarmAction as $i => $iValue) {
+            $this->options['query']['AlarmAction.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $dimension
+     *
+     * @return $this
+     */
+    public function withDimension(array $dimension)
+    {
+        $this->data['Dimension'] = $dimension;
+        foreach ($dimension as $depth1 => $depth1Value) {
+            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionValue'] = $depth1Value['DimensionValue'];
+            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionKey'] = $depth1Value['DimensionKey'];
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getScalingGroupId()
@@ -234,6 +406,66 @@ class AttachDBInstances extends Rpc
 }
 
 /**
+ * @method array getLoadBalancer()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getForceDetach()
+ * @method $this withForceDetach($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DetachLoadBalancers extends Rpc
+{
+
+    /**
+     * @param array $loadBalancer
+     *
+     * @return $this
+     */
+    public function withLoadBalancer(array $loadBalancer)
+    {
+        $this->data['LoadBalancer'] = $loadBalancer;
+        foreach ($loadBalancer as $i => $iValue) {
+            $this->options['query']['LoadBalancer.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getLoadBalancer()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getForceAttach()
+ * @method $this withForceAttach($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AttachLoadBalancers extends Rpc
+{
+
+    /**
+     * @param array $loadBalancer
+     *
+     * @return $this
+     */
+    public function withLoadBalancer(array $loadBalancer)
+    {
+        $this->data['LoadBalancer'] = $loadBalancer;
+        foreach ($loadBalancer as $i => $iValue) {
+            $this->options['query']['LoadBalancer.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getMemory()
@@ -274,7 +506,6 @@ class AttachDBInstances extends Rpc
  * @method $this withRamRoleName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method array getSecurityGroupIds()
  * @method array getDataDisk()
  * @method string getScalingConfigurationName()
  * @method $this withScalingConfigurationName($value)
@@ -354,21 +585,6 @@ class ModifyScalingConfiguration extends Rpc
     }
 
     /**
-     * @param array $securityGroupIds
-     *
-     * @return $this
-     */
-    public function withSecurityGroupIds(array $securityGroupIds)
-    {
-        $this->data['SecurityGroupIds'] = $securityGroupIds;
-        foreach ($securityGroupIds as $i => $iValue) {
-            $this->options['query']['SecurityGroupIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
      * @param array $dataDisk
      *
      * @return $this
@@ -413,410 +629,6 @@ class ModifyScalingConfiguration extends Rpc
     {
         $this->data['SystemDiskDescription'] = $value;
         $this->options['query']['SystemDisk.Description'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLoadBalancers extends Rpc
-{
-}
-
-/**
- * @method array getLoadBalancer()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getForceDetach()
- * @method $this withForceDetach($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DetachLoadBalancers extends Rpc
-{
-
-    /**
-     * @param array $loadBalancer
-     *
-     * @return $this
-     */
-    public function withLoadBalancer(array $loadBalancer)
-    {
-        $this->data['LoadBalancer'] = $loadBalancer;
-        foreach ($loadBalancer as $i => $iValue) {
-            $this->options['query']['LoadBalancer.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getLoadBalancer()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getForceAttach()
- * @method $this withForceAttach($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class AttachLoadBalancers extends Rpc
-{
-
-    /**
-     * @param array $loadBalancer
-     *
-     * @return $this
-     */
-    public function withLoadBalancer(array $loadBalancer)
-    {
-        $this->data['LoadBalancer'] = $loadBalancer;
-        foreach ($loadBalancer as $i => $iValue) {
-            $this->options['query']['LoadBalancer.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getMetricType()
- * @method $this withMetricType($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method array getAlarmAction()
- * @method string getThreshold()
- * @method $this withThreshold($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getEvaluationCount()
- * @method $this withEvaluationCount($value)
- * @method string getMetricName()
- * @method $this withMetricName($value)
- * @method string getComparisonOperator()
- * @method $this withComparisonOperator($value)
- * @method array getDimension()
- * @method string getStatistics()
- * @method $this withStatistics($value)
- */
-class CreateAlarm extends Rpc
-{
-
-    /**
-     * @param array $alarmAction
-     *
-     * @return $this
-     */
-    public function withAlarmAction(array $alarmAction)
-    {
-        $this->data['AlarmAction'] = $alarmAction;
-        foreach ($alarmAction as $i => $iValue) {
-            $this->options['query']['AlarmAction.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $dimension
-     *
-     * @return $this
-     */
-    public function withDimension(array $dimension)
-    {
-        $this->data['Dimension'] = $dimension;
-        foreach ($dimension as $depth1 => $depth1Value) {
-            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionValue'] = $depth1Value['DimensionValue'];
-            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionKey'] = $depth1Value['DimensionKey'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAlarmTaskId()
- * @method $this withAlarmTaskId($value)
- */
-class EnableAlarm extends Rpc
-{
-}
-
-/**
- * @method string getMetricType()
- * @method $this withMetricType($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method array getAlarmAction()
- * @method string getThreshold()
- * @method $this withThreshold($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAlarmTaskId()
- * @method $this withAlarmTaskId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getEvaluationCount()
- * @method $this withEvaluationCount($value)
- * @method string getMetricName()
- * @method $this withMetricName($value)
- * @method string getComparisonOperator()
- * @method $this withComparisonOperator($value)
- * @method array getDimension()
- * @method string getStatistics()
- * @method $this withStatistics($value)
- */
-class ModifyAlarm extends Rpc
-{
-
-    /**
-     * @param array $alarmAction
-     *
-     * @return $this
-     */
-    public function withAlarmAction(array $alarmAction)
-    {
-        $this->data['AlarmAction'] = $alarmAction;
-        foreach ($alarmAction as $i => $iValue) {
-            $this->options['query']['AlarmAction.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $dimension
-     *
-     * @return $this
-     */
-    public function withDimension(array $dimension)
-    {
-        $this->data['Dimension'] = $dimension;
-        foreach ($dimension as $depth1 => $depth1Value) {
-            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionValue'] = $depth1Value['DimensionValue'];
-            $this->options['query']['Dimension.' . ($depth1 + 1) . '.DimensionKey'] = $depth1Value['DimensionKey'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAlarmTaskId()
- * @method $this withAlarmTaskId($value)
- */
-class DeleteAlarm extends Rpc
-{
-}
-
-/**
- * @method string getIsEnable()
- * @method $this withIsEnable($value)
- * @method string getMetricType()
- * @method $this withMetricType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAlarmTaskId()
- * @method $this withAlarmTaskId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeAlarms extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAlarmTaskId()
- * @method $this withAlarmTaskId($value)
- */
-class DisableAlarm extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RebalanceInstances extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getNotificationArn()
- * @method $this withNotificationArn($value)
- * @method array getNotificationType()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyNotificationConfiguration extends Rpc
-{
-
-    /**
-     * @param array $notificationType
-     *
-     * @return $this
-     */
-    public function withNotificationType(array $notificationType)
-    {
-        $this->data['NotificationType'] = $notificationType;
-        foreach ($notificationType as $i => $iValue) {
-            $this->options['query']['NotificationType.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getInstanceId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getProtectedFromScaleIn()
- * @method $this withProtectedFromScaleIn($value)
- */
-class SetInstancesProtection extends Rpc
-{
-
-    /**
-     * @param array $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId(array $instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        foreach ($instanceId as $i => $iValue) {
-            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getNotificationArn()
- * @method $this withNotificationArn($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteNotificationConfiguration extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeNotificationTypes extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeNotificationConfigurations extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getNotificationArn()
- * @method $this withNotificationArn($value)
- * @method array getNotificationType()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateNotificationConfiguration extends Rpc
-{
-
-    /**
-     * @param array $notificationType
-     *
-     * @return $this
-     */
-    public function withNotificationType(array $notificationType)
-    {
-        $this->data['NotificationType'] = $notificationType;
-        foreach ($notificationType as $i => $iValue) {
-            $this->options['query']['NotificationType.' . ($i + 1)] = $iValue;
-        }
 
         return $this;
     }
@@ -887,6 +699,24 @@ class ModifyLifecycleHook extends Rpc
 }
 
 /**
+ * @method string getLifecycleHookName()
+ * @method $this withLifecycleHookName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getLifecycleHookId()
+ * @method $this withLifecycleHookId($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteLifecycleHook extends Rpc
+{
+}
+
+/**
  * @method string getLifecycleActionToken()
  * @method $this withLifecycleActionToken($value)
  * @method string getResourceOwnerAccount()
@@ -905,21 +735,50 @@ class CompleteLifecycleAction extends Rpc
 }
 
 /**
- * @method string getLifecycleHookName()
- * @method $this withLifecycleHookName($value)
+ * @method string getDefaultResult()
+ * @method $this withDefaultResult($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getLifecycleHookId()
- * @method $this withLifecycleHookId($value)
+ * @method string getHeartbeatTimeout()
+ * @method $this withHeartbeatTimeout($value)
  * @method string getScalingGroupId()
  * @method $this withScalingGroupId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getNotificationMetadata()
+ * @method $this withNotificationMetadata($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getLifecycleTransition()
+ * @method $this withLifecycleTransition($value)
+ * @method string getLifecycleHookName()
+ * @method $this withLifecycleHookName($value)
+ * @method string getNotificationArn()
+ * @method $this withNotificationArn($value)
+ * @method array getLifecycleHook()
  */
-class DeleteLifecycleHook extends Rpc
+class CreateLifecycleHook extends Rpc
 {
+
+    /**
+     * @param array $lifecycleHook
+     *
+     * @return $this
+     */
+    public function withLifecycleHook(array $lifecycleHook)
+    {
+        $this->data['LifecycleHook'] = $lifecycleHook;
+        foreach ($lifecycleHook as $depth1 => $depth1Value) {
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.DefaultResult'] = $depth1Value['DefaultResult'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleHookName'] = $depth1Value['LifecycleHookName'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.HeartbeatTimeout'] = $depth1Value['HeartbeatTimeout'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationArn'] = $depth1Value['NotificationArn'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationMetadata'] = $depth1Value['NotificationMetadata'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleTransition'] = $depth1Value['LifecycleTransition'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -977,53 +836,6 @@ class RecordLifecycleActionHeartbeat extends Rpc
 }
 
 /**
- * @method string getDefaultResult()
- * @method $this withDefaultResult($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getHeartbeatTimeout()
- * @method $this withHeartbeatTimeout($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getNotificationMetadata()
- * @method $this withNotificationMetadata($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getLifecycleTransition()
- * @method $this withLifecycleTransition($value)
- * @method string getLifecycleHookName()
- * @method $this withLifecycleHookName($value)
- * @method string getNotificationArn()
- * @method $this withNotificationArn($value)
- * @method array getLifecycleHook()
- */
-class CreateLifecycleHook extends Rpc
-{
-
-    /**
-     * @param array $lifecycleHook
-     *
-     * @return $this
-     */
-    public function withLifecycleHook(array $lifecycleHook)
-    {
-        $this->data['LifecycleHook'] = $lifecycleHook;
-        foreach ($lifecycleHook as $depth1 => $depth1Value) {
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.DefaultResult'] = $depth1Value['DefaultResult'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleHookName'] = $depth1Value['LifecycleHookName'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.HeartbeatTimeout'] = $depth1Value['HeartbeatTimeout'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationArn'] = $depth1Value['NotificationArn'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationMetadata'] = $depth1Value['NotificationMetadata'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleTransition'] = $depth1Value['LifecycleTransition'];
-        }
-
-        return $this;
-    }
-}
-
-/**
  * @method array getInstanceId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -1031,8 +843,10 @@ class CreateLifecycleHook extends Rpc
  * @method $this withScalingGroupId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getProtectedFromScaleIn()
+ * @method $this withProtectedFromScaleIn($value)
  */
-class EnterStandby extends Rpc
+class SetInstancesProtection extends Rpc
 {
 
     /**
@@ -1045,6 +859,118 @@ class EnterStandby extends Rpc
         $this->data['InstanceId'] = $instanceId;
         foreach ($instanceId as $i => $iValue) {
             $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RebalanceInstances extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getNotificationArn()
+ * @method $this withNotificationArn($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteNotificationConfiguration extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getNotificationArn()
+ * @method $this withNotificationArn($value)
+ * @method array getNotificationType()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyNotificationConfiguration extends Rpc
+{
+
+    /**
+     * @param array $notificationType
+     *
+     * @return $this
+     */
+    public function withNotificationType(array $notificationType)
+    {
+        $this->data['NotificationType'] = $notificationType;
+        foreach ($notificationType as $i => $iValue) {
+            $this->options['query']['NotificationType.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeNotificationConfigurations extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeNotificationTypes extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getNotificationArn()
+ * @method $this withNotificationArn($value)
+ * @method array getNotificationType()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateNotificationConfiguration extends Rpc
+{
+
+    /**
+     * @param array $notificationType
+     *
+     * @return $this
+     */
+    public function withNotificationType(array $notificationType)
+    {
+        $this->data['NotificationType'] = $notificationType;
+        foreach ($notificationType as $i => $iValue) {
+            $this->options['query']['NotificationType.' . ($i + 1)] = $iValue;
         }
 
         return $this;
@@ -1080,6 +1006,34 @@ class ExitStandby extends Rpc
 }
 
 /**
+ * @method array getInstanceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class EnterStandby extends Rpc
+{
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+    public function withInstanceId(array $instanceId)
+    {
+        $this->data['InstanceId'] = $instanceId;
+        foreach ($instanceId as $i => $iValue) {
+            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getScalingConfigurationId()
  * @method $this withScalingConfigurationId($value)
  * @method string getResourceOwnerAccount()
@@ -1091,34 +1045,6 @@ class ExitStandby extends Rpc
  */
 class DeactivateScalingConfiguration extends Rpc
 {
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getData()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class OrderSucceededCallback extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withData($value)
-    {
-        $this->data['Data'] = $value;
-        $this->options['query']['data'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -1152,54 +1078,6 @@ class DescribeAlertConfig extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getUserBid()
- * @method $this withUserBid($value)
- * @method string getAri()
- * @method $this withAri($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- */
-class SpiCallExecuteScalingRule extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getUserAction()
- * @method $this withUserAction($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- */
-class UserOperation extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getWorkerIp()
- * @method $this withWorkerIp($value)
- */
-class CountScalingActivitiesInWorker extends Rpc
-{
-}
-
-/**
  * @method string getUid()
  * @method $this withUid($value)
  * @method string getResourceOwnerId()
@@ -1226,36 +1104,14 @@ class VerifyUser extends Rpc
 }
 
 /**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeAccountAttributes extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getScalingActivityId()
- * @method $this withScalingActivityId($value)
  */
-class DescribeScalingActivityDetail extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLimitation extends Rpc
+class DescribeRegions extends Rpc
 {
 }
 
@@ -1280,84 +1136,331 @@ class DescribeCapacityHistory extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRegions extends Rpc
+class DescribeLimitation extends Rpc
 {
 }
 
 /**
- * @method string getInstanceId10()
- * @method string getLoadBalancerWeight6()
- * @method string getLoadBalancerWeight11()
- * @method string getLoadBalancerWeight7()
- * @method string getLoadBalancerWeight12()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId12()
- * @method string getLoadBalancerWeight8()
- * @method string getInstanceId11()
- * @method string getLoadBalancerWeight9()
- * @method string getLoadBalancerWeight10()
- * @method string getLoadBalancerWeight2()
- * @method string getLoadBalancerWeight15()
- * @method string getLoadBalancerWeight3()
- * @method string getLoadBalancerWeight16()
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getLoadBalancerWeight4()
- * @method string getLoadBalancerWeight13()
- * @method string getLoadBalancerWeight5()
- * @method string getLoadBalancerWeight14()
- * @method string getLoadBalancerWeight1()
- * @method string getInstanceId20()
- * @method string getInstanceId1()
- * @method string getLoadBalancerWeight20()
- * @method string getInstanceId3()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getInstanceId2()
- * @method string getInstanceId5()
- * @method string getInstanceId4()
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getInstanceId7()
- * @method string getInstanceId6()
- * @method string getInstanceId9()
- * @method string getInstanceId8()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getInstanceId18()
- * @method string getLoadBalancerWeight19()
- * @method string getInstanceId17()
- * @method string getLoadBalancerWeight17()
- * @method string getInstanceId19()
- * @method string getLoadBalancerWeight18()
- * @method string getInstanceId14()
- * @method string getInstanceId13()
- * @method string getInstanceId16()
- * @method string getInstanceId15()
+ * @method string getScalingActivityId()
+ * @method $this withScalingActivityId($value)
  */
-class AttachInstances extends Rpc
+class DescribeScalingActivityDetail extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeAccountAttributes extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getInstanceId()
+ * @method string getRemovePolicy()
+ * @method $this withRemovePolicy($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RemoveInstances extends Rpc
+{
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+    public function withInstanceId(array $instanceId)
+    {
+        $this->data['InstanceId'] = $instanceId;
+        foreach ($instanceId as $i => $iValue) {
+            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLaunchTime()
+ * @method $this withLaunchTime($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getScheduledAction()
+ * @method $this withScheduledAction($value)
+ * @method string getMaxValue()
+ * @method $this withMaxValue($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRecurrenceValue()
+ * @method $this withRecurrenceValue($value)
+ * @method string getLaunchExpirationTime()
+ * @method $this withLaunchExpirationTime($value)
+ * @method string getRecurrenceEndTime()
+ * @method $this withRecurrenceEndTime($value)
+ * @method string getMinValue()
+ * @method $this withMinValue($value)
+ * @method string getScheduledTaskName()
+ * @method $this withScheduledTaskName($value)
+ * @method string getTaskEnabled()
+ * @method $this withTaskEnabled($value)
+ * @method string getScheduledTaskId()
+ * @method $this withScheduledTaskId($value)
+ * @method string getRecurrenceType()
+ * @method $this withRecurrenceType($value)
+ */
+class ModifyScheduledTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAdjustmentValue()
+ * @method $this withAdjustmentValue($value)
+ * @method array getStepAdjustment()
+ * @method string getEstimatedInstanceWarmup()
+ * @method $this withEstimatedInstanceWarmup($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPredictiveTaskBufferTime()
+ * @method $this withPredictiveTaskBufferTime($value)
+ * @method string getAdjustmentType()
+ * @method $this withAdjustmentType($value)
+ * @method string getDisableScaleIn()
+ * @method $this withDisableScaleIn($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getScalingRuleId()
+ * @method $this withScalingRuleId($value)
+ * @method string getInitialMaxSize()
+ * @method $this withInitialMaxSize($value)
+ * @method string getPredictiveValueBuffer()
+ * @method $this withPredictiveValueBuffer($value)
+ * @method string getScalingRuleName()
+ * @method $this withScalingRuleName($value)
+ * @method string getCooldown()
+ * @method $this withCooldown($value)
+ * @method string getMinAdjustmentMagnitude()
+ * @method $this withMinAdjustmentMagnitude($value)
+ * @method string getPredictiveValueBehavior()
+ * @method $this withPredictiveValueBehavior($value)
+ * @method string getTargetValue()
+ * @method $this withTargetValue($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getPredictiveScalingMode()
+ * @method $this withPredictiveScalingMode($value)
+ */
+class ModifyScalingRule extends Rpc
+{
+
+    /**
+     * @param array $stepAdjustment
+     *
+     * @return $this
+     */
+    public function withStepAdjustment(array $stepAdjustment)
+    {
+        $this->data['StepAdjustment'] = $stepAdjustment;
+        foreach ($stepAdjustment as $depth1 => $depth1Value) {
+            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalLowerBound'] = $depth1Value['MetricIntervalLowerBound'];
+            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalUpperBound'] = $depth1Value['MetricIntervalUpperBound'];
+            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.ScalingAdjustment'] = $depth1Value['ScalingAdjustment'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getHealthCheckType()
+ * @method $this withHealthCheckType($value)
+ * @method string getLaunchTemplateId()
+ * @method $this withLaunchTemplateId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupName()
+ * @method $this withScalingGroupName($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method array getVSwitchIds()
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getActiveScalingConfigurationId()
+ * @method $this withActiveScalingConfigurationId($value)
+ * @method string getMinSize()
+ * @method $this withMinSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getLaunchTemplateVersion()
+ * @method $this withLaunchTemplateVersion($value)
+ * @method string getMaxSize()
+ * @method $this withMaxSize($value)
+ * @method string getDefaultCooldown()
+ * @method $this withDefaultCooldown($value)
+ * @method string getRemovalPolicy1()
+ * @method string getRemovalPolicy2()
+ */
+class ModifyScalingGroup extends Rpc
+{
+
+    /**
+     * @param array $vSwitchIds
+     *
+     * @return $this
+     */
+    public function withVSwitchIds(array $vSwitchIds)
+    {
+        $this->data['VSwitchIds'] = $vSwitchIds;
+        foreach ($vSwitchIds as $i => $iValue) {
+            $this->options['query']['VSwitchIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withInstanceId10($value)
+    public function withRemovalPolicy1($value)
     {
-        $this->data['InstanceId10'] = $value;
-        $this->options['query']['InstanceId.10'] = $value;
+        $this->data['RemovalPolicy1'] = $value;
+        $this->options['query']['RemovalPolicy.1'] = $value;
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemovalPolicy2($value)
+    {
+        $this->data['RemovalPolicy2'] = $value;
+        $this->options['query']['RemovalPolicy.2'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getScalingRuleAri()
+ * @method $this withScalingRuleAri($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBreachThreshold()
+ * @method $this withBreachThreshold($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMetricValue()
+ * @method $this withMetricValue($value)
+ */
+class ExecuteScalingRule extends Rpc
+{
+}
+
+/**
+ * @method string getLoadBalancerWeight6()
+ * @method string getLoadBalancerWeight11()
+ * @method string getLoadBalancerWeight7()
+ * @method string getLoadBalancerWeight12()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getLoadBalancerWeight8()
+ * @method string getLoadBalancerWeight9()
+ * @method string getLoadBalancerWeight10()
+ * @method string getLoadBalancerWeight2()
+ * @method string getLoadBalancerWeight15()
+ * @method string getLoadBalancerWeight3()
+ * @method string getLoadBalancerWeight16()
+ * @method string getLoadBalancerWeight4()
+ * @method string getLoadBalancerWeight13()
+ * @method string getLoadBalancerWeight5()
+ * @method string getLoadBalancerWeight14()
+ * @method string getActiveScalingConfigurationId()
+ * @method $this withActiveScalingConfigurationId($value)
+ * @method string getLoadBalancerWeight1()
+ * @method string getInstanceId1()
+ * @method string getLoadBalancerWeight20()
+ * @method string getInstanceId3()
+ * @method string getLaunchTemplateId()
+ * @method $this withLaunchTemplateId($value)
+ * @method string getInstanceId2()
+ * @method string getInstanceId5()
+ * @method string getInstanceId4()
+ * @method string getInstanceId7()
+ * @method string getInstanceId6()
+ * @method string getInstanceId9()
+ * @method string getInstanceId8()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getLoadBalancerWeight19()
+ * @method string getLoadBalancerWeight17()
+ * @method string getLoadBalancerWeight18()
+ * @method string getInstanceId10()
+ * @method string getInstanceId12()
+ * @method string getInstanceId11()
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getInstanceId20()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getLaunchTemplateVersion()
+ * @method $this withLaunchTemplateVersion($value)
+ * @method string getInstanceId18()
+ * @method string getInstanceId17()
+ * @method string getInstanceId19()
+ * @method string getInstanceId14()
+ * @method string getInstanceId13()
+ * @method string getInstanceId16()
+ * @method string getInstanceId15()
+ */
+class EnableScalingGroup extends Rpc
+{
 
     /**
      * @param string $value
@@ -1416,36 +1519,10 @@ class AttachInstances extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId12($value)
-    {
-        $this->data['InstanceId12'] = $value;
-        $this->options['query']['InstanceId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withLoadBalancerWeight8($value)
     {
         $this->data['LoadBalancerWeight8'] = $value;
         $this->options['query']['LoadBalancerWeight.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId11($value)
-    {
-        $this->data['InstanceId11'] = $value;
-        $this->options['query']['InstanceId.11'] = $value;
 
         return $this;
     }
@@ -1598,19 +1675,6 @@ class AttachInstances extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId20($value)
-    {
-        $this->data['InstanceId20'] = $value;
-        $this->options['query']['InstanceId.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withInstanceId1($value)
     {
         $this->data['InstanceId1'] = $value;
@@ -1741,36 +1805,10 @@ class AttachInstances extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId18($value)
-    {
-        $this->data['InstanceId18'] = $value;
-        $this->options['query']['InstanceId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withLoadBalancerWeight19($value)
     {
         $this->data['LoadBalancerWeight19'] = $value;
         $this->options['query']['LoadBalancerWeight.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId17($value)
-    {
-        $this->data['InstanceId17'] = $value;
-        $this->options['query']['InstanceId.17'] = $value;
 
         return $this;
     }
@@ -1793,10 +1831,10 @@ class AttachInstances extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId19($value)
+    public function withLoadBalancerWeight18($value)
     {
-        $this->data['InstanceId19'] = $value;
-        $this->options['query']['InstanceId.19'] = $value;
+        $this->data['LoadBalancerWeight18'] = $value;
+        $this->options['query']['LoadBalancerWeight.18'] = $value;
 
         return $this;
     }
@@ -1806,10 +1844,88 @@ class AttachInstances extends Rpc
      *
      * @return $this
      */
-    public function withLoadBalancerWeight18($value)
+    public function withInstanceId10($value)
     {
-        $this->data['LoadBalancerWeight18'] = $value;
-        $this->options['query']['LoadBalancerWeight.18'] = $value;
+        $this->data['InstanceId10'] = $value;
+        $this->options['query']['InstanceId.10'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId12($value)
+    {
+        $this->data['InstanceId12'] = $value;
+        $this->options['query']['InstanceId.12'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId11($value)
+    {
+        $this->data['InstanceId11'] = $value;
+        $this->options['query']['InstanceId.11'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId20($value)
+    {
+        $this->data['InstanceId20'] = $value;
+        $this->options['query']['InstanceId.20'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId18($value)
+    {
+        $this->data['InstanceId18'] = $value;
+        $this->options['query']['InstanceId.18'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId17($value)
+    {
+        $this->data['InstanceId17'] = $value;
+        $this->options['query']['InstanceId.17'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId19($value)
+    {
+        $this->data['InstanceId19'] = $value;
+        $this->options['query']['InstanceId.19'] = $value;
 
         return $this;
     }
@@ -1868,1070 +1984,909 @@ class AttachInstances extends Rpc
 }
 
 /**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getAdjustmentValue()
- * @method $this withAdjustmentValue($value)
- * @method array getStepAdjustment()
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getEstimatedInstanceWarmup()
- * @method $this withEstimatedInstanceWarmup($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPredictiveTaskBufferTime()
- * @method $this withPredictiveTaskBufferTime($value)
- * @method string getAdjustmentType()
- * @method $this withAdjustmentType($value)
- * @method string getDisableScaleIn()
- * @method $this withDisableScaleIn($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInitialMaxSize()
- * @method $this withInitialMaxSize($value)
- * @method string getPredictiveValueBuffer()
- * @method $this withPredictiveValueBuffer($value)
- * @method string getScalingRuleName()
- * @method $this withScalingRuleName($value)
- * @method string getCooldown()
- * @method $this withCooldown($value)
- * @method string getMinAdjustmentMagnitude()
- * @method $this withMinAdjustmentMagnitude($value)
- * @method string getPredictiveValueBehavior()
- * @method $this withPredictiveValueBehavior($value)
- * @method string getTargetValue()
- * @method $this withTargetValue($value)
- * @method string getScalingRuleType()
- * @method $this withScalingRuleType($value)
- * @method string getMetricName()
- * @method $this withMetricName($value)
- * @method string getPredictiveScalingMode()
- * @method $this withPredictiveScalingMode($value)
- */
-class CreateScalingRule extends Rpc
-{
-
-    /**
-     * @param array $stepAdjustment
-     *
-     * @return $this
-     */
-    public function withStepAdjustment(array $stepAdjustment)
-    {
-        $this->data['StepAdjustment'] = $stepAdjustment;
-        foreach ($stepAdjustment as $depth1 => $depth1Value) {
-            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalLowerBound'] = $depth1Value['MetricIntervalLowerBound'];
-            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.MetricIntervalUpperBound'] = $depth1Value['MetricIntervalUpperBound'];
-            $this->options['query']['StepAdjustment.' . ($depth1 + 1) . '.ScalingAdjustment'] = $depth1Value['ScalingAdjustment'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getMultiAZPolicy()
- * @method $this withMultiAZPolicy($value)
- * @method string getDBInstanceIds()
- * @method $this withDBInstanceIds($value)
- * @method string getLaunchTemplateId()
- * @method $this withLaunchTemplateId($value)
- * @method string getLoadBalancerIds()
- * @method $this withLoadBalancerIds($value)
- * @method string getHealthCheckType()
- * @method $this withHealthCheckType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupName()
- * @method $this withScalingGroupName($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method array getVSwitchIds()
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getMinSize()
- * @method $this withMinSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getLaunchTemplateVersion()
- * @method $this withLaunchTemplateVersion($value)
- * @method string getScalingPolicy()
- * @method $this withScalingPolicy($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getMaxSize()
- * @method $this withMaxSize($value)
- * @method array getLifecycleHook()
- * @method string getDefaultCooldown()
- * @method $this withDefaultCooldown($value)
- * @method string getRemovalPolicy1()
- * @method array getVServerGroup()
- * @method string getRemovalPolicy2()
- */
-class CreateScalingGroup extends Rpc
-{
-
-    /**
-     * @param array $vSwitchIds
-     *
-     * @return $this
-     */
-    public function withVSwitchIds(array $vSwitchIds)
-    {
-        $this->data['VSwitchIds'] = $vSwitchIds;
-        foreach ($vSwitchIds as $i => $iValue) {
-            $this->options['query']['VSwitchIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $lifecycleHook
-     *
-     * @return $this
-     */
-    public function withLifecycleHook(array $lifecycleHook)
-    {
-        $this->data['LifecycleHook'] = $lifecycleHook;
-        foreach ($lifecycleHook as $depth1 => $depth1Value) {
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.DefaultResult'] = $depth1Value['DefaultResult'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleHookName'] = $depth1Value['LifecycleHookName'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.HeartbeatTimeout'] = $depth1Value['HeartbeatTimeout'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationArn'] = $depth1Value['NotificationArn'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationMetadata'] = $depth1Value['NotificationMetadata'];
-            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleTransition'] = $depth1Value['LifecycleTransition'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRemovalPolicy1($value)
-    {
-        $this->data['RemovalPolicy1'] = $value;
-        $this->options['query']['RemovalPolicy.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $vServerGroup
-     *
-     * @return $this
-     */
-    public function withVServerGroup(array $vServerGroup)
-    {
-        $this->data['VServerGroup'] = $vServerGroup;
-        foreach ($vServerGroup as $depth1 => $depth1Value) {
-            $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.LoadBalancerId'] = $depth1Value['LoadBalancerId'];
-            foreach ($depth1Value['VServerGroupAttribute'] as $depth2 => $depth2Value) {
-                $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.VServerGroupAttribute.' . ($depth2 + 1) . '.VServerGroupId'] = $depth2Value['VServerGroupId'];
-                $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.VServerGroupAttribute.' . ($depth2 + 1) . '.Port'] = $depth2Value['Port'];
-                $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.VServerGroupAttribute.' . ($depth2 + 1) . '.Weight'] = $depth2Value['Weight'];
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRemovalPolicy2($value)
-    {
-        $this->data['RemovalPolicy2'] = $value;
-        $this->options['query']['RemovalPolicy.2'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getMemory()
- * @method $this withMemory($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method array getInstanceTypes()
- * @method string getIoOptimized()
- * @method $this withIoOptimized($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getInternetMaxBandwidthOut()
- * @method $this withInternetMaxBandwidthOut($value)
- * @method string getSecurityEnhancementStrategy()
- * @method $this withSecurityEnhancementStrategy($value)
- * @method string getKeyPairName()
- * @method $this withKeyPairName($value)
- * @method array getSpotPriceLimit()
- * @method string getSystemDiskCategory()
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getHostName()
- * @method $this withHostName($value)
- * @method string getPassword()
- * @method $this withPassword($value)
- * @method string getPasswordInherit()
- * @method $this withPasswordInherit($value)
- * @method string getImageName()
- * @method $this withImageName($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getDeploymentSetId()
- * @method $this withDeploymentSetId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCpu()
- * @method $this withCpu($value)
- * @method string getSystemDiskDiskName()
- * @method string getRamRoleName()
- * @method $this withRamRoleName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method array getSecurityGroupIds()
- * @method array getDataDisk()
- * @method string getScalingConfigurationName()
- * @method $this withScalingConfigurationName($value)
- * @method string getTags()
- * @method $this withTags($value)
- * @method string getSpotStrategy()
- * @method $this withSpotStrategy($value)
- * @method string getLoadBalancerWeight()
- * @method $this withLoadBalancerWeight($value)
- * @method string getInstanceName()
- * @method $this withInstanceName($value)
- * @method string getSystemDiskSize()
- * @method string getInternetChargeType()
- * @method $this withInternetChargeType($value)
- * @method string getInternetMaxBandwidthIn()
- * @method $this withInternetMaxBandwidthIn($value)
- * @method string getSystemDiskDescription()
- */
-class CreateScalingConfiguration extends Rpc
-{
-
-    /**
-     * @param array $instanceTypes
-     *
-     * @return $this
-     */
-    public function withInstanceTypes(array $instanceTypes)
-    {
-        $this->data['InstanceTypes'] = $instanceTypes;
-        foreach ($instanceTypes as $i => $iValue) {
-            $this->options['query']['InstanceTypes.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $spotPriceLimit
-     *
-     * @return $this
-     */
-    public function withSpotPriceLimit(array $spotPriceLimit)
-    {
-        $this->data['SpotPriceLimit'] = $spotPriceLimit;
-        foreach ($spotPriceLimit as $depth1 => $depth1Value) {
-            $this->options['query']['SpotPriceLimit.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
-            $this->options['query']['SpotPriceLimit.' . ($depth1 + 1) . '.PriceLimit'] = $depth1Value['PriceLimit'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSystemDiskCategory($value)
-    {
-        $this->data['SystemDiskCategory'] = $value;
-        $this->options['query']['SystemDisk.Category'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSystemDiskDiskName($value)
-    {
-        $this->data['SystemDiskDiskName'] = $value;
-        $this->options['query']['SystemDisk.DiskName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $securityGroupIds
-     *
-     * @return $this
-     */
-    public function withSecurityGroupIds(array $securityGroupIds)
-    {
-        $this->data['SecurityGroupIds'] = $securityGroupIds;
-        foreach ($securityGroupIds as $i => $iValue) {
-            $this->options['query']['SecurityGroupIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $dataDisk
-     *
-     * @return $this
-     */
-    public function withDataDisk(array $dataDisk)
-    {
-        $this->data['DataDisk'] = $dataDisk;
-        foreach ($dataDisk as $depth1 => $depth1Value) {
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.KMSKeyId'] = $depth1Value['KMSKeyId'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
-            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSystemDiskSize($value)
-    {
-        $this->data['SystemDiskSize'] = $value;
-        $this->options['query']['SystemDisk.Size'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSystemDiskDescription($value)
-    {
-        $this->data['SystemDiskDescription'] = $value;
-        $this->options['query']['SystemDisk.Description'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getScalingRuleId()
- * @method $this withScalingRuleId($value)
- */
-class DeleteScalingRule extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getForceDelete()
- * @method $this withForceDelete($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteScalingGroup extends Rpc
-{
-}
-
-/**
- * @method string getScalingConfigurationId()
- * @method $this withScalingConfigurationId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteScalingConfiguration extends Rpc
-{
-}
-
-/**
- * @method string getLaunchTime()
- * @method $this withLaunchTime($value)
- * @method string getScheduledAction()
- * @method $this withScheduledAction($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRecurrenceValue()
- * @method $this withRecurrenceValue($value)
- * @method string getLaunchExpirationTime()
- * @method $this withLaunchExpirationTime($value)
- * @method string getRecurrenceEndTime()
- * @method $this withRecurrenceEndTime($value)
- * @method string getScheduledTaskName()
- * @method $this withScheduledTaskName($value)
- * @method string getTaskEnabled()
- * @method $this withTaskEnabled($value)
- * @method string getRecurrenceType()
- * @method $this withRecurrenceType($value)
- */
-class CreateScheduledTask extends Rpc
-{
-}
-
-/**
- * @method string getScalingConfigurationId6()
- * @method string getScalingConfigurationId7()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getScalingConfigurationId4()
- * @method string getScalingConfigurationId5()
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getScalingConfigurationId8()
- * @method string getScalingConfigurationId9()
- * @method string getScalingConfigurationId10()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getScalingConfigurationName2()
- * @method string getScalingConfigurationName3()
- * @method string getScalingConfigurationName1()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getScalingConfigurationId2()
- * @method string getScalingConfigurationId3()
- * @method string getScalingConfigurationId1()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getScalingConfigurationName6()
- * @method string getScalingConfigurationName7()
- * @method string getScalingConfigurationName4()
- * @method string getScalingConfigurationName5()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getScalingConfigurationName8()
- * @method string getScalingConfigurationName9()
- * @method string getScalingConfigurationName10()
  */
-class DescribeScalingConfigurations extends Rpc
+class DisableScalingGroup extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId6($value)
-    {
-        $this->data['ScalingConfigurationId6'] = $value;
-        $this->options['query']['ScalingConfigurationId.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId7($value)
-    {
-        $this->data['ScalingConfigurationId7'] = $value;
-        $this->options['query']['ScalingConfigurationId.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId4($value)
-    {
-        $this->data['ScalingConfigurationId4'] = $value;
-        $this->options['query']['ScalingConfigurationId.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId5($value)
-    {
-        $this->data['ScalingConfigurationId5'] = $value;
-        $this->options['query']['ScalingConfigurationId.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId8($value)
-    {
-        $this->data['ScalingConfigurationId8'] = $value;
-        $this->options['query']['ScalingConfigurationId.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId9($value)
-    {
-        $this->data['ScalingConfigurationId9'] = $value;
-        $this->options['query']['ScalingConfigurationId.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId10($value)
-    {
-        $this->data['ScalingConfigurationId10'] = $value;
-        $this->options['query']['ScalingConfigurationId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName2($value)
-    {
-        $this->data['ScalingConfigurationName2'] = $value;
-        $this->options['query']['ScalingConfigurationName.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName3($value)
-    {
-        $this->data['ScalingConfigurationName3'] = $value;
-        $this->options['query']['ScalingConfigurationName.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName1($value)
-    {
-        $this->data['ScalingConfigurationName1'] = $value;
-        $this->options['query']['ScalingConfigurationName.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId2($value)
-    {
-        $this->data['ScalingConfigurationId2'] = $value;
-        $this->options['query']['ScalingConfigurationId.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId3($value)
-    {
-        $this->data['ScalingConfigurationId3'] = $value;
-        $this->options['query']['ScalingConfigurationId.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationId1($value)
-    {
-        $this->data['ScalingConfigurationId1'] = $value;
-        $this->options['query']['ScalingConfigurationId.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName6($value)
-    {
-        $this->data['ScalingConfigurationName6'] = $value;
-        $this->options['query']['ScalingConfigurationName.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName7($value)
-    {
-        $this->data['ScalingConfigurationName7'] = $value;
-        $this->options['query']['ScalingConfigurationName.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName4($value)
-    {
-        $this->data['ScalingConfigurationName4'] = $value;
-        $this->options['query']['ScalingConfigurationName.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName5($value)
-    {
-        $this->data['ScalingConfigurationName5'] = $value;
-        $this->options['query']['ScalingConfigurationName.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName8($value)
-    {
-        $this->data['ScalingConfigurationName8'] = $value;
-        $this->options['query']['ScalingConfigurationName.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName9($value)
-    {
-        $this->data['ScalingConfigurationName9'] = $value;
-        $this->options['query']['ScalingConfigurationName.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingConfigurationName10($value)
-    {
-        $this->data['ScalingConfigurationName10'] = $value;
-        $this->options['query']['ScalingConfigurationName.10'] = $value;
-
-        return $this;
-    }
 }
 
 /**
- * @method string getScalingActivityId9()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getScalingActivityId5()
- * @method string getScalingActivityId6()
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getScalingActivityId7()
- * @method string getScalingActivityId8()
- * @method string getScalingActivityId1()
- * @method string getScalingActivityId2()
- * @method string getScalingActivityId3()
- * @method string getScalingActivityId4()
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getStatusCode()
- * @method $this withStatusCode($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getScalingActivityId11()
- * @method string getScalingActivityId10()
- * @method string getScalingActivityId13()
- * @method string getScalingActivityId12()
- * @method string getScalingActivityId15()
- * @method string getScalingActivityId14()
- * @method string getScalingActivityId17()
- * @method string getScalingActivityId16()
- * @method string getScalingActivityId19()
+ * @method array getInstanceId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getScalingActivityId18()
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getScalingActivityId20()
  */
-class DescribeScalingActivities extends Rpc
+class DetachInstances extends Rpc
 {
 
     /**
-     * @param string $value
+     * @param array $instanceId
      *
      * @return $this
      */
-    public function withScalingActivityId9($value)
+    public function withInstanceId(array $instanceId)
     {
-        $this->data['ScalingActivityId9'] = $value;
-        $this->options['query']['ScalingActivityId.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId5($value)
-    {
-        $this->data['ScalingActivityId5'] = $value;
-        $this->options['query']['ScalingActivityId.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId6($value)
-    {
-        $this->data['ScalingActivityId6'] = $value;
-        $this->options['query']['ScalingActivityId.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId7($value)
-    {
-        $this->data['ScalingActivityId7'] = $value;
-        $this->options['query']['ScalingActivityId.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId8($value)
-    {
-        $this->data['ScalingActivityId8'] = $value;
-        $this->options['query']['ScalingActivityId.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId1($value)
-    {
-        $this->data['ScalingActivityId1'] = $value;
-        $this->options['query']['ScalingActivityId.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId2($value)
-    {
-        $this->data['ScalingActivityId2'] = $value;
-        $this->options['query']['ScalingActivityId.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId3($value)
-    {
-        $this->data['ScalingActivityId3'] = $value;
-        $this->options['query']['ScalingActivityId.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId4($value)
-    {
-        $this->data['ScalingActivityId4'] = $value;
-        $this->options['query']['ScalingActivityId.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId11($value)
-    {
-        $this->data['ScalingActivityId11'] = $value;
-        $this->options['query']['ScalingActivityId.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId10($value)
-    {
-        $this->data['ScalingActivityId10'] = $value;
-        $this->options['query']['ScalingActivityId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId13($value)
-    {
-        $this->data['ScalingActivityId13'] = $value;
-        $this->options['query']['ScalingActivityId.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId12($value)
-    {
-        $this->data['ScalingActivityId12'] = $value;
-        $this->options['query']['ScalingActivityId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId15($value)
-    {
-        $this->data['ScalingActivityId15'] = $value;
-        $this->options['query']['ScalingActivityId.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId14($value)
-    {
-        $this->data['ScalingActivityId14'] = $value;
-        $this->options['query']['ScalingActivityId.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId17($value)
-    {
-        $this->data['ScalingActivityId17'] = $value;
-        $this->options['query']['ScalingActivityId.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId16($value)
-    {
-        $this->data['ScalingActivityId16'] = $value;
-        $this->options['query']['ScalingActivityId.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId19($value)
-    {
-        $this->data['ScalingActivityId19'] = $value;
-        $this->options['query']['ScalingActivityId.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId18($value)
-    {
-        $this->data['ScalingActivityId18'] = $value;
-        $this->options['query']['ScalingActivityId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScalingActivityId20($value)
-    {
-        $this->data['ScalingActivityId20'] = $value;
-        $this->options['query']['ScalingActivityId.20'] = $value;
+        $this->data['InstanceId'] = $instanceId;
+        foreach ($instanceId as $i => $iValue) {
+            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+        }
 
         return $this;
     }
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getScheduledAction2()
+ * @method string getScheduledAction1()
+ * @method string getScheduledAction6()
+ * @method string getScheduledAction5()
+ * @method string getScheduledAction4()
+ * @method string getScheduledAction3()
+ * @method string getScheduledAction9()
+ * @method string getScheduledAction8()
+ * @method string getScheduledAction7()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getScheduledTaskName20()
+ * @method string getScheduledTaskName19()
+ * @method string getScheduledTaskName18()
+ * @method string getScheduledTaskId20()
+ * @method string getScheduledTaskName13()
+ * @method string getScheduledTaskName12()
+ * @method string getScheduledTaskName11()
+ * @method string getScheduledTaskName10()
+ * @method string getScheduledTaskName17()
+ * @method string getScheduledTaskName16()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getScheduledTaskName15()
+ * @method string getScheduledTaskName14()
+ * @method string getScheduledTaskId2()
+ * @method string getScheduledTaskId1()
+ * @method string getScheduledTaskId4()
+ * @method string getScheduledTaskId18()
+ * @method string getScheduledTaskId3()
+ * @method string getScheduledTaskId19()
+ * @method string getScheduledTaskId6()
+ * @method string getScheduledTaskId5()
+ * @method string getScheduledTaskId8()
+ * @method string getScheduledTaskName9()
+ * @method string getScheduledAction20()
+ * @method string getScheduledTaskId7()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getScheduledTaskId12()
+ * @method string getScheduledTaskName7()
+ * @method string getScheduledTaskId9()
+ * @method string getScheduledTaskId13()
+ * @method string getScheduledTaskName8()
+ * @method string getScheduledTaskId10()
+ * @method string getScheduledTaskName5()
+ * @method string getScheduledTaskId11()
+ * @method string getScheduledTaskName6()
+ * @method string getScheduledTaskId16()
+ * @method string getScheduledTaskName3()
+ * @method string getScheduledTaskId17()
+ * @method string getScheduledTaskName4()
+ * @method string getScheduledTaskId14()
+ * @method string getScheduledTaskName1()
+ * @method string getScheduledTaskId15()
+ * @method string getScheduledTaskName2()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getScheduledTaskId()
- * @method $this withScheduledTaskId($value)
+ * @method string getScheduledAction18()
+ * @method string getScheduledAction19()
+ * @method string getScheduledAction16()
+ * @method string getScheduledAction17()
+ * @method string getScheduledAction14()
+ * @method string getScheduledAction15()
+ * @method string getScheduledAction12()
+ * @method string getScheduledAction13()
+ * @method string getScheduledAction10()
+ * @method string getScheduledAction11()
  */
-class DeleteScheduledTask extends Rpc
+class DescribeScheduledTasks extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction2($value)
+    {
+        $this->data['ScheduledAction2'] = $value;
+        $this->options['query']['ScheduledAction.2'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction1($value)
+    {
+        $this->data['ScheduledAction1'] = $value;
+        $this->options['query']['ScheduledAction.1'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction6($value)
+    {
+        $this->data['ScheduledAction6'] = $value;
+        $this->options['query']['ScheduledAction.6'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction5($value)
+    {
+        $this->data['ScheduledAction5'] = $value;
+        $this->options['query']['ScheduledAction.5'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction4($value)
+    {
+        $this->data['ScheduledAction4'] = $value;
+        $this->options['query']['ScheduledAction.4'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction3($value)
+    {
+        $this->data['ScheduledAction3'] = $value;
+        $this->options['query']['ScheduledAction.3'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction9($value)
+    {
+        $this->data['ScheduledAction9'] = $value;
+        $this->options['query']['ScheduledAction.9'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction8($value)
+    {
+        $this->data['ScheduledAction8'] = $value;
+        $this->options['query']['ScheduledAction.8'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction7($value)
+    {
+        $this->data['ScheduledAction7'] = $value;
+        $this->options['query']['ScheduledAction.7'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName20($value)
+    {
+        $this->data['ScheduledTaskName20'] = $value;
+        $this->options['query']['ScheduledTaskName.20'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName19($value)
+    {
+        $this->data['ScheduledTaskName19'] = $value;
+        $this->options['query']['ScheduledTaskName.19'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName18($value)
+    {
+        $this->data['ScheduledTaskName18'] = $value;
+        $this->options['query']['ScheduledTaskName.18'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId20($value)
+    {
+        $this->data['ScheduledTaskId20'] = $value;
+        $this->options['query']['ScheduledTaskId.20'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName13($value)
+    {
+        $this->data['ScheduledTaskName13'] = $value;
+        $this->options['query']['ScheduledTaskName.13'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName12($value)
+    {
+        $this->data['ScheduledTaskName12'] = $value;
+        $this->options['query']['ScheduledTaskName.12'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName11($value)
+    {
+        $this->data['ScheduledTaskName11'] = $value;
+        $this->options['query']['ScheduledTaskName.11'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName10($value)
+    {
+        $this->data['ScheduledTaskName10'] = $value;
+        $this->options['query']['ScheduledTaskName.10'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName17($value)
+    {
+        $this->data['ScheduledTaskName17'] = $value;
+        $this->options['query']['ScheduledTaskName.17'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName16($value)
+    {
+        $this->data['ScheduledTaskName16'] = $value;
+        $this->options['query']['ScheduledTaskName.16'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName15($value)
+    {
+        $this->data['ScheduledTaskName15'] = $value;
+        $this->options['query']['ScheduledTaskName.15'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName14($value)
+    {
+        $this->data['ScheduledTaskName14'] = $value;
+        $this->options['query']['ScheduledTaskName.14'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId2($value)
+    {
+        $this->data['ScheduledTaskId2'] = $value;
+        $this->options['query']['ScheduledTaskId.2'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId1($value)
+    {
+        $this->data['ScheduledTaskId1'] = $value;
+        $this->options['query']['ScheduledTaskId.1'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId4($value)
+    {
+        $this->data['ScheduledTaskId4'] = $value;
+        $this->options['query']['ScheduledTaskId.4'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId18($value)
+    {
+        $this->data['ScheduledTaskId18'] = $value;
+        $this->options['query']['ScheduledTaskId.18'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId3($value)
+    {
+        $this->data['ScheduledTaskId3'] = $value;
+        $this->options['query']['ScheduledTaskId.3'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId19($value)
+    {
+        $this->data['ScheduledTaskId19'] = $value;
+        $this->options['query']['ScheduledTaskId.19'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId6($value)
+    {
+        $this->data['ScheduledTaskId6'] = $value;
+        $this->options['query']['ScheduledTaskId.6'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId5($value)
+    {
+        $this->data['ScheduledTaskId5'] = $value;
+        $this->options['query']['ScheduledTaskId.5'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId8($value)
+    {
+        $this->data['ScheduledTaskId8'] = $value;
+        $this->options['query']['ScheduledTaskId.8'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName9($value)
+    {
+        $this->data['ScheduledTaskName9'] = $value;
+        $this->options['query']['ScheduledTaskName.9'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction20($value)
+    {
+        $this->data['ScheduledAction20'] = $value;
+        $this->options['query']['ScheduledAction.20'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId7($value)
+    {
+        $this->data['ScheduledTaskId7'] = $value;
+        $this->options['query']['ScheduledTaskId.7'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId12($value)
+    {
+        $this->data['ScheduledTaskId12'] = $value;
+        $this->options['query']['ScheduledTaskId.12'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName7($value)
+    {
+        $this->data['ScheduledTaskName7'] = $value;
+        $this->options['query']['ScheduledTaskName.7'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId9($value)
+    {
+        $this->data['ScheduledTaskId9'] = $value;
+        $this->options['query']['ScheduledTaskId.9'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId13($value)
+    {
+        $this->data['ScheduledTaskId13'] = $value;
+        $this->options['query']['ScheduledTaskId.13'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName8($value)
+    {
+        $this->data['ScheduledTaskName8'] = $value;
+        $this->options['query']['ScheduledTaskName.8'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId10($value)
+    {
+        $this->data['ScheduledTaskId10'] = $value;
+        $this->options['query']['ScheduledTaskId.10'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName5($value)
+    {
+        $this->data['ScheduledTaskName5'] = $value;
+        $this->options['query']['ScheduledTaskName.5'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId11($value)
+    {
+        $this->data['ScheduledTaskId11'] = $value;
+        $this->options['query']['ScheduledTaskId.11'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName6($value)
+    {
+        $this->data['ScheduledTaskName6'] = $value;
+        $this->options['query']['ScheduledTaskName.6'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId16($value)
+    {
+        $this->data['ScheduledTaskId16'] = $value;
+        $this->options['query']['ScheduledTaskId.16'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName3($value)
+    {
+        $this->data['ScheduledTaskName3'] = $value;
+        $this->options['query']['ScheduledTaskName.3'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId17($value)
+    {
+        $this->data['ScheduledTaskId17'] = $value;
+        $this->options['query']['ScheduledTaskId.17'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName4($value)
+    {
+        $this->data['ScheduledTaskName4'] = $value;
+        $this->options['query']['ScheduledTaskName.4'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId14($value)
+    {
+        $this->data['ScheduledTaskId14'] = $value;
+        $this->options['query']['ScheduledTaskId.14'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName1($value)
+    {
+        $this->data['ScheduledTaskName1'] = $value;
+        $this->options['query']['ScheduledTaskName.1'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskId15($value)
+    {
+        $this->data['ScheduledTaskId15'] = $value;
+        $this->options['query']['ScheduledTaskId.15'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledTaskName2($value)
+    {
+        $this->data['ScheduledTaskName2'] = $value;
+        $this->options['query']['ScheduledTaskName.2'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction18($value)
+    {
+        $this->data['ScheduledAction18'] = $value;
+        $this->options['query']['ScheduledAction.18'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction19($value)
+    {
+        $this->data['ScheduledAction19'] = $value;
+        $this->options['query']['ScheduledAction.19'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction16($value)
+    {
+        $this->data['ScheduledAction16'] = $value;
+        $this->options['query']['ScheduledAction.16'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction17($value)
+    {
+        $this->data['ScheduledAction17'] = $value;
+        $this->options['query']['ScheduledAction.17'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction14($value)
+    {
+        $this->data['ScheduledAction14'] = $value;
+        $this->options['query']['ScheduledAction.14'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction15($value)
+    {
+        $this->data['ScheduledAction15'] = $value;
+        $this->options['query']['ScheduledAction.15'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction12($value)
+    {
+        $this->data['ScheduledAction12'] = $value;
+        $this->options['query']['ScheduledAction.12'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction13($value)
+    {
+        $this->data['ScheduledAction13'] = $value;
+        $this->options['query']['ScheduledAction.13'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction10($value)
+    {
+        $this->data['ScheduledAction10'] = $value;
+        $this->options['query']['ScheduledAction.10'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduledAction11($value)
+    {
+        $this->data['ScheduledAction11'] = $value;
+        $this->options['query']['ScheduledAction.11'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4253,128 +4208,42 @@ class DescribeScalingGroups extends Rpc
 }
 
 /**
+ * @method string getScalingConfigurationId6()
+ * @method string getScalingConfigurationId7()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingConfigurationId4()
+ * @method string getScalingConfigurationId5()
  * @method string getScalingGroupId()
  * @method $this withScalingGroupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DisableScalingGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getInstanceId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DetachInstances extends Rpc
-{
-
-    /**
-     * @param array $instanceId
-     *
-     * @return $this
-     */
-    public function withInstanceId(array $instanceId)
-    {
-        $this->data['InstanceId'] = $instanceId;
-        foreach ($instanceId as $i => $iValue) {
-            $this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getScheduledAction2()
- * @method string getScheduledAction1()
- * @method string getScheduledAction6()
- * @method string getScheduledAction5()
- * @method string getScheduledAction4()
- * @method string getScheduledAction3()
- * @method string getScheduledAction9()
- * @method string getScheduledAction8()
- * @method string getScheduledAction7()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getScheduledTaskName20()
- * @method string getScheduledTaskName19()
- * @method string getScheduledTaskName18()
- * @method string getScheduledTaskId20()
- * @method string getScheduledTaskName13()
- * @method string getScheduledTaskName12()
- * @method string getScheduledTaskName11()
- * @method string getScheduledTaskName10()
- * @method string getScheduledTaskName17()
- * @method string getScheduledTaskName16()
+ * @method string getScalingConfigurationId8()
+ * @method string getScalingConfigurationId9()
+ * @method string getScalingConfigurationId10()
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getScheduledTaskName15()
- * @method string getScheduledTaskName14()
- * @method string getScheduledTaskId2()
- * @method string getScheduledTaskId1()
- * @method string getScheduledTaskId4()
- * @method string getScheduledTaskId18()
- * @method string getScheduledTaskId3()
- * @method string getScheduledTaskId19()
- * @method string getScheduledTaskId6()
- * @method string getScheduledTaskId5()
- * @method string getScheduledTaskId8()
- * @method string getScheduledTaskName9()
- * @method string getScheduledAction20()
- * @method string getScheduledTaskId7()
+ * @method string getScalingConfigurationName2()
+ * @method string getScalingConfigurationName3()
+ * @method string getScalingConfigurationName1()
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getScheduledTaskId12()
- * @method string getScheduledTaskName7()
- * @method string getScheduledTaskId9()
- * @method string getScheduledTaskId13()
- * @method string getScheduledTaskName8()
- * @method string getScheduledTaskId10()
- * @method string getScheduledTaskName5()
- * @method string getScheduledTaskId11()
- * @method string getScheduledTaskName6()
- * @method string getScheduledTaskId16()
- * @method string getScheduledTaskName3()
- * @method string getScheduledTaskId17()
- * @method string getScheduledTaskName4()
- * @method string getScheduledTaskId14()
- * @method string getScheduledTaskName1()
- * @method string getScheduledTaskId15()
- * @method string getScheduledTaskName2()
+ * @method string getScalingConfigurationId2()
+ * @method string getScalingConfigurationId3()
+ * @method string getScalingConfigurationId1()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getScheduledAction18()
- * @method string getScheduledAction19()
- * @method string getScheduledAction16()
- * @method string getScheduledAction17()
- * @method string getScheduledAction14()
- * @method string getScheduledAction15()
- * @method string getScheduledAction12()
- * @method string getScheduledAction13()
- * @method string getScheduledAction10()
- * @method string getScheduledAction11()
+ * @method string getScalingConfigurationName6()
+ * @method string getScalingConfigurationName7()
+ * @method string getScalingConfigurationName4()
+ * @method string getScalingConfigurationName5()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getScalingConfigurationName8()
+ * @method string getScalingConfigurationName9()
+ * @method string getScalingConfigurationName10()
  */
-class DescribeScheduledTasks extends Rpc
+class DescribeScalingConfigurations extends Rpc
 {
 
     /**
@@ -4382,10 +4251,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction2($value)
+    public function withScalingConfigurationId6($value)
     {
-        $this->data['ScheduledAction2'] = $value;
-        $this->options['query']['ScheduledAction.2'] = $value;
+        $this->data['ScalingConfigurationId6'] = $value;
+        $this->options['query']['ScalingConfigurationId.6'] = $value;
 
         return $this;
     }
@@ -4395,10 +4264,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction1($value)
+    public function withScalingConfigurationId7($value)
     {
-        $this->data['ScheduledAction1'] = $value;
-        $this->options['query']['ScheduledAction.1'] = $value;
+        $this->data['ScalingConfigurationId7'] = $value;
+        $this->options['query']['ScalingConfigurationId.7'] = $value;
 
         return $this;
     }
@@ -4408,10 +4277,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction6($value)
+    public function withScalingConfigurationId4($value)
     {
-        $this->data['ScheduledAction6'] = $value;
-        $this->options['query']['ScheduledAction.6'] = $value;
+        $this->data['ScalingConfigurationId4'] = $value;
+        $this->options['query']['ScalingConfigurationId.4'] = $value;
 
         return $this;
     }
@@ -4421,10 +4290,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction5($value)
+    public function withScalingConfigurationId5($value)
     {
-        $this->data['ScheduledAction5'] = $value;
-        $this->options['query']['ScheduledAction.5'] = $value;
+        $this->data['ScalingConfigurationId5'] = $value;
+        $this->options['query']['ScalingConfigurationId.5'] = $value;
 
         return $this;
     }
@@ -4434,10 +4303,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction4($value)
+    public function withScalingConfigurationId8($value)
     {
-        $this->data['ScheduledAction4'] = $value;
-        $this->options['query']['ScheduledAction.4'] = $value;
+        $this->data['ScalingConfigurationId8'] = $value;
+        $this->options['query']['ScalingConfigurationId.8'] = $value;
 
         return $this;
     }
@@ -4447,10 +4316,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction3($value)
+    public function withScalingConfigurationId9($value)
     {
-        $this->data['ScheduledAction3'] = $value;
-        $this->options['query']['ScheduledAction.3'] = $value;
+        $this->data['ScalingConfigurationId9'] = $value;
+        $this->options['query']['ScalingConfigurationId.9'] = $value;
 
         return $this;
     }
@@ -4460,10 +4329,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction9($value)
+    public function withScalingConfigurationId10($value)
     {
-        $this->data['ScheduledAction9'] = $value;
-        $this->options['query']['ScheduledAction.9'] = $value;
+        $this->data['ScalingConfigurationId10'] = $value;
+        $this->options['query']['ScalingConfigurationId.10'] = $value;
 
         return $this;
     }
@@ -4473,10 +4342,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction8($value)
+    public function withScalingConfigurationName2($value)
     {
-        $this->data['ScheduledAction8'] = $value;
-        $this->options['query']['ScheduledAction.8'] = $value;
+        $this->data['ScalingConfigurationName2'] = $value;
+        $this->options['query']['ScalingConfigurationName.2'] = $value;
 
         return $this;
     }
@@ -4486,10 +4355,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledAction7($value)
+    public function withScalingConfigurationName3($value)
     {
-        $this->data['ScheduledAction7'] = $value;
-        $this->options['query']['ScheduledAction.7'] = $value;
+        $this->data['ScalingConfigurationName3'] = $value;
+        $this->options['query']['ScalingConfigurationName.3'] = $value;
 
         return $this;
     }
@@ -4499,10 +4368,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName20($value)
+    public function withScalingConfigurationName1($value)
     {
-        $this->data['ScheduledTaskName20'] = $value;
-        $this->options['query']['ScheduledTaskName.20'] = $value;
+        $this->data['ScalingConfigurationName1'] = $value;
+        $this->options['query']['ScalingConfigurationName.1'] = $value;
 
         return $this;
     }
@@ -4512,10 +4381,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName19($value)
+    public function withScalingConfigurationId2($value)
     {
-        $this->data['ScheduledTaskName19'] = $value;
-        $this->options['query']['ScheduledTaskName.19'] = $value;
+        $this->data['ScalingConfigurationId2'] = $value;
+        $this->options['query']['ScalingConfigurationId.2'] = $value;
 
         return $this;
     }
@@ -4525,10 +4394,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName18($value)
+    public function withScalingConfigurationId3($value)
     {
-        $this->data['ScheduledTaskName18'] = $value;
-        $this->options['query']['ScheduledTaskName.18'] = $value;
+        $this->data['ScalingConfigurationId3'] = $value;
+        $this->options['query']['ScalingConfigurationId.3'] = $value;
 
         return $this;
     }
@@ -4538,10 +4407,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskId20($value)
+    public function withScalingConfigurationId1($value)
     {
-        $this->data['ScheduledTaskId20'] = $value;
-        $this->options['query']['ScheduledTaskId.20'] = $value;
+        $this->data['ScalingConfigurationId1'] = $value;
+        $this->options['query']['ScalingConfigurationId.1'] = $value;
 
         return $this;
     }
@@ -4551,10 +4420,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName13($value)
+    public function withScalingConfigurationName6($value)
     {
-        $this->data['ScheduledTaskName13'] = $value;
-        $this->options['query']['ScheduledTaskName.13'] = $value;
+        $this->data['ScalingConfigurationName6'] = $value;
+        $this->options['query']['ScalingConfigurationName.6'] = $value;
 
         return $this;
     }
@@ -4564,10 +4433,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName12($value)
+    public function withScalingConfigurationName7($value)
     {
-        $this->data['ScheduledTaskName12'] = $value;
-        $this->options['query']['ScheduledTaskName.12'] = $value;
+        $this->data['ScalingConfigurationName7'] = $value;
+        $this->options['query']['ScalingConfigurationName.7'] = $value;
 
         return $this;
     }
@@ -4577,10 +4446,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName11($value)
+    public function withScalingConfigurationName4($value)
     {
-        $this->data['ScheduledTaskName11'] = $value;
-        $this->options['query']['ScheduledTaskName.11'] = $value;
+        $this->data['ScalingConfigurationName4'] = $value;
+        $this->options['query']['ScalingConfigurationName.4'] = $value;
 
         return $this;
     }
@@ -4590,10 +4459,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName10($value)
+    public function withScalingConfigurationName5($value)
     {
-        $this->data['ScheduledTaskName10'] = $value;
-        $this->options['query']['ScheduledTaskName.10'] = $value;
+        $this->data['ScalingConfigurationName5'] = $value;
+        $this->options['query']['ScalingConfigurationName.5'] = $value;
 
         return $this;
     }
@@ -4603,10 +4472,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName17($value)
+    public function withScalingConfigurationName8($value)
     {
-        $this->data['ScheduledTaskName17'] = $value;
-        $this->options['query']['ScheduledTaskName.17'] = $value;
+        $this->data['ScalingConfigurationName8'] = $value;
+        $this->options['query']['ScalingConfigurationName.8'] = $value;
 
         return $this;
     }
@@ -4616,10 +4485,10 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName16($value)
+    public function withScalingConfigurationName9($value)
     {
-        $this->data['ScheduledTaskName16'] = $value;
-        $this->options['query']['ScheduledTaskName.16'] = $value;
+        $this->data['ScalingConfigurationName9'] = $value;
+        $this->options['query']['ScalingConfigurationName.9'] = $value;
 
         return $this;
     }
@@ -4629,543 +4498,413 @@ class DescribeScheduledTasks extends Rpc
      *
      * @return $this
      */
-    public function withScheduledTaskName15($value)
+    public function withScalingConfigurationName10($value)
     {
-        $this->data['ScheduledTaskName15'] = $value;
-        $this->options['query']['ScheduledTaskName.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName14($value)
-    {
-        $this->data['ScheduledTaskName14'] = $value;
-        $this->options['query']['ScheduledTaskName.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId2($value)
-    {
-        $this->data['ScheduledTaskId2'] = $value;
-        $this->options['query']['ScheduledTaskId.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId1($value)
-    {
-        $this->data['ScheduledTaskId1'] = $value;
-        $this->options['query']['ScheduledTaskId.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId4($value)
-    {
-        $this->data['ScheduledTaskId4'] = $value;
-        $this->options['query']['ScheduledTaskId.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId18($value)
-    {
-        $this->data['ScheduledTaskId18'] = $value;
-        $this->options['query']['ScheduledTaskId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId3($value)
-    {
-        $this->data['ScheduledTaskId3'] = $value;
-        $this->options['query']['ScheduledTaskId.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId19($value)
-    {
-        $this->data['ScheduledTaskId19'] = $value;
-        $this->options['query']['ScheduledTaskId.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId6($value)
-    {
-        $this->data['ScheduledTaskId6'] = $value;
-        $this->options['query']['ScheduledTaskId.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId5($value)
-    {
-        $this->data['ScheduledTaskId5'] = $value;
-        $this->options['query']['ScheduledTaskId.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId8($value)
-    {
-        $this->data['ScheduledTaskId8'] = $value;
-        $this->options['query']['ScheduledTaskId.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName9($value)
-    {
-        $this->data['ScheduledTaskName9'] = $value;
-        $this->options['query']['ScheduledTaskName.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction20($value)
-    {
-        $this->data['ScheduledAction20'] = $value;
-        $this->options['query']['ScheduledAction.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId7($value)
-    {
-        $this->data['ScheduledTaskId7'] = $value;
-        $this->options['query']['ScheduledTaskId.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId12($value)
-    {
-        $this->data['ScheduledTaskId12'] = $value;
-        $this->options['query']['ScheduledTaskId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName7($value)
-    {
-        $this->data['ScheduledTaskName7'] = $value;
-        $this->options['query']['ScheduledTaskName.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId9($value)
-    {
-        $this->data['ScheduledTaskId9'] = $value;
-        $this->options['query']['ScheduledTaskId.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId13($value)
-    {
-        $this->data['ScheduledTaskId13'] = $value;
-        $this->options['query']['ScheduledTaskId.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName8($value)
-    {
-        $this->data['ScheduledTaskName8'] = $value;
-        $this->options['query']['ScheduledTaskName.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId10($value)
-    {
-        $this->data['ScheduledTaskId10'] = $value;
-        $this->options['query']['ScheduledTaskId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName5($value)
-    {
-        $this->data['ScheduledTaskName5'] = $value;
-        $this->options['query']['ScheduledTaskName.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId11($value)
-    {
-        $this->data['ScheduledTaskId11'] = $value;
-        $this->options['query']['ScheduledTaskId.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName6($value)
-    {
-        $this->data['ScheduledTaskName6'] = $value;
-        $this->options['query']['ScheduledTaskName.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId16($value)
-    {
-        $this->data['ScheduledTaskId16'] = $value;
-        $this->options['query']['ScheduledTaskId.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName3($value)
-    {
-        $this->data['ScheduledTaskName3'] = $value;
-        $this->options['query']['ScheduledTaskName.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId17($value)
-    {
-        $this->data['ScheduledTaskId17'] = $value;
-        $this->options['query']['ScheduledTaskId.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName4($value)
-    {
-        $this->data['ScheduledTaskName4'] = $value;
-        $this->options['query']['ScheduledTaskName.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId14($value)
-    {
-        $this->data['ScheduledTaskId14'] = $value;
-        $this->options['query']['ScheduledTaskId.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName1($value)
-    {
-        $this->data['ScheduledTaskName1'] = $value;
-        $this->options['query']['ScheduledTaskName.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskId15($value)
-    {
-        $this->data['ScheduledTaskId15'] = $value;
-        $this->options['query']['ScheduledTaskId.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledTaskName2($value)
-    {
-        $this->data['ScheduledTaskName2'] = $value;
-        $this->options['query']['ScheduledTaskName.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction18($value)
-    {
-        $this->data['ScheduledAction18'] = $value;
-        $this->options['query']['ScheduledAction.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction19($value)
-    {
-        $this->data['ScheduledAction19'] = $value;
-        $this->options['query']['ScheduledAction.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction16($value)
-    {
-        $this->data['ScheduledAction16'] = $value;
-        $this->options['query']['ScheduledAction.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction17($value)
-    {
-        $this->data['ScheduledAction17'] = $value;
-        $this->options['query']['ScheduledAction.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction14($value)
-    {
-        $this->data['ScheduledAction14'] = $value;
-        $this->options['query']['ScheduledAction.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction15($value)
-    {
-        $this->data['ScheduledAction15'] = $value;
-        $this->options['query']['ScheduledAction.15'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction12($value)
-    {
-        $this->data['ScheduledAction12'] = $value;
-        $this->options['query']['ScheduledAction.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction13($value)
-    {
-        $this->data['ScheduledAction13'] = $value;
-        $this->options['query']['ScheduledAction.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction10($value)
-    {
-        $this->data['ScheduledAction10'] = $value;
-        $this->options['query']['ScheduledAction.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheduledAction11($value)
-    {
-        $this->data['ScheduledAction11'] = $value;
-        $this->options['query']['ScheduledAction.11'] = $value;
+        $this->data['ScalingConfigurationName10'] = $value;
+        $this->options['query']['ScalingConfigurationName.10'] = $value;
 
         return $this;
     }
 }
 
 /**
+ * @method string getScalingActivityId9()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getScalingActivityId5()
+ * @method string getScalingActivityId6()
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getScalingActivityId7()
+ * @method string getScalingActivityId8()
+ * @method string getScalingActivityId1()
+ * @method string getScalingActivityId2()
+ * @method string getScalingActivityId3()
+ * @method string getScalingActivityId4()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getStatusCode()
+ * @method $this withStatusCode($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getScalingActivityId11()
+ * @method string getScalingActivityId10()
+ * @method string getScalingActivityId13()
+ * @method string getScalingActivityId12()
+ * @method string getScalingActivityId15()
+ * @method string getScalingActivityId14()
+ * @method string getScalingActivityId17()
+ * @method string getScalingActivityId16()
+ * @method string getScalingActivityId19()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingActivityId18()
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getScalingActivityId20()
+ */
+class DescribeScalingActivities extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId9($value)
+    {
+        $this->data['ScalingActivityId9'] = $value;
+        $this->options['query']['ScalingActivityId.9'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId5($value)
+    {
+        $this->data['ScalingActivityId5'] = $value;
+        $this->options['query']['ScalingActivityId.5'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId6($value)
+    {
+        $this->data['ScalingActivityId6'] = $value;
+        $this->options['query']['ScalingActivityId.6'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId7($value)
+    {
+        $this->data['ScalingActivityId7'] = $value;
+        $this->options['query']['ScalingActivityId.7'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId8($value)
+    {
+        $this->data['ScalingActivityId8'] = $value;
+        $this->options['query']['ScalingActivityId.8'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId1($value)
+    {
+        $this->data['ScalingActivityId1'] = $value;
+        $this->options['query']['ScalingActivityId.1'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId2($value)
+    {
+        $this->data['ScalingActivityId2'] = $value;
+        $this->options['query']['ScalingActivityId.2'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId3($value)
+    {
+        $this->data['ScalingActivityId3'] = $value;
+        $this->options['query']['ScalingActivityId.3'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId4($value)
+    {
+        $this->data['ScalingActivityId4'] = $value;
+        $this->options['query']['ScalingActivityId.4'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId11($value)
+    {
+        $this->data['ScalingActivityId11'] = $value;
+        $this->options['query']['ScalingActivityId.11'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId10($value)
+    {
+        $this->data['ScalingActivityId10'] = $value;
+        $this->options['query']['ScalingActivityId.10'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId13($value)
+    {
+        $this->data['ScalingActivityId13'] = $value;
+        $this->options['query']['ScalingActivityId.13'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId12($value)
+    {
+        $this->data['ScalingActivityId12'] = $value;
+        $this->options['query']['ScalingActivityId.12'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId15($value)
+    {
+        $this->data['ScalingActivityId15'] = $value;
+        $this->options['query']['ScalingActivityId.15'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId14($value)
+    {
+        $this->data['ScalingActivityId14'] = $value;
+        $this->options['query']['ScalingActivityId.14'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId17($value)
+    {
+        $this->data['ScalingActivityId17'] = $value;
+        $this->options['query']['ScalingActivityId.17'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId16($value)
+    {
+        $this->data['ScalingActivityId16'] = $value;
+        $this->options['query']['ScalingActivityId.16'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId19($value)
+    {
+        $this->data['ScalingActivityId19'] = $value;
+        $this->options['query']['ScalingActivityId.19'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId18($value)
+    {
+        $this->data['ScalingActivityId18'] = $value;
+        $this->options['query']['ScalingActivityId.18'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingActivityId20($value)
+    {
+        $this->data['ScalingActivityId20'] = $value;
+        $this->options['query']['ScalingActivityId.20'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getScheduledTaskId()
+ * @method $this withScheduledTaskId($value)
+ */
+class DeleteScheduledTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getScalingRuleId()
+ * @method $this withScalingRuleId($value)
+ */
+class DeleteScalingRule extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method string getForceDelete()
+ * @method $this withForceDelete($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteScalingGroup extends Rpc
+{
+}
+
+/**
+ * @method string getScalingConfigurationId()
+ * @method $this withScalingConfigurationId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteScalingConfiguration extends Rpc
+{
+}
+
+/**
+ * @method string getLaunchTime()
+ * @method $this withLaunchTime($value)
+ * @method string getScheduledAction()
+ * @method $this withScheduledAction($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRecurrenceValue()
+ * @method $this withRecurrenceValue($value)
+ * @method string getLaunchExpirationTime()
+ * @method $this withLaunchExpirationTime($value)
+ * @method string getRecurrenceEndTime()
+ * @method $this withRecurrenceEndTime($value)
+ * @method string getScheduledTaskName()
+ * @method $this withScheduledTaskName($value)
+ * @method string getTaskEnabled()
+ * @method $this withTaskEnabled($value)
+ * @method string getRecurrenceType()
+ * @method $this withRecurrenceType($value)
+ */
+class CreateScheduledTask extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getAdjustmentValue()
  * @method $this withAdjustmentValue($value)
  * @method array getStepAdjustment()
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getEstimatedInstanceWarmup()
  * @method $this withEstimatedInstanceWarmup($value)
  * @method string getOwnerAccount()
@@ -5178,8 +4917,6 @@ class DescribeScheduledTasks extends Rpc
  * @method $this withDisableScaleIn($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getScalingRuleId()
- * @method $this withScalingRuleId($value)
  * @method string getInitialMaxSize()
  * @method $this withInitialMaxSize($value)
  * @method string getPredictiveValueBuffer()
@@ -5194,12 +4931,14 @@ class DescribeScheduledTasks extends Rpc
  * @method $this withPredictiveValueBehavior($value)
  * @method string getTargetValue()
  * @method $this withTargetValue($value)
+ * @method string getScalingRuleType()
+ * @method $this withScalingRuleType($value)
  * @method string getMetricName()
  * @method $this withMetricName($value)
  * @method string getPredictiveScalingMode()
  * @method $this withPredictiveScalingMode($value)
  */
-class ModifyScalingRule extends Rpc
+class CreateScalingRule extends Rpc
 {
 
     /**
@@ -5221,37 +4960,45 @@ class ModifyScalingRule extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getHealthCheckType()
- * @method $this withHealthCheckType($value)
+ * @method string getMultiAZPolicy()
+ * @method $this withMultiAZPolicy($value)
+ * @method string getDBInstanceIds()
+ * @method $this withDBInstanceIds($value)
  * @method string getLaunchTemplateId()
  * @method $this withLaunchTemplateId($value)
+ * @method string getLoadBalancerIds()
+ * @method $this withLoadBalancerIds($value)
+ * @method string getHealthCheckType()
+ * @method $this withHealthCheckType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getScalingGroupName()
  * @method $this withScalingGroupName($value)
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method array getVSwitchIds()
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getActiveScalingConfigurationId()
- * @method $this withActiveScalingConfigurationId($value)
  * @method string getMinSize()
  * @method $this withMinSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getLaunchTemplateVersion()
  * @method $this withLaunchTemplateVersion($value)
+ * @method string getScalingPolicy()
+ * @method $this withScalingPolicy($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getMaxSize()
  * @method $this withMaxSize($value)
+ * @method array getLifecycleHook()
  * @method string getDefaultCooldown()
  * @method $this withDefaultCooldown($value)
  * @method string getRemovalPolicy1()
+ * @method array getVServerGroup()
  * @method string getRemovalPolicy2()
  */
-class ModifyScalingGroup extends Rpc
+class CreateScalingGroup extends Rpc
 {
 
     /**
@@ -5264,6 +5011,26 @@ class ModifyScalingGroup extends Rpc
         $this->data['VSwitchIds'] = $vSwitchIds;
         foreach ($vSwitchIds as $i => $iValue) {
             $this->options['query']['VSwitchIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $lifecycleHook
+     *
+     * @return $this
+     */
+    public function withLifecycleHook(array $lifecycleHook)
+    {
+        $this->data['LifecycleHook'] = $lifecycleHook;
+        foreach ($lifecycleHook as $depth1 => $depth1Value) {
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.DefaultResult'] = $depth1Value['DefaultResult'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleHookName'] = $depth1Value['LifecycleHookName'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.HeartbeatTimeout'] = $depth1Value['HeartbeatTimeout'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationArn'] = $depth1Value['NotificationArn'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.NotificationMetadata'] = $depth1Value['NotificationMetadata'];
+            $this->options['query']['LifecycleHook.' . ($depth1 + 1) . '.LifecycleTransition'] = $depth1Value['LifecycleTransition'];
         }
 
         return $this;
@@ -5283,6 +5050,26 @@ class ModifyScalingGroup extends Rpc
     }
 
     /**
+     * @param array $vServerGroup
+     *
+     * @return $this
+     */
+    public function withVServerGroup(array $vServerGroup)
+    {
+        $this->data['VServerGroup'] = $vServerGroup;
+        foreach ($vServerGroup as $depth1 => $depth1Value) {
+            $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.LoadBalancerId'] = $depth1Value['LoadBalancerId'];
+            foreach ($depth1Value['VServerGroupAttribute'] as $depth2 => $depth2Value) {
+                $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.VServerGroupAttribute.' . ($depth2 + 1) . '.VServerGroupId'] = $depth2Value['VServerGroupId'];
+                $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.VServerGroupAttribute.' . ($depth2 + 1) . '.Port'] = $depth2Value['Port'];
+                $this->options['query']['VServerGroup.' . ($depth1 + 1) . '.VServerGroupAttribute.' . ($depth2 + 1) . '.Weight'] = $depth2Value['Weight'];
+            }
+        }
+
+        return $this;
+    }
+
+    /**
      * @param string $value
      *
      * @return $this
@@ -5297,87 +5084,247 @@ class ModifyScalingGroup extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getScalingRuleAri()
- * @method $this withScalingRuleAri($value)
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getMemory()
+ * @method $this withMemory($value)
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
+ * @method array getInstanceTypes()
+ * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getInternetMaxBandwidthOut()
+ * @method $this withInternetMaxBandwidthOut($value)
+ * @method string getSecurityEnhancementStrategy()
+ * @method $this withSecurityEnhancementStrategy($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method array getSpotPriceLimit()
+ * @method string getSystemDiskCategory()
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getHostName()
+ * @method $this withHostName($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getPasswordInherit()
+ * @method $this withPasswordInherit($value)
+ * @method string getImageName()
+ * @method $this withImageName($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getDeploymentSetId()
+ * @method $this withDeploymentSetId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getBreachThreshold()
- * @method $this withBreachThreshold($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getCpu()
+ * @method $this withCpu($value)
+ * @method string getSystemDiskDiskName()
+ * @method string getRamRoleName()
+ * @method $this withRamRoleName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getMetricValue()
- * @method $this withMetricValue($value)
+ * @method array getDataDisk()
+ * @method string getScalingConfigurationName()
+ * @method $this withScalingConfigurationName($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
+ * @method string getLoadBalancerWeight()
+ * @method $this withLoadBalancerWeight($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getSystemDiskSize()
+ * @method string getInternetChargeType()
+ * @method $this withInternetChargeType($value)
+ * @method string getInternetMaxBandwidthIn()
+ * @method $this withInternetMaxBandwidthIn($value)
+ * @method string getSystemDiskDescription()
  */
-class ExecuteScalingRule extends Rpc
+class CreateScalingConfiguration extends Rpc
 {
+
+    /**
+     * @param array $instanceTypes
+     *
+     * @return $this
+     */
+    public function withInstanceTypes(array $instanceTypes)
+    {
+        $this->data['InstanceTypes'] = $instanceTypes;
+        foreach ($instanceTypes as $i => $iValue) {
+            $this->options['query']['InstanceTypes.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $spotPriceLimit
+     *
+     * @return $this
+     */
+    public function withSpotPriceLimit(array $spotPriceLimit)
+    {
+        $this->data['SpotPriceLimit'] = $spotPriceLimit;
+        foreach ($spotPriceLimit as $depth1 => $depth1Value) {
+            $this->options['query']['SpotPriceLimit.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+            $this->options['query']['SpotPriceLimit.' . ($depth1 + 1) . '.PriceLimit'] = $depth1Value['PriceLimit'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskCategory($value)
+    {
+        $this->data['SystemDiskCategory'] = $value;
+        $this->options['query']['SystemDisk.Category'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskDiskName($value)
+    {
+        $this->data['SystemDiskDiskName'] = $value;
+        $this->options['query']['SystemDisk.DiskName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $dataDisk
+     *
+     * @return $this
+     */
+    public function withDataDisk(array $dataDisk)
+    {
+        $this->data['DataDisk'] = $dataDisk;
+        foreach ($dataDisk as $depth1 => $depth1Value) {
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.KMSKeyId'] = $depth1Value['KMSKeyId'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskSize($value)
+    {
+        $this->data['SystemDiskSize'] = $value;
+        $this->options['query']['SystemDisk.Size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskDescription($value)
+    {
+        $this->data['SystemDiskDescription'] = $value;
+        $this->options['query']['SystemDisk.Description'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getInstanceId10()
  * @method string getLoadBalancerWeight6()
  * @method string getLoadBalancerWeight11()
  * @method string getLoadBalancerWeight7()
  * @method string getLoadBalancerWeight12()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getInstanceId12()
  * @method string getLoadBalancerWeight8()
+ * @method string getInstanceId11()
  * @method string getLoadBalancerWeight9()
  * @method string getLoadBalancerWeight10()
  * @method string getLoadBalancerWeight2()
  * @method string getLoadBalancerWeight15()
  * @method string getLoadBalancerWeight3()
  * @method string getLoadBalancerWeight16()
+ * @method string getScalingGroupId()
+ * @method $this withScalingGroupId($value)
  * @method string getLoadBalancerWeight4()
  * @method string getLoadBalancerWeight13()
  * @method string getLoadBalancerWeight5()
  * @method string getLoadBalancerWeight14()
- * @method string getActiveScalingConfigurationId()
- * @method $this withActiveScalingConfigurationId($value)
  * @method string getLoadBalancerWeight1()
+ * @method string getInstanceId20()
  * @method string getInstanceId1()
  * @method string getLoadBalancerWeight20()
  * @method string getInstanceId3()
- * @method string getLaunchTemplateId()
- * @method $this withLaunchTemplateId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getInstanceId2()
  * @method string getInstanceId5()
  * @method string getInstanceId4()
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getInstanceId7()
  * @method string getInstanceId6()
  * @method string getInstanceId9()
  * @method string getInstanceId8()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getLoadBalancerWeight19()
- * @method string getLoadBalancerWeight17()
- * @method string getLoadBalancerWeight18()
- * @method string getInstanceId10()
- * @method string getInstanceId12()
- * @method string getInstanceId11()
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getInstanceId20()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getLaunchTemplateVersion()
- * @method $this withLaunchTemplateVersion($value)
  * @method string getInstanceId18()
+ * @method string getLoadBalancerWeight19()
  * @method string getInstanceId17()
+ * @method string getLoadBalancerWeight17()
  * @method string getInstanceId19()
+ * @method string getLoadBalancerWeight18()
  * @method string getInstanceId14()
  * @method string getInstanceId13()
  * @method string getInstanceId16()
  * @method string getInstanceId15()
  */
-class EnableScalingGroup extends Rpc
+class AttachInstances extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId10($value)
+    {
+        $this->data['InstanceId10'] = $value;
+        $this->options['query']['InstanceId.10'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -5436,10 +5383,36 @@ class EnableScalingGroup extends Rpc
      *
      * @return $this
      */
+    public function withInstanceId12($value)
+    {
+        $this->data['InstanceId12'] = $value;
+        $this->options['query']['InstanceId.12'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withLoadBalancerWeight8($value)
     {
         $this->data['LoadBalancerWeight8'] = $value;
         $this->options['query']['LoadBalancerWeight.8'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId11($value)
+    {
+        $this->data['InstanceId11'] = $value;
+        $this->options['query']['InstanceId.11'] = $value;
 
         return $this;
     }
@@ -5592,6 +5565,19 @@ class EnableScalingGroup extends Rpc
      *
      * @return $this
      */
+    public function withInstanceId20($value)
+    {
+        $this->data['InstanceId20'] = $value;
+        $this->options['query']['InstanceId.20'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withInstanceId1($value)
     {
         $this->data['InstanceId1'] = $value;
@@ -5722,10 +5708,36 @@ class EnableScalingGroup extends Rpc
      *
      * @return $this
      */
+    public function withInstanceId18($value)
+    {
+        $this->data['InstanceId18'] = $value;
+        $this->options['query']['InstanceId.18'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withLoadBalancerWeight19($value)
     {
         $this->data['LoadBalancerWeight19'] = $value;
         $this->options['query']['LoadBalancerWeight.19'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId17($value)
+    {
+        $this->data['InstanceId17'] = $value;
+        $this->options['query']['InstanceId.17'] = $value;
 
         return $this;
     }
@@ -5748,6 +5760,19 @@ class EnableScalingGroup extends Rpc
      *
      * @return $this
      */
+    public function withInstanceId19($value)
+    {
+        $this->data['InstanceId19'] = $value;
+        $this->options['query']['InstanceId.19'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withLoadBalancerWeight18($value)
     {
         $this->data['LoadBalancerWeight18'] = $value;
@@ -5761,97 +5786,6 @@ class EnableScalingGroup extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId10($value)
-    {
-        $this->data['InstanceId10'] = $value;
-        $this->options['query']['InstanceId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId12($value)
-    {
-        $this->data['InstanceId12'] = $value;
-        $this->options['query']['InstanceId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId11($value)
-    {
-        $this->data['InstanceId11'] = $value;
-        $this->options['query']['InstanceId.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId20($value)
-    {
-        $this->data['InstanceId20'] = $value;
-        $this->options['query']['InstanceId.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId18($value)
-    {
-        $this->data['InstanceId18'] = $value;
-        $this->options['query']['InstanceId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId17($value)
-    {
-        $this->data['InstanceId17'] = $value;
-        $this->options['query']['InstanceId.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId19($value)
-    {
-        $this->data['InstanceId19'] = $value;
-        $this->options['query']['InstanceId.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withInstanceId14($value)
     {
         $this->data['InstanceId14'] = $value;
@@ -5898,340 +5832,4 @@ class EnableScalingGroup extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getInstanceId10()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getInstanceId12()
- * @method string getInstanceId11()
- * @method string getScalingGroupId()
- * @method $this withScalingGroupId($value)
- * @method string getInstanceId20()
- * @method string getInstanceId1()
- * @method string getRemovePolicy()
- * @method $this withRemovePolicy($value)
- * @method string getInstanceId3()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getInstanceId2()
- * @method string getInstanceId5()
- * @method string getInstanceId4()
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getInstanceId7()
- * @method string getInstanceId6()
- * @method string getInstanceId9()
- * @method string getInstanceId8()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId18()
- * @method string getInstanceId17()
- * @method string getInstanceId19()
- * @method string getInstanceId14()
- * @method string getInstanceId13()
- * @method string getInstanceId16()
- * @method string getInstanceId15()
- */
-class RemoveInstances extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId10($value)
-    {
-        $this->data['InstanceId10'] = $value;
-        $this->options['query']['InstanceId.10'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId12($value)
-    {
-        $this->data['InstanceId12'] = $value;
-        $this->options['query']['InstanceId.12'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId11($value)
-    {
-        $this->data['InstanceId11'] = $value;
-        $this->options['query']['InstanceId.11'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId20($value)
-    {
-        $this->data['InstanceId20'] = $value;
-        $this->options['query']['InstanceId.20'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId1($value)
-    {
-        $this->data['InstanceId1'] = $value;
-        $this->options['query']['InstanceId.1'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId3($value)
-    {
-        $this->data['InstanceId3'] = $value;
-        $this->options['query']['InstanceId.3'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId2($value)
-    {
-        $this->data['InstanceId2'] = $value;
-        $this->options['query']['InstanceId.2'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId5($value)
-    {
-        $this->data['InstanceId5'] = $value;
-        $this->options['query']['InstanceId.5'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId4($value)
-    {
-        $this->data['InstanceId4'] = $value;
-        $this->options['query']['InstanceId.4'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId7($value)
-    {
-        $this->data['InstanceId7'] = $value;
-        $this->options['query']['InstanceId.7'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId6($value)
-    {
-        $this->data['InstanceId6'] = $value;
-        $this->options['query']['InstanceId.6'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId9($value)
-    {
-        $this->data['InstanceId9'] = $value;
-        $this->options['query']['InstanceId.9'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId8($value)
-    {
-        $this->data['InstanceId8'] = $value;
-        $this->options['query']['InstanceId.8'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId18($value)
-    {
-        $this->data['InstanceId18'] = $value;
-        $this->options['query']['InstanceId.18'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId17($value)
-    {
-        $this->data['InstanceId17'] = $value;
-        $this->options['query']['InstanceId.17'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId19($value)
-    {
-        $this->data['InstanceId19'] = $value;
-        $this->options['query']['InstanceId.19'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId14($value)
-    {
-        $this->data['InstanceId14'] = $value;
-        $this->options['query']['InstanceId.14'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId13($value)
-    {
-        $this->data['InstanceId13'] = $value;
-        $this->options['query']['InstanceId.13'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId16($value)
-    {
-        $this->data['InstanceId16'] = $value;
-        $this->options['query']['InstanceId.16'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId15($value)
-    {
-        $this->data['InstanceId15'] = $value;
-        $this->options['query']['InstanceId.15'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getLaunchTime()
- * @method $this withLaunchTime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getScheduledAction()
- * @method $this withScheduledAction($value)
- * @method string getMaxValue()
- * @method $this withMaxValue($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRecurrenceValue()
- * @method $this withRecurrenceValue($value)
- * @method string getLaunchExpirationTime()
- * @method $this withLaunchExpirationTime($value)
- * @method string getRecurrenceEndTime()
- * @method $this withRecurrenceEndTime($value)
- * @method string getMinValue()
- * @method $this withMinValue($value)
- * @method string getScheduledTaskName()
- * @method $this withScheduledTaskName($value)
- * @method string getTaskEnabled()
- * @method $this withTaskEnabled($value)
- * @method string getScheduledTaskId()
- * @method $this withScheduledTaskId($value)
- * @method string getRecurrenceType()
- * @method $this withRecurrenceType($value)
- */
-class ModifyScheduledTask extends Rpc
-{
 }

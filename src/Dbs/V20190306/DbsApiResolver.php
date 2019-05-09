@@ -9,13 +9,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeNodeCidrList describeNodeCidrList(array $options = [])
  * @method StartRestoreTask startRestoreTask(array $options = [])
  * @method CreateRestoreTask createRestoreTask(array $options = [])
- * @method DescribeFullBackupList describeFullBackupList(array $options = [])
  * @method DescribeBackupPlanList describeBackupPlanList(array $options = [])
+ * @method DescribeFullBackupList describeFullBackupList(array $options = [])
  * @method StopBackupPlan stopBackupPlan(array $options = [])
- * @method DescribeIncrementBackupList describeIncrementBackupList(array $options = [])
  * @method DescribeBackupGatewayList describeBackupGatewayList(array $options = [])
- * @method StartBackupPlan startBackupPlan(array $options = [])
+ * @method DescribeIncrementBackupList describeIncrementBackupList(array $options = [])
  * @method ConfigureBackupPlan configureBackupPlan(array $options = [])
+ * @method StartBackupPlan startBackupPlan(array $options = [])
  * @method CreateBackupPlan createBackupPlan(array $options = [])
  */
 class DbsApiResolver extends ApiResolver
@@ -128,12 +128,14 @@ class CreateRestoreTask extends Rpc
  * @method $this withPageSize($value)
  * @method string getBackupPlanId()
  * @method $this withBackupPlanId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeFullBackupList extends Rpc
+class DescribeBackupPlanList extends Rpc
 {
 }
 
@@ -144,14 +146,12 @@ class DescribeFullBackupList extends Rpc
  * @method $this withPageSize($value)
  * @method string getBackupPlanId()
  * @method $this withBackupPlanId($value)
- * @method string getRegion()
- * @method $this withRegion($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeBackupPlanList extends Rpc
+class DescribeFullBackupList extends Rpc
 {
 }
 
@@ -166,22 +166,6 @@ class DescribeBackupPlanList extends Rpc
  * @method $this withOwnerId($value)
  */
 class StopBackupPlan extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getBackupPlanId()
- * @method $this withBackupPlanId($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeIncrementBackupList extends Rpc
 {
 }
 
@@ -206,12 +190,16 @@ class DescribeBackupGatewayList extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getBackupPlanId()
  * @method $this withBackupPlanId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class StartBackupPlan extends Rpc
+class DescribeIncrementBackupList extends Rpc
 {
 }
 
@@ -262,6 +250,18 @@ class StartBackupPlan extends Rpc
  * @method $this withEnableBackupLog($value)
  */
 class ConfigureBackupPlan extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartBackupPlan extends Rpc
 {
 }
 

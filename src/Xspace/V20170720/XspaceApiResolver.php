@@ -5,8 +5,8 @@ namespace AlibabaCloud\Xspace\V20170720;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method QueryCustomerByPhone queryCustomerByPhone(array $options = [])
  * @method QueryCustomerById queryCustomerById(array $options = [])
+ * @method QueryCustomerByPhone queryCustomerByPhone(array $options = [])
  */
 class XspaceApiResolver extends ApiResolver
 {
@@ -22,28 +22,6 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $method = 'POST';
-}
-
-/**
- * @method string getPhone()
- */
-class QueryCustomerByPhone extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/customerbyphone';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPhone($value)
-    {
-        $this->data['Phone'] = $value;
-        $this->options['query']['Phone'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -66,6 +44,28 @@ class QueryCustomerById extends Roa
     {
         $this->data['Id'] = $value;
         $this->options['query']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPhone()
+ */
+class QueryCustomerByPhone extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/customerbyphone';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhone($value)
+    {
+        $this->data['Phone'] = $value;
+        $this->options['query']['Phone'] = $value;
 
         return $this;
     }

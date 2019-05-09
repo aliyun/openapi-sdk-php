@@ -5,19 +5,19 @@ namespace AlibabaCloud\Cds\V20170925;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method GetCredentials getCredentials(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
+ * @method GetCredentials getCredentials(array $options = [])
  * @method UpdateCredential updateCredential(array $options = [])
- * @method DeleteCredential deleteCredential(array $options = [])
  * @method CreateCredential createCredential(array $options = [])
+ * @method DeleteCredential deleteCredential(array $options = [])
  * @method CreateJob createJob(array $options = [])
- * @method GetBuild getBuild(array $options = [])
- * @method DeleteJob deleteJob(array $options = [])
- * @method GetJob getJob(array $options = [])
  * @method GetBuilds getBuilds(array $options = [])
+ * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteBuild deleteBuild(array $options = [])
  * @method RunJob runJob(array $options = [])
  * @method StopBuild stopBuild(array $options = [])
+ * @method GetBuild getBuild(array $options = [])
+ * @method GetJob getJob(array $options = [])
  * @method GetJobs getJobs(array $options = [])
  */
 class CdsApiResolver extends ApiResolver
@@ -37,15 +37,6 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'cds';
-}
-
-class GetCredentials extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/v1/credentials';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -82,6 +73,15 @@ class UpdateJob extends Roa
 
         return $this;
     }
+}
+
+class GetCredentials extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v1/credentials';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -135,28 +135,6 @@ class UpdateCredential extends Roa
 }
 
 /**
- * @method string getCredentialId()
- */
-class DeleteCredential extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/v1/credential/delete';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCredentialId($value)
-    {
-        $this->data['CredentialId'] = $value;
-        $this->options['query']['CredentialId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getCredentialType()
  * @method string getJsonContent()
  */
@@ -187,6 +165,28 @@ class CreateCredential extends Roa
     {
         $this->data['JsonContent'] = $value;
         $this->options['query']['JsonContent'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCredentialId()
+ */
+class DeleteCredential extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v1/credential/delete';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCredentialId($value)
+    {
+        $this->data['CredentialId'] = $value;
+        $this->options['query']['CredentialId'] = $value;
 
         return $this;
     }
@@ -243,47 +243,6 @@ class CreateJob extends Roa
 }
 
 /**
- * @method string getBuildNumber()
- * @method $this withBuildNumber($value)
- * @method string getJobName()
- * @method $this withJobName($value)
- */
-class GetBuild extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/v1/job/[JobName]/build/[BuildNumber]';
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getJobName()
- * @method $this withJobName($value)
- */
-class DeleteJob extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/v1/job/[JobName]';
-
-    /** @var string */
-    public $method = 'DELETE';
-}
-
-/**
- * @method string getJobName()
- * @method $this withJobName($value)
- */
-class GetJob extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/v1/job/[JobName]';
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
  * @method string getStart()
  * @method string getNumberPerPage()
  * @method string getJobName()
@@ -325,6 +284,19 @@ class GetBuilds extends Roa
 }
 
 /**
+ * @method string getJobName()
+ * @method $this withJobName($value)
+ */
+class DeleteJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v1/job/[JobName]';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+/**
  * @method string getBuildNumber()
  * @method $this withBuildNumber($value)
  * @method string getJobName()
@@ -359,6 +331,34 @@ class StopBuild extends Roa
 {
     /** @var string */
     public $pathPattern = '/v1/job/[JobName]/build/[BuildNumber]/stop';
+}
+
+/**
+ * @method string getBuildNumber()
+ * @method $this withBuildNumber($value)
+ * @method string getJobName()
+ * @method $this withJobName($value)
+ */
+class GetBuild extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v1/job/[JobName]/build/[BuildNumber]';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getJobName()
+ * @method $this withJobName($value)
+ */
+class GetJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v1/job/[JobName]';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**

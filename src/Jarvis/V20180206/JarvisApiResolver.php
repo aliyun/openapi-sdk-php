@@ -7,16 +7,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method DeleteWhiteListDbItemConditional deleteWhiteListDbItemConditional(array $options = [])
  * @method DeleteWhiteListConditional deleteWhiteListConditional(array $options = [])
- * @method DescribeCdnIpList describeCdnIpList(array $options = [])
- * @method DescribeConsoleAccessWhiteList describeConsoleAccessWhiteList(array $options = [])
- * @method CreateAllEcsWhiteList createAllEcsWhiteList(array $options = [])
  * @method DescribeCdnCertify describeCdnCertify(array $options = [])
- * @method CreateConsoleAccessWhiteList createConsoleAccessWhiteList(array $options = [])
- * @method DeleteCdnIp deleteCdnIp(array $options = [])
- * @method DeleteConsoleAccessWhiteList deleteConsoleAccessWhiteList(array $options = [])
- * @method CreateCdnIp createCdnIp(array $options = [])
+ * @method CreateAllEcsWhiteList createAllEcsWhiteList(array $options = [])
  * @method DescribeSpecialEcs describeSpecialEcs(array $options = [])
  * @method DescribeEcsListPage describeEcsListPage(array $options = [])
+ * @method DescribeConsoleAccessWhiteList describeConsoleAccessWhiteList(array $options = [])
+ * @method CreateConsoleAccessWhiteList createConsoleAccessWhiteList(array $options = [])
+ * @method DeleteConsoleAccessWhiteList deleteConsoleAccessWhiteList(array $options = [])
+ * @method DeleteCdnIp deleteCdnIp(array $options = [])
+ * @method CreateCdnIp createCdnIp(array $options = [])
+ * @method DescribeCdnIpList describeCdnIpList(array $options = [])
  * @method DeleteCdnSubscription deleteCdnSubscription(array $options = [])
  * @method CreateCdnSubscription createCdnSubscription(array $options = [])
  * @method DescribeCdnSubscription describeCdnSubscription(array $options = [])
@@ -24,24 +24,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAccessWhiteListSlbList describeAccessWhiteListSlbList(array $options = [])
  * @method DescribeAccessWhiteListEipList describeAccessWhiteListEipList(array $options = [])
  * @method DescribePunishList describePunishList(array $options = [])
- * @method DescribeDdosDefenseInfo describeDdosDefenseInfo(array $options = [])
  * @method DescribeRiskListDetail describeRiskListDetail(array $options = [])
+ * @method DescribeDdosDefenseInfo describeDdosDefenseInfo(array $options = [])
  * @method DescribePhoneInfo describePhoneInfo(array $options = [])
- * @method CreateUidWhiteListGroup createUidWhiteListGroup(array $options = [])
- * @method ModifyUidWhiteListAutoShare modifyUidWhiteListAutoShare(array $options = [])
- * @method DescribeUidWhiteListGroup describeUidWhiteListGroup(array $options = [])
  * @method DeleteUidWhiteListGroup deleteUidWhiteListGroup(array $options = [])
+ * @method ModifyUidWhiteListAutoShare modifyUidWhiteListAutoShare(array $options = [])
+ * @method CreateUidWhiteListGroup createUidWhiteListGroup(array $options = [])
+ * @method DescribeUidWhiteListGroup describeUidWhiteListGroup(array $options = [])
  * @method DescribeRiskTrend describeRiskTrend(array $options = [])
- * @method DescribeUidGcLevel describeUidGcLevel(array $options = [])
- * @method CreateAccessWhiteListGroup createAccessWhiteListGroup(array $options = [])
- * @method DeleteAccessWhiteListGroup deleteAccessWhiteListGroup(array $options = [])
  * @method ModifyAccessWhiteListAutoShare modifyAccessWhiteListAutoShare(array $options = [])
+ * @method DescribeUidGcLevel describeUidGcLevel(array $options = [])
  * @method DescribeResetRecordQueryCount describeResetRecordQueryCount(array $options = [])
- * @method DescribeAccessWhitelistEcsList describeAccessWhitelistEcsList(array $options = [])
  * @method DescribeResetRecordList describeResetRecordList(array $options = [])
  * @method DescribeCpmcPunishList describeCpmcPunishList(array $options = [])
  * @method DescribeAccessWhiteListGroup describeAccessWhiteListGroup(array $options = [])
+ * @method DescribeAccessWhitelistEcsList describeAccessWhitelistEcsList(array $options = [])
+ * @method DeleteAccessWhiteListGroup deleteAccessWhiteListGroup(array $options = [])
  * @method CreateCpmcPunishFeedBack createCpmcPunishFeedBack(array $options = [])
+ * @method CreateAccessWhiteListGroup createAccessWhiteListGroup(array $options = [])
  */
 class JarvisApiResolver extends ApiResolver
 {
@@ -120,12 +120,48 @@ class DeleteWhiteListConditional extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class DescribeCdnCertify extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSrcIP()
  * @method $this withSrcIP($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getWlState()
- * @method $this withWlState($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class CreateAllEcsWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getTargetIp()
+ * @method $this withTargetIp($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class DescribeSpecialEcs extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
@@ -135,7 +171,7 @@ class DeleteWhiteListConditional extends Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeCdnIpList extends Rpc
+class DescribeEcsListPage extends Rpc
 {
 }
 
@@ -178,32 +214,6 @@ class DescribeConsoleAccessWhiteList extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSrcIP()
- * @method $this withSrcIP($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class CreateAllEcsWhiteList extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class DescribeCdnCertify extends Rpc
-{
-}
-
-/**
  * @method string getNote()
  * @method $this withNote($value)
  * @method string getResourceOwnerId()
@@ -234,6 +244,20 @@ class CreateConsoleAccessWhiteList extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDisableWhitelist()
+ * @method $this withDisableWhitelist($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class DeleteConsoleAccessWhiteList extends Rpc
+{
+}
+
+/**
  * @method string getItemId()
  * @method $this withItemId($value)
  * @method string getResourceOwnerId()
@@ -248,20 +272,6 @@ class CreateConsoleAccessWhiteList extends Rpc
  * @method $this withSourceCode($value)
  */
 class DeleteCdnIp extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getDisableWhitelist()
- * @method $this withDisableWhitelist($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class DeleteConsoleAccessWhiteList extends Rpc
 {
 }
 
@@ -282,22 +292,12 @@ class CreateCdnIp extends Rpc
 }
 
 /**
- * @method string getTargetIp()
- * @method $this withTargetIp($value)
+ * @method string getSrcIP()
+ * @method $this withSrcIP($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class DescribeSpecialEcs extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
+ * @method string getWlState()
+ * @method $this withWlState($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
@@ -307,7 +307,7 @@ class DescribeSpecialEcs extends Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeEcsListPage extends Rpc
+class DescribeCdnIpList extends Rpc
 {
 }
 
@@ -443,44 +443,6 @@ class DescribePunishList extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSrcUid($value)
-    {
-        $this->data['SrcUid'] = $value;
-        $this->options['query']['srcUid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceCode($value)
-    {
-        $this->data['SourceCode'] = $value;
-        $this->options['query']['sourceCode'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSrcUid()
- * @method string getSourceCode()
- */
-class DescribeDdosDefenseInfo extends Rpc
-{
 
     /**
      * @param string $value
@@ -648,6 +610,44 @@ class DescribeRiskListDetail extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSrcUid()
+ * @method string getSourceCode()
+ */
+class DescribeDdosDefenseInfo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSrcUid($value)
+    {
+        $this->data['SrcUid'] = $value;
+        $this->options['query']['srcUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceCode($value)
+    {
+        $this->data['SourceCode'] = $value;
+        $this->options['query']['sourceCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getPhoneNum()
  * @method string getLang()
  * @method $this withLang($value)
@@ -684,6 +684,40 @@ class DescribePhoneInfo extends Rpc
 }
 
 /**
+ * @method string getGroupIdList()
+ * @method $this withGroupIdList($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class DeleteUidWhiteListGroup extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getAutoConfig()
+ * @method $this withAutoConfig($value)
+ * @method string getProductName()
+ * @method $this withProductName($value)
+ * @method string getWhiteListType()
+ * @method $this withWhiteListType($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSrcUid()
+ * @method $this withSrcUid($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class ModifyUidWhiteListAutoShare extends Rpc
+{
+}
+
+/**
  * @method string getNote()
  * @method $this withNote($value)
  * @method string getResourceOwnerId()
@@ -714,26 +748,6 @@ class CreateUidWhiteListGroup extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getAutoConfig()
- * @method $this withAutoConfig($value)
- * @method string getProductName()
- * @method $this withProductName($value)
- * @method string getWhiteListType()
- * @method $this withWhiteListType($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSrcUid()
- * @method $this withSrcUid($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class ModifyUidWhiteListAutoShare extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
@@ -756,20 +770,6 @@ class DescribeUidWhiteListGroup extends Rpc
 }
 
 /**
- * @method string getGroupIdList()
- * @method $this withGroupIdList($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class DeleteUidWhiteListGroup extends Rpc
-{
-}
-
-/**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getQueryProduct()
@@ -784,62 +784,6 @@ class DeleteUidWhiteListGroup extends Rpc
  * @method $this withQueryRegionId($value)
  */
 class DescribeRiskTrend extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class DescribeUidGcLevel extends Rpc
-{
-}
-
-/**
- * @method string getNote()
- * @method $this withNote($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSrcIP()
- * @method $this withSrcIP($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getDstPort()
- * @method $this withDstPort($value)
- * @method string getInstanceIdList()
- * @method $this withInstanceIdList($value)
- * @method string getLiveTime()
- * @method $this withLiveTime($value)
- * @method string getProductName()
- * @method $this withProductName($value)
- * @method string getWhiteListType()
- * @method $this withWhiteListType($value)
- * @method string getInstanceInfoList()
- * @method $this withInstanceInfoList($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class CreateAccessWhiteListGroup extends Rpc
-{
-}
-
-/**
- * @method string getGroupIdList()
- * @method $this withGroupIdList($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getSourceCode()
- * @method $this withSourceCode($value)
- */
-class DeleteAccessWhiteListGroup extends Rpc
 {
 }
 
@@ -871,7 +815,7 @@ class ModifyAccessWhiteListAutoShare extends Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeResetRecordQueryCount extends Rpc
+class DescribeUidGcLevel extends Rpc
 {
 }
 
@@ -883,7 +827,7 @@ class DescribeResetRecordQueryCount extends Rpc
  * @method string getSourceCode()
  * @method $this withSourceCode($value)
  */
-class DescribeAccessWhitelistEcsList extends Rpc
+class DescribeResetRecordQueryCount extends Rpc
 {
 }
 
@@ -1020,6 +964,32 @@ class DescribeAccessWhiteListGroup extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class DescribeAccessWhitelistEcsList extends Rpc
+{
+}
+
+/**
+ * @method string getGroupIdList()
+ * @method $this withGroupIdList($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class DeleteAccessWhiteListGroup extends Rpc
+{
+}
+
+/**
  * @method string getFeedBack()
  * @method $this withFeedBack($value)
  * @method string getSrcIP()
@@ -1044,5 +1014,35 @@ class DescribeAccessWhiteListGroup extends Rpc
  * @method $this withSourceCode($value)
  */
 class CreateCpmcPunishFeedBack extends Rpc
+{
+}
+
+/**
+ * @method string getNote()
+ * @method $this withNote($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSrcIP()
+ * @method $this withSrcIP($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDstPort()
+ * @method $this withDstPort($value)
+ * @method string getInstanceIdList()
+ * @method $this withInstanceIdList($value)
+ * @method string getLiveTime()
+ * @method $this withLiveTime($value)
+ * @method string getProductName()
+ * @method $this withProductName($value)
+ * @method string getWhiteListType()
+ * @method $this withWhiteListType($value)
+ * @method string getInstanceInfoList()
+ * @method $this withInstanceInfoList($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getSourceCode()
+ * @method $this withSourceCode($value)
+ */
+class CreateAccessWhiteListGroup extends Rpc
 {
 }

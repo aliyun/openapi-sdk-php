@@ -6,17 +6,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyDeviceInfo modifyDeviceInfo(array $options = [])
- * @method CreateAuthKey createAuthKey(array $options = [])
- * @method CreateVerifySDK createVerifySDK(array $options = [])
- * @method DescribeVerifySDK describeVerifySDK(array $options = [])
  * @method DescribeDeviceInfo describeDeviceInfo(array $options = [])
+ * @method CreateAuthKey createAuthKey(array $options = [])
+ * @method DescribeVerifySDK describeVerifySDK(array $options = [])
+ * @method CreateVerifySDK createVerifySDK(array $options = [])
  * @method SubmitVerification submitVerification(array $options = [])
- * @method GetStatus getStatus(array $options = [])
- * @method CompareFaces compareFaces(array $options = [])
  * @method SubmitMaterials submitMaterials(array $options = [])
- * @method GetMaterials getMaterials(array $options = [])
  * @method GetVerifyToken getVerifyToken(array $options = [])
+ * @method GetStatus getStatus(array $options = [])
+ * @method GetMaterials getMaterials(array $options = [])
  * @method DetectFaceAttributes detectFaceAttributes(array $options = [])
+ * @method CompareFaces compareFaces(array $options = [])
  */
 class CloudauthApiResolver extends ApiResolver
 {
@@ -68,6 +68,35 @@ class ModifyDeviceInfo extends Rpc
  * @method $this withBizType($value)
  * @method string getUserDeviceId()
  * @method $this withUserDeviceId($value)
+ * @method string getTotalCount()
+ * @method $this withTotalCount($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getExpiredEndDay()
+ * @method $this withExpiredEndDay($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getExpiredStartDay()
+ * @method $this withExpiredStartDay($value)
+ */
+class DescribeDeviceInfo extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+}
+
+/**
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getUserDeviceId()
+ * @method $this withUserDeviceId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getTest()
@@ -78,23 +107,6 @@ class ModifyDeviceInfo extends Rpc
  * @method $this withLang($value)
  */
 class CreateAuthKey extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getAppUrl()
- * @method $this withAppUrl($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getPlatform()
- * @method $this withPlatform($value)
- */
-class CreateVerifySDK extends Rpc
 {
 
     /** @var string */
@@ -117,28 +129,16 @@ class DescribeVerifySDK extends Rpc
 }
 
 /**
- * @method string getBizType()
- * @method $this withBizType($value)
- * @method string getUserDeviceId()
- * @method $this withUserDeviceId($value)
- * @method string getTotalCount()
- * @method $this withTotalCount($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
+ * @method string getAppUrl()
+ * @method $this withAppUrl($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getExpiredEndDay()
- * @method $this withExpiredEndDay($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- * @method string getExpiredStartDay()
- * @method $this withExpiredStartDay($value)
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
  */
-class DescribeDeviceInfo extends Rpc
+class CreateVerifySDK extends Rpc
 {
 
     /** @var string */
@@ -203,86 +203,6 @@ class SubmitVerification extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getBiz()
- * @method $this withBiz($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getTicketId()
- * @method $this withTicketId($value)
- */
-class GetStatus extends Rpc
-{
-}
-
-/**
- * @method string getSourceImageType()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getTargetImageType()
- * @method string getSourceImageValue()
- * @method string getTargetImageValue()
- */
-class CompareFaces extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceImageType($value)
-    {
-        $this->data['SourceImageType'] = $value;
-        $this->options['form_params']['SourceImageType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetImageType($value)
-    {
-        $this->data['TargetImageType'] = $value;
-        $this->options['form_params']['TargetImageType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceImageValue($value)
-    {
-        $this->data['SourceImageValue'] = $value;
-        $this->options['form_params']['SourceImageValue'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetImageValue($value)
-    {
-        $this->data['TargetImageValue'] = $value;
-        $this->options['form_params']['TargetImageValue'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method array getMaterial()
@@ -322,20 +242,6 @@ class SubmitMaterials extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getBiz()
- * @method $this withBiz($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getTicketId()
- * @method $this withTicketId($value)
- */
-class GetMaterials extends Rpc
-{
-}
-
-/**
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getResourceOwnerId()
@@ -365,6 +271,34 @@ class GetVerifyToken extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBiz()
+ * @method $this withBiz($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getTicketId()
+ * @method $this withTicketId($value)
+ */
+class GetStatus extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBiz()
+ * @method $this withBiz($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getTicketId()
+ * @method $this withTicketId($value)
+ */
+class GetMaterials extends Rpc
+{
 }
 
 /**
@@ -456,6 +390,72 @@ class DetectFaceAttributes extends Rpc
     {
         $this->data['ClientTag'] = $value;
         $this->options['form_params']['ClientTag'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceImageType()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getTargetImageType()
+ * @method string getSourceImageValue()
+ * @method string getTargetImageValue()
+ */
+class CompareFaces extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceImageType($value)
+    {
+        $this->data['SourceImageType'] = $value;
+        $this->options['form_params']['SourceImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetImageType($value)
+    {
+        $this->data['TargetImageType'] = $value;
+        $this->options['form_params']['TargetImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceImageValue($value)
+    {
+        $this->data['SourceImageValue'] = $value;
+        $this->options['form_params']['SourceImageValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetImageValue($value)
+    {
+        $this->data['TargetImageValue'] = $value;
+        $this->options['form_params']['TargetImageValue'] = $value;
 
         return $this;
     }

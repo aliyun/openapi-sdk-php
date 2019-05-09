@@ -5,45 +5,45 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method UploadCredentials uploadCredentials(array $options = [])
- * @method VoiceCancelScan voiceCancelScan(array $options = [])
- * @method GetAddVideoDnaResults getAddVideoDnaResults(array $options = [])
- * @method DeleteVideoDnaGroup deleteVideoDnaGroup(array $options = [])
- * @method DeleteVideoDna deleteVideoDna(array $options = [])
- * @method AddVideoDnaGroup addVideoDnaGroup(array $options = [])
  * @method AddVideoDna addVideoDna(array $options = [])
- * @method VoiceIdentityStartRegister voiceIdentityStartRegister(array $options = [])
- * @method VoiceIdentityUnregister voiceIdentityUnregister(array $options = [])
- * @method VoiceIdentityStartCheck voiceIdentityStartCheck(array $options = [])
- * @method VoiceIdentityRegister voiceIdentityRegister(array $options = [])
+ * @method AddVideoDnaGroup addVideoDnaGroup(array $options = [])
+ * @method DeleteVideoDna deleteVideoDna(array $options = [])
+ * @method DeleteVideoDnaGroup deleteVideoDnaGroup(array $options = [])
+ * @method GetAddVideoDnaResults getAddVideoDnaResults(array $options = [])
+ * @method VoiceCancelScan voiceCancelScan(array $options = [])
+ * @method UploadCredentials uploadCredentials(array $options = [])
  * @method VoiceIdentityCheck voiceIdentityCheck(array $options = [])
+ * @method VoiceIdentityRegister voiceIdentityRegister(array $options = [])
+ * @method VoiceIdentityStartCheck voiceIdentityStartCheck(array $options = [])
+ * @method VoiceIdentityUnregister voiceIdentityUnregister(array $options = [])
+ * @method VoiceIdentityStartRegister voiceIdentityStartRegister(array $options = [])
  * @method VideoSyncScan videoSyncScan(array $options = [])
- * @method VoiceAsyncScanResults voiceAsyncScanResults(array $options = [])
  * @method VideoAsyncScanResults videoAsyncScanResults(array $options = [])
- * @method AddGroups addGroups(array $options = [])
+ * @method VoiceAsyncScanResults voiceAsyncScanResults(array $options = [])
  * @method GetFaces getFaces(array $options = [])
- * @method GetPersons getPersons(array $options = [])
+ * @method AddGroups addGroups(array $options = [])
  * @method GetGroups getGroups(array $options = [])
- * @method TextFeedback textFeedback(array $options = [])
+ * @method GetPersons getPersons(array $options = [])
  * @method DeleteSimilarityImage deleteSimilarityImage(array $options = [])
- * @method SetPerson setPerson(array $options = [])
+ * @method TextFeedback textFeedback(array $options = [])
  * @method AddFaces addFaces(array $options = [])
- * @method DeleteFaces deleteFaces(array $options = [])
+ * @method SetPerson setPerson(array $options = [])
  * @method DeletePerson deletePerson(array $options = [])
- * @method ImageAsyncScan imageAsyncScan(array $options = [])
+ * @method DeleteFaces deleteFaces(array $options = [])
  * @method VoiceAsyncScan voiceAsyncScan(array $options = [])
- * @method GetPerson getPerson(array $options = [])
+ * @method ImageAsyncScan imageAsyncScan(array $options = [])
  * @method ImageSyncScan imageSyncScan(array $options = [])
- * @method VideoFeedback videoFeedback(array $options = [])
+ * @method GetPerson getPerson(array $options = [])
  * @method AddPerson addPerson(array $options = [])
- * @method AddSimilarityImage addSimilarityImage(array $options = [])
+ * @method VideoFeedback videoFeedback(array $options = [])
  * @method FileAsyncScanResults fileAsyncScanResults(array $options = [])
- * @method SearchPerson searchPerson(array $options = [])
+ * @method AddSimilarityImage addSimilarityImage(array $options = [])
  * @method ImageScanFeedback imageScanFeedback(array $options = [])
- * @method VideoAsyncScan videoAsyncScan(array $options = [])
+ * @method SearchPerson searchPerson(array $options = [])
  * @method ImageAsyncScanResults imageAsyncScanResults(array $options = [])
- * @method FileAsyncScan fileAsyncScan(array $options = [])
+ * @method VideoAsyncScan videoAsyncScan(array $options = [])
  * @method TextScan textScan(array $options = [])
+ * @method FileAsyncScan fileAsyncScan(array $options = [])
  * @method DeleteGroups deleteGroups(array $options = [])
  */
 class GreenApiResolver extends ApiResolver
@@ -68,98 +68,10 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 /**
  * @method string getClientInfo()
  */
-class UploadCredentials extends Roa
+class AddVideoDna extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/credentials/uploadcredentials';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientInfo($value)
-    {
-        $this->data['ClientInfo'] = $value;
-        $this->options['query']['ClientInfo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClientInfo()
- */
-class VoiceCancelScan extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/green/voice/cancelscan';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientInfo($value)
-    {
-        $this->data['ClientInfo'] = $value;
-        $this->options['query']['ClientInfo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClientInfo()
- */
-class GetAddVideoDnaResults extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/green/video/dna/add/results';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientInfo($value)
-    {
-        $this->data['ClientInfo'] = $value;
-        $this->options['query']['ClientInfo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClientInfo()
- */
-class DeleteVideoDnaGroup extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/green/video/dna/group/delete';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientInfo($value)
-    {
-        $this->data['ClientInfo'] = $value;
-        $this->options['query']['ClientInfo'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClientInfo()
- */
-class DeleteVideoDna extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/green/video/dna/delete';
+    public $pathPattern = '/green/video/dna/add';
 
     /**
      * @param string $value
@@ -200,10 +112,10 @@ class AddVideoDnaGroup extends Roa
 /**
  * @method string getClientInfo()
  */
-class AddVideoDna extends Roa
+class DeleteVideoDna extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/video/dna/add';
+    public $pathPattern = '/green/video/dna/delete';
 
     /**
      * @param string $value
@@ -222,10 +134,10 @@ class AddVideoDna extends Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityStartRegister extends Roa
+class DeleteVideoDnaGroup extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/voice/auth/start/register';
+    public $pathPattern = '/green/video/dna/group/delete';
 
     /**
      * @param string $value
@@ -244,10 +156,10 @@ class VoiceIdentityStartRegister extends Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityUnregister extends Roa
+class GetAddVideoDnaResults extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/voice/auth/unregister';
+    public $pathPattern = '/green/video/dna/add/results';
 
     /**
      * @param string $value
@@ -266,10 +178,10 @@ class VoiceIdentityUnregister extends Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityStartCheck extends Roa
+class VoiceCancelScan extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/voice/auth/start/check';
+    public $pathPattern = '/green/voice/cancelscan';
 
     /**
      * @param string $value
@@ -288,10 +200,10 @@ class VoiceIdentityStartCheck extends Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceIdentityRegister extends Roa
+class UploadCredentials extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/voice/auth/register';
+    public $pathPattern = '/green/credentials/uploadcredentials';
 
     /**
      * @param string $value
@@ -332,10 +244,10 @@ class VoiceIdentityCheck extends Roa
 /**
  * @method string getClientInfo()
  */
-class VideoSyncScan extends Roa
+class VoiceIdentityRegister extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/video/syncscan';
+    public $pathPattern = '/green/voice/auth/register';
 
     /**
      * @param string $value
@@ -354,10 +266,76 @@ class VideoSyncScan extends Roa
 /**
  * @method string getClientInfo()
  */
-class VoiceAsyncScanResults extends Roa
+class VoiceIdentityStartCheck extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/voice/results';
+    public $pathPattern = '/green/voice/auth/start/check';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class VoiceIdentityUnregister extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/voice/auth/unregister';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class VoiceIdentityStartRegister extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/voice/auth/start/register';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class VideoSyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/video/syncscan';
 
     /**
      * @param string $value
@@ -398,10 +376,10 @@ class VideoAsyncScanResults extends Roa
 /**
  * @method string getClientInfo()
  */
-class AddGroups extends Roa
+class VoiceAsyncScanResults extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/sface/person/groups/add';
+    public $pathPattern = '/green/voice/results';
 
     /**
      * @param string $value
@@ -442,10 +420,10 @@ class GetFaces extends Roa
 /**
  * @method string getClientInfo()
  */
-class GetPersons extends Roa
+class AddGroups extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/sface/group/persons';
+    public $pathPattern = '/green/sface/person/groups/add';
 
     /**
      * @param string $value
@@ -486,10 +464,10 @@ class GetGroups extends Roa
 /**
  * @method string getClientInfo()
  */
-class TextFeedback extends Roa
+class GetPersons extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/text/feedback';
+    public $pathPattern = '/green/sface/group/persons';
 
     /**
      * @param string $value
@@ -530,10 +508,10 @@ class DeleteSimilarityImage extends Roa
 /**
  * @method string getClientInfo()
  */
-class SetPerson extends Roa
+class TextFeedback extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/sface/person/update';
+    public $pathPattern = '/green/text/feedback';
 
     /**
      * @param string $value
@@ -574,10 +552,10 @@ class AddFaces extends Roa
 /**
  * @method string getClientInfo()
  */
-class DeleteFaces extends Roa
+class SetPerson extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/sface/face/delete';
+    public $pathPattern = '/green/sface/person/update';
 
     /**
      * @param string $value
@@ -618,10 +596,10 @@ class DeletePerson extends Roa
 /**
  * @method string getClientInfo()
  */
-class ImageAsyncScan extends Roa
+class DeleteFaces extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/image/asyncscan';
+    public $pathPattern = '/green/sface/face/delete';
 
     /**
      * @param string $value
@@ -662,10 +640,10 @@ class VoiceAsyncScan extends Roa
 /**
  * @method string getClientInfo()
  */
-class GetPerson extends Roa
+class ImageAsyncScan extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/sface/person';
+    public $pathPattern = '/green/image/asyncscan';
 
     /**
      * @param string $value
@@ -706,10 +684,10 @@ class ImageSyncScan extends Roa
 /**
  * @method string getClientInfo()
  */
-class VideoFeedback extends Roa
+class GetPerson extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/video/feedback';
+    public $pathPattern = '/green/sface/person';
 
     /**
      * @param string $value
@@ -750,10 +728,10 @@ class AddPerson extends Roa
 /**
  * @method string getClientInfo()
  */
-class AddSimilarityImage extends Roa
+class VideoFeedback extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/similarity/image/add';
+    public $pathPattern = '/green/video/feedback';
 
     /**
      * @param string $value
@@ -794,10 +772,10 @@ class FileAsyncScanResults extends Roa
 /**
  * @method string getClientInfo()
  */
-class SearchPerson extends Roa
+class AddSimilarityImage extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/sface/search';
+    public $pathPattern = '/green/similarity/image/add';
 
     /**
      * @param string $value
@@ -838,10 +816,10 @@ class ImageScanFeedback extends Roa
 /**
  * @method string getClientInfo()
  */
-class VideoAsyncScan extends Roa
+class SearchPerson extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/video/asyncscan';
+    public $pathPattern = '/green/sface/search';
 
     /**
      * @param string $value
@@ -882,10 +860,10 @@ class ImageAsyncScanResults extends Roa
 /**
  * @method string getClientInfo()
  */
-class FileAsyncScan extends Roa
+class VideoAsyncScan extends Roa
 {
     /** @var string */
-    public $pathPattern = '/green/file/asyncscan';
+    public $pathPattern = '/green/video/asyncscan';
 
     /**
      * @param string $value
@@ -908,6 +886,28 @@ class TextScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/text/scan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class FileAsyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/file/asyncscan';
 
     /**
      * @param string $value

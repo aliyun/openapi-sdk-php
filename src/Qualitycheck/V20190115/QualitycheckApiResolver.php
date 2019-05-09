@@ -6,18 +6,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ListAsrVocab listAsrVocab(array $options = [])
- * @method RestartAsrTask restartAsrTask(array $options = [])
  * @method GetUserInfo getUserInfo(array $options = [])
+ * @method RestartAsrTask restartAsrTask(array $options = [])
  * @method OpenService openService(array $options = [])
  * @method GetResultToReview getResultToReview(array $options = [])
  * @method CreateRule createRule(array $options = [])
  * @method GetNextResultToReview getNextResultToReview(array $options = [])
  * @method CloseService closeService(array $options = [])
- * @method UploadAudioData uploadAudioData(array $options = [])
  * @method SaveReviewResult saveReviewResult(array $options = [])
+ * @method UploadAudioData uploadAudioData(array $options = [])
  * @method UploadAudioData4Pre uploadAudioData4Pre(array $options = [])
- * @method AddThesaurusForApi addThesaurusForApi(array $options = [])
  * @method GenerateCustomizationModelId generateCustomizationModelId(array $options = [])
+ * @method AddThesaurusForApi addThesaurusForApi(array $options = [])
  * @method RemoveAndGetTaskRules removeAndGetTaskRules(array $options = [])
  * @method SubmitReviewInfo submitReviewInfo(array $options = [])
  * @method GetAudioDataStatus getAudioDataStatus(array $options = [])
@@ -28,8 +28,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConfigDataSet configDataSet(array $options = [])
  * @method UploadRule uploadRule(array $options = [])
  * @method InsertScoreForApi insertScoreForApi(array $options = [])
- * @method SubmitModelTestTask submitModelTestTask(array $options = [])
  * @method InsertSubScoreForApi insertSubScoreForApi(array $options = [])
+ * @method SubmitModelTestTask submitModelTestTask(array $options = [])
  * @method DelRuleCategory delRuleCategory(array $options = [])
  * @method GetAccAsrResult getAccAsrResult(array $options = [])
  * @method TestRule testRule(array $options = [])
@@ -38,59 +38,59 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRuleDetail getRuleDetail(array $options = [])
  * @method UpdateAsrVocab updateAsrVocab(array $options = [])
  * @method UpdateRuleForAnt updateRuleForAnt(array $options = [])
- * @method GetRecognizeResult getRecognizeResult(array $options = [])
  * @method GetOssHeader getOssHeader(array $options = [])
+ * @method GetRecognizeResult getRecognizeResult(array $options = [])
  * @method GetBusinessCategoryList getBusinessCategoryList(array $options = [])
  * @method InvalidRule invalidRule(array $options = [])
- * @method UpdateOnPurchaseSuccess updateOnPurchaseSuccess(array $options = [])
  * @method DeleteSubScoreForApi deleteSubScoreForApi(array $options = [])
+ * @method UpdateOnPurchaseSuccess updateOnPurchaseSuccess(array $options = [])
  * @method GetThesaurusBySynonymForApi getThesaurusBySynonymForApi(array $options = [])
  * @method CreateAsrVocab createAsrVocab(array $options = [])
  * @method ListDataSetTask listDataSetTask(array $options = [])
- * @method DelThesaurusForApi delThesaurusForApi(array $options = [])
  * @method SubmitAudioLabel submitAudioLabel(array $options = [])
+ * @method DelThesaurusForApi delThesaurusForApi(array $options = [])
  * @method DeleteAsrVocab deleteAsrVocab(array $options = [])
  * @method GetAudioUrl getAudioUrl(array $options = [])
  * @method AddRuleCategory addRuleCategory(array $options = [])
- * @method AddUploadDataSet addUploadDataSet(array $options = [])
  * @method GetRuleDimension getRuleDimension(array $options = [])
+ * @method AddUploadDataSet addUploadDataSet(array $options = [])
  * @method GetResultCount getResultCount(array $options = [])
- * @method EditThesaurusForApi editThesaurusForApi(array $options = [])
  * @method GetCustomizationConfigList getCustomizationConfigList(array $options = [])
+ * @method EditThesaurusForApi editThesaurusForApi(array $options = [])
  * @method ExecuteAsrTransform executeAsrTransform(array $options = [])
  * @method GetScoreInfo getScoreInfo(array $options = [])
- * @method AddBusinessCategory addBusinessCategory(array $options = [])
  * @method UploadData uploadData(array $options = [])
+ * @method AddBusinessCategory addBusinessCategory(array $options = [])
  * @method GetAsrVocab getAsrVocab(array $options = [])
- * @method UploadAudioDataWithRules uploadAudioDataWithRules(array $options = [])
  * @method DoLogicalDeleteResource doLogicalDeleteResource(array $options = [])
+ * @method UploadAudioDataWithRules uploadAudioDataWithRules(array $options = [])
  * @method GetReviewInfo getReviewInfo(array $options = [])
  * @method GetResult getResult(array $options = [])
  * @method SubmitQualityCheckTask submitQualityCheckTask(array $options = [])
  * @method GetRuleCategory getRuleCategory(array $options = [])
- * @method GetDataSetList getDataSetList(array $options = [])
  * @method GetRule getRule(array $options = [])
+ * @method GetDataSetList getDataSetList(array $options = [])
  * @method UploadRuleForAnt uploadRuleForAnt(array $options = [])
+ * @method GetUserGroup getUserGroup(array $options = [])
  * @method SubmitCustomizationConfig submitCustomizationConfig(array $options = [])
  * @method GetTaskFileResultList getTaskFileResultList(array $options = [])
  * @method DoPhysicalDeleteResource doPhysicalDeleteResource(array $options = [])
- * @method UpdateScoreForApi updateScoreForApi(array $options = [])
  * @method DeleteDataSet deleteDataSet(array $options = [])
- * @method DeleteCustomizationConfig deleteCustomizationConfig(array $options = [])
+ * @method UpdateScoreForApi updateScoreForApi(array $options = [])
  * @method UploadDataWithRules uploadDataWithRules(array $options = [])
+ * @method DeleteCustomizationConfig deleteCustomizationConfig(array $options = [])
  * @method ValidateRoleSet validateRoleSet(array $options = [])
  * @method DoCheckResource doCheckResource(array $options = [])
- * @method DeleteBusinessCategory deleteBusinessCategory(array $options = [])
  * @method RegisterNotice registerNotice(array $options = [])
+ * @method DeleteBusinessCategory deleteBusinessCategory(array $options = [])
  * @method GetDataSetOssHeader getDataSetOssHeader(array $options = [])
  * @method GetTaskRuleList getTaskRuleList(array $options = [])
  * @method GetAudioContentInfo getAudioContentInfo(array $options = [])
  * @method UploadAudioDataWithRules4Pre uploadAudioDataWithRules4Pre(array $options = [])
  * @method GetFileDimension getFileDimension(array $options = [])
  * @method GetResultReviewList getResultReviewList(array $options = [])
- * @method DeleteScoreForApi deleteScoreForApi(array $options = [])
  * @method UpdateRule updateRule(array $options = [])
- * @method GetUserGroup getUserGroup(array $options = [])
+ * @method DeleteScoreForApi deleteScoreForApi(array $options = [])
  * @method TestNetwork testNetwork(array $options = [])
  */
 class QualitycheckApiResolver extends ApiResolver
@@ -122,18 +122,18 @@ class ListAsrVocab extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
  */
-class RestartAsrTask extends Rpc
+class GetUserInfo extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
  */
-class GetUserInfo extends Rpc
+class RestartAsrTask extends Rpc
 {
 }
 
@@ -193,7 +193,7 @@ class CloseService extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadAudioData extends Rpc
+class SaveReviewResult extends Rpc
 {
 }
 
@@ -203,7 +203,7 @@ class UploadAudioData extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SaveReviewResult extends Rpc
+class UploadAudioData extends Rpc
 {
 }
 
@@ -220,18 +220,18 @@ class UploadAudioData4Pre extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
  */
-class AddThesaurusForApi extends Rpc
+class GenerateCustomizationModelId extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
  */
-class GenerateCustomizationModelId extends Rpc
+class AddThesaurusForApi extends Rpc
 {
 }
 
@@ -341,7 +341,7 @@ class InsertScoreForApi extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SubmitModelTestTask extends Rpc
+class InsertSubScoreForApi extends Rpc
 {
 }
 
@@ -351,7 +351,7 @@ class SubmitModelTestTask extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class InsertSubScoreForApi extends Rpc
+class SubmitModelTestTask extends Rpc
 {
 }
 
@@ -441,7 +441,7 @@ class UpdateRuleForAnt extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetRecognizeResult extends Rpc
+class GetOssHeader extends Rpc
 {
 }
 
@@ -451,7 +451,7 @@ class GetRecognizeResult extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetOssHeader extends Rpc
+class GetRecognizeResult extends Rpc
 {
 }
 
@@ -481,7 +481,7 @@ class InvalidRule extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateOnPurchaseSuccess extends Rpc
+class DeleteSubScoreForApi extends Rpc
 {
 }
 
@@ -491,7 +491,7 @@ class UpdateOnPurchaseSuccess extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteSubScoreForApi extends Rpc
+class UpdateOnPurchaseSuccess extends Rpc
 {
 }
 
@@ -531,7 +531,7 @@ class ListDataSetTask extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DelThesaurusForApi extends Rpc
+class SubmitAudioLabel extends Rpc
 {
 }
 
@@ -541,7 +541,7 @@ class DelThesaurusForApi extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class SubmitAudioLabel extends Rpc
+class DelThesaurusForApi extends Rpc
 {
 }
 
@@ -581,7 +581,7 @@ class AddRuleCategory extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class AddUploadDataSet extends Rpc
+class GetRuleDimension extends Rpc
 {
 }
 
@@ -591,7 +591,7 @@ class AddUploadDataSet extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetRuleDimension extends Rpc
+class AddUploadDataSet extends Rpc
 {
 }
 
@@ -611,7 +611,7 @@ class GetResultCount extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class EditThesaurusForApi extends Rpc
+class GetCustomizationConfigList extends Rpc
 {
 }
 
@@ -621,7 +621,7 @@ class EditThesaurusForApi extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetCustomizationConfigList extends Rpc
+class EditThesaurusForApi extends Rpc
 {
 }
 
@@ -651,16 +651,6 @@ class GetScoreInfo extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class AddBusinessCategory extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
 class UploadData extends Rpc
 {
 }
@@ -671,7 +661,7 @@ class UploadData extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetAsrVocab extends Rpc
+class AddBusinessCategory extends Rpc
 {
 }
 
@@ -681,7 +671,7 @@ class GetAsrVocab extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UploadAudioDataWithRules extends Rpc
+class GetAsrVocab extends Rpc
 {
 }
 
@@ -710,6 +700,16 @@ class UploadAudioDataWithRules extends Rpc
  * @method $this withTaskIdentifier($value)
  */
 class DoLogicalDeleteResource extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class UploadAudioDataWithRules extends Rpc
 {
 }
 
@@ -759,16 +759,6 @@ class GetRuleCategory extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetDataSetList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
 class GetRule extends Rpc
 {
 }
@@ -779,7 +769,25 @@ class GetRule extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
+class GetDataSetList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
 class UploadRuleForAnt extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class GetUserGroup extends Rpc
 {
 }
 
@@ -835,16 +843,6 @@ class DoPhysicalDeleteResource extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateScoreForApi extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
 class DeleteDataSet extends Rpc
 {
 }
@@ -855,7 +853,7 @@ class DeleteDataSet extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteCustomizationConfig extends Rpc
+class UpdateScoreForApi extends Rpc
 {
 }
 
@@ -866,6 +864,16 @@ class DeleteCustomizationConfig extends Rpc
  * @method $this withJsonStr($value)
  */
 class UploadDataWithRules extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class DeleteCustomizationConfig extends Rpc
 {
 }
 
@@ -917,7 +925,7 @@ class DoCheckResource extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteBusinessCategory extends Rpc
+class RegisterNotice extends Rpc
 {
 }
 
@@ -927,7 +935,7 @@ class DeleteBusinessCategory extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class RegisterNotice extends Rpc
+class DeleteBusinessCategory extends Rpc
 {
 }
 
@@ -997,7 +1005,7 @@ class GetResultReviewList extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class DeleteScoreForApi extends Rpc
+class UpdateRule extends Rpc
 {
 }
 
@@ -1007,15 +1015,7 @@ class DeleteScoreForApi extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class UpdateRule extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- */
-class GetUserGroup extends Rpc
+class DeleteScoreForApi extends Rpc
 {
 }
 

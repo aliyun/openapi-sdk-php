@@ -5,18 +5,10 @@ namespace AlibabaCloud\Ivision\V20190308;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CreateStreamPredict createStreamPredict(array $options = [])
- * @method DeleteStreamPredict deleteStreamPredict(array $options = [])
- * @method StopStreamPredict stopStreamPredict(array $options = [])
- * @method DescribeStreamPredictResult describeStreamPredictResult(array $options = [])
- * @method DescribeStreamPredicts describeStreamPredicts(array $options = [])
- * @method StartStreamPredict startStreamPredict(array $options = [])
- * @method DeleteTrainDatasTag deleteTrainDatasTag(array $options = [])
- * @method ModifyTrainDataRegionTagAttribute modifyTrainDataRegionTagAttribute(array $options = [])
  * @method DescribeTags describeTags(array $options = [])
  * @method ModifyTagAttribute modifyTagAttribute(array $options = [])
- * @method DeleteTag deleteTag(array $options = [])
  * @method CreateTag createTag(array $options = [])
+ * @method DeleteTag deleteTag(array $options = [])
  * @method DeleteIteration deleteIteration(array $options = [])
  * @method DescribeIterations describeIterations(array $options = [])
  * @method TrainProject trainProject(array $options = [])
@@ -28,9 +20,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateTrainDatasFromPrediction createTrainDatasFromPrediction(array $options = [])
  * @method CreateTrainDatasFromUrls createTrainDatasFromUrls(array $options = [])
  * @method CreateTrainDataRegionTag createTrainDataRegionTag(array $options = [])
- * @method DeleteTrainDataTag deleteTrainDataTag(array $options = [])
+ * @method DeleteTrainDatasTag deleteTrainDatasTag(array $options = [])
  * @method ModifyTrainDataTagAttribute modifyTrainDataTagAttribute(array $options = [])
  * @method DescribeTrainDatas describeTrainDatas(array $options = [])
+ * @method ModifyTrainDataRegionTagAttribute modifyTrainDataRegionTagAttribute(array $options = [])
  * @method PredictImage predictImage(array $options = [])
  * @method CreateUploadToken createUploadToken(array $options = [])
  * @method DescribeProjects describeProjects(array $options = [])
@@ -39,6 +32,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyProjectAttribute modifyProjectAttribute(array $options = [])
  * @method DeletePredictDatas deletePredictDatas(array $options = [])
  * @method DescribePredictDatas describePredictDatas(array $options = [])
+ * @method CreateStreamPredict createStreamPredict(array $options = [])
+ * @method DeleteStreamPredict deleteStreamPredict(array $options = [])
+ * @method StopStreamPredict stopStreamPredict(array $options = [])
+ * @method DescribeStreamPredictResult describeStreamPredictResult(array $options = [])
+ * @method DescribeStreamPredicts describeStreamPredicts(array $options = [])
+ * @method StartStreamPredict startStreamPredict(array $options = [])
  */
 class IvisionApiResolver extends ApiResolver
 {
@@ -54,144 +53,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ivision';
-}
-
-/**
- * @method string getAutoStart()
- * @method $this withAutoStart($value)
- * @method string getNotify()
- * @method $this withNotify($value)
- * @method string getOutput()
- * @method $this withOutput($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getStreamType()
- * @method $this withStreamType($value)
- * @method string getStreamId()
- * @method $this withStreamId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getProbabilityThresholds()
- * @method $this withProbabilityThresholds($value)
- * @method string getModelIds()
- * @method $this withModelIds($value)
- */
-class CreateStreamPredict extends Rpc
-{
-}
-
-/**
- * @method string getPredictId()
- * @method $this withPredictId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteStreamPredict extends Rpc
-{
-}
-
-/**
- * @method string getPredictId()
- * @method $this withPredictId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class StopStreamPredict extends Rpc
-{
-}
-
-/**
- * @method string getNextPageToken()
- * @method $this withNextPageToken($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPredictId()
- * @method $this withPredictId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProbabilityThreshold()
- * @method $this withProbabilityThreshold($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getModelId()
- * @method $this withModelId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeStreamPredictResult extends Rpc
-{
-}
-
-/**
- * @method string getNextPageToken()
- * @method $this withNextPageToken($value)
- * @method string getPredictIds()
- * @method $this withPredictIds($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeStreamPredicts extends Rpc
-{
-}
-
-/**
- * @method string getPredictId()
- * @method $this withPredictId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class StartStreamPredict extends Rpc
-{
-}
-
-/**
- * @method string getDataIds()
- * @method $this withDataIds($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getTagId()
- * @method $this withTagId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteTrainDatasTag extends Rpc
-{
-}
-
-/**
- * @method string getProjectId()
- * @method $this withProjectId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getTagItems()
- * @method $this withTagItems($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDataId()
- * @method $this withDataId($value)
- */
-class ModifyTrainDataRegionTagAttribute extends Rpc
-{
 }
 
 /**
@@ -235,20 +96,6 @@ class ModifyTagAttribute extends Rpc
 }
 
 /**
- * @method string getProjectId()
- * @method $this withProjectId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getTagId()
- * @method $this withTagId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteTag extends Rpc
-{
-}
-
-/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getProjectId()
@@ -261,6 +108,20 @@ class DeleteTag extends Rpc
  * @method $this withName($value)
  */
 class CreateTag extends Rpc
+{
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getTagId()
+ * @method $this withTagId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteTag extends Rpc
 {
 }
 
@@ -448,7 +309,7 @@ class CreateTrainDataRegionTag extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteTrainDataTag extends Rpc
+class DeleteTrainDatasTag extends Rpc
 {
 }
 
@@ -489,6 +350,22 @@ class ModifyTrainDataTagAttribute extends Rpc
  * @method $this withIterationId($value)
  */
 class DescribeTrainDatas extends Rpc
+{
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getTagItems()
+ * @method $this withTagItems($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDataId()
+ * @method $this withDataId($value)
+ */
+class ModifyTrainDataRegionTagAttribute extends Rpc
 {
 }
 
@@ -629,5 +506,111 @@ class DeletePredictDatas extends Rpc
  * @method $this withIterationId($value)
  */
 class DescribePredictDatas extends Rpc
+{
+}
+
+/**
+ * @method string getAutoStart()
+ * @method $this withAutoStart($value)
+ * @method string getNotify()
+ * @method $this withNotify($value)
+ * @method string getOutput()
+ * @method $this withOutput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getStreamType()
+ * @method $this withStreamType($value)
+ * @method string getStreamId()
+ * @method $this withStreamId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getProbabilityThresholds()
+ * @method $this withProbabilityThresholds($value)
+ * @method string getModelIds()
+ * @method $this withModelIds($value)
+ */
+class CreateStreamPredict extends Rpc
+{
+}
+
+/**
+ * @method string getPredictId()
+ * @method $this withPredictId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteStreamPredict extends Rpc
+{
+}
+
+/**
+ * @method string getPredictId()
+ * @method $this withPredictId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StopStreamPredict extends Rpc
+{
+}
+
+/**
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPredictId()
+ * @method $this withPredictId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getProbabilityThreshold()
+ * @method $this withProbabilityThreshold($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getModelId()
+ * @method $this withModelId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeStreamPredictResult extends Rpc
+{
+}
+
+/**
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getPredictIds()
+ * @method $this withPredictIds($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeStreamPredicts extends Rpc
+{
+}
+
+/**
+ * @method string getPredictId()
+ * @method $this withPredictId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartStreamPredict extends Rpc
 {
 }

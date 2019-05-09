@@ -5,21 +5,21 @@ namespace AlibabaCloud\Afs\V20180112;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DescribeCaptchaOrder describeCaptchaOrder(array $options = [])
  * @method UpdateConfigName updateConfigName(array $options = [])
+ * @method DescribeCaptchaOrder describeCaptchaOrder(array $options = [])
  * @method DescribeOrderInfo describeOrderInfo(array $options = [])
- * @method DescribePersonMachineList describePersonMachineList(array $options = [])
  * @method SetEarlyWarning setEarlyWarning(array $options = [])
+ * @method DescribePersonMachineList describePersonMachineList(array $options = [])
+ * @method DescribeEarlyWarning describeEarlyWarning(array $options = [])
  * @method DescribeConfigName describeConfigName(array $options = [])
- * @method CreateConfiguration createConfiguration(array $options = [])
- * @method AnalyzeNvc analyzeNvc(array $options = [])
- * @method ConfigurationStyle configurationStyle(array $options = [])
- * @method AuthenticateSig authenticateSig(array $options = [])
  * @method DescribeCaptchaRisk describeCaptchaRisk(array $options = [])
  * @method DescribeCaptchaMin describeCaptchaMin(array $options = [])
- * @method DescribeEarlyWarning describeEarlyWarning(array $options = [])
- * @method DescribeCaptchaDay describeCaptchaDay(array $options = [])
  * @method DescribeCaptchaIpCity describeCaptchaIpCity(array $options = [])
+ * @method DescribeCaptchaDay describeCaptchaDay(array $options = [])
+ * @method CreateConfiguration createConfiguration(array $options = [])
+ * @method ConfigurationStyle configurationStyle(array $options = [])
+ * @method AuthenticateSig authenticateSig(array $options = [])
+ * @method AnalyzeNvc analyzeNvc(array $options = [])
  */
 class AfsApiResolver extends ApiResolver
 {
@@ -40,16 +40,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeCaptchaOrder extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getConfigName()
  * @method $this withConfigName($value)
  * @method string getRefExtId()
@@ -64,8 +54,10 @@ class UpdateConfigName extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  */
-class DescribeOrderInfo extends Rpc
+class DescribeCaptchaOrder extends Rpc
 {
 }
 
@@ -73,7 +65,7 @@ class DescribeOrderInfo extends Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
-class DescribePersonMachineList extends Rpc
+class DescribeOrderInfo extends Rpc
 {
 }
 
@@ -103,7 +95,85 @@ class SetEarlyWarning extends Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
+class DescribePersonMachineList extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeEarlyWarning extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
 class DescribeConfigName extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getRefExtId()
+ * @method $this withRefExtId($value)
+ * @method string getTime()
+ * @method $this withTime($value)
+ */
+class DescribeCaptchaRisk extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getRefExtId()
+ * @method $this withRefExtId($value)
+ * @method string getTime()
+ * @method $this withTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DescribeCaptchaMin extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getRefExtId()
+ * @method $this withRefExtId($value)
+ * @method string getTime()
+ * @method $this withTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DescribeCaptchaIpCity extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getRefExtId()
+ * @method $this withRefExtId($value)
+ * @method string getTime()
+ * @method $this withTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DescribeCaptchaDay extends Rpc
 {
 }
 
@@ -122,18 +192,6 @@ class DescribeConfigName extends Rpc
  * @method $this withScene($value)
  */
 class CreateConfiguration extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getData()
- * @method $this withData($value)
- * @method string getScoreJsonStr()
- * @method $this withScoreJsonStr($value)
- */
-class AnalyzeNvc extends Rpc
 {
 }
 
@@ -176,69 +234,11 @@ class AuthenticateSig extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getConfigName()
- * @method $this withConfigName($value)
- * @method string getRefExtId()
- * @method $this withRefExtId($value)
- * @method string getTime()
- * @method $this withTime($value)
+ * @method string getData()
+ * @method $this withData($value)
+ * @method string getScoreJsonStr()
+ * @method $this withScoreJsonStr($value)
  */
-class DescribeCaptchaRisk extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getConfigName()
- * @method $this withConfigName($value)
- * @method string getRefExtId()
- * @method $this withRefExtId($value)
- * @method string getTime()
- * @method $this withTime($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class DescribeCaptchaMin extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- */
-class DescribeEarlyWarning extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getConfigName()
- * @method $this withConfigName($value)
- * @method string getRefExtId()
- * @method $this withRefExtId($value)
- * @method string getTime()
- * @method $this withTime($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class DescribeCaptchaDay extends Rpc
-{
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getConfigName()
- * @method $this withConfigName($value)
- * @method string getRefExtId()
- * @method $this withRefExtId($value)
- * @method string getTime()
- * @method $this withTime($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class DescribeCaptchaIpCity extends Rpc
+class AnalyzeNvc extends Rpc
 {
 }

@@ -7,9 +7,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method Action action(array $options = [])
  * @method ActionDiskRma actionDiskRma(array $options = [])
- * @method ActionDiskCheck actionDiskCheck(array $options = [])
- * @method ActionDiskMask actionDiskMask(array $options = [])
  * @method HostGets hostGets(array $options = [])
+ * @method ActionDiskMask actionDiskMask(array $options = [])
+ * @method ActionDiskCheck actionDiskCheck(array $options = [])
  */
 class TeslaDamApiResolver extends ApiResolver
 {
@@ -55,12 +55,16 @@ class ActionDiskRma extends Rpc
 }
 
 /**
- * @method string getDiskMount()
- * @method $this withDiskMount($value)
- * @method string getIp()
- * @method $this withIp($value)
+ * @method string getQuery()
+ * @method $this withQuery($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
  */
-class ActionDiskCheck extends Rpc
+class HostGets extends Rpc
 {
 }
 
@@ -77,15 +81,11 @@ class ActionDiskMask extends Rpc
 }
 
 /**
- * @method string getQuery()
- * @method $this withQuery($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getQueryType()
- * @method $this withQueryType($value)
+ * @method string getDiskMount()
+ * @method $this withDiskMount($value)
+ * @method string getIp()
+ * @method $this withIp($value)
  */
-class HostGets extends Rpc
+class ActionDiskCheck extends Rpc
 {
 }

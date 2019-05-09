@@ -5,60 +5,54 @@ namespace AlibabaCloud\Chatbot\V20171011;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CreateSimilarityLoop createSimilarityLoop(array $options = [])
- * @method QueryLoopList queryLoopList(array $options = [])
- * @method QueryLoopResult queryLoopResult(array $options = [])
- * @method QueryLoopStatus queryLoopStatus(array $options = [])
- * @method CreateClusterLoop createClusterLoop(array $options = [])
- * @method UpdateCoreWord updateCoreWord(array $options = [])
  * @method DeleteCoreWord deleteCoreWord(array $options = [])
+ * @method UpdateCoreWord updateCoreWord(array $options = [])
  * @method CreateCoreWord createCoreWord(array $options = [])
- * @method DescribeCategory describeCategory(array $options = [])
- * @method UpdatePerspective updatePerspective(array $options = [])
- * @method QueryPerspectives queryPerspectives(array $options = [])
- * @method DescribePerspective describePerspective(array $options = [])
- * @method CreatePerspective createPerspective(array $options = [])
- * @method ActivatePerspective activatePerspective(array $options = [])
- * @method DisableDialogFlow disableDialogFlow(array $options = [])
- * @method DescribeDialogFlow describeDialogFlow(array $options = [])
- * @method TestDialogFlow testDialogFlow(array $options = [])
  * @method DescribeDialog describeDialog(array $options = [])
+ * @method DeleteDialog deleteDialog(array $options = [])
  * @method UpdateDialog updateDialog(array $options = [])
  * @method QueryDialogs queryDialogs(array $options = [])
- * @method DeleteDialog deleteDialog(array $options = [])
- * @method RemoveSynonym removeSynonym(array $options = [])
- * @method AddSynonym addSynonym(array $options = [])
- * @method QueryIntents queryIntents(array $options = [])
- * @method DescribeIntent describeIntent(array $options = [])
- * @method DescribeCoreWord describeCoreWord(array $options = [])
- * @method QueryCoreWords queryCoreWords(array $options = [])
- * @method MoveKnowledgeCategory moveKnowledgeCategory(array $options = [])
- * @method PublishKnowledge publishKnowledge(array $options = [])
- * @method DisableKnowledge disableKnowledge(array $options = [])
- * @method QueryKnowledges queryKnowledges(array $options = [])
- * @method DeleteEntity deleteEntity(array $options = [])
- * @method RemoveEntityMember removeEntityMember(array $options = [])
- * @method AppendEntityMember appendEntityMember(array $options = [])
- * @method UpdateEntity updateEntity(array $options = [])
- * @method DescribeEntities describeEntities(array $options = [])
+ * @method DescribeDialogFlow describeDialogFlow(array $options = [])
  * @method DeleteIntent deleteIntent(array $options = [])
  * @method UpdateIntent updateIntent(array $options = [])
  * @method QueryEntities queryEntities(array $options = [])
- * @method RecommendKnowledges recommendKnowledges(array $options = [])
- * @method CreateDialog createDialog(array $options = [])
- * @method QueryCategories queryCategories(array $options = [])
+ * @method DescribeEntities describeEntities(array $options = [])
+ * @method DisableDialogFlow disableDialogFlow(array $options = [])
+ * @method UpdateEntity updateEntity(array $options = [])
+ * @method DeleteEntity deleteEntity(array $options = [])
+ * @method TestDialogFlow testDialogFlow(array $options = [])
+ * @method AppendEntityMember appendEntityMember(array $options = [])
+ * @method RemoveEntityMember removeEntityMember(array $options = [])
+ * @method DescribeIntent describeIntent(array $options = [])
+ * @method QueryIntents queryIntents(array $options = [])
+ * @method DescribePerspective describePerspective(array $options = [])
+ * @method QueryPerspectives queryPerspectives(array $options = [])
+ * @method DescribeCategory describeCategory(array $options = [])
+ * @method UpdatePerspective updatePerspective(array $options = [])
+ * @method CreatePerspective createPerspective(array $options = [])
+ * @method ActivatePerspective activatePerspective(array $options = [])
+ * @method PublishKnowledge publishKnowledge(array $options = [])
+ * @method MoveKnowledgeCategory moveKnowledgeCategory(array $options = [])
+ * @method QueryKnowledges queryKnowledges(array $options = [])
+ * @method DisableKnowledge disableKnowledge(array $options = [])
+ * @method QueryCoreWords queryCoreWords(array $options = [])
+ * @method DescribeCoreWord describeCoreWord(array $options = [])
+ * @method AddSynonym addSynonym(array $options = [])
+ * @method RemoveSynonym removeSynonym(array $options = [])
  * @method UpdateKnowledge updateKnowledge(array $options = [])
  * @method DescribeKnowledge describeKnowledge(array $options = [])
  * @method DeleteKnowledge deleteKnowledge(array $options = [])
  * @method CreateKnowledge createKnowledge(array $options = [])
- * @method UpdateDialogFlow updateDialogFlow(array $options = [])
- * @method PublishDialogFlow publishDialogFlow(array $options = [])
- * @method QuerySystemEntities querySystemEntities(array $options = [])
- * @method CreateEntity createEntity(array $options = [])
+ * @method QueryCategories queryCategories(array $options = [])
  * @method CreateIntent createIntent(array $options = [])
- * @method CreateCategory createCategory(array $options = [])
+ * @method CreateEntity createEntity(array $options = [])
+ * @method QuerySystemEntities querySystemEntities(array $options = [])
+ * @method UpdateDialogFlow updateDialogFlow(array $options = [])
+ * @method CreateDialog createDialog(array $options = [])
+ * @method PublishDialogFlow publishDialogFlow(array $options = [])
  * @method DeleteCategory deleteCategory(array $options = [])
  * @method UpdateCategory updateCategory(array $options = [])
+ * @method CreateCategory createCategory(array $options = [])
  * @method Feedback feedback(array $options = [])
  * @method Chat chat(array $options = [])
  */
@@ -82,44 +76,10 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getParams()
- * @method $this withParams($value)
- * @method string getMultiParams()
- * @method $this withMultiParams($value)
+ * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
  */
-class CreateSimilarityLoop extends Rpc
-{
-}
-
-class QueryLoopList extends Rpc
-{
-}
-
-/**
- * @method string getLoopId()
- * @method $this withLoopId($value)
- */
-class QueryLoopResult extends Rpc
-{
-}
-
-/**
- * @method string getLoopId()
- * @method $this withLoopId($value)
- */
-class QueryLoopStatus extends Rpc
-{
-}
-
-/**
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getParams()
- * @method $this withParams($value)
- */
-class CreateClusterLoop extends Rpc
+class DeleteCoreWord extends Rpc
 {
 }
 
@@ -137,85 +97,7 @@ class UpdateCoreWord extends Rpc
  * @method string getCoreWordName()
  * @method $this withCoreWordName($value)
  */
-class DeleteCoreWord extends Rpc
-{
-}
-
-/**
- * @method string getCoreWordName()
- * @method $this withCoreWordName($value)
- */
 class CreateCoreWord extends Rpc
-{
-}
-
-/**
- * @method string getCategoryId()
- * @method $this withCategoryId($value)
- */
-class DescribeCategory extends Rpc
-{
-}
-
-/**
- * @method string getPerspectiveId()
- * @method $this withPerspectiveId($value)
- * @method string getName()
- * @method $this withName($value)
- */
-class UpdatePerspective extends Rpc
-{
-}
-
-class QueryPerspectives extends Rpc
-{
-}
-
-/**
- * @method string getPerspectiveId()
- * @method $this withPerspectiveId($value)
- */
-class DescribePerspective extends Rpc
-{
-}
-
-/**
- * @method string getName()
- * @method $this withName($value)
- */
-class CreatePerspective extends Rpc
-{
-}
-
-/**
- * @method string getPerspectiveId()
- * @method $this withPerspectiveId($value)
- */
-class ActivatePerspective extends Rpc
-{
-}
-
-/**
- * @method string getDialogId()
- * @method $this withDialogId($value)
- */
-class DisableDialogFlow extends Rpc
-{
-}
-
-/**
- * @method string getDialogId()
- * @method $this withDialogId($value)
- */
-class DescribeDialogFlow extends Rpc
-{
-}
-
-/**
- * @method string getDialogId()
- * @method $this withDialogId($value)
- */
-class TestDialogFlow extends Rpc
 {
 }
 
@@ -224,6 +106,14 @@ class TestDialogFlow extends Rpc
  * @method $this withDialogId($value)
  */
 class DescribeDialog extends Rpc
+{
+}
+
+/**
+ * @method string getDialogId()
+ * @method $this withDialogId($value)
+ */
+class DeleteDialog extends Rpc
 {
 }
 
@@ -257,205 +147,7 @@ class QueryDialogs extends Rpc
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class DeleteDialog extends Rpc
-{
-}
-
-/**
- * @method string getSynonym()
- * @method $this withSynonym($value)
- * @method string getCoreWordName()
- * @method $this withCoreWordName($value)
- */
-class RemoveSynonym extends Rpc
-{
-}
-
-/**
- * @method string getSynonym()
- * @method $this withSynonym($value)
- * @method string getCoreWordName()
- * @method $this withCoreWordName($value)
- */
-class AddSynonym extends Rpc
-{
-}
-
-/**
- * @method string getIntentName()
- * @method $this withIntentName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDialogId()
- * @method $this withDialogId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class QueryIntents extends Rpc
-{
-}
-
-/**
- * @method string getIntentId()
- * @method $this withIntentId($value)
- */
-class DescribeIntent extends Rpc
-{
-}
-
-/**
- * @method string getCoreWordName()
- * @method $this withCoreWordName($value)
- */
-class DescribeCoreWord extends Rpc
-{
-}
-
-/**
- * @method string getSynonym()
- * @method $this withSynonym($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCoreWordName()
- * @method $this withCoreWordName($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class QueryCoreWords extends Rpc
-{
-}
-
-/**
- * @method string getKnowledgeId()
- * @method $this withKnowledgeId($value)
- * @method string getCategoryId()
- * @method $this withCategoryId($value)
- */
-class MoveKnowledgeCategory extends Rpc
-{
-}
-
-/**
- * @method string getKnowledgeId()
- * @method $this withKnowledgeId($value)
- */
-class PublishKnowledge extends Rpc
-{
-}
-
-/**
- * @method string getKnowledgeId()
- * @method $this withKnowledgeId($value)
- */
-class DisableKnowledge extends Rpc
-{
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCoreWordName()
- * @method $this withCoreWordName($value)
- * @method string getKnowledgeTitle()
- * @method $this withKnowledgeTitle($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getCategoryId()
- * @method $this withCategoryId($value)
- */
-class QueryKnowledges extends Rpc
-{
-}
-
-/**
- * @method string getEntityId()
- * @method $this withEntityId($value)
- */
-class DeleteEntity extends Rpc
-{
-}
-
-/**
- * @method string getRemoveType()
- * @method $this withRemoveType($value)
- * @method string getMember()
- * @method string getEntityId()
- * @method $this withEntityId($value)
- */
-class RemoveEntityMember extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMember($value)
-    {
-        $this->data['Member'] = $value;
-        $this->options['form_params']['Member'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getMember()
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getApplyType()
- * @method $this withApplyType($value)
- */
-class AppendEntityMember extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMember($value)
-    {
-        $this->data['Member'] = $value;
-        $this->options['form_params']['Member'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getRegex()
- * @method $this withRegex($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- * @method string getMembers()
- * @method string getEntityName()
- * @method $this withEntityName($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- */
-class UpdateEntity extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMembers($value)
-    {
-        $this->data['Members'] = $value;
-        $this->options['form_params']['Members'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getEntityId()
- * @method $this withEntityId($value)
- */
-class DescribeEntities extends Rpc
+class DescribeDialogFlow extends Rpc
 {
 }
 
@@ -504,40 +196,262 @@ class QueryEntities extends Rpc
 }
 
 /**
- * @method string getSimilarityLevel()
- * @method $this withSimilarityLevel($value)
- * @method string getNumber()
- * @method $this withNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getUtterance()
- * @method $this withUtterance($value)
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
  */
-class RecommendKnowledges extends Rpc
+class DescribeEntities extends Rpc
 {
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getDialogName()
- * @method $this withDialogName($value)
+ * @method string getDialogId()
+ * @method $this withDialogId($value)
  */
-class CreateDialog extends Rpc
+class DisableDialogFlow extends Rpc
 {
 }
 
 /**
- * @method string getShowChildrens()
- * @method $this withShowChildrens($value)
- * @method string getParentCategoryId()
- * @method $this withParentCategoryId($value)
+ * @method string getRegex()
+ * @method $this withRegex($value)
+ * @method string getEntityType()
+ * @method $this withEntityType($value)
+ * @method string getMembers()
+ * @method string getEntityName()
+ * @method $this withEntityName($value)
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
  */
-class QueryCategories extends Rpc
+class UpdateEntity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMembers($value)
+    {
+        $this->data['Members'] = $value;
+        $this->options['form_params']['Members'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
+ */
+class DeleteEntity extends Rpc
+{
+}
+
+/**
+ * @method string getDialogId()
+ * @method $this withDialogId($value)
+ */
+class TestDialogFlow extends Rpc
+{
+}
+
+/**
+ * @method string getMember()
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
+ * @method string getApplyType()
+ * @method $this withApplyType($value)
+ */
+class AppendEntityMember extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMember($value)
+    {
+        $this->data['Member'] = $value;
+        $this->options['form_params']['Member'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRemoveType()
+ * @method $this withRemoveType($value)
+ * @method string getMember()
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
+ */
+class RemoveEntityMember extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMember($value)
+    {
+        $this->data['Member'] = $value;
+        $this->options['form_params']['Member'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ */
+class DescribeIntent extends Rpc
+{
+}
+
+/**
+ * @method string getIntentName()
+ * @method $this withIntentName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDialogId()
+ * @method $this withDialogId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class QueryIntents extends Rpc
+{
+}
+
+/**
+ * @method string getPerspectiveId()
+ * @method $this withPerspectiveId($value)
+ */
+class DescribePerspective extends Rpc
+{
+}
+
+class QueryPerspectives extends Rpc
+{
+}
+
+/**
+ * @method string getCategoryId()
+ * @method $this withCategoryId($value)
+ */
+class DescribeCategory extends Rpc
+{
+}
+
+/**
+ * @method string getPerspectiveId()
+ * @method $this withPerspectiveId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdatePerspective extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreatePerspective extends Rpc
+{
+}
+
+/**
+ * @method string getPerspectiveId()
+ * @method $this withPerspectiveId($value)
+ */
+class ActivatePerspective extends Rpc
+{
+}
+
+/**
+ * @method string getKnowledgeId()
+ * @method $this withKnowledgeId($value)
+ */
+class PublishKnowledge extends Rpc
+{
+}
+
+/**
+ * @method string getKnowledgeId()
+ * @method $this withKnowledgeId($value)
+ * @method string getCategoryId()
+ * @method $this withCategoryId($value)
+ */
+class MoveKnowledgeCategory extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
+ * @method string getKnowledgeTitle()
+ * @method $this withKnowledgeTitle($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getCategoryId()
+ * @method $this withCategoryId($value)
+ */
+class QueryKnowledges extends Rpc
+{
+}
+
+/**
+ * @method string getKnowledgeId()
+ * @method $this withKnowledgeId($value)
+ */
+class DisableKnowledge extends Rpc
+{
+}
+
+/**
+ * @method string getSynonym()
+ * @method $this withSynonym($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class QueryCoreWords extends Rpc
+{
+}
+
+/**
+ * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
+ */
+class DescribeCoreWord extends Rpc
+{
+}
+
+/**
+ * @method string getSynonym()
+ * @method $this withSynonym($value)
+ * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
+ */
+class AddSynonym extends Rpc
+{
+}
+
+/**
+ * @method string getSynonym()
+ * @method $this withSynonym($value)
+ * @method string getCoreWordName()
+ * @method $this withCoreWordName($value)
+ */
+class RemoveSynonym extends Rpc
 {
 }
 
@@ -598,11 +512,21 @@ class CreateKnowledge extends Rpc
 }
 
 /**
- * @method string getModuleDefinition()
+ * @method string getShowChildrens()
+ * @method $this withShowChildrens($value)
+ * @method string getParentCategoryId()
+ * @method $this withParentCategoryId($value)
+ */
+class QueryCategories extends Rpc
+{
+}
+
+/**
+ * @method string getIntentDefinition()
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class UpdateDialogFlow extends Rpc
+class CreateIntent extends Rpc
 {
 
     /**
@@ -610,29 +534,13 @@ class UpdateDialogFlow extends Rpc
      *
      * @return $this
      */
-    public function withModuleDefinition($value)
+    public function withIntentDefinition($value)
     {
-        $this->data['ModuleDefinition'] = $value;
-        $this->options['form_params']['ModuleDefinition'] = $value;
+        $this->data['IntentDefinition'] = $value;
+        $this->options['form_params']['IntentDefinition'] = $value;
 
         return $this;
     }
-}
-
-/**
- * @method string getDialogId()
- * @method $this withDialogId($value)
- */
-class PublishDialogFlow extends Rpc
-{
-}
-
-/**
- * @method string getEntityName()
- * @method $this withEntityName($value)
- */
-class QuerySystemEntities extends Rpc
-{
 }
 
 /**
@@ -664,11 +572,19 @@ class CreateEntity extends Rpc
 }
 
 /**
- * @method string getIntentDefinition()
+ * @method string getEntityName()
+ * @method $this withEntityName($value)
+ */
+class QuerySystemEntities extends Rpc
+{
+}
+
+/**
+ * @method string getModuleDefinition()
  * @method string getDialogId()
  * @method $this withDialogId($value)
  */
-class CreateIntent extends Rpc
+class UpdateDialogFlow extends Rpc
 {
 
     /**
@@ -676,22 +592,32 @@ class CreateIntent extends Rpc
      *
      * @return $this
      */
-    public function withIntentDefinition($value)
+    public function withModuleDefinition($value)
     {
-        $this->data['IntentDefinition'] = $value;
-        $this->options['form_params']['IntentDefinition'] = $value;
+        $this->data['ModuleDefinition'] = $value;
+        $this->options['form_params']['ModuleDefinition'] = $value;
 
         return $this;
     }
 }
 
 /**
- * @method string getParentCategoryId()
- * @method $this withParentCategoryId($value)
- * @method string getName()
- * @method $this withName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDialogName()
+ * @method $this withDialogName($value)
  */
-class CreateCategory extends Rpc
+class CreateDialog extends Rpc
+{
+}
+
+/**
+ * @method string getDialogId()
+ * @method $this withDialogId($value)
+ */
+class PublishDialogFlow extends Rpc
 {
 }
 
@@ -710,6 +636,16 @@ class DeleteCategory extends Rpc
  * @method $this withCategoryId($value)
  */
 class UpdateCategory extends Rpc
+{
+}
+
+/**
+ * @method string getParentCategoryId()
+ * @method $this withParentCategoryId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateCategory extends Rpc
 {
 }
 

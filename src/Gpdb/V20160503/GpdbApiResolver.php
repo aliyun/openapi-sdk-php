@@ -8,37 +8,37 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UntagResources untagResources(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
- * @method DescribeRdsVpcs describeRdsVpcs(array $options = [])
  * @method DescribeRdsVSwitchs describeRdsVSwitchs(array $options = [])
+ * @method DescribeRdsVpcs describeRdsVpcs(array $options = [])
  * @method AddBuDBInstanceRelation addBuDBInstanceRelation(array $options = [])
  * @method DescribeSQLLogRecords describeSQLLogRecords(array $options = [])
- * @method DescribeSQLCollectorPolicy describeSQLCollectorPolicy(array $options = [])
  * @method ModifySQLCollectorPolicy modifySQLCollectorPolicy(array $options = [])
- * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
  * @method DescribeSQLLogFiles describeSQLLogFiles(array $options = [])
- * @method ResetAccountPassword resetAccountPassword(array $options = [])
- * @method RestartDBInstance restartDBInstance(array $options = [])
+ * @method DescribeSQLCollectorPolicy describeSQLCollectorPolicy(array $options = [])
+ * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
  * @method SwitchDBInstanceNetType switchDBInstanceNetType(array $options = [])
- * @method ModifySecurityIps modifySecurityIps(array $options = [])
+ * @method RestartDBInstance restartDBInstance(array $options = [])
+ * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
- * @method ModifyDBInstanceDescription modifyDBInstanceDescription(array $options = [])
- * @method ModifyDBInstanceMaintainTime modifyDBInstanceMaintainTime(array $options = [])
+ * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method ModifyDBInstanceNetworkType modifyDBInstanceNetworkType(array $options = [])
- * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
- * @method ModifyDBInstanceConnectionMode modifyDBInstanceConnectionMode(array $options = [])
+ * @method ModifyDBInstanceMaintainTime modifyDBInstanceMaintainTime(array $options = [])
+ * @method ModifyDBInstanceDescription modifyDBInstanceDescription(array $options = [])
  * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
- * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
- * @method DescribeDBInstances describeDBInstances(array $options = [])
- * @method DescribeRegions describeRegions(array $options = [])
+ * @method ModifyDBInstanceConnectionMode modifyDBInstanceConnectionMode(array $options = [])
+ * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method DescribeResourceUsage describeResourceUsage(array $options = [])
- * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
- * @method DescribeDBInstanceIPArrayList describeDBInstanceIPArrayList(array $options = [])
+ * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeDBInstances describeDBInstances(array $options = [])
+ * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
  * @method DescribeDBInstanceNetInfo describeDBInstanceNetInfo(array $options = [])
- * @method CreateAccount createAccount(array $options = [])
- * @method CreateDBInstance createDBInstance(array $options = [])
- * @method DeleteDatabase deleteDatabase(array $options = [])
- * @method DeleteDBInstance deleteDBInstance(array $options = [])
+ * @method DescribeDBInstanceIPArrayList describeDBInstanceIPArrayList(array $options = [])
+ * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
+ * @method DeleteDBInstance deleteDBInstance(array $options = [])
+ * @method DeleteDatabase deleteDatabase(array $options = [])
+ * @method CreateDBInstance createDBInstance(array $options = [])
+ * @method CreateAccount createAccount(array $options = [])
  * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])
  */
 class GpdbApiResolver extends ApiResolver
@@ -219,12 +219,14 @@ class ListTagResources extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRdsVpcs extends Rpc
+class DescribeRdsVSwitchs extends Rpc
 {
 }
 
@@ -237,14 +239,12 @@ class DescribeRdsVpcs extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeRdsVSwitchs extends Rpc
+class DescribeRdsVpcs extends Rpc
 {
 }
 
@@ -285,20 +285,34 @@ class DescribeSQLLogRecords extends Rpc
 }
 
 /**
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class DescribeSQLCollectorPolicy extends Rpc
-{
-}
-
-/**
  * @method string getSQLCollectorStatus()
  * @method $this withSQLCollectorStatus($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
 class ModifySQLCollectorPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeSQLLogFiles extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DescribeSQLCollectorPolicy extends Rpc
 {
 }
 
@@ -323,16 +337,24 @@ class DescribeSlowLogRecords extends Rpc
 }
 
 /**
- * @method string getFileName()
- * @method $this withFileName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
+ * @method string getConnectionStringPrefix()
+ * @method $this withConnectionStringPrefix($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class DescribeSQLLogFiles extends Rpc
+class SwitchDBInstanceNetType extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class RestartDBInstance extends Rpc
 {
 }
 
@@ -349,24 +371,12 @@ class ResetAccountPassword extends Rpc
 }
 
 /**
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getCurrentConnectionString()
+ * @method $this withCurrentConnectionString($value)
  */
-class RestartDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getConnectionStringPrefix()
- * @method $this withConnectionStringPrefix($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class SwitchDBInstanceNetType extends Rpc
+class ReleaseInstancePublicConnection extends Rpc
 {
 }
 
@@ -381,38 +391,6 @@ class SwitchDBInstanceNetType extends Rpc
  * @method $this withDBInstanceId($value)
  */
 class ModifySecurityIps extends Rpc
-{
-}
-
-/**
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getCurrentConnectionString()
- * @method $this withCurrentConnectionString($value)
- */
-class ReleaseInstancePublicConnection extends Rpc
-{
-}
-
-/**
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- */
-class ModifyDBInstanceDescription extends Rpc
-{
-}
-
-/**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- */
-class ModifyDBInstanceMaintainTime extends Rpc
 {
 }
 
@@ -433,24 +411,24 @@ class ModifyDBInstanceNetworkType extends Rpc
 }
 
 /**
- * @method string getAccountName()
- * @method $this withAccountName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
- * @method string getAccountDescription()
- * @method $this withAccountDescription($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
-class ModifyAccountDescription extends Rpc
+class ModifyDBInstanceMaintainTime extends Rpc
 {
 }
 
 /**
- * @method string getConnectionMode()
- * @method $this withConnectionMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getDBInstanceDescription()
+ * @method $this withDBInstanceDescription($value)
  */
-class ModifyDBInstanceConnectionMode extends Rpc
+class ModifyDBInstanceDescription extends Rpc
 {
 }
 
@@ -469,16 +447,36 @@ class ModifyDBInstanceConnectionString extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
+ * @method string getConnectionMode()
+ * @method $this withConnectionMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getKey()
- * @method $this withKey($value)
  */
-class DescribeDBInstancePerformance extends Rpc
+class ModifyDBInstanceConnectionMode extends Rpc
+{
+}
+
+/**
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getAccountDescription()
+ * @method $this withAccountDescription($value)
+ */
+class ModifyAccountDescription extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DescribeResourceUsage extends Rpc
+{
+}
+
+class DescribeRegions extends Rpc
 {
 }
 
@@ -517,7 +515,17 @@ class DescribeDBInstances extends Rpc
     }
 }
 
-class DescribeRegions extends Rpc
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class DescribeDBInstancePerformance extends Rpc
 {
 }
 
@@ -525,17 +533,7 @@ class DescribeRegions extends Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
-class DescribeResourceUsage extends Rpc
-{
-}
-
-/**
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDBInstanceAttribute extends Rpc
+class DescribeDBInstanceNetInfo extends Rpc
 {
 }
 
@@ -550,26 +548,42 @@ class DescribeDBInstanceIPArrayList extends Rpc
 /**
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
-class DescribeDBInstanceNetInfo extends Rpc
+class DescribeDBInstanceAttribute extends Rpc
 {
 }
 
 /**
- * @method string getAccountPassword()
- * @method $this withAccountPassword($value)
  * @method string getAccountName()
  * @method $this withAccountName($value)
- * @method string getDatabaseName()
- * @method $this withDatabaseName($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DescribeAccounts extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getAccountDescription()
- * @method $this withAccountDescription($value)
  */
-class CreateAccount extends Rpc
+class DeleteDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DeleteDatabase extends Rpc
 {
 }
 
@@ -612,34 +626,20 @@ class CreateDBInstance extends Rpc
 }
 
 /**
- * @method string getDBName()
- * @method $this withDBName($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class DeleteDatabase extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getDatabaseName()
+ * @method $this withDatabaseName($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAccountDescription()
+ * @method $this withAccountDescription($value)
  */
-class DeleteDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class DescribeAccounts extends Rpc
+class CreateAccount extends Rpc
 {
 }
 

@@ -11,17 +11,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchSendSms batchSendSms(array $options = [])
  * @method ModifyDayu modifyDayu(array $options = [])
  * @method SingleSendSms singleSendSms(array $options = [])
- * @method QuerySmsFailByPage querySmsFailByPage(array $options = [])
- * @method QuerySmsStatistics querySmsStatistics(array $options = [])
  * @method QueryTemplateByParam queryTemplateByParam(array $options = [])
- * @method DeleteTemplate deleteTemplate(array $options = [])
- * @method DescAccountSummary descAccountSummary(array $options = [])
- * @method QuerySignByParam querySignByParam(array $options = [])
+ * @method QuerySmsStatistics querySmsStatistics(array $options = [])
+ * @method QuerySmsFailByPage querySmsFailByPage(array $options = [])
  * @method QuerySmsDetailByPage querySmsDetailByPage(array $options = [])
- * @method CreateMarketing createMarketing(array $options = [])
- * @method CreateSign createSign(array $options = [])
- * @method CreateTemplate createTemplate(array $options = [])
+ * @method QuerySignByParam querySignByParam(array $options = [])
+ * @method DescAccountSummary descAccountSummary(array $options = [])
+ * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteSign deleteSign(array $options = [])
+ * @method CreateTemplate createTemplate(array $options = [])
+ * @method CreateSign createSign(array $options = [])
+ * @method CreateMarketing createMarketing(array $options = [])
  */
 class SmsApiResolver extends ApiResolver
 {
@@ -150,20 +150,22 @@ class SingleSendSms extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getSmsType()
- * @method $this withSmsType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getPageNo()
  * @method $this withPageNo($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getFromType()
+ * @method $this withFromType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getQueryTime()
- * @method $this withQueryTime($value)
+ * @method string getKeyWord()
+ * @method $this withKeyWord($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
-class QuerySmsFailByPage extends Rpc
+class QueryTemplateByParam extends Rpc
 {
 }
 
@@ -192,72 +194,20 @@ class QuerySmsStatistics extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSmsType()
+ * @method $this withSmsType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getPageNo()
  * @method $this withPageNo($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getFromType()
- * @method $this withFromType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getKeyWord()
- * @method $this withKeyWord($value)
- * @method string getStatus()
- * @method $this withStatus($value)
+ * @method string getQueryTime()
+ * @method $this withQueryTime($value)
  */
-class QueryTemplateByParam extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getFromType()
- * @method $this withFromType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- */
-class DeleteTemplate extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVersion()
- * @method $this withVersion($value)
- */
-class DescAccountSummary extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPageNo()
- * @method $this withPageNo($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getFromType()
- * @method $this withFromType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getKeyWord()
- * @method $this withKeyWord($value)
- */
-class QuerySignByParam extends Rpc
+class QuerySmsFailByPage extends Rpc
 {
 }
 
@@ -286,34 +236,64 @@ class QuerySmsDetailByPage extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getFromType()
+ * @method $this withFromType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getKeyWord()
+ * @method $this withKeyWord($value)
  */
-class CreateMarketing extends Rpc
+class QuerySignByParam extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getSignName()
- * @method $this withSignName($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getFileNames()
- * @method $this withFileNames($value)
- * @method string getRemark()
- * @method $this withRemark($value)
- * @method string getSignType()
- * @method $this withSignType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVersion()
+ * @method $this withVersion($value)
+ */
+class DescAccountSummary extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getFromType()
  * @method $this withFromType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getType()
- * @method $this withType($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  */
-class CreateSign extends Rpc
+class DeleteTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getFromType()
+ * @method $this withFromType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSignId()
+ * @method $this withSignId($value)
+ */
+class DeleteSign extends Rpc
 {
 }
 
@@ -344,15 +324,35 @@ class CreateTemplate extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSignName()
+ * @method $this withSignName($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getFileNames()
+ * @method $this withFileNames($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getFromType()
  * @method $this withFromType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSignId()
- * @method $this withSignId($value)
+ * @method string getType()
+ * @method $this withType($value)
  */
-class DeleteSign extends Rpc
+class CreateSign extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateMarketing extends Rpc
 {
 }

@@ -5,20 +5,20 @@ namespace AlibabaCloud\Domain\V20180208;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method QueryBrokerDemandRecord queryBrokerDemandRecord(array $options = [])
- * @method RequestPayDemand requestPayDemand(array $options = [])
- * @method FinishDemand finishDemand(array $options = [])
- * @method FailDemand failDemand(array $options = [])
- * @method RecordDemand recordDemand(array $options = [])
- * @method RefuseDemand refuseDemand(array $options = [])
- * @method AcceptDemand acceptDemand(array $options = [])
  * @method QueryBrokerDemand queryBrokerDemand(array $options = [])
+ * @method AcceptDemand acceptDemand(array $options = [])
+ * @method RefuseDemand refuseDemand(array $options = [])
+ * @method RecordDemand recordDemand(array $options = [])
+ * @method FailDemand failDemand(array $options = [])
+ * @method FinishDemand finishDemand(array $options = [])
+ * @method RequestPayDemand requestPayDemand(array $options = [])
+ * @method QueryBrokerDemandRecord queryBrokerDemandRecord(array $options = [])
  * @method GetReserveDomainUrl getReserveDomainUrl(array $options = [])
- * @method QueryAuctionDetail queryAuctionDetail(array $options = [])
- * @method QueryAuctions queryAuctions(array $options = [])
- * @method QueryBidRecords queryBidRecords(array $options = [])
- * @method QueryBookingDomainInfo queryBookingDomainInfo(array $options = [])
  * @method BidDomain bidDomain(array $options = [])
+ * @method QueryBookingDomainInfo queryBookingDomainInfo(array $options = [])
+ * @method QueryBidRecords queryBidRecords(array $options = [])
+ * @method QueryAuctions queryAuctions(array $options = [])
+ * @method QueryAuctionDetail queryAuctionDetail(array $options = [])
  * @method ReserveDomain reserveDomain(array $options = [])
  */
 class DomainApiResolver extends ApiResolver
@@ -44,8 +44,60 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withBizId($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
-class QueryBrokerDemandRecord extends Rpc
+class QueryBrokerDemand extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ */
+class AcceptDemand extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ */
+class RefuseDemand extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ */
+class RecordDemand extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ */
+class FailDemand extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ */
+class FinishDemand extends Rpc
 {
 }
 
@@ -66,66 +118,14 @@ class RequestPayDemand extends Rpc
 }
 
 /**
- * @method string getBizId()
- * @method $this withBizId($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- */
-class FinishDemand extends Rpc
-{
-}
-
-/**
- * @method string getBizId()
- * @method $this withBizId($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- */
-class FailDemand extends Rpc
-{
-}
-
-/**
- * @method string getBizId()
- * @method $this withBizId($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- */
-class RecordDemand extends Rpc
-{
-}
-
-/**
- * @method string getBizId()
- * @method $this withBizId($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- */
-class RefuseDemand extends Rpc
-{
-}
-
-/**
- * @method string getBizId()
- * @method $this withBizId($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- */
-class AcceptDemand extends Rpc
-{
-}
-
-/**
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getBizId()
  * @method $this withBizId($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
- * @method string getStatus()
- * @method $this withStatus($value)
  */
-class QueryBrokerDemand extends Rpc
+class QueryBrokerDemandRecord extends Rpc
 {
 }
 
@@ -135,8 +135,10 @@ class GetReserveDomainUrl extends Rpc
 
 /**
  * @method string getAuctionId()
+ * @method string getMaxBid()
+ * @method string getCurrency()
  */
-class QueryAuctionDetail extends Rpc
+class BidDomain extends Rpc
 {
 
     /**
@@ -148,6 +150,100 @@ class QueryAuctionDetail extends Rpc
     {
         $this->data['AuctionId'] = $value;
         $this->options['form_params']['AuctionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxBid($value)
+    {
+        $this->data['MaxBid'] = $value;
+        $this->options['form_params']['MaxBid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrency($value)
+    {
+        $this->data['Currency'] = $value;
+        $this->options['form_params']['Currency'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDomainName()
+ */
+class QueryBookingDomainInfo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAuctionId()
+ * @method string getPageSize()
+ * @method string getCurrentPage()
+ */
+class QueryBidRecords extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuctionId($value)
+    {
+        $this->data['AuctionId'] = $value;
+        $this->options['form_params']['AuctionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
 
         return $this;
     }
@@ -203,10 +299,8 @@ class QueryAuctions extends Rpc
 
 /**
  * @method string getAuctionId()
- * @method string getPageSize()
- * @method string getCurrentPage()
  */
-class QueryBidRecords extends Rpc
+class QueryAuctionDetail extends Rpc
 {
 
     /**
@@ -218,100 +312,6 @@ class QueryBidRecords extends Rpc
     {
         $this->data['AuctionId'] = $value;
         $this->options['form_params']['AuctionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCurrentPage($value)
-    {
-        $this->data['CurrentPage'] = $value;
-        $this->options['form_params']['CurrentPage'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDomainName()
- */
-class QueryBookingDomainInfo extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomainName($value)
-    {
-        $this->data['DomainName'] = $value;
-        $this->options['form_params']['DomainName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getAuctionId()
- * @method string getMaxBid()
- * @method string getCurrency()
- */
-class BidDomain extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAuctionId($value)
-    {
-        $this->data['AuctionId'] = $value;
-        $this->options['form_params']['AuctionId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMaxBid($value)
-    {
-        $this->data['MaxBid'] = $value;
-        $this->options['form_params']['MaxBid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCurrency($value)
-    {
-        $this->data['Currency'] = $value;
-        $this->options['form_params']['Currency'] = $value;
 
         return $this;
     }

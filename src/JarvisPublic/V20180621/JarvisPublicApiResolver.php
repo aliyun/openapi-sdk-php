@@ -6,8 +6,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeCountAttackEvent describeCountAttackEvent(array $options = [])
- * @method DescribeAttackedIp describeAttackedIp(array $options = [])
  * @method DescribeAttackEvent describeAttackEvent(array $options = [])
+ * @method DescribeAttackedIp describeAttackedIp(array $options = [])
  * @method DescribePhoneInfo describePhoneInfo(array $options = [])
  */
 class JarvisPublicApiResolver extends ApiResolver
@@ -73,7 +73,7 @@ class DescribeCountAttackEvent extends Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeAttackedIp extends Rpc
+class DescribeAttackEvent extends Rpc
 {
 }
 
@@ -97,7 +97,7 @@ class DescribeAttackedIp extends Rpc
  * @method string getProductType()
  * @method $this withProductType($value)
  */
-class DescribeAttackEvent extends Rpc
+class DescribeAttackedIp extends Rpc
 {
 }
 

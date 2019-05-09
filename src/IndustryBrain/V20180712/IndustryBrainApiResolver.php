@@ -6,24 +6,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AsyncResponsePost asyncResponsePost(array $options = [])
- * @method TestHsfPostData testHsfPostData(array $options = [])
  * @method GetDataProperties getDataProperties(array $options = [])
- * @method TestInvokeService testInvokeService(array $options = [])
- * @method TestPostData testPostData(array $options = [])
+ * @method PostRealTimeDeviceData postRealTimeDeviceData(array $options = [])
+ * @method OperateEquipment operateEquipment(array $options = [])
+ * @method GetIndustryInfoList getIndustryInfoList(array $options = [])
  * @method GetIndustryInfoLineageList getIndustryInfoLineageList(array $options = [])
  * @method GetIndustryInfoChildrenList getIndustryInfoChildrenList(array $options = [])
  * @method GetIndustryInfo getIndustryInfo(array $options = [])
- * @method GetIndustryInfoList getIndustryInfoList(array $options = [])
- * @method GetAlgorithmList getAlgorithmList(array $options = [])
- * @method GetServiceInputMapping getServiceInputMapping(array $options = [])
  * @method InvokeService invokeService(array $options = [])
- * @method PostRealTimeDeviceData postRealTimeDeviceData(array $options = [])
- * @method OperateEquipment operateEquipment(array $options = [])
+ * @method GetServiceInputMapping getServiceInputMapping(array $options = [])
+ * @method GetAlgorithmList getAlgorithmList(array $options = [])
  * @method GetOSSImageAccess getOSSImageAccess(array $options = [])
  * @method GetAsyncServiceResult getAsyncServiceResult(array $options = [])
  * @method GetServiceResultAsync getServiceResultAsync(array $options = [])
  * @method InvokeServiceAsync invokeServiceAsync(array $options = [])
- * @method GetAlgoDataMapping getAlgoDataMapping(array $options = [])
  * @method GetOnlineServiceResult getOnlineServiceResult(array $options = [])
  */
 class IndustryBrainApiResolver extends ApiResolver
@@ -37,6 +33,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2018-07-12';
+
+    /** @var string */
+    protected $scheme = 'https';
 }
 
 /**
@@ -57,17 +56,7 @@ class AsyncResponsePost extends Rpc
 {
 
     /** @var string */
-    public $method = 'POST';
-}
-
-/**
- * @method string getData()
- * @method $this withData($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
- */
-class TestHsfPostData extends Rpc
-{
+    public $scheme = 'http';
 
     /** @var string */
     public $method = 'POST';
@@ -79,130 +68,9 @@ class TestHsfPostData extends Rpc
  */
 class GetDataProperties extends Rpc
 {
-}
-
-/**
- * @method string getRequestParams()
- * @method $this withRequestParams($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
- * @method string getRequestData()
- * @method $this withRequestData($value)
- * @method string getShowParams()
- * @method $this withShowParams($value)
- */
-class TestInvokeService extends Rpc
-{
 
     /** @var string */
-    public $method = 'POST';
-}
-
-/**
- * @method string getData()
- * @method string getServiceId()
- * @method $this withServiceId($value)
- */
-class TestPostData extends Rpc
-{
-
-    /** @var string */
-    public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withData($value)
-    {
-        $this->data['Data'] = $value;
-        $this->options['form_params']['Data'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getIndustryCode()
- * @method $this withIndustryCode($value)
- */
-class GetIndustryInfoLineageList extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'https';
-}
-
-/**
- * @method string getIndustryCode()
- * @method $this withIndustryCode($value)
- */
-class GetIndustryInfoChildrenList extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'https';
-}
-
-/**
- * @method string getIndustryCode()
- * @method $this withIndustryCode($value)
- */
-class GetIndustryInfo extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'https';
-}
-
-class GetIndustryInfoList extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'https';
-}
-
-/**
- * @method string getServiceId()
- * @method $this withServiceId($value)
- */
-class GetAlgorithmList extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'https';
-}
-
-/**
- * @method string getShowLatestData()
- * @method $this withShowLatestData($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
- * @method string getAlgorithmId()
- * @method $this withAlgorithmId($value)
- */
-class GetServiceInputMapping extends Rpc
-{
-}
-
-/**
- * @method string getRequestParams()
- * @method $this withRequestParams($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
- * @method string getRequestData()
- * @method $this withRequestData($value)
- * @method string getShowParams()
- * @method $this withShowParams($value)
- */
-class InvokeService extends Rpc
-{
-
-    /** @var string */
-    public $method = 'POST';
+    public $scheme = 'http';
 }
 
 /**
@@ -211,9 +79,6 @@ class InvokeService extends Rpc
  */
 class PostRealTimeDeviceData extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 
     /** @var string */
     public $method = 'POST';
@@ -252,9 +117,6 @@ class PostRealTimeDeviceData extends Rpc
  */
 class OperateEquipment extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 
     /** @var string */
     public $method = 'POST';
@@ -299,6 +161,79 @@ class OperateEquipment extends Rpc
     }
 }
 
+class GetIndustryInfoList extends Rpc
+{
+}
+
+/**
+ * @method string getIndustryCode()
+ * @method $this withIndustryCode($value)
+ */
+class GetIndustryInfoLineageList extends Rpc
+{
+}
+
+/**
+ * @method string getIndustryCode()
+ * @method $this withIndustryCode($value)
+ */
+class GetIndustryInfoChildrenList extends Rpc
+{
+}
+
+/**
+ * @method string getIndustryCode()
+ * @method $this withIndustryCode($value)
+ */
+class GetIndustryInfo extends Rpc
+{
+}
+
+/**
+ * @method string getRequestParams()
+ * @method $this withRequestParams($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ * @method string getRequestData()
+ * @method $this withRequestData($value)
+ * @method string getShowParams()
+ * @method $this withShowParams($value)
+ */
+class InvokeService extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getShowLatestData()
+ * @method $this withShowLatestData($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ * @method string getAlgorithmId()
+ * @method $this withAlgorithmId($value)
+ */
+class GetServiceInputMapping extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+}
+
+/**
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class GetAlgorithmList extends Rpc
+{
+}
+
 /**
  * @method string getUserCode()
  * @method $this withUserCode($value)
@@ -307,9 +242,6 @@ class OperateEquipment extends Rpc
  */
 class GetOSSImageAccess extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 }
 
 /**
@@ -318,6 +250,9 @@ class GetOSSImageAccess extends Rpc
  */
 class GetAsyncServiceResult extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -326,6 +261,9 @@ class GetAsyncServiceResult extends Rpc
  */
 class GetServiceResultAsync extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -342,15 +280,10 @@ class InvokeServiceAsync extends Rpc
 {
 
     /** @var string */
-    public $method = 'POST';
-}
+    public $scheme = 'http';
 
-/**
- * @method string getServiceId()
- * @method $this withServiceId($value)
- */
-class GetAlgoDataMapping extends Rpc
-{
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -359,9 +292,6 @@ class GetAlgoDataMapping extends Rpc
  */
 class GetOnlineServiceResult extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 
     /** @var string */
     public $method = 'POST';

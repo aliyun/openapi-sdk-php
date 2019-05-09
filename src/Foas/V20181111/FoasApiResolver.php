@@ -6,60 +6,60 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyMasterSpec modifyMasterSpec(array $options = [])
- * @method UnbindQueue unbindQueue(array $options = [])
- * @method BindQueue bindQueue(array $options = [])
- * @method DeleteQueue deleteQueue(array $options = [])
- * @method CreateQueue createQueue(array $options = [])
- * @method GetClusterMetrics getClusterMetrics(array $options = [])
- * @method GetClusterEngineVersions getClusterEngineVersions(array $options = [])
- * @method GetClusterDetails getClusterDetails(array $options = [])
- * @method GetClusterQueueInfo getClusterQueueInfo(array $options = [])
- * @method GetClusterResource getClusterResource(array $options = [])
- * @method ListCluster listCluster(array $options = [])
- * @method ShrinkCluster shrinkCluster(array $options = [])
- * @method ExpandCluster expandCluster(array $options = [])
- * @method DestroyCluster destroyCluster(array $options = [])
  * @method CreateCluster createCluster(array $options = [])
- * @method GetProject getProject(array $options = [])
- * @method DeleteProject deleteProject(array $options = [])
- * @method CreateProject createProject(array $options = [])
+ * @method DestroyCluster destroyCluster(array $options = [])
+ * @method ExpandCluster expandCluster(array $options = [])
+ * @method ShrinkCluster shrinkCluster(array $options = [])
+ * @method ListCluster listCluster(array $options = [])
+ * @method GetClusterResource getClusterResource(array $options = [])
+ * @method GetClusterQueueInfo getClusterQueueInfo(array $options = [])
+ * @method GetClusterDetails getClusterDetails(array $options = [])
+ * @method GetClusterEngineVersions getClusterEngineVersions(array $options = [])
+ * @method GetClusterMetrics getClusterMetrics(array $options = [])
+ * @method CreateQueue createQueue(array $options = [])
+ * @method DeleteQueue deleteQueue(array $options = [])
+ * @method BindQueue bindQueue(array $options = [])
+ * @method UnbindQueue unbindQueue(array $options = [])
  * @method ListProject listProject(array $options = [])
+ * @method CreateProject createProject(array $options = [])
+ * @method DeleteProject deleteProject(array $options = [])
+ * @method GetProject getProject(array $options = [])
  * @method CheckRawPlanJson checkRawPlanJson(array $options = [])
- * @method ListProjectBindQueueResource listProjectBindQueueResource(array $options = [])
  * @method ListProjectBindQueue listProjectBindQueue(array $options = [])
- * @method ValidateJob validateJob(array $options = [])
- * @method GetInstanceDetail getInstanceDetail(array $options = [])
- * @method GetInstanceConfig getInstanceConfig(array $options = [])
- * @method GetInstanceCheckpoint getInstanceCheckpoint(array $options = [])
+ * @method ListProjectBindQueueResource listProjectBindQueueResource(array $options = [])
  * @method GetInstanceExceptions getInstanceExceptions(array $options = [])
+ * @method GetInstanceCheckpoint getInstanceCheckpoint(array $options = [])
+ * @method GetInstanceConfig getInstanceConfig(array $options = [])
+ * @method GetInstanceDetail getInstanceDetail(array $options = [])
+ * @method ValidateJob validateJob(array $options = [])
  * @method GetInstanceResource getInstanceResource(array $options = [])
- * @method GetInstanceFinalState getInstanceFinalState(array $options = [])
  * @method GetInstanceMetric getInstanceMetric(array $options = [])
- * @method ModifyInstanceState modifyInstanceState(array $options = [])
+ * @method GetInstanceFinalState getInstanceFinalState(array $options = [])
+ * @method GetPackage getPackage(array $options = [])
+ * @method CreatePackage createPackage(array $options = [])
+ * @method UpdatePackage updatePackage(array $options = [])
+ * @method DeletePackage deletePackage(array $options = [])
+ * @method ListPackage listPackage(array $options = [])
+ * @method GetRefPackageJob getRefPackageJob(array $options = [])
+ * @method GetInstance getInstance(array $options = [])
  * @method ListInstance listInstance(array $options = [])
  * @method GetInstanceRunSummary getInstanceRunSummary(array $options = [])
- * @method GetInstance getInstance(array $options = [])
- * @method GetRefPackageJob getRefPackageJob(array $options = [])
- * @method DeletePackage deletePackage(array $options = [])
- * @method UpdatePackage updatePackage(array $options = [])
- * @method ListPackage listPackage(array $options = [])
- * @method CreatePackage createPackage(array $options = [])
- * @method GetPackage getPackage(array $options = [])
+ * @method ModifyInstanceState modifyInstanceState(array $options = [])
  * @method DeleteFolder deleteFolder(array $options = [])
- * @method MVFolder mVFolder(array $options = [])
  * @method ListChildFolder listChildFolder(array $options = [])
- * @method StartJob startJob(array $options = [])
- * @method ListJob listJob(array $options = [])
- * @method DeleteJob deleteJob(array $options = [])
- * @method GetJob getJob(array $options = [])
- * @method OfflineJob offlineJob(array $options = [])
- * @method GetRawPlanJson getRawPlanJson(array $options = [])
+ * @method MVFolder mVFolder(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
- * @method CreateJob createJob(array $options = [])
+ * @method GetRawPlanJson getRawPlanJson(array $options = [])
+ * @method DeleteJob deleteJob(array $options = [])
+ * @method OfflineJob offlineJob(array $options = [])
+ * @method GetJob getJob(array $options = [])
+ * @method ListJob listJob(array $options = [])
+ * @method StartJob startJob(array $options = [])
  * @method GetFolder getFolder(array $options = [])
  * @method CreateFolder createFolder(array $options = [])
- * @method CommitJob commitJob(array $options = [])
+ * @method CreateJob createJob(array $options = [])
  * @method BatchGetInstanceRunSummary batchGetInstanceRunSummary(array $options = [])
+ * @method CommitJob commitJob(array $options = [])
  */
 class FoasApiResolver extends ApiResolver
 {
@@ -114,596 +114,6 @@ class ModifyMasterSpec extends Roa
     {
         $this->data['MasterTargetModel'] = $value;
         $this->options['form_params']['masterTargetModel'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getQueueName()
- * @method string getProjectName()
- * @method string getClusterId()
- */
-class UnbindQueue extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/queue';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withQueueName($value)
-    {
-        $this->data['QueueName'] = $value;
-        $this->options['query']['queueName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getQueueName()
- * @method string getProjectName()
- * @method string getClusterId()
- */
-class BindQueue extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/queue';
-
-    /** @var string */
-    public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withQueueName($value)
-    {
-        $this->data['QueueName'] = $value;
-        $this->options['form_params']['queueName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['form_params']['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getQueueName()
- * @method string getClusterId()
- */
-class DeleteQueue extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/queue';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withQueueName($value)
-    {
-        $this->data['QueueName'] = $value;
-        $this->options['query']['queueName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getQueueName()
- * @method string getMaxMemMB()
- * @method string getClusterId()
- * @method string getGpu()
- * @method string getMaxVcore()
- */
-class CreateQueue extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/queue';
-
-    /** @var string */
-    public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withQueueName($value)
-    {
-        $this->data['QueueName'] = $value;
-        $this->options['form_params']['queueName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMaxMemMB($value)
-    {
-        $this->data['MaxMemMB'] = $value;
-        $this->options['form_params']['maxMemMB'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGpu($value)
-    {
-        $this->data['Gpu'] = $value;
-        $this->options['form_params']['gpu'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMaxVcore($value)
-    {
-        $this->data['MaxVcore'] = $value;
-        $this->options['form_params']['maxVcore'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- * @method string getMetricJson()
- */
-class GetClusterMetrics extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/metrics';
-
-    /** @var string */
-    public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMetricJson($value)
-    {
-        $this->data['MetricJson'] = $value;
-        $this->options['form_params']['metricJson'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- */
-class GetClusterEngineVersions extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/engineversions';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- */
-class GetClusterDetails extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/details';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- */
-class GetClusterQueueInfo extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/queueinfo';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- */
-class GetClusterResource extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/resource';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDisplayName()
- * @method string getPageSize()
- * @method string getPageIndex()
- * @method string getClusterId()
- * @method string getState()
- * @method string getRegion()
- */
-class ListCluster extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDisplayName($value)
-    {
-        $this->data['DisplayName'] = $value;
-        $this->options['query']['displayName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageIndex($value)
-    {
-        $this->data['PageIndex'] = $value;
-        $this->options['query']['pageIndex'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withState($value)
-    {
-        $this->data['State'] = $value;
-        $this->options['query']['state'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegion($value)
-    {
-        $this->data['Region'] = $value;
-        $this->options['query']['region'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getInstanceIds()
- * @method string getClusterId()
- * @method string getModelTargetCount()
- */
-class ShrinkCluster extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/shrink';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceIds($value)
-    {
-        $this->data['InstanceIds'] = $value;
-        $this->options['form_params']['instanceIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withModelTargetCount($value)
-    {
-        $this->data['ModelTargetCount'] = $value;
-        $this->options['form_params']['modelTargetCount'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCount()
- * @method string getModel()
- * @method string getUserVSwitch()
- * @method string getClusterId()
- */
-class ExpandCluster extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]/expand';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCount($value)
-    {
-        $this->data['Count'] = $value;
-        $this->options['form_params']['count'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withModel($value)
-    {
-        $this->data['Model'] = $value;
-        $this->options['form_params']['model'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserVSwitch($value)
-    {
-        $this->data['UserVSwitch'] = $value;
-        $this->options['form_params']['userVSwitch'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClusterId()
- */
-class DestroyCluster extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/clusters/[clusterId]';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->pathParameters['clusterId'] = $value;
 
         return $this;
     }
@@ -819,12 +229,514 @@ class CreateCluster extends Roa
 }
 
 /**
- * @method string getProjectName()
+ * @method string getClusterId()
  */
-class GetProject extends Roa
+class DestroyCluster extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]';
+    public $pathPattern = '/api/v2/clusters/[clusterId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCount()
+ * @method string getModel()
+ * @method string getUserVSwitch()
+ * @method string getClusterId()
+ */
+class ExpandCluster extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/expand';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCount($value)
+    {
+        $this->data['Count'] = $value;
+        $this->options['form_params']['count'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModel($value)
+    {
+        $this->data['Model'] = $value;
+        $this->options['form_params']['model'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserVSwitch($value)
+    {
+        $this->data['UserVSwitch'] = $value;
+        $this->options['form_params']['userVSwitch'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceIds()
+ * @method string getClusterId()
+ * @method string getModelTargetCount()
+ */
+class ShrinkCluster extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/shrink';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceIds($value)
+    {
+        $this->data['InstanceIds'] = $value;
+        $this->options['form_params']['instanceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelTargetCount($value)
+    {
+        $this->data['ModelTargetCount'] = $value;
+        $this->options['form_params']['modelTargetCount'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDisplayName()
+ * @method string getPageSize()
+ * @method string getPageIndex()
+ * @method string getClusterId()
+ * @method string getState()
+ * @method string getRegion()
+ */
+class ListCluster extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDisplayName($value)
+    {
+        $this->data['DisplayName'] = $value;
+        $this->options['query']['displayName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageIndex($value)
+    {
+        $this->data['PageIndex'] = $value;
+        $this->options['query']['pageIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withState($value)
+    {
+        $this->data['State'] = $value;
+        $this->options['query']['state'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegion($value)
+    {
+        $this->data['Region'] = $value;
+        $this->options['query']['region'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ */
+class GetClusterResource extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/resource';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ */
+class GetClusterQueueInfo extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/queueinfo';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ */
+class GetClusterDetails extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/details';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ */
+class GetClusterEngineVersions extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/engineversions';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ * @method string getMetricJson()
+ */
+class GetClusterMetrics extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/metrics';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricJson($value)
+    {
+        $this->data['MetricJson'] = $value;
+        $this->options['form_params']['metricJson'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getQueueName()
+ * @method string getMaxMemMB()
+ * @method string getClusterId()
+ * @method string getGpu()
+ * @method string getMaxVcore()
+ */
+class CreateQueue extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/queue';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueueName($value)
+    {
+        $this->data['QueueName'] = $value;
+        $this->options['form_params']['queueName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxMemMB($value)
+    {
+        $this->data['MaxMemMB'] = $value;
+        $this->options['form_params']['maxMemMB'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGpu($value)
+    {
+        $this->data['Gpu'] = $value;
+        $this->options['form_params']['gpu'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxVcore($value)
+    {
+        $this->data['MaxVcore'] = $value;
+        $this->options['form_params']['maxVcore'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getQueueName()
+ * @method string getClusterId()
+ */
+class DeleteQueue extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/clusters/[clusterId]/queue';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueueName($value)
+    {
+        $this->data['QueueName'] = $value;
+        $this->options['query']['queueName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->pathParameters['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getQueueName()
+ * @method string getProjectName()
+ * @method string getClusterId()
+ */
+class BindQueue extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/queue';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueueName($value)
+    {
+        $this->data['QueueName'] = $value;
+        $this->options['form_params']['queueName'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -838,18 +750,46 @@ class GetProject extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['form_params']['clusterId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getQueueName()
  * @method string getProjectName()
+ * @method string getClusterId()
  */
-class DeleteProject extends Roa
+class UnbindQueue extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]';
+    public $pathPattern = '/api/v2/projects/[projectName]/queue';
 
     /** @var string */
     public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueueName($value)
+    {
+        $this->data['QueueName'] = $value;
+        $this->options['query']['queueName'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -860,6 +800,111 @@ class DeleteProject extends Roa
     {
         $this->data['ProjectName'] = $value;
         $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['clusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getName()
+ * @method string getPageSize()
+ * @method string getPageIndex()
+ * @method string getClusterId()
+ * @method string getRegion()
+ * @method string getDeployType()
+ */
+class ListProject extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageIndex($value)
+    {
+        $this->data['PageIndex'] = $value;
+        $this->options['query']['pageIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegion($value)
+    {
+        $this->data['Region'] = $value;
+        $this->options['query']['region'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeployType($value)
+    {
+        $this->data['DeployType'] = $value;
+        $this->options['query']['deployType'] = $value;
 
         return $this;
     }
@@ -961,92 +1006,47 @@ class CreateProject extends Roa
 }
 
 /**
- * @method string getName()
- * @method string getPageSize()
- * @method string getPageIndex()
- * @method string getClusterId()
- * @method string getRegion()
- * @method string getDeployType()
+ * @method string getProjectName()
  */
-class ListProject extends Roa
+class DeleteProject extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects';
+    public $pathPattern = '/api/v2/projects/[projectName]';
+
+    /** @var string */
+    public $method = 'DELETE';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withName($value)
+    public function withProjectName($value)
     {
-        $this->data['Name'] = $value;
-        $this->options['query']['name'] = $value;
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
 
         return $this;
     }
+}
+
+/**
+ * @method string getProjectName()
+ */
+class GetProject extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withPageSize($value)
+    public function withProjectName($value)
     {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageIndex($value)
-    {
-        $this->data['PageIndex'] = $value;
-        $this->options['query']['pageIndex'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegion($value)
-    {
-        $this->data['Region'] = $value;
-        $this->options['query']['region'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeployType($value)
-    {
-        $this->data['DeployType'] = $value;
-        $this->options['query']['deployType'] = $value;
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
 
         return $this;
     }
@@ -1107,56 +1107,6 @@ class CheckRawPlanJson extends Roa
  * @method string getProjectName()
  * @method string getClusterId()
  */
-class ListProjectBindQueueResource extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/queueresource';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withQueueName($value)
-    {
-        $this->data['QueueName'] = $value;
-        $this->options['query']['queueName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['query']['clusterId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getQueueName()
- * @method string getProjectName()
- * @method string getClusterId()
- */
 class ListProjectBindQueue extends Roa
 {
     /** @var string */
@@ -1203,13 +1153,27 @@ class ListProjectBindQueue extends Roa
 }
 
 /**
+ * @method string getQueueName()
  * @method string getProjectName()
- * @method string getJobName()
+ * @method string getClusterId()
  */
-class ValidateJob extends Roa
+class ListProjectBindQueueResource extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/validate';
+    public $pathPattern = '/api/v2/projects/[projectName]/queueresource';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueueName($value)
+    {
+        $this->data['QueueName'] = $value;
+        $this->options['query']['queueName'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1229,10 +1193,10 @@ class ValidateJob extends Roa
      *
      * @return $this
      */
-    public function withJobName($value)
+    public function withClusterId($value)
     {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
+        $this->data['ClusterId'] = $value;
+        $this->options['query']['clusterId'] = $value;
 
         return $this;
     }
@@ -1243,60 +1207,10 @@ class ValidateJob extends Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceDetail extends Roa
+class GetInstanceExceptions extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/details';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->pathParameters['instanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJobName($value)
-    {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getInstanceId()
- * @method string getJobName()
- */
-class GetInstanceConfig extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/config';
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/exceptions';
 
     /**
      * @param string $value
@@ -1393,10 +1307,10 @@ class GetInstanceCheckpoint extends Roa
  * @method string getInstanceId()
  * @method string getJobName()
  */
-class GetInstanceExceptions extends Roa
+class GetInstanceConfig extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/exceptions';
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/config';
 
     /**
      * @param string $value
@@ -1420,6 +1334,92 @@ class GetInstanceExceptions extends Roa
     {
         $this->data['InstanceId'] = $value;
         $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getInstanceId()
+ * @method string getJobName()
+ */
+class GetInstanceDetail extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/details';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getJobName()
+ */
+class ValidateJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/validate';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
 
         return $this;
     }
@@ -1447,56 +1447,6 @@ class GetInstanceResource extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/resource';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->pathParameters['instanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJobName($value)
-    {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getInstanceId()
- * @method string getJobName()
- */
-class GetInstanceFinalState extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/finalstate';
 
     /**
      * @param string $value
@@ -1606,32 +1556,14 @@ class GetInstanceMetric extends Roa
 }
 
 /**
- * @method string getIsFlush()
  * @method string getProjectName()
  * @method string getInstanceId()
- * @method string getExpectState()
  * @method string getJobName()
  */
-class ModifyInstanceState extends Roa
+class GetInstanceFinalState extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/expectstate';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIsFlush($value)
-    {
-        $this->data['IsFlush'] = $value;
-        $this->options['form_params']['isFlush'] = $value;
-
-        return $this;
-    }
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/finalstate';
 
     /**
      * @param string $value
@@ -1664,10 +1596,594 @@ class ModifyInstanceState extends Roa
      *
      * @return $this
      */
-    public function withExpectState($value)
+    public function withJobName($value)
     {
-        $this->data['ExpectState'] = $value;
-        $this->options['form_params']['expectState'] = $value;
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getPackageName()
+ */
+class GetPackage extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageName($value)
+    {
+        $this->data['PackageName'] = $value;
+        $this->pathParameters['packageName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getOssBucket()
+ * @method string getOssOwner()
+ * @method string getPackageName()
+ * @method string getOssEndpoint()
+ * @method string getDescription()
+ * @method string getTag()
+ * @method string getOriginName()
+ * @method string getType()
+ * @method string getOssPath()
+ * @method string getMd5()
+ */
+class CreatePackage extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/packages';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssBucket($value)
+    {
+        $this->data['OssBucket'] = $value;
+        $this->options['form_params']['ossBucket'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssOwner($value)
+    {
+        $this->data['OssOwner'] = $value;
+        $this->options['form_params']['ossOwner'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageName($value)
+    {
+        $this->data['PackageName'] = $value;
+        $this->options['form_params']['packageName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssEndpoint($value)
+    {
+        $this->data['OssEndpoint'] = $value;
+        $this->options['form_params']['ossEndpoint'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag($value)
+    {
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginName($value)
+    {
+        $this->data['OriginName'] = $value;
+        $this->options['form_params']['originName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssPath($value)
+    {
+        $this->data['OssPath'] = $value;
+        $this->options['form_params']['ossPath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMd5($value)
+    {
+        $this->data['Md5'] = $value;
+        $this->options['form_params']['md5'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getOssBucket()
+ * @method string getOssOwner()
+ * @method string getPackageName()
+ * @method string getOssEndpoint()
+ * @method string getDescription()
+ * @method string getTag()
+ * @method string getOriginName()
+ * @method string getOssPath()
+ * @method string getMd5()
+ */
+class UpdatePackage extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssBucket($value)
+    {
+        $this->data['OssBucket'] = $value;
+        $this->options['form_params']['ossBucket'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssOwner($value)
+    {
+        $this->data['OssOwner'] = $value;
+        $this->options['form_params']['ossOwner'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageName($value)
+    {
+        $this->data['PackageName'] = $value;
+        $this->pathParameters['packageName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssEndpoint($value)
+    {
+        $this->data['OssEndpoint'] = $value;
+        $this->options['form_params']['ossEndpoint'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag($value)
+    {
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginName($value)
+    {
+        $this->data['OriginName'] = $value;
+        $this->options['form_params']['originName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssPath($value)
+    {
+        $this->data['OssPath'] = $value;
+        $this->options['form_params']['ossPath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMd5($value)
+    {
+        $this->data['Md5'] = $value;
+        $this->options['form_params']['md5'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getPackageName()
+ */
+class DeletePackage extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageName($value)
+    {
+        $this->data['PackageName'] = $value;
+        $this->pathParameters['packageName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getPackageName()
+ * @method string getPageSize()
+ * @method string getPageIndex()
+ * @method string getTag()
+ * @method string getType()
+ */
+class ListPackage extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/packages';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageName($value)
+    {
+        $this->data['PackageName'] = $value;
+        $this->options['query']['packageName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageIndex($value)
+    {
+        $this->data['PageIndex'] = $value;
+        $this->options['query']['pageIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag($value)
+    {
+        $this->data['Tag'] = $value;
+        $this->options['query']['tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['type'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getPackageName()
+ * @method string getPageSize()
+ * @method string getPageIndex()
+ */
+class GetRefPackageJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]/jobs';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageName($value)
+    {
+        $this->data['PackageName'] = $value;
+        $this->pathParameters['packageName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageIndex($value)
+    {
+        $this->data['PageIndex'] = $value;
+        $this->options['query']['pageIndex'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getInstanceId()
+ * @method string getJobName()
+ */
+class GetInstance extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
 
         return $this;
     }
@@ -1927,14 +2443,32 @@ class GetInstanceRunSummary extends Roa
 }
 
 /**
+ * @method string getIsFlush()
  * @method string getProjectName()
  * @method string getInstanceId()
+ * @method string getExpectState()
  * @method string getJobName()
  */
-class GetInstance extends Roa
+class ModifyInstanceState extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]';
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/expectstate';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsFlush($value)
+    {
+        $this->data['IsFlush'] = $value;
+        $this->options['form_params']['isFlush'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1967,557 +2501,23 @@ class GetInstance extends Roa
      *
      * @return $this
      */
+    public function withExpectState($value)
+    {
+        $this->data['ExpectState'] = $value;
+        $this->options['form_params']['expectState'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withJobName($value)
     {
         $this->data['JobName'] = $value;
         $this->pathParameters['jobName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getPackageName()
- * @method string getPageSize()
- * @method string getPageIndex()
- */
-class GetRefPackageJob extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]/jobs';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageName($value)
-    {
-        $this->data['PackageName'] = $value;
-        $this->pathParameters['packageName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageIndex($value)
-    {
-        $this->data['PageIndex'] = $value;
-        $this->options['query']['pageIndex'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getPackageName()
- */
-class DeletePackage extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageName($value)
-    {
-        $this->data['PackageName'] = $value;
-        $this->pathParameters['packageName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getOssBucket()
- * @method string getOssOwner()
- * @method string getPackageName()
- * @method string getOssEndpoint()
- * @method string getDescription()
- * @method string getTag()
- * @method string getOriginName()
- * @method string getOssPath()
- * @method string getMd5()
- */
-class UpdatePackage extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssBucket($value)
-    {
-        $this->data['OssBucket'] = $value;
-        $this->options['form_params']['ossBucket'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssOwner($value)
-    {
-        $this->data['OssOwner'] = $value;
-        $this->options['form_params']['ossOwner'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageName($value)
-    {
-        $this->data['PackageName'] = $value;
-        $this->pathParameters['packageName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssEndpoint($value)
-    {
-        $this->data['OssEndpoint'] = $value;
-        $this->options['form_params']['ossEndpoint'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['description'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag($value)
-    {
-        $this->data['Tag'] = $value;
-        $this->options['form_params']['tag'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOriginName($value)
-    {
-        $this->data['OriginName'] = $value;
-        $this->options['form_params']['originName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssPath($value)
-    {
-        $this->data['OssPath'] = $value;
-        $this->options['form_params']['ossPath'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMd5($value)
-    {
-        $this->data['Md5'] = $value;
-        $this->options['form_params']['md5'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getPackageName()
- * @method string getPageSize()
- * @method string getPageIndex()
- * @method string getTag()
- * @method string getType()
- */
-class ListPackage extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/packages';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageName($value)
-    {
-        $this->data['PackageName'] = $value;
-        $this->options['query']['packageName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['pageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageIndex($value)
-    {
-        $this->data['PageIndex'] = $value;
-        $this->options['query']['pageIndex'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag($value)
-    {
-        $this->data['Tag'] = $value;
-        $this->options['query']['tag'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['query']['type'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getOssBucket()
- * @method string getOssOwner()
- * @method string getPackageName()
- * @method string getOssEndpoint()
- * @method string getDescription()
- * @method string getTag()
- * @method string getOriginName()
- * @method string getType()
- * @method string getOssPath()
- * @method string getMd5()
- */
-class CreatePackage extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/packages';
-
-    /** @var string */
-    public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssBucket($value)
-    {
-        $this->data['OssBucket'] = $value;
-        $this->options['form_params']['ossBucket'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssOwner($value)
-    {
-        $this->data['OssOwner'] = $value;
-        $this->options['form_params']['ossOwner'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageName($value)
-    {
-        $this->data['PackageName'] = $value;
-        $this->options['form_params']['packageName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssEndpoint($value)
-    {
-        $this->data['OssEndpoint'] = $value;
-        $this->options['form_params']['ossEndpoint'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['description'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTag($value)
-    {
-        $this->data['Tag'] = $value;
-        $this->options['form_params']['tag'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOriginName($value)
-    {
-        $this->data['OriginName'] = $value;
-        $this->options['form_params']['originName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['form_params']['type'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssPath($value)
-    {
-        $this->data['OssPath'] = $value;
-        $this->options['form_params']['ossPath'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMd5($value)
-    {
-        $this->data['Md5'] = $value;
-        $this->options['form_params']['md5'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getPackageName()
- */
-class GetPackage extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/packages/[packageName]';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackageName($value)
-    {
-        $this->data['PackageName'] = $value;
-        $this->pathParameters['packageName'] = $value;
 
         return $this;
     }
@@ -2534,6 +2534,42 @@ class DeleteFolder extends Roa
 
     /** @var string */
     public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPath($value)
+    {
+        $this->data['Path'] = $value;
+        $this->options['query']['path'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPath()
+ * @method string getProjectName()
+ */
+class ListChildFolder extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/folders/children';
 
     /**
      * @param string $value
@@ -2616,23 +2652,35 @@ class MVFolder extends Roa
 }
 
 /**
- * @method string getPath()
+ * @method string getQueueName()
  * @method string getProjectName()
+ * @method string getCode()
+ * @method string getDescription()
+ * @method string getPlanJson()
+ * @method string getEngineVersion()
+ * @method string getClusterId()
+ * @method string getPackages()
+ * @method string getFolderId()
+ * @method string getProperties()
+ * @method string getJobName()
  */
-class ListChildFolder extends Roa
+class UpdateJob extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/folders/children';
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
+
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withPath($value)
+    public function withQueueName($value)
     {
-        $this->data['Path'] = $value;
-        $this->options['query']['path'] = $value;
+        $this->data['QueueName'] = $value;
+        $this->options['form_params']['queueName'] = $value;
 
         return $this;
     }
@@ -2646,6 +2694,123 @@ class ListChildFolder extends Roa
     {
         $this->data['ProjectName'] = $value;
         $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCode($value)
+    {
+        $this->data['Code'] = $value;
+        $this->options['form_params']['code'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlanJson($value)
+    {
+        $this->data['PlanJson'] = $value;
+        $this->options['form_params']['planJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEngineVersion($value)
+    {
+        $this->data['EngineVersion'] = $value;
+        $this->options['form_params']['engineVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['form_params']['clusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackages($value)
+    {
+        $this->data['Packages'] = $value;
+        $this->options['form_params']['packages'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFolderId($value)
+    {
+        $this->data['FolderId'] = $value;
+        $this->options['form_params']['folderId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProperties($value)
+    {
+        $this->data['Properties'] = $value;
+        $this->options['form_params']['properties'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
 
         return $this;
     }
@@ -2653,16 +2818,15 @@ class ListChildFolder extends Roa
 
 /**
  * @method string getProjectName()
- * @method string getParameterJson()
+ * @method string getExpectedGB()
+ * @method string getExpectedCore()
  * @method string getJobName()
+ * @method string getAutoconfEnable()
  */
-class StartJob extends Roa
+class GetRawPlanJson extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instance';
-
-    /** @var string */
-    public $method = 'POST';
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/planjson';
 
     /**
      * @param string $value
@@ -2682,10 +2846,150 @@ class StartJob extends Roa
      *
      * @return $this
      */
-    public function withParameterJson($value)
+    public function withExpectedGB($value)
     {
-        $this->data['ParameterJson'] = $value;
-        $this->options['form_params']['parameterJson'] = $value;
+        $this->data['ExpectedGB'] = $value;
+        $this->options['query']['expectedGB'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExpectedCore($value)
+    {
+        $this->data['ExpectedCore'] = $value;
+        $this->options['query']['expectedCore'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAutoconfEnable($value)
+    {
+        $this->data['AutoconfEnable'] = $value;
+        $this->options['query']['autoconfEnable'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getJobName()
+ */
+class DeleteJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getJobName()
+ */
+class OfflineJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/offline';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getJobName()
+ */
+class GetJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
 
         return $this;
     }
@@ -2854,15 +3158,16 @@ class ListJob extends Roa
 
 /**
  * @method string getProjectName()
+ * @method string getParameterJson()
  * @method string getJobName()
  */
-class DeleteJob extends Roa
+class StartJob extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instance';
 
     /** @var string */
-    public $method = 'DELETE';
+    public $method = 'POST';
 
     /**
      * @param string $value
@@ -2873,6 +3178,19 @@ class DeleteJob extends Roa
     {
         $this->data['ProjectName'] = $value;
         $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParameterJson($value)
+    {
+        $this->data['ParameterJson'] = $value;
+        $this->options['form_params']['parameterJson'] = $value;
 
         return $this;
     }
@@ -2892,13 +3210,26 @@ class DeleteJob extends Roa
 }
 
 /**
+ * @method string getPath()
  * @method string getProjectName()
- * @method string getJobName()
  */
-class GetJob extends Roa
+class GetFolder extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
+    public $pathPattern = '/api/v2/projects/[projectName]/folders';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPath($value)
+    {
+        $this->data['Path'] = $value;
+        $this->options['query']['path'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2909,171 +3240,32 @@ class GetJob extends Roa
     {
         $this->data['ProjectName'] = $value;
         $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJobName($value)
-    {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
 
         return $this;
     }
 }
 
 /**
+ * @method string getPath()
  * @method string getProjectName()
- * @method string getJobName()
  */
-class OfflineJob extends Roa
+class CreateFolder extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/offline';
+    public $pathPattern = '/api/v2/projects/[projectName]/folders';
 
     /** @var string */
-    public $method = 'PUT';
+    public $method = 'POST';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withProjectName($value)
+    public function withPath($value)
     {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJobName($value)
-    {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getExpectedGB()
- * @method string getExpectedCore()
- * @method string getJobName()
- * @method string getAutoconfEnable()
- */
-class GetRawPlanJson extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/planjson';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExpectedGB($value)
-    {
-        $this->data['ExpectedGB'] = $value;
-        $this->options['query']['expectedGB'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExpectedCore($value)
-    {
-        $this->data['ExpectedCore'] = $value;
-        $this->options['query']['expectedCore'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJobName($value)
-    {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAutoconfEnable($value)
-    {
-        $this->data['AutoconfEnable'] = $value;
-        $this->options['query']['autoconfEnable'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getQueueName()
- * @method string getProjectName()
- * @method string getCode()
- * @method string getDescription()
- * @method string getPlanJson()
- * @method string getEngineVersion()
- * @method string getClusterId()
- * @method string getPackages()
- * @method string getFolderId()
- * @method string getProperties()
- * @method string getJobName()
- */
-class UpdateJob extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withQueueName($value)
-    {
-        $this->data['QueueName'] = $value;
-        $this->options['form_params']['queueName'] = $value;
+        $this->data['Path'] = $value;
+        $this->options['form_params']['path'] = $value;
 
         return $this;
     }
@@ -3087,123 +3279,6 @@ class UpdateJob extends Roa
     {
         $this->data['ProjectName'] = $value;
         $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCode($value)
-    {
-        $this->data['Code'] = $value;
-        $this->options['form_params']['code'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['description'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPlanJson($value)
-    {
-        $this->data['PlanJson'] = $value;
-        $this->options['form_params']['planJson'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEngineVersion($value)
-    {
-        $this->data['EngineVersion'] = $value;
-        $this->options['form_params']['engineVersion'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClusterId($value)
-    {
-        $this->data['ClusterId'] = $value;
-        $this->options['form_params']['clusterId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPackages($value)
-    {
-        $this->data['Packages'] = $value;
-        $this->options['form_params']['packages'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFolderId($value)
-    {
-        $this->data['FolderId'] = $value;
-        $this->options['form_params']['folderId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProperties($value)
-    {
-        $this->data['Properties'] = $value;
-        $this->options['form_params']['properties'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJobName($value)
-    {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
 
         return $this;
     }
@@ -3403,120 +3478,6 @@ class CreateJob extends Roa
 }
 
 /**
- * @method string getPath()
- * @method string getProjectName()
- */
-class GetFolder extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/folders';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPath($value)
-    {
-        $this->data['Path'] = $value;
-        $this->options['query']['path'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getPath()
- * @method string getProjectName()
- */
-class CreateFolder extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/folders';
-
-    /** @var string */
-    public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPath($value)
-    {
-        $this->data['Path'] = $value;
-        $this->options['form_params']['path'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectName()
- * @method string getJobName()
- */
-class CommitJob extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/commit';
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->pathParameters['projectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJobName($value)
-    {
-        $this->data['JobName'] = $value;
-        $this->pathParameters['jobName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getProjectName()
  * @method string getJobNames()
  * @method string getJobType()
@@ -3561,6 +3522,45 @@ class BatchGetInstanceRunSummary extends Roa
     {
         $this->data['JobType'] = $value;
         $this->options['query']['jobType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getJobName()
+ */
+class CommitJob extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/commit';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
 
         return $this;
     }

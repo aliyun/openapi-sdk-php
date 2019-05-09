@@ -6,117 +6,114 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeAlertHistoryList describeAlertHistoryList(array $options = [])
- * @method DescribeSiteMonitorISPCityList describeSiteMonitorISPCityList(array $options = [])
- * @method RemoveMetricRuleTargets removeMetricRuleTargets(array $options = [])
- * @method DescribeMetricRuleTargets describeMetricRuleTargets(array $options = [])
  * @method PutMetricRuleTargets putMetricRuleTargets(array $options = [])
- * @method DescrebeEventRuleTarget descrebeEventRuleTarget(array $options = [])
- * @method DescribeSiteMonitorISPAreaCity describeSiteMonitorISPAreaCity(array $options = [])
- * @method QueryMetricMeta queryMetricMeta(array $options = [])
- * @method QueryProjectMeta queryProjectMeta(array $options = [])
- * @method DeleteMonitoringTemplate deleteMonitoringTemplate(array $options = [])
+ * @method DescribeMetricRuleTargets describeMetricRuleTargets(array $options = [])
+ * @method RemoveMetricRuleTargets removeMetricRuleTargets(array $options = [])
  * @method ApplyMonitoringTemplate applyMonitoringTemplate(array $options = [])
- * @method GetMonitoringTemplate getMonitoringTemplate(array $options = [])
- * @method UpdateMonitoringTemplate updateMonitoringTemplate(array $options = [])
+ * @method CreateMyGroupAlertBatch createMyGroupAlertBatch(array $options = [])
+ * @method UpdateMyGroupAlert updateMyGroupAlert(array $options = [])
+ * @method GetMyGroupAlert getMyGroupAlert(array $options = [])
+ * @method ListMonitoringTemplates listMonitoringTemplates(array $options = [])
  * @method CreateMonitoringTemplate createMonitoringTemplate(array $options = [])
+ * @method UpdateMonitoringTemplate updateMonitoringTemplate(array $options = [])
+ * @method GetMonitoringTemplate getMonitoringTemplate(array $options = [])
+ * @method DeleteMonitoringTemplate deleteMonitoringTemplate(array $options = [])
+ * @method QueryProjectMeta queryProjectMeta(array $options = [])
+ * @method QueryMetricMeta queryMetricMeta(array $options = [])
  * @method QueryStaticsResponseTime queryStaticsResponseTime(array $options = [])
  * @method QueryStaticsErrorRate queryStaticsErrorRate(array $options = [])
  * @method QueryStaticsAvailability queryStaticsAvailability(array $options = [])
  * @method QueryErrorDistribution queryErrorDistribution(array $options = [])
- * @method ListMonitoringTemplates listMonitoringTemplates(array $options = [])
- * @method CreateMyGroupAlertBatch createMyGroupAlertBatch(array $options = [])
- * @method UpdateMyGroupAlert updateMyGroupAlert(array $options = [])
- * @method GetMyGroupAlert getMyGroupAlert(array $options = [])
  * @method QueryTaskMonitorData queryTaskMonitorData(array $options = [])
  * @method QueryTaskConfig queryTaskConfig(array $options = [])
+ * @method QueryMonitorData queryMonitorData(array $options = [])
  * @method QuerySystemEventDemo querySystemEventDemo(array $options = [])
  * @method SendDryRunSystemEvent sendDryRunSystemEvent(array $options = [])
- * @method DescribeAlarmsForResources describeAlarmsForResources(array $options = [])
  * @method PutMetricAlarm putMetricAlarm(array $options = [])
- * @method DescribeAlarmsForDimensions describeAlarmsForDimensions(array $options = [])
+ * @method DescribeAlarmsForResources describeAlarmsForResources(array $options = [])
  * @method DescribeAlarms describeAlarms(array $options = [])
- * @method ListEventTargetsByRule listEventTargetsByRule(array $options = [])
- * @method ListEventRules listEventRules(array $options = [])
- * @method EnableEventRule enableEventRule(array $options = [])
- * @method DisableEventRule disableEventRule(array $options = [])
+ * @method PutGroupDynamicRule putGroupDynamicRule(array $options = [])
+ * @method DeleteGroupDynamicRule deleteGroupDynamicRule(array $options = [])
+ * @method ListGroupDynamicRule listGroupDynamicRule(array $options = [])
+ * @method ApplyTemplate applyTemplate(array $options = [])
+ * @method DeleteEventRule deleteEventRule(array $options = [])
  * @method DescribeEventRule describeEventRule(array $options = [])
  * @method DeleteEventTargets deleteEventTargets(array $options = [])
- * @method DeleteEventRule deleteEventRule(array $options = [])
- * @method PutEventTargets putEventTargets(array $options = [])
+ * @method DisableEventRule disableEventRule(array $options = [])
+ * @method ListEventRules listEventRules(array $options = [])
+ * @method EnableEventRule enableEventRule(array $options = [])
+ * @method ListEventTargetsByRule listEventTargetsByRule(array $options = [])
  * @method PutEventRule putEventRule(array $options = [])
+ * @method PutEventTargets putEventTargets(array $options = [])
  * @method DescribeContact describeContact(array $options = [])
  * @method GetContacts getContacts(array $options = [])
- * @method ApplyTemplate applyTemplate(array $options = [])
+ * @method DescribeTasks describeTasks(array $options = [])
+ * @method DescribeTaskDetail describeTaskDetail(array $options = [])
  * @method CreateTask createTask(array $options = [])
  * @method ModifyTask modifyTask(array $options = [])
  * @method DeleteTasks deleteTasks(array $options = [])
  * @method StopTasks stopTasks(array $options = [])
  * @method StartTasks startTasks(array $options = [])
  * @method DescribeISPAreaCity describeISPAreaCity(array $options = [])
- * @method DescribeTaskDetail describeTaskDetail(array $options = [])
- * @method DescribeTasks describeTasks(array $options = [])
- * @method ListGroupDynamicRule listGroupDynamicRule(array $options = [])
- * @method DeleteGroupDynamicRule deleteGroupDynamicRule(array $options = [])
- * @method PutGroupDynamicRule putGroupDynamicRule(array $options = [])
  * @method UpdateMyGroupMembers updateMyGroupMembers(array $options = [])
+ * @method QueryMetricData queryMetricData(array $options = [])
+ * @method QueryMetricLast queryMetricLast(array $options = [])
+ * @method QueryMetricList queryMetricList(array $options = [])
+ * @method QueryMetricTop queryMetricTop(array $options = [])
  * @method TaskConfigUnhealthy taskConfigUnhealthy(array $options = [])
  * @method TaskConfigDelete taskConfigDelete(array $options = [])
  * @method TaskConfigEnable taskConfigEnable(array $options = [])
  * @method TaskConfigList taskConfigList(array $options = [])
  * @method TaskConfigModify taskConfigModify(array $options = [])
  * @method TaskConfigCreate taskConfigCreate(array $options = [])
- * @method QueryMetricTop queryMetricTop(array $options = [])
- * @method QueryMetricList queryMetricList(array $options = [])
- * @method QueryMetricLast queryMetricLast(array $options = [])
- * @method QueryMetricData queryMetricData(array $options = [])
- * @method EnableAlarm enableAlarm(array $options = [])
  * @method NodeProcessCreate nodeProcessCreate(array $options = [])
+ * @method EnableAlarm enableAlarm(array $options = [])
  * @method UpdateAlarm updateAlarm(array $options = [])
- * @method ListAlarmHistory listAlarmHistory(array $options = [])
  * @method QueryCustomEventHistogram queryCustomEventHistogram(array $options = [])
+ * @method ListAlarmHistory listAlarmHistory(array $options = [])
  * @method ListMyGroups listMyGroups(array $options = [])
  * @method NodeProcesses nodeProcesses(array $options = [])
  * @method EnableActiveAlert enableActiveAlert(array $options = [])
  * @method ProfileSet profileSet(array $options = [])
- * @method NodeStatus nodeStatus(array $options = [])
  * @method DeleteAlarm deleteAlarm(array $options = [])
- * @method ListContactGroup listContactGroup(array $options = [])
+ * @method NodeStatus nodeStatus(array $options = [])
  * @method QuerySystemEventHistogram querySystemEventHistogram(array $options = [])
- * @method ListActiveAlertRule listActiveAlertRule(array $options = [])
+ * @method ListContactGroup listContactGroup(array $options = [])
  * @method GetMyGroups getMyGroups(array $options = [])
+ * @method ListActiveAlertRule listActiveAlertRule(array $options = [])
  * @method DeleteCustomMetric deleteCustomMetric(array $options = [])
- * @method CreateAlarm createAlarm(array $options = [])
  * @method PutEvent putEvent(array $options = [])
- * @method ListMyGroupCategories listMyGroupCategories(array $options = [])
+ * @method CreateAlarm createAlarm(array $options = [])
  * @method NodeUninstall nodeUninstall(array $options = [])
- * @method PutCustomMetric putCustomMetric(array $options = [])
+ * @method ListMyGroupCategories listMyGroupCategories(array $options = [])
  * @method AddMyGroupInstances addMyGroupInstances(array $options = [])
+ * @method PutCustomMetric putCustomMetric(array $options = [])
  * @method ListAlarm listAlarm(array $options = [])
- * @method DeleteMyGroupInstances deleteMyGroupInstances(array $options = [])
  * @method ListMyGroupInstancesDetails listMyGroupInstancesDetails(array $options = [])
+ * @method DeleteMyGroupInstances deleteMyGroupInstances(array $options = [])
  * @method CreateMyGroups createMyGroups(array $options = [])
- * @method ListProductOfActiveAlert listProductOfActiveAlert(array $options = [])
  * @method DisableActiveAlert disableActiveAlert(array $options = [])
- * @method DeleteMyGroups deleteMyGroups(array $options = [])
+ * @method ListProductOfActiveAlert listProductOfActiveAlert(array $options = [])
  * @method ListMyGroupInstances listMyGroupInstances(array $options = [])
- * @method NodeList nodeList(array $options = [])
+ * @method DeleteMyGroups deleteMyGroups(array $options = [])
  * @method NodeInstall nodeInstall(array $options = [])
+ * @method NodeList nodeList(array $options = [])
  * @method UpdateMyGroups updateMyGroups(array $options = [])
  * @method NodeProcessDelete nodeProcessDelete(array $options = [])
  * @method QueryCustomMetricList queryCustomMetricList(array $options = [])
  * @method GetNotifyPolicy getNotifyPolicy(array $options = [])
- * @method QuerySystemEventCount querySystemEventCount(array $options = [])
  * @method QueryCustomEventCount queryCustomEventCount(array $options = [])
- * @method UpdateMyGroupInstances updateMyGroupInstances(array $options = [])
+ * @method QuerySystemEventCount querySystemEventCount(array $options = [])
  * @method ListNotifyPolicy listNotifyPolicy(array $options = [])
+ * @method UpdateMyGroupInstances updateMyGroupInstances(array $options = [])
  * @method AccessKeyGet accessKeyGet(array $options = [])
- * @method ProfileGet profileGet(array $options = [])
  * @method CreateNotifyPolicy createNotifyPolicy(array $options = [])
- * @method DeleteNotifyPolicy deleteNotifyPolicy(array $options = [])
+ * @method ProfileGet profileGet(array $options = [])
  * @method DisableAlarm disableAlarm(array $options = [])
+ * @method DeleteNotifyPolicy deleteNotifyPolicy(array $options = [])
  * @method DescribeAlarmHistory describeAlarmHistory(array $options = [])
- * @method QuerySystemEventDetail querySystemEventDetail(array $options = [])
  * @method NodeStatusList nodeStatusList(array $options = [])
+ * @method QuerySystemEventDetail querySystemEventDetail(array $options = [])
  * @method QueryCustomEventDetail queryCustomEventDetail(array $options = [])
  */
 class CmsApiResolver extends ApiResolver
@@ -171,13 +168,57 @@ class DescribeAlertHistoryList extends Rpc
 }
 
 /**
- * @method string getCity()
- * @method $this withCity($value)
- * @method string getIsp()
- * @method $this withIsp($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getActions()
+ * @method array getTargets()
  */
-class DescribeSiteMonitorISPCityList extends Rpc
+class PutMetricRuleTargets extends Rpc
 {
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActions($value)
+    {
+        $this->data['Actions'] = $value;
+        $this->options['form_params']['Actions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $targets
+     *
+     * @return $this
+     */
+    public function withTargets(array $targets)
+    {
+        $this->data['Targets'] = $targets;
+        foreach ($targets as $depth1 => $depth1Value) {
+            $this->options['query']['Targets.' . ($depth1 + 1) . '.Level'] = $depth1Value['Level'];
+            $this->options['query']['Targets.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+            $this->options['query']['Targets.' . ($depth1 + 1) . '.Arn'] = $depth1Value['Arn'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ */
+class DescribeMetricRuleTargets extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -240,117 +281,6 @@ class RemoveMetricRuleTargets extends Rpc
 }
 
 /**
- * @method string getRuleName()
- * @method $this withRuleName($value)
- */
-class DescribeMetricRuleTargets extends Rpc
-{
-
-    /** @var string */
-    public $method = 'PUT';
-}
-
-/**
- * @method string getRuleName()
- * @method $this withRuleName($value)
- * @method string getActions()
- * @method array getTargets()
- */
-class PutMetricRuleTargets extends Rpc
-{
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withActions($value)
-    {
-        $this->data['Actions'] = $value;
-        $this->options['form_params']['Actions'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $targets
-     *
-     * @return $this
-     */
-    public function withTargets(array $targets)
-    {
-        $this->data['Targets'] = $targets;
-        foreach ($targets as $depth1 => $depth1Value) {
-            $this->options['query']['Targets.' . ($depth1 + 1) . '.Level'] = $depth1Value['Level'];
-            $this->options['query']['Targets.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
-            $this->options['query']['Targets.' . ($depth1 + 1) . '.Arn'] = $depth1Value['Arn'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getRuleName()
- * @method $this withRuleName($value)
- */
-class DescrebeEventRuleTarget extends Rpc
-{
-
-    /** @var string */
-    public $method = 'PUT';
-}
-
-/**
- * @method string getCity()
- * @method $this withCity($value)
- * @method string getIsp()
- * @method $this withIsp($value)
- */
-class DescribeSiteMonitorISPAreaCity extends Rpc
-{
-}
-
-/**
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLabels()
- * @method $this withLabels($value)
- */
-class QueryMetricMeta extends Rpc
-{
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLabels()
- * @method $this withLabels($value)
- */
-class QueryProjectMeta extends Rpc
-{
-}
-
-/**
- * @method string getId()
- * @method $this withId($value)
- */
-class DeleteMonitoringTemplate extends Rpc
-{
-}
-
-/**
  * @method string getEnableStartTime()
  * @method $this withEnableStartTime($value)
  * @method string getApplyMode()
@@ -373,12 +303,66 @@ class ApplyMonitoringTemplate extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getGroupAlertJsonArray()
+ * @method $this withGroupAlertJsonArray($value)
+ */
+class CreateMyGroupAlertBatch extends Rpc
+{
+}
+
+/**
+ * @method string getGroupAlertJson()
+ * @method $this withGroupAlertJson($value)
+ */
+class UpdateMyGroupAlert extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getAlertName()
+ * @method $this withAlertName($value)
+ */
+class GetMyGroupAlert extends Rpc
+{
+}
+
+/**
+ * @method string getTotal()
+ * @method $this withTotal($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getId()
  * @method $this withId($value)
+ * @method string getHistory()
+ * @method $this withHistory($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class GetMonitoringTemplate extends Rpc
+class ListMonitoringTemplates extends Rpc
+{
+}
+
+/**
+ * @method string getEventRuleTemplatesJson()
+ * @method $this withEventRuleTemplatesJson($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAlertTemplatesJson()
+ * @method $this withAlertTemplatesJson($value)
+ */
+class CreateMonitoringTemplate extends Rpc
 {
 }
 
@@ -401,18 +385,48 @@ class UpdateMonitoringTemplate extends Rpc
 }
 
 /**
- * @method string getEventRuleTemplatesJson()
- * @method $this withEventRuleTemplatesJson($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getNamespace()
- * @method $this withNamespace($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getAlertTemplatesJson()
- * @method $this withAlertTemplatesJson($value)
+ * @method string getId()
+ * @method $this withId($value)
  */
-class CreateMonitoringTemplate extends Rpc
+class GetMonitoringTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class DeleteMonitoringTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ */
+class QueryProjectMeta extends Rpc
+{
+}
+
+/**
+ * @method string getMetric()
+ * @method $this withMetric($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ */
+class QueryMetricMeta extends Rpc
 {
 }
 
@@ -457,54 +471,6 @@ class QueryErrorDistribution extends Rpc
 }
 
 /**
- * @method string getTotal()
- * @method $this withTotal($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getHistory()
- * @method $this withHistory($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListMonitoringTemplates extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getGroupAlertJsonArray()
- * @method $this withGroupAlertJsonArray($value)
- */
-class CreateMyGroupAlertBatch extends Rpc
-{
-}
-
-/**
- * @method string getGroupAlertJson()
- * @method $this withGroupAlertJson($value)
- */
-class UpdateMyGroupAlert extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getAlertName()
- * @method $this withAlertName($value)
- */
-class GetMyGroupAlert extends Rpc
-{
-}
-
-/**
  * @method string getCursor()
  * @method $this withCursor($value)
  * @method string getPeriod()
@@ -543,6 +509,40 @@ class QueryTaskConfig extends Rpc
 }
 
 /**
+ * @method string getCursor()
+ * @method $this withCursor($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getLength()
+ * @method $this withLength($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getMetricName()
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class QueryMonitorData extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricName($value)
+    {
+        $this->data['MetricName'] = $value;
+        $this->options['query']['metricName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getProduct()
  * @method $this withProduct($value)
  * @method string getEventName()
@@ -563,28 +563,6 @@ class QuerySystemEventDemo extends Rpc
  * @method $this withEventContent($value)
  */
 class SendDryRunSystemEvent extends Rpc
-{
-}
-
-/**
- * @method string getEnableState()
- * @method $this withEnableState($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getNamespace()
- * @method $this withNamespace($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getAlertState()
- * @method $this withAlertState($value)
- * @method string getPage()
- * @method $this withPage($value)
- * @method string getMetricName()
- * @method $this withMetricName($value)
- * @method string getDimensions()
- * @method $this withDimensions($value)
- */
-class DescribeAlarmsForResources extends Rpc
 {
 }
 
@@ -663,7 +641,7 @@ class PutMetricAlarm extends Rpc
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
-class DescribeAlarmsForDimensions extends Rpc
+class DescribeAlarmsForResources extends Rpc
 {
 }
 
@@ -696,24 +674,50 @@ class DescribeAlarms extends Rpc
 }
 
 /**
- * @method string getRuleName()
- * @method $this withRuleName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getGroupRuleArrayJson()
+ * @method $this withGroupRuleArrayJson($value)
  */
-class ListEventTargetsByRule extends Rpc
+class PutGroupDynamicRule extends Rpc
 {
 }
 
 /**
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getNamePrefix()
- * @method $this withNamePrefix($value)
- * @method string getPage()
- * @method $this withPage($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
-class ListEventRules extends Rpc
+class DeleteGroupDynamicRule extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class ListGroupDynamicRule extends Rpc
+{
+}
+
+/**
+ * @method string getEnableStartTime()
+ * @method $this withEnableStartTime($value)
+ * @method string getApplyMode()
+ * @method $this withApplyMode($value)
+ * @method string getTemplateIds()
+ * @method $this withTemplateIds($value)
+ * @method string getEnableEndTime()
+ * @method $this withEnableEndTime($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNotifyLevel()
+ * @method $this withNotifyLevel($value)
+ * @method string getSilenceTime()
+ * @method $this withSilenceTime($value)
+ */
+class ApplyTemplate extends Rpc
 {
 }
 
@@ -722,38 +726,8 @@ class ListEventRules extends Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class EnableEventRule extends Rpc
+class DeleteEventRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param array $ruleNames
-     *
-     * @return $this
-     */
-    public function withRuleNames(array $ruleNames)
-    {
-        $this->data['RuleNames'] = $ruleNames;
-        foreach ($ruleNames as $i => $iValue) {
-            $this->options['query']['RuleNames.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method array getRuleNames()
- * @method string getRuleName()
- * @method $this withRuleName($value)
- */
-class DisableEventRule extends Rpc
-{
-
-    /** @var string */
-    public $method = 'PUT';
 
     /**
      * @param array $ruleNames
@@ -811,8 +785,11 @@ class DeleteEventTargets extends Rpc
  * @method string getRuleName()
  * @method $this withRuleName($value)
  */
-class DeleteEventRule extends Rpc
+class DisableEventRule extends Rpc
 {
+
+    /** @var string */
+    public $method = 'PUT';
 
     /**
      * @param array $ruleNames
@@ -824,6 +801,102 @@ class DeleteEventRule extends Rpc
         $this->data['RuleNames'] = $ruleNames;
         foreach ($ruleNames as $i => $iValue) {
             $this->options['query']['RuleNames.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getNamePrefix()
+ * @method $this withNamePrefix($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ */
+class ListEventRules extends Rpc
+{
+}
+
+/**
+ * @method array getRuleNames()
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ */
+class EnableEventRule extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param array $ruleNames
+     *
+     * @return $this
+     */
+    public function withRuleNames(array $ruleNames)
+    {
+        $this->data['RuleNames'] = $ruleNames;
+        foreach ($ruleNames as $i => $iValue) {
+            $this->options['query']['RuleNames.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ */
+class ListEventTargetsByRule extends Rpc
+{
+}
+
+/**
+ * @method array getEventPattern()
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getEventType()
+ * @method $this withEventType($value)
+ * @method string getState()
+ * @method $this withState($value)
+ */
+class PutEventRule extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param array $eventPattern
+     *
+     * @return $this
+     */
+    public function withEventPattern(array $eventPattern)
+    {
+        $this->data['EventPattern'] = $eventPattern;
+        foreach ($eventPattern as $depth1 => $depth1Value) {
+            foreach ($depth1Value['LevelList'] as $i => $iValue) {
+                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.LevelList.' . ($i + 1)] = $iValue;
+            }
+            $this->options['query']['EventPattern.' . ($depth1 + 1) . '.Product'] = $depth1Value['Product'];
+            foreach ($depth1Value['StatusList'] as $i => $iValue) {
+                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.StatusList.' . ($i + 1)] = $iValue;
+            }
+            foreach ($depth1Value['NameList'] as $i => $iValue) {
+                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.NameList.' . ($i + 1)] = $iValue;
+            }
+            foreach ($depth1Value['EventTypeList'] as $i => $iValue) {
+                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.EventTypeList.' . ($i + 1)] = $iValue;
+            }
         }
 
         return $this;
@@ -935,53 +1008,6 @@ class PutEventTargets extends Rpc
 }
 
 /**
- * @method array getEventPattern()
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getEventType()
- * @method $this withEventType($value)
- * @method string getState()
- * @method $this withState($value)
- */
-class PutEventRule extends Rpc
-{
-
-    /** @var string */
-    public $method = 'PUT';
-
-    /**
-     * @param array $eventPattern
-     *
-     * @return $this
-     */
-    public function withEventPattern(array $eventPattern)
-    {
-        $this->data['EventPattern'] = $eventPattern;
-        foreach ($eventPattern as $depth1 => $depth1Value) {
-            foreach ($depth1Value['LevelList'] as $i => $iValue) {
-                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.LevelList.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['EventPattern.' . ($depth1 + 1) . '.Product'] = $depth1Value['Product'];
-            foreach ($depth1Value['StatusList'] as $i => $iValue) {
-                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.StatusList.' . ($i + 1)] = $iValue;
-            }
-            foreach ($depth1Value['NameList'] as $i => $iValue) {
-                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.NameList.' . ($i + 1)] = $iValue;
-            }
-            foreach ($depth1Value['EventTypeList'] as $i => $iValue) {
-                $this->options['query']['EventPattern.' . ($depth1 + 1) . '.EventTypeList.' . ($i + 1)] = $iValue;
-            }
-        }
-
-        return $this;
-    }
-}
-
-/**
  * @method string getContactName()
  * @method $this withContactName($value)
  */
@@ -998,22 +1024,26 @@ class GetContacts extends Rpc
 }
 
 /**
- * @method string getEnableStartTime()
- * @method $this withEnableStartTime($value)
- * @method string getApplyMode()
- * @method $this withApplyMode($value)
- * @method string getTemplateIds()
- * @method $this withTemplateIds($value)
- * @method string getEnableEndTime()
- * @method $this withEnableEndTime($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getNotifyLevel()
- * @method $this withNotifyLevel($value)
- * @method string getSilenceTime()
- * @method $this withSilenceTime($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
-class ApplyTemplate extends Rpc
+class DescribeTasks extends Rpc
+{
+}
+
+/**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DescribeTaskDetail extends Rpc
 {
 }
 
@@ -1126,58 +1156,6 @@ class DescribeISPAreaCity extends Rpc
 }
 
 /**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeTaskDetail extends Rpc
-{
-}
-
-/**
- * @method string getTaskType()
- * @method $this withTaskType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPage()
- * @method $this withPage($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeTasks extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class ListGroupDynamicRule extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class DeleteGroupDynamicRule extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getGroupRuleArrayJson()
- * @method $this withGroupRuleArrayJson($value)
- */
-class PutGroupDynamicRule extends Rpc
-{
-}
-
-/**
  * @method string getReaders()
  * @method $this withReaders($value)
  * @method string getGroupId()
@@ -1186,6 +1164,112 @@ class PutGroupDynamicRule extends Rpc
  * @method $this withMasters($value)
  */
 class UpdateMyGroupMembers extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getMetric()
+ * @method $this withMetric($value)
+ * @method string getLength()
+ * @method $this withLength($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getExpress()
+ * @method $this withExpress($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDimensions()
+ * @method $this withDimensions($value)
+ */
+class QueryMetricData extends Rpc
+{
+}
+
+/**
+ * @method string getCursor()
+ * @method $this withCursor($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getLength()
+ * @method $this withLength($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getExpress()
+ * @method $this withExpress($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getMetric()
+ * @method $this withMetric($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ * @method string getDimensions()
+ * @method $this withDimensions($value)
+ */
+class QueryMetricLast extends Rpc
+{
+}
+
+/**
+ * @method string getCursor()
+ * @method $this withCursor($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getMetric()
+ * @method $this withMetric($value)
+ * @method string getLength()
+ * @method $this withLength($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getExpress()
+ * @method $this withExpress($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDimensions()
+ * @method $this withDimensions($value)
+ */
+class QueryMetricList extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMetric()
+ * @method $this withMetric($value)
+ * @method string getLength()
+ * @method $this withLength($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOrderby()
+ * @method $this withOrderby($value)
+ * @method string getExpress()
+ * @method $this withExpress($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDimensions()
+ * @method $this withDimensions($value)
+ * @method string getOrderDesc()
+ * @method $this withOrderDesc($value)
+ */
+class QueryMetricTop extends Rpc
 {
 }
 
@@ -1348,120 +1432,6 @@ class TaskConfigCreate extends Rpc
 }
 
 /**
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getLength()
- * @method $this withLength($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOrderby()
- * @method $this withOrderby($value)
- * @method string getExpress()
- * @method $this withExpress($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDimensions()
- * @method $this withDimensions($value)
- * @method string getOrderDesc()
- * @method $this withOrderDesc($value)
- */
-class QueryMetricTop extends Rpc
-{
-}
-
-/**
- * @method string getCursor()
- * @method $this withCursor($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getLength()
- * @method $this withLength($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getExpress()
- * @method $this withExpress($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDimensions()
- * @method $this withDimensions($value)
- */
-class QueryMetricList extends Rpc
-{
-}
-
-/**
- * @method string getCursor()
- * @method $this withCursor($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getLength()
- * @method $this withLength($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getExpress()
- * @method $this withExpress($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getPage()
- * @method $this withPage($value)
- * @method string getDimensions()
- * @method $this withDimensions($value)
- */
-class QueryMetricLast extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getLength()
- * @method $this withLength($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getExpress()
- * @method $this withExpress($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDimensions()
- * @method $this withDimensions($value)
- */
-class QueryMetricData extends Rpc
-{
-}
-
-/**
- * @method string getId()
- * @method $this withId($value)
- */
-class EnableAlarm extends Rpc
-{
-}
-
-/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getProcessName()
@@ -1474,6 +1444,14 @@ class EnableAlarm extends Rpc
  * @method $this withCommand($value)
  */
 class NodeProcessCreate extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class EnableAlarm extends Rpc
 {
 }
 
@@ -1512,6 +1490,14 @@ class UpdateAlarm extends Rpc
 }
 
 /**
+ * @method string getQueryJson()
+ * @method $this withQueryJson($value)
+ */
+class QueryCustomEventHistogram extends Rpc
+{
+}
+
+/**
  * @method string getCursor()
  * @method $this withCursor($value)
  * @method string getSize()
@@ -1528,24 +1514,16 @@ class ListAlarmHistory extends Rpc
 }
 
 /**
- * @method string getQueryJson()
- * @method $this withQueryJson($value)
- */
-class QueryCustomEventHistogram extends Rpc
-{
-}
-
-/**
  * @method string getSelectContactGroups()
  * @method $this withSelectContactGroups($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
  * @method string getPageNumber()
@@ -1590,14 +1568,6 @@ class ProfileSet extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class NodeStatus extends Rpc
-{
-}
-
-/**
  * @method string getId()
  * @method $this withId($value)
  */
@@ -1606,12 +1576,10 @@ class DeleteAlarm extends Rpc
 }
 
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
-class ListContactGroup extends Rpc
+class NodeStatus extends Rpc
 {
 }
 
@@ -1624,12 +1592,12 @@ class QuerySystemEventHistogram extends Rpc
 }
 
 /**
- * @method string getProduct()
- * @method $this withProduct($value)
- * @method string getUserId()
- * @method $this withUserId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
-class ListActiveAlertRule extends Rpc
+class ListContactGroup extends Rpc
 {
 }
 
@@ -1652,6 +1620,16 @@ class GetMyGroups extends Rpc
 }
 
 /**
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class ListActiveAlertRule extends Rpc
+{
+}
+
+/**
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getMetricName()
@@ -1662,6 +1640,14 @@ class GetMyGroups extends Rpc
  * @method $this withMd5($value)
  */
 class DeleteCustomMetric extends Rpc
+{
+}
+
+/**
+ * @method string getEventInfo()
+ * @method $this withEventInfo($value)
+ */
+class PutEvent extends Rpc
 {
 }
 
@@ -1704,10 +1690,10 @@ class CreateAlarm extends Rpc
 }
 
 /**
- * @method string getEventInfo()
- * @method $this withEventInfo($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
-class PutEvent extends Rpc
+class NodeUninstall extends Rpc
 {
 }
 
@@ -1720,10 +1706,12 @@ class ListMyGroupCategories extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getInstances()
+ * @method $this withInstances($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
-class NodeUninstall extends Rpc
+class AddMyGroupInstances extends Rpc
 {
 }
 
@@ -1732,16 +1720,6 @@ class NodeUninstall extends Rpc
  * @method $this withMetricList($value)
  */
 class PutCustomMetric extends Rpc
-{
-}
-
-/**
- * @method string getInstances()
- * @method $this withInstances($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class AddMyGroupInstances extends Rpc
 {
 }
 
@@ -1768,20 +1746,6 @@ class ListAlarm extends Rpc
 }
 
 /**
- * @method string getInstanceIds()
- * @method $this withInstanceIds($value)
- * @method string getInstanceIdList()
- * @method $this withInstanceIdList($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class DeleteMyGroupInstances extends Rpc
-{
-}
-
-/**
  * @method string getTotal()
  * @method $this withTotal($value)
  * @method string getInstanceIds()
@@ -1798,6 +1762,20 @@ class DeleteMyGroupInstances extends Rpc
  * @method $this withPageNumber($value)
  */
 class ListMyGroupInstancesDetails extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getInstanceIdList()
+ * @method $this withInstanceIdList($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class DeleteMyGroupInstances extends Rpc
 {
 }
 
@@ -1820,14 +1798,6 @@ class CreateMyGroups extends Rpc
 }
 
 /**
- * @method string getUserId()
- * @method $this withUserId($value)
- */
-class ListProductOfActiveAlert extends Rpc
-{
-}
-
-/**
  * @method string getProduct()
  * @method $this withProduct($value)
  * @method string getUserId()
@@ -1838,10 +1808,10 @@ class DisableActiveAlert extends Rpc
 }
 
 /**
- * @method string getGroupId()
- * @method $this withGroupId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  */
-class DeleteMyGroups extends Rpc
+class ListProductOfActiveAlert extends Rpc
 {
 }
 
@@ -1866,6 +1836,26 @@ class ListMyGroupInstances extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DeleteMyGroups extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class NodeInstall extends Rpc
+{
+}
+
+/**
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getInstanceIds()
@@ -1886,18 +1876,6 @@ class ListMyGroupInstances extends Rpc
  * @method $this withStatus($value)
  */
 class NodeList extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getForce()
- * @method $this withForce($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- */
-class NodeInstall extends Rpc
 {
 }
 
@@ -1969,7 +1947,7 @@ class GetNotifyPolicy extends Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QuerySystemEventCount extends Rpc
+class QueryCustomEventCount extends Rpc
 {
 }
 
@@ -1977,17 +1955,7 @@ class QuerySystemEventCount extends Rpc
  * @method string getQueryJson()
  * @method $this withQueryJson($value)
  */
-class QueryCustomEventCount extends Rpc
-{
-}
-
-/**
- * @method string getInstances()
- * @method $this withInstances($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- */
-class UpdateMyGroupInstances extends Rpc
+class QuerySystemEventCount extends Rpc
 {
 }
 
@@ -2010,10 +1978,12 @@ class ListNotifyPolicy extends Rpc
 }
 
 /**
- * @method string getUserId()
- * @method $this withUserId($value)
+ * @method string getInstances()
+ * @method $this withInstances($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
-class AccessKeyGet extends Rpc
+class UpdateMyGroupInstances extends Rpc
 {
 }
 
@@ -2021,7 +1991,7 @@ class AccessKeyGet extends Rpc
  * @method string getUserId()
  * @method $this withUserId($value)
  */
-class ProfileGet extends Rpc
+class AccessKeyGet extends Rpc
 {
 }
 
@@ -2044,6 +2014,22 @@ class CreateNotifyPolicy extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class ProfileGet extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class DisableAlarm extends Rpc
+{
+}
+
+/**
  * @method string getPolicyType()
  * @method $this withPolicyType($value)
  * @method string getAlertName()
@@ -2056,14 +2042,6 @@ class CreateNotifyPolicy extends Rpc
  * @method $this withDimensions($value)
  */
 class DeleteNotifyPolicy extends Rpc
-{
-}
-
-/**
- * @method string getId()
- * @method $this withId($value)
- */
-class DisableAlarm extends Rpc
 {
 }
 
@@ -2100,18 +2078,18 @@ class DescribeAlarmHistory extends Rpc
 }
 
 /**
- * @method string getQueryJson()
- * @method $this withQueryJson($value)
- */
-class QuerySystemEventDetail extends Rpc
-{
-}
-
-/**
  * @method string getInstanceIds()
  * @method $this withInstanceIds($value)
  */
 class NodeStatusList extends Rpc
+{
+}
+
+/**
+ * @method string getQueryJson()
+ * @method $this withQueryJson($value)
+ */
+class QuerySystemEventDetail extends Rpc
 {
 }
 

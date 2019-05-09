@@ -5,12 +5,12 @@ namespace AlibabaCloud\Ft\V20180713;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method FtFlowSpecial ftFlowSpecial(array $options = [])
- * @method FtDynamicAddressHsf ftDynamicAddressHsf(array $options = [])
  * @method FtDynamicAddressDubbo ftDynamicAddressDubbo(array $options = [])
- * @method FtParamList ftParamList(array $options = [])
- * @method FtEagleEye ftEagleEye(array $options = [])
+ * @method FtDynamicAddressHsf ftDynamicAddressHsf(array $options = [])
+ * @method FtFlowSpecial ftFlowSpecial(array $options = [])
  * @method FTApiAliasApi fTApiAliasApi(array $options = [])
+ * @method FtEagleEye ftEagleEye(array $options = [])
+ * @method FtParamList ftParamList(array $options = [])
  * @method FtGatedLaunchPolicy4 ftGatedLaunchPolicy4(array $options = [])
  */
 class FtApiResolver extends ApiResolver
@@ -30,10 +30,12 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getName()
- * @method $this withName($value)
+ * @method string getIntValue()
+ * @method $this withIntValue($value)
+ * @method string getStringValue()
+ * @method $this withStringValue($value)
  */
-class FtFlowSpecial extends Rpc
+class FtDynamicAddressDubbo extends Rpc
 {
 }
 
@@ -42,12 +44,26 @@ class FtDynamicAddressHsf extends Rpc
 }
 
 /**
- * @method string getIntValue()
- * @method $this withIntValue($value)
- * @method string getStringValue()
- * @method $this withStringValue($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
-class FtDynamicAddressDubbo extends Rpc
+class FtFlowSpecial extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class FTApiAliasApi extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class FtEagleEye extends Rpc
 {
 }
 
@@ -78,22 +94,6 @@ class FtParamList extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getName()
- * @method $this withName($value)
- */
-class FtEagleEye extends Rpc
-{
-}
-
-/**
- * @method string getName()
- * @method $this withName($value)
- */
-class FTApiAliasApi extends Rpc
-{
 }
 
 /**

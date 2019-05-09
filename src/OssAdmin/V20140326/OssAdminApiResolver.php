@@ -5,8 +5,8 @@ namespace AlibabaCloud\OssAdmin\V20140326;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method RestartOss restartOss(array $options = [])
  * @method StopOss stopOss(array $options = [])
+ * @method RestartOss restartOss(array $options = [])
  */
 class OssAdminApiResolver extends ApiResolver
 {
@@ -35,7 +35,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withOwnerId($value)
  * @method string getRegion()
  */
-class RestartOss extends Rpc
+class StopOss extends Rpc
 {
 
     /**
@@ -63,7 +63,7 @@ class RestartOss extends Rpc
  * @method $this withOwnerId($value)
  * @method string getRegion()
  */
-class StopOss extends Rpc
+class RestartOss extends Rpc
 {
 
     /**

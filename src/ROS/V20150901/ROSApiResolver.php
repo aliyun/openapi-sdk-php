@@ -5,34 +5,34 @@ namespace AlibabaCloud\ROS\V20150901;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DeleteChangeSet deleteChangeSet(array $options = [])
- * @method ExecuteChangeSet executeChangeSet(array $options = [])
- * @method DescribeChangeSets describeChangeSets(array $options = [])
- * @method DescribeChangeSetDetail describeChangeSetDetail(array $options = [])
  * @method CreateChangeSet createChangeSet(array $options = [])
- * @method CancelUpdateStack cancelUpdateStack(array $options = [])
+ * @method DescribeChangeSetDetail describeChangeSetDetail(array $options = [])
+ * @method DescribeChangeSets describeChangeSets(array $options = [])
+ * @method ExecuteChangeSet executeChangeSet(array $options = [])
+ * @method DeleteChangeSet deleteChangeSet(array $options = [])
  * @method ContinueCreateStack continueCreateStack(array $options = [])
- * @method SetStackPolicy setStackPolicy(array $options = [])
+ * @method CancelUpdateStack cancelUpdateStack(array $options = [])
  * @method GetStackPolicy getStackPolicy(array $options = [])
+ * @method SetStackPolicy setStackPolicy(array $options = [])
  * @method UpdateStack updateStack(array $options = [])
  * @method WaitConditions waitConditions(array $options = [])
  * @method InquiryStack inquiryStack(array $options = [])
  * @method PreviewStack previewStack(array $options = [])
  * @method DoActions doActions(array $options = [])
- * @method DescribeTemplate describeTemplate(array $options = [])
- * @method ValidateTemplate validateTemplate(array $options = [])
- * @method DescribeStackDetail describeStackDetail(array $options = [])
- * @method DescribeStacks describeStacks(array $options = [])
- * @method DescribeResourceTypeTemplate describeResourceTypeTemplate(array $options = [])
- * @method DescribeResourceDetail describeResourceDetail(array $options = [])
- * @method DescribeResources describeResources(array $options = [])
- * @method DescribeResourceTypeDetail describeResourceTypeDetail(array $options = [])
- * @method DescribeResourceTypes describeResourceTypes(array $options = [])
- * @method AbandonStack abandonStack(array $options = [])
- * @method CreateStacks createStacks(array $options = [])
- * @method DeleteStack deleteStack(array $options = [])
- * @method DescribeEvents describeEvents(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeEvents describeEvents(array $options = [])
+ * @method DeleteStack deleteStack(array $options = [])
+ * @method CreateStacks createStacks(array $options = [])
+ * @method AbandonStack abandonStack(array $options = [])
+ * @method DescribeResourceTypes describeResourceTypes(array $options = [])
+ * @method DescribeResourceTypeDetail describeResourceTypeDetail(array $options = [])
+ * @method DescribeResources describeResources(array $options = [])
+ * @method DescribeResourceDetail describeResourceDetail(array $options = [])
+ * @method DescribeResourceTypeTemplate describeResourceTypeTemplate(array $options = [])
+ * @method DescribeStacks describeStacks(array $options = [])
+ * @method DescribeStackDetail describeStackDetail(array $options = [])
+ * @method ValidateTemplate validateTemplate(array $options = [])
+ * @method DescribeTemplate describeTemplate(array $options = [])
  */
 class ROSApiResolver extends ApiResolver
 {
@@ -47,21 +47,13 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
     public $version = '2015-09-01';
 }
 
-/**
- * @method string getChangeSetName()
- * @method $this withChangeSetName($value)
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- */
-class DeleteChangeSet extends Roa
+class CreateChangeSet extends Roa
 {
     /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]';
+    public $pathPattern = '/changeSets';
 
     /** @var string */
-    public $method = 'DELETE';
+    public $method = 'POST';
 }
 
 /**
@@ -72,13 +64,10 @@ class DeleteChangeSet extends Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class ExecuteChangeSet extends Roa
+class DescribeChangeSetDetail extends Roa
 {
     /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]/execute';
-
-    /** @var string */
-    public $method = 'PUT';
+    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]';
 }
 
 /**
@@ -101,16 +90,42 @@ class DescribeChangeSets extends Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class DescribeChangeSetDetail extends Roa
+class ExecuteChangeSet extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]/execute';
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getChangeSetName()
+ * @method $this withChangeSetName($value)
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DeleteChangeSet extends Roa
 {
     /** @var string */
     public $pathPattern = '/stacks/[StackName]/[StackId]/changeSets/[ChangeSetName]';
+
+    /** @var string */
+    public $method = 'DELETE';
 }
 
-class CreateChangeSet extends Roa
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class ContinueCreateStack extends Roa
 {
     /** @var string */
-    public $pathPattern = '/changeSets';
+    public $pathPattern = '/stacks/[StackName]/[StackId]/continue';
 
     /** @var string */
     public $method = 'POST';
@@ -137,13 +152,10 @@ class CancelUpdateStack extends Roa
  * @method string getStackName()
  * @method $this withStackName($value)
  */
-class ContinueCreateStack extends Roa
+class GetStackPolicy extends Roa
 {
     /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/continue';
-
-    /** @var string */
-    public $method = 'POST';
+    public $pathPattern = '/stacks/[StackName]/[StackId]/policy';
 }
 
 /**
@@ -159,18 +171,6 @@ class SetStackPolicy extends Roa
 
     /** @var string */
     public $method = 'POST';
-}
-
-/**
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- */
-class GetStackPolicy extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/policy';
 }
 
 /**
@@ -302,222 +302,10 @@ class DoActions extends Roa
     public $method = 'POST';
 }
 
-/**
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- */
-class DescribeTemplate extends Roa
+class DescribeRegions extends Roa
 {
     /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/template';
-}
-
-class ValidateTemplate extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/validate';
-
-    /** @var string */
-    public $method = 'POST';
-}
-
-/**
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- */
-class DescribeStackDetail extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]';
-}
-
-/**
- * @method string getStackId()
- * @method string getName()
- * @method string getPageSize()
- * @method string getPageNumber()
- * @method string getStatus()
- */
-class DescribeStacks extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStackId($value)
-    {
-        $this->data['StackId'] = $value;
-        $this->options['query']['StackId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['query']['Name'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['query']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['query']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStatus($value)
-    {
-        $this->data['Status'] = $value;
-        $this->options['query']['Status'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getTypeName()
- * @method $this withTypeName($value)
- */
-class DescribeResourceTypeTemplate extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/resource_types/[TypeName]/template';
-}
-
-/**
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- * @method string getResourceName()
- * @method $this withResourceName($value)
- */
-class DescribeResourceDetail extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/resources/[ResourceName]';
-}
-
-/**
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- */
-class DescribeResources extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/resources';
-}
-
-/**
- * @method string getTypeName()
- * @method $this withTypeName($value)
- */
-class DescribeResourceTypeDetail extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/resource_types/[TypeName]';
-}
-
-/**
- * @method string getSupportStatus()
- */
-class DescribeResourceTypes extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/resource_types';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSupportStatus($value)
-    {
-        $this->data['SupportStatus'] = $value;
-        $this->options['query']['SupportStatus'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- */
-class AbandonStack extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]/abandon';
-
-    /** @var string */
-    public $method = 'DELETE';
-}
-
-class CreateStacks extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks';
-
-    /** @var string */
-    public $method = 'POST';
-}
-
-/**
- * @method string getStackId()
- * @method $this withStackId($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- */
-class DeleteStack extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/stacks/[StackName]/[StackId]';
-
-    /** @var string */
-    public $method = 'DELETE';
+    public $pathPattern = '/regions';
 }
 
 /**
@@ -602,8 +390,220 @@ class DescribeEvents extends Roa
     }
 }
 
-class DescribeRegions extends Roa
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DeleteStack extends Roa
 {
     /** @var string */
-    public $pathPattern = '/regions';
+    public $pathPattern = '/stacks/[StackName]/[StackId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+class CreateStacks extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class AbandonStack extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/abandon';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+/**
+ * @method string getSupportStatus()
+ */
+class DescribeResourceTypes extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/resource_types';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSupportStatus($value)
+    {
+        $this->data['SupportStatus'] = $value;
+        $this->options['query']['SupportStatus'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTypeName()
+ * @method $this withTypeName($value)
+ */
+class DescribeResourceTypeDetail extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/resource_types/[TypeName]';
+}
+
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DescribeResources extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/resources';
+}
+
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ * @method string getResourceName()
+ * @method $this withResourceName($value)
+ */
+class DescribeResourceDetail extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/resources/[ResourceName]';
+}
+
+/**
+ * @method string getTypeName()
+ * @method $this withTypeName($value)
+ */
+class DescribeResourceTypeTemplate extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/resource_types/[TypeName]/template';
+}
+
+/**
+ * @method string getStackId()
+ * @method string getName()
+ * @method string getPageSize()
+ * @method string getPageNumber()
+ * @method string getStatus()
+ */
+class DescribeStacks extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStackId($value)
+    {
+        $this->data['StackId'] = $value;
+        $this->options['query']['StackId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['query']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DescribeStackDetail extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]';
+}
+
+class ValidateTemplate extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/validate';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getStackId()
+ * @method $this withStackId($value)
+ * @method string getStackName()
+ * @method $this withStackName($value)
+ */
+class DescribeTemplate extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/stacks/[StackName]/[StackId]/template';
 }
