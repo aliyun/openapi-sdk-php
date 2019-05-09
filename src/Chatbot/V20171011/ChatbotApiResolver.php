@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateSimilarityLoop createSimilarityLoop(array $options = [])
@@ -62,12 +62,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method Feedback feedback(array $options = [])
  * @method Chat chat(array $options = [])
  */
-class ChatbotApiResolver
+class ChatbotApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Chatbot';

@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Scdn\V20171115;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Scdn
+class Scdn extends ApiResolver
 {
-    use ApiResolverTrait;
 }

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Uis\V20180821;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeHighPriorityIps describeHighPriorityIps(array $options = [])
@@ -37,12 +37,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateUis createUis(array $options = [])
  * @method ModifyUisAttribute modifyUisAttribute(array $options = [])
  */
-class UisApiResolver
+class UisApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Uis';

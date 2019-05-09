@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeTags describeTags(array $options = [])
@@ -142,12 +142,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method VerifyPassword verifyPassword(array $options = [])
  * @method ModifyInstanceConfig modifyInstanceConfig(array $options = [])
  */
-class RKvstoreApiResolver
+class RKvstoreApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'R-kvstore';

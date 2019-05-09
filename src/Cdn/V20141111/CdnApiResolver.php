@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cdn\V20141111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ListFCTrigger listFCTrigger(array $options = [])
@@ -160,12 +160,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeCdnDomainDetail describeCdnDomainDetail(array $options = [])
  * @method DescribeCdnDomainLogs describeCdnDomainLogs(array $options = [])
  */
-class CdnApiResolver
+class CdnApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Cdn';

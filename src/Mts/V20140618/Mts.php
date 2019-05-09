@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Mts\V20140618;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Mts
+class Mts extends ApiResolver
 {
-    use ApiResolverTrait;
 }

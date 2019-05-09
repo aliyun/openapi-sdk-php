@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Cms\V20180308;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Cms
+class Cms extends ApiResolver
 {
-    use ApiResolverTrait;
 }

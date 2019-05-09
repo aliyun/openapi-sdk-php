@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Ram\Ram;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Ram\V20150501\ListAccessKeys;
@@ -30,13 +31,20 @@ class RamTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::ram()
-                               ->v20150501()
-                               ->listAccessKeys()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::ram()
+                                ->v20150501()
+                                ->listAccessKeys()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(ListAccessKeys::class, $request);
+        $request2 = Ram::v20150501()
+                       ->listAccessKeys()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(ListAccessKeys::class, $request1);
+        self::assertInstanceOf(ListAccessKeys::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

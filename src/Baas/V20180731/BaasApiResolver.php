@@ -2,9 +2,43 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CreateBlockchain createBlockchain(array $options = [])
+ * @method DescribeBlockchainApplication describeBlockchainApplication(array $options = [])
+ * @method DescribeLatestBlocks describeLatestBlocks(array $options = [])
+ * @method DescribeLatestTransactionDigests describeLatestTransactionDigests(array $options = [])
+ * @method CreateAntChainConsortium createAntChainConsortium(array $options = [])
+ * @method UpdateAntChainMember updateAntChainMember(array $options = [])
+ * @method DeleteAntChainConsortium deleteAntChainConsortium(array $options = [])
+ * @method InviteAntChainMember inviteAntChainMember(array $options = [])
+ * @method AgreeAntChainInvitation agreeAntChainInvitation(array $options = [])
+ * @method ApplyAntChain applyAntChain(array $options = [])
+ * @method CreateAntChainAccount createAntChainAccount(array $options = [])
+ * @method DescribeAntChainBlock describeAntChainBlock(array $options = [])
+ * @method DescribeAntChainInformation describeAntChainInformation(array $options = [])
+ * @method DescribeBlockchainCreationConfigOptions describeBlockchainCreationConfigOptions(array $options = [])
+ * @method DescribeAntChainDownloadPaths describeAntChainDownloadPaths(array $options = [])
+ * @method DescribeDownloadPaths describeDownloadPaths(array $options = [])
+ * @method FreezeAntChainAccount freezeAntChainAccount(array $options = [])
+ * @method DescribeMyBlockchanInfos describeMyBlockchanInfos(array $options = [])
+ * @method DescribeBlockchainSchemaFileOSSProperties describeBlockchainSchemaFileOSSProperties(array $options = [])
+ * @method UnfreezeAntChainAccount unfreezeAntChainAccount(array $options = [])
+ * @method DescribeResourceTypes describeResourceTypes(array $options = [])
+ * @method DescribeBlockchainSchemaDetail describeBlockchainSchemaDetail(array $options = [])
+ * @method DescribeBlockchainSchemaTemplates describeBlockchainSchemaTemplates(array $options = [])
+ * @method UpdateBlockchainSchema updateBlockchainSchema(array $options = [])
+ * @method DescribeAntChainApplications describeAntChainApplications(array $options = [])
+ * @method ResetAntChainUserCertificate resetAntChainUserCertificate(array $options = [])
+ * @method DescribeAntChainLatestBlocks describeAntChainLatestBlocks(array $options = [])
+ * @method DescribeAntChainLatestTransactionDigests describeAntChainLatestTransactionDigests(array $options = [])
+ * @method ResetAntChainCertificate resetAntChainCertificate(array $options = [])
+ * @method DescribeAntChainTransaction describeAntChainTransaction(array $options = [])
+ * @method DescribeAntChainRegionNames describeAntChainRegionNames(array $options = [])
+ * @method DescribeAntChainConsortiums describeAntChainConsortiums(array $options = [])
+ * @method DescribeAntChainRegionsForSale describeAntChainRegionsForSale(array $options = [])
+ * @method DescribeAntChainResourceTypes describeAntChainResourceTypes(array $options = [])
  * @method DescribeAntChainMembers describeAntChainMembers(array $options = [])
  * @method CreateAntChain createAntChain(array $options = [])
  * @method UpdateAntChainConsortium updateAntChainConsortium(array $options = [])
@@ -158,12 +192,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeConsortiumMemberApproval describeConsortiumMemberApproval(array $options = [])
  * @method AcceptInvitation acceptInvitation(array $options = [])
  */
-class BaasApiResolver
+class BaasApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Baas';
@@ -173,6 +206,1154 @@ class Rpc extends \AlibabaCloud\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getCipherSuit()
+ * @method string getSize()
+ * @method string getMachineNum()
+ * @method string getLiveTime()
+ * @method string getBizid()
+ * @method string getBlockchainType()
+ * @method string getBlockchainRegionId()
+ * @method string getTlsAlgo()
+ * @method string getMerkleTreeSuit()
+ */
+class CreateBlockchain extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCipherSuit($value)
+    {
+        $this->data['CipherSuit'] = $value;
+        $this->options['form_params']['CipherSuit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['form_params']['Size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMachineNum($value)
+    {
+        $this->data['MachineNum'] = $value;
+        $this->options['form_params']['MachineNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLiveTime($value)
+    {
+        $this->data['LiveTime'] = $value;
+        $this->options['form_params']['LiveTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBlockchainType($value)
+    {
+        $this->data['BlockchainType'] = $value;
+        $this->options['form_params']['BlockchainType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBlockchainRegionId($value)
+    {
+        $this->data['BlockchainRegionId'] = $value;
+        $this->options['form_params']['BlockchainRegionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTlsAlgo($value)
+    {
+        $this->data['TlsAlgo'] = $value;
+        $this->options['form_params']['TlsAlgo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMerkleTreeSuit($value)
+    {
+        $this->data['MerkleTreeSuit'] = $value;
+        $this->options['form_params']['MerkleTreeSuit'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCurrent()
+ * @method string getBizid()
+ * @method string getPageSize()
+ * @method string getStatus()
+ */
+class DescribeBlockchainApplication extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrent($value)
+    {
+        $this->data['Current'] = $value;
+        $this->options['form_params']['Current'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeLatestBlocks extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeLatestTransactionDigests extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getName()
+ * @method string getDescription()
+ */
+class CreateAntChainConsortium extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserId()
+ * @method string getMemberName()
+ * @method string getConsortiumId()
+ */
+class UpdateAntChainMember extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMemberName($value)
+    {
+        $this->data['MemberName'] = $value;
+        $this->options['form_params']['MemberName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConsortiumId($value)
+    {
+        $this->data['ConsortiumId'] = $value;
+        $this->options['form_params']['ConsortiumId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getConsortiumId()
+ */
+class DeleteAntChainConsortium extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConsortiumId($value)
+    {
+        $this->data['ConsortiumId'] = $value;
+        $this->options['form_params']['ConsortiumId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInviteBid()
+ * @method string getInviteUserId()
+ * @method string getConsortiumId()
+ */
+class InviteAntChainMember extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInviteBid($value)
+    {
+        $this->data['InviteBid'] = $value;
+        $this->options['form_params']['InviteBid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInviteUserId($value)
+    {
+        $this->data['InviteUserId'] = $value;
+        $this->options['form_params']['InviteUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConsortiumId($value)
+    {
+        $this->data['ConsortiumId'] = $value;
+        $this->options['form_params']['ConsortiumId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCode()
+ */
+class AgreeAntChainInvitation extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCode($value)
+    {
+        $this->data['Code'] = $value;
+        $this->options['form_params']['Code'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUploadReq()
+ * @method string getBizid()
+ * @method string getConsortiumId()
+ */
+class ApplyAntChain extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUploadReq($value)
+    {
+        $this->data['UploadReq'] = $value;
+        $this->options['form_params']['UploadReq'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConsortiumId($value)
+    {
+        $this->data['ConsortiumId'] = $value;
+        $this->options['form_params']['ConsortiumId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccountPubKey()
+ * @method string getBizid()
+ * @method string getAccount()
+ * @method string getAccountRecoverPubKey()
+ */
+class CreateAntChainAccount extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountPubKey($value)
+    {
+        $this->data['AccountPubKey'] = $value;
+        $this->options['form_params']['AccountPubKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccount($value)
+    {
+        $this->data['Account'] = $value;
+        $this->options['form_params']['Account'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountRecoverPubKey($value)
+    {
+        $this->data['AccountRecoverPubKey'] = $value;
+        $this->options['form_params']['AccountRecoverPubKey'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ * @method string getHeight()
+ */
+class DescribeAntChainBlock extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHeight($value)
+    {
+        $this->data['Height'] = $value;
+        $this->options['form_params']['Height'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeAntChainInformation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPurpose()
+ * @method $this withPurpose($value)
+ */
+class DescribeBlockchainCreationConfigOptions extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeAntChainDownloadPaths extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeDownloadPaths extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ * @method string getAccount()
+ */
+class FreezeAntChainAccount extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccount($value)
+    {
+        $this->data['Account'] = $value;
+        $this->options['form_params']['Account'] = $value;
+
+        return $this;
+    }
+}
+
+class DescribeMyBlockchanInfos extends Rpc
+{
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeBlockchainSchemaFileOSSProperties extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ * @method string getAccount()
+ */
+class UnfreezeAntChainAccount extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccount($value)
+    {
+        $this->data['Account'] = $value;
+        $this->options['form_params']['Account'] = $value;
+
+        return $this;
+    }
+}
+
+class DescribeResourceTypes extends Rpc
+{
+}
+
+/**
+ * @method string getSchemaId()
+ * @method string getBizid()
+ */
+class DescribeBlockchainSchemaDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchemaId($value)
+    {
+        $this->data['SchemaId'] = $value;
+        $this->options['form_params']['SchemaId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+class DescribeBlockchainSchemaTemplates extends Rpc
+{
+}
+
+/**
+ * @method string getSchemaName()
+ * @method string getSchemaId()
+ * @method string getBizid()
+ * @method string getDescription()
+ * @method string getCategoryConfigs()
+ */
+class UpdateBlockchainSchema extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchemaName($value)
+    {
+        $this->data['SchemaName'] = $value;
+        $this->options['form_params']['SchemaName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchemaId($value)
+    {
+        $this->data['SchemaId'] = $value;
+        $this->options['form_params']['SchemaId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCategoryConfigs($value)
+    {
+        $this->data['CategoryConfigs'] = $value;
+        $this->options['form_params']['CategoryConfigs'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCurrent()
+ * @method string getBizid()
+ * @method string getPageSize()
+ * @method string getStatus()
+ */
+class DescribeAntChainApplications extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrent($value)
+    {
+        $this->data['Current'] = $value;
+        $this->options['form_params']['Current'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ * @method string getBid()
+ * @method string getOperation()
+ * @method string getUserName()
+ */
+class ResetAntChainUserCertificate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBid($value)
+    {
+        $this->data['Bid'] = $value;
+        $this->options['form_params']['Bid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperation($value)
+    {
+        $this->data['Operation'] = $value;
+        $this->options['form_params']['Operation'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserName($value)
+    {
+        $this->data['UserName'] = $value;
+        $this->options['form_params']['UserName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeAntChainLatestBlocks extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribeAntChainLatestTransactionDigests extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class ResetAntChainCertificate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ * @method string getHash()
+ */
+class DescribeAntChainTransaction extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHash($value)
+    {
+        $this->data['Hash'] = $value;
+        $this->options['form_params']['Hash'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLocale()
+ */
+class DescribeAntChainRegionNames extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLocale($value)
+    {
+        $this->data['Locale'] = $value;
+        $this->options['form_params']['Locale'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCurrent()
+ * @method string getPageSize()
+ */
+class DescribeAntChainConsortiums extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrent($value)
+    {
+        $this->data['Current'] = $value;
+        $this->options['form_params']['Current'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+class DescribeAntChainRegionsForSale extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+class DescribeAntChainResourceTypes extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -360,6 +1541,7 @@ class CreateAntChain extends Rpc
 
 /**
  * @method string getName()
+ * @method string getDescription()
  * @method string getConsortiumId()
  */
 class UpdateAntChainConsortium extends Rpc
@@ -377,6 +1559,19 @@ class UpdateAntChainConsortium extends Rpc
     {
         $this->data['Name'] = $value;
         $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
 
         return $this;
     }

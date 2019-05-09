@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ccs\V20171001;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetHotlineRecord getHotlineRecord(array $options = [])
@@ -23,12 +23,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateTicket createTicket(array $options = [])
  * @method QueryTicket queryTicket(array $options = [])
  */
-class CcsApiResolver
+class CcsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ccs';

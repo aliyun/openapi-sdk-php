@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Aas\V20150701;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GenerateAccountLoginToken generateAccountLoginToken(array $options = [])
@@ -23,12 +23,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateAliyunAccount createAliyunAccount(array $options = [])
  * @method DeleteAccessKeyForAccount deleteAccessKeyForAccount(array $options = [])
  */
-class AasApiResolver
+class AasApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Aas';

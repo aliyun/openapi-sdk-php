@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Dbs\V20190306;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
@@ -18,12 +18,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ConfigureBackupPlan configureBackupPlan(array $options = [])
  * @method CreateBackupPlan createBackupPlan(array $options = [])
  */
-class DbsApiResolver
+class DbsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Dbs';

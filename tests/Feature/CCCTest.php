@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\CCC\CCC;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\CCC\V20170705\ListPhoneNumbers;
@@ -34,13 +35,20 @@ class CCCTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::cCC()
-                               ->v20170705()
-                               ->listPhoneNumbers()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::cCC()
+                                ->v20170705()
+                                ->listPhoneNumbers()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(ListPhoneNumbers::class, $request);
+        $request2 = CCC::v20170705()
+                       ->listPhoneNumbers()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(ListPhoneNumbers::class, $request1);
+        self::assertInstanceOf(ListPhoneNumbers::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

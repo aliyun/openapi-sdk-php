@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Rds\V20140815\DeleteDatabase;
+use AlibabaCloud\Rds\Rds;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Rds\V20140815\DeleteDatabase;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class RdsTest
@@ -30,13 +31,20 @@ class RdsTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::rds()
-                               ->v20140815()
-                               ->deleteDatabase()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::rds()
+                                ->v20140815()
+                                ->deleteDatabase()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DeleteDatabase::class, $request);
+        $request2 = Rds::v20140815()
+                       ->deleteDatabase()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(DeleteDatabase::class, $request1);
+        self::assertInstanceOf(DeleteDatabase::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

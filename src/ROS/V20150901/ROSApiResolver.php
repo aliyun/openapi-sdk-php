@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\ROS\V20150901;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteChangeSet deleteChangeSet(array $options = [])
@@ -34,12 +34,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeEvents describeEvents(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  */
-class ROSApiResolver
+class ROSApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'ROS';

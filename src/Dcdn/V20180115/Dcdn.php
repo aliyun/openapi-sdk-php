@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Dcdn\V20180115;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Dcdn
+class Dcdn extends ApiResolver
 {
-    use ApiResolverTrait;
 }

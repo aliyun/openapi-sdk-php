@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\DmsEnterprise\V20181101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method EnableUser enableUser(array $options = [])
@@ -12,12 +12,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetOpLog getOpLog(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  */
-class DmsEnterpriseApiResolver
+class DmsEnterpriseApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'dms-enterprise';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\SmsIntl\V20180501;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SmsConversion smsConversion(array $options = [])
@@ -10,12 +10,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method SendMessageToGlobe sendMessageToGlobe(array $options = [])
  * @method QueryMessage queryMessage(array $options = [])
  */
-class SmsIntlApiResolver
+class SmsIntlApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'sms-intl';

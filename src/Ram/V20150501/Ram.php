@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Ram\V20150501;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Ram
+class Ram extends ApiResolver
 {
-    use ApiResolverTrait;
 }

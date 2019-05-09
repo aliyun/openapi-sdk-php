@@ -2,18 +2,17 @@
 
 namespace AlibabaCloud\OssAdmin\V20140326;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method RestartOss restartOss(array $options = [])
  * @method StopOss stopOss(array $options = [])
  */
-class OssAdminApiResolver
+class OssAdminApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'OssAdmin';

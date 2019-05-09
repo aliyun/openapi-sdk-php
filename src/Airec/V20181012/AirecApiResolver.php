@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Airec\V20181012;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ListInstanceTask listInstanceTask(array $options = [])
@@ -39,12 +39,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method PushDocument pushDocument(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  */
-class AirecApiResolver
+class AirecApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'Airec';

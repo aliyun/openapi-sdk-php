@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Imm\V20170906;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
@@ -99,12 +99,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetPornBatchDetectJob getPornBatchDetectJob(array $options = [])
  * @method ListPornBatchDetectJobs listPornBatchDetectJobs(array $options = [])
  */
-class ImmApiResolver
+class ImmApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'imm';

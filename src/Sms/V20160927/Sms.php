@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Sms\V20160927;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Sms
+class Sms extends ApiResolver
 {
-    use ApiResolverTrait;
 }

@@ -36,23 +36,21 @@ class VersionResolverTest extends TestCase
     {
         $slb    = AlibabaCloud::slb();
         $ref    = new ReflectionObject($slb);
-        $method = $ref->getMethod('getServiceName');
+        $method = $ref->getMethod('getProductName');
         $method->setAccessible(true);
         self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class($slb)]));
-        self::assertEquals('Tests', $method->invokeArgs($slb, [\get_class($this)]));
+        self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class($this)]));
     }
 
     /**
      * @throws ReflectionException
-     * @expectedException \AlibabaCloud\Client\Exception\ClientException
-     * @expectedExceptionMessage Service name not found.
      */
     public function testGetServiceNameNotFound()
     {
         $slb    = AlibabaCloud::slb();
         $ref    = new ReflectionObject($slb);
-        $method = $ref->getMethod('getServiceName');
+        $method = $ref->getMethod('getProductName');
         $method->setAccessible(true);
-        self::assertEquals('ApiResolverTraitTest', $method->invokeArgs($slb, [\get_class(new stdClass())]));
+        self::assertEquals('Slb', $method->invokeArgs($slb, [\get_class(new stdClass())]));
     }
 }

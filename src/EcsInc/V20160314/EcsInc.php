@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\EcsInc\V20160314;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class EcsInc
+class EcsInc extends ApiResolver
 {
-    use ApiResolverTrait;
 }

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ivision\V20190308;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateStreamPredict createStreamPredict(array $options = [])
@@ -40,12 +40,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeletePredictDatas deletePredictDatas(array $options = [])
  * @method DescribePredictDatas describePredictDatas(array $options = [])
  */
-class IvisionApiResolver
+class IvisionApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'ivision';
@@ -606,6 +605,8 @@ class DeletePredictDatas extends Rpc
 /**
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
+ * @method string getDataIds()
+ * @method $this withDataIds($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getProbabilityThreshold()

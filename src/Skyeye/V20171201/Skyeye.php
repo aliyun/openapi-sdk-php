@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Skyeye\V20171201;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Skyeye
+class Skyeye extends ApiResolver
 {
-    use ApiResolverTrait;
 }

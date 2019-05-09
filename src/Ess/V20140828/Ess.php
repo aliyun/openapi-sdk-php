@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Ess\V20140828;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Ess
+class Ess extends ApiResolver
 {
-    use ApiResolverTrait;
 }

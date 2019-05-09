@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\ITaaS\V20170505;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UpdateRoomName updateRoomName(array $options = [])
@@ -23,12 +23,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateBoxCode createBoxCode(array $options = [])
  * @method CreateEnterprise createEnterprise(array $options = [])
  */
-class ITaaSApiResolver
+class ITaaSApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'ITaaS';

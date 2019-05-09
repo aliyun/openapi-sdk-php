@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Crm\V20150408;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Crm
+class Crm extends ApiResolver
 {
-    use ApiResolverTrait;
 }

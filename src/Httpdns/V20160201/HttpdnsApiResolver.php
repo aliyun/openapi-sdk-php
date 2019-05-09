@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Httpdns\V20160201;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetResolveCountSummary getResolveCountSummary(array $options = [])
@@ -13,12 +13,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DescribeDomains describeDomains(array $options = [])
  */
-class HttpdnsApiResolver
+class HttpdnsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Httpdns';

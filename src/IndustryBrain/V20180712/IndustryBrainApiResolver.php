@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\IndustryBrain\V20180712;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AsyncResponsePost asyncResponsePost(array $options = [])
@@ -26,12 +26,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetAlgoDataMapping getAlgoDataMapping(array $options = [])
  * @method GetOnlineServiceResult getOnlineServiceResult(array $options = [])
  */
-class IndustryBrainApiResolver
+class IndustryBrainApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'industry-brain';

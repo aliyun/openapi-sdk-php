@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ecs\V20140526;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ReportInstancesStatus reportInstancesStatus(array $options = [])
@@ -294,12 +294,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddTags addTags(array $options = [])
  * @method RemoveTags removeTags(array $options = [])
  */
-class EcsApiResolver
+class EcsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ecs';
@@ -7701,6 +7700,8 @@ class CreateRouteEntry extends Rpc
  * @method $this withInternetMaxBandwidthIn($value)
  * @method string getUseAdditionalService()
  * @method $this withUseAdditionalService($value)
+ * @method string getAffinity()
+ * @method $this withAffinity($value)
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getClientToken()
@@ -7720,12 +7721,15 @@ class CreateRouteEntry extends Rpc
  * @method string getSystemDiskCategory()
  * @method string getCapacityReservationId()
  * @method $this withCapacityReservationId($value)
+ * @method string getSystemDiskPerformanceLevel()
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getPasswordInherit()
  * @method $this withPasswordInherit($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getHibernationConfigured()
+ * @method $this withHibernationConfigured($value)
  * @method array getArn()
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
@@ -7737,6 +7741,8 @@ class CreateRouteEntry extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getTenancy()
+ * @method $this withTenancy($value)
  * @method string getSystemDiskDiskName()
  * @method string getRamRoleName()
  * @method $this withRamRoleName($value)
@@ -7778,6 +7784,19 @@ class CreateInstance extends Rpc
     {
         $this->data['SystemDiskCategory'] = $value;
         $this->options['query']['SystemDisk.Category'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskPerformanceLevel($value)
+    {
+        $this->data['SystemDiskPerformanceLevel'] = $value;
+        $this->options['query']['SystemDisk.PerformanceLevel'] = $value;
 
         return $this;
     }
@@ -7825,6 +7844,7 @@ class CreateInstance extends Rpc
             $this->options['query']['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
             $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
             $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
+            $this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
             $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
             $this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
             $this->options['query']['DataDisk.' . ($depth1 + 1) . '.KMSKeyId'] = $depth1Value['KMSKeyId'];

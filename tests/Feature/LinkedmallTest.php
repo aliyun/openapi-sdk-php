@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Linkedmall\Linkedmall;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Linkedmall\V20180116\ModifyBizItems;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class LinkedmallTest
@@ -30,13 +31,20 @@ class LinkedmallTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::linkedmall()
-                               ->v20180116()
-                               ->modifyBizItems()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::linkedmall()
+                                ->v20180116()
+                                ->modifyBizItems()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(ModifyBizItems::class, $request);
+        $request2 = Linkedmall::v20180116()
+                              ->modifyBizItems()
+                              ->connectTimeout(20)
+                              ->timeout(25);
+
+        self::assertInstanceOf(ModifyBizItems::class, $request1);
+        self::assertInstanceOf(ModifyBizItems::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

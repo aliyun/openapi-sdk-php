@@ -2,15 +2,9 @@
 
 namespace AlibabaCloud\Market\V20151101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DescribeApplicationInstance describeApplicationInstance(array $options = [])
- * @method DescribeApplicationInstances describeApplicationInstances(array $options = [])
- * @method UpdateApplicationInstance updateApplicationInstance(array $options = [])
- * @method CreateApplicationInstance createApplicationInstance(array $options = [])
- * @method DescribeApplicationTemplates describeApplicationTemplates(array $options = [])
- * @method DescribeApplicationTemplate describeApplicationTemplate(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method NotifyContractEvent notifyContractEvent(array $options = [])
  * @method DescribeProducts describeProducts(array $options = [])
@@ -27,12 +21,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryMarketCategories queryMarketCategories(array $options = [])
  * @method QueryMarketImages queryMarketImages(array $options = [])
  */
-class MarketApiResolver
+class MarketApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Market';
@@ -42,62 +35,6 @@ class Rpc extends \AlibabaCloud\Rpc
 
     /** @var string */
     public $method = 'POST';
-}
-
-/**
- * @method string getParam()
- * @method $this withParam($value)
- */
-class DescribeApplicationInstance extends Rpc
-{
-}
-
-/**
- * @method string getParam()
- * @method $this withParam($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeApplicationInstances extends Rpc
-{
-}
-
-/**
- * @method string getParam()
- * @method $this withParam($value)
- */
-class UpdateApplicationInstance extends Rpc
-{
-}
-
-/**
- * @method string getParam()
- * @method $this withParam($value)
- */
-class CreateApplicationInstance extends Rpc
-{
-}
-
-/**
- * @method string getParam()
- * @method $this withParam($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeApplicationTemplates extends Rpc
-{
-}
-
-/**
- * @method string getParam()
- * @method $this withParam($value)
- */
-class DescribeApplicationTemplate extends Rpc
-{
 }
 
 /**

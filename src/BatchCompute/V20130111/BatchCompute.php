@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\BatchCompute\V20130111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class BatchCompute
+class BatchCompute extends ApiResolver
 {
-    use ApiResolverTrait;
 }

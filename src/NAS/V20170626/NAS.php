@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class NAS
+class NAS extends ApiResolver
 {
-    use ApiResolverTrait;
 }

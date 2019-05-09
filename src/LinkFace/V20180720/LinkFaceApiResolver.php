@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\LinkFace\V20180720;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteDeviceGroup deleteDeviceGroup(array $options = [])
@@ -24,12 +24,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteFace deleteFace(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
  */
-class LinkFaceApiResolver
+class LinkFaceApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'LinkFace';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Green\V20180509;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method UploadCredentials uploadCredentials(array $options = [])
@@ -46,12 +46,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method TextScan textScan(array $options = [])
  * @method DeleteGroups deleteGroups(array $options = [])
  */
-class GreenApiResolver
+class GreenApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'Green';

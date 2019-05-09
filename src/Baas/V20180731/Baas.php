@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Baas\V20180731;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Baas
+class Baas extends ApiResolver
 {
-    use ApiResolverTrait;
 }

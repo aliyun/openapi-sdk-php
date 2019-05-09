@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Airec\V20181012;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Airec
+class Airec extends ApiResolver
 {
-    use ApiResolverTrait;
 }

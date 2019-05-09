@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Rds\V20140815;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyInstanceDdrPolicy modifyInstanceDdrPolicy(array $options = [])
@@ -163,12 +163,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ResetAccountForPG resetAccountForPG(array $options = [])
  * @method AllocateInstancePrivateConnection allocateInstancePrivateConnection(array $options = [])
  */
-class RdsApiResolver
+class RdsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Rds';

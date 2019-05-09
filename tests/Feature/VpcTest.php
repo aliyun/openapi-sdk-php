@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Vpc\V20160428\DescribeRegions;
+use AlibabaCloud\Vpc\Vpc;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Vpc\V20160428\DescribeRegions;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class VpcTest
@@ -30,13 +31,20 @@ class VpcTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::vpc()
-                               ->v20160428()
-                               ->describeRegions()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::vpc()
+                                ->v20160428()
+                                ->describeRegions()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeRegions::class, $request);
+        $request2 = Vpc::v20160428()
+                       ->describeRegions()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(DescribeRegions::class, $request1);
+        self::assertInstanceOf(DescribeRegions::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

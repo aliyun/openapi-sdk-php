@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Green\V20170823;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeViewContent describeViewContent(array $options = [])
@@ -84,12 +84,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method MarkAuditContent markAuditContent(array $options = [])
  * @method UpdateAuditSetting updateAuditSetting(array $options = [])
  */
-class GreenApiResolver
+class GreenApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Green';

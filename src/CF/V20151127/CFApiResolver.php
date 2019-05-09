@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\CF\V20151127;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method MonthlyPaymentCheckOrder monthlyPaymentCheckOrder(array $options = [])
@@ -13,12 +13,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QuerySimple querySimple(array $options = [])
  * @method Authenticate authenticate(array $options = [])
  */
-class CFApiResolver
+class CFApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'CF';

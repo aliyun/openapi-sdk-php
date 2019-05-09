@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cds\V20170925;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetCredentials getCredentials(array $options = [])
@@ -20,12 +20,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method StopBuild stopBuild(array $options = [])
  * @method GetJobs getJobs(array $options = [])
  */
-class CdsApiResolver
+class CdsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'Cds';

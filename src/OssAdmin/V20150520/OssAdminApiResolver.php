@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\OssAdmin\V20150520;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteImgVpc deleteImgVpc(array $options = [])
@@ -15,12 +15,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteOssVpc deleteOssVpc(array $options = [])
  * @method CreateImgVpc createImgVpc(array $options = [])
  */
-class OssAdminApiResolver
+class OssAdminApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'OssAdmin';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Scdn\V20171115;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeScdnDomainTopUrlVisit describeScdnDomainTopUrlVisit(array $options = [])
@@ -56,12 +56,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeScdnService describeScdnService(array $options = [])
  * @method AddScdnDomain addScdnDomain(array $options = [])
  */
-class ScdnApiResolver
+class ScdnApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'scdn';

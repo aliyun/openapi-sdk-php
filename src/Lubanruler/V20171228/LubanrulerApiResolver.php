@@ -2,19 +2,18 @@
 
 namespace AlibabaCloud\Lubanruler\V20171228;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateLubanrulerTask createLubanrulerTask(array $options = [])
  * @method UpdateLubanrulerTask updateLubanrulerTask(array $options = [])
  * @method GetResultByLubanruler getResultByLubanruler(array $options = [])
  */
-class LubanrulerApiResolver
+class LubanrulerApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Lubanruler';

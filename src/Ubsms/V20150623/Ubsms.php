@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Ubsms\V20150623;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Ubsms
+class Ubsms extends ApiResolver
 {
-    use ApiResolverTrait;
 }

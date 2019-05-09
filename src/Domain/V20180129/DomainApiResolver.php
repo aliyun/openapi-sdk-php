@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Domain\V20180129;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SaveSingleTaskForSaveArtExtension saveSingleTaskForSaveArtExtension(array $options = [])
@@ -109,12 +109,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryRegistrantProfiles queryRegistrantProfiles(array $options = [])
  * @method SaveRegistrantProfile saveRegistrantProfile(array $options = [])
  */
-class DomainApiResolver
+class DomainApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Domain';

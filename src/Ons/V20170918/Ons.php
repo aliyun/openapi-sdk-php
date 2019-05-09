@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Ons
+class Ons extends ApiResolver
 {
-    use ApiResolverTrait;
 }

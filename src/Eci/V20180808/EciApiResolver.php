@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Eci\V20180808;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeMultiContainerGroupMetric describeMultiContainerGroupMetric(array $options = [])
@@ -20,12 +20,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeContainerLog describeContainerLog(array $options = [])
  * @method CreateContainerGroup createContainerGroup(array $options = [])
  */
-class EciApiResolver
+class EciApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Eci';

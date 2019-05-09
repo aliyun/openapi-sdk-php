@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Green\V20180509\ImageSyncScan;
+use AlibabaCloud\Green\Green;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Green\V20180509\ImageSyncScan;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class GreenImageTest
@@ -30,14 +31,22 @@ class GreenImageTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::green()
-                               ->v20180509()
-                               ->imageSyncScan()
-                               ->host('green.cn-shanghai.aliyuncs.com')
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::green()
+                                ->v20180509()
+                                ->imageSyncScan()
+                                ->host('green.cn-shanghai.aliyuncs.com')
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(ImageSyncScan::class, $request);
+        $request2 = Green::v20180509()
+                         ->imageSyncScan()
+                         ->host('green.cn-shanghai.aliyuncs.com')
+                         ->connectTimeout(20)
+                         ->timeout(25);
+
+        self::assertInstanceOf(ImageSyncScan::class, $request1);
+        self::assertInstanceOf(ImageSyncScan::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

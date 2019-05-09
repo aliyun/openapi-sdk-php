@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Dds\V20151201;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method MigrateAvailableZone migrateAvailableZone(array $options = [])
@@ -134,12 +134,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateAccount createAccount(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
  */
-class DdsApiResolver
+class DdsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Dds';

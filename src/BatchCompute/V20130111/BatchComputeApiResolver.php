@@ -2,8 +2,8 @@
 
 namespace AlibabaCloud\BatchCompute\V20130111;
 
-use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Roa;
+use AlibabaCloud\Client\Resolver\ApiResolver;
+use AlibabaCloud\Client\Resolver\Roa;
 
 /**
  * Resolve Api based on the method name.
@@ -24,9 +24,8 @@ use AlibabaCloud\Roa;
  * @method PutJob putJob(array $options = [])
  * @method PostJob postJob(array $options = [])
  */
-class BatchComputeApiResolver
+class BatchComputeApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
 class V20130111Roa extends Roa

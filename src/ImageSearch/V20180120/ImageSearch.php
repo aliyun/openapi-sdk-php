@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\ImageSearch\V20180120;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class ImageSearch
+class ImageSearch extends ApiResolver
 {
-    use ApiResolverTrait;
 }

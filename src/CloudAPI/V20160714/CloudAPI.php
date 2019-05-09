@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\CloudAPI\V20160714;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class CloudAPI
+class CloudAPI extends ApiResolver
 {
-    use ApiResolverTrait;
 }

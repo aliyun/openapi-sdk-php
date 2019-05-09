@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Vod\V20170321;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetUploadDetails getUploadDetails(array $options = [])
@@ -116,12 +116,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method RefreshUploadVideo refreshUploadVideo(array $options = [])
  * @method CreateUploadVideo createUploadVideo(array $options = [])
  */
-class VodApiResolver
+class VodApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'vod';

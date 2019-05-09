@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\EHPC\V20180412;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class EHPC
+class EHPC extends ApiResolver
 {
-    use ApiResolverTrait;
 }

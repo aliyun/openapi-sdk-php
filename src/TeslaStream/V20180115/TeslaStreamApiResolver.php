@@ -2,19 +2,18 @@
 
 namespace AlibabaCloud\TeslaStream\V20180115;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetJobTopology getJobTopology(array $options = [])
  * @method BatchGetPluginConfigInfo batchGetPluginConfigInfo(array $options = [])
  * @method BatchGetJobMetricInfo batchGetJobMetricInfo(array $options = [])
  */
-class TeslaStreamApiResolver
+class TeslaStreamApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'TeslaStream';

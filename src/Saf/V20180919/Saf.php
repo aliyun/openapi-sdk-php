@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Saf\V20180919;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Saf
+class Saf extends ApiResolver
 {
-    use ApiResolverTrait;
 }

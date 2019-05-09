@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Jarvis\V20180206;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Jarvis
+class Jarvis extends ApiResolver
 {
-    use ApiResolverTrait;
 }

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Sas\V20181203;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyAssetGroup modifyAssetGroup(array $options = [])
@@ -44,12 +44,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeAlarmEventDetail describeAlarmEventDetail(array $options = [])
  * @method DescribeAlarmEventList describeAlarmEventList(array $options = [])
  */
-class SasApiResolver
+class SasApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Sas';

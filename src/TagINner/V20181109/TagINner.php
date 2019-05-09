@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\TagINner\V20181109;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class TagINner
+class TagINner extends ApiResolver
 {
-    use ApiResolverTrait;
 }

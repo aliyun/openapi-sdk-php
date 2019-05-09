@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\ARMS;
 
-use AlibabaCloud\VersionResolver;
+use AlibabaCloud\Client\Resolver\VersionResolver;
 
 /**
  * @deprecated

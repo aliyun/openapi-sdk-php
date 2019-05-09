@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Cdn\Cdn;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Cdn\V20180510\DescribeIpInfo;
@@ -30,13 +31,20 @@ class CdnTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::cdn()
-                               ->v20180510()
-                               ->describeIpInfo()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::cdn()
+                                ->v20180510()
+                                ->describeIpInfo()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeIpInfo::class, $request);
+        $request2 = Cdn::v20180510()
+                       ->describeIpInfo()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(DescribeIpInfo::class, $request1);
+        self::assertInstanceOf(DescribeIpInfo::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

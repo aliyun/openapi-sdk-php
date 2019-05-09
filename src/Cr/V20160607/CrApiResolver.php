@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cr\V20160607;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteUserSourceAccount deleteUserSourceAccount(array $options = [])
@@ -71,12 +71,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetRepoTags getRepoTags(array $options = [])
  * @method StartRepoBuild startRepoBuild(array $options = [])
  */
-class CrApiResolver
+class CrApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'cr';

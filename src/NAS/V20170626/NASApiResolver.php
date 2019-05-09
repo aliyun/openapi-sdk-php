@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\NAS\V20170626;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateTieringPolicy createTieringPolicy(array $options = [])
@@ -32,12 +32,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateMountTarget createMountTarget(array $options = [])
  * @method CreateAccessGroup createAccessGroup(array $options = [])
  */
-class NASApiResolver
+class NASApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'NAS';

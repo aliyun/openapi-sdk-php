@@ -3,6 +3,7 @@
 namespace AlibabaCloud\Tests\Feature;
 
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Ivision\Ivision;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
@@ -30,13 +31,20 @@ class IvisionTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::ivision()
-                               ->v20190308()
-                               ->describeProjects()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::ivision()
+                                ->v20190308()
+                                ->describeProjects()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeProjects::class, $request);
+        $request2 = Ivision::v20190308()
+                           ->describeProjects()
+                           ->connectTimeout(20)
+                           ->timeout(25);
+
+        self::assertInstanceOf(DescribeProjects::class, $request1);
+        self::assertInstanceOf(DescribeProjects::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

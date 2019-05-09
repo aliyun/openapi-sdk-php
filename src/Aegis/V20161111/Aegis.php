@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Aegis\V20161111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Aegis
+class Aegis extends ApiResolver
 {
-    use ApiResolverTrait;
 }

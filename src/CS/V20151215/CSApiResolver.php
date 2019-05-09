@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\CS\V20151215;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeClusterAttachScripts describeClusterAttachScripts(array $options = [])
@@ -87,12 +87,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ScaleCluster scaleCluster(array $options = [])
  * @method CreateCluster createCluster(array $options = [])
  */
-class CSApiResolver
+class CSApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'CS';

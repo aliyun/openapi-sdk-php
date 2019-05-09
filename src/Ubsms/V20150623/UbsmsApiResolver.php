@@ -2,19 +2,18 @@
 
 namespace AlibabaCloud\Ubsms\V20150623;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeBusinessStatus describeBusinessStatus(array $options = [])
  * @method NotifyUserBusinessCommand notifyUserBusinessCommand(array $options = [])
  * @method SetUserBusinessStatus setUserBusinessStatus(array $options = [])
  */
-class UbsmsApiResolver
+class UbsmsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ubsms';

@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Smartag\V20180313;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Smartag
+class Smartag extends ApiResolver
 {
-    use ApiResolverTrait;
 }

@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\TeslaMaxCompute\V20180104;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class TeslaMaxCompute
+class TeslaMaxCompute extends ApiResolver
 {
-    use ApiResolverTrait;
 }

@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Aegis\Aegis;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ServerException;
@@ -30,13 +31,20 @@ class AegisTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::aegis()
-                               ->v20161111()
-                               ->describeAlarmEventDetail()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::aegis()
+                                ->v20161111()
+                                ->describeAlarmEventDetail()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeAlarmEventDetail::class, $request);
+        $request2 = Aegis::v20161111()
+                         ->describeAlarmEventDetail()
+                         ->connectTimeout(20)
+                         ->timeout(25);
+
+        self::assertInstanceOf(DescribeAlarmEventDetail::class, $request1);
+        self::assertInstanceOf(DescribeAlarmEventDetail::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

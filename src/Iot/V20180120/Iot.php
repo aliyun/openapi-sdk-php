@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Iot
+class Iot extends ApiResolver
 {
-    use ApiResolverTrait;
 }

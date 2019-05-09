@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Dybaseapi\MNS\MnsClient;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Dybaseapi\MNS\MnsClient;
 use AlibabaCloud\Dybaseapi\MNS\Requests\BatchReceiveMessage;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class DyBaseApiMnsTest

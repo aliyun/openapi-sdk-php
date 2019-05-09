@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Dypnsapi\V20170525;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetMobile getMobile(array $options = [])
@@ -10,12 +10,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method VerifyMobile verifyMobile(array $options = [])
  * @method TwiceTelVerify twiceTelVerify(array $options = [])
  */
-class DypnsapiApiResolver
+class DypnsapiApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Dypnsapi';

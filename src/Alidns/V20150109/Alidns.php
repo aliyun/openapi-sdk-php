@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Alidns\V20150109;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Alidns
+class Alidns extends ApiResolver
 {
-    use ApiResolverTrait;
 }

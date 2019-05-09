@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Sts\V20150401;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AssumeRoleWithSAML assumeRoleWithSAML(array $options = [])
@@ -10,12 +10,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetCallerIdentity getCallerIdentity(array $options = [])
  * @method AssumeRole assumeRole(array $options = [])
  */
-class StsApiResolver
+class StsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Sts';

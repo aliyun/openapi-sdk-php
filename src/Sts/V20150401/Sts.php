@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Sts\V20150401;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Sts
+class Sts extends ApiResolver
 {
-    use ApiResolverTrait;
 }

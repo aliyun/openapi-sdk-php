@@ -4,6 +4,7 @@ namespace AlibabaCloud\Tests\Feature;
 
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\ImageSearch\ImageSearch;
 use AlibabaCloud\ImageSearch\V20180120\AddItem;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
@@ -30,13 +31,19 @@ class ImageSearchTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::imageSearch()
-                               ->v20180120()
+        $request1 = AlibabaCloud::imageSearch()
+                                ->v20180120()
+                                ->addItem()
+                                ->connectTimeout(20)
+                                ->timeout(25);
+
+        $request2 = ImageSearch::v20180120()
                                ->addItem()
                                ->connectTimeout(20)
                                ->timeout(25);
-
-        self::assertInstanceOf(AddItem::class, $request);
+        self::assertInstanceOf(AddItem::class, $request1);
+        self::assertInstanceOf(AddItem::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

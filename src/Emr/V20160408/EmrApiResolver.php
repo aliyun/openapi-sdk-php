@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Emr\V20160408;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SaveBatchUserAccountInfo saveBatchUserAccountInfo(array $options = [])
@@ -375,12 +375,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CreateJob createJob(array $options = [])
  * @method DeleteExecutionPlan deleteExecutionPlan(array $options = [])
  */
-class EmrApiResolver
+class EmrApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Emr';

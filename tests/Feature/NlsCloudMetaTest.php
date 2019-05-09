@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\NlsCloudMeta\NlsCloudMeta;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\NlsCloudMeta\V20180518\CreateToken;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class NlsCloudMetaTest
@@ -30,13 +31,20 @@ class NlsCloudMetaTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::nlsCloudMeta()
-                               ->v20180518()
-                               ->createToken()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::nlsCloudMeta()
+                                ->v20180518()
+                                ->createToken()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(CreateToken::class, $request);
+        $request2 = NlsCloudMeta::v20180518()
+                                ->createToken()
+                                ->connectTimeout(20)
+                                ->timeout(25);
+
+        self::assertInstanceOf(CreateToken::class, $request1);
+        self::assertInstanceOf(CreateToken::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

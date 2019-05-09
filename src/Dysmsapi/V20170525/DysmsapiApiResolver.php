@@ -2,19 +2,18 @@
 
 namespace AlibabaCloud\Dysmsapi\V20170525;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SendBatchSms sendBatchSms(array $options = [])
  * @method QuerySendDetails querySendDetails(array $options = [])
  * @method SendSms sendSms(array $options = [])
  */
-class DysmsapiApiResolver
+class DysmsapiApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Dysmsapi';

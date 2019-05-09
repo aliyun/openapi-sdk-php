@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\CS\V20151215\DescribeApiVersion;
+use AlibabaCloud\CS\CS;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\CS\V20151215\DescribeApiVersion;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class CsTest
@@ -30,13 +31,20 @@ class CsTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::cS()
-                               ->v20151215()
-                               ->describeApiVersion()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::cS()
+                                ->v20151215()
+                                ->describeApiVersion()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeApiVersion::class, $request);
+        $request2 = CS::v20151215()
+                      ->describeApiVersion()
+                      ->connectTimeout(20)
+                      ->timeout(25);
+
+        self::assertInstanceOf(DescribeApiVersion::class, $request1);
+        self::assertInstanceOf(DescribeApiVersion::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

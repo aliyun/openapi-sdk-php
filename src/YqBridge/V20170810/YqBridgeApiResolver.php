@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\YqBridge\V20170810;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetUserLabel getUserLabel(array $options = [])
@@ -11,12 +11,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method HavanaIdConvert havanaIdConvert(array $options = [])
  * @method CheckCloudUser checkCloudUser(array $options = [])
  */
-class YqBridgeApiResolver
+class YqBridgeApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'YqBridge';

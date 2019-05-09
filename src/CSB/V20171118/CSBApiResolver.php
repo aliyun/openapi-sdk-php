@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\CSB\V20171118;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DeleteAlarmRule deleteAlarmRule(array $options = [])
@@ -57,12 +57,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ReplaceCredential replaceCredential(array $options = [])
  * @method FindServiceList findServiceList(array $options = [])
  */
-class CSBApiResolver
+class CSBApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'CSB';

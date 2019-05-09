@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Cloudwf\V20170328;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetDailyStatistic getDailyStatistic(array $options = [])
@@ -240,12 +240,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method InnerProduceCloudWF innerProduceCloudWF(array $options = [])
  * @method InnerCheckOrder innerCheckOrder(array $options = [])
  */
-class CloudwfApiResolver
+class CloudwfApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'cloudwf';

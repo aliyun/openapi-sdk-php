@@ -2,8 +2,8 @@
 
 namespace AlibabaCloud\Vpc\V20160428;
 
-use AlibabaCloud\ApiResolverTrait;
-use AlibabaCloud\Rpc;
+use AlibabaCloud\Client\Resolver\ApiResolver;
+use AlibabaCloud\Client\Resolver\Rpc;
 
 /**
  * Resolve Api based on the method name.
@@ -251,9 +251,8 @@ use AlibabaCloud\Rpc;
  * @method CancelPhysicalConnection cancelPhysicalConnection(array $options = [])
  * @method ConnectRouterInterface connectRouterInterface(array $options = [])
  */
-class VpcApiResolver
+class VpcApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
 class V20160428Rpc extends Rpc

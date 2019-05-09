@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Slb\V20140515;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeSlbAttachmentInfo describeSlbAttachmentInfo(array $options = [])
@@ -123,12 +123,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeLoadBalancerUDPListenerAttribute describeLoadBalancerUDPListenerAttribute(array $options = [])
  * @method CreateLoadBalancerUDPListener createLoadBalancerUDPListener(array $options = [])
  */
-class SlbApiResolver
+class SlbApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Slb';

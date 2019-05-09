@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Rtc\V20180111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Rtc
+class Rtc extends ApiResolver
 {
-    use ApiResolverTrait;
 }

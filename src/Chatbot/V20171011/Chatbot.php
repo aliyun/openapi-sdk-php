@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Chatbot\V20171011;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Chatbot
+class Chatbot extends ApiResolver
 {
-    use ApiResolverTrait;
 }

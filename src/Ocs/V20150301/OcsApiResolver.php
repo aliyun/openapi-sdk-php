@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ocs\V20150301;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyNetworkType modifyNetworkType(array $options = [])
@@ -29,12 +29,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ActivateInstance activateInstance(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
  */
-class OcsApiResolver
+class OcsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ocs';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Domain\V20180208;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryBrokerDemandRecord queryBrokerDemandRecord(array $options = [])
@@ -21,12 +21,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BidDomain bidDomain(array $options = [])
  * @method ReserveDomain reserveDomain(array $options = [])
  */
-class DomainApiResolver
+class DomainApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Domain';

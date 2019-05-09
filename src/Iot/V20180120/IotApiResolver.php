@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Iot\V20180120;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
@@ -110,12 +110,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteProduct deleteProduct(array $options = [])
  * @method CreateProduct createProduct(array $options = [])
  */
-class IotApiResolver
+class IotApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Iot';

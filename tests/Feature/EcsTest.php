@@ -2,9 +2,9 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Ecs\Ecs;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Ecs\EcsVersion;
-use AlibabaCloud\Ecs\V20140526\Ecs;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Ecs\V20140526\DescribeRegions;
 use AlibabaCloud\Client\Exception\ClientException;
@@ -32,13 +32,20 @@ class EcsTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::ecs()
-                               ->v20140526()
-                               ->describeRegions()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::ecs()
+                                ->v20140526()
+                                ->describeRegions()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeRegions::class, $request);
+        $request2 = Ecs::v20140526()
+                       ->describeRegions()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(DescribeRegions::class, $request1);
+        self::assertInstanceOf(DescribeRegions::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**
@@ -68,19 +75,6 @@ class EcsTest extends TestCase
                             ->timeout(25)
                             ->request();
 
-        self::assertArrayHasKey('Region', $result['Regions']);
-    }
-
-    /**
-     * @throws ServerException
-     * @throws ClientException
-     */
-    public function testEcsInApiStaticMethod()
-    {
-        $result = Ecs::describeRegions()
-                     ->connectTimeout(20)
-                     ->timeout(25)
-                     ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
 }

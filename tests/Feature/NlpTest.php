@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ClientException;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Nlp\V20180408\WordSegment;
+use AlibabaCloud\Nlp\Nlp;
 use PHPUnit\Framework\TestCase;
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Nlp\V20180408\WordSegment;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class NlpTest
@@ -44,13 +45,20 @@ class NlpTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::nlp()
-                               ->v20180408()
-                               ->wordSegment()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::nlp()
+                                ->v20180408()
+                                ->wordSegment()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(WordSegment::class, $request);
+        $request2 = Nlp::v20180408()
+                       ->wordSegment()
+                       ->connectTimeout(20)
+                       ->timeout(25);
+
+        self::assertInstanceOf(WordSegment::class, $request1);
+        self::assertInstanceOf(WordSegment::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

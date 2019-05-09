@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Dyvmsapi\V20170525;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Dyvmsapi
+class Dyvmsapi extends ApiResolver
 {
-    use ApiResolverTrait;
 }

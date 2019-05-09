@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Dm\V20151123;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Dm
+class Dm extends ApiResolver
 {
-    use ApiResolverTrait;
 }

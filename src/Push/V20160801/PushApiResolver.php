@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Push\V20160801;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryDevicesByAccount queryDevicesByAccount(array $options = [])
@@ -39,12 +39,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method BindTag bindTag(array $options = [])
  * @method BindAlias bindAlias(array $options = [])
  */
-class PushApiResolver
+class PushApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Push';

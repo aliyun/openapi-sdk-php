@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\RKvstore\V20150101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class RKvstore
+class RKvstore extends ApiResolver
 {
-    use ApiResolverTrait;
 }

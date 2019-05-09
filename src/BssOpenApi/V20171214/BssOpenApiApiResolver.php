@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\BssOpenApi\V20171214;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method QueryAccountTransactions queryAccountTransactions(array $options = [])
@@ -59,12 +59,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method QueryAvailableInstancesApi queryAvailableInstancesApi(array $options = [])
  * @method SetNotRenewalApi setNotRenewalApi(array $options = [])
  */
-class BssOpenApiApiResolver
+class BssOpenApiApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'BssOpenApi';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Afs\V20180112;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeCaptchaOrder describeCaptchaOrder(array $options = [])
@@ -21,12 +21,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DescribeCaptchaDay describeCaptchaDay(array $options = [])
  * @method DescribeCaptchaIpCity describeCaptchaIpCity(array $options = [])
  */
-class AfsApiResolver
+class AfsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'afs';

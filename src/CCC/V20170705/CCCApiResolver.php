@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\CCC\V20170705;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SubmitRecording submitRecording(array $options = [])
@@ -151,12 +151,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AssignUsers assignUsers(array $options = [])
  * @method AddPhoneNumber addPhoneNumber(array $options = [])
  */
-class CCCApiResolver
+class CCCApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'CCC';

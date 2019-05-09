@@ -2,11 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use PHPUnit\Framework\TestCase;
+use AlibabaCloud\CloudAPI\CloudAPI;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\CloudAPI\V20160714\DescribeRegions;
-use PHPUnit\Framework\TestCase;
 
 /**
  * Class CloudApiTest
@@ -30,13 +31,20 @@ class CloudApiTest extends TestCase
 
     public function testVersionResolve()
     {
-        $request = AlibabaCloud::cloudAPI()
-                               ->v20160714()
-                               ->describeRegions()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request1 = AlibabaCloud::cloudAPI()
+                                ->v20160714()
+                                ->describeRegions()
+                                ->connectTimeout(20)
+                                ->timeout(25);
 
-        self::assertInstanceOf(DescribeRegions::class, $request);
+        $request2 = CloudAPI::V20160714()
+                            ->describeRegions()
+                            ->connectTimeout(20)
+                            ->timeout(25);
+
+        self::assertInstanceOf(DescribeRegions::class, $request1);
+        self::assertInstanceOf(DescribeRegions::class, $request2);
+        self::assertEquals($request1, $request2);
     }
 
     /**

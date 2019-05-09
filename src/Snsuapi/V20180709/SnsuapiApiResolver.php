@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Snsuapi\V20180709;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method MobileStatusQuery mobileStatusQuery(array $options = [])
@@ -15,12 +15,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method OrderSnsuKdjs orderSnsuKdjs(array $options = [])
  * @method BandPrecheck bandPrecheck(array $options = [])
  */
-class SnsuapiApiResolver
+class SnsuapiApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Snsuapi';

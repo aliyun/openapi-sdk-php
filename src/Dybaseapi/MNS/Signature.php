@@ -52,7 +52,7 @@ class Signature
         $canonicalizedMNSHeaders = implode(
             "\n",
             array_map(
-                function ($v, $k) {
+                static function ($v, $k) {
                     return $k . ':' . $v;
                 },
                 $tmpHeaders,

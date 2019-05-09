@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method FetchPhotos fetchPhotos(array $options = [])
@@ -77,12 +77,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteFaces deleteFaces(array $options = [])
  * @method AddAlbumPhotos addAlbumPhotos(array $options = [])
  */
-class CloudPhotoApiResolver
+class CloudPhotoApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'CloudPhoto';

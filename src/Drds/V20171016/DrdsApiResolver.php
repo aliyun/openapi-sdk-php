@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Drds\V20171016;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeInstanceTags describeInstanceTags(array $options = [])
@@ -38,12 +38,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteDrdsDB deleteDrdsDB(array $options = [])
  * @method DeleteFailedDrdsDB deleteFailedDrdsDB(array $options = [])
  */
-class DrdsApiResolver
+class DrdsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Drds';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\ImageSearch\V20190325;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ListTagResources listTagResources(array $options = [])
@@ -12,12 +12,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method DeleteImage deleteImage(array $options = [])
  * @method AddImage addImage(array $options = [])
  */
-class ImageSearchApiResolver
+class ImageSearchApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'ImageSearch';

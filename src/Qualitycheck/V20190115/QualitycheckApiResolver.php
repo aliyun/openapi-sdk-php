@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Qualitycheck\V20190115;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ListAsrVocab listAsrVocab(array $options = [])
@@ -93,12 +93,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method GetUserGroup getUserGroup(array $options = [])
  * @method TestNetwork testNetwork(array $options = [])
  */
-class QualitycheckApiResolver
+class QualitycheckApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Qualitycheck';

@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\Nlp\V20180408;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class Nlp
+class Nlp extends ApiResolver
 {
-    use ApiResolverTrait;
 }

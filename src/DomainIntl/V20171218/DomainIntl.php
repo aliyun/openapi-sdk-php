@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\DomainIntl\V20171218;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class DomainIntl
+class DomainIntl extends ApiResolver
 {
-    use ApiResolverTrait;
 }

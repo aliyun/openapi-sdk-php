@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\CloudPhoto\V20170711;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class CloudPhoto
+class CloudPhoto extends ApiResolver
 {
-    use ApiResolverTrait;
 }

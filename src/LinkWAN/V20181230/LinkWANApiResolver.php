@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\LinkWAN\V20181230;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method SubmitExternalNodesAddingTask submitExternalNodesAddingTask(array $options = [])
@@ -132,12 +132,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method ListActivatedFeatures listActivatedFeatures(array $options = [])
  * @method CheckCloudProductOpenStatus checkCloudProductOpenStatus(array $options = [])
  */
-class LinkWANApiResolver
+class LinkWANApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'LinkWAN';

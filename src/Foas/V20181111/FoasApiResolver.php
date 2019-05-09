@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Foas\V20181111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ModifyMasterSpec modifyMasterSpec(array $options = [])
@@ -61,12 +61,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method CommitJob commitJob(array $options = [])
  * @method BatchGetInstanceRunSummary batchGetInstanceRunSummary(array $options = [])
  */
-class FoasApiResolver
+class FoasApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Roa extends \AlibabaCloud\Roa
+class Roa extends \AlibabaCloud\Client\Resolver\Roa
 {
     /** @var string */
     public $product = 'foas';

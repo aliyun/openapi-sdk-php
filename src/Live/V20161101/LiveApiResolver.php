@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Live\V20161101;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeLiveStreamSpecificConfig describeLiveStreamSpecificConfig(array $options = [])
@@ -171,12 +171,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method AddLiveAppRecordConfig addLiveAppRecordConfig(array $options = [])
  * @method AddLiveAppSnapshotConfig addLiveAppSnapshotConfig(array $options = [])
  */
-class LiveApiResolver
+class LiveApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'live';

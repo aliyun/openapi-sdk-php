@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\WafOpenapi\V20161111;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateInstance createInstance(array $options = [])
@@ -10,12 +10,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method RenewInstance renewInstance(array $options = [])
  * @method UpgradeInstance upgradeInstance(array $options = [])
  */
-class WafOpenapiApiResolver
+class WafOpenapiApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'waf-openapi';

@@ -2,7 +2,7 @@
 
 namespace AlibabaCloud\Ons\V20170918;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method OnsMqttGroupIdCreate onsMqttGroupIdCreate(array $options = [])
@@ -55,12 +55,11 @@ use AlibabaCloud\ApiResolverTrait;
  * @method OnsMqttQueryMsgTransTrend onsMqttQueryMsgTransTrend(array $options = [])
  * @method OnsTopicGet onsTopicGet(array $options = [])
  */
-class OnsApiResolver
+class OnsApiResolver extends ApiResolver
 {
-    use ApiResolverTrait;
 }
 
-class Rpc extends \AlibabaCloud\Rpc
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 {
     /** @var string */
     public $product = 'Ons';

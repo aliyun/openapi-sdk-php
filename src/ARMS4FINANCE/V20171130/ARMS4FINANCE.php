@@ -2,12 +2,11 @@
 
 namespace AlibabaCloud\ARMS4FINANCE\V20171130;
 
-use AlibabaCloud\ApiResolverTrait;
+use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @deprecated
  */
-class ARMS4FINANCE
+class ARMS4FINANCE extends ApiResolver
 {
-    use ApiResolverTrait;
 }
