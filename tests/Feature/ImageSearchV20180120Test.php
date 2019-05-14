@@ -10,11 +10,11 @@ use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 
 /**
- * Class ImageSearchTest
+ * Class ImageSearchV20180120Test
  *
  * @package   AlibabaCloud\Tests\Feature
  */
-class ImageSearchTest extends TestCase
+class ImageSearchV20180120Test extends TestCase
 {
     /**
      * @throws ClientException
@@ -24,8 +24,8 @@ class ImageSearchTest extends TestCase
         parent::setUp();
 
         AlibabaCloud::accessKeyClient(
-            \getenv('ACCESS_KEY_ID'),
-            \getenv('ACCESS_KEY_SECRET')
+            \getenv('IMAGE_SEARCH_ACCESS_KEY_ID'),
+            \getenv('IMAGE_SEARCH_ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asDefaultClient();
     }
 
@@ -49,23 +49,21 @@ class ImageSearchTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The specified instance name is invalid./
      */
     public function testAddItem()
     {
-        $request = AlibabaCloud::imageSearch()
-                               ->v20180120()
-                               ->addItem()
-                               ->withInstanceName('sdktest')
-                               ->withCateId('0')
-                               ->withCustContent('{"key":"value"}')
-                               ->withItemId('1234')
-                               ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                               ->host('imagesearch.cn-shanghai.aliyuncs.com')
-                               ->connectTimeout(30)
-                               ->timeout(35);
-        $result  = $request->request();
+        $result = AlibabaCloud::imageSearch()
+                              ->v20180120()
+                              ->addItem()
+                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                              ->withCateId('0')
+                              ->withCustContent('{"key":"value"}')
+                              ->withItemId('1234')
+                              ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
+                              ->connectTimeout(30)
+                              ->timeout(35)
+                              ->request();
+
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);
     }
@@ -73,20 +71,17 @@ class ImageSearchTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The specified instance name is invalid../
      */
     public function testSearchItem()
     {
         $result = AlibabaCloud::imageSearch()
                               ->v20180120()
                               ->searchItem()
-                              ->withInstanceName('sdktest')
+                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
                               ->withNum(10)
                               ->withStart(0)
                               ->withCateId('0')
                               ->withSearchPicture(file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                              ->host('imagesearch.cn-shanghai.aliyuncs.com')
                               ->connectTimeout(30)
                               ->timeout(35)
                               ->request();
@@ -98,49 +93,20 @@ class ImageSearchTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The specified instance name is invalid../
      */
     public function testDeleteItem()
     {
         $result = AlibabaCloud::imageSearch()
                               ->v20180120()
                               ->deleteItem()
-                              ->withInstanceName('sdktest')
+                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
                               ->withItemId('1234')
                               ->addPicture('picture')
-                              ->host('imagesearch.cn-shanghai.aliyuncs.com')
                               ->connectTimeout(30)
                               ->timeout(35)
                               ->request();
 
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);
-    }
-
-    public function testSearchImage()
-    {
-        AlibabaCloud::accessKeyClient(
-            \getenv('IMAGE_SEARCH_ACCESS_KEY_ID'),
-            \getenv('IMAGE_SEARCH_ACCESS_KEY_SECRET')
-        )->regionId('cn-shanghai')->asDefaultClient();
-
-        $content          = file_get_contents(__DIR__ . '/ImageSearch.jpg');
-        $encodePicContent = base64_encode($content);
-
-        $request = AlibabaCloud::imageSearch()
-                               ->v20190325()
-                               ->searchImage()
-                               ->connectTimeout(25)
-                               ->timeout(30)
-                               ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
-                               ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                               ->withPicContent($encodePicContent)
-                               ->withStart(0)
-                               ->withNum(10);
-
-        $result = $request->request();
-
-        self::assertArrayHasKey('Auctions', $result);
     }
 }

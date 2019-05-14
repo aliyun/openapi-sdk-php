@@ -42,9 +42,16 @@ class CdnTest extends TestCase
                        ->connectTimeout(20)
                        ->timeout(25);
 
+        $request3 = (new Cdn())->v20180510()
+                               ->describeIpInfo()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
         self::assertInstanceOf(DescribeIpInfo::class, $request1);
         self::assertInstanceOf(DescribeIpInfo::class, $request2);
+        self::assertInstanceOf(DescribeIpInfo::class, $request3);
         self::assertEquals($request1, $request2);
+        self::assertEquals($request1, $request3);
     }
 
     /**

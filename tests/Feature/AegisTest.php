@@ -42,9 +42,16 @@ class AegisTest extends TestCase
                          ->connectTimeout(20)
                          ->timeout(25);
 
+        $request3 = (new Aegis())->v20161111()
+                                 ->describeAlarmEventDetail()
+                                 ->connectTimeout(20)
+                                 ->timeout(25);
+
         self::assertInstanceOf(DescribeAlarmEventDetail::class, $request1);
         self::assertInstanceOf(DescribeAlarmEventDetail::class, $request2);
+        self::assertInstanceOf(DescribeAlarmEventDetail::class, $request3);
         self::assertEquals($request1, $request2);
+        self::assertEquals($request1, $request3);
     }
 
     /**
@@ -80,8 +87,8 @@ class AegisTest extends TestCase
         $set = AlibabaCloud::aegis()
                            ->v20161111()
                            ->describeAlarmEventDetail()
-                           ->setAlarmUniqueInfo('info')
-                           ->setFrom('from')
+                           ->withAlarmUniqueInfo('info')
+                           ->withFrom('from')
                            ->connectTimeout(20)
                            ->timeout(25);
 

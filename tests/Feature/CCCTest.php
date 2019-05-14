@@ -46,9 +46,16 @@ class CCCTest extends TestCase
                        ->connectTimeout(20)
                        ->timeout(25);
 
+        $request3 = (new CCC())->v20170705()
+                               ->listPhoneNumbers()
+                               ->connectTimeout(20)
+                               ->timeout(25);
+
         self::assertInstanceOf(ListPhoneNumbers::class, $request1);
         self::assertInstanceOf(ListPhoneNumbers::class, $request2);
+        self::assertInstanceOf(ListPhoneNumbers::class, $request3);
         self::assertEquals($request1, $request2);
+        self::assertEquals($request1, $request3);
     }
 
     /**
