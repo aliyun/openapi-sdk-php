@@ -5,11 +5,13 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DescribeDashboard describeDashboard(array $options = [])
+ * @method ListInstanceTask listInstanceTask(array $options = [])
+ * @method ListDashboardParameters listDashboardParameters(array $options = [])
+ * @method ListDashboard listDashboard(array $options = [])
+ * @method ListDashboardUid listDashboardUid(array $options = [])
  * @method DescribeDataSetReport describeDataSetReport(array $options = [])
  * @method UpgradeInstance upgradeInstance(array $options = [])
  * @method ValidateInstance validateInstance(array $options = [])
- * @method DescribeSchema describeSchema(array $options = [])
  * @method ListMix listMix(array $options = [])
  * @method RunInstance runInstance(array $options = [])
  * @method ModifyMix modifyMix(array $options = [])
@@ -56,13 +58,50 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getEndDate()
- * @method string getStartDate()
  */
-class DescribeDashboard extends Roa
+class ListInstanceTask extends Roa
 {
     /** @var string */
-    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard';
+    public $pathPattern = '/openapi/instances/[InstanceId]/tasks';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListDashboardParameters extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard/parameters';
+}
+
+/**
+ * @method string getTraceId()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getEndDate()
+ * @method string getSize()
+ * @method string getSceneId()
+ * @method string getPage()
+ * @method string getStartDate()
+ */
+class ListDashboard extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard/statistics';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTraceId($value)
+    {
+        $this->data['TraceId'] = $value;
+        $this->options['query']['TraceId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -82,6 +121,45 @@ class DescribeDashboard extends Roa
      *
      * @return $this
      */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['Size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['query']['SceneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withStartDate($value)
     {
         $this->data['StartDate'] = $value;
@@ -89,6 +167,16 @@ class DescribeDashboard extends Roa
 
         return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListDashboardUid extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard/uid';
 }
 
 /**
@@ -127,16 +215,6 @@ class ValidateInstance extends Roa
 
     /** @var string */
     public $method = 'POST';
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class DescribeSchema extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/openapi/instances/[InstanceId]/schema';
 }
 
 /**

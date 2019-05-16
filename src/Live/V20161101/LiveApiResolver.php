@@ -5,6 +5,8 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method SetLiveStreamOptimizedFeatureConfig setLiveStreamOptimizedFeatureConfig(array $options = [])
+ * @method DescribeLiveStreamOptimizedFeatureConfig describeLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
  * @method DescribeLiveStreamDelayConfig describeLiveStreamDelayConfig(array $options = [])
  * @method SetBoardCallback setBoardCallback(array $options = [])
@@ -180,6 +182,34 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'live';
+}
+
+/**
+ * @method string getConfigStatus()
+ * @method $this withConfigStatus($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getConfigValue()
+ * @method $this withConfigValue($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetLiveStreamOptimizedFeatureConfig extends Rpc
+{
+}
+
+/**
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStreamOptimizedFeatureConfig extends Rpc
+{
 }
 
 /**
@@ -481,18 +511,20 @@ class DeleteLiveLazyPullStreamInfoConfig extends Rpc
 }
 
 /**
+ * @method string getAppName()
+ * @method $this withAppName($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getAppName()
- * @method $this withAppName($value)
  */
 class DescribeLiveLazyPullStreamConfig extends Rpc
 {
 }
 
 /**
+ * @method string getPullArgs()
+ * @method $this withPullArgs($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getPullAuthKey()

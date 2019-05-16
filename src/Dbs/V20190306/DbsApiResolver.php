@@ -114,6 +114,8 @@ class StartRestoreTask extends Rpc
  * @method $this withRestoreObjects($value)
  * @method string getRestoreTaskName()
  * @method $this withRestoreTaskName($value)
+ * @method string getDuplicateConflict()
+ * @method $this withDuplicateConflict($value)
  * @method string getDestinationEndpointPassword()
  * @method $this withDestinationEndpointPassword($value)
  */

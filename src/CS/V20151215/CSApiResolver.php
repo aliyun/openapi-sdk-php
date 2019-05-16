@@ -11,10 +11,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateClusterByResourcesGroup createClusterByResourcesGroup(array $options = [])
  * @method PreCheckForCreateCluster preCheckForCreateCluster(array $options = [])
  * @method DescribeKubernetesVersionMetadata describeKubernetesVersionMetadata(array $options = [])
+ * @method UpgradeClusterAddons upgradeClusterAddons(array $options = [])
+ * @method DescribeClusterAddonsVersion describeClusterAddonsVersion(array $options = [])
  * @method DescribeEdgeClusterAttachScripts describeEdgeClusterAttachScripts(array $options = [])
  * @method DeleteClusterNodes deleteClusterNodes(array $options = [])
  * @method DescribeClusterUserKubeconfig describeClusterUserKubeconfig(array $options = [])
  * @method DescribeClusterEndpoints describeClusterEndpoints(array $options = [])
+ * @method UpgradeClusterComponents upgradeClusterComponents(array $options = [])
  * @method DescribeClusterNodes describeClusterNodes(array $options = [])
  * @method DescribeClusterLogs describeClusterLogs(array $options = [])
  * @method CheckAliyunCSServiceRole checkAliyunCSServiceRole(array $options = [])
@@ -168,6 +171,29 @@ class DescribeKubernetesVersionMetadata extends Roa
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ */
+class UpgradeClusterAddons extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/components/upgrade';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeClusterAddonsVersion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/components/version';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getNamePrefix()
  */
 class DescribeEdgeClusterAttachScripts extends Roa
@@ -234,6 +260,21 @@ class DescribeClusterEndpoints extends Roa
 {
     /** @var string */
     public $pathPattern = '/clusters/[ClusterId]/endpoints';
+}
+
+/**
+ * @method string getComponentId()
+ * @method $this withComponentId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class UpgradeClusterComponents extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/components/[ComponentId]/upgrade';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**

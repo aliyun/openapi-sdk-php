@@ -5,6 +5,7 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DetectImageBodies detectImageBodies(array $options = [])
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method DetectImageLogos detectImageLogos(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
@@ -117,6 +118,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imm';
+}
+
+/**
+ * @method string getImageUri()
+ * @method $this withImageUri($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ */
+class DetectImageBodies extends Rpc
+{
 }
 
 /**

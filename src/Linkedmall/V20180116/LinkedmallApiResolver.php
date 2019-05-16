@@ -5,6 +5,7 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CancelRefund cancelRefund(array $options = [])
  * @method RenderOrder renderOrder(array $options = [])
  * @method ApplyRefund applyRefund(array $options = [])
  * @method InitApplyRefund initApplyRefund(array $options = [])
@@ -60,6 +61,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'linkedmall';
+}
+
+/**
+ * @method string getSubLmOrderId()
+ * @method $this withSubLmOrderId($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getDisputeId()
+ * @method $this withDisputeId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class CancelRefund extends Rpc
+{
 }
 
 /**

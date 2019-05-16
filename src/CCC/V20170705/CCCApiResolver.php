@@ -5,6 +5,8 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method SubmitCabRecording submitCabRecording(array $options = [])
+ * @method DownloadCabRecording downloadCabRecording(array $options = [])
  * @method ListInstancesOfUser listInstancesOfUser(array $options = [])
  * @method SaveWebRTCStats saveWebRTCStats(array $options = [])
  * @method SaveStats saveStats(array $options = [])
@@ -167,6 +169,32 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ccc';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ * @method string getMergedRecording()
+ * @method $this withMergedRecording($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getResourceRecording()
+ * @method $this withResourceRecording($value)
+ */
+class SubmitCabRecording extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DownloadCabRecording extends Rpc
+{
 }
 
 class ListInstancesOfUser extends Rpc

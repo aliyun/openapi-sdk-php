@@ -192,6 +192,8 @@ class GetIndustryInfo extends Rpc
 /**
  * @method string getRequestParams()
  * @method $this withRequestParams($value)
+ * @method string getShowBizInfo()
+ * @method $this withShowBizInfo($value)
  * @method string getServiceId()
  * @method $this withServiceId($value)
  * @method string getRequestData()

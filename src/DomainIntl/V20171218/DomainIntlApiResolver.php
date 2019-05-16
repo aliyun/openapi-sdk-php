@@ -5,6 +5,9 @@ namespace AlibabaCloud\DomainIntl\V20171218;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CancelTask cancelTask(array $options = [])
+ * @method QueryArtExtension queryArtExtension(array $options = [])
+ * @method SaveSingleTaskForSaveArtExtension saveSingleTaskForSaveArtExtension(array $options = [])
  * @method QueryDomainByDomainName queryDomainByDomainName(array $options = [])
  * @method CancelDomainVerification cancelDomainVerification(array $options = [])
  * @method QueryDomainRealNameVerificationInfo queryDomainRealNameVerificationInfo(array $options = [])
@@ -105,6 +108,60 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'domain';
+}
+
+/**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getTaskNo()
+ * @method $this withTaskNo($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class CancelTask extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class QueryArtExtension extends Rpc
+{
+}
+
+/**
+ * @method string getReference()
+ * @method $this withReference($value)
+ * @method string getFeatures()
+ * @method $this withFeatures($value)
+ * @method string getInscriptionsAndMarkings()
+ * @method $this withInscriptionsAndMarkings($value)
+ * @method string getSubject()
+ * @method $this withSubject($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getMaker()
+ * @method $this withMaker($value)
+ * @method string getObjectType()
+ * @method $this withObjectType($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getMaterialsAndTechniques()
+ * @method $this withMaterialsAndTechniques($value)
+ * @method string getDateOrPeriod()
+ * @method $this withDateOrPeriod($value)
+ * @method string getDimensions()
+ * @method $this withDimensions($value)
+ */
+class SaveSingleTaskForSaveArtExtension extends Rpc
+{
 }
 
 /**

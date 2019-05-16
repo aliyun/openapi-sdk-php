@@ -372,6 +372,8 @@ class ListFileSystemWithMountTargets extends Rpc
  * @method $this withSpotStrategy($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getShowSoldOut()
+ * @method $this withShowSoldOut($value)
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  */

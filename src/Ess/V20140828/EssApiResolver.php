@@ -506,6 +506,7 @@ class AttachLoadBalancers extends Rpc
  * @method $this withRamRoleName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getSecurityGroupIds()
  * @method array getDataDisk()
  * @method string getScalingConfigurationName()
  * @method $this withScalingConfigurationName($value)
@@ -580,6 +581,21 @@ class ModifyScalingConfiguration extends Rpc
     {
         $this->data['SystemDiskDiskName'] = $value;
         $this->options['query']['SystemDisk.DiskName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $securityGroupIds
+     *
+     * @return $this
+     */
+    public function withSecurityGroupIds(array $securityGroupIds)
+    {
+        $this->data['SecurityGroupIds'] = $securityGroupIds;
+        foreach ($securityGroupIds as $i => $iValue) {
+            $this->options['query']['SecurityGroupIds.' . ($i + 1)] = $iValue;
+        }
 
         return $this;
     }
@@ -1108,6 +1124,8 @@ class VerifyUser extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -5130,6 +5148,7 @@ class CreateScalingGroup extends Rpc
  * @method $this withRamRoleName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getSecurityGroupIds()
  * @method array getDataDisk()
  * @method string getScalingConfigurationName()
  * @method $this withScalingConfigurationName($value)
@@ -5204,6 +5223,21 @@ class CreateScalingConfiguration extends Rpc
     {
         $this->data['SystemDiskDiskName'] = $value;
         $this->options['query']['SystemDisk.DiskName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $securityGroupIds
+     *
+     * @return $this
+     */
+    public function withSecurityGroupIds(array $securityGroupIds)
+    {
+        $this->data['SecurityGroupIds'] = $securityGroupIds;
+        foreach ($securityGroupIds as $i => $iValue) {
+            $this->options['query']['SecurityGroupIds.' . ($i + 1)] = $iValue;
+        }
 
         return $this;
     }

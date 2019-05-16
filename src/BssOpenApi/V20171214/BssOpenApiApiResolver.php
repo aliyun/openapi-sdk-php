@@ -5,6 +5,15 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetCustomerAccountInfo getCustomerAccountInfo(array $options = [])
+ * @method GetCustomerList getCustomerList(array $options = [])
+ * @method ChangeResellerConsumeAmount changeResellerConsumeAmount(array $options = [])
+ * @method SetResellerUserStatus setResellerUserStatus(array $options = [])
+ * @method CreateResellerUserQuota createResellerUserQuota(array $options = [])
+ * @method SetResellerUserQuota setResellerUserQuota(array $options = [])
+ * @method QueryResellerAvailableQuota queryResellerAvailableQuota(array $options = [])
+ * @method SetResellerUserAlarmThreshold setResellerUserAlarmThreshold(array $options = [])
+ * @method QueryAccountTransactions queryAccountTransactions(array $options = [])
  * @method UnsubscribeBillToOSS unsubscribeBillToOSS(array $options = [])
  * @method SubscribeBillToOSS subscribeBillToOSS(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
@@ -56,6 +65,122 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetCustomerAccountInfo extends Rpc
+{
+}
+
+class GetCustomerList extends Rpc
+{
+}
+
+/**
+ * @method string getAdjustType()
+ * @method $this withAdjustType($value)
+ * @method string getAmount()
+ * @method $this withAmount($value)
+ * @method string getOutBizId()
+ * @method $this withOutBizId($value)
+ * @method string getExtendMap()
+ * @method $this withExtendMap($value)
+ * @method string getCurrency()
+ * @method $this withCurrency($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ */
+class ChangeResellerConsumeAmount extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ */
+class SetResellerUserStatus extends Rpc
+{
+}
+
+/**
+ * @method string getAmount()
+ * @method $this withAmount($value)
+ * @method string getOutBizId()
+ * @method $this withOutBizId($value)
+ * @method string getCurrency()
+ * @method $this withCurrency($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateResellerUserQuota extends Rpc
+{
+}
+
+/**
+ * @method string getAmount()
+ * @method $this withAmount($value)
+ * @method string getOutBizId()
+ * @method $this withOutBizId($value)
+ * @method string getCurrency()
+ * @method $this withCurrency($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetResellerUserQuota extends Rpc
+{
+}
+
+/**
+ * @method string getItemCodes()
+ * @method $this withItemCodes($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryResellerAvailableQuota extends Rpc
+{
+}
+
+/**
+ * @method string getAlarmType()
+ * @method $this withAlarmType($value)
+ * @method string getAlarmThresholds()
+ * @method $this withAlarmThresholds($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetResellerUserAlarmThreshold extends Rpc
+{
+}
+
+/**
+ * @method string getRecordID()
+ * @method $this withRecordID($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTransactionChannelSN()
+ * @method $this withTransactionChannelSN($value)
+ * @method string getCreateTimeStart()
+ * @method $this withCreateTimeStart($value)
+ * @method string getTransactionNumber()
+ * @method $this withTransactionNumber($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getCreateTimeEnd()
+ * @method $this withCreateTimeEnd($value)
+ */
+class QueryAccountTransactions extends Rpc
+{
 }
 
 /**
