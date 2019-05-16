@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.6.2 - 2019-05-16
+- Updated APIs.
+
+
 ## 1.6.1 - 2019-05-09
 - Regenerate products.
 - Generate `composer.json` for each product.
