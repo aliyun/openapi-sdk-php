@@ -768,6 +768,7 @@ class DescribeRouteServicesInCen extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method array getAccessRegionIds()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
@@ -780,8 +781,6 @@ class DescribeRouteServicesInCen extends Rpc
  * @method $this withHost($value)
  * @method string getHostRegionId()
  * @method $this withHostRegionId($value)
- * @method string getAccessRegionId()
- * @method $this withAccessRegionId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getUpdateInterval()
@@ -789,6 +788,21 @@ class DescribeRouteServicesInCen extends Rpc
  */
 class ResolveAndRouteServiceInCen extends Rpc
 {
+
+    /**
+     * @param array $accessRegionIds
+     *
+     * @return $this
+     */
+    public function withAccessRegionIds(array $accessRegionIds)
+    {
+        $this->data['AccessRegionIds'] = $accessRegionIds;
+        foreach ($accessRegionIds as $i => $iValue) {
+            $this->options['query']['AccessRegionIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**

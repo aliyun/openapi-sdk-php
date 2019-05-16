@@ -5,6 +5,10 @@ namespace AlibabaCloud\Cloudesl\V20180801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method BindApStoreService bindApStoreService(array $options = [])
+ * @method DeleteApService deleteApService(array $options = [])
+ * @method ActivateApService activateApService(array $options = [])
+ * @method SearchApService searchApService(array $options = [])
  * @method DeleteItemBySkuId deleteItemBySkuId(array $options = [])
  * @method DescribeUserRamPolicy describeUserRamPolicy(array $options = [])
  * @method BatchInsertItems batchInsertItems(array $options = [])
@@ -38,6 +42,60 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getCompanyId()
+ * @method $this withCompanyId($value)
+ * @method string getApMac()
+ * @method $this withApMac($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ */
+class BindApStoreService extends Rpc
+{
+}
+
+/**
+ * @method string getCompanyId()
+ * @method $this withCompanyId($value)
+ * @method string getApMac()
+ * @method $this withApMac($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ */
+class DeleteApService extends Rpc
+{
+}
+
+/**
+ * @method string getCompanyId()
+ * @method $this withCompanyId($value)
+ * @method string getApMac()
+ * @method $this withApMac($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ */
+class ActivateApService extends Rpc
+{
+}
+
+/**
+ * @method string getCompanyId()
+ * @method $this withCompanyId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getApMac()
+ * @method $this withApMac($value)
+ * @method string getStoreId()
+ * @method $this withStoreId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getActivated()
+ * @method $this withActivated($value)
+ */
+class SearchApService extends Rpc
+{
 }
 
 /**

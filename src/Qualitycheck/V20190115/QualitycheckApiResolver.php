@@ -5,6 +5,12 @@ namespace AlibabaCloud\Qualitycheck\V20190115;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetNextResultToVerify getNextResultToVerify(array $options = [])
+ * @method GetPrecisionTask getPrecisionTask(array $options = [])
+ * @method ListPrecisionTask listPrecisionTask(array $options = [])
+ * @method SubmitPrecisionTask submitPrecisionTask(array $options = [])
+ * @method VerifyFile verifyFile(array $options = [])
+ * @method VerifySentence verifySentence(array $options = [])
  * @method ListAsrVocab listAsrVocab(array $options = [])
  * @method GetUserInfo getUserInfo(array $options = [])
  * @method RestartAsrTask restartAsrTask(array $options = [])
@@ -107,6 +113,66 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class GetNextResultToVerify extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class GetPrecisionTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class ListPrecisionTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class SubmitPrecisionTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class VerifyFile extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class VerifySentence extends Rpc
+{
 }
 
 /**

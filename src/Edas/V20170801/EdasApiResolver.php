@@ -5,6 +5,7 @@ namespace AlibabaCloud\Edas\V20170801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ContinuePipeline continuePipeline(array $options = [])
  * @method ChangeDeployGroup changeDeployGroup(array $options = [])
  * @method GetCluster getCluster(array $options = [])
  * @method QueryRegionConfig queryRegionConfig(array $options = [])
@@ -131,6 +132,45 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'edas';
+}
+
+/**
+ * @method string getConfirm()
+ * @method string getPipelineId()
+ */
+class ContinuePipeline extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/changeorder/pipeline_batch_confirm';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfirm($value)
+    {
+        $this->data['Confirm'] = $value;
+        $this->options['query']['Confirm'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPipelineId($value)
+    {
+        $this->data['PipelineId'] = $value;
+        $this->options['query']['PipelineId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1507,6 +1547,7 @@ class ListEcsNotInCluster extends Roa
  * @method string getNasId()
  * @method string getRepoId()
  * @method string getInternetTargetPort()
+ * @method string getWebContainer()
  * @method string getIntranetSlbId()
  * @method string getCommandArgs()
  * @method string getReadiness()
@@ -1514,11 +1555,14 @@ class ListEcsNotInCluster extends Roa
  * @method string getInternetSlbPort()
  * @method string getEnvs()
  * @method string getRequestsMem()
+ * @method string getPackageVersion()
  * @method string getStorageType()
  * @method string getLimitMem()
+ * @method string getEdasContainerVersion()
  * @method string getAppName()
  * @method string getInternetSlbId()
  * @method string getLogicalRegionId()
+ * @method string getPackageUrl()
  * @method string getInternetSlbProtocol()
  * @method string getIntranetSlbPort()
  * @method string getPreStop()
@@ -1529,10 +1573,12 @@ class ListEcsNotInCluster extends Roa
  * @method string getIntranetTargetPort()
  * @method string getLocalVolume()
  * @method string getCommand()
+ * @method string getJDK()
  * @method string getIntranetSlbProtocol()
  * @method string getImageUrl()
  * @method string getNamespace()
  * @method string getApplicationDescription()
+ * @method string getPackageType()
  * @method string getRequestsCpu()
  * @method string getPostStart()
  */
@@ -1576,6 +1622,19 @@ class InsertK8sApplication extends Roa
     {
         $this->data['InternetTargetPort'] = $value;
         $this->options['query']['InternetTargetPort'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWebContainer($value)
+    {
+        $this->data['WebContainer'] = $value;
+        $this->options['query']['WebContainer'] = $value;
 
         return $this;
     }
@@ -1676,6 +1735,19 @@ class InsertK8sApplication extends Roa
      *
      * @return $this
      */
+    public function withPackageVersion($value)
+    {
+        $this->data['PackageVersion'] = $value;
+        $this->options['query']['PackageVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withStorageType($value)
     {
         $this->data['StorageType'] = $value;
@@ -1693,6 +1765,19 @@ class InsertK8sApplication extends Roa
     {
         $this->data['LimitMem'] = $value;
         $this->options['query']['LimitMem'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEdasContainerVersion($value)
+    {
+        $this->data['EdasContainerVersion'] = $value;
+        $this->options['query']['EdasContainerVersion'] = $value;
 
         return $this;
     }
@@ -1732,6 +1817,19 @@ class InsertK8sApplication extends Roa
     {
         $this->data['LogicalRegionId'] = $value;
         $this->options['query']['LogicalRegionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageUrl($value)
+    {
+        $this->data['PackageUrl'] = $value;
+        $this->options['query']['PackageUrl'] = $value;
 
         return $this;
     }
@@ -1871,6 +1969,19 @@ class InsertK8sApplication extends Roa
      *
      * @return $this
      */
+    public function withJDK($value)
+    {
+        $this->data['JDK'] = $value;
+        $this->options['query']['JDK'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withIntranetSlbProtocol($value)
     {
         $this->data['IntranetSlbProtocol'] = $value;
@@ -1914,6 +2025,19 @@ class InsertK8sApplication extends Roa
     {
         $this->data['ApplicationDescription'] = $value;
         $this->options['query']['ApplicationDescription'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageType($value)
+    {
+        $this->data['PackageType'] = $value;
+        $this->options['query']['PackageType'] = $value;
 
         return $this;
     }
@@ -5893,14 +6017,15 @@ class ScaleInApplication extends Roa
 /**
  * @method string getBuildPackId()
  * @method string getComponentIds()
- * @method string getAppId()
- * @method string getImageUrl()
  * @method string getGroupId()
  * @method string getBatchWaitTime()
+ * @method string getReleaseType()
  * @method string getBatch()
  * @method string getAppEnv()
- * @method string getWarUrl()
  * @method string getPackageVersion()
+ * @method string getAppId()
+ * @method string getImageUrl()
+ * @method string getWarUrl()
  * @method string getDesc()
  * @method string getDeployType()
  */
@@ -5940,32 +6065,6 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['AppId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageUrl($value)
-    {
-        $this->data['ImageUrl'] = $value;
-        $this->options['query']['ImageUrl'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withGroupId($value)
     {
         $this->data['GroupId'] = $value;
@@ -5983,6 +6082,19 @@ class DeployApplication extends Roa
     {
         $this->data['BatchWaitTime'] = $value;
         $this->options['query']['BatchWaitTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReleaseType($value)
+    {
+        $this->data['ReleaseType'] = $value;
+        $this->options['query']['ReleaseType'] = $value;
 
         return $this;
     }
@@ -6018,10 +6130,10 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withWarUrl($value)
+    public function withPackageVersion($value)
     {
-        $this->data['WarUrl'] = $value;
-        $this->options['query']['WarUrl'] = $value;
+        $this->data['PackageVersion'] = $value;
+        $this->options['query']['PackageVersion'] = $value;
 
         return $this;
     }
@@ -6031,10 +6143,36 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withPackageVersion($value)
+    public function withAppId($value)
     {
-        $this->data['PackageVersion'] = $value;
-        $this->options['query']['PackageVersion'] = $value;
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['query']['ImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWarUrl($value)
+    {
+        $this->data['WarUrl'] = $value;
+        $this->options['query']['WarUrl'] = $value;
 
         return $this;
     }

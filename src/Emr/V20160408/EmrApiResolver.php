@@ -5,6 +5,30 @@ namespace AlibabaCloud\Emr\V20160408;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method UpdateUserStatus updateUserStatus(array $options = [])
+ * @method DeleteBatchResourceUsers deleteBatchResourceUsers(array $options = [])
+ * @method QueryUserActionsPolicy queryUserActionsPolicy(array $options = [])
+ * @method CreateBatchUsers createBatchUsers(array $options = [])
+ * @method AddUserResourceRole addUserResourceRole(array $options = [])
+ * @method DeleteUserResourceRole deleteUserResourceRole(array $options = [])
+ * @method CreateUserGroup createUserGroup(array $options = [])
+ * @method CreateUser createUser(array $options = [])
+ * @method ListRoles listRoles(array $options = [])
+ * @method DescribeUserGroup describeUserGroup(array $options = [])
+ * @method UpdateUserGroup updateUserGroup(array $options = [])
+ * @method DescribeUser describeUser(array $options = [])
+ * @method AddResourceToUsers addResourceToUsers(array $options = [])
+ * @method SaveBatchUserAccountInfo saveBatchUserAccountInfo(array $options = [])
+ * @method ListUserGroups listUserGroups(array $options = [])
+ * @method UpdateUser updateUser(array $options = [])
+ * @method PageListUsers pageListUsers(array $options = [])
+ * @method DeleteResourceUser deleteResourceUser(array $options = [])
+ * @method ListUsersByCondition listUsersByCondition(array $options = [])
+ * @method SaveUserAccountInfo saveUserAccountInfo(array $options = [])
+ * @method QueryUserPolicies queryUserPolicies(array $options = [])
+ * @method PageListUserGroups pageListUserGroups(array $options = [])
+ * @method DeleteUserGroup deleteUserGroup(array $options = [])
+ * @method PageListResourceUsers pageListResourceUsers(array $options = [])
  * @method ListHostPool listHostPool(array $options = [])
  * @method ListKafkaReassign listKafkaReassign(array $options = [])
  * @method DeleteHostPool deleteHostPool(array $options = [])
@@ -19,7 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListStackService listStackService(array $options = [])
  * @method CreateClusterWithHostPool createClusterWithHostPool(array $options = [])
  * @method StartKafkaBrokerDiskBalancer startKafkaBrokerDiskBalancer(array $options = [])
- * @method ListHPHost listHPHost(array $options = [])
+ * @method ListHpHost listHpHost(array $options = [])
  * @method RemoveHpHost removeHpHost(array $options = [])
  * @method ListClusterInstalledService listClusterInstalledService(array $options = [])
  * @method ReassignKafka reassignKafka(array $options = [])
@@ -359,6 +383,593 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ * @method string getUpdateStatus()
+ * @method $this withUpdateStatus($value)
+ */
+class UpdateUserStatus extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method array getUserId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class DeleteBatchResourceUsers extends Rpc
+{
+
+    /**
+     * @param array $userId
+     *
+     * @return $this
+     */
+    public function withUserId(array $userId)
+    {
+        $this->data['UserId'] = $userId;
+        foreach ($userId as $i => $iValue) {
+            $this->options['query']['UserId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method array getActionName()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class QueryUserActionsPolicy extends Rpc
+{
+
+    /**
+     * @param array $actionName
+     *
+     * @return $this
+     */
+    public function withActionName(array $actionName)
+    {
+        $this->data['ActionName'] = $actionName;
+        foreach ($actionName as $i => $iValue) {
+            $this->options['query']['ActionName.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getRoleId()
+ * @method array getGroupId()
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method array getUserBaseParam()
+ */
+class CreateBatchUsers extends Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId(array $groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        foreach ($groupId as $i => $iValue) {
+            $this->options['query']['GroupId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $userBaseParam
+     *
+     * @return $this
+     */
+    public function withUserBaseParam(array $userBaseParam)
+    {
+        $this->data['UserBaseParam'] = $userBaseParam;
+        foreach ($userBaseParam as $depth1 => $depth1Value) {
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.AliyunUserId'] = $depth1Value['AliyunUserId'];
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
+            $this->options['query']['UserBaseParam.' . ($depth1 + 1) . '.IsSuperAdmin'] = $depth1Value['IsSuperAdmin'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class AddUserResourceRole extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class DeleteUserResourceRole extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getRoleId()
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateUserGroup extends Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getUserAccountParam()
+ * @method array getRoleId()
+ * @method array getGroupId()
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getIsSuperAdmin()
+ * @method $this withIsSuperAdmin($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class CreateUser extends Rpc
+{
+
+    /**
+     * @param array $userAccountParam
+     *
+     * @return $this
+     */
+    public function withUserAccountParam(array $userAccountParam)
+    {
+        $this->data['UserAccountParam'] = $userAccountParam;
+        foreach ($userAccountParam as $depth1 => $depth1Value) {
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountType'] = $depth1Value['AccountType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AuthType'] = $depth1Value['AuthType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountPassword'] = $depth1Value['AccountPassword'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId(array $groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        foreach ($groupId as $i => $iValue) {
+            $this->options['query']['GroupId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class ListRoles extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DescribeUserGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getRoleId()
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class UpdateUserGroup extends Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class DescribeUser extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method array getRoleId()
+ * @method array getUserId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class AddResourceToUsers extends Rpc
+{
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $userId
+     *
+     * @return $this
+     */
+    public function withUserId(array $userId)
+    {
+        $this->data['UserId'] = $userId;
+        foreach ($userId as $i => $iValue) {
+            $this->options['query']['UserId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method array getUserId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAuthType()
+ * @method $this withAuthType($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ */
+class SaveBatchUserAccountInfo extends Rpc
+{
+
+    /**
+     * @param array $userId
+     *
+     * @return $this
+     */
+    public function withUserId(array $userId)
+    {
+        $this->data['UserId'] = $userId;
+        foreach ($userId as $i => $iValue) {
+            $this->options['query']['UserId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFuzzyName()
+ * @method $this withFuzzyName($value)
+ */
+class ListUserGroups extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getUserAccountParam()
+ * @method array getRoleId()
+ * @method array getGroupId()
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getIsSuperAdmin()
+ * @method $this withIsSuperAdmin($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateUser extends Rpc
+{
+
+    /**
+     * @param array $userAccountParam
+     *
+     * @return $this
+     */
+    public function withUserAccountParam(array $userAccountParam)
+    {
+        $this->data['UserAccountParam'] = $userAccountParam;
+        foreach ($userAccountParam as $depth1 => $depth1Value) {
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountType'] = $depth1Value['AccountType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AuthType'] = $depth1Value['AuthType'];
+            $this->options['query']['UserAccountParam.' . ($depth1 + 1) . '.AccountPassword'] = $depth1Value['AccountPassword'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $roleId
+     *
+     * @return $this
+     */
+    public function withRoleId(array $roleId)
+    {
+        $this->data['RoleId'] = $roleId;
+        foreach ($roleId as $i => $iValue) {
+            $this->options['query']['RoleId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $groupId
+     *
+     * @return $this
+     */
+    public function withGroupId(array $groupId)
+    {
+        $this->data['GroupId'] = $groupId;
+        foreach ($groupId as $i => $iValue) {
+            $this->options['query']['GroupId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFuzzyName()
+ * @method $this withFuzzyName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class PageListUsers extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class DeleteResourceUser extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ */
+class ListUsersByCondition extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getAuthType()
+ * @method $this withAuthType($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getAliyunUserId()
+ * @method $this withAliyunUserId($value)
+ */
+class SaveUserAccountInfo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class QueryUserPolicies extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFuzzyName()
+ * @method $this withFuzzyName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class PageListUserGroups extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class DeleteUserGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class PageListResourceUsers extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()
@@ -456,6 +1067,8 @@ class ListKafkaReassignTopic extends Rpc
 }
 
 /**
+ * @method string getClusterType()
+ * @method $this withClusterType($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method array getHostGroup()
@@ -464,6 +1077,7 @@ class ListKafkaReassignTopic extends Rpc
  * @method $this withStackName($value)
  * @method string getStackVersion()
  * @method $this withStackVersion($value)
+ * @method array getServiceInfo()
  */
 class PlanComponentTopo extends Rpc
 {
@@ -496,6 +1110,23 @@ class PlanComponentTopo extends Rpc
         foreach ($hostInfo as $depth1 => $depth1Value) {
             $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HpHostBizId'] = $depth1Value['HpHostBizId'];
             $this->options['query']['HostInfo.' . ($depth1 + 1) . '.HostGroupName'] = $depth1Value['HostGroupName'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $serviceInfo
+     *
+     * @return $this
+     */
+    public function withServiceInfo(array $serviceInfo)
+    {
+        $this->data['ServiceInfo'] = $serviceInfo;
+        foreach ($serviceInfo as $depth1 => $depth1Value) {
+            $this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.ServiceEcmVersion'] = $depth1Value['ServiceEcmVersion'];
+            $this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.ServiceVersion'] = $depth1Value['ServiceVersion'];
+            $this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.ServiceName'] = $depth1Value['ServiceName'];
         }
 
         return $this;
@@ -581,6 +1212,8 @@ class ListStackService extends Rpc
  * @method $this withStackVersion($value)
  * @method array getServiceInfo()
  * @method array getConfig()
+ * @method string getRelatedClusterId()
+ * @method $this withRelatedClusterId($value)
  */
 class CreateClusterWithHostPool extends Rpc
 {
@@ -689,8 +1322,10 @@ class StartKafkaBrokerDiskBalancer extends Rpc
  * @method $this withHpBizId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
-class ListHPHost extends Rpc
+class ListHpHost extends Rpc
 {
 }
 
@@ -7026,6 +7661,8 @@ class ListExecutionPlanInstances extends Rpc
  * @method $this withDefaultStatus($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getMachineType()
+ * @method $this withMachineType($value)
  */
 class ListClusters extends Rpc
 {

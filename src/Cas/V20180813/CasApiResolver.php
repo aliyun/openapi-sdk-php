@@ -5,6 +5,7 @@ namespace AlibabaCloud\Cas\V20180813;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeRenewOrder describeRenewOrder(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
@@ -76,6 +77,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cas_esign_fdd';
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class DescribeRenewOrder extends Rpc
+{
 }
 
 /**

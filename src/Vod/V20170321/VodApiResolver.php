@@ -5,7 +5,11 @@ namespace AlibabaCloud\Vod\V20170321;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetAIVideoTagResult getAIVideoTagResult(array $options = [])
  * @method GetUploadDetails getUploadDetails(array $options = [])
+ * @method DescribeVodStorageData describeVodStorageData(array $options = [])
+ * @method DescribeVodAIData describeVodAIData(array $options = [])
+ * @method DescribeVodTranscodeData describeVodTranscodeData(array $options = [])
  * @method DeleteMultipartUpload deleteMultipartUpload(array $options = [])
  * @method GetAttachedMediaInfo getAttachedMediaInfo(array $options = [])
  * @method DeleteAttachedMedia deleteAttachedMedia(array $options = [])
@@ -45,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodDomainLog describeVodDomainLog(array $options = [])
  * @method DescribeVodDomainTrafficData describeVodDomainTrafficData(array $options = [])
  * @method DescribeVodDomainBpsData describeVodDomainBpsData(array $options = [])
+ * @method DescribeVodDomainUsageData describeVodDomainUsageData(array $options = [])
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
  * @method DescribeVodRefreshTasks describeVodRefreshTasks(array $options = [])
  * @method RefreshVodObjectCaches refreshVodObjectCaches(array $options = [])
@@ -136,6 +141,22 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class GetAIVideoTagResult extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getResourceRealOwnerId()
  * @method $this withResourceRealOwnerId($value)
  * @method string getMediaIds()
@@ -146,6 +167,50 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withMediaType($value)
  */
 class GetUploadDetails extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeVodStorageData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeVodAIData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeVodTranscodeData extends Rpc
 {
 }
 
@@ -808,6 +873,26 @@ class DescribeVodDomainTrafficData extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeVodDomainBpsData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getArea()
+ * @method $this withArea($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getField()
+ * @method $this withField($value)
+ */
+class DescribeVodDomainUsageData extends Rpc
 {
 }
 
@@ -1532,6 +1617,8 @@ class DeleteStream extends Rpc
  * @method $this withVideoId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getSpecifiedOffsetTime()
  * @method $this withSpecifiedOffsetTime($value)
  * @method string getWidth()
