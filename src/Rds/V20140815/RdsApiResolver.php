@@ -3561,6 +3561,8 @@ class CreateReadOnlyDBInstance extends Rpc
  * @method $this withEngineVersion($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getDdrInstance()
+ * @method $this withDdrInstance($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getDBInstanceDescription()
