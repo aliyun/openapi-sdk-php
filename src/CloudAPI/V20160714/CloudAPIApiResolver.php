@@ -1611,6 +1611,8 @@ class CreateApp extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDescription()
