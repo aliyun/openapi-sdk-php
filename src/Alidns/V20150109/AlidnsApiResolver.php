@@ -5,6 +5,7 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ChangeDomainGroupForTest changeDomainGroupForTest(array $options = [])
  * @method DescribeGtmInstanceSystemCname describeGtmInstanceSystemCname(array $options = [])
  * @method OperateBatchDomain operateBatchDomain(array $options = [])
  * @method DescribeBatchResultDetail describeBatchResultDetail(array $options = [])
@@ -82,6 +83,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'alidns';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class ChangeDomainGroupForTest extends Rpc
+{
 }
 
 /**

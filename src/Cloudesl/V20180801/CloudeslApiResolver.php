@@ -45,8 +45,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getCompanyId()
- * @method $this withCompanyId($value)
  * @method string getApMac()
  * @method $this withApMac($value)
  * @method string getStoreId()
@@ -57,8 +55,6 @@ class BindApStoreService extends Rpc
 }
 
 /**
- * @method string getCompanyId()
- * @method $this withCompanyId($value)
  * @method string getApMac()
  * @method $this withApMac($value)
  * @method string getStoreId()
@@ -69,8 +65,6 @@ class DeleteApService extends Rpc
 }
 
 /**
- * @method string getCompanyId()
- * @method $this withCompanyId($value)
  * @method string getApMac()
  * @method $this withApMac($value)
  * @method string getStoreId()
@@ -81,8 +75,6 @@ class ActivateApService extends Rpc
 }
 
 /**
- * @method string getCompanyId()
- * @method $this withCompanyId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getApMac()

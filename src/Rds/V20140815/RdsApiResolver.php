@@ -5,6 +5,7 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method EvaluateSupportByokShow evaluateSupportByokShow(array $options = [])
  * @method DescribeInstanceVpcMigrateInfo describeInstanceVpcMigrateInfo(array $options = [])
  * @method DescribeReadDBInstanceDelay describeReadDBInstanceDelay(array $options = [])
  * @method AllocateInstanceVpcNetworkType allocateInstanceVpcNetworkType(array $options = [])
@@ -163,6 +164,32 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'rds';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNodeType()
+ * @method $this withNodeType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getTargetRegionId()
+ * @method $this withTargetRegionId($value)
+ * @method string getDbInstanceStorageType()
+ * @method $this withDbInstanceStorageType($value)
+ */
+class EvaluateSupportByokShow extends Rpc
+{
 }
 
 /**
@@ -3550,6 +3577,8 @@ class CreateReadOnlyDBInstance extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEncryptionKey()
+ * @method $this withEncryptionKey($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getUsedTime()
@@ -3562,6 +3591,8 @@ class CreateReadOnlyDBInstance extends Rpc
  * @method $this withVSwitchId($value)
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
+ * @method string getRoleARN()
+ * @method $this withRoleARN($value)
  * @method string getVPCId()
  * @method $this withVPCId($value)
  * @method string getTunnelId()
