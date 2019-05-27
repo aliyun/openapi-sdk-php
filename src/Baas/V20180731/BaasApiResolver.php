@@ -5,6 +5,12 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ApplyPublicAntChain applyPublicAntChain(array $options = [])
+ * @method ApplyPublicAntChainWithKeyAutoCreation applyPublicAntChainWithKeyAutoCreation(array $options = [])
+ * @method DescribePublicAntChainDownloadPaths describePublicAntChainDownloadPaths(array $options = [])
+ * @method ResetPublicAntChainCertificate resetPublicAntChainCertificate(array $options = [])
+ * @method CreatePublicAntChainAccount createPublicAntChainAccount(array $options = [])
+ * @method CreatePublicAccountWithKeyPairAutoCreation createPublicAccountWithKeyPairAutoCreation(array $options = [])
  * @method ApplyAntChainWithKeyAutoCreation applyAntChainWithKeyAutoCreation(array $options = [])
  * @method CreateAccountWithKeyPairAutoCreation createAccountWithKeyPairAutoCreation(array $options = [])
  * @method ApplyBlockchainWithKeyAutoCreation applyBlockchainWithKeyAutoCreation(array $options = [])
@@ -206,6 +212,328 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getUploadReq()
+ * @method string getBizid()
+ * @method string getConsortiumId()
+ */
+class ApplyPublicAntChain extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUploadReq($value)
+    {
+        $this->data['UploadReq'] = $value;
+        $this->options['form_params']['UploadReq'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConsortiumId($value)
+    {
+        $this->data['ConsortiumId'] = $value;
+        $this->options['form_params']['ConsortiumId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationUnitName()
+ * @method string getPassword()
+ * @method string getLocalityName()
+ * @method string getStateOrProvinceName()
+ * @method string getCommonName()
+ * @method string getOrganizationName()
+ * @method string getBizid()
+ * @method string getCountryName()
+ */
+class ApplyPublicAntChainWithKeyAutoCreation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationUnitName($value)
+    {
+        $this->data['OrganizationUnitName'] = $value;
+        $this->options['form_params']['OrganizationUnitName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPassword($value)
+    {
+        $this->data['Password'] = $value;
+        $this->options['form_params']['Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLocalityName($value)
+    {
+        $this->data['LocalityName'] = $value;
+        $this->options['form_params']['LocalityName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStateOrProvinceName($value)
+    {
+        $this->data['StateOrProvinceName'] = $value;
+        $this->options['form_params']['StateOrProvinceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommonName($value)
+    {
+        $this->data['CommonName'] = $value;
+        $this->options['form_params']['CommonName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationName($value)
+    {
+        $this->data['OrganizationName'] = $value;
+        $this->options['form_params']['OrganizationName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCountryName($value)
+    {
+        $this->data['CountryName'] = $value;
+        $this->options['form_params']['CountryName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class DescribePublicAntChainDownloadPaths extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizid()
+ */
+class ResetPublicAntChainCertificate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccountPubKey()
+ * @method string getBizid()
+ * @method string getAccount()
+ * @method string getAccountRecoverPubKey()
+ */
+class CreatePublicAntChainAccount extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountPubKey($value)
+    {
+        $this->data['AccountPubKey'] = $value;
+        $this->options['form_params']['AccountPubKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccount($value)
+    {
+        $this->data['Account'] = $value;
+        $this->options['form_params']['Account'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountRecoverPubKey($value)
+    {
+        $this->data['AccountRecoverPubKey'] = $value;
+        $this->options['form_params']['AccountRecoverPubKey'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPassword()
+ * @method string getBizid()
+ * @method string getAccount()
+ */
+class CreatePublicAccountWithKeyPairAutoCreation extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPassword($value)
+    {
+        $this->data['Password'] = $value;
+        $this->options['form_params']['Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizid($value)
+    {
+        $this->data['Bizid'] = $value;
+        $this->options['form_params']['Bizid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccount($value)
+    {
+        $this->data['Account'] = $value;
+        $this->options['form_params']['Account'] = $value;
+
+        return $this;
+    }
 }
 
 /**
