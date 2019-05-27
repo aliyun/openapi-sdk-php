@@ -2024,24 +2024,12 @@ class DescribeMonitoringAgentHosts extends Rpc
  * @method string getType()
  * @method $this withType($value)
  * @method string getMetricName()
+ * @method $this withMetricName($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
 class DescribeSiteMonitorData extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMetricName($value)
-    {
-        $this->data['MetricName'] = $value;
-        $this->options['query']['metricName'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -2081,6 +2069,8 @@ class DescribeSiteMonitorQuota extends Rpc
 /**
  * @method string getTimeRange()
  * @method $this withTimeRange($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getMetricName()
  * @method $this withMetricName($value)
  * @method string getTaskId()
