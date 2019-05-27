@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.6.4 - 2019-05-27
+- Improved Docs.
+- Updated APIs.
+
+
 ## 1.6.3 - 2019-05-20
 - Updated APIs.
 
