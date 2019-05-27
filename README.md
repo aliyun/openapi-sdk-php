@@ -34,7 +34,7 @@ We developed a new kernel on the principle of `eliminating known issues` and `co
 
 
 ## Prerequisites
-Your system will need to meet the [Prerequisites](docs/0-Prerequisites-EN.md), including having PHP >= 5.5. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
+Your system will need to meet the [Prerequisites](docs/en/0-Prerequisites.md), including having PHP >= 5.5. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
 
 
 ## Installation
@@ -44,7 +44,7 @@ composer require alibabacloud/sdk --optimize-autoloader
 ```
 > Some users may not be able to install due to network problems, you can try to switch the Composer mirror.
 
-Please see the [Installation](docs/1-Installation-EN.md) for more detailed information about installing through Composer and other ways.
+Please see the [Installation](docs/en/1-Installation.md) for more detailed information about installing through Composer and other ways.
 
 
 ## Online Demo
