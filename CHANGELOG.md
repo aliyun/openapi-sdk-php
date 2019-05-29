@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.6.5 - 2019-5-29
+- Generated 2015-05-06 for `cr`
+
+
 ## 1.6.4 - 2019-05-27
 - Improved Docs.
 - Updated APIs.
