@@ -1,11 +1,15 @@
 # CHANGELOG
 
+## 1.7.0 - 2019-5-29
+- Supported `replace`. 
+
+
 ## 1.6.8 - 2019-5-29
-update  Smartag
+- Update Smartag.
 
 
 ## 1.6.7 - 2019-5-29
-update product
+- Update product.
 
 
 ## 1.6.6 - 2019-5-29
