@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.6.8 - 2019-5-29
+update  Smartag
+
+
 ## 1.6.7 - 2019-5-29
 update product
 
