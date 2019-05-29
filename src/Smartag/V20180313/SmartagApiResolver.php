@@ -5,71 +5,80 @@ namespace AlibabaCloud\Smartag\V20180313;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DescribeNetworkOptimizations describeNetworkOptimizations(array $options = [])
- * @method AddNetworkOptimizationSetting addNetworkOptimizationSetting(array $options = [])
- * @method AttachNetworkOptimizationSags attachNetworkOptimizationSags(array $options = [])
- * @method DeleteNetworkOptimizationSetting deleteNetworkOptimizationSetting(array $options = [])
- * @method DescribeNetworkOptimizationSags describeNetworkOptimizationSags(array $options = [])
- * @method DetachNetworkOptimizationSags detachNetworkOptimizationSags(array $options = [])
- * @method ModifyNetworkOptimization modifyNetworkOptimization(array $options = [])
- * @method DescribeNetworkOptimizationSettings describeNetworkOptimizationSettings(array $options = [])
- * @method DeleteNetworkOptimization deleteNetworkOptimization(array $options = [])
- * @method KickOutClients kickOutClients(array $options = [])
+ * @method SmartAccessGatewayPrepayNotifyPaid smartAccessGatewayPrepayNotifyPaid(array $options = [])
+ * @method ModifyACLRule modifyACLRule(array $options = [])
  * @method SetSagRouteableAddress setSagRouteableAddress(array $options = [])
- * @method ClearSagRouteableAddress clearSagRouteableAddress(array $options = [])
- * @method DescribeSagRouteableAddress describeSagRouteableAddress(array $options = [])
- * @method CreateNetworkOptimization createNetworkOptimization(array $options = [])
- * @method DeleteSmartAccessGatewayClientUser deleteSmartAccessGatewayClientUser(array $options = [])
- * @method ResetSmartAccessGatewayClientUserPassword resetSmartAccessGatewayClientUserPassword(array $options = [])
- * @method DescribeUserFlowStatistics describeUserFlowStatistics(array $options = [])
- * @method DescribeUserOnlineClients describeUserOnlineClients(array $options = [])
+ * @method AssociateACL associateACL(array $options = [])
+ * @method DescribeSmartAccessGatewayVersions describeSmartAccessGatewayVersions(array $options = [])
+ * @method RevokeInstanceFromCbn revokeInstanceFromCbn(array $options = [])
+ * @method RebootSmartAccessGateway rebootSmartAccessGateway(array $options = [])
+ * @method GrantInstanceToCbn grantInstanceToCbn(array $options = [])
+ * @method DowngradeSmartAccessGateway downgradeSmartAccessGateway(array $options = [])
  * @method DescribeUserOnlineClientStatistics describeUserOnlineClientStatistics(array $options = [])
- * @method DescribeSagOnlineClientStatistics describeSagOnlineClientStatistics(array $options = [])
+ * @method InnerCreateSmartAccessGateway innerCreateSmartAccessGateway(array $options = [])
  * @method DescribeSmartAccessGatewayClientUsers describeSmartAccessGatewayClientUsers(array $options = [])
  * @method ModifySmartAccessGatewayClientUser modifySmartAccessGatewayClientUser(array $options = [])
- * @method CreateSmartAccessGatewayClientUser createSmartAccessGatewayClientUser(array $options = [])
- * @method ModifySerialNumber modifySerialNumber(array $options = [])
- * @method CreateACL createACL(array $options = [])
- * @method DescribeACLs describeACLs(array $options = [])
- * @method AssociateACL associateACL(array $options = [])
- * @method AddACLRule addACLRule(array $options = [])
- * @method DisassociateACL disassociateACL(array $options = [])
- * @method DeleteACLRule deleteACLRule(array $options = [])
- * @method ModifyACLRule modifyACLRule(array $options = [])
- * @method DescribeACLAttribute describeACLAttribute(array $options = [])
- * @method DeleteACL deleteACL(array $options = [])
- * @method ModifyACL modifyACL(array $options = [])
- * @method UnicomOrderConfirm unicomOrderConfirm(array $options = [])
- * @method UnicomSignConfirm unicomSignConfirm(array $options = [])
- * @method DowngradeSmartAccessGateway downgradeSmartAccessGateway(array $options = [])
- * @method UpgradeSmartAccessGateway upgradeSmartAccessGateway(array $options = [])
- * @method DescribeGrantRules describeGrantRules(array $options = [])
- * @method GrantInstanceToCbn grantInstanceToCbn(array $options = [])
- * @method RevokeInstanceFromCbn revokeInstanceFromCbn(array $options = [])
- * @method CreateSAGLinkLevelHa createSAGLinkLevelHa(array $options = [])
- * @method SwitchSAGHaState switchSAGHaState(array $options = [])
- * @method DeleteSAGLinkLevelHa deleteSAGLinkLevelHa(array $options = [])
- * @method DeleteDedicatedLineBackup deleteDedicatedLineBackup(array $options = [])
- * @method CreateDedicatedLineBackup createDedicatedLineBackup(array $options = [])
- * @method DescribeSmartAccessGatewayHa describeSmartAccessGatewayHa(array $options = [])
- * @method SwitchCloudBoxHaState switchCloudBoxHaState(array $options = [])
- * @method RebootSmartAccessGateway rebootSmartAccessGateway(array $options = [])
- * @method CreateSmartAccessGateway createSmartAccessGateway(array $options = [])
+ * @method ModifyNetworkOptimization modifyNetworkOptimization(array $options = [])
  * @method ActivateSmartAccessGateway activateSmartAccessGateway(array $options = [])
+ * @method DisassociateACL disassociateACL(array $options = [])
+ * @method CreateACL createACL(array $options = [])
+ * @method CreateNetworkOptimization createNetworkOptimization(array $options = [])
+ * @method KickOutClients kickOutClients(array $options = [])
+ * @method SwitchCloudBoxHaState switchCloudBoxHaState(array $options = [])
+ * @method DescribeSagOnlineClientStatistics describeSagOnlineClientStatistics(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
+ * @method CreateSAGLinkLevelHa createSAGLinkLevelHa(array $options = [])
+ * @method ModifyCloudConnectNetwork modifyCloudConnectNetwork(array $options = [])
+ * @method AddNetworkOptimizationSetting addNetworkOptimizationSetting(array $options = [])
+ * @method DeleteACL deleteACL(array $options = [])
+ * @method DeleteACLRule deleteACLRule(array $options = [])
+ * @method DeleteDedicatedLineBackup deleteDedicatedLineBackup(array $options = [])
+ * @method DeleteSAGLinkLevelHa deleteSAGLinkLevelHa(array $options = [])
+ * @method GetCloudConnectNetworkUseLimit getCloudConnectNetworkUseLimit(array $options = [])
+ * @method DescribeUserOnlineClients describeUserOnlineClients(array $options = [])
+ * @method AddACLRule addACLRule(array $options = [])
+ * @method DescribeACLAttribute describeACLAttribute(array $options = [])
  * @method UnlockSmartAccessGateway unlockSmartAccessGateway(array $options = [])
- * @method BindSmartAccessGateway bindSmartAccessGateway(array $options = [])
+ * @method UpgradeSmartAccessGateway upgradeSmartAccessGateway(array $options = [])
+ * @method GetSmartAccessGatewayUseLimit getSmartAccessGatewayUseLimit(array $options = [])
+ * @method ResetSmartAccessGatewayClientUserPassword resetSmartAccessGatewayClientUserPassword(array $options = [])
+ * @method UnicomOrderConfirm unicomOrderConfirm(array $options = [])
+ * @method DescribeSmartAccessGatewayHa describeSmartAccessGatewayHa(array $options = [])
+ * @method DescribeRegions describeRegions(array $options = [])
+ * @method SmartAccessGatewayValidateOrder smartAccessGatewayValidateOrder(array $options = [])
+ * @method CreateSmartAccessGatewayClientUser createSmartAccessGatewayClientUser(array $options = [])
+ * @method CreateSmartAccessGatewaySoftware createSmartAccessGatewaySoftware(array $options = [])
+ * @method CreateDedicatedLineBackup createDedicatedLineBackup(array $options = [])
+ * @method DescribeNetworkOptimizations describeNetworkOptimizations(array $options = [])
+ * @method SmartAccessGatewayFillRestrictions smartAccessGatewayFillRestrictions(array $options = [])
+ * @method DescribeSmartAccessGateways describeSmartAccessGateways(array $options = [])
+ * @method UnicomSignConfirm unicomSignConfirm(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
+ * @method AttachNetworkOptimizationSags attachNetworkOptimizationSags(array $options = [])
+ * @method DescribeUserFlowStatistics describeUserFlowStatistics(array $options = [])
+ * @method DescribeSagRouteableAddress describeSagRouteableAddress(array $options = [])
+ * @method DeleteNetworkOptimization deleteNetworkOptimization(array $options = [])
+ * @method ModifySerialNumber modifySerialNumber(array $options = [])
+ * @method SwitchSAGHaState switchSAGHaState(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method DescribeCloudConnectNetworks describeCloudConnectNetworks(array $options = [])
+ * @method ModifyACL modifyACL(array $options = [])
  * @method CreateCloudConnectNetwork createCloudConnectNetwork(array $options = [])
  * @method DeleteCloudConnectNetwork deleteCloudConnectNetwork(array $options = [])
- * @method DescribeCloudConnectNetworks describeCloudConnectNetworks(array $options = [])
- * @method DescribeRegions describeRegions(array $options = [])
- * @method DescribeSmartAccessGateways describeSmartAccessGateways(array $options = [])
- * @method GetCloudConnectNetworkUseLimit getCloudConnectNetworkUseLimit(array $options = [])
- * @method GetSmartAccessGatewayUseLimit getSmartAccessGatewayUseLimit(array $options = [])
- * @method ModifyCloudConnectNetwork modifyCloudConnectNetwork(array $options = [])
- * @method ModifySmartAccessGateway modifySmartAccessGateway(array $options = [])
  * @method UnbindSmartAccessGateway unbindSmartAccessGateway(array $options = [])
+ * @method DetachNetworkOptimizationSags detachNetworkOptimizationSags(array $options = [])
  * @method UpdateSmartAccessGatewayVersion updateSmartAccessGatewayVersion(array $options = [])
- * @method DescribeSmartAccessGatewayVersions describeSmartAccessGatewayVersions(array $options = [])
+ * @method DescribeACLs describeACLs(array $options = [])
+ * @method DeleteSmartAccessGatewayClientUser deleteSmartAccessGatewayClientUser(array $options = [])
+ * @method DescribeGrantRules describeGrantRules(array $options = [])
+ * @method BindSmartAccessGateway bindSmartAccessGateway(array $options = [])
+ * @method DeleteNetworkOptimizationSetting deleteNetworkOptimizationSetting(array $options = [])
+ * @method ClearSagRouteableAddress clearSagRouteableAddress(array $options = [])
+ * @method DescribeNetworkOptimizationSettings describeNetworkOptimizationSettings(array $options = [])
+ * @method SmartAccessGatewayFillParams smartAccessGatewayFillParams(array $options = [])
+ * @method CreateSmartAccessGateway createSmartAccessGateway(array $options = [])
+ * @method ModifySmartAccessGateway modifySmartAccessGateway(array $options = [])
+ * @method DescribeNetworkOptimizationSags describeNetworkOptimizationSags(array $options = [])
  */
 class SmartagApiResolver extends ApiResolver
 {
@@ -93,70 +102,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getData()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getCcnId()
- * @method $this withCcnId($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeNetworkOptimizations extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class AddNetworkOptimizationSetting extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method array getSmartAGIds()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class AttachNetworkOptimizationSags extends Rpc
+class SmartAccessGatewayPrepayNotifyPaid extends Rpc
 {
 
     /**
-     * @param array $smartAGIds
+     * @param string $value
      *
      * @return $this
      */
-    public function withSmartAGIds(array $smartAGIds)
+    public function withData($value)
     {
-        $this->data['SmartAGIds'] = $smartAGIds;
-        foreach ($smartAGIds as $i => $iValue) {
-            $this->options['query']['SmartAGIds.' . ($i + 1)] = $iValue;
-        }
+        $this->data['Data'] = $value;
+        $this->options['query']['data'] = $value;
 
         return $this;
     }
@@ -165,136 +130,36 @@ class AttachNetworkOptimizationSags extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSourcePortRange()
+ * @method $this withSourcePortRange($value)
+ * @method string getSourceCidr()
+ * @method $this withSourceCidr($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDestCidr()
+ * @method $this withDestCidr($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class DeleteNetworkOptimizationSetting extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
+ * @method string getIpProtocol()
+ * @method $this withIpProtocol($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getAcrId()
+ * @method $this withAcrId($value)
+ * @method string getDestPortRange()
+ * @method $this withDestPortRange($value)
  */
-class DescribeNetworkOptimizationSags extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method array getSmartAGIds()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DetachNetworkOptimizationSags extends Rpc
-{
-
-    /**
-     * @param array $smartAGIds
-     *
-     * @return $this
-     */
-    public function withSmartAGIds(array $smartAGIds)
-    {
-        $this->data['SmartAGIds'] = $smartAGIds;
-        foreach ($smartAGIds as $i => $iValue) {
-            $this->options['query']['SmartAGIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyNetworkOptimization extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeNetworkOptimizationSettings extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getNetworkOptId()
- * @method $this withNetworkOptId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteNetworkOptimization extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUsername()
- * @method $this withUsername($value)
- */
-class KickOutClients extends Rpc
+class ModifyACLRule extends Rpc
 {
 }
 
@@ -302,16 +167,16 @@ class KickOutClients extends Rpc
  * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRouteableAddress()
+ * @method $this withRouteableAddress($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getSagId()
- * @method $this withSagId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getRouteableAddress()
- * @method $this withRouteableAddress($value)
+ * @method string getSagId()
+ * @method $this withSagId($value)
  */
 class SetSagRouteableAddress extends Rpc
 {
@@ -331,84 +196,20 @@ class SetSagRouteableAddress extends Rpc
 }
 
 /**
- * @method string getAccessKeyId()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getSagId()
- * @method $this withSagId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- */
-class ClearSagRouteableAddress extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAccessKeyId($value)
-    {
-        $this->data['AccessKeyId'] = $value;
-        $this->options['query']['access_key_id'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getSagId()
- * @method $this withSagId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSagRouteableAddress extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getCcnId()
- * @method $this withCcnId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateNetworkOptimization extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
  */
-class DeleteSmartAccessGatewayClientUser extends Rpc
+class AssociateACL extends Rpc
 {
 }
 
@@ -419,81 +220,107 @@ class DeleteSmartAccessGatewayClientUser extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
  */
-class ResetSmartAccessGatewayClientUserPassword extends Rpc
+class DescribeSmartAccessGatewayVersions extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCcnInstanceId()
+ * @method $this withCcnInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCenInstanceId()
+ * @method $this withCenInstanceId($value)
+ */
+class RevokeInstanceFromCbn extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSerialNumber()
+ * @method $this withSerialNumber($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
- * @method string getStatisticsDate()
- * @method $this withStatisticsDate($value)
+ */
+class RebootSmartAccessGateway extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCcnInstanceId()
+ * @method $this withCcnInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCenUid()
+ * @method $this withCenUid($value)
+ * @method string getCenInstanceId()
+ * @method $this withCenInstanceId($value)
+ */
+class GrantInstanceToCbn extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBandWidthSpec()
+ * @method $this withBandWidthSpec($value)
+ * @method string getUserCount()
+ * @method $this withUserCount($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getDataPlan()
+ * @method $this withDataPlan($value)
+ */
+class DowngradeSmartAccessGateway extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method array getUserNames()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeUserFlowStatistics extends Rpc
-{
-
-    /**
-     * @param array $userNames
-     *
-     * @return $this
-     */
-    public function withUserNames(array $userNames)
-    {
-        $this->data['UserNames'] = $userNames;
-        foreach ($userNames as $i => $iValue) {
-            $this->options['query']['UserNames.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class DescribeUserOnlineClients extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
- * @method array getUserNames()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeUserOnlineClientStatistics extends Rpc
 {
@@ -517,11 +344,193 @@ class DescribeUserOnlineClientStatistics extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getBandWidthSpec()
+ * @method $this withBandWidthSpec($value)
+ * @method string getCity()
+ * @method $this withCity($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
+ */
+class InnerCreateSmartAccessGateway extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class DescribeSmartAccessGatewayClientUsers extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class ModifySmartAccessGatewayClientUser extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class ModifyNetworkOptimization extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class ActivateSmartAccessGateway extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class DisassociateACL extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateACL extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCcnId()
+ * @method $this withCcnId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateNetworkOptimization extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ */
+class KickOutClients extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class SwitchCloudBoxHaState extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method array getSmartAGIds()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -547,196 +556,145 @@ class DescribeSagOnlineClientStatistics extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method array getTag()
+ * @method array getResourceId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBackupLinkId()
+ * @method $this withBackupLinkId($value)
+ * @method string getMainLinkRegionId()
+ * @method $this withMainLinkRegionId($value)
+ * @method string getMainLinkId()
+ * @method $this withMainLinkId($value)
+ * @method string getBackupLinkRegionId()
+ * @method $this withBackupLinkRegionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getHaType()
+ * @method $this withHaType($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
  */
-class DescribeSmartAccessGatewayClientUsers extends Rpc
+class CreateSAGLinkLevelHa extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBandwidth()
- * @method $this withBandwidth($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class ModifySmartAccessGatewayClientUser extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBandwidth()
- * @method $this withBandwidth($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getClientIp()
- * @method $this withClientIp($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getUserMail()
- * @method $this withUserMail($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class CreateSmartAccessGatewayClientUser extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSerialNumber()
- * @method $this withSerialNumber($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifySerialNumber extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateACL extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getAclIds()
- * @method $this withAclIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeACLs extends Rpc
-{
-}
-
-/**
- * @method string getAclId()
- * @method $this withAclId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class AssociateACL extends Rpc
-{
-}
-
-/**
- * @method string getAclId()
- * @method $this withAclId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSourcePortRange()
- * @method $this withSourcePortRange($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getIpProtocol()
- * @method $this withIpProtocol($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSourceCidr()
- * @method $this withSourceCidr($value)
+ * @method string getCcnId()
+ * @method $this withCcnId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- * @method string getDestCidr()
- * @method $this withDestCidr($value)
- * @method string getDestPortRange()
- * @method $this withDestPortRange($value)
- * @method string getDirection()
- * @method $this withDirection($value)
- * @method string getPolicy()
- * @method $this withPolicy($value)
- */
-class AddACLRule extends Rpc
-{
-}
-
-/**
- * @method string getAclId()
- * @method $this withAclId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getSnatCidrBlock()
+ * @method $this withSnatCidrBlock($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
  */
-class DisassociateACL extends Rpc
+class ModifyCloudConnectNetwork extends Rpc
 {
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class AddNetworkOptimizationSetting extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteACL extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -751,68 +709,170 @@ class DeleteACLRule extends Rpc
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class DeleteDedicatedLineBackup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getHaType()
+ * @method $this withHaType($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class DeleteSAGLinkLevelHa extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetCloudConnectNetworkUseLimit extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class DescribeUserOnlineClients extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getSourcePortRange()
  * @method $this withSourcePortRange($value)
+ * @method string getSourceCidr()
+ * @method $this withSourceCidr($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDestCidr()
+ * @method $this withDestCidr($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getIpProtocol()
  * @method $this withIpProtocol($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSourceCidr()
- * @method $this withSourceCidr($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPriority()
  * @method $this withPriority($value)
- * @method string getAcrId()
- * @method $this withAcrId($value)
- * @method string getDestCidr()
- * @method $this withDestCidr($value)
  * @method string getDestPortRange()
  * @method $this withDestPortRange($value)
- * @method string getDirection()
- * @method $this withDirection($value)
- * @method string getPolicy()
- * @method $this withPolicy($value)
  */
-class ModifyACLRule extends Rpc
+class AddACLRule extends Rpc
 {
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getDirection()
  * @method $this withDirection($value)
  * @method string getOrder()
  * @method $this withOrder($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeACLAttribute extends Rpc
 {
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class UnlockSmartAccessGateway extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBandWidthSpec()
+ * @method $this withBandWidthSpec($value)
+ * @method string getUserCount()
+ * @method $this withUserCount($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getDataPlan()
+ * @method $this withDataPlan($value)
+ */
+class UpgradeSmartAccessGateway extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -822,48 +882,48 @@ class DescribeACLAttribute extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteACL extends Rpc
+class GetSmartAccessGatewayUseLimit extends Rpc
 {
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
  */
-class ModifyACL extends Rpc
+class ResetSmartAccessGatewayClientUserPassword extends Rpc
 {
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTmsCode()
  * @method $this withTmsCode($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method array getOrderItem()
+ * @method string getOrderPostFee()
+ * @method $this withOrderPostFee($value)
+ * @method string getTradeId()
+ * @method $this withTradeId($value)
  * @method string getOwnerUserId()
  * @method $this withOwnerUserId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getOrderPostFee()
- * @method $this withOrderPostFee($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getTmsOrderCode()
  * @method $this withTmsOrderCode($value)
- * @method string getTradeId()
- * @method $this withTradeId($value)
  */
 class UnicomOrderConfirm extends Rpc
 {
@@ -891,6 +951,248 @@ class UnicomOrderConfirm extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class DescribeSmartAccessGatewayHa extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class DescribeRegions extends Rpc
+{
+}
+
+/**
+ * @method string getAccessKeyId()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getData()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SmartAccessGatewayValidateOrder extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessKeyId($value)
+    {
+        $this->data['AccessKeyId'] = $value;
+        $this->options['query']['access_key_id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['query']['data'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserMail()
+ * @method $this withUserMail($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class CreateSmartAccessGatewayClientUser extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUserCount()
+ * @method $this withUserCount($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ * @method string getDataPlan()
+ * @method $this withDataPlan($value)
+ */
+class CreateSmartAccessGatewaySoftware extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getVbrId()
+ * @method $this withVbrId($value)
+ * @method string getVbrRegionId()
+ * @method $this withVbrRegionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class CreateDedicatedLineBackup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCcnId()
+ * @method $this withCcnId($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeNetworkOptimizations extends Rpc
+{
+}
+
+/**
+ * @method string getAccessKeyId()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getData()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SmartAccessGatewayFillRestrictions extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessKeyId($value)
+    {
+        $this->data['AccessKeyId'] = $value;
+        $this->options['query']['access_key_id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['query']['data'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAclIds()
+ * @method $this withAclIds($value)
+ * @method string getUnboundAclIds()
+ * @method $this withUnboundAclIds($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getSerialNumber()
+ * @method $this withSerialNumber($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAssociatedCcnId()
+ * @method $this withAssociatedCcnId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeSmartAccessGateways extends Rpc
+{
 }
 
 /**
@@ -929,49 +1231,115 @@ class UnicomSignConfirm extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getAutoPay()
- * @method $this withAutoPay($value)
- * @method string getBandWidthSpec()
- * @method $this withBandWidthSpec($value)
+ * @method array getResourceId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getUserCount()
- * @method $this withUserCount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+    public function withTagKey(array $tagKey)
+    {
+        $this->data['TagKey'] = $tagKey;
+        foreach ($tagKey as $i => $iValue) {
+            $this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method array getSmartAGIds()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AttachNetworkOptimizationSags extends Rpc
+{
+
+    /**
+     * @param array $smartAGIds
+     *
+     * @return $this
+     */
+    public function withSmartAGIds(array $smartAGIds)
+    {
+        $this->data['SmartAGIds'] = $smartAGIds;
+        foreach ($smartAGIds as $i => $iValue) {
+            $this->options['query']['SmartAGIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getUserNames()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getStatisticsDate()
+ * @method $this withStatisticsDate($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDataPlan()
- * @method $this withDataPlan($value)
  */
-class DowngradeSmartAccessGateway extends Rpc
+class DescribeUserFlowStatistics extends Rpc
 {
-}
 
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAutoPay()
- * @method $this withAutoPay($value)
- * @method string getBandWidthSpec()
- * @method $this withBandWidthSpec($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getUserCount()
- * @method $this withUserCount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDataPlan()
- * @method $this withDataPlan($value)
- */
-class UpgradeSmartAccessGateway extends Rpc
-{
+    /**
+     * @param array $userNames
+     *
+     * @return $this
+     */
+    public function withUserNames(array $userNames)
+    {
+        $this->data['UserNames'] = $userNames;
+        foreach ($userNames as $i => $iValue) {
+            $this->options['query']['UserNames.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -981,184 +1349,28 @@ class UpgradeSmartAccessGateway extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getAssociatedCcnId()
- * @method $this withAssociatedCcnId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getSagId()
+ * @method $this withSagId($value)
  */
-class DescribeGrantRules extends Rpc
+class DescribeSagRouteableAddress extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCenUid()
- * @method $this withCenUid($value)
- * @method string getCenInstanceId()
- * @method $this withCenInstanceId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCcnInstanceId()
- * @method $this withCcnInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GrantInstanceToCbn extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCenInstanceId()
- * @method $this withCenInstanceId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCcnInstanceId()
- * @method $this withCcnInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RevokeInstanceFromCbn extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getBackupLinkId()
- * @method $this withBackupLinkId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getHaType()
- * @method $this withHaType($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getMainLinkRegionId()
- * @method $this withMainLinkRegionId($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getMainLinkId()
- * @method $this withMainLinkId($value)
- * @method string getBackupLinkRegionId()
- * @method $this withBackupLinkRegionId($value)
- */
-class CreateSAGLinkLevelHa extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getHaType()
- * @method $this withHaType($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SwitchSAGHaState extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getHaType()
- * @method $this withHaType($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteSAGLinkLevelHa extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DeleteDedicatedLineBackup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVbrId()
- * @method $this withVbrId($value)
- * @method string getVbrRegionId()
- * @method $this withVbrRegionId($value)
- */
-class CreateDedicatedLineBackup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSmartAccessGatewayHa extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SwitchCloudBoxHaState extends Rpc
+class DeleteNetworkOptimization extends Rpc
 {
 }
 
@@ -1171,13 +1383,439 @@ class SwitchCloudBoxHaState extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSmartAGId()
  * @method $this withSmartAGId($value)
+ */
+class ModifySerialNumber extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getHaType()
+ * @method $this withHaType($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class SwitchSAGHaState extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCcnId()
+ * @method $this withCcnId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeCloudConnectNetworks extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class ModifyACL extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSnatCidrBlock()
+ * @method $this withSnatCidrBlock($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
+ */
+class CreateCloudConnectNetwork extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCcnId()
+ * @method $this withCcnId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RebootSmartAccessGateway extends Rpc
+class DeleteCloudConnectNetwork extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCcnId()
+ * @method $this withCcnId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class UnbindSmartAccessGateway extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method array getSmartAGIds()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DetachNetworkOptimizationSags extends Rpc
+{
+
+    /**
+     * @param array $smartAGIds
+     *
+     * @return $this
+     */
+    public function withSmartAGIds(array $smartAGIds)
+    {
+        $this->data['SmartAGIds'] = $smartAGIds;
+        foreach ($smartAGIds as $i => $iValue) {
+            $this->options['query']['SmartAGIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getVersionCode()
+ * @method $this withVersionCode($value)
+ * @method string getSerialNumber()
+ * @method $this withSerialNumber($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class UpdateSmartAccessGatewayVersion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAclIds()
+ * @method $this withAclIds($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeACLs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class DeleteSmartAccessGatewayClientUser extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAssociatedCcnId()
+ * @method $this withAssociatedCcnId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeGrantRules extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCcnId()
+ * @method $this withCcnId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmartAGId()
+ * @method $this withSmartAGId($value)
+ */
+class BindSmartAccessGateway extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DeleteNetworkOptimizationSetting extends Rpc
+{
+}
+
+/**
+ * @method string getAccessKeyId()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSagId()
+ * @method $this withSagId($value)
+ */
+class ClearSagRouteableAddress extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessKeyId($value)
+    {
+        $this->data['AccessKeyId'] = $value;
+        $this->options['query']['access_key_id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class DescribeNetworkOptimizationSettings extends Rpc
+{
+}
+
+/**
+ * @method string getAccessKeyId()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getData()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SmartAccessGatewayFillParams extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessKeyId($value)
+    {
+        $this->data['AccessKeyId'] = $value;
+        $this->options['query']['access_key_id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['query']['data'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1243,250 +1881,19 @@ class CreateSmartAccessGateway extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ActivateSmartAccessGateway extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class UnlockSmartAccessGateway extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCcnId()
- * @method $this withCcnId($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class BindSmartAccessGateway extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getCidrBlock()
- * @method $this withCidrBlock($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getSnatCidrBlock()
- * @method $this withSnatCidrBlock($value)
- * @method string getIsDefault()
- * @method $this withIsDefault($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateCloudConnectNetwork extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCcnId()
- * @method $this withCcnId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteCloudConnectNetwork extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getCcnId()
- * @method $this withCcnId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method array getTag()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeCloudConnectNetworks extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getAcceptLanguage()
- * @method $this withAcceptLanguage($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeRegions extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSerialNumber()
- * @method $this withSerialNumber($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getAclIds()
- * @method $this withAclIds($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getAssociatedCcnId()
- * @method $this withAssociatedCcnId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUnboundAclIds()
- * @method $this withUnboundAclIds($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeSmartAccessGateways extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetCloudConnectNetworkUseLimit extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetSmartAccessGatewayUseLimit extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCcnId()
- * @method $this withCcnId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getCidrBlock()
- * @method $this withCidrBlock($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getSnatCidrBlock()
- * @method $this withSnatCidrBlock($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyCloudConnectNetwork extends Rpc
-{
-}
-
-/**
- * @method array getSnatEntries()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getCity()
  * @method $this withCity($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityLockThreshold()
  * @method $this withSecurityLockThreshold($value)
+ * @method array getSnatEntries()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getCidrBlock()
@@ -1517,53 +1924,19 @@ class ModifySmartAccessGateway extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getNetworkOptId()
+ * @method $this withNetworkOptId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getCcnId()
- * @method $this withCcnId($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
  */
-class UnbindSmartAccessGateway extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSerialNumber()
- * @method $this withSerialNumber($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getVersionCode()
- * @method $this withVersionCode($value)
- */
-class UpdateSmartAccessGatewayVersion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSmartAGId()
- * @method $this withSmartAGId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSmartAccessGatewayVersions extends Rpc
+class DescribeNetworkOptimizationSags extends Rpc
 {
 }
