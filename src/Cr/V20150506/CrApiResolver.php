@@ -5,9 +5,9 @@ namespace AlibabaCloud\Cr\V20150506;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DoLogicalDeleteResource doLogicalDeleteResource(array $options = [])
- * @method DoCheckResource doCheckResource(array $options = [])
  * @method DoPhysicalDeleteResource doPhysicalDeleteResource(array $options = [])
+ * @method DoCheckResource doCheckResource(array $options = [])
+ * @method DoLogicalDeleteResource doLogicalDeleteResource(array $options = [])
  */
 class CrApiResolver extends ApiResolver
 {
@@ -52,7 +52,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoLogicalDeleteResource extends Rpc
+class DoPhysicalDeleteResource extends Rpc
 {
 }
 
@@ -114,6 +114,6 @@ class DoCheckResource extends Rpc
  * @method string getTaskIdentifier()
  * @method $this withTaskIdentifier($value)
  */
-class DoPhysicalDeleteResource extends Rpc
+class DoLogicalDeleteResource extends Rpc
 {
 }
