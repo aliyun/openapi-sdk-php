@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.5 - 2019-5-30
+- Generated 2013-01-11, 2016-11-11 for `BatchCompute`
+
+
 ## 1.7.4 - 2019-5-30
 - Generated 2019-05-21 for `saf`
 
