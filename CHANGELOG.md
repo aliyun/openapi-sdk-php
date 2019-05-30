@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.6 - 2019-5-31
+- Generated 2016-11-11, 2015-06-30 for `BatchCompute`
+
+
 ## 1.7.5 - 2019-5-30
 - Generated 2013-01-11, 2016-11-11 for `BatchCompute`
 
