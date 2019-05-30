@@ -62,6 +62,7 @@ Before you begin, you need to sign up for an Alibaba Cloud account and retrieve 
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Ecs\Ecs;
 
 // Set up a global client
 AlibabaCloud::accessKeyClient('foo', 'bar')
@@ -70,7 +71,7 @@ AlibabaCloud::accessKeyClient('foo', 'bar')
 
 try {
     // Access product APIs
-    $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
+    $request = Ecs::v20140526()->describeRegions();
     
     // Set options/parameters and execute request
     $result = $request->withResourceType('type') // API parameter
@@ -93,23 +94,22 @@ try {
                ];
     
     // Settings priority
-    $result2 = AlibabaCloud::ecs()
-                           ->v20140526()
-                           ->describeRegions($options)
-                           ->options([
-                                         'query' => [
-                                             'Key'      => 'I will overwrite this value in constructor',
-                                             'new'      => 'I am new value',
-                                         ],
-                                     ])
-                           ->options([
-                                         'query' => [
-                                             'Key' => 'I will overwrite the previous value',
-                                             'bar' => 'I am new value',
-                                         ],
-                                     ])
-                           ->debug(false) // Overwrite the true of the former
-                           ->request();
+    $result2 = Ecs::v20140526()
+                  ->describeRegions($options)
+                  ->options([
+                                'query' => [
+                                    'Key'      => 'I will overwrite this value in constructor',
+                                    'new'      => 'I am new value',
+                                ],
+                            ])
+                  ->options([
+                                'query' => [
+                                    'Key' => 'I will overwrite the previous value',
+                                    'bar' => 'I am new value',
+                                ],
+                            ])
+                  ->debug(false) // Overwrite the true of the former
+                  ->request();
     
 } catch (ClientException $exception) {
     echo $exception->getMessage(). PHP_EOL;

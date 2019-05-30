@@ -64,6 +64,7 @@ composer require alibabacloud/sdk
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Ecs\Ecs;
 
 // 设置全局客户端
 AlibabaCloud::accessKeyClient('foo', 'bar')
@@ -72,7 +73,7 @@ AlibabaCloud::accessKeyClient('foo', 'bar')
 
 try {
     // 访问产品 APIs
-    $request = AlibabaCloud::ecs()->v20140526()->describeRegions();
+    $request = Ecs::v20140526()->describeRegions();
     
     // 设置选项/参数并执行请求
     $result = $request->withResourceType('type') // API 的参数
@@ -95,23 +96,22 @@ try {
                ];
 
     // 设置的优先级
-    $result2 = AlibabaCloud::ecs()
-                           ->v20140526()
-                           ->describeRegions($options)
-                           ->options([
-                                         'query' => [
-                                             'Key'      => '我会覆盖构造函数的这个值',
-                                             'new'      => '我是新增的值',
-                                         ],
-                                     ])
-                           ->options([
-                                         'query' => [
-                                             'Key' => '我会覆盖以前的值',
-                                             'bar' => '我是新增的值',
-                                         ],
-                                     ])
-                           ->debug(false) // 最后调用的会覆盖前者
-                           ->request();
+    $result2 = Ecs::v20140526()
+                  ->describeRegions($options)
+                  ->options([
+                                'query' => [
+                                    'Key'      => '我会覆盖构造函数的这个值',
+                                    'new'      => '我是新增的值',
+                                ],
+                            ])
+                  ->options([
+                                'query' => [
+                                    'Key' => '我会覆盖以前的值',
+                                    'bar' => '我是新增的值',
+                                ],
+                            ])
+                  ->debug(false) // 最后调用的会覆盖前者
+                  ->request();
     
 } catch (ClientException $exception) {
     echo $exception->getMessage(). PHP_EOL;
