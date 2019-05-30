@@ -53,14 +53,13 @@ class IotTest extends TestCase
      */
     public function testCs()
     {
-        $result = AlibabaCloud::iot()
-                              ->v20180120()
-                              ->batchGetDeviceState()
-                              ->withIotInstanceId('id')
-                              ->withProductKey('key')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Iot::v20180120()
+                     ->batchGetDeviceState()
+                     ->withIotInstanceId('id')
+                     ->withProductKey('key')
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
         self::assertEquals('物联网平台实例不存在', $result['ErrorMessage']);
     }
 }

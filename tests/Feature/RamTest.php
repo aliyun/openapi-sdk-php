@@ -54,15 +54,14 @@ class RamTest extends TestCase
      */
     public function testRam()
     {
-        $result = AlibabaCloud::ram()
-                              ->v20150501()
-                              ->listAccessKeys()
-                              ->options([
-                                            'verify' => false,
-                                        ])
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Ram::v20150501()
+                     ->listAccessKeys()
+                     ->options([
+                                   'verify' => false,
+                               ])
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
 
         self::assertEquals(
             \getenv('ACCESS_KEY_ID'),

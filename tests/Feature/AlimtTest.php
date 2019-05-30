@@ -60,18 +60,17 @@ class AlimtTest extends TestCase
      */
     public function testAlimt()
     {
-        $result = AlibabaCloud::alimt()
-                              ->v20181012()
-                              ->translateECommerce()
-                              ->method('POST')
-                              ->withSourceLanguage('en')
-                              ->withScene('title')
-                              ->withSourceText('book')
-                              ->withFormatType('text')
-                              ->withTargetLanguage('zh')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Alimt::v20181012()
+                       ->translateECommerce()
+                       ->method('POST')
+                       ->withSourceLanguage('en')
+                       ->withScene('title')
+                       ->withSourceText('book')
+                       ->withFormatType('text')
+                       ->withTargetLanguage('zh')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
         self::assertArrayHasKey('Data', $result);
     }
 }

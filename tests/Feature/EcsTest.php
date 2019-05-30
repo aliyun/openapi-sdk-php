@@ -54,12 +54,11 @@ class EcsTest extends TestCase
      */
     public function testEcs()
     {
-        $result = AlibabaCloud::ecs()
-                              ->v20140526()
-                              ->describeRegions()
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Ecs::v20140526()
+                     ->describeRegions()
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
 

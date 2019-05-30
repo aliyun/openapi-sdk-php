@@ -51,15 +51,14 @@ class SasTest extends TestCase
     public function testSas()
     {
         try {
-            $result = AlibabaCloud::sas()
-                                  ->v20181203()
-                                  ->describeAlarmEventList()
-                                  ->withFrom('sas')
-                                  ->withCurrentPage(1)
-                                  ->withPageSize(10)
-                                  ->connectTimeout(30)
-                                  ->timeout(35)
-                                  ->request();
+            $result = Sas::v20181203()
+                         ->describeAlarmEventList()
+                         ->withFrom('sas')
+                         ->withCurrentPage(1)
+                         ->withPageSize(10)
+                         ->connectTimeout(30)
+                         ->timeout(35)
+                         ->request();
             self::assertArrayHasKey('PageInfo', $result);
         } catch (Exception $exception) {
             // Allow foreign access timeout

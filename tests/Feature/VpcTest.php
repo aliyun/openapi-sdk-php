@@ -53,12 +53,11 @@ class VpcTest extends TestCase
      */
     public function testVpc()
     {
-        $result = AlibabaCloud::vpc()
-                              ->v20160428()
-                              ->describeRegions()
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Vpc::v20160428()
+                     ->describeRegions()
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
 }

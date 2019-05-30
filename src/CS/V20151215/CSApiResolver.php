@@ -5,6 +5,7 @@ namespace AlibabaCloud\CS\V20151215;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeClusterAttachScripts describeClusterAttachScripts(array $options = [])
  * @method ScaleOutCluster scaleOutCluster(array $options = [])
  * @method GetClusterCertInfo getClusterCertInfo(array $options = [])
  * @method CreateTriggerHook createTriggerHook(array $options = [])
@@ -48,6 +49,19 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'cs';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeClusterAttachScripts extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/clusters/[ClusterId]/attachscript';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**

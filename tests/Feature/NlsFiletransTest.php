@@ -54,8 +54,7 @@ class NlsFiletransTest extends TestCase
      */
     public function testSubmitTask()
     {
-        $result = AlibabaCloud::nlsFiletrans()
-                              ->v20180817()
+        $result = NlsFiletrans::v20180817()
                               ->submitTask()
                               ->host('filetrans.cn-shanghai.aliyuncs.com')
                               ->withTask(json_encode([
@@ -75,8 +74,7 @@ class NlsFiletransTest extends TestCase
      */
     public function testGetTaskResult()
     {
-        $result = AlibabaCloud::nlsFiletrans()
-                              ->v20180817()
+        $result = NlsFiletrans::v20180817()
                               ->getTaskResult()
                               ->host('filetrans.cn-shanghai.aliyuncs.com')
                               ->withTaskId('FILE_TRANS_TASK_EXPIRED')

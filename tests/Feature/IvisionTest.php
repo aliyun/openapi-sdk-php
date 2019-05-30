@@ -55,14 +55,13 @@ class IvisionTest extends TestCase
      */
     public function testIvision()
     {
-        $result = AlibabaCloud::ivision()
-                              ->v20190308()
-                              ->describeProjects()
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->withCurrentPage(1)
-                              ->withPageSize(10)
-                              ->request();
+        $result = Ivision::v20190308()
+                         ->describeProjects()
+                         ->connectTimeout(20)
+                         ->timeout(25)
+                         ->withCurrentPage(1)
+                         ->withPageSize(10)
+                         ->request();
 
         self::assertArrayHasKey('Data', $result);
     }

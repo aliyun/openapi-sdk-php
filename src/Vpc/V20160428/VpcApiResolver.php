@@ -5,6 +5,16 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeVpnSslServerLogs describeVpnSslServerLogs(array $options = [])
+ * @method DescribeVpnGreTunnelLogs describeVpnGreTunnelLogs(array $options = [])
+ * @method DescribeVpnGreTunnels describeVpnGreTunnels(array $options = [])
+ * @method DeleteVpnGreTunnel deleteVpnGreTunnel(array $options = [])
+ * @method ModifyVpnGreTunnel modifyVpnGreTunnel(array $options = [])
+ * @method CreateVpnGreTunnel createVpnGreTunnel(array $options = [])
+ * @method ModifyExpressCloudConnectionBandwidth modifyExpressCloudConnectionBandwidth(array $options = [])
+ * @method ModifyExpressCloudConnectionAttribute modifyExpressCloudConnectionAttribute(array $options = [])
+ * @method DescribeExpressCloudConnections describeExpressCloudConnections(array $options = [])
+ * @method CreateExpressCloudConnection createExpressCloudConnection(array $options = [])
  * @method UpdateNetworkAclEntries updateNetworkAclEntries(array $options = [])
  * @method UnassociateNetworkAcl unassociateNetworkAcl(array $options = [])
  * @method ModifyNetworkAclAttributes modifyNetworkAclAttributes(array $options = [])
@@ -233,6 +243,293 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'vpc';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMinutePeriod()
+ * @method $this withMinutePeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getVpnSslServerId()
+ * @method $this withVpnSslServerId($value)
+ * @method string getFrom()
+ * @method $this withFrom($value)
+ * @method string getTo()
+ * @method $this withTo($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeVpnSslServerLogs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMinutePeriod()
+ * @method $this withMinutePeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getVpnGreTunnelId()
+ * @method $this withVpnGreTunnelId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getFrom()
+ * @method $this withFrom($value)
+ * @method string getTo()
+ * @method $this withTo($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeVpnGreTunnelLogs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getTunnelInstanceId()
+ * @method $this withTunnelInstanceId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getVpnGatewayId()
+ * @method $this withVpnGatewayId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCustomerGatewayId()
+ * @method $this withCustomerGatewayId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeVpnGreTunnels extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTunnelInstanceId()
+ * @method $this withTunnelInstanceId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getVpnGatewayId()
+ * @method $this withVpnGatewayId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteVpnGreTunnel extends Rpc
+{
+}
+
+/**
+ * @method string getKeepaliveEnable()
+ * @method $this withKeepaliveEnable($value)
+ * @method string getTunnelPeerIp()
+ * @method $this withTunnelPeerIp($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getKeepaliveSeconds()
+ * @method $this withKeepaliveSeconds($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getVpnGatewayId()
+ * @method $this withVpnGatewayId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getHealthCheckConfig()
+ * @method $this withHealthCheckConfig($value)
+ * @method string getTunnelInstanceId()
+ * @method $this withTunnelInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getKeepaliveTimes()
+ * @method $this withKeepaliveTimes($value)
+ * @method string getChecksumEnable()
+ * @method $this withChecksumEnable($value)
+ * @method string getTunnelIp()
+ * @method $this withTunnelIp($value)
+ * @method string getGreKey()
+ * @method $this withGreKey($value)
+ */
+class ModifyVpnGreTunnel extends Rpc
+{
+}
+
+/**
+ * @method string getKeepaliveEnable()
+ * @method $this withKeepaliveEnable($value)
+ * @method string getTunnelPeerIp()
+ * @method $this withTunnelPeerIp($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getKeepaliveSeconds()
+ * @method $this withKeepaliveSeconds($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getVpnGatewayId()
+ * @method $this withVpnGatewayId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getHealthCheckConfig()
+ * @method $this withHealthCheckConfig($value)
+ * @method string getCustomerGatewayId()
+ * @method $this withCustomerGatewayId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getKeepaliveTimes()
+ * @method $this withKeepaliveTimes($value)
+ * @method string getTunnelIp()
+ * @method $this withTunnelIp($value)
+ * @method string getChecksumEnable()
+ * @method $this withChecksumEnable($value)
+ * @method string getGreKey()
+ * @method $this withGreKey($value)
+ */
+class CreateVpnGreTunnel extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEccId()
+ * @method $this withEccId($value)
+ */
+class ModifyExpressCloudConnectionBandwidth extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEccId()
+ * @method $this withEccId($value)
+ */
+class ModifyExpressCloudConnectionAttribute extends Rpc
+{
+}
+
+/**
+ * @method array getFilter()
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeExpressCloudConnections extends Rpc
+{
+
+    /**
+     * @param array $filter
+     *
+     * @return $this
+     */
+    public function withFilter(array $filter)
+    {
+        $this->data['Filter'] = $filter;
+        foreach ($filter as $depth1 => $depth1Value) {
+            foreach ($depth1Value['Value'] as $i => $iValue) {
+                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+            }
+            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPeerLocation()
+ * @method $this withPeerLocation($value)
+ * @method string getPortType()
+ * @method $this withPortType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPeerCity()
+ * @method $this withPeerCity($value)
+ * @method string getIDCardNo()
+ * @method $this withIDCardNo($value)
+ * @method string getRedundantEccId()
+ * @method $this withRedundantEccId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getContactMail()
+ * @method $this withContactMail($value)
+ * @method string getContactTel()
+ * @method $this withContactTel($value)
+ * @method string getIdcSP()
+ * @method $this withIdcSP($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateExpressCloudConnection extends Rpc
+{
 }
 
 /**
@@ -548,6 +845,8 @@ class CancelCommonBandwidthPackageIpBandwidth extends Rpc
  * @method $this withNextHop($value)
  * @method string getPublishVpc()
  * @method $this withPublishVpc($value)
+ * @method string getOverlayMode()
+ * @method $this withOverlayMode($value)
  */
 class CreateVpnPbrRouteEntry extends Rpc
 {
@@ -576,6 +875,8 @@ class CreateVpnPbrRouteEntry extends Rpc
  * @method $this withNextHop($value)
  * @method string getPublishVpc()
  * @method $this withPublishVpc($value)
+ * @method string getOverlayMode()
+ * @method $this withOverlayMode($value)
  */
 class CreateVpnRouteEntry extends Rpc
 {
@@ -602,6 +903,8 @@ class CreateVpnRouteEntry extends Rpc
  * @method $this withRouteDest($value)
  * @method string getNextHop()
  * @method $this withNextHop($value)
+ * @method string getOverlayMode()
+ * @method $this withOverlayMode($value)
  */
 class DeleteVpnPbrRouteEntry extends Rpc
 {
@@ -626,6 +929,8 @@ class DeleteVpnPbrRouteEntry extends Rpc
  * @method $this withRouteDest($value)
  * @method string getNextHop()
  * @method $this withNextHop($value)
+ * @method string getOverlayMode()
+ * @method $this withOverlayMode($value)
  */
 class DeleteVpnRouteEntry extends Rpc
 {
@@ -718,6 +1023,8 @@ class PublishVpnRouteEntry extends Rpc
  * @method $this withRouteDest($value)
  * @method string getNextHop()
  * @method $this withNextHop($value)
+ * @method string getOverlayMode()
+ * @method $this withOverlayMode($value)
  */
 class ModifyVpnRouteEntryWeight extends Rpc
 {
@@ -746,6 +1053,8 @@ class ModifyVpnRouteEntryWeight extends Rpc
  * @method $this withRouteDest($value)
  * @method string getNextHop()
  * @method $this withNextHop($value)
+ * @method string getOverlayMode()
+ * @method $this withOverlayMode($value)
  */
 class ModifyVpnPbrRouteEntryWeight extends Rpc
 {

@@ -53,14 +53,13 @@ class OnsTest extends TestCase
      */
     public function testOns()
     {
-        $result = AlibabaCloud::ons()
-                              ->v20170918()
-                              ->onsRegionList()
-                              ->withOnsRegionId('cn-hangzhou')
-                              ->withPreventCache('20190101121212111')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Ons::v20170918()
+                     ->onsRegionList()
+                     ->withOnsRegionId('cn-hangzhou')
+                     ->withPreventCache('20190101121212111')
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
 
         self::assertArrayHasKey('Data', $result);
     }

@@ -52,17 +52,16 @@ class ImageSearchV20180120Test extends TestCase
      */
     public function testAddItem()
     {
-        $result = AlibabaCloud::imageSearch()
-                              ->v20180120()
-                              ->addItem()
-                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                              ->withCateId('0')
-                              ->withCustContent('{"key":"value"}')
-                              ->withItemId('1234')
-                              ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                              ->connectTimeout(30)
-                              ->timeout(35)
-                              ->request();
+        $result = ImageSearch::v20180120()
+                             ->addItem()
+                             ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                             ->withCateId('0')
+                             ->withCustContent('{"key":"value"}')
+                             ->withItemId('1234')
+                             ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
+                             ->connectTimeout(30)
+                             ->timeout(35)
+                             ->request();
 
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);
@@ -74,17 +73,16 @@ class ImageSearchV20180120Test extends TestCase
      */
     public function testSearchItem()
     {
-        $result = AlibabaCloud::imageSearch()
-                              ->v20180120()
-                              ->searchItem()
-                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                              ->withNum(10)
-                              ->withStart(0)
-                              ->withCateId('0')
-                              ->withSearchPicture(file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                              ->connectTimeout(30)
-                              ->timeout(35)
-                              ->request();
+        $result = ImageSearch::v20180120()
+                             ->searchItem()
+                             ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                             ->withNum(10)
+                             ->withStart(0)
+                             ->withCateId('0')
+                             ->withSearchPicture(file_get_contents(__DIR__ . '/ImageSearch.jpg'))
+                             ->connectTimeout(30)
+                             ->timeout(35)
+                             ->request();
 
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);
@@ -96,15 +94,14 @@ class ImageSearchV20180120Test extends TestCase
      */
     public function testDeleteItem()
     {
-        $result = AlibabaCloud::imageSearch()
-                              ->v20180120()
-                              ->deleteItem()
-                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                              ->withItemId('1234')
-                              ->addPicture('picture')
-                              ->connectTimeout(30)
-                              ->timeout(35)
-                              ->request();
+        $result = ImageSearch::v20180120()
+                             ->deleteItem()
+                             ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                             ->withItemId('1234')
+                             ->addPicture('picture')
+                             ->connectTimeout(30)
+                             ->timeout(35)
+                             ->request();
 
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);

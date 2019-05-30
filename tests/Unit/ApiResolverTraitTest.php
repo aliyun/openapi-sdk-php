@@ -5,6 +5,7 @@ namespace AlibabaCloud\Tests\Unit;
 use stdClass;
 use ReflectionObject;
 use ReflectionException;
+use AlibabaCloud\Slb\Slb;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 
@@ -18,11 +19,13 @@ class ApiResolverTraitTest extends TestCase
     public function testApi()
     {
         AlibabaCloud::slb()->v20140515()->describeRegions();
+        Slb::v20140515()->describeRegions();
     }
 
     public function testApiWithParameters()
     {
         AlibabaCloud::slb()->v20140515()->describeRegions(['a' => 'a']);
+        Slb::v20140515()->describeRegions(['a' => 'a']);
     }
 
     /**
@@ -32,6 +35,7 @@ class ApiResolverTraitTest extends TestCase
     public function testApiNotFound()
     {
         AlibabaCloud::slb()->v20140515()->notFound();
+        Slb::v20140515()->notFound();
     }
 
     /**
@@ -39,7 +43,7 @@ class ApiResolverTraitTest extends TestCase
      */
     public function testGetServiceName()
     {
-        $slb    = AlibabaCloud::slb()->v20140515();
+        $slb    = Slb::v20140515();
         $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getProductName');
         $method->setAccessible(true);
@@ -52,7 +56,7 @@ class ApiResolverTraitTest extends TestCase
      */
     public function testGetServiceNameNotFound()
     {
-        $slb    = AlibabaCloud::slb()->v20140515();
+        $slb    = Slb::v20140515();
         $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getProductName');
         $method->setAccessible(true);
@@ -64,7 +68,7 @@ class ApiResolverTraitTest extends TestCase
      */
     public function testGetNamespace()
     {
-        $slb    = AlibabaCloud::slb()->v20140515();
+        $slb    = Slb::v20140515();
         $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getNamespace');
         $method->setAccessible(true);
@@ -77,7 +81,7 @@ class ApiResolverTraitTest extends TestCase
      */
     public function testGetNamespaceNotFound()
     {
-        $slb    = AlibabaCloud::slb()->v20140515();
+        $slb    = Slb::v20140515();
         $ref    = new ReflectionObject($slb);
         $method = $ref->getMethod('getNamespace');
         $method->setAccessible(true);

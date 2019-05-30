@@ -5,6 +5,12 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ListAgentDevices listAgentDevices(array $options = [])
+ * @method AddAgentDevice addAgentDevice(array $options = [])
+ * @method ModifyAgentDevice modifyAgentDevice(array $options = [])
+ * @method CreateFault createFault(array $options = [])
+ * @method GetRecordOssUploadParam getRecordOssUploadParam(array $options = [])
+ * @method PickGlobalOutboundNumbers pickGlobalOutboundNumbers(array $options = [])
  * @method SubmitCabRecording submitCabRecording(array $options = [])
  * @method DownloadCabRecording downloadCabRecording(array $options = [])
  * @method ListInstancesOfUser listInstancesOfUser(array $options = [])
@@ -169,6 +175,156 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ccc';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRamIds()
+ * @method $this withRamIds($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStopTime()
+ * @method $this withStopTime($value)
+ */
+class ListAgentDevices extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getRemark()
+ * @method string getClientPort()
+ * @method $this withClientPort($value)
+ * @method string getBrowserVersion()
+ */
+class AddAgentDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemark($value)
+    {
+        $this->data['Remark'] = $value;
+        $this->options['form_params']['Remark'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBrowserVersion($value)
+    {
+        $this->data['BrowserVersion'] = $value;
+        $this->options['form_params']['BrowserVersion'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAgentDeviceId()
+ * @method $this withAgentDeviceId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIsLogin()
+ * @method $this withIsLogin($value)
+ */
+class ModifyAgentDevice extends Rpc
+{
+}
+
+/**
+ * @method string getSpeakerList()
+ * @method $this withSpeakerList($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
+ * @method string getAgentOssFileName()
+ * @method $this withAgentOssFileName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOperatingSystemVersion()
+ * @method $this withOperatingSystemVersion($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getMicrophoneList()
+ * @method $this withMicrophoneList($value)
+ * @method string getSpeakerEquipment()
+ * @method $this withSpeakerEquipment($value)
+ * @method string getServicePort()
+ * @method $this withServicePort($value)
+ * @method string getClientPort()
+ * @method $this withClientPort($value)
+ * @method string getServiceIp()
+ * @method $this withServiceIp($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCustomFilePath()
+ * @method $this withCustomFilePath($value)
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getAgentFilePath()
+ * @method $this withAgentFilePath($value)
+ * @method string getConnectId()
+ * @method $this withConnectId($value)
+ * @method string getCustomOssFileName()
+ * @method $this withCustomOssFileName($value)
+ * @method string getMicrophoneEquipment()
+ * @method $this withMicrophoneEquipment($value)
+ * @method string getBrowserVersion()
+ * @method $this withBrowserVersion($value)
+ */
+class CreateFault extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ */
+class GetRecordOssUploadParam extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getSkillGroupId()
+ * @method string getCount()
+ * @method $this withCount($value)
+ * @method string getCalleeNumber()
+ * @method $this withCalleeNumber($value)
+ */
+class PickGlobalOutboundNumbers extends Rpc
+{
+
+    /**
+     * @param array $skillGroupId
+     *
+     * @return $this
+     */
+    public function withSkillGroupId(array $skillGroupId)
+    {
+        $this->data['SkillGroupId'] = $skillGroupId;
+        foreach ($skillGroupId as $i => $iValue) {
+            $this->options['query']['SkillGroupId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1060,12 +1216,14 @@ class ListSkillGroupStates extends Rpc
 }
 
 /**
+ * @method array getPhoneNumbers()
  * @method array getUserObject()
  * @method string getName()
  * @method $this withName($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method array getPhoneNumber()
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getStorageMaxDays()
@@ -1080,6 +1238,21 @@ class CreateInstance extends Rpc
 {
 
     /**
+     * @param array $phoneNumbers
+     *
+     * @return $this
+     */
+    public function withPhoneNumbers(array $phoneNumbers)
+    {
+        $this->data['PhoneNumbers'] = $phoneNumbers;
+        foreach ($phoneNumbers as $i => $iValue) {
+            $this->options['query']['PhoneNumbers.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
      * @param array $userObject
      *
      * @return $this
@@ -1089,21 +1262,6 @@ class CreateInstance extends Rpc
         $this->data['UserObject'] = $userObject;
         foreach ($userObject as $i => $iValue) {
             $this->options['query']['UserObject.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
-
-    /**
-     * @param array $phoneNumber
-     *
-     * @return $this
-     */
-    public function withPhoneNumber(array $phoneNumber)
-    {
-        $this->data['PhoneNumber'] = $phoneNumber;
-        foreach ($phoneNumber as $i => $iValue) {
-            $this->options['query']['PhoneNumber.' . ($i + 1)] = $iValue;
         }
 
         return $this;

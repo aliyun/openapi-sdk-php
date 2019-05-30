@@ -13,9 +13,9 @@
 通过 Composer 安装是推荐方式。Composer 是一款 PHP 工具，用于管理和安装项目的依赖项。有关如何安装 Composer、配置自动加载并遵循定义依赖关系的其他最佳实践的更多信息，请参阅 [getcomposer.org](https://getcomposer.org)。
 
 ### 安装依赖
-如果已在系统上[全局安装 Composer](https://getcomposer.org/doc/00-intro.md#globally)，请直接在项目目录中运行以下内容来安装 Alibaba Cloud SDK for PHP 作为依赖项并生成类映射：
+如果已在系统上[全局安装 Composer](https://getcomposer.org/doc/00-intro.md#globally)，请直接在项目目录中运行以下内容来安装 Alibaba Cloud SDK for PHP 作为依赖项：
 ```bash
-composer require alibabacloud/sdk --optimize-autoloader
+composer require alibabacloud/sdk
 ```
 
 否则，请下载并安装 Composer（Windows 用户请下载并运行 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)）：
@@ -23,9 +23,9 @@ composer require alibabacloud/sdk --optimize-autoloader
 curl -sS https://getcomposer.org/installer | php
 ```
 
-然后，执行 Composer 命令安装最新版 Alibaba Cloud SDK for PHP 作为依赖项并生成类映射：
+然后，执行 Composer 命令安装最新版 Alibaba Cloud SDK for PHP 作为依赖项：
 ```bash
-php -d memory_limit=-1 composer.phar require alibabacloud/sdk --optimize-autoloader
+php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 ```
 
 > 一些用户可能由于网络问题无法安装，可以尝试切换 Composer 镜像地址。

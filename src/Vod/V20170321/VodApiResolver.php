@@ -47,13 +47,26 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDefaultAITemplate getDefaultAITemplate(array $options = [])
  * @method SetDefaultAITemplate setDefaultAITemplate(array $options = [])
  * @method DescribeVodDomainLog describeVodDomainLog(array $options = [])
+ * @method DescribeVodDomainCertificateInfo describeVodDomainCertificateInfo(array $options = [])
  * @method DescribeVodDomainTrafficData describeVodDomainTrafficData(array $options = [])
  * @method DescribeVodDomainBpsData describeVodDomainBpsData(array $options = [])
  * @method DescribeVodDomainUsageData describeVodDomainUsageData(array $options = [])
+ * @method DescribeVodCertificateList describeVodCertificateList(array $options = [])
+ * @method BatchStopVodDomain batchStopVodDomain(array $options = [])
+ * @method DeleteVodDomain deleteVodDomain(array $options = [])
+ * @method SetVodDomainCertificate setVodDomainCertificate(array $options = [])
+ * @method DeleteVodSpecificConfig deleteVodSpecificConfig(array $options = [])
+ * @method BatchSetVodDomainConfigs batchSetVodDomainConfigs(array $options = [])
+ * @method AddVodDomain addVodDomain(array $options = [])
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
  * @method DescribeVodRefreshTasks describeVodRefreshTasks(array $options = [])
+ * @method DescribeVodDomainConfigs describeVodDomainConfigs(array $options = [])
+ * @method DescribeVodUserDomains describeVodUserDomains(array $options = [])
+ * @method UpdateVodDomain updateVodDomain(array $options = [])
  * @method RefreshVodObjectCaches refreshVodObjectCaches(array $options = [])
  * @method PreloadVodObjectCaches preloadVodObjectCaches(array $options = [])
+ * @method BatchStartVodDomain batchStartVodDomain(array $options = [])
+ * @method DescribeVodDomainDetail describeVodDomainDetail(array $options = [])
  * @method DeleteVodTemplate deleteVodTemplate(array $options = [])
  * @method GetVodTemplate getVodTemplate(array $options = [])
  * @method ListVodTemplate listVodTemplate(array $options = [])
@@ -845,6 +858,16 @@ class DescribeVodDomainLog extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainCertificateInfo extends Rpc
+{
+}
+
+/**
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
@@ -907,6 +930,116 @@ class DescribeVodDomainUsageData extends Rpc
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodCertificateList extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class BatchStopVodDomain extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteVodDomain extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSSLPub()
+ * @method $this withSSLPub($value)
+ * @method string getCertName()
+ * @method $this withCertName($value)
+ * @method string getSSLProtocol()
+ * @method $this withSSLProtocol($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getSSLPri()
+ * @method $this withSSLPri($value)
+ */
+class SetVodDomainCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteVodSpecificConfig extends Rpc
+{
+}
+
+/**
+ * @method string getFunctions()
+ * @method $this withFunctions($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class BatchSetVodDomainConfigs extends Rpc
+{
+}
+
+/**
+ * @method string getSources()
+ * @method $this withSources($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCheckUrl()
+ * @method $this withCheckUrl($value)
+ */
+class AddVodDomain extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -945,6 +1078,64 @@ class DescribeVodRefreshTasks extends Rpc
 }
 
 /**
+ * @method string getFunctionNames()
+ * @method $this withFunctionNames($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainConfigs extends Rpc
+{
+}
+
+/**
+ * @method string getFuncFilter()
+ * @method $this withFuncFilter($value)
+ * @method string getCheckDomainShow()
+ * @method $this withCheckDomainShow($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCdnType()
+ * @method $this withCdnType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFuncId()
+ * @method $this withFuncId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getDomainStatus()
+ * @method $this withDomainStatus($value)
+ * @method string getDomainSearchType()
+ * @method $this withDomainSearchType($value)
+ */
+class DescribeVodUserDomains extends Rpc
+{
+}
+
+/**
+ * @method string getTopLevelDomain()
+ * @method $this withTopLevelDomain($value)
+ * @method string getSources()
+ * @method $this withSources($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UpdateVodDomain extends Rpc
+{
+}
+
+/**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getObjectPath()
@@ -967,6 +1158,30 @@ class RefreshVodObjectCaches extends Rpc
  * @method $this withOwnerId($value)
  */
 class PreloadVodObjectCaches extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class BatchStartVodDomain extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainDetail extends Rpc
 {
 }
 

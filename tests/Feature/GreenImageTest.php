@@ -68,17 +68,16 @@ class GreenImageTest extends TestCase
             'dataId' => uniqid('', true),
             'url'    => 'http://aliyunsdk-pages.alicdn.com/tests/ImageSearch.jpg',
         ];
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->imageSyncScan()
-                              ->jsonBody([
-                                             'tasks'  => [$task1],
-                                             'scenes' => ['porn', 'terrorism'],
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->imageSyncScan()
+                       ->jsonBody([
+                                      'tasks'  => [$task1],
+                                      'scenes' => ['porn', 'terrorism'],
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertEquals('porn', $result['data'][0]['results'][0]['scene']);
         self::assertEquals('pass', $result['data'][0]['results'][0]['suggestion']);
@@ -99,17 +98,16 @@ class GreenImageTest extends TestCase
             'dataId' => uniqid('', true),
             'url'    => 'http://aliyunsdk-pages.alicdn.com/tests/ImageSearch.jpg',
         ];
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->imageAsyncScan()
-                              ->jsonBody([
-                                             'tasks'  => [$task1],
-                                             'scenes' => ['porn', 'terrorism'],
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->imageAsyncScan()
+                       ->jsonBody([
+                                      'tasks'  => [$task1],
+                                      'scenes' => ['porn', 'terrorism'],
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);
@@ -130,16 +128,15 @@ class GreenImageTest extends TestCase
      */
     public function testImageAsyncScanResults($taskId)
     {
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->imageAsyncScanResults()
-                              ->jsonBody([
-                                             $taskId,
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->imageAsyncScanResults()
+                       ->jsonBody([
+                                      $taskId,
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);

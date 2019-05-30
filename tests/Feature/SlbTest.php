@@ -53,12 +53,11 @@ class SlbTest extends TestCase
      */
     public function testSlb()
     {
-        $result = AlibabaCloud::slb()
-                              ->v20140515()
-                              ->describeRegions()
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Slb::v20140515()
+                     ->describeRegions()
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
 }

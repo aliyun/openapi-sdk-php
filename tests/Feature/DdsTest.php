@@ -53,11 +53,10 @@ class DdsTest extends TestCase
      */
     public function testDds()
     {
-        $request = AlibabaCloud::dds()
-                               ->v20151201()
-                               ->describeRegions()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request = Dds::v20151201()
+                      ->describeRegions()
+                      ->connectTimeout(20)
+                      ->timeout(25);
 
         $result = $request->request();
         self::assertArrayHasKey('DdsRegion', $result['Regions']);

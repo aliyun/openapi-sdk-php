@@ -53,13 +53,12 @@ class MtsTest extends TestCase
      */
     public function testMts()
     {
-        $result = AlibabaCloud::mts()
-                              ->v20140618()
-                              ->queryFpImportResult()
-                              ->format('JSON')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Mts::v20140618()
+                     ->queryFpImportResult()
+                     ->format('JSON')
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
         self::assertArrayHasKey('PageInfo', $result);
     }
 }
