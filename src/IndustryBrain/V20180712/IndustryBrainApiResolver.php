@@ -5,6 +5,8 @@ namespace AlibabaCloud\IndustryBrain\V20180712;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetImageDetail getImageDetail(array $options = [])
+ * @method GetDataSetInfo getDataSetInfo(array $options = [])
  * @method AsyncResponsePost asyncResponsePost(array $options = [])
  * @method GetDataProperties getDataProperties(array $options = [])
  * @method PostRealTimeDeviceData postRealTimeDeviceData(array $options = [])
@@ -33,9 +35,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2018-07-12';
+}
 
-    /** @var string */
-    protected $scheme = 'https';
+/**
+ * @method string getUserCode()
+ * @method $this withUserCode($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class GetImageDetail extends Rpc
+{
+}
+
+/**
+ * @method string getUserCode()
+ * @method $this withUserCode($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class GetDataSetInfo extends Rpc
+{
 }
 
 /**
@@ -56,9 +75,6 @@ class AsyncResponsePost extends Rpc
 {
 
     /** @var string */
-    public $scheme = 'http';
-
-    /** @var string */
     public $method = 'POST';
 }
 
@@ -68,9 +84,6 @@ class AsyncResponsePost extends Rpc
  */
 class GetDataProperties extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -79,6 +92,9 @@ class GetDataProperties extends Rpc
  */
 class PostRealTimeDeviceData extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 
     /** @var string */
     public $method = 'POST';
@@ -117,6 +133,9 @@ class PostRealTimeDeviceData extends Rpc
  */
 class OperateEquipment extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 
     /** @var string */
     public $method = 'POST';
@@ -163,6 +182,9 @@ class OperateEquipment extends Rpc
 
 class GetIndustryInfoList extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -171,6 +193,9 @@ class GetIndustryInfoList extends Rpc
  */
 class GetIndustryInfoLineageList extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -179,6 +204,9 @@ class GetIndustryInfoLineageList extends Rpc
  */
 class GetIndustryInfoChildrenList extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -187,6 +215,9 @@ class GetIndustryInfoChildrenList extends Rpc
  */
 class GetIndustryInfo extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -205,9 +236,6 @@ class InvokeService extends Rpc
 {
 
     /** @var string */
-    public $scheme = 'http';
-
-    /** @var string */
     public $method = 'POST';
 }
 
@@ -223,9 +251,6 @@ class InvokeService extends Rpc
  */
 class GetServiceInputMapping extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -234,6 +259,9 @@ class GetServiceInputMapping extends Rpc
  */
 class GetAlgorithmList extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -244,6 +272,9 @@ class GetAlgorithmList extends Rpc
  */
 class GetOSSImageAccess extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -252,9 +283,6 @@ class GetOSSImageAccess extends Rpc
  */
 class GetAsyncServiceResult extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -263,9 +291,6 @@ class GetAsyncServiceResult extends Rpc
  */
 class GetServiceResultAsync extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -282,9 +307,6 @@ class InvokeServiceAsync extends Rpc
 {
 
     /** @var string */
-    public $scheme = 'http';
-
-    /** @var string */
     public $method = 'POST';
 }
 
@@ -294,6 +316,9 @@ class InvokeServiceAsync extends Rpc
  */
 class GetOnlineServiceResult extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 
     /** @var string */
     public $method = 'POST';

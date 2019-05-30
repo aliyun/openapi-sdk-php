@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Green\Green;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Green\V20180509\VoiceAsyncScan;
@@ -55,17 +56,16 @@ class GreenVoiceTest extends TestCase
             'dataId' => uniqid('', true),
             'url'    => 'http://aliyunsdk-pages.alicdn.com/tests/voice.mp3',
         ];
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->voiceAsyncScan()
-                              ->jsonBody([
-                                             'tasks'  => [$task1],
-                                             'scenes' => ['antispam'],
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->voiceAsyncScan()
+                       ->jsonBody([
+                                      'tasks'  => [$task1],
+                                      'scenes' => ['antispam'],
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);
@@ -86,16 +86,15 @@ class GreenVoiceTest extends TestCase
      */
     public function testVideoAsyncScanResults($taskId)
     {
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->voiceAsyncScanResults()
-                              ->jsonBody([
-                                             $taskId,
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->voiceAsyncScanResults()
+                       ->jsonBody([
+                                      $taskId,
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);

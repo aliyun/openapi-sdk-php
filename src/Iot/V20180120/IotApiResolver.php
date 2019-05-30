@@ -5,6 +5,9 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CreateDataAlgoServeApi createDataAlgoServeApi(array $options = [])
+ * @method GetDataAlgoServeApiDetail getDataAlgoServeApiDetail(array $options = [])
+ * @method InvokeDataAlgoServeApi invokeDataAlgoServeApi(array $options = [])
  * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
  * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
  * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
@@ -28,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDevicesProperty setDevicesProperty(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
  * @method SetDeviceGroupTags setDeviceGroupTags(array $options = [])
+ * @method GetDataSourceList getDataSourceList(array $options = [])
  * @method QueryAppDeviceList queryAppDeviceList(array $options = [])
  * @method UpdateDeviceGroup updateDeviceGroup(array $options = [])
  * @method QueryDeviceGroupTagList queryDeviceGroupTagList(array $options = [])
@@ -110,6 +114,101 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method array getResponseParam()
+ * @method string getOriginSql()
+ * @method $this withOriginSql($value)
+ * @method string getDisplayName()
+ * @method $this withDisplayName($value)
+ * @method string getApiPath()
+ * @method $this withApiPath($value)
+ * @method array getRequestParam()
+ * @method string getFolderId()
+ * @method $this withFolderId($value)
+ * @method string getTemplateSql()
+ * @method $this withTemplateSql($value)
+ * @method string getDesc()
+ * @method $this withDesc($value)
+ */
+class CreateDataAlgoServeApi extends Rpc
+{
+
+    /**
+     * @param array $responseParam
+     *
+     * @return $this
+     */
+    public function withResponseParam(array $responseParam)
+    {
+        $this->data['ResponseParam'] = $responseParam;
+        foreach ($responseParam as $depth1 => $depth1Value) {
+            $this->options['form_params']['ResponseParam.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+            $this->options['form_params']['ResponseParam.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
+            $this->options['form_params']['ResponseParam.' . ($depth1 + 1) . '.Required'] = $depth1Value['Required'];
+            $this->options['form_params']['ResponseParam.' . ($depth1 + 1) . '.Desc'] = $depth1Value['Desc'];
+            $this->options['form_params']['ResponseParam.' . ($depth1 + 1) . '.Example'] = $depth1Value['Example'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $requestParam
+     *
+     * @return $this
+     */
+    public function withRequestParam(array $requestParam)
+    {
+        $this->data['RequestParam'] = $requestParam;
+        foreach ($requestParam as $depth1 => $depth1Value) {
+            $this->options['form_params']['RequestParam.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+            $this->options['form_params']['RequestParam.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
+            $this->options['form_params']['RequestParam.' . ($depth1 + 1) . '.Required'] = $depth1Value['Required'];
+            $this->options['form_params']['RequestParam.' . ($depth1 + 1) . '.Desc'] = $depth1Value['Desc'];
+            $this->options['form_params']['RequestParam.' . ($depth1 + 1) . '.Example'] = $depth1Value['Example'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getApiSrn()
+ * @method $this withApiSrn($value)
+ */
+class GetDataAlgoServeApiDetail extends Rpc
+{
+}
+
+/**
+ * @method string getApiSrn()
+ * @method $this withApiSrn($value)
+ * @method array getParam()
+ */
+class InvokeDataAlgoServeApi extends Rpc
+{
+
+    /**
+     * @param array $param
+     *
+     * @return $this
+     */
+    public function withParam(array $param)
+    {
+        $this->data['Param'] = $param;
+        foreach ($param as $depth1 => $depth1Value) {
+            $this->options['form_params']['Param.' . ($depth1 + 1) . '.ListParamType'] = $depth1Value['ListParamType'];
+            foreach ($depth1Value['ListParamValue'] as $i => $iValue) {
+                $this->options['form_params']['Param.' . ($depth1 + 1) . '.ListParamValue.' . ($i + 1)] = $iValue;
+            }
+            $this->options['form_params']['Param.' . ($depth1 + 1) . '.ParamValue'] = $depth1Value['ParamValue'];
+            $this->options['form_params']['Param.' . ($depth1 + 1) . '.ParamName'] = $depth1Value['ParamName'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -599,6 +698,112 @@ class InvokeThingsService extends Rpc
  */
 class SetDeviceGroupTags extends Rpc
 {
+}
+
+/**
+ * @method string getSearch()
+ * @method string getNameList()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getIdList()
+ * @method string getPurposeType()
+ * @method string getPage()
+ * @method string getType()
+ * @method string getOrder()
+ */
+class GetDataSourceList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearch($value)
+    {
+        $this->data['Search'] = $value;
+        $this->options['form_params']['Search'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNameList($value)
+    {
+        $this->data['NameList'] = $value;
+        $this->options['form_params']['NameList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdList($value)
+    {
+        $this->data['IdList'] = $value;
+        $this->options['form_params']['IdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPurposeType($value)
+    {
+        $this->data['PurposeType'] = $value;
+        $this->options['form_params']['PurposeType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['form_params']['Page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['form_params']['Order'] = $value;
+
+        return $this;
+    }
 }
 
 /**

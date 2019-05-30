@@ -53,8 +53,7 @@ class NlsCloudMetaTest extends TestCase
      */
     public function testNlsCloudMeta()
     {
-        $result = AlibabaCloud::nlsCloudMeta()
-                              ->v20180518()
+        $result = NlsCloudMeta::v20180518()
                               ->createToken()
                               ->host('nls-meta.cn-shanghai.aliyuncs.com')
                               ->connectTimeout(20)

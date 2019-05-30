@@ -5,6 +5,9 @@ namespace AlibabaCloud\Polardb\V20170801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeDBClusterMigration describeDBClusterMigration(array $options = [])
+ * @method CloseDBClusterMigration closeDBClusterMigration(array $options = [])
+ * @method ModifyDBClusterMigration modifyDBClusterMigration(array $options = [])
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
  * @method ModifyDBNodeClass modifyDBNodeClass(array $options = [])
  * @method DescribeAutoRenewAttribute describeAutoRenewAttribute(array $options = [])
@@ -67,6 +70,66 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'polardb';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBClusterMigration extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getContinueEnableBinlog()
+ * @method $this withContinueEnableBinlog($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CloseDBClusterMigration extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getSourceRDSDBInstanceId()
+ * @method $this withSourceRDSDBInstanceId($value)
+ * @method string getNewMasterInstanceId()
+ * @method $this withNewMasterInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBClusterMigration extends Rpc
+{
 }
 
 /**

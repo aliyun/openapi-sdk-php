@@ -48,9 +48,8 @@ class JaqTest extends TestCase
 
     public function testJaq()
     {
-        $request = AlibabaCloud::jaq()
-                               ->v20161123()
-                               ->afsAppCheck();
+        $request = Jaq::v20161123()
+                      ->afsAppCheck();
         self::assertInstanceOf(AfsAppCheck::class, $request);
     }
 }

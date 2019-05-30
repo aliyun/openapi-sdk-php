@@ -60,38 +60,13 @@ class AegisTest extends TestCase
      */
     public function testAegis()
     {
-        $result = AlibabaCloud::aegis()
-                              ->v20161111()
-                              ->describeAlarmEventDetail()
-                              ->withAlarmUniqueInfo('info')
-                              ->withFrom('from')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Aegis::v20161111()
+                       ->describeAlarmEventDetail()
+                       ->withAlarmUniqueInfo('info')
+                       ->withFrom('from')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
         self::assertArrayHasKey('RequestId', $result);
-    }
-
-    /**
-     * @throws ClientException
-     */
-    public function testSetMethod()
-    {
-        $with = AlibabaCloud::aegis()
-                            ->v20161111()
-                            ->describeAlarmEventDetail()
-                            ->withAlarmUniqueInfo('info')
-                            ->withFrom('from')
-                            ->connectTimeout(20)
-                            ->timeout(25);
-
-        $set = AlibabaCloud::aegis()
-                           ->v20161111()
-                           ->describeAlarmEventDetail()
-                           ->withAlarmUniqueInfo('info')
-                           ->withFrom('from')
-                           ->connectTimeout(20)
-                           ->timeout(25);
-
-        self::assertTrue(json_encode($set) === json_encode($with));
     }
 }

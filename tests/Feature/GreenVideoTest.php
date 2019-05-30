@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Green\Green;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Green\V20180509\VideoAsyncScan;
@@ -58,17 +59,16 @@ class GreenVideoTest extends TestCase
             'dataId' => uniqid('', true),
             'url'    => 'http://aliyunsdk-pages.alicdn.com/tests/video.mp4',
         ];
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->videoAsyncScan()
-                              ->jsonBody([
-                                             'tasks'  => [$task1],
-                                             'scenes' => ['porn', 'terrorism'],
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->videoAsyncScan()
+                       ->jsonBody([
+                                      'tasks'  => [$task1],
+                                      'scenes' => ['porn', 'terrorism'],
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);
@@ -97,18 +97,17 @@ class GreenVideoTest extends TestCase
             'url'    => 'http://aliyunsdk-pages.alicdn.com/tests/video.mp4',
         ];
 
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->videoAsyncScan()
-                              ->jsonBody([
-                                             'tasks'       => [$task1],
-                                             'scenes'      => ['porn', 'terrorism'],
-                                             'audioScenes' => 'antispam',
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->videoAsyncScan()
+                       ->jsonBody([
+                                      'tasks'       => [$task1],
+                                      'scenes'      => ['porn', 'terrorism'],
+                                      'audioScenes' => 'antispam',
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);
@@ -127,16 +126,15 @@ class GreenVideoTest extends TestCase
      */
     public function testVideoAsyncScanResults($taskId)
     {
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->videoAsyncScanResults()
-                              ->jsonBody([
-                                             $taskId,
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->videoAsyncScanResults()
+                       ->jsonBody([
+                                      $taskId,
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);
@@ -164,17 +162,16 @@ class GreenVideoTest extends TestCase
             ],
         ];
 
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->videoSyncScan()
-                              ->jsonBody([
-                                             'tasks'  => [$task1],
-                                             'scenes' => ['porn', 'terrorism'],
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->videoSyncScan()
+                       ->jsonBody([
+                                      'tasks'  => [$task1],
+                                      'scenes' => ['porn', 'terrorism'],
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);

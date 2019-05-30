@@ -64,14 +64,13 @@ class CCCTest extends TestCase
     public function testAegis()
     {
         try {
-            AlibabaCloud::cCC()
-                        ->v20170705()
-                        ->listPhoneNumbers()
-                        ->host('ccc.cn-shanghai.aliyuncs.com')
-                        ->withInstanceId('id')
-                        ->connectTimeout(20)
-                        ->timeout(25)
-                        ->request();
+            CCC::v20170705()
+               ->listPhoneNumbers()
+               ->host('ccc.cn-shanghai.aliyuncs.com')
+               ->withInstanceId('id')
+               ->connectTimeout(20)
+               ->timeout(25)
+               ->request();
         } catch (ServerException $e) {
             $result = $e->getResult();
             self::assertArrayHasKey('Message', $result);

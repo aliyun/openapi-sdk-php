@@ -53,11 +53,10 @@ class CloudApiTest extends TestCase
      */
     public function testCloudApi()
     {
-        $request = AlibabaCloud::cloudAPI()
-                               ->v20160714()
-                               ->describeRegions()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+        $request = CloudAPI::v20160714()
+                           ->describeRegions()
+                           ->connectTimeout(20)
+                           ->timeout(25);
 
         $result = $request->request();
         self::assertArrayHasKey('Region', $result['Regions']);

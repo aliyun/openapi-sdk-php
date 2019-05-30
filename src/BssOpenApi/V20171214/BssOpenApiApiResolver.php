@@ -5,6 +5,7 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CreateAgAccount createAgAccount(array $options = [])
  * @method GetCustomerAccountInfo getCustomerAccountInfo(array $options = [])
  * @method GetCustomerList getCustomerList(array $options = [])
  * @method ChangeResellerConsumeAmount changeResellerConsumeAmount(array $options = [])
@@ -65,6 +66,33 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getFirstName()
+ * @method $this withFirstName($value)
+ * @method string getLoginEmail()
+ * @method $this withLoginEmail($value)
+ * @method string getProvinceName()
+ * @method $this withProvinceName($value)
+ * @method string getCityName()
+ * @method $this withCityName($value)
+ * @method string getAccountAttr()
+ * @method $this withAccountAttr($value)
+ * @method string getPostcode()
+ * @method $this withPostcode($value)
+ * @method string getEnterpriseName()
+ * @method $this withEnterpriseName($value)
+ * @method string getNationCode()
+ * @method $this withNationCode($value)
+ * @method string getLastName()
+ * @method $this withLastName($value)
+ */
+class CreateAgAccount extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

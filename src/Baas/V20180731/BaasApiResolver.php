@@ -5,6 +5,7 @@ namespace AlibabaCloud\Baas\V20180731;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method UpdateChannelConfig updateChannelConfig(array $options = [])
  * @method ApplyPublicAntChain applyPublicAntChain(array $options = [])
  * @method ApplyPublicAntChainWithKeyAutoCreation applyPublicAntChainWithKeyAutoCreation(array $options = [])
  * @method DescribePublicAntChainDownloadPaths describePublicAntChainDownloadPaths(array $options = [])
@@ -212,6 +213,68 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getMaxMessageCount()
+ * @method string getPreferredMaxBytes()
+ * @method string getBatchTimeout()
+ * @method string getChannelId()
+ */
+class UpdateChannelConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxMessageCount($value)
+    {
+        $this->data['MaxMessageCount'] = $value;
+        $this->options['form_params']['MaxMessageCount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPreferredMaxBytes($value)
+    {
+        $this->data['PreferredMaxBytes'] = $value;
+        $this->options['form_params']['PreferredMaxBytes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchTimeout($value)
+    {
+        $this->data['BatchTimeout'] = $value;
+        $this->options['form_params']['BatchTimeout'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannelId($value)
+    {
+        $this->data['ChannelId'] = $value;
+        $this->options['form_params']['ChannelId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -6883,7 +6946,10 @@ class DescribeConsortiumChannels extends Rpc
 }
 
 /**
+ * @method string getMaxMessageCount()
+ * @method string getPreferredMaxBytes()
  * @method array getOrganization()
+ * @method string getBatchTimeout()
  * @method string getChannelName()
  * @method $this withChannelName($value)
  * @method string getConsortiumId()
@@ -6891,6 +6957,32 @@ class DescribeConsortiumChannels extends Rpc
  */
 class CreateChannel extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxMessageCount($value)
+    {
+        $this->data['MaxMessageCount'] = $value;
+        $this->options['form_params']['MaxMessageCount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPreferredMaxBytes($value)
+    {
+        $this->data['PreferredMaxBytes'] = $value;
+        $this->options['form_params']['PreferredMaxBytes'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $organization
@@ -6903,6 +6995,19 @@ class CreateChannel extends Rpc
         foreach ($organization as $depth1 => $depth1Value) {
             $this->options['query']['Organization.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
         }
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchTimeout($value)
+    {
+        $this->data['BatchTimeout'] = $value;
+        $this->options['form_params']['BatchTimeout'] = $value;
 
         return $this;
     }

@@ -5,6 +5,7 @@ namespace AlibabaCloud\Ivision\V20190308;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ImagePredict imagePredict(array $options = [])
  * @method DescribeTags describeTags(array $options = [])
  * @method ModifyTagAttribute modifyTagAttribute(array $options = [])
  * @method CreateTag createTag(array $options = [])
@@ -53,6 +54,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ivision';
+}
+
+/**
+ * @method string getDataUrl()
+ * @method $this withDataUrl($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getModelId()
+ * @method $this withModelId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ImagePredict extends Rpc
+{
 }
 
 /**

@@ -5,6 +5,9 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetCustomServiceUrl getCustomServiceUrl(array $options = [])
+ * @method QueryOrderInfoAfterSale queryOrderInfoAfterSale(array $options = [])
+ * @method ValidateTaobaoAccount validateTaobaoAccount(array $options = [])
  * @method CancelRefund cancelRefund(array $options = [])
  * @method RenderOrder renderOrder(array $options = [])
  * @method ApplyRefund applyRefund(array $options = [])
@@ -61,6 +64,53 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'linkedmall';
+}
+
+/**
+ * @method string getNick()
+ * @method $this withNick($value)
+ * @method string getSellerId()
+ * @method $this withSellerId($value)
+ * @method string getCuid()
+ * @method $this withCuid($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetCustomServiceUrl extends Rpc
+{
+}
+
+/**
+ * @method string getLmOrderId()
+ * @method $this withLmOrderId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getChannelUserId()
+ * @method $this withChannelUserId($value)
+ */
+class QueryOrderInfoAfterSale extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getExtJson()
+ * @method $this withExtJson($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMobileNo()
+ * @method $this withMobileNo($value)
+ * @method string getTbUserNick()
+ * @method $this withTbUserNick($value)
+ */
+class ValidateTaobaoAccount extends Rpc
+{
 }
 
 /**

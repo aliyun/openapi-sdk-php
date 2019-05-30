@@ -5,6 +5,7 @@ namespace AlibabaCloud\Ft\V20180713;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method FtIpFlowControl ftIpFlowControl(array $options = [])
  * @method FtDynamicAddressDubbo ftDynamicAddressDubbo(array $options = [])
  * @method FtDynamicAddressHsf ftDynamicAddressHsf(array $options = [])
  * @method FtFlowSpecial ftFlowSpecial(array $options = [])
@@ -27,6 +28,14 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class FtIpFlowControl extends Rpc
+{
 }
 
 /**

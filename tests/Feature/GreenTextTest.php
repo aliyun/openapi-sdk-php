@@ -2,6 +2,7 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Green\Green;
 use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Green\V20180509\TextScan;
@@ -55,17 +56,16 @@ class GreenTextTest extends TestCase
             'content' => '需要检测的文本内容',
         ];
 
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->textScan()
-                              ->jsonBody([
-                                             'tasks'  => [$task1],
-                                             'scenes' => ['antispam'],
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->textScan()
+                       ->jsonBody([
+                                      'tasks'  => [$task1],
+                                      'scenes' => ['antispam'],
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
         self::assertNotEmpty($result['data'][0]['taskId']);
@@ -86,18 +86,17 @@ class GreenTextTest extends TestCase
      */
     public function testTextFeedback($taskId)
     {
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->textFeedback()
-                              ->jsonBody([
-                                             'taskId'  => $taskId,
-                                             'content' => '需要检测的文本内容',
-                                             'label'   => 'spam',
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->textFeedback()
+                       ->jsonBody([
+                                      'taskId'  => $taskId,
+                                      'content' => '需要检测的文本内容',
+                                      'label'   => 'spam',
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertArrayHasKey('msg', $result);
         self::assertEquals('OK', $result['msg']);

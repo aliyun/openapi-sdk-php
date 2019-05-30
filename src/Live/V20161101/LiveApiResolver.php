@@ -5,6 +5,7 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ModifyLiveDomainSchdmByProperty modifyLiveDomainSchdmByProperty(array $options = [])
  * @method SetLiveStreamOptimizedFeatureConfig setLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method DescribeLiveStreamOptimizedFeatureConfig describeLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
@@ -182,6 +183,18 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'live';
+}
+
+/**
+ * @method string getProperty()
+ * @method $this withProperty($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyLiveDomainSchdmByProperty extends Rpc
+{
 }
 
 /**

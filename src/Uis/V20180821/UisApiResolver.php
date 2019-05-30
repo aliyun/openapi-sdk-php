@@ -5,6 +5,13 @@ namespace AlibabaCloud\Uis\V20180821;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeWhiteList describeWhiteList(array $options = [])
+ * @method ModifyWhiteList modifyWhiteList(array $options = [])
+ * @method CreateSubConnection createSubConnection(array $options = [])
+ * @method DeleteSubConnection deleteSubConnection(array $options = [])
+ * @method ModifySubConnection modifySubConnection(array $options = [])
+ * @method DescribeSubConnections describeSubConnections(array $options = [])
+ * @method DescribeSubConnection describeSubConnection(array $options = [])
  * @method DescribeHighPriorityIps describeHighPriorityIps(array $options = [])
  * @method SetAccessLog setAccessLog(array $options = [])
  * @method DeleteAccessLog deleteAccessLog(array $options = [])
@@ -54,6 +61,146 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'uis';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getModifyMode()
+ * @method $this withModifyMode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUisId()
+ * @method $this withUisId($value)
+ * @method string getWhitelist()
+ * @method $this withWhitelist($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getGreConfig()
+ * @method $this withGreConfig($value)
+ */
+class CreateSubConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUisSubConnectionId()
+ * @method $this withUisSubConnectionId($value)
+ */
+class DeleteSubConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUisSubConnectionId()
+ * @method $this withUisSubConnectionId($value)
+ * @method string getGreConfig()
+ * @method $this withGreConfig($value)
+ */
+class ModifySubConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUisNodeId()
+ * @method $this withUisNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getIP()
+ * @method $this withIP($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeSubConnections extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUisSubConnectionId()
+ * @method $this withUisSubConnectionId($value)
+ */
+class DescribeSubConnection extends Rpc
+{
 }
 
 /**

@@ -61,18 +61,17 @@ class GreenOCRTest extends TestCase
             'dataId' => uniqid('', true),
             'url'    => 'http://aliyunsdk-pages.alicdn.com/tests/id-card-front.jpeg',
         ];
-        $result = AlibabaCloud::green()
-                              ->v20180509()
-                              ->imageSyncScan()
-                              ->jsonBody([
-                                             'tasks'  => [$task1],
-                                             'scenes' => ['ocr'],
-                                             'extras' => [['card' => 'id-card-front']],
-                                         ])
-                              ->host('green.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Green::v20180509()
+                       ->imageSyncScan()
+                       ->jsonBody([
+                                      'tasks'  => [$task1],
+                                      'scenes' => ['ocr'],
+                                      'extras' => [['card' => 'id-card-front']],
+                                  ])
+                       ->host('green.cn-shanghai.aliyuncs.com')
+                       ->connectTimeout(20)
+                       ->timeout(25)
+                       ->request();
 
         self::assertEquals('ocr', $result['data'][0]['results'][0]['scene']);
         self::assertEquals('review', $result['data'][0]['results'][0]['suggestion']);

@@ -5,6 +5,16 @@ namespace AlibabaCloud\Qualitycheck\V20190115;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CreateSkillGroupConfig createSkillGroupConfig(array $options = [])
+ * @method CreateWarningConfig createWarningConfig(array $options = [])
+ * @method DeletePrecisionTask deletePrecisionTask(array $options = [])
+ * @method DeleteSkillGroupConfig deleteSkillGroupConfig(array $options = [])
+ * @method DeleteWarningConfig deleteWarningConfig(array $options = [])
+ * @method GetSkillGroupConfig getSkillGroupConfig(array $options = [])
+ * @method ListSkillGroupConfig listSkillGroupConfig(array $options = [])
+ * @method ListWarningConfig listWarningConfig(array $options = [])
+ * @method UpdateSkillGroupConfig updateSkillGroupConfig(array $options = [])
+ * @method UpdateWarningConfig updateWarningConfig(array $options = [])
  * @method GetNextResultToVerify getNextResultToVerify(array $options = [])
  * @method GetPrecisionTask getPrecisionTask(array $options = [])
  * @method ListPrecisionTask listPrecisionTask(array $options = [])
@@ -113,6 +123,106 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class CreateSkillGroupConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class CreateWarningConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class DeletePrecisionTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class DeleteSkillGroupConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class DeleteWarningConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class GetSkillGroupConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class ListSkillGroupConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class ListWarningConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class UpdateSkillGroupConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class UpdateWarningConfig extends Rpc
+{
 }
 
 /**

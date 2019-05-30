@@ -55,17 +55,16 @@ class ImageSearchV20190325Test extends TestCase
         $content          = file_get_contents(__DIR__ . '/ImageSearch.jpg');
         $encodePicContent = base64_encode($content);
 
-        $result = AlibabaCloud::imageSearch()
-                              ->v20190325()
-                              ->addimage()
-                              ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
-                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                              ->withProductId('1234')
-                              ->withPicName('test')
-                              ->withPicContent($encodePicContent)
-                              ->connectTimeout(30)
-                              ->timeout(35)
-                              ->request();
+        $result = ImageSearch::v20190325()
+                             ->addimage()
+                             ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
+                             ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                             ->withProductId('1234')
+                             ->withPicName('test')
+                             ->withPicContent($encodePicContent)
+                             ->connectTimeout(30)
+                             ->timeout(35)
+                             ->request();
 
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);
@@ -80,17 +79,16 @@ class ImageSearchV20190325Test extends TestCase
         $content          = file_get_contents(__DIR__ . '/ImageSearch.jpg');
         $encodePicContent = base64_encode($content);
 
-        $result = AlibabaCloud::imageSearch()
-                              ->v20190325()
-                              ->searchImage()
-                              ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
-                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                              ->withPicContent($encodePicContent)
-                              ->withStart(0)
-                              ->withNum(10)
-                              ->connectTimeout(30)
-                              ->timeout(35)
-                              ->request();
+        $result = ImageSearch::v20190325()
+                             ->searchImage()
+                             ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
+                             ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                             ->withPicContent($encodePicContent)
+                             ->withStart(0)
+                             ->withNum(10)
+                             ->connectTimeout(30)
+                             ->timeout(35)
+                             ->request();
 
         self::assertArrayHasKey('Auctions', $result);
     }
@@ -101,15 +99,14 @@ class ImageSearchV20190325Test extends TestCase
      */
     public function testDeleteImage()
     {
-        $result = AlibabaCloud::imageSearch()
-                              ->v20190325()
-                              ->deleteImage()
-                              ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
-                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
-                              ->withProductId('1234')
-                              ->connectTimeout(30)
-                              ->timeout(35)
-                              ->request();
+        $result = ImageSearch::v20190325()
+                             ->deleteImage()
+                             ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
+                             ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
+                             ->withProductId('1234')
+                             ->connectTimeout(30)
+                             ->timeout(35)
+                             ->request();
 
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('success', $result['Message']);

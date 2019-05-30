@@ -72,18 +72,17 @@ class NlpTest extends TestCase
             \getenv('ACCESS_KEY_SECRET')
         )->name('content')->regionId('cn-shanghai');
 
-        $result = AlibabaCloud::nlp()
-                              ->v20180408()
-                              ->wordSegment()
-                              ->withDomain('general')
-                              ->jsonBody([
-                                             'lang' => 'ZH',
-                                             'text' => 'Iphone专用数据线',
-                                         ])
-                              ->client('content')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Nlp::v20180408()
+                     ->wordSegment()
+                     ->withDomain('general')
+                     ->jsonBody([
+                                    'lang' => 'ZH',
+                                    'text' => 'Iphone专用数据线',
+                                ])
+                     ->client('content')
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
 
         self::assertEquals('Iphone', $result['data'][0]['word']);
     }
@@ -100,19 +99,18 @@ class NlpTest extends TestCase
         )->name('content')
                     ->regionId('cn-shanghai');
 
-        $result = AlibabaCloud::nlp()
-                              ->v20180408()
-                              ->wordSegment([
-                                                'body' => \json_encode([
-                                                                           'lang' => 'ZH',
-                                                                           'text' => 'Iphone专用数据线',
-                                                                       ]),
-                                            ])
-                              ->withDomain('general')
-                              ->client('content')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Nlp::v20180408()
+                     ->wordSegment([
+                                       'body' => \json_encode([
+                                                                  'lang' => 'ZH',
+                                                                  'text' => 'Iphone专用数据线',
+                                                              ]),
+                                   ])
+                     ->withDomain('general')
+                     ->client('content')
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
 
         self::assertEquals('Iphone', $result['data'][0]['word']);
     }
@@ -125,19 +123,18 @@ class NlpTest extends TestCase
         )->name('content')
                     ->regionId('cn-shanghai');
 
-        $result = AlibabaCloud::nlp()
-                              ->v20180408()
-                              ->wordSegment([
-                                                'body' => \json_encode([
-                                                                           'lang' => 'ZH',
-                                                                           'text' => 'Iphone专用数据线',
-                                                                       ]),
-                                            ])
-                              ->withDomain('general')
-                              ->client('content')
-                              ->connectTimeout(20)
-                              ->timeout(25)
-                              ->request();
+        $result = Nlp::v20180408()
+                     ->wordSegment([
+                                       'body' => \json_encode([
+                                                                  'lang' => 'ZH',
+                                                                  'text' => 'Iphone专用数据线',
+                                                              ]),
+                                   ])
+                     ->withDomain('general')
+                     ->client('content')
+                     ->connectTimeout(20)
+                     ->timeout(25)
+                     ->request();
 
         self::assertEquals('Iphone', $result['data'][0]['word']);
     }

@@ -88,17 +88,16 @@ class LinkedmallTest extends TestCase
             $item2,
         ];
 
-        $result = AlibabaCloud::linkedmall()
-                              ->v20180116()
-                              ->modifyBizItems()
-                              ->withBizId('BizId')
-                              ->withSubBizId('SubBizId')
-                              ->withItemList($items)
-                              ->debug(false)
-                              ->connectTimeout(25)
-                              ->timeout(30)
-                              ->host('linkedmall.aliyuncs.com')
-                              ->request();
+        $result = Linkedmall::v20180116()
+                            ->modifyBizItems()
+                            ->withBizId('BizId')
+                            ->withSubBizId('SubBizId')
+                            ->withItemList($items)
+                            ->debug(false)
+                            ->connectTimeout(25)
+                            ->timeout(30)
+                            ->host('linkedmall.aliyuncs.com')
+                            ->request();
         self::assertArrayHasKey('Message', $result);
         self::assertEquals('没有权限', $result['Message']);
     }
