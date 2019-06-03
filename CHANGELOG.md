@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.8 - 2019-6-3
+- Generated 2018-05-24 for `welfare-inner`
+
+
 ## 1.7.7 - 2019-6-2
 - Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`
 
