@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.9 - 2019-6-3
+- Generated 2018-01-12 for `afs`
+
+
 ## 1.7.8 - 2019-6-3
 - Generated 2018-05-24 for `welfare-inner`
 
