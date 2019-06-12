@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.7.14 - 2019-6-12
+1, Add InvokeDataAPIService interface, support invoke service of data api to get sql query result.
+2, Add GetDataAPIServiceDetail interface, support get data api's detail information.
+3, Add CreateDataAPIService interface, support create data api with sql statement.
+
+
 ## 1.7.13 - 2019-6-12
 - Removed `2015-05-06`,`2018-12-01` for `Cr`
 

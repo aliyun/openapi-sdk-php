@@ -5,9 +5,9 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CreateDataAlgoServeApi createDataAlgoServeApi(array $options = [])
- * @method GetDataAlgoServeApiDetail getDataAlgoServeApiDetail(array $options = [])
- * @method InvokeDataAlgoServeApi invokeDataAlgoServeApi(array $options = [])
+ * @method CreateDataAPIService createDataAPIService(array $options = [])
+ * @method GetDataAPIServiceDetail getDataAPIServiceDetail(array $options = [])
+ * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
  * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
  * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
  * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
@@ -31,7 +31,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDevicesProperty setDevicesProperty(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
  * @method SetDeviceGroupTags setDeviceGroupTags(array $options = [])
- * @method GetDataSourceList getDataSourceList(array $options = [])
  * @method QueryAppDeviceList queryAppDeviceList(array $options = [])
  * @method UpdateDeviceGroup updateDeviceGroup(array $options = [])
  * @method QueryDeviceGroupTagList queryDeviceGroupTagList(array $options = [])
@@ -114,6 +113,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'iot';
 }
 
 /**
@@ -132,7 +134,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getDesc()
  * @method $this withDesc($value)
  */
-class CreateDataAlgoServeApi extends Rpc
+class CreateDataAPIService extends Rpc
 {
 
     /**
@@ -178,7 +180,7 @@ class CreateDataAlgoServeApi extends Rpc
  * @method string getApiSrn()
  * @method $this withApiSrn($value)
  */
-class GetDataAlgoServeApiDetail extends Rpc
+class GetDataAPIServiceDetail extends Rpc
 {
 }
 
@@ -187,7 +189,7 @@ class GetDataAlgoServeApiDetail extends Rpc
  * @method $this withApiSrn($value)
  * @method array getParam()
  */
-class InvokeDataAlgoServeApi extends Rpc
+class InvokeDataAPIService extends Rpc
 {
 
     /**
@@ -698,112 +700,6 @@ class InvokeThingsService extends Rpc
  */
 class SetDeviceGroupTags extends Rpc
 {
-}
-
-/**
- * @method string getSearch()
- * @method string getNameList()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getIdList()
- * @method string getPurposeType()
- * @method string getPage()
- * @method string getType()
- * @method string getOrder()
- */
-class GetDataSourceList extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSearch($value)
-    {
-        $this->data['Search'] = $value;
-        $this->options['form_params']['Search'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNameList($value)
-    {
-        $this->data['NameList'] = $value;
-        $this->options['form_params']['NameList'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdList($value)
-    {
-        $this->data['IdList'] = $value;
-        $this->options['form_params']['IdList'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPurposeType($value)
-    {
-        $this->data['PurposeType'] = $value;
-        $this->options['form_params']['PurposeType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPage($value)
-    {
-        $this->data['Page'] = $value;
-        $this->options['form_params']['Page'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['form_params']['Type'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrder($value)
-    {
-        $this->data['Order'] = $value;
-        $this->options['form_params']['Order'] = $value;
-
-        return $this;
-    }
 }
 
 /**
