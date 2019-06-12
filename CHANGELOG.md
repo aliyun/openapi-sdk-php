@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.15 - 2019-6-12
+- Generated 2018-12-01 for `cr`
+
+
 ## 1.7.14 - 2019-6-12
 1, Add InvokeDataAPIService interface, support invoke service of data api to get sql query result.
 2, Add GetDataAPIServiceDetail interface, support get data api's detail information.
