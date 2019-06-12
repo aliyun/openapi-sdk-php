@@ -5,6 +5,7 @@ namespace AlibabaCloud\Dbs\V20190306;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method RenewBackupPlan renewBackupPlan(array $options = [])
  * @method ModifyBackupObjects modifyBackupObjects(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
  * @method DescribeNodeCidrList describeNodeCidrList(array $options = [])
@@ -36,6 +37,22 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cbs';
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ */
+class RenewBackupPlan extends Rpc
+{
 }
 
 /**

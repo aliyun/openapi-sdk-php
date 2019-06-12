@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.17 - 2019-6-12
+1, Add RenewBackupPlan DBS interface.
+
+
 ## 1.7.16 - 2019-6-12
 1.Fix bug
 
