@@ -5,6 +5,15 @@ namespace AlibabaCloud\Rds\V20140815;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
+ * @method CheckCreateDdrDBInstance checkCreateDdrDBInstance(array $options = [])
+ * @method DescribeAvailableRecoveryTime describeAvailableRecoveryTime(array $options = [])
+ * @method DescribeCrossRegionLogBackupFiles describeCrossRegionLogBackupFiles(array $options = [])
+ * @method ModifyInstanceCrossBackupPolicy modifyInstanceCrossBackupPolicy(array $options = [])
+ * @method CreateDdrInstance createDdrInstance(array $options = [])
+ * @method DescribeCrossRegionBackupDBInstance describeCrossRegionBackupDBInstance(array $options = [])
+ * @method DescribeInstanceCrossBackupPolicy describeInstanceCrossBackupPolicy(array $options = [])
+ * @method DescribeCrossRegionBackups describeCrossRegionBackups(array $options = [])
  * @method EvaluateSupportByokShow evaluateSupportByokShow(array $options = [])
  * @method DescribeInstanceVpcMigrateInfo describeInstanceVpcMigrateInfo(array $options = [])
  * @method DescribeReadDBInstanceDelay describeReadDBInstanceDelay(array $options = [])
@@ -59,6 +68,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyReadWriteSplittingConnection modifyReadWriteSplittingConnection(array $options = [])
  * @method CalculateDBInstanceWeight calculateDBInstanceWeight(array $options = [])
  * @method AllocateReadWriteSplittingConnection allocateReadWriteSplittingConnection(array $options = [])
+ * @method ModifyDBInstancePayType modifyDBInstancePayType(array $options = [])
  * @method CheckResource checkResource(array $options = [])
  * @method DescribeCharacterSetName describeCharacterSetName(array $options = [])
  * @method DeleteBackup deleteBackup(array $options = [])
@@ -164,6 +174,262 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'rds';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeAvailableCrossRegion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getDBInstanceStorage()
+ * @method $this withDBInstanceStorage($value)
+ * @method string getSourceDBInstanceName()
+ * @method $this withSourceDBInstanceName($value)
+ * @method string getBakSetName()
+ * @method $this withBakSetName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getHostType()
+ * @method $this withHostType($value)
+ * @method string getBackupSetId()
+ * @method $this withBackupSetId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUserBakSetURL()
+ * @method $this withUserBakSetURL($value)
+ * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
+ * @method string getRestoreType()
+ * @method $this withRestoreType($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getSourceRegion()
+ * @method $this withSourceRegion($value)
+ * @method string getBackupSetRegion()
+ * @method $this withBackupSetRegion($value)
+ * @method string getBackupSetType()
+ * @method $this withBackupSetType($value)
+ */
+class CheckCreateDdrDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCrossBackupId()
+ * @method $this withCrossBackupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeAvailableRecoveryTime extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCrossBackupRegion()
+ * @method $this withCrossBackupRegion($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeCrossRegionLogBackupFiles extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRetentType()
+ * @method $this withRetentType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCrossBackupType()
+ * @method $this withCrossBackupType($value)
+ * @method string getLogBackupEnabled()
+ * @method $this withLogBackupEnabled($value)
+ * @method string getBackupEnabled()
+ * @method $this withBackupEnabled($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCrossBackupRegion()
+ * @method $this withCrossBackupRegion($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getEndpoint()
+ * @method $this withEndpoint($value)
+ * @method string getStorageOwner()
+ * @method $this withStorageOwner($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getRetention()
+ * @method $this withRetention($value)
+ */
+class ModifyInstanceCrossBackupPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getConnectionMode()
+ * @method $this withConnectionMode($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBInstanceStorage()
+ * @method $this withDBInstanceStorage($value)
+ * @method string getSystemDBCharset()
+ * @method $this withSystemDBCharset($value)
+ * @method string getSourceDBInstanceName()
+ * @method $this withSourceDBInstanceName($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getHostType()
+ * @method $this withHostType($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getUserBakSetURL()
+ * @method $this withUserBakSetURL($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getDBInstanceDescription()
+ * @method $this withDBInstanceDescription($value)
+ * @method string getDBInstanceStorageType()
+ * @method $this withDBInstanceStorageType($value)
+ * @method string getBackupSetRegion()
+ * @method $this withBackupSetRegion($value)
+ * @method string getDBInstanceNetType()
+ * @method $this withDBInstanceNetType($value)
+ * @method string getBackupSetType()
+ * @method $this withBackupSetType($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getBakSetName()
+ * @method $this withBakSetName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getBackupSetId()
+ * @method $this withBackupSetId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
+ * @method string getSecurityIPList()
+ * @method $this withSecurityIPList($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getRestoreType()
+ * @method $this withRestoreType($value)
+ * @method string getVPCId()
+ * @method $this withVPCId($value)
+ * @method string getTunnelId()
+ * @method $this withTunnelId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ * @method string getSourceRegion()
+ * @method $this withSourceRegion($value)
+ * @method string getInstanceNetworkType()
+ * @method $this withInstanceNetworkType($value)
+ */
+class CreateDdrInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeCrossRegionBackupDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeInstanceCrossBackupPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCrossBackupRegion()
+ * @method $this withCrossBackupRegion($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getCrossBackupId()
+ * @method $this withCrossBackupId($value)
+ */
+class DescribeCrossRegionBackups extends Rpc
+{
 }
 
 /**
@@ -685,6 +951,8 @@ class RecoveryDBInstance extends Rpc
  * @method $this withEngineVersion($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getDBInstanceClass()
+ * @method $this withDBInstanceClass($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getZoneId()
@@ -1391,6 +1659,38 @@ class CalculateDBInstanceWeight extends Rpc
  * @method $this withMaxDelayTime($value)
  */
 class AllocateReadWriteSplittingConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResource()
+ * @method $this withResource($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ */
+class ModifyDBInstancePayType extends Rpc
 {
 }
 

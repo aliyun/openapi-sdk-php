@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.18 - 2019-6-13
+1, add DescribeAvailableResource OpenApi.
+2, upgrade version to 2.3.8 
+
+
 ## 1.7.17 - 2019-6-12
 1, Add RenewBackupPlan DBS interface.
 
