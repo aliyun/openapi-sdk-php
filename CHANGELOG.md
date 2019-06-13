@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.20 - 2019-6-13
+- Generated 2015-01-01 for `R-kvstore`
+
+
 ## 1.7.19 - 2019-6-13
 Add Network Assistant openapi sdk
 
