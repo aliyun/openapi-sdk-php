@@ -92,6 +92,7 @@ namespace AlibabaCloud;
  * @method static MoPen\MoPen moPen()
  * @method static Mts\Mts mts()
  * @method static NAS\NAS nAS()
+ * @method static Netana\Netana netana()
  * @method static Nlp\Nlp nlp()
  * @method static NlsCloudMeta\NlsCloudMeta nlsCloudMeta()
  * @method static NlsFiletrans\NlsFiletrans nlsFiletrans()

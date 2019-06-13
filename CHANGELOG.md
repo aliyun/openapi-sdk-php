@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.19 - 2019-6-13
+Add Network Assistant openapi sdk
+
+
 ## 1.7.18 - 2019-6-13
 1, add DescribeAvailableResource OpenApi.
 2, upgrade version to 2.3.8 
