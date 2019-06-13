@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.21 - 2019-6-13
+1, fixed DescribeAvailableResource OpenApi AvailableZones value problem.
+
+
 ## 1.7.20 - 2019-6-13
 - Generated 2015-01-01 for `R-kvstore`
 
