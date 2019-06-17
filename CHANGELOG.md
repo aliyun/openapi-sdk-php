@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.22 - 2019-6-17
+companyreg release
+
+
 ## 1.7.21 - 2019-6-13
 1, fixed DescribeAvailableResource OpenApi AvailableZones value problem.
 

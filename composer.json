@@ -75,6 +75,7 @@
         "alibabacloud/cloudwf": "self.version",
         "alibabacloud/cms": "self.version",
         "alibabacloud/commondriver": "self.version",
+        "alibabacloud/companyreg": "self.version",
         "alibabacloud/cr": "self.version",
         "alibabacloud/crm": "self.version",
         "alibabacloud/dataworkspublic": "self.version",
