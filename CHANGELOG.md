@@ -1,99 +1,99 @@
 # CHANGELOG
 
 ## 1.7.23 - 2019-6-18
-1. Supported the related recommend.
-2. Supported exposure time controll and exposure filter by scene.
+- Supported the related recommend.
+- Supported exposure time controll and exposure filter by scene.
 
 
 ## 1.7.22 - 2019-6-17
-companyreg release
+- Companyreg release.
 
 
 ## 1.7.21 - 2019-6-13
-1, fixed DescribeAvailableResource OpenApi AvailableZones value problem.
+- Fixed DescribeAvailableResource OpenApi AvailableZones value problem.
 
 
 ## 1.7.20 - 2019-6-13
-- Generated 2015-01-01 for `R-kvstore`
+- Generated 2015-01-01 for `R-kvstore`.
 
 
 ## 1.7.19 - 2019-6-13
-Add Network Assistant openapi sdk
+- Added Network Assistant openapi SDK.
 
 
 ## 1.7.18 - 2019-6-13
-1, add DescribeAvailableResource OpenApi.
-2, upgrade version to 2.3.8 
+- Added DescribeAvailableResource OpenApi.
+- Upgrade version to 2.3.8
 
 
 ## 1.7.17 - 2019-6-12
-1, Add RenewBackupPlan DBS interface.
+- Added RenewBackupPlan DBS interface.
 
 
 ## 1.7.16 - 2019-6-12
-1.Fix bug
+- Fixed bug.
 
 
 ## 1.7.15 - 2019-6-12
-- Generated 2018-12-01 for `cr`
+- Generated 2018-12-01 for `cr`.
 
 
 ## 1.7.14 - 2019-6-12
-1, Add InvokeDataAPIService interface, support invoke service of data api to get sql query result.
-2, Add GetDataAPIServiceDetail interface, support get data api's detail information.
-3, Add CreateDataAPIService interface, support create data api with sql statement.
+- Added InvokeDataAPIService interface, support invoke service of data api to get sql query result.
+- Added GetDataAPIServiceDetail interface, support get data api's detail information.
+- Added CreateDataAPIService interface, support create data api with sql statement.
 
 
 ## 1.7.13 - 2019-6-12
-- Removed `2015-05-06`,`2018-12-01` for `Cr`
+- Removed `2015-05-06`,`2018-12-01` for `Cr`.
 
 
 ## 1.7.12 - 2019-6-12
-- Generated 2019-03-06 for `Dbs`
+- Generated 2019-03-06 for `Dbs`.
 
 
 ## 1.7.11 - 2019-6-11
-- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`
+- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`.
 
 
 ## 1.7.10 - 2019-6-10
-- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`
+- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`.
 
 
 ## 1.7.9 - 2019-6-3
-- Generated 2018-01-12 for `afs`
+- Generated 2018-01-12 for `afs`.
 
 
 ## 1.7.8 - 2019-6-3
-- Generated 2018-05-24 for `welfare-inner`
+- Generated 2018-05-24 for `welfare-inner`.
 
 
 ## 1.7.7 - 2019-6-2
-- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`
+- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`.
 
 
 ## 1.7.6 - 2019-5-31
-- Generated 2016-11-11, 2015-06-30 for `BatchCompute`
+- Generated 2016-11-11, 2015-06-30 for `BatchCompute`.
 
 
 ## 1.7.5 - 2019-5-30
-- Generated 2013-01-11, 2016-11-11 for `BatchCompute`
+- Generated 2013-01-11, 2016-11-11 for `BatchCompute`.
 
 
 ## 1.7.4 - 2019-5-30
-- Generated 2019-05-21 for `saf`
+- Generated 2019-05-21 for `saf`.
 
 
 ## 1.7.3 - 2019-5-30
-- Generated 2015-12-15, 2018-04-18 for `CS`
+- Generated 2015-12-15, 2018-04-18 for `CS`.
 
 
 ## 1.7.2 - 2019-5-30
-- Generated 2014-02-14, 2015-05-01, 2018-03-02 for `Ram`
+- Generated 2014-02-14, 2015-05-01, 2018-03-02 for `Ram`.
 
 
 ## 1.7.1 - 2019-5-30
-- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`
+- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`.
 
 
 ## 1.7.0 - 2019-5-29
@@ -109,11 +109,11 @@ Add Network Assistant openapi sdk
 
 
 ## 1.6.6 - 2019-5-29
-- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`
+- Generated 2015-05-06, 2016-06-07, 2018-12-01 for `cr`.
 
 
 ## 1.6.5 - 2019-5-29
-- Generated 2015-05-06 for `cr`
+- Generated 2015-05-06 for `cr`.
 
 
 ## 1.6.4 - 2019-05-27
