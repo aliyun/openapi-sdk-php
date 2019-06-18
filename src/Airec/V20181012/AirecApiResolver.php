@@ -5,6 +5,8 @@ namespace AlibabaCloud\Airec\V20181012;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ModifyExposureSettings modifyExposureSettings(array $options = [])
+ * @method DescribeExposureSettings describeExposureSettings(array $options = [])
  * @method ListInstanceTask listInstanceTask(array $options = [])
  * @method ListDashboardParameters listDashboardParameters(array $options = [])
  * @method ListDashboard listDashboard(array $options = [])
@@ -53,6 +55,29 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'airec';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyExposureSettings extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/exposure-settings';
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeExposureSettings extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/exposure-settings';
 }
 
 /**
@@ -479,6 +504,7 @@ class DescribeInstance extends Roa
  * @method string getSceneId()
  * @method string getImei()
  * @method string getUserId()
+ * @method string getItems()
  */
 class Recommend extends Roa
 {
@@ -546,6 +572,19 @@ class Recommend extends Roa
     {
         $this->data['UserId'] = $value;
         $this->options['query']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withItems($value)
+    {
+        $this->data['Items'] = $value;
+        $this->options['query']['Items'] = $value;
 
         return $this;
     }

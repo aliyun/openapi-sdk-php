@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.23 - 2019-6-18
+1. Supported the related recommend.
+2. Supported exposure time controll and exposure filter by scene.
+
+
 ## 1.7.22 - 2019-6-17
 companyreg release
 
