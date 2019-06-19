@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.24 - 2019-6-19
+1, Add DefaultPolicyVersion as return field to GetPolicy interface, Facilitating to get policy document from this interface.
+2, Add RotateStrategy as input field to CreatePolicyVersion interface for rotating policy version when reaching policy version limit.
+
+
 ## 1.7.23 - 2019-6-18
 - Supported the related recommend.
 - Supported exposure time controll and exposure filter by scene.
