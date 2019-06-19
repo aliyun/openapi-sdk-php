@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.25 - 2019-6-19
+- Generated 2018-12-01 for `cr`.
+
+
 ## 1.7.24 - 2019-6-19
 1, Add DefaultPolicyVersion as return field to GetPolicy interface, Facilitating to get policy document from this interface.
 2, Add RotateStrategy as input field to CreatePolicyVersion interface for rotating policy version when reaching policy version limit.
