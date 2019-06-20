@@ -64,12 +64,11 @@ class AirecTest extends TestCase
         Airec::v20181012()
              ->recommend()
              ->withInstanceId('airec-cn-xxxxxxx')
-             ->options([
-                           'query' => [
-                               'UserId'      => 0,
-                               'ReturnCount' => 5,
-                           ]
-                       ])
+             ->contentType('application/json')
+             ->withItems('1557567585:article')
+             ->withUserId(0)
+             ->withReturnCount(5)
+             ->debug(true)
              ->request();
     }
 }
