@@ -1,4 +1,4 @@
-[ç®€ä½“ä¸­æ–‡](./SUPPORTED.md) | English
+[¼òÌåÖÐÎÄ](./SUPPORTED.md) | English
 
 # Supported
 Alibaba Cloud SDK for PHP has supported quick access to 148 versions of 133 products, as listed below:
