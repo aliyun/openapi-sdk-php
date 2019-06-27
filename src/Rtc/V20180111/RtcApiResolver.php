@@ -5,6 +5,7 @@ namespace AlibabaCloud\Rtc\V20180111;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
  * @method DescribeRtcChannelCntData describeRtcChannelCntData(array $options = [])
  * @method DescribeRtcDurationData describeRtcDurationData(array $options = [])
  * @method DescribeRtcPeakChannelCntData describeRtcPeakChannelCntData(array $options = [])
@@ -62,6 +63,24 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'rtc';
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeChannelParticipants extends Rpc
+{
 }
 
 /**
