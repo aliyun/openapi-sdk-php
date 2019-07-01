@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.30 - 2019-7-1
+- Support cloud_essd disk category for API CreateDisk, CreateInstance and RunInstances, and support configurating PerformanceLevel when choose cloud_essd.
+- Add ModifyDiskSpec API to support cloud_essd PerformanceLevel modification.
+- Add AutoProvisioningGroup interfaces, provide AutoProvisioningGroup function.
+- Add RetentionDays to snapshot creating.
+
+
 ## 1.7.29 - 2019-6-27
 - Added setting of crop_mode parameter.
 
