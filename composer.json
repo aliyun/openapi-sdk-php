@@ -100,6 +100,7 @@
         "alibabacloud/edas": "self.version",
         "alibabacloud/emr": "self.version",
         "alibabacloud/ess": "self.version",
+        "alibabacloud/fnf": "self.version",
         "alibabacloud/foas": "self.version",
         "alibabacloud/ft": "self.version",
         "alibabacloud/gpdb": "self.version",

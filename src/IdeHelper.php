@@ -65,6 +65,7 @@ namespace AlibabaCloud;
  * @method static Edas\Edas edas()
  * @method static Emr\Emr emr()
  * @method static Ess\Ess ess()
+ * @method static Fnf\Fnf fnf()
  * @method static Foas\Foas foas()
  * @method static Ft\Ft ft()
  * @method static Gpdb\Gpdb gpdb()
