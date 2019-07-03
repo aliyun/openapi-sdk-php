@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.32 - 2019-7-3
+- Supported API DescribeRecordStatisticsSummary for Query Volume.
+- Supported API DescribeDomainStatisticsSummary for Query Volume.
+- Supported API DescribeRecordStatisticsHistory for Query Volume.
+- Supported API DescribeDomainDnsStatistics for Query Volume.
+
+
 ## 1.7.31 - 2019-7-2
 - FnF public version.
 
