@@ -5,6 +5,7 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method BatchQueryDeviceDetail batchQueryDeviceDetail(array $options = [])
  * @method CreateDataAPIService createDataAPIService(array $options = [])
  * @method GetDataAPIServiceDetail getDataAPIServiceDetail(array $options = [])
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
@@ -116,6 +117,32 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'iot';
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method array getDeviceName()
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class BatchQueryDeviceDetail extends Rpc
+{
+
+    /**
+     * @param array $deviceName
+     *
+     * @return $this
+     */
+    public function withDeviceName(array $deviceName)
+    {
+        $this->data['DeviceName'] = $deviceName;
+        foreach ($deviceName as $i => $iValue) {
+            $this->options['query']['DeviceName.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**

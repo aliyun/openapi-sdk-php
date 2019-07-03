@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.33 - 2019-7-4
+- Supported batch querying for device detail.
+
+
 ## 1.7.32 - 2019-7-3
 - Supported API DescribeRecordStatisticsSummary for Query Volume.
 - Supported API DescribeDomainStatisticsSummary for Query Volume.
