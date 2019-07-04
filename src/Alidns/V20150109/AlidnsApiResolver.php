@@ -5,9 +5,10 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeDomainStatistics describeDomainStatistics(array $options = [])
+ * @method DescribeRecordStatistics describeRecordStatistics(array $options = [])
  * @method DescribeGtmInstanceSystemCname describeGtmInstanceSystemCname(array $options = [])
  * @method DescribeDomainStatisticsSummary describeDomainStatisticsSummary(array $options = [])
- * @method DescribeRecordStatisticsHistory describeRecordStatisticsHistory(array $options = [])
  * @method DescribeRecordStatisticsSummary describeRecordStatisticsSummary(array $options = [])
  * @method OperateBatchDomain operateBatchDomain(array $options = [])
  * @method DescribeBatchResultDetail describeBatchResultDetail(array $options = [])
@@ -37,7 +38,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateGtmMonitor updateGtmMonitor(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method QueryCreateInstancePrice queryCreateInstancePrice(array $options = [])
- * @method DescribeDomainDnsStatistics describeDomainDnsStatistics(array $options = [])
  * @method DescribeSupportLines describeSupportLines(array $options = [])
  * @method DescribeDomainNs describeDomainNs(array $options = [])
  * @method DescribeDnsProductInstance describeDnsProductInstance(array $options = [])
@@ -89,6 +89,40 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ */
+class DescribeDomainStatistics extends Rpc
+{
+}
+
+/**
+ * @method string getRr()
+ * @method $this withRr($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ */
+class DescribeRecordStatistics extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getUserClientIp()
@@ -125,24 +159,6 @@ class DescribeGtmInstanceSystemCname extends Rpc
  * @method $this withDirection($value)
  */
 class DescribeDomainStatisticsSummary extends Rpc
-{
-}
-
-/**
- * @method string getRr()
- * @method $this withRr($value)
- * @method string getEndDate()
- * @method $this withEndDate($value)
- * @method string getUserClientIp()
- * @method $this withUserClientIp($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getStartDate()
- * @method $this withStartDate($value)
- */
-class DescribeRecordStatisticsHistory extends Rpc
 {
 }
 
@@ -714,22 +730,6 @@ class CreateInstance extends Rpc
  * @method $this withOwnerId($value)
  */
 class QueryCreateInstancePrice extends Rpc
-{
-}
-
-/**
- * @method string getEndDate()
- * @method $this withEndDate($value)
- * @method string getUserClientIp()
- * @method $this withUserClientIp($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getStartDate()
- * @method $this withStartDate($value)
- */
-class DescribeDomainDnsStatistics extends Rpc
 {
 }
 
