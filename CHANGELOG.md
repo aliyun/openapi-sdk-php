@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.35 - 2019-7-5
+- Add TaskCancelStatus for QueryTaskList api.
+
+
 ## 1.7.34 - 2019-7-4
 - Supported API DescribeRecordStatisticsy for Query Volume.
 - Supported API DescribeDomainStatistics for Query Volume.
