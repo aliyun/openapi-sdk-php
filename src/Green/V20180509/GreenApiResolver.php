@@ -5,6 +5,12 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ListSimilarityImages listSimilarityImages(array $options = [])
+ * @method ListSimilarityLibraries listSimilarityLibraries(array $options = [])
+ * @method AddSimilarityLibrary addSimilarityLibrary(array $options = [])
+ * @method DeleteSimilarityLibrary deleteSimilarityLibrary(array $options = [])
+ * @method GetSimilarityLibrary getSimilarityLibrary(array $options = [])
+ * @method GetSimilarityImage getSimilarityImage(array $options = [])
  * @method AddVideoDna addVideoDna(array $options = [])
  * @method AddVideoDnaGroup addVideoDnaGroup(array $options = [])
  * @method DeleteVideoDna deleteVideoDna(array $options = [])
@@ -63,6 +69,138 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'green';
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class ListSimilarityImages extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/similarity/image/list';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class ListSimilarityLibraries extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/similarity/library/list';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class AddSimilarityLibrary extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/similarity/library/add';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class DeleteSimilarityLibrary extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/similarity/library/delete';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class GetSimilarityLibrary extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/similarity/library/get';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class GetSimilarityImage extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/similarity/image/get';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
 }
 
 /**

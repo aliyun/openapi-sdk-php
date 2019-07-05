@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.36 - 2019-7-5
+- Supported library managment for simillarity scene.
+- Remove the local file uploader code which can be downloaded from yundun content security document.
+
+
 ## 1.7.35 - 2019-7-5
 - Add TaskCancelStatus for QueryTaskList api.
 

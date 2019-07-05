@@ -5,6 +5,10 @@ namespace AlibabaCloud\Green\V20170823;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeBizTypeSetting describeBizTypeSetting(array $options = [])
+ * @method CreateBizType createBizType(array $options = [])
+ * @method DescribeBizTypes describeBizTypes(array $options = [])
+ * @method UpdateBizTypeSetting updateBizTypeSetting(array $options = [])
  * @method DescribeViewContent describeViewContent(array $options = [])
  * @method ExportKeywords exportKeywords(array $options = [])
  * @method ImportKeywords importKeywords(array $options = [])
@@ -100,6 +104,58 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'green';
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class DescribeBizTypeSetting extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getIndustryInfo()
+ * @method $this withIndustryInfo($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ * @method string getBizTypeImport()
+ * @method $this withBizTypeImport($value)
+ */
+class CreateBizType extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getImportFlag()
+ * @method $this withImportFlag($value)
+ */
+class DescribeBizTypes extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getTerrorism()
+ * @method $this withTerrorism($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getPorn()
+ * @method $this withPorn($value)
+ */
+class UpdateBizTypeSetting extends Rpc
+{
 }
 
 /**
