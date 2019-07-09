@@ -1,8 +1,8 @@
-简体中文 | [English](README-EN.md)
+English | [简体中文](/README-CN.md)
 
 
 <p align="center">
-<a href=" https://www.aliyun.com"><img src="https://aliyunsdk-pages.alicdn.com/icons/Aliyun.svg"></a>
+<a href=" https://www.alibabacloud.com"><img src="https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg"></a>
 </p>
 
 <h1 align="center">Alibaba Cloud SDK for PHP</h1>
@@ -22,39 +22,39 @@
 </p>
 
 
-Alibaba Cloud SDK for PHP 是支持产品快捷访问的开发包，由 [Alibaba Cloud Client for PHP][client] 提供底层支持。
+Alibaba Cloud SDK for PHP is a development kit that supports quick access to products, dependency on [Alibaba Cloud Client for PHP][client].
 
 
-## 发行说明
-我们在 `消除已知问题` 和 `兼容旧语法` 的原则上开发了新内核，增加了如下特性：
-- [支持 Composer][packagist]
-- [支持多客户端和客户端配置文件][clients]
-- [结果是一个强大的对象][result]
-- [每一个请求配置更加灵活][request]
+## Release Notes
+We developed a new kernel on the principle of `eliminating known issues` and `compatible with old grammar`, adding the following features:
+- [Support Composer][packagist]
+- [Support for multiple client and client profiles][clients]
+- [Result is a powerful object][result]
+- [More flexible configuration per request][request]
 
 
-## 先决条件
-您的系统需要满足[先决条件](docs/zh/0-Prerequisites.md)，包括 PHP >= 5.5。 我们强烈建议使用cURL扩展，并使用 TLS 后端编译 cURL 7.16.2+。
+## Prerequisites
+Your system will need to meet the [Prerequisites](/docs/en/0-Prerequisites.md), including having PHP >= 5.5. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
 
 
-## 安装依赖
-如果已在系统上[全局安装 Composer](https://getcomposer.org/doc/00-intro.md#globally)，请直接在项目目录中运行以下内容来安装 Alibaba Cloud SDK for PHP 作为依赖项：
+## Installation
+If Composer is already [installed globally on your system](https://getcomposer.org/doc/00-intro.md#globally), run the following in the base directory of your project to install Alibaba Cloud SDK for PHP as a dependency:
 ```
 composer require alibabacloud/sdk
 ```
-> 一些用户可能由于网络问题无法安装，可以尝试切换 Composer 镜像地址。
+> Some users may not be able to install due to network problems, you can try to switch the Composer mirror.
 
-请看[安装](docs/zh/1-Installation.md)有关通过 Composer 和其他方式安装的详细信息。
-
-
-## 在线示例
-[API Explorer](https://api.aliyun.com) 提供在线调用阿里云产品，并动态生成 SDK 代码和快速检索接口等能力，能显著降低使用云 API 的难度。
+Please see the [Installation](/docs/en/1-Installation.md) for more detailed information about installing through Composer and other ways.
 
 
-## 快速使用
-在您开始之前，您需要注册阿里云帐户并获取您的[凭证](https://usercenter.console.aliyun.com/#/manage/ak)。请求之前，请[了解使用客户端][clients]，请求之后，请[了解结果对象][result]。
+## Online Demo
+[API Explorer](https://api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate SDK Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API.
 
-> 目前仅支持部分阿里云产品，[已支持产品列表](SUPPORTED.md)，对于没有支持的产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起自定义请求，还可使用 [API Explorer](https://api.aliyun.com) 在线生成 Alibaba Cloud Client for PHP 代码。
+
+## Quick Examples
+Before you begin, you need to sign up for an Alibaba Cloud account and retrieve your [Credentials](https://usercenter.console.aliyun.com/#/manage/ak). Before request, please [Understanding the Clients][clients], after request, please [Understanding the Result][result].
+
+> Currently only some Alibaba Cloud products are supported, [Supported Products](/SUPPORTED-EN.md), For products that are not supported, you can use [Alibaba Cloud Client for PHP][request] to initiate custom requests, and you can use [API Explorer](https://api.aliyun.com) to generate Alibaba Cloud Client for PHP code online.
 
 ```php
 <?php
@@ -64,25 +64,25 @@ use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Ecs\Ecs;
 
-// 设置全局客户端
+// Set up a global client
 AlibabaCloud::accessKeyClient('foo', 'bar')
             ->regionId('cn-hangzhou')
             ->asDefaultClient();
 
 try {
-    // 访问产品 APIs
+    // Access product APIs
     $request = Ecs::v20140526()->describeRegions();
     
-    // 设置选项/参数并执行请求
-    $result = $request->withResourceType('type') // API 的参数
-                      ->withInstanceChargeType('type') // API 的参数
-                      ->client('client1') // 指定发送客户端，否则使用全局客户端
-                      ->debug(true) // 开启调试会输出详细信息
-                      ->connectTimeout(0.01) // 连接超时会抛出异常
-                      ->timeout(0.01) // 超时会抛出异常
-                      ->request(); // 执行请求
-    
-    // 也可以传入数组设置
+    // Set options/parameters and execute request
+    $result = $request->withResourceType('type') // API parameter
+                      ->withInstanceChargeType('type') // API parameter
+                      ->client('client1') // Specify the client for send
+                      ->debug(true) // Enable the debug will output detailed information
+                      ->connectTimeout(0.01) // Throw an exception when Connection timeout 
+                      ->timeout(0.01) // Throw an exception when timeout 
+                      ->request(); // Execution request
+
+    // Can also Set by passing in an array
     $options = [
                    'debug'           => true,
                    'connect_timeout' => 0.01,
@@ -92,23 +92,23 @@ try {
                        'InstanceChargeType' => 'type',
                    ],
                ];
-
-    // 设置的优先级
+    
+    // Settings priority
     $result2 = Ecs::v20140526()
                   ->describeRegions($options)
                   ->options([
                                 'query' => [
-                                    'Key'      => '我会覆盖构造函数的这个值',
-                                    'new'      => '我是新增的值',
+                                    'Key'      => 'I will overwrite this value in constructor',
+                                    'new'      => 'I am new value',
                                 ],
                             ])
                   ->options([
                                 'query' => [
-                                    'Key' => '我会覆盖以前的值',
-                                    'bar' => '我是新增的值',
+                                    'Key' => 'I will overwrite the previous value',
+                                    'bar' => 'I am new value',
                                 ],
                             ])
-                  ->debug(false) // 最后调用的会覆盖前者
+                  ->debug(false) // Overwrite the true of the former
                   ->request();
     
 } catch (ClientException $exception) {
@@ -122,42 +122,42 @@ try {
 ```
 
 
-## 问题
-[提交 Issue](https://github.com/aliyun/openapi-sdk-php/issues/new/choose)，不符合指南的问题可能会立即关闭。
+## Issues
+[Opening an Issue](https://github.com/aliyun/openapi-sdk-php/issues/new/choose), Issues not conforming to the guidelines may be closed immediately.
 
 
-## 发行说明
-每个版本的详细更改记录在[发行说明](CHANGELOG.md)中。
+## Changelog
+Detailed changes for each release are documented in the [release notes](/CHANGELOG.md).
 
 
-## 贡献
-提交 Pull Request 之前请阅读[贡献指南](CONTRIBUTING.md)。
+## Contribution
+Please make sure to read the [Contributing Guide](/CONTRIBUTING.md) before making a pull request.
 
 
-## 相关
-* [阿里云服务 Regions & Endpoints][endpoints]
+## References
+* [Alibaba Cloud Regions & Endpoints][endpoints]
 * [OpenAPI Explorer][open-api]
 * [Packagist][packagist]
 * [Composer][composer]
-* [Guzzle中文文档][guzzle-docs]
+* [Guzzle Documentation][guzzle-docs]
 * [Latest Release][latest-release]
 
 
-## 许可证
-[Apache-2.0](LICENSE.md)
+## License
+[Apache-2.0](/LICENSE.md)
 
-版权所有 1999-2019 阿里巴巴集团
+Copyright 1999-2019 Alibaba Group Holding Ltd.
 
 
-[open-api]: https://api.aliyun.com
+[open-api]: https://api.alibabacloud.com
 [latest-release]: https://github.com/aliyun/openapi-sdk-php
-[guzzle-docs]: https://guzzle-cn.readthedocs.io/zh_CN/latest/request-options.html
+[guzzle-docs]: http://docs.guzzlephp.org/en/stable/request-options.html
 [composer]: http://getcomposer.org
 [packagist]: https://packagist.org/packages/alibabacloud/sdk
-[client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README.md
-[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/2-Client.md
-[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/3-Request.md
-[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/4-Result.md
+[client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-EN.md
+[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/2-Client.md
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/3-Request.md
+[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/4-Result.md
 [ak]: https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak
 [home]: https://home.console.aliyun.com/?spm=5176.doc52740.2.4.QKZk8w
 [cURL]: http://php.net/manual/en/book.curl.php
