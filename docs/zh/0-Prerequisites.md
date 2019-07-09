@@ -1,4 +1,4 @@
-[← 首页](../../README.md) | 先决条件[(English)](../en/0-Prerequisites.md) | [安装 →](1-Installation.md)
+[← 首页](/README-CN.md) | 先决条件[(English)](/docs/en/0-Prerequisites.md) | [安装 →](/docs/zh/1-Installation.md)
 ***
 
 # 要求和建议
@@ -17,7 +17,7 @@
 - 生产环境中不要使用 [Xdebug][xdebug]
 
 ***
-[← 首页](../../README.md) | 先决条件[(English)](../en/0-Prerequisites.md) | [安装 →](1-Installation.md)
+[← 首页](/README-CN.md) | 先决条件[(English)](/docs/en/0-Prerequisites.md) | [安装 →](/docs/zh/1-Installation.md)
 
 [composer]: https://getcomposer.org
 [cURL]: http://php.net/manual/zh/book.curl.php
