@@ -5,6 +5,9 @@ namespace AlibabaCloud\Dbs\V20190306;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ModifyBackupStrategy modifyBackupStrategy(array $options = [])
+ * @method ModifyBackupSourceEndpoint modifyBackupSourceEndpoint(array $options = [])
+ * @method ModifyBackupPlanName modifyBackupPlanName(array $options = [])
  * @method RenewBackupPlan renewBackupPlan(array $options = [])
  * @method ModifyBackupObjects modifyBackupObjects(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
@@ -37,6 +40,70 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cbs';
+}
+
+/**
+ * @method string getBackupPeriod()
+ * @method $this withBackupPeriod($value)
+ * @method string getBackupStartTime()
+ * @method $this withBackupStartTime($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyBackupStrategy extends Rpc
+{
+}
+
+/**
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getBackupGatewayId()
+ * @method $this withBackupGatewayId($value)
+ * @method string getSourceEndpointInstanceID()
+ * @method $this withSourceEndpointInstanceID($value)
+ * @method string getSourceEndpointUserName()
+ * @method $this withSourceEndpointUserName($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSourceEndpointPassword()
+ * @method $this withSourceEndpointPassword($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getBackupObjects()
+ * @method $this withBackupObjects($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSourceEndpointPort()
+ * @method $this withSourceEndpointPort($value)
+ * @method string getSourceEndpointDatabaseName()
+ * @method $this withSourceEndpointDatabaseName($value)
+ * @method string getSourceEndpointInstanceType()
+ * @method $this withSourceEndpointInstanceType($value)
+ * @method string getSourceEndpointIP()
+ * @method $this withSourceEndpointIP($value)
+ * @method string getSourceEndpointOracleSID()
+ * @method $this withSourceEndpointOracleSID($value)
+ */
+class ModifyBackupSourceEndpoint extends Rpc
+{
+}
+
+/**
+ * @method string getBackupPlanName()
+ * @method $this withBackupPlanName($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyBackupPlanName extends Rpc
+{
 }
 
 /**
@@ -300,22 +367,32 @@ class StartBackupPlan extends Rpc
 }
 
 /**
- * @method string getBackupMethod()
- * @method $this withBackupMethod($value)
  * @method string getDatabaseType()
  * @method $this withDatabaseType($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getRegion()
- * @method $this withRegion($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getUsedTime()
  * @method $this withUsedTime($value)
  * @method string getInstanceClass()
  * @method $this withInstanceClass($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getBackupMethod()
+ * @method $this withBackupMethod($value)
+ * @method string getDatabaseRegion()
+ * @method $this withDatabaseRegion($value)
+ * @method string getStorageRegion()
+ * @method $this withStorageRegion($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
  */
 class CreateBackupPlan extends Rpc
 {

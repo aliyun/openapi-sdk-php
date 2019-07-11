@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 1.7.37 - 2019-7-11
+- Modify CreateBackupPlan.
+- Modify ConfigureBackupPlan.
+- Modify DescribeFullBackupList.
+- Modify DescribeRestoreTaskList.
+- Add ModifyBackupSourceEndpoint.
+- Add ModifyBackupStrategy.
+- Add ModifyBackupPlanName.
+
+
 ## 1.7.36 - 2019-7-5
 - Supported library managment for simillarity scene.
 - Remove the local file uploader code which can be downloaded from yundun content security document.
