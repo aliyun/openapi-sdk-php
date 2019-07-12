@@ -154,10 +154,10 @@ Copyright 1999-2019 Alibaba Group Holding Ltd.
 [guzzle-docs]: http://docs.guzzlephp.org/en/stable/request-options.html
 [composer]: http://getcomposer.org
 [packagist]: https://packagist.org/packages/alibabacloud/sdk
-[client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-EN.md
-[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/2-Client.md
-[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/3-Request.md
-[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/4-Result.md
+[client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README.md
+[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en-US/2-Client.md
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en-US/3-Request.md
+[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en-US/4-Result.md
 [ak]: https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak
 [home]: https://home.console.aliyun.com/?spm=5176.doc52740.2.4.QKZk8w
 [cURL]: http://php.net/manual/en/book.curl.php

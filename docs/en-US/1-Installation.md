@@ -1,4 +1,4 @@
-[← Prerequisites](/docs/en-US/0-Prerequisites.md) | Installation[(中文)](/docs/zh-CN/1-Installation.md) | [Client →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/2-Client.md)
+[← Prerequisites](/docs/en-US/0-Prerequisites.md) | Installation[(中文)](/docs/zh-CN/1-Installation.md) | [Client →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en-US/2-Client.md)
 ***
 
 # Installation
@@ -51,4 +51,4 @@ require __DIR__ . '/vendor/autoload.php';
 ```
 
 ***
-[← Prerequisites](/docs/en-US/0-Prerequisites.md) | Installation[(中文)](/docs/zh-CN/1-Installation.md) | [Client →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en/2-Client.md)
+[← Prerequisites](/docs/en-US/0-Prerequisites.md) | Installation[(中文)](/docs/zh-CN/1-Installation.md) | [Client →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/en-US/2-Client.md)
