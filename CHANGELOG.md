@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.38 - 2019-7-12
+- Public api AddLivePullStreamInfoConfig.
+
+
 ## 1.7.37 - 2019-7-11
 - Modify CreateBackupPlan.
 - Modify ConfigureBackupPlan.

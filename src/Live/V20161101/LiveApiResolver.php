@@ -5,6 +5,8 @@ namespace AlibabaCloud\Live\V20161101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeLiveStreamTranscodeStreamNum describeLiveStreamTranscodeStreamNum(array $options = [])
+ * @method UpdateLiveTopLevelDomain updateLiveTopLevelDomain(array $options = [])
  * @method ModifyLiveDomainSchdmByProperty modifyLiveDomainSchdmByProperty(array $options = [])
  * @method SetLiveStreamOptimizedFeatureConfig setLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method DescribeLiveStreamOptimizedFeatureConfig describeLiveStreamOptimizedFeatureConfig(array $options = [])
@@ -183,6 +185,30 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'live';
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStreamTranscodeStreamNum extends Rpc
+{
+}
+
+/**
+ * @method string getTopLevelDomain()
+ * @method $this withTopLevelDomain($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UpdateLiveTopLevelDomain extends Rpc
+{
 }
 
 /**
@@ -526,6 +552,8 @@ class DeleteLiveLazyPullStreamInfoConfig extends Rpc
 /**
  * @method string getAppName()
  * @method $this withAppName($value)
+ * @method string getLiveapiRequestFrom()
+ * @method $this withLiveapiRequestFrom($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -540,6 +568,8 @@ class DescribeLiveLazyPullStreamConfig extends Rpc
  * @method $this withPullArgs($value)
  * @method string getAppName()
  * @method $this withAppName($value)
+ * @method string getLiveapiRequestFrom()
+ * @method $this withLiveapiRequestFrom($value)
  * @method string getPullAuthKey()
  * @method $this withPullAuthKey($value)
  * @method string getPullAuthType()
@@ -830,8 +860,12 @@ class StartLiveDomain extends Rpc
 }
 
 /**
+ * @method string getForceSet()
+ * @method $this withForceSet($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getCertType()
+ * @method $this withCertType($value)
  * @method string getSSLPub()
  * @method $this withSSLPub($value)
  * @method string getCertName()
@@ -1628,6 +1662,8 @@ class DeleteCasterSceneConfig extends Rpc
  * @method $this withApp($value)
  * @method string getTemplate()
  * @method $this withTemplate($value)
+ * @method string getAudioChannelNum()
+ * @method $this withAudioChannelNum($value)
  * @method string getProfile()
  * @method $this withProfile($value)
  * @method string getFPS()
@@ -1636,6 +1672,10 @@ class DeleteCasterSceneConfig extends Rpc
  * @method $this withGop($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAudioCodec()
+ * @method $this withAudioCodec($value)
+ * @method string getAudioRate()
+ * @method $this withAudioRate($value)
  * @method string getTemplateType()
  * @method $this withTemplateType($value)
  * @method string getAudioBitrate()
@@ -1646,6 +1686,8 @@ class DeleteCasterSceneConfig extends Rpc
  * @method $this withWidth($value)
  * @method string getVideoBitrate()
  * @method $this withVideoBitrate($value)
+ * @method string getAudioProfile()
+ * @method $this withAudioProfile($value)
  * @method string getHeight()
  * @method $this withHeight($value)
  */
@@ -2386,8 +2428,6 @@ class DeleteLivePullStreamInfoConfig extends Rpc
  * @method $this withSourceUrl($value)
  * @method string getAppName()
  * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
@@ -2702,18 +2742,8 @@ class DescribeLiveStreamOnlineUserNum extends Rpc
 }
 
 /**
- * @method string getStreamType()
- * @method $this withStreamType($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOrderBy()
- * @method $this withOrderBy($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getAppName()
@@ -2724,6 +2754,16 @@ class DescribeLiveStreamOnlineUserNum extends Rpc
  * @method $this withStreamName($value)
  * @method string getQueryType()
  * @method $this withQueryType($value)
+ * @method string getStreamType()
+ * @method $this withStreamType($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeLiveStreamsPublishList extends Rpc
 {
@@ -2850,8 +2890,6 @@ class ForbidLiveStream extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getDomainTranscodeName()
