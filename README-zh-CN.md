@@ -34,7 +34,7 @@ Alibaba Cloud SDK for PHP 是支持产品快捷访问的开发包，由 [Alibaba
 
 
 ## 先决条件
-您的系统需要满足[先决条件](/docs/zh/0-Prerequisites.md)，包括 PHP >= 5.5。 我们强烈建议使用cURL扩展，并使用 TLS 后端编译 cURL 7.16.2+。
+您的系统需要满足[先决条件](/docs/zh-CN/0-Prerequisites.md)，包括 PHP >= 5.5。 我们强烈建议使用cURL扩展，并使用 TLS 后端编译 cURL 7.16.2+。
 
 
 ## 安装依赖
@@ -44,7 +44,7 @@ composer require alibabacloud/sdk
 ```
 > 一些用户可能由于网络问题无法安装，可以尝试切换 Composer 镜像地址。
 
-请看[安装](/docs/zh/1-Installation.md)有关通过 Composer 和其他方式安装的详细信息。
+请看[安装](/docs/zh-CN/1-Installation.md)有关通过 Composer 和其他方式安装的详细信息。
 
 
 ## 在线示例
