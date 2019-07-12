@@ -154,10 +154,10 @@ try {
 [guzzle-docs]: https://guzzle-cn.readthedocs.io/zh_CN/latest/request-options.html
 [composer]: http://getcomposer.org
 [packagist]: https://packagist.org/packages/alibabacloud/sdk
-[client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README.md
-[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/2-Client.md
-[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/3-Request.md
-[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/4-Result.md
+[client]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/README-zh-CN.md
+[clients]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh-CN/2-Client.md
+[request]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh-CN/3-Request.md
+[result]: https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh-CN/4-Result.md
 [ak]: https://usercenter.console.aliyun.com/?spm=5176.doc52740.2.3.QKZk8w#/manage/ak
 [home]: https://home.console.aliyun.com/?spm=5176.doc52740.2.4.QKZk8w
 [cURL]: http://php.net/manual/en/book.curl.php

@@ -1,4 +1,4 @@
-[← 先决条件](/docs/zh-CN/0-Prerequisites.md) | 安装[(English)](/docs/en-US/1-Installation.md) | [客户端 →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/2-Client.md)
+[← 先决条件](/docs/zh-CN/0-Prerequisites.md) | 安装[(English)](/docs/en-US/1-Installation.md) | [客户端 →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh-CN/2-Client.md)
 ***
 
 # 安装
@@ -51,4 +51,4 @@ require __DIR__ . '/vendor/autoload.php';
 ```
 
 ***
-[← 先决条件](/docs/zh-CN/0-Prerequisites.md) | 安装[(English)](/docs/en-US/1-Installation.md) | [客户端 →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh/2-Client.md)
+[← 先决条件](/docs/zh-CN/0-Prerequisites.md) | 安装[(English)](/docs/en-US/1-Installation.md) | [客户端 →](https://github.com/aliyun/openapi-sdk-php-client/blob/master/docs/zh-CN/2-Client.md)
