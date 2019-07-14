@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.39 - 2019-7-14
+- Modify DBS API DescribeBackupPlanList.
+
+
 ## 1.7.38 - 2019-7-12
 - Public api AddLivePullStreamInfoConfig.
 
