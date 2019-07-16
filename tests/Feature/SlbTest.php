@@ -34,13 +34,13 @@ class SlbTest extends TestCase
         $request1 = AlibabaCloud::slb()
                                 ->v20140515()
                                 ->describeRegions()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Slb::v20140515()
                        ->describeRegions()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DescribeRegions::class, $request1);
         self::assertInstanceOf(DescribeRegions::class, $request2);
@@ -55,8 +55,8 @@ class SlbTest extends TestCase
     {
         $result = Slb::v20140515()
                      ->describeRegions()
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }

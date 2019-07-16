@@ -34,13 +34,13 @@ class IvisionTest extends TestCase
         $request1 = AlibabaCloud::ivision()
                                 ->v20190308()
                                 ->describeProjects()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Ivision::v20190308()
                            ->describeProjects()
-                           ->connectTimeout(20)
-                           ->timeout(25);
+                           ->connectTimeout(60)
+                           ->timeout(65);
 
         self::assertInstanceOf(DescribeProjects::class, $request1);
         self::assertInstanceOf(DescribeProjects::class, $request2);
@@ -57,10 +57,10 @@ class IvisionTest extends TestCase
     {
         $result = Ivision::v20190308()
                          ->describeProjects()
-                         ->connectTimeout(20)
-                         ->timeout(25)
                          ->withCurrentPage(1)
                          ->withPageSize(10)
+                         ->connectTimeout(60)
+                         ->timeout(65)
                          ->request();
 
         self::assertArrayHasKey('Data', $result);

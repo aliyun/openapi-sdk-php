@@ -36,16 +36,16 @@ class DbsTest extends TestCase
                                 ->host('dbs-api.cn-hangzhou.aliyuncs.com')
                                 ->withBackupPlanId('id')
                                 ->withOwnerId('id')
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Dbs::v20190306()
                        ->startBackupPlan()
                        ->host('dbs-api.cn-hangzhou.aliyuncs.com')
                        ->withBackupPlanId('id')
                        ->withOwnerId('id')
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(StartBackupPlan::class, $request1);
         self::assertInstanceOf(StartBackupPlan::class, $request2);

@@ -34,13 +34,13 @@ class CsTest extends TestCase
         $request1 = AlibabaCloud::cS()
                                 ->v20151215()
                                 ->describeApiVersion()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = CS::v20151215()
                       ->describeApiVersion()
-                      ->connectTimeout(20)
-                      ->timeout(25);
+                      ->connectTimeout(60)
+                      ->timeout(65);
 
         self::assertInstanceOf(DescribeApiVersion::class, $request1);
         self::assertInstanceOf(DescribeApiVersion::class, $request2);
@@ -55,8 +55,8 @@ class CsTest extends TestCase
     {
         $result = CS::v20151215()
                     ->describeApiVersion()
-                    ->connectTimeout(20)
-                    ->timeout(25)
+                    ->connectTimeout(60)
+                    ->timeout(65)
                     ->request();
         self::assertArrayHasKey('docker_region_versions', $result);
     }

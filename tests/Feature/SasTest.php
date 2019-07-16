@@ -35,13 +35,13 @@ class SasTest extends TestCase
         $request1 = AlibabaCloud::sas()
                                 ->v20181203()
                                 ->describeAlarmEventList()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Sas::v20181203()
                        ->describeAlarmEventList()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DescribeAlarmEventList::class, $request1);
         self::assertInstanceOf(DescribeAlarmEventList::class, $request2);
@@ -56,8 +56,8 @@ class SasTest extends TestCase
                          ->withFrom('sas')
                          ->withCurrentPage(1)
                          ->withPageSize(10)
-                         ->connectTimeout(30)
-                         ->timeout(35)
+                         ->connectTimeout(60)
+                         ->timeout(65)
                          ->request();
             self::assertArrayHasKey('PageInfo', $result);
         } catch (Exception $exception) {

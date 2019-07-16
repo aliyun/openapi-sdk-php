@@ -34,13 +34,13 @@ class VpcTest extends TestCase
         $request1 = AlibabaCloud::vpc()
                                 ->v20160428()
                                 ->describeRegions()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Vpc::v20160428()
                        ->describeRegions()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DescribeRegions::class, $request1);
         self::assertInstanceOf(DescribeRegions::class, $request2);
@@ -55,8 +55,8 @@ class VpcTest extends TestCase
     {
         $result = Vpc::v20160428()
                      ->describeRegions()
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }

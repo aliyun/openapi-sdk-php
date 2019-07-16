@@ -34,13 +34,13 @@ class StsTest extends TestCase
         $request1 = AlibabaCloud::sts()
                                 ->v20150401()
                                 ->assumeRole()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Sts::v20150401()
                        ->assumeRole()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(AssumeRole::class, $request1);
         self::assertInstanceOf(AssumeRole::class, $request2);
@@ -59,8 +59,8 @@ class StsTest extends TestCase
            ->assumeRole()
            ->withRoleArn('acs:ram::12345678987:role/test')
            ->withRoleSessionName('RoleSessionName')
-           ->connectTimeout(20)
-           ->timeout(25)
+           ->connectTimeout(60)
+           ->timeout(65)
            ->request();
     }
 }

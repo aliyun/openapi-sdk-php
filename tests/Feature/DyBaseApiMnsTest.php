@@ -54,8 +54,8 @@ class DyBaseApiMnsTest extends TestCase
                                                   'QueueName'   => getenv('MNS_QUEUE_NAME'),
                                               ],
                                           ])
-                                ->connectTimeout(20)
-                                ->timeout(25)
+                                ->connectTimeout(60)
+                                ->timeout(65)
                                 ->request()
                                 ->toArray();
 

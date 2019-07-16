@@ -34,18 +34,18 @@ class CdnTest extends TestCase
         $request1 = AlibabaCloud::cdn()
                                 ->v20180510()
                                 ->describeIpInfo()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Cdn::v20180510()
                        ->describeIpInfo()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         $request3 = (new Cdn())->v20180510()
                                ->describeIpInfo()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+                               ->connectTimeout(60)
+                               ->timeout(65);
 
         self::assertInstanceOf(DescribeIpInfo::class, $request1);
         self::assertInstanceOf(DescribeIpInfo::class, $request2);
@@ -63,8 +63,8 @@ class CdnTest extends TestCase
         $request = Cdn::v20180510()
                       ->describeIpInfo()
                       ->withIP('192.168.0.1')
-                      ->connectTimeout(20)
-                      ->timeout(25)
+                      ->connectTimeout(60)
+                      ->timeout(65)
                       ->withSecurityToken('token');
 
         $result = $request->request();

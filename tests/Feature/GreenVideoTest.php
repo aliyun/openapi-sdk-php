@@ -35,8 +35,8 @@ class GreenVideoTest extends TestCase
                                ->v20180509()
                                ->videoAsyncScan()
                                ->host('green.cn-shanghai.aliyuncs.com')
-                               ->connectTimeout(20)
-                               ->timeout(25);
+                               ->connectTimeout(60)
+                               ->timeout(65);
 
         self::assertInstanceOf(VideoAsyncScan::class, $request);
     }
@@ -66,8 +66,8 @@ class GreenVideoTest extends TestCase
                                       'scenes' => ['porn', 'terrorism'],
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
@@ -105,8 +105,8 @@ class GreenVideoTest extends TestCase
                                       'audioScenes' => 'antispam',
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
@@ -132,8 +132,8 @@ class GreenVideoTest extends TestCase
                                       $taskId,
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
@@ -169,8 +169,8 @@ class GreenVideoTest extends TestCase
                                       'scenes' => ['porn', 'terrorism'],
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);

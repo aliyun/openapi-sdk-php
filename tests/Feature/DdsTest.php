@@ -34,13 +34,13 @@ class DdsTest extends TestCase
         $request1 = AlibabaCloud::dds()
                                 ->v20151201()
                                 ->describeRegions()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Dds::v20151201()
                        ->describeRegions()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DescribeRegions::class, $request1);
         self::assertInstanceOf(DescribeRegions::class, $request2);
@@ -55,8 +55,8 @@ class DdsTest extends TestCase
     {
         $request = Dds::v20151201()
                       ->describeRegions()
-                      ->connectTimeout(20)
-                      ->timeout(25);
+                      ->connectTimeout(60)
+                      ->timeout(65);
 
         $result = $request->request();
         self::assertArrayHasKey('DdsRegion', $result['Regions']);

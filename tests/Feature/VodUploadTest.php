@@ -34,18 +34,18 @@ class VodUploadTest extends TestCase
         $request1 = AlibabaCloud::vod()
                                 ->v20170321()
                                 ->deleteImage()
-                                ->connectTimeout(30)
-                                ->timeout(35);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Vod::v20170321()
                        ->deleteImage()
-                       ->connectTimeout(30)
-                       ->timeout(35);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         $request3 = (new Vod())->v20170321()
                                ->deleteImage()
-                               ->connectTimeout(30)
-                               ->timeout(35);
+                               ->connectTimeout(60)
+                               ->timeout(65);
 
         self::assertInstanceOf(DeleteImage::class, $request1);
         self::assertInstanceOf(DeleteImage::class, $request2);
@@ -70,8 +70,8 @@ class VodUploadTest extends TestCase
                      ->withDescription('Description')
                      ->withCoverURL('CoverURL')
                      ->withTags('tag')
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('UploadAddress', $result);
@@ -95,8 +95,8 @@ class VodUploadTest extends TestCase
         $result = Vod::v20170321()
                      ->refreshUploadVideo()
                      ->withVideoId($videoId)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('UploadAddress', $result);
@@ -118,8 +118,8 @@ class VodUploadTest extends TestCase
                      ->withImageType('cover')
                      ->withImageExt('png')
                      ->withDescription('Description')
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('ImageId', $result);
@@ -143,8 +143,8 @@ class VodUploadTest extends TestCase
         $result = Vod::v20170321()
                      ->getImageInfo()
                      ->withImageId($imageId)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('ImageInfo', $result);
@@ -169,8 +169,8 @@ class VodUploadTest extends TestCase
                      ->deleteImage()
                      ->withDeleteImageType('ImageId')
                      ->withImageIds($imageId)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('RequestId', $result);
@@ -192,8 +192,8 @@ class VodUploadTest extends TestCase
                      ->withBusinessType('watermark')
                      ->withMediaExt('gif')
                      ->withTitle('Title')
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('UploadAddress', $result);
@@ -221,8 +221,8 @@ class VodUploadTest extends TestCase
                      ->uploadMediaByURL()
                      ->withUploadURLs($url)
                      ->withUploadMetadatas(json_encode($uploadMetadataList))
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('JobId', $result['UploadJobs'][0]);
@@ -250,8 +250,8 @@ class VodUploadTest extends TestCase
         $result = Vod::v20170321()
                      ->registerMedia()
                      ->withRegisterMetadatas(json_encode($metaDataArray))
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('JobId', $result['UploadJobs'][0]);
@@ -282,8 +282,8 @@ class VodUploadTest extends TestCase
         $result = Vod::v20170321()
                      ->getURLUploadInfos()
                      ->withUploadURLs(implode(',', $uploadURLs))
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('URLUploadInfoList', $result);

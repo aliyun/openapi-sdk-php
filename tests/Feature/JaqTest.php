@@ -33,13 +33,13 @@ class JaqTest extends TestCase
         $request1 = AlibabaCloud::jaq()
                                 ->v20161123()
                                 ->afsAppCheck()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Jaq::v20161123()
                        ->afsAppCheck()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(AfsAppCheck::class, $request1);
         self::assertInstanceOf(AfsAppCheck::class, $request2);

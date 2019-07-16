@@ -38,18 +38,18 @@ class CCCTest extends TestCase
         $request1 = AlibabaCloud::cCC()
                                 ->v20170705()
                                 ->listPhoneNumbers()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = CCC::v20170705()
                        ->listPhoneNumbers()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         $request3 = (new CCC())->v20170705()
                                ->listPhoneNumbers()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+                               ->connectTimeout(60)
+                               ->timeout(65);
 
         self::assertInstanceOf(ListPhoneNumbers::class, $request1);
         self::assertInstanceOf(ListPhoneNumbers::class, $request2);
@@ -68,8 +68,8 @@ class CCCTest extends TestCase
                ->listPhoneNumbers()
                ->host('ccc.cn-shanghai.aliyuncs.com')
                ->withInstanceId('id')
-               ->connectTimeout(20)
-               ->timeout(25)
+               ->connectTimeout(60)
+               ->timeout(65)
                ->request();
         } catch (ServerException $e) {
             $result = $e->getResult();

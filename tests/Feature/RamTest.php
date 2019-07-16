@@ -35,13 +35,13 @@ class RamTest extends TestCase
         $request1 = AlibabaCloud::ram()
                                 ->v20150501()
                                 ->listAccessKeys()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Ram::v20150501()
                        ->listAccessKeys()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(ListAccessKeys::class, $request1);
         self::assertInstanceOf(ListAccessKeys::class, $request2);
@@ -59,8 +59,8 @@ class RamTest extends TestCase
                      ->options([
                                    'verify' => false,
                                ])
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertEquals(
@@ -97,8 +97,8 @@ class RamTest extends TestCase
 ],
 "Version": "1"
 }')
-           ->connectTimeout(20)
-           ->timeout(25)
+           ->connectTimeout(60)
+           ->timeout(65)
            ->request();
     }
 
@@ -129,8 +129,8 @@ class RamTest extends TestCase
 ],
 "Version": "1"
 }')
-           ->connectTimeout(20)
-           ->timeout(25)
+           ->connectTimeout(60)
+           ->timeout(65)
            ->request();
     }
 
@@ -150,8 +150,8 @@ class RamTest extends TestCase
            ->withPolicyType('Custom')
            ->withPolicyName('EcsRamRolePolicyTest')
            ->withRoleName('EcsRamRoleTest')
-           ->connectTimeout(20)
-           ->timeout(25)
+           ->connectTimeout(60)
+           ->timeout(65)
            ->request();
     }
 
@@ -170,8 +170,8 @@ class RamTest extends TestCase
                      ])
            ->withRamRoleName('EcsRamRoleTest')
            ->withInstanceIds('i-bXXXXXXXX')
-           ->connectTimeout(20)
-           ->timeout(25)
+           ->connectTimeout(60)
+           ->timeout(65)
            ->request();
     }
 }

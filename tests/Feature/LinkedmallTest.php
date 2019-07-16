@@ -34,13 +34,13 @@ class LinkedmallTest extends TestCase
         $request1 = AlibabaCloud::linkedmall()
                                 ->v20180116()
                                 ->modifyBizItems()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Linkedmall::v20180116()
                               ->modifyBizItems()
-                              ->connectTimeout(20)
-                              ->timeout(25);
+                              ->connectTimeout(60)
+                              ->timeout(65);
 
         self::assertInstanceOf(ModifyBizItems::class, $request1);
         self::assertInstanceOf(ModifyBizItems::class, $request2);
@@ -94,8 +94,8 @@ class LinkedmallTest extends TestCase
                             ->withSubBizId('SubBizId')
                             ->withItemList($items)
                             ->debug(false)
-                            ->connectTimeout(25)
-                            ->timeout(30)
+                            ->connectTimeout(60)
+                            ->timeout(65)
                             ->host('linkedmall.aliyuncs.com')
                             ->request();
         self::assertArrayHasKey('Message', $result);
