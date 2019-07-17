@@ -5,6 +5,8 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetTURNCredentials getTURNCredentials(array $options = [])
+ * @method ModifyCabInstance modifyCabInstance(array $options = [])
  * @method ListAgentDevices listAgentDevices(array $options = [])
  * @method AddAgentDevice addAgentDevice(array $options = [])
  * @method ModifyAgentDevice modifyAgentDevice(array $options = [])
@@ -172,9 +174,32 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
 
-    /** @var string */
-    public $serviceCode = 'ccc';
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class GetTURNCredentials extends Rpc
+{
+}
+
+/**
+ * @method string getMaxConcurrentConversation()
+ * @method $this withMaxConcurrentConversation($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getCallCenterInstanceId()
+ * @method $this withCallCenterInstanceId($value)
+ * @method string getInstanceDescription()
+ * @method $this withInstanceDescription($value)
+ */
+class ModifyCabInstance extends Rpc
+{
 }
 
 /**

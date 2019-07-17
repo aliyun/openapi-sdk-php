@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.40 - 2019-7-17
+- Add a lot of new API.
+
+
 ## 1.7.39 - 2019-7-14
 - Modify DBS API DescribeBackupPlanList.
 
