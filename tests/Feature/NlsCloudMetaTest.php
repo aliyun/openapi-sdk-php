@@ -34,13 +34,13 @@ class NlsCloudMetaTest extends TestCase
         $request1 = AlibabaCloud::nlsCloudMeta()
                                 ->v20180518()
                                 ->createToken()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = NlsCloudMeta::v20180518()
                                 ->createToken()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         self::assertInstanceOf(CreateToken::class, $request1);
         self::assertInstanceOf(CreateToken::class, $request2);
@@ -56,8 +56,8 @@ class NlsCloudMetaTest extends TestCase
         $result = NlsCloudMeta::v20180518()
                               ->createToken()
                               ->host('nls-meta.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
+                              ->connectTimeout(60)
+                              ->timeout(65)
                               ->request();
         self::assertArrayHasKey('NlsRequestId', $result);
     }
@@ -75,8 +75,8 @@ class NlsCloudMetaTest extends TestCase
                               ->method('POST')
                               ->action('CreateToken')
                               ->host('nls-meta.cn-shanghai.aliyuncs.com')
-                              ->connectTimeout(20)
-                              ->timeout(25)
+                              ->connectTimeout(60)
+                              ->timeout(65)
                               ->request();
         self::assertArrayHasKey('NlsRequestId', $result);
     }

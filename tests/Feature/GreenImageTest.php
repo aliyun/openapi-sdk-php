@@ -35,14 +35,14 @@ class GreenImageTest extends TestCase
                                 ->v20180509()
                                 ->imageSyncScan()
                                 ->host('green.cn-shanghai.aliyuncs.com')
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Green::v20180509()
                          ->imageSyncScan()
                          ->host('green.cn-shanghai.aliyuncs.com')
-                         ->connectTimeout(20)
-                         ->timeout(25);
+                         ->connectTimeout(60)
+                         ->timeout(65);
 
         self::assertInstanceOf(ImageSyncScan::class, $request1);
         self::assertInstanceOf(ImageSyncScan::class, $request2);
@@ -75,8 +75,8 @@ class GreenImageTest extends TestCase
                                       'scenes' => ['porn', 'terrorism'],
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertEquals('porn', $result['data'][0]['results'][0]['scene']);
@@ -105,8 +105,8 @@ class GreenImageTest extends TestCase
                                       'scenes' => ['porn', 'terrorism'],
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
@@ -134,8 +134,8 @@ class GreenImageTest extends TestCase
                                       $taskId,
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);

@@ -35,13 +35,13 @@ class EcsTest extends TestCase
         $request1 = AlibabaCloud::ecs()
                                 ->v20140526()
                                 ->describeRegions()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Ecs::v20140526()
                        ->describeRegions()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DescribeRegions::class, $request1);
         self::assertInstanceOf(DescribeRegions::class, $request2);
@@ -56,8 +56,8 @@ class EcsTest extends TestCase
     {
         $result = Ecs::v20140526()
                      ->describeRegions()
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
         self::assertArrayHasKey('Region', $result['Regions']);
     }
@@ -70,8 +70,8 @@ class EcsTest extends TestCase
     {
         $result = EcsVersion::v20140526()
                             ->describeRegions()
-                            ->connectTimeout(20)
-                            ->timeout(25)
+                            ->connectTimeout(60)
+                            ->timeout(65)
                             ->request();
 
         self::assertArrayHasKey('Region', $result['Regions']);

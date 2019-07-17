@@ -35,14 +35,14 @@ class GreenOCRTest extends TestCase
                                 ->v20180509()
                                 ->imageSyncScan()
                                 ->host('green.cn-shanghai.aliyuncs.com')
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Green::v20180509()
                          ->imageSyncScan()
                          ->host('green.cn-shanghai.aliyuncs.com')
-                         ->connectTimeout(20)
-                         ->timeout(25);
+                         ->connectTimeout(60)
+                         ->timeout(65);
 
         self::assertInstanceOf(ImageSyncScan::class, $request1);
         self::assertInstanceOf(ImageSyncScan::class, $request2);
@@ -69,8 +69,8 @@ class GreenOCRTest extends TestCase
                                       'extras' => [['card' => 'id-card-front']],
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertEquals('ocr', $result['data'][0]['results'][0]['scene']);

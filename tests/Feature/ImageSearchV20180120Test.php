@@ -34,13 +34,13 @@ class ImageSearchV20180120Test extends TestCase
         $request1 = AlibabaCloud::imageSearch()
                                 ->v20180120()
                                 ->addItem()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = ImageSearch::v20180120()
                                ->addItem()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+                               ->connectTimeout(60)
+                               ->timeout(65);
         self::assertInstanceOf(AddItem::class, $request1);
         self::assertInstanceOf(AddItem::class, $request2);
         self::assertEquals($request1, $request2);
@@ -59,8 +59,8 @@ class ImageSearchV20180120Test extends TestCase
                              ->withCustContent('{"key":"value"}')
                              ->withItemId('1234')
                              ->addPicture('picture', file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                             ->connectTimeout(30)
-                             ->timeout(35)
+                             ->connectTimeout(60)
+                             ->timeout(65)
                              ->request();
 
         self::assertArrayHasKey('Message', $result);
@@ -80,8 +80,8 @@ class ImageSearchV20180120Test extends TestCase
                              ->withStart(0)
                              ->withCateId('0')
                              ->withSearchPicture(file_get_contents(__DIR__ . '/ImageSearch.jpg'))
-                             ->connectTimeout(30)
-                             ->timeout(35)
+                             ->connectTimeout(60)
+                             ->timeout(65)
                              ->request();
 
         self::assertArrayHasKey('Message', $result);
@@ -99,8 +99,8 @@ class ImageSearchV20180120Test extends TestCase
                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
                              ->withItemId('1234')
                              ->addPicture('picture')
-                             ->connectTimeout(30)
-                             ->timeout(35)
+                             ->connectTimeout(60)
+                             ->timeout(65)
                              ->request();
 
         self::assertArrayHasKey('Message', $result);

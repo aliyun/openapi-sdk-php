@@ -34,13 +34,13 @@ class VodPlayTest extends TestCase
         $request1 = AlibabaCloud::vod()
                                 ->v20170321()
                                 ->deleteImage()
-                                ->connectTimeout(30)
-                                ->timeout(35);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Vod::v20170321()
                        ->deleteImage()
-                       ->connectTimeout(30)
-                       ->timeout(35);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DeleteImage::class, $request1);
         self::assertInstanceOf(DeleteImage::class, $request2);
@@ -63,8 +63,8 @@ class VodPlayTest extends TestCase
                      ->withDescription('Description')
                      ->withCoverURL('CoverURL')
                      ->withTags('tag')
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('UploadAddress', $result);
@@ -91,8 +91,8 @@ class VodPlayTest extends TestCase
                      ->getPlayInfo()
                      ->withVideoId($videoId)
                      ->withAuthTimeout(3600 * 24)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('VideoMeta', $result);
@@ -117,8 +117,8 @@ class VodPlayTest extends TestCase
                      ->getVideoPlayAuth()
                      ->withVideoId($videoId)
                      ->withAuthInfoTimeout(3600 * 24)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('VideoMeta', $result);

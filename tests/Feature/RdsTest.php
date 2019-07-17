@@ -34,13 +34,13 @@ class RdsTest extends TestCase
         $request1 = AlibabaCloud::rds()
                                 ->v20140815()
                                 ->deleteDatabase()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Rds::v20140815()
                        ->deleteDatabase()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DeleteDatabase::class, $request1);
         self::assertInstanceOf(DeleteDatabase::class, $request2);
@@ -57,8 +57,8 @@ class RdsTest extends TestCase
                ->deleteDatabase()
                ->withDBInstanceId(\time())
                ->withDBName('name')
-               ->connectTimeout(20)
-               ->timeout(25)
+               ->connectTimeout(60)
+               ->timeout(65)
                ->request();
         } catch (ServerException $e) {
             self::assertEquals(

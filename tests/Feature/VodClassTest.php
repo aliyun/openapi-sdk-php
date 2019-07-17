@@ -34,13 +34,13 @@ class VodClassTest extends TestCase
         $request1 = AlibabaCloud::vod()
                                 ->v20170321()
                                 ->deleteImage()
-                                ->connectTimeout(30)
-                                ->timeout(35);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Vod::v20170321()
                        ->deleteImage()
-                       ->connectTimeout(30)
-                       ->timeout(35);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DeleteImage::class, $request1);
         self::assertInstanceOf(DeleteImage::class, $request2);
@@ -60,8 +60,8 @@ class VodClassTest extends TestCase
                      ->addCategory()
                      ->withCateName('name')
                      ->withParentId('')
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('Category', $result);
@@ -86,8 +86,8 @@ class VodClassTest extends TestCase
                      ->updateCategory()
                      ->withCateId($cateId)
                      ->withCateName('new name')
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('RequestId', $result);
@@ -111,8 +111,8 @@ class VodClassTest extends TestCase
         $result = Vod::v20170321()
                      ->getCategories()
                      ->withCateId($cateId)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('Category', $result);
@@ -137,8 +137,8 @@ class VodClassTest extends TestCase
         $result = Vod::v20170321()
                      ->deleteCategory()
                      ->withCateId($cateId)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('RequestId', $result);
@@ -146,8 +146,8 @@ class VodClassTest extends TestCase
         $result = Vod::v20170321()
                      ->getCategories()
                      ->withCateId($cateId)
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('Category', $result);

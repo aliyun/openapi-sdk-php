@@ -36,8 +36,8 @@ class GreenVoiceTest extends TestCase
                                ->v20180509()
                                ->voiceAsyncScan()
                                ->host('green.cn-shanghai.aliyuncs.com')
-                               ->connectTimeout(20)
-                               ->timeout(25);
+                               ->connectTimeout(60)
+                               ->timeout(65);
 
         self::assertInstanceOf(VoiceAsyncScan::class, $request);
     }
@@ -63,8 +63,8 @@ class GreenVoiceTest extends TestCase
                                       'scenes' => ['antispam'],
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
@@ -92,8 +92,8 @@ class GreenVoiceTest extends TestCase
                                       $taskId,
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);

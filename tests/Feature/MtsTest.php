@@ -34,13 +34,13 @@ class MtsTest extends TestCase
         $request1 = AlibabaCloud::mts()
                                 ->v20140618()
                                 ->queryFpImportResult()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Mts::v20140618()
                        ->queryFpImportResult()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(QueryFpImportResult::class, $request1);
         self::assertInstanceOf(QueryFpImportResult::class, $request2);
@@ -56,8 +56,8 @@ class MtsTest extends TestCase
         $result = Mts::v20140618()
                      ->queryFpImportResult()
                      ->format('JSON')
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
         self::assertArrayHasKey('PageInfo', $result);
     }

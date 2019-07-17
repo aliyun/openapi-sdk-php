@@ -48,8 +48,10 @@ class AirecTest extends TestCase
                                   'query' => [
                                       'UserId'      => 0,
                                       'ReturnCount' => 5,
-                                  ]
+                                  ],
                               ])
+                    ->connectTimeout(60)
+                    ->timeout(65)
                     ->withInstanceId('airec-cn-xxxxxxx')
                     ->request();
     }
@@ -69,6 +71,8 @@ class AirecTest extends TestCase
              ->withUserId(0)
              ->withReturnCount(5)
              ->debug(true)
+             ->connectTimeout(60)
+             ->timeout(65)
              ->request();
     }
 }

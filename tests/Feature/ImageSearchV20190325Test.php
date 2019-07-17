@@ -34,13 +34,13 @@ class ImageSearchV20190325Test extends TestCase
         $request1 = AlibabaCloud::imageSearch()
                                 ->v20190325()
                                 ->addImage()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = ImageSearch::v20190325()
                                ->addImage()
-                               ->connectTimeout(20)
-                               ->timeout(25);
+                               ->connectTimeout(60)
+                               ->timeout(65);
         self::assertInstanceOf(AddImage::class, $request1);
         self::assertInstanceOf(AddImage::class, $request2);
         self::assertEquals($request1, $request2);
@@ -62,8 +62,8 @@ class ImageSearchV20190325Test extends TestCase
                              ->withProductId('1234')
                              ->withPicName('test')
                              ->withPicContent($encodePicContent)
-                             ->connectTimeout(30)
-                             ->timeout(35)
+                             ->connectTimeout(60)
+                             ->timeout(65)
                              ->request();
 
         self::assertArrayHasKey('Message', $result);
@@ -86,8 +86,8 @@ class ImageSearchV20190325Test extends TestCase
                              ->withPicContent($encodePicContent)
                              ->withStart(0)
                              ->withNum(10)
-                             ->connectTimeout(30)
-                             ->timeout(35)
+                             ->connectTimeout(60)
+                             ->timeout(65)
                              ->request();
 
         self::assertArrayHasKey('Auctions', $result);
@@ -104,8 +104,8 @@ class ImageSearchV20190325Test extends TestCase
                              ->contentType('application/x-www-form-urlencoded; charset=UTF-8')
                              ->withInstanceName(getenv('IMAGE_SEARCH_INSTANCE_NAME'))
                              ->withProductId('1234')
-                             ->connectTimeout(30)
-                             ->timeout(35)
+                             ->connectTimeout(60)
+                             ->timeout(65)
                              ->request();
 
         self::assertArrayHasKey('Message', $result);

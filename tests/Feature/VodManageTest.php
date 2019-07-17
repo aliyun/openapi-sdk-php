@@ -34,13 +34,13 @@ class VodManageTest extends TestCase
         $request1 = AlibabaCloud::vod()
                                 ->v20170321()
                                 ->deleteImage()
-                                ->connectTimeout(30)
-                                ->timeout(35);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Vod::v20170321()
                        ->deleteImage()
-                       ->connectTimeout(30)
-                       ->timeout(35);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(DeleteImage::class, $request1);
         self::assertInstanceOf(DeleteImage::class, $request2);
@@ -63,8 +63,8 @@ class VodManageTest extends TestCase
                      ->withDescription('Description')
                      ->withCoverURL('CoverURL')
                      ->withTags('tag')
-                     ->connectTimeout(30)
-                     ->timeout(35)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('UploadAddress', $result);
@@ -89,6 +89,8 @@ class VodManageTest extends TestCase
                      ->withPageSize(10)
                      ->withSearchType('video')
                      ->withSortBy('CreationTime:Desc')
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('MediaList', $result);
@@ -108,6 +110,8 @@ class VodManageTest extends TestCase
         $result = Vod::v20170321()
                      ->getVideoInfos()
                      ->withVideoIds('e67e761ec04342cd9ca5149c74xxxxxx,b19439abb9a94374b7f4d45f69xxxxxx')
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('NonExistVideoIds', $result);
@@ -136,6 +140,8 @@ class VodManageTest extends TestCase
                      ->withCoverURL('http://img.alicdn.com/tps/TB1qnJ1PVXXXXXCXXXXXXXXXXXX-700-700.png')
                      ->withTags('tag1,tag2')
                      ->withCateId(0)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('RequestId', $result);
@@ -159,6 +165,8 @@ class VodManageTest extends TestCase
         $result = Vod::v20170321()
                      ->getVideoInfo()
                      ->withVideoId($videoId)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('Video', $result);
@@ -184,6 +192,8 @@ class VodManageTest extends TestCase
                      ->getMezzanineInfo()
                      ->withVideoId($videoId)
                      ->withAuthTimeout(3600 * 5)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('Mezzanine', $result);
@@ -206,6 +216,8 @@ class VodManageTest extends TestCase
                      ->getVideoList()
                      ->withPageNo(1)
                      ->withPageSize(20)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('VideoList', $result);
@@ -235,6 +247,8 @@ class VodManageTest extends TestCase
         $result = Vod::v20170321()
                      ->updateVideoInfos()
                      ->withUpdateContent(json_encode($updateContentArray))
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('NonExistVideoIds', $result);
@@ -259,6 +273,8 @@ class VodManageTest extends TestCase
         $result = Vod::v20170321()
                      ->deleteVideo()
                      ->withVideoIds('abc123')
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('RequestId', $result);
@@ -284,6 +300,8 @@ class VodManageTest extends TestCase
            ->deleteStream()
            ->withVideoId($videoId)
            ->withJobIds($videoId)
+           ->connectTimeout(60)
+           ->timeout(65)
            ->request();
     }
 
@@ -304,6 +322,8 @@ class VodManageTest extends TestCase
                      ->deleteMezzanines()
                      ->withVideoIds($videoId)
                      ->withForce(false)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('UnRemoveableVideoIds', $result);
@@ -335,6 +355,8 @@ class VodManageTest extends TestCase
         $result = Vod::v20170321()
                      ->updateImageInfos()
                      ->withUpdateContent(json_encode($updateContentArray))
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('NonExistImageIds', $result);

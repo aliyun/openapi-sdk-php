@@ -35,8 +35,8 @@ class GreenTextTest extends TestCase
                                ->v20180509()
                                ->textScan()
                                ->host('green.cn-shanghai.aliyuncs.com')
-                               ->connectTimeout(20)
-                               ->timeout(25);
+                               ->connectTimeout(60)
+                               ->timeout(65);
 
         self::assertInstanceOf(TextScan::class, $request);
     }
@@ -63,8 +63,8 @@ class GreenTextTest extends TestCase
                                       'scenes' => ['antispam'],
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('taskId', $result['data'][0]);
@@ -94,8 +94,8 @@ class GreenTextTest extends TestCase
                                       'label'   => 'spam',
                                   ])
                        ->host('green.cn-shanghai.aliyuncs.com')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
 
         self::assertArrayHasKey('msg', $result);

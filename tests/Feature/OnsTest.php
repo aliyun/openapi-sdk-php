@@ -34,13 +34,13 @@ class OnsTest extends TestCase
         $request1 = AlibabaCloud::ons()
                                 ->v20170918()
                                 ->onsRegionList()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Ons::v20170918()
                        ->onsRegionList()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(OnsRegionList::class, $request1);
         self::assertInstanceOf(OnsRegionList::class, $request2);
@@ -57,8 +57,8 @@ class OnsTest extends TestCase
                      ->onsRegionList()
                      ->withOnsRegionId('cn-hangzhou')
                      ->withPreventCache('20190101121212111')
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertArrayHasKey('Data', $result);

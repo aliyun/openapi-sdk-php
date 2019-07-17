@@ -34,13 +34,13 @@ class NlsFiletransTest extends TestCase
         $request1 = AlibabaCloud::nlsFiletrans()
                                 ->v20180817()
                                 ->submitTask()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = NlsFiletrans::v20180817()
                                 ->submitTask()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         self::assertInstanceOf(SubmitTask::class, $request1);
         self::assertInstanceOf(SubmitTask::class, $request2);
@@ -61,8 +61,8 @@ class NlsFiletransTest extends TestCase
                                                          'file_link' => 'https://aliyun-nls.oss-cn-hangzhou.aliyuncs.com/asr/fileASR/examples/nls-sample-16k.wav',
                                                      ]))
                               ->withDebug('true')
-                              ->connectTimeout(20)
-                              ->timeout(25)
+                              ->connectTimeout(60)
+                              ->timeout(65)
                               ->request();
 
         self::assertEquals('REQUEST_EMPTY_APPKEY_VALUE', $result['StatusText']);
@@ -79,8 +79,8 @@ class NlsFiletransTest extends TestCase
                               ->host('filetrans.cn-shanghai.aliyuncs.com')
                               ->withTaskId('FILE_TRANS_TASK_EXPIRED')
                               ->withDebug('true')
-                              ->connectTimeout(20)
-                              ->timeout(25)
+                              ->connectTimeout(60)
+                              ->timeout(65)
                               ->request();
 
         self::assertEquals('REQUEST_INVALID_TASK_ID', $result['StatusText']);
@@ -107,8 +107,8 @@ class NlsFiletransTest extends TestCase
                                                 'Debug' => 'true',
                                             ],
                                         ])
-                              ->connectTimeout(35)
-                              ->timeout(40)
+                              ->connectTimeout(60)
+                              ->timeout(65)
                               ->request();
 
         self::assertEquals('REQUEST_EMPTY_APPKEY_VALUE', $result['StatusText']);

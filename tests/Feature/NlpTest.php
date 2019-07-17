@@ -36,8 +36,8 @@ class NlpTest extends TestCase
                                              'lang' => 'ZH',
                                              'text' => 'Iphone专用数据线',
                                          ])
-                              ->connectTimeout(20)
-                              ->timeout(25)
+                              ->connectTimeout(60)
+                              ->timeout(65)
                               ->client('content')
                               ->request();
         self::assertEquals('Iphone', $result['data'][0]['word']);
@@ -48,13 +48,13 @@ class NlpTest extends TestCase
         $request1 = AlibabaCloud::nlp()
                                 ->v20180408()
                                 ->wordSegment()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Nlp::v20180408()
                        ->wordSegment()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(WordSegment::class, $request1);
         self::assertInstanceOf(WordSegment::class, $request2);
@@ -80,8 +80,8 @@ class NlpTest extends TestCase
                                     'text' => 'Iphone专用数据线',
                                 ])
                      ->client('content')
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertEquals('Iphone', $result['data'][0]['word']);
@@ -108,8 +108,8 @@ class NlpTest extends TestCase
                                    ])
                      ->withDomain('general')
                      ->client('content')
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertEquals('Iphone', $result['data'][0]['word']);
@@ -132,8 +132,8 @@ class NlpTest extends TestCase
                                    ])
                      ->withDomain('general')
                      ->client('content')
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
 
         self::assertEquals('Iphone', $result['data'][0]['word']);

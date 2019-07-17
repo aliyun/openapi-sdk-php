@@ -34,13 +34,13 @@ class IotTest extends TestCase
         $request1 = AlibabaCloud::iot()
                                 ->v20180120()
                                 ->batchGetDeviceState()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Iot::v20180120()
                        ->batchGetDeviceState()
-                       ->connectTimeout(20)
-                       ->timeout(25);
+                       ->connectTimeout(60)
+                       ->timeout(65);
 
         self::assertInstanceOf(BatchGetDeviceState::class, $request1);
         self::assertInstanceOf(BatchGetDeviceState::class, $request2);
@@ -57,8 +57,8 @@ class IotTest extends TestCase
                      ->batchGetDeviceState()
                      ->withIotInstanceId('id')
                      ->withProductKey('key')
-                     ->connectTimeout(20)
-                     ->timeout(25)
+                     ->connectTimeout(60)
+                     ->timeout(65)
                      ->request();
         self::assertEquals('物联网平台实例不存在', $result['ErrorMessage']);
     }

@@ -34,18 +34,18 @@ class AlimtTest extends TestCase
         $request1 = AlibabaCloud::alimt()
                                 ->v20181012()
                                 ->translateECommerce()
-                                ->connectTimeout(20)
-                                ->timeout(25);
+                                ->connectTimeout(60)
+                                ->timeout(65);
 
         $request2 = Alimt::v20181012()
                          ->translateECommerce()
-                         ->connectTimeout(20)
-                         ->timeout(25);
+                         ->connectTimeout(60)
+                         ->timeout(65);
 
         $request3 = (new Alimt())->v20181012()
                                  ->translateECommerce()
-                                 ->connectTimeout(20)
-                                 ->timeout(25);
+                                 ->connectTimeout(60)
+                                 ->timeout(65);
 
         self::assertInstanceOf(TranslateECommerce::class, $request1);
         self::assertInstanceOf(TranslateECommerce::class, $request2);
@@ -68,8 +68,8 @@ class AlimtTest extends TestCase
                        ->withSourceText('book')
                        ->withFormatType('text')
                        ->withTargetLanguage('zh')
-                       ->connectTimeout(20)
-                       ->timeout(25)
+                       ->connectTimeout(60)
+                       ->timeout(65)
                        ->request();
         self::assertArrayHasKey('Data', $result);
     }
