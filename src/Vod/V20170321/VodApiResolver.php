@@ -1328,8 +1328,8 @@ class CreateUploadAttachedMedia extends Rpc
  * @method $this withOwnerId($value)
  * @method string getRegisterMetadatas()
  * @method $this withRegisterMetadatas($value)
- * @method string getWorkFlowId()
- * @method $this withWorkFlowId($value)
+ * @method string getWorkflowId()
+ * @method $this withWorkflowId($value)
  */
 class RegisterMedia extends Rpc
 {
@@ -1526,20 +1526,10 @@ class SetAuditSecurityIp extends Rpc
 }
 
 /**
- * @method string getUserData()
- * @method $this withUserData($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getTemplateGroupId()
- * @method $this withTemplateGroupId($value)
- * @method string getUploadMetadatas()
- * @method $this withUploadMetadatas($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getUploadURLs()
- * @method $this withUploadURLs($value)
- * @method string getAppId()
- * @method $this withAppId($value)
  * @method string getMessageCallback()
  * @method $this withMessageCallback($value)
  * @method string getOwnerId()
@@ -1548,6 +1538,18 @@ class SetAuditSecurityIp extends Rpc
  * @method $this withPriority($value)
  * @method string getStorageLocation()
  * @method $this withStorageLocation($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getTemplateGroupId()
+ * @method $this withTemplateGroupId($value)
+ * @method string getUploadMetadatas()
+ * @method $this withUploadMetadatas($value)
+ * @method string getUploadURLs()
+ * @method $this withUploadURLs($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getWorkflowId()
+ * @method $this withWorkflowId($value)
  */
 class UploadMediaByURL extends Rpc
 {
@@ -1800,6 +1802,8 @@ class ListAIJob extends Rpc
 /**
  * @method string getUserData()
  * @method $this withUserData($value)
+ * @method string getInput()
+ * @method $this withInput($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getTypes()
