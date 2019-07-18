@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.42 - 2019-7-18
+- Generated 2016-06-07 for `cr`.
+
+
 ## 1.7.41 - 2019-7-18
 - Add a new field named Input to SubmitAIJob api request to set the input file of AI job.
 - Change the field MediaId of SubmitAIJob api to non-mandatory.
