@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.7.43 - 2019-7-19
+- QueryMonthlyBillResponse add roundDownDiscount.
+- QueryBillResponse add roundDownDiscount.
+- QueryInstanceBillResponse add item.
+
+
 ## 1.7.42 - 2019-7-18
 - Generated 2016-06-07 for `cr`.
 
