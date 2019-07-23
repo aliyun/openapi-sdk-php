@@ -5,6 +5,8 @@ namespace AlibabaCloud\Polardb\V20170801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method UnlockDBClusterDeletion unlockDBClusterDeletion(array $options = [])
+ * @method LockDBClusterDeletion lockDBClusterDeletion(array $options = [])
  * @method DescribeDBClusterMigration describeDBClusterMigration(array $options = [])
  * @method CloseDBClusterMigration closeDBClusterMigration(array $options = [])
  * @method ModifyDBClusterMigration modifyDBClusterMigration(array $options = [])
@@ -70,6 +72,38 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'polardb';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UnlockDBClusterDeletion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class LockDBClusterDeletion extends Rpc
+{
 }
 
 /**
@@ -998,6 +1032,12 @@ class DeleteDBCluster extends Rpc
  * @method $this withZoneId($value)
  * @method string getDBVersion()
  * @method $this withDBVersion($value)
+ * @method string getCreationOption()
+ * @method $this withCreationOption($value)
+ * @method string getSourceResourceId()
+ * @method $this withSourceResourceId($value)
+ * @method string getCloneDataPoint()
+ * @method $this withCloneDataPoint($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  */
