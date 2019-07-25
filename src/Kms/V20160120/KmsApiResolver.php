@@ -5,6 +5,7 @@ namespace AlibabaCloud\Kms\V20160120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeService describeService(array $options = [])
  * @method UpdateAlias updateAlias(array $options = [])
  * @method UntagResource untagResource(array $options = [])
  * @method TagResource tagResource(array $options = [])
@@ -48,6 +49,10 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'kms';
+}
+
+class DescribeService extends Rpc
+{
 }
 
 /**
@@ -237,6 +242,8 @@ class Decrypt extends Rpc
 }
 
 /**
+ * @method string getProtectionLevel()
+ * @method $this withProtectionLevel($value)
  * @method string getKeyUsage()
  * @method $this withKeyUsage($value)
  * @method string getOrigin()

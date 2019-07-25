@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.7.46 - 2019-7-25
+- Api createKey add optional parameter `ProtectionLevel`.
+- Api describeKey add a field `ProtectionLevel` in the response.
+- Add Api `DescribeService`.
+
+
 ## 1.7.45 - 2019-7-25
 - App-related actions support tag authentication.
 
