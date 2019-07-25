@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.45 - 2019-7-25
+- App-related actions support tag authentication.
+
+
 ## 1.7.44 - 2019-7-23
 - Supported CreationOption of CreateDBCluster with `CloneFromPolarDB `,`CloneFromRDS`,`MigrationFromRDS`.
 

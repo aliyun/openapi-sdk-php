@@ -5,6 +5,9 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method UntagResources untagResources(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
+ * @method TagResources tagResources(array $options = [])
  * @method ResetAppCode resetAppCode(array $options = [])
  * @method DescribeApp describeApp(array $options = [])
  * @method CreateIntranetDomain createIntranetDomain(array $options = [])
@@ -123,6 +126,138 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'apigateway';
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getResourceId()
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method array getTagKey()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+    public function withTagKey(array $tagKey)
+    {
+        $this->data['TagKey'] = $tagKey;
+        foreach ($tagKey as $i => $iValue) {
+            $this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method array getTag()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -683,16 +818,10 @@ class SetDomainCertificate extends Rpc
 /**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getCertificatePrivateKey()
- * @method $this withCertificatePrivateKey($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getCertificateName()
- * @method $this withCertificateName($value)
- * @method string getCertificateBody()
- * @method $this withCertificateBody($value)
  */
 class SetDomain extends Rpc
 {
@@ -865,9 +994,26 @@ class ModifySignature extends Rpc
  * @method $this withAppId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method array getTag()
  */
 class ModifyApp extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1191,9 +1337,26 @@ class DescribeAuthorizedApis extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method array getTag()
  */
 class DescribeAppSecurity extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1221,11 +1384,28 @@ class DescribeApps extends Rpc
  * @method $this withAppId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
 class DescribeAppAttributes extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1527,9 +1707,26 @@ class DeleteDomain extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method array getTag()
  */
 class DeleteApp extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
