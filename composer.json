@@ -78,6 +78,7 @@
         "alibabacloud/companyreg": "self.version",
         "alibabacloud/cr": "self.version",
         "alibabacloud/crm": "self.version",
+        "alibabacloud/cusanalyticsconline": "self.version",
         "alibabacloud/dataworkspublic": "self.version",
         "alibabacloud/dbs": "self.version",
         "alibabacloud/dcdn": "self.version",

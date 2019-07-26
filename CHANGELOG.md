@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.47 - 2019-7-26
+- Generated 2019-05-24 for `cusanalytic_sc_online`.
+
+
 ## 1.7.46 - 2019-7-25
 - Api createKey add optional parameter `ProtectionLevel`.
 - Api describeKey add a field `ProtectionLevel` in the response.
