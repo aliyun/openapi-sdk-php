@@ -137,6 +137,7 @@ namespace AlibabaCloud;
  * @method static Uis\Uis uis()
  * @method static Vod\Vod vod()
  * @method static Vpc\Vpc vpc()
+ * @method static Vs\Vs vs()
  * @method static WafOpenapi\WafOpenapi wafOpenapi()
  * @method static WelfareInner\WelfareInner welfareInner()
  * @method static Xspace\Xspace xspace()

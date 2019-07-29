@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.7.49 - 2019-7-29
+- Supported group API.
+- Supported device APIs.
+- Supported stream APIs.
+- Supported template APIs.
+- Supported record APIs.
+- Supported domain APIs.
+
+
 ## 1.7.48 - 2019-7-26
 - Generated 2019-05-24 for `cusanalytic_sc_online`.
 
