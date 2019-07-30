@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.51 - 2019-7-30
+- Suport ImportCredentials api.
+
+
 ## 1.7.50 - 2019-7-30
 - Suport ImportCredentials api.
 
