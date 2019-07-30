@@ -5,6 +5,7 @@ namespace AlibabaCloud\CSB\V20171118;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ImportCredentials importCredentials(array $options = [])
  * @method FindServiceStatisticalData findServiceStatisticalData(array $options = [])
  * @method GetInstance getInstance(array $options = [])
  * @method DeleteCasService deleteCasService(array $options = [])
@@ -65,7 +66,29 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     protected $scheme = 'https';
 
     /** @var string */
-    public $serviceCode = 'csb';
+    public $serviceCode = 'CSB';
+}
+
+/**
+ * @method string getData()
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
+ */
+class ImportCredentials extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
 }
 
 /**

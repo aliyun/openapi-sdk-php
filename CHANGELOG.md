@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.50 - 2019-7-30
+- Suport ImportCredentials api.
+
+
 ## 1.7.49 - 2019-7-29
 - Supported group API.
 - Supported device APIs.
