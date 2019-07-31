@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.52 - 2019-7-31
+- Endpoint auto route.
+
+
 ## 1.7.51 - 2019-7-30
 - Suport ImportCredentials api.
 
