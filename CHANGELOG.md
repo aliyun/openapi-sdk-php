@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.53 - 2019-8-2
+- SubscribeBillToOSSRequest add multAccountRelSubscribe, bucketOwnerId.
+- UnsubscribeBillToOSSRequest add multAccountRelSubscribe.
+
+
 ## 1.7.52 - 2019-7-31
 - Endpoint auto route.
 
