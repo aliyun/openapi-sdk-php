@@ -27,7 +27,7 @@ curl -sS https://getcomposer.org/installer | php
 php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 ```
 
-> 一些用户可能由于网络问题无法安装，可以尝试切换 Composer 镜像地址。
+> 一些用户可能由于网络问题无法安装，可以使用[阿里云 Composer 全量镜像](https://developer.aliyun.com/composer)。
 
 
 ## 下载使用 ZIP 文件
