@@ -1,45 +1,36 @@
-build: off
-shallow_clone: false
-platform:
-  - x64
-branches:
-  only:
-    - master
+build: false
+clone_depth: 5
 
-# Install PHP/Composer and set PATH
+environment:
+  # This sets the PHP version (from Chocolatey)
+  PHPCI_CHOCO_VERSION: 7.2.9
+  PHPCI_CACHE: C:\tools\phpci
+  PHPCI_PHP: C:\tools\phpci\php
+  PHPCI_COMPOSER: C:\tools\phpci\composer
+
+cache:
+  - '%PHPCI_CACHE% -> appveyor.yml'
+
+init:
+  - SET PATH=%PHPCI_PHP%;%PHPCI_COMPOSER%;%PATH%
+  - SET COMPOSER_HOME=%PHPCI_COMPOSER%\home
+  - SET COMPOSER_CACHE_DIR=%PHPCI_COMPOSER%\cache
+  - SET COMPOSER_NO_INTERACTION=1
+  - SET PHP=0
+  - SET ANSICON=121x90 (121x90)
+
 install:
-  - cinst -y curl
-  - SET PATH=C:\Program Files\curl;%PATH%
-  # Which is only needed by the test suite.
-  - cinst -y which
-  - SET PATH=C:\Program Files\which;%PATH%
-  # Install PHP per
-  - IF EXIST c:\tools\php (SET PHP=0) # Checks for the PHP install being cached
-  - ps: appveyor-retry cinst --params '""/InstallDir:C:\tools\php""' --ignore-checksums -y php --version ((choco search php --exact --all-versions -r | select-string -pattern $env:php_ver_target | sort { [version]($_ -split '\|' | select -last 1) } -Descending | Select-Object -first 1) -replace '[php|]','')
-  - cd c:\tools\php
-  - copy php.ini-production php.ini
-  - echo date.timezone="UTC" >> php.ini
-  - echo extension_dir=ext >> php.ini
-  - echo extension=php_openssl.dll >> php.ini
-  - echo extension=php_mbstring.dll >> php.ini
-  - echo extension=php_sockets.dll >> php.ini
-  - echo extension=php_curl.dll >> php.ini
-  # Set PATH for PHP
-  - SET PATH=C:\tools\php;%PATH%
-  # Back to working directory
+  - IF EXIST %PHPCI_CACHE% (SET PHP=1)
+  - IF %PHP%==0 cinst php -i -y --version %PHPCI_CHOCO_VERSION%  --params "/InstallDir:%PHPCI_PHP%"
+  - IF %PHP%==0 cinst composer -i -y --ia "/DEV=%PHPCI_COMPOSER%"
+  - php -v
+  - IF %PHP%==0 (composer --version) ELSE (composer self-update)
+  - echo extension_dir=ext >> C:\tools\phpci\php\php.ini
+  - echo extension=php_sockets.dll >> C:\tools\phpci\php\php.ini
+  - echo extension=php_curl.dll >> C:\tools\phpci\php\php.ini
   - cd %APPVEYOR_BUILD_FOLDER%
-  # Download Composer https://getcomposer.org/composer.phar
-  - php -r "readfile('http://getcomposer.org/installer');" | php
-  # Install dependencies via Composer
-  - appveyor-retry php composer.phar update --no-interaction --prefer-source --profile
-  # Set PATH for Composer'S bin
-  - SET PATH=%APPVEYOR_BUILD_FOLDER%;%APPVEYOR_BUILD_FOLDER%/vendor/bin;%PATH%
+  - composer install --prefer-dist --no-progress
 
 test_script:
-  - phpunit --colors=always
-
-# environment variables
-environment:
-  matrix:
-    - php_ver_target: 5.5
-    - php_ver_target: 7.0
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - vendor\bin\phpunit --colors=always
