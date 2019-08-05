@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.56 - 2019-8-5
+- GetOrderDetail add originalConfig param.
+
+
 ## 1.7.55 - 2019-8-5
 - GetOrderDetail add originalConfig param.
 
