@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.54 - 2019-8-5
+- Modify DBS API DescribeFullBackupList.
+
+
 ## 1.7.53 - 2019-8-2
 - SubscribeBillToOSSRequest add multAccountRelSubscribe, bucketOwnerId.
 - UnsubscribeBillToOSSRequest add multAccountRelSubscribe.
