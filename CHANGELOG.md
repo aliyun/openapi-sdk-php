@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.59 - 2019-8-6
+- Supported GetMediaMeta for IMM.
+
+
 ## 1.7.58 - 2019-8-6
 - Supported GetMediaMeta for IMM.
 
