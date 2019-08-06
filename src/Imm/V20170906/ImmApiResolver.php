@@ -5,6 +5,8 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetMediaMeta getMediaMeta(array $options = [])
+ * @method ListProjectAPIs listProjectAPIs(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
  * @method DetectImageBodies detectImageBodies(array $options = [])
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
@@ -119,6 +121,24 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imm';
+}
+
+/**
+ * @method string getMediaUri()
+ * @method $this withMediaUri($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ */
+class GetMediaMeta extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ */
+class ListProjectAPIs extends Rpc
+{
 }
 
 /**

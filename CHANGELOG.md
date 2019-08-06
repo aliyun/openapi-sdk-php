@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.57 - 2019-8-6
+- Supported GetMediaMeta for IMM.
+
+
 ## 1.7.56 - 2019-8-5
 - GetOrderDetail add originalConfig param.
 
