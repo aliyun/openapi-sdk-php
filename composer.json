@@ -151,6 +151,7 @@
         "alibabacloud/ros": "self.version",
         "alibabacloud/ram": "self.version",
         "alibabacloud/rds": "self.version",
+        "alibabacloud/retailcloud": "self.version",
         "alibabacloud/rtc": "self.version",
         "alibabacloud/saf": "self.version",
         "alibabacloud/sas": "self.version",

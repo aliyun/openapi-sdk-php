@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.62 - 2019-8-7
+- Generated 2018-03-13 for `retailcloud`.
+
+
 ## 1.7.61 - 2019-8-6
 - Supported GetMediaMeta for IMM.
 
