@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 1.7.64 - 2019-8-8
+- Add CreateStorageSet api to support storageSet.
+- Add DeleteStorageSet api to support storageSet.
+- Add ModifyStorageSetAttribute api to support storageSet.
+- Add DescribeStorageSets api to support storageSet.
+- Add DescribeStorageSetDetails api to support storageSet.
+- Add parameter StorageSetId,StorageSetPartitionNumber to api CreateDisk,RunInstances,CreateInstance support storageSet.
+- Add StorageSetId,StorageSetPartitionNumber with response of api DescribeDisks.
+- Add DescribeNetworkInterfaces to support filter by PrivateIpAddress.
+
+
 ## 1.7.63 - 2019-8-8
 - Group, Plugin support tag authentication.
 
