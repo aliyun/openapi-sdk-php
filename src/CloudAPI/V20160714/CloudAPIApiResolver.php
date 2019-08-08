@@ -37,7 +37,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SdkGenerateByGroup sdkGenerateByGroup(array $options = [])
  * @method SdkGenerateByApp sdkGenerateByApp(array $options = [])
  * @method DescribeApisByApp describeApisByApp(array $options = [])
- * @method SdkGenerate sdkGenerate(array $options = [])
  * @method DescribeApiStage describeApiStage(array $options = [])
  * @method DeleteApiStageVariable deleteApiStageVariable(array $options = [])
  * @method CreateApiStageVariable createApiStageVariable(array $options = [])
@@ -692,20 +691,6 @@ class DescribeApisByApp extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getLanguage()
- * @method $this withLanguage($value)
- */
-class SdkGenerate extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getStageId()
  * @method $this withStageId($value)
  */
@@ -1023,11 +1008,28 @@ class ModifyApp extends Rpc
  * @method $this withGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method array getTag()
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
 class ModifyApiGroup extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1271,6 +1273,9 @@ class DescribeDomain extends Rpc
  * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getEnableTagAuth()
+ * @method $this withEnableTagAuth($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  * @method string getPageNumber()
@@ -1278,6 +1283,22 @@ class DescribeDomain extends Rpc
  */
 class DescribeDeployedApis extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1385,6 +1406,8 @@ class DescribeApps extends Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
+ * @method string getEnableTagAuth()
+ * @method $this withEnableTagAuth($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
@@ -1501,6 +1524,9 @@ class DescribeApisBySignature extends Rpc
  * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getEnableTagAuth()
+ * @method $this withEnableTagAuth($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  * @method string getPageNumber()
@@ -1508,6 +1534,22 @@ class DescribeApisBySignature extends Rpc
  */
 class DescribeApis extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1565,6 +1607,9 @@ class DescribeApiHistory extends Rpc
  * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getEnableTagAuth()
+ * @method $this withEnableTagAuth($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
  * @method string getPageNumber()
@@ -1572,6 +1617,22 @@ class DescribeApiHistory extends Rpc
  */
 class DescribeApiGroups extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1579,9 +1640,26 @@ class DescribeApiGroups extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method array getTag()
  */
 class DescribeApiGroup extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1734,9 +1812,26 @@ class DeleteApp extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method array getTag()
  */
 class DeleteApiGroup extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1802,9 +1897,26 @@ class CreateSignature extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method array getTag()
  */
 class CreateApp extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -1816,11 +1928,28 @@ class CreateApp extends Rpc
  * @method $this withDescription($value)
  * @method string getSource()
  * @method $this withSource($value)
+ * @method array getTag()
  * @method string getGroupName()
  * @method $this withGroupName($value)
  */
 class CreateApiGroup extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
 }
 
 /**

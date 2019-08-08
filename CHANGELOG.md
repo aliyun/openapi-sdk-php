@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.63 - 2019-8-8
+- Group, Plugin support tag authentication.
+
+
 ## 1.7.62 - 2019-8-7
 - Generated 2018-03-13 for `retailcloud`.
 
