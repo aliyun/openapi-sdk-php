@@ -5,6 +5,10 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetTURNServerList getTURNServerList(array $options = [])
+ * @method PredictiveRecordFailure predictiveRecordFailure(array $options = [])
+ * @method PredictiveRecordSuccess predictiveRecordSuccess(array $options = [])
+ * @method DownloadAllTypeRecording downloadAllTypeRecording(array $options = [])
  * @method GetTURNCredentials getTURNCredentials(array $options = [])
  * @method ModifyCabInstance modifyCabInstance(array $options = [])
  * @method ListAgentDevices listAgentDevices(array $options = [])
@@ -179,6 +183,74 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ */
+class GetTURNServerList extends Rpc
+{
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getActualTime()
+ * @method $this withActualTime($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDispositionCode()
+ * @method $this withDispositionCode($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getCabInstanceId()
+ * @method $this withCabInstanceId($value)
+ * @method string getCabInstanceOwnerId()
+ * @method $this withCabInstanceOwnerId($value)
+ */
+class PredictiveRecordFailure extends Rpc
+{
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getCallType()
+ * @method $this withCallType($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getCabInstanceId()
+ * @method $this withCabInstanceId($value)
+ * @method string getCabInstanceOwnerId()
+ * @method $this withCabInstanceOwnerId($value)
+ */
+class PredictiveRecordSuccess extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getChannel()
+ * @method $this withChannel($value)
+ */
+class DownloadAllTypeRecording extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getUserName()
  * @method $this withUserName($value)
  */
@@ -325,6 +397,8 @@ class GetRecordOssUploadParam extends Rpc
 }
 
 /**
+ * @method string getIsVirtual()
+ * @method $this withIsVirtual($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method array getSkillGroupId()
@@ -575,8 +649,8 @@ class ListCallEventDetailByContactId extends Rpc
 }
 
 /**
- * @method string getContactFlowId()
- * @method $this withContactFlowId($value)
+ * @method string getRoutPoint()
+ * @method $this withRoutPoint($value)
  * @method string getCaller()
  * @method $this withCaller($value)
  * @method string getInstanceId()
@@ -585,6 +659,8 @@ class ListCallEventDetailByContactId extends Rpc
  * @method $this withProvider($value)
  * @method string getCallee()
  * @method $this withCallee($value)
+ * @method string getAnswerMode()
+ * @method $this withAnswerMode($value)
  */
 class DialEx extends Rpc
 {

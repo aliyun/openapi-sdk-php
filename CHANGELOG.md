@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.65 - 2019-8-9
+- Add a lot of new API.
+
+
 ## 1.7.64 - 2019-8-8
 - Add CreateStorageSet api to support storageSet.
 - Add DeleteStorageSet api to support storageSet.
