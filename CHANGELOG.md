@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.66 - 2019-8-12
+- Support Defect Face API.
+
+
 ## 1.7.65 - 2019-8-9
 - Add a lot of new API.
 

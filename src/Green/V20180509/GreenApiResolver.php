@@ -5,6 +5,7 @@ namespace AlibabaCloud\Green\V20180509;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DetectFace detectFace(array $options = [])
  * @method ListSimilarityImages listSimilarityImages(array $options = [])
  * @method ListSimilarityLibraries listSimilarityLibraries(array $options = [])
  * @method AddSimilarityLibrary addSimilarityLibrary(array $options = [])
@@ -69,6 +70,28 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'green';
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class DetectFace extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/face/detect';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
 }
 
 /**
