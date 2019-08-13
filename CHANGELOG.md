@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.68 - 2019-8-13
+- Optimize return code.
+- Edit QueryDataset.
+
+
 ## 1.7.67 - 2019-8-13
 - Supported for openapi new version.
 
