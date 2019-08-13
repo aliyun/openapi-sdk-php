@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.67 - 2019-8-13
+- Supported for openapi new version.
+
+
 ## 1.7.66 - 2019-8-12
 - Support Defect Face API.
 
