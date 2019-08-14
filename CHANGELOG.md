@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.69 - 2019-8-14
+- Expose the interface to the yundun-console.
+- Update interface definitions of the cloudauth.
+
+
 ## 1.7.68 - 2019-8-13
 - Optimize return code.
 - Edit QueryDataset.
