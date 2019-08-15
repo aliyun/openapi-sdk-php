@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.71 - 2019-8-15
+- Add API BatchStartCdnDomain, BatchStopCdnDomain, DescribeTagResources, DescribeUserTags, TagResources, UntagResources.
+
+
 ## 1.7.70 - 2019-8-15
 - QueryInstanceBillResponse add ServicePeriod.
 

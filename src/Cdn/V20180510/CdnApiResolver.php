@@ -5,10 +5,15 @@ namespace AlibabaCloud\Cdn\V20180510;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeDomainQpsDataByLayer describeDomainQpsDataByLayer(array $options = [])
+ * @method DeleteSpecificStagingConfig deleteSpecificStagingConfig(array $options = [])
  * @method ModifyCdnDomainSchdmByProperty modifyCdnDomainSchdmByProperty(array $options = [])
  * @method DescribeCdnHttpsDomainList describeCdnHttpsDomainList(array $options = [])
  * @method DescribeCdnDomainByCertificate describeCdnDomainByCertificate(array $options = [])
- * @method DescribeUserCdnStatus describeUserCdnStatus(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method DescribeUserTags describeUserTags(array $options = [])
+ * @method DescribeTagResources describeTagResources(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method BatchSetCdnDomainServerCertificate batchSetCdnDomainServerCertificate(array $options = [])
  * @method DeleteUsageDetailDataExportTask deleteUsageDetailDataExportTask(array $options = [])
  * @method DeleteUserUsageDataExportTask deleteUserUsageDataExportTask(array $options = [])
@@ -71,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchSetCdnDomainConfig batchSetCdnDomainConfig(array $options = [])
  * @method DescribeCdnUserResourcePackage describeCdnUserResourcePackage(array $options = [])
  * @method DescribeDomainAverageResponseTime describeDomainAverageResponseTime(array $options = [])
+ * @method BatchStartCdnDomain batchStartCdnDomain(array $options = [])
  * @method ModifyFileCacheExpiredConfig modifyFileCacheExpiredConfig(array $options = [])
  * @method DescribeIpInfo describeIpInfo(array $options = [])
  * @method DescribeDomainFileSizeProportionData describeDomainFileSizeProportionData(array $options = [])
@@ -93,6 +99,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PushObjectCache pushObjectCache(array $options = [])
  * @method StopCdnDomain stopCdnDomain(array $options = [])
  * @method DescribeDomainUvData describeDomainUvData(array $options = [])
+ * @method BatchStopCdnDomain batchStopCdnDomain(array $options = [])
  * @method ModifyCdnService modifyCdnService(array $options = [])
  * @method DescribeCdnService describeCdnService(array $options = [])
  * @method ModifyCdnDomain modifyCdnDomain(array $options = [])
@@ -133,6 +140,45 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'cdn';
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getLayer()
+ * @method $this withLayer($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeDomainQpsDataByLayer extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteSpecificStagingConfig extends Rpc
+{
 }
 
 /**
@@ -148,6 +194,12 @@ class ModifyCdnDomainSchdmByProperty extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -166,13 +218,141 @@ class DescribeCdnDomainByCertificate extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeUserCdnStatus extends Rpc
+class DescribeUserTags extends Rpc
 {
+}
+
+/**
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class DescribeTagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+    public function withTag(array $tag)
+    {
+        $this->data['Tag'] = $tag;
+        foreach ($tag as $depth1 => $depth1Value) {
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+    public function withResourceId(array $resourceId)
+    {
+        $this->data['ResourceId'] = $resourceId;
+        foreach ($resourceId as $i => $iValue) {
+            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+    public function withTagKey(array $tagKey)
+    {
+        $this->data['TagKey'] = $tagKey;
+        foreach ($tagKey as $i => $iValue) {
+            $this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
 }
 
 /**
@@ -296,6 +476,7 @@ class SetReqAuthConfig extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRoleARN()
+ * @method string getFunctionARN()
  */
 class UpdateFCTrigger extends Rpc
 {
@@ -335,6 +516,19 @@ class UpdateFCTrigger extends Rpc
     {
         $this->data['RoleARN'] = $value;
         $this->options['form_params']['RoleARN'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFunctionARN($value)
+    {
+        $this->data['FunctionARN'] = $value;
+        $this->options['form_params']['FunctionARN'] = $value;
 
         return $this;
     }
@@ -1118,6 +1312,7 @@ class CreateUsageDetailDataExportTask extends Rpc
  * @method $this withOwnerId($value)
  * @method string getRoleARN()
  * @method string getEventMetaName()
+ * @method string getFunctionARN()
  */
 class AddFCTrigger extends Rpc
 {
@@ -1183,6 +1378,19 @@ class AddFCTrigger extends Rpc
     {
         $this->data['EventMetaName'] = $value;
         $this->options['form_params']['EventMetaName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFunctionARN($value)
+    {
+        $this->data['FunctionARN'] = $value;
+        $this->options['form_params']['FunctionARN'] = $value;
 
         return $this;
     }
@@ -1273,6 +1481,18 @@ class DescribeCdnUserResourcePackage extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeDomainAverageResponseTime extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class BatchStartCdnDomain extends Rpc
 {
 }
 
@@ -1601,6 +1821,18 @@ class StopCdnDomain extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDomainUvData extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class BatchStopCdnDomain extends Rpc
 {
 }
 
