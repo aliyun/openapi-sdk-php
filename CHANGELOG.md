@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.72 - 2019-8-15
+- FnF public version.
+- Add Report task api.
+
+
 ## 1.7.71 - 2019-8-15
 - Add API BatchStartCdnDomain, BatchStopCdnDomain, DescribeTagResources, DescribeUserTags, TagResources, UntagResources.
 

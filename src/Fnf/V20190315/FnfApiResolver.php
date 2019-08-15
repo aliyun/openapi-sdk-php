@@ -5,6 +5,8 @@ namespace AlibabaCloud\Fnf\V20190315;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ReportTaskSucceeded reportTaskSucceeded(array $options = [])
+ * @method ReportTaskFailed reportTaskFailed(array $options = [])
  * @method UpdateFlow updateFlow(array $options = [])
  * @method StopExecution stopExecution(array $options = [])
  * @method StartExecution startExecution(array $options = [])
@@ -29,7 +31,72 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $version = '2019-03-15';
 
     /** @var string */
+    public $method = 'POST';
+
+    /** @var string */
     public $serviceCode = 'fnf';
+}
+
+/**
+ * @method string getOutput()
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getTaskToken()
+ * @method $this withTaskToken($value)
+ */
+class ReportTaskSucceeded extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutput($value)
+    {
+        $this->data['Output'] = $value;
+        $this->options['form_params']['Output'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getCause()
+ * @method string getTaskToken()
+ * @method $this withTaskToken($value)
+ * @method string getError()
+ */
+class ReportTaskFailed extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCause($value)
+    {
+        $this->data['Cause'] = $value;
+        $this->options['form_params']['Cause'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withError($value)
+    {
+        $this->data['Error'] = $value;
+        $this->options['form_params']['Error'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -43,9 +110,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class UpdateFlow extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -127,9 +191,6 @@ class UpdateFlow extends Rpc
  */
 class StopExecution extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -143,9 +204,6 @@ class StopExecution extends Rpc
  */
 class StartExecution extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -171,6 +229,9 @@ class StartExecution extends Rpc
  */
 class ListFlows extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -185,6 +246,9 @@ class ListFlows extends Rpc
  */
 class ListExecutions extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -201,6 +265,9 @@ class ListExecutions extends Rpc
  */
 class GetExecutionHistory extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -211,6 +278,9 @@ class GetExecutionHistory extends Rpc
  */
 class DescribeFlow extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -223,6 +293,9 @@ class DescribeFlow extends Rpc
  */
 class DescribeExecution extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -233,6 +306,9 @@ class DescribeExecution extends Rpc
  */
 class DeleteFlow extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -246,9 +322,6 @@ class DeleteFlow extends Rpc
  */
 class CreateFlow extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
