@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.70 - 2019-8-15
+- QueryInstanceBillResponse add ServicePeriod.
+
+
 ## 1.7.69 - 2019-8-14
 - Expose the interface to the yundun-console.
 - Update interface definitions of the cloudauth.
