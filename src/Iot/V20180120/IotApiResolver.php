@@ -5,13 +5,28 @@ namespace AlibabaCloud\Iot\V20180120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CloseEdgeInstanceDeployment closeEdgeInstanceDeployment(array $options = [])
+ * @method UnbindDriverFromEdgeInstance unbindDriverFromEdgeInstance(array $options = [])
+ * @method BindDriverToEdgeInstance bindDriverToEdgeInstance(array $options = [])
  * @method BatchQueryDeviceDetail batchQueryDeviceDetail(array $options = [])
+ * @method GetEdgeInstanceDeployment getEdgeInstanceDeployment(array $options = [])
  * @method CreateDataAPIService createDataAPIService(array $options = [])
  * @method GetDataAPIServiceDetail getDataAPIServiceDetail(array $options = [])
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
+ * @method BatchUnbindDeviceFromEdgeInstance batchUnbindDeviceFromEdgeInstance(array $options = [])
+ * @method SetEdgeInstanceDriverConfigs setEdgeInstanceDriverConfigs(array $options = [])
+ * @method BatchGetDeviceDriver batchGetDeviceDriver(array $options = [])
+ * @method BatchBindDeviceToEdgeInstanceWithDriver batchBindDeviceToEdgeInstanceWithDriver(array $options = [])
+ * @method QueryDeviceByDriver queryDeviceByDriver(array $options = [])
+ * @method BatchSetEdgeInstanceDeviceConfig batchSetEdgeInstanceDeviceConfig(array $options = [])
+ * @method BatchClearEdgeInstanceDeviceConfig batchClearEdgeInstanceDeviceConfig(array $options = [])
+ * @method BatchGetEdgeInstanceDeviceConfig batchGetEdgeInstanceDeviceConfig(array $options = [])
+ * @method BatchGetEdgeInstanceDriverConfigs batchGetEdgeInstanceDriverConfigs(array $options = [])
+ * @method ClearEdgeInstanceDriverConfigs clearEdgeInstanceDriverConfigs(array $options = [])
  * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
  * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
  * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
+ * @method QueryEdgeInstanceDriver queryEdgeInstanceDriver(array $options = [])
  * @method BatchUpdateDeviceNickname batchUpdateDeviceNickname(array $options = [])
  * @method QueryDeviceFile queryDeviceFile(array $options = [])
  * @method QueryDeviceFileList queryDeviceFileList(array $options = [])
@@ -19,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetNodesAddingTask getNodesAddingTask(array $options = [])
  * @method SetDeviceDesiredProperty setDeviceDesiredProperty(array $options = [])
  * @method QueryDeviceDesiredProperty queryDeviceDesiredProperty(array $options = [])
+ * @method QueryEdgeInstanceHistoricDeployment queryEdgeInstanceHistoricDeployment(array $options = [])
  * @method CreateProductTags createProductTags(array $options = [])
  * @method UpdateProductTags updateProductTags(array $options = [])
  * @method DeleteProductTags deleteProductTags(array $options = [])
@@ -27,6 +43,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDeviceGroupByTags queryDeviceGroupByTags(array $options = [])
  * @method QueryDeviceListByDeviceGroup queryDeviceListByDeviceGroup(array $options = [])
  * @method QueryDevicePropertiesData queryDevicePropertiesData(array $options = [])
+ * @method UpdateEdgeInstance updateEdgeInstance(array $options = [])
+ * @method GetEdgeInstance getEdgeInstance(array $options = [])
+ * @method DeleteEdgeInstance deleteEdgeInstance(array $options = [])
+ * @method CreateEdgeInstance createEdgeInstance(array $options = [])
+ * @method QueryEdgeInstanceGateway queryEdgeInstanceGateway(array $options = [])
+ * @method QueryEdgeInstanceDevice queryEdgeInstanceDevice(array $options = [])
+ * @method BindGatewayToEdgeInstance bindGatewayToEdgeInstance(array $options = [])
+ * @method QueryEdgeInstance queryEdgeInstance(array $options = [])
+ * @method CreateEdgeInstanceDeployment createEdgeInstanceDeployment(array $options = [])
  * @method QuerySuperDeviceGroup querySuperDeviceGroup(array $options = [])
  * @method QueryDeviceByTags queryDeviceByTags(array $options = [])
  * @method SetDevicesProperty setDevicesProperty(array $options = [])
@@ -120,6 +145,40 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class CloseEdgeInstanceDeployment extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDriverId()
+ * @method $this withDriverId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class UnbindDriverFromEdgeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDriverId()
+ * @method $this withDriverId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BindDriverToEdgeInstance extends Rpc
+{
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method array getDeviceName()
@@ -143,6 +202,18 @@ class BatchQueryDeviceDetail extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeploymentId()
+ * @method $this withDeploymentId($value)
+ */
+class GetEdgeInstanceDeployment extends Rpc
+{
 }
 
 /**
@@ -241,6 +312,249 @@ class InvokeDataAPIService extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getIotIds()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchUnbindDeviceFromEdgeInstance extends Rpc
+{
+
+    /**
+     * @param array $iotIds
+     *
+     * @return $this
+     */
+    public function withIotIds(array $iotIds)
+    {
+        $this->data['IotIds'] = $iotIds;
+        foreach ($iotIds as $i => $iValue) {
+            $this->options['query']['IotIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getConfigs()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDriverId()
+ * @method $this withDriverId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class SetEdgeInstanceDriverConfigs extends Rpc
+{
+
+    /**
+     * @param array $configs
+     *
+     * @return $this
+     */
+    public function withConfigs(array $configs)
+    {
+        $this->data['Configs'] = $configs;
+        foreach ($configs as $depth1 => $depth1Value) {
+            $this->options['query']['Configs.' . ($depth1 + 1) . '.Format'] = $depth1Value['Format'];
+            $this->options['query']['Configs.' . ($depth1 + 1) . '.Content'] = $depth1Value['Content'];
+            $this->options['query']['Configs.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getIotIds()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchGetDeviceDriver extends Rpc
+{
+
+    /**
+     * @param array $iotIds
+     *
+     * @return $this
+     */
+    public function withIotIds(array $iotIds)
+    {
+        $this->data['IotIds'] = $iotIds;
+        foreach ($iotIds as $i => $iValue) {
+            $this->options['query']['IotIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDriverId()
+ * @method $this withDriverId($value)
+ * @method array getIotIds()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchBindDeviceToEdgeInstanceWithDriver extends Rpc
+{
+
+    /**
+     * @param array $iotIds
+     *
+     * @return $this
+     */
+    public function withIotIds(array $iotIds)
+    {
+        $this->data['IotIds'] = $iotIds;
+        foreach ($iotIds as $i => $iValue) {
+            $this->options['query']['IotIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDriverId()
+ * @method $this withDriverId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ */
+class QueryDeviceByDriver extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getDeviceConfigs()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchSetEdgeInstanceDeviceConfig extends Rpc
+{
+
+    /**
+     * @param array $deviceConfigs
+     *
+     * @return $this
+     */
+    public function withDeviceConfigs(array $deviceConfigs)
+    {
+        $this->data['DeviceConfigs'] = $deviceConfigs;
+        foreach ($deviceConfigs as $depth1 => $depth1Value) {
+            $this->options['query']['DeviceConfigs.' . ($depth1 + 1) . '.IotId'] = $depth1Value['IotId'];
+            $this->options['query']['DeviceConfigs.' . ($depth1 + 1) . '.Content'] = $depth1Value['Content'];
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getIotIds()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchClearEdgeInstanceDeviceConfig extends Rpc
+{
+
+    /**
+     * @param array $iotIds
+     *
+     * @return $this
+     */
+    public function withIotIds(array $iotIds)
+    {
+        $this->data['IotIds'] = $iotIds;
+        foreach ($iotIds as $i => $iValue) {
+            $this->options['query']['IotIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getIotIds()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchGetEdgeInstanceDeviceConfig extends Rpc
+{
+
+    /**
+     * @param array $iotIds
+     *
+     * @return $this
+     */
+    public function withIotIds(array $iotIds)
+    {
+        $this->data['IotIds'] = $iotIds;
+        foreach ($iotIds as $i => $iValue) {
+            $this->options['query']['IotIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getDriverIds()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchGetEdgeInstanceDriverConfigs extends Rpc
+{
+
+    /**
+     * @param array $driverIds
+     *
+     * @return $this
+     */
+    public function withDriverIds(array $driverIds)
+    {
+        $this->data['DriverIds'] = $driverIds;
+        foreach ($driverIds as $i => $iValue) {
+            $this->options['query']['DriverIds.' . ($i + 1)] = $iValue;
+        }
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDriverId()
+ * @method $this withDriverId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class ClearEdgeInstanceDriverConfigs extends Rpc
+{
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -282,6 +596,20 @@ class GetLoraNodesTask extends Rpc
  * @method $this withIotInstanceId($value)
  */
 class QueryLoRaJoinPermissions extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ */
+class QueryEdgeInstanceDriver extends Rpc
 {
 }
 
@@ -418,6 +746,24 @@ class QueryDeviceDesiredProperty extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ */
+class QueryEdgeInstanceHistoricDeployment extends Rpc
+{
 }
 
 /**
@@ -618,6 +964,124 @@ class QueryDevicePropertiesData extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getBizEnable()
+ * @method $this withBizEnable($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ */
+class UpdateEdgeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class GetEdgeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class DeleteEdgeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ */
+class CreateEdgeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class QueryEdgeInstanceGateway extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ */
+class QueryEdgeInstanceDevice extends Rpc
+{
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ */
+class BindGatewayToEdgeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ */
+class QueryEdgeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class CreateEdgeInstanceDeployment extends Rpc
+{
 }
 
 /**

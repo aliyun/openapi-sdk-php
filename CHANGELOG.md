@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.73 - 2019-8-16
+- Add LinkIoTEdge API.
+
+
 ## 1.7.72 - 2019-8-15
 - FnF public version.
 - Add Report task api.
