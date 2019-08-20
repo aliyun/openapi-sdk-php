@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.74 - 2019-8-20
+- API TaobaoFilmGetSchedules retrun col add hallId.
+
+
 ## 1.7.73 - 2019-8-16
 - Add LinkIoTEdge API.
 

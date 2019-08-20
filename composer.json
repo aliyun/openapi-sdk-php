@@ -53,6 +53,7 @@
         "alibabacloud/alidns": "self.version",
         "alibabacloud/alikafka": "self.version",
         "alibabacloud/alimt": "self.version",
+        "alibabacloud/appmallsservice": "self.version",
         "alibabacloud/baas": "self.version",
         "alibabacloud/batchcompute": "self.version",
         "alibabacloud/bss": "self.version",
