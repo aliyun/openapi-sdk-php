@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.76 - 2019-8-21
+- Move StartExecution params to body.
+
+
 ## 1.7.75 - 2019-8-21
 - Return backup job id when create backup.
 - Return backup set size when describe backups.
