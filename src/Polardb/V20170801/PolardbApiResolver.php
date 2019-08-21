@@ -5,6 +5,8 @@ namespace AlibabaCloud\Polardb\V20170801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ContinueDBClusterMigration continueDBClusterMigration(array $options = [])
+ * @method AbortDBClusterMigration abortDBClusterMigration(array $options = [])
  * @method UnlockDBClusterDeletion unlockDBClusterDeletion(array $options = [])
  * @method LockDBClusterDeletion lockDBClusterDeletion(array $options = [])
  * @method DescribeDBClusterMigration describeDBClusterMigration(array $options = [])
@@ -72,6 +74,42 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'polardb';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ContinueDBClusterMigration extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AbortDBClusterMigration extends Rpc
+{
 }
 
 /**

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.75 - 2019-8-21
+- Return backup job id when create backup.
+- Return backup set size when describe backups.
+
+
 ## 1.7.74 - 2019-8-20
 - API TaobaoFilmGetSchedules retrun col add hallId.
 
