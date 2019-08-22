@@ -82,6 +82,7 @@ namespace AlibabaCloud;
  * @method static IndustryBrain\IndustryBrain industryBrain()
  * @method static Iot\Iot iot()
  * @method static Ivision\Ivision ivision()
+ * @method static Ivpd\Ivpd ivpd()
  * @method static Jaq\Jaq jaq()
  * @method static Jarvis\Jarvis jarvis()
  * @method static JarvisPublic\JarvisPublic jarvisPublic()

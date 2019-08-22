@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 1.7.78 - 2019-8-22
+- Support API RecognizeImageColor.
+- Support API DetectImageElements.
+- Support API RecolorImage.
+- Support API SegmentImage.
+- Support API ChangeImageSize.
+- Support API ExtendImageStyle.
+- Support API RecognizeImageStyle.
+- Support API MakeSuperResolutionImage.
+
+
 ## 1.7.77 - 2019-8-22
 - Api release 2019-08-08 public sdk 2-5-2 sdk release 20190822 shichun-fsc.
 
