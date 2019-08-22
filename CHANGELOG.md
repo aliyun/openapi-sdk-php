@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.77 - 2019-8-22
+- Api release 2019-08-08 public sdk 2-5-2 sdk release 20190822 shichun-fsc.
+
+
 ## 1.7.76 - 2019-8-21
 - Move StartExecution params to body.
 

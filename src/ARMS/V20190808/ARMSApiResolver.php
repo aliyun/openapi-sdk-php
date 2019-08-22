@@ -279,6 +279,8 @@ class SearchAlertContactGroup extends Rpc
  * @method $this withContactGroupIds($value)
  * @method string getPids()
  * @method $this withPids($value)
+ * @method string getTemplageAlertConfig()
+ * @method $this withTemplageAlertConfig($value)
  * @method string getTemplateAlertId()
  * @method $this withTemplateAlertId($value)
  */
