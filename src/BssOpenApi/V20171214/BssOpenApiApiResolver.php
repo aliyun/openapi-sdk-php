@@ -5,6 +5,8 @@ namespace AlibabaCloud\BssOpenApi\V20171214;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method RenewResourcePackage renewResourcePackage(array $options = [])
+ * @method UpgradeResourcePackage upgradeResourcePackage(array $options = [])
  * @method CreateAgAccount createAgAccount(array $options = [])
  * @method GetCustomerAccountInfo getCustomerAccountInfo(array $options = [])
  * @method GetCustomerList getCustomerList(array $options = [])
@@ -66,6 +68,36 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEffectiveDate()
+ * @method $this withEffectiveDate($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
+ */
+class RenewResourcePackage extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSpecification()
+ * @method $this withSpecification($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEffectiveDate()
+ * @method $this withEffectiveDate($value)
+ */
+class UpgradeResourcePackage extends Rpc
+{
 }
 
 /**
@@ -867,6 +899,8 @@ class QueryResourcePackageInstances extends Rpc
  * @method $this withDuration($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSpecification()
  * @method $this withSpecification($value)
  * @method string getOwnerId()
@@ -877,6 +911,8 @@ class QueryResourcePackageInstances extends Rpc
  * @method $this withEffectiveDate($value)
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class GetResourcePackagePrice extends Rpc
 {

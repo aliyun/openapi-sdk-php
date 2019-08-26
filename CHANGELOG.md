@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.79 - 2019-8-26
+- QueryInstanceBillResponse change ownerId type from Long to String.
+- QueryInstanceBillResponse change usage type from float to String.
+- QueryInstanceBillResponse change listPrice type from float to String.
+- QueryInstanceBillResponse change deductedByResourcePackage type from float to String.
+
+
 ## 1.7.78 - 2019-8-22
 - Support API RecognizeImageColor.
 - Support API DetectImageElements.
