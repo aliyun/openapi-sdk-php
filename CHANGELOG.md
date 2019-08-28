@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.80 - 2019-8-28
+- Add DBS API UpgradeBackupPlan.
+- Add DBS API DescribePreCheckProgressList.
+
+
 ## 1.7.79 - 2019-8-26
 - QueryInstanceBillResponse change ownerId type from Long to String.
 - QueryInstanceBillResponse change usage type from float to String.

@@ -5,6 +5,8 @@ namespace AlibabaCloud\Dbs\V20190306;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method UpgradeBackupPlan upgradeBackupPlan(array $options = [])
+ * @method DescribePreCheckProgressList describePreCheckProgressList(array $options = [])
  * @method ModifyBackupStrategy modifyBackupStrategy(array $options = [])
  * @method ModifyBackupSourceEndpoint modifyBackupSourceEndpoint(array $options = [])
  * @method ModifyBackupPlanName modifyBackupPlanName(array $options = [])
@@ -40,6 +42,34 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cbs';
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ */
+class UpgradeBackupPlan extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRestoreTaskId()
+ * @method $this withRestoreTaskId($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribePreCheckProgressList extends Rpc
+{
 }
 
 /**
