@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.82 - 2019-8-29
+- Move StopExecution params to body.
+
+
 ## 1.7.81 - 2019-8-29
 - For publish.
 

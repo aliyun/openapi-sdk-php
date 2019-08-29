@@ -179,18 +179,66 @@ class UpdateFlow extends Rpc
 
 /**
  * @method string getExecutionName()
- * @method $this withExecutionName($value)
  * @method string getRequestId()
  * @method $this withRequestId($value)
  * @method string getCause()
- * @method $this withCause($value)
  * @method string getFlowName()
- * @method $this withFlowName($value)
  * @method string getError()
- * @method $this withError($value)
  */
 class StopExecution extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExecutionName($value)
+    {
+        $this->data['ExecutionName'] = $value;
+        $this->options['form_params']['ExecutionName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCause($value)
+    {
+        $this->data['Cause'] = $value;
+        $this->options['form_params']['Cause'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlowName($value)
+    {
+        $this->data['FlowName'] = $value;
+        $this->options['form_params']['FlowName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withError($value)
+    {
+        $this->data['Error'] = $value;
+        $this->options['form_params']['Error'] = $value;
+
+        return $this;
+    }
 }
 
 /**
