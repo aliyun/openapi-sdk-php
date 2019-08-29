@@ -5,6 +5,10 @@ namespace AlibabaCloud\Vs\V20181212;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ContinuousMove continuousMove(array $options = [])
+ * @method StopMove stopMove(array $options = [])
+ * @method ContinuousAdjust continuousAdjust(array $options = [])
+ * @method StopAdjust stopAdjust(array $options = [])
  * @method DescribeDeviceChannels describeDeviceChannels(array $options = [])
  * @method SyncCatalogs syncCatalogs(array $options = [])
  * @method UnlockDevice unlockDevice(array $options = [])
@@ -86,6 +90,74 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'vs';
+}
+
+/**
+ * @method string getTilt()
+ * @method $this withTilt($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getPan()
+ * @method $this withPan($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getZoom()
+ * @method $this withZoom($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ContinuousMove extends Rpc
+{
+}
+
+/**
+ * @method string getTilt()
+ * @method $this withTilt($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getPan()
+ * @method $this withPan($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getZoom()
+ * @method $this withZoom($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StopMove extends Rpc
+{
+}
+
+/**
+ * @method string getFocus()
+ * @method $this withFocus($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getIris()
+ * @method $this withIris($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ContinuousAdjust extends Rpc
+{
+}
+
+/**
+ * @method string getFocus()
+ * @method $this withFocus($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getIris()
+ * @method $this withIris($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StopAdjust extends Rpc
+{
 }
 
 /**
@@ -599,6 +671,8 @@ class DeleteDevice extends Rpc
 /**
  * @method string getSortDirection()
  * @method $this withSortDirection($value)
+ * @method string getGbId()
+ * @method $this withGbId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getPageNum()
@@ -645,6 +719,8 @@ class DescribeDevices extends Rpc
  * @method $this withStartTime($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getRetention()
+ * @method $this withRetention($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getHlsM3u8()
@@ -757,10 +833,10 @@ class BatchBindTemplate extends Rpc
  * @method $this withJpgOverwrite($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getType()
- * @method $this withType($value)
  * @method string getId()
  * @method $this withId($value)
+ * @method string getRetention()
+ * @method $this withRetention($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getHlsM3u8()

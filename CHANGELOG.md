@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.83 - 2019-8-29
+- Add PTZ APIs.
+
+
 ## 1.7.82 - 2019-8-29
 - Move StopExecution params to body.
 
