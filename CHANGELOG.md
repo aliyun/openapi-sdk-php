@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.81 - 2019-8-29
+- For publish.
+
+
 ## 1.7.80 - 2019-8-28
 - Add DBS API UpgradeBackupPlan.
 - Add DBS API DescribePreCheckProgressList.
