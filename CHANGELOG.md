@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.85 - 2019-8-30
+- Supported Meida complex for IMM.
+
+
 ## 1.7.84 - 2019-8-30
 - Add api for getTrace and searchTracelist.
 

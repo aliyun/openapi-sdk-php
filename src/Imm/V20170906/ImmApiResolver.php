@@ -5,6 +5,7 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CreateMediaComplexTask createMediaComplexTask(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method ListProjectAPIs listProjectAPIs(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
@@ -121,6 +122,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imm';
+}
+
+/**
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class CreateMediaComplexTask extends Rpc
+{
 }
 
 /**
@@ -252,6 +267,8 @@ class CreateCADConversionTask extends Rpc
  * @method $this withImageUri($value)
  * @method string getMinSimilarity()
  * @method $this withMinSimilarity($value)
+ * @method string getResponseFormat()
+ * @method $this withResponseFormat($value)
  * @method string getLimit()
  * @method $this withLimit($value)
  * @method string getProject()
@@ -272,6 +289,8 @@ class FindSimilarFaces extends Rpc
  * @method $this withProject($value)
  * @method string getExternalId()
  * @method $this withExternalId($value)
+ * @method string getFacesModifyTimeRange()
+ * @method $this withFacesModifyTimeRange($value)
  * @method string getImageSizeRange()
  * @method $this withImageSizeRange($value)
  * @method string getRemarksBPrefix()
@@ -286,6 +305,8 @@ class FindSimilarFaces extends Rpc
  * @method $this withLimit($value)
  * @method string getRemarksDPrefix()
  * @method $this withRemarksDPrefix($value)
+ * @method string getTagsModifyTimeRange()
+ * @method $this withTagsModifyTimeRange($value)
  * @method string getSourceType()
  * @method $this withSourceType($value)
  * @method string getAgeRange()
