@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.84 - 2019-8-30
+- Add api for getTrace and searchTracelist.
+
+
 ## 1.7.83 - 2019-8-29
 - Add PTZ APIs.
 

@@ -179,6 +179,7 @@
         "alibabacloud/wafopenapi": "self.version",
         "alibabacloud/welfareinner": "self.version",
         "alibabacloud/xspace": "self.version",
+        "alibabacloud/xtrace": "self.version",
         "alibabacloud/yqbridge": "self.version",
         "alibabacloud/yundun": "self.version"
     },

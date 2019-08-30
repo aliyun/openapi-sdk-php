@@ -144,6 +144,7 @@ namespace AlibabaCloud;
  * @method static WafOpenapi\WafOpenapi wafOpenapi()
  * @method static WelfareInner\WelfareInner welfareInner()
  * @method static Xspace\Xspace xspace()
+ * @method static Xtrace\Xtrace xtrace()
  * @method static YqBridge\YqBridge yqBridge()
  * @method static Yundun\Yundun yundun()
  */
