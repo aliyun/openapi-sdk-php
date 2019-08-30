@@ -45,6 +45,9 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $version = '2015-09-01';
+
+    /** @var string */
+    public $serviceCode = 'ROS';
 }
 
 class CreateChangeSet extends Roa
