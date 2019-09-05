@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.95 - 2019-9-5
+- Generated 2014-05-15 for `Slb`.
+
+
 ## 1.7.94 - 2019-9-5
 - Generated 2018-11-11 for `foas`.
 
