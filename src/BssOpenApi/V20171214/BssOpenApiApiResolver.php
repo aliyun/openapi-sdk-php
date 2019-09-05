@@ -68,17 +68,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'bssopenapi';
 }
 
 /**
- * @method string getDuration()
- * @method $this withDuration($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getEffectiveDate()
  * @method $this withEffectiveDate($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
@@ -87,14 +90,14 @@ class RenewResourcePackage extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getSpecification()
  * @method $this withSpecification($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getEffectiveDate()
  * @method $this withEffectiveDate($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class UpgradeResourcePackage extends Rpc
 {
@@ -103,14 +106,8 @@ class UpgradeResourcePackage extends Rpc
 /**
  * @method string getFirstName()
  * @method $this withFirstName($value)
- * @method string getLoginEmail()
- * @method $this withLoginEmail($value)
- * @method string getProvinceName()
- * @method $this withProvinceName($value)
  * @method string getCityName()
  * @method $this withCityName($value)
- * @method string getAccountAttr()
- * @method $this withAccountAttr($value)
  * @method string getPostcode()
  * @method $this withPostcode($value)
  * @method string getEnterpriseName()
@@ -119,6 +116,12 @@ class UpgradeResourcePackage extends Rpc
  * @method $this withNationCode($value)
  * @method string getLastName()
  * @method $this withLastName($value)
+ * @method string getLoginEmail()
+ * @method $this withLoginEmail($value)
+ * @method string getProvinceName()
+ * @method $this withProvinceName($value)
+ * @method string getAccountAttr()
+ * @method $this withAccountAttr($value)
  */
 class CreateAgAccount extends Rpc
 {
@@ -140,22 +143,22 @@ class GetCustomerList extends Rpc
 }
 
 /**
- * @method string getAdjustType()
- * @method $this withAdjustType($value)
  * @method string getAmount()
  * @method $this withAmount($value)
  * @method string getOutBizId()
  * @method $this withOutBizId($value)
- * @method string getExtendMap()
- * @method $this withExtendMap($value)
- * @method string getCurrency()
- * @method $this withCurrency($value)
  * @method string getSource()
  * @method $this withSource($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
+ * @method string getAdjustType()
+ * @method $this withAdjustType($value)
+ * @method string getExtendMap()
+ * @method $this withExtendMap($value)
+ * @method string getCurrency()
+ * @method $this withCurrency($value)
  */
 class ChangeResellerConsumeAmount extends Rpc
 {
@@ -164,10 +167,10 @@ class ChangeResellerConsumeAmount extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getStatus()
- * @method $this withStatus($value)
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class SetResellerUserStatus extends Rpc
 {
@@ -178,10 +181,10 @@ class SetResellerUserStatus extends Rpc
  * @method $this withAmount($value)
  * @method string getOutBizId()
  * @method $this withOutBizId($value)
- * @method string getCurrency()
- * @method $this withCurrency($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCurrency()
+ * @method $this withCurrency($value)
  */
 class CreateResellerUserQuota extends Rpc
 {
@@ -192,10 +195,10 @@ class CreateResellerUserQuota extends Rpc
  * @method $this withAmount($value)
  * @method string getOutBizId()
  * @method $this withOutBizId($value)
- * @method string getCurrency()
- * @method $this withCurrency($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCurrency()
+ * @method $this withCurrency($value)
  */
 class SetResellerUserQuota extends Rpc
 {
@@ -224,6 +227,10 @@ class SetResellerUserAlarmThreshold extends Rpc
 }
 
 /**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getCreateTimeEnd()
+ * @method $this withCreateTimeEnd($value)
  * @method string getRecordID()
  * @method $this withRecordID($value)
  * @method string getPageSize()
@@ -234,10 +241,6 @@ class SetResellerUserAlarmThreshold extends Rpc
  * @method $this withCreateTimeStart($value)
  * @method string getTransactionNumber()
  * @method $this withTransactionNumber($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getCreateTimeEnd()
- * @method $this withCreateTimeEnd($value)
  */
 class QueryAccountTransactions extends Rpc
 {
@@ -268,18 +271,18 @@ class SubscribeBillToOSS extends Rpc
 }
 
 /**
- * @method string getDataType()
- * @method $this withDataType($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getDataType()
+ * @method $this withDataType($value)
+ * @method string getMarker()
+ * @method $this withMarker($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getTable()
  * @method $this withTable($value)
  */
@@ -303,13 +306,6 @@ class CancelOrder extends Rpc
 /**
  * @method string getInvoicingType()
  * @method $this withInvoicingType($value)
- * @method string getApplyUserNick()
- * @method $this withApplyUserNick($value)
- * @method string getInvoiceByAmount()
- * @method $this withInvoiceByAmount($value)
- * @method string getCustomerId()
- * @method $this withCustomerId($value)
- * @method array getSelectedIds()
  * @method string getProcessWay()
  * @method $this withProcessWay($value)
  * @method string getCallerBid()
@@ -319,25 +315,17 @@ class CancelOrder extends Rpc
  * @method $this withInvoiceAmount($value)
  * @method string getAddressId()
  * @method $this withAddressId($value)
+ * @method string getApplyUserNick()
+ * @method $this withApplyUserNick($value)
+ * @method string getInvoiceByAmount()
+ * @method $this withInvoiceByAmount($value)
+ * @method string getCustomerId()
+ * @method $this withCustomerId($value)
+ * @method array getSelectedIds()
  * @method string getCallerUid()
  */
 class ApplyInvoice extends Rpc
 {
-
-    /**
-     * @param array $selectedIds
-     *
-     * @return $this
-     */
-    public function withSelectedIds(array $selectedIds)
-    {
-        $this->data['SelectedIds'] = $selectedIds;
-        foreach ($selectedIds as $i => $iValue) {
-            $this->options['query']['SelectedIds.' . ($i + 1)] = $iValue;
-        }
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -350,6 +338,21 @@ class ApplyInvoice extends Rpc
         $this->options['query']['callerBid'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $selectedIds
+     *
+     * @return $this
+     */
+	public function withSelectedIds(array $selectedIds)
+	{
+	    $this->data['SelectedIds'] = $selectedIds;
+		foreach ($selectedIds as $i => $iValue) {
+			$this->options['query']['SelectedIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -409,23 +412,23 @@ class QueryCustomerAddressList extends Rpc
  * @method $this withOutBizId($value)
  * @method string getSortType()
  * @method $this withSortType($value)
- * @method array getBizTypeList()
  * @method string getType()
  * @method $this withType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
- * @method string getStartSearchTime()
- * @method $this withStartSearchTime($value)
- * @method string getEndBizTime()
- * @method $this withEndBizTime($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getEndAmount()
  * @method $this withEndAmount($value)
  * @method string getBillCycle()
  * @method $this withBillCycle($value)
+ * @method array getBizTypeList()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStartSearchTime()
+ * @method $this withStartSearchTime($value)
+ * @method string getEndBizTime()
+ * @method $this withEndBizTime($value)
  * @method string getStartAmount()
  * @method $this withStartAmount($value)
  * @method string getStartBizTime()
@@ -439,14 +442,14 @@ class QueryEvaluateList extends Rpc
      *
      * @return $this
      */
-    public function withBizTypeList(array $bizTypeList)
-    {
-        $this->data['BizTypeList'] = $bizTypeList;
-        foreach ($bizTypeList as $i => $iValue) {
-            $this->options['query']['BizTypeList.' . ($i + 1)] = $iValue;
-        }
+	public function withBizTypeList(array $bizTypeList)
+	{
+	    $this->data['BizTypeList'] = $bizTypeList;
+		foreach ($bizTypeList as $i => $iValue) {
+			$this->options['query']['BizTypeList.' . ($i + 1)] = $iValue;
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -481,8 +484,6 @@ class QueryBillOverview extends Rpc
  * @method $this withIsDisplayLocalCurrency($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getBillingCycle()
  * @method $this withBillingCycle($value)
  * @method string getType()
@@ -493,22 +494,20 @@ class QueryBillOverview extends Rpc
  * @method $this withPageNum($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class QueryBill extends Rpc
 {
 }
 
 /**
- * @method string getIsBillingItem()
- * @method $this withIsBillingItem($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
  * @method string getIsHideZeroCharge()
  * @method $this withIsHideZeroCharge($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getBillingCycle()
  * @method $this withBillingCycle($value)
  * @method string getOwnerId()
@@ -517,6 +516,10 @@ class QueryBill extends Rpc
  * @method $this withPageNum($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getIsBillingItem()
+ * @method $this withIsBillingItem($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class QueryInstanceBill extends Rpc
 {
@@ -538,14 +541,14 @@ class EnableBillGeneration extends Rpc
 /**
  * @method string getExpiryTimeEnd()
  * @method $this withExpiryTimeEnd($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getExpiryTimeStart()
  * @method $this withExpiryTimeStart($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getEffectiveOrNot()
  * @method $this withEffectiveOrNot($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class QueryRedeem extends Rpc
 {
@@ -559,14 +562,14 @@ class QueryRedeem extends Rpc
  * @method $this withPeriod($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ConvertChargeType extends Rpc
 {
@@ -581,15 +584,15 @@ class ConvertChargeType extends Rpc
  * @method $this withClientToken($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
  * @method string getRenewPeriod()
  * @method $this withRenewPeriod($value)
  * @method array getParameter()
  * @method string getRenewalStatus()
  * @method $this withRenewalStatus($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getProductType()
- * @method $this withProductType($value)
  */
 class CreateInstance extends Rpc
 {
@@ -599,34 +602,34 @@ class CreateInstance extends Rpc
      *
      * @return $this
      */
-    public function withParameter(array $parameter)
-    {
-        $this->data['Parameter'] = $parameter;
-        foreach ($parameter as $depth1 => $depth1Value) {
-            $this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
-            $this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
+	public function withParameter(array $parameter)
+	{
+	    $this->data['Parameter'] = $parameter;
+		foreach ($parameter as $depth1 => $depth1Value) {
+			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
+			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getProductCode()
  * @method $this withProductCode($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getModifyType()
- * @method $this withModifyType($value)
- * @method array getParameter()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getModifyType()
+ * @method $this withModifyType($value)
+ * @method array getParameter()
  */
 class ModifyInstance extends Rpc
 {
@@ -636,15 +639,15 @@ class ModifyInstance extends Rpc
      *
      * @return $this
      */
-    public function withParameter(array $parameter)
-    {
-        $this->data['Parameter'] = $parameter;
-        foreach ($parameter as $depth1 => $depth1Value) {
-            $this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
-            $this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-        }
+	public function withParameter(array $parameter)
+	{
+	    $this->data['Parameter'] = $parameter;
+		foreach ($parameter as $depth1 => $depth1Value) {
+			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
+			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -663,12 +666,12 @@ class DescribePricingModule extends Rpc
 }
 
 /**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getQueryTotalCount()
  * @method $this withQueryTotalCount($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
  */
 class QueryProductList extends Rpc
 {
@@ -679,14 +682,14 @@ class QueryProductList extends Rpc
  * @method $this withProductCode($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getBillingCycle()
  * @method $this withBillingCycle($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class QueryInstanceGaapCost extends Rpc
 {
@@ -695,16 +698,16 @@ class QueryInstanceGaapCost extends Rpc
 /**
  * @method string getProductCode()
  * @method $this withProductCode($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getRenewPeriod()
- * @method $this withRenewPeriod($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRenewPeriod()
+ * @method $this withRenewPeriod($value)
  */
 class RenewInstance extends Rpc
 {
@@ -725,12 +728,6 @@ class GetOrderDetail extends Rpc
  * @method $this withProductCode($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPaymentStatus()
- * @method $this withPaymentStatus($value)
- * @method string getCreateTimeStart()
- * @method $this withCreateTimeStart($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerId()
@@ -739,6 +736,12 @@ class GetOrderDetail extends Rpc
  * @method $this withCreateTimeEnd($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPaymentStatus()
+ * @method $this withPaymentStatus($value)
+ * @method string getCreateTimeStart()
+ * @method $this withCreateTimeStart($value)
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
@@ -751,8 +754,6 @@ class QueryOrders extends Rpc
  * @method $this withProductCode($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getBillingCycle()
  * @method $this withBillingCycle($value)
  * @method string getOwnerId()
@@ -761,6 +762,8 @@ class QueryOrders extends Rpc
  * @method $this withPageNum($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class QueryMonthlyInstanceConsumption extends Rpc
 {
@@ -773,8 +776,6 @@ class QueryMonthlyInstanceConsumption extends Rpc
  * @method $this withIsHideZeroCharge($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getBillingCycle()
@@ -789,6 +790,8 @@ class QueryMonthlyInstanceConsumption extends Rpc
  * @method $this withType($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class QuerySettlementBill extends Rpc
 {
@@ -805,20 +808,20 @@ class QueryMonthlyBill extends Rpc
 /**
  * @method string getProductCode()
  * @method $this withProductCode($value)
- * @method string getInstanceIDs()
- * @method $this withInstanceIDs($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getRenewalStatus()
- * @method $this withRenewalStatus($value)
- * @method string getRenewalPeriodUnit()
- * @method $this withRenewalPeriodUnit($value)
  * @method string getRenewalPeriod()
  * @method $this withRenewalPeriod($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getInstanceIDs()
+ * @method $this withInstanceIDs($value)
+ * @method string getRenewalStatus()
+ * @method $this withRenewalStatus($value)
+ * @method string getRenewalPeriodUnit()
+ * @method $this withRenewalPeriodUnit($value)
  */
 class SetRenewal extends Rpc
 {
@@ -829,46 +832,46 @@ class SetRenewal extends Rpc
  * @method $this withProductCode($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
- * @method string getEndTimeStart()
- * @method $this withEndTimeStart($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRenewStatus()
+ * @method $this withRenewStatus($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEndTimeStart()
+ * @method $this withEndTimeStart($value)
  * @method string getCreateTimeEnd()
  * @method $this withCreateTimeEnd($value)
  * @method string getInstanceIDs()
  * @method $this withInstanceIDs($value)
  * @method string getEndTimeEnd()
  * @method $this withEndTimeEnd($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getCreateTimeStart()
  * @method $this withCreateTimeStart($value)
  * @method string getRegion()
  * @method $this withRegion($value)
- * @method string getRenewStatus()
- * @method $this withRenewStatus($value)
  */
 class QueryAvailableInstances extends Rpc
 {
 }
 
 /**
- * @method string getDuration()
- * @method $this withDuration($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
  * @method string getSpecification()
  * @method $this withSpecification($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPackageType()
- * @method $this withPackageType($value)
  * @method string getEffectiveDate()
  * @method $this withEffectiveDate($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getPackageType()
+ * @method $this withPackageType($value)
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
@@ -881,34 +884,34 @@ class CreateResourcePackage extends Rpc
  * @method $this withExpiryTimeEnd($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getExpiryTimeStart()
  * @method $this withExpiryTimeStart($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class QueryResourcePackageInstances extends Rpc
 {
 }
 
 /**
- * @method string getDuration()
- * @method $this withDuration($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getSpecification()
  * @method $this withSpecification($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPackageType()
- * @method $this withPackageType($value)
  * @method string getEffectiveDate()
  * @method $this withEffectiveDate($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPackageType()
+ * @method $this withPackageType($value)
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  * @method string getOrderType()
@@ -919,27 +922,27 @@ class GetResourcePackagePrice extends Rpc
 }
 
 /**
- * @method string getServicePeriodQuantity()
- * @method $this withServicePeriodQuantity($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getQuantity()
  * @method $this withQuantity($value)
- * @method string getServicePeriodUnit()
- * @method $this withServicePeriodUnit($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
  * @method array getModuleList()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ * @method string getServicePeriodQuantity()
+ * @method $this withServicePeriodQuantity($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getServicePeriodUnit()
+ * @method $this withServicePeriodUnit($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  * @method string getOrderType()
  * @method $this withOrderType($value)
- * @method string getProductType()
- * @method $this withProductType($value)
  */
 class GetSubscriptionPrice extends Rpc
 {
@@ -949,17 +952,17 @@ class GetSubscriptionPrice extends Rpc
      *
      * @return $this
      */
-    public function withModuleList(array $moduleList)
-    {
-        $this->data['ModuleList'] = $moduleList;
-        foreach ($moduleList as $depth1 => $depth1Value) {
-            $this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
-            $this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleStatus'] = $depth1Value['ModuleStatus'];
-            $this->options['query']['ModuleList.' . ($depth1 + 1) . '.Tag'] = $depth1Value['Tag'];
-            $this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
-        }
+	public function withModuleList(array $moduleList)
+	{
+	    $this->data['ModuleList'] = $moduleList;
+		foreach ($moduleList as $depth1 => $depth1Value) {
+			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
+			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleStatus'] = $depth1Value['ModuleStatus'];
+			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Tag'] = $depth1Value['Tag'];
+			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -971,10 +974,10 @@ class GetSubscriptionPrice extends Rpc
  * @method array getModuleList()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getRegion()
- * @method $this withRegion($value)
  * @method string getProductType()
  * @method $this withProductType($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
  */
 class GetPayAsYouGoPrice extends Rpc
 {
@@ -984,16 +987,16 @@ class GetPayAsYouGoPrice extends Rpc
      *
      * @return $this
      */
-    public function withModuleList(array $moduleList)
-    {
-        $this->data['ModuleList'] = $moduleList;
-        foreach ($moduleList as $depth1 => $depth1Value) {
-            $this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
-            $this->options['query']['ModuleList.' . ($depth1 + 1) . '.PriceType'] = $depth1Value['PriceType'];
-            $this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
-        }
+	public function withModuleList(array $moduleList)
+	{
+	    $this->data['ModuleList'] = $moduleList;
+		foreach ($moduleList as $depth1 => $depth1Value) {
+			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
+			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.PriceType'] = $depth1Value['PriceType'];
+			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 

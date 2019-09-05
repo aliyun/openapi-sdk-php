@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.89 - 2019-9-5
+- Generated 2017-12-14 for `BssOpenApi`.
+
+
 ## 1.7.88 - 2019-9-3
 - Generated 2014-08-15 for `Rds`.
 
