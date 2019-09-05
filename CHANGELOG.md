@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.91 - 2019-9-5
+- Generated 2016-07-14 for `CloudAPI`.
+
+
 ## 1.7.90 - 2019-9-5
 - Generated 2017-08-01 for `polardb`.
 

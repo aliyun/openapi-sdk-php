@@ -5,6 +5,8 @@ namespace AlibabaCloud\CloudAPI\V20160714;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DeleteInstance deleteInstance(array $options = [])
+ * @method CreateInstance createInstance(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -128,14 +130,48 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getToken()
+ * @method $this withToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteInstance extends Rpc
+{
+}
+
+/**
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getInstanceSpec()
+ * @method $this withInstanceSpec($value)
+ * @method string getHttpsPolicy()
+ * @method $this withHttpsPolicy($value)
+ * @method string getToken()
+ * @method $this withToken($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
+ */
+class CreateInstance extends Rpc
+{
+}
+
+/**
  * @method string getAll()
  * @method $this withAll($value)
  * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method array getTagKey()
- * @method string getResourceType()
- * @method $this withResourceType($value)
  */
 class UntagResources extends Rpc
 {
@@ -145,14 +181,14 @@ class UntagResources extends Rpc
      *
      * @return $this
      */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
 
-        return $this;
+		return $this;
     }
 
     /**
@@ -160,26 +196,26 @@ class UntagResources extends Rpc
      *
      * @return $this
      */
-    public function withTagKey(array $tagKey)
-    {
-        $this->data['TagKey'] = $tagKey;
-        foreach ($tagKey as $i => $iValue) {
-            $this->options['query']['TagKey.' . ($i + 1)] = $iValue;
-        }
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method array getTag()
- * @method string getResourceType()
- * @method $this withResourceType($value)
  */
 class ListTagResources extends Rpc
 {
@@ -189,14 +225,14 @@ class ListTagResources extends Rpc
      *
      * @return $this
      */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
 
-        return $this;
+		return $this;
     }
 
     /**
@@ -204,25 +240,25 @@ class ListTagResources extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method array getTag()
- * @method string getResourceType()
- * @method $this withResourceType($value)
  */
 class TagResources extends Rpc
 {
@@ -232,14 +268,14 @@ class TagResources extends Rpc
      *
      * @return $this
      */
-    public function withResourceId(array $resourceId)
-    {
-        $this->data['ResourceId'] = $resourceId;
-        foreach ($resourceId as $i => $iValue) {
-            $this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-        }
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
 
-        return $this;
+		return $this;
     }
 
     /**
@@ -247,15 +283,15 @@ class TagResources extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -280,12 +316,12 @@ class DescribeApp extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getDeleteInternetDomain()
  * @method $this withDeleteInternetDomain($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  */
 class CreateIntranetDomain extends Rpc
 {
@@ -320,12 +356,12 @@ class ImportSwagger extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getIpControlId()
  * @method $this withIpControlId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -334,12 +370,12 @@ class SetIpControlApis extends Rpc
 }
 
 /**
+ * @method string getPolicyItemIds()
+ * @method $this withPolicyItemIds($value)
  * @method string getIpControlId()
  * @method $this withIpControlId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getPolicyItemIds()
- * @method $this withPolicyItemIds($value)
  */
 class RemoveIpControlPolicyItem extends Rpc
 {
@@ -348,12 +384,12 @@ class RemoveIpControlPolicyItem extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getIpControlId()
  * @method $this withIpControlId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -378,38 +414,40 @@ class ModifyIpControlPolicyItem extends Rpc
 }
 
 /**
- * @method string getIpControlId()
- * @method $this withIpControlId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getIpControlName()
  * @method $this withIpControlName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getIpControlId()
+ * @method $this withIpControlId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class ModifyIpControl extends Rpc
 {
 }
 
 /**
+ * @method string getIpControlName()
+ * @method $this withIpControlName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getIpControlId()
  * @method $this withIpControlId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getIpControlName()
- * @method $this withIpControlName($value)
  * @method string getIpControlType()
  * @method $this withIpControlType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeIpControls extends Rpc
 {
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getIpControlId()
  * @method $this withIpControlId($value)
  * @method string getPolicyItemId()
@@ -418,22 +456,20 @@ class DescribeIpControls extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeIpControlPolicyItems extends Rpc
 {
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getIpControlId()
  * @method $this withIpControlId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeApisByIpControl extends Rpc
 {
@@ -442,14 +478,14 @@ class DescribeApisByIpControl extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -468,15 +504,15 @@ class DeleteIpControl extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getIpControlName()
  * @method $this withIpControlName($value)
- * @method string getIpControlType()
- * @method $this withIpControlType($value)
  * @method array getIpControlPolicys()
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getIpControlType()
+ * @method $this withIpControlType($value)
  */
 class CreateIpControl extends Rpc
 {
@@ -486,15 +522,15 @@ class CreateIpControl extends Rpc
      *
      * @return $this
      */
-    public function withIpControlPolicys(array $ipControlPolicys)
-    {
-        $this->data['IpControlPolicys'] = $ipControlPolicys;
-        foreach ($ipControlPolicys as $depth1 => $depth1Value) {
-            $this->options['query']['IpControlPolicys.' . ($depth1 + 1) . '.AppId'] = $depth1Value['AppId'];
-            $this->options['query']['IpControlPolicys.' . ($depth1 + 1) . '.CidrIp'] = $depth1Value['CidrIp'];
-        }
+	public function withIpControlPolicys(array $ipControlPolicys)
+	{
+	    $this->data['IpControlPolicys'] = $ipControlPolicys;
+		foreach ($ipControlPolicys as $depth1 => $depth1Value) {
+			$this->options['query']['IpControlPolicys.' . ($depth1 + 1) . '.AppId'] = $depth1Value['AppId'];
+			$this->options['query']['IpControlPolicys.' . ($depth1 + 1) . '.CidrIp'] = $depth1Value['CidrIp'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -515,12 +551,12 @@ class AddIpControlPolicyItem extends Rpc
 /**
  * @method string getSlsLogStore()
  * @method $this withSlsLogStore($value)
+ * @method string getSlsProject()
+ * @method $this withSlsProject($value)
  * @method string getLogType()
  * @method $this withLogType($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getSlsProject()
- * @method $this withSlsProject($value)
  */
 class ModifyLogConfig extends Rpc
 {
@@ -549,24 +585,24 @@ class DeleteLogConfig extends Rpc
 /**
  * @method string getSlsLogStore()
  * @method $this withSlsLogStore($value)
+ * @method string getSlsProject()
+ * @method $this withSlsProject($value)
  * @method string getLogType()
  * @method $this withLogType($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getSlsProject()
- * @method $this withSlsProject($value)
  */
 class CreateLogConfig extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getActionValue()
  * @method $this withActionValue($value)
  */
@@ -605,24 +641,24 @@ class SetVpcAccess extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeVpcAccesses extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class ReactivateDomain extends Rpc
 {
@@ -631,66 +667,66 @@ class ReactivateDomain extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getApiName()
  * @method $this withApiName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getApiId()
  * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeApiHistories extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getLanguage()
  * @method $this withLanguage($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class SdkGenerateByGroup extends Rpc
 {
 }
 
 /**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getLanguage()
- * @method $this withLanguage($value)
  */
 class SdkGenerateByApp extends Rpc
 {
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeApisByApp extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getStageId()
  * @method $this withStageId($value)
  */
@@ -699,12 +735,12 @@ class DescribeApiStage extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getVariableName()
  * @method $this withVariableName($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getStageId()
  * @method $this withStageId($value)
  */
@@ -715,16 +751,16 @@ class DeleteApiStageVariable extends Rpc
 /**
  * @method string getSupportRoute()
  * @method $this withSupportRoute($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getVariableName()
- * @method $this withVariableName($value)
  * @method string getVariableValue()
  * @method $this withVariableValue($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getStageRouteModel()
  * @method $this withStageRouteModel($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getVariableName()
+ * @method $this withVariableName($value)
  * @method string getStageId()
  * @method $this withStageId($value)
  */
@@ -735,12 +771,12 @@ class CreateApiStageVariable extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  * @method string getHistoryVersion()
@@ -755,10 +791,10 @@ class SwitchApi extends Rpc
  * @method $this withTrafficControlId($value)
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -769,12 +805,12 @@ class SetTrafficControlApis extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getSignatureId()
  * @method $this withSignatureId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -783,30 +819,30 @@ class SetSignatureApis extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getCertificatePrivateKey()
  * @method $this withCertificatePrivateKey($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getCertificateName()
- * @method $this withCertificateName($value)
  * @method string getCertificateBody()
  * @method $this withCertificateBody($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertificateName()
+ * @method $this withCertificateName($value)
  */
 class SetDomainCertificate extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class SetDomain extends Rpc
 {
@@ -817,18 +853,18 @@ class SetDomain extends Rpc
  * @method $this withAuthVaildTime($value)
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getAppIds()
- * @method $this withAppIds($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getApiId()
- * @method $this withApiId($value)
  * @method string getAuthValidTime()
  * @method $this withAuthValidTime($value)
+ * @method string getAppIds()
+ * @method $this withAppIds($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
  */
 class SetAppsAuthorities extends Rpc
 {
@@ -839,16 +875,16 @@ class SetAppsAuthorities extends Rpc
  * @method $this withAuthVaildTime($value)
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getAuthValidTime()
  * @method $this withAuthValidTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -871,10 +907,10 @@ class ResetAppSecret extends Rpc
  * @method $this withTrafficControlId($value)
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -885,12 +921,12 @@ class RemoveTrafficControlApis extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getSignatureId()
  * @method $this withSignatureId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -901,12 +937,12 @@ class RemoveSignatureApis extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getAppIds()
  * @method $this withAppIds($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -917,14 +953,14 @@ class RemoveAppsAuthorities extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -935,18 +971,18 @@ class RemoveApisAuthorities extends Rpc
 /**
  * @method string getTrafficControlId()
  * @method $this withTrafficControlId($value)
- * @method string getApiDefault()
- * @method $this withApiDefault($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getTrafficControlName()
  * @method $this withTrafficControlName($value)
- * @method string getTrafficControlUnit()
- * @method $this withTrafficControlUnit($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getUserDefault()
  * @method $this withUserDefault($value)
+ * @method string getApiDefault()
+ * @method $this withApiDefault($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getTrafficControlUnit()
+ * @method $this withTrafficControlUnit($value)
  * @method string getAppDefault()
  * @method $this withAppDefault($value)
  */
@@ -955,30 +991,30 @@ class ModifyTrafficControl extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getSignatureName()
  * @method $this withSignatureName($value)
- * @method string getSignatureKey()
- * @method $this withSignatureKey($value)
  * @method string getSignatureId()
  * @method $this withSignatureId($value)
  * @method string getSignatureSecret()
  * @method $this withSignatureSecret($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSignatureKey()
+ * @method $this withSignatureKey($value)
  */
 class ModifySignature extends Rpc
 {
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method array getTag()
  */
 class ModifyApp extends Rpc
@@ -989,28 +1025,28 @@ class ModifyApp extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method array getTag()
  * @method string getGroupName()
  * @method $this withGroupName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method array getTag()
  */
 class ModifyApiGroup extends Rpc
 {
@@ -1020,15 +1056,15 @@ class ModifyApiGroup extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -1093,10 +1129,10 @@ class ModifyApi extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1109,18 +1145,18 @@ class DescribeTrafficControlsByApi extends Rpc
  * @method $this withTrafficControlId($value)
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getTrafficControlName()
  * @method $this withTrafficControlName($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getApiId()
  * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeTrafficControls extends Rpc
 {
@@ -1137,10 +1173,10 @@ class DescribeSystemParameters extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1149,26 +1185,26 @@ class DescribeSignaturesByApi extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getSignatureName()
  * @method $this withSignatureName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getSignatureId()
  * @method $this withSignatureId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class DescribeSignatures extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getLanguage()
  * @method $this withLanguage($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DescribeRegions extends Rpc
 {
@@ -1177,42 +1213,42 @@ class DescribeRegions extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getApiName()
- * @method $this withApiName($value)
  * @method string getVisibility()
  * @method $this withVisibility($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getApiName()
+ * @method $this withApiName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getApiId()
  * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribePurchasedApis extends Rpc
 {
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribePurchasedApiGroups extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DescribePurchasedApiGroup extends Rpc
 {
@@ -1221,42 +1257,42 @@ class DescribePurchasedApiGroup extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getApiName()
  * @method $this withApiName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getApiId()
  * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeHistoryApis extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DescribeDomainsResolution extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DescribeDomain extends Rpc
 {
@@ -1265,21 +1301,21 @@ class DescribeDomain extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEnableTagAuth()
+ * @method $this withEnableTagAuth($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getApiName()
  * @method $this withApiName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
- * @method string getEnableTagAuth()
- * @method $this withEnableTagAuth($value)
  * @method string getApiId()
  * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeDeployedApis extends Rpc
 {
@@ -1289,25 +1325,25 @@ class DescribeDeployedApis extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1318,36 +1354,36 @@ class DescribeDeployedApi extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getAppOwnerId()
+ * @method $this withAppOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getAppOwnerId()
- * @method $this withAppOwnerId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getApiId()
  * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeAuthorizedApps extends Rpc
 {
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeAuthorizedApis extends Rpc
 {
@@ -1368,15 +1404,15 @@ class DescribeAppSecurity extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -1397,6 +1433,10 @@ class DescribeApps extends Rpc
 }
 
 /**
+ * @method string getEnableTagAuth()
+ * @method $this withEnableTagAuth($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
@@ -1406,10 +1446,6 @@ class DescribeApps extends Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
- * @method string getEnableTagAuth()
- * @method $this withEnableTagAuth($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeAppAttributes extends Rpc
 {
@@ -1419,27 +1455,27 @@ class DescribeAppAttributes extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1450,14 +1486,14 @@ class DescribeApiTrafficData extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -1468,14 +1504,14 @@ class DescribeApiTrafficControls extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getApiIds()
  * @method $this withApiIds($value)
  */
@@ -1486,51 +1522,51 @@ class DescribeApiSignatures extends Rpc
 /**
  * @method string getTrafficControlId()
  * @method $this withTrafficControlId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeApisByTrafficControl extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getSignatureId()
  * @method $this withSignatureId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class DescribeApisBySignature extends Rpc
 {
 }
 
 /**
+ * @method string getVisibility()
+ * @method $this withVisibility($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEnableTagAuth()
+ * @method $this withEnableTagAuth($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getApiName()
  * @method $this withApiName($value)
  * @method string getCatalogId()
  * @method $this withCatalogId($value)
- * @method string getVisibility()
- * @method $this withVisibility($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
- * @method string getEnableTagAuth()
- * @method $this withEnableTagAuth($value)
  * @method string getApiId()
  * @method $this withApiId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeApis extends Rpc
 {
@@ -1540,27 +1576,27 @@ class DescribeApis extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1569,14 +1605,14 @@ class DescribeApiQpsData extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1587,10 +1623,10 @@ class DescribeApiLatencyData extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  * @method string getHistoryVersion()
@@ -1601,19 +1637,19 @@ class DescribeApiHistory extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method array getTag()
  * @method string getEnableTagAuth()
  * @method $this withEnableTagAuth($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTag()
  */
 class DescribeApiGroups extends Rpc
 {
@@ -1623,23 +1659,23 @@ class DescribeApiGroups extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method array getTag()
  */
 class DescribeApiGroup extends Rpc
@@ -1650,27 +1686,27 @@ class DescribeApiGroup extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1681,10 +1717,10 @@ class DescribeApiErrorData extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1693,10 +1729,10 @@ class DescribeApiDoc extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1707,12 +1743,12 @@ class DescribeApi extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1745,36 +1781,36 @@ class DeleteTrafficControl extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getSignatureId()
  * @method $this withSignatureId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DeleteSignature extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getCertificateId()
  * @method $this withCertificateId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DeleteDomainCertificate extends Rpc
 {
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  */
 class DeleteDomain extends Rpc
 {
@@ -1795,23 +1831,23 @@ class DeleteApp extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method array getTag()
  */
 class DeleteApiGroup extends Rpc
@@ -1822,23 +1858,23 @@ class DeleteApiGroup extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -1857,18 +1893,18 @@ class DeleteAllTrafficSpecialControl extends Rpc
 }
 
 /**
- * @method string getApiDefault()
- * @method $this withApiDefault($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getTrafficControlName()
  * @method $this withTrafficControlName($value)
- * @method string getTrafficControlUnit()
- * @method $this withTrafficControlUnit($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getUserDefault()
  * @method $this withUserDefault($value)
+ * @method string getApiDefault()
+ * @method $this withApiDefault($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getTrafficControlUnit()
+ * @method $this withTrafficControlUnit($value)
  * @method string getAppDefault()
  * @method $this withAppDefault($value)
  */
@@ -1877,26 +1913,26 @@ class CreateTrafficControl extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getSignatureName()
  * @method $this withSignatureName($value)
- * @method string getSignatureKey()
- * @method $this withSignatureKey($value)
  * @method string getSignatureSecret()
  * @method $this withSignatureSecret($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSignatureKey()
+ * @method $this withSignatureKey($value)
  */
 class CreateSignature extends Rpc
 {
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method array getTag()
  */
 class CreateApp extends Rpc
@@ -1907,30 +1943,30 @@ class CreateApp extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getSource()
  * @method $this withSource($value)
- * @method array getTag()
  * @method string getGroupName()
  * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method array getTag()
  */
 class CreateApiGroup extends Rpc
 {
@@ -1940,15 +1976,15 @@ class CreateApiGroup extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -2013,10 +2049,10 @@ class CreateApi extends Rpc
  * @method $this withTrafficControlId($value)
  * @method string getSpecialKey()
  * @method $this withSpecialKey($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getTrafficValue()
  * @method $this withTrafficValue($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getSpecialType()
  * @method $this withSpecialType($value)
  */
@@ -2027,10 +2063,10 @@ class AddTrafficSpecialControl extends Rpc
 /**
  * @method string getStageName()
  * @method $this withStageName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
