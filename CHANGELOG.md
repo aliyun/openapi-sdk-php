@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.90 - 2019-9-5
+- Generated 2017-08-01 for `polardb`.
+
+
 ## 1.7.89 - 2019-9-5
 - Generated 2017-12-14 for `BssOpenApi`.
 
