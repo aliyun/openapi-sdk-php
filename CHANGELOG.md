@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.96 - 2019-9-5
+- Supported for setEndpoint method.
+
+
 ## 1.7.95 - 2019-9-5
 - Generated 2014-05-15 for `Slb`.
 

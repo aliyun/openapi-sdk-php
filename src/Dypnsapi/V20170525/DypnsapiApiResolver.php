@@ -36,10 +36,10 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getAccessToken()
  * @method $this withAccessToken($value)
- * @method string getOutId()
- * @method $this withOutId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
  */
 class GetMobile extends Rpc
 {
@@ -51,22 +51,22 @@ class GetMobile extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPackName()
- * @method $this withPackName($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getSchemeName()
- * @method $this withSchemeName($value)
  * @method string getBundleId()
  * @method $this withBundleId($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getPackSign()
+ * @method $this withPackSign($value)
+ * @method string getPackName()
+ * @method $this withPackName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOsType()
  * @method $this withOsType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPackSign()
- * @method $this withPackSign($value)
+ * @method string getSchemeName()
+ * @method $this withSchemeName($value)
  */
 class CreateVerifyScheme extends Rpc
 {
@@ -75,16 +75,16 @@ class CreateVerifyScheme extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
  * @method string getAccessCode()
  * @method $this withAccessCode($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getOutId()
- * @method $this withOutId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
  */
 class VerifyMobile extends Rpc
 {
