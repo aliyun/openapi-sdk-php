@@ -5,6 +5,13 @@ namespace AlibabaCloud\Foas\V20181111;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetInstanceHistoryAutoScalePlanContent getInstanceHistoryAutoScalePlanContent(array $options = [])
+ * @method GetInstanceHistoryAutoScalePlanList getInstanceHistoryAutoScalePlanList(array $options = [])
+ * @method GetInstanceVertexTaskManagers getInstanceVertexTaskManagers(array $options = [])
+ * @method CalcPlanJsonResource calcPlanJsonResource(array $options = [])
+ * @method UpdateAutoScaleConfig updateAutoScaleConfig(array $options = [])
+ * @method GetJobLatestAutoScalePlan getJobLatestAutoScalePlan(array $options = [])
+ * @method CreateCellClusterOrder createCellClusterOrder(array $options = [])
  * @method ModifyMasterSpec modifyMasterSpec(array $options = [])
  * @method CreateCluster createCluster(array $options = [])
  * @method DestroyCluster destroyCluster(array $options = [])
@@ -78,6 +85,432 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'foas';
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getInstanceId()
+ * @method string getPlanName()
+ * @method string getJobName()
+ */
+class GetInstanceHistoryAutoScalePlanContent extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instance/[instanceId]/autoscale/plancontent';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlanName($value)
+    {
+        $this->data['PlanName'] = $value;
+        $this->options['query']['planName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getInstanceId()
+ * @method string getJobName()
+ */
+class GetInstanceHistoryAutoScalePlanList extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instance/[instanceId]/autoscale/planlist';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getInstanceId()
+ * @method string getVertexId()
+ * @method string getJobName()
+ */
+class GetInstanceVertexTaskManagers extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instances/[instanceId]/vertices/[vertexId]/taskmanagers';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVertexId($value)
+    {
+        $this->data['VertexId'] = $value;
+        $this->pathParameters['vertexId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getJobName()
+ */
+class CalcPlanJsonResource extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/planjson-resource';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getInstanceId()
+ * @method string getConfigJson()
+ * @method string getJobName()
+ */
+class UpdateAutoScaleConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/instance/[instanceId]/autoscale/config';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigJson($value)
+    {
+        $this->data['ConfigJson'] = $value;
+        $this->options['form_params']['configJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectName()
+ * @method string getJobName()
+ */
+class GetJobLatestAutoScalePlan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/projects/[projectName]/jobs/[jobName]/autoscale/latestplanjson';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->pathParameters['jobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPeriod()
+ * @method string getSlaveNum()
+ * @method string getSlaveSpec()
+ * @method string getRegion()
+ * @method string getMasterNum()
+ * @method string getMasterSpec()
+ * @method string getPayModel()
+ */
+class CreateCellClusterOrder extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/realtime-compute/cell/buy';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPeriod($value)
+    {
+        $this->data['Period'] = $value;
+        $this->options['form_params']['period'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSlaveNum($value)
+    {
+        $this->data['SlaveNum'] = $value;
+        $this->options['form_params']['slaveNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSlaveSpec($value)
+    {
+        $this->data['SlaveSpec'] = $value;
+        $this->options['form_params']['slaveSpec'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegion($value)
+    {
+        $this->data['Region'] = $value;
+        $this->options['form_params']['region'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMasterNum($value)
+    {
+        $this->data['MasterNum'] = $value;
+        $this->options['form_params']['masterNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMasterSpec($value)
+    {
+        $this->data['MasterSpec'] = $value;
+        $this->options['form_params']['masterSpec'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPayModel($value)
+    {
+        $this->data['PayModel'] = $value;
+        $this->options['form_params']['payModel'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -3012,6 +3445,7 @@ class GetJob extends Roa
  * @method string getQueueName()
  * @method string getProjectName()
  * @method string getPageSize()
+ * @method string getIsShowFullField()
  * @method string getPageIndex()
  * @method string getEngineVersion()
  * @method string getClusterId()
@@ -3060,6 +3494,19 @@ class ListJob extends Roa
     {
         $this->data['PageSize'] = $value;
         $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsShowFullField($value)
+    {
+        $this->data['IsShowFullField'] = $value;
+        $this->options['query']['isShowFullField'] = $value;
 
         return $this;
     }
@@ -3529,6 +3976,9 @@ class BatchGetInstanceRunSummary extends Roa
 
 /**
  * @method string getProjectName()
+ * @method string getMaxCU()
+ * @method string getConfigure()
+ * @method string getIsOnOff()
  * @method string getJobName()
  */
 class CommitJob extends Roa
@@ -3548,6 +3998,45 @@ class CommitJob extends Roa
     {
         $this->data['ProjectName'] = $value;
         $this->pathParameters['projectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxCU($value)
+    {
+        $this->data['MaxCU'] = $value;
+        $this->options['form_params']['maxCU'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigure($value)
+    {
+        $this->data['Configure'] = $value;
+        $this->options['form_params']['configure'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsOnOff($value)
+    {
+        $this->data['IsOnOff'] = $value;
+        $this->options['form_params']['isOnOff'] = $value;
 
         return $this;
     }

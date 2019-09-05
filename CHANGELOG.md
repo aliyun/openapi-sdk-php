@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.94 - 2019-9-5
+- Generated 2018-11-11 for `foas`.
+
+
 ## 1.7.93 - 2019-9-5
 - Generated 2019-05-24 for `cusanalytic_sc_online`.
 
