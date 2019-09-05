@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.92 - 2019-9-5
+- Generated 2015-11-01 for `Market`.
+
+
 ## 1.7.91 - 2019-9-5
 - Generated 2016-07-14 for `CloudAPI`.
 

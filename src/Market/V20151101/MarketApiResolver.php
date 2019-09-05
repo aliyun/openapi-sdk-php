@@ -5,6 +5,14 @@ namespace AlibabaCloud\Market\V20151101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DeleteCommodity deleteCommodity(array $options = [])
+ * @method UpdateCommodity updateCommodity(array $options = [])
+ * @method DescribeCommodities describeCommodities(array $options = [])
+ * @method UploadCommodityFile uploadCommodityFile(array $options = [])
+ * @method CreateCommodity createCommodity(array $options = [])
+ * @method DescribeRate describeRate(array $options = [])
+ * @method CreateRate createRate(array $options = [])
+ * @method DescribeCommodity describeCommodity(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method NotifyContractEvent notifyContractEvent(array $options = [])
  * @method DescribeProducts describeProducts(array $options = [])
@@ -34,6 +42,137 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'yunmarket';
+}
+
+/**
+ * @method string getCommodityId()
+ * @method $this withCommodityId($value)
+ */
+class DeleteCommodity extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getCommodityId()
+ * @method $this withCommodityId($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ */
+class UpdateCommodity extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getCommodityGmtModifiedTo()
+ * @method $this withCommodityGmtModifiedTo($value)
+ * @method string getCommodityGmtModifiedFrom()
+ * @method $this withCommodityGmtModifiedFrom($value)
+ * @method string getCommodityId()
+ * @method $this withCommodityId($value)
+ * @method string getCommodityGmtPublishFrom()
+ * @method $this withCommodityGmtPublishFrom($value)
+ * @method string getCommodityStatuses()
+ * @method $this withCommodityStatuses($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getCommodityGmtCreatedFrom()
+ * @method $this withCommodityGmtCreatedFrom($value)
+ * @method string getCommodityIds()
+ * @method $this withCommodityIds($value)
+ * @method string getCommodityGmtCreatedTo()
+ * @method $this withCommodityGmtCreatedTo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCommodityGmtPublishTo()
+ * @method $this withCommodityGmtPublishTo($value)
+ * @method string getCommodityAuditStatuses()
+ * @method $this withCommodityAuditStatuses($value)
+ * @method string getProperties()
+ * @method $this withProperties($value)
+ * @method string getCommodityCategoryIds()
+ * @method $this withCommodityCategoryIds($value)
+ */
+class DescribeCommodities extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getFileResourceType()
+ * @method $this withFileResourceType($value)
+ * @method string getFileResource()
+ * @method $this withFileResource($value)
+ * @method string getFileContentType()
+ * @method $this withFileContentType($value)
+ */
+class UploadCommodityFile extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getContent()
+ */
+class CreateCommodity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class DescribeRate extends Rpc
+{
+}
+
+/**
+ * @method string getScore()
+ * @method $this withScore($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ */
+class CreateRate extends Rpc
+{
+}
+
+/**
+ * @method string getCommodityId()
+ * @method $this withCommodityId($value)
+ */
+class DescribeCommodity extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -75,15 +214,15 @@ class DescribeProducts extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -128,10 +267,10 @@ class DescribeOrder extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
