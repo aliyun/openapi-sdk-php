@@ -5,12 +5,10 @@ namespace AlibabaCloud\Vpc\V20160428;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DeletionProtection deletionProtection(array $options = [])
+ * @method DescribeEipGatewayInfo describeEipGatewayInfo(array $options = [])
+ * @method ModifyBgpPeerAttribute modifyBgpPeerAttribute(array $options = [])
  * @method DescribeVpnSslServerLogs describeVpnSslServerLogs(array $options = [])
- * @method DescribeVpnGreTunnelLogs describeVpnGreTunnelLogs(array $options = [])
- * @method DescribeVpnGreTunnels describeVpnGreTunnels(array $options = [])
- * @method DeleteVpnGreTunnel deleteVpnGreTunnel(array $options = [])
- * @method ModifyVpnGreTunnel modifyVpnGreTunnel(array $options = [])
- * @method CreateVpnGreTunnel createVpnGreTunnel(array $options = [])
  * @method ModifyExpressCloudConnectionBandwidth modifyExpressCloudConnectionBandwidth(array $options = [])
  * @method ModifyExpressCloudConnectionAttribute modifyExpressCloudConnectionAttribute(array $options = [])
  * @method DescribeExpressCloudConnections describeExpressCloudConnections(array $options = [])
@@ -42,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ApplyPhysicalConnectionLOA applyPhysicalConnectionLOA(array $options = [])
  * @method ConvertBandwidthPackage convertBandwidthPackage(array $options = [])
  * @method ModifyRouteEntry modifyRouteEntry(array $options = [])
+ * @method DescribeRouteEntryList describeRouteEntryList(array $options = [])
  * @method CreateIPv6TranslatorAclList createIPv6TranslatorAclList(array $options = [])
  * @method DeleteIPv6TranslatorAclList deleteIPv6TranslatorAclList(array $options = [])
  * @method AddIPv6TranslatorAclListEntry addIPv6TranslatorAclListEntry(array $options = [])
@@ -50,6 +49,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveIPv6TranslatorAclListEntry removeIPv6TranslatorAclListEntry(array $options = [])
  * @method DescribeIPv6TranslatorAclListAttributes describeIPv6TranslatorAclListAttributes(array $options = [])
  * @method ModifyIPv6TranslatorAclListEntry modifyIPv6TranslatorAclListEntry(array $options = [])
+ * @method UnTagResources unTagResources(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyIpv6InternetBandwidth modifyIpv6InternetBandwidth(array $options = [])
  * @method ModifyIpv6GatewaySpec modifyIpv6GatewaySpec(array $options = [])
  * @method ModifyIpv6GatewayAttribute modifyIpv6GatewayAttribute(array $options = [])
@@ -64,7 +66,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateIpv6Gateway createIpv6Gateway(array $options = [])
  * @method CreateIpv6EgressOnlyRule createIpv6EgressOnlyRule(array $options = [])
  * @method AllocateIpv6InternetBandwidth allocateIpv6InternetBandwidth(array $options = [])
- * @method DescribePhysicalConnectionOrder describePhysicalConnectionOrder(array $options = [])
  * @method DeleteExpressConnect deleteExpressConnect(array $options = [])
  * @method CreateIPv6Translator createIPv6Translator(array $options = [])
  * @method DescribeIPv6Translators describeIPv6Translators(array $options = [])
@@ -75,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyIPv6TranslatorEntry modifyIPv6TranslatorEntry(array $options = [])
  * @method DescribeIPv6TranslatorEntries describeIPv6TranslatorEntries(array $options = [])
  * @method DeleteIPv6Translator deleteIPv6Translator(array $options = [])
+ * @method DescribeHighDefinitionMonitorLogAttribute describeHighDefinitionMonitorLogAttribute(array $options = [])
  * @method ModifyFlowLogAttribute modifyFlowLogAttribute(array $options = [])
  * @method DescribeFlowLogs describeFlowLogs(array $options = [])
  * @method DeleteFlowLog deleteFlowLog(array $options = [])
@@ -86,6 +88,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateRouteTable createRouteTable(array $options = [])
  * @method AssociateRouteTable associateRouteTable(array $options = [])
  * @method CreateVpnGateway createVpnGateway(array $options = [])
+ * @method MoveResourceGroup moveResourceGroup(array $options = [])
  * @method RevokeInstanceFromCen revokeInstanceFromCen(array $options = [])
  * @method GrantInstanceToCen grantInstanceToCen(array $options = [])
  * @method DescribeGrantRulesToCen describeGrantRulesToCen(array $options = [])
@@ -135,16 +138,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCustomerGateway deleteCustomerGateway(array $options = [])
  * @method CreateVpnConnection createVpnConnection(array $options = [])
  * @method CreateCustomerGateway createCustomerGateway(array $options = [])
- * @method ModifyNqa modifyNqa(array $options = [])
  * @method ModifyBgpGroupAttribute modifyBgpGroupAttribute(array $options = [])
- * @method DescribeNqas describeNqas(array $options = [])
  * @method DescribeBgpPeers describeBgpPeers(array $options = [])
  * @method DescribeBgpGroups describeBgpGroups(array $options = [])
- * @method DeleteNqa deleteNqa(array $options = [])
  * @method DeleteBgpPeer deleteBgpPeer(array $options = [])
  * @method DeleteBgpNetwork deleteBgpNetwork(array $options = [])
  * @method DeleteBgpGroup deleteBgpGroup(array $options = [])
- * @method CreateNqa createNqa(array $options = [])
  * @method CreateBgpPeer createBgpPeer(array $options = [])
  * @method CreateBgpGroup createBgpGroup(array $options = [])
  * @method AddBgpNetwork addBgpNetwork(array $options = [])
@@ -152,7 +151,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableVpcClassicLink disableVpcClassicLink(array $options = [])
  * @method DescribeVpcAttribute describeVpcAttribute(array $options = [])
  * @method UnassociatePhysicalConnectionFromVirtualBorderRouter unassociatePhysicalConnectionFromVirtualBorderRouter(array $options = [])
- * @method CreatePhysicalConnectionNew createPhysicalConnectionNew(array $options = [])
  * @method AssociatePhysicalConnectionToVirtualBorderRouter associatePhysicalConnectionToVirtualBorderRouter(array $options = [])
  * @method ModifySnatEntry modifySnatEntry(array $options = [])
  * @method ModifyNatGatewaySpec modifyNatGatewaySpec(array $options = [])
@@ -248,24 +246,84 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getMinutePeriod()
- * @method $this withMinutePeriod($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getProtectionEnable()
+ * @method $this withProtectionEnable($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeletionProtection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeEipGatewayInfo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBgpGroupId()
+ * @method $this withBgpGroupId($value)
+ * @method string getPeerIpAddress()
+ * @method $this withPeerIpAddress($value)
+ * @method string getEnableBfd()
+ * @method $this withEnableBfd($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getBgpPeerId()
+ * @method $this withBgpPeerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyBgpPeerAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getMinutePeriod()
+ * @method $this withMinutePeriod($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getVpnSslServerId()
  * @method $this withVpnSslServerId($value)
  * @method string getFrom()
  * @method $this withFrom($value)
- * @method string getTo()
- * @method $this withTo($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getTo()
+ * @method $this withTo($value)
  */
 class DescribeVpnSslServerLogs extends Rpc
 {
@@ -274,156 +332,8 @@ class DescribeVpnSslServerLogs extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getMinutePeriod()
- * @method $this withMinutePeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getVpnGreTunnelId()
- * @method $this withVpnGreTunnelId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getFrom()
- * @method $this withFrom($value)
- * @method string getTo()
- * @method $this withTo($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeVpnGreTunnelLogs extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getTunnelInstanceId()
- * @method $this withTunnelInstanceId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getVpnGatewayId()
- * @method $this withVpnGatewayId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCustomerGatewayId()
- * @method $this withCustomerGatewayId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeVpnGreTunnels extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getTunnelInstanceId()
- * @method $this withTunnelInstanceId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getVpnGatewayId()
- * @method $this withVpnGatewayId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteVpnGreTunnel extends Rpc
-{
-}
-
-/**
- * @method string getKeepaliveEnable()
- * @method $this withKeepaliveEnable($value)
- * @method string getTunnelPeerIp()
- * @method $this withTunnelPeerIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getKeepaliveSeconds()
- * @method $this withKeepaliveSeconds($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getVpnGatewayId()
- * @method $this withVpnGatewayId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getHealthCheckConfig()
- * @method $this withHealthCheckConfig($value)
- * @method string getTunnelInstanceId()
- * @method $this withTunnelInstanceId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getKeepaliveTimes()
- * @method $this withKeepaliveTimes($value)
- * @method string getChecksumEnable()
- * @method $this withChecksumEnable($value)
- * @method string getTunnelIp()
- * @method $this withTunnelIp($value)
- * @method string getGreKey()
- * @method $this withGreKey($value)
- */
-class ModifyVpnGreTunnel extends Rpc
-{
-}
-
-/**
- * @method string getKeepaliveEnable()
- * @method $this withKeepaliveEnable($value)
- * @method string getTunnelPeerIp()
- * @method $this withTunnelPeerIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getKeepaliveSeconds()
- * @method $this withKeepaliveSeconds($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getVpnGatewayId()
- * @method $this withVpnGatewayId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getHealthCheckConfig()
- * @method $this withHealthCheckConfig($value)
- * @method string getCustomerGatewayId()
- * @method $this withCustomerGatewayId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getKeepaliveTimes()
- * @method $this withKeepaliveTimes($value)
- * @method string getTunnelIp()
- * @method $this withTunnelIp($value)
- * @method string getChecksumEnable()
- * @method $this withChecksumEnable($value)
- * @method string getGreKey()
- * @method $this withGreKey($value)
- */
-class CreateVpnGreTunnel extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getEccId()
+ * @method $this withEccId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
@@ -432,8 +342,6 @@ class CreateVpnGreTunnel extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getEccId()
- * @method $this withEccId($value)
  */
 class ModifyExpressCloudConnectionBandwidth extends Rpc
 {
@@ -442,37 +350,37 @@ class ModifyExpressCloudConnectionBandwidth extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getEccId()
+ * @method $this withEccId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getEccId()
- * @method $this withEccId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyExpressCloudConnectionAttribute extends Rpc
 {
 }
 
 /**
- * @method array getFilter()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method array getFilter()
  */
 class DescribeExpressCloudConnections extends Rpc
 {
@@ -482,41 +390,41 @@ class DescribeExpressCloudConnections extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            foreach ($depth1Value['Value'] as $i => $iValue) {
-                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPeerLocation()
- * @method $this withPeerLocation($value)
  * @method string getPortType()
  * @method $this withPortType($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getRedundantEccId()
+ * @method $this withRedundantEccId($value)
+ * @method string getPeerLocation()
+ * @method $this withPeerLocation($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getPeerCity()
  * @method $this withPeerCity($value)
  * @method string getIDCardNo()
  * @method $this withIDCardNo($value)
- * @method string getRedundantEccId()
- * @method $this withRedundantEccId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getContactMail()
@@ -558,21 +466,21 @@ class UpdateNetworkAclEntries extends Rpc
      *
      * @return $this
      */
-    public function withEgressAclEntries(array $egressAclEntries)
-    {
-        $this->data['EgressAclEntries'] = $egressAclEntries;
-        foreach ($egressAclEntries as $depth1 => $depth1Value) {
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryName'] = $depth1Value['NetworkAclEntryName'];
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryId'] = $depth1Value['NetworkAclEntryId'];
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Policy'] = $depth1Value['Policy'];
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.DestinationCidrIp'] = $depth1Value['DestinationCidrIp'];
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.EntryType'] = $depth1Value['EntryType'];
-            $this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
-        }
+	public function withEgressAclEntries(array $egressAclEntries)
+	{
+	    $this->data['EgressAclEntries'] = $egressAclEntries;
+		foreach ($egressAclEntries as $depth1 => $depth1Value) {
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryName'] = $depth1Value['NetworkAclEntryName'];
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryId'] = $depth1Value['NetworkAclEntryId'];
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Policy'] = $depth1Value['Policy'];
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.DestinationCidrIp'] = $depth1Value['DestinationCidrIp'];
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.EntryType'] = $depth1Value['EntryType'];
+			$this->options['query']['EgressAclEntries.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+		}
 
-        return $this;
+		return $this;
     }
 
     /**
@@ -580,21 +488,21 @@ class UpdateNetworkAclEntries extends Rpc
      *
      * @return $this
      */
-    public function withIngressAclEntries(array $ingressAclEntries)
-    {
-        $this->data['IngressAclEntries'] = $ingressAclEntries;
-        foreach ($ingressAclEntries as $depth1 => $depth1Value) {
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryName'] = $depth1Value['NetworkAclEntryName'];
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryId'] = $depth1Value['NetworkAclEntryId'];
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Policy'] = $depth1Value['Policy'];
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.SourceCidrIp'] = $depth1Value['SourceCidrIp'];
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.EntryType'] = $depth1Value['EntryType'];
-            $this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
-        }
+	public function withIngressAclEntries(array $ingressAclEntries)
+	{
+	    $this->data['IngressAclEntries'] = $ingressAclEntries;
+		foreach ($ingressAclEntries as $depth1 => $depth1Value) {
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryName'] = $depth1Value['NetworkAclEntryName'];
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.NetworkAclEntryId'] = $depth1Value['NetworkAclEntryId'];
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Policy'] = $depth1Value['Policy'];
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.SourceCidrIp'] = $depth1Value['SourceCidrIp'];
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.EntryType'] = $depth1Value['EntryType'];
+			$this->options['query']['IngressAclEntries.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -619,15 +527,15 @@ class UnassociateNetworkAcl extends Rpc
      *
      * @return $this
      */
-    public function withResource(array $resource)
-    {
-        $this->data['Resource'] = $resource;
-        foreach ($resource as $depth1 => $depth1Value) {
-            $this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceType'] = $depth1Value['ResourceType'];
-            $this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
-        }
+	public function withResource(array $resource)
+	{
+	    $this->data['Resource'] = $resource;
+		foreach ($resource as $depth1 => $depth1Value) {
+			$this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceType'] = $depth1Value['ResourceType'];
+			$this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -770,15 +678,15 @@ class AssociateNetworkAcl extends Rpc
      *
      * @return $this
      */
-    public function withResource(array $resource)
-    {
-        $this->data['Resource'] = $resource;
-        foreach ($resource as $depth1 => $depth1Value) {
-            $this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceType'] = $depth1Value['ResourceType'];
-            $this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
-        }
+	public function withResource(array $resource)
+	{
+	    $this->data['Resource'] = $resource;
+		foreach ($resource as $depth1 => $depth1Value) {
+			$this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceType'] = $depth1Value['ResourceType'];
+			$this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -825,16 +733,18 @@ class CancelCommonBandwidthPackageIpBandwidth extends Rpc
  * @method $this withRouteSource($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPublishVpc()
+ * @method $this withPublishVpc($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getWeight()
  * @method $this withWeight($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getVpnGatewayId()
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
@@ -843,8 +753,6 @@ class CancelCommonBandwidthPackageIpBandwidth extends Rpc
  * @method $this withRouteDest($value)
  * @method string getNextHop()
  * @method $this withNextHop($value)
- * @method string getPublishVpc()
- * @method $this withPublishVpc($value)
  * @method string getOverlayMode()
  * @method $this withOverlayMode($value)
  */
@@ -855,16 +763,18 @@ class CreateVpnPbrRouteEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPublishVpc()
+ * @method $this withPublishVpc($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getWeight()
  * @method $this withWeight($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getVpnGatewayId()
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
@@ -873,8 +783,6 @@ class CreateVpnPbrRouteEntry extends Rpc
  * @method $this withRouteDest($value)
  * @method string getNextHop()
  * @method $this withNextHop($value)
- * @method string getPublishVpc()
- * @method $this withPublishVpc($value)
  * @method string getOverlayMode()
  * @method $this withOverlayMode($value)
  */
@@ -887,10 +795,10 @@ class CreateVpnRouteEntry extends Rpc
  * @method $this withRouteSource($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getWeight()
@@ -913,10 +821,10 @@ class DeleteVpnPbrRouteEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getWeight()
@@ -939,18 +847,18 @@ class DeleteVpnRouteEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getVpnGatewayId()
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeVpnRouteEntries extends Rpc
 {
@@ -959,18 +867,18 @@ class DescribeVpnRouteEntries extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getVpnGatewayId()
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeVpnPbrRouteEntries extends Rpc
 {
@@ -979,12 +887,14 @@ class DescribeVpnPbrRouteEntries extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRouteType()
+ * @method $this withRouteType($value)
  * @method string getPublishVpc()
  * @method $this withPublishVpc($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getVpnGatewayId()
@@ -995,8 +905,6 @@ class DescribeVpnPbrRouteEntries extends Rpc
  * @method $this withRouteDest($value)
  * @method string getNextHop()
  * @method $this withNextHop($value)
- * @method string getRouteType()
- * @method $this withRouteType($value)
  */
 class PublishVpnRouteEntry extends Rpc
 {
@@ -1005,10 +913,12 @@ class PublishVpnRouteEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getNewWeight()
+ * @method $this withNewWeight($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getWeight()
@@ -1017,8 +927,6 @@ class PublishVpnRouteEntry extends Rpc
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getNewWeight()
- * @method $this withNewWeight($value)
  * @method string getRouteDest()
  * @method $this withRouteDest($value)
  * @method string getNextHop()
@@ -1035,10 +943,12 @@ class ModifyVpnRouteEntryWeight extends Rpc
  * @method $this withRouteSource($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getNewWeight()
+ * @method $this withNewWeight($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getWeight()
@@ -1047,8 +957,6 @@ class ModifyVpnRouteEntryWeight extends Rpc
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getNewWeight()
- * @method $this withNewWeight($value)
  * @method string getRouteDest()
  * @method $this withRouteDest($value)
  * @method string getNextHop()
@@ -1063,16 +971,16 @@ class ModifyVpnPbrRouteEntryWeight extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class DescribePhysicalConnectionLOA extends Rpc
 {
@@ -1081,16 +989,16 @@ class DescribePhysicalConnectionLOA extends Rpc
 /**
  * @method string getAccessPointId()
  * @method $this withAccessPointId($value)
- * @method string getRedundantPhysicalConnectionId()
- * @method $this withRedundantPhysicalConnectionId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getPortType()
  * @method $this withPortType($value)
- * @method string getAutoPay()
- * @method $this withAutoPay($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getRedundantPhysicalConnectionId()
+ * @method $this withRedundantPhysicalConnectionId($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1105,24 +1013,24 @@ class CreatePhysicalConnectionSetupOrder extends Rpc
 }
 
 /**
- * @method string getPeriod()
- * @method $this withPeriod($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
@@ -1131,22 +1039,22 @@ class CreatePhysicalConnectionOccupancyOrder extends Rpc
 }
 
 /**
- * @method string getLineLabel()
- * @method $this withLineLabel($value)
  * @method string getLineCode()
  * @method $this withLineCode($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getLineLabel()
+ * @method $this withLineLabel($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class CompletePhysicalConnectionLOA extends Rpc
 {
@@ -1155,16 +1063,18 @@ class CompletePhysicalConnectionLOA extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPeerLocation()
- * @method $this withPeerLocation($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getLineType()
+ * @method $this withLineType($value)
+ * @method string getSi()
+ * @method $this withSi($value)
+ * @method string getPeerLocation()
+ * @method $this withPeerLocation($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
- * @method string getLineType()
- * @method $this withLineType($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getConstructionTime()
@@ -1175,8 +1085,6 @@ class CompletePhysicalConnectionLOA extends Rpc
  * @method $this withInstanceId($value)
  * @method string getCompanyName()
  * @method $this withCompanyName($value)
- * @method string getSi()
- * @method $this withSi($value)
  * @method array getPMInfo()
  */
 class ApplyPhysicalConnectionLOA extends Rpc
@@ -1187,18 +1095,18 @@ class ApplyPhysicalConnectionLOA extends Rpc
      *
      * @return $this
      */
-    public function withPMInfo(array $pMInfo)
-    {
-        $this->data['PMInfo'] = $pMInfo;
-        foreach ($pMInfo as $depth1 => $depth1Value) {
-            $this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMCertificateNo'] = $depth1Value['PMCertificateNo'];
-            $this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMName'] = $depth1Value['PMName'];
-            $this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMCertificateType'] = $depth1Value['PMCertificateType'];
-            $this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMContactInfo'] = $depth1Value['PMContactInfo'];
-            $this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMGender'] = $depth1Value['PMGender'];
-        }
+	public function withPMInfo(array $pMInfo)
+	{
+	    $this->data['PMInfo'] = $pMInfo;
+		foreach ($pMInfo as $depth1 => $depth1Value) {
+			$this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMCertificateNo'] = $depth1Value['PMCertificateNo'];
+			$this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMName'] = $depth1Value['PMName'];
+			$this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMCertificateType'] = $depth1Value['PMCertificateType'];
+			$this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMContactInfo'] = $depth1Value['PMContactInfo'];
+			$this->options['query']['PMInfo.' . ($depth1 + 1) . '.PMGender'] = $depth1Value['PMGender'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -1221,14 +1129,14 @@ class ConvertBandwidthPackage extends Rpc
 /**
  * @method string getRouteEntryName()
  * @method $this withRouteEntryName($value)
- * @method string getRouteEntryId()
- * @method $this withRouteEntryId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRouteEntryId()
+ * @method $this withRouteEntryId($value)
  */
 class ModifyRouteEntry extends Rpc
 {
@@ -1237,12 +1145,46 @@ class ModifyRouteEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getAclName()
- * @method $this withAclName($value)
+ * @method string getRouteEntryName()
+ * @method $this withRouteEntryName($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getRouteEntryType()
+ * @method $this withRouteEntryType($value)
+ * @method string getIpVersion()
+ * @method $this withIpVersion($value)
+ * @method string getNextHopId()
+ * @method $this withNextHopId($value)
+ * @method string getNextHopType()
+ * @method $this withNextHopType($value)
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getDestinationCidrBlock()
+ * @method $this withDestinationCidrBlock($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResult()
+ * @method $this withMaxResult($value)
+ * @method string getRouteEntryId()
+ * @method $this withRouteEntryId($value)
+ */
+class DescribeRouteEntryList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAclName()
+ * @method $this withAclName($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -1253,14 +1195,14 @@ class CreateIPv6TranslatorAclList extends Rpc
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -1271,10 +1213,10 @@ class DeleteIPv6TranslatorAclList extends Rpc
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getAclEntryIp()
  * @method $this withAclEntryIp($value)
  * @method string getResourceOwnerAccount()
@@ -1291,38 +1233,38 @@ class AddIPv6TranslatorAclListEntry extends Rpc
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getAclName()
  * @method $this withAclName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeIPv6TranslatorAclLists extends Rpc
 {
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getAclName()
  * @method $this withAclName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -1333,14 +1275,14 @@ class ModifyIPv6TranslatorAclAttribute extends Rpc
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -1353,30 +1295,30 @@ class RemoveIPv6TranslatorAclListEntry extends Rpc
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeIPv6TranslatorAclListAttributes extends Rpc
 {
 }
 
 /**
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1390,6 +1332,154 @@ class DescribeIPv6TranslatorAclListAttributes extends Rpc
  */
 class ModifyIPv6TranslatorAclListEntry extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTagKey()
+ */
+class UnTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1707,36 +1797,18 @@ class AllocateIpv6InternetBandwidth extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribePhysicalConnectionOrder extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForce()
- * @method $this withForce($value)
  * @method string getRouterInterfaceId()
  * @method $this withRouterInterfaceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class DeleteExpressConnect extends Rpc
 {
@@ -1745,22 +1817,22 @@ class DeleteExpressConnect extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSpec()
- * @method $this withSpec($value)
- * @method string getDuration()
- * @method $this withDuration($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getPayType()
@@ -1773,28 +1845,28 @@ class CreateIPv6Translator extends Rpc
 }
 
 /**
- * @method string getBusinessStatus()
- * @method $this withBusinessStatus($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAllocateIpv4Addr()
+ * @method $this withAllocateIpv4Addr($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getBusinessStatus()
+ * @method $this withBusinessStatus($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getAllocateIpv6Addr()
  * @method $this withAllocateIpv6Addr($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getAllocateIpv4Addr()
- * @method $this withAllocateIpv4Addr($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSpec()
- * @method $this withSpec($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getIpv6TranslatorId()
  * @method $this withIpv6TranslatorId($value)
  * @method string getPayType()
@@ -1809,20 +1881,20 @@ class DescribeIPv6Translators extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getIpv6TranslatorId()
- * @method $this withIpv6TranslatorId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getIpv6TranslatorId()
+ * @method $this withIpv6TranslatorId($value)
  */
 class ModifyIPv6TranslatorAttribute extends Rpc
 {
@@ -1831,20 +1903,20 @@ class ModifyIPv6TranslatorAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIpv6TranslatorId()
- * @method $this withIpv6TranslatorId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getIpv6TranslatorId()
+ * @method $this withIpv6TranslatorId($value)
  */
 class ModifyIPv6TranslatorBandwidth extends Rpc
 {
@@ -1853,18 +1925,10 @@ class ModifyIPv6TranslatorBandwidth extends Rpc
 /**
  * @method string getBackendIpv4Port()
  * @method $this withBackendIpv4Port($value)
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getEntryName()
  * @method $this withEntryName($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAclStatus()
  * @method $this withAclStatus($value)
  * @method string getEntryBandwidth()
@@ -1877,6 +1941,14 @@ class ModifyIPv6TranslatorBandwidth extends Rpc
  * @method $this withEntryDescription($value)
  * @method string getBackendIpv4Addr()
  * @method $this withBackendIpv4Addr($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTransProtocol()
  * @method $this withTransProtocol($value)
  * @method string getIpv6TranslatorId()
@@ -1889,18 +1961,18 @@ class CreateIPv6TranslatorEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getIpv6TranslatorEntryId()
  * @method $this withIpv6TranslatorEntryId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIpv6TranslatorId()
- * @method $this withIpv6TranslatorId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getIpv6TranslatorId()
+ * @method $this withIpv6TranslatorId($value)
  */
 class DeleteIPv6TranslatorEntry extends Rpc
 {
@@ -1909,20 +1981,10 @@ class DeleteIPv6TranslatorEntry extends Rpc
 /**
  * @method string getBackendIpv4Port()
  * @method $this withBackendIpv4Port($value)
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getIpv6TranslatorEntryId()
- * @method $this withIpv6TranslatorEntryId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getEntryName()
  * @method $this withEntryName($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAclStatus()
  * @method $this withAclStatus($value)
  * @method string getEntryBandwidth()
@@ -1935,6 +1997,16 @@ class DeleteIPv6TranslatorEntry extends Rpc
  * @method $this withEntryDescription($value)
  * @method string getBackendIpv4Addr()
  * @method $this withBackendIpv4Addr($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getIpv6TranslatorEntryId()
+ * @method $this withIpv6TranslatorEntryId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTransProtocol()
  * @method $this withTransProtocol($value)
  */
@@ -1945,24 +2017,12 @@ class ModifyIPv6TranslatorEntry extends Rpc
 /**
  * @method string getBackendIpv4Port()
  * @method $this withBackendIpv4Port($value)
- * @method string getAclId()
- * @method $this withAclId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getIpv6TranslatorEntryId()
- * @method $this withIpv6TranslatorEntryId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getEntryName()
  * @method $this withEntryName($value)
- * @method string getAllocateIpv6Addr()
- * @method $this withAllocateIpv6Addr($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAclStatus()
  * @method $this withAclStatus($value)
  * @method string getPageNumber()
@@ -1975,6 +2035,18 @@ class ModifyIPv6TranslatorEntry extends Rpc
  * @method $this withPageSize($value)
  * @method string getBackendIpv4Addr()
  * @method $this withBackendIpv4Addr($value)
+ * @method string getAclId()
+ * @method $this withAclId($value)
+ * @method string getIpv6TranslatorEntryId()
+ * @method $this withIpv6TranslatorEntryId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAllocateIpv6Addr()
+ * @method $this withAllocateIpv6Addr($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTransProtocol()
  * @method $this withTransProtocol($value)
  * @method string getIpv6TranslatorId()
@@ -1987,16 +2059,16 @@ class DescribeIPv6TranslatorEntries extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIpv6TranslatorId()
- * @method $this withIpv6TranslatorId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getIpv6TranslatorId()
+ * @method $this withIpv6TranslatorId($value)
  */
 class DeleteIPv6Translator extends Rpc
 {
@@ -2005,12 +2077,30 @@ class DeleteIPv6Translator extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeHighDefinitionMonitorLogAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getFlowLogId()
@@ -2025,6 +2115,12 @@ class ModifyFlowLogAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getProjectName()
@@ -2035,16 +2131,10 @@ class ModifyFlowLogAttribute extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getTrafficType()
  * @method $this withTrafficType($value)
  * @method string getFlowLogId()
@@ -2093,6 +2183,8 @@ class DeactiveFlowLog extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getProjectName()
@@ -2103,8 +2195,6 @@ class DeactiveFlowLog extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getResourceType()
@@ -2215,6 +2305,10 @@ class AssociateRouteTable extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEnableIpsec()
+ * @method $this withEnableIpsec($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getAutoPay()
@@ -2223,12 +2317,12 @@ class AssociateRouteTable extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
- * @method string getEnableIpsec()
- * @method $this withEnableIpsec($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getEnableSsl()
  * @method $this withEnableSsl($value)
  * @method string getSslConnections()
@@ -2237,8 +2331,6 @@ class AssociateRouteTable extends Rpc
  * @method $this withVpcId($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
  */
 class CreateVpnGateway extends Rpc
 {
@@ -2247,22 +2339,42 @@ class CreateVpnGateway extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ */
+class MoveResourceGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getCenId()
  * @method $this withCenId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
  * @method string getCenOwnerId()
  * @method $this withCenOwnerId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class RevokeInstanceFromCen extends Rpc
 {
@@ -2271,70 +2383,70 @@ class RevokeInstanceFromCen extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getCenId()
  * @method $this withCenId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
  * @method string getCenOwnerId()
  * @method $this withCenOwnerId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class GrantInstanceToCen extends Rpc
 {
 }
 
 /**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class DescribeGrantRulesToCen extends Rpc
 {
 }
 
 /**
- * @method string getCipher()
- * @method $this withCipher($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSslVpnServerId()
+ * @method $this withSslVpnServerId($value)
+ * @method string getLocalSubnet()
+ * @method $this withLocalSubnet($value)
+ * @method string getCipher()
+ * @method $this withCipher($value)
  * @method string getClientIpPool()
  * @method $this withClientIpPool($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getCompress()
  * @method $this withCompress($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSslVpnServerId()
- * @method $this withSslVpnServerId($value)
- * @method string getLocalSubnet()
- * @method $this withLocalSubnet($value)
  * @method string getPort()
  * @method $this withPort($value)
  * @method string getProto()
@@ -2349,66 +2461,66 @@ class ModifySslVpnServer extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSslVpnClientCertId()
  * @method $this withSslVpnClientCertId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifySslVpnClientCert extends Rpc
 {
 }
 
 /**
- * @method string getSslVpnServerId()
- * @method $this withSslVpnServerId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSslVpnServerId()
+ * @method $this withSslVpnServerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getVpnGatewayId()
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeSslVpnServers extends Rpc
 {
 }
 
 /**
- * @method string getSslVpnServerId()
- * @method $this withSslVpnServerId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSslVpnServerId()
+ * @method $this withSslVpnServerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSslVpnClientCertId()
+ * @method $this withSslVpnClientCertId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSslVpnClientCertId()
- * @method $this withSslVpnClientCertId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeSslVpnClientCerts extends Rpc
 {
@@ -2417,28 +2529,28 @@ class DescribeSslVpnClientCerts extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSslVpnClientCertId()
+ * @method $this withSslVpnClientCertId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSslVpnClientCertId()
- * @method $this withSslVpnClientCertId($value)
  */
 class DescribeSslVpnClientCert extends Rpc
 {
 }
 
 /**
- * @method string getSslVpnServerId()
- * @method $this withSslVpnServerId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getSslVpnServerId()
+ * @method $this withSslVpnServerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -2451,32 +2563,34 @@ class DeleteSslVpnServer extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getSslVpnClientCertId()
+ * @method $this withSslVpnClientCertId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSslVpnClientCertId()
- * @method $this withSslVpnClientCertId($value)
  */
 class DeleteSslVpnClientCert extends Rpc
 {
 }
 
 /**
- * @method string getCipher()
- * @method $this withCipher($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getLocalSubnet()
+ * @method $this withLocalSubnet($value)
+ * @method string getCipher()
+ * @method $this withCipher($value)
  * @method string getClientIpPool()
  * @method $this withClientIpPool($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getCompress()
  * @method $this withCompress($value)
  * @method string getOwnerAccount()
@@ -2485,8 +2599,6 @@ class DeleteSslVpnClientCert extends Rpc
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getLocalSubnet()
- * @method $this withLocalSubnet($value)
  * @method string getPort()
  * @method $this withPort($value)
  * @method string getProto()
@@ -2499,20 +2611,20 @@ class CreateSslVpnServer extends Rpc
 }
 
 /**
- * @method string getSslVpnServerId()
- * @method $this withSslVpnServerId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getSslVpnServerId()
+ * @method $this withSslVpnServerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class CreateSslVpnClientCert extends Rpc
 {
@@ -2521,16 +2633,16 @@ class CreateSslVpnClientCert extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIpInstanceId()
- * @method $this withIpInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
+ * @method string getIpInstanceId()
+ * @method $this withIpInstanceId($value)
  */
 class RemoveGlobalAccelerationInstanceIp extends Rpc
 {
@@ -2539,16 +2651,16 @@ class RemoveGlobalAccelerationInstanceIp extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIpInstanceId()
- * @method $this withIpInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
+ * @method string getIpInstanceId()
+ * @method $this withIpInstanceId($value)
  */
 class AddGlobalAccelerationInstanceIp extends Rpc
 {
@@ -2557,29 +2669,29 @@ class AddGlobalAccelerationInstanceIp extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getRouteTableName()
+ * @method $this withRouteTableName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getRouterType()
  * @method $this withRouterType($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getRouteTableName()
- * @method $this withRouteTableName($value)
  * @method string getRouterId()
  * @method $this withRouterId($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method array getTag()
- * @method string getRouteTableId()
- * @method $this withRouteTableId($value)
  */
 class DescribeRouteTableList extends Rpc
 {
@@ -2589,41 +2701,41 @@ class DescribeRouteTableList extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getRouteTableName()
+ * @method $this withRouteTableName($value)
+ * @method string getResourceUid()
+ * @method $this withResourceUid($value)
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getKbpsBandwidth()
  * @method $this withKbpsBandwidth($value)
- * @method string getRouteTableName()
- * @method $this withRouteTableName($value)
- * @method string getResourceUid()
- * @method $this withResourceUid($value)
  * @method string getResourceBid()
  * @method $this withResourceBid($value)
- * @method string getRouteTableId()
- * @method $this withRouteTableId($value)
  */
 class ModifyRouteTableAttributes extends Rpc
 {
@@ -2632,18 +2744,18 @@ class ModifyRouteTableAttributes extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRouterId()
- * @method $this withRouterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRouterId()
+ * @method $this withRouterId($value)
  */
 class DescribeBgpNetworks extends Rpc
 {
@@ -2652,6 +2764,10 @@ class DescribeBgpNetworks extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getResourceUid()
+ * @method $this withResourceUid($value)
  * @method string getBandwidthPackageId()
  * @method $this withBandwidthPackageId($value)
  * @method string getAutoPay()
@@ -2664,12 +2780,8 @@ class DescribeBgpNetworks extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDuration()
- * @method $this withDuration($value)
  * @method string getKbpsBandwidth()
  * @method $this withKbpsBandwidth($value)
- * @method string getResourceUid()
- * @method $this withResourceUid($value)
  * @method string getResourceBid()
  * @method $this withResourceBid($value)
  * @method string getPayType()
@@ -2684,16 +2796,16 @@ class ModifyCommonBandwidthPackagePayType extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
  */
 class UnassociateGlobalAccelerationInstance extends Rpc
 {
@@ -2702,6 +2814,8 @@ class UnassociateGlobalAccelerationInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
@@ -2710,8 +2824,6 @@ class UnassociateGlobalAccelerationInstance extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
  */
 class ModifyGlobalAccelerationInstanceSpec extends Rpc
 {
@@ -2720,18 +2832,18 @@ class ModifyGlobalAccelerationInstanceSpec extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyGlobalAccelerationInstanceAttributes extends Rpc
 {
@@ -2762,6 +2874,14 @@ class DescribeServerRelatedGlobalAccelerationInstances extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getBandwidthType()
  * @method $this withBandwidthType($value)
+ * @method string getIncludeReservationData()
+ * @method $this withIncludeReservationData($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getServiceLocation()
@@ -2770,18 +2890,10 @@ class DescribeServerRelatedGlobalAccelerationInstances extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getIncludeReservationData()
- * @method $this withIncludeReservationData($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getServerId()
  * @method $this withServerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -2792,14 +2904,14 @@ class DescribeGlobalAccelerationInstances extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
  */
 class DeleteGlobalAccelerationInstance extends Rpc
 {
@@ -2810,18 +2922,18 @@ class DeleteGlobalAccelerationInstance extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getBandwidthType()
  * @method $this withBandwidthType($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getServiceLocation()
  * @method $this withServiceLocation($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getInternetChargeType()
@@ -2836,16 +2948,16 @@ class CreateGlobalAccelerationInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getGlobalAccelerationInstanceId()
+ * @method $this withGlobalAccelerationInstanceId($value)
+ * @method string getBackendServerId()
+ * @method $this withBackendServerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getBackendServerId()
- * @method $this withBackendServerId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGlobalAccelerationInstanceId()
- * @method $this withGlobalAccelerationInstanceId($value)
  * @method string getBackendServerRegionId()
  * @method $this withBackendServerRegionId($value)
  * @method string getBackendServerType()
@@ -2856,16 +2968,18 @@ class AssociateGlobalAccelerationInstance extends Rpc
 }
 
 /**
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  */
 class DescribeVSwitchAttributes extends Rpc
 {
@@ -2880,10 +2994,10 @@ class DescribeVSwitchAttributes extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIpInstanceId()
- * @method $this withIpInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getIpInstanceId()
+ * @method $this withIpInstanceId($value)
  */
 class RemoveCommonBandwidthPackageIp extends Rpc
 {
@@ -2910,44 +3024,44 @@ class ModifyCommonBandwidthPackageSpec extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getBandwidthPackageId()
  * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyCommonBandwidthPackageAttribute extends Rpc
 {
 }
 
 /**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getIncludeReservationData()
+ * @method $this withIncludeReservationData($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getBandwidthPackageId()
  * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getIncludeReservationData()
- * @method $this withIncludeReservationData($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeCommonBandwidthPackages extends Rpc
 {
@@ -2962,10 +3076,10 @@ class DescribeCommonBandwidthPackages extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForce()
- * @method $this withForce($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class DeleteCommonBandwidthPackage extends Rpc
 {
@@ -2974,24 +3088,24 @@ class DeleteCommonBandwidthPackage extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getBandwidth()
- * @method $this withBandwidth($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getISP()
  * @method $this withISP($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getZone()
  * @method $this withZone($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
  * @method string getName()
@@ -3012,10 +3126,10 @@ class CreateCommonBandwidthPackage extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getIpInstanceId()
- * @method $this withIpInstanceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getIpInstanceId()
+ * @method $this withIpInstanceId($value)
  */
 class AddCommonBandwidthPackageIp extends Rpc
 {
@@ -3024,20 +3138,20 @@ class AddCommonBandwidthPackageIp extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getVpnGatewayId()
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyVpnGatewayAttribute extends Rpc
 {
@@ -3048,26 +3162,26 @@ class ModifyVpnGatewayAttribute extends Rpc
  * @method $this withIkeConfig($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getRemoteSubnet()
- * @method $this withRemoteSubnet($value)
- * @method string getEffectImmediately()
- * @method $this withEffectImmediately($value)
  * @method string getAutoConfigRoute()
  * @method $this withAutoConfigRoute($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getIpsecConfig()
  * @method $this withIpsecConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getHealthCheckConfig()
  * @method $this withHealthCheckConfig($value)
  * @method string getLocalSubnet()
  * @method $this withLocalSubnet($value)
+ * @method string getRemoteSubnet()
+ * @method $this withRemoteSubnet($value)
+ * @method string getEffectImmediately()
+ * @method $this withEffectImmediately($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVpnConnectionId()
  * @method $this withVpnConnectionId($value)
  * @method string getName()
@@ -3080,20 +3194,20 @@ class ModifyVpnConnectionAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getCustomerGatewayId()
  * @method $this withCustomerGatewayId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyCustomerGatewayAttribute extends Rpc
 {
@@ -3104,36 +3218,36 @@ class ModifyCustomerGatewayAttribute extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getVpnConnectionId()
- * @method $this withVpnConnectionId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpnConnectionId()
+ * @method $this withVpnConnectionId($value)
  */
 class DownloadVpnConnectionConfig extends Rpc
 {
 }
 
 /**
- * @method string getBusinessStatus()
- * @method $this withBusinessStatus($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getBusinessStatus()
+ * @method $this withBusinessStatus($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getVpnGatewayId()
  * @method $this withVpnGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -3160,22 +3274,22 @@ class DescribeVpnGateway extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getVpnConnectionId()
- * @method $this withVpnConnectionId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getVpnGatewayId()
- * @method $this withVpnGatewayId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getCustomerGatewayId()
  * @method $this withCustomerGatewayId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getVpnGatewayId()
+ * @method $this withVpnGatewayId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVpnConnectionId()
+ * @method $this withVpnConnectionId($value)
  */
 class DescribeVpnConnections extends Rpc
 {
@@ -3186,12 +3300,12 @@ class DescribeVpnConnections extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getVpnConnectionId()
- * @method $this withVpnConnectionId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpnConnectionId()
+ * @method $this withVpnConnectionId($value)
  */
 class DescribeVpnConnection extends Rpc
 {
@@ -3200,18 +3314,18 @@ class DescribeVpnConnection extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getCustomerGatewayId()
  * @method $this withCustomerGatewayId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeCustomerGateways extends Rpc
 {
@@ -3220,14 +3334,14 @@ class DescribeCustomerGateways extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCustomerGatewayId()
+ * @method $this withCustomerGatewayId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getCustomerGatewayId()
- * @method $this withCustomerGatewayId($value)
  */
 class DescribeCustomerGateway extends Rpc
 {
@@ -3236,10 +3350,10 @@ class DescribeCustomerGateway extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getVpnGatewayId()
@@ -3254,16 +3368,16 @@ class DeleteVpnGateway extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getVpnConnectionId()
- * @method $this withVpnConnectionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpnConnectionId()
+ * @method $this withVpnConnectionId($value)
  */
 class DeleteVpnConnection extends Rpc
 {
@@ -3272,16 +3386,16 @@ class DeleteVpnConnection extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getCustomerGatewayId()
+ * @method $this withCustomerGatewayId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getCustomerGatewayId()
- * @method $this withCustomerGatewayId($value)
  */
 class DeleteCustomerGateway extends Rpc
 {
@@ -3292,30 +3406,30 @@ class DeleteCustomerGateway extends Rpc
  * @method $this withIkeConfig($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getRemoteSubnet()
- * @method $this withRemoteSubnet($value)
- * @method string getEffectImmediately()
- * @method $this withEffectImmediately($value)
  * @method string getAutoConfigRoute()
  * @method $this withAutoConfigRoute($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getIpsecConfig()
  * @method $this withIpsecConfig($value)
- * @method string getVpnGatewayId()
- * @method $this withVpnGatewayId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getHealthCheckConfig()
  * @method $this withHealthCheckConfig($value)
  * @method string getCustomerGatewayId()
  * @method $this withCustomerGatewayId($value)
  * @method string getLocalSubnet()
  * @method $this withLocalSubnet($value)
+ * @method string getRemoteSubnet()
+ * @method $this withRemoteSubnet($value)
+ * @method string getEffectImmediately()
+ * @method $this withEffectImmediately($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getVpnGatewayId()
+ * @method $this withVpnGatewayId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getName()
  * @method $this withName($value)
  */
@@ -3328,40 +3442,20 @@ class CreateVpnConnection extends Rpc
  * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateCustomerGateway extends Rpc
-{
-}
-
-/**
- * @method string getDestinationIp()
- * @method $this withDestinationIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getNqaId()
- * @method $this withNqaId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
-class ModifyNqa extends Rpc
+class CreateCustomerGateway extends Rpc
 {
 }
 
@@ -3370,24 +3464,26 @@ class ModifyNqa extends Rpc
  * @method $this withAuthKey($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getBgpGroupId()
  * @method $this withBgpGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPeerAsn()
  * @method $this withPeerAsn($value)
  * @method string getIsFakeAsn()
  * @method $this withIsFakeAsn($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getLocalAsn()
+ * @method $this withLocalAsn($value)
  */
 class ModifyBgpGroupAttribute extends Rpc
 {
@@ -3396,48 +3492,24 @@ class ModifyBgpGroupAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRouterId()
- * @method $this withRouterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getNqaId()
- * @method $this withNqaId($value)
- * @method string getIsDefault()
- * @method $this withIsDefault($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class DescribeNqas extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRouterId()
- * @method $this withRouterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getBgpGroupId()
  * @method $this withBgpGroupId($value)
- * @method string getBgpPeerId()
- * @method $this withBgpPeerId($value)
- * @method string getIsDefault()
- * @method $this withIsDefault($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getBgpPeerId()
+ * @method $this withBgpPeerId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRouterId()
+ * @method $this withRouterId($value)
  */
 class DescribeBgpPeers extends Rpc
 {
@@ -3446,22 +3518,22 @@ class DescribeBgpPeers extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getRouterId()
- * @method $this withRouterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getBgpGroupId()
  * @method $this withBgpGroupId($value)
- * @method string getIsDefault()
- * @method $this withIsDefault($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRouterId()
+ * @method $this withRouterId($value)
  */
 class DescribeBgpGroups extends Rpc
 {
@@ -3470,28 +3542,10 @@ class DescribeBgpGroups extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getNqaId()
- * @method $this withNqaId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteNqa extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getBgpPeerId()
@@ -3506,16 +3560,16 @@ class DeleteBgpPeer extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getRouterId()
- * @method $this withRouterId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRouterId()
+ * @method $this withRouterId($value)
  * @method string getDstCidrBlock()
  * @method $this withDstCidrBlock($value)
  */
@@ -3526,14 +3580,14 @@ class DeleteBgpNetwork extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getBgpGroupId()
  * @method $this withBgpGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -3542,40 +3596,22 @@ class DeleteBgpGroup extends Rpc
 }
 
 /**
- * @method string getDestinationIp()
- * @method $this withDestinationIp($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getRouterId()
- * @method $this withRouterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateNqa extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getBgpGroupId()
  * @method $this withBgpGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPeerIpAddress()
  * @method $this withPeerIpAddress($value)
+ * @method string getEnableBfd()
+ * @method $this withEnableBfd($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class CreateBgpPeer extends Rpc
 {
@@ -3586,24 +3622,26 @@ class CreateBgpPeer extends Rpc
  * @method $this withAuthKey($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPeerAsn()
  * @method $this withPeerAsn($value)
  * @method string getIsFakeAsn()
  * @method $this withIsFakeAsn($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getRouterId()
  * @method $this withRouterId($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getLocalAsn()
+ * @method $this withLocalAsn($value)
  */
 class CreateBgpGroup extends Rpc
 {
@@ -3612,18 +3650,18 @@ class CreateBgpGroup extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getRouterId()
- * @method $this withRouterId($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRouterId()
+ * @method $this withRouterId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getDstCidrBlock()
  * @method $this withDstCidrBlock($value)
  */
@@ -3634,16 +3672,16 @@ class AddBgpNetwork extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class EnableVpcClassicLink extends Rpc
 {
@@ -3652,16 +3690,16 @@ class EnableVpcClassicLink extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class DisableVpcClassicLink extends Rpc
 {
@@ -3670,16 +3708,18 @@ class DisableVpcClassicLink extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getIsDefault()
  * @method $this withIsDefault($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class DescribeVpcAttribute extends Rpc
 {
@@ -3688,73 +3728,21 @@ class DescribeVpcAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getVbrId()
  * @method $this withVbrId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  */
 class UnassociatePhysicalConnectionFromVirtualBorderRouter extends Rpc
 {
-}
-
-/**
- * @method string getAccessPointId()
- * @method $this withAccessPointId($value)
- * @method string getRedundantPhysicalConnectionId()
- * @method $this withRedundantPhysicalConnectionId($value)
- * @method string getPeerLocation()
- * @method $this withPeerLocation($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPortType()
- * @method $this withPortType($value)
- * @method string getCircuitCode()
- * @method $this withCircuitCode($value)
- * @method string getBandwidth()
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getInterfaceName()
- * @method $this withInterfaceName($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getLineOperator()
- * @method $this withLineOperator($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- */
-class CreatePhysicalConnectionNew extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBandwidth($value)
-    {
-        $this->data['Bandwidth'] = $value;
-        $this->options['query']['bandwidth'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -3764,24 +3752,24 @@ class CreatePhysicalConnectionNew extends Rpc
  * @method $this withCircuitCode($value)
  * @method string getVlanId()
  * @method $this withVlanId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getVbrId()
  * @method $this withVbrId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPeerGatewayIp()
  * @method $this withPeerGatewayIp($value)
  * @method string getPeeringSubnetMask()
  * @method $this withPeeringSubnetMask($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
  * @method string getLocalGatewayIp()
  * @method $this withLocalGatewayIp($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  */
 class AssociatePhysicalConnectionToVirtualBorderRouter extends Rpc
 {
@@ -3790,20 +3778,20 @@ class AssociatePhysicalConnectionToVirtualBorderRouter extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSnatIp()
+ * @method $this withSnatIp($value)
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSnatEntryName()
- * @method $this withSnatEntryName($value)
  * @method string getSnatTableId()
  * @method $this withSnatTableId($value)
- * @method string getSnatEntryId()
- * @method $this withSnatEntryId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSnatIp()
- * @method $this withSnatIp($value)
+ * @method string getSnatEntryName()
+ * @method $this withSnatEntryName($value)
  */
 class ModifySnatEntry extends Rpc
 {
@@ -3812,20 +3800,20 @@ class ModifySnatEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getNatGatewayId()
+ * @method $this withNatGatewayId($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getNatGatewayId()
- * @method $this withNatGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSpec()
- * @method $this withSpec($value)
  */
 class ModifyNatGatewaySpec extends Rpc
 {
@@ -3834,18 +3822,18 @@ class ModifyNatGatewaySpec extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getNatGatewayId()
  * @method $this withNatGatewayId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyNatGatewayAttribute extends Rpc
 {
@@ -3854,18 +3842,18 @@ class ModifyNatGatewayAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getBandwidthPackageId()
  * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyBandwidthPackageAttribute extends Rpc
 {
@@ -3874,28 +3862,28 @@ class ModifyBandwidthPackageAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getSourceCIDR()
  * @method $this withSourceCIDR($value)
- * @method string getSnatTableId()
- * @method $this withSnatTableId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSnatIp()
  * @method $this withSnatIp($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSourceVSwitchId()
  * @method $this withSourceVSwitchId($value)
- * @method string getSnatEntryName()
- * @method $this withSnatEntryName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getSnatEntryId()
  * @method $this withSnatEntryId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getSnatTableId()
+ * @method $this withSnatTableId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSnatEntryName()
+ * @method $this withSnatEntryName($value)
  */
 class DescribeSnatTableEntries extends Rpc
 {
@@ -3904,14 +3892,14 @@ class DescribeSnatTableEntries extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getSnatTableId()
  * @method $this withSnatTableId($value)
- * @method string getSnatEntryId()
- * @method $this withSnatEntryId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -3922,22 +3910,22 @@ class DeleteSnatEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSourceCIDR()
+ * @method $this withSourceCIDR($value)
+ * @method string getSnatIp()
+ * @method $this withSnatIp($value)
  * @method string getSourceVSwitchId()
  * @method $this withSourceVSwitchId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getSnatEntryName()
- * @method $this withSnatEntryName($value)
- * @method string getSourceCIDR()
- * @method $this withSourceCIDR($value)
  * @method string getSnatTableId()
  * @method $this withSnatTableId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSnatIp()
- * @method $this withSnatIp($value)
+ * @method string getSnatEntryName()
+ * @method $this withSnatEntryName($value)
  */
 class CreateSnatEntry extends Rpc
 {
@@ -3946,28 +3934,28 @@ class CreateSnatEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getBandwidth()
- * @method $this withBandwidth($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getISP()
  * @method $this withISP($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getZone()
  * @method $this withZone($value)
+ * @method string getNatGatewayId()
+ * @method $this withNatGatewayId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getNatGatewayId()
- * @method $this withNatGatewayId($value)
  * @method string getIpCount()
  * @method $this withIpCount($value)
  */
@@ -3976,46 +3964,46 @@ class CreateBandwidthPackage extends Rpc
 }
 
 /**
- * @method string getHaVipId()
- * @method $this withHaVipId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getHaVipId()
+ * @method $this withHaVipId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForce()
- * @method $this withForce($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class UnassociateHaVip extends Rpc
 {
 }
 
 /**
- * @method string getPrivateIpAddress()
- * @method $this withPrivateIpAddress($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getAllocationId()
+ * @method $this withAllocationId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
- * @method string getForce()
- * @method $this withForce($value)
- * @method string getAllocationId()
- * @method $this withAllocationId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class UnassociateEipAddress extends Rpc
 {
@@ -4024,14 +4012,14 @@ class UnassociateEipAddress extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getVbrId()
  * @method $this withVbrId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -4042,31 +4030,31 @@ class TerminateVirtualBorderRouter extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  */
 class TerminatePhysicalConnection extends Rpc
 {
 }
 
 /**
- * @method array getRemovedIpAddresses()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method array getRemovedIpAddresses()
  * @method string getBandwidthPackageId()
  * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -4080,26 +4068,26 @@ class RemoveBandwidthPackageIps extends Rpc
      *
      * @return $this
      */
-    public function withRemovedIpAddresses(array $removedIpAddresses)
-    {
-        $this->data['RemovedIpAddresses'] = $removedIpAddresses;
-        foreach ($removedIpAddresses as $i => $iValue) {
-            $this->options['query']['RemovedIpAddresses.' . ($i + 1)] = $iValue;
-        }
+	public function withRemovedIpAddresses(array $removedIpAddresses)
+	{
+	    $this->data['RemovedIpAddresses'] = $removedIpAddresses;
+		foreach ($removedIpAddresses as $i => $iValue) {
+			$this->options['query']['RemovedIpAddresses.' . ($i + 1)] = $iValue;
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAllocationId()
+ * @method $this withAllocationId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getAllocationId()
- * @method $this withAllocationId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -4110,14 +4098,14 @@ class ReleaseEipAddress extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getVbrId()
  * @method $this withVbrId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -4126,40 +4114,40 @@ class RecoverVirtualBorderRouter extends Rpc
 }
 
 /**
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getVSwitchName()
- * @method $this withVSwitchName($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getIpv6CidrBlock()
  * @method $this withIpv6CidrBlock($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getVSwitchName()
+ * @method $this withVSwitchName($value)
  */
 class ModifyVSwitchAttribute extends Rpc
 {
 }
 
 /**
- * @method string getVRouterName()
- * @method $this withVRouterName($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getVRouterId()
  * @method $this withVRouterId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getVRouterName()
+ * @method $this withVRouterName($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -4168,24 +4156,24 @@ class ModifyVRouterAttribute extends Rpc
 }
 
 /**
- * @method string getVpcName()
- * @method $this withVpcName($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getCidrBlock()
- * @method $this withCidrBlock($value)
  * @method string getEnableIPv6()
  * @method $this withEnableIPv6($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getVpcName()
+ * @method $this withVpcName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
  */
 class ModifyVpcAttribute extends Rpc
 {
@@ -4200,26 +4188,32 @@ class ModifyVpcAttribute extends Rpc
  * @method $this withAssociatedPhysicalConnections($value)
  * @method string getVlanId()
  * @method $this withVlanId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getVbrId()
  * @method $this withVbrId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPeerGatewayIp()
  * @method $this withPeerGatewayIp($value)
+ * @method string getDetectMultiplier()
+ * @method $this withDetectMultiplier($value)
  * @method string getPeeringSubnetMask()
  * @method $this withPeeringSubnetMask($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getLocalGatewayIp()
  * @method $this withLocalGatewayIp($value)
+ * @method string getMinTxInterval()
+ * @method $this withMinTxInterval($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMinRxInterval()
+ * @method $this withMinRxInterval($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyVirtualBorderRouterAttribute extends Rpc
 {
@@ -4228,18 +4222,18 @@ class ModifyVirtualBorderRouterAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getRouterInterfaceId()
  * @method $this withRouterInterfaceId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSpec()
- * @method $this withSpec($value)
  */
 class ModifyRouterInterfaceSpec extends Rpc
 {
@@ -4250,14 +4244,18 @@ class ModifyRouterInterfaceSpec extends Rpc
  * @method $this withOppositeRouterId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDeleteHealthCheckIp()
- * @method $this withDeleteHealthCheckIp($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getHealthCheckTargetIp()
  * @method $this withHealthCheckTargetIp($value)
+ * @method string getOppositeInterfaceId()
+ * @method $this withOppositeInterfaceId($value)
+ * @method string getHcThreshold()
+ * @method $this withHcThreshold($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDeleteHealthCheckIp()
+ * @method $this withDeleteHealthCheckIp($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRouterInterfaceId()
@@ -4270,33 +4268,33 @@ class ModifyRouterInterfaceSpec extends Rpc
  * @method $this withName($value)
  * @method string getOppositeRouterType()
  * @method $this withOppositeRouterType($value)
- * @method string getOppositeInterfaceId()
- * @method $this withOppositeInterfaceId($value)
+ * @method string getHcRate()
+ * @method $this withHcRate($value)
  */
 class ModifyRouterInterfaceAttribute extends Rpc
 {
 }
 
 /**
- * @method string getRedundantPhysicalConnectionId()
- * @method $this withRedundantPhysicalConnectionId($value)
- * @method string getPeerLocation()
- * @method $this withPeerLocation($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getPortType()
  * @method $this withPortType($value)
  * @method string getCircuitCode()
  * @method $this withCircuitCode($value)
- * @method string getBandwidth()
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getRedundantPhysicalConnectionId()
+ * @method $this withRedundantPhysicalConnectionId($value)
+ * @method string getPeerLocation()
+ * @method $this withPeerLocation($value)
+ * @method string getBandwidth()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getLineOperator()
@@ -4324,20 +4322,22 @@ class ModifyPhysicalConnectionAttribute extends Rpc
 }
 
 /**
- * @method string getHaVipId()
- * @method $this withHaVipId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getHaVipId()
+ * @method $this withHaVipId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyHaVipAttribute extends Rpc
 {
@@ -4346,6 +4346,14 @@ class ModifyHaVipAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getForwardTableId()
+ * @method $this withForwardTableId($value)
+ * @method string getInternalIp()
+ * @method $this withInternalIp($value)
+ * @method string getForwardEntryId()
+ * @method $this withForwardEntryId($value)
+ * @method string getExternalIp()
+ * @method $this withExternalIp($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getIpProtocol()
@@ -4354,18 +4362,10 @@ class ModifyHaVipAttribute extends Rpc
  * @method $this withForwardEntryName($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForwardTableId()
- * @method $this withForwardTableId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getInternalIp()
- * @method $this withInternalIp($value)
- * @method string getForwardEntryId()
- * @method $this withForwardEntryId($value)
  * @method string getInternalPort()
  * @method $this withInternalPort($value)
- * @method string getExternalIp()
- * @method $this withExternalIp($value)
  * @method string getExternalPort()
  * @method $this withExternalPort($value)
  */
@@ -4376,20 +4376,20 @@ class ModifyForwardEntry extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAllocationId()
+ * @method $this withAllocationId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getAllocationId()
- * @method $this withAllocationId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyEipAddressAttribute extends Rpc
 {
@@ -4416,16 +4416,16 @@ class ModifyBandwidthPackageSpec extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  */
 class EnablePhysicalConnection extends Rpc
 {
@@ -4448,31 +4448,33 @@ class DescribeZones extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getVSwitchName()
  * @method $this withVSwitchName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method array getTag()
- * @method string getIsDefault()
- * @method $this withIsDefault($value)
- * @method string getRouteTableId()
- * @method $this withRouteTableId($value)
  */
 class DescribeVSwitches extends Rpc
 {
@@ -4482,15 +4484,15 @@ class DescribeVSwitches extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -4499,16 +4501,16 @@ class DescribeVSwitches extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getVRouterId()
  * @method $this withVRouterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeVRouters extends Rpc
 {
@@ -4517,25 +4519,27 @@ class DescribeVRouters extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getVpcName()
  * @method $this withVpcName($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
  * @method string getIsDefault()
  * @method $this withIsDefault($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class DescribeVpcs extends Rpc
 {
@@ -4545,32 +4549,32 @@ class DescribeVpcs extends Rpc
      *
      * @return $this
      */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method array getFilter()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getFilter()
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  */
 class DescribeVirtualBorderRoutersForPhysicalConnection extends Rpc
 {
@@ -4580,32 +4584,32 @@ class DescribeVirtualBorderRoutersForPhysicalConnection extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            foreach ($depth1Value['Value'] as $i => $iValue) {
-                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method array getFilter()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getFilter()
  */
 class DescribeVirtualBorderRouters extends Rpc
 {
@@ -4615,17 +4619,17 @@ class DescribeVirtualBorderRouters extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            foreach ($depth1Value['Value'] as $i => $iValue) {
-                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
@@ -4634,47 +4638,47 @@ class DescribeVirtualBorderRouters extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getVRouterId()
  * @method $this withVRouterId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getRouteTableName()
+ * @method $this withRouteTableName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getRouterType()
  * @method $this withRouterType($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getRouteTableName()
- * @method $this withRouteTableName($value)
  * @method string getRouterId()
  * @method $this withRouterId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getRouteTableId()
- * @method $this withRouteTableId($value)
  */
 class DescribeRouteTables extends Rpc
 {
 }
 
 /**
- * @method array getFilter()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getIncludeReservationData()
  * @method $this withIncludeReservationData($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getFilter()
  */
 class DescribeRouterInterfaces extends Rpc
 {
@@ -4684,56 +4688,56 @@ class DescribeRouterInterfaces extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            foreach ($depth1Value['Value'] as $i => $iValue) {
-                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getAcceptLanguage()
- * @method $this withAcceptLanguage($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getProductType()
- * @method $this withProductType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class DescribeRegions extends Rpc
 {
 }
 
 /**
- * @method array getFilter()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getIncludeReservationData()
  * @method $this withIncludeReservationData($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getFilter()
  */
 class DescribePhysicalConnections extends Rpc
 {
@@ -4743,62 +4747,62 @@ class DescribePhysicalConnections extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            foreach ($depth1Value['Value'] as $i => $iValue) {
-                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSpec()
  * @method $this withSpec($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getNatGatewayId()
  * @method $this withNatGatewayId($value)
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeNatGateways extends Rpc
 {
 }
 
 /**
- * @method array getFilter()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method array getFilter()
  */
 class DescribeHaVips extends Rpc
 {
@@ -4808,23 +4812,35 @@ class DescribeHaVips extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            foreach ($depth1Value['Value'] as $i => $iValue) {
-                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getForwardTableId()
+ * @method $this withForwardTableId($value)
+ * @method string getInternalIp()
+ * @method $this withInternalIp($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getForwardEntryId()
+ * @method $this withForwardEntryId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getExternalIp()
+ * @method $this withExternalIp($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getIpProtocol()
@@ -4833,22 +4849,10 @@ class DescribeHaVips extends Rpc
  * @method $this withForwardEntryName($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForwardTableId()
- * @method $this withForwardTableId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getInternalIp()
- * @method $this withInternalIp($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getForwardEntryId()
- * @method $this withForwardEntryId($value)
  * @method string getInternalPort()
  * @method $this withInternalPort($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getExternalIp()
- * @method $this withExternalIp($value)
  * @method string getExternalPort()
  * @method $this withExternalPort($value)
  */
@@ -4859,6 +4863,10 @@ class DescribeForwardTableEntries extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAllocationId()
+ * @method $this withAllocationId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getResourceOwnerAccount()
@@ -4867,10 +4875,6 @@ class DescribeForwardTableEntries extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getAllocationId()
- * @method $this withAllocationId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -4881,19 +4885,11 @@ class DescribeEipMonitorData extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getFilter2Value()
  * @method string getISP()
  * @method $this withISP($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getAllocationId()
  * @method $this withAllocationId($value)
- * @method string getFilter1Value()
- * @method string getFilter2Key()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getIncludeReservationData()
  * @method $this withIncludeReservationData($value)
  * @method string getEipAddress()
@@ -4910,6 +4906,14 @@ class DescribeEipMonitorData extends Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getFilter1Value()
+ * @method string getFilter2Key()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
  * @method string getAssociatedInstanceId()
@@ -4938,6 +4942,35 @@ class DescribeEipAddresses extends Rpc
      *
      * @return $this
      */
+    public function withFilter1Key($value)
+    {
+        $this->data['Filter1Key'] = $value;
+        $this->options['query']['Filter.1.Key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withFilter1Value($value)
     {
         $this->data['Filter1Value'] = $value;
@@ -4958,77 +4991,48 @@ class DescribeEipAddresses extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFilter1Key($value)
-    {
-        $this->data['Filter1Key'] = $value;
-        $this->options['query']['Filter.1.Key'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-    public function withTag(array $tag)
-    {
-        $this->data['Tag'] = $tag;
-        foreach ($tag as $depth1 => $depth1Value) {
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-            $this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
-
-        return $this;
-    }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getNatGatewayId()
+ * @method $this withNatGatewayId($value)
  * @method string getBandwidthPackageId()
  * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getNatGatewayId()
- * @method $this withNatGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class DescribeBandwidthPackages extends Rpc
 {
 }
 
 /**
- * @method array getFilter()
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getHostOperator()
- * @method $this withHostOperator($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getFilter()
+ * @method string getHostOperator()
+ * @method $this withHostOperator($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeAccessPoints extends Rpc
 {
@@ -5038,23 +5042,21 @@ class DescribeAccessPoints extends Rpc
      *
      * @return $this
      */
-    public function withFilter(array $filter)
-    {
-        $this->data['Filter'] = $filter;
-        foreach ($filter as $depth1 => $depth1Value) {
-            foreach ($depth1Value['Value'] as $i => $iValue) {
-                $this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-            }
-            $this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -5063,6 +5065,8 @@ class DescribeAccessPoints extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  */
 class DeleteVSwitch extends Rpc
 {
@@ -5073,12 +5077,12 @@ class DeleteVSwitch extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class DeleteVpc extends Rpc
 {
@@ -5087,14 +5091,14 @@ class DeleteVpc extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getVbrId()
  * @method $this withVbrId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -5105,10 +5109,10 @@ class DeleteVirtualBorderRouter extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getRouterInterfaceId()
@@ -5123,21 +5127,21 @@ class DeleteRouterInterface extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getNextHopId()
+ * @method $this withNextHopId($value)
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getRouteEntryId()
- * @method $this withRouteEntryId($value)
  * @method string getDestinationCidrBlock()
  * @method $this withDestinationCidrBlock($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getNextHopId()
- * @method $this withNextHopId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRouteEntryId()
+ * @method $this withRouteEntryId($value)
  * @method array getNextHopList()
- * @method string getRouteTableId()
- * @method $this withRouteTableId($value)
  */
 class DeleteRouteEntry extends Rpc
 {
@@ -5147,33 +5151,33 @@ class DeleteRouteEntry extends Rpc
      *
      * @return $this
      */
-    public function withNextHopList(array $nextHopList)
-    {
-        $this->data['NextHopList'] = $nextHopList;
-        foreach ($nextHopList as $depth1 => $depth1Value) {
-            $this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopId'] = $depth1Value['NextHopId'];
-            $this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopType'] = $depth1Value['NextHopType'];
-        }
+	public function withNextHopList(array $nextHopList)
+	{
+	    $this->data['NextHopList'] = $nextHopList;
+		foreach ($nextHopList as $depth1 => $depth1Value) {
+			$this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopId'] = $depth1Value['NextHopId'];
+			$this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopType'] = $depth1Value['NextHopType'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getUserCidr()
  * @method $this withUserCidr($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  */
 class DeletePhysicalConnection extends Rpc
 {
@@ -5182,30 +5186,30 @@ class DeletePhysicalConnection extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getNatGatewayId()
+ * @method $this withNatGatewayId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForce()
- * @method $this withForce($value)
- * @method string getNatGatewayId()
- * @method $this withNatGatewayId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class DeleteNatGateway extends Rpc
 {
 }
 
 /**
- * @method string getHaVipId()
- * @method $this withHaVipId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getHaVipId()
+ * @method $this withHaVipId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -5218,14 +5222,14 @@ class DeleteHaVip extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getForwardEntryId()
- * @method $this withForwardEntryId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getForwardTableId()
  * @method $this withForwardTableId($value)
+ * @method string getForwardEntryId()
+ * @method $this withForwardEntryId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -5242,10 +5246,10 @@ class DeleteForwardEntry extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForce()
- * @method $this withForce($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class DeleteBandwidthPackage extends Rpc
 {
@@ -5268,14 +5272,14 @@ class DeactivateRouterInterface extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getIpv6CidrBlock()
@@ -5296,28 +5300,30 @@ class CreateVSwitch extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getEnableIpv6()
  * @method $this withEnableIpv6($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getIpv6CidrBlock()
- * @method $this withIpv6CidrBlock($value)
  * @method string getVpcName()
  * @method $this withVpcName($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
- * @method string getCidrBlock()
- * @method $this withCidrBlock($value)
  * @method string getUserCidr()
  * @method $this withUserCidr($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIpv6CidrBlock()
+ * @method $this withIpv6CidrBlock($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
  */
 class CreateVpc extends Rpc
 {
@@ -5332,24 +5338,24 @@ class CreateVpc extends Rpc
  * @method $this withVlanId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPeerGatewayIp()
  * @method $this withPeerGatewayIp($value)
  * @method string getPeeringSubnetMask()
  * @method $this withPeeringSubnetMask($value)
+ * @method string getLocalGatewayIp()
+ * @method $this withLocalGatewayIp($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getPhysicalConnectionId()
  * @method $this withPhysicalConnectionId($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getLocalGatewayIp()
- * @method $this withLocalGatewayIp($value)
  * @method string getVbrOwnerId()
  * @method $this withVbrOwnerId($value)
  */
@@ -5416,10 +5422,16 @@ class CreateRouterInterface extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getRouteEntryName()
  * @method $this withRouteEntryName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getNextHopId()
+ * @method $this withNextHopId($value)
+ * @method string getNextHopType()
+ * @method $this withNextHopType($value)
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getDestinationCidrBlock()
  * @method $this withDestinationCidrBlock($value)
  * @method string getOwnerAccount()
@@ -5428,13 +5440,7 @@ class CreateRouterInterface extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
- * @method string getNextHopId()
- * @method $this withNextHopId($value)
- * @method string getNextHopType()
- * @method $this withNextHopType($value)
  * @method array getNextHopList()
- * @method string getRouteTableId()
- * @method $this withRouteTableId($value)
  */
 class CreateRouteEntry extends Rpc
 {
@@ -5444,43 +5450,43 @@ class CreateRouteEntry extends Rpc
      *
      * @return $this
      */
-    public function withNextHopList(array $nextHopList)
-    {
-        $this->data['NextHopList'] = $nextHopList;
-        foreach ($nextHopList as $depth1 => $depth1Value) {
-            $this->options['query']['NextHopList.' . ($depth1 + 1) . '.Weight'] = $depth1Value['Weight'];
-            $this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopId'] = $depth1Value['NextHopId'];
-            $this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopType'] = $depth1Value['NextHopType'];
-        }
+	public function withNextHopList(array $nextHopList)
+	{
+	    $this->data['NextHopList'] = $nextHopList;
+		foreach ($nextHopList as $depth1 => $depth1Value) {
+			$this->options['query']['NextHopList.' . ($depth1 + 1) . '.Weight'] = $depth1Value['Weight'];
+			$this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopId'] = $depth1Value['NextHopId'];
+			$this->options['query']['NextHopList.' . ($depth1 + 1) . '.NextHopType'] = $depth1Value['NextHopType'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
  * @method string getAccessPointId()
  * @method $this withAccessPointId($value)
- * @method string getRedundantPhysicalConnectionId()
- * @method $this withRedundantPhysicalConnectionId($value)
- * @method string getPeerLocation()
- * @method $this withPeerLocation($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getPortType()
  * @method $this withPortType($value)
  * @method string getCircuitCode()
  * @method $this withCircuitCode($value)
- * @method string getBandwidth()
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getRedundantPhysicalConnectionId()
+ * @method $this withRedundantPhysicalConnectionId($value)
+ * @method string getPeerLocation()
+ * @method $this withPeerLocation($value)
+ * @method string getBandwidth()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getLineOperator()
@@ -5508,29 +5514,29 @@ class CreatePhysicalConnection extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getAutoPay()
- * @method $this withAutoPay($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSpec()
  * @method $this withSpec($value)
  * @method string getDuration()
  * @method $this withDuration($value)
+ * @method array getBandwidthPackage()
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getName()
  * @method $this withName($value)
- * @method array getBandwidthPackage()
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
  */
@@ -5542,38 +5548,40 @@ class CreateNatGateway extends Rpc
      *
      * @return $this
      */
-    public function withBandwidthPackage(array $bandwidthPackage)
-    {
-        $this->data['BandwidthPackage'] = $bandwidthPackage;
-        foreach ($bandwidthPackage as $depth1 => $depth1Value) {
-            $this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.Bandwidth'] = $depth1Value['Bandwidth'];
-            $this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.Zone'] = $depth1Value['Zone'];
-            $this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.InternetChargeType'] = $depth1Value['InternetChargeType'];
-            $this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.ISP'] = $depth1Value['ISP'];
-            $this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.IpCount'] = $depth1Value['IpCount'];
-        }
+	public function withBandwidthPackage(array $bandwidthPackage)
+	{
+	    $this->data['BandwidthPackage'] = $bandwidthPackage;
+		foreach ($bandwidthPackage as $depth1 => $depth1Value) {
+			$this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.Bandwidth'] = $depth1Value['Bandwidth'];
+			$this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.Zone'] = $depth1Value['Zone'];
+			$this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.InternetChargeType'] = $depth1Value['InternetChargeType'];
+			$this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.ISP'] = $depth1Value['ISP'];
+			$this->options['query']['BandwidthPackage.' . ($depth1 + 1) . '.IpCount'] = $depth1Value['IpCount'];
+		}
 
-        return $this;
+		return $this;
     }
 }
 
 /**
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
  * @method string getIpAddress()
  * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class CreateHaVip extends Rpc
 {
@@ -5582,6 +5590,12 @@ class CreateHaVip extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getForwardTableId()
+ * @method $this withForwardTableId($value)
+ * @method string getInternalIp()
+ * @method $this withInternalIp($value)
+ * @method string getExternalIp()
+ * @method $this withExternalIp($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getIpProtocol()
@@ -5590,16 +5604,10 @@ class CreateHaVip extends Rpc
  * @method $this withForwardEntryName($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getForwardTableId()
- * @method $this withForwardTableId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getInternalIp()
- * @method $this withInternalIp($value)
  * @method string getInternalPort()
  * @method $this withInternalPort($value)
- * @method string getExternalIp()
- * @method $this withExternalIp($value)
  * @method string getExternalPort()
  * @method $this withExternalPort($value)
  */
@@ -5624,62 +5632,62 @@ class ConnectRouterInterface extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getPhysicalConnectionId()
- * @method $this withPhysicalConnectionId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPhysicalConnectionId()
+ * @method $this withPhysicalConnectionId($value)
  */
 class CancelPhysicalConnection extends Rpc
 {
 }
 
 /**
- * @method string getHaVipId()
- * @method $this withHaVipId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getHaVipId()
+ * @method $this withHaVipId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class AssociateHaVip extends Rpc
 {
 }
 
 /**
- * @method string getPrivateIpAddress()
- * @method $this withPrivateIpAddress($value)
- * @method string getMode()
- * @method $this withMode($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getInstanceRegionId()
- * @method $this withInstanceRegionId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
  * @method string getAllocationId()
  * @method $this withAllocationId($value)
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getInstanceRegionId()
+ * @method $this withInstanceRegionId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class AssociateEipAddress extends Rpc
 {
@@ -5688,6 +5696,16 @@ class AssociateEipAddress extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getISP()
+ * @method $this withISP($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getNetmode()
+ * @method $this withNetmode($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getAutoPay()
@@ -5696,24 +5714,16 @@ class AssociateEipAddress extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getBandwidth()
  * @method $this withBandwidth($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getISP()
- * @method $this withISP($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
+ * @method string getActivityId()
+ * @method $this withActivityId($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
- * @method string getNetmode()
- * @method $this withNetmode($value)
  * @method string getPricingCycle()
  * @method $this withPricingCycle($value)
- * @method string getInstanceChargeType()
- * @method $this withInstanceChargeType($value)
  */
 class AllocateEipAddress extends Rpc
 {
@@ -5722,12 +5732,12 @@ class AllocateEipAddress extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getBandwidthPackageId()
  * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
