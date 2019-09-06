@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.98 - 2019-9-6
+- Update endpoint data.
+
+
 ## 1.7.97 - 2019-9-6
 - Generated 2016-04-28 for `Vpc`.
 
