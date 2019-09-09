@@ -100,6 +100,7 @@
         "alibabacloud/ecs": "self.version",
         "alibabacloud/ecsinc": "self.version",
         "alibabacloud/edas": "self.version",
+        "alibabacloud/elasticsearch": "self.version",
         "alibabacloud/emr": "self.version",
         "alibabacloud/ess": "self.version",
         "alibabacloud/fnf": "self.version",
