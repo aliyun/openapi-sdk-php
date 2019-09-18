@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.101 - 2019-9-18
+- Supported Video Abstract for IMM.
+
+
 ## 1.7.100 - 2019-9-18
 - Generated 2016-11-01 for `live`.
 
