@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.104 - 2019-9-19
+- Supported Video Abstract for IMM.
+
+
 ## 1.7.103 - 2019-9-19
 - Supported Video Abstract for IMM.
 
