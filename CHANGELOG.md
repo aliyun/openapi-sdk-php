@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.103 - 2019-9-19
+- Supported Video Abstract for IMM.
+
+
 ## 1.7.102 - 2019-9-19
 - Add bizSubCode and so on.
 
