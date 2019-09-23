@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.105 - 2019-9-23
+- Add param, DescribePrice supprot ReservedInstance.
+
+
 ## 1.7.104 - 2019-9-19
 - Supported Video Abstract for IMM.
 
