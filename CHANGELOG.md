@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.106 - 2019-9-24
+- Generated 2019-04-30 for `schedulerx2`.
+
+
 ## 1.7.105 - 2019-9-23
 - Add param, DescribePrice supprot ReservedInstance.
 

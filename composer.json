@@ -160,6 +160,7 @@
         "alibabacloud/sas": "self.version",
         "alibabacloud/sasapi": "self.version",
         "alibabacloud/scdn": "self.version",
+        "alibabacloud/schedulerx2": "self.version",
         "alibabacloud/skyeye": "self.version",
         "alibabacloud/slb": "self.version",
         "alibabacloud/smartag": "self.version",

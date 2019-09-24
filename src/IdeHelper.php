@@ -125,6 +125,7 @@ namespace AlibabaCloud;
  * @method static Sas\Sas sas()
  * @method static SasApi\SasApi sasApi()
  * @method static Scdn\Scdn scdn()
+ * @method static Schedulerx2\Schedulerx2 schedulerx2()
  * @method static Skyeye\Skyeye skyeye()
  * @method static Slb\Slb slb()
  * @method static Smartag\Smartag smartag()
