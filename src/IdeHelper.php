@@ -97,6 +97,7 @@ namespace AlibabaCloud;
  * @method static Market\Market market()
  * @method static MoPen\MoPen moPen()
  * @method static Mts\Mts mts()
+ * @method static Multimediaai\Multimediaai multimediaai()
  * @method static NAS\NAS nAS()
  * @method static Netana\Netana netana()
  * @method static Nlp\Nlp nlp()

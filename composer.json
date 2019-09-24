@@ -132,6 +132,7 @@
         "alibabacloud/market": "self.version",
         "alibabacloud/mopen": "self.version",
         "alibabacloud/mts": "self.version",
+        "alibabacloud/multimediaai": "self.version",
         "alibabacloud/nas": "self.version",
         "alibabacloud/netana": "self.version",
         "alibabacloud/nlp": "self.version",

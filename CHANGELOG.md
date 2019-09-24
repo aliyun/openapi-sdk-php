@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.107 - 2019-9-24
+- Generated 2019-08-10 for `multimediaai`.
+
+
 ## 1.7.106 - 2019-9-24
 - Generated 2019-04-30 for `schedulerx2`.
 
