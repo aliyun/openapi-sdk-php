@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.108 - 2019-9-25
+- Support anonymous account.
+
+
 ## 1.7.107 - 2019-9-24
 - Generated 2019-08-10 for `multimediaai`.
 
