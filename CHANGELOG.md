@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.109 - 2019-9-26
+- Supported RingConfig for BindAxb,BindAxn,BindAxg,BindAxnExtension.
+- Add QuerySubsId.
+
+
 ## 1.7.108 - 2019-9-25
 - Support anonymous account.
 

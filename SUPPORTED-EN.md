@@ -1,7 +1,7 @@
 [简体中文](./SUPPORTED.md) | English
 
 # Supported
-Alibaba Cloud SDK for PHP has supported quick access to 162 versions of 143 products, as listed below:
+Alibaba Cloud SDK for PHP has supported quick access to 163 versions of 144 products, as listed below:
 
 | Products |  Versions   |
 |----------|-------------|
@@ -55,6 +55,7 @@ Alibaba Cloud SDK for PHP has supported quick access to 162 versions of 143 prod
 | [Drds](https://packagist.org/packages/alibabacloud/drds) | V20171016 |
 | [Dts](https://packagist.org/packages/alibabacloud/dts) | V20160801 |
 | [Dybaseapi](https://packagist.org/packages/alibabacloud/dybaseapi) | V20170525 |
+| [Dyplsapi](https://packagist.org/packages/alibabacloud/dyplsapi) | V20170525 |
 | [Dypnsapi](https://packagist.org/packages/alibabacloud/dypnsapi) | V20170525 |
 | [Dysmsapi](https://packagist.org/packages/alibabacloud/dysmsapi) | V20170525 |
 | [Dyvmsapi](https://packagist.org/packages/alibabacloud/dyvmsapi) | V20170525 |

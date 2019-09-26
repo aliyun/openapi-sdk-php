@@ -92,6 +92,7 @@
         "alibabacloud/drds": "self.version",
         "alibabacloud/dts": "self.version",
         "alibabacloud/dybaseapi": "self.version",
+        "alibabacloud/dyplsapi": "self.version",
         "alibabacloud/dypnsapi": "self.version",
         "alibabacloud/dysmsapi": "self.version",
         "alibabacloud/dyvmsapi": "self.version",
