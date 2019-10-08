@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.112 - 2019-10-8
+- Supported Grab Frame IMM.
+
+
 ## 1.7.111 - 2019-10-8
 - Supported API MassPush for Push Message or Notice.
 

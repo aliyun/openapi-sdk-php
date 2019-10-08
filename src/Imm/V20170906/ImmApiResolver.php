@@ -11,6 +11,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCADConversionTask createCADConversionTask(array $options = [])
  * @method CreateDocIndexTask createDocIndexTask(array $options = [])
  * @method CreateFaceSet createFaceSet(array $options = [])
+ * @method CreateGrabFrameTask createGrabFrameTask(array $options = [])
  * @method CreateGroupFacesJob createGroupFacesJob(array $options = [])
  * @method CreateMediaComplexTask createMediaComplexTask(array $options = [])
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
@@ -282,6 +283,24 @@ class CreateFaceSet extends Rpc
  * @method $this withProject($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
+ * @method string getCustomMessage()
+ * @method $this withCustomMessage($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getTargetList()
+ * @method $this withTargetList($value)
+ * @method string getVideoUri()
+ * @method $this withVideoUri($value)
+ */
+class CreateGrabFrameTask extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
  * @method string getNotifyTopicName()
  * @method $this withNotifyTopicName($value)
  * @method string getSetId()
@@ -482,6 +501,8 @@ class CreateVideoAnalyseTask extends Rpc
  * @method $this withProject($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
+ * @method string getCustomMessage()
+ * @method $this withCustomMessage($value)
  * @method string getNotifyTopicName()
  * @method $this withNotifyTopicName($value)
  * @method string getTargetList()
