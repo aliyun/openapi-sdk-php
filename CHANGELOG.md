@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.111 - 2019-10-8
+- Supported API MassPush for Push Message or Notice.
+
+
 ## 1.7.110 - 2019-10-8
 - Generated 2016-01-20 for `Kms`.
 

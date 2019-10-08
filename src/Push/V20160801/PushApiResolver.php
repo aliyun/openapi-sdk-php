@@ -5,34 +5,35 @@ namespace AlibabaCloud\Push\V20160801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method QueryDevicesByAlias queryDevicesByAlias(array $options = [])
- * @method QueryDevicesByAccount queryDevicesByAccount(array $options = [])
- * @method UnbindPhone unbindPhone(array $options = [])
- * @method BindPhone bindPhone(array $options = [])
- * @method RemoveTag removeTag(array $options = [])
- * @method CheckDevices checkDevices(array $options = [])
- * @method QueryPushList queryPushList(array $options = [])
- * @method CheckDevice checkDevice(array $options = [])
- * @method UnbindTag unbindTag(array $options = [])
- * @method UnbindAlias unbindAlias(array $options = [])
- * @method QueryUniqueDeviceStat queryUniqueDeviceStat(array $options = [])
- * @method QueryTags queryTags(array $options = [])
- * @method QueryPushStatByMsg queryPushStatByMsg(array $options = [])
- * @method QueryPushStatByApp queryPushStatByApp(array $options = [])
- * @method QueryDeviceStat queryDeviceStat(array $options = [])
- * @method QueryDeviceInfo queryDeviceInfo(array $options = [])
- * @method QueryAliases queryAliases(array $options = [])
- * @method PushNoticeToiOS pushNoticeToiOS(array $options = [])
- * @method PushNoticeToAndroid pushNoticeToAndroid(array $options = [])
- * @method PushMessageToiOS pushMessageToiOS(array $options = [])
- * @method PushMessageToAndroid pushMessageToAndroid(array $options = [])
- * @method Push push(array $options = [])
- * @method ListTags listTags(array $options = [])
- * @method ListSummaryApps listSummaryApps(array $options = [])
- * @method ListPushRecords listPushRecords(array $options = [])
- * @method BindTag bindTag(array $options = [])
  * @method BindAlias bindAlias(array $options = [])
+ * @method BindPhone bindPhone(array $options = [])
+ * @method BindTag bindTag(array $options = [])
  * @method CancelPush cancelPush(array $options = [])
+ * @method CheckDevice checkDevice(array $options = [])
+ * @method CheckDevices checkDevices(array $options = [])
+ * @method ListPushRecords listPushRecords(array $options = [])
+ * @method ListSummaryApps listSummaryApps(array $options = [])
+ * @method ListTags listTags(array $options = [])
+ * @method MassPush massPush(array $options = [])
+ * @method Push push(array $options = [])
+ * @method PushMessageToAndroid pushMessageToAndroid(array $options = [])
+ * @method PushMessageToiOS pushMessageToiOS(array $options = [])
+ * @method PushNoticeToAndroid pushNoticeToAndroid(array $options = [])
+ * @method PushNoticeToiOS pushNoticeToiOS(array $options = [])
+ * @method QueryAliases queryAliases(array $options = [])
+ * @method QueryDeviceInfo queryDeviceInfo(array $options = [])
+ * @method QueryDevicesByAccount queryDevicesByAccount(array $options = [])
+ * @method QueryDevicesByAlias queryDevicesByAlias(array $options = [])
+ * @method QueryDeviceStat queryDeviceStat(array $options = [])
+ * @method QueryPushList queryPushList(array $options = [])
+ * @method QueryPushStatByApp queryPushStatByApp(array $options = [])
+ * @method QueryPushStatByMsg queryPushStatByMsg(array $options = [])
+ * @method QueryTags queryTags(array $options = [])
+ * @method QueryUniqueDeviceStat queryUniqueDeviceStat(array $options = [])
+ * @method RemoveTag removeTag(array $options = [])
+ * @method UnbindAlias unbindAlias(array $options = [])
+ * @method UnbindPhone unbindPhone(array $options = [])
+ * @method UnbindTag unbindTag(array $options = [])
  */
 class PushApiResolver extends ApiResolver
 {
@@ -51,54 +52,60 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getAlias()
- * @method $this withAlias($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- */
-class QueryDevicesByAlias extends Rpc
-{
-}
-
-/**
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getAccount()
- * @method $this withAccount($value)
- */
-class QueryDevicesByAccount extends Rpc
-{
-}
-
-/**
- * @method string getAppKey()
- * @method $this withAppKey($value)
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
+ * @method string getAliasName()
+ * @method $this withAliasName($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
-class UnbindPhone extends Rpc
+class BindAlias extends Rpc
 {
 }
 
 /**
  * @method string getPhoneNumber()
  * @method $this withPhoneNumber($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
 class BindPhone extends Rpc
 {
 }
 
 /**
+ * @method string getKeyType()
+ * @method $this withKeyType($value)
  * @method string getTagName()
  * @method $this withTagName($value)
+ * @method string getClientKey()
+ * @method $this withClientKey($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class RemoveTag extends Rpc
+class BindTag extends Rpc
+{
+}
+
+/**
+ * @method string getMessageId()
+ * @method $this withMessageId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class CancelPush extends Rpc
+{
+}
+
+/**
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class CheckDevice extends Rpc
 {
 }
 
@@ -113,223 +120,94 @@ class CheckDevices extends Rpc
 }
 
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  * @method string getPage()
  * @method $this withPage($value)
  * @method string getPushType()
  * @method $this withPushType($value)
  */
-class QueryPushList extends Rpc
+class ListPushRecords extends Rpc
+{
+}
+
+class ListSummaryApps extends Rpc
 {
 }
 
 /**
  * @method string getAppKey()
  * @method $this withAppKey($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
  */
-class CheckDevice extends Rpc
+class ListTags extends Rpc
 {
 }
 
 /**
- * @method string getTagName()
- * @method $this withTagName($value)
- * @method string getClientKey()
- * @method $this withClientKey($value)
+ * @method array getPushTask()
  * @method string getAppKey()
  * @method $this withAppKey($value)
- * @method string getKeyType()
- * @method $this withKeyType($value)
  */
-class UnbindTag extends Rpc
+class MassPush extends Rpc
 {
-}
 
-/**
- * @method string getAliasName()
- * @method $this withAliasName($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- * @method string getUnbindAll()
- * @method $this withUnbindAll($value)
- */
-class UnbindAlias extends Rpc
-{
-}
+    /**
+     * @param array $pushTask
+     *
+     * @return $this
+     */
+	public function withPushTask(array $pushTask)
+	{
+	    $this->data['PushTask'] = $pushTask;
+		foreach ($pushTask as $depth1 => $depth1Value) {
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationBarType'] = $depth1Value['AndroidNotificationBarType'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidExtParameters'] = $depth1Value['AndroidExtParameters'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSBadge'] = $depth1Value['IOSBadge'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSBadgeAutoIncrement'] = $depth1Value['IOSBadgeAutoIncrement'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidOpenType'] = $depth1Value['AndroidOpenType'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.Title'] = $depth1Value['Title'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.Body'] = $depth1Value['Body'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.DeviceType'] = $depth1Value['DeviceType'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.PushTime'] = $depth1Value['PushTime'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.SendSpeed'] = $depth1Value['SendSpeed'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidPopupActivity'] = $depth1Value['AndroidPopupActivity'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSRemindBody'] = $depth1Value['IOSRemindBody'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSExtParameters'] = $depth1Value['IOSExtParameters'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidNotifyType'] = $depth1Value['AndroidNotifyType'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidPopupTitle'] = $depth1Value['AndroidPopupTitle'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSMusic'] = $depth1Value['IOSMusic'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSApnsEnv'] = $depth1Value['IOSApnsEnv'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSMutableContent'] = $depth1Value['IOSMutableContent'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationBarPriority'] = $depth1Value['AndroidNotificationBarPriority'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.ExpireTime'] = $depth1Value['ExpireTime'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidPopupBody'] = $depth1Value['AndroidPopupBody'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCategory'] = $depth1Value['IOSNotificationCategory'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.StoreOffline'] = $depth1Value['StoreOffline'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSSilentNotification'] = $depth1Value['IOSSilentNotification'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.JobKey'] = $depth1Value['JobKey'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.Target'] = $depth1Value['Target'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidOpenUrl'] = $depth1Value['AndroidOpenUrl'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationChannel'] = $depth1Value['AndroidNotificationChannel'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidRemind'] = $depth1Value['AndroidRemind'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidActivity'] = $depth1Value['AndroidActivity'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyBody'] = $depth1Value['AndroidXiaoMiNotifyBody'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSSubtitle'] = $depth1Value['IOSSubtitle'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.iOSRemind'] = $depth1Value['IOSRemind'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.TargetValue'] = $depth1Value['TargetValue'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidMusic'] = $depth1Value['AndroidMusic'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiActivity'] = $depth1Value['AndroidXiaoMiActivity'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyTitle'] = $depth1Value['AndroidXiaoMiNotifyTitle'];
+			$this->options['query']['PushTask.' . ($depth1 + 1) . '.PushType'] = $depth1Value['PushType'];
+		}
 
-/**
- * @method string getGranularity()
- * @method $this withGranularity($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- */
-class QueryUniqueDeviceStat extends Rpc
-{
-}
-
-/**
- * @method string getClientKey()
- * @method $this withClientKey($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getKeyType()
- * @method $this withKeyType($value)
- */
-class QueryTags extends Rpc
-{
-}
-
-/**
- * @method string getMessageId()
- * @method $this withMessageId($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- */
-class QueryPushStatByMsg extends Rpc
-{
-}
-
-/**
- * @method string getGranularity()
- * @method $this withGranularity($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- */
-class QueryPushStatByApp extends Rpc
-{
-}
-
-/**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDeviceType()
- * @method $this withDeviceType($value)
- * @method string getQueryType()
- * @method $this withQueryType($value)
- */
-class QueryDeviceStat extends Rpc
-{
-}
-
-/**
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- */
-class QueryDeviceInfo extends Rpc
-{
-}
-
-/**
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- */
-class QueryAliases extends Rpc
-{
-}
-
-/**
- * @method string getExtParameters()
- * @method $this withExtParameters($value)
- * @method string getApnsEnv()
- * @method $this withApnsEnv($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getTargetValue()
- * @method $this withTargetValue($value)
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getBody()
- * @method $this withBody($value)
- * @method string getJobKey()
- * @method $this withJobKey($value)
- * @method string getTarget()
- * @method $this withTarget($value)
- */
-class PushNoticeToiOS extends Rpc
-{
-}
-
-/**
- * @method string getExtParameters()
- * @method $this withExtParameters($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getTargetValue()
- * @method $this withTargetValue($value)
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getBody()
- * @method $this withBody($value)
- * @method string getJobKey()
- * @method $this withJobKey($value)
- * @method string getTarget()
- * @method $this withTarget($value)
- */
-class PushNoticeToAndroid extends Rpc
-{
-}
-
-/**
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getTargetValue()
- * @method $this withTargetValue($value)
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getBody()
- * @method $this withBody($value)
- * @method string getJobKey()
- * @method $this withJobKey($value)
- * @method string getTarget()
- * @method $this withTarget($value)
- */
-class PushMessageToiOS extends Rpc
-{
-}
-
-/**
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getTargetValue()
- * @method $this withTargetValue($value)
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getBody()
- * @method $this withBody($value)
- * @method string getJobKey()
- * @method $this withJobKey($value)
- * @method string getTarget()
- * @method $this withTarget($value)
- */
-class PushMessageToAndroid extends Rpc
-{
+		return $this;
+    }
 }
 
 /**
@@ -337,28 +215,17 @@ class PushMessageToAndroid extends Rpc
  * @method $this withAndroidNotificationBarType($value)
  * @method string getSmsSendPolicy()
  * @method $this withSmsSendPolicy($value)
- * @method string getAndroidExtParameters()
- * @method $this withAndroidExtParameters($value)
- * @method string getIOSBadge()
- * @method string getIOSBadgeAutoIncrement()
- * @method string getAndroidOpenType()
- * @method $this withAndroidOpenType($value)
- * @method string getTitle()
- * @method $this withTitle($value)
  * @method string getBody()
  * @method $this withBody($value)
  * @method string getDeviceType()
  * @method $this withDeviceType($value)
  * @method string getPushTime()
  * @method $this withPushTime($value)
- * @method string getSmsDelaySecs()
- * @method $this withSmsDelaySecs($value)
  * @method string getSendSpeed()
  * @method $this withSendSpeed($value)
  * @method string getAndroidPopupActivity()
  * @method $this withAndroidPopupActivity($value)
  * @method string getIOSRemindBody()
- * @method string getIOSExtParameters()
  * @method string getAndroidNotifyType()
  * @method $this withAndroidNotifyType($value)
  * @method string getAndroidPopupTitle()
@@ -370,75 +237,60 @@ class PushMessageToAndroid extends Rpc
  * @method $this withAndroidNotificationBarPriority($value)
  * @method string getExpireTime()
  * @method $this withExpireTime($value)
- * @method string getSmsTemplateName()
- * @method $this withSmsTemplateName($value)
- * @method string getAndroidPopupBody()
- * @method $this withAndroidPopupBody($value)
  * @method string getIOSNotificationCategory()
  * @method string getStoreOffline()
  * @method $this withStoreOffline($value)
- * @method string getIOSSilentNotification()
  * @method string getSmsParams()
  * @method $this withSmsParams($value)
  * @method string getJobKey()
  * @method $this withJobKey($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getAndroidOpenUrl()
  * @method $this withAndroidOpenUrl($value)
+ * @method string getAndroidXiaoMiNotifyBody()
+ * @method $this withAndroidXiaoMiNotifyBody($value)
+ * @method string getIOSSubtitle()
+ * @method string getIOSRemind()
+ * @method string getAndroidMusic()
+ * @method $this withAndroidMusic($value)
+ * @method string getPushType()
+ * @method $this withPushType($value)
+ * @method string getAndroidExtParameters()
+ * @method $this withAndroidExtParameters($value)
+ * @method string getIOSBadge()
+ * @method string getIOSBadgeAutoIncrement()
+ * @method string getAndroidOpenType()
+ * @method $this withAndroidOpenType($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getSmsDelaySecs()
+ * @method $this withSmsDelaySecs($value)
+ * @method string getIOSExtParameters()
+ * @method string getSmsTemplateName()
+ * @method $this withSmsTemplateName($value)
+ * @method string getAndroidPopupBody()
+ * @method $this withAndroidPopupBody($value)
+ * @method string getIOSSilentNotification()
+ * @method string getTarget()
+ * @method $this withTarget($value)
  * @method string getAndroidNotificationChannel()
  * @method $this withAndroidNotificationChannel($value)
  * @method string getAndroidRemind()
  * @method $this withAndroidRemind($value)
  * @method string getAndroidActivity()
  * @method $this withAndroidActivity($value)
- * @method string getAndroidXiaoMiNotifyBody()
- * @method $this withAndroidXiaoMiNotifyBody($value)
- * @method string getIOSSubtitle()
  * @method string getSmsSignName()
  * @method $this withSmsSignName($value)
- * @method string getIOSRemind()
  * @method string getAppKey()
  * @method $this withAppKey($value)
  * @method string getTargetValue()
  * @method $this withTargetValue($value)
- * @method string getAndroidMusic()
- * @method $this withAndroidMusic($value)
  * @method string getAndroidXiaoMiActivity()
  * @method $this withAndroidXiaoMiActivity($value)
  * @method string getAndroidXiaoMiNotifyTitle()
  * @method $this withAndroidXiaoMiNotifyTitle($value)
- * @method string getPushType()
- * @method $this withPushType($value)
  */
 class Push extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIOSBadge($value)
-    {
-        $this->data['IOSBadge'] = $value;
-        $this->options['query']['iOSBadge'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIOSBadgeAutoIncrement($value)
-    {
-        $this->data['IOSBadgeAutoIncrement'] = $value;
-        $this->options['query']['iOSBadgeAutoIncrement'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -449,19 +301,6 @@ class Push extends Rpc
     {
         $this->data['IOSRemindBody'] = $value;
         $this->options['query']['iOSRemindBody'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIOSExtParameters($value)
-    {
-        $this->data['IOSExtParameters'] = $value;
-        $this->options['query']['iOSExtParameters'] = $value;
 
         return $this;
     }
@@ -523,19 +362,6 @@ class Push extends Rpc
      *
      * @return $this
      */
-    public function withIOSSilentNotification($value)
-    {
-        $this->data['IOSSilentNotification'] = $value;
-        $this->options['query']['iOSSilentNotification'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withIOSSubtitle($value)
     {
         $this->data['IOSSubtitle'] = $value;
@@ -556,61 +382,223 @@ class Push extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSBadge($value)
+    {
+        $this->data['IOSBadge'] = $value;
+        $this->options['query']['iOSBadge'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSBadgeAutoIncrement($value)
+    {
+        $this->data['IOSBadgeAutoIncrement'] = $value;
+        $this->options['query']['iOSBadgeAutoIncrement'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSExtParameters($value)
+    {
+        $this->data['IOSExtParameters'] = $value;
+        $this->options['query']['iOSExtParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSSilentNotification($value)
+    {
+        $this->data['IOSSilentNotification'] = $value;
+        $this->options['query']['iOSSilentNotification'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getJobKey()
+ * @method $this withJobKey($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getTargetValue()
+ * @method $this withTargetValue($value)
+ */
+class PushMessageToAndroid extends Rpc
+{
+}
+
+/**
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getJobKey()
+ * @method $this withJobKey($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getTargetValue()
+ * @method $this withTargetValue($value)
+ */
+class PushMessageToiOS extends Rpc
+{
+}
+
+/**
+ * @method string getExtParameters()
+ * @method $this withExtParameters($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getJobKey()
+ * @method $this withJobKey($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getTargetValue()
+ * @method $this withTargetValue($value)
+ */
+class PushNoticeToAndroid extends Rpc
+{
+}
+
+/**
+ * @method string getExtParameters()
+ * @method $this withExtParameters($value)
+ * @method string getApnsEnv()
+ * @method $this withApnsEnv($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getJobKey()
+ * @method $this withJobKey($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getTargetValue()
+ * @method $this withTargetValue($value)
+ */
+class PushNoticeToiOS extends Rpc
+{
+}
+
+/**
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class ListTags extends Rpc
-{
-}
-
-class ListSummaryApps extends Rpc
+class QueryAliases extends Rpc
 {
 }
 
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
+ */
+class QueryDeviceInfo extends Rpc
+{
+}
+
+/**
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getAccount()
+ * @method $this withAccount($value)
+ */
+class QueryDevicesByAccount extends Rpc
+{
+}
+
+/**
+ * @method string getAlias()
+ * @method $this withAlias($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class QueryDevicesByAlias extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getDeviceType()
+ * @method $this withDeviceType($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ */
+class QueryDeviceStat extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  * @method string getPage()
  * @method $this withPage($value)
  * @method string getPushType()
  * @method $this withPushType($value)
  */
-class ListPushRecords extends Rpc
+class QueryPushList extends Rpc
 {
 }
 
 /**
- * @method string getTagName()
- * @method $this withTagName($value)
- * @method string getClientKey()
- * @method $this withClientKey($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getGranularity()
+ * @method $this withGranularity($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
- * @method string getKeyType()
- * @method $this withKeyType($value)
  */
-class BindTag extends Rpc
-{
-}
-
-/**
- * @method string getAliasName()
- * @method $this withAliasName($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- */
-class BindAlias extends Rpc
+class QueryPushStatByApp extends Rpc
 {
 }
 
@@ -620,6 +608,80 @@ class BindAlias extends Rpc
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
-class CancelPush extends Rpc
+class QueryPushStatByMsg extends Rpc
+{
+}
+
+/**
+ * @method string getKeyType()
+ * @method $this withKeyType($value)
+ * @method string getClientKey()
+ * @method $this withClientKey($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class QueryTags extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getGranularity()
+ * @method $this withGranularity($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class QueryUniqueDeviceStat extends Rpc
+{
+}
+
+/**
+ * @method string getTagName()
+ * @method $this withTagName($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class RemoveTag extends Rpc
+{
+}
+
+/**
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getAliasName()
+ * @method $this withAliasName($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getUnbindAll()
+ * @method $this withUnbindAll($value)
+ */
+class UnbindAlias extends Rpc
+{
+}
+
+/**
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class UnbindPhone extends Rpc
+{
+}
+
+/**
+ * @method string getKeyType()
+ * @method $this withKeyType($value)
+ * @method string getTagName()
+ * @method $this withTagName($value)
+ * @method string getClientKey()
+ * @method $this withClientKey($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class UnbindTag extends Rpc
 {
 }
