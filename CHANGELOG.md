@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 1.7.113 - 2019-10-9
+- Support API RecognizeImageColor.
+- Support API DetectImageElements.
+- Support API RecolorImage.
+- Support API SegmentImage.
+- Support API ChangeImageSize.
+- Support API ExtendImageStyle.
+- Support API RecognizeImageStyle.
+- Support API MakeSuperResolution.
+
+
 ## 1.7.112 - 2019-10-8
 - Supported Grab Frame IMM.
 
