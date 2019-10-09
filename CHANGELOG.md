@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.114 - 2019-10-9
+- Add VideoCancelScan Api.
+
+
 ## 1.7.113 - 2019-10-9
 - Support API RecognizeImageColor.
 - Support API DetectImageElements.
