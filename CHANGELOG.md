@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.115 - 2019-10-12
+- Add new api.
+
+
 ## 1.7.114 - 2019-10-9
 - Add VideoCancelScan Api.
 
