@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.117 - 2019-10-14
+- Supported callback for groups APIs.
+- Supported NVR historical stream for DescribeStreamURL.
+
+
 ## 1.7.116 - 2019-10-14
 - Support continuous pushing.
 
