@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.116 - 2019-10-14
+- Support continuous pushing.
+
+
 ## 1.7.115 - 2019-10-12
 - Add new api.
 

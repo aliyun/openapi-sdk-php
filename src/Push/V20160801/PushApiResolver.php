@@ -11,6 +11,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelPush cancelPush(array $options = [])
  * @method CheckDevice checkDevice(array $options = [])
  * @method CheckDevices checkDevices(array $options = [])
+ * @method CompleteContinuouslyPush completeContinuouslyPush(array $options = [])
+ * @method ContinuouslyPush continuouslyPush(array $options = [])
  * @method ListPushRecords listPushRecords(array $options = [])
  * @method ListSummaryApps listSummaryApps(array $options = [])
  * @method ListTags listTags(array $options = [])
@@ -116,6 +118,30 @@ class CheckDevice extends Rpc
  * @method $this withAppKey($value)
  */
 class CheckDevices extends Rpc
+{
+}
+
+/**
+ * @method string getMessageId()
+ * @method $this withMessageId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class CompleteContinuouslyPush extends Rpc
+{
+}
+
+/**
+ * @method string getMessageId()
+ * @method $this withMessageId($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getTargetValue()
+ * @method $this withTargetValue($value)
+ */
+class ContinuouslyPush extends Rpc
 {
 }
 
