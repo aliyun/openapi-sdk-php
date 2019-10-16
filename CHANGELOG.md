@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.118 - 2019-10-16
+- Add ListTagResources OpenApi.
+- Add TagResources OpenApi.
+- Add UntagResources OpenApi.
+- Add ModifyDBInstanceAutoUpgradeMinorVersion OpenApi.
+
+
 ## 1.7.117 - 2019-10-14
 - Supported callback for groups APIs.
 - Supported NVR historical stream for DescribeStreamURL.
