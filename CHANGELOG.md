@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.7.119 - 2019-10-17
+- Support instance manage API, includes UpdateInstance and DeleteInstance.
+- Support user manage API, includes ListUsers and UpdateUser.
+- Support meta data information API, includes ListInstances, ListDatabases, ListLogicDatabases, ListTables, ListLogicTables, ListColumns, ListIndexes.
+- Support meta data search API, inclues SearchDatabase, SearcTable.
+- Support RegisterInstance API to set datalinkName and useDsql option.
+
+
 ## 1.7.118 - 2019-10-16
 - Add ListTagResources OpenApi.
 - Add TagResources OpenApi.
