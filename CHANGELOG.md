@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.121 - 2019-10-18
+- Generated 2019-09-10 for `DnsKnocker`.
+
+
 ## 1.7.120 - 2019-10-18
 - Add X509 API, including queryDeviceCert, queryCertUrlByApplyId, createDeviceCert.
 - Add authType parameter of APIs, including createProduct, queryProduct, queryProductList, CreateProductPop, QueryProductAllInfo, QueryProductListPop, ListProductConsole, QueryAllProductListPop, QueryDeviceBatchList.

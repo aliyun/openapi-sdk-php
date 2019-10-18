@@ -86,6 +86,7 @@
         "alibabacloud/dds": "self.version",
         "alibabacloud/dm": "self.version",
         "alibabacloud/dmsenterprise": "self.version",
+        "alibabacloud/dnsknocker": "self.version",
         "alibabacloud/domain": "self.version",
         "alibabacloud/domainintl": "self.version",
         "alibabacloud/drcloud": "self.version",
