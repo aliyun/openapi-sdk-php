@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.120 - 2019-10-18
+- Add X509 API, including queryDeviceCert, queryCertUrlByApplyId, createDeviceCert.
+- Add authType parameter of APIs, including createProduct, queryProduct, queryProductList, CreateProductPop, QueryProductAllInfo, QueryProductListPop, ListProductConsole, QueryAllProductListPop, QueryDeviceBatchList.
+
+
 ## 1.7.119 - 2019-10-17
 - Support instance manage API, includes UpdateInstance and DeleteInstance.
 - Support user manage API, includes ListUsers and UpdateUser.
