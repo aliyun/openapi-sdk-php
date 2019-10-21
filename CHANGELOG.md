@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.122 - 2019-10-21
+- Release first version.
+
+
 ## 1.7.121 - 2019-10-18
 - Generated 2019-09-10 for `DnsKnocker`.
 

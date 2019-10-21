@@ -119,6 +119,7 @@
         "alibabacloud/imm": "self.version",
         "alibabacloud/industrybrain": "self.version",
         "alibabacloud/iot": "self.version",
+        "alibabacloud/iqa": "self.version",
         "alibabacloud/ivision": "self.version",
         "alibabacloud/ivpd": "self.version",
         "alibabacloud/jaq": "self.version",
