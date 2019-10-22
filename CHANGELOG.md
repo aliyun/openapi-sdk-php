@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.7.126 - 2019-10-22
+- Supported Sync predict for Image.
+- Supported Set Frame Frequency for Stream Predict.
+- Fixed Errore Code For APIs.
+
+
 ## 1.7.125 - 2019-10-22
 - RunInstances support AutoSnapshotPolicyId.
 
