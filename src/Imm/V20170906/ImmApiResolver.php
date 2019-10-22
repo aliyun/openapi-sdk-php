@@ -10,36 +10,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConvertOfficeFormat convertOfficeFormat(array $options = [])
  * @method CreateCADConversionTask createCADConversionTask(array $options = [])
  * @method CreateDocIndexTask createDocIndexTask(array $options = [])
- * @method CreateFaceSet createFaceSet(array $options = [])
  * @method CreateGrabFrameTask createGrabFrameTask(array $options = [])
  * @method CreateGroupFacesJob createGroupFacesJob(array $options = [])
  * @method CreateMediaComplexTask createMediaComplexTask(array $options = [])
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method CreateOfficeConversionTask createOfficeConversionTask(array $options = [])
- * @method CreatePornBatchDetectJob createPornBatchDetectJob(array $options = [])
  * @method CreateSet createSet(array $options = [])
- * @method CreateTagJob createTagJob(array $options = [])
- * @method CreateTagSet createTagSet(array $options = [])
  * @method CreateVideoAbstractTask createVideoAbstractTask(array $options = [])
  * @method CreateVideoAnalyseTask createVideoAnalyseTask(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
  * @method DecodeBlindWatermark decodeBlindWatermark(array $options = [])
  * @method DeleteDocIndex deleteDocIndex(array $options = [])
- * @method DeleteFaceJob deleteFaceJob(array $options = [])
- * @method DeleteFaceSearchGroup deleteFaceSearchGroup(array $options = [])
- * @method DeleteFaceSearchImageById deleteFaceSearchImageById(array $options = [])
- * @method DeleteFaceSearchUser deleteFaceSearchUser(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
  * @method DeleteImageJob deleteImageJob(array $options = [])
  * @method DeleteOfficeConversionTask deleteOfficeConversionTask(array $options = [])
- * @method DeletePhotoProcessTask deletePhotoProcessTask(array $options = [])
- * @method DeletePornBatchDetectJob deletePornBatchDetectJob(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSet deleteSet(array $options = [])
- * @method DeleteTagByName deleteTagByName(array $options = [])
- * @method DeleteTagByUrl deleteTagByUrl(array $options = [])
- * @method DeleteTagJob deleteTagJob(array $options = [])
- * @method DeleteTagSet deleteTagSet(array $options = [])
  * @method DeleteVideo deleteVideo(array $options = [])
  * @method DeleteVideoTask deleteVideoTask(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
@@ -48,61 +34,41 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectImageCelebrity detectImageCelebrity(array $options = [])
  * @method DetectImageFaces detectImageFaces(array $options = [])
  * @method DetectImageLogos detectImageLogos(array $options = [])
+ * @method DetectImageQRCodes detectImageQRCodes(array $options = [])
  * @method DetectImageTags detectImageTags(array $options = [])
  * @method DetectImageTexts detectImageTexts(array $options = [])
- * @method DetectLogo detectLogo(array $options = [])
  * @method DetectQRCodes detectQRCodes(array $options = [])
- * @method DetectTag detectTag(array $options = [])
  * @method EncodeBlindWatermark encodeBlindWatermark(array $options = [])
  * @method FindImages findImages(array $options = [])
  * @method FindImagesByTagNames findImagesByTagNames(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
  * @method GetDocIndex getDocIndex(array $options = [])
  * @method GetDocIndexTask getDocIndexTask(array $options = [])
- * @method GetFaceSearchGroup getFaceSearchGroup(array $options = [])
- * @method GetFaceSearchImage getFaceSearchImage(array $options = [])
- * @method GetFaceSearchUser getFaceSearchUser(array $options = [])
  * @method GetImage getImage(array $options = [])
  * @method GetImageJob getImageJob(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method GetOfficeConversionTask getOfficeConversionTask(array $options = [])
- * @method GetPhotoProcessTask getPhotoProcessTask(array $options = [])
- * @method GetPornBatchDetectJob getPornBatchDetectJob(array $options = [])
  * @method GetProject getProject(array $options = [])
  * @method GetSet getSet(array $options = [])
- * @method GetTagJob getTagJob(array $options = [])
- * @method GetTagSet getTagSet(array $options = [])
  * @method GetVideo getVideo(array $options = [])
  * @method GetVideoTask getVideoTask(array $options = [])
  * @method IndexImage indexImage(array $options = [])
- * @method IndexTag indexTag(array $options = [])
  * @method IndexVideo indexVideo(array $options = [])
  * @method ListFaceGroups listFaceGroups(array $options = [])
- * @method ListFaceSearchGroupImages listFaceSearchGroupImages(array $options = [])
- * @method ListFaceSearchGroups listFaceSearchGroups(array $options = [])
- * @method ListFaceSearchGroupUsers listFaceSearchGroupUsers(array $options = [])
  * @method ListImageJobs listImageJobs(array $options = [])
  * @method ListImages listImages(array $options = [])
  * @method ListOfficeConversionTask listOfficeConversionTask(array $options = [])
- * @method ListPhotoProcessTasks listPhotoProcessTasks(array $options = [])
- * @method ListPornBatchDetectJobs listPornBatchDetectJobs(array $options = [])
  * @method ListProjectAPIs listProjectAPIs(array $options = [])
  * @method ListProjects listProjects(array $options = [])
  * @method ListSets listSets(array $options = [])
  * @method ListSetTags listSetTags(array $options = [])
- * @method ListTagJobs listTagJobs(array $options = [])
  * @method ListTagNames listTagNames(array $options = [])
- * @method ListTagPhotos listTagPhotos(array $options = [])
- * @method ListTagSets listTagSets(array $options = [])
  * @method ListVideoAudios listVideoAudios(array $options = [])
  * @method ListVideoFrames listVideoFrames(array $options = [])
  * @method ListVideos listVideos(array $options = [])
  * @method ListVideoTasks listVideoTasks(array $options = [])
- * @method PhotoProcess photoProcess(array $options = [])
  * @method PutProject putProject(array $options = [])
- * @method RegistFace registFace(array $options = [])
  * @method SearchDocIndex searchDocIndex(array $options = [])
- * @method SearchFace searchFace(array $options = [])
  * @method UpdateDocIndexMeta updateDocIndexMeta(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
  * @method UpdateImage updateImage(array $options = [])
@@ -273,14 +239,6 @@ class CreateDocIndexTask extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- */
-class CreateFaceSet extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
  * @method string getCustomMessage()
@@ -399,54 +357,12 @@ class CreateOfficeConversionTask extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getExternalID()
- * @method $this withExternalID($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- * @method string getTgtUri()
- * @method $this withTgtUri($value)
- */
-class CreatePornBatchDetectJob extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getSetName()
  * @method $this withSetName($value)
  * @method string getSetId()
  * @method $this withSetId($value)
  */
 class CreateSet extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getExternalID()
- * @method $this withExternalID($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- */
-class CreateTagJob extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- */
-class CreateTagSet extends Rpc
 {
 }
 
@@ -547,56 +463,6 @@ class DeleteDocIndex extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getClearIndexData()
- * @method $this withClearIndexData($value)
- */
-class DeleteFaceJob extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- */
-class DeleteFaceSearchGroup extends Rpc
-{
-}
-
-/**
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class DeleteFaceSearchImageById extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class DeleteFaceSearchUser extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
  * @method string getSetId()
@@ -631,26 +497,6 @@ class DeleteOfficeConversionTask extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DeletePhotoProcessTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- */
-class DeletePornBatchDetectJob extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  */
 class DeleteProject extends Rpc
 {
@@ -663,58 +509,6 @@ class DeleteProject extends Rpc
  * @method $this withSetId($value)
  */
 class DeleteSet extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getTagName()
- * @method $this withTagName($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- */
-class DeleteTagByName extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- */
-class DeleteTagByUrl extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getClearIndexData()
- * @method $this withClearIndexData($value)
- */
-class DeleteTagJob extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getLazyMode()
- * @method $this withLazyMode($value)
- * @method string getCheckEmpty()
- * @method $this withCheckEmpty($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- */
-class DeleteTagSet extends Rpc
 {
 }
 
@@ -807,6 +601,16 @@ class DetectImageLogos extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getImageUri()
+ * @method $this withImageUri($value)
+ */
+class DetectImageQRCodes extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
  * @method string getRealUid()
  * @method $this withRealUid($value)
  * @method string getImageUri()
@@ -832,29 +636,7 @@ class DetectImageTexts extends Rpc
  * @method string getSrcUris()
  * @method $this withSrcUris($value)
  */
-class DetectLogo extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getSrcUris()
- * @method $this withSrcUris($value)
- */
 class DetectQRCodes extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getModelId()
- * @method $this withModelId($value)
- * @method string getSrcUris()
- * @method $this withSrcUris($value)
- */
-class DetectTag extends Rpc
 {
 }
 
@@ -1001,44 +783,6 @@ class GetDocIndexTask extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- */
-class GetFaceSearchGroup extends Rpc
-{
-}
-
-/**
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class GetFaceSearchImage extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class GetFaceSearchUser extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
  * @method string getSetId()
@@ -1083,26 +827,6 @@ class GetOfficeConversionTask extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class GetPhotoProcessTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- */
-class GetPornBatchDetectJob extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  */
 class GetProject extends Rpc
 {
@@ -1115,26 +839,6 @@ class GetProject extends Rpc
  * @method $this withSetId($value)
  */
 class GetSet extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- */
-class GetTagJob extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- */
-class GetTagSet extends Rpc
 {
 }
 
@@ -1197,22 +901,6 @@ class IndexImage extends Rpc
 }
 
 /**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getModelId()
- * @method $this withModelId($value)
- * @method string getSrcUris()
- * @method $this withSrcUris($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- * @method string getForce()
- * @method $this withForce($value)
- */
-class IndexTag extends Rpc
-{
-}
-
-/**
  * @method string getGrabType()
  * @method $this withGrabType($value)
  * @method string getProject()
@@ -1269,48 +957,6 @@ class ListFaceGroups extends Rpc
  * @method $this withMaxKeys($value)
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class ListFaceSearchGroupImages extends Rpc
-{
-}
-
-/**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- */
-class ListFaceSearchGroups extends Rpc
-{
-}
-
-/**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- */
-class ListFaceSearchGroupUsers extends Rpc
-{
-}
-
-/**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getJobType()
  * @method $this withJobType($value)
  * @method string getMarker()
@@ -1345,30 +991,6 @@ class ListImages extends Rpc
  * @method $this withMarker($value)
  */
 class ListOfficeConversionTask extends Rpc
-{
-}
-
-/**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- */
-class ListPhotoProcessTasks extends Rpc
-{
-}
-
-/**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- */
-class ListPornBatchDetectJobs extends Rpc
 {
 }
 
@@ -1411,20 +1033,6 @@ class ListSetTags extends Rpc
 }
 
 /**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getCondition()
- * @method $this withCondition($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- */
-class ListTagJobs extends Rpc
-{
-}
-
-/**
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getMarker()
@@ -1433,34 +1041,6 @@ class ListTagJobs extends Rpc
  * @method $this withSetId($value)
  */
 class ListTagNames extends Rpc
-{
-}
-
-/**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getTagName()
- * @method $this withTagName($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- */
-class ListTagPhotos extends Rpc
-{
-}
-
-/**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- */
-class ListTagSets extends Rpc
 {
 }
 
@@ -1523,26 +1103,6 @@ class ListVideoTasks extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getExternalID()
- * @method $this withExternalID($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- * @method string getStyle()
- * @method $this withStyle($value)
- * @method string getTgtUri()
- * @method $this withTgtUri($value)
- */
-class PhotoProcess extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getCU()
@@ -1553,26 +1113,6 @@ class PhotoProcess extends Rpc
  * @method $this withBillingType($value)
  */
 class PutProject extends Rpc
-{
-}
-
-/**
- * @method string getChooseBiggestFace()
- * @method $this withChooseBiggestFace($value)
- * @method string getIsQualityLimit()
- * @method $this withIsQualityLimit($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- * @method string getRegisterCheckLevel()
- * @method $this withRegisterCheckLevel($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class RegistFace extends Rpc
 {
 }
 
@@ -1617,24 +1157,6 @@ class RegistFace extends Rpc
  * @method $this withName($value)
  */
 class SearchDocIndex extends Rpc
-{
-}
-
-/**
- * @method string getResultNum()
- * @method $this withResultNum($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getSearchThresholdLevel()
- * @method $this withSearchThresholdLevel($value)
- * @method string getIsThreshold()
- * @method $this withIsThreshold($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- */
-class SearchFace extends Rpc
 {
 }
 

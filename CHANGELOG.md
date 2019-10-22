@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.123 - 2019-10-22
+- Supported ExternalId IMM.
+
+
 ## 1.7.122 - 2019-10-21
 - Release first version.
 
