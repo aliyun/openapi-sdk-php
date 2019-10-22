@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.124 - 2019-10-22
+- Fix ListDatabases CatalogName dataType integer to string.
+- Remove GetLogicDatabase invalid output param named TotalCount.
+- Remove ListIndexes invalid output param named ColumnList.
+- Support SearchTable API to filter searchTarget.
+
+
 ## 1.7.123 - 2019-10-22
 - Supported ExternalId IMM.
 

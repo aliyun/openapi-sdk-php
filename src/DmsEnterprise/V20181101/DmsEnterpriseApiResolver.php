@@ -373,6 +373,8 @@ class SearchDatabase extends Rpc
 }
 
 /**
+ * @method string getSearchTarget()
+ * @method $this withSearchTarget($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getEnvType()
