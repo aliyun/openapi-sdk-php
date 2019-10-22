@@ -37,7 +37,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCommand createCommand(array $options = [])
  * @method CreateDeploymentSet createDeploymentSet(array $options = [])
  * @method CreateDisk createDisk(array $options = [])
- * @method CreateFleet createFleet(array $options = [])
  * @method CreateForwardEntry createForwardEntry(array $options = [])
  * @method CreateHaVip createHaVip(array $options = [])
  * @method CreateHpcCluster createHpcCluster(array $options = [])
@@ -66,7 +65,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCommand deleteCommand(array $options = [])
  * @method DeleteDeploymentSet deleteDeploymentSet(array $options = [])
  * @method DeleteDisk deleteDisk(array $options = [])
- * @method DeleteFleet deleteFleet(array $options = [])
  * @method DeleteForwardEntry deleteForwardEntry(array $options = [])
  * @method DeleteHaVip deleteHaVip(array $options = [])
  * @method DeleteHpcCluster deleteHpcCluster(array $options = [])
@@ -112,9 +110,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEipAddresses describeEipAddresses(array $options = [])
  * @method DescribeEipMonitorData describeEipMonitorData(array $options = [])
  * @method DescribeEniMonitorData describeEniMonitorData(array $options = [])
- * @method DescribeFleetHistory describeFleetHistory(array $options = [])
- * @method DescribeFleetInstances describeFleetInstances(array $options = [])
- * @method DescribeFleets describeFleets(array $options = [])
  * @method DescribeForwardTableEntries describeForwardTableEntries(array $options = [])
  * @method DescribeHaVips describeHaVips(array $options = [])
  * @method DescribeHpcClusters describeHpcClusters(array $options = [])
@@ -211,7 +206,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDiskChargeType modifyDiskChargeType(array $options = [])
  * @method ModifyDiskSpec modifyDiskSpec(array $options = [])
  * @method ModifyEipAddressAttribute modifyEipAddressAttribute(array $options = [])
- * @method ModifyFleet modifyFleet(array $options = [])
  * @method ModifyForwardEntry modifyForwardEntry(array $options = [])
  * @method ModifyHaVipAttribute modifyHaVipAttribute(array $options = [])
  * @method ModifyHpcClusterAttribute modifyHpcClusterAttribute(array $options = [])
@@ -1290,80 +1284,6 @@ class CreateDisk extends Rpc
 			$this->options['query']['Arn.' . ($depth1 + 1) . '.Rolearn'] = $depth1Value['Rolearn'];
 			$this->options['query']['Arn.' . ($depth1 + 1) . '.RoleType'] = $depth1Value['RoleType'];
 			$this->options['query']['Arn.' . ($depth1 + 1) . '.AssumeRoleFor'] = $depth1Value['AssumeRoleFor'];
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getFleetType()
- * @method $this withFleetType($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getTerminateInstancesWithExpiration()
- * @method $this withTerminateInstancesWithExpiration($value)
- * @method string getOnDemandTargetCapacity()
- * @method $this withOnDemandTargetCapacity($value)
- * @method string getFleetName()
- * @method $this withFleetName($value)
- * @method string getSpotAllocationStrategy()
- * @method $this withSpotAllocationStrategy($value)
- * @method string getTerminateInstances()
- * @method $this withTerminateInstances($value)
- * @method string getDefaultTargetCapacityType()
- * @method $this withDefaultTargetCapacityType($value)
- * @method string getExcessCapacityTerminationPolicy()
- * @method $this withExcessCapacityTerminationPolicy($value)
- * @method array getLaunchTemplateConfig()
- * @method string getValidUntil()
- * @method $this withValidUntil($value)
- * @method string getFillGapWithOnDemand()
- * @method $this withFillGapWithOnDemand($value)
- * @method string getSpotInstanceInterruptionBehavior()
- * @method $this withSpotInstanceInterruptionBehavior($value)
- * @method string getLaunchTemplateId()
- * @method $this withLaunchTemplateId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getSpotInstancePoolsToUseCount()
- * @method $this withSpotInstancePoolsToUseCount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getLaunchTemplateVersion()
- * @method $this withLaunchTemplateVersion($value)
- * @method string getTotalTargetCapacity()
- * @method $this withTotalTargetCapacity($value)
- * @method string getOnDemandAllocationStrategy()
- * @method $this withOnDemandAllocationStrategy($value)
- * @method string getSpotTargetCapacity()
- * @method $this withSpotTargetCapacity($value)
- * @method string getValidFrom()
- * @method $this withValidFrom($value)
- * @method string getMaxSpotPrice()
- * @method $this withMaxSpotPrice($value)
- */
-class CreateFleet extends Rpc
-{
-
-    /**
-     * @param array $launchTemplateConfig
-     *
-     * @return $this
-     */
-	public function withLaunchTemplateConfig(array $launchTemplateConfig)
-	{
-	    $this->data['LaunchTemplateConfig'] = $launchTemplateConfig;
-		foreach ($launchTemplateConfig as $depth1 => $depth1Value) {
-			$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
-			$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.MaxPrice'] = $depth1Value['MaxPrice'];
-			$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
-			$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.WeightedCapacity'] = $depth1Value['WeightedCapacity'];
-			$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
 		}
 
 		return $this;
@@ -2815,24 +2735,6 @@ class DeleteDisk extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getTerminateInstances()
- * @method $this withTerminateInstances($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFleetId()
- * @method $this withFleetId($value)
- */
-class DeleteFleet extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getForwardTableId()
  * @method $this withForwardTableId($value)
  * @method string getForwardEntryId()
@@ -4188,94 +4090,6 @@ class DescribeEniMonitorData extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFleetId()
- * @method $this withFleetId($value)
- */
-class DescribeFleetHistory extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFleetId()
- * @method $this withFleetId($value)
- */
-class DescribeFleetInstances extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getFleetName()
- * @method $this withFleetName($value)
- * @method array getFleetStatus()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method array getFleetId()
- */
-class DescribeFleets extends Rpc
-{
-
-    /**
-     * @param array $fleetStatus
-     *
-     * @return $this
-     */
-	public function withFleetStatus(array $fleetStatus)
-	{
-	    $this->data['FleetStatus'] = $fleetStatus;
-		foreach ($fleetStatus as $i => $iValue) {
-			$this->options['query']['FleetStatus.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $fleetId
-     *
-     * @return $this
-     */
-	public function withFleetId(array $fleetId)
-	{
-	    $this->data['FleetId'] = $fleetId;
-		foreach ($fleetId as $i => $iValue) {
-			$this->options['query']['FleetId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getForwardTableId()
  * @method $this withForwardTableId($value)
  * @method string getPageNumber()
@@ -5157,6 +4971,8 @@ class DescribeInvocationResults extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getInvokeStatus()
  * @method $this withInvokeStatus($value)
+ * @method string getIncludeOutput()
+ * @method $this withIncludeOutput($value)
  * @method string getCommandId()
  * @method $this withCommandId($value)
  * @method string getPageNumber()
@@ -5591,6 +5407,8 @@ class DescribePhysicalConnections extends Rpc
  * @method string getSystemDiskCategory()
  * @method string getPlatform()
  * @method $this withPlatform($value)
+ * @method string getCapacity()
+ * @method $this withCapacity($value)
  * @method string getSystemDiskPerformanceLevel()
  * @method string getDataDisk4Category()
  * @method string getDataDisk4PerformanceLevel()
@@ -7616,6 +7434,7 @@ class ModifyDeploymentSetAttribute extends Rpc
  * @method $this withDiskName($value)
  * @method string getDeleteAutoSnapshot()
  * @method $this withDeleteAutoSnapshot($value)
+ * @method array getDiskIds()
  * @method string getDiskId()
  * @method $this withDiskId($value)
  * @method string getDeleteWithInstance()
@@ -7631,6 +7450,21 @@ class ModifyDeploymentSetAttribute extends Rpc
  */
 class ModifyDiskAttribute extends Rpc
 {
+
+    /**
+     * @param array $diskIds
+     *
+     * @return $this
+     */
+	public function withDiskIds(array $diskIds)
+	{
+	    $this->data['DiskIds'] = $diskIds;
+		foreach ($diskIds as $i => $iValue) {
+			$this->options['query']['DiskIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -7690,36 +7524,6 @@ class ModifyDiskSpec extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifyEipAddressAttribute extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTerminateInstancesWithExpiration()
- * @method $this withTerminateInstancesWithExpiration($value)
- * @method string getOnDemandTargetCapacity()
- * @method $this withOnDemandTargetCapacity($value)
- * @method string getDefaultTargetCapacityType()
- * @method $this withDefaultTargetCapacityType($value)
- * @method string getExcessCapacityTerminationPolicy()
- * @method $this withExcessCapacityTerminationPolicy($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFleetId()
- * @method $this withFleetId($value)
- * @method string getTotalTargetCapacity()
- * @method $this withTotalTargetCapacity($value)
- * @method string getSpotTargetCapacity()
- * @method $this withSpotTargetCapacity($value)
- * @method string getMaxSpotPrice()
- * @method $this withMaxSpotPrice($value)
- */
-class ModifyFleet extends Rpc
 {
 }
 
@@ -8784,6 +8588,8 @@ class ModifyVSwitchAttribute extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getScope()
@@ -9406,6 +9212,7 @@ class RunCommand extends Rpc
  * @method string getStorageSetPartitionNumber()
  * @method $this withStorageSetPartitionNumber($value)
  * @method array getTag()
+ * @method string getSystemDiskAutoSnapshotPolicyId()
  * @method string getAutoRenewPeriod()
  * @method $this withAutoRenewPeriod($value)
  * @method string getPeriod()
@@ -9520,6 +9327,19 @@ class RunInstances extends Rpc
     }
 
     /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskAutoSnapshotPolicyId($value)
+    {
+        $this->data['SystemDiskAutoSnapshotPolicyId'] = $value;
+        $this->options['query']['SystemDisk.AutoSnapshotPolicyId'] = $value;
+
+        return $this;
+    }
+
+    /**
      * @param array $ipv6Address
      *
      * @return $this
@@ -9626,6 +9446,7 @@ class RunInstances extends Rpc
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.AutoSnapshotPolicyId'] = $depth1Value['AutoSnapshotPolicyId'];
 		}
 
 		return $this;

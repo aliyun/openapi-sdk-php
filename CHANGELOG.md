@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.125 - 2019-10-22
+- RunInstances support AutoSnapshotPolicyId.
+
+
 ## 1.7.124 - 2019-10-22
 - Fix ListDatabases CatalogName dataType integer to string.
 - Remove GetLogicDatabase invalid output param named TotalCount.
