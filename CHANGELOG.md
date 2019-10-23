@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.7.127 - 2019-10-23
+- Add a new api named SubmitDynamicImageJob capture a certain part of the video as a dynamic image.
+- Add a new api named SubmitWorkflowJob to initiate the VoD workflow processing for audio and video.
+- Add a new field AuditStatus in the structure ImageInfo to GetImageInfo api response, which is used to identify the audit status of the image.
+- Modify the data type of return field StorageLocation to String.
+- Add a new field named MediaType to SubmitAIMediaAuditJob api request.
+
+
 ## 1.7.126 - 2019-10-22
 - Supported Sync predict for Image.
 - Supported Set Frame Frequency for Stream Predict.
