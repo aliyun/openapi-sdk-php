@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.130 - 2019-10-24
+- Generated 2017-12-14 for `BssOpenApi`.
+
+
 ## 1.7.129 - 2019-10-23
 - Add a new api named SubmitDynamicImageJob capture a certain part of the video as a dynamic image.
 - Add a new api named SubmitWorkflowJob to initiate the VoD workflow processing for audio and video.
