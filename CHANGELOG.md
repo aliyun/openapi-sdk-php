@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.7.133 - 2019-10-25
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+
+
 ## 1.7.132 - 2019-10-25
 - Supported query push records.
 
