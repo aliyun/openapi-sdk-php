@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.131 - 2019-10-25
+- Add DescribeDBClusterPerformance, DescribeDBNodePerformance for performance.
+
+
 ## 1.7.130 - 2019-10-24
 - Generated 2017-12-14 for `BssOpenApi`.
 
