@@ -28,6 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDevicesByAlias queryDevicesByAlias(array $options = [])
  * @method QueryDeviceStat queryDeviceStat(array $options = [])
  * @method QueryPushList queryPushList(array $options = [])
+ * @method QueryPushRecords queryPushRecords(array $options = [])
  * @method QueryPushStatByApp queryPushStatByApp(array $options = [])
  * @method QueryPushStatByMsg queryPushStatByMsg(array $options = [])
  * @method QueryTags queryTags(array $options = [])
@@ -51,6 +52,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'cps';
 }
 
 /**
@@ -611,6 +615,30 @@ class QueryDeviceStat extends Rpc
  * @method $this withPushType($value)
  */
 class QueryPushList extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getPushType()
+ * @method $this withPushType($value)
+ */
+class QueryPushRecords extends Rpc
 {
 }
 

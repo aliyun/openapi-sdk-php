@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.132 - 2019-10-25
+- Supported query push records.
+
+
 ## 1.7.131 - 2019-10-25
 - Add DescribeDBClusterPerformance, DescribeDBNodePerformance for performance.
 
