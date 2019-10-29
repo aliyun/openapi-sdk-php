@@ -28,6 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyCostUnit modifyCostUnit(array $options = [])
  * @method ModifyInstance modifyInstance(array $options = [])
  * @method QueryAccountBalance queryAccountBalance(array $options = [])
+ * @method QueryAccountBill queryAccountBill(array $options = [])
  * @method QueryAccountTransactions queryAccountTransactions(array $options = [])
  * @method QueryAvailableInstances queryAvailableInstances(array $options = [])
  * @method QueryBill queryBill(array $options = [])
@@ -74,9 +75,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'bssopenapi';
 }
 
 /**
@@ -583,6 +581,20 @@ class ModifyInstance extends Rpc
 }
 
 class QueryAccountBalance extends Rpc
+{
+}
+
+/**
+ * @method string getBillingCycle()
+ * @method $this withBillingCycle($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerID()
+ * @method $this withOwnerID($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class QueryAccountBill extends Rpc
 {
 }
 

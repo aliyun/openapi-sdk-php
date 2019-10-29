@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.134 - 2019-10-29
+- Add a new Alibaba Cloud Bill API named QueryAccountBill.
+
+
 ## 1.7.133 - 2019-10-25
 - Initial construction.
 - Public beta version.
