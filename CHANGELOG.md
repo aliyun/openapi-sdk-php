@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.136 - 2019-10-30
+- Update interface params of the cloudauth.
+
+
 ## 1.7.135 - 2019-10-30
 - Add features for open api.
 
