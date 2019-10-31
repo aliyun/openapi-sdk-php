@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.7.138 - 2019-10-31
+- Initial construction.
+- Public beta version.
+- Supported AliyunController for Interface.
+- Supported ConsoleController for Interface.
+- Supported AccountController for Interface.
+
+
 ## 1.7.137 - 2019-10-31
 - Initial construction.
 - Public beta version.
