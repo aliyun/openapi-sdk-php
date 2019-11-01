@@ -5,6 +5,7 @@ namespace AlibabaCloud\Vs\V20181212;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method BatchBindDirectories batchBindDirectories(array $options = [])
  * @method BatchBindTemplate batchBindTemplate(array $options = [])
  * @method BatchBindTemplates batchBindTemplates(array $options = [])
  * @method BatchDeleteDevices batchDeleteDevices(array $options = [])
@@ -16,23 +17,31 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchStartStreams batchStartStreams(array $options = [])
  * @method BatchStopDevices batchStopDevices(array $options = [])
  * @method BatchStopStreams batchStopStreams(array $options = [])
+ * @method BatchUnbindDirectories batchUnbindDirectories(array $options = [])
  * @method BatchUnbindTemplate batchUnbindTemplate(array $options = [])
  * @method BatchUnbindTemplates batchUnbindTemplates(array $options = [])
+ * @method BindDirectory bindDirectory(array $options = [])
  * @method BindTemplate bindTemplate(array $options = [])
  * @method ContinuousAdjust continuousAdjust(array $options = [])
  * @method ContinuousMove continuousMove(array $options = [])
  * @method CreateDevice createDevice(array $options = [])
+ * @method CreateDirectory createDirectory(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
  * @method CreateTemplate createTemplate(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
+ * @method DeleteDirectory deleteDirectory(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
+ * @method DeletePreset deletePreset(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteVsStreamsNotifyUrlConfig deleteVsStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeDevice describeDevice(array $options = [])
  * @method DescribeDeviceChannels describeDeviceChannels(array $options = [])
  * @method DescribeDevices describeDevices(array $options = [])
+ * @method DescribeDirectories describeDirectories(array $options = [])
+ * @method DescribeDirectory describeDirectory(array $options = [])
  * @method DescribeGroup describeGroup(array $options = [])
  * @method DescribeGroups describeGroups(array $options = [])
+ * @method DescribePresets describePresets(array $options = [])
  * @method DescribeRecords describeRecords(array $options = [])
  * @method DescribeStream describeStream(array $options = [])
  * @method DescribeStreams describeStreams(array $options = [])
@@ -58,10 +67,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVsUpPeakPublishStreamData describeVsUpPeakPublishStreamData(array $options = [])
  * @method DescribeVsUserResourcePackage describeVsUserResourcePackage(array $options = [])
  * @method ForbidVsStream forbidVsStream(array $options = [])
+ * @method GotoPreset gotoPreset(array $options = [])
  * @method ModifyDevice modifyDevice(array $options = [])
+ * @method ModifyDirectory modifyDirectory(array $options = [])
  * @method ModifyGroup modifyGroup(array $options = [])
  * @method ModifyTemplate modifyTemplate(array $options = [])
  * @method ResumeVsStream resumeVsStream(array $options = [])
+ * @method SetPreset setPreset(array $options = [])
  * @method SetVsDomainCertificate setVsDomainCertificate(array $options = [])
  * @method SetVsStreamsNotifyUrlConfig setVsStreamsNotifyUrlConfig(array $options = [])
  * @method StartDevice startDevice(array $options = [])
@@ -71,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopMove stopMove(array $options = [])
  * @method StopStream stopStream(array $options = [])
  * @method SyncCatalogs syncCatalogs(array $options = [])
+ * @method UnbindDirectory unbindDirectory(array $options = [])
  * @method UnbindTemplate unbindTemplate(array $options = [])
  * @method UnlockDevice unlockDevice(array $options = [])
  */
@@ -91,6 +104,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'vs';
+}
+
+/**
+ * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class BatchBindDirectories extends Rpc
+{
 }
 
 /**
@@ -266,6 +293,20 @@ class BatchStopStreams extends Rpc
 }
 
 /**
+ * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class BatchUnbindDirectories extends Rpc
+{
+}
+
+/**
  * @method string getTemplateType()
  * @method $this withTemplateType($value)
  * @method string getInstanceType()
@@ -298,6 +339,20 @@ class BatchUnbindTemplate extends Rpc
  * @method $this withInstanceId($value)
  */
 class BatchUnbindTemplates extends Rpc
+{
+}
+
+/**
+ * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class BindDirectory extends Rpc
 {
 }
 
@@ -370,6 +425,8 @@ class ContinuousMove extends Rpc
  * @method $this withPassword($value)
  * @method string getVendor()
  * @method $this withVendor($value)
+ * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getGroupId()
@@ -388,6 +445,24 @@ class ContinuousMove extends Rpc
  * @method $this withUsername($value)
  */
 class CreateDevice extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateDirectory extends Rpc
 {
 }
 
@@ -489,7 +564,33 @@ class DeleteDevice extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
+class DeleteDirectory extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
 class DeleteGroup extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getPresetId()
+ * @method $this withPresetId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeletePreset extends Rpc
 {
 }
 
@@ -518,6 +619,8 @@ class DeleteVsStreamsNotifyUrlConfig extends Rpc
 }
 
 /**
+ * @method string getIncludeDirectory()
+ * @method $this withIncludeDirectory($value)
  * @method string getIncludeStats()
  * @method $this withIncludeStats($value)
  * @method string getId()
@@ -550,6 +653,8 @@ class DescribeDeviceChannels extends Rpc
 /**
  * @method string getSortDirection()
  * @method $this withSortDirection($value)
+ * @method string getIncludeDirectory()
+ * @method $this withIncludeDirectory($value)
  * @method string getGbId()
  * @method $this withGbId($value)
  * @method string getType()
@@ -564,6 +669,8 @@ class DescribeDeviceChannels extends Rpc
  * @method $this withVendor($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -580,6 +687,42 @@ class DescribeDeviceChannels extends Rpc
  * @method $this withStatus($value)
  */
 class DescribeDevices extends Rpc
+{
+}
+
+/**
+ * @method string getSortDirection()
+ * @method $this withSortDirection($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getNoPagination()
+ * @method $this withNoPagination($value)
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSortBy()
+ * @method $this withSortBy($value)
+ */
+class DescribeDirectories extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDirectory extends Rpc
 {
 }
 
@@ -624,6 +767,18 @@ class DescribeGroup extends Rpc
  * @method $this withStatus($value)
  */
 class DescribeGroups extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribePresets extends Rpc
 {
 }
 
@@ -1100,6 +1255,20 @@ class ForbidVsStream extends Rpc
 }
 
 /**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getPresetId()
+ * @method $this withPresetId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GotoPreset extends Rpc
+{
+}
+
+/**
  * @method string getGbId()
  * @method $this withGbId($value)
  * @method string getDescription()
@@ -1114,6 +1283,8 @@ class ForbidVsStream extends Rpc
  * @method $this withPassword($value)
  * @method string getVendor()
  * @method $this withVendor($value)
+ * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -1134,6 +1305,22 @@ class ForbidVsStream extends Rpc
  * @method $this withUsername($value)
  */
 class ModifyDevice extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class ModifyDirectory extends Rpc
 {
 }
 
@@ -1234,6 +1421,20 @@ class ModifyTemplate extends Rpc
  * @method $this withOwnerId($value)
  */
 class ResumeVsStream extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getPresetId()
+ * @method $this withPresetId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetPreset extends Rpc
 {
 }
 
@@ -1376,6 +1577,20 @@ class StopStream extends Rpc
  * @method $this withOwnerId($value)
  */
 class SyncCatalogs extends Rpc
+{
+}
+
+/**
+ * @method string getDirectoryId()
+ * @method $this withDirectoryId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class UnbindDirectory extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.139 - 2019-11-1
+- Supported directory APIs.
+
+
 ## 1.7.138 - 2019-10-31
 - Initial construction.
 - Public beta version.
