@@ -5,21 +5,35 @@ namespace AlibabaCloud\Dyvmsapi\V20170525;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method SmartCallOperate smartCallOperate(array $options = [])
- * @method QueryRobotInfoList queryRobotInfoList(array $options = [])
- * @method BatchRobotSmartCall batchRobotSmartCall(array $options = [])
- * @method QueryCallDetailByTaskId queryCallDetailByTaskId(array $options = [])
- * @method GetRtcToken getRtcToken(array $options = [])
  * @method AddRtcAccount addRtcAccount(array $options = [])
+ * @method BatchRobotSmartCall batchRobotSmartCall(array $options = [])
+ * @method BindNumberAndVoipId bindNumberAndVoipId(array $options = [])
+ * @method CancelCall cancelCall(array $options = [])
+ * @method CancelOrderRobotTask cancelOrderRobotTask(array $options = [])
+ * @method CancelRobotTask cancelRobotTask(array $options = [])
+ * @method ClickToDial clickToDial(array $options = [])
+ * @method CreateRobotTask createRobotTask(array $options = [])
+ * @method DeleteRobotTask deleteRobotTask(array $options = [])
+ * @method GetRtcToken getRtcToken(array $options = [])
+ * @method IvrCall ivrCall(array $options = [])
+ * @method QueryCallDetailByCallId queryCallDetailByCallId(array $options = [])
+ * @method QueryCallDetailByTaskId queryCallDetailByTaskId(array $options = [])
+ * @method QueryRobotInfoList queryRobotInfoList(array $options = [])
+ * @method QueryRobotTaskCallDetail queryRobotTaskCallDetail(array $options = [])
+ * @method QueryRobotTaskCallList queryRobotTaskCallList(array $options = [])
+ * @method QueryRobotTaskDetail queryRobotTaskDetail(array $options = [])
+ * @method QueryRobotTaskList queryRobotTaskList(array $options = [])
+ * @method QueryRobotv2AllList queryRobotv2AllList(array $options = [])
+ * @method SingleCallByTts singleCallByTts(array $options = [])
+ * @method SingleCallByVoice singleCallByVoice(array $options = [])
+ * @method SmartCall smartCall(array $options = [])
+ * @method SmartCallOperate smartCallOperate(array $options = [])
+ * @method StartRobotTask startRobotTask(array $options = [])
+ * @method StopRobotTask stopRobotTask(array $options = [])
+ * @method UnbindNumberAndVoipId unbindNumberAndVoipId(array $options = [])
+ * @method UploadRobotTaskCalledFile uploadRobotTaskCalledFile(array $options = [])
  * @method VoipAddAccount voipAddAccount(array $options = [])
  * @method VoipGetToken voipGetToken(array $options = [])
- * @method SmartCall smartCall(array $options = [])
- * @method QueryCallDetailByCallId queryCallDetailByCallId(array $options = [])
- * @method CancelCall cancelCall(array $options = [])
- * @method ClickToDial clickToDial(array $options = [])
- * @method IvrCall ivrCall(array $options = [])
- * @method SingleCallByVoice singleCallByVoice(array $options = [])
- * @method SingleCallByTts singleCallByTts(array $options = [])
  */
 class DyvmsapiApiResolver extends ApiResolver
 {
@@ -38,20 +52,286 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class AddRtcAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getEarlyMediaAsr()
+ * @method $this withEarlyMediaAsr($value)
+ * @method string getTtsParamHead()
+ * @method $this withTtsParamHead($value)
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getTtsParam()
+ * @method $this withTtsParam($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getCalledShowNumber()
+ * @method $this withCalledShowNumber($value)
+ * @method string getIsSelfLine()
+ * @method $this withIsSelfLine($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDialogId()
+ * @method $this withDialogId($value)
+ * @method string getScheduleTime()
+ * @method $this withScheduleTime($value)
+ * @method string getCorpName()
+ * @method $this withCorpName($value)
+ * @method string getScheduleCall()
+ * @method $this withScheduleCall($value)
+ */
+class BatchRobotSmartCall extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVoipId()
+ * @method $this withVoipId($value)
+ */
+class BindNumberAndVoipId extends Rpc
+{
+}
+
+/**
  * @method string getCallId()
  * @method $this withCallId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getParam()
- * @method $this withParam($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getCommand()
- * @method $this withCommand($value)
  */
-class SmartCallOperate extends Rpc
+class CancelCall extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class CancelOrderRobotTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class CancelRobotTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCallerShowNumber()
+ * @method $this withCallerShowNumber($value)
+ * @method string getSessionTimeout()
+ * @method $this withSessionTimeout($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getCalledShowNumber()
+ * @method $this withCalledShowNumber($value)
+ * @method string getAsrFlag()
+ * @method $this withAsrFlag($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getRecordFlag()
+ * @method $this withRecordFlag($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
+ * @method string getAsrModelId()
+ * @method $this withAsrModelId($value)
+ * @method string getCallerNumber()
+ * @method $this withCallerNumber($value)
+ */
+class ClickToDial extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRecallStateCodes()
+ * @method $this withRecallStateCodes($value)
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getRecallTimes()
+ * @method $this withRecallTimes($value)
+ * @method string getIsSelfLine()
+ * @method $this withIsSelfLine($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getRetryType()
+ * @method $this withRetryType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDialogId()
+ * @method $this withDialogId($value)
+ * @method string getCaller()
+ * @method $this withCaller($value)
+ * @method string getNumberStatusIdent()
+ * @method $this withNumberStatusIdent($value)
+ * @method string getCorpName()
+ * @method $this withCorpName($value)
+ * @method string getRecallInterval()
+ * @method $this withRecallInterval($value)
+ */
+class CreateRobotTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DeleteRobotTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getIsCustomAccount()
+ * @method $this withIsCustomAccount($value)
+ */
+class GetRtcToken extends Rpc
+{
+}
+
+/**
+ * @method string getByeCode()
+ * @method $this withByeCode($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStartTtsParams()
+ * @method $this withStartTtsParams($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getStartCode()
+ * @method $this withStartCode($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getCalledShowNumber()
+ * @method $this withCalledShowNumber($value)
+ * @method array getMenuKeyMap()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPlayTimes()
+ * @method $this withPlayTimes($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
+ * @method string getByeTtsParams()
+ * @method $this withByeTtsParams($value)
+ */
+class IvrCall extends Rpc
+{
+
+    /**
+     * @param array $menuKeyMap
+     *
+     * @return $this
+     */
+	public function withMenuKeyMap(array $menuKeyMap)
+	{
+	    $this->data['MenuKeyMap'] = $menuKeyMap;
+		foreach ($menuKeyMap as $depth1 => $depth1Value) {
+			$this->options['query']['MenuKeyMap.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
+			$this->options['query']['MenuKeyMap.' . ($depth1 + 1) . '.TtsParams'] = $depth1Value['TtsParams'];
+			$this->options['query']['MenuKeyMap.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getQueryDate()
+ * @method $this withQueryDate($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getProdId()
+ * @method $this withProdId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryCallDetailByCallId extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getQueryDate()
+ * @method $this withQueryDate($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryCallDetailByTaskId extends Rpc
 {
 }
 
@@ -72,52 +352,50 @@ class QueryRobotInfoList extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getEarlyMediaAsr()
- * @method $this withEarlyMediaAsr($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getTtsParamHead()
- * @method $this withTtsParamHead($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
- * @method string getTtsParam()
- * @method $this withTtsParam($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDialogId()
- * @method $this withDialogId($value)
- * @method string getCalledNumber()
- * @method $this withCalledNumber($value)
- * @method string getScheduleTime()
- * @method $this withScheduleTime($value)
- * @method string getCalledShowNumber()
- * @method $this withCalledShowNumber($value)
- * @method string getCorpName()
- * @method $this withCorpName($value)
- * @method string getScheduleCall()
- * @method $this withScheduleCall($value)
- * @method string getIsSelfLine()
- * @method $this withIsSelfLine($value)
- */
-class BatchRobotSmartCall extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  * @method string getQueryDate()
  * @method $this withQueryDate($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getCallee()
- * @method $this withCallee($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ */
+class QueryRobotTaskCallDetail extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCalled()
+ * @method $this withCalled($value)
+ * @method string getDialogCountTo()
+ * @method $this withDialogCountTo($value)
+ * @method string getDurationFrom()
+ * @method $this withDurationFrom($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDialogCountFrom()
+ * @method $this withDialogCountFrom($value)
+ * @method string getDurationTo()
+ * @method $this withDurationTo($value)
+ * @method string getHangupDirection()
+ * @method $this withHangupDirection($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getCallResult()
+ * @method $this withCallResult($value)
  */
-class QueryCallDetailByTaskId extends Rpc
+class QueryRobotTaskCallList extends Rpc
 {
 }
 
@@ -128,14 +406,32 @@ class QueryCallDetailByTaskId extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- * @method string getIsCustomAccount()
- * @method $this withIsCustomAccount($value)
+ * @method string getId()
+ * @method $this withId($value)
  */
-class GetRtcToken extends Rpc
+class QueryRobotTaskDetail extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getTime()
+ * @method $this withTime($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class QueryRobotTaskList extends Rpc
 {
 }
 
@@ -146,42 +442,62 @@ class GetRtcToken extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
  */
-class AddRtcAccount extends Rpc
+class QueryRobotv2AllList extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getTtsParam()
+ * @method $this withTtsParam($value)
+ * @method string getSpeed()
+ * @method $this withSpeed($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getCalledShowNumber()
+ * @method $this withCalledShowNumber($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getTtsCode()
+ * @method $this withTtsCode($value)
+ * @method string getPlayTimes()
+ * @method $this withPlayTimes($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
+ * @method string getVolume()
+ * @method $this withVolume($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
  */
-class VoipAddAccount extends Rpc
+class SingleCallByTts extends Rpc
 {
 }
 
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getVoipId()
- * @method $this withVoipId($value)
+ * @method string getSpeed()
+ * @method $this withSpeed($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getVoiceCode()
+ * @method $this withVoiceCode($value)
+ * @method string getCalledShowNumber()
+ * @method $this withCalledShowNumber($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getPlayTimes()
+ * @method $this withPlayTimes($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
- * @method string getIsCustomAccount()
- * @method $this withIsCustomAccount($value)
+ * @method string getVolume()
+ * @method $this withVolume($value)
+ * @method string getOutId()
+ * @method $this withOutId($value)
  */
-class VoipGetToken extends Rpc
+class SingleCallByVoice extends Rpc
 {
 }
 
@@ -244,30 +560,16 @@ class SmartCall extends Rpc
  * @method $this withCallId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getQueryDate()
- * @method $this withQueryDate($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getProdId()
- * @method $this withProdId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class QueryCallDetailByCallId extends Rpc
-{
-}
-
-/**
- * @method string getCallId()
- * @method $this withCallId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getParam()
+ * @method $this withParam($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCommand()
+ * @method $this withCommand($value)
  */
-class CancelCall extends Rpc
+class SmartCallOperate extends Rpc
 {
 }
 
@@ -276,102 +578,14 @@ class CancelCall extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getRecordFlag()
- * @method $this withRecordFlag($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getCallerShowNumber()
- * @method $this withCallerShowNumber($value)
- * @method string getSessionTimeout()
- * @method $this withSessionTimeout($value)
- * @method string getCalledNumber()
- * @method $this withCalledNumber($value)
- * @method string getCalledShowNumber()
- * @method $this withCalledShowNumber($value)
- * @method string getOutId()
- * @method $this withOutId($value)
- * @method string getAsrFlag()
- * @method $this withAsrFlag($value)
- * @method string getAsrModelId()
- * @method $this withAsrModelId($value)
- * @method string getCallerNumber()
- * @method $this withCallerNumber($value)
+ * @method string getScheduleTime()
+ * @method $this withScheduleTime($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
-class ClickToDial extends Rpc
-{
-}
-
-/**
- * @method string getByeCode()
- * @method $this withByeCode($value)
- * @method array getMenuKeyMap()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getStartTtsParams()
- * @method $this withStartTtsParams($value)
- * @method string getPlayTimes()
- * @method $this withPlayTimes($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTimeout()
- * @method $this withTimeout($value)
- * @method string getStartCode()
- * @method $this withStartCode($value)
- * @method string getCalledNumber()
- * @method $this withCalledNumber($value)
- * @method string getCalledShowNumber()
- * @method $this withCalledShowNumber($value)
- * @method string getOutId()
- * @method $this withOutId($value)
- * @method string getByeTtsParams()
- * @method $this withByeTtsParams($value)
- */
-class IvrCall extends Rpc
-{
-
-    /**
-     * @param array $menuKeyMap
-     *
-     * @return $this
-     */
-    public function withMenuKeyMap(array $menuKeyMap)
-    {
-        $this->data['MenuKeyMap'] = $menuKeyMap;
-        foreach ($menuKeyMap as $depth1 => $depth1Value) {
-            $this->options['query']['MenuKeyMap.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
-            $this->options['query']['MenuKeyMap.' . ($depth1 + 1) . '.TtsParams'] = $depth1Value['TtsParams'];
-            $this->options['query']['MenuKeyMap.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-        }
-
-        return $this;
-    }
-}
-
-/**
- * @method string getVolume()
- * @method $this withVolume($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getCalledNumber()
- * @method $this withCalledNumber($value)
- * @method string getVoiceCode()
- * @method $this withVoiceCode($value)
- * @method string getCalledShowNumber()
- * @method $this withCalledShowNumber($value)
- * @method string getPlayTimes()
- * @method $this withPlayTimes($value)
- * @method string getOutId()
- * @method $this withOutId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSpeed()
- * @method $this withSpeed($value)
- */
-class SingleCallByVoice extends Rpc
+class StartRobotTask extends Rpc
 {
 }
 
@@ -380,25 +594,79 @@ class SingleCallByVoice extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getTtsCode()
- * @method $this withTtsCode($value)
- * @method string getPlayTimes()
- * @method $this withPlayTimes($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class StopRobotTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVoipId()
+ * @method $this withVoipId($value)
+ */
+class UnbindNumberAndVoipId extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTtsParamHead()
+ * @method $this withTtsParamHead($value)
  * @method string getTtsParam()
  * @method $this withTtsParam($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSpeed()
- * @method $this withSpeed($value)
- * @method string getVolume()
- * @method $this withVolume($value)
  * @method string getCalledNumber()
  * @method $this withCalledNumber($value)
- * @method string getCalledShowNumber()
- * @method $this withCalledShowNumber($value)
- * @method string getOutId()
- * @method $this withOutId($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
-class SingleCallByTts extends Rpc
+class UploadRobotTaskCalledFile extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class VoipAddAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getVoipId()
+ * @method $this withVoipId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getIsCustomAccount()
+ * @method $this withIsCustomAccount($value)
+ */
+class VoipGetToken extends Rpc
 {
 }
