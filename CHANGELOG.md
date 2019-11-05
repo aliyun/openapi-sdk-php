@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.141 - 2019-11-5
+- Add OperateBlackNo.
+
+
 ## 1.7.140 - 2019-11-2
 - Generated 2017-05-25 for `Dyvmsapi`.
 
