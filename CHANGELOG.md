@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.142 - 2019-11-8
+- Add DescribeJobErrorCode.
+
+
 ## 1.7.141 - 2019-11-5
 - Add OperateBlackNo.
 
