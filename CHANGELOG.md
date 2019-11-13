@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.148 - 2019-11-13
+- Fix ResourceId type from Long to String on QueryCostUnitResource.
+
+
 ## 1.7.147 - 2019-11-13
 - Fix ResourceId type from Long to String on QueryCostUnitResource.
 
