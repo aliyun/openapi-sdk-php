@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method CreateOfficeConversionTask createOfficeConversionTask(array $options = [])
  * @method CreateSet createSet(array $options = [])
+ * @method CreateStreamAnalyseTask createStreamAnalyseTask(array $options = [])
  * @method CreateVideoAbstractTask createVideoAbstractTask(array $options = [])
  * @method CreateVideoAnalyseTask createVideoAnalyseTask(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
@@ -363,6 +364,32 @@ class CreateOfficeConversionTask extends Rpc
  * @method $this withSetId($value)
  */
 class CreateSet extends Rpc
+{
+}
+
+/**
+ * @method string getGrabType()
+ * @method $this withGrabType($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getStreamUri()
+ * @method $this withStreamUri($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getSaveType()
+ * @method $this withSaveType($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method string getTgtUri()
+ * @method $this withTgtUri($value)
+ */
+class CreateStreamAnalyseTask extends Rpc
 {
 }
 
