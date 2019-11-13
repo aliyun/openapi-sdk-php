@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.144 - 2019-11-13
+- FindServiceList add RouteConfJson result.
+
+
 ## 1.7.143 - 2019-11-13
 - Support Go SDK.
 - Support C SDK.
