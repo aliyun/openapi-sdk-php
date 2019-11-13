@@ -46,6 +46,7 @@
         "alibabacloud/arms4finance": "self.version",
         "alibabacloud/aas": "self.version",
         "alibabacloud/actiontrail": "self.version",
+        "alibabacloud/adb": "self.version",
         "alibabacloud/aegis": "self.version",
         "alibabacloud/afs": "self.version",
         "alibabacloud/airec": "self.version",

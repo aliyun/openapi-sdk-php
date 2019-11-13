@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.7.143 - 2019-11-13
+- Support Go SDK.
+- Support C SDK.
+- Support PHP SDK.
+
+
 ## 1.7.142 - 2019-11-8
 - Add DescribeJobErrorCode.
 

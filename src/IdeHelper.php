@@ -11,6 +11,7 @@ namespace AlibabaCloud;
  * @method static ARMS4FINANCE\ARMS4FINANCE aRMS4FINANCE()
  * @method static Aas\Aas aas()
  * @method static Actiontrail\Actiontrail actiontrail()
+ * @method static Adb\Adb adb()
  * @method static Aegis\Aegis aegis()
  * @method static Afs\Afs afs()
  * @method static Airec\Airec airec()
