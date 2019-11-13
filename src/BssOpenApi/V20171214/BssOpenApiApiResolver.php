@@ -33,6 +33,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryAvailableInstances queryAvailableInstances(array $options = [])
  * @method QueryBill queryBill(array $options = [])
  * @method QueryBillOverview queryBillOverview(array $options = [])
+ * @method QueryBillToOSSSubscription queryBillToOSSSubscription(array $options = [])
  * @method QueryCashCoupons queryCashCoupons(array $options = [])
  * @method QueryCostUnit queryCostUnit(array $options = [])
  * @method QueryCostUnitResource queryCostUnitResource(array $options = [])
@@ -687,6 +688,10 @@ class QueryBill extends Rpc
  * @method $this withProductType($value)
  */
 class QueryBillOverview extends Rpc
+{
+}
+
+class QueryBillToOSSSubscription extends Rpc
 {
 }
 

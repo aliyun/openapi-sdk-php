@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.146 - 2019-11-13
+- Add new API QueryBillToOSSSubscription.
+
+
 ## 1.7.145 - 2019-11-13
 - Supported API UpdateDomainRemark for Update Domain Remark.
 - Supported API UpdateDomainRecordRemark for Update Record Remark.
