@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.151 - 2019-11-14
+- Released dysms OpenAPI.
+
+
 ## 1.7.150 - 2019-11-14
 - Support Tag OpenAPI.
 - Fix endpoint problem.
