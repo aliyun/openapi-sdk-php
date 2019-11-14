@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.152 - 2019-11-15
+- Add DescribeRestoreRangeInfo.
+
+
 ## 1.7.151 - 2019-11-14
 - Released dysms OpenAPI.
 

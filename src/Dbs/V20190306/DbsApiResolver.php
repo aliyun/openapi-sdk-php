@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeJobErrorCode describeJobErrorCode(array $options = [])
  * @method DescribeNodeCidrList describeNodeCidrList(array $options = [])
  * @method DescribePreCheckProgressList describePreCheckProgressList(array $options = [])
+ * @method DescribeRestoreRangeInfo describeRestoreRangeInfo(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
  * @method ModifyBackupObjects modifyBackupObjects(array $options = [])
  * @method ModifyBackupPlanName modifyBackupPlanName(array $options = [])
@@ -276,6 +277,22 @@ class DescribeNodeCidrList extends Rpc
  * @method $this withRestoreTaskId($value)
  */
 class DescribePreCheckProgressList extends Rpc
+{
+}
+
+/**
+ * @method string getBeginTimestampForRestore()
+ * @method $this withBeginTimestampForRestore($value)
+ * @method string getEndTimestampForRestore()
+ * @method $this withEndTimestampForRestore($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeRestoreRangeInfo extends Rpc
 {
 }
 
