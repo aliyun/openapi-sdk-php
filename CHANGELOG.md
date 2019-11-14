@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.150 - 2019-11-14
+- Support Tag OpenAPI.
+- Fix endpoint problem.
+
+
 ## 1.7.149 - 2019-11-13
 - Supported Stream analyse.
 

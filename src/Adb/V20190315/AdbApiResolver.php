@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
  * @method DescribeSlowLogTrend describeSlowLogTrend(array $options = [])
  * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
  * @method ModifyDBClusterAccessWhiteList modifyDBClusterAccessWhiteList(array $options = [])
@@ -31,6 +32,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ReleaseClusterPublicConnection releaseClusterPublicConnection(array $options = [])
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method RevokeOperatorPermission revokeOperatorPermission(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  */
 class AdbApiResolver extends ApiResolver
 {
@@ -443,6 +446,57 @@ class GrantOperatorPermission extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAccountDescription()
  * @method $this withAccountDescription($value)
  * @method string getAccountName()
@@ -592,4 +646,103 @@ class ResetAccountPassword extends Rpc
  */
 class RevokeOperatorPermission extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
