@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.153 - 2019-11-15
+- Modify DescribeRestoreRangeInfo.
+
+
 ## 1.7.152 - 2019-11-15
 - Add DescribeRestoreRangeInfo.
 
