@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.160 - 2019-11-15
+- Nlp Automl SDK.
+
+
 ## 1.7.159 - 2019-11-15
 - Init php sdk.
 
