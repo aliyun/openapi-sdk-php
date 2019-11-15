@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.158 - 2019-11-15
+- Sync cdn APIs.
+
+
 ## 1.7.157 - 2019-11-15
 - Fixed bugs.
 
