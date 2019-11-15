@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.156 - 2019-11-15
+- Sync cdn APIs.
+
+
 ## 1.7.155 - 2019-11-15
 - Add Scdn APIS.
 - Sync cdn APIS.
