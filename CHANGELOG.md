@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.155 - 2019-11-15
+- Add Scdn APIS.
+- Sync cdn APIS.
+
+
 ## 1.7.154 - 2019-11-15
 - Modify QueryAccountBill, support group by product.
 
