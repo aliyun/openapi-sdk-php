@@ -106,6 +106,7 @@ namespace AlibabaCloud;
  * @method static NAS\NAS nAS()
  * @method static Netana\Netana netana()
  * @method static Nlp\Nlp nlp()
+ * @method static NlpAutoml\NlpAutoml nlpAutoml()
  * @method static NlsCloudMeta\NlsCloudMeta nlsCloudMeta()
  * @method static NlsFiletrans\NlsFiletrans nlsFiletrans()
  * @method static Ocs\Ocs ocs()

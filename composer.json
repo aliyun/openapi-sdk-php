@@ -141,6 +141,7 @@
         "alibabacloud/nas": "self.version",
         "alibabacloud/netana": "self.version",
         "alibabacloud/nlp": "self.version",
+        "alibabacloud/nlpautoml": "self.version",
         "alibabacloud/nlscloudmeta": "self.version",
         "alibabacloud/nlsfiletrans": "self.version",
         "alibabacloud/ocs": "self.version",
