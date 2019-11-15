@@ -76,9 +76,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'BssOpenApi';
 }
 
 /**
@@ -589,12 +586,16 @@ class QueryAccountBalance extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
  * @method string getBillingCycle()
  * @method $this withBillingCycle($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerID()
  * @method $this withOwnerID($value)
+ * @method string getIsGroupByProduct()
+ * @method $this withIsGroupByProduct($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */

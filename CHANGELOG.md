@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.154 - 2019-11-15
+- Modify QueryAccountBill, support group by product.
+
+
 ## 1.7.153 - 2019-11-15
 - Modify DescribeRestoreRangeInfo.
 
