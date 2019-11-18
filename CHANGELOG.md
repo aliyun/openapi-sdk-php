@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.161 - 2019-11-18
+- Add seller refuse reason for queryRefundDetail.
+
+
 ## 1.7.160 - 2019-11-15
 - Nlp Automl SDK.
 

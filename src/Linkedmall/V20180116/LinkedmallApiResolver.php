@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddSupplierNewItems addSupplierNewItems(array $options = [])
  * @method ApplyRefund applyRefund(array $options = [])
  * @method BatchRegistAnonymousTbAccount batchRegistAnonymousTbAccount(array $options = [])
+ * @method CancelOrder cancelOrder(array $options = [])
  * @method CancelRefund cancelRefund(array $options = [])
  * @method ConfirmDisburse confirmDisburse(array $options = [])
  * @method CreateMovieTicketOrder createMovieTicketOrder(array $options = [])
@@ -19,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetCategoryList getCategoryList(array $options = [])
  * @method GetCustomServiceUrl getCustomServiceUrl(array $options = [])
  * @method InitApplyRefund initApplyRefund(array $options = [])
+ * @method ListItemActivities listItemActivities(array $options = [])
  * @method ModifyBasicAndBizItems modifyBasicAndBizItems(array $options = [])
  * @method ModifyBizItems modifyBizItems(array $options = [])
  * @method NotifyPayOrderStatus notifyPayOrderStatus(array $options = [])
@@ -167,6 +169,18 @@ class ApplyRefund extends Rpc
  * @method $this withIdJsonList($value)
  */
 class BatchRegistAnonymousTbAccount extends Rpc
+{
+}
+
+/**
+ * @method string getLmOrderId()
+ * @method $this withLmOrderId($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class CancelOrder extends Rpc
 {
 }
 
@@ -416,6 +430,18 @@ class GetCustomServiceUrl extends Rpc
  * @method $this withUseAnonymousTbAccount($value)
  */
 class InitApplyRefund extends Rpc
+{
+}
+
+/**
+ * @method string getLmItemIds()
+ * @method $this withLmItemIds($value)
+ * @method string getItemIds()
+ * @method $this withItemIds($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class ListItemActivities extends Rpc
 {
 }
 
