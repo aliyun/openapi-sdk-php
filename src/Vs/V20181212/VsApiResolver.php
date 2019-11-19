@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteVsStreamsNotifyUrlConfig deleteVsStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeDevice describeDevice(array $options = [])
  * @method DescribeDeviceChannels describeDeviceChannels(array $options = [])
+ * @method DescribeDeviceGateway describeDeviceGateway(array $options = [])
  * @method DescribeDevices describeDevices(array $options = [])
  * @method DescribeDirectories describeDirectories(array $options = [])
  * @method DescribeDirectory describeDirectory(array $options = [])
@@ -69,6 +70,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ForbidVsStream forbidVsStream(array $options = [])
  * @method GotoPreset gotoPreset(array $options = [])
  * @method ModifyDevice modifyDevice(array $options = [])
+ * @method ModifyDeviceChannels modifyDeviceChannels(array $options = [])
  * @method ModifyDirectory modifyDirectory(array $options = [])
  * @method ModifyGroup modifyGroup(array $options = [])
  * @method ModifyTemplate modifyTemplate(array $options = [])
@@ -441,6 +443,8 @@ class ContinuousMove extends Rpc
  * @method $this withPort($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getDsn()
+ * @method $this withDsn($value)
  * @method string getUsername()
  * @method $this withUsername($value)
  */
@@ -511,6 +515,8 @@ class CreateGroup extends Rpc
  * @method $this withStartTime($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getJpgOnDemand()
+ * @method $this withJpgOnDemand($value)
  * @method string getRetention()
  * @method $this withRetention($value)
  * @method string getShowLog()
@@ -519,6 +525,8 @@ class CreateGroup extends Rpc
  * @method $this withHlsM3u8($value)
  * @method string getOssBucket()
  * @method $this withOssBucket($value)
+ * @method string getTransConfigsJSON()
+ * @method $this withTransConfigsJSON($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getOwnerId()
@@ -647,6 +655,22 @@ class DescribeDevice extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDeviceChannels extends Rpc
+{
+}
+
+/**
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getExpire()
+ * @method $this withExpire($value)
+ */
+class DescribeDeviceGateway extends Rpc
 {
 }
 
@@ -867,6 +891,8 @@ class DescribeStreams extends Rpc
  * @method $this withShowLog($value)
  * @method string getOutProtocol()
  * @method $this withOutProtocol($value)
+ * @method string getTranscode()
+ * @method $this withTranscode($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getOwnerId()
@@ -1309,6 +1335,20 @@ class ModifyDevice extends Rpc
 }
 
 /**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getChannels()
+ * @method $this withChannels($value)
+ */
+class ModifyDeviceChannels extends Rpc
+{
+}
+
+/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getId()
@@ -1369,6 +1409,8 @@ class ModifyGroup extends Rpc
  * @method $this withJpgOverwrite($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getJpgOnDemand()
+ * @method $this withJpgOnDemand($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getRetention()
@@ -1379,6 +1421,8 @@ class ModifyGroup extends Rpc
  * @method $this withHlsM3u8($value)
  * @method string getOssBucket()
  * @method $this withOssBucket($value)
+ * @method string getTransConfigsJSON()
+ * @method $this withTransConfigsJSON($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getOwnerId()

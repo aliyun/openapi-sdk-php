@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.162 - 2019-11-19
+- Supported transcode template.
+
+
 ## 1.7.161 - 2019-11-18
 - Add seller refuse reason for queryRefundDetail.
 
