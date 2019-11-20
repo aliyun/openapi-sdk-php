@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.167 - 2019-11-20
+- Supported ecsDemand CreateDemand, ModifyDemand, DeleteDemand API.
+- Modify ecsDemand DescribesDemands API.
+
+
 ## 1.7.166 - 2019-11-20
 - Generated 2019-01-01 for `HBase`.
 
