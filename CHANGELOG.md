@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.164 - 2019-11-20
+- Support anonymous account for enableOrder.
+
+
 ## 1.7.163 - 2019-11-20
 - Add API ReportVoipProblems.
 - Add API QueryVoipNumberBindINfos.
