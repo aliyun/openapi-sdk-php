@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.170 - 2019-11-20
+- Update Nlp Automl SDK.
+
+
 ## 1.7.169 - 2019-11-20
 - Add new OpenAPI.
 
