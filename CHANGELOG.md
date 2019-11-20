@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.163 - 2019-11-20
+- Add API ReportVoipProblems.
+- Add API QueryVoipNumberBindINfos.
+
+
 ## 1.7.162 - 2019-11-19
 - Supported transcode template.
 

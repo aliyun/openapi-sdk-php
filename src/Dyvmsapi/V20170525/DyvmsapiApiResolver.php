@@ -24,6 +24,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRobotTaskDetail queryRobotTaskDetail(array $options = [])
  * @method QueryRobotTaskList queryRobotTaskList(array $options = [])
  * @method QueryRobotv2AllList queryRobotv2AllList(array $options = [])
+ * @method QueryVoipNumberBindInfos queryVoipNumberBindInfos(array $options = [])
+ * @method ReportVoipProblems reportVoipProblems(array $options = [])
  * @method SingleCallByTts singleCallByTts(array $options = [])
  * @method SingleCallByVoice singleCallByVoice(array $options = [])
  * @method SmartCall smartCall(array $options = [])
@@ -49,6 +51,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'dyvms';
 }
 
 /**
@@ -444,6 +449,42 @@ class QueryRobotTaskList extends Rpc
  * @method $this withOwnerId($value)
  */
 class QueryRobotv2AllList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVoipId()
+ * @method $this withVoipId($value)
+ */
+class QueryVoipNumberBindInfos extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getVoipId()
+ * @method $this withVoipId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getDesc()
+ * @method $this withDesc($value)
+ */
+class ReportVoipProblems extends Rpc
 {
 }
 
