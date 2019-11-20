@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.169 - 2019-11-20
+- Add new OpenAPI.
+
+
 ## 1.7.168 - 2019-11-20
 - Add new pop api.
 

@@ -28,7 +28,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'dypnsapi';
+    public $serviceCode = 'dypns';
 }
 
 /**
