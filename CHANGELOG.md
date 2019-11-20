@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.166 - 2019-11-20
+- Generated 2019-01-01 for `HBase`.
+
+
 ## 1.7.165 - 2019-11-20
 - Support anonymous account for enableOrder.
 

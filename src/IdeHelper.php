@@ -77,6 +77,7 @@ namespace AlibabaCloud;
  * @method static Ft\Ft ft()
  * @method static Gpdb\Gpdb gpdb()
  * @method static Green\Green green()
+ * @method static HBase\HBase hBase()
  * @method static HPC\HPC hPC()
  * @method static Hsm\Hsm hsm()
  * @method static Httpdns\Httpdns httpdns()

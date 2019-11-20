@@ -112,6 +112,7 @@
         "alibabacloud/ft": "self.version",
         "alibabacloud/gpdb": "self.version",
         "alibabacloud/green": "self.version",
+        "alibabacloud/hbase": "self.version",
         "alibabacloud/hpc": "self.version",
         "alibabacloud/hsm": "self.version",
         "alibabacloud/httpdns": "self.version",
