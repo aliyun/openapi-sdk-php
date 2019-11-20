@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.168 - 2019-11-20
+- Add new pop api.
+
+
 ## 1.7.167 - 2019-11-20
 - Supported ecsDemand CreateDemand, ModifyDemand, DeleteDemand API.
 - Modify ecsDemand DescribesDemands API.
