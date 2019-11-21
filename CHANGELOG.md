@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.171 - 2019-11-21
+- Add ConvertPayType.
+- Add ConvertLogstashPayType.
+
+
 ## 1.7.170 - 2019-11-20
 - Update Nlp Automl SDK.
 
