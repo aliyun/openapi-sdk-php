@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.172 - 2019-11-22
+- Update Api Request And Response structure.
+
+
 ## 1.7.171 - 2019-11-21
 - Add ConvertPayType.
 - Add ConvertLogstashPayType.

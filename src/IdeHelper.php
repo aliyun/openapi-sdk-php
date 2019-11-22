@@ -84,6 +84,7 @@ namespace AlibabaCloud;
  * @method static IDST\IDST iDST()
  * @method static ITaaS\ITaaS iTaaS()
  * @method static ImageSearch\ImageSearch imageSearch()
+ * @method static Imageenhan\Imageenhan imageenhan()
  * @method static Imm\Imm imm()
  * @method static IndustryBrain\IndustryBrain industryBrain()
  * @method static Iot\Iot iot()
