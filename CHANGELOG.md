@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.174 - 2019-11-22
+- Supported ondemand snapshot.
+
+
 ## 1.7.173 - 2019-11-22
 - First version.
 

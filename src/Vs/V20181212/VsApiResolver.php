@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDevice createDevice(array $options = [])
  * @method CreateDirectory createDirectory(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
+ * @method CreateStreamSnapshot createStreamSnapshot(array $options = [])
  * @method CreateTemplate createTemplate(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
  * @method DeleteDirectory deleteDirectory(array $options = [])
@@ -497,6 +498,18 @@ class CreateDirectory extends Rpc
  * @method $this withRegion($value)
  */
 class CreateGroup extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateStreamSnapshot extends Rpc
 {
 }
 
