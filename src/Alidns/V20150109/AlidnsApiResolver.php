@@ -5,15 +5,19 @@ namespace AlibabaCloud\Alidns\V20150109;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddCustomLine addCustomLine(array $options = [])
  * @method AddDomain addDomain(array $options = [])
+ * @method AddDomainBackup addDomainBackup(array $options = [])
  * @method AddDomainGroup addDomainGroup(array $options = [])
  * @method AddDomainRecord addDomainRecord(array $options = [])
  * @method AddGtmAccessStrategy addGtmAccessStrategy(array $options = [])
  * @method AddGtmAddressPool addGtmAddressPool(array $options = [])
  * @method AddGtmMonitor addGtmMonitor(array $options = [])
  * @method AddGtmRecoveryPlan addGtmRecoveryPlan(array $options = [])
+ * @method BindInstanceDomains bindInstanceDomains(array $options = [])
  * @method ChangeDomainGroup changeDomainGroup(array $options = [])
  * @method ChangeDomainOfDnsProduct changeDomainOfDnsProduct(array $options = [])
+ * @method DeleteCustomLines deleteCustomLines(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DeleteDomainGroup deleteDomainGroup(array $options = [])
  * @method DeleteDomainRecord deleteDomainRecord(array $options = [])
@@ -23,6 +27,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSubDomainRecords deleteSubDomainRecords(array $options = [])
  * @method DescribeBatchResultCount describeBatchResultCount(array $options = [])
  * @method DescribeBatchResultDetail describeBatchResultDetail(array $options = [])
+ * @method DescribeCustomLine describeCustomLine(array $options = [])
+ * @method DescribeCustomLines describeCustomLines(array $options = [])
  * @method DescribeDnsProductInstance describeDnsProductInstance(array $options = [])
  * @method DescribeDnsProductInstances describeDnsProductInstances(array $options = [])
  * @method DescribeDNSSLBSubDomains describeDNSSLBSubDomains(array $options = [])
@@ -56,6 +62,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRecordStatisticsSummary describeRecordStatisticsSummary(array $options = [])
  * @method DescribeSubDomainRecords describeSubDomainRecords(array $options = [])
  * @method DescribeSupportLines describeSupportLines(array $options = [])
+ * @method DescribeTransferDomains describeTransferDomains(array $options = [])
  * @method ExecuteGtmRecoveryPlan executeGtmRecoveryPlan(array $options = [])
  * @method GetMainDomainName getMainDomainName(array $options = [])
  * @method ModifyHichinaDomainDNS modifyHichinaDomainDNS(array $options = [])
@@ -66,6 +73,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDomainRecordStatus setDomainRecordStatus(array $options = [])
  * @method SetGtmAccessMode setGtmAccessMode(array $options = [])
  * @method SetGtmMonitorStatus setGtmMonitorStatus(array $options = [])
+ * @method TransferDomain transferDomain(array $options = [])
+ * @method UnbindInstanceDomains unbindInstanceDomains(array $options = [])
+ * @method UpdateCustomLine updateCustomLine(array $options = [])
  * @method UpdateDNSSLBWeight updateDNSSLBWeight(array $options = [])
  * @method UpdateDomainGroup updateDomainGroup(array $options = [])
  * @method UpdateDomainRecord updateDomainRecord(array $options = [])
@@ -97,6 +107,37 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method array getIpSegment()
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLineName()
+ * @method $this withLineName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class AddCustomLine extends Rpc
+{
+
+    /**
+     * @param array $ipSegment
+     *
+     * @return $this
+     */
+	public function withIpSegment(array $ipSegment)
+	{
+	    $this->data['IpSegment'] = $ipSegment;
+		foreach ($ipSegment as $depth1 => $depth1Value) {
+			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.EndIp'] = $depth1Value['EndIp'];
+			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
@@ -109,6 +150,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withLang($value)
  */
 class AddDomain extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getPeriodType()
+ * @method $this withPeriodType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class AddDomainBackup extends Rpc
 {
 }
 
@@ -289,6 +344,20 @@ class AddGtmRecoveryPlan extends Rpc
 }
 
 /**
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class BindInstanceDomains extends Rpc
+{
+}
+
+/**
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDomainName()
@@ -315,6 +384,18 @@ class ChangeDomainGroup extends Rpc
  * @method $this withLang($value)
  */
 class ChangeDomainOfDnsProduct extends Rpc
+{
+}
+
+/**
+ * @method string getLineIds()
+ * @method $this withLineIds($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DeleteCustomLines extends Rpc
 {
 }
 
@@ -433,8 +514,38 @@ class DescribeBatchResultCount extends Rpc
  * @method $this withLang($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeBatchResultDetail extends Rpc
+{
+}
+
+/**
+ * @method string getLineId()
+ * @method $this withLineId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeCustomLine extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeCustomLines extends Rpc
 {
 }
 
@@ -1017,6 +1128,22 @@ class DescribeSupportLines extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTransferType()
+ * @method $this withTransferType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeTransferDomains extends Rpc
+{
+}
+
+/**
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getRecoveryPlanId()
@@ -1175,6 +1302,67 @@ class SetGtmAccessMode extends Rpc
  */
 class SetGtmMonitorStatus extends Rpc
 {
+}
+
+/**
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getTargetUserId()
+ * @method $this withTargetUserId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class TransferDomain extends Rpc
+{
+}
+
+/**
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class UnbindInstanceDomains extends Rpc
+{
+}
+
+/**
+ * @method string getLineId()
+ * @method $this withLineId($value)
+ * @method array getIpSegment()
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLineName()
+ * @method $this withLineName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class UpdateCustomLine extends Rpc
+{
+
+    /**
+     * @param array $ipSegment
+     *
+     * @return $this
+     */
+	public function withIpSegment(array $ipSegment)
+	{
+	    $this->data['IpSegment'] = $ipSegment;
+		foreach ($ipSegment as $depth1 => $depth1Value) {
+			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.EndIp'] = $depth1Value['EndIp'];
+			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+		}
+
+		return $this;
+    }
 }
 
 /**

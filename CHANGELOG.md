@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 1.7.176 - 2019-11-26
+- Supported API BindInstanceDomains.
+- Supported API UnbindInstanceDomains.
+- Supported API AddCustomLine.
+- Supported API UpdateCustomLine.
+- Supported API DeleteCustomLines.
+- Supported API DescribeCustomLine.
+- Supported API DescribeCustomLines.
+
+
 ## 1.7.175 - 2019-11-25
 - One or more people can be subscribed when creating tasks.
 
