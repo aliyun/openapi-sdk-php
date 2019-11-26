@@ -50,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRedeem queryRedeem(array $options = [])
  * @method QueryResellerAvailableQuota queryResellerAvailableQuota(array $options = [])
  * @method QueryResourcePackageInstances queryResourcePackageInstances(array $options = [])
+ * @method QueryRIUtilizationDetail queryRIUtilizationDetail(array $options = [])
  * @method QuerySettlementBill querySettlementBill(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
@@ -995,6 +996,28 @@ class QueryResellerAvailableQuota extends Rpc
  * @method $this withPageSize($value)
  */
 class QueryResourcePackageInstances extends Rpc
+{
+}
+
+/**
+ * @method string getDeductedInstanceId()
+ * @method $this withDeductedInstanceId($value)
+ * @method string getInstanceSpec()
+ * @method $this withInstanceSpec($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getRIInstanceId()
+ * @method $this withRIInstanceId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRICommodityCode()
+ * @method $this withRICommodityCode($value)
+ */
+class QueryRIUtilizationDetail extends Rpc
 {
 }
 
