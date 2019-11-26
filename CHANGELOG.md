@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.178 - 2019-11-26
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+
 ## 1.7.177 - 2019-11-26
 - Modify QueryBill, add SubOrderId in item of response.
 

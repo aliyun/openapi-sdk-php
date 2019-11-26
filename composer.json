@@ -185,6 +185,7 @@
         "alibabacloud/ubsms": "self.version",
         "alibabacloud/ubsmsinner": "self.version",
         "alibabacloud/uis": "self.version",
+        "alibabacloud/unimkt": "self.version",
         "alibabacloud/vod": "self.version",
         "alibabacloud/vpc": "self.version",
         "alibabacloud/vs": "self.version",
