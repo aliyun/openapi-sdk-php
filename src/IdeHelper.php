@@ -139,6 +139,7 @@ namespace AlibabaCloud;
  * @method static Skyeye\Skyeye skyeye()
  * @method static Slb\Slb slb()
  * @method static Smartag\Smartag smartag()
+ * @method static Smc\Smc smc()
  * @method static Sms\Sms sms()
  * @method static SmsIntl\SmsIntl smsIntl()
  * @method static Snsuapi\Snsuapi snsuapi()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.179 - 2019-11-27
+- CreateReplicationJob API supports the specified instance type.
+
+
 ## 1.7.178 - 2019-11-26
 - Generated 2018-12-12, 2018-12-07 for `UniMkt`.
 
