@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.7.180 - 2019-11-28
+- Support Order Basis API, include CreateOrder, CloseOrder, ListOrders, GetOrderBaseInfo.
+- Support Order Approval API, include SubmitOrderApproval, ApproveOrder, GetApprovalDetail.
+- Support DataCorrect Order Operation API, include ExecuteDataCorrect, GetDataCorrectOrderDetail, GetDataCorrectBackupFiles.
+- Support DDL Order Operation API, include CreatePublishGroupTask.
+- Support DataExport Operation API, include ExecuteDataExport, GetDataExportOrderDetail, GetDataExportDownloadURL.
+
+
 ## 1.7.179 - 2019-11-27
 - CreateReplicationJob API supports the specified instance type.
 
