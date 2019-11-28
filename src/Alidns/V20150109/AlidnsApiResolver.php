@@ -65,9 +65,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTransferDomains describeTransferDomains(array $options = [])
  * @method ExecuteGtmRecoveryPlan executeGtmRecoveryPlan(array $options = [])
  * @method GetMainDomainName getMainDomainName(array $options = [])
+ * @method GetTxtRecordForVerify getTxtRecordForVerify(array $options = [])
  * @method ModifyHichinaDomainDNS modifyHichinaDomainDNS(array $options = [])
  * @method OperateBatchDomain operateBatchDomain(array $options = [])
  * @method PreviewGtmRecoveryPlan previewGtmRecoveryPlan(array $options = [])
+ * @method RetrieveDomain retrieveDomain(array $options = [])
  * @method RollbackGtmRecoveryPlan rollbackGtmRecoveryPlan(array $options = [])
  * @method SetDNSSLBStatus setDNSSLBStatus(array $options = [])
  * @method SetDomainRecordStatus setDomainRecordStatus(array $options = [])
@@ -1170,6 +1172,20 @@ class GetMainDomainName extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class GetTxtRecordForVerify extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getLang()
@@ -1229,6 +1245,18 @@ class OperateBatchDomain extends Rpc
  * @method $this withLang($value)
  */
 class PreviewGtmRecoveryPlan extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class RetrieveDomain extends Rpc
 {
 }
 
