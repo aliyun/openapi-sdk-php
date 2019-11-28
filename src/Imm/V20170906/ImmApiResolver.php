@@ -444,6 +444,8 @@ class CreateVideoAnalyseTask extends Rpc
  * @method $this withProject($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
+ * @method string getTargetContainer()
+ * @method $this withTargetContainer($value)
  * @method string getCustomMessage()
  * @method $this withCustomMessage($value)
  * @method string getNotifyTopicName()

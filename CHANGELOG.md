@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.182 - 2019-11-28
+- Supported dash for compress.
+
+
 ## 1.7.181 - 2019-11-28
 - Eni Supports Multi-SecurityGroup.
 
