@@ -10,8 +10,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddSnapshotRepo addSnapshotRepo(array $options = [])
  * @method CancelTask cancelTask(array $options = [])
  * @method CloseHttps closeHttps(array $options = [])
- * @method ConvertLogstashPayType convertLogstashPayType(array $options = [])
- * @method ConvertPayType convertPayType(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateLogstash createLogstash(array $options = [])
  * @method CreateProject createProject(array $options = [])
@@ -49,6 +47,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSnapshotReposByInstanceId listSnapshotReposByInstanceId(array $options = [])
  * @method MoveResourceGroup moveResourceGroup(array $options = [])
  * @method OpenHttps openHttps(array $options = [])
+ * @method RenewInstance renewInstance(array $options = [])
+ * @method RenewLogstash renewLogstash(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method RestartLogstash restartLogstash(array $options = [])
  * @method ResumeElasticsearchTask resumeElasticsearchTask(array $options = [])
@@ -68,10 +68,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateDict updateDict(array $options = [])
  * @method UpdateHotIkDicts updateHotIkDicts(array $options = [])
  * @method UpdateInstance updateInstance(array $options = [])
+ * @method UpdateInstanceChargeType updateInstanceChargeType(array $options = [])
  * @method UpdateInstanceSettings updateInstanceSettings(array $options = [])
  * @method UpdateKibanaSettings updateKibanaSettings(array $options = [])
  * @method UpdateKibanaWhiteIps updateKibanaWhiteIps(array $options = [])
  * @method UpdateLogstash updateLogstash(array $options = [])
+ * @method UpdateLogstashChargeType updateLogstashChargeType(array $options = [])
  * @method UpdateLogstashDescription updateLogstashDescription(array $options = [])
  * @method UpdateLogstashSettings updateLogstashSettings(array $options = [])
  * @method UpdatePipelineManagementConfig updatePipelineManagementConfig(array $options = [])
@@ -208,54 +210,6 @@ class CloseHttps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/close-https';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['query']['clientToken'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getClientToken()
- */
-class ConvertLogstashPayType extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/openapi/logstashes/[InstanceId]/convert-pay-type';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['query']['clientToken'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getClientToken()
- */
-class ConvertPayType extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/openapi/instances/[InstanceId]/convert-pay-type';
 
     /**
      * @param string $value
@@ -1542,6 +1496,54 @@ class OpenHttps extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ */
+class RenewInstance extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/renew';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class RenewLogstash extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/actions/renew';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
  * @method string getForce()
  */
 class RestartInstance extends Roa
@@ -2070,6 +2072,30 @@ class UpdateInstance extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  */
+class UpdateInstanceChargeType extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/convert-pay-type';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
 class UpdateInstanceSettings extends Roa
 {
     /** @var string */
@@ -2149,6 +2175,30 @@ class UpdateLogstash extends Roa
 
     /** @var string */
     public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class UpdateLogstashChargeType extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/actions/convert-pay-type';
 
     /**
      * @param string $value

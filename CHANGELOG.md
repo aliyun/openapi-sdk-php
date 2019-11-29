@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.184 - 2019-11-29
+- Add RenewInstance.
+- Add RenewLogstash.
+- Add UpdateInstanceChargeType.
+- Add UpdateLogstashChargeType.
+
+
 ## 1.7.183 - 2019-11-28
 - Supported API GetTxtRecordForVerify.
 - Supported API RetrieveDomain.
