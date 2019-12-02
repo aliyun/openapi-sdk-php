@@ -12,7 +12,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifySmsSign modifySmsSign(array $options = [])
  * @method ModifySmsTemplate modifySmsTemplate(array $options = [])
  * @method QuerySendDetails querySendDetails(array $options = [])
- * @method QuerySmsProdStatus querySmsProdStatus(array $options = [])
  * @method QuerySmsSign querySmsSign(array $options = [])
  * @method QuerySmsTemplate querySmsTemplate(array $options = [])
  * @method SendBatchSms sendBatchSms(array $options = [])
@@ -196,20 +195,6 @@ class ModifySmsTemplate extends Rpc
  * @method $this withBizId($value)
  */
 class QuerySendDetails extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAliyUid()
- * @method $this withAliyUid($value)
- */
-class QuerySmsProdStatus extends Rpc
 {
 }
 

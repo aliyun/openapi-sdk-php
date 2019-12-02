@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.185 - 2019-12-2
+- Remove QuerySmsProdStatus OpenAPI.
+
+
 ## 1.7.184 - 2019-11-29
 - Add RenewInstance.
 - Add RenewLogstash.
