@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.7.186 - 2019-12-3
+- Supported face library operation.
+- Supported task template and words.
+
+
 ## 1.7.185 - 2019-12-2
 - Remove QuerySmsProdStatus OpenAPI.
 
