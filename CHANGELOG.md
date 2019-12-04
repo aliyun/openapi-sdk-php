@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.187 - 2019-12-4
+- Supported ModifyDBInstanceSpec for Direction param.
+
+
 ## 1.7.186 - 2019-12-3
 - Supported face library operation.
 - Supported task template and words.
