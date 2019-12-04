@@ -9,7 +9,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExtendImageStyle extendImageStyle(array $options = [])
  * @method MakeSuperResolutionImage makeSuperResolutionImage(array $options = [])
  * @method RecolorImage recolorImage(array $options = [])
- * @method SegmentImage segmentImage(array $options = [])
  */
 class ImageenhanApiResolver extends ApiResolver
 {
@@ -205,26 +204,6 @@ class RecolorImage extends Rpc
     {
         $this->data['RefUrl'] = $value;
         $this->options['form_params']['RefUrl'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getUrl()
- */
-class SegmentImage extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUrl($value)
-    {
-        $this->data['Url'] = $value;
-        $this->options['form_params']['Url'] = $value;
 
         return $this;
     }
