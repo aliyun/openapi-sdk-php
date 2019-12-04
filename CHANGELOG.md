@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.189 - 2019-12-4
+- Generated 2019-01-01 for `HBase`.
+
+
 ## 1.7.188 - 2019-12-4
 - Supported ModifyDBInstanceSpec for Direction param.
 

@@ -7,24 +7,34 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddUserHdfsInfo addUserHdfsInfo(array $options = [])
  * @method ConvertInstance convertInstance(array $options = [])
+ * @method CreateHbaseHaSlb createHbaseHaSlb(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
+ * @method DeleteHbaseHaSlb deleteHbaseHaSlb(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteUserHdfsInfo deleteUserHdfsInfo(array $options = [])
+ * @method DescribeDBInstanceUsage describeDBInstanceUsage(array $options = [])
  * @method DescribeEndpoints describeEndpoints(array $options = [])
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
+ * @method DescribeInstanceType describeInstanceType(array $options = [])
  * @method DescribeIpWhitelist describeIpWhitelist(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
+ * @method ModifyInstanceMaintainTime modifyInstanceMaintainTime(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
  * @method ModifyIpWhitelist modifyIpWhitelist(array $options = [])
  * @method ModifySecurityGroups modifySecurityGroups(array $options = [])
  * @method ModifyUIAccountPassword modifyUIAccountPassword(array $options = [])
+ * @method QueryHBaseHaDB queryHBaseHaDB(array $options = [])
  * @method QueryXpackRelateDB queryXpackRelateDB(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method ResizeDiskSize resizeDiskSize(array $options = [])
  * @method ResizeNodeCount resizeNodeCount(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
+ * @method SwitchHbaseHaSlb switchHbaseHaSlb(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method UnTagResources unTagResources(array $options = [])
  * @method XpackRelateDB xpackRelateDB(array $options = [])
  */
 class HBaseApiResolver extends ApiResolver
@@ -65,6 +75,20 @@ class AddUserHdfsInfo extends Rpc
  * @method $this withPricingCycle($value)
  */
 class ConvertInstance extends Rpc
+{
+}
+
+/**
+ * @method string getHaTypes()
+ * @method $this withHaTypes($value)
+ * @method string getHbaseType()
+ * @method $this withHbaseType($value)
+ * @method string getBdsId()
+ * @method $this withBdsId($value)
+ * @method string getHaId()
+ * @method $this withHaId($value)
+ */
+class CreateHbaseHaSlb extends Rpc
 {
 }
 
@@ -129,6 +153,18 @@ class CreateInstance extends Rpc
 }
 
 /**
+ * @method string getHaId()
+ * @method $this withHaId($value)
+ * @method string getHaTypes()
+ * @method $this withHaTypes($value)
+ * @method string getBdsId()
+ * @method $this withBdsId($value)
+ */
+class DeleteHbaseHaSlb extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -143,6 +179,14 @@ class DeleteInstance extends Rpc
  * @method $this withNameService($value)
  */
 class DeleteUserHdfsInfo extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeDBInstanceUsage extends Rpc
 {
 }
 
@@ -173,6 +217,14 @@ class DescribeInstances extends Rpc
 }
 
 /**
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ */
+class DescribeInstanceType extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -193,6 +245,59 @@ class DescribeRegions extends Rpc
  * @method $this withClusterId($value)
  */
 class DescribeSecurityGroups extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getMaintainEndTime()
+ * @method $this withMaintainEndTime($value)
+ * @method string getMaintainStartTime()
+ * @method $this withMaintainStartTime($value)
+ */
+class ModifyInstanceMaintainTime extends Rpc
 {
 }
 
@@ -247,6 +352,14 @@ class ModifyUIAccountPassword extends Rpc
 }
 
 /**
+ * @method string getBdsId()
+ * @method $this withBdsId($value)
+ */
+class QueryHBaseHaDB extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getRelateDbType()
@@ -296,6 +409,99 @@ class ResizeNodeCount extends Rpc
  */
 class RestartInstance extends Rpc
 {
+}
+
+/**
+ * @method string getHaTypes()
+ * @method $this withHaTypes($value)
+ * @method string getHbaseType()
+ * @method $this withHbaseType($value)
+ * @method string getBdsId()
+ * @method $this withBdsId($value)
+ * @method string getHaId()
+ * @method $this withHaId($value)
+ */
+class SwitchHbaseHaSlb extends Rpc
+{
+}
+
+/**
+ * @method array getResourceId()
+ * @method array getTag()
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getResourceId()
+ * @method array getTagKey()
+ */
+class UnTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
