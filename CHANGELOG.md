@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.191 - 2019-12-5
+- Add api QueryMetric.
+
+
 ## 1.7.190 - 2019-12-4
 - Delete invalid Api.
 
