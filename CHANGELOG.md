@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.7.192 - 2019-12-11
+- Add tag API.
+- Add group process monitoring API.
+- Add API for batch setting alarm rules.
+
+
 ## 1.7.191 - 2019-12-5
 - Add api QueryMetric.
 
