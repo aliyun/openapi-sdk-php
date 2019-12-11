@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method BatchAddDeviceGroupRelations batchAddDeviceGroupRelations(array $options = [])
+ * @method BatchAddThingTopo batchAddThingTopo(array $options = [])
  * @method BatchBindDeviceToEdgeInstanceWithDriver batchBindDeviceToEdgeInstanceWithDriver(array $options = [])
  * @method BatchCheckDeviceNames batchCheckDeviceNames(array $options = [])
  * @method BatchClearEdgeInstanceDeviceConfig batchClearEdgeInstanceDeviceConfig(array $options = [])
@@ -49,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableThing disableThing(array $options = [])
  * @method EnableThing enableThing(array $options = [])
  * @method GetDataAPIServiceDetail getDataAPIServiceDetail(array $options = [])
+ * @method GetDeviceListByIotIds getDeviceListByIotIds(array $options = [])
  * @method GetDeviceShadow getDeviceShadow(array $options = [])
  * @method GetDeviceStatus getDeviceStatus(array $options = [])
  * @method GetEdgeInstance getEdgeInstance(array $options = [])
@@ -56,9 +58,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetGatewayBySubDevice getGatewayBySubDevice(array $options = [])
  * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
  * @method GetNodesAddingTask getNodesAddingTask(array $options = [])
+ * @method GetProductKeyListByName getProductKeyListByName(array $options = [])
+ * @method GetProductMetaListByName getProductMetaListByName(array $options = [])
  * @method GetRule getRule(array $options = [])
  * @method GetRuleAction getRuleAction(array $options = [])
  * @method GetThingTopo getThingTopo(array $options = [])
+ * @method GisQueryDeviceLocation gisQueryDeviceLocation(array $options = [])
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
@@ -74,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryCertUrlByApplyId queryCertUrlByApplyId(array $options = [])
  * @method QueryDevice queryDevice(array $options = [])
  * @method QueryDeviceByDriver queryDeviceByDriver(array $options = [])
+ * @method QueryDeviceByStatus queryDeviceByStatus(array $options = [])
  * @method QueryDeviceByTags queryDeviceByTags(array $options = [])
  * @method QueryDeviceCert queryDeviceCert(array $options = [])
  * @method QueryDeviceDesiredProperty queryDeviceDesiredProperty(array $options = [])
@@ -101,6 +107,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
  * @method QueryPageByApplyId queryPageByApplyId(array $options = [])
  * @method QueryProduct queryProduct(array $options = [])
+ * @method QueryProductCertInfo queryProductCertInfo(array $options = [])
  * @method QueryProductList queryProductList(array $options = [])
  * @method QueryProductTopic queryProductTopic(array $options = [])
  * @method QuerySuperDeviceGroup querySuperDeviceGroup(array $options = [])
@@ -115,6 +122,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDeviceProperty setDeviceProperty(array $options = [])
  * @method SetDevicesProperty setDevicesProperty(array $options = [])
  * @method SetEdgeInstanceDriverConfigs setEdgeInstanceDriverConfigs(array $options = [])
+ * @method SetProductCertInfo setProductCertInfo(array $options = [])
  * @method StartRule startRule(array $options = [])
  * @method StopRule stopRule(array $options = [])
  * @method UnbindDriverFromEdgeInstance unbindDriverFromEdgeInstance(array $options = [])
@@ -167,6 +175,41 @@ class BatchAddDeviceGroupRelations extends Rpc
 		foreach ($device as $depth1 => $depth1Value) {
 			$this->options['query']['Device.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
 			$this->options['query']['Device.' . ($depth1 + 1) . '.ProductKey'] = $depth1Value['ProductKey'];
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getExt()
+ * @method $this withExt($value)
+ * @method string getGwProductKey()
+ * @method $this withGwProductKey($value)
+ * @method array getTopoAddItem()
+ * @method string getGwDeviceName()
+ * @method $this withGwDeviceName($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class BatchAddThingTopo extends Rpc
+{
+
+    /**
+     * @param array $topoAddItem
+     *
+     * @return $this
+     */
+	public function withTopoAddItem(array $topoAddItem)
+	{
+	    $this->data['TopoAddItem'] = $topoAddItem;
+		foreach ($topoAddItem as $depth1 => $depth1Value) {
+			$this->options['query']['TopoAddItem.' . ($depth1 + 1) . '.ClientId'] = $depth1Value['ClientId'];
+			$this->options['query']['TopoAddItem.' . ($depth1 + 1) . '.SignMethod'] = $depth1Value['SignMethod'];
+			$this->options['query']['TopoAddItem.' . ($depth1 + 1) . '.Sign'] = $depth1Value['Sign'];
+			$this->options['query']['TopoAddItem.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
+			$this->options['query']['TopoAddItem.' . ($depth1 + 1) . '.ProductKey'] = $depth1Value['ProductKey'];
+			$this->options['query']['TopoAddItem.' . ($depth1 + 1) . '.Timestamp'] = $depth1Value['Timestamp'];
 		}
 
 		return $this;
@@ -539,6 +582,8 @@ class BatchUpdateDeviceNickname extends Rpc
  * @method $this withDriverId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method string getDriverVersion()
+ * @method $this withDriverVersion($value)
  */
 class BindDriverToEdgeInstance extends Rpc
 {
@@ -787,20 +832,22 @@ class CreateProductTopic extends Rpc
  * @method $this withSelect($value)
  * @method string getRuleDesc()
  * @method $this withRuleDesc($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
  * @method string getShortTopic()
  * @method $this withShortTopic($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getDataType()
  * @method $this withDataType($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getWhere()
  * @method $this withWhere($value)
  * @method string getTopicType()
  * @method $this withTopicType($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class CreateRule extends Rpc
 {
@@ -1043,6 +1090,18 @@ class GetDataAPIServiceDetail extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotIds()
+ * @method $this withIotIds($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class GetDeviceListByIotIds extends Rpc
+{
+}
+
+/**
  * @method string getShadowMessage()
  * @method $this withShadowMessage($value)
  * @method string getProductKey()
@@ -1127,6 +1186,72 @@ class GetNodesAddingTask extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductName()
+ * @method $this withProductName($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ */
+class GetProductKeyListByName extends Rpc
+{
+}
+
+/**
+ * @method string getProductKey()
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceName()
+ * @method string getPage()
+ */
+class GetProductMetaListByName extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['form_params']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getRuleId()
@@ -1162,6 +1287,44 @@ class GetRuleAction extends Rpc
  */
 class GetThingTopo extends Rpc
 {
+}
+
+/**
+ * @method string getThingList()
+ * @method $this withThingList($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class GisQueryDeviceLocation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1285,6 +1448,8 @@ class ListProductTags extends Rpc
  * @method $this withSearchName($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()
@@ -1462,6 +1627,26 @@ class QueryDevice extends Rpc
  * @method $this withPageSize($value)
  */
 class QueryDeviceByDriver extends Rpc
+{
+}
+
+/**
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getBizTenantId()
+ * @method $this withBizTenantId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class QueryDeviceByStatus extends Rpc
 {
 }
 
@@ -1928,6 +2113,44 @@ class QueryProduct extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QueryProductCertInfo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getResourceGroupId()
@@ -2150,6 +2373,46 @@ class SetEdgeInstanceDriverConfigs extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getIssueModel()
+ * @method $this withIssueModel($value)
+ */
+class SetProductCertInfo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
     }
 }
 

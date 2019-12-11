@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.7.193 - 2019-12-11
+- Add api `BatchAddThingTopo`, support add multiple sub-devices for a gateway.
+- Add api `QueryDeviceByStatus`, support query device list by device status.
+- Support grouping products and rules.
+- Support using RAM to authorize resouces, including products, devices, rules, groups and instances, to RAM users.
+
+
 ## 1.7.192 - 2019-12-11
 - Add tag API.
 - Add group process monitoring API.
