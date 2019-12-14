@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.195 - 2019-12-14
+- Update DescribeAvailableResource.
+
+
 ## 1.7.194 - 2019-12-14
 - Update DescribeAvailableResource.
 
