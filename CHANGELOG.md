@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.196 - 2019-12-14
+- Generated 2015-01-01 for `R-kvstore`.
+
+
 ## 1.7.195 - 2019-12-14
 - Update DescribeAvailableResource.
 
