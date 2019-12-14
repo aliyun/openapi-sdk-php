@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.7.194 - 2019-12-14
+- Update DescribeAvailableResource.
+
+
 ## 1.7.193 - 2019-12-11
 - Add api `BatchAddThingTopo`, support add multiple sub-devices for a gateway.
 - Add api `QueryDeviceByStatus`, support query device list by device status.
