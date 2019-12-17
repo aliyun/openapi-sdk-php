@@ -53,7 +53,6 @@ namespace AlibabaCloud;
  * @method static Dds\Dds dds()
  * @method static Dm\Dm dm()
  * @method static DmsEnterprise\DmsEnterprise dmsEnterprise()
- * @method static DnsKnocker\DnsKnocker dnsKnocker()
  * @method static Domain\Domain domain()
  * @method static DomainIntl\DomainIntl domainIntl()
  * @method static Drcloud\Drcloud drcloud()
