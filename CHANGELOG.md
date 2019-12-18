@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1 - 2019-12-18
+- First sdk version.
+
+
 ## 1.7.197 - 2019-12-16
 - DescribeTransferDomains add query param, TargetUserId, FromUserId, DomainName.
 

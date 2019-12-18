@@ -51,7 +51,6 @@ Alibaba Cloud SDK for PHP 已经支持 154 个产品共 175 个版本的快捷�
 | [Dds](https://packagist.org/packages/alibabacloud/dds) | V20151201 |
 | [Dm](https://packagist.org/packages/alibabacloud/dm) | V20151123 |
 | [DmsEnterprise](https://packagist.org/packages/alibabacloud/dmsenterprise) | V20181101 |
-| [DnsKnocker](https://packagist.org/packages/alibabacloud/dnsknocker) | V20190910 |
 | [Domain](https://packagist.org/packages/alibabacloud/domain) | V20180129, V20180208 |
 | [DomainIntl](https://packagist.org/packages/alibabacloud/domainintl) | V20171218 |
 | [Drcloud](https://packagist.org/packages/alibabacloud/drcloud) | V20190213 |
@@ -73,6 +72,7 @@ Alibaba Cloud SDK for PHP 已经支持 154 个产品共 175 个版本的快捷�
 | [Fnf](https://packagist.org/packages/alibabacloud/fnf) | V20190315 |
 | [Foas](https://packagist.org/packages/alibabacloud/foas) | V20181111 |
 | [Ft](https://packagist.org/packages/alibabacloud/ft) | V20180713 |
+| [Goodstech](https://packagist.org/packages/alibabacloud/goodstech) | V20191230 |
 | [Gpdb](https://packagist.org/packages/alibabacloud/gpdb) | V20160503 |
 | [Green](https://packagist.org/packages/alibabacloud/green) | V20161222, V20170823, V20180509 |
 | [HBase](https://packagist.org/packages/alibabacloud/hbase) | V20190101 |
