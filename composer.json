@@ -147,6 +147,7 @@
         "alibabacloud/nlpautoml": "self.version",
         "alibabacloud/nlscloudmeta": "self.version",
         "alibabacloud/nlsfiletrans": "self.version",
+        "alibabacloud/objectdet": "self.version",
         "alibabacloud/ocs": "self.version",
         "alibabacloud/oms": "self.version",
         "alibabacloud/ons": "self.version",

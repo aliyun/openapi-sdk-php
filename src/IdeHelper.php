@@ -112,6 +112,7 @@ namespace AlibabaCloud;
  * @method static NlpAutoml\NlpAutoml nlpAutoml()
  * @method static NlsCloudMeta\NlsCloudMeta nlsCloudMeta()
  * @method static NlsFiletrans\NlsFiletrans nlsFiletrans()
+ * @method static Objectdet\Objectdet objectdet()
  * @method static Ocs\Ocs ocs()
  * @method static Oms\Oms oms()
  * @method static Ons\Ons ons()
