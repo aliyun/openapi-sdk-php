@@ -123,6 +123,7 @@
         "alibabacloud/imageaudit": "self.version",
         "alibabacloud/imageenhan": "self.version",
         "alibabacloud/imagerecog": "self.version",
+        "alibabacloud/imageseg": "self.version",
         "alibabacloud/imm": "self.version",
         "alibabacloud/industrybrain": "self.version",
         "alibabacloud/iot": "self.version",
