@@ -71,6 +71,7 @@ namespace AlibabaCloud;
  * @method static Elasticsearch\Elasticsearch elasticsearch()
  * @method static Emr\Emr emr()
  * @method static Ess\Ess ess()
+ * @method static Facebody\Facebody facebody()
  * @method static Fnf\Fnf fnf()
  * @method static Foas\Foas foas()
  * @method static Ft\Ft ft()

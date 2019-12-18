@@ -106,6 +106,7 @@
         "alibabacloud/elasticsearch": "self.version",
         "alibabacloud/emr": "self.version",
         "alibabacloud/ess": "self.version",
+        "alibabacloud/facebody": "self.version",
         "alibabacloud/fnf": "self.version",
         "alibabacloud/foas": "self.version",
         "alibabacloud/ft": "self.version",
