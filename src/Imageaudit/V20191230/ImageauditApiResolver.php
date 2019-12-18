@@ -27,41 +27,41 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method array getScenes()
- * @method array getTasks()
+ * @method array getScene()
+ * @method array getTask()
  */
 class ScanImage extends Rpc
 {
 
     /**
-     * @param array $scenes
+     * @param array $scene
      *
      * @return $this
      */
-	public function withScenes(array $scenes)
+	public function withScene(array $scene)
 	{
-	    $this->data['Scenes'] = $scenes;
-		foreach ($scenes as $i => $iValue) {
-			$this->options['form_params']['Scenes.' . ($i + 1)] = $iValue;
+	    $this->data['Scene'] = $scene;
+		foreach ($scene as $i => $iValue) {
+			$this->options['form_params']['Scene.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
     }
 
     /**
-     * @param array $tasks
+     * @param array $task
      *
      * @return $this
      */
-	public function withTasks(array $tasks)
+	public function withTask(array $task)
 	{
-	    $this->data['Tasks'] = $tasks;
-		foreach ($tasks as $depth1 => $depth1Value) {
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.DataId'] = $depth1Value['DataId'];
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.MaxFrames'] = $depth1Value['MaxFrames'];
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.Interval'] = $depth1Value['Interval'];
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageTimeMillisecond'] = $depth1Value['ImageTimeMillisecond'];
+	    $this->data['Task'] = $task;
+		foreach ($task as $depth1 => $depth1Value) {
+			$this->options['form_params']['Task.' . ($depth1 + 1) . '.DataId'] = $depth1Value['DataId'];
+			$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			$this->options['form_params']['Task.' . ($depth1 + 1) . '.MaxFrames'] = $depth1Value['MaxFrames'];
+			$this->options['form_params']['Task.' . ($depth1 + 1) . '.Interval'] = $depth1Value['Interval'];
+			$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageTimeMillisecond'] = $depth1Value['ImageTimeMillisecond'];
 		}
 
 		return $this;
