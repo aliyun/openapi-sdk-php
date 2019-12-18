@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.9 - 2019-12-18
+- Second sdk version.
+
+
 ## 1.8.8 - 2019-12-18
 - Second sdk version.
 
