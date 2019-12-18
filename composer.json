@@ -120,6 +120,7 @@
         "alibabacloud/idst": "self.version",
         "alibabacloud/itaas": "self.version",
         "alibabacloud/imagesearch": "self.version",
+        "alibabacloud/imageaudit": "self.version",
         "alibabacloud/imageenhan": "self.version",
         "alibabacloud/imagerecog": "self.version",
         "alibabacloud/imm": "self.version",

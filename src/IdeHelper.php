@@ -85,6 +85,7 @@ namespace AlibabaCloud;
  * @method static IDST\IDST iDST()
  * @method static ITaaS\ITaaS iTaaS()
  * @method static ImageSearch\ImageSearch imageSearch()
+ * @method static Imageaudit\Imageaudit imageaudit()
  * @method static Imageenhan\Imageenhan imageenhan()
  * @method static Imagerecog\Imagerecog imagerecog()
  * @method static Imm\Imm imm()

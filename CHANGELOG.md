@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.4 - 2019-12-18
+- First sdk version.
+
+
 ## 1.8.3 - 2019-12-18
 - First sdk version.
 
