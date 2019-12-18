@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.11 - 2019-12-18
+- Third sdk version.
+
+
 ## 1.8.10 - 2019-12-18
 - Second sdk version.
 
