@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.13 - 2019-12-19
+- Generated 2019-09-28 for `reid`.
+
+
 ## 1.8.12 - 2019-12-19
 - DescribeNetworkInterfaces Supports NextToken.
 

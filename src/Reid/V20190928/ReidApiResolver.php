@@ -1,0 +1,745 @@
+<?php
+
+namespace AlibabaCloud\Reid\V20190928;
+
+use AlibabaCloud\Client\Resolver\ApiResolver;
+
+/**
+ * @method DescribeBaseStatistics describeBaseStatistics(array $options = [])
+ * @method DescribeCursor describeCursor(array $options = [])
+ * @method DescribeCustomerFlowByLocation describeCustomerFlowByLocation(array $options = [])
+ * @method DescribeHeatMap describeHeatMap(array $options = [])
+ * @method DescribeImageUrls describeImageUrls(array $options = [])
+ * @method DescribeOverviewData describeOverviewData(array $options = [])
+ * @method ImportSpecialPersonnel importSpecialPersonnel(array $options = [])
+ * @method ListActionData listActionData(array $options = [])
+ * @method ListEmap listEmap(array $options = [])
+ * @method ListLocation listLocation(array $options = [])
+ * @method ListPersonByImage listPersonByImage(array $options = [])
+ * @method ListStore listStore(array $options = [])
+ * @method PullActionData pullActionData(array $options = [])
+ */
+class ReidApiResolver extends ApiResolver
+{
+}
+
+class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
+{
+    /** @var string */
+    public $product = 'reid';
+
+    /** @var string */
+    public $version = '2019-09-28';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = '1.0.0';
+}
+
+/**
+ * @method string getDate()
+ * @method string getExtraStatisticTypes()
+ * @method string getStoreId()
+ * @method string getSummaryType()
+ * @method string getLocationId()
+ */
+class DescribeBaseStatistics extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDate($value)
+    {
+        $this->data['Date'] = $value;
+        $this->options['form_params']['Date'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraStatisticTypes($value)
+    {
+        $this->data['ExtraStatisticTypes'] = $value;
+        $this->options['form_params']['ExtraStatisticTypes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSummaryType($value)
+    {
+        $this->data['SummaryType'] = $value;
+        $this->options['form_params']['SummaryType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLocationId($value)
+    {
+        $this->data['LocationId'] = $value;
+        $this->options['form_params']['LocationId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStoreId()
+ * @method string getTime()
+ */
+class DescribeCursor extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTime($value)
+    {
+        $this->data['Time'] = $value;
+        $this->options['form_params']['Time'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartDate()
+ * @method string getStoreId()
+ * @method string getMinCount()
+ * @method string getParentAmount()
+ * @method string getMaxCount()
+ * @method string getEndDate()
+ * @method string getLocationId()
+ * @method string getParentLocationIds()
+ */
+class DescribeCustomerFlowByLocation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartDate($value)
+    {
+        $this->data['StartDate'] = $value;
+        $this->options['form_params']['StartDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinCount($value)
+    {
+        $this->data['MinCount'] = $value;
+        $this->options['form_params']['MinCount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParentAmount($value)
+    {
+        $this->data['ParentAmount'] = $value;
+        $this->options['form_params']['ParentAmount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxCount($value)
+    {
+        $this->data['MaxCount'] = $value;
+        $this->options['form_params']['MaxCount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndDate($value)
+    {
+        $this->data['EndDate'] = $value;
+        $this->options['form_params']['EndDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLocationId($value)
+    {
+        $this->data['LocationId'] = $value;
+        $this->options['form_params']['LocationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParentLocationIds($value)
+    {
+        $this->data['ParentLocationIds'] = $value;
+        $this->options['form_params']['ParentLocationIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDate()
+ * @method string getStoreId()
+ * @method string getEmapId()
+ */
+class DescribeHeatMap extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDate($value)
+    {
+        $this->data['Date'] = $value;
+        $this->options['form_params']['Date'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEmapId($value)
+    {
+        $this->data['EmapId'] = $value;
+        $this->options['form_params']['EmapId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOriginUrls()
+ * @method string getStoreId()
+ * @method string getObjectKeys()
+ */
+class DescribeImageUrls extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginUrls($value)
+    {
+        $this->data['OriginUrls'] = $value;
+        $this->options['form_params']['OriginUrls'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withObjectKeys($value)
+    {
+        $this->data['ObjectKeys'] = $value;
+        $this->options['form_params']['ObjectKeys'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDate()
+ * @method string getStoreIds()
+ */
+class DescribeOverviewData extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDate($value)
+    {
+        $this->data['Date'] = $value;
+        $this->options['form_params']['Date'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreIds($value)
+    {
+        $this->data['StoreIds'] = $value;
+        $this->options['form_params']['StoreIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUkId()
+ * @method string getDescription()
+ * @method string getExternalId()
+ * @method string getPersonType()
+ * @method string getUrls()
+ * @method string getPersonName()
+ * @method string getStoreIds()
+ * @method string getStatus()
+ */
+class ImportSpecialPersonnel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUkId($value)
+    {
+        $this->data['UkId'] = $value;
+        $this->options['form_params']['UkId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExternalId($value)
+    {
+        $this->data['ExternalId'] = $value;
+        $this->options['form_params']['ExternalId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonType($value)
+    {
+        $this->data['PersonType'] = $value;
+        $this->options['form_params']['PersonType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrls($value)
+    {
+        $this->data['Urls'] = $value;
+        $this->options['form_params']['Urls'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonName($value)
+    {
+        $this->data['PersonName'] = $value;
+        $this->options['form_params']['PersonName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreIds($value)
+    {
+        $this->data['StoreIds'] = $value;
+        $this->options['form_params']['StoreIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getStoreId()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getFilterInvalidData()
+ */
+class ListActionData extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilterInvalidData($value)
+    {
+        $this->data['FilterInvalidData'] = $value;
+        $this->options['form_params']['FilterInvalidData'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStoreId()
+ */
+class ListEmap extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStoreId()
+ */
+class ListLocation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStoreId()
+ * @method string getImageUrl()
+ */
+class ListPersonByImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+}
+
+class ListStore extends Rpc
+{
+}
+
+/**
+ * @method string getStoreId()
+ * @method string getEndMessageId()
+ * @method string getLimit()
+ * @method string getStartMessageId()
+ */
+class PullActionData extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndMessageId($value)
+    {
+        $this->data['EndMessageId'] = $value;
+        $this->options['form_params']['EndMessageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartMessageId($value)
+    {
+        $this->data['StartMessageId'] = $value;
+        $this->options['form_params']['StartMessageId'] = $value;
+
+        return $this;
+    }
+}
