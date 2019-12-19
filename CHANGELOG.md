@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.14 - 2019-12-19
+- Add DescribeSlowLogRecords,DescribeSlowLogs for SlowLog.
+
+
 ## 1.8.13 - 2019-12-19
 - Generated 2019-09-28 for `reid`.
 

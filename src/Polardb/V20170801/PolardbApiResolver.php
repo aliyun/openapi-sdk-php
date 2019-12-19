@@ -34,8 +34,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBClusters describeDBClusters(array $options = [])
  * @method DescribeDBNodePerformance describeDBNodePerformance(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
+ * @method DescribeSlowLogs describeSlowLogs(array $options = [])
  * @method FailoverDBCluster failoverDBCluster(array $options = [])
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyAccountPassword modifyAccountPassword(array $options = [])
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
@@ -175,6 +178,8 @@ class CreateDatabase extends Rpc
  * @method $this withClientToken($value)
  * @method string getClusterNetworkType()
  * @method $this withClusterNetworkType($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getDBNodeClass()
  * @method $this withDBNodeClass($value)
  * @method string getEngine()
@@ -658,6 +663,8 @@ class DescribeDBClusterPerformance extends Rpc
  * @method $this withDBClusterStatus($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -733,6 +740,60 @@ class DescribeRegions extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getSQLHASH()
+ * @method $this withSQLHASH($value)
+ */
+class DescribeSlowLogRecords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ */
+class DescribeSlowLogs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getResourceOwnerAccount()
@@ -770,6 +831,57 @@ class FailoverDBCluster extends Rpc
  */
 class GrantAccountPrivilege extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -869,8 +981,12 @@ class ModifyBackupPolicy extends Rpc
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getWhiteListType()
+ * @method $this withWhiteListType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSecurityGroupIds()
+ * @method $this withSecurityGroupIds($value)
  * @method string getDBClusterIPArrayName()
  * @method $this withDBClusterIPArrayName($value)
  */
