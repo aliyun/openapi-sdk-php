@@ -682,6 +682,12 @@ class AttachClassicLinkVpc extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method string getBootable()
+ * @method $this withBootable($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
  * @method string getDeleteWithInstance()
@@ -5426,6 +5432,8 @@ class DescribeNetworkInterfacePermissions extends Rpc
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -5446,6 +5454,8 @@ class DescribeNetworkInterfacePermissions extends Rpc
  * @method $this withVpcId($value)
  * @method string getPrimaryIpAddress()
  * @method $this withPrimaryIpAddress($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  * @method array getNetworkInterfaceId()
  */
 class DescribeNetworkInterfaces extends Rpc
@@ -6797,6 +6807,8 @@ class DetachClassicLinkVpc extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method string getDeleteWithInstance()
+ * @method $this withDeleteWithInstance($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -8060,6 +8072,8 @@ class ModifyInstanceChargeType extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getDeploymentSetId()
  * @method $this withDeploymentSetId($value)
  * @method string getResourceOwnerAccount()

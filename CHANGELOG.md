@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.12 - 2019-12-19
+- DescribeNetworkInterfaces Supports NextToken.
+
+
 ## 1.8.11 - 2019-12-18
 - Third sdk version.
 
