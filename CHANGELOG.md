@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.15 - 2019-12-20
+- Add result value for OnsConsumerStatus.
+
+
 ## 1.8.14 - 2019-12-19
 - Add DescribeSlowLogRecords,DescribeSlowLogs for SlowLog.
 
