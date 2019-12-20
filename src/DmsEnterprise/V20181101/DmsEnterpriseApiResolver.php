@@ -25,20 +25,28 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetLogicDatabase getLogicDatabase(array $options = [])
  * @method GetOpLog getOpLog(array $options = [])
  * @method GetOrderBaseInfo getOrderBaseInfo(array $options = [])
+ * @method GetUser getUser(array $options = [])
+ * @method GrantUserPermission grantUserPermission(array $options = [])
  * @method ListColumns listColumns(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
+ * @method ListDatabaseUserPermssions listDatabaseUserPermssions(array $options = [])
  * @method ListIndexes listIndexes(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListLogicDatabases listLogicDatabases(array $options = [])
  * @method ListLogicTables listLogicTables(array $options = [])
  * @method ListOrders listOrders(array $options = [])
  * @method ListTables listTables(array $options = [])
+ * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  * @method RegisterUser registerUser(array $options = [])
+ * @method RevokeUserPermission revokeUserPermission(array $options = [])
  * @method SearchDatabase searchDatabase(array $options = [])
  * @method SearchTable searchTable(array $options = [])
+ * @method SetOwners setOwners(array $options = [])
  * @method SubmitOrderApproval submitOrderApproval(array $options = [])
+ * @method SyncDatabaseMeta syncDatabaseMeta(array $options = [])
+ * @method SyncInstanceMeta syncInstanceMeta(array $options = [])
  * @method UpdateInstance updateInstance(array $options = [])
  * @method UpdateUser updateUser(array $options = [])
  */
@@ -355,6 +363,45 @@ class GetOrderBaseInfo extends Rpc
 }
 
 /**
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetUser extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getPermTypes()
+ * @method $this withPermTypes($value)
+ * @method string getDsType()
+ * @method $this withDsType($value)
+ * @method string getExpireDate()
+ * @method $this withExpireDate($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ */
+class GrantUserPermission extends Rpc
+{
+}
+
+/**
  * @method string getTableId()
  * @method $this withTableId($value)
  * @method string getLogic()
@@ -380,6 +427,29 @@ class ListColumns extends Rpc
  * @method $this withPageNumber($value)
  */
 class ListDatabases extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getPermType()
+ * @method $this withPermType($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class ListDatabaseUserPermssions extends Rpc
 {
 
     /** @var string */
@@ -511,6 +581,33 @@ class ListTables extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPermType()
+ * @method $this withPermType($value)
+ * @method string getDatabaseName()
+ * @method $this withDatabaseName($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getDbType()
+ * @method $this withDbType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
+ */
+class ListUserPermissions extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getUserState()
  * @method $this withUserState($value)
  * @method string getRole()
@@ -586,10 +683,36 @@ class RegisterInstance extends Rpc
  * @method $this withUid($value)
  * @method string getUserNick()
  * @method $this withUserNick($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
  * @method string getTid()
  * @method $this withTid($value)
  */
 class RegisterUser extends Rpc
+{
+}
+
+/**
+ * @method string getPermTypes()
+ * @method $this withPermTypes($value)
+ * @method string getUserAccessId()
+ * @method $this withUserAccessId($value)
+ * @method string getDsType()
+ * @method $this withDsType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ */
+class RevokeUserPermission extends Rpc
 {
 }
 
@@ -642,12 +765,50 @@ class SearchTable extends Rpc
 }
 
 /**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getOwnerIds()
+ * @method $this withOwnerIds($value)
+ * @method string getOwnerType()
+ * @method $this withOwnerType($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class SetOwners extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
  */
 class SubmitOrderApproval extends Rpc
+{
+}
+
+/**
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class SyncDatabaseMeta extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIgnoreTable()
+ * @method $this withIgnoreTable($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class SyncInstanceMeta extends Rpc
 {
 }
 

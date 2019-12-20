@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.17 - 2019-12-20
+- Supported Authorization API, includes GrantUserPermission, RevokeUserPermission, ListDatabaseUserPermssions, ListUserPermissions.
+- Supported Database or Table Metadata synchronization API, includes SyncInstanceMeta, SyncDatabaseMeta.
+- Supported Database or Table Owner set up API.
+- Supported GetUser API to get information of one DMS user.
+- Supported set Dingding mobile number with RegisterUser API.
+
+
 ## 1.8.16 - 2019-12-20
 - Supported Search stream predict task list use modelId for IVISION.
 
