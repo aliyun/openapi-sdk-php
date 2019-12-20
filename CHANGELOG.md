@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.16 - 2019-12-20
+- Supported Search stream predict task list use modelId for IVISION.
+
+
 ## 1.8.15 - 2019-12-20
 - Add result value for OnsConsumerStatus.
 

@@ -163,6 +163,8 @@ class DescribeStreamPredictResult extends Rpc
  * @method $this withPageSize($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
+ * @method string getModelId()
+ * @method $this withModelId($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getOwnerId()
