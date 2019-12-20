@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.18 - 2019-12-20
+- Support miniapp.
+- Support account type.
+
+
 ## 1.8.17 - 2019-12-20
 - Supported Authorization API, includes GrantUserPermission, RevokeUserPermission, ListDatabaseUserPermssions, ListUserPermissions.
 - Supported Database or Table Metadata synchronization API, includes SyncInstanceMeta, SyncDatabaseMeta.

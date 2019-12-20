@@ -5,6 +5,8 @@ namespace AlibabaCloud\Linkedmall\V20180116;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddAddress addAddress(array $options = [])
+ * @method AddItemLimitRule addItemLimitRule(array $options = [])
  * @method AddSupplierNewItems addSupplierNewItems(array $options = [])
  * @method ApplyRefund applyRefund(array $options = [])
  * @method BatchRegistAnonymousTbAccount batchRegistAnonymousTbAccount(array $options = [])
@@ -14,11 +16,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateMovieTicketOrder createMovieTicketOrder(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
  * @method CreateOrderV2 createOrderV2(array $options = [])
+ * @method CreatePayUrl createPayUrl(array $options = [])
  * @method DeleteBizItems deleteBizItems(array $options = [])
+ * @method DeleteItemLimitRule deleteItemLimitRule(array $options = [])
  * @method EnableOrder enableOrder(array $options = [])
  * @method GetCategoryChain getCategoryChain(array $options = [])
  * @method GetCategoryList getCategoryList(array $options = [])
  * @method GetCustomServiceUrl getCustomServiceUrl(array $options = [])
+ * @method GetGuidePage getGuidePage(array $options = [])
+ * @method GetLoginPage getLoginPage(array $options = [])
+ * @method GetSwitchUrl getSwitchUrl(array $options = [])
+ * @method GetUserInfo getUserInfo(array $options = [])
  * @method InitApplyRefund initApplyRefund(array $options = [])
  * @method ListItemActivities listItemActivities(array $options = [])
  * @method ModifyBasicAndBizItems modifyBasicAndBizItems(array $options = [])
@@ -26,6 +34,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method NotifyPayOrderStatus notifyPayOrderStatus(array $options = [])
  * @method NotifyWithholdFund notifyWithholdFund(array $options = [])
  * @method QueryAddress queryAddress(array $options = [])
+ * @method QueryAddressDetail queryAddressDetail(array $options = [])
+ * @method QueryAddressList queryAddressList(array $options = [])
  * @method QueryAllCinemas queryAllCinemas(array $options = [])
  * @method QueryAllCities queryAllCities(array $options = [])
  * @method QueryBatchRegistAnonymousTbAccountResult queryBatchRegistAnonymousTbAccountResult(array $options = [])
@@ -34,6 +44,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryGuideItemGroup queryGuideItemGroup(array $options = [])
  * @method QueryHotMovies queryHotMovies(array $options = [])
  * @method QueryItemDetail queryItemDetail(array $options = [])
+ * @method QueryItemDetailInner queryItemDetailInner(array $options = [])
  * @method QueryItemInventory queryItemInventory(array $options = [])
  * @method QueryLogistics queryLogistics(array $options = [])
  * @method QueryMessages queryMessages(array $options = [])
@@ -42,6 +53,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryMovieSeats queryMovieSeats(array $options = [])
  * @method QueryMovieTickets queryMovieTickets(array $options = [])
  * @method QueryOrderAndPaymentList queryOrderAndPaymentList(array $options = [])
+ * @method QueryOrderDetailInner queryOrderDetailInner(array $options = [])
  * @method QueryOrderIdByPayId queryOrderIdByPayId(array $options = [])
  * @method QueryOrderInfoAfterSale queryOrderInfoAfterSale(array $options = [])
  * @method QueryOrderItemInfoByPaymentIdForAiZhanYou queryOrderItemInfoByPaymentIdForAiZhanYou(array $options = [])
@@ -52,11 +64,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefundPoint refundPoint(array $options = [])
  * @method RegistAnonymousTbAccount registAnonymousTbAccount(array $options = [])
  * @method ReleaseMovieSeat releaseMovieSeat(array $options = [])
+ * @method RemoveAddress removeAddress(array $options = [])
  * @method RemoveMessages removeMessages(array $options = [])
  * @method RenderOrder renderOrder(array $options = [])
+ * @method RepayForPayUrl repayForPayUrl(array $options = [])
  * @method RepayOrder repayOrder(array $options = [])
  * @method ReserveMovieSeat reserveMovieSeat(array $options = [])
  * @method SubmitReturnGoodLogistics submitReturnGoodLogistics(array $options = [])
+ * @method UpdateAddress updateAddress(array $options = [])
  * @method ValidateTaobaoAccount validateTaobaoAccount(array $options = [])
  */
 class LinkedmallApiResolver extends ApiResolver
@@ -76,6 +91,56 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'linkedmall';
+}
+
+/**
+ * @method string getAddressInfo()
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ */
+class AddAddress extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAddressInfo($value)
+    {
+        $this->data['AddressInfo'] = $value;
+        $this->options['form_params']['AddressInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUpperNum()
+ * @method $this withUpperNum($value)
+ * @method string getLmActivityId()
+ * @method $this withLmActivityId($value)
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getSubBizCode()
+ * @method $this withSubBizCode($value)
+ * @method string getItemId()
+ * @method $this withItemId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class AddItemLimitRule extends Rpc
+{
 }
 
 /**
@@ -112,6 +177,8 @@ class AddSupplierNewItems extends Rpc
  * @method $this withBizClaimType($value)
  * @method string getApplyReasonTextId()
  * @method $this withApplyReasonTextId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method array getLeavePictureList()
@@ -175,10 +242,16 @@ class BatchRegistAnonymousTbAccount extends Rpc
 /**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
  */
 class CancelOrder extends Rpc
 {
@@ -195,6 +268,8 @@ class CancelOrder extends Rpc
  * @method $this withDisputeId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  */
@@ -244,6 +319,8 @@ class CreateMovieTicketOrder extends Rpc
  * @method $this withBizUid($value)
  * @method string getExtJson()
  * @method $this withExtJson($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getOrderExpireTime()
@@ -290,6 +367,8 @@ class CreateOrder extends Rpc
  * @method $this withBizUid($value)
  * @method string getExtJson()
  * @method $this withExtJson($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getOrderExpireTime()
@@ -330,6 +409,34 @@ class CreateOrderV2 extends Rpc
 }
 
 /**
+ * @method string getBuyInfo()
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ */
+class CreatePayUrl extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBuyInfo($value)
+    {
+        $this->data['BuyInfo'] = $value;
+        $this->options['form_params']['BuyInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getBizId()
  * @method $this withBizId($value)
  * @method array getItemIdList()
@@ -356,12 +463,32 @@ class DeleteBizItems extends Rpc
 }
 
 /**
+ * @method string getLmActivityId()
+ * @method $this withLmActivityId($value)
+ * @method string getLtemId()
+ * @method $this withLtemId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ * @method string getSubBizCode()
+ * @method $this withSubBizCode($value)
+ */
+class DeleteItemLimitRule extends Rpc
+{
+}
+
+/**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
  * @method string getExtJson()
  * @method $this withExtJson($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getThirdPartyUserId()
@@ -418,20 +545,127 @@ class GetCustomServiceUrl extends Rpc
 }
 
 /**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetGuidePage extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getTargetUrl()
+ * @method string getFailUrl()
+ */
+class GetLoginPage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUrl($value)
+    {
+        $this->data['TargetUrl'] = $value;
+        $this->options['form_params']['TargetUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFailUrl($value)
+    {
+        $this->data['FailUrl'] = $value;
+        $this->options['form_params']['FailUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getUrl()
+ */
+class GetSwitchUrl extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrl($value)
+    {
+        $this->data['Url'] = $value;
+        $this->options['form_params']['Url'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserFlag()
+ * @method $this withUserFlag($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getQueryJson()
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetUserInfo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueryJson($value)
+    {
+        $this->data['QueryJson'] = $value;
+        $this->options['form_params']['QueryJson'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getBizClaimType()
+ * @method $this withBizClaimType($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
  * @method string getGoodsStatus()
  * @method $this withGoodsStatus($value)
  * @method string getSubLmOrderId()
  * @method $this withSubLmOrderId($value)
  * @method string getThirdPartyUserId()
  * @method $this withThirdPartyUserId($value)
- * @method string getBizUid()
- * @method $this withBizUid($value)
- * @method string getBizClaimType()
- * @method $this withBizClaimType($value)
  * @method string getBizId()
  * @method $this withBizId($value)
- * @method string getUseAnonymousTbAccount()
- * @method $this withUseAnonymousTbAccount($value)
  */
 class InitApplyRefund extends Rpc
 {
@@ -567,6 +801,32 @@ class QueryAddress extends Rpc
 }
 
 /**
+ * @method string getAddressInfo()
+ * @method $this withAddressInfo($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ */
+class QueryAddressDetail extends Rpc
+{
+}
+
+/**
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ */
+class QueryAddressList extends Rpc
+{
+}
+
+/**
  * @method string getCityCode()
  * @method $this withCityCode($value)
  * @method string getExtJson()
@@ -671,6 +931,28 @@ class QueryHotMovies extends Rpc
  * @method $this withBizId($value)
  */
 class QueryItemDetail extends Rpc
+{
+}
+
+/**
+ * @method string getDivisionCode()
+ * @method $this withDivisionCode($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
+ * @method string getItemId()
+ * @method $this withItemId($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class QueryItemDetailInner extends Rpc
 {
 }
 
@@ -789,6 +1071,28 @@ class QueryMovieTickets extends Rpc
 }
 
 /**
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getFilterOption()
+ * @method $this withFilterOption($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class QueryOrderAndPaymentList extends Rpc
+{
+}
+
+/**
  * @method string getThirdPartyUserId()
  * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
@@ -797,14 +1101,10 @@ class QueryMovieTickets extends Rpc
  * @method $this withFilterOption($value)
  * @method string getBizId()
  * @method $this withBizId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
-class QueryOrderAndPaymentList extends Rpc
+class QueryOrderDetailInner extends Rpc
 {
 }
 
@@ -817,6 +1117,8 @@ class QueryOrderAndPaymentList extends Rpc
  * @method $this withPaymentId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  */
@@ -831,6 +1133,8 @@ class QueryOrderIdByPayId extends Rpc
  * @method $this withThirdPartyUserId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getChannelUserId()
@@ -856,20 +1160,22 @@ class QueryOrderItemInfoByPaymentIdForAiZhanYou extends Rpc
 }
 
 /**
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
  * @method string getFilterOption()
  * @method $this withFilterOption($value)
  * @method string getBizId()
  * @method $this withBizId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getUseAnonymousTbAccount()
- * @method $this withUseAnonymousTbAccount($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class QueryOrderList extends Rpc
 {
@@ -884,6 +1190,8 @@ class QueryOrderList extends Rpc
  * @method $this withBizUid($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  */
@@ -900,6 +1208,8 @@ class QueryOrderLogistics extends Rpc
  * @method $this withBizUid($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  */
@@ -962,6 +1272,32 @@ class ReleaseMovieSeat extends Rpc
 }
 
 /**
+ * @method string getAddressInfo()
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ */
+class RemoveAddress extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAddressInfo($value)
+    {
+        $this->data['AddressInfo'] = $value;
+        $this->options['form_params']['AddressInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getExtJson()
  * @method $this withExtJson($value)
  * @method string getBizId()
@@ -1021,6 +1357,24 @@ class RenderOrder extends Rpc
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  */
+class RepayForPayUrl extends Rpc
+{
+}
+
+/**
+ * @method string getLmOrderId()
+ * @method $this withLmOrderId($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ */
 class RepayOrder extends Rpc
 {
 }
@@ -1048,6 +1402,8 @@ class ReserveMovieSeat extends Rpc
 /**
  * @method string getBizUid()
  * @method $this withBizUid($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getCpCode()
@@ -1065,6 +1421,32 @@ class ReserveMovieSeat extends Rpc
  */
 class SubmitReturnGoodLogistics extends Rpc
 {
+}
+
+/**
+ * @method string getAddressInfo()
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ */
+class UpdateAddress extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAddressInfo($value)
+    {
+        $this->data['AddressInfo'] = $value;
+        $this->options['form_params']['AddressInfo'] = $value;
+
+        return $this;
+    }
 }
 
 /**
