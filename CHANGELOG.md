@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.19 - 2019-12-24
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+
 ## 1.8.18 - 2019-12-20
 - Support miniapp.
 - Support account type.
