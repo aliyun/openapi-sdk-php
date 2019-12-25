@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.20 - 2019-12-25
+- Support merchant sync item info.
+
+
 ## 1.8.19 - 2019-12-24
 - Generated 2018-12-12, 2018-12-07 for `UniMkt`.
 
