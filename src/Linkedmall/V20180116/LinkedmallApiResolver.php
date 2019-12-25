@@ -72,6 +72,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RepayOrder repayOrder(array $options = [])
  * @method ReserveMovieSeat reserveMovieSeat(array $options = [])
  * @method SubmitReturnGoodLogistics submitReturnGoodLogistics(array $options = [])
+ * @method SyncMerchantInfo syncMerchantInfo(array $options = [])
  * @method UpdateAddress updateAddress(array $options = [])
  * @method ValidateTaobaoAccount validateTaobaoAccount(array $options = [])
  */
@@ -1448,6 +1449,34 @@ class ReserveMovieSeat extends Rpc
  */
 class SubmitReturnGoodLogistics extends Rpc
 {
+}
+
+/**
+ * @method string getSellerNick()
+ * @method $this withSellerNick($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getItemList()
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getTimeStamp()
+ * @method $this withTimeStamp($value)
+ */
+class SyncMerchantInfo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withItemList($value)
+    {
+        $this->data['ItemList'] = $value;
+        $this->options['form_params']['ItemList'] = $value;
+
+        return $this;
+    }
 }
 
 /**

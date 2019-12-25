@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.22 - 2019-12-25
+- Support merchant sync item info.
+
+
 ## 1.8.21 - 2019-12-25
 - Support merchant sync item info.
 
