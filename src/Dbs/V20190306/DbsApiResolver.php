@@ -145,6 +145,8 @@ class CreateBackupPlan extends Rpc
  * @method $this withRestoreObjects($value)
  * @method string getRestoreTaskName()
  * @method $this withRestoreTaskName($value)
+ * @method string getRestoreHome()
+ * @method $this withRestoreHome($value)
  * @method string getDestinationEndpointOracleSID()
  * @method $this withDestinationEndpointOracleSID($value)
  * @method string getRestoreTime()
