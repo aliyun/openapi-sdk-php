@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.24 - 2019-12-26
+- NlpAutoml add async api.
+
+
 ## 1.8.23 - 2019-12-26
 - Modify CreateRestoreTask.
 
