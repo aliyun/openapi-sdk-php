@@ -288,6 +288,8 @@ class CancelRefund extends Rpc
  * @method $this withBizUid($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  */
@@ -1024,6 +1026,8 @@ class QueryItemInventory extends Rpc
  * @method $this withBizUid($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  */
