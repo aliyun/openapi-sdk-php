@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.26 - 2019-12-27
+- Support set accountType.
+
+
 ## 1.8.25 - 2019-12-27
 - Support set accountType.
 
