@@ -8,6 +8,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
+ * @method RecognizeScene recognizeScene(array $options = [])
+ * @method TaggingImage taggingImage(array $options = [])
  */
 class ImagerecogApiResolver extends ApiResolver
 {
@@ -97,6 +99,102 @@ class RecognizeImageStyle extends Rpc
     {
         $this->data['Url'] = $value;
         $this->options['form_params']['Url'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageType()
+ * @method string getImageURL()
+ * @method string getImageContent()
+ */
+class RecognizeScene extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageType($value)
+    {
+        $this->data['ImageType'] = $value;
+        $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageContent($value)
+    {
+        $this->data['ImageContent'] = $value;
+        $this->options['form_params']['ImageContent'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageType()
+ * @method string getImageURL()
+ * @method string getImageContent()
+ */
+class TaggingImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageType($value)
+    {
+        $this->data['ImageType'] = $value;
+        $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageContent($value)
+    {
+        $this->data['ImageContent'] = $value;
+        $this->options['form_params']['ImageContent'] = $value;
 
         return $this;
     }

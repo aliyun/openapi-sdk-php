@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.27 - 2019-12-29
+- Add new api.
+
+
 ## 1.8.26 - 2019-12-27
 - Support set accountType.
 
