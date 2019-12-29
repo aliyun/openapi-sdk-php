@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.29 - 2019-12-29
+- Add new api.
+
+
 ## 1.8.28 - 2019-12-29
 - Add new api.
 
