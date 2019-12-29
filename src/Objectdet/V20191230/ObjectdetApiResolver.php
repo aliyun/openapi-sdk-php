@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DetectMainBody detectMainBody(array $options = [])
+ * @method DetectVehicle detectVehicle(array $options = [])
  */
 class ObjectdetApiResolver extends ApiResolver
 {
@@ -32,4 +33,52 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class DetectMainBody extends Rpc
 {
+}
+
+/**
+ * @method string getImageType()
+ * @method string getImageURL()
+ * @method string getImageContent()
+ */
+class DetectVehicle extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageType($value)
+    {
+        $this->data['ImageType'] = $value;
+        $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageContent($value)
+    {
+        $this->data['ImageContent'] = $value;
+        $this->options['form_params']['ImageContent'] = $value;
+
+        return $this;
+    }
 }
