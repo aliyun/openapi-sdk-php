@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.35 - 2019-12-30
+- Disable Base64 string data support.
+
+
 ## 1.8.34 - 2019-12-30
 - Disable Base64 string data support.
 
