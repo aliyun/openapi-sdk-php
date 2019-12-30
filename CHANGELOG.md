@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.33 - 2019-12-30
+- Disable Base64 Image string data support.
+
+
 ## 1.8.32 - 2019-12-30
 - Visionai online.
 
