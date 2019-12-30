@@ -38,7 +38,6 @@ class DetectMainBody extends Rpc
 /**
  * @method string getImageType()
  * @method string getImageURL()
- * @method string getImageContent()
  */
 class DetectVehicle extends Rpc
 {
@@ -65,19 +64,6 @@ class DetectVehicle extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageContent($value)
-    {
-        $this->data['ImageContent'] = $value;
-        $this->options['form_params']['ImageContent'] = $value;
 
         return $this;
     }
