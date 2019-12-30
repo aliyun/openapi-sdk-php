@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.32 - 2019-12-30
+- Visionai online.
+
+
 ## 1.8.31 - 2019-12-29
 - Add new api.
 

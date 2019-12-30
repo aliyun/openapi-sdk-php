@@ -158,6 +158,7 @@ namespace AlibabaCloud;
  * @method static UbsmsInner\UbsmsInner ubsmsInner()
  * @method static Uis\Uis uis()
  * @method static UniMkt\UniMkt uniMkt()
+ * @method static Visionai\Visionai visionai()
  * @method static Vod\Vod vod()
  * @method static Vpc\Vpc vpc()
  * @method static Vs\Vs vs()
