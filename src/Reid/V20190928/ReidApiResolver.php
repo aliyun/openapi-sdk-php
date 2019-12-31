@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBaseStatistics describeBaseStatistics(array $options = [])
  * @method DescribeCursor describeCursor(array $options = [])
  * @method DescribeCustomerFlowByLocation describeCustomerFlowByLocation(array $options = [])
+ * @method DescribeDevices describeDevices(array $options = [])
  * @method DescribeHeatMap describeHeatMap(array $options = [])
  * @method DescribeImageUrls describeImageUrls(array $options = [])
  * @method DescribeOverviewData describeOverviewData(array $options = [])
@@ -261,6 +262,26 @@ class DescribeCustomerFlowByLocation extends Rpc
     {
         $this->data['ParentLocationIds'] = $value;
         $this->options['form_params']['ParentLocationIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStoreId()
+ */
+class DescribeDevices extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
 
         return $this;
     }

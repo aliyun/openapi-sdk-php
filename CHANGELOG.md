@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.38 - 2019-12-31
+- Generated 2019-09-28 for `reid`.
+
+
 ## 1.8.37 - 2019-12-31
 - Support DeleteDBCluster.
 - Support ModifyDBCluster.
