@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.37 - 2019-12-31
+- Support DeleteDBCluster.
+- Support ModifyDBCluster.
+- Support DescribeAvailableResource.
+
+
 ## 1.8.36 - 2019-12-30
 - Disable Base64 string data support.
 
