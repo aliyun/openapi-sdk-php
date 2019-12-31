@@ -140,6 +140,7 @@
         "alibabacloud/live": "self.version",
         "alibabacloud/lubancloud": "self.version",
         "alibabacloud/lubanruler": "self.version",
+        "alibabacloud/mpserverless": "self.version",
         "alibabacloud/market": "self.version",
         "alibabacloud/mopen": "self.version",
         "alibabacloud/mts": "self.version",

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.42 - 2019-12-31
+- Add CreateMarketCellSpace method.
+
+
 ## 1.8.41 - 2019-12-31
 - Support asymmetric keys.
 
