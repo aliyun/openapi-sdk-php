@@ -23,6 +23,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchUpdateDeviceNickname batchUpdateDeviceNickname(array $options = [])
  * @method BindDriverToEdgeInstance bindDriverToEdgeInstance(array $options = [])
  * @method BindGatewayToEdgeInstance bindGatewayToEdgeInstance(array $options = [])
+ * @method CancelOTAStrategyByJob cancelOTAStrategyByJob(array $options = [])
+ * @method CancelOTATaskByDevice cancelOTATaskByDevice(array $options = [])
+ * @method CancelOTATaskByJob cancelOTATaskByJob(array $options = [])
  * @method ClearEdgeInstanceDriverConfigs clearEdgeInstanceDriverConfigs(array $options = [])
  * @method CloseEdgeInstanceDeployment closeEdgeInstanceDeployment(array $options = [])
  * @method CreateDataAPIService createDataAPIService(array $options = [])
@@ -30,6 +33,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEdgeInstance createEdgeInstance(array $options = [])
  * @method CreateEdgeInstanceDeployment createEdgeInstanceDeployment(array $options = [])
  * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
+ * @method CreateOTADynamicUpgradeJob createOTADynamicUpgradeJob(array $options = [])
+ * @method CreateOTAFirmware createOTAFirmware(array $options = [])
+ * @method CreateOTAStaticUpgradeJob createOTAStaticUpgradeJob(array $options = [])
+ * @method CreateOTAVerifyJob createOTAVerifyJob(array $options = [])
  * @method CreateProduct createProduct(array $options = [])
  * @method CreateProductTags createProductTags(array $options = [])
  * @method CreateProductTopic createProductTopic(array $options = [])
@@ -41,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDeviceGroup deleteDeviceGroup(array $options = [])
  * @method DeleteDeviceProp deleteDeviceProp(array $options = [])
  * @method DeleteEdgeInstance deleteEdgeInstance(array $options = [])
+ * @method DeleteOTAFirmware deleteOTAFirmware(array $options = [])
  * @method DeleteProduct deleteProduct(array $options = [])
  * @method DeleteProductTags deleteProductTags(array $options = [])
  * @method DeleteProductTopic deleteProductTopic(array $options = [])
@@ -49,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTopicRouteTable deleteTopicRouteTable(array $options = [])
  * @method DisableThing disableThing(array $options = [])
  * @method EnableThing enableThing(array $options = [])
+ * @method GenerateOTAUploadURL generateOTAUploadURL(array $options = [])
  * @method GetDataAPIServiceDetail getDataAPIServiceDetail(array $options = [])
  * @method GetDeviceListByIotIds getDeviceListByIotIds(array $options = [])
  * @method GetDeviceShadow getDeviceShadow(array $options = [])
@@ -67,6 +76,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
+ * @method ListOTAFirmware listOTAFirmware(array $options = [])
+ * @method ListOTAJobByFirmware listOTAJobByFirmware(array $options = [])
  * @method ListProductByTags listProductByTags(array $options = [])
  * @method ListProductTags listProductTags(array $options = [])
  * @method ListRule listRule(array $options = [])
@@ -105,6 +116,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryEdgeInstanceGateway queryEdgeInstanceGateway(array $options = [])
  * @method QueryEdgeInstanceHistoricDeployment queryEdgeInstanceHistoricDeployment(array $options = [])
  * @method QueryLoRaJoinPermissions queryLoRaJoinPermissions(array $options = [])
+ * @method QueryOTAFirmware queryOTAFirmware(array $options = [])
+ * @method QueryOTAJob queryOTAJob(array $options = [])
  * @method QueryPageByApplyId queryPageByApplyId(array $options = [])
  * @method QueryProduct queryProduct(array $options = [])
  * @method QueryProductCertInfo queryProductCertInfo(array $options = [])
@@ -130,6 +143,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateDeviceShadow updateDeviceShadow(array $options = [])
  * @method UpdateEdgeInstance updateEdgeInstance(array $options = [])
  * @method UpdateProduct updateProduct(array $options = [])
+ * @method UpdateProductFilterConfig updateProductFilterConfig(array $options = [])
  * @method UpdateProductTags updateProductTags(array $options = [])
  * @method UpdateProductTopic updateProductTopic(array $options = [])
  * @method UpdateRule updateRule(array $options = [])
@@ -606,6 +620,62 @@ class BindGatewayToEdgeInstance extends Rpc
 }
 
 /**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class CancelOTAStrategyByJob extends Rpc
+{
+}
+
+/**
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method array getDeviceName()
+ */
+class CancelOTATaskByDevice extends Rpc
+{
+
+    /**
+     * @param array $deviceName
+     *
+     * @return $this
+     */
+	public function withDeviceName(array $deviceName)
+	{
+	    $this->data['DeviceName'] = $deviceName;
+		foreach ($deviceName as $i => $iValue) {
+			$this->options['query']['DeviceName.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getCancelScheduledTask()
+ * @method $this withCancelScheduledTask($value)
+ * @method string getCancelInProgressTask()
+ * @method $this withCancelInProgressTask($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getCancelQueuedTask()
+ * @method $this withCancelQueuedTask($value)
+ */
+class CancelOTATaskByJob extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getDriverId()
@@ -746,6 +816,158 @@ class CreateLoRaNodesTask extends Rpc
 		foreach ($deviceInfo as $depth1 => $depth1Value) {
 			$this->options['query']['DeviceInfo.' . ($depth1 + 1) . '.PinCode'] = $depth1Value['PinCode'];
 			$this->options['query']['DeviceInfo.' . ($depth1 + 1) . '.DevEui'] = $depth1Value['DevEui'];
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getRetryCount()
+ * @method $this withRetryCount($value)
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getTimeoutInMinutes()
+ * @method $this withTimeoutInMinutes($value)
+ * @method string getRetryInterval()
+ * @method $this withRetryInterval($value)
+ * @method array getSrcVersion()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getMaximumPerMinute()
+ * @method $this withMaximumPerMinute($value)
+ */
+class CreateOTADynamicUpgradeJob extends Rpc
+{
+
+    /**
+     * @param array $srcVersion
+     *
+     * @return $this
+     */
+	public function withSrcVersion(array $srcVersion)
+	{
+	    $this->data['SrcVersion'] = $srcVersion;
+		foreach ($srcVersion as $i => $iValue) {
+			$this->options['query']['SrcVersion.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getSignMethod()
+ * @method $this withSignMethod($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getFirmwareUrl()
+ * @method $this withFirmwareUrl($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getFirmwareDesc()
+ * @method $this withFirmwareDesc($value)
+ * @method string getFirmwareSign()
+ * @method $this withFirmwareSign($value)
+ * @method string getFirmwareSize()
+ * @method $this withFirmwareSize($value)
+ * @method string getFirmwareName()
+ * @method $this withFirmwareName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getSrcVersion()
+ * @method $this withSrcVersion($value)
+ * @method string getDestVersion()
+ * @method $this withDestVersion($value)
+ */
+class CreateOTAFirmware extends Rpc
+{
+}
+
+/**
+ * @method string getRetryCount()
+ * @method $this withRetryCount($value)
+ * @method string getTimeoutInMinutes()
+ * @method $this withTimeoutInMinutes($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getTargetSelection()
+ * @method $this withTargetSelection($value)
+ * @method string getGrayPercent()
+ * @method $this withGrayPercent($value)
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getRetryInterval()
+ * @method $this withRetryInterval($value)
+ * @method array getSrcVersion()
+ * @method string getScheduleTime()
+ * @method $this withScheduleTime($value)
+ * @method string getMaximumPerMinute()
+ * @method $this withMaximumPerMinute($value)
+ * @method array getTargetDeviceName()
+ */
+class CreateOTAStaticUpgradeJob extends Rpc
+{
+
+    /**
+     * @param array $srcVersion
+     *
+     * @return $this
+     */
+	public function withSrcVersion(array $srcVersion)
+	{
+	    $this->data['SrcVersion'] = $srcVersion;
+		foreach ($srcVersion as $i => $iValue) {
+			$this->options['query']['SrcVersion.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $targetDeviceName
+     *
+     * @return $this
+     */
+	public function withTargetDeviceName(array $targetDeviceName)
+	{
+	    $this->data['TargetDeviceName'] = $targetDeviceName;
+		foreach ($targetDeviceName as $i => $iValue) {
+			$this->options['query']['TargetDeviceName.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getTimeoutInMinutes()
+ * @method $this withTimeoutInMinutes($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method array getTargetDeviceName()
+ */
+class CreateOTAVerifyJob extends Rpc
+{
+
+    /**
+     * @param array $targetDeviceName
+     *
+     * @return $this
+     */
+	public function withTargetDeviceName(array $targetDeviceName)
+	{
+	    $this->data['TargetDeviceName'] = $targetDeviceName;
+		foreach ($targetDeviceName as $i => $iValue) {
+			$this->options['query']['TargetDeviceName.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -962,6 +1184,16 @@ class DeleteEdgeInstance extends Rpc
 }
 
 /**
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class DeleteOTAFirmware extends Rpc
+{
+}
+
+/**
  * @method string getProductKey()
  * @method $this withProductKey($value)
  * @method string getIotInstanceId()
@@ -1078,6 +1310,14 @@ class DisableThing extends Rpc
  * @method $this withDeviceName($value)
  */
 class EnableThing extends Rpc
+{
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class GenerateOTAUploadURL extends Rpc
 {
 }
 
@@ -1402,6 +1642,40 @@ class InvokeThingsService extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDestVersion()
+ * @method $this withDestVersion($value)
+ */
+class ListOTAFirmware extends Rpc
+{
+}
+
+/**
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class ListOTAJobByFirmware extends Rpc
+{
 }
 
 /**
@@ -2089,6 +2363,26 @@ class QueryLoRaJoinPermissions extends Rpc
 }
 
 /**
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class QueryOTAFirmware extends Rpc
+{
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ */
+class QueryOTAJob extends Rpc
+{
+}
+
+/**
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getApplyId()
@@ -2504,6 +2798,46 @@ class UpdateEdgeInstance extends Rpc
  */
 class UpdateProduct extends Rpc
 {
+}
+
+/**
+ * @method string getPropertyTimestampFilter()
+ * @method $this withPropertyTimestampFilter($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getPropertyValueFilter()
+ * @method $this withPropertyValueFilter($value)
+ */
+class UpdateProductFilterConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
 }
 
 /**

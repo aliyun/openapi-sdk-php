@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.44 - 2019-12-31
+- Add OTA APIs, including GenerateOTAUploadURL, CreateOTAFirmware, etc.
+- Add UpdateProductFilterConfig interface, support setting product filter config.
+
+
 ## 1.8.43 - 2019-12-31
 - Supported SQL SERVER support delete backup set according to time range.
 
