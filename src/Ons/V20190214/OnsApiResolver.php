@@ -198,6 +198,8 @@ class OnsGroupConsumerUpdate extends Rpc
  * @method $this withRemark($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getGroupType()
+ * @method $this withGroupType($value)
  */
 class OnsGroupCreate extends Rpc
 {

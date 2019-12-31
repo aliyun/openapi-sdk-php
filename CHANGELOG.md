@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.40 - 2019-12-31
+- Add request parameter groupType for OnsGroupCreate.
+
+
 ## 1.8.39 - 2019-12-31
 - Supported image for process.
 
