@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.39 - 2019-12-31
+- Supported image for process.
+
+
 ## 1.8.38 - 2019-12-31
 - Generated 2019-09-28 for `reid`.
 

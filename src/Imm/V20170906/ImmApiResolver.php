@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDocIndexTask createDocIndexTask(array $options = [])
  * @method CreateGrabFrameTask createGrabFrameTask(array $options = [])
  * @method CreateGroupFacesJob createGroupFacesJob(array $options = [])
+ * @method CreateImageProcessTask createImageProcessTask(array $options = [])
  * @method CreateMediaComplexTask createMediaComplexTask(array $options = [])
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method CreateOfficeConversionTask createOfficeConversionTask(array $options = [])
@@ -49,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetImageJob getImageJob(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method GetOfficeConversionTask getOfficeConversionTask(array $options = [])
+ * @method GetOfficePreviewURL getOfficePreviewURL(array $options = [])
  * @method GetProject getProject(array $options = [])
  * @method GetSet getSet(array $options = [])
  * @method GetVideo getVideo(array $options = [])
@@ -266,6 +268,22 @@ class CreateGrabFrameTask extends Rpc
  * @method $this withSetId($value)
  */
 class CreateGroupFacesJob extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getTargetList()
+ * @method $this withTargetList($value)
+ * @method string getImageUri()
+ * @method $this withImageUri($value)
+ */
+class CreateImageProcessTask extends Rpc
 {
 }
 
@@ -850,6 +868,22 @@ class GetMediaMeta extends Rpc
  * @method $this withTaskId($value)
  */
 class GetOfficeConversionTask extends Rpc
+{
+}
+
+/**
+ * @method string getSrcType()
+ * @method $this withSrcType($value)
+ * @method string getExpires()
+ * @method $this withExpires($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getUseHTTPS()
+ * @method $this withUseHTTPS($value)
+ * @method string getSrcUri()
+ * @method $this withSrcUri($value)
+ */
+class GetOfficePreviewURL extends Rpc
 {
 }
 
