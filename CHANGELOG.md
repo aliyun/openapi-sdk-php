@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.43 - 2019-12-31
+- Supported SQL SERVER support delete backup set according to time range.
+
+
 ## 1.8.42 - 2019-12-31
 - Add CreateMarketCellSpace method.
 
