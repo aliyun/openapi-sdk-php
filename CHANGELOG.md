@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.41 - 2019-12-31
+- Support asymmetric keys.
+
+
 ## 1.8.40 - 2019-12-31
 - Add request parameter groupType for OnsGroupCreate.
 

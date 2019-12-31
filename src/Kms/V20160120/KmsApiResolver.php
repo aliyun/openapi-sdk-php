@@ -5,9 +5,14 @@ namespace AlibabaCloud\Kms\V20160120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AsymmetricDecrypt asymmetricDecrypt(array $options = [])
+ * @method AsymmetricEncrypt asymmetricEncrypt(array $options = [])
+ * @method AsymmetricSign asymmetricSign(array $options = [])
+ * @method AsymmetricVerify asymmetricVerify(array $options = [])
  * @method CancelKeyDeletion cancelKeyDeletion(array $options = [])
  * @method CreateAlias createAlias(array $options = [])
  * @method CreateKey createKey(array $options = [])
+ * @method CreateKeyVersion createKeyVersion(array $options = [])
  * @method Decrypt decrypt(array $options = [])
  * @method DeleteAlias deleteAlias(array $options = [])
  * @method DeleteKeyMaterial deleteKeyMaterial(array $options = [])
@@ -21,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateDataKey generateDataKey(array $options = [])
  * @method GenerateDataKeyWithoutPlaintext generateDataKeyWithoutPlaintext(array $options = [])
  * @method GetParametersForImport getParametersForImport(array $options = [])
+ * @method GetPublicKey getPublicKey(array $options = [])
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
  * @method ListAliases listAliases(array $options = [])
  * @method ListAliasesByKeyId listAliasesByKeyId(array $options = [])
@@ -57,6 +63,64 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getKeyVersionId()
+ * @method $this withKeyVersionId($value)
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getCiphertextBlob()
+ * @method $this withCiphertextBlob($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class AsymmetricDecrypt extends Rpc
+{
+}
+
+/**
+ * @method string getKeyVersionId()
+ * @method $this withKeyVersionId($value)
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getPlaintext()
+ * @method $this withPlaintext($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class AsymmetricEncrypt extends Rpc
+{
+}
+
+/**
+ * @method string getKeyVersionId()
+ * @method $this withKeyVersionId($value)
+ * @method string getDigest()
+ * @method $this withDigest($value)
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class AsymmetricSign extends Rpc
+{
+}
+
+/**
+ * @method string getKeyVersionId()
+ * @method $this withKeyVersionId($value)
+ * @method string getDigest()
+ * @method $this withDigest($value)
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getValue()
+ * @method $this withValue($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class AsymmetricVerify extends Rpc
+{
+}
+
+/**
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
@@ -83,12 +147,22 @@ class CreateAlias extends Rpc
  * @method $this withOrigin($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getKeySpec()
+ * @method $this withKeySpec($value)
  * @method string getRotationInterval()
  * @method $this withRotationInterval($value)
  * @method string getEnableAutomaticRotation()
  * @method $this withEnableAutomaticRotation($value)
  */
 class CreateKey extends Rpc
+{
+}
+
+/**
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ */
+class CreateKeyVersion extends Rpc
 {
 }
 
@@ -209,6 +283,16 @@ class GenerateDataKeyWithoutPlaintext extends Rpc
  * @method $this withWrappingKeySpec($value)
  */
 class GetParametersForImport extends Rpc
+{
+}
+
+/**
+ * @method string getKeyVersionId()
+ * @method $this withKeyVersionId($value)
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ */
+class GetPublicKey extends Rpc
 {
 }
 
