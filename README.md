@@ -138,7 +138,7 @@ Please make sure to read the [Contributing Guide](/CONTRIBUTING.md) before makin
 ## License
 [Apache-2.0](/LICENSE.md)
 
-Copyright 1999-2019 Alibaba Group Holding Ltd.
+Copyright 1999-2020 Alibaba Group Holding Ltd.
 
 
 [open-api]: https://api.alibabacloud.com
