@@ -138,7 +138,7 @@ try {
 ## 许可证
 [Apache-2.0](/LICENSE.md)
 
-版权所有 1999-2020 阿里巴巴集团
+Copyright (c) 1999-present, Alibaba Cloud All rights reserved.
 
 
 [open-api]: https://api.aliyun.com
