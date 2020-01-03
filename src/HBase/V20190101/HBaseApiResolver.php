@@ -21,6 +21,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method ListTags listTags(array $options = [])
  * @method ModifyInstanceMaintainTime modifyInstanceMaintainTime(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
  * @method ModifyIpWhitelist modifyIpWhitelist(array $options = [])
@@ -165,6 +166,8 @@ class DeleteHbaseHaSlb extends Rpc
 }
 
 /**
+ * @method string getImmediateDeleteFlag()
+ * @method $this withImmediateDeleteFlag($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -207,13 +210,34 @@ class DescribeInstance extends Rpc
 }
 
 /**
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getDbType()
+ * @method $this withDbType($value)
  */
 class DescribeInstances extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -287,6 +311,10 @@ class ListTagResources extends Rpc
 
 		return $this;
     }
+}
+
+class ListTags extends Rpc
+{
 }
 
 /**

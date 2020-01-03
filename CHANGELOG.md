@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.45 - 2020-1-3
+- ImmediateDelete.
+- DescribeInstance CreateTimeUTC ExpireTimeUTC.
+- DescribeInstances CreateTimeUTC ExpireTimeUTC.
+- DescribeIpWhitelist Groups GroupName.
+
+
 ## 1.8.44 - 2019-12-31
 - Add OTA APIs, including GenerateOTAUploadURL, CreateOTAFirmware, etc.
 - Add UpdateProductFilterConfig interface, support setting product filter config.
