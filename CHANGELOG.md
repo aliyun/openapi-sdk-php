@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.46 - 2020-1-3
+- New API DescribeAvailableResource.
+
+
 ## 1.8.45 - 2020-1-3
 - ImmediateDelete.
 - DescribeInstance CreateTimeUTC ExpireTimeUTC.
