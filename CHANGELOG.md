@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.47 - 2020-1-3
+- Add GWS serie apis.
+- Add QueryReport.
+- Fix ListJobs.
+- Etc.
+
+
 ## 1.8.46 - 2020-1-3
 - New API DescribeAvailableResource.
 
