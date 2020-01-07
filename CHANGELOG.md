@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.48 - 2020-1-7
+- Supported AAA for BBB.
+- Fixed bugs for CCC.
+
+
 ## 1.8.47 - 2020-1-3
 - Add GWS serie apis.
 - Add QueryReport.
