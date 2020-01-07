@@ -37,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InterruptLogstashTask interruptLogstashTask(array $options = [])
  * @method ListAllNode listAllNode(array $options = [])
  * @method ListAlternativeSnapshotRepos listAlternativeSnapshotRepos(array $options = [])
+ * @method ListConnectedClusters listConnectedClusters(array $options = [])
  * @method ListInstance listInstance(array $options = [])
  * @method ListKibanaPlugins listKibanaPlugins(array $options = [])
  * @method ListLogstash listLogstash(array $options = [])
@@ -45,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPlugins listPlugins(array $options = [])
  * @method ListSearchLog listSearchLog(array $options = [])
  * @method ListSnapshotReposByInstanceId listSnapshotReposByInstanceId(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method MoveResourceGroup moveResourceGroup(array $options = [])
  * @method OpenHttps openHttps(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
@@ -55,11 +57,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResumeLogstashTask resumeLogstashTask(array $options = [])
  * @method RollbackInstance rollbackInstance(array $options = [])
  * @method ShrinkNode shrinkNode(array $options = [])
+ * @method TagResources tagResources(array $options = [])
  * @method TransferNode transferNode(array $options = [])
  * @method TriggerNetwork triggerNetwork(array $options = [])
  * @method UninstallKibanaPlugin uninstallKibanaPlugin(array $options = [])
  * @method UninstallLogstashPlugin uninstallLogstashPlugin(array $options = [])
  * @method UninstallPlugin uninstallPlugin(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method UpdateAdminPassword updateAdminPassword(array $options = [])
  * @method UpdateAdvancedSetting updateAdvancedSetting(array $options = [])
  * @method UpdateAliwsDict updateAliwsDict(array $options = [])
@@ -841,6 +845,19 @@ class ListAlternativeSnapshotRepos extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListConnectedClusters extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/connected-clusters';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getResourceGroupId()
  * @method string getInstanceId()
  * @method string getSize()
@@ -1445,6 +1462,101 @@ class ListSnapshotReposByInstanceId extends Roa
 }
 
 /**
+ * @method string getSize()
+ * @method string getNextToken()
+ * @method string getPage()
+ * @method string getResourceType()
+ * @method string getResourceIds()
+ * @method string getTags()
+ */
+class ListTagResources extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/tags';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['Size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNextToken($value)
+    {
+        $this->data['NextToken'] = $value;
+        $this->options['query']['NextToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['query']['ResourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceIds($value)
+    {
+        $this->data['ResourceIds'] = $value;
+        $this->options['query']['ResourceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['query']['Tags'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -1726,6 +1838,12 @@ class ShrinkNode extends Roa
     }
 }
 
+class TagResources extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/tags';
+}
+
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -1855,6 +1973,73 @@ class UninstallPlugin extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAll()
+ * @method string getTagKeys()
+ * @method string getResourceType()
+ * @method string getResourceIds()
+ */
+class UntagResources extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/tags';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAll($value)
+    {
+        $this->data['All'] = $value;
+        $this->options['query']['All'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagKeys($value)
+    {
+        $this->data['TagKeys'] = $value;
+        $this->options['query']['TagKeys'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['query']['ResourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceIds($value)
+    {
+        $this->data['ResourceIds'] = $value;
+        $this->options['query']['ResourceIds'] = $value;
 
         return $this;
     }

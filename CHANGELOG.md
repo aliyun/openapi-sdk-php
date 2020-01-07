@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.49 - 2020-1-7
+- Modify desribeInstance return dict item.
+
+
 ## 1.8.48 - 2020-1-7
 - Supported AAA for BBB.
 - Fixed bugs for CCC.
