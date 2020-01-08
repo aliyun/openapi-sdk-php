@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.50 - 2020-1-8
+- Add TagLevel to ListSetTags.
+
+
 ## 1.8.49 - 2020-1-7
 - Modify desribeInstance return dict item.
 
