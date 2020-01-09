@@ -35,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeletePreset deletePreset(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteVsStreamsNotifyUrlConfig deleteVsStreamsNotifyUrlConfig(array $options = [])
+ * @method DescribeAccountStat describeAccountStat(array $options = [])
  * @method DescribeDevice describeDevice(array $options = [])
  * @method DescribeDeviceChannels describeDeviceChannels(array $options = [])
  * @method DescribeDeviceGateway describeDeviceGateway(array $options = [])
@@ -85,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopDevice stopDevice(array $options = [])
  * @method StopMove stopMove(array $options = [])
  * @method StopStream stopStream(array $options = [])
+ * @method StopTransferStream stopTransferStream(array $options = [])
  * @method SyncCatalogs syncCatalogs(array $options = [])
  * @method UnbindDirectory unbindDirectory(array $options = [])
  * @method UnbindTemplate unbindTemplate(array $options = [])
@@ -416,6 +418,8 @@ class ContinuousMove extends Rpc
 /**
  * @method string getGbId()
  * @method $this withGbId($value)
+ * @method string getLatitude()
+ * @method $this withLatitude($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getType()
@@ -432,6 +436,8 @@ class ContinuousMove extends Rpc
  * @method $this withDirectoryId($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
+ * @method string getLongitude()
+ * @method $this withLongitude($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getIp()
@@ -444,10 +450,14 @@ class ContinuousMove extends Rpc
  * @method $this withPort($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getPosInterval()
+ * @method $this withPosInterval($value)
  * @method string getDsn()
  * @method $this withDsn($value)
  * @method string getUsername()
  * @method $this withUsername($value)
+ * @method string getAutoPos()
+ * @method $this withAutoPos($value)
  */
 class CreateDevice extends Rpc
 {
@@ -636,6 +646,18 @@ class DeleteTemplate extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteVsStreamsNotifyUrlConfig extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeAccountStat extends Rpc
 {
 }
 
@@ -898,6 +920,8 @@ class DescribeStreams extends Rpc
  * @method $this withStartTime($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getOutHostType()
+ * @method $this withOutHostType($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -1310,6 +1334,8 @@ class GotoPreset extends Rpc
 /**
  * @method string getGbId()
  * @method $this withGbId($value)
+ * @method string getLatitude()
+ * @method $this withLatitude($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getType()
@@ -1328,6 +1354,8 @@ class GotoPreset extends Rpc
  * @method $this withId($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
+ * @method string getLongitude()
+ * @method $this withLongitude($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getIp()
@@ -1340,8 +1368,12 @@ class GotoPreset extends Rpc
  * @method $this withPort($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getPosInterval()
+ * @method $this withPosInterval($value)
  * @method string getUsername()
  * @method $this withUsername($value)
+ * @method string getAutoPos()
+ * @method $this withAutoPos($value)
  */
 class ModifyDevice extends Rpc
 {
@@ -1622,6 +1654,20 @@ class StopMove extends Rpc
  * @method $this withOwnerId($value)
  */
 class StopStream extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getTranscode()
+ * @method $this withTranscode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StopTransferStream extends Rpc
 {
 }
 

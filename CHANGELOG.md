@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.52 - 2020-1-9
+- Supported ondemand transfer stream.
+- Supported device position.
+
+
 ## 1.8.51 - 2020-1-9
 - Support DAILY report in QueryInstanBill.
 
