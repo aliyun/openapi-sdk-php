@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.51 - 2020-1-9
+- Support DAILY report in QueryInstanBill.
+
+
 ## 1.8.50 - 2020-1-8
 - Add TagLevel to ListSetTags.
 
