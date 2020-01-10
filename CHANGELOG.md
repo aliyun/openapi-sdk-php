@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.53 - 2020-1-10
+- Return `ConsistentTime` for DescribeBackups.
+- Return `DBNodeIds` for CreateDBNodes.
+
+
 ## 1.8.52 - 2020-1-9
 - Supported ondemand transfer stream.
 - Supported device position.
