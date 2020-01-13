@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.56 - 2020-1-13
+- Supported ondemand start transfer stream.
+
+
 ## 1.8.55 - 2020-1-13
 - Add Dynamic Tag API.
 

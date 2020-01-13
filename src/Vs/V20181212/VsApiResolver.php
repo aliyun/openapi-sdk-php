@@ -82,6 +82,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetVsStreamsNotifyUrlConfig setVsStreamsNotifyUrlConfig(array $options = [])
  * @method StartDevice startDevice(array $options = [])
  * @method StartStream startStream(array $options = [])
+ * @method StartTransferStream startTransferStream(array $options = [])
  * @method StopAdjust stopAdjust(array $options = [])
  * @method StopDevice stopDevice(array $options = [])
  * @method StopMove stopMove(array $options = [])
@@ -1592,6 +1593,22 @@ class StartDevice extends Rpc
  * @method $this withOwnerId($value)
  */
 class StartStream extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getTranscode()
+ * @method $this withTranscode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ */
+class StartTransferStream extends Rpc
 {
 }
 
