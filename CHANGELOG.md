@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.55 - 2020-1-13
+- Add Dynamic Tag API.
+
+
 ## 1.8.54 - 2020-1-13
 - Supported InstanceMaintenanceAtrributes for maintening the attributes of instances.
 - Deleted MaintenanceProperty.

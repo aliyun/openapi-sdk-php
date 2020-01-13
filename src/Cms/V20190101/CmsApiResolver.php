@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddTags addTags(array $options = [])
  * @method ApplyMetricRuleTemplate applyMetricRuleTemplate(array $options = [])
+ * @method CreateDynamicTagGroup createDynamicTagGroup(array $options = [])
  * @method CreateGroupMetricRules createGroupMetricRules(array $options = [])
  * @method CreateGroupMonitoringAgentProcess createGroupMonitoringAgentProcess(array $options = [])
  * @method CreateHostAvailability createHostAvailability(array $options = [])
@@ -21,6 +22,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteContact deleteContact(array $options = [])
  * @method DeleteContactGroup deleteContactGroup(array $options = [])
  * @method DeleteCustomMetric deleteCustomMetric(array $options = [])
+ * @method DeleteDynamicTagGroup deleteDynamicTagGroup(array $options = [])
  * @method DeleteEventRules deleteEventRules(array $options = [])
  * @method DeleteEventRuleTargets deleteEventRuleTargets(array $options = [])
  * @method DeleteGroupMonitoringAgentProcess deleteGroupMonitoringAgentProcess(array $options = [])
@@ -45,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCustomEventCount describeCustomEventCount(array $options = [])
  * @method DescribeCustomEventHistogram describeCustomEventHistogram(array $options = [])
  * @method DescribeCustomMetricList describeCustomMetricList(array $options = [])
+ * @method DescribeDynamicTagRuleList describeDynamicTagRuleList(array $options = [])
  * @method DescribeEventRuleAttribute describeEventRuleAttribute(array $options = [])
  * @method DescribeEventRuleList describeEventRuleList(array $options = [])
  * @method DescribeEventRuleTargetList describeEventRuleTargetList(array $options = [])
@@ -72,6 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeMonitoringAgentProcesses describeMonitoringAgentProcesses(array $options = [])
  * @method DescribeMonitoringAgentStatuses describeMonitoringAgentStatuses(array $options = [])
  * @method DescribeMonitoringConfig describeMonitoringConfig(array $options = [])
+ * @method DescribeProductResourceTagKeyList describeProductResourceTagKeyList(array $options = [])
  * @method DescribeProductsOfActiveMetricRule describeProductsOfActiveMetricRule(array $options = [])
  * @method DescribeProjectMeta describeProjectMeta(array $options = [])
  * @method DescribeSiteMonitorAttribute describeSiteMonitorAttribute(array $options = [])
@@ -198,6 +202,70 @@ class AddTags extends Rpc
  */
 class ApplyMetricRuleTemplate extends Rpc
 {
+}
+
+/**
+ * @method string getEnableSubscribeEvent()
+ * @method $this withEnableSubscribeEvent($value)
+ * @method string getMatchExpressFilterRelation()
+ * @method $this withMatchExpressFilterRelation($value)
+ * @method string getEnableInstallAgent()
+ * @method $this withEnableInstallAgent($value)
+ * @method array getMatchExpress()
+ * @method array getContactGroupList()
+ * @method array getTemplateIdList()
+ * @method string getTagKey()
+ * @method $this withTagKey($value)
+ */
+class CreateDynamicTagGroup extends Rpc
+{
+
+    /**
+     * @param array $matchExpress
+     *
+     * @return $this
+     */
+	public function withMatchExpress(array $matchExpress)
+	{
+	    $this->data['MatchExpress'] = $matchExpress;
+		foreach ($matchExpress as $depth1 => $depth1Value) {
+			$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.TagName'] = $depth1Value['TagName'];
+			$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
+			$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.TagValueMatchFunction'] = $depth1Value['TagValueMatchFunction'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $contactGroupList
+     *
+     * @return $this
+     */
+	public function withContactGroupList(array $contactGroupList)
+	{
+	    $this->data['ContactGroupList'] = $contactGroupList;
+		foreach ($contactGroupList as $i => $iValue) {
+			$this->options['query']['ContactGroupList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $templateIdList
+     *
+     * @return $this
+     */
+	public function withTemplateIdList(array $templateIdList)
+	{
+	    $this->data['TemplateIdList'] = $templateIdList;
+		foreach ($templateIdList as $i => $iValue) {
+			$this->options['query']['TemplateIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -696,6 +764,14 @@ class DeleteCustomMetric extends Rpc
 }
 
 /**
+ * @method string getDynamicTagGroupId()
+ * @method $this withDynamicTagGroupId($value)
+ */
+class DeleteDynamicTagGroup extends Rpc
+{
+}
+
+/**
  * @method array getRuleNames()
  */
 class DeleteEventRules extends Rpc
@@ -911,8 +987,6 @@ class DescribeActiveMetricRuleList extends Rpc
 }
 
 /**
- * @method string getAlertStatus()
- * @method $this withAlertStatus($value)
  * @method string getRuleName()
  * @method $this withRuleName($value)
  * @method string getStartTime()
@@ -935,6 +1009,8 @@ class DescribeActiveMetricRuleList extends Rpc
  * @method $this withPage($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeAlertHistoryList extends Rpc
 {
@@ -1066,6 +1142,18 @@ class DescribeCustomEventHistogram extends Rpc
  * @method $this withMd5($value)
  */
 class DescribeCustomMetricList extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTagKey()
+ * @method $this withTagKey($value)
+ */
+class DescribeDynamicTagRuleList extends Rpc
 {
 }
 
@@ -1397,17 +1485,21 @@ class DescribeMonitorGroupNotifyPolicyList extends Rpc
  * @method $this withIncludeTemplateHistory($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
  * @method string getKeyword()
  * @method $this withKeyword($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDynamicTagGroupId()
+ * @method $this withDynamicTagGroupId($value)
  */
 class DescribeMonitorGroups extends Rpc
 {
@@ -1474,6 +1566,14 @@ class DescribeMonitoringAgentStatuses extends Rpc
 }
 
 class DescribeMonitoringConfig extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ */
+class DescribeProductResourceTagKeyList extends Rpc
 {
 }
 
