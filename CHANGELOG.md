@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.54 - 2020-1-13
+- Supported InstanceMaintenanceAtrributes for maintening the attributes of instances.
+- Deleted MaintenanceProperty.
+- Supported RedeployDedicatedHost for redeploying dedicated host in under-assessment status.
+
+
 ## 1.8.53 - 2020-1-10
 - Return `ConsistentTime` for DescribeBackups.
 - Return `DBNodeIds` for CreateDBNodes.
