@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.57 - 2020-1-13
+- New API DescribeAvailableResource.
+
+
 ## 1.8.56 - 2020-1-13
 - Supported ondemand start transfer stream.
 
