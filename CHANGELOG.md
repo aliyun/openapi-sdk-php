@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.58 - 2020-1-14
+- Visionai online.
+
+
 ## 1.8.57 - 2020-1-13
 - New API DescribeAvailableResource.
 
