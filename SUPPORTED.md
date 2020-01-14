@@ -1,7 +1,7 @@
 简体中文 | [English](./SUPPORTED-EN.md)
 
 # 支持
-Alibaba Cloud SDK for PHP 已经支持 162 个产品共 184 个版本的快捷访问，列表如下：
+Alibaba Cloud SDK for PHP 已经支持 162 个产品共 185 个版本的快捷访问，列表如下：
 
 | 产品      |     版本     |
 |----------|-------------|
@@ -27,7 +27,7 @@ Alibaba Cloud SDK for PHP 已经支持 162 个产品共 184 个版本的快捷�
 | [CF](https://packagist.org/packages/alibabacloud/cf) | V20151127 |
 | [CS](https://packagist.org/packages/alibabacloud/cs) | V20151215, V20180418 |
 | [CSB](https://packagist.org/packages/alibabacloud/csb) | V20171118 |
-| [Cas](https://packagist.org/packages/alibabacloud/cas) | V20180813 |
+| [Cas](https://packagist.org/packages/alibabacloud/cas) | V20180713, V20180813 |
 | [Cbn](https://packagist.org/packages/alibabacloud/cbn) | V20170912 |
 | [Ccs](https://packagist.org/packages/alibabacloud/ccs) | V20171001 |
 | [Cdn](https://packagist.org/packages/alibabacloud/cdn) | V20141111, V20180510 |
