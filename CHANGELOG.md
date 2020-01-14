@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.59 - 2020-1-14
+- Visionai online.
+
+
 ## 1.8.58 - 2020-1-14
 - Visionai online.
 
