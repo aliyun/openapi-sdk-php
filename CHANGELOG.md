@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.63 - 2020-1-15
+- Fix SignatureDoesNotMatch issue of GetOrderBaseInfo API.
+
+
 ## 1.8.62 - 2020-1-15
 - Fix parameter issues for label synchronization group.
 

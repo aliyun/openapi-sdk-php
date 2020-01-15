@@ -342,24 +342,12 @@ class GetOpLog extends Rpc
 
 /**
  * @method string getOrderId()
+ * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
  */
 class GetOrderBaseInfo extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrderId($value)
-    {
-        $this->data['OrderId'] = $value;
-        $this->options['form_params']['OrderId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
