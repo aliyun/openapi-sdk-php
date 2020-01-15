@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.61 - 2020-1-15
+- Fix parameter issues for label synchronization group.
+
+
 ## 1.8.60 - 2020-1-14
 - Publish SDK For Java python, PHP.
 - Base on 2018-07-13.

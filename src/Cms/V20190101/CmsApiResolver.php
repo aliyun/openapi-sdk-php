@@ -229,7 +229,6 @@ class CreateDynamicTagGroup extends Rpc
 	{
 	    $this->data['MatchExpress'] = $matchExpress;
 		foreach ($matchExpress as $depth1 => $depth1Value) {
-			$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.TagName'] = $depth1Value['TagName'];
 			$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
 			$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.TagValueMatchFunction'] = $depth1Value['TagValueMatchFunction'];
 		}
@@ -764,8 +763,8 @@ class DeleteCustomMetric extends Rpc
 }
 
 /**
- * @method string getDynamicTagGroupId()
- * @method $this withDynamicTagGroupId($value)
+ * @method string getDynamicTagRuleId()
+ * @method $this withDynamicTagRuleId($value)
  */
 class DeleteDynamicTagGroup extends Rpc
 {
@@ -1483,6 +1482,8 @@ class DescribeMonitorGroupNotifyPolicyList extends Rpc
  * @method $this withSelectContactGroups($value)
  * @method string getIncludeTemplateHistory()
  * @method $this withIncludeTemplateHistory($value)
+ * @method string getDynamicTagRuleId()
+ * @method $this withDynamicTagRuleId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getPageNumber()
@@ -1498,8 +1499,6 @@ class DescribeMonitorGroupNotifyPolicyList extends Rpc
  * @method $this withGroupName($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getDynamicTagGroupId()
- * @method $this withDynamicTagGroupId($value)
  */
 class DescribeMonitorGroups extends Rpc
 {
