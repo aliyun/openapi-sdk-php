@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.62 - 2020-1-15
+- Fix parameter issues for label synchronization group.
+
+
 ## 1.8.61 - 2020-1-15
 - Fix parameter issues for label synchronization group.
 
