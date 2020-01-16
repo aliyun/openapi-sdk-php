@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.64 - 2020-1-16
+- Add fields faceComparisonScore for DescribeVerifyResult and VerifyMaterials interface.
+
+
 ## 1.8.63 - 2020-1-15
 - Fix SignatureDoesNotMatch issue of GetOrderBaseInfo API.
 
