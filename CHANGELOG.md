@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.65 - 2020-1-16
+- Generated 2015-01-01 for `R-kvstore`.
+- Update DescribeAvailableResource.
+
+
 ## 1.8.64 - 2020-1-16
 - Add fields faceComparisonScore for DescribeVerifyResult and VerifyMaterials interface.
 
