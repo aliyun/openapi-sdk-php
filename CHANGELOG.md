@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.66 - 2020-1-16
+- Fix the result value of DeleteSiteMonitors.
+
+
 ## 1.8.65 - 2020-1-16
 - Generated 2015-01-01 for `R-kvstore`.
 - Update DescribeAvailableResource.
