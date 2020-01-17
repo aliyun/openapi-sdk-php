@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.68 - 2020-1-17
+- Supported Add the history event signature function.
+
+
 ## 1.8.67 - 2020-1-17
 - Supported AAA for BBB.
 - Fixed bugs for CCC.
