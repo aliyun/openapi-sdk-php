@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.67 - 2020-1-17
+- Supported AAA for BBB.
+- Fixed bugs for CCC.
+
+
 ## 1.8.66 - 2020-1-16
 - Fix the result value of DeleteSiteMonitors.
 

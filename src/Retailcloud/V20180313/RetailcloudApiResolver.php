@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddClusterNode addClusterNode(array $options = [])
+ * @method BatchAddServers batchAddServers(array $options = [])
  * @method BindNodeLabel bindNodeLabel(array $options = [])
  * @method CloseDeployOrder closeDeployOrder(array $options = [])
  * @method CreateApp createApp(array $options = [])
@@ -16,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEnvironment createEnvironment(array $options = [])
  * @method CreateNodeLabel createNodeLabel(array $options = [])
  * @method CreatePersistentVolume createPersistentVolume(array $options = [])
+ * @method CreatePersistentVolumeClaim createPersistentVolumeClaim(array $options = [])
  * @method CreateService createService(array $options = [])
  * @method CreateSlbAP createSlbAP(array $options = [])
  * @method DeleteAppDetail deleteAppDetail(array $options = [])
@@ -26,6 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDeployConfig deleteDeployConfig(array $options = [])
  * @method DeleteNodeLabel deleteNodeLabel(array $options = [])
  * @method DeletePersistentVolume deletePersistentVolume(array $options = [])
+ * @method DeletePersistentVolumeClaim deletePersistentVolumeClaim(array $options = [])
  * @method DeleteRdsAccount deleteRdsAccount(array $options = [])
  * @method DeleteService deleteService(array $options = [])
  * @method DeleteSlbAP deleteSlbAP(array $options = [])
@@ -55,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListNodeLabelBindings listNodeLabelBindings(array $options = [])
  * @method ListNodeLabels listNodeLabels(array $options = [])
  * @method ListPersistentVolume listPersistentVolume(array $options = [])
+ * @method ListPersistentVolumeClaim listPersistentVolumeClaim(array $options = [])
  * @method ListPods listPods(array $options = [])
  * @method ListServices listServices(array $options = [])
  * @method ListSlbAPs listSlbAPs(array $options = [])
@@ -117,6 +121,18 @@ class AddClusterNode extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getSign()
+ * @method $this withSign($value)
+ */
+class BatchAddServers extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getLabelKey()
  * @method $this withLabelKey($value)
  * @method string getLabelValue()
@@ -142,6 +158,7 @@ class CloseDeployOrder extends Rpc
  * @method string getServiceType()
  * @method string getBizCode()
  * @method string getOperatingSystem()
+ * @method string getNamespace()
  * @method string getDescription()
  * @method string getLanguage()
  * @method string getTitle()
@@ -210,6 +227,19 @@ class CreateApp extends Rpc
     {
         $this->data['OperatingSystem'] = $value;
         $this->options['form_params']['OperatingSystem'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespace($value)
+    {
+        $this->data['Namespace'] = $value;
+        $this->options['form_params']['Namespace'] = $value;
 
         return $this;
     }
@@ -389,6 +419,7 @@ class CreateDb extends Rpc
 /**
  * @method string getCodePath()
  * @method $this withCodePath($value)
+ * @method array getConfigMapList()
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getConfigMap()
@@ -404,6 +435,21 @@ class CreateDb extends Rpc
  */
 class CreateDeployConfig extends Rpc
 {
+
+    /**
+     * @param array $configMapList
+     *
+     * @return $this
+     */
+	public function withConfigMapList(array $configMapList)
+	{
+	    $this->data['ConfigMapList'] = $configMapList;
+		foreach ($configMapList as $i => $iValue) {
+			$this->options['query']['ConfigMapList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -566,6 +612,24 @@ class CreatePersistentVolume extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getAccessModes()
+ * @method $this withAccessModes($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ * @method string getStorageClass()
+ * @method $this withStorageClass($value)
+ * @method string getCapacity()
+ * @method $this withCapacity($value)
+ */
+class CreatePersistentVolumeClaim extends Rpc
+{
 }
 
 /**
@@ -759,6 +823,18 @@ class DeletePersistentVolume extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPersistentVolumeClaimName()
+ * @method $this withPersistentVolumeClaimName($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ */
+class DeletePersistentVolumeClaim extends Rpc
+{
 }
 
 /**
@@ -1475,6 +1551,20 @@ class ListPersistentVolume extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListPersistentVolumeClaim extends Rpc
+{
+}
+
+/**
  * @method array getStatusList()
  * @method string getDeployOrderId()
  * @method $this withDeployOrderId($value)
@@ -1812,6 +1902,7 @@ class UpdateApp extends Rpc
 /**
  * @method string getCodePath()
  * @method $this withCodePath($value)
+ * @method array getConfigMapList()
  * @method string getConfigMap()
  * @method $this withConfigMap($value)
  * @method string getStatefulSet()
@@ -1825,6 +1916,21 @@ class UpdateApp extends Rpc
  */
 class UpdateDeployConfig extends Rpc
 {
+
+    /**
+     * @param array $configMapList
+     *
+     * @return $this
+     */
+	public function withConfigMapList(array $configMapList)
+	{
+	    $this->data['ConfigMapList'] = $configMapList;
+		foreach ($configMapList as $i => $iValue) {
+			$this->options['query']['ConfigMapList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
