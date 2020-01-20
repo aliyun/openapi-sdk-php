@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.71 - 2020-1-20
+- Onezeroone sdk version.
+
+
 ## 1.8.70 - 2020-1-20
 - Onezeroone sdk version.
 

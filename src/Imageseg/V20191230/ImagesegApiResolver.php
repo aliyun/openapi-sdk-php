@@ -8,6 +8,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SegmentBody segmentBody(array $options = [])
  * @method SegmentCommodity segmentCommodity(array $options = [])
  * @method SegmentCommonImage segmentCommonImage(array $options = [])
+ * @method SegmentFace segmentFace(array $options = [])
+ * @method SegmentHair segmentHair(array $options = [])
+ * @method SegmentHead segmentHead(array $options = [])
  */
 class ImagesegApiResolver extends ApiResolver
 {
@@ -49,5 +52,29 @@ class SegmentCommodity extends Rpc
  * @method $this withImageURL($value)
  */
 class SegmentCommonImage extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class SegmentFace extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class SegmentHair extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class SegmentHead extends Rpc
 {
 }
