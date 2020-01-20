@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.72 - 2020-1-20
+- Add Thing Model APIs, including QueryThingModel, PublishThingModel, etc.
+
+
 ## 1.8.71 - 2020-1-20
 - Onezeroone sdk version.
 
