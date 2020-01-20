@@ -80,6 +80,7 @@ namespace AlibabaCloud;
  * @method static Green\Green green()
  * @method static HBase\HBase hBase()
  * @method static HPC\HPC hPC()
+ * @method static Hiknoengine\Hiknoengine hiknoengine()
  * @method static Hsm\Hsm hsm()
  * @method static Httpdns\Httpdns httpdns()
  * @method static IDST\IDST iDST()

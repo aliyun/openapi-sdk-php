@@ -115,6 +115,7 @@
         "alibabacloud/green": "self.version",
         "alibabacloud/hbase": "self.version",
         "alibabacloud/hpc": "self.version",
+        "alibabacloud/hiknoengine": "self.version",
         "alibabacloud/hsm": "self.version",
         "alibabacloud/httpdns": "self.version",
         "alibabacloud/idst": "self.version",

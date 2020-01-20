@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.69 - 2020-1-20
+- Release on full language support.
+
+
 ## 1.8.68 - 2020-1-17
 - Supported Add the history event signature function.
 
