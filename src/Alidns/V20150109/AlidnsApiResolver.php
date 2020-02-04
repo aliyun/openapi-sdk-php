@@ -32,6 +32,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDnsProductInstance describeDnsProductInstance(array $options = [])
  * @method DescribeDnsProductInstances describeDnsProductInstances(array $options = [])
  * @method DescribeDNSSLBSubDomains describeDNSSLBSubDomains(array $options = [])
+ * @method DescribeDomainDnssecInfo describeDomainDnssecInfo(array $options = [])
  * @method DescribeDomainGroups describeDomainGroups(array $options = [])
  * @method DescribeDomainInfo describeDomainInfo(array $options = [])
  * @method DescribeDomainLogs describeDomainLogs(array $options = [])
@@ -72,6 +73,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RetrieveDomain retrieveDomain(array $options = [])
  * @method RollbackGtmRecoveryPlan rollbackGtmRecoveryPlan(array $options = [])
  * @method SetDNSSLBStatus setDNSSLBStatus(array $options = [])
+ * @method SetDomainDnssecStatus setDomainDnssecStatus(array $options = [])
  * @method SetDomainRecordStatus setDomainRecordStatus(array $options = [])
  * @method SetGtmAccessMode setGtmAccessMode(array $options = [])
  * @method SetGtmMonitorStatus setGtmMonitorStatus(array $options = [])
@@ -596,6 +598,18 @@ class DescribeDNSSLBSubDomains extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDomainDnssecInfo extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getUserClientIp()
@@ -724,6 +738,8 @@ class DescribeDomainRecords extends Rpc
 }
 
 /**
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
@@ -742,6 +758,8 @@ class DescribeDomainRecords extends Rpc
  * @method $this withGroupId($value)
  * @method string getOrderBy()
  * @method $this withOrderBy($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getSearchMode()
@@ -1293,6 +1311,20 @@ class RollbackGtmRecoveryPlan extends Rpc
  * @method $this withOpen($value)
  */
 class SetDNSSLBStatus extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class SetDomainDnssecStatus extends Rpc
 {
 }
 

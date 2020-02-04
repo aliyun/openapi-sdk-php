@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.73 - 2020-2-4
+- Update default endpoints.
+
+
 ## 1.8.72 - 2020-1-20
 - Add Thing Model APIs, including QueryThingModel, PublishThingModel, etc.
 
