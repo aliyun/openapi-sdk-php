@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.74 - 2020-2-5
+- Supported GetOfficePreviewURL.
+- Supported RefreshOfficePreviewToken.
+
+
 ## 1.8.73 - 2020-2-4
 - Update default endpoints.
 

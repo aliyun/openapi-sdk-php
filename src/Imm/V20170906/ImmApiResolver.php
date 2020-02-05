@@ -71,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVideos listVideos(array $options = [])
  * @method ListVideoTasks listVideoTasks(array $options = [])
  * @method PutProject putProject(array $options = [])
+ * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
  * @method SearchDocIndex searchDocIndex(array $options = [])
  * @method UpdateDocIndexMeta updateDocIndexMeta(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
@@ -874,8 +875,6 @@ class GetOfficeConversionTask extends Rpc
 /**
  * @method string getSrcType()
  * @method $this withSrcType($value)
- * @method string getExpires()
- * @method $this withExpires($value)
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getUseHTTPS()
@@ -1176,6 +1175,18 @@ class ListVideoTasks extends Rpc
  * @method $this withBillingType($value)
  */
 class PutProject extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getAccessToken()
+ * @method $this withAccessToken($value)
+ * @method string getRefreshToken()
+ * @method $this withRefreshToken($value)
+ */
+class RefreshOfficePreviewToken extends Rpc
 {
 }
 
