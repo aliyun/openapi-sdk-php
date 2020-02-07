@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.75 - 2020-2-7
+- Fix bug for DescribeZoneInfo, delete return result of reionId.
+- Fix bug for DeleteZone, parameter zoneId change to compulsory.
+- Fix bug for SetProxyPattern, parameter zoneId change to compulsory.
+
+
 ## 1.8.74 - 2020-2-5
 - Supported GetOfficePreviewURL.
 - Supported RefreshOfficePreviewToken.
