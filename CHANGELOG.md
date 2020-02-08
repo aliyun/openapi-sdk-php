@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.76 - 2020-2-8
+- Add DetectMask Api.
+
+
 ## 1.8.75 - 2020-2-7
 - Fix bug for DescribeZoneInfo, delete return result of reionId.
 - Fix bug for DeleteZone, parameter zoneId change to compulsory.

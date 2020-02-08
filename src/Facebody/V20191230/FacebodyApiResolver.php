@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CompareFace compareFace(array $options = [])
  * @method DetectFace detectFace(array $options = [])
+ * @method DetectMask detectMask(array $options = [])
  * @method RecognizeFace recognizeFace(array $options = [])
  */
 class FacebodyApiResolver extends ApiResolver
@@ -95,6 +96,26 @@ class DetectFace extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectMask extends Rpc
+{
 
     /**
      * @param string $value
