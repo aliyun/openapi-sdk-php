@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.77 - 2020-2-9
+- Sdk version 104.
+
+
 ## 1.8.76 - 2020-2-8
 - Add DetectMask Api.
 
