@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.79 - 2020-2-10
+- Update default endpoints.
+
+
 ## 1.8.78 - 2020-2-10
 - Supported address for GetMediaMeta.
 
