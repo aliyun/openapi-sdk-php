@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.78 - 2020-2-10
+- Supported address for GetMediaMeta.
+
+
 ## 1.8.77 - 2020-2-9
 - Sdk version 104.
 
