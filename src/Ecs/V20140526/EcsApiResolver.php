@@ -2561,6 +2561,8 @@ class CreateSimulatedSystemEvents extends Rpc
  * @method $this withOwnerId($value)
  * @method string getRetentionDays()
  * @method $this withRetentionDays($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class CreateSnapshot extends Rpc
 {
@@ -5911,6 +5913,8 @@ class DescribeRenewalPrice extends Rpc
  * @method string getReservedInstanceName()
  * @method $this withReservedInstanceName($value)
  * @method array getStatus()
+ * @method string getAllocationType()
+ * @method $this withAllocationType($value)
  */
 class DescribeReservedInstances extends Rpc
 {
@@ -6214,6 +6218,8 @@ class DescribeSnapshotLinks extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class DescribeSnapshotMonitorData extends Rpc
 {
@@ -7937,6 +7943,7 @@ class ModifyImageSharePermission extends Rpc
  * @method $this withCreditSpecification($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getSecurityGroupIds()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceName()
@@ -7944,6 +7951,21 @@ class ModifyImageSharePermission extends Rpc
  */
 class ModifyInstanceAttribute extends Rpc
 {
+
+    /**
+     * @param array $securityGroupIds
+     *
+     * @return $this
+     */
+	public function withSecurityGroupIds(array $securityGroupIds)
+	{
+	    $this->data['SecurityGroupIds'] = $securityGroupIds;
+		foreach ($securityGroupIds as $i => $iValue) {
+			$this->options['query']['SecurityGroupIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

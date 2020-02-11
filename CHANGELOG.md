@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.81 - 2020-2-11
+- Support ModifyInstanceAttributes for SecurityGroupIds.
+
+
 ## 1.8.80 - 2020-2-11
 - Add Thing Model APIs, including CreateThingModel, UpdateThingModel, etc.
 - Add OTA API ListOTATaskByJob.
