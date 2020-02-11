@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.82 - 2020-2-11
+- Return `VpcInstanceId ` for DescribeDBClusterEndpoints.
+- Add DescribeBackupLogs.
+
+
 ## 1.8.81 - 2020-2-11
 - Support ModifyInstanceAttributes for SecurityGroupIds.
 
