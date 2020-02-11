@@ -43,6 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateProductTopic createProductTopic(array $options = [])
  * @method CreateRule createRule(array $options = [])
  * @method CreateRuleAction createRuleAction(array $options = [])
+ * @method CreateThingModel createThingModel(array $options = [])
  * @method CreateTopicRouteTable createTopicRouteTable(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
  * @method DeleteDeviceFile deleteDeviceFile(array $options = [])
@@ -82,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InvokeThingsService invokeThingsService(array $options = [])
  * @method ListOTAFirmware listOTAFirmware(array $options = [])
  * @method ListOTAJobByFirmware listOTAJobByFirmware(array $options = [])
+ * @method ListOTATaskByJob listOTATaskByJob(array $options = [])
  * @method ListProductByTags listProductByTags(array $options = [])
  * @method ListProductTags listProductTags(array $options = [])
  * @method ListRule listRule(array $options = [])
@@ -156,6 +158,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateProductTopic updateProductTopic(array $options = [])
  * @method UpdateRule updateRule(array $options = [])
  * @method UpdateRuleAction updateRuleAction(array $options = [])
+ * @method UpdateThingModel updateThingModel(array $options = [])
  */
 class IotApiResolver extends ApiResolver
 {
@@ -960,6 +963,8 @@ class CreateOTAFirmware extends Rpc
  * @method array getSrcVersion()
  * @method string getScheduleTime()
  * @method $this withScheduleTime($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
  * @method string getMaximumPerMinute()
  * @method $this withMaximumPerMinute($value)
  * @method array getTargetDeviceName()
@@ -980,6 +985,32 @@ class CreateOTAStaticUpgradeJob extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
     }
 
     /**
@@ -1147,6 +1178,44 @@ class CreateRule extends Rpc
  */
 class CreateRuleAction extends Rpc
 {
+}
+
+/**
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getThingModelJson()
+ * @method $this withThingModelJson($value)
+ * @method string getApiRevision()
+ */
+class CreateThingModel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1826,21 +1895,89 @@ class ListOTAFirmware extends Rpc
 }
 
 /**
- * @method string getFirmwareId()
- * @method $this withFirmwareId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
+ * @method string getFirmwareId()
+ * @method $this withFirmwareId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
  */
 class ListOTAJobByFirmware extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getTaskStatus()
+ * @method $this withTaskStatus($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class ListOTATaskByJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -3136,4 +3273,44 @@ class UpdateRule extends Rpc
  */
 class UpdateRuleAction extends Rpc
 {
+}
+
+/**
+ * @method string getIdentifier()
+ * @method $this withIdentifier($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getThingModelJson()
+ * @method $this withThingModelJson($value)
+ * @method string getApiRevision()
+ */
+class UpdateThingModel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
 }

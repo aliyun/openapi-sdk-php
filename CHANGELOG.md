@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.80 - 2020-2-11
+- Add Thing Model APIs, including CreateThingModel, UpdateThingModel, etc.
+- Add OTA API ListOTATaskByJob.
+- Update OTA API ListOTAJobByFirmware.
+- Update Thing Core Model API InvokeThingsService.
+
+
 ## 1.8.79 - 2020-2-10
 - Update default endpoints.
 
