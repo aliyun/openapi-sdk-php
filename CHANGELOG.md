@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.85 - 2020-2-12
+- Update Full showStorageTyp.
+
+
 ## 1.8.84 - 2020-2-12
 - Add Full showStorageTyp.
 
