@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CheckDevice checkDevice(array $options = [])
+ * @method CheckReceivingDetail checkReceivingDetail(array $options = [])
  * @method KeepAlive keepAlive(array $options = [])
  * @method PushDeviceStatus pushDeviceStatus(array $options = [])
  * @method PushExtraTradeDetail pushExtraTradeDetail(array $options = [])
@@ -32,6 +33,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     protected $scheme = 'https';
+
+    /** @var string */
+    public $serviceCode = '1.0.0';
 }
 
 /**
@@ -50,6 +54,54 @@ class CheckDevice extends Rpc
     {
         $this->data['DeviceSn'] = $value;
         $this->options['form_params']['DeviceSn'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannelId($value)
+    {
+        $this->data['ChannelId'] = $value;
+        $this->options['form_params']['ChannelId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDeviceCode()
+ * @method string getV()
+ * @method string getChannelId()
+ */
+class CheckReceivingDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceCode($value)
+    {
+        $this->data['DeviceCode'] = $value;
+        $this->options['form_params']['DeviceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withV($value)
+    {
+        $this->data['V'] = $value;
+        $this->options['form_params']['V'] = $value;
 
         return $this;
     }
@@ -619,6 +671,7 @@ class PushTradeDetail extends Rpc
 /**
  * @method string getExtra()
  * @method string getAlipayOpenId()
+ * @method string getUserId()
  * @method string getChannelId()
  */
 class QueryPromotion extends Rpc
@@ -646,6 +699,19 @@ class QueryPromotion extends Rpc
     {
         $this->data['AlipayOpenId'] = $value;
         $this->options['form_params']['AlipayOpenId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
 
         return $this;
     }

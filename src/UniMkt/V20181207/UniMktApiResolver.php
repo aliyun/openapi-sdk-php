@@ -34,6 +34,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     protected $scheme = 'https';
+
+    /** @var string */
+    public $serviceCode = '1.0.0';
 }
 
 /**
