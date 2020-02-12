@@ -219,6 +219,8 @@ class DescribeBackupPlanList extends Rpc
  * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getShowStorageType()
+ * @method $this withShowStorageType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
@@ -235,6 +237,8 @@ class DescribeFullBackupList extends Rpc
  * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getShowStorageType()
+ * @method $this withShowStorageType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */

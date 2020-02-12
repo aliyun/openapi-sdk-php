@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.84 - 2020-2-12
+- Add Full showStorageTyp.
+
+
 ## 1.8.83 - 2020-2-12
 - Support mau.
 
