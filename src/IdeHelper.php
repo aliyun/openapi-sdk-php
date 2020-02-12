@@ -51,6 +51,7 @@ namespace AlibabaCloud;
  * @method static Dbs\Dbs dbs()
  * @method static Dcdn\Dcdn dcdn()
  * @method static Dds\Dds dds()
+ * @method static DemoCenter\DemoCenter demoCenter()
  * @method static Dm\Dm dm()
  * @method static DmsEnterprise\DmsEnterprise dmsEnterprise()
  * @method static Domain\Domain domain()

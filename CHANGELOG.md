@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.87 - 2020-2-12
+- Support to create, describe and expire demo access token.
+
+
 ## 1.8.86 - 2020-2-12
 - Generated 2018-12-12, 2018-12-07 for `UniMkt`.
 
