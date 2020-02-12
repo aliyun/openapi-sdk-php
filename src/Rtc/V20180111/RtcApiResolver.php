@@ -7,13 +7,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CreateChannel createChannel(array $options = [])
  * @method CreateConference createConference(array $options = [])
+ * @method CreateMAURule createMAURule(array $options = [])
  * @method CreateTemplate createTemplate(array $options = [])
  * @method DeleteChannel deleteChannel(array $options = [])
  * @method DeleteConference deleteConference(array $options = [])
+ * @method DeleteMAURule deleteMAURule(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DescribeApps describeApps(array $options = [])
  * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
  * @method DescribeConferenceAuthInfo describeConferenceAuthInfo(array $options = [])
+ * @method DescribeMAURule describeMAURule(array $options = [])
  * @method DescribeRtcChannelCntData describeRtcChannelCntData(array $options = [])
  * @method DescribeRtcChannelList describeRtcChannelList(array $options = [])
  * @method DescribeRtcChannelMetric describeRtcChannelMetric(array $options = [])
@@ -21,7 +24,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRtcDurationData describeRtcDurationData(array $options = [])
  * @method DescribeRtcPeakChannelCntData describeRtcPeakChannelCntData(array $options = [])
  * @method DescribeRtcPeakUserCntData describeRtcPeakUserCntData(array $options = [])
+ * @method DescribeRtcQualityMetric describeRtcQualityMetric(array $options = [])
  * @method DescribeRtcUserCntData describeRtcUserCntData(array $options = [])
+ * @method DescribeRtcUserList describeRtcUserList(array $options = [])
+ * @method DisableMAURule disableMAURule(array $options = [])
+ * @method EnableMAURule enableMAURule(array $options = [])
  * @method GetMPUTaskStatus getMPUTaskStatus(array $options = [])
  * @method GetTaskStatus getTaskStatus(array $options = [])
  * @method ModifyApp modifyApp(array $options = [])
@@ -85,6 +92,24 @@ class CreateChannel extends Rpc
  * @method $this withRemindNotice($value)
  */
 class CreateConference extends Rpc
+{
+}
+
+/**
+ * @method string getUseridPrefix()
+ * @method $this withUseridPrefix($value)
+ * @method string getChannelPrefix()
+ * @method $this withChannelPrefix($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMauTemplateId()
+ * @method $this withMauTemplateId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getCallBack()
+ * @method $this withCallBack($value)
+ */
+class CreateMAURule extends Rpc
 {
 }
 
@@ -190,6 +215,18 @@ class DeleteConference extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DeleteMAURule extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  * @method string getAppId()
@@ -244,6 +281,16 @@ class DescribeChannelParticipants extends Rpc
  * @method $this withAppId($value)
  */
 class DescribeConferenceAuthInfo extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeMAURule extends Rpc
 {
 }
 
@@ -378,6 +425,26 @@ class DescribeRtcPeakUserCntData extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getSubUser()
+ * @method $this withSubUser($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPubUser()
+ * @method $this withPubUser($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRtcQualityMetric extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getServiceArea()
  * @method $this withServiceArea($value)
  * @method string getEndTime()
@@ -390,6 +457,46 @@ class DescribeRtcPeakUserCntData extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeRtcUserCntData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRtcUserList extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DisableMAURule extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class EnableMAURule extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.83 - 2020-2-12
+- Support mau.
+
+
 ## 1.8.82 - 2020-2-11
 - Return `VpcInstanceId ` for DescribeDBClusterEndpoints.
 - Add DescribeBackupLogs.
