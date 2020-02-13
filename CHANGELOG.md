@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.95 - 2020-2-13
+- ModifyNetworkInterfaceAttribute support modify QueueNumber.
+- DescribeNetworkInterfaces support QueueNumber.
+
+
 ## 1.8.94 - 2020-2-13
 - Add Staging apis.
 

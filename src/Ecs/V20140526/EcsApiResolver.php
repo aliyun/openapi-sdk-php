@@ -8296,6 +8296,8 @@ class ModifyLaunchTemplateDefaultVersion extends Rpc
 }
 
 /**
+ * @method string getQueueNumber()
+ * @method $this withQueueNumber($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method array getSecurityGroupId()
