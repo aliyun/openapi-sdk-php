@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.88 - 2020-2-13
+- Init MQTT SDK .
+
+
 ## 1.8.87 - 2020-2-12
 - Support to create, describe and expire demo access token.
 

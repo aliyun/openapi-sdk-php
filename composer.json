@@ -158,6 +158,7 @@
         "alibabacloud/ocs": "self.version",
         "alibabacloud/oms": "self.version",
         "alibabacloud/ons": "self.version",
+        "alibabacloud/onsmqtt": "self.version",
         "alibabacloud/openanalytics": "self.version",
         "alibabacloud/ossadmin": "self.version",
         "alibabacloud/ots": "self.version",
