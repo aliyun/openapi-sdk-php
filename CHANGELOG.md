@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.93 - 2020-2-13
+- Add Staging apis.
+
+
 ## 1.8.92 - 2020-2-13
 - Add Staging apis.
 
