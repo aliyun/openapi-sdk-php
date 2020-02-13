@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.96 - 2020-2-13
+- ModifyNetworkInterfaceAttribute support modify QueueNumber.
+- DescribeNetworkInterfaces support QueueNumber.
+
+
 ## 1.8.95 - 2020-2-13
 - ModifyNetworkInterfaceAttribute support modify QueueNumber.
 - DescribeNetworkInterfaces support QueueNumber.
