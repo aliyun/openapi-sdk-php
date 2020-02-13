@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.90 - 2020-2-13
+- Add Staging apis.
+
+
 ## 1.8.89 - 2020-2-13
 - Fix GetDataCorrectOrderDetail API return empty database information.
 

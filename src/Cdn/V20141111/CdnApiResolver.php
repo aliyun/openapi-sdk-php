@@ -106,7 +106,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefreshObjectCaches refreshObjectCaches(array $options = [])
  * @method ResumeLiveStream resumeLiveStream(array $options = [])
  * @method SetCcConfig setCcConfig(array $options = [])
- * @method SetDomainGreenManagerConfig setDomainGreenManagerConfig(array $options = [])
  * @method SetDomainServerCertificate setDomainServerCertificate(array $options = [])
  * @method SetDynamicConfig setDynamicConfig(array $options = [])
  * @method SetErrorPageConfig setErrorPageConfig(array $options = [])
@@ -1382,58 +1381,58 @@ class DescribeLiveStreamOnlineUserNum extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getStreamName()
  * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeLiveStreamRecordContent extends Rpc
 {
 }
 
 /**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRecordId()
  * @method $this withRecordId($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getStreamName()
- * @method $this withStreamName($value)
  */
 class DescribeLiveStreamRecordIndexFile extends Rpc
 {
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getStreamName()
  * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeLiveStreamRecordIndexFiles extends Rpc
 {
@@ -1452,18 +1451,18 @@ class DescribeLiveStreamsBlockList extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeLiveStreamsControlHistory extends Rpc
 {
@@ -1512,12 +1511,6 @@ class DescribeLiveStreamSnapshotInfo extends Rpc
 }
 
 /**
- * @method string getStreamType()
- * @method $this withStreamType($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getAppName()
@@ -1526,6 +1519,12 @@ class DescribeLiveStreamSnapshotInfo extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getStreamType()
+ * @method $this withStreamType($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeLiveStreamsOnlineList extends Rpc
 {
@@ -1709,6 +1708,12 @@ class DescribeUserDomains extends Rpc
 }
 
 /**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
  * @method string getResumeTime()
  * @method $this withResumeTime($value)
  * @method string getLiveStreamType()
@@ -1717,12 +1722,6 @@ class DescribeUserDomains extends Rpc
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getStreamName()
- * @method $this withStreamName($value)
  */
 class ForbidLiveStream extends Rpc
 {
@@ -1906,18 +1905,18 @@ class RefreshObjectCaches extends Rpc
 }
 
 /**
- * @method string getLiveStreamType()
- * @method $this withLiveStreamType($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getStreamName()
  * @method $this withStreamName($value)
+ * @method string getLiveStreamType()
+ * @method $this withLiveStreamType($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class ResumeLiveStream extends Rpc
 {
@@ -1937,21 +1936,6 @@ class ResumeLiveStream extends Rpc
  */
 class SetCcConfig extends Rpc
 {
-}
-
-/**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEnable()
- * @method $this withEnable($value)
- */
-class SetDomainGreenManagerConfig extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2019,6 +2003,8 @@ class SetErrorPageConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getWeight()
@@ -2029,8 +2015,6 @@ class SetErrorPageConfig extends Rpc
  * @method $this withOwnerId($value)
  * @method string getTTL()
  * @method $this withTTL($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class SetFileCacheExpiredConfig extends Rpc
 {
@@ -2051,18 +2035,18 @@ class SetForceRedirectConfig extends Rpc
 }
 
 /**
- * @method string getSchemeOrigin()
- * @method $this withSchemeOrigin($value)
  * @method string getSchemeOriginPort()
  * @method $this withSchemeOriginPort($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getEnable()
  * @method $this withEnable($value)
+ * @method string getSchemeOrigin()
+ * @method $this withSchemeOrigin($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class SetForwardSchemeConfig extends Rpc
 {
@@ -2085,14 +2069,14 @@ class SetHttpErrorPageConfig extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getHeaderValue()
  * @method $this withHeaderValue($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getConfigId()
  * @method $this withConfigId($value)
  * @method string getHeaderKey()
@@ -2117,6 +2101,10 @@ class SetHttpsOptionConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
  * @method string getKeepOssArgs()
  * @method $this withKeepOssArgs($value)
  * @method string getDomainName()
@@ -2125,10 +2113,6 @@ class SetHttpsOptionConfig extends Rpc
  * @method $this withOwnerId($value)
  * @method string getHashKeyArgs()
  * @method $this withHashKeyArgs($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getEnable()
- * @method $this withEnable($value)
  */
 class SetIgnoreQueryStringConfig extends Rpc
 {
@@ -2219,6 +2203,8 @@ class SetPageCompressConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getWeight()
@@ -2229,8 +2215,6 @@ class SetPageCompressConfig extends Rpc
  * @method $this withOwnerId($value)
  * @method string getTTL()
  * @method $this withTTL($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class SetPathCacheExpiredConfig extends Rpc
 {
@@ -2253,16 +2237,16 @@ class SetRangeConfig extends Rpc
 /**
  * @method string getReferList()
  * @method $this withReferList($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getReferType()
  * @method $this withReferType($value)
  * @method string getDisableAst()
  * @method $this withDisableAst($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAllowEmpty()
  * @method $this withAllowEmpty($value)
  */
@@ -2309,18 +2293,18 @@ class SetReqAuthConfig extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getConfigId()
- * @method $this withConfigId($value)
  * @method string getValue()
  * @method $this withValue($value)
  * @method string getKey()
  * @method $this withKey($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
  */
 class SetReqHeaderConfig extends Rpc
 {
