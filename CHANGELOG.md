@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.89 - 2020-2-13
+- Fix GetDataCorrectOrderDetail API return empty database information.
+
+
 ## 1.8.88 - 2020-2-13
 - Init MQTT SDK .
 
