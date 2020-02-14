@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.105 - 2020-2-14
+- Update default endpoints.
+
+
 ## 1.8.104 - 2020-2-14
 - Add callback params to StartExecution API.
 - Support ListExecutions with Status API.
