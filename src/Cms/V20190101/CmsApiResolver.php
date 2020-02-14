@@ -888,9 +888,6 @@ class DeleteMetricRules extends Rpc
 class DeleteMetricRuleTargets extends Rpc
 {
 
-    /** @var string */
-    public $method = 'PUT';
-
     /**
      * @param array $targetIds
      *
@@ -1184,9 +1181,6 @@ class DescribeEventRuleList extends Rpc
  */
 class DescribeEventRuleTargetList extends Rpc
 {
-
-    /** @var string */
-    public $method = 'PUT';
 }
 
 /**
@@ -1350,9 +1344,6 @@ class DescribeMetricRuleList extends Rpc
  */
 class DescribeMetricRuleTargets extends Rpc
 {
-
-    /** @var string */
-    public $method = 'PUT';
 }
 
 /**
@@ -1810,9 +1801,6 @@ class DisableActiveMetricRule extends Rpc
 class DisableEventRules extends Rpc
 {
 
-    /** @var string */
-    public $method = 'PUT';
-
     /**
      * @param array $ruleNames
      *
@@ -1894,9 +1882,6 @@ class EnableActiveMetricRule extends Rpc
  */
 class EnableEventRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'PUT';
 
     /**
      * @param array $ruleNames
@@ -2541,9 +2526,6 @@ class PutEventRule extends Rpc
 class PutEventRuleTargets extends Rpc
 {
 
-    /** @var string */
-    public $method = 'PUT';
-
     /**
      * @param array $webhookParameters
      *
@@ -2677,9 +2659,6 @@ class PutEventRuleTargets extends Rpc
  */
 class PutGroupMetricRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'PUT';
 
     /**
      * @param string $value
@@ -2947,9 +2926,6 @@ class PutMonitoringConfig extends Rpc
 class PutResourceMetricRule extends Rpc
 {
 
-    /** @var string */
-    public $method = 'PUT';
-
     /**
      * @param string $value
      *
@@ -3112,9 +3088,6 @@ class PutResourceMetricRule extends Rpc
  */
 class PutResourceMetricRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'PUT';
 
     /**
      * @param array $rules

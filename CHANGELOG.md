@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.102 - 2020-2-14
+- Fix the field definition for the site monitoring option OptionJson.
+
+
 ## 1.8.101 - 2020-2-13
 - ModifyNetworkInterfaceAttribute support modify QueueNumber.
 - DescribeNetworkInterfaces support QueueNumber.
