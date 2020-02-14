@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.103 - 2020-2-14
+- Update default endpoints.
+
+
 ## 1.8.102 - 2020-2-14
 - Fix the field definition for the site monitoring option OptionJson.
 
