@@ -33,6 +33,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBClusterParameters describeDBClusterParameters(array $options = [])
  * @method DescribeDBClusterPerformance describeDBClusterPerformance(array $options = [])
  * @method DescribeDBClusters describeDBClusters(array $options = [])
+ * @method DescribeDBClusterSSL describeDBClusterSSL(array $options = [])
  * @method DescribeDBNodePerformance describeDBNodePerformance(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
@@ -50,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBClusterMaintainTime modifyDBClusterMaintainTime(array $options = [])
  * @method ModifyDBClusterMigration modifyDBClusterMigration(array $options = [])
  * @method ModifyDBClusterParameters modifyDBClusterParameters(array $options = [])
+ * @method ModifyDBClusterSSL modifyDBClusterSSL(array $options = [])
  * @method ModifyDBDescription modifyDBDescription(array $options = [])
  * @method ModifyDBEndpointAddress modifyDBEndpointAddress(array $options = [])
  * @method ModifyDBNodeClass modifyDBNodeClass(array $options = [])
@@ -729,6 +731,22 @@ class DescribeDBClusters extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBClusterSSL extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDBNodeId()
  * @method $this withDBNodeId($value)
  * @method string getStartTime()
@@ -1124,6 +1142,28 @@ class ModifyDBClusterMigration extends Rpc
  * @method $this withParameters($value)
  */
 class ModifyDBClusterParameters extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBEndpointId()
+ * @method $this withDBEndpointId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getNetType()
+ * @method $this withNetType($value)
+ * @method string getSSLEnabled()
+ * @method $this withSSLEnabled($value)
+ */
+class ModifyDBClusterSSL extends Rpc
 {
 }
 

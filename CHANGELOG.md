@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.106 - 2020-2-15
+- Add DescribeDBClusterSSL.
+- Add ModifyDBClusterSSL.
+
+
 ## 1.8.105 - 2020-2-14
 - Update default endpoints.
 
