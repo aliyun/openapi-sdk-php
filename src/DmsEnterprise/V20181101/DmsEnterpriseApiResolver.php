@@ -38,6 +38,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTables listTables(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
+ * @method ListWorkFlowNodes listWorkFlowNodes(array $options = [])
+ * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  * @method RegisterUser registerUser(array $options = [])
  * @method RevokeUserPermission revokeUserPermission(array $options = [])
@@ -614,6 +616,26 @@ class ListUsers extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListWorkFlowNodes extends Rpc
+{
+}
+
+/**
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListWorkFlowTemplates extends Rpc
+{
 }
 
 /**

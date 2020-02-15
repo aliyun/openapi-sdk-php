@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.107 - 2020-2-15
+- Supported ListWorkFlowTemplates, ListWorkFlowNodes API.
+
+
 ## 1.8.106 - 2020-2-15
 - Add DescribeDBClusterSSL.
 - Add ModifyDBClusterSSL.
