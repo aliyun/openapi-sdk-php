@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.108 - 2020-2-18
+- Supported customized params in device apis.
+
+
 ## 1.8.107 - 2020-2-15
 - Supported ListWorkFlowTemplates, ListWorkFlowNodes API.
 
