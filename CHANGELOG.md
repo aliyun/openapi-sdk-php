@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.110 - 2020-2-20
+- Add new interface ListMaskDetectionResults to support to pull mask detection results.
+
+
 ## 1.8.109 - 2020-2-20
 - Add new api ListUsers.
 - Supported userRole setting for api, CreateApp, UpdateApp, DescribeAppDetail.

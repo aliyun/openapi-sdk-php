@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListActionData listActionData(array $options = [])
  * @method ListEmap listEmap(array $options = [])
  * @method ListLocation listLocation(array $options = [])
+ * @method ListMaskDetectionResults listMaskDetectionResults(array $options = [])
  * @method ListPersonByImage listPersonByImage(array $options = [])
  * @method ListStore listStore(array $options = [])
  * @method PullActionData pullActionData(array $options = [])
@@ -36,7 +37,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = '1.0.0';
+    public $serviceCode = 'reid';
 }
 
 /**
@@ -660,6 +661,82 @@ class ListLocation extends Rpc
     {
         $this->data['StoreId'] = $value;
         $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getStoreId()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ */
+class ListMaskDetectionResults extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
