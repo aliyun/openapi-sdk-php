@@ -62,6 +62,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPods listPods(array $options = [])
  * @method ListServices listServices(array $options = [])
  * @method ListSlbAPs listSlbAPs(array $options = [])
+ * @method ListUsers listUsers(array $options = [])
  * @method ModifyService modifyService(array $options = [])
  * @method ModifySlbAP modifySlbAP(array $options = [])
  * @method QueryClusterDetail queryClusterDetail(array $options = [])
@@ -156,6 +157,7 @@ class CloseDeployOrder extends Rpc
  * @method string getBizTitle()
  * @method string getStateType()
  * @method string getServiceType()
+ * @method array getUserRoles()
  * @method string getBizCode()
  * @method string getOperatingSystem()
  * @method string getNamespace()
@@ -203,6 +205,23 @@ class CreateApp extends Rpc
         $this->options['form_params']['ServiceType'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $userRoles
+     *
+     * @return $this
+     */
+	public function withUserRoles(array $userRoles)
+	{
+	    $this->data['UserRoles'] = $userRoles;
+		foreach ($userRoles as $depth1 => $depth1Value) {
+			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.RoleName'] = $depth1Value['RoleName'];
+			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
+			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+		}
+
+		return $this;
     }
 
     /**
@@ -1663,6 +1682,19 @@ class ListSlbAPs extends Rpc
 }
 
 /**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListUsers extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getName()
  * @method $this withName($value)
  * @method array getPortMappings()
@@ -1812,6 +1844,7 @@ class UnbindNodeLabel extends Rpc
 /**
  * @method string getBizTitle()
  * @method string getServiceType()
+ * @method array getUserRoles()
  * @method string getAppId()
  * @method string getOperatingSystem()
  * @method string getDescription()
@@ -1844,6 +1877,23 @@ class UpdateApp extends Rpc
         $this->options['form_params']['ServiceType'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $userRoles
+     *
+     * @return $this
+     */
+	public function withUserRoles(array $userRoles)
+	{
+	    $this->data['UserRoles'] = $userRoles;
+		foreach ($userRoles as $depth1 => $depth1Value) {
+			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.RoleName'] = $depth1Value['RoleName'];
+			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
+			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+		}
+
+		return $this;
     }
 
     /**
