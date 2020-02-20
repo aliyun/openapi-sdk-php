@@ -37,7 +37,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'reid';
+    public $serviceCode = '1.0.0';
 }
 
 /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.112 - 2020-2-20
+- Generated 2019-09-28 for `reid`.
+
+
 ## 1.8.111 - 2020-2-20
 - Fix the problem that the three APIs, disablesitemonitors, enablesitemonitors and modifysitemonitor, return result fields are not fully define.
 
