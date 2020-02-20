@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.111 - 2020-2-20
+- Fix the problem that the three APIs, disablesitemonitors, enablesitemonitors and modifysitemonitor, return result fields are not fully define.
+
+
 ## 1.8.110 - 2020-2-20
 - Add new interface ListMaskDetectionResults to support to pull mask detection results.
 
