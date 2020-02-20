@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.113 - 2020-2-20
+- Support set accountType.
+
+
 ## 1.8.112 - 2020-2-20
 - Generated 2019-09-28 for `reid`.
 

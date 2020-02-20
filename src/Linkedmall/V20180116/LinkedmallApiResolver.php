@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateOrder createOrder(array $options = [])
  * @method CreateOrderV2 createOrderV2(array $options = [])
  * @method CreatePayUrl createPayUrl(array $options = [])
+ * @method CreateVirtualProductOrder createVirtualProductOrder(array $options = [])
  * @method DeleteBizItems deleteBizItems(array $options = [])
  * @method DeleteItemLimitRule deleteItemLimitRule(array $options = [])
  * @method EnableOrder enableOrder(array $options = [])
@@ -63,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRefundApplicationDetail queryRefundApplicationDetail(array $options = [])
  * @method QueryUpcomingMovies queryUpcomingMovies(array $options = [])
  * @method RefundPoint refundPoint(array $options = [])
+ * @method RefuseMerchantSyncTask refuseMerchantSyncTask(array $options = [])
  * @method RegistAnonymousTbAccount registAnonymousTbAccount(array $options = [])
  * @method ReleaseMovieSeat releaseMovieSeat(array $options = [])
  * @method RemoveAddress removeAddress(array $options = [])
@@ -441,6 +443,54 @@ class CreatePayUrl extends Rpc
 }
 
 /**
+ * @method string getQuantity()
+ * @method $this withQuantity($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getExtJson()
+ * @method $this withExtJson($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getOrderExpireTime()
+ * @method $this withOrderExpireTime($value)
+ * @method array getItemList()
+ * @method string getItemId()
+ * @method $this withItemId($value)
+ * @method string getTotalAmount()
+ * @method $this withTotalAmount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getOutTradeId()
+ * @method $this withOutTradeId($value)
+ * @method string getDeliveryAddress()
+ * @method $this withDeliveryAddress($value)
+ */
+class CreateVirtualProductOrder extends Rpc
+{
+
+    /**
+     * @param array $itemList
+     *
+     * @return $this
+     */
+	public function withItemList(array $itemList)
+	{
+	    $this->data['ItemList'] = $itemList;
+		foreach ($itemList as $depth1 => $depth1Value) {
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getBizId()
  * @method $this withBizId($value)
  * @method array getItemIdList()
@@ -467,10 +517,10 @@ class DeleteBizItems extends Rpc
 }
 
 /**
+ * @method string getItemId()
+ * @method $this withItemId($value)
  * @method string getLmActivityId()
  * @method $this withLmActivityId($value)
- * @method string getLtemId()
- * @method $this withLtemId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
  * @method string getLmItemId()
@@ -1276,6 +1326,20 @@ class QueryUpcomingMovies extends Rpc
  * @method $this withUseAnonymousTbAccount($value)
  */
 class RefundPoint extends Rpc
+{
+}
+
+/**
+ * @method string getSellerNick()
+ * @method $this withSellerNick($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getTimeStamp()
+ * @method $this withTimeStamp($value)
+ */
+class RefuseMerchantSyncTask extends Rpc
 {
 }
 
