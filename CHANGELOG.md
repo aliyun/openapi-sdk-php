@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.114 - 2020-2-21
+- Support TAG API.
+
+
 ## 1.8.113 - 2020-2-20
 - Support set accountType.
 
