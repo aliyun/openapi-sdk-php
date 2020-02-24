@@ -81,12 +81,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLogstashDescription updateLogstashDescription(array $options = [])
  * @method UpdateLogstashSettings updateLogstashSettings(array $options = [])
  * @method UpdatePipelineManagementConfig updatePipelineManagementConfig(array $options = [])
+ * @method UpdatePipelines updatePipelines(array $options = [])
  * @method UpdatePrivateNetworkWhiteIps updatePrivateNetworkWhiteIps(array $options = [])
  * @method UpdatePublicNetwork updatePublicNetwork(array $options = [])
  * @method UpdatePublicWhiteIps updatePublicWhiteIps(array $options = [])
  * @method UpdateSnapshotSetting updateSnapshotSetting(array $options = [])
  * @method UpdateSynonymsDicts updateSynonymsDicts(array $options = [])
  * @method UpdateWhiteIps updateWhiteIps(array $options = [])
+ * @method UpgradeEngineVersion upgradeEngineVersion(array $options = [])
  * @method ValidateShrinkNodes validateShrinkNodes(array $options = [])
  * @method ValidateTransferableNodes validateTransferableNodes(array $options = [])
  */
@@ -858,13 +860,18 @@ class ListConnectedClusters extends Roa
 }
 
 /**
+ * @method string getDescription()
+ * @method string getInstanceCategory()
+ * @method string getOwnerId()
+ * @method string getTags()
  * @method string getResourceGroupId()
  * @method string getInstanceId()
  * @method string getSize()
  * @method string getEsVersion()
- * @method string getDescription()
+ * @method string getVpcId()
+ * @method string getZoneId()
  * @method string getPage()
- * @method string getOwnerId()
+ * @method string getPaymentType()
  */
 class ListInstance extends Roa
 {
@@ -873,6 +880,58 @@ class ListInstance extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['query']['description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceCategory($value)
+    {
+        $this->data['InstanceCategory'] = $value;
+        $this->options['query']['instanceCategory'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOwnerId($value)
+    {
+        $this->data['OwnerId'] = $value;
+        $this->options['query']['ownerId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['query']['tags'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -931,10 +990,23 @@ class ListInstance extends Roa
      *
      * @return $this
      */
-    public function withDescription($value)
+    public function withVpcId($value)
     {
-        $this->data['Description'] = $value;
-        $this->options['query']['description'] = $value;
+        $this->data['VpcId'] = $value;
+        $this->options['query']['vpcId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withZoneId($value)
+    {
+        $this->data['ZoneId'] = $value;
+        $this->options['query']['zoneId'] = $value;
 
         return $this;
     }
@@ -957,10 +1029,10 @@ class ListInstance extends Roa
      *
      * @return $this
      */
-    public function withOwnerId($value)
+    public function withPaymentType($value)
     {
-        $this->data['OwnerId'] = $value;
-        $this->options['query']['ownerId'] = $value;
+        $this->data['PaymentType'] = $value;
+        $this->options['query']['paymentType'] = $value;
 
         return $this;
     }
@@ -1566,6 +1638,9 @@ class MoveResourceGroup extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/resourcegroup';
 
+    /** @var string */
+    public $method = 'PATCH';
+
     /**
      * @param string $value
      *
@@ -1842,6 +1917,9 @@ class TagResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/tags';
+
+    /** @var string */
+    public $method = 'PATCH';
 }
 
 /**
@@ -2055,6 +2133,9 @@ class UpdateAdminPassword extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/admin-pwd';
 
+    /** @var string */
+    public $method = 'PATCH';
+
     /**
      * @param string $value
      *
@@ -2078,9 +2159,6 @@ class UpdateAdvancedSetting extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/update-advanced-setting';
-
-    /** @var string */
-    public $method = 'PUT';
 
     /**
      * @param string $value
@@ -2133,6 +2211,9 @@ class UpdateBlackIps extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/black-ips';
 
+    /** @var string */
+    public $method = 'PATCH';
+
     /**
      * @param string $value
      *
@@ -2156,6 +2237,9 @@ class UpdateDescription extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/description';
+
+    /** @var string */
+    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2286,6 +2370,9 @@ class UpdateInstanceSettings extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/instance-settings';
 
+    /** @var string */
+    public $method = 'PATCH';
+
     /**
      * @param string $value
      *
@@ -2310,6 +2397,9 @@ class UpdateKibanaSettings extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/update-kibana-settings';
 
+    /** @var string */
+    public $method = 'PATCH';
+
     /**
      * @param string $value
      *
@@ -2333,6 +2423,9 @@ class UpdateKibanaWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/kibana-white-ips';
+
+    /** @var string */
+    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2359,7 +2452,7 @@ class UpdateLogstash extends Roa
     public $pathPattern = '/openapi/logstashes/[InstanceId]';
 
     /** @var string */
-    public $method = 'PUT';
+    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2409,6 +2502,9 @@ class UpdateLogstashDescription extends Roa
     /** @var string */
     public $pathPattern = '/openapi/logstashes/[InstanceId]/description';
 
+    /** @var string */
+    public $method = 'PATCH';
+
     /**
      * @param string $value
      *
@@ -2432,6 +2528,9 @@ class UpdateLogstashSettings extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/logstashes/[InstanceId]/instance-settings';
+
+    /** @var string */
+    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2475,6 +2574,47 @@ class UpdatePipelineManagementConfig extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getTrigger()
+ */
+class UpdatePipelines extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipelines';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrigger($value)
+    {
+        $this->data['Trigger'] = $value;
+        $this->options['query']['trigger'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
  */
 class UpdatePrivateNetworkWhiteIps extends Roa
 {
@@ -2505,6 +2645,9 @@ class UpdatePublicNetwork extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/public-network';
 
+    /** @var string */
+    public $method = 'PATCH';
+
     /**
      * @param string $value
      *
@@ -2528,6 +2671,9 @@ class UpdatePublicWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/public-white-ips';
+
+    /** @var string */
+    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2589,6 +2735,47 @@ class UpdateWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/white-ips';
+
+    /** @var string */
+    public $method = 'PATCH';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDryRun()
+ * @method string getClientToken()
+ */
+class UpgradeEngineVersion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/upgrade-version';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['query']['dryRun'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

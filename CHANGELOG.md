@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.117 - 2020-2-24
+- Add tag of list instance parameters.
+
+
 ## 1.8.116 - 2020-2-24
 - Generated 2018-06-12 for `VoiceNavigator`.
 
