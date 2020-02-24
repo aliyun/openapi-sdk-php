@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.121 - 2020-2-24
+- ImmediateDelete.
+- DescribeInstance CreateTimeUTC ExpireTimeUTC.
+- DescribeInstances CreateTimeUTC ExpireTimeUTC.
+- DescribeIpWhitelist Groups GroupName.
+- CreateCluster.
+
+
 ## 1.8.120 - 2020-2-24
 - Release Ft SDK.
 

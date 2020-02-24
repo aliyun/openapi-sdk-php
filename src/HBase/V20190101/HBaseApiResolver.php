@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddUserHdfsInfo addUserHdfsInfo(array $options = [])
  * @method ConvertInstance convertInstance(array $options = [])
+ * @method CreateCluster createCluster(array $options = [])
  * @method CreateHbaseHaSlb createHbaseHaSlb(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method DeleteHbaseHaSlb deleteHbaseHaSlb(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTags listTags(array $options = [])
+ * @method ModifyClusterDeletionProtection modifyClusterDeletionProtection(array $options = [])
  * @method ModifyInstanceMaintainTime modifyInstanceMaintainTime(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
  * @method ModifyIpWhitelist modifyIpWhitelist(array $options = [])
@@ -52,9 +54,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'hbase';
 }
 
 /**
@@ -76,6 +75,48 @@ class AddUserHdfsInfo extends Rpc
  * @method $this withPricingCycle($value)
  */
 class ConvertInstance extends Rpc
+{
+}
+
+/**
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getDiskSize()
+ * @method $this withDiskSize($value)
+ * @method string getMasterInstanceType()
+ * @method $this withMasterInstanceType($value)
+ * @method string getDiskType()
+ * @method $this withDiskType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getSecurityIPList()
+ * @method $this withSecurityIPList($value)
+ * @method string getColdStorageSize()
+ * @method $this withColdStorageSize($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getCoreInstanceType()
+ * @method $this withCoreInstanceType($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getNodeCount()
+ * @method $this withNodeCount($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class CreateCluster extends Rpc
 {
 }
 
@@ -318,6 +359,16 @@ class ListTags extends Rpc
 }
 
 /**
+ * @method string getProtection()
+ * @method $this withProtection($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ModifyClusterDeletionProtection extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getMaintainEndTime()
@@ -388,6 +439,8 @@ class QueryHBaseHaDB extends Rpc
 }
 
 /**
+ * @method string getHasSingleNode()
+ * @method $this withHasSingleNode($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getRelateDbType()
