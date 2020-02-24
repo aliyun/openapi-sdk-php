@@ -166,6 +166,7 @@ namespace AlibabaCloud;
  * @method static UniMkt\UniMkt uniMkt()
  * @method static Visionai\Visionai visionai()
  * @method static Vod\Vod vod()
+ * @method static VoiceNavigator\VoiceNavigator voiceNavigator()
  * @method static Vpc\Vpc vpc()
  * @method static Vs\Vs vs()
  * @method static WafOpenapi\WafOpenapi wafOpenapi()

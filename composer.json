@@ -201,6 +201,7 @@
         "alibabacloud/unimkt": "self.version",
         "alibabacloud/visionai": "self.version",
         "alibabacloud/vod": "self.version",
+        "alibabacloud/voicenavigator": "self.version",
         "alibabacloud/vpc": "self.version",
         "alibabacloud/vs": "self.version",
         "alibabacloud/wafopenapi": "self.version",

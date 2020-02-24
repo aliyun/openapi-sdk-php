@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.116 - 2020-2-24
+- Generated 2018-06-12 for `VoiceNavigator`.
+
+
 ## 1.8.115 - 2020-2-24
 - Generated 2019-12-26 for `OutboundBot`.
 
