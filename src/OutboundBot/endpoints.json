@@ -1,0 +1,1 @@
+{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-hangzhou":"outboundbot.cn-hangzhou.aliyuncs.com","cn-shanghai":"outboundbot.cn-shanghai.aliyuncs.com","cn-fujian":"outboundbot.cn-fujian.aliyuncs.com"},"regions":["cn-hangzhou","cn-shanghai","cn-fujian"],"endpoint_health":{"cn-hangzhou":"DomainNotFound"}}

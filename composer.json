@@ -163,6 +163,7 @@
         "alibabacloud/openanalytics": "self.version",
         "alibabacloud/ossadmin": "self.version",
         "alibabacloud/ots": "self.version",
+        "alibabacloud/outboundbot": "self.version",
         "alibabacloud/pts": "self.version",
         "alibabacloud/petadata": "self.version",
         "alibabacloud/polardb": "self.version",

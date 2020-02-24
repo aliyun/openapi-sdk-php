@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.115 - 2020-2-24
+- Generated 2019-12-26 for `OutboundBot`.
+
+
 ## 1.8.114 - 2020-2-21
 - Support TAG API.
 
