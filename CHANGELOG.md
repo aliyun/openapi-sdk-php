@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.118 - 2020-2-24
+- Add tag of list instance parameters.
+
+
 ## 1.8.117 - 2020-2-24
 - Add tag of list instance parameters.
 
