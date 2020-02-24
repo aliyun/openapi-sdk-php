@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.120 - 2020-2-24
+- Release Ft SDK.
+
+
 ## 1.8.119 - 2020-2-24
 - Release Ft SDK.
 
