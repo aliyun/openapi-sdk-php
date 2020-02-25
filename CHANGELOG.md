@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.122 - 2020-2-25
+- Update backupsetDownloadset fun.
+
+
 ## 1.8.121 - 2020-2-24
 - ImmediateDelete.
 - DescribeInstance CreateTimeUTC ExpireTimeUTC.
