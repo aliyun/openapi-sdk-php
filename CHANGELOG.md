@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.124 - 2020-2-25
+- Fix ListWorkFlowTemplates, ListWorkFlowNodes API Go SDK build error.
+
+
 ## 1.8.123 - 2020-2-25
 - JAVA fifth sdk version.
 - PYTHON second sdk version.
