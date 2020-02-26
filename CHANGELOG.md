@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.127 - 2020-2-26
+- Upgrade sdk.
+
+
 ## 1.8.126 - 2020-2-26
 - Generated 2015-01-01 for `R-kvstore`.
 - Add VpcCloudInstanceId for DescribeInstanceAttribute.
