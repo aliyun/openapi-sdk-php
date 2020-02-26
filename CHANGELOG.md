@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.126 - 2020-2-26
+- Generated 2015-01-01 for `R-kvstore`.
+- Add VpcCloudInstanceId for DescribeInstanceAttribute.
+
+
 ## 1.8.125 - 2020-2-26
 - Add InitFaceVerify and DescribeFaceVerify API.
 

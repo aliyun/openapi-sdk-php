@@ -36,7 +36,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLogicInstanceTopology describeLogicInstanceTopology(array $options = [])
  * @method DescribeMonitorItems describeMonitorItems(array $options = [])
  * @method DescribeParameters describeParameters(array $options = [])
- * @method DescribeRedisLogConfig describeRedisLogConfig(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRunningLogRecords describeRunningLogRecords(array $options = [])
  * @method DescribeSecurityIps describeSecurityIps(array $options = [])
@@ -93,9 +92,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'R-kvstore';
 }
 
 /**
@@ -868,6 +864,8 @@ class DescribeInstanceSSL extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
@@ -934,24 +932,6 @@ class DescribeMonitorItems extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeParameters extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class DescribeRedisLogConfig extends Rpc
 {
 }
 
