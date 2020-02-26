@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.128 - 2020-2-26
+- Fix tag upper case parameters.
+- Fix patch.
+
+
 ## 1.8.127 - 2020-2-26
 - Upgrade sdk.
 

@@ -1638,9 +1638,6 @@ class MoveResourceGroup extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/resourcegroup';
 
-    /** @var string */
-    public $method = 'PATCH';
-
     /**
      * @param string $value
      *
@@ -1917,9 +1914,6 @@ class TagResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/tags';
-
-    /** @var string */
-    public $method = 'PATCH';
 }
 
 /**
@@ -2133,9 +2127,6 @@ class UpdateAdminPassword extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/admin-pwd';
 
-    /** @var string */
-    public $method = 'PATCH';
-
     /**
      * @param string $value
      *
@@ -2211,9 +2202,6 @@ class UpdateBlackIps extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/black-ips';
 
-    /** @var string */
-    public $method = 'PATCH';
-
     /**
      * @param string $value
      *
@@ -2237,9 +2225,6 @@ class UpdateDescription extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/description';
-
-    /** @var string */
-    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2370,9 +2355,6 @@ class UpdateInstanceSettings extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/instance-settings';
 
-    /** @var string */
-    public $method = 'PATCH';
-
     /**
      * @param string $value
      *
@@ -2397,9 +2379,6 @@ class UpdateKibanaSettings extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/update-kibana-settings';
 
-    /** @var string */
-    public $method = 'PATCH';
-
     /**
      * @param string $value
      *
@@ -2423,9 +2402,6 @@ class UpdateKibanaWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/kibana-white-ips';
-
-    /** @var string */
-    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2452,7 +2428,7 @@ class UpdateLogstash extends Roa
     public $pathPattern = '/openapi/logstashes/[InstanceId]';
 
     /** @var string */
-    public $method = 'PATCH';
+    public $method = 'GET';
 
     /**
      * @param string $value
@@ -2502,9 +2478,6 @@ class UpdateLogstashDescription extends Roa
     /** @var string */
     public $pathPattern = '/openapi/logstashes/[InstanceId]/description';
 
-    /** @var string */
-    public $method = 'PATCH';
-
     /**
      * @param string $value
      *
@@ -2528,9 +2501,6 @@ class UpdateLogstashSettings extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/logstashes/[InstanceId]/instance-settings';
-
-    /** @var string */
-    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2645,9 +2615,6 @@ class UpdatePublicNetwork extends Roa
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/public-network';
 
-    /** @var string */
-    public $method = 'PATCH';
-
     /**
      * @param string $value
      *
@@ -2671,9 +2638,6 @@ class UpdatePublicWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/public-white-ips';
-
-    /** @var string */
-    public $method = 'PATCH';
 
     /**
      * @param string $value
@@ -2735,9 +2699,6 @@ class UpdateWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/white-ips';
-
-    /** @var string */
-    public $method = 'PATCH';
 
     /**
      * @param string $value
