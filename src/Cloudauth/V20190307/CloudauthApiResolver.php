@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateVerifySetting createVerifySetting(array $options = [])
  * @method DescribeDeviceInfo describeDeviceInfo(array $options = [])
  * @method DescribeFaceUsage describeFaceUsage(array $options = [])
+ * @method DescribeFaceVerify describeFaceVerify(array $options = [])
  * @method DescribeOssUploadToken describeOssUploadToken(array $options = [])
  * @method DescribeRPSDK describeRPSDK(array $options = [])
  * @method DescribeUploadInfo describeUploadInfo(array $options = [])
@@ -23,8 +24,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVerifyToken describeVerifyToken(array $options = [])
  * @method DescribeVerifyUsage describeVerifyUsage(array $options = [])
  * @method DetectFaceAttributes detectFaceAttributes(array $options = [])
+ * @method InitDevice initDevice(array $options = [])
+ * @method InitFaceVerify initFaceVerify(array $options = [])
  * @method ModifyDeviceInfo modifyDeviceInfo(array $options = [])
  * @method UpdateVerifySetting updateVerifySetting(array $options = [])
+ * @method VerifyDevice verifyDevice(array $options = [])
  * @method VerifyMaterial verifyMaterial(array $options = [])
  */
 class CloudauthApiResolver extends ApiResolver
@@ -41,9 +45,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'cloudauth';
 }
 
 /**
@@ -216,6 +217,16 @@ class DescribeDeviceInfo extends Rpc
  * @method $this withSourceIp($value)
  */
 class DescribeFaceUsage extends Rpc
+{
+}
+
+/**
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
+ */
+class DescribeFaceVerify extends Rpc
 {
 }
 
@@ -459,6 +470,56 @@ class DetectFaceAttributes extends Rpc
 }
 
 /**
+ * @method string getChannel()
+ * @method $this withChannel($value)
+ * @method string getBizData()
+ * @method $this withBizData($value)
+ * @method string getMerchant()
+ * @method $this withMerchant($value)
+ * @method string getAppVersion()
+ * @method $this withAppVersion($value)
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
+ * @method string getOuterOrderNo()
+ * @method $this withOuterOrderNo($value)
+ * @method string getProduceNode()
+ * @method $this withProduceNode($value)
+ * @method string getProductName()
+ * @method $this withProductName($value)
+ * @method string getCertifyPrincipal()
+ * @method $this withCertifyPrincipal($value)
+ * @method string getMetaInfo()
+ * @method $this withMetaInfo($value)
+ */
+class InitDevice extends Rpc
+{
+}
+
+/**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getFaceContrastPicture()
+ * @method $this withFaceContrastPicture($value)
+ * @method string getCertName()
+ * @method $this withCertName($value)
+ * @method string getCertNo()
+ * @method $this withCertNo($value)
+ * @method string getOuterOrderNo()
+ * @method $this withOuterOrderNo($value)
+ * @method string getCertType()
+ * @method $this withCertType($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getReturnUrl()
+ * @method $this withReturnUrl($value)
+ * @method string getMetaInfo()
+ * @method $this withMetaInfo($value)
+ */
+class InitFaceVerify extends Rpc
+{
+}
+
+/**
  * @method string getUserDeviceId()
  * @method $this withUserDeviceId($value)
  * @method string getDuration()
@@ -495,6 +556,18 @@ class ModifyDeviceInfo extends Rpc
  * @method $this withPrivacyStep($value)
  */
 class UpdateVerifySetting extends Rpc
+{
+}
+
+/**
+ * @method string getCertifyData()
+ * @method $this withCertifyData($value)
+ * @method string getAppVersion()
+ * @method $this withAppVersion($value)
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
+ */
+class VerifyDevice extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.125 - 2020-2-26
+- Add InitFaceVerify and DescribeFaceVerify API.
+
+
 ## 1.8.124 - 2020-2-25
 - Fix ListWorkFlowTemplates, ListWorkFlowNodes API Go SDK build error.
 
