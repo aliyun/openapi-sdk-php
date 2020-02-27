@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.134 - 2020-2-27
+- Sixth sdk version.
+
+
 ## 1.8.133 - 2020-2-27
 - Sixth sdk version.
 
