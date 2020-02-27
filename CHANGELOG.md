@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.130 - 2020-2-27
+- Sixth version.
+
+
 ## 1.8.129 - 2020-2-27
 - Release Ft SDK.
 

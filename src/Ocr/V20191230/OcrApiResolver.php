@@ -14,10 +14,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeDrivingLicense recognizeDrivingLicense(array $options = [])
  * @method RecognizeIdentityCard recognizeIdentityCard(array $options = [])
  * @method RecognizeLicensePlate recognizeLicensePlate(array $options = [])
+ * @method RecognizeQrCode recognizeQrCode(array $options = [])
  * @method RecognizeStamp recognizeStamp(array $options = [])
  * @method RecognizeTable recognizeTable(array $options = [])
  * @method RecognizeTaxiInvoice recognizeTaxiInvoice(array $options = [])
  * @method RecognizeTrainTicket recognizeTrainTicket(array $options = [])
+ * @method RecognizeVATInvoice recognizeVATInvoice(array $options = [])
  * @method RecognizeVINCode recognizeVINCode(array $options = [])
  */
 class OcrApiResolver extends ApiResolver
@@ -34,6 +36,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'ocr';
 }
 
 /**
@@ -413,6 +418,28 @@ class RecognizeLicensePlate extends Rpc
 }
 
 /**
+ * @method array getTasks()
+ */
+class RecognizeQrCode extends Rpc
+{
+
+    /**
+     * @param array $tasks
+     *
+     * @return $this
+     */
+	public function withTasks(array $tasks)
+	{
+	    $this->data['Tasks'] = $tasks;
+		foreach ($tasks as $depth1 => $depth1Value) {
+			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getImageType()
  * @method string getImageURL()
  */
@@ -613,6 +640,40 @@ class RecognizeTrainTicket extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFileType()
+ * @method string getFileURL()
+ */
+class RecognizeVATInvoice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileType($value)
+    {
+        $this->data['FileType'] = $value;
+        $this->options['form_params']['FileType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileURL($value)
+    {
+        $this->data['FileURL'] = $value;
+        $this->options['form_params']['FileURL'] = $value;
 
         return $this;
     }
