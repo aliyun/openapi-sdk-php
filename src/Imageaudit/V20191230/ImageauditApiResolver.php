@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ScanImage scanImage(array $options = [])
+ * @method ScanText scanText(array $options = [])
  */
 class ImageauditApiResolver extends ApiResolver
 {
@@ -62,6 +63,44 @@ class ScanImage extends Rpc
 			$this->options['form_params']['Task.' . ($depth1 + 1) . '.MaxFrames'] = $depth1Value['MaxFrames'];
 			$this->options['form_params']['Task.' . ($depth1 + 1) . '.Interval'] = $depth1Value['Interval'];
 			$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageTimeMillisecond'] = $depth1Value['ImageTimeMillisecond'];
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getLabels()
+ * @method array getTasks()
+ */
+class ScanText extends Rpc
+{
+
+    /**
+     * @param array $labels
+     *
+     * @return $this
+     */
+	public function withLabels(array $labels)
+	{
+	    $this->data['Labels'] = $labels;
+		foreach ($labels as $depth1 => $depth1Value) {
+			$this->options['form_params']['Labels.' . ($depth1 + 1) . '.Label'] = $depth1Value['Label'];
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tasks
+     *
+     * @return $this
+     */
+	public function withTasks(array $tasks)
+	{
+	    $this->data['Tasks'] = $tasks;
+		foreach ($tasks as $depth1 => $depth1Value) {
+			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.Content'] = $depth1Value['Content'];
 		}
 
 		return $this;
