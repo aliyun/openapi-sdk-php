@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
+ * @method RecognizeLogo recognizeLogo(array $options = [])
  * @method RecognizeScene recognizeScene(array $options = [])
  * @method TaggingImage taggingImage(array $options = [])
  */
@@ -101,6 +102,28 @@ class RecognizeImageStyle extends Rpc
         $this->options['form_params']['Url'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method array getTasks()
+ */
+class RecognizeLogo extends Rpc
+{
+
+    /**
+     * @param array $tasks
+     *
+     * @return $this
+     */
+	public function withTasks(array $tasks)
+	{
+	    $this->data['Tasks'] = $tasks;
+		foreach ($tasks as $depth1 => $depth1Value) {
+			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+		}
+
+		return $this;
     }
 }
 
