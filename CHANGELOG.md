@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.129 - 2020-2-27
+- Release Ft SDK.
+
+
 ## 1.8.128 - 2020-2-26
 - Fix tag upper case parameters.
 - Fix patch.
