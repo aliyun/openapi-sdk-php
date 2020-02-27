@@ -5,8 +5,12 @@ namespace AlibabaCloud\Objectdet\V20191230;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ClassifyVehicleInsurance classifyVehicleInsurance(array $options = [])
  * @method DetectMainBody detectMainBody(array $options = [])
  * @method DetectVehicle detectVehicle(array $options = [])
+ * @method RecognizeVehicleDamage recognizeVehicleDamage(array $options = [])
+ * @method RecognizeVehicleDashboard recognizeVehicleDashboard(array $options = [])
+ * @method RecognizeVehicleParts recognizeVehicleParts(array $options = [])
  */
 class ObjectdetApiResolver extends ApiResolver
 {
@@ -25,6 +29,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'objectdet';
+}
+
+/**
+ * @method string getImageURL()
+ */
+class ClassifyVehicleInsurance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -54,6 +78,66 @@ class DetectVehicle extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizeVehicleDamage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizeVehicleDashboard extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizeVehicleParts extends Rpc
+{
 
     /**
      * @param string $value
