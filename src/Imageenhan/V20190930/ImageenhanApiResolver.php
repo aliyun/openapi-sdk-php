@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ChangeImageSize changeImageSize(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
+ * @method IntelligentComposition intelligentComposition(array $options = [])
  * @method MakeSuperResolutionImage makeSuperResolutionImage(array $options = [])
  * @method RecolorImage recolorImage(array $options = [])
  */
@@ -106,6 +107,40 @@ class ExtendImageStyle extends Rpc
     {
         $this->data['StyleUrl'] = $value;
         $this->options['form_params']['StyleUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNumBoxes()
+ * @method string getImageURL()
+ */
+class IntelligentComposition extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNumBoxes($value)
+    {
+        $this->data['NumBoxes'] = $value;
+        $this->options['form_params']['NumBoxes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
