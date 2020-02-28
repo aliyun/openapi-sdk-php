@@ -5,6 +5,7 @@ namespace AlibabaCloud\Dyplsapi\V20170525;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddAxnTrackNo addAxnTrackNo(array $options = [])
  * @method BindAxb bindAxb(array $options = [])
  * @method BindAxg bindAxg(array $options = [])
  * @method BindAxn bindAxn(array $options = [])
@@ -14,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OperateAxgGroup operateAxgGroup(array $options = [])
  * @method OperateBlackNo operateBlackNo(array $options = [])
  * @method QueryCallStatus queryCallStatus(array $options = [])
+ * @method QueryPhoneNoAByTrackNo queryPhoneNoAByTrackNo(array $options = [])
  * @method QueryRecordFileDownloadUrl queryRecordFileDownloadUrl(array $options = [])
  * @method QuerySecretNoRemain querySecretNoRemain(array $options = [])
  * @method QuerySubscriptionDetail querySubscriptionDetail(array $options = [])
@@ -39,6 +41,38 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'dypls';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSubsId()
+ * @method $this withSubsId($value)
+ * @method string getPhoneNoX()
+ * @method $this withPhoneNoX($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTrackNo()
+ * @method string getPoolKey()
+ * @method $this withPoolKey($value)
+ */
+class AddAxnTrackNo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrackNo($value)
+    {
+        $this->data['TrackNo'] = $value;
+        $this->options['query']['trackNo'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -70,6 +104,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withIsRecordingEnabled($value)
  * @method string getOutId()
  * @method $this withOutId($value)
+ * @method string getCallRestrict()
+ * @method $this withCallRestrict($value)
  */
 class BindAxb extends Rpc
 {
@@ -281,6 +317,34 @@ class OperateBlackNo extends Rpc
  */
 class QueryCallStatus extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTrackNo()
+ * @method string getPhoneNoX()
+ * @method $this withPhoneNoX($value)
+ */
+class QueryPhoneNoAByTrackNo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrackNo($value)
+    {
+        $this->data['TrackNo'] = $value;
+        $this->options['query']['trackNo'] = $value;
+
+        return $this;
+    }
 }
 
 /**

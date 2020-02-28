@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.139 - 2020-2-28
+- Add QueryPhoneNoAByTrackNo  and AddAxnTrackNo.
+
+
 ## 1.8.138 - 2020-2-28
 - Supported for eip operation idempotence.
 
