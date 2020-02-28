@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.137 - 2020-2-28
+- Supported for eip operation idempotence.
+
+
 ## 1.8.136 - 2020-2-27
 - Add translate api.
 
