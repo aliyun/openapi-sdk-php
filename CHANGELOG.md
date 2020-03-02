@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.140 - 2020-3-3
+- Supported secretmanager for kms.
+
+
 ## 1.8.139 - 2020-2-28
 - Add QueryPhoneNoAByTrackNo  and AddAxnTrackNo.
 

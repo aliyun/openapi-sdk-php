@@ -13,12 +13,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateAlias createAlias(array $options = [])
  * @method CreateKey createKey(array $options = [])
  * @method CreateKeyVersion createKeyVersion(array $options = [])
+ * @method CreateSecret createSecret(array $options = [])
  * @method Decrypt decrypt(array $options = [])
  * @method DeleteAlias deleteAlias(array $options = [])
  * @method DeleteKeyMaterial deleteKeyMaterial(array $options = [])
+ * @method DeleteSecret deleteSecret(array $options = [])
  * @method DescribeKey describeKey(array $options = [])
  * @method DescribeKeyVersion describeKeyVersion(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeSecret describeSecret(array $options = [])
  * @method DescribeService describeService(array $options = [])
  * @method DisableKey disableKey(array $options = [])
  * @method EnableKey enableKey(array $options = [])
@@ -27,18 +30,26 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateDataKeyWithoutPlaintext generateDataKeyWithoutPlaintext(array $options = [])
  * @method GetParametersForImport getParametersForImport(array $options = [])
  * @method GetPublicKey getPublicKey(array $options = [])
+ * @method GetRandomPassword getRandomPassword(array $options = [])
+ * @method GetSecretValue getSecretValue(array $options = [])
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
  * @method ListAliases listAliases(array $options = [])
  * @method ListAliasesByKeyId listAliasesByKeyId(array $options = [])
  * @method ListKeys listKeys(array $options = [])
  * @method ListKeyVersions listKeyVersions(array $options = [])
  * @method ListResourceTags listResourceTags(array $options = [])
+ * @method ListSecrets listSecrets(array $options = [])
+ * @method ListSecretVersionIds listSecretVersionIds(array $options = [])
+ * @method PutSecretValue putSecretValue(array $options = [])
+ * @method RestoreSecret restoreSecret(array $options = [])
  * @method ScheduleKeyDeletion scheduleKeyDeletion(array $options = [])
  * @method TagResource tagResource(array $options = [])
  * @method UntagResource untagResource(array $options = [])
  * @method UpdateAlias updateAlias(array $options = [])
  * @method UpdateKeyDescription updateKeyDescription(array $options = [])
  * @method UpdateRotationPolicy updateRotationPolicy(array $options = [])
+ * @method UpdateSecret updateSecret(array $options = [])
+ * @method UpdateSecretVersionStage updateSecretVersionStage(array $options = [])
  */
 class KmsApiResolver extends ApiResolver
 {
@@ -167,6 +178,26 @@ class CreateKeyVersion extends Rpc
 }
 
 /**
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ * @method string getSecretData()
+ * @method $this withSecretData($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ * @method string getEncryptionKeyId()
+ * @method $this withEncryptionKeyId($value)
+ * @method string getSecretDataType()
+ * @method $this withSecretDataType($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ */
+class CreateSecret extends Rpc
+{
+}
+
+/**
  * @method string getEncryptionContext()
  * @method $this withEncryptionContext($value)
  * @method string getCiphertextBlob()
@@ -193,6 +224,18 @@ class DeleteKeyMaterial extends Rpc
 }
 
 /**
+ * @method string getForceDeleteWithoutRecovery()
+ * @method $this withForceDeleteWithoutRecovery($value)
+ * @method string getRecoveryWindowInDays()
+ * @method $this withRecoveryWindowInDays($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ */
+class DeleteSecret extends Rpc
+{
+}
+
+/**
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
@@ -211,6 +254,16 @@ class DescribeKeyVersion extends Rpc
 }
 
 class DescribeRegions extends Rpc
+{
+}
+
+/**
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ * @method string getFetchTags()
+ * @method $this withFetchTags($value)
+ */
+class DescribeSecret extends Rpc
 {
 }
 
@@ -297,6 +350,38 @@ class GetPublicKey extends Rpc
 }
 
 /**
+ * @method string getExcludeLowercase()
+ * @method $this withExcludeLowercase($value)
+ * @method string getExcludeCharacters()
+ * @method $this withExcludeCharacters($value)
+ * @method string getPasswordLength()
+ * @method $this withPasswordLength($value)
+ * @method string getExcludePunctuation()
+ * @method $this withExcludePunctuation($value)
+ * @method string getExcludeUppercase()
+ * @method $this withExcludeUppercase($value)
+ * @method string getRequireEachIncludedType()
+ * @method $this withRequireEachIncludedType($value)
+ * @method string getExcludeNumbers()
+ * @method $this withExcludeNumbers($value)
+ */
+class GetRandomPassword extends Rpc
+{
+}
+
+/**
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ * @method string getVersionStage()
+ * @method $this withVersionStage($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ */
+class GetSecretValue extends Rpc
+{
+}
+
+/**
  * @method string getImportToken()
  * @method $this withImportToken($value)
  * @method string getEncryptedKeyMaterial()
@@ -363,6 +448,56 @@ class ListResourceTags extends Rpc
 }
 
 /**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getFetchTags()
+ * @method $this withFetchTags($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListSecrets extends Rpc
+{
+}
+
+/**
+ * @method string getIncludeDeprecated()
+ * @method $this withIncludeDeprecated($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListSecretVersionIds extends Rpc
+{
+}
+
+/**
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ * @method string getVersionStages()
+ * @method $this withVersionStages($value)
+ * @method string getSecretData()
+ * @method $this withSecretData($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ * @method string getSecretDataType()
+ * @method $this withSecretDataType($value)
+ */
+class PutSecretValue extends Rpc
+{
+}
+
+/**
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ */
+class RestoreSecret extends Rpc
+{
+}
+
+/**
  * @method string getPendingWindowInDays()
  * @method $this withPendingWindowInDays($value)
  * @method string getKeyId()
@@ -375,6 +510,8 @@ class ScheduleKeyDeletion extends Rpc
 /**
  * @method string getKeyId()
  * @method $this withKeyId($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
  * @method string getTags()
  * @method $this withTags($value)
  */
@@ -387,6 +524,8 @@ class TagResource extends Rpc
  * @method $this withTagKeys($value)
  * @method string getKeyId()
  * @method $this withKeyId($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
  */
 class UntagResource extends Rpc
 {
@@ -421,5 +560,29 @@ class UpdateKeyDescription extends Rpc
  * @method $this withEnableAutomaticRotation($value)
  */
 class UpdateRotationPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ */
+class UpdateSecret extends Rpc
+{
+}
+
+/**
+ * @method string getRemoveFromVersion()
+ * @method $this withRemoveFromVersion($value)
+ * @method string getMoveToVersion()
+ * @method $this withMoveToVersion($value)
+ * @method string getVersionStage()
+ * @method $this withVersionStage($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ */
+class UpdateSecretVersionStage extends Rpc
 {
 }
