@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.143 - 2020-3-3
+- Supported secretmanager stable version for kms.
+
+
 ## 1.8.142 - 2020-3-3
 - Supported secretmanager stable version for kms.
 
