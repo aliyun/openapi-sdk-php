@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.142 - 2020-3-3
+- Supported secretmanager stable version for kms.
+
+
 ## 1.8.141 - 2020-3-3
 - GeoIP Databases SDK initial release.
 
