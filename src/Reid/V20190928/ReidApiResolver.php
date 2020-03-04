@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeBaseStatistics describeBaseStatistics(array $options = [])
+ * @method DescribeCameraStatistics describeCameraStatistics(array $options = [])
  * @method DescribeCursor describeCursor(array $options = [])
  * @method DescribeCustomerFlowByLocation describeCustomerFlowByLocation(array $options = [])
  * @method DescribeDevices describeDevices(array $options = [])
@@ -37,7 +38,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = '1.0.0';
+    public $serviceCode = '1.1.2';
 }
 
 /**
@@ -111,6 +112,54 @@ class DescribeBaseStatistics extends Rpc
     {
         $this->data['LocationId'] = $value;
         $this->options['form_params']['LocationId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTimestamp()
+ * @method string getStoreId()
+ * @method string getEndTimestamp()
+ */
+class DescribeCameraStatistics extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTimestamp($value)
+    {
+        $this->data['StartTimestamp'] = $value;
+        $this->options['form_params']['StartTimestamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTimestamp($value)
+    {
+        $this->data['EndTimestamp'] = $value;
+        $this->options['form_params']['EndTimestamp'] = $value;
 
         return $this;
     }
