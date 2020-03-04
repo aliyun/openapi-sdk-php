@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.144 - 2020-3-4
+- Public beta version.
+- Add Api GetMeetingMebers.
+
+
 ## 1.8.143 - 2020-3-3
 - Supported secretmanager stable version for kms.
 

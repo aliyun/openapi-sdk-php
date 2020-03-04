@@ -12,9 +12,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteMeeting deleteMeeting(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method GetMeeting getMeeting(array $options = [])
+ * @method GetMeetingMember getMeetingMember(array $options = [])
  * @method GetUser getUser(array $options = [])
  * @method JoinMeeting joinMeeting(array $options = [])
  * @method ListEvaluations listEvaluations(array $options = [])
+ * @method ListIsvStatistics listIsvStatistics(array $options = [])
  * @method ListMembers listMembers(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  */
@@ -214,6 +216,14 @@ class GetMeeting extends Rpc
 }
 
 /**
+ * @method string getMeetingUUID()
+ * @method $this withMeetingUUID($value)
+ */
+class GetMeetingMember extends Rpc
+{
+}
+
+/**
  * @method string getUserId()
  * @method $this withUserId($value)
  */
@@ -222,24 +232,11 @@ class GetUser extends Rpc
 }
 
 /**
- * @method string getMeetingCode()
  * @method string getUserId()
+ * @method string getMeetingCode()
  */
 class JoinMeeting extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMeetingCode($value)
-    {
-        $this->data['MeetingCode'] = $value;
-        $this->options['form_params']['MeetingCode'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -253,9 +250,32 @@ class JoinMeeting extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMeetingCode($value)
+    {
+        $this->data['MeetingCode'] = $value;
+        $this->options['form_params']['MeetingCode'] = $value;
+
+        return $this;
+    }
 }
 
 class ListEvaluations extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ */
+class ListIsvStatistics extends Rpc
 {
 }
 
@@ -268,10 +288,10 @@ class ListMembers extends Rpc
 }
 
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class ListUsers extends Rpc
 {
