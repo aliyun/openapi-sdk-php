@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.147 - 2020-3-5
+- Add CreateEdgeDriver, DeleteEdgeDriver, BatchGetEdgeDriver, QueryEdgeDriver, CreateEdgeDriverVersion, DeleteEdgeDriverVersion, UpdateEdgeDriverVersion, GetEdgeDriverVersion, QueryEdgeDriverVersion API.
+- Add ResetThing API, support reset thing topo and 
+
+
 ## 1.8.146 - 2020-3-5
 - Update send message noPresistFlag param.
 
