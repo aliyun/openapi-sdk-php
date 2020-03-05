@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.146 - 2020-3-5
+- Update send message noPresistFlag param.
+
+
 ## 1.8.145 - 2020-3-4
 - Update.
 
