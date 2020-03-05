@@ -31,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAutoScaleConfig describeAutoScaleConfig(array $options = [])
  * @method DescribeCluster describeCluster(array $options = [])
  * @method DescribeContainerApp describeContainerApp(array $options = [])
+ * @method DescribeGWSClusterPolicy describeGWSClusterPolicy(array $options = [])
  * @method DescribeGWSClusters describeGWSClusters(array $options = [])
  * @method DescribeGWSImages describeGWSImages(array $options = [])
  * @method DescribeGWSInstances describeGWSInstances(array $options = [])
@@ -101,6 +102,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResetNodes resetNodes(array $options = [])
  * @method RunCloudMetricProfiling runCloudMetricProfiling(array $options = [])
  * @method SetAutoScaleConfig setAutoScaleConfig(array $options = [])
+ * @method SetGWSClusterPolicy setGWSClusterPolicy(array $options = [])
  * @method SetGWSInstanceName setGWSInstanceName(array $options = [])
  * @method SetGWSInstanceUser setGWSInstanceUser(array $options = [])
  * @method SetJobUser setJobUser(array $options = [])
@@ -882,6 +884,17 @@ class DescribeContainerApp extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ */
+class DescribeGWSClusterPolicy extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1042,10 +1055,18 @@ class EditJobTemplate extends Rpc
  * @method $this withEndTime($value)
  * @method string getFilterValue()
  * @method $this withFilterValue($value)
+ * @method string getDim()
+ * @method $this withDim($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class GetAccountingReport extends Rpc
 {
@@ -1388,6 +1409,8 @@ class ListCurrentClientVersion extends Rpc
  * @method $this withImageOwnerAlias($value)
  * @method string getBaseOsTag()
  * @method $this withBaseOsTag($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  */
 class ListCustomImages extends Rpc
 {
@@ -1403,6 +1426,12 @@ class ListFileSystemWithMountTargets extends Rpc
 {
 }
 
+/**
+ * @method string getBaseOsTag()
+ * @method $this withBaseOsTag($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ */
 class ListImages extends Rpc
 {
 }
@@ -1556,6 +1585,8 @@ class ListRegions extends Rpc
 }
 
 /**
+ * @method string getOsTag()
+ * @method $this withOsTag($value)
  * @method string getEhpcVersion()
  * @method $this withEhpcVersion($value)
  */
@@ -1816,6 +1847,8 @@ class RunCloudMetricProfiling extends Rpc
 }
 
 /**
+ * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getSpotPriceLimit()
  * @method $this withSpotPriceLimit($value)
  * @method string getExcludeNodes()
@@ -1866,6 +1899,7 @@ class SetAutoScaleConfig extends Rpc
 				$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceTypes.' . ($depth2 + 1) . '.HostNamePrefix'] = $depth2Value['HostNamePrefix'];
 				$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceTypes.' . ($depth2 + 1) . '.SpotPriceLimit'] = $depth2Value['SpotPriceLimit'];
 			}
+			$this->options['query']['Queues.' . ($depth1 + 1) . '.MaxNodesInQueue'] = $depth1Value['MaxNodesInQueue'];
 			$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
 			$this->options['query']['Queues.' . ($depth1 + 1) . '.EnableAutoGrow'] = $depth1Value['EnableAutoGrow'];
 			$this->options['query']['Queues.' . ($depth1 + 1) . '.SpotPriceLimit'] = $depth1Value['SpotPriceLimit'];
@@ -1874,6 +1908,25 @@ class SetAutoScaleConfig extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getWatermark()
+ * @method $this withWatermark($value)
+ * @method string getLocalDrive()
+ * @method $this withLocalDrive($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getClipboard()
+ * @method $this withClipboard($value)
+ * @method string getUsbRedirect()
+ * @method $this withUsbRedirect($value)
+ */
+class SetGWSClusterPolicy extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**

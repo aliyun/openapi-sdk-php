@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.149 - 2020-3-5
+- Add param InstanceType for ListImages and ListCustomImages.
+- Fix error codes for SubmitJobs and so on.
+
+
 ## 1.8.148 - 2020-3-5
 - Add CreateEdgeDriver, DeleteEdgeDriver, BatchGetEdgeDriver, QueryEdgeDriver, CreateEdgeDriverVersion, DeleteEdgeDriverVersion, UpdateEdgeDriverVersion, GetEdgeDriverVersion, QueryEdgeDriverVersion API.
 - Add ResetThing API, support reset thing topo and 
