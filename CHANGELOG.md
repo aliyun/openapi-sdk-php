@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.150 - 2020-3-6
+- Add request parameter groupType for OnsGroupCreate.
+- Add request parameter groupType for OnsGroupList.
+
+
 ## 1.8.149 - 2020-3-5
 - Add param InstanceType for ListImages and ListCustomImages.
 - Fix error codes for SubmitJobs and so on.

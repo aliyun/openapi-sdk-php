@@ -220,6 +220,8 @@ class OnsGroupDelete extends Rpc
  * @method $this withGroupId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getGroupType()
+ * @method $this withGroupType($value)
  */
 class OnsGroupList extends Rpc
 {
