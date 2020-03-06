@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.156 - 2020-3-6
+- Add LinkIoTEdge CreateEdgeOssPreSignedAddress API.
+
+
 ## 1.8.155 - 2020-3-6
 - Add LinkIoTEdge CreateEdgeOssPreSignedAddress API.
 
