@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.151 - 2020-3-6
+- Supported Saf for oversea.
+
+
 ## 1.8.150 - 2020-3-6
 - Add request parameter groupType for OnsGroupCreate.
 - Add request parameter groupType for OnsGroupList.
