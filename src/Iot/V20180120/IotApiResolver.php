@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEdgeDriverVersion createEdgeDriverVersion(array $options = [])
  * @method CreateEdgeInstance createEdgeInstance(array $options = [])
  * @method CreateEdgeInstanceDeployment createEdgeInstanceDeployment(array $options = [])
+ * @method CreateEdgeOssPreSignedAddress createEdgeOssPreSignedAddress(array $options = [])
  * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
  * @method CreateOTADynamicUpgradeJob createOTADynamicUpgradeJob(array $options = [])
  * @method CreateOTAFirmware createOTAFirmware(array $options = [])
@@ -185,7 +186,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'iot';
+    public $serviceCode = 'Iot';
 }
 
 /**
@@ -1516,6 +1517,52 @@ class CreateEdgeInstance extends Rpc
  * @method string getApiRevision()
  */
 class CreateEdgeInstanceDeployment extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getResourceVersion()
+ * @method $this withResourceVersion($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class CreateEdgeOssPreSignedAddress extends Rpc
 {
 
     /**
