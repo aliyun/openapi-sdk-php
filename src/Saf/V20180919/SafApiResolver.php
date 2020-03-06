@@ -1,6 +1,6 @@
 <?php
 
-namespace AlibabaCloud\Saf\V20190521;
+namespace AlibabaCloud\Saf\V20180919;
 
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
@@ -17,7 +17,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $product = 'saf';
 
     /** @var string */
-    public $version = '2019-05-21';
+    public $version = '2018-09-19';
 
     /** @var string */
     public $method = 'POST';
