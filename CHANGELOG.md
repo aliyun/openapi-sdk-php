@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.154 - 2020-3-6
+- Supported Saf for cn.
+
+
 ## 1.8.153 - 2020-3-6
 - Supported Saf for cn.
 
