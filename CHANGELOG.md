@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.159 - 2020-3-9
+- Add BackupStorageType.
+
+
 ## 1.8.158 - 2020-3-9
 - Add EmotionConfidence to GetImage.
 

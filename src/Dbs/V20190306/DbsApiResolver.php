@@ -46,6 +46,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'cbs';
 }
 
 /**
@@ -71,6 +74,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withSourceEndpointIP($value)
  * @method string getEnableBackupLog()
  * @method $this withEnableBackupLog($value)
+ * @method string getBackupStorageType()
+ * @method $this withBackupStorageType($value)
  * @method string getDuplicationArchivePeriod()
  * @method $this withDuplicationArchivePeriod($value)
  * @method string getSourceEndpointPassword()
