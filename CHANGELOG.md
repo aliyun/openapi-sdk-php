@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.157 - 2020-3-9
+- NlpAutoml update contract api.
+
+
 ## 1.8.156 - 2020-3-6
 - Add LinkIoTEdge CreateEdgeOssPreSignedAddress API.
 
