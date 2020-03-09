@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.158 - 2020-3-9
+- Add EmotionConfidence to GetImage.
+
+
 ## 1.8.157 - 2020-3-9
 - NlpAutoml update contract api.
 

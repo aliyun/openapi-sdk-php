@@ -5,7 +5,6 @@ namespace AlibabaCloud\Imm\V20170906;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CompareFace compareFace(array $options = [])
  * @method CompareImageFaces compareImageFaces(array $options = [])
  * @method ConvertOfficeFormat convertOfficeFormat(array $options = [])
  * @method CreateCADConversionTask createCADConversionTask(array $options = [])
@@ -31,7 +30,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteVideo deleteVideo(array $options = [])
  * @method DeleteVideoTask deleteVideoTask(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
- * @method DetectClothes detectClothes(array $options = [])
  * @method DetectImageBodies detectImageBodies(array $options = [])
  * @method DetectImageCelebrity detectImageCelebrity(array $options = [])
  * @method DetectImageFaces detectImageFaces(array $options = [])
@@ -65,7 +63,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListProjects listProjects(array $options = [])
  * @method ListSets listSets(array $options = [])
  * @method ListSetTags listSetTags(array $options = [])
- * @method ListTagNames listTagNames(array $options = [])
  * @method ListVideoAudios listVideoAudios(array $options = [])
  * @method ListVideoFrames listVideoFrames(array $options = [])
  * @method ListVideos listVideos(array $options = [])
@@ -96,18 +93,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imm';
-}
-
-/**
- * @method string getSrcUriB()
- * @method $this withSrcUriB($value)
- * @method string getSrcUriA()
- * @method $this withSrcUriA($value)
- * @method string getProject()
- * @method $this withProject($value)
- */
-class CompareFace extends Rpc
-{
 }
 
 /**
@@ -587,16 +572,6 @@ class DeleteVideoTask extends Rpc
 }
 
 class DescribeRegions extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getSrcUris()
- * @method $this withSrcUris($value)
- */
-class DetectClothes extends Rpc
 {
 }
 
@@ -1091,18 +1066,6 @@ class ListSets extends Rpc
  * @method $this withSetId($value)
  */
 class ListSetTags extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- */
-class ListTagNames extends Rpc
 {
 }
 
