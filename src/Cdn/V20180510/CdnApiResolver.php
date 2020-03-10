@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchStopCdnDomain batchStopCdnDomain(array $options = [])
  * @method BatchUpdateCdnDomain batchUpdateCdnDomain(array $options = [])
  * @method CreateCdnCertificateSigningRequest createCdnCertificateSigningRequest(array $options = [])
+ * @method CreateIllegalUrlExportTask createIllegalUrlExportTask(array $options = [])
  * @method CreateRealTimeLogDelivery createRealTimeLogDelivery(array $options = [])
  * @method CreateUsageDetailDataExportTask createUsageDetailDataExportTask(array $options = [])
  * @method CreateUserUsageDataExportTask createUserUsageDataExportTask(array $options = [])
@@ -82,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainUsageData describeDomainUsageData(array $options = [])
  * @method DescribeDomainUvData describeDomainUvData(array $options = [])
  * @method DescribeFCTrigger describeFCTrigger(array $options = [])
+ * @method DescribeIllegalUrlExportTask describeIllegalUrlExportTask(array $options = [])
  * @method DescribeIpInfo describeIpInfo(array $options = [])
  * @method DescribeL2VipsByDomain describeL2VipsByDomain(array $options = [])
  * @method DescribeRangeDataByLocateAndIspService describeRangeDataByLocateAndIspService(array $options = [])
@@ -334,12 +336,12 @@ class BatchDeleteCdnDomainConfig extends Rpc
  * @method $this withFunctions($value)
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class BatchSetCdnDomainConfig extends Rpc
 {
@@ -434,6 +436,18 @@ class BatchUpdateCdnDomain extends Rpc
  * @method $this withOrganizationUnit($value)
  */
 class CreateCdnCertificateSigningRequest extends Rpc
+{
+}
+
+/**
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTimePoint()
+ * @method $this withTimePoint($value)
+ */
+class CreateIllegalUrlExportTask extends Rpc
 {
 }
 
@@ -1487,6 +1501,16 @@ class DescribeFCTrigger extends Rpc
 }
 
 /**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeIllegalUrlExportTask extends Rpc
+{
+}
+
+/**
  * @method string getIP()
  * @method $this withIP($value)
  * @method string getOwnerId()
@@ -2025,12 +2049,12 @@ class PushObjectCache extends Rpc
 /**
  * @method string getObjectPath()
  * @method $this withObjectPath($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getObjectType()
  * @method $this withObjectType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class RefreshObjectCaches extends Rpc
 {
@@ -2065,8 +2089,8 @@ class SetCcConfig extends Rpc
 }
 
 /**
- * @method string getCertificate()
- * @method $this withCertificate($value)
+ * @method string getServerCertificate()
+ * @method $this withServerCertificate($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()

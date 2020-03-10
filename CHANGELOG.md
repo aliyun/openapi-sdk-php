@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.160 - 2020-3-10
+- Add ExportTas apis.
+
+
 ## 1.8.159 - 2020-3-9
 - Add BackupStorageType.
 
