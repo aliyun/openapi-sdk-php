@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
  * @method RecolorImage recolorImage(array $options = [])
+ * @method SegmentBody segmentBody(array $options = [])
  * @method SegmentImage segmentImage(array $options = [])
  */
 class IvpdApiResolver extends ApiResolver
@@ -282,6 +283,26 @@ class RecolorImage extends Rpc
     {
         $this->data['RefUrl'] = $value;
         $this->options['form_params']['RefUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageUrl()
+ */
+class SegmentBody extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }

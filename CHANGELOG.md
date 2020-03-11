@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.165 - 2020-3-11
+- Add new Api SegmentBody.
+
+
 ## 1.8.164 - 2020-3-11
 - Support certificate translate.
 
