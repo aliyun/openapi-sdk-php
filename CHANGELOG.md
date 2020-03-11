@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.162 - 2020-3-11
+- Supported ondemand record.
+- Supported ivision template binding.
+
+
 ## 1.8.161 - 2020-3-10
 - ACM POP SDK.
 

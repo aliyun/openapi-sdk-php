@@ -5,6 +5,7 @@ namespace AlibabaCloud\Vs\V20181212;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddVsPullStreamInfoConfig addVsPullStreamInfoConfig(array $options = [])
  * @method BatchBindDirectories batchBindDirectories(array $options = [])
  * @method BatchBindTemplate batchBindTemplate(array $options = [])
  * @method BatchBindTemplates batchBindTemplates(array $options = [])
@@ -34,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteGroup deleteGroup(array $options = [])
  * @method DeletePreset deletePreset(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
+ * @method DeleteVsPullStreamInfoConfig deleteVsPullStreamInfoConfig(array $options = [])
  * @method DeleteVsStreamsNotifyUrlConfig deleteVsStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeAccountStat describeAccountStat(array $options = [])
  * @method DescribeDevice describeDevice(array $options = [])
@@ -64,6 +66,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVsDomainReqTrafficData describeVsDomainReqTrafficData(array $options = [])
  * @method DescribeVsDomainSnapshotData describeVsDomainSnapshotData(array $options = [])
  * @method DescribeVsDomainTrafficData describeVsDomainTrafficData(array $options = [])
+ * @method DescribeVsPullStreamInfoConfig describeVsPullStreamInfoConfig(array $options = [])
  * @method DescribeVsStreamsNotifyUrlConfig describeVsStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeVsStreamsOnlineList describeVsStreamsOnlineList(array $options = [])
  * @method DescribeVsStreamsPublishList describeVsStreamsPublishList(array $options = [])
@@ -81,17 +84,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetVsDomainCertificate setVsDomainCertificate(array $options = [])
  * @method SetVsStreamsNotifyUrlConfig setVsStreamsNotifyUrlConfig(array $options = [])
  * @method StartDevice startDevice(array $options = [])
+ * @method StartRecordStream startRecordStream(array $options = [])
  * @method StartStream startStream(array $options = [])
  * @method StartTransferStream startTransferStream(array $options = [])
  * @method StopAdjust stopAdjust(array $options = [])
  * @method StopDevice stopDevice(array $options = [])
  * @method StopMove stopMove(array $options = [])
+ * @method StopRecordStream stopRecordStream(array $options = [])
  * @method StopStream stopStream(array $options = [])
  * @method StopTransferStream stopTransferStream(array $options = [])
  * @method SyncCatalogs syncCatalogs(array $options = [])
  * @method UnbindDirectory unbindDirectory(array $options = [])
  * @method UnbindTemplate unbindTemplate(array $options = [])
  * @method UnlockDevice unlockDevice(array $options = [])
+ * @method UpdateVsPullStreamInfoConfig updateVsPullStreamInfoConfig(array $options = [])
  */
 class VsApiResolver extends ApiResolver
 {
@@ -110,6 +116,30 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'vs';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getAlways()
+ * @method $this withAlways($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSourceUrl()
+ * @method $this withSourceUrl($value)
+ */
+class AddVsPullStreamInfoConfig extends Rpc
+{
 }
 
 /**
@@ -149,6 +179,8 @@ class BatchBindTemplate extends Rpc
 /**
  * @method string getReplace()
  * @method $this withReplace($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getShowLog()
@@ -365,6 +397,8 @@ class BindDirectory extends Rpc
 /**
  * @method string getReplace()
  * @method $this withReplace($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getShowLog()
@@ -555,6 +589,8 @@ class CreateStreamSnapshot extends Rpc
  * @method $this withTransConfigsJSON($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getTrigger()
+ * @method $this withTrigger($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getJpgSequence()
@@ -637,6 +673,22 @@ class DeletePreset extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteVsPullStreamInfoConfig extends Rpc
 {
 }
 
@@ -1202,6 +1254,18 @@ class DescribeVsDomainTrafficData extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
+class DescribeVsPullStreamInfoConfig extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
 class DescribeVsStreamsNotifyUrlConfig extends Rpc
 {
 }
@@ -1475,6 +1539,8 @@ class ModifyGroup extends Rpc
  * @method $this withTransConfigsJSON($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getTrigger()
+ * @method $this withTrigger($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getJpgSequence()
@@ -1593,6 +1659,24 @@ class StartDevice extends Rpc
  * @method $this withId($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
+ * @method string getPlayDomain()
+ * @method $this withPlayDomain($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class StartRecordStream extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -1661,6 +1745,24 @@ class StopDevice extends Rpc
  * @method $this withOwnerId($value)
  */
 class StopMove extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getPlayDomain()
+ * @method $this withPlayDomain($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class StopRecordStream extends Rpc
 {
 }
 
@@ -1745,5 +1847,29 @@ class UnbindTemplate extends Rpc
  * @method $this withOwnerId($value)
  */
 class UnlockDevice extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getAlways()
+ * @method $this withAlways($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSourceUrl()
+ * @method $this withSourceUrl($value)
+ */
+class UpdateVsPullStreamInfoConfig extends Rpc
 {
 }
