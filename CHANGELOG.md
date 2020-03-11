@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.168 - 2020-3-11
+- Support certificate translate.
+
+
 ## 1.8.167 - 2020-3-11
 - Support certificate translate.
 
