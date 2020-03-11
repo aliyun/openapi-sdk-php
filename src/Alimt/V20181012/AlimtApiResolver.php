@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDocTranslateTask createDocTranslateTask(array $options = [])
  * @method GetDocTranslateTask getDocTranslateTask(array $options = [])
  * @method Translate translate(array $options = [])
+ * @method TranslateCertificate translateCertificate(array $options = [])
  * @method TranslateECommerce translateECommerce(array $options = [])
  * @method TranslateGeneral translateGeneral(array $options = [])
  */
@@ -27,7 +28,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'alimt';
+    public $serviceCode = 'alimtct';
 }
 
 /**
@@ -189,6 +190,82 @@ class Translate extends Rpc
     {
         $this->data['Scene'] = $value;
         $this->options['form_params']['Scene'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceLanguage()
+ * @method string getCertificateType()
+ * @method string getResultType()
+ * @method string getImageUrl()
+ * @method string getTargetLanguage()
+ */
+class TranslateCertificate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertificateType($value)
+    {
+        $this->data['CertificateType'] = $value;
+        $this->options['form_params']['CertificateType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResultType($value)
+    {
+        $this->data['ResultType'] = $value;
+        $this->options['form_params']['ResultType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.164 - 2020-3-11
+- Support certificate translate.
+
+
 ## 1.8.163 - 2020-3-11
 - Public beta version.
 - Add Api GetMeetingMebers.
