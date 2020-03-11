@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.163 - 2020-3-11
+- Public beta version.
+- Add Api GetMeetingMebers.
+
+
 ## 1.8.162 - 2020-3-11
 - Supported ondemand record.
 - Supported ivision template binding.
