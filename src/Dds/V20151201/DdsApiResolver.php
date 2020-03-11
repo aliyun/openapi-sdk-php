@@ -9,7 +9,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AllocatePublicNetworkAddress allocatePublicNetworkAddress(array $options = [])
  * @method CheckCloudResourceAuthorized checkCloudResourceAuthorized(array $options = [])
  * @method CheckRecoveryCondition checkRecoveryCondition(array $options = [])
- * @method CreateAccount createAccount(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
  * @method CreateDBInstance createDBInstance(array $options = [])
  * @method CreateNode createNode(array $options = [])
@@ -29,6 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
  * @method DescribeBackups describeBackups(array $options = [])
  * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
+ * @method DescribeDBInstanceEncryptionKey describeDBInstanceEncryptionKey(array $options = [])
  * @method DescribeDBInstanceMonitor describeDBInstanceMonitor(array $options = [])
  * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
  * @method DescribeDBInstances describeDBInstances(array $options = [])
@@ -51,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeShardingNetworkAddress describeShardingNetworkAddress(array $options = [])
  * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
  * @method DescribeTags describeTags(array $options = [])
+ * @method DescribeUserEncryptionKeyList describeUserEncryptionKeyList(array $options = [])
  * @method DestroyInstance destroyInstance(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method MigrateAvailableZone migrateAvailableZone(array $options = [])
@@ -103,7 +104,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'Dds';
+    public $serviceCode = 'dds';
 }
 
 /**
@@ -193,30 +194,6 @@ class CheckCloudResourceAuthorized extends Rpc
  * @method $this withOwnerId($value)
  */
 class CheckRecoveryCondition extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getAccountDescription()
- * @method $this withAccountDescription($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAccountPassword()
- * @method $this withAccountPassword($value)
- */
-class CreateAccount extends Rpc
 {
 }
 
@@ -781,6 +758,26 @@ class DescribeDBInstanceAttribute extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEncryptionKey()
+ * @method $this withEncryptionKey($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBInstanceEncryptionKey extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -1314,6 +1311,24 @@ class DescribeTags extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeUserEncryptionKeyList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getSecurityToken()
@@ -1723,10 +1738,14 @@ class ModifyDBInstanceSSL extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEncryptionKey()
+ * @method $this withEncryptionKey($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getEncryptorName()
  * @method $this withEncryptorName($value)
+ * @method string getRoleARN()
+ * @method $this withRoleARN($value)
  * @method string getTDEStatus()
  * @method $this withTDEStatus($value)
  */

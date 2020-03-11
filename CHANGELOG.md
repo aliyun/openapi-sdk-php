@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.170 - 2020-3-11
+- Update structure for DescribeAvailableResource without compatible.
+
+
 ## 1.8.169 - 2020-3-11
 - Support certificate translate.
 
