@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.172 - 2020-3-12
+- Add new Api SegmentBody.
+
+
 ## 1.8.171 - 2020-3-12
 - Add new Api SegmentBody.
 
