@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.175 - 2020-3-16
+- Release.
+- Add virtual host modification API.
+- Add exchange modification API.
+- Add queue modification API.
+- Add binding modification API.
+
+
 ## 1.8.174 - 2020-3-16
 - Add ImageFamily paramters and apis, in Instance creation apis and Image query apis, and add DescribeImageFromFamily.
 - Add Instance batch operation apis RebootInstances StartInstances and StopInstances.
