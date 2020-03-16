@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.177 - 2020-3-16
+- DescribeFaceVerify API Return DeviceToken Field.
+
+
 ## 1.8.176 - 2020-3-16
 - Add exporter related API.
 

@@ -45,6 +45,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'cloudauth';
 }
 
 /**
@@ -478,6 +481,8 @@ class DetectFaceAttributes extends Rpc
  * @method $this withMerchant($value)
  * @method string getAppVersion()
  * @method $this withAppVersion($value)
+ * @method string getDeviceToken()
+ * @method $this withDeviceToken($value)
  * @method string getCertifyId()
  * @method $this withCertifyId($value)
  * @method string getOuterOrderNo()
