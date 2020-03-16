@@ -25,6 +25,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDynamicTagGroup deleteDynamicTagGroup(array $options = [])
  * @method DeleteEventRules deleteEventRules(array $options = [])
  * @method DeleteEventRuleTargets deleteEventRuleTargets(array $options = [])
+ * @method DeleteExporterOutput deleteExporterOutput(array $options = [])
+ * @method DeleteExporterRule deleteExporterRule(array $options = [])
  * @method DeleteGroupMonitoringAgentProcess deleteGroupMonitoringAgentProcess(array $options = [])
  * @method DeleteHostAvailability deleteHostAvailability(array $options = [])
  * @method DeleteMetricRuleResources deleteMetricRuleResources(array $options = [])
@@ -51,6 +53,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEventRuleAttribute describeEventRuleAttribute(array $options = [])
  * @method DescribeEventRuleList describeEventRuleList(array $options = [])
  * @method DescribeEventRuleTargetList describeEventRuleTargetList(array $options = [])
+ * @method DescribeExporterOutputList describeExporterOutputList(array $options = [])
+ * @method DescribeExporterRuleList describeExporterRuleList(array $options = [])
+ * @method DescribeFolderList describeFolderList(array $options = [])
  * @method DescribeGroupMonitoringAgentProcess describeGroupMonitoringAgentProcess(array $options = [])
  * @method DescribeHostAvailabilityList describeHostAvailabilityList(array $options = [])
  * @method DescribeMetricData describeMetricData(array $options = [])
@@ -114,6 +119,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PutCustomMetric putCustomMetric(array $options = [])
  * @method PutEventRule putEventRule(array $options = [])
  * @method PutEventRuleTargets putEventRuleTargets(array $options = [])
+ * @method PutExporterOutput putExporterOutput(array $options = [])
+ * @method PutExporterRule putExporterRule(array $options = [])
  * @method PutGroupMetricRule putGroupMetricRule(array $options = [])
  * @method PutMetricRuleTargets putMetricRuleTargets(array $options = [])
  * @method PutMonitorGroupDynamicRule putMonitorGroupDynamicRule(array $options = [])
@@ -817,6 +824,22 @@ class DeleteEventRuleTargets extends Rpc
 }
 
 /**
+ * @method string getDestName()
+ * @method $this withDestName($value)
+ */
+class DeleteExporterOutput extends Rpc
+{
+}
+
+/**
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ */
+class DeleteExporterRule extends Rpc
+{
+}
+
+/**
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getId()
@@ -1184,6 +1207,37 @@ class DescribeEventRuleTargetList extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeExporterOutputList extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeExporterRuleList extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ */
+class DescribeFolderList extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getProcessName()
@@ -1490,6 +1544,8 @@ class DescribeMonitorGroupNotifyPolicyList extends Rpc
  * @method $this withGroupName($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
  */
 class DescribeMonitorGroups extends Rpc
 {
@@ -2609,6 +2665,52 @@ class PutEventRuleTargets extends Rpc
 			$this->options['query']['FcParameters.' . ($depth1 + 1) . '.ServiceName'] = $depth1Value['ServiceName'];
 			$this->options['query']['FcParameters.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
 			$this->options['query']['FcParameters.' . ($depth1 + 1) . '.Region'] = $depth1Value['Region'];
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getDestName()
+ * @method $this withDestName($value)
+ * @method string getConfigJson()
+ * @method $this withConfigJson($value)
+ * @method string getDestType()
+ * @method $this withDestType($value)
+ * @method string getDesc()
+ * @method $this withDesc($value)
+ */
+class PutExporterOutput extends Rpc
+{
+}
+
+/**
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method array getDstNames()
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getTargetWindows()
+ * @method $this withTargetWindows($value)
+ * @method string getDescribe()
+ * @method $this withDescribe($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ */
+class PutExporterRule extends Rpc
+{
+
+    /**
+     * @param array $dstNames
+     *
+     * @return $this
+     */
+	public function withDstNames(array $dstNames)
+	{
+	    $this->data['DstNames'] = $dstNames;
+		foreach ($dstNames as $i => $iValue) {
+			$this->options['query']['DstNames.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
