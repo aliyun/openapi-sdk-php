@@ -115,6 +115,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeForwardTableEntries describeForwardTableEntries(array $options = [])
  * @method DescribeHaVips describeHaVips(array $options = [])
  * @method DescribeHpcClusters describeHpcClusters(array $options = [])
+ * @method DescribeImageFromFamily describeImageFromFamily(array $options = [])
  * @method DescribeImages describeImages(array $options = [])
  * @method DescribeImageSharePermission describeImageSharePermission(array $options = [])
  * @method DescribeImageSupportInstanceTypes describeImageSupportInstanceTypes(array $options = [])
@@ -248,6 +249,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PurchaseReservedInstancesOffering purchaseReservedInstancesOffering(array $options = [])
  * @method ReActivateInstances reActivateInstances(array $options = [])
  * @method RebootInstance rebootInstance(array $options = [])
+ * @method RebootInstances rebootInstances(array $options = [])
  * @method RecoverVirtualBorderRouter recoverVirtualBorderRouter(array $options = [])
  * @method RedeployDedicatedHost redeployDedicatedHost(array $options = [])
  * @method RedeployInstance redeployInstance(array $options = [])
@@ -268,7 +270,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunCommand runCommand(array $options = [])
  * @method RunInstances runInstances(array $options = [])
  * @method StartInstance startInstance(array $options = [])
+ * @method StartInstances startInstances(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
+ * @method StopInstances stopInstances(array $options = [])
  * @method StopInvocation stopInvocation(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TerminatePhysicalConnection terminatePhysicalConnection(array $options = [])
@@ -987,6 +991,8 @@ class ConvertNatPublicIpToEip extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getEncryptAlgorithm()
+ * @method $this withEncryptAlgorithm($value)
  * @method string getDestinationRegionId()
  * @method $this withDestinationRegionId($value)
  * @method array getTag()
@@ -1266,6 +1272,8 @@ class CreateDeploymentSet extends Rpc
  * @method $this withSnapshotId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getEncryptAlgorithm()
+ * @method $this withEncryptAlgorithm($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getDiskName()
@@ -1433,6 +1441,8 @@ class CreateHpcCluster extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getImageFamily()
+ * @method $this withImageFamily($value)
  * @method string getImageVersion()
  * @method $this withImageVersion($value)
  */
@@ -1584,6 +1594,8 @@ class CreateImage extends Rpc
  * @method string getStorageSetId()
  * @method $this withStorageSetId($value)
  * @method string getSystemDiskSize()
+ * @method string getImageFamily()
+ * @method $this withImageFamily($value)
  * @method string getSystemDiskDescription()
  */
 class CreateInstance extends Rpc
@@ -1675,6 +1687,7 @@ class CreateInstance extends Rpc
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.EncryptAlgorithm'] = $depth1Value['EncryptAlgorithm'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.KMSKeyId'] = $depth1Value['KMSKeyId'];
@@ -4277,6 +4290,22 @@ class DescribeHpcClusters extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getImageFamily()
+ * @method $this withImageFamily($value)
+ */
+class DescribeImageFromFamily extends Rpc
+{
+}
+
+/**
  * @method string getActionType()
  * @method $this withActionType($value)
  * @method string getResourceOwnerId()
@@ -4319,6 +4348,8 @@ class DescribeHpcClusters extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method array getFilter()
+ * @method string getImageFamily()
+ * @method $this withImageFamily($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -4995,11 +5026,27 @@ class DescribeInstancesFullStatus extends Rpc
  * @method $this withClusterId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getInstanceId()
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
 class DescribeInstanceStatus extends Rpc
 {
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+	public function withInstanceId(array $instanceId)
+	{
+	    $this->data['InstanceId'] = $instanceId;
+		foreach ($instanceId as $i => $iValue) {
+			$this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -7071,6 +7118,9 @@ class ImportImage extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getPublicKeyBody()
@@ -7080,6 +7130,22 @@ class ImportImage extends Rpc
  */
 class ImportKeyPair extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -7823,6 +7889,8 @@ class ModifyHpcClusterAttribute extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class ModifyImageAttribute extends Rpc
 {
@@ -8940,6 +9008,40 @@ class RebootInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getForceReboot()
+ * @method $this withForceReboot($value)
+ * @method array getInstanceId()
+ */
+class RebootInstances extends Rpc
+{
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+	public function withInstanceId(array $instanceId)
+	{
+	    $this->data['InstanceId'] = $instanceId;
+		foreach ($instanceId as $i => $iValue) {
+			$this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getVbrId()
@@ -9606,6 +9708,8 @@ class RunCommand extends Rpc
  * @method string getStorageSetId()
  * @method $this withStorageSetId($value)
  * @method string getSystemDiskSize()
+ * @method string getImageFamily()
+ * @method $this withImageFamily($value)
  * @method string getSystemDiskDescription()
  */
 class RunInstances extends Rpc
@@ -9790,6 +9894,7 @@ class RunInstances extends Rpc
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
 			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.AutoSnapshotPolicyId'] = $depth1Value['AutoSnapshotPolicyId'];
+			$this->options['query']['DataDisk.' . ($depth1 + 1) . '.EncryptAlgorithm'] = $depth1Value['EncryptAlgorithm'];
 		}
 
 		return $this;
@@ -9847,6 +9952,38 @@ class StartInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getInstanceId()
+ */
+class StartInstances extends Rpc
+{
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+	public function withInstanceId(array $instanceId)
+	{
+	    $this->data['InstanceId'] = $instanceId;
+		foreach ($instanceId as $i => $iValue) {
+			$this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getStoppedMode()
  * @method $this withStoppedMode($value)
  * @method string getHibernate()
@@ -9868,6 +10005,42 @@ class StartInstance extends Rpc
  */
 class StopInstance extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStoppedMode()
+ * @method $this withStoppedMode($value)
+ * @method string getForceStop()
+ * @method $this withForceStop($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getInstanceId()
+ */
+class StopInstances extends Rpc
+{
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+	public function withInstanceId(array $instanceId)
+	{
+	    $this->data['InstanceId'] = $instanceId;
+		foreach ($instanceId as $i => $iValue) {
+			$this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

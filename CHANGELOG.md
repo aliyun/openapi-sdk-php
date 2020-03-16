@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.174 - 2020-3-16
+- Add ImageFamily paramters and apis, in Instance creation apis and Image query apis, and add DescribeImageFromFamily.
+- Add Instance batch operation apis RebootInstances StartInstances and StopInstances.
+- Add EncryptAlgorithm paramter in instance creati
+
+
 ## 1.8.173 - 2020-3-13
 - ACM POP SDK.
 
