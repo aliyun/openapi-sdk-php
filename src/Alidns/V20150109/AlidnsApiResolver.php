@@ -58,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeGtmRecoveryPlan describeGtmRecoveryPlan(array $options = [])
  * @method DescribeGtmRecoveryPlanAvailableConfig describeGtmRecoveryPlanAvailableConfig(array $options = [])
  * @method DescribeGtmRecoveryPlans describeGtmRecoveryPlans(array $options = [])
+ * @method DescribeInstanceDomains describeInstanceDomains(array $options = [])
  * @method DescribeRecordLogs describeRecordLogs(array $options = [])
  * @method DescribeRecordStatistics describeRecordStatistics(array $options = [])
  * @method DescribeRecordStatisticsSummary describeRecordStatisticsSummary(array $options = [])
@@ -1028,6 +1029,22 @@ class DescribeGtmRecoveryPlanAvailableConfig extends Rpc
  * @method $this withKeyword($value)
  */
 class DescribeGtmRecoveryPlans extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeInstanceDomains extends Rpc
 {
 }
 

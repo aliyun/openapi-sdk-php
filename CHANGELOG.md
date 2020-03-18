@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.180 - 2020-3-18
+- Supported API for DescribeInstanceDomains.
+
+
 ## 1.8.179 - 2020-3-18
 - ACM POP SDK.
 
