@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.178 - 2020-3-18
+- Generated 2018-08-28 for `Tag`.
+
+
 ## 1.8.177 - 2020-3-16
 - DescribeFaceVerify API Return DeviceToken Field.
 
