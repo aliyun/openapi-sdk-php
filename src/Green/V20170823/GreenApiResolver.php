@@ -1153,8 +1153,8 @@ class UpdateAuditSetting extends Rpc
 }
 
 /**
- * @method string getResourceType()
- * @method $this withResourceType($value)
+ * @method string getAntispam()
+ * @method $this withAntispam($value)
  * @method string getPorn()
  * @method $this withPorn($value)
  * @method string getSourceIp()
@@ -1163,6 +1163,10 @@ class UpdateAuditSetting extends Rpc
  * @method $this withTerrorism($value)
  * @method string getBizTypeName()
  * @method $this withBizTypeName($value)
+ * @method string getAd()
+ * @method $this withAd($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  */
 class UpdateBizTypeSetting extends Rpc
 {
