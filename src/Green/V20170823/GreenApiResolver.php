@@ -1401,6 +1401,8 @@ class UpgradeCdiBaseBag extends Rpc
 /**
  * @method string getImages()
  * @method $this withImages($value)
+ * @method string getUrls()
+ * @method $this withUrls($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getImageLibId()
