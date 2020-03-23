@@ -6,10 +6,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ParseFace parseFace(array $options = [])
+ * @method RefineMask refineMask(array $options = [])
  * @method SegmentBody segmentBody(array $options = [])
  * @method SegmentCommodity segmentCommodity(array $options = [])
  * @method SegmentCommonImage segmentCommonImage(array $options = [])
  * @method SegmentFace segmentFace(array $options = [])
+ * @method SegmentFurniture segmentFurniture(array $options = [])
  * @method SegmentHair segmentHair(array $options = [])
  * @method SegmentHead segmentHead(array $options = [])
  * @method SegmentVehicle segmentVehicle(array $options = [])
@@ -42,6 +44,40 @@ class ParseFace extends Rpc
 }
 
 /**
+ * @method string getMaskImageURL()
+ * @method string getImageURL()
+ */
+class RefineMask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaskImageURL($value)
+    {
+        $this->data['MaskImageURL'] = $value;
+        $this->options['form_params']['MaskImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
@@ -71,6 +107,26 @@ class SegmentCommonImage extends Rpc
  */
 class SegmentFace extends Rpc
 {
+}
+
+/**
+ * @method string getImageURL()
+ */
+class SegmentFurniture extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
 }
 
 /**
