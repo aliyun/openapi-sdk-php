@@ -24,10 +24,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateBackup createBackup(array $options = [])
  * @method CreateDatabase createDatabase(array $options = [])
  * @method CreateDBInstance createDBInstance(array $options = [])
- * @method CreateDBInstanceReplica createDBInstanceReplica(array $options = [])
  * @method CreateDdrInstance createDdrInstance(array $options = [])
  * @method CreateDedicatedHost createDedicatedHost(array $options = [])
+ * @method CreateDedicatedHostAccount createDedicatedHostAccount(array $options = [])
  * @method CreateDedicatedHostGroup createDedicatedHostGroup(array $options = [])
+ * @method CreateDedicatedHostUser createDedicatedHostUser(array $options = [])
  * @method CreateDiagnosticReport createDiagnosticReport(array $options = [])
  * @method CreateMigrateTask createMigrateTask(array $options = [])
  * @method CreateMigrateTaskForSQLServer createMigrateTaskForSQLServer(array $options = [])
@@ -40,16 +41,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteBackupFile deleteBackupFile(array $options = [])
  * @method DeleteDatabase deleteDatabase(array $options = [])
  * @method DeleteDBInstance deleteDBInstance(array $options = [])
+ * @method DeleteDedicatedHostAccount deleteDedicatedHostAccount(array $options = [])
  * @method DeleteDedicatedHostGroup deleteDedicatedHostGroup(array $options = [])
  * @method DeleteParameterGroup deleteParameterGroup(array $options = [])
  * @method DescibeImportsFromDatabase descibeImportsFromDatabase(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method DescribeActionEventPolicy describeActionEventPolicy(array $options = [])
+ * @method DescribeAvailableClasses describeAvailableClasses(array $options = [])
  * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
  * @method DescribeAvailableDedicatedHostClasses describeAvailableDedicatedHostClasses(array $options = [])
  * @method DescribeAvailableDedicatedHostZones describeAvailableDedicatedHostZones(array $options = [])
  * @method DescribeAvailableRecoveryTime describeAvailableRecoveryTime(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
+ * @method DescribeAvailableZones describeAvailableZones(array $options = [])
  * @method DescribeBackupDatabase describeBackupDatabase(array $options = [])
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
  * @method DescribeBackups describeBackups(array $options = [])
@@ -92,8 +96,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeHASwitchConfig describeHASwitchConfig(array $options = [])
  * @method DescribeInstanceAutoRenewalAttribute describeInstanceAutoRenewalAttribute(array $options = [])
  * @method DescribeInstanceCrossBackupPolicy describeInstanceCrossBackupPolicy(array $options = [])
+ * @method DescribeInstanceKeywords describeInstanceKeywords(array $options = [])
+ * @method DescribeLocalAvailableRecoveryTime describeLocalAvailableRecoveryTime(array $options = [])
  * @method DescribeLogBackupFiles describeLogBackupFiles(array $options = [])
- * @method DescribeMigrateTaskById describeMigrateTaskById(array $options = [])
  * @method DescribeMigrateTasks describeMigrateTasks(array $options = [])
  * @method DescribeMigrateTasksForSQLServer describeMigrateTasksForSQLServer(array $options = [])
  * @method DescribeModifyParameterLog describeModifyParameterLog(array $options = [])
@@ -123,6 +128,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTags describeTags(array $options = [])
  * @method DescribeTasks describeTasks(array $options = [])
  * @method DestroyDBInstance destroyDBInstance(array $options = [])
+ * @method DropDedicatedHostUser dropDedicatedHostUser(array $options = [])
  * @method EvaluateDedicatedHostInstanceResource evaluateDedicatedHostInstanceResource(array $options = [])
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
  * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
@@ -155,8 +161,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBProxy modifyDBProxy(array $options = [])
  * @method ModifyDBProxyEndpoint modifyDBProxyEndpoint(array $options = [])
  * @method ModifyDBProxyInstance modifyDBProxyInstance(array $options = [])
+ * @method ModifyDedicatedHostAccount modifyDedicatedHostAccount(array $options = [])
  * @method ModifyDedicatedHostAttribute modifyDedicatedHostAttribute(array $options = [])
  * @method ModifyDedicatedHostGroupAttribute modifyDedicatedHostGroupAttribute(array $options = [])
+ * @method ModifyDedicatedHostUser modifyDedicatedHostUser(array $options = [])
  * @method ModifyDTCSecurityIpHostsForSQLServer modifyDTCSecurityIpHostsForSQLServer(array $options = [])
  * @method ModifyHASwitchConfig modifyHASwitchConfig(array $options = [])
  * @method ModifyInstanceAutoRenewalAttribute modifyInstanceAutoRenewalAttribute(array $options = [])
@@ -165,7 +173,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyParameterGroup modifyParameterGroup(array $options = [])
  * @method ModifyReadonlyInstanceDelayReplicationTime modifyReadonlyInstanceDelayReplicationTime(array $options = [])
  * @method ModifyReadWriteSplittingConnection modifyReadWriteSplittingConnection(array $options = [])
- * @method ModifyReplicaDescription modifyReplicaDescription(array $options = [])
  * @method ModifyResourceGroup modifyResourceGroup(array $options = [])
  * @method ModifySecurityGroupConfiguration modifySecurityGroupConfiguration(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
@@ -185,11 +192,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method RestartDBInstance restartDBInstance(array $options = [])
  * @method RestartDedicatedHost restartDedicatedHost(array $options = [])
- * @method RestoreDBInstance restoreDBInstance(array $options = [])
  * @method RestoreTable restoreTable(array $options = [])
  * @method RevokeAccountPrivilege revokeAccountPrivilege(array $options = [])
  * @method RevokeOperatorPermission revokeOperatorPermission(array $options = [])
  * @method SignEventAction signEventAction(array $options = [])
+ * @method StartDBInstance startDBInstance(array $options = [])
+ * @method StopDBInstance stopDBInstance(array $options = [])
  * @method SwitchDBInstanceHA switchDBInstanceHA(array $options = [])
  * @method SwitchDBInstanceNetType switchDBInstanceNetType(array $options = [])
  * @method SwitchDBInstanceVpc switchDBInstanceVpc(array $options = [])
@@ -198,6 +206,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UntagResources untagResources(array $options = [])
  * @method UpgradeDBInstanceEngineVersion upgradeDBInstanceEngineVersion(array $options = [])
  * @method UpgradeDBInstanceKernelVersion upgradeDBInstanceKernelVersion(array $options = [])
+ * @method UpgradeDBProxyInstanceKernelVersion upgradeDBProxyInstanceKernelVersion(array $options = [])
  */
 class RdsApiResolver extends ApiResolver
 {
@@ -629,6 +638,8 @@ class ClearDedicatedHost extends Rpc
  * @method $this withDBInstanceStorageType($value)
  * @method string getDedicatedHostGroupId()
  * @method $this withDedicatedHostGroupId($value)
+ * @method string getBackupType()
+ * @method $this withBackupType($value)
  * @method string getRestoreTime()
  * @method $this withRestoreTime($value)
  * @method string getPeriod()
@@ -803,6 +814,8 @@ class CreateDatabase extends Rpc
 }
 
 /**
+ * @method string getDBParamGroupId()
+ * @method $this withDBParamGroupId($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceStorage()
@@ -855,8 +868,12 @@ class CreateDatabase extends Rpc
  * @method $this withZoneIdSlave1($value)
  * @method string getZoneIdSlave2()
  * @method $this withZoneIdSlave2($value)
+ * @method string getDBIsIgnoreCase()
+ * @method $this withDBIsIgnoreCase($value)
  * @method string getEngine()
  * @method $this withEngine($value)
+ * @method string getDBTimeZone()
+ * @method $this withDBTimeZone($value)
  * @method string getDBInstanceStorageType()
  * @method $this withDBInstanceStorageType($value)
  * @method string getDedicatedHostGroupId()
@@ -877,64 +894,6 @@ class CreateDatabase extends Rpc
  * @method $this withPayType($value)
  */
 class CreateDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getConnectionMode()
- * @method $this withConnectionMode($value)
- * @method string getDomainMode()
- * @method $this withDomainMode($value)
- * @method string getReplicaDescription()
- * @method $this withReplicaDescription($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceStorage()
- * @method $this withDBInstanceStorage($value)
- * @method string getSystemDBCharset()
- * @method $this withSystemDBCharset($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- * @method string getDBInstanceNetType()
- * @method $this withDBInstanceNetType($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUsedTime()
- * @method $this withUsedTime($value)
- * @method string getDBInstanceClass()
- * @method $this withDBInstanceClass($value)
- * @method string getSecurityIPList()
- * @method $this withSecurityIPList($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getPrivateIpAddress()
- * @method $this withPrivateIpAddress($value)
- * @method string getSourceDBInstanceId()
- * @method $this withSourceDBInstanceId($value)
- * @method string getReplicaMode()
- * @method $this withReplicaMode($value)
- * @method string getVPCId()
- * @method $this withVPCId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
- */
-class CreateDBInstanceReplica extends Rpc
 {
 }
 
@@ -1049,6 +1008,24 @@ class CreateDedicatedHost extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDedicatedHostId()
+ * @method $this withDedicatedHostId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ */
+class CreateDedicatedHostAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getCpuAllocationRatio()
  * @method $this withCpuAllocationRatio($value)
  * @method string getClientToken()
@@ -1071,6 +1048,24 @@ class CreateDedicatedHost extends Rpc
  * @method $this withVPCId($value)
  */
 class CreateDedicatedHostGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getUserPassword()
+ * @method $this withUserPassword($value)
+ * @method string getDedicatedHostName()
+ * @method $this withDedicatedHostName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class CreateDedicatedHostUser extends Rpc
 {
 }
 
@@ -1345,6 +1340,22 @@ class DeleteDBInstance extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getDedicatedHostId()
+ * @method $this withDedicatedHostId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ */
+class DeleteDedicatedHostAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getDedicatedHostGroupId()
@@ -1433,6 +1444,40 @@ class DescribeActionEventPolicy extends Rpc
 }
 
 /**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getDBInstanceStorageType()
+ * @method $this withDBInstanceStorageType($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeAvailableClasses extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -1451,6 +1496,8 @@ class DescribeAvailableCrossRegion extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
@@ -1511,10 +1558,30 @@ class DescribeAvailableRecoveryTime extends Rpc
  * @method $this withDBInstanceClass($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  * @method string getOrderType()
  * @method $this withOrderType($value)
  */
 class DescribeAvailableResource extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class DescribeAvailableZones extends Rpc
 {
 }
 
@@ -2599,14 +2666,16 @@ class DescribeDedicatedHostGroups extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getHostType()
+ * @method $this withHostType($value)
+ * @method string getDedicatedHostGroupId()
+ * @method $this withDedicatedHostGroupId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDedicatedHostGroupId()
- * @method $this withDedicatedHostGroupId($value)
  */
 class DescribeDedicatedHosts extends Rpc
 {
@@ -2783,6 +2852,39 @@ class DescribeInstanceCrossBackupPolicy extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class DescribeInstanceKeywords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DescribeLocalAvailableRecoveryTime extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -2801,22 +2903,6 @@ class DescribeInstanceCrossBackupPolicy extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLogBackupFiles extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getMigrateTaskId()
- * @method $this withMigrateTaskId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class DescribeMigrateTaskById extends Rpc
 {
 }
 
@@ -3463,6 +3549,22 @@ class DescribeTasks extends Rpc
  * @method $this withDBInstanceId($value)
  */
 class DestroyDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDedicatedHostName()
+ * @method $this withDedicatedHostName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class DropDedicatedHostUser extends Rpc
 {
 }
 
@@ -4232,6 +4334,24 @@ class ModifyDBProxyInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDedicatedHostId()
+ * @method $this withDedicatedHostId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ */
+class ModifyDedicatedHostAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getAllocationStatus()
@@ -4270,6 +4390,26 @@ class ModifyDedicatedHostAttribute extends Rpc
  * @method $this withAllocationPolicy($value)
  */
 class ModifyDedicatedHostGroupAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDedicatedHostName()
+ * @method $this withDedicatedHostName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOldPassword()
+ * @method $this withOldPassword($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getNewPassword()
+ * @method $this withNewPassword($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class ModifyDedicatedHostUser extends Rpc
 {
 }
 
@@ -4452,26 +4592,6 @@ class ModifyReadonlyInstanceDelayReplicationTime extends Rpc
  * @method $this withMaxDelayTime($value)
  */
 class ModifyReadWriteSplittingConnection extends Rpc
-{
-}
-
-/**
- * @method string getReplicaDescription()
- * @method $this withReplicaDescription($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getReplicaId()
- * @method $this withReplicaId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyReplicaDescription extends Rpc
 {
 }
 
@@ -5032,28 +5152,8 @@ class RestartDedicatedHost extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getRestoreTime()
- * @method $this withRestoreTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class RestoreDBInstance extends Rpc
-{
-}
-
-/**
+ * @method string getRestoreTableMode()
+ * @method $this withRestoreTableMode($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
@@ -5126,6 +5226,58 @@ class RevokeOperatorPermission extends Rpc
  * @method $this withOwnerId($value)
  */
 class SignEventAction extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSpecifiedTime()
+ * @method $this withSpecifiedTime($value)
+ * @method string getTargetDedicatedHostIdForSlave()
+ * @method $this withTargetDedicatedHostIdForSlave($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getStorage()
+ * @method $this withStorage($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getDBInstanceTransType()
+ * @method $this withDBInstanceTransType($value)
+ * @method string getTargetDedicatedHostIdForMaster()
+ * @method $this withTargetDedicatedHostIdForMaster($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getDedicatedHostGroupId()
+ * @method $this withDedicatedHostGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTargetDBInstanceClass()
+ * @method $this withTargetDBInstanceClass($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getTargetDedicatedHostIdForLog()
+ * @method $this withTargetDedicatedHostIdForLog($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class StartDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class StopDBInstance extends Rpc
 {
 }
 
@@ -5347,5 +5499,23 @@ class UpgradeDBInstanceEngineVersion extends Rpc
  * @method $this withSwitchTime($value)
  */
 class UpgradeDBInstanceKernelVersion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUpgradeTime()
+ * @method $this withUpgradeTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getSwitchTime()
+ * @method $this withSwitchTime($value)
+ */
+class UpgradeDBProxyInstanceKernelVersion extends Rpc
 {
 }
