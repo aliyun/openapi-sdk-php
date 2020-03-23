@@ -5,11 +5,13 @@ namespace AlibabaCloud\Imagerecog\V20190930;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ClassifyingRubbish classifyingRubbish(array $options = [])
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
  * @method RecognizeLogo recognizeLogo(array $options = [])
  * @method RecognizeScene recognizeScene(array $options = [])
+ * @method RecognizeVehicleType recognizeVehicleType(array $options = [])
  * @method TaggingImage taggingImage(array $options = [])
  */
 class ImagerecogApiResolver extends ApiResolver
@@ -29,6 +31,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imagerecog';
+}
+
+/**
+ * @method string getImageURL()
+ */
+class ClassifyingRubbish extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -146,6 +168,26 @@ class RecognizeScene extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizeVehicleType extends Rpc
+{
 
     /**
      * @param string $value
