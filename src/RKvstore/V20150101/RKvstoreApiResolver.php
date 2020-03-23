@@ -38,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeParameters describeParameters(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRunningLogRecords describeRunningLogRecords(array $options = [])
+ * @method DescribeSecurityGroupConfiguration describeSecurityGroupConfiguration(array $options = [])
  * @method DescribeSecurityIps describeSecurityIps(array $options = [])
  * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
  * @method DescribeUserClusterHost describeUserClusterHost(array $options = [])
@@ -65,6 +66,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstanceSSL modifyInstanceSSL(array $options = [])
  * @method ModifyInstanceVpcAuthMode modifyInstanceVpcAuthMode(array $options = [])
  * @method ModifyIntranetAttribute modifyIntranetAttribute(array $options = [])
+ * @method ModifySecurityGroupConfiguration modifySecurityGroupConfiguration(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method ModifyUserClusterHost modifyUserClusterHost(array $options = [])
  * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
@@ -92,6 +94,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'redisa';
 }
 
 /**
@@ -705,6 +710,10 @@ class DescribeDedicatedUserCluster extends Rpc
  * @method $this withIntervalForHistory($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
+ * @method string getAccessType()
+ * @method $this withAccessType($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -715,6 +724,8 @@ class DescribeDedicatedUserCluster extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  * @method string getMonitorKeys()
  * @method $this withMonitorKeys($value)
  */
@@ -758,6 +769,8 @@ class DescribeInstanceAttribute extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class DescribeInstanceAutoRenewalAttribute extends Rpc
 {
@@ -984,6 +997,24 @@ class DescribeRegions extends Rpc
  * @method $this withDBName($value)
  */
 class DescribeRunningLogRecords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeSecurityGroupConfiguration extends Rpc
 {
 }
 
@@ -1651,6 +1682,26 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withInstanceId($value)
  */
 class ModifyIntranetAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifySecurityGroupConfiguration extends Rpc
 {
 }
 

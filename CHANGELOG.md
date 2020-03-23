@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.187 - 2020-3-23
+- Generated 2015-01-01 for `R-kvstore`.
+- Add DescribeSecurityGroupConfiguration API.
+- Add ModifySecurityGroupConfiguration API.
+
+
 ## 1.8.186 - 2020-3-23
 - Sdk version 107.
 
