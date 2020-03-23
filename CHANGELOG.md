@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.194 - 2020-3-23
+- SDK version 100.
+
+
 ## 1.8.193 - 2020-3-23
 - SDK version 107.
 
