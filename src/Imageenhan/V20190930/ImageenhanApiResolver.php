@@ -7,9 +7,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ChangeImageSize changeImageSize(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
+ * @method ImageBlindCharacterWatermark imageBlindCharacterWatermark(array $options = [])
+ * @method ImageBlindPicWatermark imageBlindPicWatermark(array $options = [])
  * @method IntelligentComposition intelligentComposition(array $options = [])
  * @method MakeSuperResolutionImage makeSuperResolutionImage(array $options = [])
  * @method RecolorImage recolorImage(array $options = [])
+ * @method RemoveImageSubtitles removeImageSubtitles(array $options = [])
+ * @method RemoveImageWatermark removeImageWatermark(array $options = [])
  */
 class ImageenhanApiResolver extends ApiResolver
 {
@@ -107,6 +111,186 @@ class ExtendImageStyle extends Rpc
     {
         $this->data['StyleUrl'] = $value;
         $this->options['form_params']['StyleUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getWatermarkImageURL()
+ * @method string getQualityFactor()
+ * @method string getFunctionType()
+ * @method string getOutputFileType()
+ * @method string getOriginImageURL()
+ * @method string getText()
+ */
+class ImageBlindCharacterWatermark extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWatermarkImageURL($value)
+    {
+        $this->data['WatermarkImageURL'] = $value;
+        $this->options['form_params']['WatermarkImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQualityFactor($value)
+    {
+        $this->data['QualityFactor'] = $value;
+        $this->options['form_params']['QualityFactor'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFunctionType($value)
+    {
+        $this->data['FunctionType'] = $value;
+        $this->options['form_params']['FunctionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputFileType($value)
+    {
+        $this->data['OutputFileType'] = $value;
+        $this->options['form_params']['OutputFileType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginImageURL($value)
+    {
+        $this->data['OriginImageURL'] = $value;
+        $this->options['form_params']['OriginImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getWatermarkImageURL()
+ * @method string getQualityFactor()
+ * @method string getFunctionType()
+ * @method string getLogoURL()
+ * @method string getOutputFileType()
+ * @method string getOriginImageURL()
+ */
+class ImageBlindPicWatermark extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWatermarkImageURL($value)
+    {
+        $this->data['WatermarkImageURL'] = $value;
+        $this->options['form_params']['WatermarkImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQualityFactor($value)
+    {
+        $this->data['QualityFactor'] = $value;
+        $this->options['form_params']['QualityFactor'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFunctionType($value)
+    {
+        $this->data['FunctionType'] = $value;
+        $this->options['form_params']['FunctionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogoURL($value)
+    {
+        $this->data['LogoURL'] = $value;
+        $this->options['form_params']['LogoURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputFileType($value)
+    {
+        $this->data['OutputFileType'] = $value;
+        $this->options['form_params']['OutputFileType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginImageURL($value)
+    {
+        $this->data['OriginImageURL'] = $value;
+        $this->options['form_params']['OriginImageURL'] = $value;
 
         return $this;
     }
@@ -239,6 +423,102 @@ class RecolorImage extends Rpc
     {
         $this->data['RefUrl'] = $value;
         $this->options['form_params']['RefUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBH()
+ * @method string getBW()
+ * @method string getBX()
+ * @method string getImageURL()
+ * @method string getBY()
+ */
+class RemoveImageSubtitles extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBH($value)
+    {
+        $this->data['BH'] = $value;
+        $this->options['form_params']['BH'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBW($value)
+    {
+        $this->data['BW'] = $value;
+        $this->options['form_params']['BW'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBX($value)
+    {
+        $this->data['BX'] = $value;
+        $this->options['form_params']['BX'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBY($value)
+    {
+        $this->data['BY'] = $value;
+        $this->options['form_params']['BY'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RemoveImageWatermark extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
