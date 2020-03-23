@@ -7,7 +7,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ClassifyVehicleInsurance classifyVehicleInsurance(array $options = [])
  * @method DetectMainBody detectMainBody(array $options = [])
+ * @method DetectObject detectObject(array $options = [])
+ * @method DetectTransparentImage detectTransparentImage(array $options = [])
  * @method DetectVehicle detectVehicle(array $options = [])
+ * @method DetectWhiteBaseImage detectWhiteBaseImage(array $options = [])
  * @method RecognizeVehicleDamage recognizeVehicleDamage(array $options = [])
  * @method RecognizeVehicleDashboard recognizeVehicleDashboard(array $options = [])
  * @method RecognizeVehicleParts recognizeVehicleParts(array $options = [])
@@ -60,6 +63,46 @@ class DetectMainBody extends Rpc
 }
 
 /**
+ * @method string getImageURL()
+ */
+class DetectObject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectTransparentImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageType()
  * @method string getImageURL()
  */
@@ -78,6 +121,26 @@ class DetectVehicle extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectWhiteBaseImage extends Rpc
+{
 
     /**
      * @param string $value
