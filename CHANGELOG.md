@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.196 - 2020-3-24
+- DescribeInstanceTypes Supports EniIpv6AddressQuantity.
+
+
 ## 1.8.195 - 2020-3-23
 - SDK version 107.
 

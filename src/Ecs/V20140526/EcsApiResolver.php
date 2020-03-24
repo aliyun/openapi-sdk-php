@@ -223,6 +223,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstanceChargeType modifyInstanceChargeType(array $options = [])
  * @method ModifyInstanceDeployment modifyInstanceDeployment(array $options = [])
  * @method ModifyInstanceMaintenanceAttributes modifyInstanceMaintenanceAttributes(array $options = [])
+ * @method ModifyInstanceMetadataOptions modifyInstanceMetadataOptions(array $options = [])
  * @method ModifyInstanceNetworkSpec modifyInstanceNetworkSpec(array $options = [])
  * @method ModifyInstanceSpec modifyInstanceSpec(array $options = [])
  * @method ModifyInstanceVncPasswd modifyInstanceVncPasswd(array $options = [])
@@ -1110,6 +1111,7 @@ class CreateAutoProvisioningGroup extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getTimePoints()
  * @method string getRepeatWeekdays()
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
@@ -1144,6 +1146,22 @@ class CreateAutoSnapshotPolicy extends Rpc
         $this->options['query']['repeatWeekdays'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
     }
 
     /**
@@ -1489,6 +1507,8 @@ class CreateImage extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getHpcClusterId()
  * @method $this withHpcClusterId($value)
+ * @method string getHttpPutResponseHopLimit()
+ * @method $this withHttpPutResponseHopLimit($value)
  * @method string getSecurityEnhancementStrategy()
  * @method $this withSecurityEnhancementStrategy($value)
  * @method string getKeyPairName()
@@ -1564,6 +1584,8 @@ class CreateImage extends Rpc
  * @method $this withUserData($value)
  * @method string getPasswordInherit()
  * @method $this withPasswordInherit($value)
+ * @method string getHttpEndpoint()
+ * @method $this withHttpEndpoint($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method array getArn()
@@ -1596,6 +1618,8 @@ class CreateImage extends Rpc
  * @method string getSystemDiskSize()
  * @method string getImageFamily()
  * @method $this withImageFamily($value)
+ * @method string getHttpTokens()
+ * @method $this withHttpTokens($value)
  * @method string getSystemDiskDescription()
  */
 class CreateInstance extends Rpc
@@ -3446,6 +3470,7 @@ class DescribeAutoProvisioningGroups extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -3455,6 +3480,22 @@ class DescribeAutoProvisioningGroups extends Rpc
  */
 class DescribeAutoSnapshotPolicyEx extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -4693,6 +4734,8 @@ class DescribeInstanceRamRole extends Rpc
  * @method $this withPrivateIpAddresses($value)
  * @method string getHpcClusterId()
  * @method $this withHpcClusterId($value)
+ * @method string getHttpPutResponseHopLimit()
+ * @method $this withHttpPutResponseHopLimit($value)
  * @method string getFilter2Value()
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
@@ -4714,6 +4757,7 @@ class DescribeInstanceRamRole extends Rpc
  * @method $this withOwnerId($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method array getAdditionalAttributes()
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getInstanceIds()
@@ -4738,6 +4782,8 @@ class DescribeInstanceRamRole extends Rpc
  * @method $this withPageNumber($value)
  * @method string getRdmaIpAddresses()
  * @method $this withRdmaIpAddresses($value)
+ * @method string getHttpEndpoint()
+ * @method $this withHttpEndpoint($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPublicIpAddresses()
@@ -4757,6 +4803,8 @@ class DescribeInstanceRamRole extends Rpc
  * @method $this withEipAddresses($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
+ * @method string getHttpTokens()
+ * @method $this withHttpTokens($value)
  * @method string getFilter3Key()
  */
 class DescribeInstances extends Rpc
@@ -4828,6 +4876,21 @@ class DescribeInstances extends Rpc
         $this->options['query']['Filter.1.Value'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $additionalAttributes
+     *
+     * @return $this
+     */
+	public function withAdditionalAttributes(array $additionalAttributes)
+	{
+	    $this->data['AdditionalAttributes'] = $additionalAttributes;
+		foreach ($additionalAttributes as $i => $iValue) {
+			$this->options['query']['AdditionalAttributes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -5457,6 +5520,8 @@ class DescribeNetworkInterfacePermissions extends Rpc
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
  * @method array getNetworkInterfaceId()
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeNetworkInterfaces extends Rpc
 {
@@ -8192,6 +8257,26 @@ class ModifyInstanceMaintenanceAttributes extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getHttpPutResponseHopLimit()
+ * @method $this withHttpPutResponseHopLimit($value)
+ * @method string getHttpEndpoint()
+ * @method $this withHttpEndpoint($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getHttpTokens()
+ * @method $this withHttpTokens($value)
+ */
+class ModifyInstanceMetadataOptions extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getInternetMaxBandwidthOut()
@@ -9593,6 +9678,8 @@ class RunCommand extends Rpc
  * @method $this withUniqueSuffix($value)
  * @method string getHpcClusterId()
  * @method $this withHpcClusterId($value)
+ * @method string getHttpPutResponseHopLimit()
+ * @method $this withHttpPutResponseHopLimit($value)
  * @method string getSecurityEnhancementStrategy()
  * @method $this withSecurityEnhancementStrategy($value)
  * @method string getKeyPairName()
@@ -9673,6 +9760,8 @@ class RunCommand extends Rpc
  * @method $this withUserData($value)
  * @method string getPasswordInherit()
  * @method $this withPasswordInherit($value)
+ * @method string getHttpEndpoint()
+ * @method $this withHttpEndpoint($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getHibernationConfigured()
@@ -9710,6 +9799,8 @@ class RunCommand extends Rpc
  * @method string getSystemDiskSize()
  * @method string getImageFamily()
  * @method $this withImageFamily($value)
+ * @method string getHttpTokens()
+ * @method $this withHttpTokens($value)
  * @method string getSystemDiskDescription()
  */
 class RunInstances extends Rpc
