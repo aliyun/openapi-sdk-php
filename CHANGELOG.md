@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.199 - 2020-3-25
+- SDK versioin 101.
+
+
 ## 1.8.198 - 2020-3-25
 - Supported describe appkey for rtc application.
 - Supported set property for rtc channel.

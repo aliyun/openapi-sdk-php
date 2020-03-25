@@ -159,9 +159,9 @@ class AbstractFilmVideo extends Rpc
 /**
  * @method string getMode()
  * @method string getAsync()
- * @method string getVideoCode()
  * @method string getVideoUrl()
  * @method string getVideoBitrate()
+ * @method string getVideoCodec()
  * @method string getVideoFormat()
  */
 class AdjustVideoColor extends Rpc
@@ -198,19 +198,6 @@ class AdjustVideoColor extends Rpc
      *
      * @return $this
      */
-    public function withVideoCode($value)
-    {
-        $this->data['VideoCode'] = $value;
-        $this->options['form_params']['VideoCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withVideoUrl($value)
     {
         $this->data['VideoUrl'] = $value;
@@ -228,6 +215,19 @@ class AdjustVideoColor extends Rpc
     {
         $this->data['VideoBitrate'] = $value;
         $this->options['form_params']['VideoBitrate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoCodec($value)
+    {
+        $this->data['VideoCodec'] = $value;
+        $this->options['form_params']['VideoCodec'] = $value;
 
         return $this;
     }
