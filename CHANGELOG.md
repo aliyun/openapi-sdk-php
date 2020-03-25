@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.198 - 2020-3-25
+- Supported describe appkey for rtc application.
+- Supported set property for rtc channel.
+- Fixed the missing error code description for rtc removeterminal.
+
+
 ## 1.8.197 - 2020-3-24
 - DescribeInstanceTypes Supports EniIpv6AddressQuantity.
 

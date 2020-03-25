@@ -15,8 +15,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DescribeApps describeApps(array $options = [])
  * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
+ * @method DescribeChannelUsers describeChannelUsers(array $options = [])
  * @method DescribeConferenceAuthInfo describeConferenceAuthInfo(array $options = [])
  * @method DescribeMAURule describeMAURule(array $options = [])
+ * @method DescribeRTCAppKey describeRTCAppKey(array $options = [])
  * @method DescribeRtcChannelCntData describeRtcChannelCntData(array $options = [])
  * @method DescribeRtcChannelList describeRtcChannelList(array $options = [])
  * @method DescribeRtcChannelMetric describeRtcChannelMetric(array $options = [])
@@ -27,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRtcQualityMetric describeRtcQualityMetric(array $options = [])
  * @method DescribeRtcUserCntData describeRtcUserCntData(array $options = [])
  * @method DescribeRtcUserList describeRtcUserList(array $options = [])
+ * @method DescribeUserInfoInChannel describeUserInfoInChannel(array $options = [])
  * @method DisableMAURule disableMAURule(array $options = [])
  * @method EnableMAURule enableMAURule(array $options = [])
  * @method GetMPUTaskStatus getMPUTaskStatus(array $options = [])
@@ -38,6 +41,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ReceiveNotify receiveNotify(array $options = [])
  * @method RemoveParticipants removeParticipants(array $options = [])
  * @method RemoveTerminals removeTerminals(array $options = [])
+ * @method SetChannelProperty setChannelProperty(array $options = [])
  * @method StartMPUTask startMPUTask(array $options = [])
  * @method StartTask startTask(array $options = [])
  * @method StopMPUTask stopMPUTask(array $options = [])
@@ -61,6 +65,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'rtc';
 }
 
 /**
@@ -275,6 +282,18 @@ class DescribeChannelParticipants extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeChannelUsers extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getConferenceId()
  * @method $this withConferenceId($value)
  * @method string getAppId()
@@ -291,6 +310,16 @@ class DescribeConferenceAuthInfo extends Rpc
  * @method $this withAppId($value)
  */
 class DescribeMAURule extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeRTCAppKey extends Rpc
 {
 }
 
@@ -477,6 +506,20 @@ class DescribeRtcUserList extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeUserInfoInChannel extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getAppId()
@@ -501,12 +544,12 @@ class EnableMAURule extends Rpc
 }
 
 /**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
  */
 class GetMPUTaskStatus extends Rpc
 {
@@ -620,10 +663,10 @@ class ReceiveNotify extends Rpc
 
 /**
  * @method array getParticipantIds()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getConferenceId()
  * @method $this withConferenceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  */
@@ -672,6 +715,28 @@ class RemoveTerminals extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getMaxUserNum()
+ * @method $this withMaxUserNum($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getTopics()
+ * @method $this withTopics($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class SetChannelProperty extends Rpc
+{
 }
 
 /**
