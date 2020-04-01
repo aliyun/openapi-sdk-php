@@ -331,6 +331,8 @@ class ListTemplates extends Rpc
  * @method $this withNotifyNote($value)
  * @method string getLoopItem()
  * @method $this withLoopItem($value)
+ * @method string getTaskExecutionIds()
+ * @method $this withTaskExecutionIds($value)
  * @method string getTaskExecutionId()
  * @method $this withTaskExecutionId($value)
  * @method string getParameters()

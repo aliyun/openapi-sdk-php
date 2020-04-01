@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.201 - 2020-4-1
+- Counters and Parameters are changed to Map in ListExections and StartExecution.
+
+
 ## 1.8.200 - 2020-3-25
 - Supported describe appkey for rtc application.
 - Supported set property for rtc channel.
