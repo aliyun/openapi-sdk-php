@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.204 - 2020-4-2
+- Support for WaitTimeSeconds for DescribeExecution.
+
+
 ## 1.8.203 - 2020-4-1
 - DescribeVerifyToken API Add Parameters-UserIp and UserPhoneNumber and UserRegistTime.
 

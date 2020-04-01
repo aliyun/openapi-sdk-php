@@ -131,6 +131,8 @@ class DeleteFlow extends Rpc
 /**
  * @method string getExecutionName()
  * @method $this withExecutionName($value)
+ * @method string getWaitTimeSeconds()
+ * @method $this withWaitTimeSeconds($value)
  * @method string getRequestId()
  * @method $this withRequestId($value)
  * @method string getFlowName()
