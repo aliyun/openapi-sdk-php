@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.202 - 2020-4-1
+- Parameters is string in StartExecution Response.
+
+
 ## 1.8.201 - 2020-4-1
 - Counters and Parameters are changed to Map in ListExections and StartExecution.
 
