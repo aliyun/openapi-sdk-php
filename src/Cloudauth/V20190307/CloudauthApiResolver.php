@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CompareFaces compareFaces(array $options = [])
+ * @method ContrastFaceVerify contrastFaceVerify(array $options = [])
  * @method CreateAuthKey createAuthKey(array $options = [])
  * @method CreateRPSDK createRPSDK(array $options = [])
  * @method CreateVerifySDK createVerifySDK(array $options = [])
@@ -117,6 +118,42 @@ class CompareFaces extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getOssObjectName()
+ * @method $this withOssObjectName($value)
+ * @method string getFaceContrastPicture()
+ * @method $this withFaceContrastPicture($value)
+ * @method string getCertName()
+ * @method $this withCertName($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
+ * @method string getDeviceToken()
+ * @method $this withDeviceToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
+ * @method string getCertNo()
+ * @method $this withCertNo($value)
+ * @method string getOuterOrderNo()
+ * @method $this withOuterOrderNo($value)
+ * @method string getCertType()
+ * @method $this withCertType($value)
+ * @method string getFaceContrastPictureUrl()
+ * @method $this withFaceContrastPictureUrl($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getOssBucketName()
+ * @method $this withOssBucketName($value)
+ */
+class ContrastFaceVerify extends Rpc
+{
 }
 
 /**
@@ -511,20 +548,34 @@ class InitDevice extends Rpc
  * @method $this withProductCode($value)
  * @method string getFaceContrastPicture()
  * @method $this withFaceContrastPicture($value)
- * @method string getCertName()
- * @method $this withCertName($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
  * @method string getCertNo()
  * @method $this withCertNo($value)
  * @method string getOuterOrderNo()
  * @method $this withOuterOrderNo($value)
  * @method string getCertType()
  * @method $this withCertType($value)
- * @method string getSceneId()
- * @method $this withSceneId($value)
- * @method string getReturnUrl()
- * @method $this withReturnUrl($value)
+ * @method string getFaceContrastPictureUrl()
+ * @method $this withFaceContrastPictureUrl($value)
  * @method string getMetaInfo()
  * @method $this withMetaInfo($value)
+ * @method string getOssObjectName()
+ * @method $this withOssObjectName($value)
+ * @method string getCertName()
+ * @method $this withCertName($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getOssBucketName()
+ * @method $this withOssBucketName($value)
+ * @method string getReturnUrl()
+ * @method $this withReturnUrl($value)
  */
 class InitFaceVerify extends Rpc
 {

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.206 - 2020-4-2
+- Add API ContrastFaceVerify.
+
+
 ## 1.8.205 - 2020-4-2
 - Support light up led lamp for ESL.
 
