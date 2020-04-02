@@ -20,17 +20,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteService deleteService(array $options = [])
  * @method DeleteServiceList deleteServiceList(array $options = [])
  * @method DeleteUnionCasService deleteUnionCasService(array $options = [])
+ * @method DescribeRegions describeRegions(array $options = [])
+ * @method FindAllLinkRule findAllLinkRule(array $options = [])
  * @method FindApprovalOrderList findApprovalOrderList(array $options = [])
  * @method FindApproveServiceList findApproveServiceList(array $options = [])
+ * @method FindBrokerSLOHisList findBrokerSLOHisList(array $options = [])
+ * @method FindBrokerSLOList findBrokerSLOList(array $options = [])
  * @method FindCredentialsList findCredentialsList(array $options = [])
  * @method FindInstanceList findInstanceList(array $options = [])
+ * @method FindInstanceNodeList findInstanceNodeList(array $options = [])
  * @method FindOrderableList findOrderableList(array $options = [])
  * @method FindOrderedList findOrderedList(array $options = [])
  * @method FindProjectList findProjectList(array $options = [])
  * @method FindProjectsNameList findProjectsNameList(array $options = [])
  * @method FindServiceList findServiceList(array $options = [])
  * @method FindServiceStatisticalData findServiceStatisticalData(array $options = [])
+ * @method GetConsoleSLO getConsoleSLO(array $options = [])
  * @method GetInstance getInstance(array $options = [])
+ * @method GetMetaServerSLO getMetaServerSLO(array $options = [])
  * @method GetOrder getOrder(array $options = [])
  * @method GetProject getProject(array $options = [])
  * @method GetService getService(array $options = [])
@@ -64,9 +71,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     protected $scheme = 'https';
-
-    /** @var string */
-    public $serviceCode = 'csb';
 }
 
 /**
@@ -345,6 +349,30 @@ class DeleteUnionCasService extends Rpc
 {
 }
 
+class DescribeRegions extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
+ */
+class FindAllLinkRule extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
 /**
  * @method string getProjectName()
  * @method $this withProjectName($value)
@@ -392,6 +420,34 @@ class FindApproveServiceList extends Rpc
 /**
  * @method string getCsbId()
  * @method $this withCsbId($value)
+ */
+class FindBrokerSLOHisList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
+ */
+class FindBrokerSLOList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getGroupName()
@@ -415,6 +471,26 @@ class FindCredentialsList extends Rpc
  * @method $this withStatus($value)
  */
 class FindInstanceList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getOnlyImported()
+ * @method $this withOnlyImported($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class FindInstanceNodeList extends Rpc
 {
 
     /** @var string */
@@ -507,6 +583,8 @@ class FindProjectsNameList extends Rpc
  * @method $this withPageNum($value)
  * @method string getCasShowType()
  * @method $this withCasShowType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getAlias()
  * @method $this withAlias($value)
  * @method string getServiceName()
@@ -536,11 +614,31 @@ class FindServiceStatisticalData extends Rpc
     public $method = 'GET';
 }
 
+class GetConsoleSLO extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
 /**
  * @method string getCsbId()
  * @method $this withCsbId($value)
  */
 class GetInstance extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+class GetMetaServerSLO extends Rpc
 {
 
     /** @var string */

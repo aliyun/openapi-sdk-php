@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.207 - 2020-4-2
+- Add slo metrics.
+
+
 ## 1.8.206 - 2020-4-2
 - Add API ContrastFaceVerify.
 
