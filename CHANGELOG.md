@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.205 - 2020-4-2
+- Support light up led lamp for ESL.
+
+
 ## 1.8.204 - 2020-4-2
 - Support for WaitTimeSeconds for DescribeExecution.
 
