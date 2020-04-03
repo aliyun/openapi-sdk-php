@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.208 - 2020-4-3
+- Support lmItemId.
+- Support STSToken.
+
+
 ## 1.8.207 - 2020-4-2
 - Add slo metrics.
 

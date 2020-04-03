@@ -35,12 +35,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyItemLimitRule modifyItemLimitRule(array $options = [])
  * @method NotifyPayOrderStatus notifyPayOrderStatus(array $options = [])
  * @method NotifyWithholdFund notifyWithholdFund(array $options = [])
+ * @method QueryActivityItems queryActivityItems(array $options = [])
  * @method QueryAddress queryAddress(array $options = [])
  * @method QueryAddressDetail queryAddressDetail(array $options = [])
  * @method QueryAddressList queryAddressList(array $options = [])
  * @method QueryAllCinemas queryAllCinemas(array $options = [])
  * @method QueryAllCities queryAllCities(array $options = [])
  * @method QueryBatchRegistAnonymousTbAccountResult queryBatchRegistAnonymousTbAccountResult(array $options = [])
+ * @method QueryBestSession4Items queryBestSession4Items(array $options = [])
  * @method QueryBizItemList queryBizItemList(array $options = [])
  * @method QueryBizItems queryBizItems(array $options = [])
  * @method QueryGuideItemGroup queryGuideItemGroup(array $options = [])
@@ -62,6 +64,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryOrderList queryOrderList(array $options = [])
  * @method QueryOrderLogistics queryOrderLogistics(array $options = [])
  * @method QueryRefundApplicationDetail queryRefundApplicationDetail(array $options = [])
+ * @method QueryUnfinishedActivities queryUnfinishedActivities(array $options = [])
+ * @method QueryUnfinishedSessions queryUnfinishedSessions(array $options = [])
+ * @method QueryUnfinishedSessions4Items queryUnfinishedSessions4Items(array $options = [])
  * @method QueryUpcomingMovies queryUpcomingMovies(array $options = [])
  * @method RefundPoint refundPoint(array $options = [])
  * @method RefuseMerchantSyncTask refuseMerchantSyncTask(array $options = [])
@@ -165,6 +170,7 @@ class AddSupplierNewItems extends Rpc
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 			foreach ($depth1Value['SkuList'] as $i => $iValue) {
 				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($i + 1)] = $iValue;
 			}
@@ -246,36 +252,36 @@ class BatchRegistAnonymousTbAccount extends Rpc
 /**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class CancelOrder extends Rpc
 {
 }
 
 /**
- * @method string getSubLmOrderId()
- * @method $this withSubLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getDisputeId()
- * @method $this withDisputeId($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getSubLmOrderId()
+ * @method $this withSubLmOrderId($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getDisputeId()
+ * @method $this withDisputeId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class CancelRefund extends Rpc
 {
@@ -284,16 +290,16 @@ class CancelRefund extends Rpc
 /**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class ConfirmDisburse extends Rpc
 {
@@ -331,6 +337,8 @@ class CreateMovieTicketOrder extends Rpc
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getOrderExpireTime()
  * @method $this withOrderExpireTime($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
  * @method array getItemList()
  * @method string getItemId()
  * @method $this withItemId($value)
@@ -359,6 +367,7 @@ class CreateOrder extends Rpc
 		foreach ($itemList as $depth1 => $depth1Value) {
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
 		}
 
@@ -379,6 +388,8 @@ class CreateOrder extends Rpc
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getOrderExpireTime()
  * @method $this withOrderExpireTime($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
  * @method array getItemList()
  * @method string getItemId()
  * @method $this withItemId($value)
@@ -407,6 +418,7 @@ class CreateOrderV2 extends Rpc
 		foreach ($itemList as $depth1 => $depth1Value) {
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
 		}
 
@@ -415,15 +427,15 @@ class CreateOrderV2 extends Rpc
 }
 
 /**
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
  * @method string getBuyInfo()
  * @method string getThirdPartyUserId()
  * @method $this withThirdPartyUserId($value)
- * @method string getBizUid()
- * @method $this withBizUid($value)
  * @method string getBizId()
  * @method $this withBizId($value)
- * @method string getUseAnonymousTbAccount()
- * @method $this withUseAnonymousTbAccount($value)
  */
 class CreatePayUrl extends Rpc
 {
@@ -455,6 +467,8 @@ class CreatePayUrl extends Rpc
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getOrderExpireTime()
  * @method $this withOrderExpireTime($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
  * @method array getItemList()
  * @method string getItemId()
  * @method $this withItemId($value)
@@ -483,6 +497,7 @@ class CreateVirtualProductOrder extends Rpc
 		foreach ($itemList as $depth1 => $depth1Value) {
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
 		}
 
@@ -517,18 +532,18 @@ class DeleteBizItems extends Rpc
 }
 
 /**
- * @method string getItemId()
- * @method $this withItemId($value)
  * @method string getLmActivityId()
  * @method $this withLmActivityId($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getLmItemId()
  * @method $this withLmItemId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
  * @method string getSubBizCode()
  * @method $this withSubBizCode($value)
+ * @method string getItemId()
+ * @method $this withItemId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
  */
 class DeleteItemLimitRule extends Rpc
 {
@@ -561,6 +576,8 @@ class EnableOrder extends Rpc
  * @method $this withItemId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
  */
@@ -579,20 +596,20 @@ class GetCategoryList extends Rpc
 }
 
 /**
+ * @method string getCuid()
+ * @method $this withCuid($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
  * @method string getNick()
  * @method $this withNick($value)
  * @method string getSellerId()
  * @method $this withSellerId($value)
- * @method string getCuid()
- * @method $this withCuid($value)
  * @method string getThirdPartyUserId()
  * @method $this withThirdPartyUserId($value)
- * @method string getBizUid()
- * @method $this withBizUid($value)
  * @method string getBizId()
  * @method $this withBizId($value)
- * @method string getUseAnonymousTbAccount()
- * @method $this withUseAnonymousTbAccount($value)
  */
 class GetCustomServiceUrl extends Rpc
 {
@@ -757,6 +774,7 @@ class ModifyBasicAndBizItems extends Rpc
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
 			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 			foreach ($depth1Value['SkuList'] as $depth2 => $depth2Value) {
 				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.StatusAction'] = $depth2Value['StatusAction'];
 				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PriceCent'] = $depth2Value['PriceCent'];
@@ -793,6 +811,7 @@ class ModifyBizItems extends Rpc
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
 			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 			foreach ($depth1Value['SkuList'] as $depth2 => $depth2Value) {
 				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.StatusAction'] = $depth2Value['StatusAction'];
 				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PriceCent'] = $depth2Value['PriceCent'];
@@ -865,6 +884,20 @@ class NotifyPayOrderStatus extends Rpc
  * @method $this withChannelId($value)
  */
 class NotifyWithholdFund extends Rpc
+{
+}
+
+/**
+ * @method string getLmActivityId()
+ * @method $this withLmActivityId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class QueryActivityItems extends Rpc
 {
 }
 
@@ -945,6 +978,18 @@ class QueryBatchRegistAnonymousTbAccountResult extends Rpc
  * @method $this withLmItemIds($value)
  * @method string getItemIds()
  * @method $this withItemIds($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class QueryBestSession4Items extends Rpc
+{
+}
+
+/**
+ * @method string getLmItemIds()
+ * @method $this withLmItemIds($value)
+ * @method string getItemIds()
+ * @method $this withItemIds($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getPageNumber()
@@ -1009,6 +1054,8 @@ class QueryHotMovies extends Rpc
  * @method $this withItemId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
  */
 class QueryItemDetail extends Rpc
 {
@@ -1061,6 +1108,7 @@ class QueryItemInventory extends Rpc
 			foreach ($depth1Value['SkuIdList'] as $i => $iValue) {
 				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuIdList.' . ($i + 1)] = $iValue;
 			}
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 		}
 
 		return $this;
@@ -1070,16 +1118,16 @@ class QueryItemInventory extends Rpc
 /**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class QueryLogistics extends Rpc
 {
@@ -1191,18 +1239,18 @@ class QueryOrderDetailInner extends Rpc
 }
 
 /**
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getPaymentId()
- * @method $this withPaymentId($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getPaymentId()
+ * @method $this withPaymentId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class QueryOrderIdByPayId extends Rpc
 {
@@ -1211,14 +1259,14 @@ class QueryOrderIdByPayId extends Rpc
 /**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  * @method string getChannelUserId()
  * @method $this withChannelUserId($value)
  */
@@ -1266,36 +1314,76 @@ class QueryOrderList extends Rpc
 /**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class QueryOrderLogistics extends Rpc
 {
 }
 
 /**
- * @method string getSubLmOrderId()
- * @method $this withSubLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getSubLmOrderId()
+ * @method $this withSubLmOrderId($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class QueryRefundApplicationDetail extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class QueryUnfinishedActivities extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getQueryTime()
+ * @method $this withQueryTime($value)
+ */
+class QueryUnfinishedSessions extends Rpc
+{
+}
+
+/**
+ * @method string getLmItemIds()
+ * @method $this withLmItemIds($value)
+ * @method string getItemIds()
+ * @method $this withItemIds($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getQueryTime()
+ * @method $this withQueryTime($value)
+ */
+class QueryUnfinishedSessions4Items extends Rpc
 {
 }
 
@@ -1314,16 +1402,16 @@ class QueryUpcomingMovies extends Rpc
 /**
  * @method string getReason()
  * @method $this withReason($value)
- * @method string getSellerId()
- * @method $this withSellerId($value)
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getSellerId()
+ * @method $this withSellerId($value)
  * @method string getThirdPartyUserId()
  * @method $this withThirdPartyUserId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
- * @method string getUseAnonymousTbAccount()
- * @method $this withUseAnonymousTbAccount($value)
  */
 class RefundPoint extends Rpc
 {
@@ -1412,6 +1500,8 @@ class RemoveMessages extends Rpc
  * @method $this withExtJson($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getLmItemId()
+ * @method $this withLmItemId($value)
  * @method array getItemList()
  * @method string getThirdPartyUserId()
  * @method $this withThirdPartyUserId($value)
@@ -1434,6 +1524,7 @@ class RenderOrder extends Rpc
 		foreach ($itemList as $depth1 => $depth1Value) {
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
 			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
 		}
 
@@ -1460,16 +1551,16 @@ class RepayForPayUrl extends Rpc
 /**
  * @method string getLmOrderId()
  * @method $this withLmOrderId($value)
- * @method string getThirdPartyUserId()
- * @method $this withThirdPartyUserId($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  */
 class RepayOrder extends Rpc
 {
@@ -1482,10 +1573,10 @@ class RepayOrder extends Rpc
  * @method $this withBizUid($value)
  * @method string getExtJson()
  * @method $this withExtJson($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getMobile()
  * @method $this withMobile($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  * @method string getSeatNames()
  * @method $this withSeatNames($value)
  * @method string getScheduleId()
@@ -1578,10 +1669,10 @@ class UpdateAddress extends Rpc
  * @method $this withBizUid($value)
  * @method string getExtJson()
  * @method $this withExtJson($value)
- * @method string getBizId()
- * @method $this withBizId($value)
  * @method string getMobileNo()
  * @method $this withMobileNo($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  * @method string getTbUserNick()
  * @method $this withTbUserNick($value)
  */
