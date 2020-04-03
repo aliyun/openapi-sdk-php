@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.211 - 2020-4-3
+- Add trace api.
+- Add prometheus api.
+
+
 ## 1.8.210 - 2020-4-3
 - Support shelf type for planogram position.
 
