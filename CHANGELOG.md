@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.210 - 2020-4-3
+- Support shelf type for planogram position.
+
+
 ## 1.8.209 - 2020-4-3
 - Support sort script.
 
