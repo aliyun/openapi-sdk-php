@@ -130,6 +130,7 @@ namespace AlibabaCloud;
  * @method static Ons\Ons ons()
  * @method static OnsMqtt\OnsMqtt onsMqtt()
  * @method static Oos\Oos oos()
+ * @method static OpenSearch\OpenSearch openSearch()
  * @method static Openanalytics\Openanalytics openanalytics()
  * @method static OssAdmin\OssAdmin ossAdmin()
  * @method static Ots\Ots ots()

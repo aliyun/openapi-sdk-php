@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.209 - 2020-4-3
+- Support sort script.
+
+
 ## 1.8.208 - 2020-4-3
 - Support lmItemId.
 - Support STSToken.
