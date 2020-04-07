@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.214 - 2020-4-7
+- Generated 2020-03-20 for `imgsearch`.
+
+
 ## 1.8.213 - 2020-4-7
 - Generated 2019-12-30 for `facebody`.
 

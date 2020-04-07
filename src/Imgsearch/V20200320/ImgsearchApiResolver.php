@@ -34,10 +34,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
 /**
  * @method string getEntityId()
- * @method string getExtraData()
  * @method string getDbName()
- * @method string getDataId()
  * @method string getImageUrl()
+ * @method string getExtraData()
  */
 class AddImage extends Rpc
 {
@@ -60,19 +59,6 @@ class AddImage extends Rpc
      *
      * @return $this
      */
-    public function withExtraData($value)
-    {
-        $this->data['ExtraData'] = $value;
-        $this->options['form_params']['ExtraData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withDbName($value)
     {
         $this->data['DbName'] = $value;
@@ -86,10 +72,10 @@ class AddImage extends Rpc
      *
      * @return $this
      */
-    public function withDataId($value)
+    public function withImageUrl($value)
     {
-        $this->data['DataId'] = $value;
-        $this->options['form_params']['DataId'] = $value;
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }
@@ -99,10 +85,10 @@ class AddImage extends Rpc
      *
      * @return $this
      */
-    public function withImageUrl($value)
+    public function withExtraData($value)
     {
-        $this->data['ImageUrl'] = $value;
-        $this->options['form_params']['ImageUrl'] = $value;
+        $this->data['ExtraData'] = $value;
+        $this->options['form_params']['ExtraData'] = $value;
 
         return $this;
     }
@@ -129,11 +115,24 @@ class CreateImageDb extends Rpc
 }
 
 /**
+ * @method string getEntityId()
  * @method string getDbName()
- * @method string getDataId()
  */
 class DeleteImage extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEntityId($value)
+    {
+        $this->data['EntityId'] = $value;
+        $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -144,19 +143,6 @@ class DeleteImage extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDataId($value)
-    {
-        $this->data['DataId'] = $value;
-        $this->options['form_params']['DataId'] = $value;
 
         return $this;
     }
@@ -187,7 +173,11 @@ class ListImageDbs extends Rpc
 }
 
 /**
- * @method string getFromScrollId()
+ * @method string getEntityIdPrefix()
+ * @method string getLimit()
+ * @method string getOrder()
+ * @method string getOffset()
+ * @method string getToken()
  * @method string getDbName()
  */
 class ListImages extends Rpc
@@ -198,10 +188,62 @@ class ListImages extends Rpc
      *
      * @return $this
      */
-    public function withFromScrollId($value)
+    public function withEntityIdPrefix($value)
     {
-        $this->data['FromScrollId'] = $value;
-        $this->options['form_params']['FromScrollId'] = $value;
+        $this->data['EntityIdPrefix'] = $value;
+        $this->options['form_params']['EntityIdPrefix'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['form_params']['Order'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOffset($value)
+    {
+        $this->data['Offset'] = $value;
+        $this->options['form_params']['Offset'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['form_params']['Token'] = $value;
 
         return $this;
     }
