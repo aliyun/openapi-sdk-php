@@ -6,11 +6,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddFace addFace(array $options = [])
+ * @method AddFaceEntity addFaceEntity(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
+ * @method DeleteFaceEntity deleteFaceEntity(array $options = [])
  * @method DetectBodyCount detectBodyCount(array $options = [])
  * @method DetectFace detectFace(array $options = [])
  * @method DetectLivingFace detectLivingFace(array $options = [])
@@ -21,13 +23,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FaceFilter faceFilter(array $options = [])
  * @method FaceMakeup faceMakeup(array $options = [])
  * @method FaceTidyup faceTidyup(array $options = [])
+ * @method GetFaceEntity getFaceEntity(array $options = [])
  * @method HandPosture handPosture(array $options = [])
  * @method ListFaceDbs listFaceDbs(array $options = [])
- * @method ListFaces listFaces(array $options = [])
+ * @method ListFaceEntities listFaceEntities(array $options = [])
  * @method RecognizeExpression recognizeExpression(array $options = [])
  * @method RecognizeFace recognizeFace(array $options = [])
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
+ * @method UpdateFaceEntity updateFaceEntity(array $options = [])
  */
 class FacebodyApiResolver extends ApiResolver
 {
@@ -50,10 +54,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
 /**
  * @method string getEntityId()
- * @method string getExtraData()
- * @method string getFaceId()
  * @method string getDbName()
  * @method string getImageUrl()
+ * @method string getExtraData()
  */
 class AddFace extends Rpc
 {
@@ -67,32 +70,6 @@ class AddFace extends Rpc
     {
         $this->data['EntityId'] = $value;
         $this->options['form_params']['EntityId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraData($value)
-    {
-        $this->data['ExtraData'] = $value;
-        $this->options['form_params']['ExtraData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFaceId($value)
-    {
-        $this->data['FaceId'] = $value;
-        $this->options['form_params']['FaceId'] = $value;
 
         return $this;
     }
@@ -119,6 +96,67 @@ class AddFace extends Rpc
     {
         $this->data['ImageUrl'] = $value;
         $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraData($value)
+    {
+        $this->data['ExtraData'] = $value;
+        $this->options['form_params']['ExtraData'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEntityId()
+ * @method string getLabels()
+ * @method string getDbName()
+ */
+class AddFaceEntity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEntityId($value)
+    {
+        $this->data['EntityId'] = $value;
+        $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabels($value)
+    {
+        $this->data['Labels'] = $value;
+        $this->options['form_params']['Labels'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
 
         return $this;
     }
@@ -261,6 +299,40 @@ class DeleteFaceDb extends Rpc
     {
         $this->data['Name'] = $value;
         $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEntityId()
+ * @method string getDbName()
+ */
+class DeleteFaceEntity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEntityId($value)
+    {
+        $this->data['EntityId'] = $value;
+        $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
 
         return $this;
     }
@@ -623,6 +695,40 @@ class FaceTidyup extends Rpc
 }
 
 /**
+ * @method string getEntityId()
+ * @method string getDbName()
+ */
+class GetFaceEntity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEntityId($value)
+    {
+        $this->data['EntityId'] = $value;
+        $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  */
 class HandPosture extends Rpc
@@ -647,10 +753,15 @@ class ListFaceDbs extends Rpc
 }
 
 /**
- * @method string getFromScrollId()
+ * @method string getEntityIdPrefix()
+ * @method string getLimit()
+ * @method string getOrder()
+ * @method string getOffset()
+ * @method string getToken()
+ * @method string getLabels()
  * @method string getDbName()
  */
-class ListFaces extends Rpc
+class ListFaceEntities extends Rpc
 {
 
     /**
@@ -658,10 +769,75 @@ class ListFaces extends Rpc
      *
      * @return $this
      */
-    public function withFromScrollId($value)
+    public function withEntityIdPrefix($value)
     {
-        $this->data['FromScrollId'] = $value;
-        $this->options['form_params']['FromScrollId'] = $value;
+        $this->data['EntityIdPrefix'] = $value;
+        $this->options['form_params']['EntityIdPrefix'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['form_params']['Order'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOffset($value)
+    {
+        $this->data['Offset'] = $value;
+        $this->options['form_params']['Offset'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['form_params']['Token'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabels($value)
+    {
+        $this->data['Labels'] = $value;
+        $this->options['form_params']['Labels'] = $value;
 
         return $this;
     }
@@ -799,6 +975,54 @@ class SearchFace extends Rpc
     {
         $this->data['Limit'] = $value;
         $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEntityId()
+ * @method string getLabels()
+ * @method string getDbName()
+ */
+class UpdateFaceEntity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEntityId($value)
+    {
+        $this->data['EntityId'] = $value;
+        $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabels($value)
+    {
+        $this->data['Labels'] = $value;
+        $this->options['form_params']['Labels'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
 
         return $this;
     }
