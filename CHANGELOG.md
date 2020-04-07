@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.212 - 2020-4-7
+- Support namespaces.
+
+
 ## 1.8.211 - 2020-4-3
 - Add trace api.
 - Add prometheus api.

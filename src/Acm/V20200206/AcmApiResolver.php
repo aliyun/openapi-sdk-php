@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeployConfiguration deployConfiguration(array $options = [])
  * @method DescribeConfiguration describeConfiguration(array $options = [])
  * @method DescribeNamespace describeNamespace(array $options = [])
+ * @method DescribeNamespaces describeNamespaces(array $options = [])
  * @method UpdateNamespace updateNamespace(array $options = [])
  */
 class AcmApiResolver extends ApiResolver
@@ -25,9 +26,6 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $version = '2020-02-06';
-
-    /** @var string */
-    public $method = 'DELETE';
 
     /** @var string */
     public $serviceCode = 'acms';
@@ -191,6 +189,9 @@ class DeleteConfiguration extends Roa
     /** @var string */
     public $pathPattern = '/diamond-ops/pop/configuration';
 
+    /** @var string */
+    public $method = 'DELETE';
+
     /**
      * @param string $value
      *
@@ -238,6 +239,9 @@ class DeleteNamespace extends Roa
 {
     /** @var string */
     public $pathPattern = '/diamond-ops/pop/namespace';
+
+    /** @var string */
+    public $method = 'DELETE';
 
     /**
      * @param string $value
@@ -386,9 +390,6 @@ class DescribeConfiguration extends Roa
     /** @var string */
     public $pathPattern = '/diamond-ops/pop/configuration';
 
-    /** @var string */
-    public $method = 'GET';
-
     /**
      * @param string $value
      *
@@ -437,9 +438,6 @@ class DescribeNamespace extends Roa
     /** @var string */
     public $pathPattern = '/diamond-ops/pop/namespace';
 
-    /** @var string */
-    public $method = 'GET';
-
     /**
      * @param string $value
      *
@@ -452,6 +450,12 @@ class DescribeNamespace extends Roa
 
         return $this;
     }
+}
+
+class DescribeNamespaces extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/diamond-ops/pop/namespace/list';
 }
 
 /**
