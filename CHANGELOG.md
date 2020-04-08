@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.215 - 2020-4-8
+- Add SubCode for DescribeFaceVerify.
+
+
 ## 1.8.214 - 2020-4-7
 - Generated 2020-03-20 for `imgsearch`.
 
