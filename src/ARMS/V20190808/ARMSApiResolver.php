@@ -5,6 +5,8 @@ namespace AlibabaCloud\ARMS\V20190808;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddGrafana addGrafana(array $options = [])
+ * @method AddIntegration addIntegration(array $options = [])
  * @method CreateAlertContact createAlertContact(array $options = [])
  * @method CreateAlertContactGroup createAlertContactGroup(array $options = [])
  * @method CreateRetcodeApp createRetcodeApp(array $options = [])
@@ -56,6 +58,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'arms';
+}
+
+/**
+ * @method string getIntegration()
+ * @method $this withIntegration($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class AddGrafana extends Rpc
+{
+}
+
+/**
+ * @method string getIntegration()
+ * @method $this withIntegration($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class AddIntegration extends Rpc
+{
 }
 
 /**
@@ -248,9 +270,15 @@ class QueryDataset extends Rpc
 	{
 	    $this->data['OptionalDims'] = $optionalDims;
 		foreach ($optionalDims as $depth1 => $depth1Value) {
-			$this->options['query']['OptionalDims.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
-			$this->options['query']['OptionalDims.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['OptionalDims.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Type'])){
+				$this->options['query']['OptionalDims.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['OptionalDims.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['OptionalDims.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -280,9 +308,15 @@ class QueryDataset extends Rpc
 	{
 	    $this->data['RequiredDims'] = $requiredDims;
 		foreach ($requiredDims as $depth1 => $depth1Value) {
-			$this->options['query']['RequiredDims.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
-			$this->options['query']['RequiredDims.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['RequiredDims.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Type'])){
+				$this->options['query']['RequiredDims.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['RequiredDims.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['RequiredDims.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -297,9 +331,15 @@ class QueryDataset extends Rpc
 	{
 	    $this->data['Dimensions'] = $dimensions;
 		foreach ($dimensions as $depth1 => $depth1Value) {
-			$this->options['query']['Dimensions.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
-			$this->options['query']['Dimensions.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Dimensions.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Type'])){
+				$this->options['query']['Dimensions.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Dimensions.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Dimensions.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -339,8 +379,12 @@ class QueryMetric extends Rpc
 	{
 	    $this->data['Filters'] = $filters;
 		foreach ($filters as $depth1 => $depth1Value) {
-			$this->options['query']['Filters.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Filters.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Filters.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Filters.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -536,8 +580,12 @@ class SearchTraces extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;

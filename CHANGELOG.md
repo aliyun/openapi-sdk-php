@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.221 - 2020-4-9
+- Add prometheus api AddGrafana and AddIntegration.
+
+
 ## 1.8.220 - 2020-4-9
 - Generated 2018-03-13 for `retailcloud`.
 
