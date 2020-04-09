@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.217 - 2020-4-9
+- WAF OpenApi SDK Release.
+
+
 ## 1.8.216 - 2020-4-9
 - Add DescribeDBClusterAvailableResources.
 
