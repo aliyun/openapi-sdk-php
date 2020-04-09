@@ -28,8 +28,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDatabases describeDatabases(array $options = [])
  * @method DescribeDBClusterAccessWhitelist describeDBClusterAccessWhitelist(array $options = [])
  * @method DescribeDBClusterAttribute describeDBClusterAttribute(array $options = [])
+ * @method DescribeDBClusterAvailableResources describeDBClusterAvailableResources(array $options = [])
  * @method DescribeDBClusterEndpoints describeDBClusterEndpoints(array $options = [])
  * @method DescribeDBClusterMigration describeDBClusterMigration(array $options = [])
+ * @method DescribeDBClusterMonitor describeDBClusterMonitor(array $options = [])
  * @method DescribeDBClusterParameters describeDBClusterParameters(array $options = [])
  * @method DescribeDBClusterPerformance describeDBClusterPerformance(array $options = [])
  * @method DescribeDBClusters describeDBClusters(array $options = [])
@@ -50,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBClusterEndpoint modifyDBClusterEndpoint(array $options = [])
  * @method ModifyDBClusterMaintainTime modifyDBClusterMaintainTime(array $options = [])
  * @method ModifyDBClusterMigration modifyDBClusterMigration(array $options = [])
+ * @method ModifyDBClusterMonitor modifyDBClusterMonitor(array $options = [])
  * @method ModifyDBClusterParameters modifyDBClusterParameters(array $options = [])
  * @method ModifyDBClusterSSL modifyDBClusterSSL(array $options = [])
  * @method ModifyDBDescription modifyDBDescription(array $options = [])
@@ -187,6 +190,8 @@ class CreateDatabase extends Rpc
  * @method $this withDBNodeClass($value)
  * @method string getEngine()
  * @method $this withEngine($value)
+ * @method string getGDNId()
+ * @method $this withGDNId($value)
  * @method string getCreationOption()
  * @method $this withCreationOption($value)
  * @method string getSourceResourceId()
@@ -217,6 +222,8 @@ class CreateDatabase extends Rpc
  * @method $this withDBVersion($value)
  * @method string getCloneDataPoint()
  * @method $this withCloneDataPoint($value)
+ * @method string getTDEStatus()
+ * @method $this withTDEStatus($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  */
@@ -474,6 +481,8 @@ class DescribeAccounts extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
@@ -612,6 +621,30 @@ class DescribeDBClusterAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDBNodeClass()
+ * @method $this withDBNodeClass($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBType()
+ * @method $this withDBType($value)
+ * @method string getDBVersion()
+ * @method $this withDBVersion($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class DescribeDBClusterAvailableResources extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDBEndpointId()
  * @method $this withDBEndpointId($value)
  * @method string getResourceOwnerAccount()
@@ -640,6 +673,22 @@ class DescribeDBClusterEndpoints extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDBClusterMigration extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBClusterMonitor extends Rpc
 {
 }
 
@@ -755,6 +804,8 @@ class DescribeDBClusterSSL extends Rpc
  * @method $this withKey($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getEndTime()
@@ -974,6 +1025,8 @@ class ModifyAccountPassword extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDuration()
  * @method $this withDuration($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getRenewalStatus()
  * @method $this withRenewalStatus($value)
  * @method string getResourceOwnerAccount()
@@ -1128,6 +1181,24 @@ class ModifyDBClusterMigration extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBClusterMonitor extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getEffectiveTime()
  * @method $this withEffectiveTime($value)
  * @method string getResourceOwnerAccount()
@@ -1194,6 +1265,10 @@ class ModifyDBDescription extends Rpc
  * @method $this withConnectionStringPrefix($value)
  * @method string getDBEndpointId()
  * @method $this withDBEndpointId($value)
+ * @method string getPrivateZoneName()
+ * @method $this withPrivateZoneName($value)
+ * @method string getPrivateZoneAddressPrefix()
+ * @method $this withPrivateZoneAddressPrefix($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
