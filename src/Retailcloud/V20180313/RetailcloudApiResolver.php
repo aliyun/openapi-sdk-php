@@ -47,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRdsBackUp getRdsBackUp(array $options = [])
  * @method GrantDbToAccount grantDbToAccount(array $options = [])
  * @method ListApp listApp(array $options = [])
+ * @method ListAppCmsGroups listAppCmsGroups(array $options = [])
  * @method ListAppEnvironment listAppEnvironment(array $options = [])
  * @method ListAppInstance listAppInstance(array $options = [])
  * @method ListAppResourceAllocs listAppResourceAllocs(array $options = [])
@@ -155,15 +156,16 @@ class CloseDeployOrder extends Rpc
 
 /**
  * @method string getBizTitle()
+ * @method string getOperatingSystem()
+ * @method string getDescription()
+ * @method string getLanguage()
+ * @method string getTitle()
+ * @method array getMiddleWareIdList()
  * @method string getStateType()
  * @method string getServiceType()
  * @method array getUserRoles()
  * @method string getBizCode()
- * @method string getOperatingSystem()
  * @method string getNamespace()
- * @method string getDescription()
- * @method string getLanguage()
- * @method string getTitle()
  */
 class CreateApp extends Rpc
 {
@@ -179,6 +181,73 @@ class CreateApp extends Rpc
         $this->options['form_params']['BizTitle'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatingSystem($value)
+    {
+        $this->data['OperatingSystem'] = $value;
+        $this->options['form_params']['OperatingSystem'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLanguage($value)
+    {
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTitle($value)
+    {
+        $this->data['Title'] = $value;
+        $this->options['form_params']['Title'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $middleWareIdList
+     *
+     * @return $this
+     */
+	public function withMiddleWareIdList(array $middleWareIdList)
+	{
+	    $this->data['MiddleWareIdList'] = $middleWareIdList;
+		foreach ($middleWareIdList as $i => $iValue) {
+			$this->options['form_params']['MiddleWareIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -242,62 +311,10 @@ class CreateApp extends Rpc
      *
      * @return $this
      */
-    public function withOperatingSystem($value)
-    {
-        $this->data['OperatingSystem'] = $value;
-        $this->options['form_params']['OperatingSystem'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withNamespace($value)
     {
         $this->data['Namespace'] = $value;
         $this->options['form_params']['Namespace'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['Description'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLanguage($value)
-    {
-        $this->data['Language'] = $value;
-        $this->options['form_params']['Language'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTitle($value)
-    {
-        $this->data['Title'] = $value;
-        $this->options['form_params']['Title'] = $value;
 
         return $this;
     }
@@ -449,6 +466,7 @@ class CreateDb extends Rpc
  * @method $this withEnvType($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method array getSecretList()
  * @method string getDeployment()
  * @method $this withDeployment($value)
  */
@@ -465,6 +483,21 @@ class CreateDeployConfig extends Rpc
 	    $this->data['ConfigMapList'] = $configMapList;
 		foreach ($configMapList as $i => $iValue) {
 			$this->options['query']['ConfigMapList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $secretList
+     *
+     * @return $this
+     */
+	public function withSecretList(array $secretList)
+	{
+	    $this->data['SecretList'] = $secretList;
+		foreach ($secretList as $i => $iValue) {
+			$this->options['query']['SecretList.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -1252,6 +1285,23 @@ class ListApp extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListAppCmsGroups extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getEnvName()
  * @method $this withEnvName($value)
  * @method string getAppId()
@@ -1849,6 +1899,7 @@ class UnbindNodeLabel extends Rpc
  * @method string getOperatingSystem()
  * @method string getDescription()
  * @method string getLanguage()
+ * @method array getMiddleWareIdList()
  */
 class UpdateApp extends Rpc
 {
@@ -1947,6 +1998,21 @@ class UpdateApp extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param array $middleWareIdList
+     *
+     * @return $this
+     */
+	public function withMiddleWareIdList(array $middleWareIdList)
+	{
+	    $this->data['MiddleWareIdList'] = $middleWareIdList;
+		foreach ($middleWareIdList as $i => $iValue) {
+			$this->options['form_params']['MiddleWareIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1959,6 +2025,7 @@ class UpdateApp extends Rpc
  * @method $this withStatefulSet($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method array getSecretList()
  * @method string getId()
  * @method $this withId($value)
  * @method string getDeployment()
@@ -1977,6 +2044,21 @@ class UpdateDeployConfig extends Rpc
 	    $this->data['ConfigMapList'] = $configMapList;
 		foreach ($configMapList as $i => $iValue) {
 			$this->options['query']['ConfigMapList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $secretList
+     *
+     * @return $this
+     */
+	public function withSecretList(array $secretList)
+	{
+	    $this->data['SecretList'] = $secretList;
+		foreach ($secretList as $i => $iValue) {
+			$this->options['query']['SecretList.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;

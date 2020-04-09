@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.220 - 2020-4-9
+- Generated 2018-03-13 for `retailcloud`.
+
+
 ## 1.8.219 - 2020-4-9
 - Generated 2015-01-01 for `R-kvstore`.
 - Add DescribePrice API.
