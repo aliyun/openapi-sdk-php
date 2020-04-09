@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLogicInstanceTopology describeLogicInstanceTopology(array $options = [])
  * @method DescribeMonitorItems describeMonitorItems(array $options = [])
  * @method DescribeParameters describeParameters(array $options = [])
+ * @method DescribePrice describePrice(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRunningLogRecords describeRunningLogRecords(array $options = [])
  * @method DescribeSecurityGroupConfiguration describeSecurityGroupConfiguration(array $options = [])
@@ -945,6 +946,50 @@ class DescribeMonitorItems extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeParameters extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNodeType()
+ * @method $this withNodeType($value)
+ * @method string getInstances()
+ * @method $this withInstances($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getCapacity()
+ * @method $this withCapacity($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getQuantity()
+ * @method $this withQuantity($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOrderParamOut()
+ * @method $this withOrderParamOut($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ * @method string getForceUpgrade()
+ * @method $this withForceUpgrade($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribePrice extends Rpc
 {
 }
 

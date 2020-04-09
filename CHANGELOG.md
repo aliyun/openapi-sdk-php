@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.219 - 2020-4-9
+- Generated 2015-01-01 for `R-kvstore`.
+- Add DescribePrice API.
+
+
 ## 1.8.218 - 2020-4-9
 - Add DescribePrice API.
 
