@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.222 - 2020-4-10
+- Support DescribeIpv4Location.
+
+
 ## 1.8.221 - 2020-4-9
 - Add prometheus api AddGrafana and AddIntegration.
 
