@@ -48,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetImageJob getImageJob(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method GetOfficeConversionTask getOfficeConversionTask(array $options = [])
+ * @method GetOfficeEditURL getOfficeEditURL(array $options = [])
  * @method GetOfficePreviewURL getOfficePreviewURL(array $options = [])
  * @method GetProject getProject(array $options = [])
  * @method GetSet getSet(array $options = [])
@@ -68,6 +69,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVideos listVideos(array $options = [])
  * @method ListVideoTasks listVideoTasks(array $options = [])
  * @method PutProject putProject(array $options = [])
+ * @method RefreshOfficeEditToken refreshOfficeEditToken(array $options = [])
  * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
  * @method SearchDocIndex searchDocIndex(array $options = [])
  * @method UpdateDocIndexMeta updateDocIndexMeta(array $options = [])
@@ -852,8 +854,34 @@ class GetOfficeConversionTask extends Rpc
  * @method $this withSrcType($value)
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getUseHTTPS()
- * @method $this withUseHTTPS($value)
+ * @method string getUserID()
+ * @method $this withUserID($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getFileID()
+ * @method $this withFileID($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ * @method string getSrcUri()
+ * @method $this withSrcUri($value)
+ * @method string getTgtUri()
+ * @method $this withTgtUri($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class GetOfficeEditURL extends Rpc
+{
+}
+
+/**
+ * @method string getSrcType()
+ * @method $this withSrcType($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getUseOldURL()
+ * @method $this withUseOldURL($value)
  * @method string getSrcUri()
  * @method $this withSrcUri($value)
  */
@@ -1138,6 +1166,18 @@ class ListVideoTasks extends Rpc
  * @method $this withBillingType($value)
  */
 class PutProject extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getAccessToken()
+ * @method $this withAccessToken($value)
+ * @method string getRefreshToken()
+ * @method $this withRefreshToken($value)
+ */
+class RefreshOfficeEditToken extends Rpc
 {
 }
 

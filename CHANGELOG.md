@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.223 - 2020-4-10
+- Support GetOfficeEditURL.
+- Support RefreshOfficeEditToken.
+
+
 ## 1.8.222 - 2020-4-10
 - Support DescribeIpv4Location.
 
