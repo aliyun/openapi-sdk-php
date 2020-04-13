@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.224 - 2020-4-13
+- Fix ListTaskExecutions SDK error.
+
+
 ## 1.8.223 - 2020-4-10
 - Support GetOfficeEditURL.
 - Support RefreshOfficeEditToken.
