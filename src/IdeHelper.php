@@ -93,6 +93,7 @@ namespace AlibabaCloud;
  * @method static ImageSearch\ImageSearch imageSearch()
  * @method static Imageaudit\Imageaudit imageaudit()
  * @method static Imageenhan\Imageenhan imageenhan()
+ * @method static Imageprocess\Imageprocess imageprocess()
  * @method static Imagerecog\Imagerecog imagerecog()
  * @method static Imageseg\Imageseg imageseg()
  * @method static Imgsearch\Imgsearch imgsearch()
