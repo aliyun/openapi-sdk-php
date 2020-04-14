@@ -35,6 +35,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListLogicDatabases listLogicDatabases(array $options = [])
  * @method ListLogicTables listLogicTables(array $options = [])
  * @method ListOrders listOrders(array $options = [])
+ * @method ListSensitiveColumns listSensitiveColumns(array $options = [])
+ * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
  * @method ListTables listTables(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
@@ -66,6 +68,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'dmsenterprise';
 }
 
 /**
@@ -549,6 +554,40 @@ class ListOrders extends Rpc
 }
 
 /**
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getSecurityLevel()
+ * @method $this withSecurityLevel($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListSensitiveColumns extends Rpc
+{
+}
+
+/**
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListSensitiveColumnsDetail extends Rpc
+{
+}
+
+/**
  * @method string getSearchName()
  * @method $this withSearchName($value)
  * @method string getPageSize()
@@ -872,6 +911,10 @@ class UpdateInstance extends Rpc
  * @method $this withRoleNames($value)
  * @method string getUid()
  * @method $this withUid($value)
+ * @method string getMaxResultCount()
+ * @method $this withMaxResultCount($value)
+ * @method string getMaxExecuteCount()
+ * @method $this withMaxExecuteCount($value)
  * @method string getUserNick()
  * @method $this withUserNick($value)
  * @method string getMobile()

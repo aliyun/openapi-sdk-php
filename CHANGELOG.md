@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.227 - 2020-4-14
+- Support ListSensitiveColumns, ListSensitiveColumnsDetail API.
+- ListUsers API return user execute query count information.
+- Fix ListWorkFlowTemplates to return create user information.
+- UpdateUser API support to update user max execute query count.
+
+
 ## 1.8.226 - 2020-4-14
 - Supported CreateSegmentBodyJob.
 
