@@ -6,8 +6,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ChangeImageSize changeImageSize(array $options = [])
+ * @method CreateSegmentBodyJob createSegmentBodyJob(array $options = [])
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
+ * @method GetJobResult getJobResult(array $options = [])
+ * @method GetJobStatus getJobStatus(array $options = [])
  * @method MakeSuperResolutionImage makeSuperResolutionImage(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
@@ -29,9 +32,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'ivpd';
 }
 
 /**
@@ -77,6 +77,75 @@ class ChangeImageSize extends Rpc
     {
         $this->data['Height'] = $value;
         $this->options['form_params']['Height'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getDataList()
+ * @method string getAsync()
+ * @method string getJobId()
+ * @method string getTimeToLive()
+ */
+class CreateSegmentBodyJob extends Rpc
+{
+
+    /**
+     * @param array $dataList
+     *
+     * @return $this
+     */
+	public function withDataList(array $dataList)
+	{
+	    $this->data['DataList'] = $dataList;
+		foreach ($dataList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DataId'])){
+				$this->options['form_params']['DataList.' . ($depth1 + 1) . '.DataId'] = $depth1Value['DataId'];
+			}
+			if(isset($depth1Value['ImageUrl'])){
+				$this->options['form_params']['DataList.' . ($depth1 + 1) . '.ImageUrl'] = $depth1Value['ImageUrl'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimeToLive($value)
+    {
+        $this->data['TimeToLive'] = $value;
+        $this->options['form_params']['TimeToLive'] = $value;
 
         return $this;
     }
@@ -131,6 +200,46 @@ class ExtendImageStyle extends Rpc
     {
         $this->data['StyleUrl'] = $value;
         $this->options['form_params']['StyleUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ */
+class GetJobResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ */
+class GetJobStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
 
         return $this;
     }
@@ -229,7 +338,9 @@ class RecolorImage extends Rpc
 	{
 	    $this->data['ColorTemplate'] = $colorTemplate;
 		foreach ($colorTemplate as $depth1 => $depth1Value) {
-			$this->options['form_params']['ColorTemplate.' . ($depth1 + 1) . '.Color'] = $depth1Value['Color'];
+			if(isset($depth1Value['Color'])){
+				$this->options['form_params']['ColorTemplate.' . ($depth1 + 1) . '.Color'] = $depth1Value['Color'];
+			}
 		}
 
 		return $this;

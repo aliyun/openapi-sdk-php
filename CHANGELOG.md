@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.226 - 2020-4-14
+- Supported CreateSegmentBodyJob.
+
+
 ## 1.8.225 - 2020-4-13
 - ImageProcess First Version.
 
