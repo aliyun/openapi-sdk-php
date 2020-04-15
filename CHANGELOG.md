@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.230 - 2020-4-15
+- Add pre train service api.
+
+
 ## 1.8.229 - 2020-4-15
 - CreateNode API add return NodeId.
 
