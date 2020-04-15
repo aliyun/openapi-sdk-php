@@ -398,8 +398,12 @@ class CreateShardingDBInstance extends Rpc
 	{
 	    $this->data['ReplicaSet'] = $replicaSet;
 		foreach ($replicaSet as $depth1 => $depth1Value) {
-			$this->options['query']['ReplicaSet.' . ($depth1 + 1) . '.Storage'] = $depth1Value['Storage'];
-			$this->options['query']['ReplicaSet.' . ($depth1 + 1) . '.Class'] = $depth1Value['Class'];
+			if(isset($depth1Value['Storage'])){
+				$this->options['query']['ReplicaSet.' . ($depth1 + 1) . '.Storage'] = $depth1Value['Storage'];
+			}
+			if(isset($depth1Value['Class'])){
+				$this->options['query']['ReplicaSet.' . ($depth1 + 1) . '.Class'] = $depth1Value['Class'];
+			}
 		}
 
 		return $this;
@@ -414,8 +418,12 @@ class CreateShardingDBInstance extends Rpc
 	{
 	    $this->data['ConfigServer'] = $configServer;
 		foreach ($configServer as $depth1 => $depth1Value) {
-			$this->options['query']['ConfigServer.' . ($depth1 + 1) . '.Storage'] = $depth1Value['Storage'];
-			$this->options['query']['ConfigServer.' . ($depth1 + 1) . '.Class'] = $depth1Value['Class'];
+			if(isset($depth1Value['Storage'])){
+				$this->options['query']['ConfigServer.' . ($depth1 + 1) . '.Storage'] = $depth1Value['Storage'];
+			}
+			if(isset($depth1Value['Class'])){
+				$this->options['query']['ConfigServer.' . ($depth1 + 1) . '.Class'] = $depth1Value['Class'];
+			}
 		}
 
 		return $this;
@@ -430,7 +438,9 @@ class CreateShardingDBInstance extends Rpc
 	{
 	    $this->data['Mongos'] = $mongos;
 		foreach ($mongos as $depth1 => $depth1Value) {
-			$this->options['query']['Mongos.' . ($depth1 + 1) . '.Class'] = $depth1Value['Class'];
+			if(isset($depth1Value['Class'])){
+				$this->options['query']['Mongos.' . ($depth1 + 1) . '.Class'] = $depth1Value['Class'];
+			}
 		}
 
 		return $this;
@@ -876,8 +886,12 @@ class DescribeDBInstances extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -1426,8 +1440,12 @@ class ListTagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -2127,8 +2145,12 @@ class TagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;

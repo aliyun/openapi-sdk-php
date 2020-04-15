@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.229 - 2020-4-15
+- CreateNode API add return NodeId.
+
+
 ## 1.8.228 - 2020-4-15
 - Vision-poc response modified.
 
