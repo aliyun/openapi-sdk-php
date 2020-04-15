@@ -176,6 +176,7 @@ namespace AlibabaCloud;
  * @method static Videorecog\Videorecog videorecog()
  * @method static Videoseg\Videoseg videoseg()
  * @method static Visionai\Visionai visionai()
+ * @method static VisionaiPoc\VisionaiPoc visionaiPoc()
  * @method static Vod\Vod vod()
  * @method static VoiceNavigator\VoiceNavigator voiceNavigator()
  * @method static Vpc\Vpc vpc()

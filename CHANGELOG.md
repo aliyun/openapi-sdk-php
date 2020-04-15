@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.228 - 2020-4-15
+- Vision-poc response modified.
+
+
 ## 1.8.227 - 2020-4-14
 - Support ListSensitiveColumns, ListSensitiveColumnsDetail API.
 - ListUsers API return user execute query count information.
