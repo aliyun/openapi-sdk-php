@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.8.232 - 2020-4-16
+- Add BatchOptimization param in Stop and Start Instances.
+- Add RemoveSymbols in GetInstanceConsoleOutput.
+- Add ImageFamily in ModifyImageAttribute.
+- Customize InstanceType on DedicatedHosts is supported.
+- Add StorageCapacityUnit interfaces.
+- Add param Tag in CreateAutoSnapshotPolicy.
+
+
 ## 1.8.231 - 2020-4-16
 - Add features for open api.
 
