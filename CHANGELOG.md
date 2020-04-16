@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.231 - 2020-4-16
+- Add features for open api.
+
+
 ## 1.8.230 - 2020-4-15
 - Add pre train service api.
 

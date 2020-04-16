@@ -8,10 +8,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddAgentDevice addAgentDevice(array $options = [])
  * @method AddBulkPhoneNumbers addBulkPhoneNumbers(array $options = [])
  * @method AddPhoneNumber addPhoneNumber(array $options = [])
+ * @method AddPhoneTags addPhoneTags(array $options = [])
  * @method AssignJobs assignJobs(array $options = [])
  * @method AssignUsers assignUsers(array $options = [])
  * @method CallOnlinePrivacyNumber callOnlinePrivacyNumber(array $options = [])
  * @method CancelJobs cancelJobs(array $options = [])
+ * @method CheckNumberAvaliable checkNumberAvaliable(array $options = [])
  * @method CommitContactFlowVersionModification commitContactFlowVersionModification(array $options = [])
  * @method CreateBatchJobs createBatchJobs(array $options = [])
  * @method CreateCabInstance createCabInstance(array $options = [])
@@ -29,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteJobGroup deleteJobGroup(array $options = [])
  * @method DeleteMedia deleteMedia(array $options = [])
+ * @method DeletePhoneTags deletePhoneTags(array $options = [])
  * @method DeleteSkillGroup deleteSkillGroup(array $options = [])
  * @method DeleteSurvey deleteSurvey(array $options = [])
  * @method DialEx dialEx(array $options = [])
@@ -67,6 +70,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTURNCredentials getTURNCredentials(array $options = [])
  * @method GetTURNServerList getTURNServerList(array $options = [])
  * @method GetUser getUser(array $options = [])
+ * @method InflightTaskTimeout inflightTaskTimeout(array $options = [])
  * @method LaunchAppraise launchAppraise(array $options = [])
  * @method LaunchShortMessageAppraise launchShortMessageAppraise(array $options = [])
  * @method ListAgentDevices listAgentDevices(array $options = [])
@@ -89,6 +93,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListMedias listMedias(array $options = [])
  * @method ListOutboundPhoneNumberOfUser listOutboundPhoneNumberOfUser(array $options = [])
  * @method ListPhoneNumbers listPhoneNumbers(array $options = [])
+ * @method ListPhoneTags listPhoneTags(array $options = [])
  * @method ListRealTimeAgent listRealTimeAgent(array $options = [])
  * @method ListRecentCallRecords listRecentCallRecords(array $options = [])
  * @method ListRecordingOfDualTrack listRecordingOfDualTrack(array $options = [])
@@ -111,6 +116,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyAgentDevice modifyAgentDevice(array $options = [])
  * @method ModifyCabInstance modifyCabInstance(array $options = [])
  * @method ModifyPhoneNumber modifyPhoneNumber(array $options = [])
+ * @method ModifyPhoneTags modifyPhoneTags(array $options = [])
  * @method ModifyPrivacyNumberCallDetail modifyPrivacyNumberCallDetail(array $options = [])
  * @method ModifyScenario modifyScenario(array $options = [])
  * @method ModifySkillGroup modifySkillGroup(array $options = [])
@@ -138,6 +144,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitBatchJobs submitBatchJobs(array $options = [])
  * @method SubmitCabRecording submitCabRecording(array $options = [])
  * @method SuspendJobs suspendJobs(array $options = [])
+ * @method TaskPreparing taskPreparing(array $options = [])
  */
 class CCCApiResolver extends ApiResolver
 {
@@ -251,6 +258,42 @@ class AddBulkPhoneNumbers extends Rpc
  */
 class AddPhoneNumber extends Rpc
 {
+}
+
+/**
+ * @method string getRegionNameProvince()
+ * @method $this withRegionNameProvince($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getConcurrency()
+ * @method $this withConcurrency($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getProvider()
+ * @method $this withProvider($value)
+ * @method array getPhoneNumberList()
+ * @method string getServiceTag()
+ * @method $this withServiceTag($value)
+ * @method string getRegionNameCity()
+ * @method $this withRegionNameCity($value)
+ */
+class AddPhoneTags extends Rpc
+{
+
+    /**
+     * @param array $phoneNumberList
+     *
+     * @return $this
+     */
+	public function withPhoneNumberList(array $phoneNumberList)
+	{
+	    $this->data['PhoneNumberList'] = $phoneNumberList;
+		foreach ($phoneNumberList as $i => $iValue) {
+			$this->options['query']['PhoneNumberList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -427,6 +470,18 @@ class CancelJobs extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getCaller()
+ * @method $this withCaller($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ */
+class CheckNumberAvaliable extends Rpc
+{
 }
 
 /**
@@ -990,6 +1045,30 @@ class DeleteMedia extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method array getPhoneNumberList()
+ */
+class DeletePhoneTags extends Rpc
+{
+
+    /**
+     * @param array $phoneNumberList
+     *
+     * @return $this
+     */
+	public function withPhoneNumberList(array $phoneNumberList)
+	{
+	    $this->data['PhoneNumberList'] = $phoneNumberList;
+		foreach ($phoneNumberList as $i => $iValue) {
+			$this->options['query']['PhoneNumberList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSkillGroupId()
  * @method $this withSkillGroupId($value)
  */
@@ -1030,18 +1109,10 @@ class DialEx extends Rpc
 /**
  * @method string getCallId()
  * @method $this withCallId($value)
- * @method string getActionParams()
- * @method $this withActionParams($value)
- * @method string getCallingNumber()
- * @method $this withCallingNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getCalledNumber()
  * @method $this withCalledNumber($value)
  * @method string getInstanceOwnerId()
  * @method $this withInstanceOwnerId($value)
- * @method string getActionKey()
- * @method $this withActionKey($value)
  * @method string getCallType()
  * @method $this withCallType($value)
  * @method string getScenarioId()
@@ -1050,6 +1121,14 @@ class DialEx extends Rpc
  * @method $this withTaskId($value)
  * @method string getUtterance()
  * @method $this withUtterance($value)
+ * @method string getActionParams()
+ * @method $this withActionParams($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getActionKey()
+ * @method $this withActionKey($value)
  */
 class Dialogue extends Rpc
 {
@@ -1470,6 +1549,18 @@ class GetUser extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class InflightTaskTimeout extends Rpc
+{
+}
+
+/**
  * @method string getAcid()
  * @method $this withAcid($value)
  * @method string getInstanceId()
@@ -1826,10 +1917,14 @@ class ListMedias extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class ListOutboundPhoneNumberOfUser extends Rpc
 {
@@ -1843,6 +1938,38 @@ class ListOutboundPhoneNumberOfUser extends Rpc
  */
 class ListPhoneNumbers extends Rpc
 {
+}
+
+/**
+ * @method array getNumberGroupIds()
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getOutboundOnly()
+ * @method $this withOutboundOnly($value)
+ * @method string getNumber()
+ * @method $this withNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListPhoneTags extends Rpc
+{
+
+    /**
+     * @param array $numberGroupIds
+     *
+     * @return $this
+     */
+	public function withNumberGroupIds(array $numberGroupIds)
+	{
+	    $this->data['NumberGroupIds'] = $numberGroupIds;
+		foreach ($numberGroupIds as $i => $iValue) {
+			$this->options['query']['NumberGroupIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2141,6 +2268,32 @@ class ModifyPhoneNumber extends Rpc
 	    $this->data['SkillGroupId'] = $skillGroupId;
 		foreach ($skillGroupId as $i => $iValue) {
 			$this->options['query']['SkillGroupId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getSkillGroupIdList()
+ * @method string getServiceTag()
+ * @method $this withServiceTag($value)
+ */
+class ModifyPhoneTags extends Rpc
+{
+
+    /**
+     * @param array $skillGroupIdList
+     *
+     * @return $this
+     */
+	public function withSkillGroupIdList(array $skillGroupIdList)
+	{
+	    $this->data['SkillGroupIdList'] = $skillGroupIdList;
+		foreach ($skillGroupIdList as $i => $iValue) {
+			$this->options['query']['SkillGroupIdList.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -2841,4 +2994,16 @@ class SuspendJobs extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ */
+class TaskPreparing extends Rpc
+{
 }
