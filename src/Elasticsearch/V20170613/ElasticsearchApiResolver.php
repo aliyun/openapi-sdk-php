@@ -47,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSearchLog listSearchLog(array $options = [])
  * @method ListSnapshotReposByInstanceId listSnapshotReposByInstanceId(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method ModifyWhiteIps modifyWhiteIps(array $options = [])
  * @method MoveResourceGroup moveResourceGroup(array $options = [])
  * @method OpenHttps openHttps(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
@@ -585,6 +586,9 @@ class DescribeRegions extends Roa
     public $method = 'GET';
 }
 
+/**
+ * @method string getZoneId()
+ */
 class GetRegionConfiguration extends Roa
 {
     /** @var string */
@@ -592,6 +596,19 @@ class GetRegionConfiguration extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withZoneId($value)
+    {
+        $this->data['ZoneId'] = $value;
+        $this->options['query']['zoneId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1623,6 +1640,30 @@ class ListTagResources extends Roa
     {
         $this->data['Tags'] = $value;
         $this->options['query']['Tags'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class ModifyWhiteIps extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/modify-white-ips';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
 
         return $this;
     }

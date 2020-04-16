@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.233 - 2020-4-16
+- Add ModifyWhiteIps.
+
+
 ## 1.8.232 - 2020-4-16
 - Add BatchOptimization param in Stop and Start Instances.
 - Add RemoveSymbols in GetInstanceConsoleOutput.
