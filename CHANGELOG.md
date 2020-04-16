@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.234 - 2020-4-16
+- Modify `SubmitSmarttagJob`.
+
+
 ## 1.8.233 - 2020-4-16
 - Add ModifyWhiteIps.
 
