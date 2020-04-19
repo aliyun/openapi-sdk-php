@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.235 - 2020-4-19
+- Multimedia poc modified.
+
+
 ## 1.8.234 - 2020-4-16
 - Modify `SubmitSmarttagJob`.
 
