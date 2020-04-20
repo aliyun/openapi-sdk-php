@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.236 - 2020-4-20
+- Fix FaceContrastPicture.
+
+
 ## 1.8.235 - 2020-4-19
 - Multimedia poc modified.
 
