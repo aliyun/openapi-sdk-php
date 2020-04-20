@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.237 - 2020-4-20
+- Add TemplateId.
+
+
 ## 1.8.236 - 2020-4-20
 - Fix FaceContrastPicture.
 

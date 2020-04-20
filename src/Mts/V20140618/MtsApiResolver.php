@@ -187,9 +187,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'mts';
 }
 
 /**
@@ -2995,6 +2992,8 @@ class SubmitPornJob extends Rpc
  * @method $this withOwnerId($value)
  * @method string getParams()
  * @method $this withParams($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  * @method string getContentType()
