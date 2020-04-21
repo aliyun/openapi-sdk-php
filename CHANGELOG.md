@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.238 - 2020-4-21
+- Add Statistics API.
+
+
 ## 1.8.237 - 2020-4-20
 - Add TemplateId.
 

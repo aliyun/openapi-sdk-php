@@ -27,12 +27,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FindBrokerSLOHisList findBrokerSLOHisList(array $options = [])
  * @method FindBrokerSLOList findBrokerSLOList(array $options = [])
  * @method FindCredentialsList findCredentialsList(array $options = [])
+ * @method FindCredentialStatisticalData findCredentialStatisticalData(array $options = [])
  * @method FindInstanceList findInstanceList(array $options = [])
  * @method FindInstanceNodeList findInstanceNodeList(array $options = [])
  * @method FindOrderableList findOrderableList(array $options = [])
  * @method FindOrderedList findOrderedList(array $options = [])
  * @method FindProjectList findProjectList(array $options = [])
  * @method FindProjectsNameList findProjectsNameList(array $options = [])
+ * @method FindProjectStatisticalData findProjectStatisticalData(array $options = [])
+ * @method FindServiceCredentialStatisticalData findServiceCredentialStatisticalData(array $options = [])
  * @method FindServiceList findServiceList(array $options = [])
  * @method FindServiceStatisticalData findServiceStatisticalData(array $options = [])
  * @method GetConsoleSLO getConsoleSLO(array $options = [])
@@ -463,6 +466,26 @@ class FindCredentialsList extends Rpc
 /**
  * @method string getCsbId()
  * @method $this withCsbId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getCredentialName()
+ * @method $this withCredentialName($value)
+ */
+class FindCredentialStatisticalData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getSearchTxt()
@@ -575,6 +598,48 @@ class FindProjectsNameList extends Rpc
 /**
  * @method string getProjectName()
  * @method $this withProjectName($value)
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ */
+class FindProjectStatisticalData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getCredentialName()
+ * @method $this withCredentialName($value)
+ * @method string getServiceNameVersion()
+ * @method $this withServiceNameVersion($value)
+ */
+class FindServiceCredentialStatisticalData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getProjectName()
+ * @method $this withProjectName($value)
  * @method string getShowDelService()
  * @method $this withShowDelService($value)
  * @method string getCsbId()
@@ -604,11 +669,14 @@ class FindServiceList extends Rpc
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
+ * @method string getServiceNameVersion()
+ * @method $this withServiceNameVersion($value)
  */
 class FindServiceStatisticalData extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'http';
 
     /** @var string */
     public $method = 'GET';
