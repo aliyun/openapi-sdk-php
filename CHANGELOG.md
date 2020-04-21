@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.241 - 2020-4-21
+- VideoSearch deploy SDK.
+
+
 ## 1.8.240 - 2020-4-21
 - Supported API for DescribeTags.
 - Supported API for ListTagResources.

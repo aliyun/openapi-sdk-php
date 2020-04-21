@@ -174,6 +174,7 @@ namespace AlibabaCloud;
  * @method static UniMkt\UniMkt uniMkt()
  * @method static Videoenhan\Videoenhan videoenhan()
  * @method static Videorecog\Videorecog videorecog()
+ * @method static Videosearch\Videosearch videosearch()
  * @method static Videoseg\Videoseg videoseg()
  * @method static Visionai\Visionai visionai()
  * @method static VisionaiPoc\VisionaiPoc visionaiPoc()
