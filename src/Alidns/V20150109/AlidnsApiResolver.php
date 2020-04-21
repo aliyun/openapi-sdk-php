@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BindInstanceDomains bindInstanceDomains(array $options = [])
  * @method ChangeDomainGroup changeDomainGroup(array $options = [])
  * @method ChangeDomainOfDnsProduct changeDomainOfDnsProduct(array $options = [])
+ * @method CopyGtmConfig copyGtmConfig(array $options = [])
  * @method DeleteCustomLines deleteCustomLines(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DeleteDomainGroup deleteDomainGroup(array $options = [])
@@ -64,10 +65,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRecordStatisticsSummary describeRecordStatisticsSummary(array $options = [])
  * @method DescribeSubDomainRecords describeSubDomainRecords(array $options = [])
  * @method DescribeSupportLines describeSupportLines(array $options = [])
+ * @method DescribeTags describeTags(array $options = [])
  * @method DescribeTransferDomains describeTransferDomains(array $options = [])
  * @method ExecuteGtmRecoveryPlan executeGtmRecoveryPlan(array $options = [])
  * @method GetMainDomainName getMainDomainName(array $options = [])
  * @method GetTxtRecordForVerify getTxtRecordForVerify(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyHichinaDomainDNS modifyHichinaDomainDNS(array $options = [])
  * @method OperateBatchDomain operateBatchDomain(array $options = [])
  * @method PreviewGtmRecoveryPlan previewGtmRecoveryPlan(array $options = [])
@@ -78,8 +81,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDomainRecordStatus setDomainRecordStatus(array $options = [])
  * @method SetGtmAccessMode setGtmAccessMode(array $options = [])
  * @method SetGtmMonitorStatus setGtmMonitorStatus(array $options = [])
+ * @method TagResources tagResources(array $options = [])
  * @method TransferDomain transferDomain(array $options = [])
  * @method UnbindInstanceDomains unbindInstanceDomains(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method UpdateCustomLine updateCustomLine(array $options = [])
  * @method UpdateDNSSLBWeight updateDNSSLBWeight(array $options = [])
  * @method UpdateDomainGroup updateDomainGroup(array $options = [])
@@ -134,8 +139,12 @@ class AddCustomLine extends Rpc
 	{
 	    $this->data['IpSegment'] = $ipSegment;
 		foreach ($ipSegment as $depth1 => $depth1Value) {
-			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.EndIp'] = $depth1Value['EndIp'];
-			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+			if(isset($depth1Value['EndIp'])){
+				$this->options['query']['IpSegment.' . ($depth1 + 1) . '.EndIp'] = $depth1Value['EndIp'];
+			}
+			if(isset($depth1Value['StartIp'])){
+				$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+			}
 		}
 
 		return $this;
@@ -268,9 +277,15 @@ class AddGtmAddressPool extends Rpc
 	{
 	    $this->data['Addr'] = $addr;
 		foreach ($addr as $depth1 => $depth1Value) {
-			$this->options['query']['Addr.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
-			$this->options['query']['Addr.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
-			$this->options['query']['Addr.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			if(isset($depth1Value['Mode'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -285,8 +300,12 @@ class AddGtmAddressPool extends Rpc
 	{
 	    $this->data['IspCityNode'] = $ispCityNode;
 		foreach ($ispCityNode as $depth1 => $depth1Value) {
-			$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
-			$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
+			if(isset($depth1Value['CityCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
+			}
+			if(isset($depth1Value['IspCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
+			}
 		}
 
 		return $this;
@@ -324,8 +343,12 @@ class AddGtmMonitor extends Rpc
 	{
 	    $this->data['IspCityNode'] = $ispCityNode;
 		foreach ($ispCityNode as $depth1 => $depth1Value) {
-			$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
-			$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
+			if(isset($depth1Value['CityCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
+			}
+			if(isset($depth1Value['IspCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
+			}
 		}
 
 		return $this;
@@ -389,6 +412,22 @@ class ChangeDomainGroup extends Rpc
  * @method $this withLang($value)
  */
 class ChangeDomainOfDnsProduct extends Rpc
+{
+}
+
+/**
+ * @method string getSourceId()
+ * @method $this withSourceId($value)
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getCopyType()
+ * @method $this withCopyType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class CopyGtmConfig extends Rpc
 {
 }
 
@@ -747,6 +786,7 @@ class DescribeDomainRecords extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getKeyWord()
@@ -768,6 +808,26 @@ class DescribeDomainRecords extends Rpc
  */
 class DescribeDomains extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1165,6 +1225,22 @@ class DescribeSupportLines extends Rpc
 }
 
 /**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeTags extends Rpc
+{
+}
+
+/**
  * @method string getFromUserId()
  * @method $this withFromUserId($value)
  * @method string getPageNumber()
@@ -1225,6 +1301,59 @@ class GetTxtRecordForVerify extends Rpc
 }
 
 /**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getSize()
+ * @method $this withSize($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method array getTag()
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getUserClientIp()
@@ -1257,16 +1386,36 @@ class OperateBatchDomain extends Rpc
 	{
 	    $this->data['DomainRecordInfo'] = $domainRecordInfo;
 		foreach ($domainRecordInfo as $depth1 => $depth1Value) {
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Rr'] = $depth1Value['Rr'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.NewType'] = $depth1Value['NewType'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.NewValue'] = $depth1Value['NewValue'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Line'] = $depth1Value['Line'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Domain'] = $depth1Value['Domain'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Ttl'] = $depth1Value['Ttl'];
-			$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.NewRr'] = $depth1Value['NewRr'];
+			if(isset($depth1Value['Rr'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Rr'] = $depth1Value['Rr'];
+			}
+			if(isset($depth1Value['NewType'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.NewType'] = $depth1Value['NewType'];
+			}
+			if(isset($depth1Value['NewValue'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.NewValue'] = $depth1Value['NewValue'];
+			}
+			if(isset($depth1Value['Line'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Line'] = $depth1Value['Line'];
+			}
+			if(isset($depth1Value['Domain'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Domain'] = $depth1Value['Domain'];
+			}
+			if(isset($depth1Value['Type'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
+			}
+			if(isset($depth1Value['Priority'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Ttl'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.Ttl'] = $depth1Value['Ttl'];
+			}
+			if(isset($depth1Value['NewRr'])){
+				$this->options['query']['DomainRecordInfo.' . ($depth1 + 1) . '.NewRr'] = $depth1Value['NewRr'];
+			}
 		}
 
 		return $this;
@@ -1388,6 +1537,57 @@ class SetGtmMonitorStatus extends Rpc
 }
 
 /**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method array getTag()
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getOverWrite()
+ * @method $this withOverWrite($value)
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
  * @method string getRemark()
@@ -1418,6 +1618,52 @@ class UnbindInstanceDomains extends Rpc
 }
 
 /**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getLineId()
  * @method $this withLineId($value)
  * @method array getIpSegment()
@@ -1440,8 +1686,12 @@ class UpdateCustomLine extends Rpc
 	{
 	    $this->data['IpSegment'] = $ipSegment;
 		foreach ($ipSegment as $depth1 => $depth1Value) {
-			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.EndIp'] = $depth1Value['EndIp'];
-			$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+			if(isset($depth1Value['EndIp'])){
+				$this->options['query']['IpSegment.' . ($depth1 + 1) . '.EndIp'] = $depth1Value['EndIp'];
+			}
+			if(isset($depth1Value['StartIp'])){
+				$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+			}
 		}
 
 		return $this;
@@ -1575,9 +1825,15 @@ class UpdateGtmAddressPool extends Rpc
 	{
 	    $this->data['Addr'] = $addr;
 		foreach ($addr as $depth1 => $depth1Value) {
-			$this->options['query']['Addr.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
-			$this->options['query']['Addr.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
-			$this->options['query']['Addr.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			if(isset($depth1Value['Mode'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -1641,8 +1897,12 @@ class UpdateGtmMonitor extends Rpc
 	{
 	    $this->data['IspCityNode'] = $ispCityNode;
 		foreach ($ispCityNode as $depth1 => $depth1Value) {
-			$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
-			$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
+			if(isset($depth1Value['CityCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
+			}
+			if(isset($depth1Value['IspCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
+			}
 		}
 
 		return $this;

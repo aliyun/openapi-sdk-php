@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.240 - 2020-4-21
+- Supported API for DescribeTags.
+- Supported API for ListTagResources.
+- Supported API for TagResources.
+- Supported API for UntagResources.
+
+
 ## 1.8.239 - 2020-4-21
 - Supported PackageDesign Apis.
 - Supported Api ListPackageDesignModelTypes.
