@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.239 - 2020-4-21
+- Supported PackageDesign Apis.
+- Supported Api ListPackageDesignModelTypes.
+- Supported Api PreviewModelForPackageDesign.
+- Supported Api RenderImageForPackageDesign.
+- Supported Api GetRenderResult.
+
+
 ## 1.8.238 - 2020-4-21
 - Add Statistics API.
 
