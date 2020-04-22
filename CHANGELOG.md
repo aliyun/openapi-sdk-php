@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.242 - 2020-4-22
+- Generated 2019-01-01 for `Cassandra`.
+
+
 ## 1.8.241 - 2020-4-21
 - VideoSearch deploy SDK.
 

@@ -33,6 +33,7 @@ namespace AlibabaCloud;
  * @method static CS\CS cS()
  * @method static CSB\CSB cSB()
  * @method static Cas\Cas cas()
+ * @method static Cassandra\Cassandra cassandra()
  * @method static Cbn\Cbn cbn()
  * @method static Ccs\Ccs ccs()
  * @method static Cdn\Cdn cdn()
