@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.243 - 2020-4-23
+- Support groupId operations.
+
+
 ## 1.8.242 - 2020-4-22
 - Generated 2019-01-01 for `Cassandra`.
 
