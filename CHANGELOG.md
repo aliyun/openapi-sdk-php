@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.244 - 2020-4-23
+- Add location info.
+
+
 ## 1.8.243 - 2020-4-23
 - Support groupId operations.
 
