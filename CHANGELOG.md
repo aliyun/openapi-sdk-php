@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.245 - 2020-4-23
+- Fixed bugs for MassPush API.
+
+
 ## 1.8.244 - 2020-4-23
 - Add location info.
 
