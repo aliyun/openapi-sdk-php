@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.246 - 2020-4-24
+- Publish apis for ledger instances.
+- Publish apis for members.
+- Publish apis for time anchors.
+- Publish apis for endpoints.
+
+
 ## 1.8.245 - 2020-4-23
 - Fixed bugs for MassPush API.
 
