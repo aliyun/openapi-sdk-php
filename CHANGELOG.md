@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.248 - 2020-4-24
+- Template update.
+
+
 ## 1.8.247 - 2020-4-24
 - Publish apis for ledger instances.
 - Publish apis for members.

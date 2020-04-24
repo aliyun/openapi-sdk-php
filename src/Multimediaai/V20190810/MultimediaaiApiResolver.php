@@ -10,15 +10,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateFacePerson createFacePerson(array $options = [])
  * @method CreateGifTask createGifTask(array $options = [])
  * @method CreateLabelTask createLabelTask(array $options = [])
+ * @method CreateTemplate createTemplate(array $options = [])
  * @method DeleteFaceGroup deleteFaceGroup(array $options = [])
  * @method DeleteFaceImage deleteFaceImage(array $options = [])
  * @method DeleteFacePerson deleteFacePerson(array $options = [])
  * @method GetTaskResult getTaskResult(array $options = [])
  * @method GetTaskStatus getTaskStatus(array $options = [])
+ * @method GetTemplate getTemplate(array $options = [])
  * @method ListFaceGroups listFaceGroups(array $options = [])
  * @method ListFaceImages listFaceImages(array $options = [])
  * @method ListFacePersons listFacePersons(array $options = [])
+ * @method ListTemplates listTemplates(array $options = [])
  * @method RegisterFaceImage registerFaceImage(array $options = [])
+ * @method UpdateTemplate updateTemplate(array $options = [])
  */
 class MultimediaaiApiResolver extends ApiResolver
 {
@@ -107,6 +111,20 @@ class CreateLabelTask extends Rpc
 }
 
 /**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ */
+class CreateTemplate extends Rpc
+{
+}
+
+/**
  * @method string getFaceGroupId()
  * @method $this withFaceGroupId($value)
  */
@@ -153,6 +171,14 @@ class GetTaskStatus extends Rpc
 }
 
 /**
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class GetTemplate extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -191,6 +217,22 @@ class ListFacePersons extends Rpc
 }
 
 /**
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ */
+class ListTemplates extends Rpc
+{
+}
+
+/**
  * @method string getFaceGroupId()
  * @method $this withFaceGroupId($value)
  * @method string getFacePersonId()
@@ -199,5 +241,21 @@ class ListFacePersons extends Rpc
  * @method $this withImageUrl($value)
  */
 class RegisterFaceImage extends Rpc
+{
+}
+
+/**
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ */
+class UpdateTemplate extends Rpc
 {
 }
