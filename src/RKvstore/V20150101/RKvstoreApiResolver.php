@@ -849,8 +849,12 @@ class DescribeInstances extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -1283,8 +1287,12 @@ class ListTagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -1905,6 +1913,8 @@ class ResetAccountPassword extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getUpgradeMinorVersion()
+ * @method $this withUpgradeMinorVersion($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getEffectiveTime()
@@ -2000,8 +2010,12 @@ class TagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
