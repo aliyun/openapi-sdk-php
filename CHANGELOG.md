@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.250 - 2020-4-26
+- New api publish.
+
+
 ## 1.8.249 - 2020-4-25
 - Generated 2015-01-01 for `R-kvstore`.
 - Add RestoreTime for CreateInstance API.
