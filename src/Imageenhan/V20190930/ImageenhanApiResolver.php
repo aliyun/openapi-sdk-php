@@ -5,6 +5,9 @@ namespace AlibabaCloud\Imageenhan\V20190930;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AssessComposition assessComposition(array $options = [])
+ * @method AssessExposure assessExposure(array $options = [])
+ * @method AssessSharpness assessSharpness(array $options = [])
  * @method ChangeImageSize changeImageSize(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
  * @method ImageBlindCharacterWatermark imageBlindCharacterWatermark(array $options = [])
@@ -32,6 +35,66 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imageenhan';
+}
+
+/**
+ * @method string getImageURL()
+ */
+class AssessComposition extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class AssessExposure extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class AssessSharpness extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -369,7 +432,9 @@ class RecolorImage extends Rpc
 	{
 	    $this->data['ColorTemplate'] = $colorTemplate;
 		foreach ($colorTemplate as $depth1 => $depth1Value) {
-			$this->options['form_params']['ColorTemplate.' . ($depth1 + 1) . '.Color'] = $depth1Value['Color'];
+			if(isset($depth1Value['Color'])){
+				$this->options['form_params']['ColorTemplate.' . ($depth1 + 1) . '.Color'] = $depth1Value['Color'];
+			}
 		}
 
 		return $this;
