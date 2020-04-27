@@ -7,22 +7,33 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddUserHdfsInfo addUserHdfsInfo(array $options = [])
  * @method ConvertInstance convertInstance(array $options = [])
+ * @method CreateBackupPlan createBackupPlan(array $options = [])
  * @method CreateCluster createCluster(array $options = [])
  * @method CreateHbaseHaSlb createHbaseHaSlb(array $options = [])
- * @method CreateInstance createInstance(array $options = [])
+ * @method CreateRestorePlan createRestorePlan(array $options = [])
  * @method DeleteHbaseHaSlb deleteHbaseHaSlb(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteUserHdfsInfo deleteUserHdfsInfo(array $options = [])
+ * @method DescribeAvailableResource describeAvailableResource(array $options = [])
+ * @method DescribeBackupPlanConfig describeBackupPlanConfig(array $options = [])
+ * @method DescribeBackupStatus describeBackupStatus(array $options = [])
+ * @method DescribeBackupSummary describeBackupSummary(array $options = [])
+ * @method DescribeBackupTables describeBackupTables(array $options = [])
  * @method DescribeDBInstanceUsage describeDBInstanceUsage(array $options = [])
  * @method DescribeEndpoints describeEndpoints(array $options = [])
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeInstanceType describeInstanceType(array $options = [])
  * @method DescribeIpWhitelist describeIpWhitelist(array $options = [])
+ * @method DescribeRecoverableTimeRange describeRecoverableTimeRange(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeRestoreSummary describeRestoreSummary(array $options = [])
+ * @method DescribeRestoreTables describeRestoreTables(array $options = [])
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
+ * @method EnableHBaseueBackup enableHBaseueBackup(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTags listTags(array $options = [])
+ * @method ModifyBackupPlanConfig modifyBackupPlanConfig(array $options = [])
  * @method ModifyClusterDeletionProtection modifyClusterDeletionProtection(array $options = [])
  * @method ModifyInstanceMaintainTime modifyInstanceMaintainTime(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
@@ -54,6 +65,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'hbase';
 }
 
 /**
@@ -75,6 +89,14 @@ class AddUserHdfsInfo extends Rpc
  * @method $this withPricingCycle($value)
  */
 class ConvertInstance extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class CreateBackupPlan extends Rpc
 {
 }
 
@@ -135,62 +157,20 @@ class CreateHbaseHaSlb extends Rpc
 }
 
 /**
- * @method string getClusterName()
- * @method $this withClusterName($value)
- * @method string getDbInstanceConnType()
- * @method $this withDbInstanceConnType($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getDepMode()
- * @method $this withDepMode($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getDbInstanceType()
- * @method $this withDbInstanceType($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getSecurityIPList()
- * @method $this withSecurityIPList($value)
- * @method string getAutoRenew()
- * @method $this withAutoRenew($value)
- * @method string getNetType()
- * @method $this withNetType($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getCoreDiskType()
- * @method $this withCoreDiskType($value)
- * @method string getPricingCycle()
- * @method $this withPricingCycle($value)
- * @method string getCoreInstanceQuantity()
- * @method $this withCoreInstanceQuantity($value)
- * @method string getDuration()
- * @method $this withDuration($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getRestoreTime()
- * @method $this withRestoreTime($value)
- * @method string getSrcDBInstanceId()
- * @method $this withSrcDBInstanceId($value)
- * @method string getMasterInstanceType()
- * @method $this withMasterInstanceType($value)
- * @method string getColdStorageSize()
- * @method $this withColdStorageSize($value)
- * @method string getCoreDiskQuantity()
- * @method $this withCoreDiskQuantity($value)
- * @method string getIsColdStorage()
- * @method $this withIsColdStorage($value)
- * @method string getCoreInstanceType()
- * @method $this withCoreInstanceType($value)
- * @method string getCoreDiskSize()
- * @method $this withCoreDiskSize($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getDbType()
- * @method $this withDbType($value)
- * @method string getPayType()
- * @method $this withPayType($value)
+ * @method string getRestoreToDate()
+ * @method $this withRestoreToDate($value)
+ * @method string getTables()
+ * @method $this withTables($value)
+ * @method string getRestoreByCopy()
+ * @method $this withRestoreByCopy($value)
+ * @method string getRestoreAllTable()
+ * @method $this withRestoreAllTable($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getTargetClusterId()
+ * @method $this withTargetClusterId($value)
  */
-class CreateInstance extends Rpc
+class CreateRestorePlan extends Rpc
 {
 }
 
@@ -223,6 +203,50 @@ class DeleteInstance extends Rpc
  * @method $this withNameService($value)
  */
 class DeleteUserHdfsInfo extends Rpc
+{
+}
+
+/**
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ */
+class DescribeAvailableResource extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeBackupPlanConfig extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeBackupStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeBackupSummary extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getBackupRecordId()
+ * @method $this withBackupRecordId($value)
+ */
+class DescribeBackupTables extends Rpc
 {
 }
 
@@ -273,8 +297,12 @@ class DescribeInstances extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -298,6 +326,14 @@ class DescribeIpWhitelist extends Rpc
 }
 
 /**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeRecoverableTimeRange extends Rpc
+{
+}
+
+/**
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
@@ -309,7 +345,39 @@ class DescribeRegions extends Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
+class DescribeRestoreSummary extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getRestoreRecordId()
+ * @method $this withRestoreRecordId($value)
+ */
+class DescribeRestoreTables extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
 class DescribeSecurityGroups extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getHbaseueClusterId()
+ * @method $this withHbaseueClusterId($value)
+ * @method string getColdStorageSize()
+ * @method $this withColdStorageSize($value)
+ * @method string getNodeCount()
+ * @method $this withNodeCount($value)
+ */
+class EnableHBaseueBackup extends Rpc
 {
 }
 
@@ -331,8 +399,12 @@ class ListTagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -355,6 +427,22 @@ class ListTagResources extends Rpc
 }
 
 class ListTags extends Rpc
+{
+}
+
+/**
+ * @method string getFullBackupCycle()
+ * @method $this withFullBackupCycle($value)
+ * @method string getTables()
+ * @method $this withTables($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getMinHFileBackupCount()
+ * @method $this withMinHFileBackupCount($value)
+ * @method string getNextFullBackupDate()
+ * @method $this withNextFullBackupDate($value)
+ */
+class ModifyBackupPlanConfig extends Rpc
 {
 }
 
@@ -537,8 +625,12 @@ class TagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;

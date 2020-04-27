@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.254 - 2020-4-27
+- Describe describeAvailableResource.
+
+
 ## 1.8.253 - 2020-4-27
 - ContrastFaceVerify Return SubCode.
 
