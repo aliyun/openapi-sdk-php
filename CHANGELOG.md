@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.253 - 2020-4-27
+- ContrastFaceVerify Return SubCode.
+
+
 ## 1.8.252 - 2020-4-26
 - SDK versioin 101.
 
