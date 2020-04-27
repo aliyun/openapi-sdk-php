@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.255 - 2020-4-27
+- Support watermark.
+
+
 ## 1.8.254 - 2020-4-27
 - Describe describeAvailableResource.
 
