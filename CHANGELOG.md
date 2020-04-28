@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.256 - 2020-4-28
+- Generated 2019-03-15 for `fnf`.
+
+
 ## 1.8.255 - 2020-4-27
 - Support watermark.
 

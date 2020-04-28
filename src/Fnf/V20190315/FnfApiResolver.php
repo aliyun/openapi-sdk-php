@@ -45,6 +45,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getRoleArn()
  * @method string getName()
  * @method string getDefinition()
+ * @method string getExternalStorageLocation()
  */
 class CreateFlow extends Rpc
 {
@@ -110,6 +111,19 @@ class CreateFlow extends Rpc
     {
         $this->data['Definition'] = $value;
         $this->options['form_params']['Definition'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExternalStorageLocation($value)
+    {
+        $this->data['ExternalStorageLocation'] = $value;
+        $this->options['form_params']['ExternalStorageLocation'] = $value;
 
         return $this;
     }
@@ -409,6 +423,7 @@ class StopExecution extends Rpc
  * @method string getRoleArn()
  * @method string getName()
  * @method string getDefinition()
+ * @method string getExternalStorageLocation()
  */
 class UpdateFlow extends Rpc
 {
@@ -474,6 +489,19 @@ class UpdateFlow extends Rpc
     {
         $this->data['Definition'] = $value;
         $this->options['form_params']['Definition'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExternalStorageLocation($value)
+    {
+        $this->data['ExternalStorageLocation'] = $value;
+        $this->options['form_params']['ExternalStorageLocation'] = $value;
 
         return $this;
     }
