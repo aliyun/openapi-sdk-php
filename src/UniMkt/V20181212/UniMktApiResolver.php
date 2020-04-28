@@ -5,6 +5,7 @@ namespace AlibabaCloud\UniMkt\V20181212;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ChargeLaunch chargeLaunch(array $options = [])
  * @method CheckDevice checkDevice(array $options = [])
  * @method CheckReceivingDetail checkReceivingDetail(array $options = [])
  * @method KeepAlive keepAlive(array $options = [])
@@ -14,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PushTradeDetail pushTradeDetail(array $options = [])
  * @method QueryPromotion queryPromotion(array $options = [])
  * @method RegistDevice registDevice(array $options = [])
+ * @method SaveCpmTrade saveCpmTrade(array $options = [])
  * @method ScanCodeNotification scanCodeNotification(array $options = [])
  */
 class UniMktApiResolver extends ApiResolver
@@ -35,7 +37,24 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     protected $scheme = 'https';
 
     /** @var string */
-    public $serviceCode = '1.0.0';
+    public $serviceCode = 'uniMkt';
+}
+
+/**
+ * @method string getExtra()
+ * @method $this withExtra($value)
+ * @method string getAlipayOpenId()
+ * @method $this withAlipayOpenId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getOuterCode()
+ * @method $this withOuterCode($value)
+ */
+class ChargeLaunch extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -916,6 +935,48 @@ class RegistDevice extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getRealCostAmount()
+ * @method $this withRealCostAmount($value)
+ * @method string getSex()
+ * @method $this withSex($value)
+ * @method string getCostDetail()
+ * @method $this withCostDetail($value)
+ * @method string getTaskTag()
+ * @method $this withTaskTag($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getDeviceCode()
+ * @method $this withDeviceCode($value)
+ * @method string getV()
+ * @method $this withV($value)
+ * @method string getApplyPrice()
+ * @method $this withApplyPrice($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ * @method string getHoldId()
+ * @method $this withHoldId($value)
+ * @method string getExtendString()
+ * @method $this withExtendString($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getAge()
+ * @method $this withAge($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getAdvertType()
+ * @method $this withAdvertType($value)
+ * @method string getOuterCode()
+ * @method $this withOuterCode($value)
+ * @method string getTradeTime()
+ * @method $this withTradeTime($value)
+ */
+class SaveCpmTrade extends Rpc
+{
 }
 
 /**
