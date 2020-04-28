@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.257 - 2020-4-28
+- Add CompareFaceVerify API.
+
+
 ## 1.8.256 - 2020-4-28
 - Generated 2019-03-15 for `fnf`.
 
