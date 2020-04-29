@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.263 - 2020-4-29
+- Add ExportTas apis.
+
+
 ## 1.8.262 - 2020-4-29
 - Support Document Translation.
 - Support Lanuage Detection.

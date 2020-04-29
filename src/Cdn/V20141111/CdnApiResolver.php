@@ -36,7 +36,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainBpsData describeDomainBpsData(array $options = [])
  * @method DescribeDomainBpsDataByTimeStamp describeDomainBpsDataByTimeStamp(array $options = [])
  * @method DescribeDomainCertificateInfo describeDomainCertificateInfo(array $options = [])
- * @method DescribeDomainCname describeDomainCname(array $options = [])
  * @method DescribeDomainConfigs describeDomainConfigs(array $options = [])
  * @method DescribeDomainCustomLogConfig describeDomainCustomLogConfig(array $options = [])
  * @method DescribeDomainFileSizeProportionData describeDomainFileSizeProportionData(array $options = [])
@@ -284,18 +283,18 @@ class AddFCTrigger extends Rpc
 }
 
 /**
- * @method string getOssBucket()
- * @method $this withOssBucket($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
  * @method string getOssEndpoint()
  * @method $this withOssEndpoint($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getOssBucket()
+ * @method $this withOssBucket($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getOssObjectPrefix()
  * @method $this withOssObjectPrefix($value)
  */
@@ -520,14 +519,14 @@ class DeleteLiveDomainMapping extends Rpc
 /**
  * @method string getTemplate()
  * @method $this withTemplate($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApp()
  * @method $this withApp($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDomain()
  * @method $this withDomain($value)
  */
@@ -744,19 +743,6 @@ class DescribeDomainBpsDataByTimeStamp extends Rpc
  */
 class DescribeDomainCertificateInfo extends Rpc
 {
-}
-
-/**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDomainCname extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -1792,6 +1778,8 @@ class ModifyDomainCustomLogConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getWeight()
@@ -1802,8 +1790,6 @@ class ModifyDomainCustomLogConfig extends Rpc
  * @method $this withOwnerId($value)
  * @method string getTTL()
  * @method $this withTTL($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getConfigID()
  * @method $this withConfigID($value)
  */
@@ -1812,14 +1798,14 @@ class ModifyFileCacheExpiredConfig extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getHeaderValue()
  * @method $this withHeaderValue($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getConfigID()
  * @method $this withConfigID($value)
  * @method string getHeaderKey()
@@ -1830,6 +1816,8 @@ class ModifyHttpHeaderConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getWeight()
@@ -1840,8 +1828,6 @@ class ModifyHttpHeaderConfig extends Rpc
  * @method $this withOwnerId($value)
  * @method string getTTL()
  * @method $this withTTL($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getConfigID()
  * @method $this withConfigID($value)
  */

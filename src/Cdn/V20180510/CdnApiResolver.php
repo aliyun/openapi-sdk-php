@@ -45,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainAverageResponseTime describeDomainAverageResponseTime(array $options = [])
  * @method DescribeDomainBpsData describeDomainBpsData(array $options = [])
  * @method DescribeDomainBpsDataByTimeStamp describeDomainBpsDataByTimeStamp(array $options = [])
+ * @method DescribeDomainCcActivityLog describeDomainCcActivityLog(array $options = [])
  * @method DescribeDomainCertificateInfo describeDomainCertificateInfo(array $options = [])
  * @method DescribeDomainCustomLogConfig describeDomainCustomLogConfig(array $options = [])
  * @method DescribeDomainFileSizeProportionData describeDomainFileSizeProportionData(array $options = [])
@@ -866,6 +867,30 @@ class DescribeDomainBpsDataByTimeStamp extends Rpc
 }
 
 /**
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getTriggerObject()
+ * @method $this withTriggerObject($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getValue()
+ * @method $this withValue($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDomainCcActivityLog extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -889,16 +914,16 @@ class DescribeDomainCustomLogConfig extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeDomainFileSizeProportionData extends Rpc
 {
@@ -988,16 +1013,16 @@ class DescribeDomainPathData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeDomainPvData extends Rpc
 {
@@ -1640,8 +1665,12 @@ class DescribeTagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -1732,8 +1761,12 @@ class DescribeUserDomains extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -1937,6 +1970,8 @@ class ModifyDomainCustomLogConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getWeight()
@@ -1947,8 +1982,6 @@ class ModifyDomainCustomLogConfig extends Rpc
  * @method $this withOwnerId($value)
  * @method string getTTL()
  * @method $this withTTL($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getConfigID()
  * @method $this withConfigID($value)
  */
@@ -1957,14 +1990,14 @@ class ModifyFileCacheExpiredConfig extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getHeaderValue()
  * @method $this withHeaderValue($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getConfigID()
  * @method $this withConfigID($value)
  * @method string getHeaderKey()
@@ -2254,9 +2287,6 @@ class SetForwardSchemeConfig extends Rpc
  */
 class SetHttpErrorPageConfig extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2577,8 +2607,12 @@ class TagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
