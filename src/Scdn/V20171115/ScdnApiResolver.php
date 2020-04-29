@@ -11,8 +11,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchUpdateScdnDomain batchUpdateScdnDomain(array $options = [])
  * @method CheckScdnService checkScdnService(array $options = [])
  * @method DeleteScdnDomain deleteScdnDomain(array $options = [])
+ * @method DeleteScdnSpecificConfig deleteScdnSpecificConfig(array $options = [])
+ * @method DescribeScdnCcQpsInfo describeScdnCcQpsInfo(array $options = [])
+ * @method DescribeScdnCcTopIp describeScdnCcTopIp(array $options = [])
+ * @method DescribeScdnCcTopUrl describeScdnCcTopUrl(array $options = [])
  * @method DescribeScdnCertificateDetail describeScdnCertificateDetail(array $options = [])
  * @method DescribeScdnCertificateList describeScdnCertificateList(array $options = [])
+ * @method DescribeScdnDdosInfo describeScdnDdosInfo(array $options = [])
+ * @method DescribeScdnDdosTrafficInfo describeScdnDdosTrafficInfo(array $options = [])
  * @method DescribeScdnDomainBpsData describeScdnDomainBpsData(array $options = [])
  * @method DescribeScdnDomainCertificateInfo describeScdnDomainCertificateInfo(array $options = [])
  * @method DescribeScdnDomainCname describeScdnDomainCname(array $options = [])
@@ -49,6 +55,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PreloadScdnObjectCaches preloadScdnObjectCaches(array $options = [])
  * @method RefreshScdnObjectCaches refreshScdnObjectCaches(array $options = [])
  * @method SetDomainServerCertificate setDomainServerCertificate(array $options = [])
+ * @method SetScdnBotInfo setScdnBotInfo(array $options = [])
+ * @method SetScdnCcInfo setScdnCcInfo(array $options = [])
+ * @method SetScdnDdosInfo setScdnDdosInfo(array $options = [])
+ * @method SetScdnDomainBizInfo setScdnDomainBizInfo(array $options = [])
  * @method SetScdnDomainCertificate setScdnDomainCertificate(array $options = [])
  * @method StartScdnDomain startScdnDomain(array $options = [])
  * @method StopScdnDomain stopScdnDomain(array $options = [])
@@ -125,18 +135,18 @@ class BatchSetScdnDomainConfigs extends Rpc
 }
 
 /**
- * @method string getTopLevelDomain()
- * @method $this withTopLevelDomain($value)
  * @method string getSources()
  * @method $this withSources($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getTopLevelDomain()
+ * @method $this withTopLevelDomain($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class BatchUpdateScdnDomain extends Rpc
 {
@@ -169,6 +179,79 @@ class DeleteScdnDomain extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
+ */
+class DeleteScdnSpecificConfig extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeScdnCcQpsInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeScdnCcTopIp extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeScdnCcTopUrl extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getCertName()
  * @method $this withCertName($value)
  * @method string getOwnerId()
@@ -190,6 +273,34 @@ class DescribeScdnCertificateDetail extends Rpc
  */
 class DescribeScdnCertificateList extends Rpc
 {
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeScdnDdosInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getLine()
+ * @method $this withLine($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeScdnDdosTrafficInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -793,6 +904,64 @@ class RefreshScdnObjectCaches extends Rpc
  */
 class SetDomainServerCertificate extends Rpc
 {
+}
+
+/**
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class SetScdnBotInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class SetScdnCcInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getElasticBandwidth()
+ * @method $this withElasticBandwidth($value)
+ */
+class SetScdnDdosInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getBizName()
+ * @method $this withBizName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetScdnDomainBizInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**

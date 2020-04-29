@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.259 - 2020-4-29
+- Add Scdn APIS.
+- Sync cdn APIS.
+
+
 ## 1.8.258 - 2020-4-28
 - Generated 2018-12-12, 2018-12-07 for `UniMkt`.
 
