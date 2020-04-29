@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.261 - 2020-4-29
+- Sync cdn APIs.
+
+
 ## 1.8.260 - 2020-4-29
 - Supported the Marketplace Delivery Center Project Api.
 - About Project info.

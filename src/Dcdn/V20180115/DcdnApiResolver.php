@@ -14,10 +14,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchStopDcdnDomain batchStopDcdnDomain(array $options = [])
  * @method DeleteDcdnDomain deleteDcdnDomain(array $options = [])
  * @method DeleteDcdnIpaDomain deleteDcdnIpaDomain(array $options = [])
+ * @method DeleteDcdnIpaSpecificConfig deleteDcdnIpaSpecificConfig(array $options = [])
  * @method DeleteDcdnSpecificConfig deleteDcdnSpecificConfig(array $options = [])
  * @method DescribeDcdnCertificateDetail describeDcdnCertificateDetail(array $options = [])
  * @method DescribeDcdnCertificateList describeDcdnCertificateList(array $options = [])
  * @method DescribeDcdnDomainBpsData describeDcdnDomainBpsData(array $options = [])
+ * @method DescribeDcdnDomainByCertificate describeDcdnDomainByCertificate(array $options = [])
  * @method DescribeDcdnDomainCertificateInfo describeDcdnDomainCertificateInfo(array $options = [])
  * @method DescribeDcdnDomainCname describeDcdnDomainCname(array $options = [])
  * @method DescribeDcdnDomainConfigs describeDcdnDomainConfigs(array $options = [])
@@ -48,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnDomainWebsocketBpsData describeDcdnDomainWebsocketBpsData(array $options = [])
  * @method DescribeDcdnDomainWebsocketHttpCodeData describeDcdnDomainWebsocketHttpCodeData(array $options = [])
  * @method DescribeDcdnDomainWebsocketTrafficData describeDcdnDomainWebsocketTrafficData(array $options = [])
+ * @method DescribeDcdnHttpsDomainList describeDcdnHttpsDomainList(array $options = [])
  * @method DescribeDcdnIpaDomainConfigs describeDcdnIpaDomainConfigs(array $options = [])
  * @method DescribeDcdnIpaDomainDetail describeDcdnIpaDomainDetail(array $options = [])
  * @method DescribeDcdnIpaService describeDcdnIpaService(array $options = [])
@@ -250,6 +253,20 @@ class DeleteDcdnIpaDomain extends Rpc
  * @method string getConfigId()
  * @method $this withConfigId($value)
  */
+class DeleteDcdnIpaSpecificConfig extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
+ */
 class DeleteDcdnSpecificConfig extends Rpc
 {
 }
@@ -295,6 +312,16 @@ class DescribeDcdnCertificateList extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeDcdnDomainBpsData extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSSLPub()
+ * @method $this withSSLPub($value)
+ */
+class DescribeDcdnDomainByCertificate extends Rpc
 {
 }
 
@@ -823,6 +850,20 @@ class DescribeDcdnDomainWebsocketTrafficData extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnHttpsDomainList extends Rpc
+{
+}
+
+/**
  * @method string getFunctionNames()
  * @method $this withFunctionNames($value)
  * @method string getDomainName()
@@ -1137,18 +1178,18 @@ class StopDcdnIpaDomain extends Rpc
 }
 
 /**
- * @method string getTopLevelDomain()
- * @method $this withTopLevelDomain($value)
  * @method string getSources()
  * @method $this withSources($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getTopLevelDomain()
+ * @method $this withTopLevelDomain($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class UpdateDcdnDomain extends Rpc
 {
