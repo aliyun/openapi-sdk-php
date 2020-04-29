@@ -20,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateVideoAbstractTask createVideoAbstractTask(array $options = [])
  * @method CreateVideoAnalyseTask createVideoAnalyseTask(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
+ * @method CreateVideoProduceTask createVideoProduceTask(array $options = [])
  * @method DecodeBlindWatermark decodeBlindWatermark(array $options = [])
  * @method DeleteDocIndex deleteDocIndex(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
@@ -466,6 +467,32 @@ class CreateVideoCompressTask extends Rpc
 }
 
 /**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getMusic()
+ * @method $this withMusic($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getTargetUri()
+ * @method $this withTargetUri($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getCustomMessage()
+ * @method $this withCustomMessage($value)
+ * @method string getImages()
+ * @method $this withImages($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ */
+class CreateVideoProduceTask extends Rpc
+{
+}
+
+/**
  * @method string getImageQuality()
  * @method $this withImageQuality($value)
  * @method string getProject()
@@ -688,6 +715,8 @@ class EncodeBlindWatermark extends Rpc
 }
 
 /**
+ * @method string getRemarksArrayBIn()
+ * @method $this withRemarksArrayBIn($value)
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getExternalId()
@@ -720,6 +749,8 @@ class EncodeBlindWatermark extends Rpc
  * @method $this withAddressLineContentsMatch($value)
  * @method string getGender()
  * @method $this withGender($value)
+ * @method string getRemarksArrayAIn()
+ * @method $this withRemarksArrayAIn($value)
  * @method string getImageSizeRange()
  * @method $this withImageSizeRange($value)
  * @method string getRemarksBPrefix()
@@ -962,6 +993,10 @@ class GetVideoTask extends Rpc
  * @method $this withRemarksA($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
+ * @method string getRemarksArrayA()
+ * @method $this withRemarksArrayA($value)
+ * @method string getRemarksArrayB()
+ * @method $this withRemarksArrayB($value)
  * @method string getSourceUri()
  * @method $this withSourceUri($value)
  * @method string getSourcePosition()
@@ -1304,6 +1339,10 @@ class UpdateFaceGroup extends Rpc
  * @method $this withRemarksA($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
+ * @method string getRemarksArrayA()
+ * @method $this withRemarksArrayA($value)
+ * @method string getRemarksArrayB()
+ * @method $this withRemarksArrayB($value)
  * @method string getSourceUri()
  * @method $this withSourceUri($value)
  * @method string getSourcePosition()

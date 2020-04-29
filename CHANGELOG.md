@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.266 - 2020-4-29
+- Supported VideoProduce.
+
+
 ## 1.8.265 - 2020-4-29
 - Add ListTemplateVersions API.
 - GenerateExecutionPolicy supports TemplateVersion.
