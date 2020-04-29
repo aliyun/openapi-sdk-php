@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.269 - 2020-4-29
+- Add prometheus ListDashboards api.
+
+
 ## 1.8.268 - 2020-4-29
 - Supported VideoProduce.
 
