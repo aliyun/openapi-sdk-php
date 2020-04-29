@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.265 - 2020-4-29
+- Add ListTemplateVersions API.
+- GenerateExecutionPolicy supports TemplateVersion.
+- CreateTemplate and UpdateTemplate support VersionName.
+
+
+
 ## 1.8.264 - 2020-4-29
 - Support groupId operations.
 

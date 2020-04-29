@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTagValues listTagValues(array $options = [])
  * @method ListTaskExecutions listTaskExecutions(array $options = [])
  * @method ListTemplates listTemplates(array $options = [])
+ * @method ListTemplateVersions listTemplateVersions(array $options = [])
  * @method NotifyExecution notifyExecution(array $options = [])
  * @method StartExecution startExecution(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -65,6 +66,8 @@ class CancelExecution extends Rpc
  * @method $this withTags($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
+ * @method string getVersionName()
+ * @method $this withVersionName($value)
  */
 class CreateTemplate extends Rpc
 {
@@ -107,6 +110,8 @@ class DescribeRegions extends Rpc
 }
 
 /**
+ * @method string getTemplateVersion()
+ * @method $this withTemplateVersion($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
  */
@@ -293,6 +298,8 @@ class ListTaskExecutions extends Rpc
  * @method $this withCreatedBy($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
  * @method string getSortOrder()
@@ -315,6 +322,20 @@ class ListTaskExecutions extends Rpc
  * @method $this withCategory($value)
  */
 class ListTemplates extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getShareType()
+ * @method $this withShareType($value)
+ */
+class ListTemplateVersions extends Rpc
 {
 }
 
@@ -415,6 +436,8 @@ class UntagResources extends Rpc
  * @method $this withTags($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
+ * @method string getVersionName()
+ * @method $this withVersionName($value)
  */
 class UpdateTemplate extends Rpc
 {
