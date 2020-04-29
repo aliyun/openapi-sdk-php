@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.267 - 2020-4-29
+- Supported VideoProduce.
+
+
 ## 1.8.266 - 2020-4-29
 - Supported VideoProduce.
 
