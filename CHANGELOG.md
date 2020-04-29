@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.262 - 2020-4-29
+- Support Document Translation.
+- Support Lanuage Detection.
+
+
 ## 1.8.261 - 2020-4-29
 - Sync cdn APIs.
 

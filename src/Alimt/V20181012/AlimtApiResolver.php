@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateDocTranslateTask createDocTranslateTask(array $options = [])
+ * @method GetDetectLanguage getDetectLanguage(array $options = [])
  * @method GetDocTranslateTask getDocTranslateTask(array $options = [])
  * @method Translate translate(array $options = [])
  * @method TranslateCertificate translateCertificate(array $options = [])
@@ -28,7 +29,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'alimtct';
+    public $serviceCode = 'alimt';
 }
 
 /**
@@ -116,6 +117,26 @@ class CreateDocTranslateTask extends Rpc
     {
         $this->data['CallbackUrl'] = $value;
         $this->options['form_params']['CallbackUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceText()
+ */
+class GetDetectLanguage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceText($value)
+    {
+        $this->data['SourceText'] = $value;
+        $this->options['form_params']['SourceText'] = $value;
 
         return $this;
     }
