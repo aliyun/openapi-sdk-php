@@ -27,6 +27,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeIpWhitelist describeIpWhitelist(array $options = [])
  * @method DescribeRecoverableTimeRange describeRecoverableTimeRange(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeRestoreFullDetails describeRestoreFullDetails(array $options = [])
+ * @method DescribeRestoreIncrDetail describeRestoreIncrDetail(array $options = [])
+ * @method DescribeRestoreSchemaDetails describeRestoreSchemaDetails(array $options = [])
  * @method DescribeRestoreSummary describeRestoreSummary(array $options = [])
  * @method DescribeRestoreTables describeRestoreTables(array $options = [])
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
@@ -235,16 +238,24 @@ class DescribeBackupStatus extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class DescribeBackupSummary extends Rpc
 {
 }
 
 /**
- * @method string getClusterId()
- * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getBackupRecordId()
  * @method $this withBackupRecordId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class DescribeBackupTables extends Rpc
 {
@@ -342,8 +353,50 @@ class DescribeRegions extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getRestoreRecordId()
+ * @method $this withRestoreRecordId($value)
+ */
+class DescribeRestoreFullDetails extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getRestoreRecordId()
+ * @method $this withRestoreRecordId($value)
+ */
+class DescribeRestoreIncrDetail extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getRestoreRecordId()
+ * @method $this withRestoreRecordId($value)
+ */
+class DescribeRestoreSchemaDetails extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class DescribeRestoreSummary extends Rpc
 {

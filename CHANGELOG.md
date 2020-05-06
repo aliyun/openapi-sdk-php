@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.272 - 2020-5-6
+- Describe describeAvailableResource.
+
+
 ## 1.8.271 - 2020-4-30
 - Add prometheus ListDashboards api.
 
