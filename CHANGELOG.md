@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.273 - 2020-5-8
+- Support sg for region.
+
+
 ## 1.8.272 - 2020-5-6
 - Describe describeAvailableResource.
 
