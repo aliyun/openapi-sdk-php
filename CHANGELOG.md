@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.274 - 2020-5-9
+- DescribeCamerasStatistics add pvType.
+
+
 ## 1.8.273 - 2020-5-8
 - Support sg for region.
 
