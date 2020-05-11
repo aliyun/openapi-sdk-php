@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.276 - 2020-5-11
+- Bugfix for DescribeProjectAttachments Integer AttachmentType updated to String AttachmentType.
+
+
 ## 1.8.275 - 2020-5-11
 - Support CreationCategory for CreateDBCluster.
 
