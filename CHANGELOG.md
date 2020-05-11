@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.277 - 2020-5-11
+- Add new openapi ApplyNodes.
+
+
 ## 1.8.276 - 2020-5-11
 - Bugfix for DescribeProjectAttachments Integer AttachmentType updated to String AttachmentType.
 
