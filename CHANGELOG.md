@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.279 - 2020-5-12
+- BugFix for DescribeProjectMessages not returned the totalCount property.
+
+
 ## 1.8.278 - 2020-5-12
 - Supported DRM.
 
