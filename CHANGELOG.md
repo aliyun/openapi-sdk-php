@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.278 - 2020-5-12
+- Supported DRM.
+
+
 ## 1.8.277 - 2020-5-11
 - Add new openapi ApplyNodes.
 

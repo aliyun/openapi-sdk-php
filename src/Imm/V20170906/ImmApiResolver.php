@@ -43,8 +43,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FindImages findImages(array $options = [])
  * @method FindImagesByTagNames findImagesByTagNames(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
+ * @method GetContentKey getContentKey(array $options = [])
  * @method GetDocIndex getDocIndex(array $options = [])
  * @method GetDocIndexTask getDocIndexTask(array $options = [])
+ * @method GetDRMLicense getDRMLicense(array $options = [])
  * @method GetImage getImage(array $options = [])
  * @method GetImageJob getImageJob(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
@@ -73,6 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefreshOfficeEditToken refreshOfficeEditToken(array $options = [])
  * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
  * @method SearchDocIndex searchDocIndex(array $options = [])
+ * @method StopStreamAnalyseTask stopStreamAnalyseTask(array $options = [])
  * @method UpdateDocIndexMeta updateDocIndexMeta(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
  * @method UpdateImage updateImage(array $options = [])
@@ -817,6 +820,20 @@ class FindSimilarFaces extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ * @method string getDRMServerId()
+ * @method $this withDRMServerId($value)
+ * @method string getKeyIds()
+ * @method $this withKeyIds($value)
+ */
+class GetContentKey extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
  * @method string getUniqueId()
  * @method $this withUniqueId($value)
  * @method string getSet()
@@ -833,6 +850,18 @@ class GetDocIndex extends Rpc
  * @method $this withTaskId($value)
  */
 class GetDocIndexTask extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getDRMType()
+ * @method $this withDRMType($value)
+ * @method string getDRMLicense()
+ * @method $this withDRMLicense($value)
+ */
+class GetDRMLicense extends Rpc
 {
 }
 
@@ -1281,6 +1310,16 @@ class RefreshOfficePreviewToken extends Rpc
  * @method $this withName($value)
  */
 class SearchDocIndex extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class StopStreamAnalyseTask extends Rpc
 {
 }
 
