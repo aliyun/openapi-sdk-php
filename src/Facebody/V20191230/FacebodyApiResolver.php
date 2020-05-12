@@ -31,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeFace recognizeFace(array $options = [])
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
+ * @method SwapFacialFeatures swapFacialFeatures(array $options = [])
  * @method UpdateFaceEntity updateFaceEntity(array $options = [])
  */
 class FacebodyApiResolver extends ApiResolver
@@ -407,7 +408,9 @@ class DetectLivingFace extends Rpc
 	{
 	    $this->data['Tasks'] = $tasks;
 		foreach ($tasks as $depth1 => $depth1Value) {
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
 		}
 
 		return $this;
@@ -925,7 +928,9 @@ class RecognizePublicFace extends Rpc
 	{
 	    $this->data['Task'] = $task;
 		foreach ($task as $depth1 => $depth1Value) {
-			$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
 		}
 
 		return $this;
@@ -975,6 +980,54 @@ class SearchFace extends Rpc
     {
         $this->data['Limit'] = $value;
         $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTargetImageURL()
+ * @method string getSourceImageURL()
+ * @method string getEditPart()
+ */
+class SwapFacialFeatures extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetImageURL($value)
+    {
+        $this->data['TargetImageURL'] = $value;
+        $this->options['form_params']['TargetImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceImageURL($value)
+    {
+        $this->data['SourceImageURL'] = $value;
+        $this->options['form_params']['SourceImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEditPart($value)
+    {
+        $this->data['EditPart'] = $value;
+        $this->options['form_params']['EditPart'] = $value;
 
         return $this;
     }
