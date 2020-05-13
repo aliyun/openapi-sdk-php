@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.282 - 2020-5-13
+- Generated 2018-12-12, 2018-12-07 for `UniMkt`.
+
+
 ## 1.8.281 - 2020-5-12
 - Sdk version 109.
 
