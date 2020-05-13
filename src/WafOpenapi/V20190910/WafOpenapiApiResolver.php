@@ -11,6 +11,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateIPBlock createIPBlock(array $options = [])
  * @method CreateProtectionModuleRule createProtectionModuleRule(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
+ * @method DeleteInstance deleteInstance(array $options = [])
  * @method DescribeCertificates describeCertificates(array $options = [])
  * @method DescribeCertMatchStatus describeCertMatchStatus(array $options = [])
  * @method DescribeDomain describeDomain(array $options = [])
@@ -24,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeProtectBlockSummary describeProtectBlockSummary(array $options = [])
  * @method DescribeProtectionModuleMode describeProtectionModuleMode(array $options = [])
  * @method DescribeProtectionModuleRules describeProtectionModuleRules(array $options = [])
+ * @method DescribeProtectionModuleRulesByIdList describeProtectionModuleRulesByIdList(array $options = [])
  * @method DescribeProtectionModuleStatus describeProtectionModuleStatus(array $options = [])
  * @method DescribeRealProtectSummary describeRealProtectSummary(array $options = [])
  * @method DescribeRuleMonitor describeRuleMonitor(array $options = [])
@@ -194,6 +196,20 @@ class DeleteDomain extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DeleteInstance extends Rpc
+{
 }
 
 /**
@@ -425,6 +441,22 @@ class DescribeProtectionModuleRules extends Rpc
 }
 
 /**
+ * @method string getRuleIdList()
+ * @method $this withRuleIdList($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeProtectionModuleRulesByIdList extends Rpc
+{
+}
+
+/**
  * @method string getDefenseType()
  * @method $this withDefenseType($value)
  * @method string getInstanceId()
@@ -565,8 +597,6 @@ class ModifyDomain extends Rpc
  * @method $this withSourceIp($value)
  * @method string getDomain()
  * @method $this withDomain($value)
- * @method string getRegion()
- * @method $this withRegion($value)
  */
 class ModifyDomainClusterType extends Rpc
 {

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.286 - 2020-5-13
+- Generated 2019-09-10 for `waf-openapi`.
+
+
 ## 1.8.285 - 2020-5-13
 - Supported AAA for BBB.
 - Fixed bugs for CCC.
