@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchAddServers batchAddServers(array $options = [])
  * @method BindNodeLabel bindNodeLabel(array $options = [])
  * @method CloseDeployOrder closeDeployOrder(array $options = [])
+ * @method CreateAccount createAccount(array $options = [])
  * @method CreateApp createApp(array $options = [])
  * @method CreateAppResourceAlloc createAppResourceAlloc(array $options = [])
  * @method CreateCluster createCluster(array $options = [])
@@ -68,6 +69,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifySlbAP modifySlbAP(array $options = [])
  * @method QueryClusterDetail queryClusterDetail(array $options = [])
  * @method RemoveClusterNode removeClusterNode(array $options = [])
+ * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method ResourceStatusNotify resourceStatusNotify(array $options = [])
  * @method ResumeDeploy resumeDeploy(array $options = [])
  * @method ScaleApp scaleApp(array $options = [])
@@ -152,6 +154,68 @@ class BindNodeLabel extends Rpc
  */
 class CloseDeployOrder extends Rpc
 {
+}
+
+/**
+ * @method string getAccountPassword()
+ * @method string getAccountName()
+ * @method string getAccountType()
+ * @method string getDbInstanceId()
+ */
+class CreateAccount extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountPassword($value)
+    {
+        $this->data['AccountPassword'] = $value;
+        $this->options['form_params']['AccountPassword'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountType($value)
+    {
+        $this->data['AccountType'] = $value;
+        $this->options['form_params']['AccountType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbInstanceId($value)
+    {
+        $this->data['DbInstanceId'] = $value;
+        $this->options['form_params']['DbInstanceId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -285,9 +349,15 @@ class CreateApp extends Rpc
 	{
 	    $this->data['UserRoles'] = $userRoles;
 		foreach ($userRoles as $depth1 => $depth1Value) {
-			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.RoleName'] = $depth1Value['RoleName'];
-			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
-			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+			if(isset($depth1Value['RoleName'])){
+				$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.RoleName'] = $depth1Value['RoleName'];
+			}
+			if(isset($depth1Value['UserType'])){
+				$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
+			}
+			if(isset($depth1Value['UserId'])){
+				$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+			}
 		}
 
 		return $this;
@@ -709,11 +779,21 @@ class CreateService extends Rpc
 	{
 	    $this->data['PortMappings'] = $portMappings;
 		foreach ($portMappings as $depth1 => $depth1Value) {
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.NodePort'] = $depth1Value['NodePort'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.TargetPort'] = $depth1Value['TargetPort'];
+			if(isset($depth1Value['Protocol'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
+			}
+			if(isset($depth1Value['Port'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['Name'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['NodePort'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.NodePort'] = $depth1Value['NodePort'];
+			}
+			if(isset($depth1Value['TargetPort'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.TargetPort'] = $depth1Value['TargetPort'];
+			}
 		}
 
 		return $this;
@@ -1763,11 +1843,21 @@ class ModifyService extends Rpc
 	{
 	    $this->data['PortMappings'] = $portMappings;
 		foreach ($portMappings as $depth1 => $depth1Value) {
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.NodePort'] = $depth1Value['NodePort'];
-			$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.TargetPort'] = $depth1Value['TargetPort'];
+			if(isset($depth1Value['Protocol'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Protocol'] = $depth1Value['Protocol'];
+			}
+			if(isset($depth1Value['Port'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['Name'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['NodePort'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.NodePort'] = $depth1Value['NodePort'];
+			}
+			if(isset($depth1Value['TargetPort'])){
+				$this->options['form_params']['PortMappings.' . ($depth1 + 1) . '.TargetPort'] = $depth1Value['TargetPort'];
+			}
 		}
 
 		return $this;
@@ -1826,6 +1916,54 @@ class RemoveClusterNode extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getAccountPassword()
+ * @method string getAccountName()
+ * @method string getDbInstanceId()
+ */
+class ResetAccountPassword extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountPassword($value)
+    {
+        $this->data['AccountPassword'] = $value;
+        $this->options['form_params']['AccountPassword'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbInstanceId($value)
+    {
+        $this->data['DbInstanceId'] = $value;
+        $this->options['form_params']['DbInstanceId'] = $value;
+
+        return $this;
     }
 }
 
@@ -1939,9 +2077,15 @@ class UpdateApp extends Rpc
 	{
 	    $this->data['UserRoles'] = $userRoles;
 		foreach ($userRoles as $depth1 => $depth1Value) {
-			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.RoleName'] = $depth1Value['RoleName'];
-			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
-			$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+			if(isset($depth1Value['RoleName'])){
+				$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.RoleName'] = $depth1Value['RoleName'];
+			}
+			if(isset($depth1Value['UserType'])){
+				$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserType'] = $depth1Value['UserType'];
+			}
+			if(isset($depth1Value['UserId'])){
+				$this->options['form_params']['UserRoles.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+			}
 		}
 
 		return $this;
