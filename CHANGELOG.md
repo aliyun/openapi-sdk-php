@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.288 - 2020-5-13
+- Add ListDevicesImages DescribeIpcLiveAddress.
+- Modify DescribeDevices.
+
+
 ## 1.8.287 - 2020-5-13
 - Add ExportTas apis.
 
