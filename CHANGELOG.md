@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.287 - 2020-5-13
+- Add ExportTas apis.
+
+
 ## 1.8.286 - 2020-5-13
 - Generated 2019-09-10 for `waf-openapi`.
 
