@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.284 - 2020-5-13
+- Add ExportTas apis.
+
+
 ## 1.8.283 - 2020-5-13
 - About 2019-03-07 and 2018-09-16 Version.
 

@@ -44,6 +44,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCustomLogConfig describeCustomLogConfig(array $options = [])
  * @method DescribeDomainAverageResponseTime describeDomainAverageResponseTime(array $options = [])
  * @method DescribeDomainBpsData describeDomainBpsData(array $options = [])
+ * @method DescribeDomainBpsDataByLayer describeDomainBpsDataByLayer(array $options = [])
  * @method DescribeDomainBpsDataByTimeStamp describeDomainBpsDataByTimeStamp(array $options = [])
  * @method DescribeDomainCcActivityLog describeDomainCcActivityLog(array $options = [])
  * @method DescribeDomainCertificateInfo describeDomainCertificateInfo(array $options = [])
@@ -51,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainFileSizeProportionData describeDomainFileSizeProportionData(array $options = [])
  * @method DescribeDomainHitRateData describeDomainHitRateData(array $options = [])
  * @method DescribeDomainHttpCodeData describeDomainHttpCodeData(array $options = [])
+ * @method DescribeDomainHttpCodeDataByLayer describeDomainHttpCodeDataByLayer(array $options = [])
  * @method DescribeDomainISPData describeDomainISPData(array $options = [])
  * @method DescribeDomainMax95BpsData describeDomainMax95BpsData(array $options = [])
  * @method DescribeDomainPathData describeDomainPathData(array $options = [])
@@ -851,6 +853,28 @@ class DescribeDomainBpsData extends Rpc
 }
 
 /**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getLayer()
+ * @method $this withLayer($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeDomainBpsDataByLayer extends Rpc
+{
+}
+
+/**
  * @method string getLocationNames()
  * @method $this withLocationNames($value)
  * @method string getIspNames()
@@ -958,6 +982,28 @@ class DescribeDomainHitRateData extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeDomainHttpCodeData extends Rpc
+{
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getLayer()
+ * @method $this withLayer($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeDomainHttpCodeDataByLayer extends Rpc
 {
 }
 
