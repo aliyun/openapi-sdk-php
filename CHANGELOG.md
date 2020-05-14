@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.290 - 2020-5-14
+- Supported Grant Permission.
+- Supported Revoke Permission.
+
+
 ## 1.8.289 - 2020-5-14
 - Add demo edition auth.
 

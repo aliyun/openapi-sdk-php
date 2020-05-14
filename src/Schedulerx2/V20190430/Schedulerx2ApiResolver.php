@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateJob createJob(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteWorkflow deleteWorkflow(array $options = [])
+ * @method DescribeRegions describeRegions(array $options = [])
  * @method DisableJob disableJob(array $options = [])
  * @method DisableWorkflow disableWorkflow(array $options = [])
  * @method EnableJob enableJob(array $options = [])
@@ -18,6 +19,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobInfo getJobInfo(array $options = [])
  * @method GetJobInstance getJobInstance(array $options = [])
  * @method GetJobInstanceList getJobInstanceList(array $options = [])
+ * @method GrantPermission grantPermission(array $options = [])
+ * @method RevokePermission revokePermission(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
  */
@@ -35,9 +38,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     protected $scheme = 'https';
-
-    /** @var string */
-    public $serviceCode = 'schedulerx2';
 }
 
 /**
@@ -423,8 +423,12 @@ class CreateJob extends Rpc
 	{
 	    $this->data['ContactInfo'] = $contactInfo;
 		foreach ($contactInfo as $depth1 => $depth1Value) {
-			$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserPhone'] = $depth1Value['UserPhone'];
-			$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
+			if(isset($depth1Value['UserPhone'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserPhone'] = $depth1Value['UserPhone'];
+			}
+			if(isset($depth1Value['UserName'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
+			}
 		}
 
 		return $this;
@@ -524,6 +528,16 @@ class DeleteWorkflow extends Rpc
 {
 }
 
+class DescribeRegions extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
 /**
  * @method string getJobId()
  * @method $this withJobId($value)
@@ -536,6 +550,9 @@ class DeleteWorkflow extends Rpc
  */
 class DisableJob extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -564,6 +581,9 @@ class DisableWorkflow extends Rpc
  */
 class EnableJob extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
@@ -654,6 +674,50 @@ class GetJobInstance extends Rpc
  */
 class GetJobInstanceList extends Rpc
 {
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getGrantOption()
+ * @method $this withGrantOption($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class GrantPermission extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class RevokePermission extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -1031,8 +1095,12 @@ class UpdateJob extends Rpc
 	{
 	    $this->data['ContactInfo'] = $contactInfo;
 		foreach ($contactInfo as $depth1 => $depth1Value) {
-			$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserPhone'] = $depth1Value['UserPhone'];
-			$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
+			if(isset($depth1Value['UserPhone'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserPhone'] = $depth1Value['UserPhone'];
+			}
+			if(isset($depth1Value['UserName'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
+			}
 		}
 
 		return $this;
