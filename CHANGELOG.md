@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.289 - 2020-5-14
+- Add demo edition auth.
+
+
 ## 1.8.288 - 2020-5-13
 - Add ListDevicesImages DescribeIpcLiveAddress.
 - Modify DescribeDevices.
