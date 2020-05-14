@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.291 - 2020-5-14
+- Generated 2015-01-01 for `R-kvstore`.
+- Fix DescribeCacheAnalysisReport return empty BigKeys because of wrong type defination.
+
+
 ## 1.8.290 - 2020-5-14
 - Supported Grant Permission.
 - Supported Revoke Permission.

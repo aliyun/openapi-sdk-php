@@ -1022,6 +1022,8 @@ class DescribeRegions extends Rpc
  * @method $this withStartTime($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
@@ -1499,6 +1501,10 @@ class ModifyDedicatedUserCluster extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getInstanceReleaseProtection()
+ * @method $this withInstanceReleaseProtection($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1511,6 +1517,8 @@ class ModifyDedicatedUserCluster extends Rpc
  * @method $this withInstanceId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class ModifyInstanceAttribute extends Rpc
 {
