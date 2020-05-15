@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.292 - 2020-5-15
+- Add LinkIoTEdge CreateEdgeInstanceChannel, BatchDeleteEdgeInstanceChannel, UpdateEdgeInstanceChannel, BatchGetEdgeInstanceChannel, QueryEdgeInstanceChannel, QueryEdgeInstanceDeviceByDriver, BatchGetEdgeInstanceDeviceDriver, BatchSetEdgeInstanceDeviceChannel, BatchGetEdgeInstanceDeviceChannel API.
+- Add LinkIoTEdge BindApplicationToEdgeInstance, UnbindApplicationFromEdgeInstance API.
+- Add LinkIoTEdge ReplaceEdgeInstanceGateway, ReleaseEdgeDriverVersion, BatchGetDeviceBindStatus API.
+
+
 ## 1.8.291 - 2020-5-14
 - Generated 2015-01-01 for `R-kvstore`.
 - Fix DescribeCacheAnalysisReport return empty BigKeys because of wrong type defination.
