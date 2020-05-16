@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.293 - 2020-5-17
+- Open API publish.
+
+
 ## 1.8.292 - 2020-5-15
 - Add LinkIoTEdge CreateEdgeInstanceChannel, BatchDeleteEdgeInstanceChannel, UpdateEdgeInstanceChannel, BatchGetEdgeInstanceChannel, QueryEdgeInstanceChannel, QueryEdgeInstanceDeviceByDriver, BatchGetEdgeInstanceDeviceDriver, BatchSetEdgeInstanceDeviceChannel, BatchGetEdgeInstanceDeviceChannel API.
 - Add LinkIoTEdge BindApplicationToEdgeInstance, UnbindApplicationFromEdgeInstance API.
