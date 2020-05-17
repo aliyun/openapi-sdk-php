@@ -33,7 +33,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'VCS';
+    public $serviceCode = 'vcs';
 }
 
 /**
