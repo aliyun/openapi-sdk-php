@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.294 - 2020-5-17
+- Open API publish.
+
+
 ## 1.8.293 - 2020-5-17
 - Open API publish.
 
