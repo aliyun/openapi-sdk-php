@@ -297,6 +297,8 @@ class AddUsers extends Rpc
  * @method $this withInternetMaxBandWidthIn($value)
  * @method string getTargetCapacity()
  * @method $this withTargetCapacity($value)
+ * @method string getStrictSatisfiedTargetCapacity()
+ * @method $this withStrictSatisfiedTargetCapacity($value)
  */
 class ApplyNodes extends Rpc
 {
@@ -1632,6 +1634,8 @@ class ListJobTemplates extends Rpc
  * @method $this withClusterId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSequence()
+ * @method $this withSequence($value)
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getPageSize()
@@ -1660,6 +1664,8 @@ class ListNodesByQueue extends Rpc
  * @method $this withRole($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getSequence()
+ * @method $this withSequence($value)
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getOnlyDetached()

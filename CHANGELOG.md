@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.298 - 2020-5-18
+- Support sequence for listNodes.
+- Support StrictSatisfiedTargetCapacity for applyNodes.
+
+
+
 ## 1.8.297 - 2020-5-18
 - Fix DescribeIpcLiveAddress , add in params.
 
