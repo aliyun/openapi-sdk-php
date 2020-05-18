@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.297 - 2020-5-18
+- Fix DescribeIpcLiveAddress , add in params.
+
+
 ## 1.8.296 - 2020-5-17
 - Open API publish.
 

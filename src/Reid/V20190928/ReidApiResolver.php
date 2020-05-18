@@ -435,6 +435,7 @@ class DescribeImageUrls extends Rpc
 /**
  * @method string getIpcId()
  * @method string getStoreId()
+ * @method string getProtocolType()
  */
 class DescribeIpcLiveAddress extends Rpc
 {
@@ -461,6 +462,19 @@ class DescribeIpcLiveAddress extends Rpc
     {
         $this->data['StoreId'] = $value;
         $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProtocolType($value)
+    {
+        $this->data['ProtocolType'] = $value;
+        $this->options['form_params']['ProtocolType'] = $value;
 
         return $this;
     }
