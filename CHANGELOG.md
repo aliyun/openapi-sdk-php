@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.299 - 2020-5-19
+- Initial version.
+
+
 ## 1.8.298 - 2020-5-18
 - Support sequence for listNodes.
 - Support StrictSatisfiedTargetCapacity for applyNodes.
