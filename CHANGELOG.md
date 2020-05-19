@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.300 - 2020-5-19
+- Public beta version.
+- Add Api Overseas.
+
+
 ## 1.8.299 - 2020-5-19
 - Initial version.
 
