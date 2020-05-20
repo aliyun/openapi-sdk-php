@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.302 - 2020-5-20
+- Edit GetTrace and SearchTraces api.
+
+
 ## 1.8.301 - 2020-5-20
 - Public beta version.
 - Add Api Overseas.

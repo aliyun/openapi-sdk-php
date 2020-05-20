@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddGrafana addGrafana(array $options = [])
  * @method AddIntegration addIntegration(array $options = [])
  * @method CheckDataConsistency checkDataConsistency(array $options = [])
+ * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
  * @method CreateAlertContact createAlertContact(array $options = [])
  * @method CreateAlertContactGroup createAlertContactGroup(array $options = [])
  * @method CreateRetcodeApp createRetcodeApp(array $options = [])
@@ -94,6 +95,20 @@ class AddIntegration extends Rpc
  * @method $this withProxyUserId($value)
  */
 class CheckDataConsistency extends Rpc
+{
+}
+
+/**
+ * @method string getSPIRegionId()
+ * @method $this withSPIRegionId($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
+ * @method string getDeletionTaskId()
+ * @method $this withDeletionTaskId($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ */
+class CheckServiceLinkedRoleForDeleting extends Rpc
 {
 }
 
