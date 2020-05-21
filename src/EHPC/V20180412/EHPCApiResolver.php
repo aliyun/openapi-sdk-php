@@ -288,8 +288,6 @@ class AddUsers extends Rpc
  * @method $this withPriorityStrategy($value)
  * @method string getInstanceFamilyLevel()
  * @method $this withInstanceFamilyLevel($value)
- * @method string getEcsChargeType()
- * @method $this withEcsChargeType($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
  * @method array getInstanceTypeModel()

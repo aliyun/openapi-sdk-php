@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.304 - 2020-5-21
+- Support more error Codes.
+
+
 ## 1.8.303 - 2020-5-20
 - Generated 2019-09-10 for `waf-openapi`.
 
