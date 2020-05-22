@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.305 - 2020-5-22
+- Add schedule crud api.
+
+
 ## 1.8.304 - 2020-5-21
 - Support more error Codes.
 
