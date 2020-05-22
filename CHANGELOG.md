@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.306 - 2020-5-23
+- Generated 2015-01-01 for `R-kvstore`.
+- Add ModifyResourceGroup API.
+- DescribeInstanceAttribute return ResourceGroupId.
+
+
 ## 1.8.305 - 2020-5-22
 - Add schedule crud api.
 
