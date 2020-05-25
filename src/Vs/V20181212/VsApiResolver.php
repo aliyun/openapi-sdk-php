@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddVsPullStreamInfoConfig addVsPullStreamInfoConfig(array $options = [])
  * @method BatchBindDirectories batchBindDirectories(array $options = [])
+ * @method BatchBindPurchasedDevices batchBindPurchasedDevices(array $options = [])
  * @method BatchBindTemplate batchBindTemplate(array $options = [])
  * @method BatchBindTemplates batchBindTemplates(array $options = [])
  * @method BatchDeleteDevices batchDeleteDevices(array $options = [])
@@ -19,13 +20,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchStopDevices batchStopDevices(array $options = [])
  * @method BatchStopStreams batchStopStreams(array $options = [])
  * @method BatchUnbindDirectories batchUnbindDirectories(array $options = [])
+ * @method BatchUnbindPurchasedDevices batchUnbindPurchasedDevices(array $options = [])
  * @method BatchUnbindTemplate batchUnbindTemplate(array $options = [])
  * @method BatchUnbindTemplates batchUnbindTemplates(array $options = [])
  * @method BindDirectory bindDirectory(array $options = [])
+ * @method BindPurchasedDevice bindPurchasedDevice(array $options = [])
  * @method BindTemplate bindTemplate(array $options = [])
  * @method ContinuousAdjust continuousAdjust(array $options = [])
  * @method ContinuousMove continuousMove(array $options = [])
  * @method CreateDevice createDevice(array $options = [])
+ * @method CreateDeviceAlarm createDeviceAlarm(array $options = [])
  * @method CreateDirectory createDirectory(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
  * @method CreateStreamSnapshot createStreamSnapshot(array $options = [])
@@ -42,11 +46,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDeviceChannels describeDeviceChannels(array $options = [])
  * @method DescribeDeviceGateway describeDeviceGateway(array $options = [])
  * @method DescribeDevices describeDevices(array $options = [])
+ * @method DescribeDeviceURL describeDeviceURL(array $options = [])
  * @method DescribeDirectories describeDirectories(array $options = [])
  * @method DescribeDirectory describeDirectory(array $options = [])
  * @method DescribeGroup describeGroup(array $options = [])
  * @method DescribeGroups describeGroups(array $options = [])
  * @method DescribePresets describePresets(array $options = [])
+ * @method DescribePurchasedDevice describePurchasedDevice(array $options = [])
+ * @method DescribePurchasedDevices describePurchasedDevices(array $options = [])
  * @method DescribeRecords describeRecords(array $options = [])
  * @method DescribeStream describeStream(array $options = [])
  * @method DescribeStreams describeStreams(array $options = [])
@@ -75,6 +82,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ForbidVsStream forbidVsStream(array $options = [])
  * @method GotoPreset gotoPreset(array $options = [])
  * @method ModifyDevice modifyDevice(array $options = [])
+ * @method ModifyDeviceAlarm modifyDeviceAlarm(array $options = [])
+ * @method ModifyDeviceCapture modifyDeviceCapture(array $options = [])
  * @method ModifyDeviceChannels modifyDeviceChannels(array $options = [])
  * @method ModifyDirectory modifyDirectory(array $options = [])
  * @method ModifyGroup modifyGroup(array $options = [])
@@ -95,6 +104,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopTransferStream stopTransferStream(array $options = [])
  * @method SyncCatalogs syncCatalogs(array $options = [])
  * @method UnbindDirectory unbindDirectory(array $options = [])
+ * @method UnbindPurchasedDevice unbindPurchasedDevice(array $options = [])
  * @method UnbindTemplate unbindTemplate(array $options = [])
  * @method UnlockDevice unlockDevice(array $options = [])
  * @method UpdateVsPullStreamInfoConfig updateVsPullStreamInfoConfig(array $options = [])
@@ -153,6 +163,22 @@ class AddVsPullStreamInfoConfig extends Rpc
  * @method $this withDeviceId($value)
  */
 class BatchBindDirectories extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class BatchBindPurchasedDevices extends Rpc
 {
 }
 
@@ -345,6 +371,18 @@ class BatchUnbindDirectories extends Rpc
 }
 
 /**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class BatchUnbindPurchasedDevices extends Rpc
+{
+}
+
+/**
  * @method string getTemplateType()
  * @method $this withTemplateType($value)
  * @method string getInstanceType()
@@ -391,6 +429,22 @@ class BatchUnbindTemplates extends Rpc
  * @method $this withDeviceId($value)
  */
 class BindDirectory extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class BindPurchasedDevice extends Rpc
 {
 }
 
@@ -467,6 +521,8 @@ class ContinuousMove extends Rpc
  * @method $this withPassword($value)
  * @method string getVendor()
  * @method $this withVendor($value)
+ * @method string getAlarmMethod()
+ * @method $this withAlarmMethod($value)
  * @method string getDirectoryId()
  * @method $this withDirectoryId($value)
  * @method string getShowLog()
@@ -501,6 +557,32 @@ class CreateDevice extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAlarm()
+ * @method $this withAlarm($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getObjectType()
+ * @method $this withObjectType($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSubAlarm()
+ * @method $this withSubAlarm($value)
+ * @method string getExpire()
+ * @method $this withExpire($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class CreateDeviceAlarm extends Rpc
+{
+}
+
+/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getParentId()
@@ -519,10 +601,16 @@ class CreateDirectory extends Rpc
 }
 
 /**
+ * @method string getCaptureVideo()
+ * @method $this withCaptureVideo($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getCaptureOssPath()
+ * @method $this withCaptureOssPath($value)
  * @method string getPushDomain()
  * @method $this withPushDomain($value)
+ * @method string getCaptureImage()
+ * @method $this withCaptureImage($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getApp()
@@ -531,6 +619,8 @@ class CreateDirectory extends Rpc
  * @method $this withPlayDomain($value)
  * @method string getOutProtocol()
  * @method $this withOutProtocol($value)
+ * @method string getCaptureInterval()
+ * @method $this withCaptureInterval($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getInProtocol()
@@ -543,6 +633,8 @@ class CreateDirectory extends Rpc
  * @method $this withCallback($value)
  * @method string getRegion()
  * @method $this withRegion($value)
+ * @method string getCaptureOssBucket()
+ * @method $this withCaptureOssBucket($value)
  */
 class CreateGroup extends Rpc
 {
@@ -805,6 +897,30 @@ class DescribeDevices extends Rpc
 }
 
 /**
+ * @method string getAuth()
+ * @method $this withAuth($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOutProtocol()
+ * @method $this withOutProtocol($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getExpire()
+ * @method $this withExpire($value)
+ */
+class DescribeDeviceURL extends Rpc
+{
+}
+
+/**
  * @method string getSortDirection()
  * @method $this withSortDirection($value)
  * @method string getPageNum()
@@ -897,6 +1013,48 @@ class DescribePresets extends Rpc
 }
 
 /**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribePurchasedDevice extends Rpc
+{
+}
+
+/**
+ * @method string getSortDirection()
+ * @method $this withSortDirection($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getSubType()
+ * @method $this withSubType($value)
+ * @method string getVendor()
+ * @method $this withVendor($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSortBy()
+ * @method $this withSortBy($value)
+ */
+class DescribePurchasedDevices extends Rpc
+{
+}
+
+/**
  * @method string getSortDirection()
  * @method $this withSortDirection($value)
  * @method string getStartTime()
@@ -905,6 +1063,8 @@ class DescribePresets extends Rpc
  * @method $this withType($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getPrivateBucket()
+ * @method $this withPrivateBucket($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getShowLog()
@@ -1415,6 +1575,8 @@ class GotoPreset extends Rpc
  * @method $this withPassword($value)
  * @method string getVendor()
  * @method $this withVendor($value)
+ * @method string getAlarmMethod()
+ * @method $this withAlarmMethod($value)
  * @method string getDirectoryId()
  * @method $this withDirectoryId($value)
  * @method string getId()
@@ -1455,8 +1617,46 @@ class ModifyDevice extends Rpc
  * @method $this withShowLog($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAlarmId()
+ * @method $this withAlarmId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ModifyDeviceAlarm extends Rpc
+{
+}
+
+/**
+ * @method string getVideo()
+ * @method $this withVideo($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getImage()
+ * @method $this withImage($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDeviceCapture extends Rpc
+{
+}
+
+/**
+ * @method string getDeviceStatus()
+ * @method $this withDeviceStatus($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getChannels()
  * @method $this withChannels($value)
+ * @method string getDsn()
+ * @method $this withDsn($value)
  */
 class ModifyDeviceChannels extends Rpc
 {
@@ -1479,12 +1679,18 @@ class ModifyDirectory extends Rpc
 }
 
 /**
+ * @method string getCaptureVideo()
+ * @method $this withCaptureVideo($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getEnabled()
  * @method $this withEnabled($value)
+ * @method string getCaptureOssPath()
+ * @method $this withCaptureOssPath($value)
  * @method string getPushDomain()
  * @method $this withPushDomain($value)
+ * @method string getCaptureImage()
+ * @method $this withCaptureImage($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -1493,6 +1699,8 @@ class ModifyDirectory extends Rpc
  * @method $this withPlayDomain($value)
  * @method string getOutProtocol()
  * @method $this withOutProtocol($value)
+ * @method string getCaptureInterval()
+ * @method $this withCaptureInterval($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getInProtocol()
@@ -1505,6 +1713,8 @@ class ModifyDirectory extends Rpc
  * @method $this withCallback($value)
  * @method string getRegion()
  * @method $this withRegion($value)
+ * @method string getCaptureOssBucket()
+ * @method $this withCaptureOssBucket($value)
  */
 class ModifyGroup extends Rpc
 {
@@ -1673,10 +1883,14 @@ class StartRecordStream extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -1775,6 +1989,8 @@ class StopRecordStream extends Rpc
  * @method $this withShowLog($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class StopStream extends Rpc
 {
@@ -1817,6 +2033,18 @@ class SyncCatalogs extends Rpc
  * @method $this withDeviceId($value)
  */
 class UnbindDirectory extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class UnbindPurchasedDevice extends Rpc
 {
 }
 

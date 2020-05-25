@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.307 - 2020-5-25
+- Supported auvsp protocol changes.
+- Supported start vod streams.
+- Supported stop vod streams.
+- Supported gb28281 alarm on device.
+
+
 ## 1.8.306 - 2020-5-23
 - Generated 2015-01-01 for `R-kvstore`.
 - Add ModifyResourceGroup API.
