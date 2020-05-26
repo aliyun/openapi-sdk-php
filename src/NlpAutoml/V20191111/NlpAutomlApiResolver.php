@@ -10,6 +10,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPredictResult getPredictResult(array $options = [])
  * @method RunContactReview runContactReview(array $options = [])
  * @method RunPreTrainService runPreTrainService(array $options = [])
+ * @method RunSmartCallService runSmartCallService(array $options = [])
  */
 class NlpAutomlApiResolver extends ApiResolver
 {
@@ -299,6 +300,68 @@ class RunPreTrainService extends Rpc
     {
         $this->data['ServiceVersion'] = $value;
         $this->options['form_params']['ServiceVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceName($value)
+    {
+        $this->data['ServiceName'] = $value;
+        $this->options['form_params']['ServiceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSessionId()
+ * @method string getRobotId()
+ * @method string getParamContent()
+ * @method string getServiceName()
+ */
+class RunSmartCallService extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionId($value)
+    {
+        $this->data['SessionId'] = $value;
+        $this->options['form_params']['SessionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRobotId($value)
+    {
+        $this->data['RobotId'] = $value;
+        $this->options['form_params']['RobotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParamContent($value)
+    {
+        $this->data['ParamContent'] = $value;
+        $this->options['form_params']['ParamContent'] = $value;
 
         return $this;
     }
