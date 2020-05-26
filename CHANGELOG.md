@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.308 - 2020-5-26
+- Add smartcall service api.
+
+
 ## 1.8.307 - 2020-5-25
 - Supported auvsp protocol changes.
 - Supported start vod streams.
