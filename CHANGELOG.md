@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.310 - 2020-5-26
+- Support DescribeAllEntity API.
+
+
 ## 1.8.309 - 2020-5-26
 - Add smartcall service api.
 
