@@ -6,14 +6,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CompileSortScript compileSortScript(array $options = [])
+ * @method CreateApp createApp(array $options = [])
+ * @method CreateAppGroup createAppGroup(array $options = [])
  * @method CreateSortScript createSortScript(array $options = [])
  * @method DeleteSortScript deleteSortScript(array $options = [])
+ * @method DescribeApp describeApp(array $options = [])
+ * @method DescribeAppGroup describeAppGroup(array $options = [])
+ * @method DescribeApps describeApps(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method GetSortScript getSortScript(array $options = [])
  * @method GetSortScriptFile getSortScriptFile(array $options = [])
+ * @method ListAppGroups listAppGroups(array $options = [])
  * @method ListApps listApps(array $options = [])
  * @method ListSortScripts listSortScripts(array $options = [])
+ * @method ModifyAppGroup modifyAppGroup(array $options = [])
+ * @method ModifyAppGroupQuota modifyAppGroupQuota(array $options = [])
  * @method ReleaseSortScript releaseSortScript(array $options = [])
+ * @method RemoveApp removeApp(array $options = [])
+ * @method RemoveAppGroup removeAppGroup(array $options = [])
  * @method SaveSortScriptFile saveSortScriptFile(array $options = [])
  */
 class OpenSearchApiResolver extends ApiResolver
@@ -83,6 +93,54 @@ class CompileSortScript extends Roa
 
         return $this;
     }
+}
+
+/**
+ * @method string getDryRun()
+ * @method string getAppGroupIdentity()
+ */
+class CreateApp extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/apps';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['query']['dryRun'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+class CreateAppGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -162,6 +220,86 @@ class DeleteSortScript extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getAppGroupIdentity()
+ */
+class DescribeApp extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/apps/[appId]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->pathParameters['appId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppGroupIdentity()
+ */
+class DescribeAppGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppGroupIdentity()
+ */
+class DescribeApps extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/apps';
 
     /**
      * @param string $value
@@ -300,6 +438,98 @@ class GetSortScriptFile extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method string getPageSize()
+ * @method string getName()
+ * @method string getSortBy()
+ * @method string getType()
+ * @method string getPageNumber()
+ */
+class ListAppGroups extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortBy($value)
+    {
+        $this->data['SortBy'] = $value;
+        $this->options['query']['sortBy'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['pageNumber'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSize()
  * @method string getPage()
  * @method string getGroup()
@@ -386,6 +616,56 @@ class ListSortScripts extends Roa
 }
 
 /**
+ * @method string getAppGroupIdentity()
+ */
+class ModifyAppGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppGroupIdentity()
+ */
+class ModifyAppGroupQuota extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/quota';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAppVersionId()
  * @method string getScriptName()
  * @method string getAppGroupIdentity()
@@ -423,6 +703,70 @@ class ReleaseSortScript extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method string getAppGroupIdentity()
+ */
+class RemoveApp extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/apps/[appId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->pathParameters['appId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppGroupIdentity()
+ */
+class RemoveAppGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]';
+
+    /** @var string */
+    public $method = 'DELETE';
 
     /**
      * @param string $value

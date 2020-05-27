@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.311 - 2020-5-27
+- Add app-group-management and quota-updating APIs.
+- Add app management APIs.
+
+
 ## 1.8.310 - 2020-5-26
 - Support DescribeAllEntity API.
 
