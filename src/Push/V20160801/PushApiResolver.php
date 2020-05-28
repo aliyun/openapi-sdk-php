@@ -239,6 +239,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSNotificationCategory'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCategory'] = $depth1Value['IOSNotificationCategory'];
 			}
+			if(isset($depth1Value['AndroidNotificationXiaomiChannel'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationXiaomiChannel'] = $depth1Value['AndroidNotificationXiaomiChannel'];
+			}
 			if(isset($depth1Value['StoreOffline'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.StoreOffline'] = $depth1Value['StoreOffline'];
 			}
@@ -321,6 +324,8 @@ class MassPush extends Rpc
  * @method string getExpireTime()
  * @method $this withExpireTime($value)
  * @method string getIOSNotificationCategory()
+ * @method string getAndroidNotificationXiaomiChannel()
+ * @method $this withAndroidNotificationXiaomiChannel($value)
  * @method string getStoreOffline()
  * @method $this withStoreOffline($value)
  * @method string getSmsParams()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.312 - 2020-5-28
+- Supported AndroidNotificationXiaomiChannel for Push and MassPush.
+
+
 ## 1.8.311 - 2020-5-27
 - Add app-group-management and quota-updating APIs.
 - Add app management APIs.
