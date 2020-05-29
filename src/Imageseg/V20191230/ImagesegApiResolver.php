@@ -5,15 +5,19 @@ namespace AlibabaCloud\Imageseg\V20191230;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method ParseFace parseFace(array $options = [])
  * @method RefineMask refineMask(array $options = [])
+ * @method SegmentAnimal segmentAnimal(array $options = [])
  * @method SegmentBody segmentBody(array $options = [])
  * @method SegmentCommodity segmentCommodity(array $options = [])
  * @method SegmentCommonImage segmentCommonImage(array $options = [])
  * @method SegmentFace segmentFace(array $options = [])
  * @method SegmentFurniture segmentFurniture(array $options = [])
  * @method SegmentHair segmentHair(array $options = [])
+ * @method SegmentHDBody segmentHDBody(array $options = [])
  * @method SegmentHead segmentHead(array $options = [])
+ * @method SegmentSky segmentSky(array $options = [])
  * @method SegmentVehicle segmentVehicle(array $options = [])
  */
 class ImagesegApiResolver extends ApiResolver
@@ -33,6 +37,40 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imageseg';
+}
+
+/**
+ * @method string getAsync()
+ * @method string getJobId()
+ */
+class GetAsyncJobResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -81,8 +119,30 @@ class RefineMask extends Rpc
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
+class SegmentAnimal extends Rpc
+{
+}
+
+/**
+ * @method string getAsync()
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
 class SegmentBody extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -141,7 +201,23 @@ class SegmentHair extends Rpc
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
+class SegmentHDBody extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
 class SegmentHead extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class SegmentSky extends Rpc
 {
 }
 

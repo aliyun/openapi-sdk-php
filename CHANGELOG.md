@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.313 - 2020-5-29
+- SDK version 108.
+
+
 ## 1.8.312 - 2020-5-28
 - Supported AndroidNotificationXiaomiChannel for Push and MassPush.
 
