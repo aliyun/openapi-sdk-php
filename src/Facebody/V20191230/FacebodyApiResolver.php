@@ -18,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectLivingFace detectLivingFace(array $options = [])
  * @method DetectMask detectMask(array $options = [])
  * @method DetectPedestrian detectPedestrian(array $options = [])
+ * @method DetectVideoLivingFace detectVideoLivingFace(array $options = [])
  * @method EnhanceFace enhanceFace(array $options = [])
  * @method FaceBeauty faceBeauty(array $options = [])
  * @method FaceFilter faceFilter(array $options = [])
@@ -452,6 +453,26 @@ class DetectPedestrian extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getVideoUrl()
+ */
+class DetectVideoLivingFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
 
         return $this;
     }
