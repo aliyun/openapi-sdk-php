@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.315 - 2020-6-2
+- Edit SearchTraces api.
+
+
 ## 1.8.314 - 2020-5-29
 - Sdk version 111.
 

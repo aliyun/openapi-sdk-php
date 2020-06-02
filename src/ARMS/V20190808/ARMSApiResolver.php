@@ -620,6 +620,7 @@ class SearchTraceAppByPage extends Rpc
  * @method $this withMinDuration($value)
  * @method string getServiceIp()
  * @method $this withServiceIp($value)
+ * @method array getExclusionFilters()
  * @method string getOperationName()
  * @method $this withOperationName($value)
  * @method string getServiceName()
@@ -628,6 +629,26 @@ class SearchTraceAppByPage extends Rpc
  */
 class SearchTraces extends Rpc
 {
+
+    /**
+     * @param array $exclusionFilters
+     *
+     * @return $this
+     */
+	public function withExclusionFilters(array $exclusionFilters)
+	{
+	    $this->data['ExclusionFilters'] = $exclusionFilters;
+		foreach ($exclusionFilters as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['ExclusionFilters.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['ExclusionFilters.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $tag
