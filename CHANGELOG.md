@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.316 - 2020-6-3
+- DescribeCameraStatistics add filed.
+
+
 ## 1.8.315 - 2020-6-2
 - Edit SearchTraces api.
 
