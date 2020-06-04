@@ -32,38 +32,25 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeJobGroup describeJobGroup(array $options = [])
  * @method DescribeScript describeScript(array $options = [])
  * @method DescribeScriptVoiceConfig describeScriptVoiceConfig(array $options = [])
+ * @method DescribeTagHitsSummary describeTagHitsSummary(array $options = [])
  * @method DescribeTTSConfig describeTTSConfig(array $options = [])
  * @method Dialogue dialogue(array $options = [])
- * @method DownloadBasicStatisticsReport downloadBasicStatisticsReport(array $options = [])
- * @method DownloadConversationDetails downloadConversationDetails(array $options = [])
- * @method DownloadRecording downloadRecording(array $options = [])
- * @method DownloadUnreachableContacts downloadUnreachableContacts(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
- * @method GenerateBasicStatisticsReport generateBasicStatisticsReport(array $options = [])
- * @method GenerateOverallStatisticsReport generateOverallStatisticsReport(array $options = [])
- * @method GetJobByPhoneNumber getJobByPhoneNumber(array $options = [])
- * @method GetJobStatusByCallId getJobStatusByCallId(array $options = [])
- * @method GetTagHitsSummary getTagHitsSummary(array $options = [])
  * @method ImportScript importScript(array $options = [])
- * @method ListBasicStatisticsReportSubItems listBasicStatisticsReportSubItems(array $options = [])
- * @method ListConversationsWithUnrecognizedIntents listConversationsWithUnrecognizedIntents(array $options = [])
  * @method ListDialogueFlows listDialogueFlows(array $options = [])
  * @method ListGlobalQuestions listGlobalQuestions(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListIntents listIntents(array $options = [])
  * @method ListJobGroups listJobGroups(array $options = [])
- * @method ListJobGroupsWithScenario listJobGroupsWithScenario(array $options = [])
  * @method ListJobs listJobs(array $options = [])
  * @method ListJobsByGroup listJobsByGroup(array $options = [])
- * @method ListMedias listMedias(array $options = [])
+ * @method ListMedia listMedia(array $options = [])
  * @method ListOutboundCallNumbers listOutboundCallNumbers(array $options = [])
  * @method ListScriptPublishHistories listScriptPublishHistories(array $options = [])
  * @method ListScripts listScripts(array $options = [])
  * @method ListScriptVoiceConfigs listScriptVoiceConfigs(array $options = [])
  * @method ListTags listTags(array $options = [])
- * @method ListUnreachableContacts listUnreachableContacts(array $options = [])
- * @method ListUnrecognizedIntents listUnrecognizedIntents(array $options = [])
  * @method ModifyBatchJobs modifyBatchJobs(array $options = [])
  * @method ModifyDialogueFlow modifyDialogueFlow(array $options = [])
  * @method ModifyGlobalQuestion modifyGlobalQuestion(array $options = [])
@@ -88,7 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitRecording submitRecording(array $options = [])
  * @method SubmitScriptReview submitScriptReview(array $options = [])
  * @method SuspendJobs suspendJobs(array $options = [])
- * @method WithdrawScript withdrawScript(array $options = [])
+ * @method WithdrawScriptReview withdrawScriptReview(array $options = [])
  */
 class OutboundBotApiResolver extends ApiResolver
 {
@@ -272,12 +259,20 @@ class CreateGlobalQuestion extends Rpc
 /**
  * @method string getMaxConcurrentConversation()
  * @method $this withMaxConcurrentConversation($value)
+ * @method string getSecretKey()
+ * @method $this withSecretKey($value)
+ * @method string getEndpoint()
+ * @method $this withEndpoint($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getCallCenterInstanceId()
  * @method $this withCallCenterInstanceId($value)
+ * @method string getAccessKey()
+ * @method $this withAccessKey($value)
  * @method string getInstanceDescription()
  * @method $this withInstanceDescription($value)
+ * @method string getNluServiceType()
+ * @method $this withNluServiceType($value)
  */
 class CreateInstance extends Rpc
 {
@@ -350,14 +345,20 @@ class CreateOutboundCallNumber extends Rpc
 }
 
 /**
+ * @method string getTtsConfig()
+ * @method $this withTtsConfig($value)
  * @method string getIndustry()
  * @method $this withIndustry($value)
  * @method string getScriptName()
  * @method $this withScriptName($value)
  * @method string getScene()
  * @method $this withScene($value)
+ * @method string getChatbotId()
+ * @method $this withChatbotId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAsrConfig()
+ * @method $this withAsrConfig($value)
  * @method string getScriptDescription()
  * @method $this withScriptDescription($value)
  */
@@ -572,6 +573,16 @@ class DescribeScriptVoiceConfig extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class DescribeTagHitsSummary extends Rpc
+{
+}
+
+/**
  * @method string getScriptId()
  * @method $this withScriptId($value)
  * @method string getInstanceId()
@@ -584,18 +595,10 @@ class DescribeTTSConfig extends Rpc
 /**
  * @method string getCallId()
  * @method $this withCallId($value)
- * @method string getActionParams()
- * @method $this withActionParams($value)
- * @method string getCallingNumber()
- * @method $this withCallingNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getInstanceOwnerId()
  * @method $this withInstanceOwnerId($value)
  * @method string getCalledNumber()
  * @method $this withCalledNumber($value)
- * @method string getActionKey()
- * @method $this withActionKey($value)
  * @method string getCallType()
  * @method $this withCallType($value)
  * @method string getScenarioId()
@@ -604,48 +607,16 @@ class DescribeTTSConfig extends Rpc
  * @method $this withTaskId($value)
  * @method string getUtterance()
  * @method $this withUtterance($value)
+ * @method string getActionParams()
+ * @method $this withActionParams($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getActionKey()
+ * @method $this withActionKey($value)
  */
 class Dialogue extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- */
-class DownloadBasicStatisticsReport extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- */
-class DownloadConversationDetails extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DownloadRecording extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- */
-class DownloadUnreachableContacts extends Rpc
 {
 }
 
@@ -672,92 +643,12 @@ class ExportScript extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- */
-class GenerateBasicStatisticsReport extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- */
-class GenerateOverallStatisticsReport extends Rpc
-{
-}
-
-/**
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- */
-class GetJobByPhoneNumber extends Rpc
-{
-}
-
-/**
- * @method string getCallId()
- * @method $this withCallId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class GetJobStatusByCallId extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- */
-class GetTagHitsSummary extends Rpc
-{
-}
-
-/**
  * @method string getSignatureUrl()
  * @method $this withSignatureUrl($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class ImportScript extends Rpc
-{
-}
-
-/**
- * @method string getTitle()
- * @method $this withTitle($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListBasicStatisticsReportSubItems extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- * @method string getNodeId()
- * @method $this withNodeId($value)
- */
-class ListConversationsWithUnrecognizedIntents extends Rpc
 {
 }
 
@@ -822,22 +713,6 @@ class ListJobGroups extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListJobGroupsWithScenario extends Rpc
-{
-}
-
-/**
  * @method array getJobId()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -889,7 +764,7 @@ class ListJobsByGroup extends Rpc
  * @method string getNamePrefix()
  * @method $this withNamePrefix($value)
  */
-class ListMedias extends Rpc
+class ListMedia extends Rpc
 {
 }
 
@@ -952,34 +827,6 @@ class ListScriptVoiceConfigs extends Rpc
  * @method $this withInstanceId($value)
  */
 class ListTags extends Rpc
-{
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListUnreachableContacts extends Rpc
-{
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getJobGroupId()
- * @method $this withJobGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListUnrecognizedIntents extends Rpc
 {
 }
 
@@ -1060,14 +907,22 @@ class ModifyGlobalQuestion extends Rpc
 /**
  * @method string getMaxConcurrentConversation()
  * @method $this withMaxConcurrentConversation($value)
+ * @method string getSecretKey()
+ * @method $this withSecretKey($value)
+ * @method string getEndpoint()
+ * @method $this withEndpoint($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getCallCenterInstanceId()
  * @method $this withCallCenterInstanceId($value)
+ * @method string getAccessKey()
+ * @method $this withAccessKey($value)
  * @method string getInstanceDescription()
  * @method $this withInstanceDescription($value)
+ * @method string getNluServiceType()
+ * @method $this withNluServiceType($value)
  */
 class ModifyInstance extends Rpc
 {
@@ -1146,6 +1001,8 @@ class ModifyOutboundCallNumber extends Rpc
 }
 
 /**
+ * @method string getTtsConfig()
+ * @method $this withTtsConfig($value)
  * @method string getIndustry()
  * @method $this withIndustry($value)
  * @method string getScriptName()
@@ -1154,8 +1011,12 @@ class ModifyOutboundCallNumber extends Rpc
  * @method $this withScene($value)
  * @method string getScriptId()
  * @method $this withScriptId($value)
+ * @method string getChatbotId()
+ * @method $this withChatbotId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAsrConfig()
+ * @method $this withAsrConfig($value)
  * @method string getScriptDescription()
  * @method $this withScriptDescription($value)
  */
@@ -1216,6 +1077,8 @@ class ModifyTTSConfig extends Rpc
  * @method $this withScriptId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  */
 class PublishScript extends Rpc
 {
@@ -1258,17 +1121,31 @@ class QueryJobs extends Rpc
 }
 
 /**
+ * @method array getStatusList()
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getStatus()
- * @method $this withStatus($value)
  */
 class QueryScriptsByStatus extends Rpc
 {
+
+    /**
+     * @param array $statusList
+     *
+     * @return $this
+     */
+	public function withStatusList(array $statusList)
+	{
+	    $this->data['StatusList'] = $statusList;
+		foreach ($statusList as $i => $iValue) {
+			$this->options['query']['StatusList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1296,6 +1173,8 @@ class QueryScriptWaveforms extends Rpc
  * @method $this withDispositionCode($value)
  * @method string getCalledNumber()
  * @method $this withCalledNumber($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
@@ -1483,6 +1362,6 @@ class SuspendJobs extends Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class WithdrawScript extends Rpc
+class WithdrawScriptReview extends Rpc
 {
 }

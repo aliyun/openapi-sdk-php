@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.320 - 2020-6-4
+- Generated 2019-12-26 for `OutboundBot`.
+
+
 ## 1.8.319 - 2020-6-4
 - Update monitor related API.
 
