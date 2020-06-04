@@ -67,6 +67,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEditingProject getEditingProject(array $options = [])
  * @method GetEditingProjectMaterials getEditingProjectMaterials(array $options = [])
  * @method GetImageInfo getImageInfo(array $options = [])
+ * @method GetMediaAuditAudioResultDetail getMediaAuditAudioResultDetail(array $options = [])
  * @method GetMediaAuditResult getMediaAuditResult(array $options = [])
  * @method GetMediaAuditResultDetail getMediaAuditResultDetail(array $options = [])
  * @method GetMediaAuditResultTimeline getMediaAuditResultTimeline(array $options = [])
@@ -91,6 +92,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAppPoliciesForIdentity listAppPoliciesForIdentity(array $options = [])
  * @method ListAuditSecurityIp listAuditSecurityIp(array $options = [])
  * @method ListLiveRecordVideo listLiveRecordVideo(array $options = [])
+ * @method ListMediaDNADeleteJob listMediaDNADeleteJob(array $options = [])
  * @method ListSnapshots listSnapshots(array $options = [])
  * @method ListTranscodeTask listTranscodeTask(array $options = [])
  * @method ListTranscodeTemplateGroup listTranscodeTemplateGroup(array $options = [])
@@ -114,6 +116,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitAIJob submitAIJob(array $options = [])
  * @method SubmitAIMediaAuditJob submitAIMediaAuditJob(array $options = [])
  * @method SubmitDynamicImageJob submitDynamicImageJob(array $options = [])
+ * @method SubmitMediaDNADeleteJob submitMediaDNADeleteJob(array $options = [])
  * @method SubmitPreprocessJobs submitPreprocessJobs(array $options = [])
  * @method SubmitSnapshotJob submitSnapshotJob(array $options = [])
  * @method SubmitTranscodeJobs submitTranscodeJobs(array $options = [])
@@ -994,6 +997,8 @@ class DescribeVodRefreshTasks extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -1012,6 +1017,8 @@ class DescribeVodStorageData extends Rpc
  * @method $this withSpecification($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -1248,6 +1255,24 @@ class GetEditingProjectMaterials extends Rpc
  * @method $this withOwnerId($value)
  */
 class GetImageInfo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class GetMediaAuditAudioResultDetail extends Rpc
 {
 }
 
@@ -1680,6 +1705,22 @@ class ListAuditSecurityIp extends Rpc
  * @method $this withSortBy($value)
  */
 class ListLiveRecordVideo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ */
+class ListMediaDNADeleteJob extends Rpc
 {
 }
 
@@ -2132,6 +2173,24 @@ class SubmitAIMediaAuditJob extends Rpc
  * @method $this withOwnerId($value)
  */
 class SubmitDynamicImageJob extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getFpDBId()
+ * @method $this withFpDBId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class SubmitMediaDNADeleteJob extends Rpc
 {
 }
 

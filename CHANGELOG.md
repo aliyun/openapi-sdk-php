@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.318 - 2020-6-4
+- Add SubmitMediaDNADeleteJob and ListMediaDNADeleteJob.
+- Modify GetMediaAuditResult interface, support ad logo and live result.
+- Modify GetMediaAuditResultTimeline interface, support ad logo and live result.
+
+
 ## 1.8.317 - 2020-6-4
 - Update monitor related API.
 
