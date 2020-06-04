@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.317 - 2020-6-4
+- Update monitor related API.
+
+
 ## 1.8.316 - 2020-6-3
 - DescribeCameraStatistics add filed.
 
