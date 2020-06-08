@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.321 - 2020-6-8
+- Support offline instance.
+
+
 ## 1.8.320 - 2020-6-4
 - Generated 2019-12-26 for `OutboundBot`.
 

@@ -6,6 +6,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeGeoipInstance describeGeoipInstance(array $options = [])
+ * @method DescribeGeoipInstanceDataInfos describeGeoipInstanceDataInfos(array $options = [])
+ * @method DescribeGeoipInstanceDataUrl describeGeoipInstanceDataUrl(array $options = [])
  * @method DescribeGeoipInstances describeGeoipInstances(array $options = [])
  * @method DescribeGeoipInstanceStatistics describeGeoipInstanceStatistics(array $options = [])
  * @method DescribeIpv4Location describeIpv4Location(array $options = [])
@@ -39,6 +41,32 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withLang($value)
  */
 class DescribeGeoipInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeGeoipInstanceDataInfos extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDataType()
+ * @method $this withDataType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeGeoipInstanceDataUrl extends Rpc
 {
 }
 
