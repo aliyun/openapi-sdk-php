@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.322 - 2020-6-9
+- Changed ServiceCode from `cr` to `acr`.
+
+
 ## 1.8.321 - 2020-6-8
 - Support offline instance.
 
