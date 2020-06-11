@@ -52,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryResourcePackageInstances queryResourcePackageInstances(array $options = [])
  * @method QueryRIUtilizationDetail queryRIUtilizationDetail(array $options = [])
  * @method QuerySettlementBill querySettlementBill(array $options = [])
+ * @method QuerySplitItemBill querySplitItemBill(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewResourcePackage renewResourcePackage(array $options = [])
@@ -102,9 +103,15 @@ class AllocateCostUnitResource extends Rpc
 	{
 	    $this->data['ResourceInstanceList'] = $resourceInstanceList;
 		foreach ($resourceInstanceList as $depth1 => $depth1Value) {
-			$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
-			$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.CommodityCode'] = $depth1Value['CommodityCode'];
-			$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ResourceUserId'] = $depth1Value['ResourceUserId'];
+			if(isset($depth1Value['ResourceId'])){
+				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
+			}
+			if(isset($depth1Value['CommodityCode'])){
+				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.CommodityCode'] = $depth1Value['CommodityCode'];
+			}
+			if(isset($depth1Value['ResourceUserId'])){
+				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ResourceUserId'] = $depth1Value['ResourceUserId'];
+			}
 		}
 
 		return $this;
@@ -116,7 +123,6 @@ class AllocateCostUnitResource extends Rpc
  * @method $this withInvoicingType($value)
  * @method string getProcessWay()
  * @method $this withProcessWay($value)
- * @method string getCallerBid()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getInvoiceAmount()
@@ -130,23 +136,9 @@ class AllocateCostUnitResource extends Rpc
  * @method string getCustomerId()
  * @method $this withCustomerId($value)
  * @method array getSelectedIds()
- * @method string getCallerUid()
  */
 class ApplyInvoice extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerBid($value)
-    {
-        $this->data['CallerBid'] = $value;
-        $this->options['query']['callerBid'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param array $selectedIds
@@ -161,19 +153,6 @@ class ApplyInvoice extends Rpc
 		}
 
 		return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerUid($value)
-    {
-        $this->data['CallerUid'] = $value;
-        $this->options['query']['callerUid'] = $value;
-
-        return $this;
     }
 }
 
@@ -269,9 +248,15 @@ class CreateCostUnit extends Rpc
 	{
 	    $this->data['UnitEntityList'] = $unitEntityList;
 		foreach ($unitEntityList as $depth1 => $depth1Value) {
-			$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.UnitName'] = $depth1Value['UnitName'];
-			$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.ParentUnitId'] = $depth1Value['ParentUnitId'];
-			$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.OwnerUid'] = $depth1Value['OwnerUid'];
+			if(isset($depth1Value['UnitName'])){
+				$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.UnitName'] = $depth1Value['UnitName'];
+			}
+			if(isset($depth1Value['ParentUnitId'])){
+				$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.ParentUnitId'] = $depth1Value['ParentUnitId'];
+			}
+			if(isset($depth1Value['OwnerUid'])){
+				$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.OwnerUid'] = $depth1Value['OwnerUid'];
+			}
 		}
 
 		return $this;
@@ -309,8 +294,12 @@ class CreateInstance extends Rpc
 	{
 	    $this->data['Parameter'] = $parameter;
 		foreach ($parameter as $depth1 => $depth1Value) {
-			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
-			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			if(isset($depth1Value['Code'])){
+				$this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -391,9 +380,6 @@ class DescribeResourcePackageProduct extends Rpc
  */
 class EnableBillGeneration extends Rpc
 {
-
-    /** @var string */
-    public $method = 'PUT';
 }
 
 /**
@@ -443,9 +429,15 @@ class GetPayAsYouGoPrice extends Rpc
 	{
 	    $this->data['ModuleList'] = $moduleList;
 		foreach ($moduleList as $depth1 => $depth1Value) {
-			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
-			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.PriceType'] = $depth1Value['PriceType'];
-			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
+			if(isset($depth1Value['ModuleCode'])){
+				$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
+			}
+			if(isset($depth1Value['PriceType'])){
+				$this->options['query']['ModuleList.' . ($depth1 + 1) . '.PriceType'] = $depth1Value['PriceType'];
+			}
+			if(isset($depth1Value['Config'])){
+				$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
+			}
 		}
 
 		return $this;
@@ -511,10 +503,18 @@ class GetSubscriptionPrice extends Rpc
 	{
 	    $this->data['ModuleList'] = $moduleList;
 		foreach ($moduleList as $depth1 => $depth1Value) {
-			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
-			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleStatus'] = $depth1Value['ModuleStatus'];
-			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Tag'] = $depth1Value['Tag'];
-			$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
+			if(isset($depth1Value['ModuleCode'])){
+				$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleCode'] = $depth1Value['ModuleCode'];
+			}
+			if(isset($depth1Value['ModuleStatus'])){
+				$this->options['query']['ModuleList.' . ($depth1 + 1) . '.ModuleStatus'] = $depth1Value['ModuleStatus'];
+			}
+			if(isset($depth1Value['Tag'])){
+				$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Tag'] = $depth1Value['Tag'];
+			}
+			if(isset($depth1Value['Config'])){
+				$this->options['query']['ModuleList.' . ($depth1 + 1) . '.Config'] = $depth1Value['Config'];
+			}
 		}
 
 		return $this;
@@ -536,9 +536,15 @@ class ModifyCostUnit extends Rpc
 	{
 	    $this->data['UnitEntityList'] = $unitEntityList;
 		foreach ($unitEntityList as $depth1 => $depth1Value) {
-			$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.NewUnitName'] = $depth1Value['NewUnitName'];
-			$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.UnitId'] = $depth1Value['UnitId'];
-			$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.OwnerUid'] = $depth1Value['OwnerUid'];
+			if(isset($depth1Value['NewUnitName'])){
+				$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.NewUnitName'] = $depth1Value['NewUnitName'];
+			}
+			if(isset($depth1Value['UnitId'])){
+				$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.UnitId'] = $depth1Value['UnitId'];
+			}
+			if(isset($depth1Value['OwnerUid'])){
+				$this->options['query']['UnitEntityList.' . ($depth1 + 1) . '.OwnerUid'] = $depth1Value['OwnerUid'];
+			}
 		}
 
 		return $this;
@@ -574,8 +580,12 @@ class ModifyInstance extends Rpc
 	{
 	    $this->data['Parameter'] = $parameter;
 		foreach ($parameter as $depth1 => $depth1Value) {
-			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
-			$this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			if(isset($depth1Value['Code'])){
+				$this->options['query']['Parameter.' . ($depth1 + 1) . '.Code'] = $depth1Value['Code'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Parameter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -741,39 +751,11 @@ class QueryCostUnitResource extends Rpc
 }
 
 /**
- * @method string getCallerBid()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getCallerUid()
  */
 class QueryCustomerAddressList extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerBid($value)
-    {
-        $this->data['CallerBid'] = $value;
-        $this->options['query']['callerBid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCallerUid($value)
-    {
-        $this->data['CallerUid'] = $value;
-        $this->options['query']['callerUid'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -1054,6 +1036,26 @@ class QuerySettlementBill extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getSubscriptionType()
+ * @method $this withSubscriptionType($value)
+ * @method string getBillingCycle()
+ * @method $this withBillingCycle($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class QuerySplitItemBill extends Rpc
+{
+}
+
+/**
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
@@ -1071,9 +1073,6 @@ class QuerySettlementBill extends Rpc
  */
 class QueryUserOmsData extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**

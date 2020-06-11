@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.324 - 2020-6-11
+- Support ServicePeriodUnit in QueryInstanceBill.
+
+
 ## 1.8.323 - 2020-6-11
 - Supported AndroidNotificationVivoChannel for Push and MassPush.
 
