@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.323 - 2020-6-11
+- Supported AndroidNotificationVivoChannel for Push and MassPush.
+
+
 ## 1.8.322 - 2020-6-9
 - Changed ServiceCode from `cr` to `acr`.
 
