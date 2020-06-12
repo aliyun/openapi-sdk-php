@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 1.8.327 - 2020-6-12
+- Add CreateProduct API ProductSecret in Response.
+- Add AMQP APIs, including CreateSubscribeRelation, CreateConsumerGroup, etc.
+- Add LinkIoTEdge CreateSceneRule API.
+- Add LinkIoTEdge DeleteSceneRule API.
+- Add LinkIoTEdge UpdateSceneRule API.
+- Add LinkIoTEdge GetSceneRule API.
+- Add LinkIoTEdge QuerySceneRule API.
+- Add LinkIoTEdge EnableSceneRule API.
+- Add LinkIoTEdge DisableSceneRule API.
+- Add LinkIoTEdge TriggerSceneRule API.
+- Add LinkIoTEdge QuerySummarySceneRuleLog API.
+- Add LinkIoTEdge QueryDetailSceneRuleLog API.
+- Add LinkIoTEdge BindSceneRuleToEdgeInstance API.
+- Add LinkIoTEdge UnbindSceneRuleFromEdgeInstance API.
+- Add LinkIoTEdge QueryEdgeInstanceSceneRule API.
+
+
 ## 1.8.326 - 2020-6-12
 - Update monitor related API.
 
