@@ -1,0 +1,1 @@
+{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-beijing":"airec.cn-beijing.aliyuncs.com","cn-hangzhou":"airec.cn-hangzhou.aliyuncs.com","cn-shanghai":"airec.cn-shanghai.aliyuncs.com","cn-shenzhen":"airec.cn-shenzhen.aliyuncs.com"},"regions":["cn-beijing","cn-hangzhou","cn-shanghai","cn-shenzhen"],"endpoint_health":{"cn-shanghai":"DomainNotFound"}}

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.325 - 2020-6-12
+- Generated 2018-10-12 for `Airec`.
+
+
 ## 1.8.324 - 2020-6-11
 - Support ServicePeriodUnit in QueryInstanceBill.
 
