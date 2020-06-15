@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.329 - 2020-6-15
+- Generated 2019-09-10 for `waf-openapi`.
+
+
 ## 1.8.328 - 2020-6-15
 - Generated 2019-09-10 for `waf-openapi`.
 
