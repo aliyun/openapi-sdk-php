@@ -8,7 +8,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCertificate createCertificate(array $options = [])
  * @method CreateCertificateByCertificateId createCertificateByCertificateId(array $options = [])
  * @method CreateDomain createDomain(array $options = [])
- * @method CreateIPBlock createIPBlock(array $options = [])
  * @method CreateProtectionModuleRule createProtectionModuleRule(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
@@ -19,17 +18,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainBasicConfigs describeDomainBasicConfigs(array $options = [])
  * @method DescribeDomainNames describeDomainNames(array $options = [])
  * @method DescribeDomainRuleGroup describeDomainRuleGroup(array $options = [])
- * @method DescribeDomainStatus describeDomainStatus(array $options = [])
  * @method DescribeInstanceInfo describeInstanceInfo(array $options = [])
+ * @method DescribeInstanceInfos describeInstanceInfos(array $options = [])
  * @method DescribeInstanceSpecInfo describeInstanceSpecInfo(array $options = [])
- * @method DescribeProtectBlockSummary describeProtectBlockSummary(array $options = [])
  * @method DescribeProtectionModuleMode describeProtectionModuleMode(array $options = [])
  * @method DescribeProtectionModuleRules describeProtectionModuleRules(array $options = [])
- * @method DescribeProtectionModuleRulesByIdList describeProtectionModuleRulesByIdList(array $options = [])
  * @method DescribeProtectionModuleStatus describeProtectionModuleStatus(array $options = [])
- * @method DescribeRealProtectSummary describeRealProtectSummary(array $options = [])
- * @method DescribeRuleMonitor describeRuleMonitor(array $options = [])
- * @method DescribeRuleSummary describeRuleSummary(array $options = [])
  * @method ModifyDomain modifyDomain(array $options = [])
  * @method ModifyDomainClusterType modifyDomainClusterType(array $options = [])
  * @method ModifyDomainIpv6Status modifyDomainIpv6Status(array $options = [])
@@ -138,28 +132,6 @@ class CreateCertificateByCertificateId extends Rpc
  * @method $this withHttpToUserIp($value)
  */
 class CreateDomain extends Rpc
-{
-}
-
-/**
- * @method string getDomainList()
- * @method $this withDomainList($value)
- * @method string getIPList()
- * @method $this withIPList($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getBlockInterval()
- * @method $this withBlockInterval($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getOperationType()
- * @method $this withOperationType($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class CreateIPBlock extends Rpc
 {
 }
 
@@ -334,25 +306,6 @@ class DescribeDomainRuleGroup extends Rpc
  * @method $this withInstanceId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeDomainStatus extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'https';
-}
-
-/**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getInstanceSource()
  * @method $this withInstanceSource($value)
  * @method string getLang()
@@ -369,32 +322,26 @@ class DescribeInstanceInfo extends Rpc
  * @method $this withInstanceId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getInstanceSource()
+ * @method $this withInstanceSource($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
-class DescribeInstanceSpecInfo extends Rpc
+class DescribeInstanceInfos extends Rpc
 {
 }
 
 /**
- * @method string getStartTimestamp()
- * @method $this withStartTimestamp($value)
- * @method string getEndTimestamp()
- * @method $this withEndTimestamp($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getStep()
- * @method $this withStep($value)
- * @method string getRegion()
- * @method $this withRegion($value)
  */
-class DescribeProtectBlockSummary extends Rpc
+class DescribeInstanceSpecInfo extends Rpc
 {
 }
 
@@ -441,22 +388,6 @@ class DescribeProtectionModuleRules extends Rpc
 }
 
 /**
- * @method string getRuleIdList()
- * @method $this withRuleIdList($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeProtectionModuleRulesByIdList extends Rpc
-{
-}
-
-/**
  * @method string getDefenseType()
  * @method $this withDefenseType($value)
  * @method string getInstanceId()
@@ -469,76 +400,6 @@ class DescribeProtectionModuleRulesByIdList extends Rpc
  * @method $this withLang($value)
  */
 class DescribeProtectionModuleStatus extends Rpc
-{
-}
-
-/**
- * @method string getStartTimestamp()
- * @method $this withStartTimestamp($value)
- * @method string getEndTimestamp()
- * @method $this withEndTimestamp($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getStep()
- * @method $this withStep($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class DescribeRealProtectSummary extends Rpc
-{
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getEndTimestamp()
- * @method $this withEndTimestamp($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class DescribeRuleMonitor extends Rpc
-{
-}
-
-/**
- * @method string getEndTimestamp()
- * @method $this withEndTimestamp($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getAntibotType()
- * @method $this withAntibotType($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class DescribeRuleSummary extends Rpc
 {
 }
 
