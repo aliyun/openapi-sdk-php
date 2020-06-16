@@ -333,6 +333,9 @@ class ApplyNodes extends Rpc
 			if(isset($depth1Value['MaxPrice'])){
 				$this->options['query']['InstanceTypeModel.' . ($depth1 + 1) . '.MaxPrice'] = $depth1Value['MaxPrice'];
 			}
+			if(isset($depth1Value['TargetImageId'])){
+				$this->options['query']['InstanceTypeModel.' . ($depth1 + 1) . '.TargetImageId'] = $depth1Value['TargetImageId'];
+			}
 			if(isset($depth1Value['InstanceType'])){
 				$this->options['query']['InstanceTypeModel.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
 			}

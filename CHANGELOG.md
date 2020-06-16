@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.330 - 2020-6-16
+- Support TargetImageId in ApplyNodes Interface.
+
+
 ## 1.8.329 - 2020-6-15
 - Generated 2019-09-10 for `waf-openapi`.
 
