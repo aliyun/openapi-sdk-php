@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.331 - 2020-6-17
+- Supported sync create eni and assign private ip.
+
+
 ## 1.8.330 - 2020-6-16
 - Support TargetImageId in ApplyNodes Interface.
 

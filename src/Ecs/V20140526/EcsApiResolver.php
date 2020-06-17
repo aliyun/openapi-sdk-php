@@ -107,6 +107,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDedicatedHostTypes describeDedicatedHostTypes(array $options = [])
  * @method DescribeDemands describeDemands(array $options = [])
  * @method DescribeDeploymentSets describeDeploymentSets(array $options = [])
+ * @method DescribeDeploymentSetSupportedInstanceTypeFamily describeDeploymentSetSupportedInstanceTypeFamily(array $options = [])
  * @method DescribeDiskMonitorData describeDiskMonitorData(array $options = [])
  * @method DescribeDisks describeDisks(array $options = [])
  * @method DescribeDisksFullStatus describeDisksFullStatus(array $options = [])
@@ -141,6 +142,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLaunchTemplateVersions describeLaunchTemplateVersions(array $options = [])
  * @method DescribeLimitation describeLimitation(array $options = [])
  * @method DescribeNatGateways describeNatGateways(array $options = [])
+ * @method DescribeNetworkInterfaceAttribute describeNetworkInterfaceAttribute(array $options = [])
  * @method DescribeNetworkInterfacePermissions describeNetworkInterfacePermissions(array $options = [])
  * @method DescribeNetworkInterfaces describeNetworkInterfaces(array $options = [])
  * @method DescribeNewProjectEipMonitorData describeNewProjectEipMonitorData(array $options = [])
@@ -609,6 +611,8 @@ class AssignIpv6Addresses extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getSecondaryPrivateIpAddressCount()
  * @method $this withSecondaryPrivateIpAddressCount($value)
  * @method string getResourceOwnerAccount()
@@ -759,6 +763,8 @@ class AttachKeyPair extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getTrunkNetworkInstanceId()
+ * @method $this withTrunkNetworkInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1179,15 +1185,21 @@ class CreateAutoProvisioningGroup extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCopiedSnapshotsRetentionDays()
+ * @method $this withCopiedSnapshotsRetentionDays($value)
  * @method string getTimePoints()
  * @method string getRepeatWeekdays()
  * @method array getTag()
+ * @method string getEnableCrossRegionCopy()
+ * @method $this withEnableCrossRegionCopy($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getAutoSnapshotPolicyName()
  * @method string getRetentionDays()
+ * @method string getTargetCopyRegions()
+ * @method $this withTargetCopyRegions($value)
  */
 class CreateAutoSnapshotPolicy extends Rpc
 {
@@ -1336,6 +1348,8 @@ class CreateDemand extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getGroupCount()
+ * @method $this withGroupCount($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1619,6 +1633,8 @@ class CreateImage extends Rpc
  * @method $this withHostName($value)
  * @method string getPassword()
  * @method $this withPassword($value)
+ * @method string getDeploymentSetGroupNo()
+ * @method $this withDeploymentSetGroupNo($value)
  * @method string getStorageSetPartitionNumber()
  * @method $this withStorageSetPartitionNumber($value)
  * @method array getTag()
@@ -2468,6 +2484,8 @@ class CreateNatGateway extends Rpc
  * @method $this withBusinessType($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method array getTag()
  * @method string getNetworkInterfaceName()
  * @method $this withNetworkInterfaceName($value)
@@ -4097,6 +4115,20 @@ class DescribeDeploymentSets extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDeploymentSetSupportedInstanceTypeFamily extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getDiskId()
@@ -4783,6 +4815,8 @@ class DescribeInstanceAutoRenewAttribute extends Rpc
  * @method $this withEventCycleStatus($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getImpactLevel()
+ * @method $this withImpactLevel($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getInstanceEventCycleStatus()
@@ -5455,6 +5489,8 @@ class DescribeInstanceVncUrl extends Rpc
  * @method $this withCommandId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getContentEncoding()
+ * @method $this withContentEncoding($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getInvokeId()
@@ -5710,6 +5746,45 @@ class DescribeLimitation extends Rpc
  */
 class DescribeNatGateways extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getTag()
+ * @method string getAttribute()
+ * @method $this withAttribute($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getNetworkInterfaceId()
+ * @method $this withNetworkInterfaceId($value)
+ */
+class DescribeNetworkInterfaceAttribute extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -6546,6 +6621,8 @@ class DescribeSecurityGroupReferences extends Rpc
  * @method $this withOwnerId($value)
  * @method string getSecurityGroupIds()
  * @method $this withSecurityGroupIds($value)
+ * @method string getSecurityGroupType()
+ * @method $this withSecurityGroupType($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  */
@@ -6679,6 +6756,8 @@ class DescribeSnapshotPackage extends Rpc
  * @method $this withSnapshotType($value)
  * @method string getKMSKeyId()
  * @method $this withKMSKeyId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -7274,6 +7353,8 @@ class DetachKeyPair extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getTrunkNetworkInstanceId()
+ * @method $this withTrunkNetworkInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -7489,8 +7570,11 @@ class GetInstanceScreenshot extends Rpc
  * @method $this withDescription($value)
  * @method string getPlatform()
  * @method $this withPlatform($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getImageName()
  * @method $this withImageName($value)
+ * @method array getTag()
  * @method string getArchitecture()
  * @method $this withArchitecture($value)
  * @method string getLicenseType()
@@ -7533,6 +7617,26 @@ class ImportImage extends Rpc
 			}
 			if(isset($depth1Value['DiskImageSize'])){
 				$this->options['query']['DiskDeviceMapping.' . ($depth1 + 1) . '.DiskImageSize'] = $depth1Value['DiskImageSize'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
 			}
 		}
 
@@ -7865,14 +7969,20 @@ class ModifyAutoSnapshotPolicy extends Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getAutoSnapshotPolicyId()
+ * @method string getCopiedSnapshotsRetentionDays()
+ * @method $this withCopiedSnapshotsRetentionDays($value)
  * @method string getTimePoints()
  * @method string getRepeatWeekdays()
+ * @method string getEnableCrossRegionCopy()
+ * @method $this withEnableCrossRegionCopy($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getAutoSnapshotPolicyName()
  * @method string getRetentionDays()
+ * @method string getTargetCopyRegions()
+ * @method $this withTargetCopyRegions($value)
  */
 class ModifyAutoSnapshotPolicyEx extends Rpc
 {
@@ -8238,8 +8348,12 @@ class ModifyDiskChargeType extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDiskCategory()
+ * @method $this withDiskCategory($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getPerformanceLevel()
@@ -8348,6 +8462,8 @@ class ModifyHpcClusterAttribute extends Rpc
  * @method $this withImageId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getBootMode()
+ * @method $this withBootMode($value)
  * @method string getImageName()
  * @method $this withImageName($value)
  * @method string getResourceOwnerAccount()
@@ -8582,6 +8698,8 @@ class ModifyInstanceChargeType extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDeploymentSetGroupNo()
+ * @method $this withDeploymentSetGroupNo($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getDeploymentSetId()
@@ -8819,6 +8937,7 @@ class ModifyInstanceVncPasswd extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method array getSecurityGroupId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -8831,9 +8950,26 @@ class ModifyInstanceVncPasswd extends Rpc
  * @method $this withPrivateIpAddress($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  */
 class ModifyInstanceVpcAttribute extends Rpc
 {
+
+    /**
+     * @param array $securityGroupId
+     *
+     * @return $this
+     */
+	public function withSecurityGroupId(array $securityGroupId)
+	{
+	    $this->data['SecurityGroupId'] = $securityGroupId;
+		foreach ($securityGroupId as $i => $iValue) {
+			$this->options['query']['SecurityGroupId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -10172,6 +10308,8 @@ class RunCommand extends Rpc
  * @method $this withHostName($value)
  * @method string getPassword()
  * @method $this withPassword($value)
+ * @method string getDeploymentSetGroupNo()
+ * @method $this withDeploymentSetGroupNo($value)
  * @method string getStorageSetPartitionNumber()
  * @method $this withStorageSetPartitionNumber($value)
  * @method array getTag()
