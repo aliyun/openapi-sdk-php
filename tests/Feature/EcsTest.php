@@ -2,13 +2,13 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Ecs\Ecs;
-use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Ecs\EcsVersion;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Ecs\V20140526\DescribeRegions;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Ecs\Ecs;
+use AlibabaCloud\Ecs\EcsVersion;
+use AlibabaCloud\Ecs\V20140526\DescribeRegions;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class EcsTest
@@ -59,21 +59,6 @@ class EcsTest extends TestCase
                      ->connectTimeout(60)
                      ->timeout(65)
                      ->request();
-        self::assertArrayHasKey('Region', $result['Regions']);
-    }
-
-    /**
-     * @throws ServerException
-     * @throws ClientException
-     */
-    public function testEcsInVersionStaticMethod()
-    {
-        $result = EcsVersion::v20140526()
-                            ->describeRegions()
-                            ->connectTimeout(60)
-                            ->timeout(65)
-                            ->request();
-
         self::assertArrayHasKey('Region', $result['Regions']);
     }
 }
