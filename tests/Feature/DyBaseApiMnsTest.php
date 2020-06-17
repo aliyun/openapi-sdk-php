@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Dybaseapi\MNS\MnsClient;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Dybaseapi\MNS\MnsClient;
 use AlibabaCloud\Dybaseapi\MNS\Requests\BatchReceiveMessage;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DyBaseApiMnsTest
@@ -32,8 +32,6 @@ class DyBaseApiMnsTest extends TestCase
     /**
      * @throws ClientException
      * @throws ServerException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessage Message not exist.
      */
     public function testMns()
     {
@@ -69,6 +67,12 @@ class DyBaseApiMnsTest extends TestCase
 
         $request = new BatchReceiveMessage(10, 5);
         $request->setQueueName(getenv('MNS_QUEUE_NAME'));
-        $client->sendRequest($request);
+
+        try {
+            $client->sendRequest($request);
+        } catch (ServerException $exception) {
+            self::assertEquals($exception->getErrorMessage(), 'Message not exist.');
+        }
+
     }
 }

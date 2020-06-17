@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\ImageSearch\ImageSearch;
-use AlibabaCloud\ImageSearch\V20190325\AddImage;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\ImageSearch\ImageSearch;
+use AlibabaCloud\ImageSearch\V20190325\AddImage;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class ImageSearchV20190325Test
@@ -24,8 +24,8 @@ class ImageSearchV20190325Test extends TestCase
         parent::setUp();
 
         AlibabaCloud::accessKeyClient(
-            \getenv('IMAGE_SEARCH_ACCESS_KEY_ID'),
-            \getenv('IMAGE_SEARCH_ACCESS_KEY_SECRET')
+            \getenv('ACCESS_KEY_ID'),
+            \getenv('ACCESS_KEY_SECRET')
         )->regionId('cn-shanghai')->asDefaultClient();
     }
 

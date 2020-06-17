@@ -2,13 +2,13 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use Exception;
-use Stringy\Stringy;
-use AlibabaCloud\Sas\Sas;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Sas\Sas;
 use AlibabaCloud\Sas\V20181203\DescribeAlarmEventList;
+use Exception;
+use PHPUnit\Framework\TestCase;
+use Stringy\Stringy;
 
 /**
  * Class SasTest

@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Jaq\Jaq;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Jaq\V20161123\AfsAppCheck;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Jaq\Jaq;
+use AlibabaCloud\Jaq\V20161123\AfsAppCheck;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class JaqTest

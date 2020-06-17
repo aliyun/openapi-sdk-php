@@ -2,12 +2,14 @@
 
 namespace AlibabaCloud\Tests\Unit;
 
-use stdClass;
-use ReflectionObject;
-use ReflectionException;
-use AlibabaCloud\Slb\Slb;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Slb\Slb;
+use AlibabaCloud\Slb\V20140515\DescribeRegions;
+use PHPUnit\Framework\TestCase;
+use ReflectionException;
+use ReflectionObject;
+use stdClass;
 
 /**
  * Class ApiResolverTraitTest
@@ -19,23 +21,26 @@ class ApiResolverTraitTest extends TestCase
     public function testApi()
     {
         AlibabaCloud::slb()->v20140515()->describeRegions();
-        Slb::v20140515()->describeRegions();
+        $res = Slb::v20140515()->describeRegions();
+        self::assertEquals(get_class($res), DescribeRegions::class);
     }
 
     public function testApiWithParameters()
     {
         AlibabaCloud::slb()->v20140515()->describeRegions(['a' => 'a']);
-        Slb::v20140515()->describeRegions(['a' => 'a']);
+        $res = Slb::v20140515()->describeRegions(['a' => 'a']);
+        self::assertEquals(get_class($res), DescribeRegions::class);
     }
 
-    /**
-     * @expectedExceptionMessage Slb contains no notFound
-     * @expectedException \AlibabaCloud\Client\Exception\ClientException
-     */
+
     public function testApiNotFound()
     {
-        AlibabaCloud::slb()->v20140515()->notFound();
-        Slb::v20140515()->notFound();
+        try {
+            AlibabaCloud::slb()->v20140515()->notFound();
+            Slb::v20140515()->notFound();
+        } catch (ClientException $exception) {
+            self::assertEquals('Slb contains no notFound', $exception->getMessage());
+        }
     }
 
     /**

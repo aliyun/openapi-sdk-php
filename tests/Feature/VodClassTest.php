@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Vod\V20170321\DeleteImage;
 use AlibabaCloud\Vod\Vod;
 use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Vod\V20170321\DeleteImage;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class VodClassTest

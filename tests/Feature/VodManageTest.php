@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Vod\V20170321\DeleteImage;
 use AlibabaCloud\Vod\Vod;
 use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Vod\V20170321\DeleteImage;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class VodManageTest
@@ -264,22 +264,23 @@ class VodManageTest extends TestCase
      *
      * @return array
      * @throws ClientException
-     * @throws ServerException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The video does not exist./
      */
     public function testDeleteVideos()
     {
-        $result = Vod::v20170321()
-                     ->deleteVideo()
-                     ->withVideoIds('abc123')
-                     ->connectTimeout(60)
-                     ->timeout(65)
-                     ->request();
+        try {
+            $result = Vod::v20170321()
+                         ->deleteVideo()
+                         ->withVideoIds('abc123')
+                         ->connectTimeout(60)
+                         ->timeout(65)
+                         ->request();
 
-        self::assertArrayHasKey('RequestId', $result);
+            self::assertArrayHasKey('RequestId', $result);
 
-        return $result['RequestId'];
+            return $result['RequestId'];
+        } catch (ServerException $exception) {
+            self::assertEquals('The video does not exist.', $exception->getErrorMessage());
+        }
     }
 
     /**
@@ -290,19 +291,20 @@ class VodManageTest extends TestCase
      * @param string $videoId
      *
      * @throws ClientException
-     * @throws ServerException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The stream does not exist./
      */
     public function testDeleteStream($videoId)
     {
-        Vod::v20170321()
-           ->deleteStream()
-           ->withVideoId($videoId)
-           ->withJobIds($videoId)
-           ->connectTimeout(60)
-           ->timeout(65)
-           ->request();
+        try {
+            Vod::v20170321()
+               ->deleteStream()
+               ->withVideoId($videoId)
+               ->withJobIds($videoId)
+               ->connectTimeout(60)
+               ->timeout(65)
+               ->request();
+        } catch (ServerException $exception) {
+            self::assertEquals('The stream does not exist.', $exception->getErrorMessage());
+        }
     }
 
     /**

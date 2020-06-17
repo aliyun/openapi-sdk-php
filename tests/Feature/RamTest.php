@@ -2,13 +2,13 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Ecs\Ecs;
-use AlibabaCloud\Ram\Ram;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Ram\V20150501\ListAccessKeys;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Ecs\Ecs;
+use AlibabaCloud\Ram\Ram;
+use AlibabaCloud\Ram\V20150501\ListAccessKeys;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class RamTest
@@ -70,20 +70,18 @@ class RamTest extends TestCase
     }
 
     /**
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The role already exists:EcsRamRoleTest/
      * @throws ClientException
-     * @throws ServerException
      */
     public function testCreateRole()
     {
-        Ram::v20150501()
-           ->createRole()
-           ->options([
-                         'verify' => false,
-                     ])
-           ->withRoleName('EcsRamRoleTest')
-           ->withAssumeRolePolicyDocument('{
+        try {
+            Ram::v20150501()
+               ->createRole()
+               ->options([
+                             'verify' => false,
+                         ])
+               ->withRoleName('EcsRamRoleTest')
+               ->withAssumeRolePolicyDocument('{
 "Statement": [
 {
 "Action": "sts:AssumeRole",
@@ -97,26 +95,27 @@ class RamTest extends TestCase
 ],
 "Version": "1"
 }')
-           ->connectTimeout(60)
-           ->timeout(65)
-           ->request();
+               ->connectTimeout(60)
+               ->timeout(65)
+               ->request();
+        } catch (ServerException $exception) {
+            self::assertEquals($exception->getErrorMessage(), 'The role already exists:EcsRamRoleTest');
+        }
     }
 
     /**
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The policy has already been created,/
      * @throws ClientException
-     * @throws ServerException
      */
     public function testCreatePolicy()
     {
-        Ram::v20150501()
-           ->createpolicy()
-           ->options([
-                         'verify' => false,
-                     ])
-           ->withPolicyName('EcsRamRolePolicyTest')
-           ->withPolicyDocument('{
+        try {
+            Ram::v20150501()
+               ->createpolicy()
+               ->options([
+                             'verify' => false,
+                         ])
+               ->withPolicyName('EcsRamRolePolicyTest')
+               ->withPolicyDocument('{
 "Statement": [
 {
 "Action": [
@@ -129,49 +128,55 @@ class RamTest extends TestCase
 ],
 "Version": "1"
 }')
-           ->connectTimeout(60)
-           ->timeout(65)
-           ->request();
+               ->connectTimeout(60)
+               ->timeout(65)
+               ->request();
+        } catch (ServerException $exception) {
+            self::assertEquals($exception->getErrorCode(), 'EntityAlreadyExists.Policy');
+        }
+
     }
 
     /**
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The policy has already been attached to the role./
      * @throws ClientException
-     * @throws ServerException
      */
     public function testAttachPolicyToRole()
     {
-        Ram::v20150501()
-           ->attachpolicytorole()
-           ->options([
-                         'verify' => false,
-                     ])
-           ->withPolicyType('Custom')
-           ->withPolicyName('EcsRamRolePolicyTest')
-           ->withRoleName('EcsRamRoleTest')
-           ->connectTimeout(60)
-           ->timeout(65)
-           ->request();
+        try {
+            Ram::v20150501()
+               ->attachpolicytorole()
+               ->options([
+                             'verify' => false,
+                         ])
+               ->withPolicyType('Custom')
+               ->withPolicyName('EcsRamRolePolicyTest')
+               ->withRoleName('EcsRamRoleTest')
+               ->connectTimeout(60)
+               ->timeout(65)
+               ->request();
+        } catch (ServerException $exception) {
+            self::assertEquals($exception->getErrorCode(), 'EntityAlreadyExists.Role.Policy');
+        }
     }
 
     /**
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The specified instanceIds are not valid./
      * @throws ClientException
-     * @throws ServerException
      */
     public function testAttachInstanceRamRole()
     {
-        Ecs::v20140526()
-           ->attachinstanceramrole()
-           ->options([
-                         'verify' => false,
-                     ])
-           ->withRamRoleName('EcsRamRoleTest')
-           ->withInstanceIds('i-bXXXXXXXX')
-           ->connectTimeout(60)
-           ->timeout(65)
-           ->request();
+        try {
+            Ecs::v20140526()
+               ->attachinstanceramrole()
+               ->options([
+                             'verify' => false,
+                         ])
+               ->withRamRoleName('EcsRamRoleTest')
+               ->withInstanceIds('i-bXXXXXXXX')
+               ->connectTimeout(60)
+               ->timeout(65)
+               ->request();
+        } catch (ServerException $exception) {
+            self::assertEquals('The specified instanceIds are not valid.', $exception->getErrorMessage());
+        }
     }
 }

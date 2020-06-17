@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Mts\Mts;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Mts\Mts;
 use AlibabaCloud\Mts\V20140618\QueryFpImportResult;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class MtsTest

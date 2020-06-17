@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Sts\Sts;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Sts\V20150401\AssumeRole;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Sts\Sts;
+use AlibabaCloud\Sts\V20150401\AssumeRole;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class StsTest
@@ -48,19 +48,20 @@ class StsTest extends TestCase
     }
 
     /**
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /EntityNotExist.Role: The specified Role not exists/
      * @throws ClientException
-     * @throws ServerException
      */
     public function testSts()
     {
-        Sts::v20150401()
-           ->assumeRole()
-           ->withRoleArn('acs:ram::12345678987:role/test')
-           ->withRoleSessionName('RoleSessionName')
-           ->connectTimeout(60)
-           ->timeout(65)
-           ->request();
+        try {
+            Sts::v20150401()
+               ->assumeRole()
+               ->withRoleArn('acs:ram::12345678987:role/test')
+               ->withRoleSessionName('RoleSessionName')
+               ->connectTimeout(60)
+               ->timeout(65)
+               ->request();
+        } catch (ServerException $exception) {
+            self::assertEquals('The specified Role not exists .', $exception->getErrorMessage());
+        }
     }
 }

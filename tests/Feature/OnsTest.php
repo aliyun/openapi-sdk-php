@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Ons\Ons;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Ons\V20170918\OnsRegionList;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Ons\Ons;
+use AlibabaCloud\Ons\V20190214\OnsRegionList;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class OnsTest
@@ -32,12 +32,12 @@ class OnsTest extends TestCase
     public function testVersionResolve()
     {
         $request1 = AlibabaCloud::ons()
-                                ->v20170918()
+                                ->v20190214()
                                 ->onsRegionList()
                                 ->connectTimeout(60)
                                 ->timeout(65);
 
-        $request2 = Ons::v20170918()
+        $request2 = Ons::v20190214()
                        ->onsRegionList()
                        ->connectTimeout(60)
                        ->timeout(65);
@@ -53,10 +53,8 @@ class OnsTest extends TestCase
      */
     public function testOns()
     {
-        $result = Ons::v20170918()
+        $result = Ons::v20190214()
                      ->onsRegionList()
-                     ->withOnsRegionId('cn-hangzhou')
-                     ->withPreventCache('20190101121212111')
                      ->connectTimeout(60)
                      ->timeout(65)
                      ->request();

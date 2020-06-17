@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\NlsCloudMeta\NlsCloudMeta;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\NlsCloudMeta\NlsCloudMeta;
 use AlibabaCloud\NlsCloudMeta\V20180518\CreateToken;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class NlsCloudMetaTest

@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Slb\Slb;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Slb\V20140515\DescribeRegions;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Slb\Slb;
+use AlibabaCloud\Slb\V20140515\DescribeRegions;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class SlbTest

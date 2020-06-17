@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Linkedmall\Linkedmall;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Linkedmall\Linkedmall;
 use AlibabaCloud\Linkedmall\V20180116\ModifyBizItems;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class LinkedmallTest
@@ -55,6 +55,7 @@ class LinkedmallTest extends TestCase
     {
         $item1 = [
             'ItemId'  => 123,
+            'LmItemId'  => 123,
             'SkuList' => [
                 [
                     'SkuId'        => 1,
@@ -70,6 +71,7 @@ class LinkedmallTest extends TestCase
 
         $item2 = [
             'ItemId'  => 456,
+            'LmItemId'  => 456,
             'SkuList' => [
                 [
                     'SkuId'        => 4,
@@ -98,7 +100,8 @@ class LinkedmallTest extends TestCase
                             ->timeout(65)
                             ->host('linkedmall.aliyuncs.com')
                             ->request();
-        self::assertArrayHasKey('Message', $result);
-        self::assertEquals('没有权限', $result['Message']);
+
+        self::assertArrayHasKey('FailedItemList', $result);
+        self::assertEquals('ACL_CHECK_INVALID', $result['Code']);
     }
 }
