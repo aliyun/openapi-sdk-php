@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
-use AlibabaCloud\CloudAPI\CloudAPI;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\CloudAPI\CloudAPI;
 use AlibabaCloud\CloudAPI\V20160714\DescribeRegions;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class CloudApiTest

@@ -3,11 +3,11 @@
 namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\CCC\CCC;
-use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\CCC\V20170705\ListPhoneNumbers;
-use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class CCCTest

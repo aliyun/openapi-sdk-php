@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Dds\Dds;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Dds\V20151201\DescribeRegions;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Dds\Dds;
+use AlibabaCloud\Dds\V20151201\DescribeRegions;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DdsTest

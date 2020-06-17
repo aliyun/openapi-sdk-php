@@ -2,11 +2,11 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Dbs\Dbs;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Dbs\V20190306\StartBackupPlan;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Dbs\Dbs;
+use AlibabaCloud\Dbs\V20190306\StartBackupPlan;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DbsTest

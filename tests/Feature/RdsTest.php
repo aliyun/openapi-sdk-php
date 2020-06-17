@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Rds\Rds;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Rds\V20140815\DeleteDatabase;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Rds\Rds;
+use AlibabaCloud\Rds\V20140815\DeleteDatabase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class RdsTest
@@ -62,7 +62,7 @@ class RdsTest extends TestCase
                ->request();
         } catch (ServerException $e) {
             self::assertEquals(
-                'DBInstanceIdentifier does not refer to an existing DB instance.',
+                'The specified instance is not found.',
                 $e->getErrorMessage()
             );
         }

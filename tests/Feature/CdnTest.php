@@ -3,11 +3,11 @@
 namespace AlibabaCloud\Tests\Feature;
 
 use AlibabaCloud\Cdn\Cdn;
-use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Cdn\V20180510\DescribeIpInfo;
-use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class CdnTest

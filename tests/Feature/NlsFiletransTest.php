@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\NlsFiletrans\NlsFiletrans;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\NlsFiletrans\NlsFiletrans;
 use AlibabaCloud\NlsFiletrans\V20180817\SubmitTask;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class NlsFiletransTest

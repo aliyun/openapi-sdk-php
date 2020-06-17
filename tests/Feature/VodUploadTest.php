@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Vod\V20170321\DeleteImage;
 use AlibabaCloud\Vod\Vod;
 use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Vod\V20170321\DeleteImage;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class VodUploadTest
@@ -234,29 +234,30 @@ class VodUploadTest extends TestCase
      * 注册媒资信息
      *
      * @return array
-     * @throws ServerException
      * @throws ClientException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The storageLocation must be registered on VOD./
      */
     public function testRegisterMedia()
     {
-        $metaDataArray       = [];
-        $metaData            = [];
-        $metaData['Title']   = 'registerMedia by url sample';
-        $metaData['FileURL'] = 'https://xxxxxx.oss-cn-shanghai.aliyuncs.com/vod_sample.mp4';
-        $metaDataArray[]     = $metaData;
+        try {
+            $metaDataArray       = [];
+            $metaData            = [];
+            $metaData['Title']   = 'registerMedia by url sample';
+            $metaData['FileURL'] = 'https://xxxxxx.oss-cn-shanghai.aliyuncs.com/vod_sample.mp4';
+            $metaDataArray[]     = $metaData;
 
-        $result = Vod::v20170321()
-                     ->registerMedia()
-                     ->withRegisterMetadatas(json_encode($metaDataArray))
-                     ->connectTimeout(60)
-                     ->timeout(65)
-                     ->request();
+            $result = Vod::v20170321()
+                         ->registerMedia()
+                         ->withRegisterMetadatas(json_encode($metaDataArray))
+                         ->connectTimeout(60)
+                         ->timeout(65)
+                         ->request();
 
-        self::assertArrayHasKey('JobId', $result['UploadJobs'][0]);
+            self::assertArrayHasKey('JobId', $result['UploadJobs'][0]);
 
-        return $result['UploadJobs'];
+            return $result['UploadJobs'];
+        } catch (ServerException $exception) {
+            self::assertEquals('The storageLocation must be registered on VOD.', $exception->getErrorMessage());
+        }
     }
 
     /**

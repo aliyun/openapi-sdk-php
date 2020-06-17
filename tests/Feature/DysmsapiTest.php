@@ -2,9 +2,9 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Dysmsapi\Dysmsapi;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Dysmsapi\Dysmsapi;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class DysmsapiTest

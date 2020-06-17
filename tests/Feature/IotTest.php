@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Iot\Iot;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Iot\Iot;
 use AlibabaCloud\Iot\V20180120\BatchGetDeviceState;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class IotTest
@@ -60,6 +60,6 @@ class IotTest extends TestCase
                      ->connectTimeout(60)
                      ->timeout(65)
                      ->request();
-        self::assertEquals('物联网平台实例不存在', $result['ErrorMessage']);
+        self::assertEquals('Instance not found.', $result['ErrorMessage']);
     }
 }

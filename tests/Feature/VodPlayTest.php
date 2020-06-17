@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Vod\V20170321\DeleteImage;
 use AlibabaCloud\Vod\Vod;
 use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Vod\V20170321\DeleteImage;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class VodPlayTest
@@ -81,23 +81,24 @@ class VodPlayTest extends TestCase
      *
      * @return array
      * @throws ClientException
-     * @throws ServerException
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /The video has no stream to play for the request parameter/
      */
     public function testGetPlayInfo($videoId)
     {
-        $result = Vod::v20170321()
-                     ->getPlayInfo()
-                     ->withVideoId($videoId)
-                     ->withAuthTimeout(3600 * 24)
-                     ->connectTimeout(60)
-                     ->timeout(65)
-                     ->request();
+        try {
+            $result = Vod::v20170321()
+                         ->getPlayInfo()
+                         ->withVideoId($videoId)
+                         ->withAuthTimeout(3600 * 24)
+                         ->connectTimeout(60)
+                         ->timeout(65)
+                         ->request();
 
-        self::assertArrayHasKey('VideoMeta', $result);
+            self::assertArrayHasKey('VideoMeta', $result);
 
-        return $result['VideoMeta'];
+            return $result['VideoMeta'];
+        } catch (ServerException $exception) {
+            self::assertEquals("The video has no stream to play for the request parameter ''.", $exception->getErrorMessage());
+        }
     }
 
     /**

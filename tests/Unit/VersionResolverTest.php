@@ -2,31 +2,36 @@
 
 namespace AlibabaCloud\Tests\Unit;
 
-use stdClass;
-use ReflectionObject;
-use ReflectionException;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Slb\V20140515\DescribeRegions;
+use PHPUnit\Framework\TestCase;
+use ReflectionException;
+use ReflectionObject;
+use stdClass;
 
 class VersionResolverTest extends TestCase
 {
     public function testApi()
     {
-        AlibabaCloud::slb()->v20140515()->describeRegions();
+        $res = AlibabaCloud::slb()->v20140515()->describeRegions();
+        self::assertEquals(get_class($res), DescribeRegions::class);
     }
 
     public function testApiWithParameters()
     {
-        AlibabaCloud::slb()->v20140515()->describeRegions(['a' => 'a']);
+        $res = AlibabaCloud::slb()->v20140515()->describeRegions(['a' => 'a']);
+        self::assertEquals(get_class($res), DescribeRegions::class);
     }
 
-    /**
-     * @expectedExceptionMessage Slb Versions contains no BadVersion
-     * @expectedException \AlibabaCloud\Client\Exception\ClientException
-     */
     public function testVersionNotFound()
     {
-        AlibabaCloud::slb()->badVersion();
+
+        try {
+            AlibabaCloud::slb()->badVersion();
+        } catch (ClientException $exception) {
+            self::assertEquals('Slb Versions contains no BadVersion', $exception->getMessage());
+        }
     }
 
     /**

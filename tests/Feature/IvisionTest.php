@@ -2,12 +2,13 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Ivision\Ivision;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Ivision\Ivision;
+use AlibabaCloud\Ivision\V20190308\DescribeFaceGroups;
 use AlibabaCloud\Ivision\V20190308\DescribeProjects;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class IvisionTest
@@ -33,36 +34,36 @@ class IvisionTest extends TestCase
     {
         $request1 = AlibabaCloud::ivision()
                                 ->v20190308()
-                                ->describeProjects()
+                                ->describeFaceGroups()
                                 ->connectTimeout(60)
                                 ->timeout(65);
 
         $request2 = Ivision::v20190308()
-                           ->describeProjects()
+                           ->describeFaceGroups()
                            ->connectTimeout(60)
                            ->timeout(65);
 
-        self::assertInstanceOf(DescribeProjects::class, $request1);
-        self::assertInstanceOf(DescribeProjects::class, $request2);
+        self::assertInstanceOf(DescribeFaceGroups::class, $request1);
+        self::assertInstanceOf(DescribeFaceGroups::class, $request2);
         self::assertEquals($request1, $request2);
     }
 
     /**
-     * @expectedException \AlibabaCloud\Client\Exception\ServerException
-     * @expectedExceptionMessageRegExp /Your account has not opened service yet./
      * @throws ClientException
      * @throws ServerException
      */
     public function testIvision()
     {
-        $result = Ivision::v20190308()
-                         ->describeProjects()
-                         ->withCurrentPage(1)
-                         ->withPageSize(10)
-                         ->connectTimeout(60)
-                         ->timeout(65)
-                         ->request();
-
-        self::assertArrayHasKey('Data', $result);
+        try {
+            Ivision::v20190308()
+                   ->describeFaceGroups()
+                   ->withCurrentPage(1)
+                   ->withPageSize(10)
+                   ->connectTimeout(60)
+                   ->timeout(65)
+                   ->request();
+        } catch (ServerException $exception) {
+            self::assertEquals('Your account has not opened service yet.', $exception->getErrorMessage());
+        }
     }
 }

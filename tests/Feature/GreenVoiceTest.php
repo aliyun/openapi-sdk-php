@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Green\Green;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Green\V20180509\VoiceAsyncScan;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Green\Green;
+use AlibabaCloud\Green\V20180509\VoiceAsyncScan;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class GreenVoiceTest

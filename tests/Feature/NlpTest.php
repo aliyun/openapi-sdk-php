@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
-use AlibabaCloud\Nlp\Nlp;
-use PHPUnit\Framework\TestCase;
 use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Nlp\V20180408\WordSegment;
-use AlibabaCloud\Client\Exception\ServerException;
 use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Nlp\Nlp;
+use AlibabaCloud\Nlp\V20180408\WordSegment;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class NlpTest

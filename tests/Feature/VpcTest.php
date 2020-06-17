@@ -2,12 +2,12 @@
 
 namespace AlibabaCloud\Tests\Feature;
 
+use AlibabaCloud\Client\AlibabaCloud;
+use AlibabaCloud\Client\Exception\ClientException;
+use AlibabaCloud\Client\Exception\ServerException;
+use AlibabaCloud\Vpc\V20160428\DescribeRegions;
 use AlibabaCloud\Vpc\Vpc;
 use PHPUnit\Framework\TestCase;
-use AlibabaCloud\Client\AlibabaCloud;
-use AlibabaCloud\Vpc\V20160428\DescribeRegions;
-use AlibabaCloud\Client\Exception\ServerException;
-use AlibabaCloud\Client\Exception\ClientException;
 
 /**
  * Class VpcTest
