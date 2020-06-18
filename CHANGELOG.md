@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.333 - 2020-6-18
+- Supported TransformDBInstancePayType API.
+
+
 ## 1.8.332 - 2020-6-18
 - Add GetAuthToken OpenAPI.
 
