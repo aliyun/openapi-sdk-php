@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.332 - 2020-6-18
+- Add GetAuthToken OpenAPI.
+
+
 ## 1.8.331 - 2020-6-17
 - Supported sync create eni and assign private ip.
 
