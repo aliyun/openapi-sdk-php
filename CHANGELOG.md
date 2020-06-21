@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.334 - 2020-6-21
+- Add persons API.
+
+
 ## 1.8.333 - 2020-6-18
 - Supported TransformDBInstancePayType API.
 

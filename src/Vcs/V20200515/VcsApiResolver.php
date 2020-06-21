@@ -15,8 +15,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetFaceOptions getFaceOptions(array $options = [])
  * @method GetInventory getInventory(array $options = [])
  * @method GetMonitorResult getMonitorResult(array $options = [])
+ * @method GetPersonDetail getPersonDetail(array $options = [])
  * @method ListCorps listCorps(array $options = [])
  * @method ListDevices listDevices(array $options = [])
+ * @method ListPersons listPersons(array $options = [])
  * @method RecognizeImage recognizeImage(array $options = [])
  * @method SearchBody searchBody(array $options = [])
  * @method SearchFace searchFace(array $options = [])
@@ -195,6 +197,7 @@ class AddDevice extends Rpc
  * @method string getCorpId()
  * @method string getDescription()
  * @method string getBatchIndicator()
+ * @method string getAlgorithmVendor()
  */
 class AddMonitor extends Rpc
 {
@@ -247,6 +250,19 @@ class AddMonitor extends Rpc
     {
         $this->data['BatchIndicator'] = $value;
         $this->options['form_params']['BatchIndicator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
 
         return $this;
     }
@@ -508,6 +524,7 @@ class GetInventory extends Rpc
  * @method string getCorpId()
  * @method string getEndTime()
  * @method string getStartTime()
+ * @method string getAlgorithmVendor()
  * @method string getMinRecordId()
  * @method string getTaskId()
  */
@@ -558,6 +575,19 @@ class GetMonitorResult extends Rpc
      *
      * @return $this
      */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withMinRecordId($value)
     {
         $this->data['MinRecordId'] = $value;
@@ -575,6 +605,40 @@ class GetMonitorResult extends Rpc
     {
         $this->data['TaskId'] = $value;
         $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getPersonID()
+ */
+class GetPersonDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonID($value)
+    {
+        $this->data['PersonID'] = $value;
+        $this->options['form_params']['PersonID'] = $value;
 
         return $this;
     }
@@ -685,6 +749,54 @@ class ListDevices extends Rpc
     {
         $this->data['DeviceName'] = $value;
         $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getPageNo()
+ * @method string getPageSize()
+ */
+class ListPersons extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNo($value)
+    {
+        $this->data['PageNo'] = $value;
+        $this->options['form_params']['PageNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -947,10 +1059,24 @@ class SearchFace extends Rpc
 }
 
 /**
+ * @method string getAlgorithmVendor()
  * @method string getTaskId()
  */
 class StopMonitor extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1201,6 +1327,7 @@ class UpdateDevice extends Rpc
  * @method string getPicList()
  * @method string getAttributeValueList()
  * @method string getDeviceList()
+ * @method string getAlgorithmVendor()
  */
 class UpdateMonitor extends Rpc
 {
@@ -1357,6 +1484,19 @@ class UpdateMonitor extends Rpc
     {
         $this->data['DeviceList'] = $value;
         $this->options['form_params']['DeviceList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
 
         return $this;
     }
