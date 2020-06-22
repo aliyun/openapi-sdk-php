@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.335 - 2020-6-22
+- Add GetMultipleTrace api.
+- Add SearchTracesByPage api.
+- Add GetStack api.
+
+
 ## 1.8.334 - 2020-6-21
 - Add persons API.
 

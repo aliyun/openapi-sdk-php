@@ -16,9 +16,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAlertContactGroup deleteAlertContactGroup(array $options = [])
  * @method DeleteAlertRules deleteAlertRules(array $options = [])
  * @method DeleteRetcodeApp deleteRetcodeApp(array $options = [])
+ * @method DeleteTraceApp deleteTraceApp(array $options = [])
+ * @method DescribeTraceLicenseKey describeTraceLicenseKey(array $options = [])
+ * @method DescribeTraceLocation describeTraceLocation(array $options = [])
  * @method GetConsistencySnapshot getConsistencySnapshot(array $options = [])
+ * @method GetMultipleTrace getMultipleTrace(array $options = [])
  * @method GetPrometheusApiToken getPrometheusApiToken(array $options = [])
  * @method GetRetcodeShareUrl getRetcodeShareUrl(array $options = [])
+ * @method GetStack getStack(array $options = [])
  * @method GetTrace getTrace(array $options = [])
  * @method ImportAppAlertRules importAppAlertRules(array $options = [])
  * @method ImportCustomAlertRules importCustomAlertRules(array $options = [])
@@ -38,6 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchTraceAppByName searchTraceAppByName(array $options = [])
  * @method SearchTraceAppByPage searchTraceAppByPage(array $options = [])
  * @method SearchTraces searchTraces(array $options = [])
+ * @method SearchTracesByPage searchTracesByPage(array $options = [])
  * @method SetRetcodeShareStatus setRetcodeShareStatus(array $options = [])
  * @method StartAlert startAlert(array $options = [])
  * @method StopAlert stopAlert(array $options = [])
@@ -191,6 +197,24 @@ class DeleteRetcodeApp extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DeleteTraceApp extends Rpc
+{
+}
+
+class DescribeTraceLicenseKey extends Rpc
+{
+}
+
+class DescribeTraceLocation extends Rpc
+{
+}
+
+/**
  * @method string getCurrentTimestamp()
  * @method $this withCurrentTimestamp($value)
  * @method string getAppType()
@@ -204,6 +228,28 @@ class GetConsistencySnapshot extends Rpc
 {
 }
 
+/**
+ * @method array getTraceIDs()
+ */
+class GetMultipleTrace extends Rpc
+{
+
+    /**
+     * @param array $traceIDs
+     *
+     * @return $this
+     */
+	public function withTraceIDs(array $traceIDs)
+	{
+	    $this->data['TraceIDs'] = $traceIDs;
+		foreach ($traceIDs as $i => $iValue) {
+			$this->options['query']['TraceIDs.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
 class GetPrometheusApiToken extends Rpc
 {
 }
@@ -213,6 +259,16 @@ class GetPrometheusApiToken extends Rpc
  * @method $this withPid($value)
  */
 class GetRetcodeShareUrl extends Rpc
+{
+}
+
+/**
+ * @method string getTraceID()
+ * @method $this withTraceID($value)
+ * @method string getRpcID()
+ * @method $this withRpcID($value)
+ */
+class GetStack extends Rpc
 {
 }
 
@@ -664,6 +720,51 @@ class SearchTraces extends Rpc
 			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getReverse()
+ * @method $this withReverse($value)
+ * @method string getMinDuration()
+ * @method $this withMinDuration($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getServiceIp()
+ * @method $this withServiceIp($value)
+ * @method array getExclusionFilters()
+ * @method string getOperationName()
+ * @method $this withOperationName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ */
+class SearchTracesByPage extends Rpc
+{
+
+    /**
+     * @param array $exclusionFilters
+     *
+     * @return $this
+     */
+	public function withExclusionFilters(array $exclusionFilters)
+	{
+	    $this->data['ExclusionFilters'] = $exclusionFilters;
+		foreach ($exclusionFilters as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['ExclusionFilters.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['ExclusionFilters.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
 			}
 		}
 
