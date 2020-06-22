@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.336 - 2020-6-22
+- Add support cn-shenzhen region.
+
+
 ## 1.8.335 - 2020-6-22
 - Add GetMultipleTrace api.
 - Add SearchTracesByPage api.
