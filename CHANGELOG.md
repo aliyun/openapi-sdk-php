@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.339 - 2020-6-23
+- Generated 2015-12-15 for `CS`.
+
+
 ## 1.8.338 - 2020-6-23
 - Support SubmitOperationAuditInfo for Support self-service submission of approval information.
 - Support SubmitOperationCredentials for self-service submission of certificate information.
