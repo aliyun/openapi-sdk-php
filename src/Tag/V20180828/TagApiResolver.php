@@ -5,7 +5,9 @@ namespace AlibabaCloud\Tag\V20180828;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method ListTagValues listTagValues(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  */
@@ -29,8 +31,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class ListTagKeys extends Rpc
+{
+}
+
+/**
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getPageSize()
@@ -67,8 +87,26 @@ class ListTagResources extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class ListTagValues extends Rpc
+{
+}
+
+/**
  * @method array getResourceARN()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -99,8 +137,6 @@ class TagResources extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method array getResourceARN()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)

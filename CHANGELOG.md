@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.337 - 2020-6-23
+- Generated 2018-08-28 for `Tag`.
+
+
 ## 1.8.336 - 2020-6-22
 - Add support cn-shenzhen region.
 
