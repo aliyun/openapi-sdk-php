@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.8.338 - 2020-6-23
+- Support SubmitOperationAuditInfo for Support self-service submission of approval information.
+- Support SubmitOperationCredentials for self-service submission of certificate information.
+- Support CancelOperationAudit for cancel audit.
+- Support GetOperationOssUploadPolic for get oss policy.
+- Support QueryOperationAuditInfoLis for query audit list.
+- Support QueryOperationAuditInfoDetail for query audit details.
+
+
 ## 1.8.337 - 2020-6-23
 - Generated 2018-08-28 for `Tag`.
 
