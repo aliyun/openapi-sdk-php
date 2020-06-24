@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 1.8.340 - 2020-6-24
+- Add DescribeBackupPlanBilling.
+- Modify ConfigureBackupPlan.
+- Modify CreateBackupPlan.
+- Modify CreateRestoreTask.
+- Modify DescribeRestoreTaskList.
+- Modify DescribeBackupPlanList.
+- Modify ModifyBackupSourceEndpoint.
+- Modify ModifyBackupStrategy.
+
+
 ## 1.8.339 - 2020-6-23
 - Generated 2015-12-15 for `CS`.
 
