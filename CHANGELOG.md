@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.341 - 2020-6-26
+- Supported Api EraseLogoInVideo.
+
+
 ## 1.8.340 - 2020-6-24
 - Add DescribeBackupPlanBilling.
 - Modify ConfigureBackupPlan.
