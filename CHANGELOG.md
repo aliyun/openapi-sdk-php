@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.344 - 2020-6-29
+- Supported Rotate.
+
+
 ## 1.8.343 - 2020-6-29
 - Supported gb28181 parent platform.
 

@@ -41,7 +41,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectQRCodes detectQRCodes(array $options = [])
  * @method EncodeBlindWatermark encodeBlindWatermark(array $options = [])
  * @method FindImages findImages(array $options = [])
- * @method FindImagesByTagNames findImagesByTagNames(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
  * @method GetContentKey getContentKey(array $options = [])
  * @method GetDocIndex getDocIndex(array $options = [])
@@ -778,22 +777,6 @@ class EncodeBlindWatermark extends Rpc
  * @method $this withSetId($value)
  */
 class FindImages extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getTagNames()
- * @method $this withTagNames($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- * @method string getSetId()
- * @method $this withSetId($value)
- */
-class FindImagesByTagNames extends Rpc
 {
 }
 
