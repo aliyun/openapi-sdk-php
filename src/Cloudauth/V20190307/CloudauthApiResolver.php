@@ -58,12 +58,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
 /**
  * @method string getSourceImageType()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getTargetImageType()
  * @method string getTargetImageValue()
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getSourceImageValue()
  */
 class CompareFaces extends Rpc
@@ -748,8 +744,6 @@ class DescribeVerifyRecords extends Rpc
 /**
  * @method string getBizType()
  * @method $this withBizType($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getBizId()
  * @method $this withBizId($value)
  */
@@ -782,8 +776,6 @@ class DescribeVerifySetting extends Rpc
  * @method $this withFaceRetainedImageUrl($value)
  * @method string getUserId()
  * @method $this withUserId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getCallbackSeed()
  * @method $this withCallbackSeed($value)
  * @method string getUserIp()
@@ -830,74 +822,10 @@ class DescribeVerifyUsage extends Rpc
 }
 
 /**
- * @method string getMaxNumPhotosPerCategory()
- * @method string getMaxFaceNum()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getRetAttributes()
- * @method string getClientTag()
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getMaterialValue()
- * @method string getDontSaveDB()
  */
 class DetectFaceAttributes extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMaxNumPhotosPerCategory($value)
-    {
-        $this->data['MaxNumPhotosPerCategory'] = $value;
-        $this->options['form_params']['MaxNumPhotosPerCategory'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMaxFaceNum($value)
-    {
-        $this->data['MaxFaceNum'] = $value;
-        $this->options['form_params']['MaxFaceNum'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRetAttributes($value)
-    {
-        $this->data['RetAttributes'] = $value;
-        $this->options['form_params']['RetAttributes'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientTag($value)
-    {
-        $this->data['ClientTag'] = $value;
-        $this->options['form_params']['ClientTag'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -908,19 +836,6 @@ class DetectFaceAttributes extends Rpc
     {
         $this->data['MaterialValue'] = $value;
         $this->options['form_params']['MaterialValue'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDontSaveDB($value)
-    {
-        $this->data['DontSaveDB'] = $value;
-        $this->options['form_params']['DontSaveDB'] = $value;
 
         return $this;
     }
@@ -970,6 +885,7 @@ class InitDevice extends Rpc
  * @method $this withCertType($value)
  * @method string getFaceContrastPictureUrl()
  * @method $this withFaceContrastPictureUrl($value)
+ * @method string getModel()
  * @method string getMetaInfo()
  * @method $this withMetaInfo($value)
  * @method string getOssObjectName()
@@ -999,6 +915,19 @@ class InitFaceVerify extends Rpc
     {
         $this->data['FaceContrastPicture'] = $value;
         $this->options['form_params']['FaceContrastPicture'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModel($value)
+    {
+        $this->data['Model'] = $value;
+        $this->options['form_params']['Model'] = $value;
 
         return $this;
     }
@@ -1091,8 +1020,6 @@ class VerifyDevice extends Rpc
  * @method $this withFaceImageUrl($value)
  * @method string getUserId()
  * @method $this withUserId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getIdCardBackImageUrl()
  * @method $this withIdCardBackImageUrl($value)
  * @method string getIdCardNumber()

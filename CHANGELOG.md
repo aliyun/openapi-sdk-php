@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.342 - 2020-6-29
+- Add Model Parameter For InitFaceVerify API.
+
+
 ## 1.8.341 - 2020-6-26
 - Supported Api EraseLogoInVideo.
 

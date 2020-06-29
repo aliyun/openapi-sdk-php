@@ -283,12 +283,8 @@ class DetectFaceAttributes extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getBiz()
  * @method $this withBiz($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getTicketId()
  * @method $this withTicketId($value)
  */
@@ -297,12 +293,8 @@ class GetMaterials extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getBiz()
  * @method $this withBiz($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getTicketId()
  * @method $this withTicketId($value)
  */
@@ -311,8 +303,6 @@ class GetStatus extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getBinding()
  * @method string getVerifyConfigs()
  * @method $this withVerifyConfigs($value)
@@ -320,8 +310,6 @@ class GetStatus extends Rpc
  * @method $this withUserData($value)
  * @method string getBiz()
  * @method $this withBiz($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getTicketId()
  * @method $this withTicketId($value)
  */
