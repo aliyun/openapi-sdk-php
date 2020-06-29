@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddVsPullStreamInfoConfig addVsPullStreamInfoConfig(array $options = [])
  * @method BatchBindDirectories batchBindDirectories(array $options = [])
+ * @method BatchBindParentPlatformDevices batchBindParentPlatformDevices(array $options = [])
  * @method BatchBindPurchasedDevices batchBindPurchasedDevices(array $options = [])
  * @method BatchBindTemplate batchBindTemplate(array $options = [])
  * @method BatchBindTemplates batchBindTemplates(array $options = [])
@@ -20,10 +21,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchStopDevices batchStopDevices(array $options = [])
  * @method BatchStopStreams batchStopStreams(array $options = [])
  * @method BatchUnbindDirectories batchUnbindDirectories(array $options = [])
+ * @method BatchUnbindParentPlatformDevices batchUnbindParentPlatformDevices(array $options = [])
  * @method BatchUnbindPurchasedDevices batchUnbindPurchasedDevices(array $options = [])
  * @method BatchUnbindTemplate batchUnbindTemplate(array $options = [])
  * @method BatchUnbindTemplates batchUnbindTemplates(array $options = [])
  * @method BindDirectory bindDirectory(array $options = [])
+ * @method BindParentPlatformDevice bindParentPlatformDevice(array $options = [])
  * @method BindPurchasedDevice bindPurchasedDevice(array $options = [])
  * @method BindTemplate bindTemplate(array $options = [])
  * @method ContinuousAdjust continuousAdjust(array $options = [])
@@ -32,11 +35,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDeviceAlarm createDeviceAlarm(array $options = [])
  * @method CreateDirectory createDirectory(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
+ * @method CreateParentPlatform createParentPlatform(array $options = [])
  * @method CreateStreamSnapshot createStreamSnapshot(array $options = [])
  * @method CreateTemplate createTemplate(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
  * @method DeleteDirectory deleteDirectory(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
+ * @method DeleteParentPlatform deleteParentPlatform(array $options = [])
  * @method DeletePreset deletePreset(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteVsPullStreamInfoConfig deleteVsPullStreamInfoConfig(array $options = [])
@@ -51,6 +56,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDirectory describeDirectory(array $options = [])
  * @method DescribeGroup describeGroup(array $options = [])
  * @method DescribeGroups describeGroups(array $options = [])
+ * @method DescribeParentPlatform describeParentPlatform(array $options = [])
+ * @method DescribeParentPlatformDevices describeParentPlatformDevices(array $options = [])
+ * @method DescribeParentPlatforms describeParentPlatforms(array $options = [])
  * @method DescribePresets describePresets(array $options = [])
  * @method DescribePurchasedDevice describePurchasedDevice(array $options = [])
  * @method DescribePurchasedDevices describePurchasedDevices(array $options = [])
@@ -87,6 +95,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDeviceChannels modifyDeviceChannels(array $options = [])
  * @method ModifyDirectory modifyDirectory(array $options = [])
  * @method ModifyGroup modifyGroup(array $options = [])
+ * @method ModifyParentPlatform modifyParentPlatform(array $options = [])
  * @method ModifyTemplate modifyTemplate(array $options = [])
  * @method ResumeVsStream resumeVsStream(array $options = [])
  * @method SetPreset setPreset(array $options = [])
@@ -104,6 +113,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopTransferStream stopTransferStream(array $options = [])
  * @method SyncCatalogs syncCatalogs(array $options = [])
  * @method UnbindDirectory unbindDirectory(array $options = [])
+ * @method UnbindParentPlatformDevice unbindParentPlatformDevice(array $options = [])
  * @method UnbindPurchasedDevice unbindPurchasedDevice(array $options = [])
  * @method UnbindTemplate unbindTemplate(array $options = [])
  * @method UnlockDevice unlockDevice(array $options = [])
@@ -163,6 +173,20 @@ class AddVsPullStreamInfoConfig extends Rpc
  * @method $this withDeviceId($value)
  */
 class BatchBindDirectories extends Rpc
+{
+}
+
+/**
+ * @method string getParentPlatformId()
+ * @method $this withParentPlatformId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class BatchBindParentPlatformDevices extends Rpc
 {
 }
 
@@ -371,6 +395,20 @@ class BatchUnbindDirectories extends Rpc
 }
 
 /**
+ * @method string getParentPlatformId()
+ * @method $this withParentPlatformId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class BatchUnbindParentPlatformDevices extends Rpc
+{
+}
+
+/**
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getOwnerId()
@@ -429,6 +467,20 @@ class BatchUnbindTemplates extends Rpc
  * @method $this withDeviceId($value)
  */
 class BindDirectory extends Rpc
+{
+}
+
+/**
+ * @method string getParentPlatformId()
+ * @method $this withParentPlatformId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class BindParentPlatformDevice extends Rpc
 {
 }
 
@@ -641,6 +693,36 @@ class CreateGroup extends Rpc
 }
 
 /**
+ * @method string getGbId()
+ * @method $this withGbId($value)
+ * @method string getClientAuth()
+ * @method $this withClientAuth($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAutoStart()
+ * @method $this withAutoStart($value)
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getClientPassword()
+ * @method $this withClientPassword($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getClientUsername()
+ * @method $this withClientUsername($value)
+ */
+class CreateParentPlatform extends Rpc
+{
+}
+
+/**
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -739,6 +821,18 @@ class DeleteDirectory extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteGroup extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteParentPlatform extends Rpc
 {
 }
 
@@ -997,6 +1091,60 @@ class DescribeGroup extends Rpc
  * @method $this withStatus($value)
  */
 class DescribeGroups extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeParentPlatform extends Rpc
+{
+}
+
+/**
+ * @method string getSortDirection()
+ * @method $this withSortDirection($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSortBy()
+ * @method $this withSortBy($value)
+ */
+class DescribeParentPlatformDevices extends Rpc
+{
+}
+
+/**
+ * @method string getSortDirection()
+ * @method $this withSortDirection($value)
+ * @method string getGbId()
+ * @method $this withGbId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSortBy()
+ * @method $this withSortBy($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeParentPlatforms extends Rpc
 {
 }
 
@@ -1721,6 +1869,36 @@ class ModifyGroup extends Rpc
 }
 
 /**
+ * @method string getGbId()
+ * @method $this withGbId($value)
+ * @method string getClientAuth()
+ * @method $this withClientAuth($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAutoStart()
+ * @method $this withAutoStart($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getClientPassword()
+ * @method $this withClientPassword($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getClientUsername()
+ * @method $this withClientUsername($value)
+ */
+class ModifyParentPlatform extends Rpc
+{
+}
+
+/**
  * @method string getHlsTs()
  * @method $this withHlsTs($value)
  * @method string getOssEndpoint()
@@ -2033,6 +2211,20 @@ class SyncCatalogs extends Rpc
  * @method $this withDeviceId($value)
  */
 class UnbindDirectory extends Rpc
+{
+}
+
+/**
+ * @method string getParentPlatformId()
+ * @method $this withParentPlatformId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class UnbindParentPlatformDevice extends Rpc
 {
 }
 

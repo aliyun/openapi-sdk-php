@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.343 - 2020-6-29
+- Supported gb28181 parent platform.
+
+
 ## 1.8.342 - 2020-6-29
 - Add Model Parameter For InitFaceVerify API.
 
