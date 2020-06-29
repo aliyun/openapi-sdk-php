@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.347 - 2020-6-29
+- Supported Rotate.
+
+
 ## 1.8.346 - 2020-6-29
 - Generated 2019-12-26 for `OutboundBot`.
 
