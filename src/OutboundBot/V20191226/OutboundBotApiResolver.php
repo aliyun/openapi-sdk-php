@@ -35,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTagHitsSummary describeTagHitsSummary(array $options = [])
  * @method DescribeTTSConfig describeTTSConfig(array $options = [])
  * @method Dialogue dialogue(array $options = [])
+ * @method DownloadRecording downloadRecording(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
  * @method ImportScript importScript(array $options = [])
@@ -617,6 +618,16 @@ class DescribeTTSConfig extends Rpc
  * @method $this withActionKey($value)
  */
 class Dialogue extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DownloadRecording extends Rpc
 {
 }
 
