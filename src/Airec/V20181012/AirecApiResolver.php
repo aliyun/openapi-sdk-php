@@ -9,9 +9,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDiversify createDiversify(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateMix createMix(array $options = [])
+ * @method CreateRule createRule(array $options = [])
+ * @method CreateScene createScene(array $options = [])
  * @method DeleteDataSet deleteDataSet(array $options = [])
  * @method DeleteDiversify deleteDiversify(array $options = [])
  * @method DeleteMix deleteMix(array $options = [])
+ * @method DeleteScene deleteScene(array $options = [])
  * @method DescribeDataSetMessage describeDataSetMessage(array $options = [])
  * @method DescribeDataSetReport describeDataSetReport(array $options = [])
  * @method DescribeDiversify describeDiversify(array $options = [])
@@ -20,11 +23,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeMix describeMix(array $options = [])
  * @method DescribeQuota describeQuota(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeRule describeRule(array $options = [])
+ * @method DescribeScene describeScene(array $options = [])
+ * @method DescribeSceneThroughput describeSceneThroughput(array $options = [])
  * @method DescribeSyncReportDetail describeSyncReportDetail(array $options = [])
  * @method DescribeSyncReportOutliers describeSyncReportOutliers(array $options = [])
  * @method DescribeUserMetrics describeUserMetrics(array $options = [])
  * @method DowngradeInstance downgradeInstance(array $options = [])
  * @method ListDashboard listDashboard(array $options = [])
+ * @method ListDashboardDetails listDashboardDetails(array $options = [])
+ * @method ListDashboardDetailsFlows listDashboardDetailsFlows(array $options = [])
+ * @method ListDashboardMetrics listDashboardMetrics(array $options = [])
+ * @method ListDashboardMetricsFlows listDashboardMetricsFlows(array $options = [])
  * @method ListDashboardParameters listDashboardParameters(array $options = [])
  * @method ListDashboardUid listDashboardUid(array $options = [])
  * @method ListDataSet listDataSet(array $options = [])
@@ -33,12 +43,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstance listInstance(array $options = [])
  * @method ListInstanceTask listInstanceTask(array $options = [])
  * @method ListMix listMix(array $options = [])
+ * @method ListRuleConditions listRuleConditions(array $options = [])
+ * @method ListRules listRules(array $options = [])
+ * @method ListRuleTasks listRuleTasks(array $options = [])
+ * @method ListSceneItems listSceneItems(array $options = [])
+ * @method ListScenes listScenes(array $options = [])
  * @method ListUmengAppkeys listUmengAppkeys(array $options = [])
  * @method ModifyDataSource modifyDataSource(array $options = [])
  * @method ModifyDiversify modifyDiversify(array $options = [])
  * @method ModifyExposureSettings modifyExposureSettings(array $options = [])
  * @method ModifyInstance modifyInstance(array $options = [])
  * @method ModifyMix modifyMix(array $options = [])
+ * @method ModifyRule modifyRule(array $options = [])
+ * @method ModifyScene modifyScene(array $options = [])
+ * @method PublishRule publishRule(array $options = [])
  * @method PushDocument pushDocument(array $options = [])
  * @method PushIntervention pushIntervention(array $options = [])
  * @method QueryDataMessage queryDataMessage(array $options = [])
@@ -120,6 +138,46 @@ class CreateMix extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/rules';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDryRun()
+ */
+class CreateScene extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/scenes';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['query']['DryRun'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getVersionId()
  * @method $this withVersionId($value)
  * @method string getInstanceId()
@@ -159,6 +217,21 @@ class DeleteMix extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes/[Name]';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ */
+class DeleteScene extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/scenes/[SceneId]';
 
     /** @var string */
     public $method = 'DELETE';
@@ -262,6 +335,70 @@ class DescribeRegions extends Roa
 
         return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRuleType()
+ * @method string getSceneId()
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DescribeRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/rules/[RuleId]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleType($value)
+    {
+        $this->data['RuleType'] = $value;
+        $this->options['query']['RuleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['query']['SceneId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ */
+class DescribeScene extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/scenes/[SceneId]';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ */
+class DescribeSceneThroughput extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/scenes/[SceneId]/throughput';
 }
 
 /**
@@ -570,6 +707,270 @@ class ListDashboard extends Roa
 }
 
 /**
+ * @method string getMetricType()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTraceIds()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getSceneIds()
+ */
+class ListDashboardDetails extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard/details';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricType($value)
+    {
+        $this->data['MetricType'] = $value;
+        $this->options['query']['MetricType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTraceIds($value)
+    {
+        $this->data['TraceIds'] = $value;
+        $this->options['query']['TraceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneIds($value)
+    {
+        $this->data['SceneIds'] = $value;
+        $this->options['query']['SceneIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMetricType()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTraceIds()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getSceneIds()
+ */
+class ListDashboardDetailsFlows extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard/details/flows';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricType($value)
+    {
+        $this->data['MetricType'] = $value;
+        $this->options['query']['MetricType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTraceIds($value)
+    {
+        $this->data['TraceIds'] = $value;
+        $this->options['query']['TraceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneIds($value)
+    {
+        $this->data['SceneIds'] = $value;
+        $this->options['query']['SceneIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMetricType()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getEndTime()
+ * @method string getStartTime()
+ */
+class ListDashboardMetrics extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard/metrics';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricType($value)
+    {
+        $this->data['MetricType'] = $value;
+        $this->options['query']['MetricType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['StartTime'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMetricType()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getEndTime()
+ * @method string getStartTime()
+ */
+class ListDashboardMetricsFlows extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dashboard/metrics/flows';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricType($value)
+    {
+        $this->data['MetricType'] = $value;
+        $this->options['query']['MetricType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['StartTime'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -675,6 +1076,254 @@ class ListMix extends Roa
     public $pathPattern = '/openapi/instances/[InstanceId]/mixes';
 }
 
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListRuleConditions extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/rule-conditions';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getRuleType()
+ * @method string getSceneId()
+ * @method string getEndTime()
+ * @method string getPage()
+ * @method string getStartTime()
+ * @method string getStatus()
+ */
+class ListRules extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/rules';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['Size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleType($value)
+    {
+        $this->data['RuleType'] = $value;
+        $this->options['query']['RuleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['query']['SceneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['query']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSceneId()
+ */
+class ListRuleTasks extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/rule-tasks';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['query']['SceneId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSelectionRuleId()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getQueryCount()
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getOperationRuleId()
+ * @method string getPreviewType()
+ * @method string getPage()
+ */
+class ListSceneItems extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/scenes/[SceneId]/items';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSelectionRuleId($value)
+    {
+        $this->data['SelectionRuleId'] = $value;
+        $this->options['query']['SelectionRuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['Size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueryCount($value)
+    {
+        $this->data['QueryCount'] = $value;
+        $this->options['query']['QueryCount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperationRuleId($value)
+    {
+        $this->data['OperationRuleId'] = $value;
+        $this->options['query']['OperationRuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPreviewType($value)
+    {
+        $this->data['PreviewType'] = $value;
+        $this->options['query']['PreviewType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListScenes extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/scenes';
+}
+
 class ListUmengAppkeys extends Roa
 {
     /** @var string */
@@ -750,6 +1399,79 @@ class ModifyMix extends Roa
 
     /** @var string */
     public $method = 'PUT';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class ModifyRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/rules/[RuleId]';
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ */
+class ModifyScene extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/scenes/[SceneId]';
+
+    /** @var string */
+    public $method = 'PUT';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRuleType()
+ * @method string getSceneId()
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class PublishRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/rules/[RuleId]/actions/publish';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleType($value)
+    {
+        $this->data['RuleType'] = $value;
+        $this->options['query']['RuleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['query']['SceneId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
