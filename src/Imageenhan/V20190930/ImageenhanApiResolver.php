@@ -9,11 +9,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssessExposure assessExposure(array $options = [])
  * @method AssessSharpness assessSharpness(array $options = [])
  * @method ChangeImageSize changeImageSize(array $options = [])
+ * @method EnhanceImageColor enhanceImageColor(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
+ * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method ImageBlindCharacterWatermark imageBlindCharacterWatermark(array $options = [])
  * @method ImageBlindPicWatermark imageBlindPicWatermark(array $options = [])
+ * @method ImitatePhotoStyle imitatePhotoStyle(array $options = [])
  * @method IntelligentComposition intelligentComposition(array $options = [])
  * @method MakeSuperResolutionImage makeSuperResolutionImage(array $options = [])
+ * @method RecolorHDImage recolorHDImage(array $options = [])
  * @method RecolorImage recolorImage(array $options = [])
  * @method RemoveImageSubtitles removeImageSubtitles(array $options = [])
  * @method RemoveImageWatermark removeImageWatermark(array $options = [])
@@ -146,6 +150,54 @@ class ChangeImageSize extends Rpc
 }
 
 /**
+ * @method string getMode()
+ * @method string getImageURL()
+ * @method string getOutputFormat()
+ */
+class EnhanceImageColor extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputFormat($value)
+    {
+        $this->data['OutputFormat'] = $value;
+        $this->options['form_params']['OutputFormat'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getMajorUrl()
  * @method string getStyleUrl()
  */
@@ -174,6 +226,40 @@ class ExtendImageStyle extends Rpc
     {
         $this->data['StyleUrl'] = $value;
         $this->options['form_params']['StyleUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getJobId()
+ */
+class GetAsyncJobResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
 
         return $this;
     }
@@ -360,6 +446,40 @@ class ImageBlindPicWatermark extends Rpc
 }
 
 /**
+ * @method string getStyleUrl()
+ * @method string getImageURL()
+ */
+class ImitatePhotoStyle extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStyleUrl($value)
+    {
+        $this->data['StyleUrl'] = $value;
+        $this->options['form_params']['StyleUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getNumBoxes()
  * @method string getImageURL()
  */
@@ -408,6 +528,114 @@ class MakeSuperResolutionImage extends Rpc
     {
         $this->data['Url'] = $value;
         $this->options['form_params']['Url'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getColorTemplate()
+ * @method string getDegree()
+ * @method string getUrl()
+ * @method string getMode()
+ * @method string getAsync()
+ * @method string getColorCount()
+ * @method string getRefUrl()
+ */
+class RecolorHDImage extends Rpc
+{
+
+    /**
+     * @param array $colorTemplate
+     *
+     * @return $this
+     */
+	public function withColorTemplate(array $colorTemplate)
+	{
+	    $this->data['ColorTemplate'] = $colorTemplate;
+		foreach ($colorTemplate as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Color'])){
+				$this->options['form_params']['ColorTemplate.' . ($depth1 + 1) . '.Color'] = $depth1Value['Color'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDegree($value)
+    {
+        $this->data['Degree'] = $value;
+        $this->options['form_params']['Degree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrl($value)
+    {
+        $this->data['Url'] = $value;
+        $this->options['form_params']['Url'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withColorCount($value)
+    {
+        $this->data['ColorCount'] = $value;
+        $this->options['form_params']['ColorCount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRefUrl($value)
+    {
+        $this->data['RefUrl'] = $value;
+        $this->options['form_params']['RefUrl'] = $value;
 
         return $this;
     }
