@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ClassifyingRubbish classifyingRubbish(array $options = [])
+ * @method DetectFruits detectFruits(array $options = [])
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
@@ -37,6 +38,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getImageURL()
  */
 class ClassifyingRubbish extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectFruits extends Rpc
 {
 
     /**
@@ -142,7 +163,9 @@ class RecognizeLogo extends Rpc
 	{
 	    $this->data['Tasks'] = $tasks;
 		foreach ($tasks as $depth1 => $depth1Value) {
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
 		}
 
 		return $this;

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.351 - 2020-7-1
+- SDK version 108.
+
+
 ## 1.8.350 - 2020-7-1
 - Add API for GetMetadataAmount.
 
