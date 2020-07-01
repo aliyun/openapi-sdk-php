@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DetectCovid19Cad detectCovid19Cad(array $options = [])
+ * @method DetectLungNodule detectLungNodule(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  */
 class ImageprocessApiResolver extends ApiResolver
@@ -32,6 +33,44 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getAsync()
  */
 class DetectCovid19Cad extends Rpc
+{
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getURLList()
+ * @method string getAsync()
+ */
+class DetectLungNodule extends Rpc
 {
 
     /**

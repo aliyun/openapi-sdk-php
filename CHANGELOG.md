@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.353 - 2020-7-1
+- ImageProcess First Version.
+
+
 ## 1.8.352 - 2020-7-1
 - Sdk version 111.
 
