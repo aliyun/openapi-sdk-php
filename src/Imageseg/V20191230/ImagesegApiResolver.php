@@ -10,9 +10,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefineMask refineMask(array $options = [])
  * @method SegmentAnimal segmentAnimal(array $options = [])
  * @method SegmentBody segmentBody(array $options = [])
+ * @method SegmentCloth segmentCloth(array $options = [])
  * @method SegmentCommodity segmentCommodity(array $options = [])
  * @method SegmentCommonImage segmentCommonImage(array $options = [])
  * @method SegmentFace segmentFace(array $options = [])
+ * @method SegmentFood segmentFood(array $options = [])
  * @method SegmentFurniture segmentFurniture(array $options = [])
  * @method SegmentHair segmentHair(array $options = [])
  * @method SegmentHDBody segmentHDBody(array $options = [])
@@ -149,6 +151,14 @@ class SegmentBody extends Rpc
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
+class SegmentCloth extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
 class SegmentCommodity extends Rpc
 {
 }
@@ -166,6 +176,14 @@ class SegmentCommonImage extends Rpc
  * @method $this withImageURL($value)
  */
 class SegmentFace extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class SegmentFood extends Rpc
 {
 }
 
