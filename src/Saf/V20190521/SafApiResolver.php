@@ -5,6 +5,7 @@ namespace AlibabaCloud\Saf\V20190521;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ExecuteExtendService executeExtendService(array $options = [])
  * @method ExecuteRequest executeRequest(array $options = [])
  * @method ExecuteRequestSG executeRequestSG(array $options = [])
  */
@@ -27,7 +28,22 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     protected $scheme = 'https';
 
     /** @var string */
-    public $serviceCode = 'saf';
+    public $serviceCode = 'SAF';
+}
+
+/**
+ * @method string getServiceParameters()
+ * @method $this withServiceParameters($value)
+ * @method string getService()
+ * @method $this withService($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class ExecuteExtendService extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**

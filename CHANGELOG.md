@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.349 - 2020-7-1
+- Support Saf For ExecuteExtendService.
+
+
 ## 1.8.348 - 2020-6-30
 - Generated 2018-10-12 for `Airec`.
 
