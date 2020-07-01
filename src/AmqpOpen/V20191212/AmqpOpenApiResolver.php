@@ -13,11 +13,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteExchange deleteExchange(array $options = [])
  * @method DeleteQueue deleteQueue(array $options = [])
  * @method DeleteVirtualHost deleteVirtualHost(array $options = [])
+ * @method GetMetadataAmount getMetadataAmount(array $options = [])
  * @method ListBindings listBindings(array $options = [])
  * @method ListDownStreamBindings listDownStreamBindings(array $options = [])
  * @method ListExchanges listExchanges(array $options = [])
  * @method ListExchangeUpStreamBindings listExchangeUpStreamBindings(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ListQueueConsumers listQueueConsumers(array $options = [])
  * @method ListQueues listQueues(array $options = [])
  * @method ListQueueUpStreamBindings listQueueUpStreamBindings(array $options = [])
  * @method ListVirtualHosts listVirtualHosts(array $options = [])
@@ -35,9 +37,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $version = '2019-12-12';
 
     /** @var string */
-    public $method = 'POST';
-
-    /** @var string */
     public $serviceCode = 'onsproxy';
 }
 
@@ -52,6 +51,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class CreateBinding extends Rpc
 {
+
+    /** @var string */
+    public $method = 'POST';
 
     /**
      * @param string $value
@@ -156,6 +158,9 @@ class CreateBinding extends Rpc
  */
 class CreateExchange extends Rpc
 {
+
+    /** @var string */
+    public $method = 'POST';
 
     /**
      * @param string $value
@@ -264,6 +269,9 @@ class CreateExchange extends Rpc
  */
 class CreateQueue extends Rpc
 {
+
+    /** @var string */
+    public $method = 'POST';
 
     /**
      * @param string $value
@@ -416,6 +424,9 @@ class CreateQueue extends Rpc
 class CreateVirtualHost extends Rpc
 {
 
+    /** @var string */
+    public $method = 'POST';
+
     /**
      * @param string $value
      *
@@ -453,6 +464,9 @@ class CreateVirtualHost extends Rpc
  */
 class DeleteBinding extends Rpc
 {
+
+    /** @var string */
+    public $method = 'POST';
 
     /**
      * @param string $value
@@ -541,6 +555,9 @@ class DeleteBinding extends Rpc
 class DeleteExchange extends Rpc
 {
 
+    /** @var string */
+    public $method = 'POST';
+
     /**
      * @param string $value
      *
@@ -589,6 +606,9 @@ class DeleteExchange extends Rpc
 class DeleteQueue extends Rpc
 {
 
+    /** @var string */
+    public $method = 'POST';
+
     /**
      * @param string $value
      *
@@ -636,6 +656,9 @@ class DeleteQueue extends Rpc
 class DeleteVirtualHost extends Rpc
 {
 
+    /** @var string */
+    public $method = 'POST';
+
     /**
      * @param string $value
      *
@@ -666,6 +689,14 @@ class DeleteVirtualHost extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ */
+class GetMetadataAmount extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getMaxResults()
@@ -675,9 +706,6 @@ class DeleteVirtualHost extends Rpc
  */
 class ListBindings extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -694,9 +722,6 @@ class ListBindings extends Rpc
  */
 class ListDownStreamBindings extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -711,9 +736,6 @@ class ListDownStreamBindings extends Rpc
  */
 class ListExchanges extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -730,9 +752,6 @@ class ListExchanges extends Rpc
  */
 class ListExchangeUpStreamBindings extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -743,9 +762,22 @@ class ListExchangeUpStreamBindings extends Rpc
  */
 class ListInstances extends Rpc
 {
+}
 
-    /** @var string */
-    public $method = 'GET';
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getQueryCount()
+ * @method $this withQueryCount($value)
+ * @method string getVirtualHost()
+ * @method $this withVirtualHost($value)
+ * @method string getQueue()
+ * @method $this withQueue($value)
+ */
+class ListQueueConsumers extends Rpc
+{
 }
 
 /**
@@ -760,9 +792,6 @@ class ListInstances extends Rpc
  */
 class ListQueues extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -779,9 +808,6 @@ class ListQueues extends Rpc
  */
 class ListQueueUpStreamBindings extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -794,7 +820,4 @@ class ListQueueUpStreamBindings extends Rpc
  */
 class ListVirtualHosts extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.350 - 2020-7-1
+- Add API for GetMetadataAmount.
+
+
 ## 1.8.349 - 2020-7-1
 - Support Saf For ExecuteExtendService.
 
