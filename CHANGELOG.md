@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.352 - 2020-7-1
+- Sdk version 111.
+
+
 ## 1.8.351 - 2020-7-1
 - SDK version 108.
 

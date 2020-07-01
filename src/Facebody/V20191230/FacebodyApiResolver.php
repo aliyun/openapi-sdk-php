@@ -28,12 +28,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method HandPosture handPosture(array $options = [])
  * @method ListFaceDbs listFaceDbs(array $options = [])
  * @method ListFaceEntities listFaceEntities(array $options = [])
+ * @method RecognizeAction recognizeAction(array $options = [])
  * @method RecognizeExpression recognizeExpression(array $options = [])
  * @method RecognizeFace recognizeFace(array $options = [])
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
  * @method SwapFacialFeatures swapFacialFeatures(array $options = [])
  * @method UpdateFaceEntity updateFaceEntity(array $options = [])
+ * @method VerifyFaceMask verifyFaceMask(array $options = [])
  */
 class FacebodyApiResolver extends ApiResolver
 {
@@ -881,6 +883,58 @@ class ListFaceEntities extends Rpc
 }
 
 /**
+ * @method array getURLList()
+ * @method string getType()
+ * @method string getVideoUrl()
+ */
+class RecognizeAction extends Rpc
+{
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  */
 class RecognizeExpression extends Rpc
@@ -1097,6 +1151,40 @@ class UpdateFaceEntity extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ * @method string getRefUrl()
+ */
+class VerifyFaceMask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRefUrl($value)
+    {
+        $this->data['RefUrl'] = $value;
+        $this->options['form_params']['RefUrl'] = $value;
 
         return $this;
     }
