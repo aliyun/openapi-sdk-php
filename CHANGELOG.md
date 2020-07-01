@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.356 - 2020-7-1
+- Added API for modifying non Alibaba Cloud host names.
+- Fix the required type adjustment of several parameters.
+
+
 ## 1.8.355 - 2020-7-1
 - SDK version 109.
 
