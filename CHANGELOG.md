@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.358 - 2020-7-2
+- Update endpoint.
+
+
 ## 1.8.357 - 2020-7-2
 - CreateShardingDBInstance add ProtocolType, to support DynamoDB.
 - DescribeDBInstances add return ResourceGroupId.
