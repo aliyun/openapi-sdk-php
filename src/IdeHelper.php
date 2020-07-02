@@ -16,6 +16,7 @@ namespace AlibabaCloud;
  * @method static Adb\Adb adb()
  * @method static Aegis\Aegis aegis()
  * @method static Afs\Afs afs()
+ * @method static Aiccs\Aiccs aiccs()
  * @method static Airec\Airec airec()
  * @method static AliProbe\AliProbe aliProbe()
  * @method static Alidns\Alidns alidns()
