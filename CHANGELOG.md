@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.359 - 2020-7-2
+- Add GetFootwearPosition.
+- Add PullTakeShoesEvent.
+- Add PullTryOnShoesEvent.
+
+
 ## 1.8.358 - 2020-7-2
 - Update endpoint.
 
