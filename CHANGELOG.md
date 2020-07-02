@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.357 - 2020-7-2
+- CreateShardingDBInstance add ProtocolType, to support DynamoDB.
+- DescribeDBInstances add return ResourceGroupId.
+
+
 ## 1.8.356 - 2020-7-1
 - Added API for modifying non Alibaba Cloud host names.
 - Fix the required type adjustment of several parameters.

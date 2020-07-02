@@ -106,7 +106,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'dds';
+    public $serviceCode = 'Dds';
 }
 
 /**
@@ -383,6 +383,8 @@ class CreateRecommendationTask extends Rpc
  * @method $this withVpcId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getProtocolType()
+ * @method $this withProtocolType($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
  */
@@ -602,6 +604,8 @@ class DescribeAuditPolicy extends Rpc
  * @method $this withForm($value)
  * @method string getUser()
  * @method $this withUser($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeAuditRecords extends Rpc
 {
@@ -838,6 +842,8 @@ class DescribeDBInstancePerformance extends Rpc
  * @method $this withPageNumber($value)
  * @method string getReplicationFactor()
  * @method $this withReplicationFactor($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getExpired()
  * @method $this withExpired($value)
  * @method string getSecurityToken()
@@ -1083,6 +1089,8 @@ class DescribeMongoDBLogConfig extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
  */
 class DescribeParameterModificationHistory extends Rpc
 {
@@ -1103,6 +1111,8 @@ class DescribeParameterModificationHistory extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
  */
 class DescribeParameters extends Rpc
 {
@@ -1261,6 +1271,8 @@ class DescribeRoleZoneInfo extends Rpc
  * @method $this withOwnerId($value)
  * @method string getDBName()
  * @method $this withDBName($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeRunningLogRecords extends Rpc
 {
@@ -1349,6 +1361,8 @@ class DescribeShardingNetworkAddress extends Rpc
  * @method $this withOwnerId($value)
  * @method string getDBName()
  * @method $this withDBName($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeSlowLogRecords extends Rpc
 {
@@ -1359,6 +1373,8 @@ class DescribeSlowLogRecords extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1367,6 +1383,8 @@ class DescribeSlowLogRecords extends Rpc
  * @method $this withOwnerId($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class DescribeTags extends Rpc
 {
@@ -1892,6 +1910,8 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class ModifyNodeSpec extends Rpc
 {
@@ -1914,6 +1934,8 @@ class ModifyNodeSpec extends Rpc
  * @method $this withOwnerId($value)
  * @method string getParameters()
  * @method $this withParameters($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
  */
 class ModifyParameters extends Rpc
 {
