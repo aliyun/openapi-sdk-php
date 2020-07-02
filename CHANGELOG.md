@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.360 - 2020-7-2
+- SDK version 102.
+
+
 ## 1.8.359 - 2020-7-2
 - Add GetFootwearPosition.
 - Add PullTakeShoesEvent.
