@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.361 - 2020-7-2
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.360 - 2020-7-2
 - SDK version 102.
 
