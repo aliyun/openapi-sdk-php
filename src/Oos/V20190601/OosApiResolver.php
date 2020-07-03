@@ -18,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListExecutionLogs listExecutionLogs(array $options = [])
  * @method ListExecutionRiskyTasks listExecutionRiskyTasks(array $options = [])
  * @method ListExecutions listExecutions(array $options = [])
+ * @method ListResourceExecutionStatus listResourceExecutionStatus(array $options = [])
  * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTagValues listTagValues(array $options = [])
@@ -46,9 +47,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'oos';
 }
 
 /**
@@ -192,6 +190,8 @@ class ListExecutionRiskyTasks extends Rpc
  * @method $this withEndDateBefore($value)
  * @method string getSortOrder()
  * @method $this withSortOrder($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getStartDateAfter()
  * @method $this withStartDateAfter($value)
  * @method string getStartDateBefore()
@@ -208,10 +208,24 @@ class ListExecutionRiskyTasks extends Rpc
  * @method $this withSortField($value)
  * @method string getCategory()
  * @method $this withCategory($value)
+ * @method string getResourceTemplateName()
+ * @method $this withResourceTemplateName($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
 class ListExecutions extends Rpc
+{
+}
+
+/**
+ * @method string getExecutionId()
+ * @method $this withExecutionId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListResourceExecutionStatus extends Rpc
 {
 }
 

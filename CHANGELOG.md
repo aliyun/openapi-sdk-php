@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.364 - 2020-7-3
+- Add ListResourceExecutionStatus API.
+- ListExecutions API supports filtering by resource id.
+- TriggerExecution API supports TimerTrigger.
+
+
 ## 1.8.363 - 2020-7-3
 - Supports tag management APIs.
 
