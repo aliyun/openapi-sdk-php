@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.363 - 2020-7-3
+- Supports tag management APIs.
+
+
 ## 1.8.362 - 2020-7-2
 - Build sdk.
 
