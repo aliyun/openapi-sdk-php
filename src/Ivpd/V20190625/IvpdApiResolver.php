@@ -14,7 +14,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobResult getJobResult(array $options = [])
  * @method GetJobStatus getJobStatus(array $options = [])
  * @method GetRenderResult getRenderResult(array $options = [])
+ * @method GetUserBucketConfig getUserBucketConfig(array $options = [])
  * @method ListPackageDesignModelTypes listPackageDesignModelTypes(array $options = [])
+ * @method ListUserBuckets listUserBuckets(array $options = [])
  * @method MakeSuperResolutionImage makeSuperResolutionImage(array $options = [])
  * @method PreviewModelForPackageDesign previewModelForPackageDesign(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
@@ -23,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RenderImageForPackageDesign renderImageForPackageDesign(array $options = [])
  * @method SegmentBody segmentBody(array $options = [])
  * @method SegmentImage segmentImage(array $options = [])
+ * @method UpdateUserBucketConfig updateUserBucketConfig(array $options = [])
  */
 class IvpdApiResolver extends ApiResolver
 {
@@ -38,9 +41,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'ivpd';
 }
 
 /**
@@ -369,8 +369,36 @@ class GetRenderResult extends Rpc
     }
 }
 
+class GetUserBucketConfig extends Rpc
+{
+}
+
 class ListPackageDesignModelTypes extends Rpc
 {
+}
+
+/**
+ * @method array getData()
+ */
+class ListUserBuckets extends Rpc
+{
+
+    /**
+     * @param array $data
+     *
+     * @return $this
+     */
+	public function withData(array $data)
+	{
+	    $this->data['Data'] = $data;
+		foreach ($data as $depth1 => $depth1Value) {
+			if(isset($depth1Value['RegionId'])){
+				$this->options['form_params']['Data.' . ($depth1 + 1) . '.RegionId'] = $depth1Value['RegionId'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -800,5 +828,32 @@ class SegmentImage extends Rpc
         $this->options['form_params']['Url'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method array getData()
+ */
+class UpdateUserBucketConfig extends Rpc
+{
+
+    /**
+     * @param array $data
+     *
+     * @return $this
+     */
+	public function withData(array $data)
+	{
+	    $this->data['Data'] = $data;
+		foreach ($data as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Bucket'])){
+				$this->options['form_params']['Data.' . ($depth1 + 1) . '.Bucket'] = $depth1Value['Bucket'];
+			}
+			if(isset($depth1Value['Region'])){
+				$this->options['form_params']['Data.' . ($depth1 + 1) . '.Region'] = $depth1Value['Region'];
+			}
+		}
+
+		return $this;
     }
 }

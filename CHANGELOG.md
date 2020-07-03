@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.365 - 2020-7-3
+- Supported UpdateUserBucketConfig.
+
+
 ## 1.8.364 - 2020-7-3
 - Add ListResourceExecutionStatus API.
 - ListExecutions API supports filtering by resource id.
