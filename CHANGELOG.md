@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.366 - 2020-7-6
+- Sdk for 101.
+
+
 ## 1.8.365 - 2020-7-3
 - Supported UpdateUserBucketConfig.
 
