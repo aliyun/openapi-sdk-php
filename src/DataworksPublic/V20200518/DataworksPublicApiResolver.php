@@ -10,12 +10,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckMetaPartition checkMetaPartition(array $options = [])
  * @method CheckMetaTable checkMetaTable(array $options = [])
  * @method CreateConnection createConnection(array $options = [])
+ * @method CreateDagComplement createDagComplement(array $options = [])
+ * @method CreateDagTest createDagTest(array $options = [])
  * @method CreateDataServiceApi createDataServiceApi(array $options = [])
  * @method CreateFile createFile(array $options = [])
  * @method CreateFolder createFolder(array $options = [])
  * @method CreateMetaCategory createMetaCategory(array $options = [])
- * @method CreateNodeComplement createNodeComplement(array $options = [])
- * @method CreateNodeTest createNodeTest(array $options = [])
  * @method CreateQualityEntity createQualityEntity(array $options = [])
  * @method CreateQualityFollower createQualityFollower(array $options = [])
  * @method CreateQualityRelativeNode createQualityRelativeNode(array $options = [])
@@ -225,6 +225,242 @@ class CheckMetaTable extends Rpc
  */
 class CreateConnection extends Rpc
 {
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getStartBizDate()
+ * @method string getParallelism()
+ * @method string getRootNodeId()
+ * @method string getBizBeginTime()
+ * @method string getEndBizDate()
+ * @method string getIncludeNodeIds()
+ * @method string getBizEndTime()
+ * @method string getName()
+ * @method string getExcludeNodeIds()
+ * @method string getNodeParams()
+ */
+class CreateDagComplement extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartBizDate($value)
+    {
+        $this->data['StartBizDate'] = $value;
+        $this->options['form_params']['StartBizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParallelism($value)
+    {
+        $this->data['Parallelism'] = $value;
+        $this->options['form_params']['Parallelism'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRootNodeId($value)
+    {
+        $this->data['RootNodeId'] = $value;
+        $this->options['form_params']['RootNodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizBeginTime($value)
+    {
+        $this->data['BizBeginTime'] = $value;
+        $this->options['form_params']['BizBeginTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndBizDate($value)
+    {
+        $this->data['EndBizDate'] = $value;
+        $this->options['form_params']['EndBizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIncludeNodeIds($value)
+    {
+        $this->data['IncludeNodeIds'] = $value;
+        $this->options['form_params']['IncludeNodeIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizEndTime($value)
+    {
+        $this->data['BizEndTime'] = $value;
+        $this->options['form_params']['BizEndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExcludeNodeIds($value)
+    {
+        $this->data['ExcludeNodeIds'] = $value;
+        $this->options['form_params']['ExcludeNodeIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeParams($value)
+    {
+        $this->data['NodeParams'] = $value;
+        $this->options['form_params']['NodeParams'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getBizdate()
+ * @method string getName()
+ * @method string getNodeParams()
+ * @method string getNodeId()
+ */
+class CreateDagTest extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizdate($value)
+    {
+        $this->data['Bizdate'] = $value;
+        $this->options['form_params']['Bizdate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeParams($value)
+    {
+        $this->data['NodeParams'] = $value;
+        $this->options['form_params']['NodeParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -445,6 +681,7 @@ class CreateDataServiceApi extends Rpc
 
 /**
  * @method string getFileType()
+ * @method string getDependentNodeIdList()
  * @method string getContent()
  * @method string getProjectIdentifier()
  * @method string getProjectId()
@@ -452,7 +689,6 @@ class CreateDataServiceApi extends Rpc
  * @method string getCycleType()
  * @method string getOwner()
  * @method string getAutoRerunIntervalMillis()
- * @method string getDependentCloudUuidList()
  * @method string getInputList()
  * @method string getRerunMode()
  * @method string getParaValue()
@@ -477,6 +713,19 @@ class CreateFile extends Rpc
     {
         $this->data['FileType'] = $value;
         $this->options['form_params']['FileType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDependentNodeIdList($value)
+    {
+        $this->data['DependentNodeIdList'] = $value;
+        $this->options['form_params']['DependentNodeIdList'] = $value;
 
         return $this;
     }
@@ -568,19 +817,6 @@ class CreateFile extends Rpc
     {
         $this->data['AutoRerunIntervalMillis'] = $value;
         $this->options['form_params']['AutoRerunIntervalMillis'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDependentCloudUuidList($value)
-    {
-        $this->data['DependentCloudUuidList'] = $value;
-        $this->options['form_params']['DependentCloudUuidList'] = $value;
 
         return $this;
     }
@@ -820,312 +1056,6 @@ class CreateMetaCategory extends Rpc
     {
         $this->data['ParentId'] = $value;
         $this->options['form_params']['ParentId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectEnv()
- * @method string getStartBizDate()
- * @method string getParallelism()
- * @method string getBizBeginTime()
- * @method string getEndBizDate()
- * @method string getIncludeNodeIds()
- * @method string getBizEndTime()
- * @method string getName()
- * @method string getExcludeNodeIds()
- * @method string getNodeId()
- * @method string getNodeProjectId()
- */
-class CreateNodeComplement extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectEnv($value)
-    {
-        $this->data['ProjectEnv'] = $value;
-        $this->options['form_params']['ProjectEnv'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartBizDate($value)
-    {
-        $this->data['StartBizDate'] = $value;
-        $this->options['form_params']['StartBizDate'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withParallelism($value)
-    {
-        $this->data['Parallelism'] = $value;
-        $this->options['form_params']['Parallelism'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBizBeginTime($value)
-    {
-        $this->data['BizBeginTime'] = $value;
-        $this->options['form_params']['BizBeginTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndBizDate($value)
-    {
-        $this->data['EndBizDate'] = $value;
-        $this->options['form_params']['EndBizDate'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIncludeNodeIds($value)
-    {
-        $this->data['IncludeNodeIds'] = $value;
-        $this->options['form_params']['IncludeNodeIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBizEndTime($value)
-    {
-        $this->data['BizEndTime'] = $value;
-        $this->options['form_params']['BizEndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExcludeNodeIds($value)
-    {
-        $this->data['ExcludeNodeIds'] = $value;
-        $this->options['form_params']['ExcludeNodeIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNodeId($value)
-    {
-        $this->data['NodeId'] = $value;
-        $this->options['form_params']['NodeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNodeProjectId($value)
-    {
-        $this->data['NodeProjectId'] = $value;
-        $this->options['form_params']['NodeProjectId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getProjectEnv()
- * @method string getParallelism()
- * @method string getBizBeginTime()
- * @method string getIncludeNodeIds()
- * @method string getBizdate()
- * @method string getBizEndTime()
- * @method string getName()
- * @method string getExcludeNodeIds()
- * @method string getNodeId()
- * @method string getNodeProjectId()
- */
-class CreateNodeTest extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectEnv($value)
-    {
-        $this->data['ProjectEnv'] = $value;
-        $this->options['form_params']['ProjectEnv'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withParallelism($value)
-    {
-        $this->data['Parallelism'] = $value;
-        $this->options['form_params']['Parallelism'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBizBeginTime($value)
-    {
-        $this->data['BizBeginTime'] = $value;
-        $this->options['form_params']['BizBeginTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIncludeNodeIds($value)
-    {
-        $this->data['IncludeNodeIds'] = $value;
-        $this->options['form_params']['IncludeNodeIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBizdate($value)
-    {
-        $this->data['Bizdate'] = $value;
-        $this->options['form_params']['Bizdate'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBizEndTime($value)
-    {
-        $this->data['BizEndTime'] = $value;
-        $this->options['form_params']['BizEndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExcludeNodeIds($value)
-    {
-        $this->data['ExcludeNodeIds'] = $value;
-        $this->options['form_params']['ExcludeNodeIds'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNodeId($value)
-    {
-        $this->data['NodeId'] = $value;
-        $this->options['form_params']['NodeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNodeProjectId($value)
-    {
-        $this->data['NodeProjectId'] = $value;
-        $this->options['form_params']['NodeProjectId'] = $value;
 
         return $this;
     }
@@ -4966,14 +4896,12 @@ class ListFolders extends Rpc
 
 /**
  * @method string getProjectEnv()
+ * @method string getOwner()
  * @method string getBizName()
- * @method string getOwnerId()
  * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getNodeName()
  * @method string getProgramType()
  * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getNodeId()
  * @method string getProjectId()
  */
@@ -4998,6 +4926,19 @@ class ListInstances extends Rpc
      *
      * @return $this
      */
+    public function withOwner($value)
+    {
+        $this->data['Owner'] = $value;
+        $this->options['form_params']['Owner'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withBizName($value)
     {
         $this->data['BizName'] = $value;
@@ -5011,10 +4952,10 @@ class ListInstances extends Rpc
      *
      * @return $this
      */
-    public function withOwnerId($value)
+    public function withPageNumber($value)
     {
-        $this->data['OwnerId'] = $value;
-        $this->options['form_params']['OwnerId'] = $value;
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
 
         return $this;
     }
@@ -5050,6 +4991,19 @@ class ListInstances extends Rpc
      *
      * @return $this
      */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withNodeId($value)
     {
         $this->data['NodeId'] = $value;
@@ -5074,8 +5028,8 @@ class ListInstances extends Rpc
 
 /**
  * @method string getProjectEnv()
- * @method string getType()
  * @method string getNodeId()
+ * @method string getIoType()
  */
 class ListNodeIO extends Rpc
 {
@@ -5098,10 +5052,10 @@ class ListNodeIO extends Rpc
      *
      * @return $this
      */
-    public function withType($value)
+    public function withNodeId($value)
     {
-        $this->data['Type'] = $value;
-        $this->options['form_params']['Type'] = $value;
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
 
         return $this;
     }
@@ -5111,19 +5065,19 @@ class ListNodeIO extends Rpc
      *
      * @return $this
      */
-    public function withNodeId($value)
+    public function withIoType($value)
     {
-        $this->data['NodeId'] = $value;
-        $this->options['form_params']['NodeId'] = $value;
+        $this->data['IoType'] = $value;
+        $this->options['form_params']['IoType'] = $value;
 
         return $this;
     }
 }
 
 /**
+ * @method string getOwner()
  * @method string getProjectEnv()
  * @method string getBizName()
- * @method string getOwnerId()
  * @method string getPageNumber()
  * @method string getNodeName()
  * @method string getProgramType()
@@ -5132,6 +5086,19 @@ class ListNodeIO extends Rpc
  */
 class ListNodes extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOwner($value)
+    {
+        $this->data['Owner'] = $value;
+        $this->options['form_params']['Owner'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -5155,19 +5122,6 @@ class ListNodes extends Rpc
     {
         $this->data['BizName'] = $value;
         $this->options['form_params']['BizName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOwnerId($value)
-    {
-        $this->data['OwnerId'] = $value;
-        $this->options['form_params']['OwnerId'] = $value;
 
         return $this;
     }
