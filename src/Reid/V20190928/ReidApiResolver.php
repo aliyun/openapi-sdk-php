@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeImageUrls describeImageUrls(array $options = [])
  * @method DescribeIpcLiveAddress describeIpcLiveAddress(array $options = [])
  * @method DescribeOverviewData describeOverviewData(array $options = [])
+ * @method GetFootwearEvent getFootwearEvent(array $options = [])
  * @method GetFootwearPosition getFootwearPosition(array $options = [])
  * @method ImportSpecialPersonnel importSpecialPersonnel(array $options = [])
  * @method ListActionData listActionData(array $options = [])
@@ -43,7 +44,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = '1.1.8';
+    public $serviceCode = '1.1.8.2';
 }
 
 /**
@@ -515,6 +516,40 @@ class DescribeOverviewData extends Rpc
     {
         $this->data['StoreIds'] = $value;
         $this->options['form_params']['StoreIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDate()
+ * @method string getStoreId()
+ */
+class GetFootwearEvent extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDate($value)
+    {
+        $this->data['Date'] = $value;
+        $this->options['form_params']['Date'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
 
         return $this;
     }

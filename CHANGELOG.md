@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.371 - 2020-7-8
+- Remove GetFootwearPosition PullTakeShoesEvent PullTryOnShoesEvent.
+- Add GetFootwearEvent.
+- Please ignore the pd s pot.
+
+
 ## 1.8.370 - 2020-7-8
 - Add video compose api.
 
