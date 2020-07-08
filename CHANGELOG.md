@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.369 - 2020-7-8
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.368 - 2020-7-8
 - Support hotword and hint.
 
