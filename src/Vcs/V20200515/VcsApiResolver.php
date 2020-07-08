@@ -5,10 +5,16 @@ namespace AlibabaCloud\Vcs\V20200515;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddDataSource addDataSource(array $options = [])
  * @method AddDevice addDevice(array $options = [])
  * @method AddMonitor addMonitor(array $options = [])
  * @method CreateCorp createCorp(array $options = [])
+ * @method CreateVideoComposeTask createVideoComposeTask(array $options = [])
+ * @method CreateVideoSummaryTask createVideoSummaryTask(array $options = [])
+ * @method DeleteDataSource deleteDataSource(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
+ * @method DeleteRecords deleteRecords(array $options = [])
+ * @method DeleteVideoSummaryTask deleteVideoSummaryTask(array $options = [])
  * @method GetBodyOptions getBodyOptions(array $options = [])
  * @method GetDeviceLiveUrl getDeviceLiveUrl(array $options = [])
  * @method GetDeviceVideoUrl getDeviceVideoUrl(array $options = [])
@@ -16,9 +22,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetInventory getInventory(array $options = [])
  * @method GetMonitorResult getMonitorResult(array $options = [])
  * @method GetPersonDetail getPersonDetail(array $options = [])
+ * @method GetVideoComposeResult getVideoComposeResult(array $options = [])
+ * @method GetVideoSummaryTaskResult getVideoSummaryTaskResult(array $options = [])
  * @method ListCorps listCorps(array $options = [])
  * @method ListDevices listDevices(array $options = [])
+ * @method ListEventAlgorithmResults listEventAlgorithmResults(array $options = [])
+ * @method ListFaceAlgorithmResults listFaceAlgorithmResults(array $options = [])
+ * @method ListMetrics listMetrics(array $options = [])
+ * @method ListMotorAlgorithmResults listMotorAlgorithmResults(array $options = [])
  * @method ListPersons listPersons(array $options = [])
+ * @method RecognizeFaceQuality recognizeFaceQuality(array $options = [])
  * @method RecognizeImage recognizeImage(array $options = [])
  * @method SearchBody searchBody(array $options = [])
  * @method SearchFace searchFace(array $options = [])
@@ -26,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateCorp updateCorp(array $options = [])
  * @method UpdateDevice updateDevice(array $options = [])
  * @method UpdateMonitor updateMonitor(array $options = [])
+ * @method UploadFile uploadFile(array $options = [])
  */
 class VcsApiResolver extends ApiResolver
 {
@@ -41,9 +55,68 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
 
-    /** @var string */
-    public $serviceCode = 'vcs';
+/**
+ * @method string getDataSourceType()
+ * @method string getCorpId()
+ * @method string getDescription()
+ * @method string getDataSourceName()
+ */
+class AddDataSource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceType($value)
+    {
+        $this->data['DataSourceType'] = $value;
+        $this->options['form_params']['DataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceName($value)
+    {
+        $this->data['DataSourceName'] = $value;
+        $this->options['form_params']['DataSourceName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -332,6 +405,248 @@ class CreateCorp extends Rpc
 
 /**
  * @method string getCorpId()
+ * @method string getDomainName()
+ * @method string getVideoFrameRate()
+ * @method string getImageFileNames()
+ * @method string getAudioFileName()
+ * @method string getBucketName()
+ * @method string getImageParameters()
+ * @method string getVideoFormat()
+ */
+class CreateVideoComposeTask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoFrameRate($value)
+    {
+        $this->data['VideoFrameRate'] = $value;
+        $this->options['form_params']['VideoFrameRate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageFileNames($value)
+    {
+        $this->data['ImageFileNames'] = $value;
+        $this->options['form_params']['ImageFileNames'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAudioFileName($value)
+    {
+        $this->data['AudioFileName'] = $value;
+        $this->options['form_params']['AudioFileName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBucketName($value)
+    {
+        $this->data['BucketName'] = $value;
+        $this->options['form_params']['BucketName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageParameters($value)
+    {
+        $this->data['ImageParameters'] = $value;
+        $this->options['form_params']['ImageParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoFormat($value)
+    {
+        $this->data['VideoFormat'] = $value;
+        $this->options['form_params']['VideoFormat'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getLiveVideoSummary()
+ * @method string getStartTimeStamp()
+ * @method string getDeviceId()
+ * @method string getEndTimeStamp()
+ * @method string getOptionList()
+ */
+class CreateVideoSummaryTask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLiveVideoSummary($value)
+    {
+        $this->data['LiveVideoSummary'] = $value;
+        $this->options['form_params']['LiveVideoSummary'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTimeStamp($value)
+    {
+        $this->data['StartTimeStamp'] = $value;
+        $this->options['form_params']['StartTimeStamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceId($value)
+    {
+        $this->data['DeviceId'] = $value;
+        $this->options['form_params']['DeviceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTimeStamp($value)
+    {
+        $this->data['EndTimeStamp'] = $value;
+        $this->options['form_params']['EndTimeStamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOptionList($value)
+    {
+        $this->data['OptionList'] = $value;
+        $this->options['form_params']['OptionList'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getDataSourceId()
+ */
+class DeleteDataSource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceId($value)
+    {
+        $this->data['DataSourceId'] = $value;
+        $this->options['form_params']['DataSourceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
  * @method string getGbId()
  */
 class DeleteDevice extends Rpc
@@ -359,6 +674,116 @@ class DeleteDevice extends Rpc
     {
         $this->data['GbId'] = $value;
         $this->options['form_params']['GbId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAlgorithmType()
+ * @method string getCorpId()
+ * @method string getAttributeName()
+ * @method string getOperatorType()
+ * @method string getValue()
+ */
+class DeleteRecords extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmType($value)
+    {
+        $this->data['AlgorithmType'] = $value;
+        $this->options['form_params']['AlgorithmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAttributeName($value)
+    {
+        $this->data['AttributeName'] = $value;
+        $this->options['form_params']['AttributeName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorType($value)
+    {
+        $this->data['OperatorType'] = $value;
+        $this->options['form_params']['OperatorType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValue($value)
+    {
+        $this->data['Value'] = $value;
+        $this->options['form_params']['Value'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getTaskId()
+ */
+class DeleteVideoSummaryTask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
 
         return $this;
     }
@@ -645,6 +1070,74 @@ class GetPersonDetail extends Rpc
 }
 
 /**
+ * @method string getCorpId()
+ * @method string getTaskRequestId()
+ */
+class GetVideoComposeResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskRequestId($value)
+    {
+        $this->data['TaskRequestId'] = $value;
+        $this->options['form_params']['TaskRequestId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getTaskId()
+ */
+class GetVideoSummaryTaskResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageNumber()
  * @method string getPageSize()
  */
@@ -756,6 +1249,436 @@ class ListDevices extends Rpc
 
 /**
  * @method string getCorpId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getDataSourceId()
+ * @method string getPageSize()
+ * @method string getEventType()
+ */
+class ListEventAlgorithmResults extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceId($value)
+    {
+        $this->data['DataSourceId'] = $value;
+        $this->options['form_params']['DataSourceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventType($value)
+    {
+        $this->data['EventType'] = $value;
+        $this->options['form_params']['EventType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAlgorithmType()
+ * @method string getCorpId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getDataSourceId()
+ * @method string getPageSize()
+ */
+class ListFaceAlgorithmResults extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmType($value)
+    {
+        $this->data['AlgorithmType'] = $value;
+        $this->options['form_params']['AlgorithmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceId($value)
+    {
+        $this->data['DataSourceId'] = $value;
+        $this->options['form_params']['DataSourceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getTagCode()
+ * @method string getPageSize()
+ * @method string getAggregateType()
+ */
+class ListMetrics extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagCode($value)
+    {
+        $this->data['TagCode'] = $value;
+        $this->options['form_params']['TagCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAggregateType($value)
+    {
+        $this->data['AggregateType'] = $value;
+        $this->options['form_params']['AggregateType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAlgorithmType()
+ * @method string getCorpId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getPlateNumber()
+ * @method string getDataSourceId()
+ * @method string getPageSize()
+ */
+class ListMotorAlgorithmResults extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmType($value)
+    {
+        $this->data['AlgorithmType'] = $value;
+        $this->options['form_params']['AlgorithmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlateNumber($value)
+    {
+        $this->data['PlateNumber'] = $value;
+        $this->options['form_params']['PlateNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceId($value)
+    {
+        $this->data['DataSourceId'] = $value;
+        $this->options['form_params']['DataSourceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
  * @method string getPageNo()
  * @method string getPageSize()
  */
@@ -804,6 +1727,69 @@ class ListPersons extends Rpc
 
 /**
  * @method string getCorpId()
+ * @method string getPicUrl()
+ * @method string getPicContent()
+ * @method string getPicFormat()
+ */
+class RecognizeFaceQuality extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicUrl($value)
+    {
+        $this->data['PicUrl'] = $value;
+        $this->options['form_params']['PicUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicContent($value)
+    {
+        $this->data['PicContent'] = $value;
+        $this->options['form_params']['PicContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicFormat($value)
+    {
+        $this->data['PicFormat'] = $value;
+        $this->options['form_params']['PicFormat'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getPicUrl()
  * @method string getPicContent()
  * @method string getPicFormat()
  */
@@ -819,6 +1805,19 @@ class RecognizeImage extends Rpc
     {
         $this->data['CorpId'] = $value;
         $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicUrl($value)
+    {
+        $this->data['PicUrl'] = $value;
+        $this->options['form_params']['PicUrl'] = $value;
 
         return $this;
     }
@@ -1497,6 +2496,124 @@ class UpdateMonitor extends Rpc
     {
         $this->data['AlgorithmVendor'] = $value;
         $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFileType()
+ * @method string getCorpId()
+ * @method string getFileAliasName()
+ * @method string getFileName()
+ * @method string getFilePath()
+ * @method string getFileContent()
+ * @method string getDataSourceId()
+ * @method string getMD5()
+ */
+class UploadFile extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileType($value)
+    {
+        $this->data['FileType'] = $value;
+        $this->options['form_params']['FileType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileAliasName($value)
+    {
+        $this->data['FileAliasName'] = $value;
+        $this->options['form_params']['FileAliasName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileName($value)
+    {
+        $this->data['FileName'] = $value;
+        $this->options['form_params']['FileName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilePath($value)
+    {
+        $this->data['FilePath'] = $value;
+        $this->options['form_params']['FilePath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileContent($value)
+    {
+        $this->data['FileContent'] = $value;
+        $this->options['form_params']['FileContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceId($value)
+    {
+        $this->data['DataSourceId'] = $value;
+        $this->options['form_params']['DataSourceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMD5($value)
+    {
+        $this->data['MD5'] = $value;
+        $this->options['form_params']['MD5'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.370 - 2020-7-8
+- Add video compose api.
+
+
 ## 1.8.369 - 2020-7-8
 - Generated 2020-05-18 for `dataworks-public`.
 
