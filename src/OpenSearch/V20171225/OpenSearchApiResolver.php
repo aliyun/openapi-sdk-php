@@ -8,12 +8,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CompileSortScript compileSortScript(array $options = [])
  * @method CreateApp createApp(array $options = [])
  * @method CreateAppGroup createAppGroup(array $options = [])
+ * @method CreateModel createModel(array $options = [])
  * @method CreateSortScript createSortScript(array $options = [])
  * @method DeleteSortScript deleteSortScript(array $options = [])
  * @method DescribeApp describeApp(array $options = [])
  * @method DescribeAppGroup describeAppGroup(array $options = [])
  * @method DescribeApps describeApps(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method GetModelProgress getModelProgress(array $options = [])
  * @method GetSortScript getSortScript(array $options = [])
  * @method GetSortScriptFile getSortScriptFile(array $options = [])
  * @method ListAppGroups listAppGroups(array $options = [])
@@ -141,6 +143,31 @@ class CreateAppGroup extends Roa
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getAppGroupIdentity()
+ */
+class CreateModel extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/simple-models';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -332,6 +359,42 @@ class DescribeRegions extends Roa
     {
         $this->data['AcceptLanguage'] = $value;
         $this->options['query']['accept_language'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getModelId()
+ * @method string getAppGroupIdentity()
+ */
+class GetModelProgress extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/simple-models/[modelId]/progress';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelId($value)
+    {
+        $this->data['ModelId'] = $value;
+        $this->pathParameters['modelId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
 
         return $this;
     }
