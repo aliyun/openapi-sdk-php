@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.372 - 2020-7-9
+- Add Log Monitoring API.
+- Add and modify non Alibaba Cloud host name API.
+
+
 ## 1.8.371 - 2020-7-8
 - Remove GetFootwearPosition PullTakeShoesEvent PullTryOnShoesEvent.
 - Add GetFootwearEvent.

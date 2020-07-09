@@ -29,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteExporterRule deleteExporterRule(array $options = [])
  * @method DeleteGroupMonitoringAgentProcess deleteGroupMonitoringAgentProcess(array $options = [])
  * @method DeleteHostAvailability deleteHostAvailability(array $options = [])
+ * @method DeleteLogMonitor deleteLogMonitor(array $options = [])
  * @method DeleteMetricRuleResources deleteMetricRuleResources(array $options = [])
  * @method DeleteMetricRules deleteMetricRules(array $options = [])
  * @method DeleteMetricRuleTargets deleteMetricRuleTargets(array $options = [])
@@ -58,6 +59,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeFolderList describeFolderList(array $options = [])
  * @method DescribeGroupMonitoringAgentProcess describeGroupMonitoringAgentProcess(array $options = [])
  * @method DescribeHostAvailabilityList describeHostAvailabilityList(array $options = [])
+ * @method DescribeLogMonitorAttribute describeLogMonitorAttribute(array $options = [])
+ * @method DescribeLogMonitorList describeLogMonitorList(array $options = [])
  * @method DescribeMetricData describeMetricData(array $options = [])
  * @method DescribeMetricLast describeMetricLast(array $options = [])
  * @method DescribeMetricList describeMetricList(array $options = [])
@@ -123,6 +126,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PutExporterOutput putExporterOutput(array $options = [])
  * @method PutExporterRule putExporterRule(array $options = [])
  * @method PutGroupMetricRule putGroupMetricRule(array $options = [])
+ * @method PutLogMonitor putLogMonitor(array $options = [])
  * @method PutMetricRuleTargets putMetricRuleTargets(array $options = [])
  * @method PutMonitorGroupDynamicRule putMonitorGroupDynamicRule(array $options = [])
  * @method PutMonitoringConfig putMonitoringConfig(array $options = [])
@@ -1011,6 +1015,14 @@ class DeleteHostAvailability extends Rpc
 }
 
 /**
+ * @method string getLogId()
+ * @method $this withLogId($value)
+ */
+class DeleteLogMonitor extends Rpc
+{
+}
+
+/**
  * @method string getResources()
  * @method $this withResources($value)
  * @method string getRuleId()
@@ -1239,8 +1251,6 @@ class DescribeContactListByContactGroup extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getLevel()
- * @method $this withLevel($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
@@ -1255,8 +1265,6 @@ class DescribeCustomEventAttribute extends Rpc
 /**
  * @method string getEventId()
  * @method $this withEventId($value)
- * @method string getLevel()
- * @method $this withLevel($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
@@ -1410,6 +1418,31 @@ class DescribeGroupMonitoringAgentProcess extends Rpc
  * @method $this withId($value)
  */
 class DescribeHostAvailabilityList extends Rpc
+{
+}
+
+/**
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ */
+class DescribeLogMonitorAttribute extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSearchValue()
+ * @method $this withSearchValue($value)
+ */
+class DescribeLogMonitorList extends Rpc
 {
 }
 
@@ -2446,8 +2479,6 @@ class ModifyHostAvailability extends Rpc
 }
 
 /**
- * @method string getIP()
- * @method $this withIP($value)
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getInstanceId()
@@ -3209,6 +3240,101 @@ class PutGroupMetricRule extends Rpc
         $this->options['query']['Escalations.Critical.Threshold'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getSlsLogstore()
+ * @method $this withSlsLogstore($value)
+ * @method string getSlsProject()
+ * @method $this withSlsProject($value)
+ * @method array getValueFilter()
+ * @method string getMetricExpress()
+ * @method $this withMetricExpress($value)
+ * @method string getSlsRegionId()
+ * @method $this withSlsRegionId($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getTumblingwindows()
+ * @method $this withTumblingwindows($value)
+ * @method string getValueFilterRelation()
+ * @method $this withValueFilterRelation($value)
+ * @method string getUnit()
+ * @method $this withUnit($value)
+ * @method array getGroupbys()
+ * @method string getLogId()
+ * @method $this withLogId($value)
+ * @method array getAggregates()
+ */
+class PutLogMonitor extends Rpc
+{
+
+    /**
+     * @param array $valueFilter
+     *
+     * @return $this
+     */
+	public function withValueFilter(array $valueFilter)
+	{
+	    $this->data['ValueFilter'] = $valueFilter;
+		foreach ($valueFilter as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['ValueFilter.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['ValueFilter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Operator'])){
+				$this->options['query']['ValueFilter.' . ($depth1 + 1) . '.Operator'] = $depth1Value['Operator'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $groupbys
+     *
+     * @return $this
+     */
+	public function withGroupbys(array $groupbys)
+	{
+	    $this->data['Groupbys'] = $groupbys;
+		foreach ($groupbys as $depth1 => $depth1Value) {
+			if(isset($depth1Value['FieldName'])){
+				$this->options['query']['Groupbys.' . ($depth1 + 1) . '.FieldName'] = $depth1Value['FieldName'];
+			}
+			if(isset($depth1Value['Alias'])){
+				$this->options['query']['Groupbys.' . ($depth1 + 1) . '.Alias'] = $depth1Value['Alias'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $aggregates
+     *
+     * @return $this
+     */
+	public function withAggregates(array $aggregates)
+	{
+	    $this->data['Aggregates'] = $aggregates;
+		foreach ($aggregates as $depth1 => $depth1Value) {
+			if(isset($depth1Value['FieldName'])){
+				$this->options['query']['Aggregates.' . ($depth1 + 1) . '.FieldName'] = $depth1Value['FieldName'];
+			}
+			if(isset($depth1Value['Function'])){
+				$this->options['query']['Aggregates.' . ($depth1 + 1) . '.Function'] = $depth1Value['Function'];
+			}
+			if(isset($depth1Value['Alias'])){
+				$this->options['query']['Aggregates.' . ($depth1 + 1) . '.Alias'] = $depth1Value['Alias'];
+			}
+		}
+
+		return $this;
     }
 }
 
