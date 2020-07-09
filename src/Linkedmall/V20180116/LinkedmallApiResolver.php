@@ -57,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryMovieSeats queryMovieSeats(array $options = [])
  * @method QueryMovieTickets queryMovieTickets(array $options = [])
  * @method QueryOrderAndPaymentList queryOrderAndPaymentList(array $options = [])
+ * @method QueryOrderCommissionRate queryOrderCommissionRate(array $options = [])
  * @method QueryOrderDetailInner queryOrderDetailInner(array $options = [])
  * @method QueryOrderIdByPayId queryOrderIdByPayId(array $options = [])
  * @method QueryOrderInfoAfterSale queryOrderInfoAfterSale(array $options = [])
@@ -74,6 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ReleaseMovieSeat releaseMovieSeat(array $options = [])
  * @method RemoveAddress removeAddress(array $options = [])
  * @method RemoveMessages removeMessages(array $options = [])
+ * @method RenderH5Order renderH5Order(array $options = [])
  * @method RenderOrder renderOrder(array $options = [])
  * @method RepayForPayUrl repayForPayUrl(array $options = [])
  * @method RepayOrder repayOrder(array $options = [])
@@ -169,8 +171,12 @@ class AddSupplierNewItems extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
 			foreach ($depth1Value['SkuList'] as $i => $iValue) {
 				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($i + 1)] = $iValue;
 			}
@@ -218,8 +224,12 @@ class ApplyRefund extends Rpc
 	{
 	    $this->data['LeavePictureList'] = $leavePictureList;
 		foreach ($leavePictureList as $depth1 => $depth1Value) {
-			$this->options['form_params']['LeavePictureList.' . ($depth1 + 1) . '.Picture'] = $depth1Value['Picture'];
-			$this->options['form_params']['LeavePictureList.' . ($depth1 + 1) . '.Desc'] = $depth1Value['Desc'];
+			if(isset($depth1Value['Picture'])){
+				$this->options['form_params']['LeavePictureList.' . ($depth1 + 1) . '.Picture'] = $depth1Value['Picture'];
+			}
+			if(isset($depth1Value['Desc'])){
+				$this->options['form_params']['LeavePictureList.' . ($depth1 + 1) . '.Desc'] = $depth1Value['Desc'];
+			}
 		}
 
 		return $this;
@@ -365,10 +375,18 @@ class CreateOrder extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['Quantity'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			}
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
+			if(isset($depth1Value['SkuId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			}
 		}
 
 		return $this;
@@ -416,10 +434,18 @@ class CreateOrderV2 extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['Quantity'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			}
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
+			if(isset($depth1Value['SkuId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			}
 		}
 
 		return $this;
@@ -495,10 +521,18 @@ class CreateVirtualProductOrder extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['Quantity'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			}
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
+			if(isset($depth1Value['SkuId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			}
 		}
 
 		return $this;
@@ -773,17 +807,37 @@ class ModifyBasicAndBizItems extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
-			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
 			foreach ($depth1Value['SkuList'] as $depth2 => $depth2Value) {
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.StatusAction'] = $depth2Value['StatusAction'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PriceCent'] = $depth2Value['PriceCent'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PointsAmount'] = $depth2Value['PointsAmount'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Quantity'] = $depth2Value['Quantity'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.BenefitId'] = $depth2Value['BenefitId'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.SkuId'] = $depth2Value['SkuId'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.SupplierPrice'] = $depth2Value['SupplierPrice'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Points'] = $depth2Value['Points'];
+				if(isset($depth2Value['StatusAction'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.StatusAction'] = $depth2Value['StatusAction'];
+				}
+				if(isset($depth2Value['PriceCent'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PriceCent'] = $depth2Value['PriceCent'];
+				}
+				if(isset($depth2Value['PointsAmount'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PointsAmount'] = $depth2Value['PointsAmount'];
+				}
+				if(isset($depth2Value['Quantity'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Quantity'] = $depth2Value['Quantity'];
+				}
+				if(isset($depth2Value['BenefitId'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.BenefitId'] = $depth2Value['BenefitId'];
+				}
+				if(isset($depth2Value['SkuId'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.SkuId'] = $depth2Value['SkuId'];
+				}
+				if(isset($depth2Value['SupplierPrice'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.SupplierPrice'] = $depth2Value['SupplierPrice'];
+				}
+				if(isset($depth2Value['Points'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Points'] = $depth2Value['Points'];
+				}
 			}
 		}
 
@@ -810,16 +864,34 @@ class ModifyBizItems extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
-			$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
 			foreach ($depth1Value['SkuList'] as $depth2 => $depth2Value) {
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.StatusAction'] = $depth2Value['StatusAction'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PriceCent'] = $depth2Value['PriceCent'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PointsAmount'] = $depth2Value['PointsAmount'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Quantity'] = $depth2Value['Quantity'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.BenefitId'] = $depth2Value['BenefitId'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.SkuId'] = $depth2Value['SkuId'];
-				$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Points'] = $depth2Value['Points'];
+				if(isset($depth2Value['StatusAction'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.StatusAction'] = $depth2Value['StatusAction'];
+				}
+				if(isset($depth2Value['PriceCent'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PriceCent'] = $depth2Value['PriceCent'];
+				}
+				if(isset($depth2Value['PointsAmount'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.PointsAmount'] = $depth2Value['PointsAmount'];
+				}
+				if(isset($depth2Value['Quantity'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Quantity'] = $depth2Value['Quantity'];
+				}
+				if(isset($depth2Value['BenefitId'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.BenefitId'] = $depth2Value['BenefitId'];
+				}
+				if(isset($depth2Value['SkuId'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.SkuId'] = $depth2Value['SkuId'];
+				}
+				if(isset($depth2Value['Points'])){
+					$this->options['form_params']['ItemList.' . ($depth1 + 1) . '.SkuList.' . ($depth2 + 1) . '.Points'] = $depth2Value['Points'];
+				}
 			}
 		}
 
@@ -1104,11 +1176,15 @@ class QueryItemInventory extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
 			foreach ($depth1Value['SkuIdList'] as $i => $iValue) {
 				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuIdList.' . ($i + 1)] = $iValue;
 			}
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
 		}
 
 		return $this;
@@ -1219,6 +1295,24 @@ class QueryMovieTickets extends Rpc
  * @method $this withPageSize($value)
  */
 class QueryOrderAndPaymentList extends Rpc
+{
+}
+
+/**
+ * @method string getLmOrderId()
+ * @method $this withLmOrderId($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class QueryOrderCommissionRate extends Rpc
 {
 }
 
@@ -1494,10 +1588,30 @@ class RemoveMessages extends Rpc
 }
 
 /**
+ * @method string getBuyOrderRequestModel()
+ * @method $this withBuyOrderRequestModel($value)
+ * @method string getBizUid()
+ * @method $this withBizUid($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getUseAnonymousTbAccount()
+ * @method $this withUseAnonymousTbAccount($value)
+ * @method string getThirdPartyUserId()
+ * @method $this withThirdPartyUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class RenderH5Order extends Rpc
+{
+}
+
+/**
  * @method string getBizUid()
  * @method $this withBizUid($value)
  * @method string getExtJson()
  * @method $this withExtJson($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getLmItemId()
@@ -1522,10 +1636,18 @@ class RenderOrder extends Rpc
 	{
 	    $this->data['ItemList'] = $itemList;
 		foreach ($itemList as $depth1 => $depth1Value) {
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
-			$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			if(isset($depth1Value['ItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['Quantity'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.Quantity'] = $depth1Value['Quantity'];
+			}
+			if(isset($depth1Value['LmItemId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.LmItemId'] = $depth1Value['LmItemId'];
+			}
+			if(isset($depth1Value['SkuId'])){
+				$this->options['query']['ItemList.' . ($depth1 + 1) . '.SkuId'] = $depth1Value['SkuId'];
+			}
 		}
 
 		return $this;

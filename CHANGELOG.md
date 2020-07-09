@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.373 - 2020-7-9
+- Add accountType for renderOrder.
+
+
 ## 1.8.372 - 2020-7-9
 - Add Log Monitoring API.
 - Add and modify non Alibaba Cloud host name API.
