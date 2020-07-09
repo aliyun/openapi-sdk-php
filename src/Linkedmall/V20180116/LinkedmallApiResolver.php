@@ -634,6 +634,8 @@ class GetCategoryList extends Rpc
  * @method $this withCuid($value)
  * @method string getBizUid()
  * @method $this withBizUid($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
  * @method string getUseAnonymousTbAccount()
  * @method $this withUseAnonymousTbAccount($value)
  * @method string getNick()

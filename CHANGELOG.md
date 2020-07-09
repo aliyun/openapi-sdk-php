@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.374 - 2020-7-9
+- Add accountType for customer service.
+
+
 ## 1.8.373 - 2020-7-9
 - Add accountType for renderOrder.
 
