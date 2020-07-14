@@ -61,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateSubscribeRelation createSubscribeRelation(array $options = [])
  * @method CreateThingModel createThingModel(array $options = [])
  * @method CreateTopicRouteTable createTopicRouteTable(array $options = [])
+ * @method DeleteClientIds deleteClientIds(array $options = [])
  * @method DeleteConsumerGroup deleteConsumerGroup(array $options = [])
  * @method DeleteConsumerGroupSubscribeRelation deleteConsumerGroupSubscribeRelation(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
@@ -121,6 +122,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryAppDeviceList queryAppDeviceList(array $options = [])
  * @method QueryBatchRegisterDeviceStatus queryBatchRegisterDeviceStatus(array $options = [])
  * @method QueryCertUrlByApplyId queryCertUrlByApplyId(array $options = [])
+ * @method QueryClientIds queryClientIds(array $options = [])
  * @method QueryConsumerGroupByGroupId queryConsumerGroupByGroupId(array $options = [])
  * @method QueryConsumerGroupList queryConsumerGroupList(array $options = [])
  * @method QueryConsumerGroupStatus queryConsumerGroupStatus(array $options = [])
@@ -187,6 +189,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetProductCertInfo setProductCertInfo(array $options = [])
  * @method StartRule startRule(array $options = [])
  * @method StopRule stopRule(array $options = [])
+ * @method TransformClientId transformClientId(array $options = [])
  * @method TriggerSceneRule triggerSceneRule(array $options = [])
  * @method UnbindApplicationFromEdgeInstance unbindApplicationFromEdgeInstance(array $options = [])
  * @method UnbindDriverFromEdgeInstance unbindDriverFromEdgeInstance(array $options = [])
@@ -2671,6 +2674,8 @@ class CreateOTAFirmware extends Rpc
  * @method $this withIotInstanceId($value)
  * @method string getTargetSelection()
  * @method $this withTargetSelection($value)
+ * @method string getScheduleFinishTime()
+ * @method $this withScheduleFinishTime($value)
  * @method string getGrayPercent()
  * @method $this withGrayPercent($value)
  * @method string getFirmwareId()
@@ -3251,6 +3256,46 @@ class CreateTopicRouteTable extends Rpc
 
 		return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAuthConfig()
+ * @method $this withAuthConfig($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteClientIds extends Rpc
+{
 
     /**
      * @param string $value
@@ -5890,6 +5935,46 @@ class QueryBatchRegisterDeviceStatus extends Rpc
  * @method string getApiRevision()
  */
 class QueryCertUrlByApplyId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAuthConfig()
+ * @method $this withAuthConfig($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QueryClientIds extends Rpc
 {
 
     /**
@@ -8816,6 +8901,48 @@ class StopRule extends Rpc
 }
 
 /**
+ * @method string getAuthConfig()
+ * @method $this withAuthConfig($value)
+ * @method string getClientId()
+ * @method $this withClientId($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class TransformClientId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getInstanceId()
@@ -9062,6 +9189,8 @@ class UpdateDeviceGroup extends Rpc
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
+ * @method string getDeltaUpdate()
+ * @method $this withDeltaUpdate($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
  * @method string getDeviceName()

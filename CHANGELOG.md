@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.379 - 2020-7-14
+- Add Dynamic Registration APIs, including TransformClientId, DeleteClientIds, QueryClientIds, etc.
+- Update OTA API, including CreateOTAStaticUpgradeJob and QueryOTAJob.
+- Update Device Shadow API UpdateDeviceShadow.
+
+
 ## 1.8.378 - 2020-7-14
 - Support Web SDK.
 
