@@ -33,6 +33,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDnsProductInstance describeDnsProductInstance(array $options = [])
  * @method DescribeDnsProductInstances describeDnsProductInstances(array $options = [])
  * @method DescribeDNSSLBSubDomains describeDNSSLBSubDomains(array $options = [])
+ * @method DescribeDohAccountStatistics describeDohAccountStatistics(array $options = [])
+ * @method DescribeDohDomainStatistics describeDohDomainStatistics(array $options = [])
+ * @method DescribeDohDomainStatisticsSummary describeDohDomainStatisticsSummary(array $options = [])
+ * @method DescribeDohSubDomainStatistics describeDohSubDomainStatistics(array $options = [])
+ * @method DescribeDohSubDomainStatisticsSummary describeDohSubDomainStatisticsSummary(array $options = [])
+ * @method DescribeDohUserInfo describeDohUserInfo(array $options = [])
  * @method DescribeDomainDnssecInfo describeDomainDnssecInfo(array $options = [])
  * @method DescribeDomainGroups describeDomainGroups(array $options = [])
  * @method DescribeDomainInfo describeDomainInfo(array $options = [])
@@ -113,7 +119,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'alidns';
+    public $serviceCode = 'Alidns';
 }
 
 /**
@@ -634,6 +640,104 @@ class DescribeDnsProductInstances extends Rpc
  * @method $this withLang($value)
  */
 class DescribeDNSSLBSubDomains extends Rpc
+{
+}
+
+/**
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDohAccountStatistics extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDohDomainStatistics extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ */
+class DescribeDohDomainStatisticsSummary extends Rpc
+{
+}
+
+/**
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getSubDomain()
+ * @method $this withSubDomain($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDohSubDomainStatistics extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSubDomain()
+ * @method $this withSubDomain($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ */
+class DescribeDohSubDomainStatisticsSummary extends Rpc
+{
+}
+
+/**
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDohUserInfo extends Rpc
 {
 }
 

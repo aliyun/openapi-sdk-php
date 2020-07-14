@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.8.376 - 2020-7-14
+- Supported API for DescribeDohUserInfo.
+- Supported API for DescribeDohAccountStatistics.
+- Supported API for DescribeDohDomainStatistics.
+- Supported API for DescribeDohDomainStatisticsSummary.
+- Supported API for DescribeDohSubDomainStatistics.
+- Supported API for DescribeDohSubDomainStatisticsSummary.
+
+
 ## 1.8.375 - 2020-7-10
 - Sdk for 109.
 
