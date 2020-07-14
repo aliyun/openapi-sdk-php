@@ -854,10 +854,12 @@ class DetectFaceAttributes extends Rpc
  * @method $this withDeviceToken($value)
  * @method string getCertifyId()
  * @method $this withCertifyId($value)
+ * @method string getWebUmidToken()
  * @method string getOuterOrderNo()
  * @method $this withOuterOrderNo($value)
  * @method string getProduceNode()
  * @method $this withProduceNode($value)
+ * @method string getUaToken()
  * @method string getProductName()
  * @method $this withProductName($value)
  * @method string getCertifyPrincipal()
@@ -867,6 +869,32 @@ class DetectFaceAttributes extends Rpc
  */
 class InitDevice extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWebUmidToken($value)
+    {
+        $this->data['WebUmidToken'] = $value;
+        $this->options['form_params']['WebUmidToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUaToken($value)
+    {
+        $this->data['UaToken'] = $value;
+        $this->options['form_params']['UaToken'] = $value;
+
+        return $this;
+    }
 }
 
 /**

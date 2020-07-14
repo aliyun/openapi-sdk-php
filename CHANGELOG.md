@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.378 - 2020-7-14
+- Support Web SDK.
+
+
 ## 1.8.377 - 2020-7-14
 - Fixed bug for service code.
 
