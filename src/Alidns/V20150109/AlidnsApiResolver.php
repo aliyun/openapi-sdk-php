@@ -119,7 +119,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'Alidns';
+    public $serviceCode = 'alidns';
 }
 
 /**

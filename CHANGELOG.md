@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.377 - 2020-7-14
+- Fixed bug for service code.
+
+
 ## 1.8.376 - 2020-7-14
 - Supported API for DescribeDohUserInfo.
 - Supported API for DescribeDohAccountStatistics.
