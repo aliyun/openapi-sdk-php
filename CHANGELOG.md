@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.380 - 2020-7-15
+- Support ModifyImageAttribute by LaunchPermission.
+- Support ImageFamily.
+
+
 ## 1.8.379 - 2020-7-14
 - Add Dynamic Registration APIs, including TransformClientId, DeleteClientIds, QueryClientIds, etc.
 - Update OTA API, including CreateOTAStaticUpgradeJob and QueryOTAJob.
