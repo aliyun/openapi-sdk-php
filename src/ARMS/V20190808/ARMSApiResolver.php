@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddIntegration addIntegration(array $options = [])
  * @method CheckDataConsistency checkDataConsistency(array $options = [])
  * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
+ * @method ConfigApp configApp(array $options = [])
  * @method CreateAlertContact createAlertContact(array $options = [])
  * @method CreateAlertContactGroup createAlertContactGroup(array $options = [])
  * @method CreateRetcodeApp createRetcodeApp(array $options = [])
@@ -115,6 +116,16 @@ class CheckDataConsistency extends Rpc
  * @method $this withServiceName($value)
  */
 class CheckServiceLinkedRoleForDeleting extends Rpc
+{
+}
+
+/**
+ * @method string getAppIds()
+ * @method $this withAppIds($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ */
+class ConfigApp extends Rpc
 {
 }
 

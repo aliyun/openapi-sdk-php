@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.381 - 2020-7-15
+- Edit ListTraceApp api.
+- Edit SearchTraceAppByName api.
+- Edut SearchTraceAppByPage api.
+
+
 ## 1.8.380 - 2020-7-15
 - Support ModifyImageAttribute by LaunchPermission.
 - Support ImageFamily.
