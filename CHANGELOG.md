@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.382 - 2020-7-16
+- Add more OpenAPIs related to QueryProcessor, FirstRank, SecondRank, etc.
+
+
 ## 1.8.381 - 2020-7-15
 - Edit ListTraceApp api.
 - Edit SearchTraceAppByName api.
