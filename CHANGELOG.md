@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.383 - 2020-7-17
+- Add actions.
+
+
 ## 1.8.382 - 2020-7-16
 - Add more OpenAPIs related to QueryProcessor, FirstRank, SecondRank, etc.
 
