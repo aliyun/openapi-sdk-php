@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeJobErrorCode describeJobErrorCode(array $options = [])
  * @method DescribeNodeCidrList describeNodeCidrList(array $options = [])
  * @method DescribePreCheckProgressList describePreCheckProgressList(array $options = [])
+ * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRestoreRangeInfo describeRestoreRangeInfo(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
  * @method ModifyBackupObjects modifyBackupObjects(array $options = [])
@@ -83,6 +84,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withDuplicationArchivePeriod($value)
  * @method string getCrossAliyunId()
  * @method $this withCrossAliyunId($value)
+ * @method string getAutoStartBackup()
+ * @method $this withAutoStartBackup($value)
  * @method string getSourceEndpointPassword()
  * @method $this withSourceEndpointPassword($value)
  * @method string getBackupObjects()
@@ -303,6 +306,8 @@ class DescribeBackupSetDownloadTaskList extends Rpc
  * @method $this withClientToken($value)
  * @method string getBackupPlanId()
  * @method $this withBackupPlanId($value)
+ * @method string getBackupSetId()
+ * @method $this withBackupSetId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerId()
@@ -375,6 +380,16 @@ class DescribePreCheckProgressList extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeRegions extends Rpc
+{
+}
+
+/**
  * @method string getBeginTimestampForRestore()
  * @method $this withBeginTimestampForRestore($value)
  * @method string getEndTimestampForRestore()
@@ -385,6 +400,8 @@ class DescribePreCheckProgressList extends Rpc
  * @method $this withBackupPlanId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRecentlyRestore()
+ * @method $this withRecentlyRestore($value)
  */
 class DescribeRestoreRangeInfo extends Rpc
 {

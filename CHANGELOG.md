@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.384 - 2020-7-17
+- Add DescribeRegions.
+- Modify DescribeFullBackupList.
+- Modify DescribeBackupPlanList.
+- Modify DescribeRestoreRangeInfo.
+
+
 ## 1.8.383 - 2020-7-17
 - Add actions.
 
