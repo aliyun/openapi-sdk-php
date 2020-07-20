@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.385 - 2020-7-20
+- Add actions.
+
+
 ## 1.8.384 - 2020-7-17
 - Add DescribeRegions.
 - Modify DescribeFullBackupList.
