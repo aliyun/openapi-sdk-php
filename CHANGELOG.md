@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.386 - 2020-7-21
+- Add algorithm type for ListPerson.
+
+
 ## 1.8.385 - 2020-7-20
 - Add actions.
 
