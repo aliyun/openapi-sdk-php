@@ -34,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPersons listPersons(array $options = [])
  * @method RecognizeFaceQuality recognizeFaceQuality(array $options = [])
  * @method RecognizeImage recognizeImage(array $options = [])
+ * @method SaveVideoSummaryTaskVideo saveVideoSummaryTaskVideo(array $options = [])
  * @method SearchBody searchBody(array $options = [])
  * @method SearchFace searchFace(array $options = [])
  * @method StopMonitor stopMonitor(array $options = [])
@@ -63,6 +64,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getCorpId()
  * @method string getDescription()
  * @method string getDataSourceName()
+ * @method string getFileRetentionDays()
  */
 class AddDataSource extends Rpc
 {
@@ -115,6 +117,19 @@ class AddDataSource extends Rpc
     {
         $this->data['DataSourceName'] = $value;
         $this->options['form_params']['DataSourceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileRetentionDays($value)
+    {
+        $this->data['FileRetentionDays'] = $value;
+        $this->options['form_params']['FileRetentionDays'] = $value;
 
         return $this;
     }
@@ -2033,6 +2048,54 @@ class RecognizeImage extends Rpc
     {
         $this->data['PicFormat'] = $value;
         $this->options['form_params']['PicFormat'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getSaveVideo()
+ * @method string getTaskId()
+ */
+class SaveVideoSummaryTaskVideo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSaveVideo($value)
+    {
+        $this->data['SaveVideo'] = $value;
+        $this->options['form_params']['SaveVideo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.388 - 2020-7-22
+- Add source id for file uploader.
+
+
 ## 1.8.387 - 2020-7-21
 - Support Tag API.
 
