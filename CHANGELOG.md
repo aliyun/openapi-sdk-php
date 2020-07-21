@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.387 - 2020-7-21
+- Support Tag API.
+
+
 ## 1.8.386 - 2020-7-21
 - Add algorithm type for ListPerson.
 
