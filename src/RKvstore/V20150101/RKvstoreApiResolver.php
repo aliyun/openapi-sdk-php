@@ -26,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCacheAnalysisReport describeCacheAnalysisReport(array $options = [])
  * @method DescribeCacheAnalysisReportList describeCacheAnalysisReportList(array $options = [])
  * @method DescribeDBInstanceNetInfo describeDBInstanceNetInfo(array $options = [])
+ * @method DescribeDedicatedClusterInstanceList describeDedicatedClusterInstanceList(array $options = [])
  * @method DescribeDedicatedUserCluster describeDedicatedUserCluster(array $options = [])
  * @method DescribeHistoryMonitorValues describeHistoryMonitorValues(array $options = [])
  * @method DescribeInstanceAttribute describeInstanceAttribute(array $options = [])
@@ -51,7 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTagResources listTagResources(array $options = [])
  * @method MigrateToOtherZone migrateToOtherZone(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
- * @method ModifyAuditLogConfig modifyAuditLogConfig(array $options = [])
+ * @method ModifyAccountPassword modifyAccountPassword(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
  * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
  * @method ModifyDedicatedInstanceSpec modifyDedicatedInstanceSpec(array $options = [])
@@ -78,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RestartInstance restartInstance(array $options = [])
  * @method RestoreInstance restoreInstance(array $options = [])
  * @method SwitchNetwork switchNetwork(array $options = [])
+ * @method SyncDtsStatus syncDtsStatus(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TransformToPrePaid transformToPrePaid(array $options = [])
  * @method UntagResources untagResources(array $options = [])
@@ -312,6 +314,8 @@ class CreateDedicatedUserCluster extends Rpc
  * @method $this withCapacity($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getDedicatedHostGroupId()
+ * @method $this withDedicatedHostGroupId($value)
  * @method string getRestoreTime()
  * @method $this withRestoreTime($value)
  * @method string getResourceOwnerAccount()
@@ -686,6 +690,40 @@ class DescribeDBInstanceNetInfo extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getInstanceStatus()
+ * @method $this withInstanceStatus($value)
+ * @method string getDedicatedHostName()
+ * @method $this withDedicatedHostName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getInstanceNetType()
+ * @method $this withInstanceNetType($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeDedicatedClusterInstanceList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
@@ -1039,6 +1077,8 @@ class DescribeRegions extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getQueryKeyword()
+ * @method $this withQueryKeyword($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getOwnerId()
@@ -1047,6 +1087,10 @@ class DescribeRegions extends Rpc
  * @method $this withInstanceId($value)
  * @method string getDBName()
  * @method $this withDBName($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
  */
 class DescribeRunningLogRecords extends Rpc
 {
@@ -1366,12 +1410,14 @@ class ModifyAccountDescription extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getNewAccountPassword()
+ * @method $this withNewAccountPassword($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getAuditCommand()
- * @method $this withAuditCommand($value)
- * @method string getRetention()
- * @method $this withRetention($value)
+ * @method string getOldAccountPassword()
+ * @method $this withOldAccountPassword($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1381,7 +1427,7 @@ class ModifyAccountDescription extends Rpc
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
-class ModifyAuditLogConfig extends Rpc
+class ModifyAccountPassword extends Rpc
 {
 }
 
@@ -2010,6 +2056,26 @@ class RestoreInstance extends Rpc
  * @method $this withVpcId($value)
  */
 class SwitchNetwork extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class SyncDtsStatus extends Rpc
 {
 }
 

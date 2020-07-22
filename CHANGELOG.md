@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.390 - 2020-7-22
+- Generated 2015-01-01 for `R-kvstore`.
+- Add SyncDtsStatus API.
+
+
 ## 1.8.389 - 2020-7-22
 - Add source id for file uploader.
 
