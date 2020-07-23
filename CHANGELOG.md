@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.391 - 2020-7-23
+- Add GenerateAndExportDataKey, ExportDataKey, ReEncrypt api.
+
+
 ## 1.8.390 - 2020-7-22
 - Generated 2015-01-01 for `R-kvstore`.
 - Add SyncDtsStatus API.
