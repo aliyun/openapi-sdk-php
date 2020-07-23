@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.393 - 2020-7-23
+- Add AddSecretBlacklist and DeleteSecretBlacklist.
+- Suppoort ASR.
+
+
 ## 1.8.392 - 2020-7-23
 - Add GenerateAndExportDataKey, ExportDataKey, ReEncrypt api.
 

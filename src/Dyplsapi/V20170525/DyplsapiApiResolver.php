@@ -6,12 +6,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddAxnTrackNo addAxnTrackNo(array $options = [])
+ * @method AddSecretBlacklist addSecretBlacklist(array $options = [])
  * @method BindAxb bindAxb(array $options = [])
  * @method BindAxg bindAxg(array $options = [])
  * @method BindAxn bindAxn(array $options = [])
  * @method BindAxnExtension bindAxnExtension(array $options = [])
  * @method BuySecretNo buySecretNo(array $options = [])
  * @method CreateAxgGroup createAxgGroup(array $options = [])
+ * @method DeleteSecretBlacklist deleteSecretBlacklist(array $options = [])
+ * @method GetSecretAsrDetail getSecretAsrDetail(array $options = [])
+ * @method LockSecretNo lockSecretNo(array $options = [])
  * @method OperateAxgGroup operateAxgGroup(array $options = [])
  * @method OperateBlackNo operateBlackNo(array $options = [])
  * @method QueryCallStatus queryCallStatus(array $options = [])
@@ -22,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySubsId querySubsId(array $options = [])
  * @method ReleaseSecretNo releaseSecretNo(array $options = [])
  * @method UnbindSubscription unbindSubscription(array $options = [])
+ * @method UnlockSecretNo unlockSecretNo(array $options = [])
  * @method UpdateSubscription updateSubscription(array $options = [])
  */
 class DyplsapiApiResolver extends ApiResolver
@@ -76,6 +81,26 @@ class AddAxnTrackNo extends Rpc
 }
 
 /**
+ * @method string getBlackType()
+ * @method $this withBlackType($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPoolKey()
+ * @method $this withPoolKey($value)
+ * @method string getBlackNo()
+ * @method $this withBlackNo($value)
+ */
+class AddSecretBlacklist extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getCallDisplayType()
@@ -84,6 +109,8 @@ class AddAxnTrackNo extends Rpc
  * @method $this withPhoneNoX($value)
  * @method string getRingConfig()
  * @method $this withRingConfig($value)
+ * @method string getASRStatus()
+ * @method $this withASRStatus($value)
  * @method string getPhoneNoB()
  * @method $this withPhoneNoB($value)
  * @method string getPhoneNoA()
@@ -104,6 +131,8 @@ class AddAxnTrackNo extends Rpc
  * @method $this withIsRecordingEnabled($value)
  * @method string getOutId()
  * @method $this withOutId($value)
+ * @method string getASRModelId()
+ * @method $this withASRModelId($value)
  * @method string getCallRestrict()
  * @method $this withCallRestrict($value)
  */
@@ -120,6 +149,8 @@ class BindAxb extends Rpc
  * @method $this withPhoneNoX($value)
  * @method string getRingConfig()
  * @method $this withRingConfig($value)
+ * @method string getASRStatus()
+ * @method $this withASRStatus($value)
  * @method string getPhoneNoB()
  * @method $this withPhoneNoB($value)
  * @method string getPhoneNoA()
@@ -142,6 +173,8 @@ class BindAxb extends Rpc
  * @method $this withIsRecordingEnabled($value)
  * @method string getOutId()
  * @method $this withOutId($value)
+ * @method string getASRModelId()
+ * @method $this withASRModelId($value)
  */
 class BindAxg extends Rpc
 {
@@ -156,6 +189,8 @@ class BindAxg extends Rpc
  * @method $this withPhoneNoX($value)
  * @method string getRingConfig()
  * @method $this withRingConfig($value)
+ * @method string getASRStatus()
+ * @method $this withASRStatus($value)
  * @method string getPhoneNoB()
  * @method $this withPhoneNoB($value)
  * @method string getPhoneNoA()
@@ -178,6 +213,8 @@ class BindAxg extends Rpc
  * @method $this withOutId($value)
  * @method string getNoType()
  * @method $this withNoType($value)
+ * @method string getASRModelId()
+ * @method $this withASRModelId($value)
  */
 class BindAxn extends Rpc
 {
@@ -194,6 +231,8 @@ class BindAxn extends Rpc
  * @method $this withPhoneNoX($value)
  * @method string getRingConfig()
  * @method $this withRingConfig($value)
+ * @method string getASRStatus()
+ * @method $this withASRStatus($value)
  * @method string getPhoneNoB()
  * @method $this withPhoneNoB($value)
  * @method string getPhoneNoA()
@@ -214,6 +253,8 @@ class BindAxn extends Rpc
  * @method $this withIsRecordingEnabled($value)
  * @method string getOutId()
  * @method $this withOutId($value)
+ * @method string getASRModelId()
+ * @method $this withASRModelId($value)
  */
 class BindAxnExtension extends Rpc
 {
@@ -258,6 +299,60 @@ class BuySecretNo extends Rpc
  * @method $this withName($value)
  */
 class CreateAxgGroup extends Rpc
+{
+}
+
+/**
+ * @method string getBlackType()
+ * @method $this withBlackType($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPoolKey()
+ * @method $this withPoolKey($value)
+ * @method string getBlackNo()
+ * @method $this withBlackNo($value)
+ */
+class DeleteSecretBlacklist extends Rpc
+{
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCallTime()
+ * @method $this withCallTime($value)
+ * @method string getPoolKey()
+ * @method $this withPoolKey($value)
+ */
+class GetSecretAsrDetail extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPoolKey()
+ * @method $this withPoolKey($value)
+ * @method string getSecretNo()
+ * @method $this withSecretNo($value)
+ */
+class LockSecretNo extends Rpc
 {
 }
 
@@ -460,6 +555,22 @@ class UnbindSubscription extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPoolKey()
+ * @method $this withPoolKey($value)
+ * @method string getSecretNo()
+ * @method $this withSecretNo($value)
+ */
+class UnlockSecretNo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getCallDisplayType()
  * @method $this withCallDisplayType($value)
  * @method string getProductType()
@@ -470,6 +581,8 @@ class UnbindSubscription extends Rpc
  * @method $this withPhoneNoX($value)
  * @method string getRingConfig()
  * @method $this withRingConfig($value)
+ * @method string getASRStatus()
+ * @method $this withASRStatus($value)
  * @method string getPhoneNoB()
  * @method $this withPhoneNoB($value)
  * @method string getPhoneNoA()
@@ -490,6 +603,8 @@ class UnbindSubscription extends Rpc
  * @method $this withIsRecordingEnabled($value)
  * @method string getOperateType()
  * @method $this withOperateType($value)
+ * @method string getASRModelId()
+ * @method $this withASRModelId($value)
  * @method string getCallRestrict()
  * @method $this withCallRestrict($value)
  */
