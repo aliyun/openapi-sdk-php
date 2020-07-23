@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.392 - 2020-7-23
+- Add GenerateAndExportDataKey, ExportDataKey, ReEncrypt api.
+
+
 ## 1.8.391 - 2020-7-23
 - Add GenerateAndExportDataKey, ExportDataKey, ReEncrypt api.
 
