@@ -39,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAppResourceAlloc describeAppResourceAlloc(array $options = [])
  * @method DescribeDatabases describeDatabases(array $options = [])
  * @method DescribeDeployOrderDetail describeDeployOrderDetail(array $options = [])
+ * @method DescribeJobLog describeJobLog(array $options = [])
  * @method DescribePodEvents describePodEvents(array $options = [])
  * @method DescribePodLog describePodLog(array $options = [])
  * @method DescribeRdsAccounts describeRdsAccounts(array $options = [])
@@ -57,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListClusterNode listClusterNode(array $options = [])
  * @method ListDeployConfig listDeployConfig(array $options = [])
  * @method ListDeployOrders listDeployOrders(array $options = [])
+ * @method ListJobHistories listJobHistories(array $options = [])
  * @method ListNodeLabelBindings listNodeLabelBindings(array $options = [])
  * @method ListNodeLabels listNodeLabels(array $options = [])
  * @method ListPersistentVolume listPersistentVolume(array $options = [])
@@ -68,6 +70,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyService modifyService(array $options = [])
  * @method ModifySlbAP modifySlbAP(array $options = [])
  * @method QueryClusterDetail queryClusterDetail(array $options = [])
+ * @method RebuildAppInstance rebuildAppInstance(array $options = [])
  * @method RemoveClusterNode removeClusterNode(array $options = [])
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method ResourceStatusNotify resourceStatusNotify(array $options = [])
@@ -537,6 +540,8 @@ class CreateDb extends Rpc
  * @method string getName()
  * @method $this withName($value)
  * @method array getSecretList()
+ * @method string getCronJob()
+ * @method $this withCronJob($value)
  * @method string getDeployment()
  * @method $this withDeployment($value)
  */
@@ -1093,6 +1098,21 @@ class DescribeDeployOrderDetail extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPodName()
+ * @method $this withPodName($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ */
+class DescribeJobLog extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getDeployOrderId()
  * @method $this withDeployOrderId($value)
  * @method string getAppInstId()
@@ -1617,6 +1637,25 @@ class ListDeployOrders extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListJobHistories extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getLabelKey()
@@ -1896,6 +1935,18 @@ class QueryClusterDetail extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ * @method string getAppInstanceId()
+ * @method $this withAppInstanceId($value)
+ */
+class RebuildAppInstance extends Rpc
+{
+}
+
+/**
  * @method array getEcsInstanceIdList()
  * @method string getClusterInstanceId()
  * @method $this withClusterInstanceId($value)
@@ -2172,6 +2223,8 @@ class UpdateApp extends Rpc
  * @method array getSecretList()
  * @method string getId()
  * @method $this withId($value)
+ * @method string getCronJob()
+ * @method $this withCronJob($value)
  * @method string getDeployment()
  * @method $this withDeployment($value)
  */

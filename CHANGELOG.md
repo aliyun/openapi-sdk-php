@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.395 - 2020-7-23
+- Supported AAA for BBB.
+- Fixed bugs for CCC.
+
+
 ## 1.8.394 - 2020-7-23
 - Update OTA API, including GenerateOTAUploadURL.
 
