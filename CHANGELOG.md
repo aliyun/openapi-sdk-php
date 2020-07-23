@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.396 - 2020-7-23
+- Supported CloudGame.
+
+
 ## 1.8.395 - 2020-7-23
 - Supported AAA for BBB.
 - Fixed bugs for CCC.
