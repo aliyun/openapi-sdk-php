@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.394 - 2020-7-23
+- Update OTA API, including GenerateOTAUploadURL.
+
+
 ## 1.8.393 - 2020-7-23
 - Add AddSecretBlacklist and DeleteSecretBlacklist.
 - Suppoort ASR.
