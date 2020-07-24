@@ -48,6 +48,7 @@ namespace AlibabaCloud;
  * @method static Cloudmarketing\Cloudmarketing cloudmarketing()
  * @method static Cloudwf\Cloudwf cloudwf()
  * @method static Cms\Cms cms()
+ * @method static Codeup\Codeup codeup()
  * @method static Commondriver\Commondriver commondriver()
  * @method static Companyreg\Companyreg companyreg()
  * @method static Cr\Cr cr()

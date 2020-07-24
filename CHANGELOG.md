@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.397 - 2020-7-24
+- First build.
+
+
 ## 1.8.396 - 2020-7-23
 - Supported CloudGame.
 
