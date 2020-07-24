@@ -47,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDocIndexTask getDocIndexTask(array $options = [])
  * @method GetDRMLicense getDRMLicense(array $options = [])
  * @method GetImage getImage(array $options = [])
+ * @method GetImageCroppingSuggestions getImageCroppingSuggestions(array $options = [])
  * @method GetImageJob getImageJob(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method GetOfficeConversionTask getOfficeConversionTask(array $options = [])
@@ -95,9 +96,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'imm';
 }
 
 /**
@@ -503,6 +501,8 @@ class CreateVideoProduceTask extends Rpc
  * @method $this withWatermarkType($value)
  * @method string getTargetUri()
  * @method $this withTargetUri($value)
+ * @method string getModel()
+ * @method $this withModel($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
  * @method string getOriginalImageUri()
@@ -707,6 +707,8 @@ class DetectQRCodes extends Rpc
  * @method $this withWatermarkType($value)
  * @method string getTargetUri()
  * @method $this withTargetUri($value)
+ * @method string getModel()
+ * @method $this withModel($value)
  * @method string getTargetImageType()
  * @method $this withTargetImageType($value)
  * @method string getImageUri()
@@ -857,6 +859,18 @@ class GetDRMLicense extends Rpc
  * @method $this withSetId($value)
  */
 class GetImage extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getAspectRatios()
+ * @method $this withAspectRatios($value)
+ * @method string getImageUri()
+ * @method $this withImageUri($value)
+ */
+class GetImageCroppingSuggestions extends Rpc
 {
 }
 
@@ -1061,16 +1075,30 @@ class IndexVideo extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getRemarksBQuery()
+ * @method $this withRemarksBQuery($value)
+ * @method string getExternalId()
+ * @method $this withExternalId($value)
  * @method string getLimit()
  * @method $this withLimit($value)
+ * @method string getRemarksArrayBQuery()
+ * @method $this withRemarksArrayBQuery($value)
  * @method string getOrder()
  * @method $this withOrder($value)
+ * @method string getRemarksAQuery()
+ * @method $this withRemarksAQuery($value)
  * @method string getOrderBy()
  * @method $this withOrderBy($value)
+ * @method string getRemarksDQuery()
+ * @method $this withRemarksDQuery($value)
+ * @method string getRemarksArrayAQuery()
+ * @method $this withRemarksArrayAQuery($value)
  * @method string getMarker()
  * @method $this withMarker($value)
  * @method string getSetId()
  * @method $this withSetId($value)
+ * @method string getRemarksCQuery()
+ * @method $this withRemarksCQuery($value)
  */
 class ListFaceGroups extends Rpc
 {
@@ -1335,10 +1363,24 @@ class UpdateDocIndexMeta extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getExternalId()
+ * @method $this withExternalId($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getRemarksB()
+ * @method $this withRemarksB($value)
+ * @method string getRemarksA()
+ * @method $this withRemarksA($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
+ * @method string getRemarksArrayA()
+ * @method $this withRemarksArrayA($value)
+ * @method string getRemarksArrayB()
+ * @method $this withRemarksArrayB($value)
+ * @method string getRemarksD()
+ * @method $this withRemarksD($value)
+ * @method string getRemarksC()
+ * @method $this withRemarksC($value)
  * @method string getSetId()
  * @method $this withSetId($value)
  * @method string getGroupCoverFaceId()

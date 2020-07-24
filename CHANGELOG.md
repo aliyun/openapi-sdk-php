@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.398 - 2020-7-24
+- Support GetImageCroppingSuggestions API.
+- Add Remarks to face group related APIs.
+- Add Model parameter to blind watermark related APIs.
+
+
 ## 1.8.397 - 2020-7-24
 - First build.
 
