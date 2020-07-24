@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.399 - 2020-7-24
+- Edit ListTraceApp api with add tags.
+- Edit SearchTraceAppByName api with add tags.
+- Edut SearchTraceAppByPage api with add tags.
+
+
 ## 1.8.398 - 2020-7-24
 - Support GetImageCroppingSuggestions API.
 - Add Remarks to face group related APIs.
