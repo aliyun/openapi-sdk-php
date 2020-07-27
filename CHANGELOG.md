@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.400 - 2020-7-27
+- Add HSF apis.
+
+
 ## 1.8.399 - 2020-7-24
 - Edit ListTraceApp api with add tags.
 - Edit SearchTraceAppByName api with add tags.
