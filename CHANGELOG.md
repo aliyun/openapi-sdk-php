@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.401 - 2020-7-27
+- Supported CheckCloudResourceAuthorized API.
+
+
 ## 1.8.400 - 2020-7-27
 - Add HSF apis.
 
