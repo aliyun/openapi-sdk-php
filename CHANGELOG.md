@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.402 - 2020-7-28
+- Generated 2018-10-12 for `Airec`.
+
+
 ## 1.8.401 - 2020-7-27
 - Supported CheckCloudResourceAuthorized API.
 

@@ -60,6 +60,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PushDocument pushDocument(array $options = [])
  * @method PushIntervention pushIntervention(array $options = [])
  * @method QueryDataMessage queryDataMessage(array $options = [])
+ * @method QueryDataMessageStatistics queryDataMessageStatistics(array $options = [])
  * @method QueryExceptionHistory queryExceptionHistory(array $options = [])
  * @method QueryRawData queryRawData(array $options = [])
  * @method QuerySingleAggregationReport querySingleAggregationReport(array $options = [])
@@ -1022,7 +1023,10 @@ class ListDiversify extends Roa
 
 /**
  * @method string getSize()
+ * @method string getName()
+ * @method string getExpiredTime()
  * @method string getPage()
+ * @method string getStatus()
  */
 class ListInstance extends Roa
 {
@@ -1047,10 +1051,49 @@ class ListInstance extends Roa
      *
      * @return $this
      */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExpiredTime($value)
+    {
+        $this->data['ExpiredTime'] = $value;
+        $this->options['query']['ExpiredTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPage($value)
     {
         $this->data['Page'] = $value;
         $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['query']['Status'] = $value;
 
         return $this;
     }
@@ -1317,11 +1360,25 @@ class ListSceneItems extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getStatus()
  */
 class ListScenes extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/scenes';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['query']['Status'] = $value;
+
+        return $this;
+    }
 }
 
 class ListUmengAppkeys extends Roa
@@ -1503,17 +1560,20 @@ class PushIntervention extends Roa
 }
 
 /**
+ * @method string getTraceId()
+ * @method string getEndTime()
+ * @method string getUserType()
+ * @method string getStartTime()
+ * @method string getUserId()
  * @method string getItemId()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getItemType()
  * @method string getCmdType()
  * @method string getSize()
- * @method string getEndTime()
- * @method string getUserType()
- * @method string getStartTime()
+ * @method string getSceneId()
+ * @method string getBhvType()
  * @method string getPage()
- * @method string getUserId()
  * @method string getTable()
  * @method $this withTable($value)
  */
@@ -1521,6 +1581,71 @@ class QueryDataMessage extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/tables/[Table]/data-message';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTraceId($value)
+    {
+        $this->data['TraceId'] = $value;
+        $this->options['query']['TraceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserType($value)
+    {
+        $this->data['UserType'] = $value;
+        $this->options['query']['UserType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['query']['UserId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1579,6 +1704,80 @@ class QueryDataMessage extends Roa
      *
      * @return $this
      */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['query']['SceneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBhvType($value)
+    {
+        $this->data['BhvType'] = $value;
+        $this->options['query']['BhvType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTraceId()
+ * @method string getEndTime()
+ * @method string getUserType()
+ * @method string getStartTime()
+ * @method string getUserId()
+ * @method string getItemId()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getItemType()
+ * @method string getCmdType()
+ * @method string getSceneId()
+ * @method string getBhvType()
+ * @method string getTable()
+ * @method $this withTable($value)
+ */
+class QueryDataMessageStatistics extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/tables/[Table]/data-message-statistics';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTraceId($value)
+    {
+        $this->data['TraceId'] = $value;
+        $this->options['query']['TraceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withEndTime($value)
     {
         $this->data['EndTime'] = $value;
@@ -1618,10 +1817,10 @@ class QueryDataMessage extends Roa
      *
      * @return $this
      */
-    public function withPage($value)
+    public function withUserId($value)
     {
-        $this->data['Page'] = $value;
-        $this->options['query']['Page'] = $value;
+        $this->data['UserId'] = $value;
+        $this->options['query']['UserId'] = $value;
 
         return $this;
     }
@@ -1631,10 +1830,62 @@ class QueryDataMessage extends Roa
      *
      * @return $this
      */
-    public function withUserId($value)
+    public function withItemId($value)
     {
-        $this->data['UserId'] = $value;
-        $this->options['query']['UserId'] = $value;
+        $this->data['ItemId'] = $value;
+        $this->options['query']['ItemId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withItemType($value)
+    {
+        $this->data['ItemType'] = $value;
+        $this->options['query']['ItemType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCmdType($value)
+    {
+        $this->data['CmdType'] = $value;
+        $this->options['query']['CmdType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['query']['SceneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBhvType($value)
+    {
+        $this->data['BhvType'] = $value;
+        $this->options['query']['BhvType'] = $value;
 
         return $this;
     }
