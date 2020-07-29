@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.404 - 2020-7-29
+- API GetTaskStatus return task detail.
+
+
 ## 1.8.403 - 2020-7-29
 - Generated 2020-05-18 for `dataworks-public`.
 
