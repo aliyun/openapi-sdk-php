@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConfigureBackupPlan configureBackupPlan(array $options = [])
  * @method CreateBackupPlan createBackupPlan(array $options = [])
  * @method CreateFullBackupSetDownload createFullBackupSetDownload(array $options = [])
+ * @method CreateGetDBListFromAgentTask createGetDBListFromAgentTask(array $options = [])
  * @method CreateIncrementBackupSetDownload createIncrementBackupSetDownload(array $options = [])
  * @method CreateRestoreTask createRestoreTask(array $options = [])
  * @method DescribeBackupGatewayList describeBackupGatewayList(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRestoreRangeInfo describeRestoreRangeInfo(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
+ * @method GetDBListFromAgent getDBListFromAgent(array $options = [])
  * @method ModifyBackupObjects modifyBackupObjects(array $options = [])
  * @method ModifyBackupPlanName modifyBackupPlanName(array $options = [])
  * @method ModifyBackupSetDownloadRules modifyBackupSetDownloadRules(array $options = [])
@@ -160,6 +162,26 @@ class CreateBackupPlan extends Rpc
  * @method $this withBackupSetDataFormat($value)
  */
 class CreateFullBackupSetDownload extends Rpc
+{
+}
+
+/**
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getBackupGatewayId()
+ * @method $this withBackupGatewayId($value)
+ * @method string getDatabaseType()
+ * @method $this withDatabaseType($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSourceEndpointPort()
+ * @method $this withSourceEndpointPort($value)
+ * @method string getSourceEndpointIP()
+ * @method $this withSourceEndpointIP($value)
+ */
+class CreateGetDBListFromAgentTask extends Rpc
 {
 }
 
@@ -422,6 +444,22 @@ class DescribeRestoreRangeInfo extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeRestoreTaskList extends Rpc
+{
+}
+
+/**
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getBackupGatewayId()
+ * @method $this withBackupGatewayId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetDBListFromAgent extends Rpc
 {
 }
 

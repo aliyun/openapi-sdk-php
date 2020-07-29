@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.405 - 2020-7-29
+- Add CreateGetDBListFromAgentTask.
+- Add GetDBListFromAgent.
+
+
 ## 1.8.404 - 2020-7-29
 - API GetTaskStatus return task detail.
 
