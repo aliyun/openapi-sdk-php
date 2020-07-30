@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.410 - 2020-7-30
+- Add ABTest-related APIs.
+- Add UserAnalyzer-related APIs.
+- Add API ListSortExpressions.
+- Fix property tag_label of response of ListInterventionDictionaryEntries.
+
+
 ## 1.8.409 - 2020-7-30
 - Add ChangeVideoSize.
 
