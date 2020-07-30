@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
  * @method DeleteFaceEntity deleteFaceEntity(array $options = [])
  * @method DetectBodyCount detectBodyCount(array $options = [])
+ * @method DetectCelebrity detectCelebrity(array $options = [])
  * @method DetectFace detectFace(array $options = [])
  * @method DetectLivingFace detectLivingFace(array $options = [])
  * @method DetectMask detectMask(array $options = [])
@@ -347,6 +348,29 @@ class DeleteFaceEntity extends Rpc
  */
 class DetectBodyCount extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectCelebrity extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 
     /**
      * @param string $value

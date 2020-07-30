@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.407 - 2020-7-30
+- Add DetectCelebrity.
+
+
 ## 1.8.406 - 2020-7-30
 - Supported ChatApp for SDK.
 
