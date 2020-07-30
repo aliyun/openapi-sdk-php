@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.409 - 2020-7-30
+- Add ChangeVideoSize.
+
+
 ## 1.8.408 - 2020-7-30
 - Add SegmentLogo SegmentScene.
 
