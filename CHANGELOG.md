@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.406 - 2020-7-30
+- Supported ChatApp for SDK.
+
+
 ## 1.8.405 - 2020-7-29
 - Add CreateGetDBListFromAgentTask.
 - Add GetDBListFromAgent.
