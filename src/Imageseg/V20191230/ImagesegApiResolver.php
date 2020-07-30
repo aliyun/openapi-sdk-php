@@ -19,6 +19,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SegmentHair segmentHair(array $options = [])
  * @method SegmentHDBody segmentHDBody(array $options = [])
  * @method SegmentHead segmentHead(array $options = [])
+ * @method SegmentLogo segmentLogo(array $options = [])
+ * @method SegmentScene segmentScene(array $options = [])
  * @method SegmentSky segmentSky(array $options = [])
  * @method SegmentVehicle segmentVehicle(array $options = [])
  */
@@ -228,6 +230,22 @@ class SegmentHDBody extends Rpc
  * @method $this withImageURL($value)
  */
 class SegmentHead extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class SegmentLogo extends Rpc
+{
+}
+
+/**
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class SegmentScene extends Rpc
 {
 }
 

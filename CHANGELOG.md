@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.408 - 2020-7-30
+- Add SegmentLogo SegmentScene.
+
+
 ## 1.8.407 - 2020-7-30
 - Add DetectCelebrity.
 
