@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.412 - 2020-7-30
+- Update DetectCelebrity.
+
+
 ## 1.8.411 - 2020-7-30
 - Add Smart Cloudauth API.
 

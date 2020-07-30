@@ -369,9 +369,6 @@ class DetectBodyCount extends Rpc
 class DetectCelebrity extends Rpc
 {
 
-    /** @var string */
-    public $method = 'GET';
-
     /**
      * @param string $value
      *
