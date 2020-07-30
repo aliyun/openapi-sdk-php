@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.411 - 2020-7-30
+- Add Smart Cloudauth API.
+
+
 ## 1.8.410 - 2020-7-30
 - Add ABTest-related APIs.
 - Add UserAnalyzer-related APIs.
