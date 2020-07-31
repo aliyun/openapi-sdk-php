@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.413 - 2020-7-31
+- Edit GetStack api.
+
+
 ## 1.8.412 - 2020-7-30
 - Update DetectCelebrity.
 

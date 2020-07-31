@@ -210,6 +210,8 @@ class DeleteRetcodeApp extends Rpc
 /**
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method string getPid()
+ * @method $this withPid($value)
  * @method string getType()
  * @method $this withType($value)
  */
@@ -278,6 +280,8 @@ class GetRetcodeShareUrl extends Rpc
  * @method $this withTraceID($value)
  * @method string getRpcID()
  * @method $this withRpcID($value)
+ * @method string getPid()
+ * @method $this withPid($value)
  */
 class GetStack extends Rpc
 {
@@ -314,10 +318,10 @@ class ImportAppAlertRules extends Rpc
  * @method $this withIsAutoStart($value)
  * @method string getContactGroupIds()
  * @method $this withContactGroupIds($value)
+ * @method string getTemplateAlertConfig()
+ * @method $this withTemplateAlertConfig($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
- * @method string getTemplageAlertConfig()
- * @method $this withTemplageAlertConfig($value)
  */
 class ImportCustomAlertRules extends Rpc
 {
