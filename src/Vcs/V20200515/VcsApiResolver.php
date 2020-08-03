@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRecords deleteRecords(array $options = [])
  * @method DeleteVideoSummaryTask deleteVideoSummaryTask(array $options = [])
  * @method GetBodyOptions getBodyOptions(array $options = [])
+ * @method GetDeviceConfig getDeviceConfig(array $options = [])
  * @method GetDeviceLiveUrl getDeviceLiveUrl(array $options = [])
  * @method GetDeviceVideoUrl getDeviceVideoUrl(array $options = [])
  * @method GetFaceOptions getFaceOptions(array $options = [])
@@ -24,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPersonDetail getPersonDetail(array $options = [])
  * @method GetVideoComposeResult getVideoComposeResult(array $options = [])
  * @method GetVideoSummaryTaskResult getVideoSummaryTaskResult(array $options = [])
+ * @method InvokeMotorModel invokeMotorModel(array $options = [])
  * @method ListBodyAlgorithmResults listBodyAlgorithmResults(array $options = [])
  * @method ListCorps listCorps(array $options = [])
  * @method ListDevices listDevices(array $options = [])
@@ -34,10 +36,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPersons listPersons(array $options = [])
  * @method RecognizeFaceQuality recognizeFaceQuality(array $options = [])
  * @method RecognizeImage recognizeImage(array $options = [])
+ * @method RegisterDevice registerDevice(array $options = [])
+ * @method ReportDeviceCapacity reportDeviceCapacity(array $options = [])
  * @method SaveVideoSummaryTaskVideo saveVideoSummaryTaskVideo(array $options = [])
  * @method SearchBody searchBody(array $options = [])
  * @method SearchFace searchFace(array $options = [])
  * @method StopMonitor stopMonitor(array $options = [])
+ * @method SyncDeviceTime syncDeviceTime(array $options = [])
  * @method UpdateCorp updateCorp(array $options = [])
  * @method UpdateDevice updateDevice(array $options = [])
  * @method UpdateMonitor updateMonitor(array $options = [])
@@ -843,6 +848,40 @@ class GetBodyOptions extends Rpc
 }
 
 /**
+ * @method string getDeviceTimeStamp()
+ * @method string getDeviceSn()
+ */
+class GetDeviceConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceTimeStamp($value)
+    {
+        $this->data['DeviceTimeStamp'] = $value;
+        $this->options['form_params']['DeviceTimeStamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceSn($value)
+    {
+        $this->data['DeviceSn'] = $value;
+        $this->options['form_params']['DeviceSn'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCorpId()
  * @method string getGbId()
  */
@@ -1179,6 +1218,54 @@ class GetVideoSummaryTaskResult extends Rpc
     {
         $this->data['TaskId'] = $value;
         $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPicPath()
+ * @method string getCorpId()
+ * @method string getPicId()
+ */
+class InvokeMotorModel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicPath($value)
+    {
+        $this->data['PicPath'] = $value;
+        $this->options['form_params']['PicPath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicId($value)
+    {
+        $this->data['PicId'] = $value;
+        $this->options['form_params']['PicId'] = $value;
 
         return $this;
     }
@@ -2057,6 +2144,188 @@ class RecognizeImage extends Rpc
 }
 
 /**
+ * @method string getDeviceTimeStamp()
+ * @method string getDeviceId()
+ * @method string getServerId()
+ * @method string getDeviceSerialNumber()
+ */
+class RegisterDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceTimeStamp($value)
+    {
+        $this->data['DeviceTimeStamp'] = $value;
+        $this->options['form_params']['DeviceTimeStamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceId($value)
+    {
+        $this->data['DeviceId'] = $value;
+        $this->options['form_params']['DeviceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServerId($value)
+    {
+        $this->data['ServerId'] = $value;
+        $this->options['form_params']['ServerId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceSerialNumber($value)
+    {
+        $this->data['DeviceSerialNumber'] = $value;
+        $this->options['form_params']['DeviceSerialNumber'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getStreamCapacities()
+ * @method string getLatitude()
+ * @method string getPresetNum()
+ * @method string getDeviceSn()
+ * @method string getAudioFormat()
+ * @method string getPTZCapacity()
+ * @method string getLongitude()
+ */
+class ReportDeviceCapacity extends Rpc
+{
+
+    /**
+     * @param array $streamCapacities
+     *
+     * @return $this
+     */
+	public function withStreamCapacities(array $streamCapacities)
+	{
+	    $this->data['StreamCapacities'] = $streamCapacities;
+		foreach ($streamCapacities as $depth1 => $depth1Value) {
+			if(isset($depth1Value['BitrateRange'])){
+				$this->options['form_params']['StreamCapacities.' . ($depth1 + 1) . '.BitrateRange'] = $depth1Value['BitrateRange'];
+			}
+			if(isset($depth1Value['MaxStream'])){
+				$this->options['form_params']['StreamCapacities.' . ($depth1 + 1) . '.MaxStream'] = $depth1Value['MaxStream'];
+			}
+			if(isset($depth1Value['EncodeFormat'])){
+				$this->options['form_params']['StreamCapacities.' . ($depth1 + 1) . '.EncodeFormat'] = $depth1Value['EncodeFormat'];
+			}
+			if(isset($depth1Value['MaxFrameRate'])){
+				$this->options['form_params']['StreamCapacities.' . ($depth1 + 1) . '.MaxFrameRate'] = $depth1Value['MaxFrameRate'];
+			}
+			if(isset($depth1Value['Resolution'])){
+				$this->options['form_params']['StreamCapacities.' . ($depth1 + 1) . '.Resolution'] = $depth1Value['Resolution'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLatitude($value)
+    {
+        $this->data['Latitude'] = $value;
+        $this->options['form_params']['Latitude'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPresetNum($value)
+    {
+        $this->data['PresetNum'] = $value;
+        $this->options['form_params']['PresetNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceSn($value)
+    {
+        $this->data['DeviceSn'] = $value;
+        $this->options['form_params']['DeviceSn'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAudioFormat($value)
+    {
+        $this->data['AudioFormat'] = $value;
+        $this->options['form_params']['AudioFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPTZCapacity($value)
+    {
+        $this->data['PTZCapacity'] = $value;
+        $this->options['form_params']['PTZCapacity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLongitude($value)
+    {
+        $this->data['Longitude'] = $value;
+        $this->options['form_params']['Longitude'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCorpId()
  * @method string getSaveVideo()
  * @method string getTaskId()
@@ -2341,6 +2610,40 @@ class StopMonitor extends Rpc
     {
         $this->data['TaskId'] = $value;
         $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDeviceTimeStamp()
+ * @method string getDeviceSn()
+ */
+class SyncDeviceTime extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceTimeStamp($value)
+    {
+        $this->data['DeviceTimeStamp'] = $value;
+        $this->options['form_params']['DeviceTimeStamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceSn($value)
+    {
+        $this->data['DeviceSn'] = $value;
+        $this->options['form_params']['DeviceSn'] = $value;
 
         return $this;
     }
