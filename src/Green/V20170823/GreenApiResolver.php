@@ -27,8 +27,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAuditContentItem describeAuditContentItem(array $options = [])
  * @method DescribeAuditRange describeAuditRange(array $options = [])
  * @method DescribeAuditSetting describeAuditSetting(array $options = [])
+ * @method DescribeBizTypeImageLib describeBizTypeImageLib(array $options = [])
  * @method DescribeBizTypes describeBizTypes(array $options = [])
  * @method DescribeBizTypeSetting describeBizTypeSetting(array $options = [])
+ * @method DescribeBizTypeTextLib describeBizTypeTextLib(array $options = [])
  * @method DescribeCustomOcrTemplate describeCustomOcrTemplate(array $options = [])
  * @method DescribeImageFromLib describeImageFromLib(array $options = [])
  * @method DescribeImageLib describeImageLib(array $options = [])
@@ -46,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSdkUrl describeSdkUrl(array $options = [])
  * @method DescribeUpdatePackageResult describeUpdatePackageResult(array $options = [])
  * @method DescribeUploadInfo describeUploadInfo(array $options = [])
+ * @method DescribeUsageBill describeUsageBill(array $options = [])
  * @method DescribeUserBizTypes describeUserBizTypes(array $options = [])
  * @method DescribeUserStatus describeUserStatus(array $options = [])
  * @method DescribeViewContent describeViewContent(array $options = [])
@@ -75,7 +78,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAuditCallback updateAuditCallback(array $options = [])
  * @method UpdateAuditRange updateAuditRange(array $options = [])
  * @method UpdateAuditSetting updateAuditSetting(array $options = [])
+ * @method UpdateBizTypeImageLib updateBizTypeImageLib(array $options = [])
  * @method UpdateBizTypeSetting updateBizTypeSetting(array $options = [])
+ * @method UpdateBizTypeTextLib updateBizTypeTextLib(array $options = [])
  * @method UpdateCustomOcrTemplate updateCustomOcrTemplate(array $options = [])
  * @method UpdateImageLib updateImageLib(array $options = [])
  * @method UpdateKeywordLib updateKeywordLib(array $options = [])
@@ -131,6 +136,8 @@ class CreatCustomOcrTemplate extends Rpc
 /**
  * @method string getBizTypeImport()
  * @method $this withBizTypeImport($value)
+ * @method string getCiteTemplate()
+ * @method $this withCiteTemplate($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getIndustryInfo()
@@ -457,6 +464,20 @@ class DescribeAuditSetting extends Rpc
 }
 
 /**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ */
+class DescribeBizTypeImageLib extends Rpc
+{
+}
+
+/**
  * @method string getImportFlag()
  * @method $this withImportFlag($value)
  * @method string getSourceIp()
@@ -475,6 +496,20 @@ class DescribeBizTypes extends Rpc
  * @method $this withBizTypeName($value)
  */
 class DescribeBizTypeSetting extends Rpc
+{
+}
+
+/**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ */
+class DescribeBizTypeTextLib extends Rpc
 {
 }
 
@@ -713,6 +748,24 @@ class DescribeUpdatePackageResult extends Rpc
  * @method $this withLang($value)
  */
 class DescribeUploadInfo extends Rpc
+{
+}
+
+/**
+ * @method string getTotalCount()
+ * @method $this withTotalCount($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDay()
+ * @method $this withDay($value)
+ */
+class DescribeUsageBill extends Rpc
 {
 }
 
@@ -1153,6 +1206,26 @@ class UpdateAuditSetting extends Rpc
 }
 
 /**
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getWhite()
+ * @method $this withWhite($value)
+ * @method string getReview()
+ * @method $this withReview($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ * @method string getBlack()
+ * @method $this withBlack($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class UpdateBizTypeImageLib extends Rpc
+{
+}
+
+/**
  * @method string getAntispam()
  * @method $this withAntispam($value)
  * @method string getPorn()
@@ -1169,6 +1242,28 @@ class UpdateAuditSetting extends Rpc
  * @method $this withResourceType($value)
  */
 class UpdateBizTypeSetting extends Rpc
+{
+}
+
+/**
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getWhite()
+ * @method $this withWhite($value)
+ * @method string getReview()
+ * @method $this withReview($value)
+ * @method string getIgnore()
+ * @method $this withIgnore($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ * @method string getBlack()
+ * @method $this withBlack($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class UpdateBizTypeTextLib extends Rpc
 {
 }
 

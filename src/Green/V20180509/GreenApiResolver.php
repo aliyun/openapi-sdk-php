@@ -53,6 +53,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method VoiceIdentityStartCheck voiceIdentityStartCheck(array $options = [])
  * @method VoiceIdentityStartRegister voiceIdentityStartRegister(array $options = [])
  * @method VoiceIdentityUnregister voiceIdentityUnregister(array $options = [])
+ * @method VoiceSyncScan voiceSyncScan(array $options = [])
  */
 class GreenApiResolver extends ApiResolver
 {
@@ -1114,6 +1115,28 @@ class VoiceIdentityUnregister extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/auth/unregister';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class VoiceSyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/voice/syncscan';
 
     /**
      * @param string $value

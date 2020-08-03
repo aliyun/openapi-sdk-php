@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.415 - 2020-8-3
+- Add Voice Synchronous Scan API.
+
+
 ## 1.8.414 - 2020-8-3
 - Add ExtractPedestrianFeatureAttribute.
 
