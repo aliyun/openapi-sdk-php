@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.414 - 2020-8-3
+- Add ExtractPedestrianFeatureAttribute.
+
+
 ## 1.8.413 - 2020-7-31
 - Edit GetStack api.
 
