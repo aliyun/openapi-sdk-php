@@ -27,10 +27,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAuditContentItem describeAuditContentItem(array $options = [])
  * @method DescribeAuditRange describeAuditRange(array $options = [])
  * @method DescribeAuditSetting describeAuditSetting(array $options = [])
- * @method DescribeBizTypeImageLib describeBizTypeImageLib(array $options = [])
  * @method DescribeBizTypes describeBizTypes(array $options = [])
  * @method DescribeBizTypeSetting describeBizTypeSetting(array $options = [])
- * @method DescribeBizTypeTextLib describeBizTypeTextLib(array $options = [])
  * @method DescribeCustomOcrTemplate describeCustomOcrTemplate(array $options = [])
  * @method DescribeImageFromLib describeImageFromLib(array $options = [])
  * @method DescribeImageLib describeImageLib(array $options = [])
@@ -464,20 +462,6 @@ class DescribeAuditSetting extends Rpc
 }
 
 /**
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getScene()
- * @method $this withScene($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getBizTypeName()
- * @method $this withBizTypeName($value)
- */
-class DescribeBizTypeImageLib extends Rpc
-{
-}
-
-/**
  * @method string getImportFlag()
  * @method $this withImportFlag($value)
  * @method string getSourceIp()
@@ -496,20 +480,6 @@ class DescribeBizTypes extends Rpc
  * @method $this withBizTypeName($value)
  */
 class DescribeBizTypeSetting extends Rpc
-{
-}
-
-/**
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getScene()
- * @method $this withScene($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getBizTypeName()
- * @method $this withBizTypeName($value)
- */
-class DescribeBizTypeTextLib extends Rpc
 {
 }
 

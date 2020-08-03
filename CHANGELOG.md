@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.417 - 2020-8-3
+- Fix Some API Response Define.
+
+
 ## 1.8.416 - 2020-8-3
 - Add source picture url for Monitor.
 
