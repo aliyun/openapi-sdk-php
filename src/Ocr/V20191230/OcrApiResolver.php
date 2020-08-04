@@ -512,7 +512,9 @@ class RecognizeQrCode extends Rpc
 	{
 	    $this->data['Tasks'] = $tasks;
 		foreach ($tasks as $depth1 => $depth1Value) {
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
 		}
 
 		return $this;

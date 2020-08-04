@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.419 - 2020-8-4
+- Update RecognizeTable.
+
+
 ## 1.8.418 - 2020-8-4
 - Supported for deploy updateStrategy.
 
