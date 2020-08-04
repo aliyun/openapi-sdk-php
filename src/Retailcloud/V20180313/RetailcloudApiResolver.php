@@ -1037,6 +1037,8 @@ class DeleteSlbAP extends Rpc
  * @method $this withDescription($value)
  * @method string getEnvId()
  * @method $this withEnvId($value)
+ * @method string getUpdateStrategyType()
+ * @method $this withUpdateStrategyType($value)
  * @method string getPauseType()
  * @method $this withPauseType($value)
  * @method string getArmsFlag()

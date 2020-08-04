@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.418 - 2020-8-4
+- Supported for deploy updateStrategy.
+
+
 ## 1.8.417 - 2020-8-3
 - Fix Some API Response Define.
 
