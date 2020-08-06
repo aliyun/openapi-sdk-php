@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.420 - 2020-8-6
+- Add Smart Cloudauth API.
+
+
 ## 1.8.419 - 2020-8-4
 - Update RecognizeTable.
 
