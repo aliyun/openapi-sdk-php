@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.421 - 2020-8-6
+- Update OTA API, including CreateOTAStaticUpgradeJob,CreateOTADynamicUpgradeJob and QueryOTAJob.
+
+
 ## 1.8.420 - 2020-8-6
 - Add Smart Cloudauth API.
 

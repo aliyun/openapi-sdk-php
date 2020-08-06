@@ -99,6 +99,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRuleAction getRuleAction(array $options = [])
  * @method GetSceneRule getSceneRule(array $options = [])
  * @method GetThingModelTsl getThingModelTsl(array $options = [])
+ * @method GetThingModelTslPublished getThingModelTslPublished(array $options = [])
  * @method GetThingTemplate getThingTemplate(array $options = [])
  * @method GetThingTopo getThingTopo(array $options = [])
  * @method ImportThingModelTsl importThingModelTsl(array $options = [])
@@ -171,6 +172,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySummarySceneRuleLog querySummarySceneRuleLog(array $options = [])
  * @method QuerySuperDeviceGroup querySuperDeviceGroup(array $options = [])
  * @method QueryThingModel queryThingModel(array $options = [])
+ * @method QueryThingModelExtendConfig queryThingModelExtendConfig(array $options = [])
+ * @method QueryThingModelExtendConfigPublished queryThingModelExtendConfigPublished(array $options = [])
+ * @method QueryThingModelPublished queryThingModelPublished(array $options = [])
  * @method QueryTopicReverseRouteTable queryTopicReverseRouteTable(array $options = [])
  * @method QueryTopicRouteTable queryTopicRouteTable(array $options = [])
  * @method RegisterDevice registerDevice(array $options = [])
@@ -2544,6 +2548,8 @@ class CreateLoRaNodesTask extends Rpc
 }
 
 /**
+ * @method string getDynamicMode()
+ * @method $this withDynamicMode($value)
  * @method string getRetryCount()
  * @method $this withRetryCount($value)
  * @method string getTimeoutInMinutes()
@@ -2557,6 +2563,8 @@ class CreateLoRaNodesTask extends Rpc
  * @method string getRetryInterval()
  * @method $this withRetryInterval($value)
  * @method array getSrcVersion()
+ * @method string getOverwriteMode()
+ * @method $this withOverwriteMode($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
  * @method string getMaximumPerMinute()
@@ -2687,6 +2695,8 @@ class CreateOTAFirmware extends Rpc
  * @method array getSrcVersion()
  * @method string getScheduleTime()
  * @method $this withScheduleTime($value)
+ * @method string getOverwriteMode()
+ * @method $this withOverwriteMode($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
  * @method string getMaximumPerMinute()
@@ -4855,6 +4865,50 @@ class GetSceneRule extends Rpc
  * @method $this withModelVersion($value)
  */
 class GetThingModelTsl extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSimple()
+ * @method $this withSimple($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getModelVersion()
+ * @method $this withModelVersion($value)
+ */
+class GetThingModelTslPublished extends Rpc
 {
 
     /**
@@ -8089,6 +8143,132 @@ class QuerySuperDeviceGroup extends Rpc
  * @method $this withModelVersion($value)
  */
 class QueryThingModel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getModelVersion()
+ * @method $this withModelVersion($value)
+ */
+class QueryThingModelExtendConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getModelVersion()
+ * @method $this withModelVersion($value)
+ */
+class QueryThingModelExtendConfigPublished extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getModelVersion()
+ * @method $this withModelVersion($value)
+ */
+class QueryThingModelPublished extends Rpc
 {
 
     /**
