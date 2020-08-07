@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.423 - 2020-8-7
+- GetTitleDiagnose GetTitleGenerate GetImageTranslate supported.
+
+
 ## 1.8.422 - 2020-8-7
 - Add FindServiceList and GetService qps.
 

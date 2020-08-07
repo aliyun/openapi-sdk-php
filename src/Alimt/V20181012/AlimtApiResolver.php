@@ -8,6 +8,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDocTranslateTask createDocTranslateTask(array $options = [])
  * @method GetDetectLanguage getDetectLanguage(array $options = [])
  * @method GetDocTranslateTask getDocTranslateTask(array $options = [])
+ * @method GetImageDiagnose getImageDiagnose(array $options = [])
+ * @method GetImageTranslate getImageTranslate(array $options = [])
+ * @method GetTitleDiagnose getTitleDiagnose(array $options = [])
+ * @method GetTitleGenerate getTitleGenerate(array $options = [])
  * @method Translate translate(array $options = [])
  * @method TranslateCertificate translateCertificate(array $options = [])
  * @method TranslateECommerce translateECommerce(array $options = [])
@@ -27,9 +31,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'alimt';
 }
 
 /**
@@ -151,6 +152,282 @@ class GetDocTranslateTask extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getUrl()
+ * @method string getExtra()
+ */
+class GetImageDiagnose extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrl($value)
+    {
+        $this->data['Url'] = $value;
+        $this->options['form_params']['Url'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtra($value)
+    {
+        $this->data['Extra'] = $value;
+        $this->options['form_params']['Extra'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceLanguage()
+ * @method string getUrl()
+ * @method string getExtra()
+ * @method string getTargetLanguage()
+ */
+class GetImageTranslate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrl($value)
+    {
+        $this->data['Url'] = $value;
+        $this->options['form_params']['Url'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtra($value)
+    {
+        $this->data['Extra'] = $value;
+        $this->options['form_params']['Extra'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLanguage()
+ * @method string getTitle()
+ * @method string getPlatform()
+ * @method string getExtra()
+ * @method string getCategoryId()
+ */
+class GetTitleDiagnose extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLanguage($value)
+    {
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTitle($value)
+    {
+        $this->data['Title'] = $value;
+        $this->options['form_params']['Title'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlatform($value)
+    {
+        $this->data['Platform'] = $value;
+        $this->options['form_params']['Platform'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtra($value)
+    {
+        $this->data['Extra'] = $value;
+        $this->options['form_params']['Extra'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCategoryId($value)
+    {
+        $this->data['CategoryId'] = $value;
+        $this->options['form_params']['CategoryId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLanguage()
+ * @method string getTitle()
+ * @method string getPlatform()
+ * @method string getExtra()
+ * @method string getAttributes()
+ * @method string getHotWords()
+ * @method string getCategoryId()
+ */
+class GetTitleGenerate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLanguage($value)
+    {
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTitle($value)
+    {
+        $this->data['Title'] = $value;
+        $this->options['form_params']['Title'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlatform($value)
+    {
+        $this->data['Platform'] = $value;
+        $this->options['form_params']['Platform'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtra($value)
+    {
+        $this->data['Extra'] = $value;
+        $this->options['form_params']['Extra'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAttributes($value)
+    {
+        $this->data['Attributes'] = $value;
+        $this->options['form_params']['Attributes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHotWords($value)
+    {
+        $this->data['HotWords'] = $value;
+        $this->options['form_params']['HotWords'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCategoryId($value)
+    {
+        $this->data['CategoryId'] = $value;
+        $this->options['form_params']['CategoryId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
