@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.422 - 2020-8-7
+- Add FindServiceList and GetService qps.
+
+
 ## 1.8.421 - 2020-8-6
 - Update OTA API, including CreateOTAStaticUpgradeJob,CreateOTADynamicUpgradeJob and QueryOTAJob.
 

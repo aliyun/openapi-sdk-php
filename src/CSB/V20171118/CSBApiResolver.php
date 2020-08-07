@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ApproveOrderList approveOrderList(array $options = [])
  * @method CheckServiceExist checkServiceExist(array $options = [])
+ * @method CheckSLRDelete checkSLRDelete(array $options = [])
  * @method CommitSuccessedServices commitSuccessedServices(array $options = [])
  * @method CreateCredentials createCredentials(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
@@ -32,6 +33,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FindInstanceNodeList findInstanceNodeList(array $options = [])
  * @method FindOrderableList findOrderableList(array $options = [])
  * @method FindOrderedList findOrderedList(array $options = [])
+ * @method FindOrderedServiceList findOrderedServiceList(array $options = [])
+ * @method FindOtherInstanceList findOtherInstanceList(array $options = [])
  * @method FindProjectList findProjectList(array $options = [])
  * @method FindProjectsNameList findProjectsNameList(array $options = [])
  * @method FindProjectStatisticalData findProjectStatisticalData(array $options = [])
@@ -104,6 +107,28 @@ class ApproveOrderList extends Rpc
  */
 class CheckServiceExist extends Rpc
 {
+}
+
+/**
+ * @method string getDeletionTaskId()
+ * @method $this withDeletionTaskId($value)
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ * @method string getSPIRegionId()
+ * @method $this withSPIRegionId($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ */
+class CheckSLRDelete extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -383,6 +408,8 @@ class FindAllLinkRule extends Rpc
  * @method $this withCsbId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getCredentialGroupName()
+ * @method $this withCredentialGroupName($value)
  * @method string getAlias()
  * @method $this withAlias($value)
  * @method string getServiceName()
@@ -423,6 +450,10 @@ class FindApproveServiceList extends Rpc
 /**
  * @method string getCsbId()
  * @method $this withCsbId($value)
+ * @method string getBeginDdHHmm()
+ * @method $this withBeginDdHHmm($value)
+ * @method string getEndDdHHmm()
+ * @method $this withEndDdHHmm($value)
  */
 class FindBrokerSLOHisList extends Rpc
 {
@@ -551,6 +582,8 @@ class FindOrderableList extends Rpc
  * @method $this withCsbId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getCredentialGroupName()
+ * @method $this withCredentialGroupName($value)
  * @method string getAlias()
  * @method $this withAlias($value)
  * @method string getServiceName()
@@ -562,6 +595,53 @@ class FindOrderableList extends Rpc
  */
 class FindOrderedList extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getProjectName()
+ * @method $this withProjectName($value)
+ * @method string getShowDelOrder()
+ * @method $this withShowDelOrder($value)
+ * @method string getCsbId()
+ * @method $this withCsbId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getCredentialGroupName()
+ * @method $this withCredentialGroupName($value)
+ * @method string getAccessKey()
+ * @method $this withAccessKey($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class FindOrderedServiceList extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getSearchTxt()
+ * @method $this withSearchTxt($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class FindOtherInstanceList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
 
     /** @var string */
     public $method = 'GET';
