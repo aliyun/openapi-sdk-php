@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AbolishDataServiceApi abolishDataServiceApi(array $options = [])
+ * @method AddProjectMemberToRole addProjectMemberToRole(array $options = [])
  * @method AddToMetaCategory addToMetaCategory(array $options = [])
  * @method CheckMetaPartition checkMetaPartition(array $options = [])
  * @method CheckMetaTable checkMetaTable(array $options = [])
@@ -16,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateFile createFile(array $options = [])
  * @method CreateFolder createFolder(array $options = [])
  * @method CreateMetaCategory createMetaCategory(array $options = [])
+ * @method CreateProjectMember createProjectMember(array $options = [])
  * @method CreateQualityEntity createQualityEntity(array $options = [])
  * @method CreateQualityFollower createQualityFollower(array $options = [])
  * @method CreateQualityRelativeNode createQualityRelativeNode(array $options = [])
@@ -29,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFolder deleteFolder(array $options = [])
  * @method DeleteFromMetaCategory deleteFromMetaCategory(array $options = [])
  * @method DeleteMetaCategory deleteMetaCategory(array $options = [])
+ * @method DeleteProjectMember deleteProjectMember(array $options = [])
  * @method DeleteQualityEntity deleteQualityEntity(array $options = [])
  * @method DeleteQualityFollower deleteQualityFollower(array $options = [])
  * @method DeleteQualityRelativeNode deleteQualityRelativeNode(array $options = [])
@@ -89,11 +92,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstances listInstances(array $options = [])
  * @method ListNodeIO listNodeIO(array $options = [])
  * @method ListNodes listNodes(array $options = [])
+ * @method ListProjectMembers listProjectMembers(array $options = [])
+ * @method ListProjectRoles listProjectRoles(array $options = [])
  * @method ListQualityRules listQualityRules(array $options = [])
  * @method ListReminds listReminds(array $options = [])
  * @method ListResourceGroups listResourceGroups(array $options = [])
  * @method ListTopics listTopics(array $options = [])
  * @method PublishDataServiceApi publishDataServiceApi(array $options = [])
+ * @method RemoveProjectMemberFromRole removeProjectMemberFromRole(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method ResumeInstance resumeInstance(array $options = [])
  * @method SearchMetaTables searchMetaTables(array $options = [])
@@ -177,6 +183,20 @@ class AbolishDataServiceApi extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getRoleCode()
+ * @method $this withRoleCode($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class AddProjectMemberToRole extends Rpc
+{
 }
 
 /**
@@ -1059,6 +1079,18 @@ class CreateMetaCategory extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class CreateProjectMember extends Rpc
+{
 }
 
 /**
@@ -2184,6 +2216,16 @@ class DeleteMetaCategory extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class DeleteProjectMember extends Rpc
+{
 }
 
 /**
@@ -5193,6 +5235,26 @@ class ListNodes extends Rpc
 }
 
 /**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ListProjectMembers extends Rpc
+{
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ListProjectRoles extends Rpc
+{
+}
+
+/**
  * @method string getProjectName()
  * @method string getPageSize()
  * @method string getEntityId()
@@ -5546,6 +5608,18 @@ class PublishDataServiceApi extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getRoleCode()
+ * @method $this withRoleCode($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class RemoveProjectMemberFromRole extends Rpc
+{
 }
 
 /**

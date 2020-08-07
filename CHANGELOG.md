@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.424 - 2020-8-7
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.423 - 2020-8-7
 - GetTitleDiagnose GetTitleGenerate GetImageTranslate supported.
 
