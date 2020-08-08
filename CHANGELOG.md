@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.426 - 2020-8-8
+- Update SearchImage.
+
+
 ## 1.8.425 - 2020-8-7
 - GetTitleDiagnose GetTitleGenerate GetImageTranslate supported.
 
