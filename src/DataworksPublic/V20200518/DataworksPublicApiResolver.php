@@ -1082,6 +1082,8 @@ class CreateMetaCategory extends Rpc
 }
 
 /**
+ * @method string getRoleCode()
+ * @method $this withRoleCode($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getProjectId()
@@ -5237,10 +5239,10 @@ class ListNodes extends Rpc
 /**
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class ListProjectMembers extends Rpc
 {
