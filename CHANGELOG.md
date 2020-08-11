@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.428 - 2020-8-11
+- Add ResourceGroup in resource snapshot.
+
+
 ## 1.8.427 - 2020-8-10
 - Generated 2020-05-18 for `dataworks-public`.
 
