@@ -10,8 +10,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreatePipeline createPipeline(array $options = [])
  * @method CreateServiceConnection createServiceConnection(array $options = [])
  * @method ExecutePipeline executePipeline(array $options = [])
+ * @method GetPipelineInstanceBuildNumberStatus getPipelineInstanceBuildNumberStatus(array $options = [])
+ * @method GetPipelineInstanceGroupStatus getPipelineInstanceGroupStatus(array $options = [])
  * @method GetPipelineInstanceInfo getPipelineInstanceInfo(array $options = [])
  * @method GetPipelineInstanceStatus getPipelineInstanceStatus(array $options = [])
+ * @method GetPipelineLog getPipelineLog(array $options = [])
+ * @method GetPipleineLatestInstanceStatus getPipleineLatestInstanceStatus(array $options = [])
  * @method ListCredentials listCredentials(array $options = [])
  * @method ListPipelines listPipelines(array $options = [])
  * @method ListServiceConnections listServiceConnections(array $options = [])
@@ -95,41 +99,15 @@ class CancelPipeline extends Rpc
 }
 
 /**
- * @method string getPassword()
- * @method string getName()
  * @method string getType()
  * @method string getUserPk()
  * @method string getOrgId()
+ * @method string getPassword()
+ * @method string getName()
  * @method string getUserName()
  */
 class CreateCredential extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPassword($value)
-    {
-        $this->data['Password'] = $value;
-        $this->options['form_params']['Password'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -166,6 +144,32 @@ class CreateCredential extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPassword($value)
+    {
+        $this->data['Password'] = $value;
+        $this->options['form_params']['Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
 
         return $this;
     }
@@ -343,6 +347,82 @@ class ExecutePipeline extends Rpc
 }
 
 /**
+ * @method string getBuildNum()
+ * @method string getUserPk()
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class GetPipelineInstanceBuildNumberStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBuildNum($value)
+    {
+        $this->data['BuildNum'] = $value;
+        $this->options['form_params']['BuildNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFlowInstanceId()
+ * @method string getUserPk()
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class GetPipelineInstanceGroupStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlowInstanceId($value)
+    {
+        $this->data['FlowInstanceId'] = $value;
+        $this->options['form_params']['FlowInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getFlowInstanceId()
  * @method string getUserPk()
  * @method string getOrgId()
@@ -414,6 +494,92 @@ class GetPipelineInstanceInfo extends Rpc
  * @method $this withPipelineId($value)
  */
 class GetPipelineInstanceStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserPk()
+ * @method string getOrgId()
+ * @method string getPipelineId()
+ * @method string getJobId()
+ */
+class GetPipelineLog extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPipelineId($value)
+    {
+        $this->data['PipelineId'] = $value;
+        $this->options['form_params']['PipelineId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserPk()
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class GetPipleineLatestInstanceStatus extends Rpc
 {
 
     /**

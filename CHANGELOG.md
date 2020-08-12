@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.429 - 2020-8-12
+- Add pipeline status api.
+
+
 ## 1.8.428 - 2020-8-11
 - Add ResourceGroup in resource snapshot.
 
