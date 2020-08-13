@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.430 - 2020-8-13
+- Release SegmentHalfBody.
+
+
 ## 1.8.429 - 2020-8-12
 - Add pipeline status api.
 
