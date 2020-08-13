@@ -51,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryResellerAvailableQuota queryResellerAvailableQuota(array $options = [])
  * @method QueryResourcePackageInstances queryResourcePackageInstances(array $options = [])
  * @method QueryRIUtilizationDetail queryRIUtilizationDetail(array $options = [])
+ * @method QuerySettleBill querySettleBill(array $options = [])
  * @method QuerySettlementBill querySettlementBill(array $options = [])
  * @method QuerySplitItemBill querySplitItemBill(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
@@ -111,6 +112,9 @@ class AllocateCostUnitResource extends Rpc
 			}
 			if(isset($depth1Value['ResourceUserId'])){
 				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ResourceUserId'] = $depth1Value['ResourceUserId'];
+			}
+			if(isset($depth1Value['ApportionCode'])){
+				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ApportionCode'] = $depth1Value['ApportionCode'];
 			}
 		}
 
@@ -605,6 +609,8 @@ class QueryAccountBalance extends Rpc
  * @method $this withPageNum($value)
  * @method string getOwnerID()
  * @method $this withOwnerID($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
  * @method string getIsGroupByProduct()
  * @method $this withIsGroupByProduct($value)
  * @method string getPageSize()
@@ -683,6 +689,8 @@ class QueryAvailableInstances extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
  * @method string getProductType()
  * @method $this withProductType($value)
  * @method string getPageSize()
@@ -699,6 +707,8 @@ class QueryBill extends Rpc
  * @method $this withSubscriptionType($value)
  * @method string getBillingCycle()
  * @method $this withBillingCycle($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
  * @method string getProductType()
  * @method $this withProductType($value)
  */
@@ -819,6 +829,8 @@ class QueryEvaluateList extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
  * @method string getBillingDate()
  * @method $this withBillingDate($value)
  * @method string getProductType()
@@ -1012,6 +1024,34 @@ class QueryRIUtilizationDetail extends Rpc
  * @method $this withProductCode($value)
  * @method string getIsHideZeroCharge()
  * @method $this withIsHideZeroCharge($value)
+ * @method string getIsDisplayLocalCurrency()
+ * @method $this withIsDisplayLocalCurrency($value)
+ * @method string getSubscriptionType()
+ * @method $this withSubscriptionType($value)
+ * @method string getBillingCycle()
+ * @method $this withBillingCycle($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class QuerySettleBill extends Rpc
+{
+}
+
+/**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getIsHideZeroCharge()
+ * @method $this withIsHideZeroCharge($value)
  * @method string getSubscriptionType()
  * @method $this withSubscriptionType($value)
  * @method string getEndTime()
@@ -1046,6 +1086,8 @@ class QuerySettlementBill extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
  * @method string getProductType()
  * @method $this withProductType($value)
  * @method string getPageSize()

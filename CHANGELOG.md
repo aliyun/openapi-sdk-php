@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.434 - 2020-8-13
+- Add PipCode and CommodityCode for QueryInstanceBill, QueryBillOverview, QueryBill, QuerySettleBill, QueryAccountBill, QuerySplitItemBill.
+- Support BillOwnerId filter for QueryInstanceBill, QueryBillOverview, QueryBill, QuerySettleBill, QueryAccountBill, QuerySplitItemBill.
+
+
 ## 1.8.433 - 2020-8-13
 - Release DetectKneeXRay DetectSpineMRI TranslateMed.
 
