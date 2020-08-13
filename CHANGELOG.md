@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.433 - 2020-8-13
+- Release DetectKneeXRay DetectSpineMRI TranslateMed.
+
+
 ## 1.8.432 - 2020-8-13
 - Release DetectKneeXRay DetectSpineMRI TranslateMed.
 
