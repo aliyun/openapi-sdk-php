@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.431 - 2020-8-13
+- DescribePrice update amount parameters type, float to string.
+- Add ResourceGroupId parameter to support resource group.
+
+
 ## 1.8.430 - 2020-8-13
 - Release SegmentHalfBody.
 
