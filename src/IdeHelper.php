@@ -172,6 +172,7 @@ namespace AlibabaCloud;
  * @method static Sts\Sts sts()
  * @method static Tag\Tag tag()
  * @method static TagINner\TagINner tagINner()
+ * @method static TeambitionAliyun\TeambitionAliyun teambitionAliyun()
  * @method static TeslaDam\TeslaDam teslaDam()
  * @method static TeslaMaxCompute\TeslaMaxCompute teslaMaxCompute()
  * @method static TeslaStream\TeslaStream teslaStream()
