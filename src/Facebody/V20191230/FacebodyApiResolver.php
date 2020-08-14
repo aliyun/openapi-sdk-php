@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddFace addFace(array $options = [])
  * @method AddFaceEntity addFaceEntity(array $options = [])
+ * @method BlurFace blurFace(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
@@ -16,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectBodyCount detectBodyCount(array $options = [])
  * @method DetectCelebrity detectCelebrity(array $options = [])
  * @method DetectFace detectFace(array $options = [])
+ * @method DetectIPCPedestrian detectIPCPedestrian(array $options = [])
  * @method DetectLivingFace detectLivingFace(array $options = [])
  * @method DetectMask detectMask(array $options = [])
  * @method DetectPedestrian detectPedestrian(array $options = [])
@@ -53,9 +55,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'facebody';
 }
 
 /**
@@ -163,6 +162,26 @@ class AddFaceEntity extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class BlurFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
@@ -413,6 +432,89 @@ class DetectFace extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageData()
+ * @method array getURLList()
+ * @method string getContinueOnError()
+ * @method string getWidth()
+ * @method string getHeight()
+ */
+class DetectIPCPedestrian extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageData($value)
+    {
+        $this->data['ImageData'] = $value;
+        $this->options['form_params']['ImageData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DataId'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.DataId'] = $depth1Value['DataId'];
+			}
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContinueOnError($value)
+    {
+        $this->data['ContinueOnError'] = $value;
+        $this->options['form_params']['ContinueOnError'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWidth($value)
+    {
+        $this->data['Width'] = $value;
+        $this->options['form_params']['Width'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHeight($value)
+    {
+        $this->data['Height'] = $value;
+        $this->options['form_params']['Height'] = $value;
 
         return $this;
     }

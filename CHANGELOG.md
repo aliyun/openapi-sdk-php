@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.437 - 2020-8-14
+- Supported Api DetectIPCPedestrian.
+
+
 ## 1.8.436 - 2020-8-14
 - Supported CheckCloudResourceAuthorized API.
 
