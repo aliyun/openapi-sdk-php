@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.436 - 2020-8-14
+- Supported CheckCloudResourceAuthorized API.
+
+
 ## 1.8.435 - 2020-8-14
 - Add project Api.
 
