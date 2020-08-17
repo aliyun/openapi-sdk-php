@@ -26,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRetcodeShareUrl getRetcodeShareUrl(array $options = [])
  * @method GetStack getStack(array $options = [])
  * @method GetTrace getTrace(array $options = [])
+ * @method GetTraceApp getTraceApp(array $options = [])
  * @method ImportAppAlertRules importAppAlertRules(array $options = [])
  * @method ImportCustomAlertRules importCustomAlertRules(array $options = [])
  * @method ListClusterFromGrafana listClusterFromGrafana(array $options = [])
@@ -296,6 +297,14 @@ class GetTrace extends Rpc
 }
 
 /**
+ * @method string getPid()
+ * @method $this withPid($value)
+ */
+class GetTraceApp extends Rpc
+{
+}
+
+/**
  * @method string getIsAutoStart()
  * @method $this withIsAutoStart($value)
  * @method string getProxyUserId()
@@ -316,12 +325,14 @@ class ImportAppAlertRules extends Rpc
 /**
  * @method string getIsAutoStart()
  * @method $this withIsAutoStart($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
  * @method string getContactGroupIds()
  * @method $this withContactGroupIds($value)
  * @method string getTemplateAlertConfig()
  * @method $this withTemplateAlertConfig($value)
- * @method string getProxyUserId()
- * @method $this withProxyUserId($value)
+ * @method string getTemplageAlertConfig()
+ * @method $this withTemplageAlertConfig($value)
  */
 class ImportCustomAlertRules extends Rpc
 {

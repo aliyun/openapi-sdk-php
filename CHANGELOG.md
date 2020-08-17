@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.444 - 2020-8-17
+- Add GetTrace api.
+- Edit Aler api.
+
+
 ## 1.8.443 - 2020-8-17
 - Add pipeline status api.
 
