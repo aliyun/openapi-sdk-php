@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.442 - 2020-8-17
+- Add Api HighlightGameVideo.
+
+
 ## 1.8.441 - 2020-8-17
 - Add Api HighlightGameVideo.
 
