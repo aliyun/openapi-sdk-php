@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.440 - 2020-8-17
+- Fix create project task.
+
+
 ## 1.8.439 - 2020-8-14
 - Add POP-Model-related APIs.
 

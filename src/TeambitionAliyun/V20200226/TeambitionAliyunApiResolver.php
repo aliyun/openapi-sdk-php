@@ -546,6 +546,7 @@ class CreateProjectSprint extends Rpc
  * @method string getNote()
  * @method string getVisible()
  * @method string getExecutorId()
+ * @method string getTaskFlowStatusId()
  * @method string getStartDate()
  * @method string getPriority()
  * @method string getParentTaskId()
@@ -553,7 +554,6 @@ class CreateProjectSprint extends Rpc
  * @method string getContent()
  * @method string getSprintId()
  * @method string getDueDate()
- * @method string getTasFlowStatusId()
  * @method string getScenarioFieldConfigId()
  * @method string getProjectId()
  * @method string getTaskListId()
@@ -596,6 +596,19 @@ class CreateProjectTask extends Rpc
     {
         $this->data['ExecutorId'] = $value;
         $this->options['form_params']['ExecutorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskFlowStatusId($value)
+    {
+        $this->data['TaskFlowStatusId'] = $value;
+        $this->options['form_params']['TaskFlowStatusId'] = $value;
 
         return $this;
     }
@@ -687,19 +700,6 @@ class CreateProjectTask extends Rpc
     {
         $this->data['DueDate'] = $value;
         $this->options['form_params']['DueDate'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTasFlowStatusId($value)
-    {
-        $this->data['TasFlowStatusId'] = $value;
-        $this->options['form_params']['TasFlowStatusId'] = $value;
 
         return $this;
     }
