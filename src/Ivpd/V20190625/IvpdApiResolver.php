@@ -10,11 +10,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method EraseLogoInVideo eraseLogoInVideo(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
+ * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method GetAsyncResult getAsyncResult(array $options = [])
  * @method GetJobResult getJobResult(array $options = [])
  * @method GetJobStatus getJobStatus(array $options = [])
  * @method GetRenderResult getRenderResult(array $options = [])
  * @method GetUserBucketConfig getUserBucketConfig(array $options = [])
+ * @method HighlightGameVideo highlightGameVideo(array $options = [])
  * @method ListPackageDesignModelTypes listPackageDesignModelTypes(array $options = [])
  * @method ListUserBuckets listUserBuckets(array $options = [])
  * @method MakeSuperResolutionImage makeSuperResolutionImage(array $options = [])
@@ -41,6 +43,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'ivpd';
 }
 
 /**
@@ -290,6 +295,40 @@ class ExtendImageStyle extends Rpc
 }
 
 /**
+ * @method string getAsync()
+ * @method string getJobId()
+ */
+class GetAsyncJobResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getJobId()
  */
 class GetAsyncResult extends Rpc
@@ -371,6 +410,40 @@ class GetRenderResult extends Rpc
 
 class GetUserBucketConfig extends Rpc
 {
+}
+
+/**
+ * @method string getAsync()
+ * @method string getVideoUrl()
+ */
+class HighlightGameVideo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
 }
 
 class ListPackageDesignModelTypes extends Rpc
