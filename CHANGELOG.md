@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.445 - 2020-8-18
+- Add API RenewAppGroup.
+
+
 ## 1.8.444 - 2020-8-17
 - Add GetTrace api.
 - Edit Aler api.

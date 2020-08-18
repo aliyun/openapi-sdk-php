@@ -97,6 +97,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveScheduledTask removeScheduledTask(array $options = [])
  * @method RemoveSecondRank removeSecondRank(array $options = [])
  * @method RemoveUserAnalyzer removeUserAnalyzer(array $options = [])
+ * @method RenewAppGroup renewAppGroup(array $options = [])
  * @method ReplaceAppGroupCommodityCode replaceAppGroupCommodityCode(array $options = [])
  * @method SaveSortScriptFile saveSortScriptFile(array $options = [])
  * @method StartSlowQueryAnalyzer startSlowQueryAnalyzer(array $options = [])
@@ -3866,6 +3867,31 @@ class RemoveUserAnalyzer extends Roa
     {
         $this->data['Name'] = $value;
         $this->pathParameters['name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppGroupIdentity()
+ */
+class RenewAppGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/actions/renew';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
 
         return $this;
     }
