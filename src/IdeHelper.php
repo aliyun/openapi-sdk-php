@@ -164,6 +164,7 @@ namespace AlibabaCloud;
  * @method static Schedulerx2\Schedulerx2 schedulerx2()
  * @method static Skyeye\Skyeye skyeye()
  * @method static Slb\Slb slb()
+ * @method static SmartHosting\SmartHosting smartHosting()
  * @method static Smartag\Smartag smartag()
  * @method static Smc\Smc smc()
  * @method static Sms\Sms sms()

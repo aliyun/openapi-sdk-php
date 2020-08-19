@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.446 - 2020-8-19
+- Generated 2020-08-01 for `SmartHosting`.
+
+
 ## 1.8.445 - 2020-8-18
 - Add API RenewAppGroup.
 
