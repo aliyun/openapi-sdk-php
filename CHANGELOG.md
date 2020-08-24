@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.449 - 2020-8-24
+- Edit QueryMetricByPage api.
+
+
 ## 1.8.448 - 2020-8-21
 - Add QueryMetricByPage api.
 - Add GetAppApiByPage api.
