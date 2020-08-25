@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.452 - 2020-8-25
+- Add list person visit count API.
+
+
 ## 1.8.451 - 2020-8-25
 - Video Content analytics template introduced to this SDK.
 
