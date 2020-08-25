@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.451 - 2020-8-25
+- Video Content analytics template introduced to this SDK.
+
+
 ## 1.8.450 - 2020-8-24
 - Add project api.
 

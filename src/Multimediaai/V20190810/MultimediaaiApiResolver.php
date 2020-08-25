@@ -45,6 +45,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withTemplateId($value)
  * @method string getVideoUrl()
  * @method $this withVideoUrl($value)
+ * @method string getScales()
  * @method string getVideoName()
  * @method $this withVideoName($value)
  * @method string getCallbackUrl()
@@ -54,6 +55,19 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class CreateCoverTask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScales($value)
+    {
+        $this->data['Scales'] = $value;
+        $this->options['form_params']['Scales'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -83,6 +97,7 @@ class CreateFacePerson extends Rpc
  * @method $this withTemplateId($value)
  * @method string getVideoUrl()
  * @method $this withVideoUrl($value)
+ * @method string getScales()
  * @method string getVideoName()
  * @method $this withVideoName($value)
  * @method string getCallbackUrl()
@@ -92,6 +107,19 @@ class CreateFacePerson extends Rpc
  */
 class CreateGifTask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScales($value)
+    {
+        $this->data['Scales'] = $value;
+        $this->options['form_params']['Scales'] = $value;
+
+        return $this;
+    }
 }
 
 /**
