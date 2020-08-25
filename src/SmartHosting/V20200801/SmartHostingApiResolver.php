@@ -26,7 +26,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'SmartHosting';
+    public $serviceCode = 'smarthosting';
 }
 
 /**

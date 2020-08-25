@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.453 - 2020-8-25
+- Generated 2020-08-01 for `SmartHosting`.
+
+
 ## 1.8.452 - 2020-8-25
 - Add list person visit count API.
 
