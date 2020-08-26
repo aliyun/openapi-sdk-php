@@ -22,6 +22,7 @@ namespace AlibabaCloud;
  * @method static Alidns\Alidns alidns()
  * @method static Alikafka\Alikafka alikafka()
  * @method static Alimt\Alimt alimt()
+ * @method static Alinlp\Alinlp alinlp()
  * @method static Aliyuncvc\Aliyuncvc aliyuncvc()
  * @method static AmqpOpen\AmqpOpen amqpOpen()
  * @method static AppMallsService\AppMallsService appMallsService()

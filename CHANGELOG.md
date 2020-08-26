@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.454 - 2020-8-26
+- Generated 2020-06-29 for `alinlp`.
+
+
 ## 1.8.453 - 2020-8-25
 - Generated 2020-08-01 for `SmartHosting`.
 
