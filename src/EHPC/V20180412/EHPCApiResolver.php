@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddLocalNodes addLocalNodes(array $options = [])
  * @method AddNodes addNodes(array $options = [])
  * @method AddQueue addQueue(array $options = [])
+ * @method AddSecurityGroup addSecurityGroup(array $options = [])
  * @method AddUsers addUsers(array $options = [])
  * @method ApplyNodes applyNodes(array $options = [])
  * @method BindAccountToClusterUser bindAccountToClusterUser(array $options = [])
@@ -28,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteJobTemplates deleteJobTemplates(array $options = [])
  * @method DeleteNodes deleteNodes(array $options = [])
  * @method DeleteQueue deleteQueue(array $options = [])
+ * @method DeleteSecurityGroup deleteSecurityGroup(array $options = [])
  * @method DeleteUsers deleteUsers(array $options = [])
  * @method DescribeAutoScaleConfig describeAutoScaleConfig(array $options = [])
  * @method DescribeCluster describeCluster(array $options = [])
@@ -81,7 +83,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPreferredEcsTypes listPreferredEcsTypes(array $options = [])
  * @method ListQueues listQueues(array $options = [])
  * @method ListRegions listRegions(array $options = [])
+ * @method ListSecurityGroups listSecurityGroups(array $options = [])
  * @method ListSoftwares listSoftwares(array $options = [])
+ * @method ListTasks listTasks(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method ListVolumes listVolumes(array $options = [])
  * @method ModifyClusterAttributes modifyClusterAttributes(array $options = [])
@@ -161,6 +165,8 @@ class AddLocalNodes extends Rpc
 /**
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getAllocatePublicAddress()
  * @method $this withAllocatePublicAddress($value)
  * @method string getInternetMaxBandWidthOut()
@@ -221,6 +227,18 @@ class AddNodes extends Rpc
  * @method $this withClusterId($value)
  */
 class AddQueue extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class AddSecurityGroup extends Rpc
 {
 }
 
@@ -378,6 +396,8 @@ class BindAccountToClusterUser extends Rpc
  * @method string getPassword()
  * @method $this withPassword($value)
  * @method string getEcsOrderLoginCount()
+ * @method string getWithoutElasticIp()
+ * @method $this withWithoutElasticIp($value)
  * @method string getRemoteVisEnable()
  * @method $this withRemoteVisEnable($value)
  * @method string getSystemDiskSize()
@@ -412,6 +432,8 @@ class BindAccountToClusterUser extends Rpc
  * @method $this withSccClusterId($value)
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getEhpcVersion()
  * @method $this withEhpcVersion($value)
  * @method string getAccountType()
@@ -613,6 +635,8 @@ class CreateCluster extends Rpc
 /**
  * @method string getClusterType()
  * @method $this withClusterType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getName()
@@ -655,6 +679,8 @@ class CreateGWSImage extends Rpc
  * @method $this withClusterId($value)
  * @method string getWorkMode()
  * @method $this withWorkMode($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getPeriodUnit()
  * @method $this withPeriodUnit($value)
  * @method string getAutoRenew()
@@ -704,6 +730,8 @@ class CreateGWSInstance extends Rpc
  * @method $this withZoneId($value)
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getEhpcVersion()
  * @method $this withEhpcVersion($value)
  * @method string getSecurityGroupId()
@@ -982,6 +1010,16 @@ class DeleteQueue extends Rpc
 }
 
 /**
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DeleteSecurityGroup extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method array getUser()
@@ -1034,6 +1072,10 @@ class DescribeContainerApp extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsyncMode()
+ * @method $this withAsyncMode($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class DescribeGWSClusterPolicy extends Rpc
 {
@@ -1073,6 +1115,10 @@ class DescribeGWSImages extends Rpc
  * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getUserUid()
+ * @method $this withUserUid($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
  */
 class DescribeGWSInstances extends Rpc
 {
@@ -1701,12 +1747,36 @@ class ListRegions extends Rpc
 }
 
 /**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ListSecurityGroups extends Rpc
+{
+}
+
+/**
  * @method string getOsTag()
  * @method $this withOsTag($value)
  * @method string getEhpcVersion()
  * @method $this withEhpcVersion($value)
  */
 class ListSoftwares extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getArchived()
+ * @method $this withArchived($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class ListTasks extends Rpc
 {
 }
 
@@ -2060,6 +2130,9 @@ class SetAutoScaleConfig extends Rpc
 			if(isset($depth1Value['InstanceType'])){
 				$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
 			}
+			if(isset($depth1Value['QueueImageId'])){
+				$this->options['query']['Queues.' . ($depth1 + 1) . '.QueueImageId'] = $depth1Value['QueueImageId'];
+			}
 			if(isset($depth1Value['EnableAutoGrow'])){
 				$this->options['query']['Queues.' . ($depth1 + 1) . '.EnableAutoGrow'] = $depth1Value['EnableAutoGrow'];
 			}
@@ -2086,6 +2159,10 @@ class SetAutoScaleConfig extends Rpc
  * @method $this withClipboard($value)
  * @method string getUsbRedirect()
  * @method $this withUsbRedirect($value)
+ * @method string getAsyncMode()
+ * @method $this withAsyncMode($value)
+ * @method string getUdpPort()
+ * @method $this withUdpPort($value)
  */
 class SetGWSClusterPolicy extends Rpc
 {

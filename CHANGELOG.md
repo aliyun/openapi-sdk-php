@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.458 - 2020-8-28
+- Support multiple security group for one ehpc cluster.
+- Update GWS apis.
+
+
 ## 1.8.457 - 2020-8-28
 - Supported Add GetAlgorithmHistoryResult.
 
