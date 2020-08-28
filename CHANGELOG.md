@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.457 - 2020-8-28
+- Supported Add GetAlgorithmHistoryResult.
+
+
 ## 1.8.456 - 2020-8-27
 - Update parameter.
 
