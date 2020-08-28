@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.459 - 2020-8-28
+- Add name.
+
+
 ## 1.8.458 - 2020-8-28
 - Support multiple security group for one ehpc cluster.
 - Update GWS apis.
