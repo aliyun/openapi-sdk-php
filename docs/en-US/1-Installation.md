@@ -13,6 +13,9 @@ Before you install ensure your environment is using PHP version 5.5 or later. Le
 Composer is the recommended way to install. Composer is a tool for PHP that manages and installs the dependencies of your project. For more information on how to install Composer, configure autoloading, and follow other best practices for defining dependencies, see [getcomposer.org](https://getcomposer.org).
 
 ### Installation
+
+> This repository is the all-in-one SDK of Alibaba Cloud. If you want to install by product sub-package, please refer to: [Supported Product List](/SUPPORTED-EN.md).
+
 If Composer is already [installed globally on your system](https://getcomposer.org/doc/00-intro.md#globally), run the following in the base directory of your project to install Alibaba Cloud SDK for PHP as a dependency:
 ```bash
 composer require alibabacloud/sdk
