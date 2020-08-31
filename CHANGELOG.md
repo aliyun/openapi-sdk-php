@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.461 - 2020-8-31
+- Supported AAA for BBB.
+- Fixed bugs for CCC.
+
+
 ## 1.8.460 - 2020-8-31
 - Add list person visit count API.
 
