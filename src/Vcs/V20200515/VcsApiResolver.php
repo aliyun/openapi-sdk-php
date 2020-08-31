@@ -8,7 +8,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddDataSource addDataSource(array $options = [])
  * @method AddDevice addDevice(array $options = [])
  * @method AddMonitor addMonitor(array $options = [])
+ * @method AddProfile addProfile(array $options = [])
+ * @method AddProfileCatalog addProfileCatalog(array $options = [])
  * @method BindCorpGroup bindCorpGroup(array $options = [])
+ * @method BindPerson bindPerson(array $options = [])
  * @method BindUser bindUser(array $options = [])
  * @method CreateCorp createCorp(array $options = [])
  * @method CreateCorpGroup createCorpGroup(array $options = [])
@@ -19,11 +22,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCorpGroup deleteCorpGroup(array $options = [])
  * @method DeleteDataSource deleteDataSource(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
+ * @method DeleteProfile deleteProfile(array $options = [])
+ * @method DeleteProfileCatalog deleteProfileCatalog(array $options = [])
  * @method DeleteRecords deleteRecords(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method DeleteUserGroup deleteUserGroup(array $options = [])
  * @method DeleteVideoSummaryTask deleteVideoSummaryTask(array $options = [])
  * @method GetBodyOptions getBodyOptions(array $options = [])
+ * @method GetCatalogList getCatalogList(array $options = [])
  * @method GetDeviceConfig getDeviceConfig(array $options = [])
  * @method GetDeviceLiveUrl getDeviceLiveUrl(array $options = [])
  * @method GetDeviceVideoUrl getDeviceVideoUrl(array $options = [])
@@ -33,6 +39,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMonitorResult getMonitorResult(array $options = [])
  * @method GetPersonDetail getPersonDetail(array $options = [])
  * @method GetPersonList getPersonList(array $options = [])
+ * @method GetProfileDetail getProfileDetail(array $options = [])
+ * @method GetProfileList getProfileList(array $options = [])
  * @method GetUserDetail getUserDetail(array $options = [])
  * @method GetVideoComposeResult getVideoComposeResult(array $options = [])
  * @method GetVideoSummaryTaskResult getVideoSummaryTaskResult(array $options = [])
@@ -63,10 +71,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopMonitor stopMonitor(array $options = [])
  * @method SyncDeviceTime syncDeviceTime(array $options = [])
  * @method UnbindCorpGroup unbindCorpGroup(array $options = [])
+ * @method UnbindPerson unbindPerson(array $options = [])
  * @method UnbindUser unbindUser(array $options = [])
  * @method UpdateCorp updateCorp(array $options = [])
  * @method UpdateDevice updateDevice(array $options = [])
  * @method UpdateMonitor updateMonitor(array $options = [])
+ * @method UpdateProfile updateProfile(array $options = [])
+ * @method UpdateProfileCatalog updateProfileCatalog(array $options = [])
  * @method UpdateUser updateUser(array $options = [])
  * @method UpdateUserGroup updateUserGroup(array $options = [])
  * @method UploadFile uploadFile(array $options = [])
@@ -86,6 +97,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'vcs';
 }
 
 /**
@@ -388,6 +402,242 @@ class AddMonitor extends Rpc
 
 /**
  * @method string getCorpId()
+ * @method string getGender()
+ * @method string getPlateNo()
+ * @method string getIdNumber()
+ * @method string getFaceUrl()
+ * @method string getLiveAddress()
+ * @method string getIsvSubId()
+ * @method string getSceneType()
+ * @method string getPhoneNo()
+ * @method string getCatalogId()
+ * @method string getName()
+ * @method string getBizId()
+ */
+class AddProfile extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGender($value)
+    {
+        $this->data['Gender'] = $value;
+        $this->options['form_params']['Gender'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlateNo($value)
+    {
+        $this->data['PlateNo'] = $value;
+        $this->options['form_params']['PlateNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdNumber($value)
+    {
+        $this->data['IdNumber'] = $value;
+        $this->options['form_params']['IdNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceUrl($value)
+    {
+        $this->data['FaceUrl'] = $value;
+        $this->options['form_params']['FaceUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLiveAddress($value)
+    {
+        $this->data['LiveAddress'] = $value;
+        $this->options['form_params']['LiveAddress'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneType($value)
+    {
+        $this->data['SceneType'] = $value;
+        $this->options['form_params']['SceneType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNo($value)
+    {
+        $this->data['PhoneNo'] = $value;
+        $this->options['form_params']['PhoneNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCatalogId($value)
+    {
+        $this->data['CatalogId'] = $value;
+        $this->options['form_params']['CatalogId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIsvSubId()
+ * @method string getParentCatalogId()
+ * @method string getCorpId()
+ * @method string getCatalogName()
+ */
+class AddProfileCatalog extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParentCatalogId($value)
+    {
+        $this->data['ParentCatalogId'] = $value;
+        $this->options['form_params']['ParentCatalogId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCatalogName($value)
+    {
+        $this->data['CatalogName'] = $value;
+        $this->options['form_params']['CatalogName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
  * @method string getCorpGroupId()
  */
 class BindCorpGroup extends Rpc
@@ -415,6 +665,82 @@ class BindCorpGroup extends Rpc
     {
         $this->data['CorpGroupId'] = $value;
         $this->options['form_params']['CorpGroupId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIsvSubId()
+ * @method string getCorpId()
+ * @method string getPersonMatchingRate()
+ * @method string getProfileId()
+ * @method string getPersonId()
+ */
+class BindPerson extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonMatchingRate($value)
+    {
+        $this->data['PersonMatchingRate'] = $value;
+        $this->options['form_params']['PersonMatchingRate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProfileId($value)
+    {
+        $this->data['ProfileId'] = $value;
+        $this->options['form_params']['ProfileId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonId($value)
+    {
+        $this->data['PersonId'] = $value;
+        $this->options['form_params']['PersonId'] = $value;
 
         return $this;
     }
@@ -1195,6 +1521,102 @@ class DeleteDevice extends Rpc
 }
 
 /**
+ * @method string getIsvSubId()
+ * @method string getCorpId()
+ * @method string getProfileId()
+ */
+class DeleteProfile extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProfileId($value)
+    {
+        $this->data['ProfileId'] = $value;
+        $this->options['form_params']['ProfileId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIsvSubId()
+ * @method string getCorpId()
+ * @method string getCatalogId()
+ */
+class DeleteProfileCatalog extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCatalogId($value)
+    {
+        $this->data['CatalogId'] = $value;
+        $this->options['form_params']['CatalogId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAlgorithmType()
  * @method string getCorpId()
  * @method string getAttributeName()
@@ -1418,6 +1840,16 @@ class GetBodyOptions extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getIsvSubId()
+ * @method $this withIsvSubId($value)
+ * @method string getCorpId()
+ * @method $this withCorpId($value)
+ */
+class GetCatalogList extends Rpc
+{
 }
 
 /**
@@ -1777,10 +2209,13 @@ class GetPersonDetail extends Rpc
 }
 
 /**
- * @method string getFaceImageUrl()
+ * @method string getCorpId()
+ * @method string getFaceMatchingRateThreshold()
  * @method string getPageNumber()
  * @method string getCorpIdList()
+ * @method string getFaceUrl()
  * @method string getPageSize()
+ * @method string getPersonIdList()
  */
 class GetPersonList extends Rpc
 {
@@ -1790,10 +2225,23 @@ class GetPersonList extends Rpc
      *
      * @return $this
      */
-    public function withFaceImageUrl($value)
+    public function withCorpId($value)
     {
-        $this->data['FaceImageUrl'] = $value;
-        $this->options['form_params']['FaceImageUrl'] = $value;
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceMatchingRateThreshold($value)
+    {
+        $this->data['FaceMatchingRateThreshold'] = $value;
+        $this->options['form_params']['FaceMatchingRateThreshold'] = $value;
 
         return $this;
     }
@@ -1829,10 +2277,328 @@ class GetPersonList extends Rpc
      *
      * @return $this
      */
+    public function withFaceUrl($value)
+    {
+        $this->data['FaceUrl'] = $value;
+        $this->options['form_params']['FaceUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPageSize($value)
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonIdList($value)
+    {
+        $this->data['PersonIdList'] = $value;
+        $this->options['form_params']['PersonIdList'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIsvSubId()
+ * @method string getCorpId()
+ * @method string getProfileId()
+ */
+class GetProfileDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProfileId($value)
+    {
+        $this->data['ProfileId'] = $value;
+        $this->options['form_params']['ProfileId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProfileIdList()
+ * @method string getCorpId()
+ * @method string getGender()
+ * @method string getPlateNo()
+ * @method string getIdNumber()
+ * @method string getPageNumber()
+ * @method string getFaceUrl()
+ * @method string getPageSize()
+ * @method string getPersonIdList()
+ * @method string getLiveAddress()
+ * @method string getIsvSubId()
+ * @method string getSceneType()
+ * @method string getPhoneNo()
+ * @method string getCatalogId()
+ * @method string getName()
+ * @method string getBizId()
+ * @method string getMatchingRateThreshold()
+ */
+class GetProfileList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProfileIdList($value)
+    {
+        $this->data['ProfileIdList'] = $value;
+        $this->options['form_params']['ProfileIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGender($value)
+    {
+        $this->data['Gender'] = $value;
+        $this->options['form_params']['Gender'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlateNo($value)
+    {
+        $this->data['PlateNo'] = $value;
+        $this->options['form_params']['PlateNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdNumber($value)
+    {
+        $this->data['IdNumber'] = $value;
+        $this->options['form_params']['IdNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceUrl($value)
+    {
+        $this->data['FaceUrl'] = $value;
+        $this->options['form_params']['FaceUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonIdList($value)
+    {
+        $this->data['PersonIdList'] = $value;
+        $this->options['form_params']['PersonIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLiveAddress($value)
+    {
+        $this->data['LiveAddress'] = $value;
+        $this->options['form_params']['LiveAddress'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneType($value)
+    {
+        $this->data['SceneType'] = $value;
+        $this->options['form_params']['SceneType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNo($value)
+    {
+        $this->data['PhoneNo'] = $value;
+        $this->options['form_params']['PhoneNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCatalogId($value)
+    {
+        $this->data['CatalogId'] = $value;
+        $this->options['form_params']['CatalogId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMatchingRateThreshold($value)
+    {
+        $this->data['MatchingRateThreshold'] = $value;
+        $this->options['form_params']['MatchingRateThreshold'] = $value;
 
         return $this;
     }
@@ -3525,11 +4291,13 @@ class ListUserGroups extends Rpc
 }
 
 /**
+ * @method string getUserList()
  * @method string getCorpId()
  * @method string getGender()
  * @method string getPlateNo()
  * @method string getIdNumber()
  * @method string getFaceImageUrl()
+ * @method string getPersonList()
  * @method string getPageNumber()
  * @method string getAttachment()
  * @method string getPageSize()
@@ -3539,10 +4307,24 @@ class ListUserGroups extends Rpc
  * @method string getPhoneNo()
  * @method string getBizId()
  * @method string getAge()
+ * @method string getMatchingRateThreshold()
  * @method string getUserName()
  */
 class ListUsers extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserList($value)
+    {
+        $this->data['UserList'] = $value;
+        $this->options['form_params']['UserList'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -3605,6 +4387,19 @@ class ListUsers extends Rpc
     {
         $this->data['FaceImageUrl'] = $value;
         $this->options['form_params']['FaceImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonList($value)
+    {
+        $this->data['PersonList'] = $value;
+        $this->options['form_params']['PersonList'] = $value;
 
         return $this;
     }
@@ -3722,6 +4517,19 @@ class ListUsers extends Rpc
     {
         $this->data['Age'] = $value;
         $this->options['form_params']['Age'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMatchingRateThreshold($value)
+    {
+        $this->data['MatchingRateThreshold'] = $value;
+        $this->options['form_params']['MatchingRateThreshold'] = $value;
 
         return $this;
     }
@@ -4424,6 +5232,54 @@ class UnbindCorpGroup extends Rpc
 /**
  * @method string getIsvSubId()
  * @method string getCorpId()
+ * @method string getProfileId()
+ */
+class UnbindPerson extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProfileId($value)
+    {
+        $this->data['ProfileId'] = $value;
+        $this->options['form_params']['ProfileId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIsvSubId()
+ * @method string getCorpId()
  * @method string getUserId()
  */
 class UnbindUser extends Rpc
@@ -4888,6 +5744,256 @@ class UpdateMonitor extends Rpc
     {
         $this->data['AlgorithmVendor'] = $value;
         $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getGender()
+ * @method string getPlateNo()
+ * @method string getIdNumber()
+ * @method string getFaceUrl()
+ * @method string getProfileId()
+ * @method string getLiveAddress()
+ * @method string getIsvSubId()
+ * @method string getSceneType()
+ * @method string getPhoneNo()
+ * @method string getCatalogId()
+ * @method string getName()
+ * @method string getBizId()
+ */
+class UpdateProfile extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGender($value)
+    {
+        $this->data['Gender'] = $value;
+        $this->options['form_params']['Gender'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlateNo($value)
+    {
+        $this->data['PlateNo'] = $value;
+        $this->options['form_params']['PlateNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdNumber($value)
+    {
+        $this->data['IdNumber'] = $value;
+        $this->options['form_params']['IdNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceUrl($value)
+    {
+        $this->data['FaceUrl'] = $value;
+        $this->options['form_params']['FaceUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProfileId($value)
+    {
+        $this->data['ProfileId'] = $value;
+        $this->options['form_params']['ProfileId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLiveAddress($value)
+    {
+        $this->data['LiveAddress'] = $value;
+        $this->options['form_params']['LiveAddress'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneType($value)
+    {
+        $this->data['SceneType'] = $value;
+        $this->options['form_params']['SceneType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNo($value)
+    {
+        $this->data['PhoneNo'] = $value;
+        $this->options['form_params']['PhoneNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCatalogId($value)
+    {
+        $this->data['CatalogId'] = $value;
+        $this->options['form_params']['CatalogId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIsvSubId()
+ * @method string getCorpId()
+ * @method string getCatalogName()
+ * @method string getCatalogId()
+ */
+class UpdateProfileCatalog extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvSubId($value)
+    {
+        $this->data['IsvSubId'] = $value;
+        $this->options['form_params']['IsvSubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCatalogName($value)
+    {
+        $this->data['CatalogName'] = $value;
+        $this->options['form_params']['CatalogName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCatalogId($value)
+    {
+        $this->data['CatalogId'] = $value;
+        $this->options['form_params']['CatalogId'] = $value;
 
         return $this;
     }

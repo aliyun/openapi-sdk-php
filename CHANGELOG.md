@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.460 - 2020-8-31
+- Add list person visit count API.
+
+
 ## 1.8.459 - 2020-8-28
 - Add name.
 
