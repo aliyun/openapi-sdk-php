@@ -97,9 +97,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'vcs';
 }
 
 /**
@@ -4165,10 +4162,13 @@ class ListPersonTrace extends Rpc
 /**
  * @method string getCorpId()
  * @method string getEndTime()
+ * @method string getCountType()
  * @method string getStartTime()
  * @method string getPageNumber()
  * @method string getTimeAggregateType()
+ * @method string getMaxVal()
  * @method string getTagCode()
+ * @method string getMinVal()
  * @method string getPageSize()
  * @method string getAggregateType()
  */
@@ -4197,6 +4197,19 @@ class ListPersonVisitCount extends Rpc
     {
         $this->data['EndTime'] = $value;
         $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCountType($value)
+    {
+        $this->data['CountType'] = $value;
+        $this->options['form_params']['CountType'] = $value;
 
         return $this;
     }
@@ -4245,10 +4258,36 @@ class ListPersonVisitCount extends Rpc
      *
      * @return $this
      */
+    public function withMaxVal($value)
+    {
+        $this->data['MaxVal'] = $value;
+        $this->options['form_params']['MaxVal'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withTagCode($value)
     {
         $this->data['TagCode'] = $value;
         $this->options['form_params']['TagCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinVal($value)
+    {
+        $this->data['MinVal'] = $value;
+        $this->options['form_params']['MinVal'] = $value;
 
         return $this;
     }

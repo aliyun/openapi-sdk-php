@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.464 - 2020-8-31
+- GetPersonList Support LastShotTime.
+
+
 ## 1.8.463 - 2020-8-31
 - Supported AAA for BBB.
 - Fixed bugs for CCC.
