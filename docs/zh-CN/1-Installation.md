@@ -2,6 +2,9 @@
 ***
 
 # 安装
+
+> 本仓库为阿里云产品 all-in-one SDK，若要按产品分包安装，请参考：[已支持产品列表](/SUPPORTED.md)。
+
 安装 Alibaba Cloud SDK for PHP 有如下方式：
 
 - [通过 Composer 安装依赖](#%E9%80%9A%E8%BF%87-composer-%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96)
