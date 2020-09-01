@@ -63,13 +63,16 @@ class DescribeSmartVerify extends Rpc
 
 /**
  * @method string getIp()
+ * @method string getCertName()
  * @method string getMobile()
  * @method string getUserId()
  * @method string getMode()
+ * @method string getCertNo()
  * @method string getOuterOrderNo()
  * @method string getCertType()
  * @method string getSceneId()
  * @method string getMetaInfo()
+ * @method string getOcr()
  */
 class InitSmartVerify extends Rpc
 {
@@ -83,6 +86,19 @@ class InitSmartVerify extends Rpc
     {
         $this->data['Ip'] = $value;
         $this->options['form_params']['Ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertName($value)
+    {
+        $this->data['CertName'] = $value;
+        $this->options['form_params']['CertName'] = $value;
 
         return $this;
     }
@@ -122,6 +138,19 @@ class InitSmartVerify extends Rpc
     {
         $this->data['Mode'] = $value;
         $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertNo($value)
+    {
+        $this->data['CertNo'] = $value;
+        $this->options['form_params']['CertNo'] = $value;
 
         return $this;
     }
@@ -174,6 +203,19 @@ class InitSmartVerify extends Rpc
     {
         $this->data['MetaInfo'] = $value;
         $this->options['form_params']['MetaInfo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOcr($value)
+    {
+        $this->data['Ocr'] = $value;
+        $this->options['form_params']['Ocr'] = $value;
 
         return $this;
     }

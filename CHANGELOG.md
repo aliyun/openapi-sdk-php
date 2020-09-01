@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.469 - 2020-9-1
+- Add Smart Verify API.
+
+
 ## 1.8.468 - 2020-9-1
 - Generated 2020-07-02 for `scsp`.
 
