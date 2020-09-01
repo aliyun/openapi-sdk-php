@@ -32,6 +32,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySkillGroups querySkillGroups(array $options = [])
  * @method RemoveSkillGroup removeSkillGroup(array $options = [])
  * @method SearchTicketById searchTicketById(array $options = [])
+ * @method SearchTicketList searchTicketList(array $options = [])
  * @method SendHotlineHeartBeat sendHotlineHeartBeat(array $options = [])
  * @method StartCall startCall(array $options = [])
  * @method StartHotlineService startHotlineService(array $options = [])
@@ -151,8 +152,8 @@ class AnswerCall extends Rpc
 }
 
 /**
- * @method string getInstanceId()
  * @method string getClientToken()
+ * @method string getInstanceId()
  * @method string getTicketId()
  * @method string getOperatorId()
  * @method string getAcceptorId()
@@ -165,10 +166,10 @@ class AssignTicket extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId($value)
+    public function withClientToken($value)
     {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
 
         return $this;
     }
@@ -178,10 +179,10 @@ class AssignTicket extends Rpc
      *
      * @return $this
      */
-    public function withClientToken($value)
+    public function withInstanceId($value)
     {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -227,8 +228,8 @@ class AssignTicket extends Rpc
 }
 
 /**
- * @method string getInstanceId()
  * @method string getClientToken()
+ * @method string getInstanceId()
  * @method string getTicketId()
  * @method string getActionItems()
  * @method string getOperatorId()
@@ -241,10 +242,10 @@ class CloseTicket extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId($value)
+    public function withClientToken($value)
     {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
 
         return $this;
     }
@@ -254,10 +255,10 @@ class CloseTicket extends Rpc
      *
      * @return $this
      */
-    public function withClientToken($value)
+    public function withInstanceId($value)
     {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -549,8 +550,8 @@ class CreateSkillGroup extends Rpc
 }
 
 /**
- * @method string getInstanceId()
  * @method string getClientToken()
+ * @method string getInstanceId()
  * @method string getTemplateId()
  * @method string getCategoryId()
  * @method string getCreatorId()
@@ -571,10 +572,10 @@ class CreateTicket extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId($value)
+    public function withClientToken($value)
     {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
 
         return $this;
     }
@@ -584,10 +585,10 @@ class CreateTicket extends Rpc
      *
      * @return $this
      */
-    public function withClientToken($value)
+    public function withInstanceId($value)
     {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -848,27 +849,15 @@ class EnableRole extends Rpc
 }
 
 /**
- * @method string getInstanceId()
  * @method string getClientToken()
+ * @method string getInstanceId()
  * @method string getTicketId()
  * @method string getOperatorId()
  * @method string getActivityCode()
+ * @method string getActivityForm()
  */
 class ExecuteActivity extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -879,6 +868,19 @@ class ExecuteActivity extends Rpc
     {
         $this->data['ClientToken'] = $value;
         $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -918,6 +920,19 @@ class ExecuteActivity extends Rpc
     {
         $this->data['ActivityCode'] = $value;
         $this->options['form_params']['ActivityCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActivityForm($value)
+    {
+        $this->data['ActivityForm'] = $value;
+        $this->options['form_params']['ActivityForm'] = $value;
 
         return $this;
     }
@@ -1065,6 +1080,7 @@ class GetHotlineAgentDetail extends Rpc
 }
 
 /**
+ * @method string getClientToken()
  * @method string getInstanceId()
  * @method string getTemplateId()
  */
@@ -1073,6 +1089,19 @@ class GetTicketTemplateSchema extends Rpc
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1454,6 +1483,7 @@ class RemoveSkillGroup extends Rpc
 }
 
 /**
+ * @method string getClientToken()
  * @method string getInstanceId()
  * @method string getTicketId()
  */
@@ -1462,6 +1492,19 @@ class SearchTicketById extends Rpc
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1485,6 +1528,99 @@ class SearchTicketById extends Rpc
     {
         $this->data['TicketId'] = $value;
         $this->options['form_params']['TicketId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getOperatorId()
+ * @method string getTicketStatus()
+ * @method string getPageNo()
+ * @method string getPageSize()
+ */
+class SearchTicketList extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorId($value)
+    {
+        $this->data['OperatorId'] = $value;
+        $this->options['form_params']['OperatorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTicketStatus($value)
+    {
+        $this->data['TicketStatus'] = $value;
+        $this->options['form_params']['TicketStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNo($value)
+    {
+        $this->data['PageNo'] = $value;
+        $this->options['form_params']['PageNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -2340,8 +2476,8 @@ class UpdateSkillGroup extends Rpc
 }
 
 /**
- * @method string getInstanceId()
  * @method string getClientToken()
+ * @method string getInstanceId()
  * @method string getTicketId()
  * @method string getOperatorId()
  * @method string getFormData()
@@ -2354,10 +2490,10 @@ class UpdateTicket extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId($value)
+    public function withClientToken($value)
     {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
 
         return $this;
     }
@@ -2367,10 +2503,10 @@ class UpdateTicket extends Rpc
      *
      * @return $this
      */
-    public function withClientToken($value)
+    public function withInstanceId($value)
     {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
