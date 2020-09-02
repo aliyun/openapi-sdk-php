@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ExecuteExtendService executeExtendService(array $options = [])
  * @method ExecuteRequest executeRequest(array $options = [])
+ * @method ExecuteRequestML executeRequestML(array $options = [])
  * @method ExecuteRequestSG executeRequestSG(array $options = [])
  */
 class SafApiResolver extends ApiResolver
@@ -28,7 +29,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     protected $scheme = 'https';
 
     /** @var string */
-    public $serviceCode = 'SAF';
+    public $serviceCode = 'saf';
 }
 
 /**
@@ -53,6 +54,16 @@ class ExecuteExtendService extends Rpc
  * @method $this withService($value)
  */
 class ExecuteRequest extends Rpc
+{
+}
+
+/**
+ * @method string getServiceParameters()
+ * @method $this withServiceParameters($value)
+ * @method string getService()
+ * @method $this withService($value)
+ */
+class ExecuteRequestML extends Rpc
 {
 }
 

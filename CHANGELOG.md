@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.474 - 2020-9-2
+- Support sg for ml region.
+
+
 ## 1.8.473 - 2020-9-2
 - ChatApp second version.
 - Support new message fomat.
