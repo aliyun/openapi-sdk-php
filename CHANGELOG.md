@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.470 - 2020-9-2
+- Supported AndroidNotificationHuaweiChannel for Push and MassPush.
+
+
 ## 1.8.469 - 2020-9-1
 - Add Smart Verify API.
 
