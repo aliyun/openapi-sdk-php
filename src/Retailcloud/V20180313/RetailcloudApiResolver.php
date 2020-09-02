@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddClusterNode addClusterNode(array $options = [])
+ * @method AllocatePodConfig allocatePodConfig(array $options = [])
  * @method BatchAddServers batchAddServers(array $options = [])
  * @method BindNodeLabel bindNodeLabel(array $options = [])
  * @method CloseDeployOrder closeDeployOrder(array $options = [])
@@ -77,6 +78,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResumeDeploy resumeDeploy(array $options = [])
  * @method ScaleApp scaleApp(array $options = [])
  * @method SetDeployPauseType setDeployPauseType(array $options = [])
+ * @method SyncPodInfo syncPodInfo(array $options = [])
  * @method UnbindNodeLabel unbindNodeLabel(array $options = [])
  * @method UpdateApp updateApp(array $options = [])
  * @method UpdateDeployConfig updateDeployConfig(array $options = [])
@@ -96,9 +98,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'retailcloud';
 }
 
 /**
@@ -123,6 +122,18 @@ class AddClusterNode extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ */
+class AllocatePodConfig extends Rpc
+{
 }
 
 /**
@@ -2065,6 +2076,24 @@ class ScaleApp extends Rpc
  * @method $this withDeployOrderId($value)
  */
 class SetDeployPauseType extends Rpc
+{
+}
+
+/**
+ * @method string getReason()
+ * @method $this withReason($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getPodName()
+ * @method $this withPodName($value)
+ * @method string getSideCarType()
+ * @method $this withSideCarType($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class SyncPodInfo extends Rpc
 {
 }
 

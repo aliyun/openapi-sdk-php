@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.472 - 2020-9-2
+- Meshstress.
+
+
 ## 1.8.471 - 2020-9-2
 - Supported AndroidNotificationHuaweiChannel for Push and MassPush.
 
