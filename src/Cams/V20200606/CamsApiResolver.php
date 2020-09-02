@@ -30,22 +30,150 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getTemplateBodyParams()
- * @method $this withTemplateBodyParams($value)
+ * @method string getLink()
+ * @method string getCaption()
  * @method string getType()
- * @method $this withType($value)
+ * @method string getBody()
  * @method string getChannelType()
- * @method $this withChannelType($value)
  * @method string getFrom()
- * @method $this withFrom($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getTo()
- * @method $this withTo($value)
  * @method string getTemplateCode()
- * @method $this withTemplateCode($value)
+ * @method string getMediaType()
  */
 class SendMessage extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateBodyParams($value)
+    {
+        $this->data['TemplateBodyParams'] = $value;
+        $this->options['form_params']['TemplateBodyParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLink($value)
+    {
+        $this->data['Link'] = $value;
+        $this->options['form_params']['Link'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCaption($value)
+    {
+        $this->data['Caption'] = $value;
+        $this->options['form_params']['Caption'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['Body'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChannelType($value)
+    {
+        $this->data['ChannelType'] = $value;
+        $this->options['form_params']['ChannelType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFrom($value)
+    {
+        $this->data['From'] = $value;
+        $this->options['form_params']['From'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTo($value)
+    {
+        $this->data['To'] = $value;
+        $this->options['form_params']['To'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateCode($value)
+    {
+        $this->data['TemplateCode'] = $value;
+        $this->options['form_params']['TemplateCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMediaType($value)
+    {
+        $this->data['MediaType'] = $value;
+        $this->options['form_params']['MediaType'] = $value;
+
+        return $this;
+    }
 }
