@@ -204,6 +204,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['SendSpeed'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.SendSpeed'] = $depth1Value['SendSpeed'];
 			}
+			if(isset($depth1Value['AndroidNotificationHuaweiChannel'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationHuaweiChannel'] = $depth1Value['AndroidNotificationHuaweiChannel'];
+			}
 			if(isset($depth1Value['AndroidPopupActivity'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidPopupActivity'] = $depth1Value['AndroidPopupActivity'];
 			}
@@ -313,6 +316,8 @@ class MassPush extends Rpc
  * @method $this withPushTime($value)
  * @method string getSendSpeed()
  * @method $this withSendSpeed($value)
+ * @method string getAndroidNotificationHuaweiChannel()
+ * @method $this withAndroidNotificationHuaweiChannel($value)
  * @method string getAndroidPopupActivity()
  * @method $this withAndroidPopupActivity($value)
  * @method string getIOSRemindBody()
