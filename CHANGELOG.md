@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.475 - 2020-9-3
+- Generated 2020-07-02 for `scsp`.
+
+
 ## 1.8.474 - 2020-9-2
 - Support sg for ml region.
 

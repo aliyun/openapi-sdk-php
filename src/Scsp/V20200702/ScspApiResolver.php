@@ -29,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListHotlineRecord listHotlineRecord(array $options = [])
  * @method ListOutboundPhoneNumber listOutboundPhoneNumber(array $options = [])
  * @method ListSkillGroup listSkillGroup(array $options = [])
+ * @method QueryHotlineSession queryHotlineSession(array $options = [])
  * @method QuerySkillGroups querySkillGroups(array $options = [])
  * @method RemoveSkillGroup removeSkillGroup(array $options = [])
  * @method SearchTicketById searchTicketById(array $options = [])
@@ -1081,53 +1082,17 @@ class GetHotlineAgentDetail extends Rpc
 
 /**
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  */
 class GetTicketTemplateSchema extends Rpc
 {
 
     /** @var string */
     public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTemplateId($value)
-    {
-        $this->data['TemplateId'] = $value;
-        $this->options['form_params']['TemplateId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -1421,6 +1386,48 @@ class ListSkillGroup extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getServicerId()
+ * @method $this withServicerId($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getAcid()
+ * @method $this withAcid($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
+ * @method string getQueryEndTime()
+ * @method $this withQueryEndTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getQueryStartTime()
+ * @method $this withQueryStartTime($value)
+ * @method string getServicerName()
+ * @method $this withServicerName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCallResult()
+ * @method $this withCallResult($value)
+ * @method string getCallType()
+ * @method $this withCallType($value)
+ * @method string getMemberName()
+ * @method $this withMemberName($value)
+ * @method string getMemberId()
+ * @method $this withMemberId($value)
+ */
+class QueryHotlineSession extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -1484,146 +1491,38 @@ class RemoveSkillGroup extends Rpc
 
 /**
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getTicketId()
+ * @method $this withTicketId($value)
  */
 class SearchTicketById extends Rpc
 {
 
     /** @var string */
     public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTicketId($value)
-    {
-        $this->data['TicketId'] = $value;
-        $this->options['form_params']['TicketId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
  * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getOperatorId()
+ * @method $this withOperatorId($value)
  * @method string getTicketStatus()
+ * @method $this withTicketStatus($value)
  * @method string getPageNo()
+ * @method $this withPageNo($value)
  * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class SearchTicketList extends Rpc
 {
 
     /** @var string */
     public $method = 'GET';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperatorId($value)
-    {
-        $this->data['OperatorId'] = $value;
-        $this->options['form_params']['OperatorId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTicketStatus($value)
-    {
-        $this->data['TicketStatus'] = $value;
-        $this->options['form_params']['TicketStatus'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNo($value)
-    {
-        $this->data['PageNo'] = $value;
-        $this->options['form_params']['PageNo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
 }
 
 /**
