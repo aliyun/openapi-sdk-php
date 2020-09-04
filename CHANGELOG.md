@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.480 - 2020-9-4
+- Sync cdn APIs.
+
+
 ## 1.8.479 - 2020-9-4
 - Update Scdn API.
 
