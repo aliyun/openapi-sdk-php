@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.477 - 2020-9-4
+- Add GetImageQuality API.
+- Add more info as parameters to Images related APIs.
+
+
 ## 1.8.476 - 2020-9-3
 - Generated 2020-07-02 for `scsp`.
 

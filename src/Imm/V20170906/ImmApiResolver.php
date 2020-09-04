@@ -49,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetImage getImage(array $options = [])
  * @method GetImageCroppingSuggestions getImageCroppingSuggestions(array $options = [])
  * @method GetImageJob getImageJob(array $options = [])
+ * @method GetImageQuality getImageQuality(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method GetOfficeConversionTask getOfficeConversionTask(array $options = [])
  * @method GetOfficeEditURL getOfficeEditURL(array $options = [])
@@ -887,6 +888,16 @@ class GetImageJob extends Rpc
 }
 
 /**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getImageUri()
+ * @method $this withImageUri($value)
+ */
+class GetImageQuality extends Rpc
+{
+}
+
+/**
  * @method string getMediaUri()
  * @method $this withMediaUri($value)
  * @method string getProject()
@@ -1047,6 +1058,10 @@ class IndexImage extends Rpc
  * @method $this withExternalId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
  * @method string getRemarksB()
  * @method $this withRemarksB($value)
  * @method string getRemarksA()
