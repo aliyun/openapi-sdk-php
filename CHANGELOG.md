@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.479 - 2020-9-4
+- Update Scdn API.
+
+
 ## 1.8.478 - 2020-9-4
 - Update domain API.
 

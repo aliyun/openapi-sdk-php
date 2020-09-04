@@ -50,11 +50,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeScdnService describeScdnService(array $options = [])
  * @method DescribeScdnTopDomainsByFlow describeScdnTopDomainsByFlow(array $options = [])
  * @method DescribeScdnUserDomains describeScdnUserDomains(array $options = [])
+ * @method DescribeScdnUserProtectInfo describeScdnUserProtectInfo(array $options = [])
  * @method DescribeScdnUserQuota describeScdnUserQuota(array $options = [])
  * @method OpenScdnService openScdnService(array $options = [])
  * @method PreloadScdnObjectCaches preloadScdnObjectCaches(array $options = [])
  * @method RefreshScdnObjectCaches refreshScdnObjectCaches(array $options = [])
- * @method SetDomainServerCertificate setDomainServerCertificate(array $options = [])
  * @method SetScdnBotInfo setScdnBotInfo(array $options = [])
  * @method SetScdnCcInfo setScdnCcInfo(array $options = [])
  * @method SetScdnDdosInfo setScdnDdosInfo(array $options = [])
@@ -823,6 +823,17 @@ class DescribeScdnUserDomains extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ */
+class DescribeScdnUserProtectInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
@@ -881,28 +892,6 @@ class PreloadScdnObjectCaches extends Rpc
  * @method $this withObjectType($value)
  */
 class RefreshScdnObjectCaches extends Rpc
-{
-}
-
-/**
- * @method string getSSLProtocol()
- * @method $this withSSLProtocol($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getSSLPri()
- * @method $this withSSLPri($value)
- * @method string getCertName()
- * @method $this withCertName($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSSLPub()
- * @method $this withSSLPub($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class SetDomainServerCertificate extends Rpc
 {
 }
 
