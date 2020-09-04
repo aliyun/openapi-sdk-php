@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.478 - 2020-9-4
+- Update domain API.
+
+
 ## 1.8.477 - 2020-9-4
 - Add GetImageQuality API.
 - Add more info as parameters to Images related APIs.

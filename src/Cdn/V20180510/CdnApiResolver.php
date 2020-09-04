@@ -40,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCdnUserBillPrediction describeCdnUserBillPrediction(array $options = [])
  * @method DescribeCdnUserBillType describeCdnUserBillType(array $options = [])
  * @method DescribeCdnUserConfigs describeCdnUserConfigs(array $options = [])
+ * @method DescribeCdnUserDomainsByFunc describeCdnUserDomainsByFunc(array $options = [])
  * @method DescribeCdnUserQuota describeCdnUserQuota(array $options = [])
  * @method DescribeCdnUserResourcePackage describeCdnUserResourcePackage(array $options = [])
  * @method DescribeCertificateInfoByID describeCertificateInfoByID(array $options = [])
@@ -108,6 +109,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserUsageDataExportTask describeUserUsageDataExportTask(array $options = [])
  * @method DescribeUserUsageDetailDataExportTask describeUserUsageDetailDataExportTask(array $options = [])
  * @method DescribeUserVipsByDomain describeUserVipsByDomain(array $options = [])
+ * @method DescribeVerifyContent describeVerifyContent(array $options = [])
  * @method DisableRealtimeLogDelivery disableRealtimeLogDelivery(array $options = [])
  * @method EnableRealtimeLogDelivery enableRealtimeLogDelivery(array $options = [])
  * @method ListDomainsByLogConfigId listDomainsByLogConfigId(array $options = [])
@@ -152,13 +154,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetSourceHostConfig setSourceHostConfig(array $options = [])
  * @method SetUserGreenManagerConfig setUserGreenManagerConfig(array $options = [])
  * @method SetVideoSeekConfig setVideoSeekConfig(array $options = [])
- * @method SetWafConfig setWafConfig(array $options = [])
  * @method SetWaitingRoomConfig setWaitingRoomConfig(array $options = [])
  * @method StartCdnDomain startCdnDomain(array $options = [])
  * @method StopCdnDomain stopCdnDomain(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateFCTrigger updateFCTrigger(array $options = [])
+ * @method VerifyDomainOwner verifyDomainOwner(array $options = [])
  */
 class CdnApiResolver extends ApiResolver
 {
@@ -779,6 +781,22 @@ class DescribeCdnUserBillType extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeCdnUserConfigs extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFuncId()
+ * @method $this withFuncId($value)
+ */
+class DescribeCdnUserDomainsByFunc extends Rpc
 {
 }
 
@@ -1729,10 +1747,6 @@ class DescribeRefreshQuota extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
  * @method string getOwnerId()
@@ -1955,6 +1969,16 @@ class DescribeUserUsageDetailDataExportTask extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeUserVipsByDomain extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVerifyContent extends Rpc
 {
 }
 
@@ -2629,20 +2653,6 @@ class SetVideoSeekConfig extends Rpc
 }
 
 /**
- * @method string getEnable()
- * @method $this withEnable($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getConfigId()
- * @method $this withConfigId($value)
- */
-class SetWafConfig extends Rpc
-{
-}
-
-/**
  * @method string getWaitUrl()
  * @method $this withWaitUrl($value)
  * @method string getWaitUri()
@@ -2839,4 +2849,16 @@ class UpdateFCTrigger extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getVerifyType()
+ * @method $this withVerifyType($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class VerifyDomainOwner extends Rpc
+{
 }
