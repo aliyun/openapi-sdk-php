@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.481 - 2020-9-7
+- Support parameter APIs.
+
+
 ## 1.8.480 - 2020-9-4
 - Sync cdn APIs.
 
