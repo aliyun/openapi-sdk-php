@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.482 - 2020-9-8
+- Supported backend interface for ICBU.
+
+
 ## 1.8.481 - 2020-9-7
 - Support parameter APIs.
 
