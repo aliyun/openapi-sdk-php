@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.483 - 2020-9-9
+- Add support cn-beijing service region.
+- Add ai video cover interface,include submit and query.
+- Add dynamic image query interface.
+- Update SubmitMediaAuditJob support MediaAuditConfiguration to set ResourceType.
+
+
 ## 1.8.482 - 2020-9-8
 - Supported backend interface for ICBU.
 
