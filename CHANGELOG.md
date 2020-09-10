@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.484 - 2020-9-10
+- Update HasRenewChangeOrder type to Boolean in DescribeInstances.
+
+
 ## 1.8.483 - 2020-9-9
 - Add support cn-beijing service region.
 - Add ai video cover interface,include submit and query.
