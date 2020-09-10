@@ -23,12 +23,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRestoreRangeInfo describeRestoreRangeInfo(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
+ * @method DisableBackupLog disableBackupLog(array $options = [])
+ * @method EnableBackupLog enableBackupLog(array $options = [])
  * @method GetDBListFromAgent getDBListFromAgent(array $options = [])
  * @method ModifyBackupObjects modifyBackupObjects(array $options = [])
  * @method ModifyBackupPlanName modifyBackupPlanName(array $options = [])
  * @method ModifyBackupSetDownloadRules modifyBackupSetDownloadRules(array $options = [])
  * @method ModifyBackupSourceEndpoint modifyBackupSourceEndpoint(array $options = [])
  * @method ModifyBackupStrategy modifyBackupStrategy(array $options = [])
+ * @method ModifyStorageStrategy modifyStorageStrategy(array $options = [])
+ * @method ReleaseBackupPlan releaseBackupPlan(array $options = [])
  * @method RenewBackupPlan renewBackupPlan(array $options = [])
  * @method StartBackupPlan startBackupPlan(array $options = [])
  * @method StartRestoreTask startRestoreTask(array $options = [])
@@ -448,6 +452,30 @@ class DescribeRestoreTaskList extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DisableBackupLog extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class EnableBackupLog extends Rpc
+{
+}
+
+/**
  * @method string getSourceEndpointRegion()
  * @method $this withSourceEndpointRegion($value)
  * @method string getBackupGatewayId()
@@ -508,6 +536,8 @@ class ModifyBackupPlanName extends Rpc
  * @method $this withOpenAutoDownload($value)
  * @method string getIncrementDataFormat()
  * @method $this withIncrementDataFormat($value)
+ * @method string getBackupSetDownloadTargetTypeLocation()
+ * @method $this withBackupSetDownloadTargetTypeLocation($value)
  * @method string getBackupSetDownloadDir()
  * @method $this withBackupSetDownloadDir($value)
  */
@@ -554,6 +584,8 @@ class ModifyBackupSourceEndpoint extends Rpc
 }
 
 /**
+ * @method string getBackupLogIntervalSeconds()
+ * @method $this withBackupLogIntervalSeconds($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getBackupPlanId()
@@ -568,6 +600,36 @@ class ModifyBackupSourceEndpoint extends Rpc
  * @method $this withBackupStrategyType($value)
  */
 class ModifyBackupStrategy extends Rpc
+{
+}
+
+/**
+ * @method string getDuplicationArchivePeriod()
+ * @method $this withDuplicationArchivePeriod($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBackupRetentionPeriod()
+ * @method $this withBackupRetentionPeriod($value)
+ * @method string getDuplicationInfrequentAccessPeriod()
+ * @method $this withDuplicationInfrequentAccessPeriod($value)
+ */
+class ModifyStorageStrategy extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ReleaseBackupPlan extends Rpc
 {
 }
 

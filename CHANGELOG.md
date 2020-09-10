@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.8.485 - 2020-9-10
+- Add DisableBackupLog.
+- Add EnableBackupLog.
+- Add ReleaseBackupPlan.
+- Add ModifyStorageStrategy.
+- Modify ModifyBackupStrategy.
+- Modify ModifyBackupSetDownloadRules.
+
+
 ## 1.8.484 - 2020-9-10
 - Update HasRenewChangeOrder type to Boolean in DescribeInstances.
 
