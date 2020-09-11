@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.486 - 2020-9-11
+- Support execute database script via open api.
+
+
 ## 1.8.485 - 2020-9-10
 - Add DisableBackupLog.
 - Add EnableBackupLog.

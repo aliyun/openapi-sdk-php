@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ApproveOrder approveOrder(array $options = [])
+ * @method CheckFinishMission checkFinishMission(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
  * @method CreatePublishGroupTask createPublishGroupTask(array $options = [])
@@ -15,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableUser enableUser(array $options = [])
  * @method ExecuteDataCorrect executeDataCorrect(array $options = [])
  * @method ExecuteDataExport executeDataExport(array $options = [])
+ * @method ExecuteScript executeScript(array $options = [])
  * @method GetApprovalDetail getApprovalDetail(array $options = [])
  * @method GetDatabase getDatabase(array $options = [])
  * @method GetDataCorrectBackupFiles getDataCorrectBackupFiles(array $options = [])
@@ -83,6 +85,17 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class ApproveOrder extends Rpc
 {
+}
+
+/**
+ * @method string getMissionType()
+ * @method $this withMissionType($value)
+ */
+class CheckFinishMission extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -204,6 +217,20 @@ class ExecuteDataExport extends Rpc
 }
 
 /**
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
+ * @method string getScript()
+ * @method $this withScript($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ExecuteScript extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getWorkflowInstanceId()
@@ -211,9 +238,6 @@ class ExecuteDataExport extends Rpc
  */
 class GetApprovalDetail extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -230,9 +254,6 @@ class GetApprovalDetail extends Rpc
  */
 class GetDatabase extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -305,9 +326,6 @@ class GetDataExportOrderDetail extends Rpc
  */
 class GetInstance extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -318,9 +336,6 @@ class GetInstance extends Rpc
  */
 class GetLogicDatabase extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -339,9 +354,6 @@ class GetLogicDatabase extends Rpc
  */
 class GetOpLog extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -364,9 +376,6 @@ class GetOrderBaseInfo extends Rpc
  */
 class GetUser extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -403,9 +412,6 @@ class GrantUserPermission extends Rpc
  */
 class ListColumns extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -420,9 +426,6 @@ class ListColumns extends Rpc
  */
 class ListDatabases extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -443,9 +446,6 @@ class ListDatabases extends Rpc
  */
 class ListDatabaseUserPermssions extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -458,9 +458,6 @@ class ListDatabaseUserPermssions extends Rpc
  */
 class ListIndexes extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -485,9 +482,6 @@ class ListIndexes extends Rpc
  */
 class ListInstances extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -500,9 +494,6 @@ class ListInstances extends Rpc
  */
 class ListLogicDatabases extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -519,9 +510,6 @@ class ListLogicDatabases extends Rpc
  */
 class ListLogicTables extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -548,9 +536,6 @@ class ListLogicTables extends Rpc
  */
 class ListOrders extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -601,9 +586,6 @@ class ListSensitiveColumnsDetail extends Rpc
  */
 class ListTables extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -628,9 +610,6 @@ class ListTables extends Rpc
  */
 class ListUserPermissions extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -649,9 +628,6 @@ class ListUserPermissions extends Rpc
  */
 class ListUsers extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -782,9 +758,6 @@ class RevokeUserPermission extends Rpc
  */
 class SearchDatabase extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -805,9 +778,6 @@ class SearchDatabase extends Rpc
  */
 class SearchTable extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
