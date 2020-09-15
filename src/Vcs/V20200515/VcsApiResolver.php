@@ -28,6 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteUser deleteUser(array $options = [])
  * @method DeleteUserGroup deleteUserGroup(array $options = [])
  * @method DeleteVideoSummaryTask deleteVideoSummaryTask(array $options = [])
+ * @method DescribeDevices describeDevices(array $options = [])
  * @method GetBodyOptions getBodyOptions(array $options = [])
  * @method GetCatalogList getCatalogList(array $options = [])
  * @method GetDeviceConfig getDeviceConfig(array $options = [])
@@ -68,6 +69,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SaveVideoSummaryTaskVideo saveVideoSummaryTaskVideo(array $options = [])
  * @method SearchBody searchBody(array $options = [])
  * @method SearchFace searchFace(array $options = [])
+ * @method SearchObject searchObject(array $options = [])
  * @method StopMonitor stopMonitor(array $options = [])
  * @method SyncDeviceTime syncDeviceTime(array $options = [])
  * @method UnbindCorpGroup unbindCorpGroup(array $options = [])
@@ -97,6 +99,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'vcs';
 }
 
 /**
@@ -1820,6 +1825,54 @@ class DeleteVideoSummaryTask extends Rpc
 }
 
 /**
+ * @method string getPageNum()
+ * @method string getCorpIdList()
+ * @method string getPageSize()
+ */
+class DescribeDevices extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['form_params']['PageNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpIdList($value)
+    {
+        $this->data['CorpIdList'] = $value;
+        $this->options['form_params']['CorpIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCorpId()
  */
 class GetBodyOptions extends Rpc
@@ -1884,11 +1937,40 @@ class GetDeviceConfig extends Rpc
 }
 
 /**
+ * @method string getOutProtocol()
+ * @method string getStreamType()
  * @method string getCorpId()
  * @method string getGbId()
+ * @method string getDeviceId()
  */
 class GetDeviceLiveUrl extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutProtocol($value)
+    {
+        $this->data['OutProtocol'] = $value;
+        $this->options['form_params']['OutProtocol'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStreamType($value)
+    {
+        $this->data['StreamType'] = $value;
+        $this->options['form_params']['StreamType'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1915,16 +1997,44 @@ class GetDeviceLiveUrl extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceId($value)
+    {
+        $this->data['DeviceId'] = $value;
+        $this->options['form_params']['DeviceId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getOutProtocol()
  * @method string getCorpId()
  * @method string getGbId()
  * @method string getEndTime()
  * @method string getStartTime()
+ * @method string getDeviceId()
  */
 class GetDeviceVideoUrl extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutProtocol($value)
+    {
+        $this->data['OutProtocol'] = $value;
+        $this->options['form_params']['OutProtocol'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1974,6 +2084,19 @@ class GetDeviceVideoUrl extends Rpc
     {
         $this->data['StartTime'] = $value;
         $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceId($value)
+    {
+        $this->data['DeviceId'] = $value;
+        $this->options['form_params']['DeviceId'] = $value;
 
         return $this;
     }
@@ -2364,6 +2487,7 @@ class GetProfileDetail extends Rpc
  * @method string getPlateNo()
  * @method string getIdNumber()
  * @method string getPageNumber()
+ * @method string getFaceImageId()
  * @method string getFaceUrl()
  * @method string getPageSize()
  * @method string getPersonIdList()
@@ -2453,6 +2577,19 @@ class GetProfileList extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceImageId($value)
+    {
+        $this->data['FaceImageId'] = $value;
+        $this->options['form_params']['FaceImageId'] = $value;
 
         return $this;
     }
@@ -3240,6 +3377,7 @@ class ListCorpMetrics extends Rpc
 /**
  * @method string getPageNumber()
  * @method string getPageSize()
+ * @method string getCorpName()
  */
 class ListCorps extends Rpc
 {
@@ -3266,6 +3404,19 @@ class ListCorps extends Rpc
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpName($value)
+    {
+        $this->data['CorpName'] = $value;
+        $this->options['form_params']['CorpName'] = $value;
 
         return $this;
     }
@@ -5161,6 +5312,180 @@ class SearchFace extends Rpc
     {
         $this->data['OptionList'] = $value;
         $this->options['form_params']['OptionList'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getPicContent()
+ * @method string getPageSize()
+ * @method string getObjectType()
+ * @method string getAlgorithmType()
+ * @method string getEndTime()
+ * @method string getDeviceList()
+ * @method string getPicUrl()
+ * @method string getImagePath()
+ * @method string getConditions()
+ */
+class SearchObject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicContent($value)
+    {
+        $this->data['PicContent'] = $value;
+        $this->options['form_params']['PicContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withObjectType($value)
+    {
+        $this->data['ObjectType'] = $value;
+        $this->options['form_params']['ObjectType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmType($value)
+    {
+        $this->data['AlgorithmType'] = $value;
+        $this->options['form_params']['AlgorithmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceList($value)
+    {
+        $this->data['DeviceList'] = $value;
+        $this->options['form_params']['DeviceList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicUrl($value)
+    {
+        $this->data['PicUrl'] = $value;
+        $this->options['form_params']['PicUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImagePath($value)
+    {
+        $this->data['ImagePath'] = $value;
+        $this->options['form_params']['ImagePath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConditions($value)
+    {
+        $this->data['Conditions'] = $value;
+        $this->options['form_params']['Conditions'] = $value;
 
         return $this;
     }

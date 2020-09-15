@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.487 - 2020-9-15
+- Add describe devices to return device status.
+
+
 ## 1.8.486 - 2020-9-11
 - Support execute database script via open api.
 
