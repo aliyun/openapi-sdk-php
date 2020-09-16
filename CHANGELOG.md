@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.488 - 2020-9-16
+- Add Content.
+
+
 ## 1.8.487 - 2020-9-15
 - Add describe devices to return device status.
 
