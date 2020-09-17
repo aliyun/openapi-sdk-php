@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.489 - 2020-9-17
+- GetTitleIntelligence add interface.
+
+
 ## 1.8.488 - 2020-9-16
 - Add Content.
 
