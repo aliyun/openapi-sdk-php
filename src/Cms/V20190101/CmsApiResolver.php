@@ -120,7 +120,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PutContact putContact(array $options = [])
  * @method PutContactGroup putContactGroup(array $options = [])
  * @method PutCustomEvent putCustomEvent(array $options = [])
+ * @method PutCustomEventRule putCustomEventRule(array $options = [])
  * @method PutCustomMetric putCustomMetric(array $options = [])
+ * @method PutCustomMetricRule putCustomMetricRule(array $options = [])
  * @method PutEventRule putEventRule(array $options = [])
  * @method PutEventRuleTargets putEventRuleTargets(array $options = [])
  * @method PutExporterOutput putExporterOutput(array $options = [])
@@ -1765,14 +1767,18 @@ class DescribeMonitoringAgentConfig extends Rpc
  * @method $this withPageNumber($value)
  * @method string getHostName()
  * @method $this withHostName($value)
- * @method string getInstanceIds()
- * @method $this withInstanceIds($value)
  * @method string getInstanceRegionId()
  * @method $this withInstanceRegionId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAliyunHost()
+ * @method $this withAliyunHost($value)
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeMonitoringAgentHosts extends Rpc
 {
@@ -1859,6 +1865,10 @@ class DescribeSiteMonitorData extends Rpc
  * @method $this withCity($value)
  * @method string getIsp()
  * @method $this withIsp($value)
+ * @method string getIPV4()
+ * @method $this withIPV4($value)
+ * @method string getIPV6()
+ * @method $this withIPV6($value)
  */
 class DescribeSiteMonitorISPCityList extends Rpc
 {
@@ -2653,6 +2663,8 @@ class ModifySiteMonitor extends Rpc
  * @method string getChannelsAliIM()
  * @method string getDescribe()
  * @method $this withDescribe($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getChannelsSMS()
  */
 class PutContact extends Rpc
@@ -2712,8 +2724,12 @@ class PutContact extends Rpc
 }
 
 /**
+ * @method string getEnableSubscribed()
+ * @method $this withEnableSubscribed($value)
  * @method string getContactGroupName()
  * @method $this withContactGroupName($value)
+ * @method string getEnabledWeeklyReport()
+ * @method $this withEnabledWeeklyReport($value)
  * @method string getDescribe()
  * @method $this withDescribe($value)
  * @method array getContactNames()
@@ -2771,6 +2787,34 @@ class PutCustomEvent extends Rpc
 }
 
 /**
+ * @method string getWebhook()
+ * @method $this withWebhook($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getThreshold()
+ * @method $this withThreshold($value)
+ * @method string getEffectiveInterval()
+ * @method $this withEffectiveInterval($value)
+ * @method string getEventName()
+ * @method $this withEventName($value)
+ * @method string getEmailSubject()
+ * @method $this withEmailSubject($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getContactGroups()
+ * @method $this withContactGroups($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class PutCustomEventRule extends Rpc
+{
+}
+
+/**
  * @method array getMetricList()
  */
 class PutCustomMetric extends Rpc
@@ -2810,6 +2854,44 @@ class PutCustomMetric extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getWebhook()
+ * @method $this withWebhook($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getThreshold()
+ * @method $this withThreshold($value)
+ * @method string getEffectiveInterval()
+ * @method $this withEffectiveInterval($value)
+ * @method string getEmailSubject()
+ * @method $this withEmailSubject($value)
+ * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
+ * @method string getSilenceTime()
+ * @method $this withSilenceTime($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getContactGroups()
+ * @method $this withContactGroups($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getResources()
+ * @method $this withResources($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ * @method string getComparisonOperator()
+ * @method $this withComparisonOperator($value)
+ * @method string getStatistics()
+ * @method $this withStatistics($value)
+ */
+class PutCustomMetricRule extends Rpc
+{
 }
 
 /**

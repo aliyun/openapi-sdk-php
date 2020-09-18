@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.490 - 2020-9-18
+- Add alarm notification language settings.
+
+
 ## 1.8.489 - 2020-9-17
 - GetTitleIntelligence add interface.
 
