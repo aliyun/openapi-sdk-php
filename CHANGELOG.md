@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.491 - 2020-9-20
+- Add describe devices to return device status.
+
+
 ## 1.8.490 - 2020-9-18
 - Add alarm notification language settings.
 

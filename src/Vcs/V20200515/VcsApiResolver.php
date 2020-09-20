@@ -51,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListCorpGroups listCorpGroups(array $options = [])
  * @method ListCorpMetrics listCorpMetrics(array $options = [])
  * @method ListCorps listCorps(array $options = [])
+ * @method ListDeviceGroups listDeviceGroups(array $options = [])
  * @method ListDevices listDevices(array $options = [])
  * @method ListEventAlgorithmDetails listEventAlgorithmDetails(array $options = [])
  * @method ListEventAlgorithmResults listEventAlgorithmResults(array $options = [])
@@ -330,7 +331,12 @@ class AddDevice extends Rpc
  * @method string getMonitorType()
  * @method string getCorpId()
  * @method string getDescription()
+ * @method string getNotifierAppSecret()
+ * @method string getNotifierExtendValues()
+ * @method string getNotifierUrl()
+ * @method string getNotifierType()
  * @method string getBatchIndicator()
+ * @method string getNotifierTimeOut()
  * @method string getAlgorithmVendor()
  */
 class AddMonitor extends Rpc
@@ -380,10 +386,75 @@ class AddMonitor extends Rpc
      *
      * @return $this
      */
+    public function withNotifierAppSecret($value)
+    {
+        $this->data['NotifierAppSecret'] = $value;
+        $this->options['form_params']['NotifierAppSecret'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierExtendValues($value)
+    {
+        $this->data['NotifierExtendValues'] = $value;
+        $this->options['form_params']['NotifierExtendValues'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierUrl($value)
+    {
+        $this->data['NotifierUrl'] = $value;
+        $this->options['form_params']['NotifierUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierType($value)
+    {
+        $this->data['NotifierType'] = $value;
+        $this->options['form_params']['NotifierType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withBatchIndicator($value)
     {
         $this->data['BatchIndicator'] = $value;
         $this->options['form_params']['BatchIndicator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierTimeOut($value)
+    {
+        $this->data['NotifierTimeOut'] = $value;
+        $this->options['form_params']['NotifierTimeOut'] = $value;
 
         return $this;
     }
@@ -829,6 +900,7 @@ class BindUser extends Rpc
  * @method string getIsvSubId()
  * @method string getParentCorpId()
  * @method string getDescription()
+ * @method string getIconPath()
  * @method string getAppName()
  * @method string getCorpName()
  */
@@ -883,6 +955,19 @@ class CreateCorp extends Rpc
     {
         $this->data['Description'] = $value;
         $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIconPath($value)
+    {
+        $this->data['IconPath'] = $value;
+        $this->options['form_params']['IconPath'] = $value;
 
         return $this;
     }
@@ -3423,6 +3508,110 @@ class ListCorps extends Rpc
 }
 
 /**
+ * @method string getIsPage()
+ * @method string getPageNum()
+ * @method string getCorpIdList()
+ * @method string getDeviceCodeList()
+ * @method string getName()
+ * @method string getPageSize()
+ * @method string getGroup()
+ */
+class ListDeviceGroups extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsPage($value)
+    {
+        $this->data['IsPage'] = $value;
+        $this->options['form_params']['IsPage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['form_params']['PageNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpIdList($value)
+    {
+        $this->data['CorpIdList'] = $value;
+        $this->options['form_params']['CorpIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceCodeList($value)
+    {
+        $this->data['DeviceCodeList'] = $value;
+        $this->options['form_params']['DeviceCodeList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroup($value)
+    {
+        $this->data['Group'] = $value;
+        $this->options['form_params']['Group'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCorpId()
  * @method string getGbId()
  * @method string getPageNumber()
@@ -5318,17 +5507,16 @@ class SearchFace extends Rpc
 }
 
 /**
+ * @method string getAlgorithmType()
  * @method string getCorpId()
+ * @method string getEndTime()
  * @method string getStartTime()
  * @method string getPageNumber()
- * @method string getPicContent()
- * @method string getPageSize()
- * @method string getObjectType()
- * @method string getAlgorithmType()
- * @method string getEndTime()
  * @method string getDeviceList()
  * @method string getPicUrl()
  * @method string getImagePath()
+ * @method string getPageSize()
+ * @method string getObjectType()
  * @method string getConditions()
  */
 class SearchObject extends Rpc
@@ -5339,10 +5527,36 @@ class SearchObject extends Rpc
      *
      * @return $this
      */
+    public function withAlgorithmType($value)
+    {
+        $this->data['AlgorithmType'] = $value;
+        $this->options['form_params']['AlgorithmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withCorpId($value)
     {
         $this->data['CorpId'] = $value;
         $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
 
         return $this;
     }
@@ -5369,71 +5583,6 @@ class SearchObject extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPicContent($value)
-    {
-        $this->data['PicContent'] = $value;
-        $this->options['form_params']['PicContent'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withObjectType($value)
-    {
-        $this->data['ObjectType'] = $value;
-        $this->options['form_params']['ObjectType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAlgorithmType($value)
-    {
-        $this->data['AlgorithmType'] = $value;
-        $this->options['form_params']['AlgorithmType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
 
         return $this;
     }
@@ -5473,6 +5622,32 @@ class SearchObject extends Rpc
     {
         $this->data['ImagePath'] = $value;
         $this->options['form_params']['ImagePath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withObjectType($value)
+    {
+        $this->data['ObjectType'] = $value;
+        $this->options['form_params']['ObjectType'] = $value;
 
         return $this;
     }
@@ -5694,6 +5869,7 @@ class UnbindUser extends Rpc
  * @method string getCorpId()
  * @method string getParentCorpId()
  * @method string getDescription()
+ * @method string getIconPath()
  * @method string getAppName()
  * @method string getCorpName()
  */
@@ -5748,6 +5924,19 @@ class UpdateCorp extends Rpc
     {
         $this->data['Description'] = $value;
         $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIconPath($value)
+    {
+        $this->data['IconPath'] = $value;
+        $this->options['form_params']['IconPath'] = $value;
 
         return $this;
     }
@@ -5933,11 +6122,16 @@ class UpdateDevice extends Rpc
  * @method string getAttributeName()
  * @method string getAttributeOperateType()
  * @method string getRuleExpression()
+ * @method string getNotifierTimeOut()
  * @method string getTaskId()
  * @method string getDeviceOperateType()
  * @method string getPicList()
  * @method string getAttributeValueList()
+ * @method string getNotifierAppSecret()
+ * @method string getNotifierExtendValues()
  * @method string getDeviceList()
+ * @method string getNotifierUrl()
+ * @method string getNotifierType()
  * @method string getAlgorithmVendor()
  */
 class UpdateMonitor extends Rpc
@@ -6039,6 +6233,19 @@ class UpdateMonitor extends Rpc
      *
      * @return $this
      */
+    public function withNotifierTimeOut($value)
+    {
+        $this->data['NotifierTimeOut'] = $value;
+        $this->options['form_params']['NotifierTimeOut'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withTaskId($value)
     {
         $this->data['TaskId'] = $value;
@@ -6091,10 +6298,62 @@ class UpdateMonitor extends Rpc
      *
      * @return $this
      */
+    public function withNotifierAppSecret($value)
+    {
+        $this->data['NotifierAppSecret'] = $value;
+        $this->options['form_params']['NotifierAppSecret'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierExtendValues($value)
+    {
+        $this->data['NotifierExtendValues'] = $value;
+        $this->options['form_params']['NotifierExtendValues'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withDeviceList($value)
     {
         $this->data['DeviceList'] = $value;
         $this->options['form_params']['DeviceList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierUrl($value)
+    {
+        $this->data['NotifierUrl'] = $value;
+        $this->options['form_params']['NotifierUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierType($value)
+    {
+        $this->data['NotifierType'] = $value;
+        $this->options['form_params']['NotifierType'] = $value;
 
         return $this;
     }
