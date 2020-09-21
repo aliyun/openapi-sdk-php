@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.492 - 2020-9-21
+- Add search object.
+
+
 ## 1.8.491 - 2020-9-20
 - Add describe devices to return device status.
 
