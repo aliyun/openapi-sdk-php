@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.493 - 2020-9-21
+- Interface add column wordCount.
+
+
 ## 1.8.492 - 2020-9-21
 - Add search object.
 
