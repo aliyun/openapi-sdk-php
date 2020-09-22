@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.495 - 2020-9-22
+- Generated 2018-12-12 for `vs`.
+
+
 ## 1.8.494 - 2020-9-22
 - Generated 2016-11-01 for `live`.
 

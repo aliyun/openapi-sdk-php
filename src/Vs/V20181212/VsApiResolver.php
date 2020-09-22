@@ -76,15 +76,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVsDomainCertificateInfo describeVsDomainCertificateInfo(array $options = [])
  * @method DescribeVsDomainConfigs describeVsDomainConfigs(array $options = [])
  * @method DescribeVsDomainDetail describeVsDomainDetail(array $options = [])
+ * @method DescribeVsDomainPvData describeVsDomainPvData(array $options = [])
  * @method DescribeVsDomainRecordData describeVsDomainRecordData(array $options = [])
+ * @method DescribeVsDomainRegionData describeVsDomainRegionData(array $options = [])
  * @method DescribeVsDomainReqBpsData describeVsDomainReqBpsData(array $options = [])
  * @method DescribeVsDomainReqTrafficData describeVsDomainReqTrafficData(array $options = [])
  * @method DescribeVsDomainSnapshotData describeVsDomainSnapshotData(array $options = [])
  * @method DescribeVsDomainTrafficData describeVsDomainTrafficData(array $options = [])
+ * @method DescribeVsDomainUvData describeVsDomainUvData(array $options = [])
  * @method DescribeVsPullStreamInfoConfig describeVsPullStreamInfoConfig(array $options = [])
  * @method DescribeVsStreamsNotifyUrlConfig describeVsStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeVsStreamsOnlineList describeVsStreamsOnlineList(array $options = [])
  * @method DescribeVsStreamsPublishList describeVsStreamsPublishList(array $options = [])
+ * @method DescribeVsTopDomainsByFlow describeVsTopDomainsByFlow(array $options = [])
  * @method DescribeVsUpPeakPublishStreamData describeVsUpPeakPublishStreamData(array $options = [])
  * @method DescribeVsUserResourcePackage describeVsUserResourcePackage(array $options = [])
  * @method ForbidVsStream forbidVsStream(array $options = [])
@@ -102,6 +106,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetVsDomainCertificate setVsDomainCertificate(array $options = [])
  * @method SetVsStreamsNotifyUrlConfig setVsStreamsNotifyUrlConfig(array $options = [])
  * @method StartDevice startDevice(array $options = [])
+ * @method StartParentPlatform startParentPlatform(array $options = [])
  * @method StartRecordStream startRecordStream(array $options = [])
  * @method StartStream startStream(array $options = [])
  * @method StartTransferStream startTransferStream(array $options = [])
@@ -729,6 +734,8 @@ class CreateParentPlatform extends Rpc
  * @method $this withShowLog($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getLocation()
+ * @method $this withLocation($value)
  */
 class CreateStreamSnapshot extends Rpc
 {
@@ -1468,7 +1475,39 @@ class DescribeVsDomainDetail extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
+class DescribeVsDomainPvData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
 class DescribeVsDomainRecordData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVsDomainRegionData extends Rpc
 {
 }
 
@@ -1555,6 +1594,22 @@ class DescribeVsDomainTrafficData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVsDomainUvData extends Rpc
+{
+}
+
+/**
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getDomainName()
@@ -1635,6 +1690,22 @@ class DescribeVsStreamsOnlineList extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeVsStreamsPublishList extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVsTopDomainsByFlow extends Rpc
 {
 }
 
@@ -2039,6 +2110,18 @@ class SetVsStreamsNotifyUrlConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class StartDevice extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartParentPlatform extends Rpc
 {
 }
 
