@@ -64,6 +64,8 @@ class CreateFaceGroup extends Rpc
  * @method $this withFaceGroupId($value)
  * @method string getStreamId()
  * @method $this withStreamId($value)
+ * @method string getPredictTemplateId()
+ * @method $this withPredictTemplateId($value)
  * @method string getDetectIntervals()
  * @method $this withDetectIntervals($value)
  * @method string getOwnerId()
