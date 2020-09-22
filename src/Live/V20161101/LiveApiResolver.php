@@ -20,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddLiveDetectNotifyConfig addLiveDetectNotifyConfig(array $options = [])
  * @method AddLiveDomain addLiveDomain(array $options = [])
  * @method AddLiveDomainMapping addLiveDomainMapping(array $options = [])
+ * @method AddLiveDomainPlayMapping addLiveDomainPlayMapping(array $options = [])
  * @method AddLivePullStreamInfoConfig addLivePullStreamInfoConfig(array $options = [])
  * @method AddLiveRecordNotifyConfig addLiveRecordNotifyConfig(array $options = [])
  * @method AddLiveRecordVodConfig addLiveRecordVodConfig(array $options = [])
@@ -41,6 +42,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCaster createCaster(array $options = [])
  * @method CreateLiveRealTimeLogDelivery createLiveRealTimeLogDelivery(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
+ * @method CreateMixStream createMixStream(array $options = [])
  * @method CreateRoom createRoom(array $options = [])
  * @method DeleteBoard deleteBoard(array $options = [])
  * @method DeleteCaster deleteCaster(array $options = [])
@@ -68,6 +70,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveSnapshotDetectPornConfig deleteLiveSnapshotDetectPornConfig(array $options = [])
  * @method DeleteLiveStreamsNotifyUrlConfig deleteLiveStreamsNotifyUrlConfig(array $options = [])
  * @method DeleteLiveStreamTranscode deleteLiveStreamTranscode(array $options = [])
+ * @method DeleteMixStream deleteMixStream(array $options = [])
  * @method DeleteRoom deleteRoom(array $options = [])
  * @method DescribeBoardEvents describeBoardEvents(array $options = [])
  * @method DescribeBoards describeBoards(array $options = [])
@@ -114,6 +117,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainTrafficData describeLiveDomainTrafficData(array $options = [])
  * @method DescribeLiveDomainTranscodeData describeLiveDomainTranscodeData(array $options = [])
  * @method DescribeLiveLazyPullStreamConfig describeLiveLazyPullStreamConfig(array $options = [])
+ * @method DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
  * @method DescribeLiveRealtimeDeliveryAcc describeLiveRealtimeDeliveryAcc(array $options = [])
  * @method DescribeLiveRealtimeLogAuthorized describeLiveRealtimeLogAuthorized(array $options = [])
  * @method DescribeLiveRecordConfig describeLiveRecordConfig(array $options = [])
@@ -143,6 +147,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveTopDomainsByFlow describeLiveTopDomainsByFlow(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
+ * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRecord describeRecord(array $options = [])
  * @method DescribeRecords describeRecords(array $options = [])
  * @method DescribeRoomKickoutUserList describeRoomKickoutUserList(array $options = [])
@@ -194,6 +199,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopLiveDomain stopLiveDomain(array $options = [])
  * @method StopLiveIndex stopLiveIndex(array $options = [])
  * @method TagLiveResources tagLiveResources(array $options = [])
+ * @method TriggerRecord triggerRecord(array $options = [])
  * @method UnTagLiveResources unTagLiveResources(array $options = [])
  * @method UpdateBoard updateBoard(array $options = [])
  * @method UpdateBoardCallback updateBoardCallback(array $options = [])
@@ -206,6 +212,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveRecordNotifyConfig updateLiveRecordNotifyConfig(array $options = [])
  * @method UpdateLiveSnapshotDetectPornConfig updateLiveSnapshotDetectPornConfig(array $options = [])
  * @method UpdateLiveTopLevelDomain updateLiveTopLevelDomain(array $options = [])
+ * @method UpdateMixStream updateMixStream(array $options = [])
  */
 class LiveApiResolver extends ApiResolver
 {
@@ -221,6 +228,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'live';
 }
 
 /**
@@ -522,6 +532,8 @@ class AddCasterVideoResource extends Rpc
 /**
  * @method string getTemplate()
  * @method $this withTemplate($value)
+ * @method string getLazy()
+ * @method $this withLazy($value)
  * @method string getGop()
  * @method $this withGop($value)
  * @method string getAudioCodec()
@@ -725,6 +737,18 @@ class AddLiveDomainMapping extends Rpc
 }
 
 /**
+ * @method string getPlayDomain()
+ * @method $this withPlayDomain($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPullDomain()
+ * @method $this withPullDomain($value)
+ */
+class AddLiveDomainPlayMapping extends Rpc
+{
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getAppName()
@@ -829,14 +853,22 @@ class AddLiveSnapshotDetectPornConfig extends Rpc
 /**
  * @method string getTemplate()
  * @method $this withTemplate($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
+ * @method string getLazy()
+ * @method $this withLazy($value)
+ * @method string getMix()
+ * @method $this withMix($value)
  * @method string getApp()
  * @method $this withApp($value)
+ * @method string getWatermark()
+ * @method $this withWatermark($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getDomain()
  * @method $this withDomain($value)
+ * @method string getWaterPattern()
+ * @method $this withWaterPattern($value)
+ * @method string getOnlyAudio()
+ * @method $this withOnlyAudio($value)
  */
 class AddLiveStreamTranscode extends Rpc
 {
@@ -847,6 +879,8 @@ class AddLiveStreamTranscode extends Rpc
  * @method $this withTemplate($value)
  * @method string getDeleteBframes()
  * @method $this withDeleteBframes($value)
+ * @method string getLazy()
+ * @method $this withLazy($value)
  * @method string getGop()
  * @method $this withGop($value)
  * @method string getOpus()
@@ -1132,6 +1166,24 @@ class CreateLiveRealTimeLogDelivery extends Rpc
  * @method $this withOwnerId($value)
  */
 class CreateLiveStreamRecordIndexFiles extends Rpc
+{
+}
+
+/**
+ * @method string getOutputConfig()
+ * @method $this withOutputConfig($value)
+ * @method string getLayoutId()
+ * @method $this withLayoutId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getInputStreamList()
+ * @method $this withInputStreamList($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCallbackConfig()
+ * @method $this withCallbackConfig($value)
+ */
+class CreateMixStream extends Rpc
 {
 }
 
@@ -1506,6 +1558,22 @@ class DeleteLiveStreamsNotifyUrlConfig extends Rpc
  * @method $this withDomain($value)
  */
 class DeleteLiveStreamTranscode extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getMixStreamId()
+ * @method $this withMixStreamId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteMixStream extends Rpc
 {
 }
 
@@ -2186,6 +2254,18 @@ class DescribeLiveLazyPullStreamConfig extends Rpc
 }
 
 /**
+ * @method string getLiveapiRequestFrom()
+ * @method $this withLiveapiRequestFrom($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLivePullStreamConfig extends Rpc
+{
+}
+
+/**
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getStartTime()
@@ -2744,6 +2824,30 @@ class DescribeLiveUserDomains extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveUserTags extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getMixStreamId()
+ * @method $this withMixStreamId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class DescribeMixStreamList extends Rpc
 {
 }
 
@@ -3840,6 +3944,32 @@ class TagLiveResources extends Rpc
 }
 
 /**
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getAvMode()
+ * @method $this withAvMode($value)
+ * @method string getStorePath()
+ * @method $this withStorePath($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getForceTranscode()
+ * @method $this withForceTranscode($value)
+ * @method string getNeedRecord()
+ * @method $this withNeedRecord($value)
+ */
+class TriggerRecord extends Rpc
+{
+}
+
+/**
  * @method string getAll()
  * @method $this withAll($value)
  * @method array getResourceId()
@@ -4142,5 +4272,21 @@ class UpdateLiveSnapshotDetectPornConfig extends Rpc
  * @method $this withSecurityToken($value)
  */
 class UpdateLiveTopLevelDomain extends Rpc
+{
+}
+
+/**
+ * @method string getLayoutId()
+ * @method $this withLayoutId($value)
+ * @method string getMixStreamId()
+ * @method $this withMixStreamId($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getInputStreamList()
+ * @method $this withInputStreamList($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UpdateMixStream extends Rpc
 {
 }

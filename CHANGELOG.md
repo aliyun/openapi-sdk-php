@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.494 - 2020-9-22
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.493 - 2020-9-21
 - Interface add column wordCount.
 
