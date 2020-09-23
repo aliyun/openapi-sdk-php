@@ -7,7 +7,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddDcdnDomain addDcdnDomain(array $options = [])
  * @method AddDcdnIpaDomain addDcdnIpaDomain(array $options = [])
+ * @method BatchAddDcdnDomain batchAddDcdnDomain(array $options = [])
  * @method BatchDeleteDcdnDomainConfigs batchDeleteDcdnDomainConfigs(array $options = [])
+ * @method BatchSetDcdnDomainCertificate batchSetDcdnDomainCertificate(array $options = [])
  * @method BatchSetDcdnDomainConfigs batchSetDcdnDomainConfigs(array $options = [])
  * @method BatchSetDcdnIpaDomainConfigs batchSetDcdnIpaDomainConfigs(array $options = [])
  * @method BatchStartDcdnDomain batchStartDcdnDomain(array $options = [])
@@ -158,6 +160,30 @@ class AddDcdnIpaDomain extends Rpc
 }
 
 /**
+ * @method string getSources()
+ * @method $this withSources($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method string getTopLevelDomain()
+ * @method $this withTopLevelDomain($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCheckUrl()
+ * @method $this withCheckUrl($value)
+ */
+class BatchAddDcdnDomain extends Rpc
+{
+}
+
+/**
  * @method string getFunctionNames()
  * @method $this withFunctionNames($value)
  * @method string getDomainNames()
@@ -170,6 +196,30 @@ class AddDcdnIpaDomain extends Rpc
  * @method $this withSecurityToken($value)
  */
 class BatchDeleteDcdnDomainConfigs extends Rpc
+{
+}
+
+/**
+ * @method string getSSLProtocol()
+ * @method $this withSSLProtocol($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertType()
+ * @method $this withCertType($value)
+ * @method string getSSLPri()
+ * @method $this withSSLPri($value)
+ * @method string getCertName()
+ * @method $this withCertName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSSLPub()
+ * @method $this withSSLPub($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class BatchSetDcdnDomainCertificate extends Rpc
 {
 }
 
@@ -1498,6 +1548,8 @@ class TagDcdnResources extends Rpc
 }
 
 /**
+ * @method string getAll()
+ * @method $this withAll($value)
  * @method array getResourceId()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
