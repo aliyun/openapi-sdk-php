@@ -8,7 +8,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddCdnDomain addCdnDomain(array $options = [])
  * @method AddFCTrigger addFCTrigger(array $options = [])
  * @method BatchAddCdnDomain batchAddCdnDomain(array $options = [])
- * @method BatchDeleteCdnDomainConfig batchDeleteCdnDomainConfig(array $options = [])
  * @method BatchSetCdnDomainConfig batchSetCdnDomainConfig(array $options = [])
  * @method BatchSetCdnDomainServerCertificate batchSetCdnDomainServerCertificate(array $options = [])
  * @method BatchStartCdnDomain batchStartCdnDomain(array $options = [])
@@ -152,7 +151,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetReqAuthConfig setReqAuthConfig(array $options = [])
  * @method SetReqHeaderConfig setReqHeaderConfig(array $options = [])
  * @method SetSourceHostConfig setSourceHostConfig(array $options = [])
- * @method SetUserGreenManagerConfig setUserGreenManagerConfig(array $options = [])
  * @method SetVideoSeekConfig setVideoSeekConfig(array $options = [])
  * @method SetWaitingRoomConfig setWaitingRoomConfig(array $options = [])
  * @method StartCdnDomain startCdnDomain(array $options = [])
@@ -321,22 +319,6 @@ class AddFCTrigger extends Rpc
  * @method $this withCheckUrl($value)
  */
 class BatchAddCdnDomain extends Rpc
-{
-}
-
-/**
- * @method string getFunctionNames()
- * @method $this withFunctionNames($value)
- * @method string getDomainNames()
- * @method $this withDomainNames($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class BatchDeleteCdnDomainConfig extends Rpc
 {
 }
 
@@ -2621,20 +2603,6 @@ class SetReqHeaderConfig extends Rpc
  * @method $this withBackSrcDomain($value)
  */
 class SetSourceHostConfig extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getQuota()
- * @method $this withQuota($value)
- * @method string getRatio()
- * @method $this withRatio($value)
- */
-class SetUserGreenManagerConfig extends Rpc
 {
 }
 
