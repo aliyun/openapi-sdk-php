@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateAutoProvisioningGroup createAutoProvisioningGroup(array $options = [])
  * @method CreateAutoSnapshotPolicy createAutoSnapshotPolicy(array $options = [])
  * @method CreateCommand createCommand(array $options = [])
+ * @method CreateDedicatedHostCluster createDedicatedHostCluster(array $options = [])
  * @method CreateDemand createDemand(array $options = [])
  * @method CreateDeploymentSet createDeploymentSet(array $options = [])
  * @method CreateDisk createDisk(array $options = [])
@@ -65,6 +66,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAutoSnapshotPolicy deleteAutoSnapshotPolicy(array $options = [])
  * @method DeleteBandwidthPackage deleteBandwidthPackage(array $options = [])
  * @method DeleteCommand deleteCommand(array $options = [])
+ * @method DeleteDedicatedHostCluster deleteDedicatedHostCluster(array $options = [])
  * @method DeleteDemand deleteDemand(array $options = [])
  * @method DeleteDeploymentSet deleteDeploymentSet(array $options = [])
  * @method DeleteDisk deleteDisk(array $options = [])
@@ -103,6 +105,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeClusters describeClusters(array $options = [])
  * @method DescribeCommands describeCommands(array $options = [])
  * @method DescribeDedicatedHostAutoRenew describeDedicatedHostAutoRenew(array $options = [])
+ * @method DescribeDedicatedHostClusters describeDedicatedHostClusters(array $options = [])
  * @method DescribeDedicatedHosts describeDedicatedHosts(array $options = [])
  * @method DescribeDedicatedHostTypes describeDedicatedHostTypes(array $options = [])
  * @method DescribeDemands describeDemands(array $options = [])
@@ -159,6 +162,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSecurityGroupAttribute describeSecurityGroupAttribute(array $options = [])
  * @method DescribeSecurityGroupReferences describeSecurityGroupReferences(array $options = [])
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
+ * @method DescribeSendFileResults describeSendFileResults(array $options = [])
  * @method DescribeSnapshotLinks describeSnapshotLinks(array $options = [])
  * @method DescribeSnapshotMonitorData describeSnapshotMonitorData(array $options = [])
  * @method DescribeSnapshotPackage describeSnapshotPackage(array $options = [])
@@ -209,6 +213,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDedicatedHostAttribute modifyDedicatedHostAttribute(array $options = [])
  * @method ModifyDedicatedHostAutoReleaseTime modifyDedicatedHostAutoReleaseTime(array $options = [])
  * @method ModifyDedicatedHostAutoRenewAttribute modifyDedicatedHostAutoRenewAttribute(array $options = [])
+ * @method ModifyDedicatedHostClusterAttribute modifyDedicatedHostClusterAttribute(array $options = [])
  * @method ModifyDedicatedHostsChargeType modifyDedicatedHostsChargeType(array $options = [])
  * @method ModifyDemand modifyDemand(array $options = [])
  * @method ModifyDeploymentSetAttribute modifyDeploymentSetAttribute(array $options = [])
@@ -277,6 +282,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RevokeSecurityGroupEgress revokeSecurityGroupEgress(array $options = [])
  * @method RunCommand runCommand(array $options = [])
  * @method RunInstances runInstances(array $options = [])
+ * @method SendFile sendFile(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartInstances startInstances(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
@@ -404,10 +410,14 @@ class AddTags extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getCpuOverCommitRatio()
+ * @method $this withCpuOverCommitRatio($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getActionOnMaintenance()
  * @method $this withActionOnMaintenance($value)
+ * @method string getDedicatedHostClusterId()
+ * @method $this withDedicatedHostClusterId($value)
  * @method array getTag()
  * @method string getDedicatedHostType()
  * @method $this withDedicatedHostType($value)
@@ -769,6 +779,8 @@ class AttachKeyPair extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getWaitForNetworkConfigurationReady()
+ * @method $this withWaitForNetworkConfigurationReady($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
@@ -1307,6 +1319,51 @@ class CreateAutoSnapshotPolicy extends Rpc
  */
 class CreateCommand extends Rpc
 {
+}
+
+/**
+ * @method string getDedicatedHostClusterName()
+ * @method $this withDedicatedHostClusterName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method array getTag()
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class CreateDedicatedHostCluster extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2474,6 +2531,8 @@ class CreateNatGateway extends Rpc
 }
 
 /**
+ * @method string getQueueNumber()
+ * @method $this withQueueNumber($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
@@ -3060,6 +3119,22 @@ class DeleteBandwidthPackage extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteCommand extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDedicatedHostClusterId()
+ * @method $this withDedicatedHostClusterId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteDedicatedHostCluster extends Rpc
 {
 }
 
@@ -3949,6 +4024,57 @@ class DescribeDedicatedHostAutoRenew extends Rpc
 }
 
 /**
+ * @method string getDedicatedHostClusterName()
+ * @method $this withDedicatedHostClusterName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDedicatedHostClusterIds()
+ * @method $this withDedicatedHostClusterIds($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getLockReason()
+ * @method $this withLockReason($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeDedicatedHostClusters extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getDedicatedHostIds()
  * @method $this withDedicatedHostIds($value)
  * @method string getResourceOwnerId()
@@ -4186,12 +4312,16 @@ class DescribeDiskMonitorData extends Rpc
  * @method $this withInstanceId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  * @method string getSnapshotId()
  * @method $this withSnapshotId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDiskIds()
@@ -6362,6 +6492,7 @@ class DescribeRenewalPrice extends Rpc
  * @method $this withPageSize($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -6383,6 +6514,26 @@ class DescribeRenewalPrice extends Rpc
  */
 class DescribeReservedInstances extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $reservedInstanceId
@@ -6654,6 +6805,30 @@ class DescribeSecurityGroups extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getInvokeId()
+ * @method $this withInvokeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeSendFileResults extends Rpc
+{
 }
 
 /**
@@ -8112,8 +8287,12 @@ class ModifyCommand extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getCpuOverCommitRatio()
+ * @method $this withCpuOverCommitRatio($value)
  * @method string getActionOnMaintenance()
  * @method $this withActionOnMaintenance($value)
+ * @method string getDedicatedHostClusterId()
+ * @method $this withDedicatedHostClusterId($value)
  * @method string getDedicatedHostName()
  * @method $this withDedicatedHostName($value)
  * @method string getResourceOwnerAccount()
@@ -8198,6 +8377,26 @@ class ModifyDedicatedHostAutoReleaseTime extends Rpc
  * @method $this withAutoRenew($value)
  */
 class ModifyDedicatedHostAutoRenewAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getDedicatedHostClusterName()
+ * @method $this withDedicatedHostClusterName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDedicatedHostClusterId()
+ * @method $this withDedicatedHostClusterId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDedicatedHostClusterAttribute extends Rpc
 {
 }
 
@@ -8590,6 +8789,8 @@ class ModifyImageSharePermission extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getRecyclable()
  * @method $this withRecyclable($value)
+ * @method string getNetworkInterfaceQueueNumber()
+ * @method $this withNetworkInterfaceQueueNumber($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getDeletionProtection()
@@ -8712,6 +8913,8 @@ class ModifyInstanceChargeType extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDeploymentSetGroupNo()
  * @method $this withDeploymentSetGroupNo($value)
+ * @method string getDedicatedHostClusterId()
+ * @method $this withDedicatedHostClusterId($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getDeploymentSetId()
@@ -9617,6 +9820,7 @@ class ModifyVSwitchAttribute extends Rpc
  * @method $this withScope($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method array getTag()
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getResourceOwnerAccount()
@@ -9638,6 +9842,26 @@ class ModifyVSwitchAttribute extends Rpc
  */
 class PurchaseReservedInstancesOffering extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -10337,6 +10561,8 @@ class RunCommand extends Rpc
  * @method $this withImageId($value)
  * @method string getSpotInterruptionBehavior()
  * @method $this withSpotInterruptionBehavior($value)
+ * @method string getNetworkInterfaceQueueNumber()
+ * @method $this withNetworkInterfaceQueueNumber($value)
  * @method string getIoOptimized()
  * @method $this withIoOptimized($value)
  * @method string getSecurityGroupId()
@@ -10349,6 +10575,8 @@ class RunCommand extends Rpc
  * @method string getHibernationConfigured()
  * @method $this withHibernationConfigured($value)
  * @method array getArn()
+ * @method string getSchedulerOptions()
+ * @method $this withSchedulerOptions($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getSystemDiskDiskName()
@@ -10637,6 +10865,9 @@ class RunInstances extends Rpc
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
 			}
+			if(isset($depth1Value['QueueNumber'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.QueueNumber'] = $depth1Value['QueueNumber'];
+			}
 		}
 
 		return $this;
@@ -10703,6 +10934,56 @@ class RunInstances extends Rpc
         $this->options['query']['SystemDisk.Description'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getFileOwner()
+ * @method $this withFileOwner($value)
+ * @method string getOverwrite()
+ * @method $this withOverwrite($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getFileMode()
+ * @method $this withFileMode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getContentType()
+ * @method $this withContentType($value)
+ * @method array getInstanceId()
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getFileGroup()
+ * @method $this withFileGroup($value)
+ * @method string getTargetDir()
+ * @method $this withTargetDir($value)
+ */
+class SendFile extends Rpc
+{
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+	public function withInstanceId(array $instanceId)
+	{
+	    $this->data['InstanceId'] = $instanceId;
+		foreach ($instanceId as $i => $iValue) {
+			$this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 }
 

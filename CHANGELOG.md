@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.502 - 2020-9-23
+- Add spotDuration support.
+
+
 ## 1.8.501 - 2020-9-23
 - Some new parameters are supported.
 
