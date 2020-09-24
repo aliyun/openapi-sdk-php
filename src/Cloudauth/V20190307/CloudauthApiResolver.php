@@ -311,11 +311,7 @@ class CompareFaceVerify extends Rpc
 
 /**
  * @method string getProductCode()
- * @method string getOssObjectName()
  * @method string getFaceContrastPicture()
- * @method string getCertName()
- * @method string getIp()
- * @method string getMobile()
  * @method string getDeviceToken()
  * @method string getUserId()
  * @method string getCertifyId()
@@ -323,6 +319,12 @@ class CompareFaceVerify extends Rpc
  * @method string getOuterOrderNo()
  * @method string getCertType()
  * @method string getFaceContrastPictureUrl()
+ * @method string getModel()
+ * @method $this withModel($value)
+ * @method string getOssObjectName()
+ * @method string getCertName()
+ * @method string getIp()
+ * @method string getMobile()
  * @method string getSceneId()
  * @method string getOssBucketName()
  */
@@ -347,62 +349,10 @@ class ContrastFaceVerify extends Rpc
      *
      * @return $this
      */
-    public function withOssObjectName($value)
-    {
-        $this->data['OssObjectName'] = $value;
-        $this->options['form_params']['OssObjectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withFaceContrastPicture($value)
     {
         $this->data['FaceContrastPicture'] = $value;
         $this->options['form_params']['FaceContrastPicture'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCertName($value)
-    {
-        $this->data['CertName'] = $value;
-        $this->options['form_params']['CertName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIp($value)
-    {
-        $this->data['Ip'] = $value;
-        $this->options['form_params']['Ip'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMobile($value)
-    {
-        $this->data['Mobile'] = $value;
-        $this->options['form_params']['Mobile'] = $value;
 
         return $this;
     }
@@ -494,6 +444,58 @@ class ContrastFaceVerify extends Rpc
     {
         $this->data['FaceContrastPictureUrl'] = $value;
         $this->options['form_params']['FaceContrastPictureUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssObjectName($value)
+    {
+        $this->data['OssObjectName'] = $value;
+        $this->options['form_params']['OssObjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertName($value)
+    {
+        $this->data['CertName'] = $value;
+        $this->options['form_params']['CertName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['form_params']['Ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
 
         return $this;
     }

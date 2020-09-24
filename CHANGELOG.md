@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.504 - 2020-9-24
+- ContrastFaceVerify API Add Model Parameter.
+
+
 ## 1.8.503 - 2020-9-24
 - Add a new api named SubmitAIImageAuditJob to submit image ai detection job.
 - Add a new api named CreateDNADB to create a DNA analysis library.
