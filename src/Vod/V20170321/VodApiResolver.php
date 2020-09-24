@@ -18,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchStopVodDomain batchStopVodDomain(array $options = [])
  * @method CreateAppInfo createAppInfo(array $options = [])
  * @method CreateAudit createAudit(array $options = [])
+ * @method CreateDNADB createDNADB(array $options = [])
  * @method CreateMediaDNALib createMediaDNALib(array $options = [])
  * @method CreateUploadAttachedMedia createUploadAttachedMedia(array $options = [])
  * @method CreateUploadImage createUploadImage(array $options = [])
@@ -70,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAuditHistory getAuditHistory(array $options = [])
  * @method GetCategories getCategories(array $options = [])
  * @method GetDefaultAITemplate getDefaultAITemplate(array $options = [])
+ * @method GetDNADB getDNADB(array $options = [])
  * @method GetDRMCertInfo getDRMCertInfo(array $options = [])
  * @method GetDRMLicense getDRMLicense(array $options = [])
  * @method GetEditingProject getEditingProject(array $options = [])
@@ -100,6 +102,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAppInfo listAppInfo(array $options = [])
  * @method ListAppPoliciesForIdentity listAppPoliciesForIdentity(array $options = [])
  * @method ListAuditSecurityIp listAuditSecurityIp(array $options = [])
+ * @method ListDNADB listDNADB(array $options = [])
  * @method ListDynamicImage listDynamicImage(array $options = [])
  * @method ListLiveRecordVideo listLiveRecordVideo(array $options = [])
  * @method ListMediaDNADeleteJob listMediaDNADeleteJob(array $options = [])
@@ -124,6 +127,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetEditingProjectMaterials setEditingProjectMaterials(array $options = [])
  * @method SetMessageCallback setMessageCallback(array $options = [])
  * @method SetVodDomainCertificate setVodDomainCertificate(array $options = [])
+ * @method SubmitAIImageAuditJob submitAIImageAuditJob(array $options = [])
  * @method SubmitAIImageJob submitAIImageJob(array $options = [])
  * @method SubmitAIJob submitAIJob(array $options = [])
  * @method SubmitAIMediaAuditJob submitAIMediaAuditJob(array $options = [])
@@ -255,6 +259,8 @@ class AddTranscodeTemplateGroup extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getScope()
  * @method $this withScope($value)
+ * @method string getTopLevelDomain()
+ * @method $this withTopLevelDomain($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDomainName()
@@ -397,6 +403,28 @@ class CreateAppInfo extends Rpc
  * @method $this withAuditContent($value)
  */
 class CreateAudit extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDBRegion()
+ * @method $this withDBRegion($value)
+ * @method string getDBDescription()
+ * @method $this withDBDescription($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ * @method string getDBType()
+ * @method $this withDBType($value)
+ */
+class CreateDNADB extends Rpc
 {
 }
 
@@ -1361,6 +1389,22 @@ class GetDefaultAITemplate extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBId()
+ * @method $this withDBId($value)
+ */
+class GetDNADB extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getVideoId()
@@ -1885,6 +1929,20 @@ class ListAuditSecurityIp extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListDNADB extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getVideoId()
  * @method $this withVideoId($value)
  * @method string getOwnerId()
@@ -2343,6 +2401,26 @@ class SetMessageCallback extends Rpc
  * @method $this withRegion($value)
  */
 class SetVodDomainCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getMediaAuditConfiguration()
+ * @method $this withMediaAuditConfiguration($value)
+ */
+class SubmitAIImageAuditJob extends Rpc
 {
 }
 

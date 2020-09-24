@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.503 - 2020-9-24
+- Add a new api named SubmitAIImageAuditJob to submit image ai detection job.
+- Add a new api named CreateDNADB to create a DNA analysis library.
+- Add a new api named ListDNADB to query the list of DNA analysis libraries.
+- Add a new api named GetDNADB to query specified DNA analysis library.
+- Add a new field DNADBId to the request parameter Config structure for SubmitAIJob api.
+
+
 ## 1.8.502 - 2020-9-23
 - Add spotDuration support.
 
