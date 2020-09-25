@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.505 - 2020-9-25
+- Support DescribeSuspEventQuaraFiles API.
+- Support RefreshContainerAsserts API.
+
+
 ## 1.8.504 - 2020-9-24
 - ContrastFaceVerify API Add Model Parameter.
 
