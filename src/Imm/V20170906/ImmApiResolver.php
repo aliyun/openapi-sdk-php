@@ -72,6 +72,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVideoFrames listVideoFrames(array $options = [])
  * @method ListVideos listVideos(array $options = [])
  * @method ListVideoTasks listVideoTasks(array $options = [])
+ * @method OpenImmService openImmService(array $options = [])
  * @method PutProject putProject(array $options = [])
  * @method RefreshOfficeEditToken refreshOfficeEditToken(array $options = [])
  * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
@@ -97,6 +98,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'imm';
 }
 
 /**
@@ -1252,6 +1256,14 @@ class ListVideos extends Rpc
  * @method $this withMarker($value)
  */
 class ListVideoTasks extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class OpenImmService extends Rpc
 {
 }
 

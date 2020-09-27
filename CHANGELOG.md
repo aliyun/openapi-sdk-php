@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.506 - 2020-9-27
+- Support Open Service API.
+
+
 ## 1.8.505 - 2020-9-25
 - Support DescribeSuspEventQuaraFiles API.
 - Support RefreshContainerAsserts API.
