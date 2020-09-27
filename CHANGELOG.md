@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.507 - 2020-9-27
+- Update domain API.
+
+
 ## 1.8.506 - 2020-9-27
 - Support Open Service API.
 

@@ -42,6 +42,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCdnUserDomainsByFunc describeCdnUserDomainsByFunc(array $options = [])
  * @method DescribeCdnUserQuota describeCdnUserQuota(array $options = [])
  * @method DescribeCdnUserResourcePackage describeCdnUserResourcePackage(array $options = [])
+ * @method DescribeCdnWafDomain describeCdnWafDomain(array $options = [])
  * @method DescribeCertificateInfoByID describeCertificateInfoByID(array $options = [])
  * @method DescribeConfigOfVersion describeConfigOfVersion(array $options = [])
  * @method DescribeCustomLogConfig describeCustomLogConfig(array $options = [])
@@ -799,6 +800,16 @@ class DescribeCdnUserQuota extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeCdnUserResourcePackage extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeCdnWafDomain extends Rpc
 {
 }
 
@@ -2712,6 +2723,8 @@ class TagResources extends Rpc
 }
 
 /**
+ * @method string getAll()
+ * @method $this withAll($value)
  * @method array getResourceId()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
