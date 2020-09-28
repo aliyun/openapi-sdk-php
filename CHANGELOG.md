@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.509 - 2020-9-28
+- Update Scdn API.
+
+
 ## 1.8.508 - 2020-9-28
 - Support filtering keys and secrets.
 - Support opening KMS service and describing service status by API.
