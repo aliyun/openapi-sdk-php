@@ -18,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAlias deleteAlias(array $options = [])
  * @method DeleteKeyMaterial deleteKeyMaterial(array $options = [])
  * @method DeleteSecret deleteSecret(array $options = [])
+ * @method DescribeAccountKmsStatus describeAccountKmsStatus(array $options = [])
  * @method DescribeKey describeKey(array $options = [])
  * @method DescribeKeyVersion describeKeyVersion(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
@@ -42,6 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListResourceTags listResourceTags(array $options = [])
  * @method ListSecrets listSecrets(array $options = [])
  * @method ListSecretVersionIds listSecretVersionIds(array $options = [])
+ * @method OpenKmsService openKmsService(array $options = [])
  * @method PutSecretValue putSecretValue(array $options = [])
  * @method ReEncrypt reEncrypt(array $options = [])
  * @method RestoreSecret restoreSecret(array $options = [])
@@ -73,7 +75,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     protected $scheme = 'https';
 
     /** @var string */
-    public $serviceCode = 'kms-service';
+    public $serviceCode = 'kms';
 }
 
 /**
@@ -235,6 +237,10 @@ class DeleteKeyMaterial extends Rpc
  * @method $this withSecretName($value)
  */
 class DeleteSecret extends Rpc
+{
+}
+
+class DescribeAccountKmsStatus extends Rpc
 {
 }
 
@@ -459,6 +465,8 @@ class ListAliasesByKeyId extends Rpc
 /**
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getFilters()
+ * @method $this withFilters($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
@@ -489,6 +497,8 @@ class ListResourceTags extends Rpc
 /**
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getFilters()
+ * @method $this withFilters($value)
  * @method string getFetchTags()
  * @method $this withFetchTags($value)
  * @method string getPageNumber()
@@ -509,6 +519,10 @@ class ListSecrets extends Rpc
  * @method $this withPageNumber($value)
  */
 class ListSecretVersionIds extends Rpc
+{
+}
+
+class OpenKmsService extends Rpc
 {
 }
 

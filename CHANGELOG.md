@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.508 - 2020-9-28
+- Support filtering keys and secrets.
+- Support opening KMS service and describing service status by API.
+- Add a prefix limitation for SecretName.
+
+
 ## 1.8.507 - 2020-9-27
 - Update domain API.
 
