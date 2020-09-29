@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.511 - 2020-9-29
+- Add API OpenOnsService which can active ons service.
+
+
 ## 1.8.510 - 2020-9-29
 - Add API OpenOnsService which can active ons service.
 
