@@ -52,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OnsTrendTopicInputTps onsTrendTopicInputTps(array $options = [])
  * @method OnsWarnCreate onsWarnCreate(array $options = [])
  * @method OnsWarnDelete onsWarnDelete(array $options = [])
+ * @method OpenOnsService openOnsService(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  */
@@ -69,9 +70,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'ons';
 }
 
 /**
@@ -765,6 +763,10 @@ class OnsWarnCreate extends Rpc
  * @method $this withTopic($value)
  */
 class OnsWarnDelete extends Rpc
+{
+}
+
+class OpenOnsService extends Rpc
 {
 }
 
