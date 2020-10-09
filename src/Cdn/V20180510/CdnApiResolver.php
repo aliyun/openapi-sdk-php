@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCdnHttpsDomainList describeCdnHttpsDomainList(array $options = [])
  * @method DescribeCdnRegionAndIsp describeCdnRegionAndIsp(array $options = [])
  * @method DescribeCdnService describeCdnService(array $options = [])
+ * @method DescribeCdnUserBillHistory describeCdnUserBillHistory(array $options = [])
  * @method DescribeCdnUserBillPrediction describeCdnUserBillPrediction(array $options = [])
  * @method DescribeCdnUserBillType describeCdnUserBillType(array $options = [])
  * @method DescribeCdnUserConfigs describeCdnUserConfigs(array $options = [])
@@ -726,6 +727,18 @@ class DescribeCdnRegionAndIsp extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeCdnService extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeCdnUserBillHistory extends Rpc
 {
 }
 

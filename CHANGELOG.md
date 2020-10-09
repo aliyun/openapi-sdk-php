@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.515 - 2020-10-9
+- Update DescribeCdnUserBillHistory API.
+
+
 ## 1.8.514 - 2020-10-9
 - Update SetVideoSeekConfig API.
 
