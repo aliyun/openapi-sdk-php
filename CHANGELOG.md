@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.514 - 2020-10-9
+- Update SetVideoSeekConfig API.
+
+
 ## 1.8.513 - 2020-9-29
 - Add API OpenOnsService which can active ons service.
 
