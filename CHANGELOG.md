@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.516 - 2020-10-9
+- Update Scdn API.
+
+
 ## 1.8.515 - 2020-10-9
 - Update DescribeCdnUserBillHistory API.
 
