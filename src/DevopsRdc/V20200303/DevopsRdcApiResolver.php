@@ -43,6 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDevopsScenarioFieldConfig listDevopsScenarioFieldConfig(array $options = [])
  * @method ListPipelines listPipelines(array $options = [])
  * @method ListServiceConnections listServiceConnections(array $options = [])
+ * @method ListUserOrganization listUserOrganization(array $options = [])
  * @method UpdateDevopsProject updateDevopsProject(array $options = [])
  * @method UpdateDevopsProjectSprint updateDevopsProjectSprint(array $options = [])
  * @method UpdateDevopsProjectTask updateDevopsProjectTask(array $options = [])
@@ -2014,6 +2015,26 @@ class ListServiceConnections extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRealPk()
+ */
+class ListUserOrganization extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealPk($value)
+    {
+        $this->data['RealPk'] = $value;
+        $this->options['form_params']['RealPk'] = $value;
 
         return $this;
     }

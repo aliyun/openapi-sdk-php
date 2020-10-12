@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.518 - 2020-10-12
+- Add list Organizations.
+
+
 ## 1.8.517 - 2020-10-12
 - ChatApp third version.
 - Add contack check api.
