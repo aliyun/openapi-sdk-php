@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.519 - 2020-10-12
+- Support add webhook, get repository info via id or path.
+
+
 ## 1.8.518 - 2020-10-12
 - Add list Organizations.
 

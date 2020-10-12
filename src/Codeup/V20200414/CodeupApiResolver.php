@@ -7,19 +7,30 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddGroupMember addGroupMember(array $options = [])
  * @method AddRepositoryMember addRepositoryMember(array $options = [])
+ * @method AddWebhook addWebhook(array $options = [])
+ * @method CreateBranch createBranch(array $options = [])
  * @method CreateFile createFile(array $options = [])
+ * @method CreateMergeRequest createMergeRequest(array $options = [])
  * @method CreateRepository createRepository(array $options = [])
  * @method CreateRepositoryGroup createRepositoryGroup(array $options = [])
+ * @method CreateTag createTag(array $options = [])
+ * @method DeleteBranch deleteBranch(array $options = [])
  * @method DeleteFile deleteFile(array $options = [])
  * @method DeleteGroupMember deleteGroupMember(array $options = [])
  * @method DeleteRepository deleteRepository(array $options = [])
  * @method DeleteRepositoryGroup deleteRepositoryGroup(array $options = [])
  * @method DeleteRepositoryMember deleteRepositoryMember(array $options = [])
+ * @method GetBranchInfo getBranchInfo(array $options = [])
  * @method GetCodeupOrganization getCodeupOrganization(array $options = [])
  * @method GetFileBlobs getFileBlobs(array $options = [])
+ * @method GetProjectMember getProjectMember(array $options = [])
+ * @method GetRepositoryInfo getRepositoryInfo(array $options = [])
  * @method ListGroupMember listGroupMember(array $options = [])
+ * @method ListGroupRepositories listGroupRepositories(array $options = [])
+ * @method ListGroups listGroups(array $options = [])
  * @method ListRepositoryMember listRepositoryMember(array $options = [])
  * @method ListRepositoryTree listRepositoryTree(array $options = [])
+ * @method MergeMergeRequest mergeMergeRequest(array $options = [])
  * @method UpdateFile updateFile(array $options = [])
  * @method UpdateGroupMember updateGroupMember(array $options = [])
  * @method UpdateRepositoryMember updateRepositoryMember(array $options = [])
@@ -37,7 +48,7 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
     public $version = '2020-04-14';
 
     /** @var string */
-    public $method = 'DELETE';
+    public $method = 'POST';
 }
 
 /**
@@ -52,9 +63,6 @@ class AddGroupMember extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v4/groups/[GroupId]/members';
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -122,9 +130,6 @@ class AddRepositoryMember extends Roa
     /** @var string */
     public $pathPattern = '/api/v4/projects/[ProjectId]/members';
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -160,6 +165,96 @@ class AddRepositoryMember extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class AddWebhook extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/hooks';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class CreateBranch extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/branches';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
 
         return $this;
     }
@@ -191,9 +286,6 @@ class CreateFile extends Roa
     /** @var string */
     public $pathPattern = '/api/v3/projects/[ProjectId]/repository/files';
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -250,6 +342,58 @@ class CreateFile extends Roa
 /**
  * @method string getOrganizationId()
  * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class CreateMergeRequest extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/merge_requests';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
  * @method string getClientToken()
  * @method string getAccessToken()
  * @method string getSync()
@@ -259,9 +403,6 @@ class CreateRepository extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v3/projects';
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -353,9 +494,6 @@ class CreateRepositoryGroup extends Roa
     /** @var string */
     public $pathPattern = '/api/v3/groups';
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -412,6 +550,115 @@ class CreateRepositoryGroup extends Roa
 /**
  * @method string getOrganizationId()
  * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class CreateTag extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/tags';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getBranchName()
+ * @method $this withBranchName($value)
+ */
+class DeleteBranch extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/branches/[BranchName]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
  * @method string getFilePath()
  * @method string getAccessToken()
  * @method string getCommitMessage()
@@ -423,6 +670,9 @@ class DeleteFile extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v3/projects/[ProjectId]/repository/files';
+
+    /** @var string */
+    public $method = 'DELETE';
 
     /**
      * @param string $value
@@ -516,6 +766,9 @@ class DeleteGroupMember extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v3/groups/[GroupId]/members/[UserId]';
+
+    /** @var string */
+    public $method = 'DELETE';
 
     /**
      * @param string $value
@@ -619,7 +872,7 @@ class DeleteRepository extends Roa
 class DeleteRepositoryGroup extends Roa
 {
     /** @var string */
-    public $pathPattern = '/api/v3/groups/[GroupId]';
+    public $pathPattern = '/api/v3/groups/[GroupId]/remove';
 
     /**
      * @param string $value
@@ -674,6 +927,66 @@ class DeleteRepositoryMember extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v3/projects/[ProjectId]/members/[UserId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getBranchName()
+ * @method $this withBranchName($value)
+ */
+class GetBranchInfo extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/branches/[BranchName]';
+
+    /** @var string */
+    public $method = 'GET';
 
     /**
      * @param string $value
@@ -884,6 +1197,116 @@ class GetFileBlobs extends Roa
 /**
  * @method string getOrganizationId()
  * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class GetProjectMember extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/members/[UserId]';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getIdentity()
+ * @method string getAccessToken()
+ */
+class GetRepositoryInfo extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/info';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdentity($value)
+    {
+        $this->data['Identity'] = $value;
+        $this->options['query']['Identity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getPageSize()
@@ -907,6 +1330,226 @@ class ListGroupMember extends Roa
     {
         $this->data['OrganizationId'] = $value;
         $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccessToken()
+ * @method string getIsMember()
+ * @method string getOrganizationId()
+ * @method string getSearch()
+ * @method string getSubUserId()
+ * @method string getIdentity()
+ * @method $this withIdentity($value)
+ * @method string getPageSize()
+ * @method string getPage()
+ */
+class ListGroupRepositories extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/groups/[Identity]/projects';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsMember($value)
+    {
+        $this->data['IsMember'] = $value;
+        $this->options['query']['IsMember'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearch($value)
+    {
+        $this->data['Search'] = $value;
+        $this->options['query']['Search'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getIncludePersonal()
+ * @method string getSearch()
+ * @method string getSubUserId()
+ * @method string getPageSize()
+ * @method string getAccessToken()
+ * @method string getPage()
+ */
+class ListGroups extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/groups/all';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIncludePersonal($value)
+    {
+        $this->data['IncludePersonal'] = $value;
+        $this->options['query']['IncludePersonal'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearch($value)
+    {
+        $this->data['Search'] = $value;
+        $this->options['query']['Search'] = $value;
 
         return $this;
     }
@@ -1153,6 +1796,63 @@ class ListRepositoryTree extends Roa
     {
         $this->data['RefName'] = $value;
         $this->options['query']['RefName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class MergeMergeRequest extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/merge_request/[MergeRequestId]/merge';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
 
         return $this;
     }
