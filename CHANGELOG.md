@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.527 - 2020-10-13
+- Add describe devices to return device status.
+
+
 ## 1.8.526 - 2020-10-13
 - Add spotDuration support.
 

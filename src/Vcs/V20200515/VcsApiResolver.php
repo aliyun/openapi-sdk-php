@@ -37,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetFaceModelResult getFaceModelResult(array $options = [])
  * @method GetFaceOptions getFaceOptions(array $options = [])
  * @method GetInventory getInventory(array $options = [])
+ * @method GetMonitorList getMonitorList(array $options = [])
  * @method GetMonitorResult getMonitorResult(array $options = [])
  * @method GetPersonDetail getPersonDetail(array $options = [])
  * @method GetPersonList getPersonList(array $options = [])
@@ -2270,6 +2271,54 @@ class GetInventory extends Rpc
     {
         $this->data['CommodityCode'] = $value;
         $this->options['form_params']['CommodityCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getPageNo()
+ * @method string getPageSize()
+ */
+class GetMonitorList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNo($value)
+    {
+        $this->data['PageNo'] = $value;
+        $this->options['form_params']['PageNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
