@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.529 - 2020-10-13
+- Sync cdn APIs.
+
+
 ## 1.8.528 - 2020-10-13
 - Update HasRenewChangeOrder type to Boolean in DescribeInstances.
 
