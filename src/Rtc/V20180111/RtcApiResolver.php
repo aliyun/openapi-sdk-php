@@ -208,6 +208,8 @@ class CreateMAURule extends Rpc
  * @method $this withOwnerId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method string getName()
+ * @method $this withName($value)
  * @method string getAudioMixCount()
  * @method $this withAudioMixCount($value)
  */

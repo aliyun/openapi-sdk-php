@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.521 - 2020-10-13
+- Generated 2018-01-11 for `rtc`.
+
+
 ## 1.8.520 - 2020-10-13
 - Generated 2018-12-12 for `vs`.
 
