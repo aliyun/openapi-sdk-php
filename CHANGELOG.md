@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.525 - 2020-10-13
+- GetTitleIntelligence add interface.
+
+
 ## 1.8.524 - 2020-10-13
 - Generated 2018-01-11 for `rtc`.
 
