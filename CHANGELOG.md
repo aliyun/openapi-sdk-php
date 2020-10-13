@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.531 - 2020-10-13
+- Add describe devices to return device status.
+
+
 ## 1.8.530 - 2020-10-13
 - Update Scdn API.
 
