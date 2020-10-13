@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddCustomLiveStreamTranscode addCustomLiveStreamTranscode(array $options = [])
  * @method AddLiveAppRecordConfig addLiveAppRecordConfig(array $options = [])
  * @method AddLiveAppSnapshotConfig addLiveAppSnapshotConfig(array $options = [])
+ * @method AddLiveASRConfig addLiveASRConfig(array $options = [])
  * @method AddLiveAudioAuditConfig addLiveAudioAuditConfig(array $options = [])
  * @method AddLiveAudioAuditNotifyConfig addLiveAudioAuditNotifyConfig(array $options = [])
  * @method AddLiveDetectNotifyConfig addLiveDetectNotifyConfig(array $options = [])
@@ -56,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteHtmlResource deleteHtmlResource(array $options = [])
  * @method DeleteLiveAppRecordConfig deleteLiveAppRecordConfig(array $options = [])
  * @method DeleteLiveAppSnapshotConfig deleteLiveAppSnapshotConfig(array $options = [])
+ * @method DeleteLiveASRConfig deleteLiveASRConfig(array $options = [])
  * @method DeleteLiveAudioAuditConfig deleteLiveAudioAuditConfig(array $options = [])
  * @method DeleteLiveAudioAuditNotifyConfig deleteLiveAudioAuditNotifyConfig(array $options = [])
  * @method DeleteLiveDetectNotifyConfig deleteLiveDetectNotifyConfig(array $options = [])
@@ -90,6 +92,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeForbidPushStreamRoomList describeForbidPushStreamRoomList(array $options = [])
  * @method DescribeHlsLiveStreamRealTimeBpsData describeHlsLiveStreamRealTimeBpsData(array $options = [])
  * @method DescribeHtmlResource describeHtmlResource(array $options = [])
+ * @method DescribeLiveAsrConfig describeLiveAsrConfig(array $options = [])
  * @method DescribeLiveAudioAuditConfig describeLiveAudioAuditConfig(array $options = [])
  * @method DescribeLiveAudioAuditNotifyConfig describeLiveAudioAuditNotifyConfig(array $options = [])
  * @method DescribeLiveCertificateDetail describeLiveCertificateDetail(array $options = [])
@@ -206,6 +209,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateCasterSceneAudio updateCasterSceneAudio(array $options = [])
  * @method UpdateCasterSceneConfig updateCasterSceneConfig(array $options = [])
  * @method UpdateLiveAppSnapshotConfig updateLiveAppSnapshotConfig(array $options = [])
+ * @method UpdateLiveASRConfig updateLiveASRConfig(array $options = [])
  * @method UpdateLiveAudioAuditConfig updateLiveAudioAuditConfig(array $options = [])
  * @method UpdateLiveAudioAuditNotifyConfig updateLiveAudioAuditNotifyConfig(array $options = [])
  * @method UpdateLiveDetectNotifyConfig updateLiveDetectNotifyConfig(array $options = [])
@@ -645,6 +649,28 @@ class AddLiveAppRecordConfig extends Rpc
  * @method $this withCallback($value)
  */
 class AddLiveAppSnapshotConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getMnsTopic()
+ * @method $this withMnsTopic($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getHttpCallbackURL()
+ * @method $this withHttpCallbackURL($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMnsRegion()
+ * @method $this withMnsRegion($value)
+ */
+class AddLiveASRConfig extends Rpc
 {
 }
 
@@ -1377,6 +1403,20 @@ class DeleteLiveAppSnapshotConfig extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
+class DeleteLiveASRConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
 class DeleteLiveAudioAuditConfig extends Rpc
 {
 }
@@ -1840,6 +1880,20 @@ class DescribeHtmlResource extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveAsrConfig extends Rpc
+{
 }
 
 /**
@@ -4152,6 +4206,28 @@ class UpdateCasterSceneConfig extends Rpc
  * @method $this withCallback($value)
  */
 class UpdateLiveAppSnapshotConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getMnsTopic()
+ * @method $this withMnsTopic($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getHttpCallbackURL()
+ * @method $this withHttpCallbackURL($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMnsRegion()
+ * @method $this withMnsRegion($value)
+ */
+class UpdateLiveASRConfig extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.522 - 2020-10-13
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.521 - 2020-10-13
 - Generated 2018-01-11 for `rtc`.
 
