@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.523 - 2020-10-13
+- Add DeviceCenter API, including QueryDeviceBySQL.
+- Add OTA API, including ListOTAModuleByProduct, DeleteOTAModule.
+- Update error message in response with InvokeThingService, SetDeviceProperty.
+- Update OTA API, including CreateOTAModule, QueryDeviceVersionCountByPkFromOTA, QueryFirmwareByUid.
+- Update thing model API, ImportThingModelTsl.
+
+
 ## 1.8.522 - 2020-10-13
 - Generated 2016-11-01 for `live`.
 
