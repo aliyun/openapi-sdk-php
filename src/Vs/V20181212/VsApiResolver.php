@@ -77,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVsDomainConfigs describeVsDomainConfigs(array $options = [])
  * @method DescribeVsDomainDetail describeVsDomainDetail(array $options = [])
  * @method DescribeVsDomainPvData describeVsDomainPvData(array $options = [])
+ * @method DescribeVsDomainPvUvData describeVsDomainPvUvData(array $options = [])
  * @method DescribeVsDomainRecordData describeVsDomainRecordData(array $options = [])
  * @method DescribeVsDomainRegionData describeVsDomainRegionData(array $options = [])
  * @method DescribeVsDomainReqBpsData describeVsDomainReqBpsData(array $options = [])
@@ -1476,6 +1477,22 @@ class DescribeVsDomainDetail extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeVsDomainPvData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVsDomainPvUvData extends Rpc
 {
 }
 

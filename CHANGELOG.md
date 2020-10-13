@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.520 - 2020-10-13
+- Generated 2018-12-12 for `vs`.
+
+
 ## 1.8.519 - 2020-10-12
 - Support add webhook, get repository info via id or path.
 
