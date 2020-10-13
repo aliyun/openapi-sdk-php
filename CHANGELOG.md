@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.528 - 2020-10-13
+- Update HasRenewChangeOrder type to Boolean in DescribeInstances.
+
+
 ## 1.8.527 - 2020-10-13
 - Add describe devices to return device status.
 

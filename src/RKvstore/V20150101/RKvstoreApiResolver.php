@@ -52,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FlushExpireKeys flushExpireKeys(array $options = [])
  * @method FlushInstance flushInstance(array $options = [])
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
+ * @method InitializeKvstorePermission initializeKvstorePermission(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method MigrateToOtherZone migrateToOtherZone(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
@@ -598,6 +599,8 @@ class DescribeAuditRecords extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getEngine()
@@ -612,6 +615,8 @@ class DescribeAuditRecords extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getOrderType()
@@ -1391,6 +1396,24 @@ class GrantAccountPrivilege extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class InitializeKvstorePermission extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method array getTag()
@@ -1724,6 +1747,8 @@ class ModifyInstanceMaintainTime extends Rpc
  * @method $this withEffectTime($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
  * @method string getMajorVersion()
  * @method $this withMajorVersion($value)
  * @method string getResourceOwnerAccount()
@@ -1746,6 +1771,8 @@ class ModifyInstanceMajorVersion extends Rpc
  * @method $this withEffectTime($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getMinorversion()
@@ -1786,6 +1813,8 @@ class ModifyInstanceNetExpireTime extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
  * @method string getInstanceClass()
@@ -1884,6 +1913,8 @@ class ModifyIntranetAttribute extends Rpc
  * @method $this withClientToken($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1892,6 +1923,8 @@ class ModifyIntranetAttribute extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class ModifyResourceGroup extends Rpc
 {
