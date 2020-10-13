@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.526 - 2020-10-13
+- Add spotDuration support.
+
+
 ## 1.8.525 - 2020-10-13
 - GetTitleIntelligence add interface.
 

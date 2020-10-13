@@ -2797,6 +2797,8 @@ class CreateRouterInterface extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getServiceManaged()
+ * @method $this withServiceManaged($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getSecurityGroupName()
