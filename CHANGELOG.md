@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.524 - 2020-10-13
+- Generated 2018-01-11 for `rtc`.
+
+
 ## 1.8.523 - 2020-10-13
 - Add DeviceCenter API, including QueryDeviceBySQL.
 - Add OTA API, including ListOTAModuleByProduct, DeleteOTAModule.
