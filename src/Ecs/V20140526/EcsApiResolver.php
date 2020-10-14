@@ -40,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDemand createDemand(array $options = [])
  * @method CreateDeploymentSet createDeploymentSet(array $options = [])
  * @method CreateDisk createDisk(array $options = [])
+ * @method CreateElasticityAssurance createElasticityAssurance(array $options = [])
  * @method CreateForwardEntry createForwardEntry(array $options = [])
  * @method CreateHaVip createHaVip(array $options = [])
  * @method CreateHpcCluster createHpcCluster(array $options = [])
@@ -116,6 +117,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDisksFullStatus describeDisksFullStatus(array $options = [])
  * @method DescribeEipAddresses describeEipAddresses(array $options = [])
  * @method DescribeEipMonitorData describeEipMonitorData(array $options = [])
+ * @method DescribeElasticityAssuranceInstances describeElasticityAssuranceInstances(array $options = [])
+ * @method DescribeElasticityAssurances describeElasticityAssurances(array $options = [])
  * @method DescribeEniMonitorData describeEniMonitorData(array $options = [])
  * @method DescribeForwardTableEntries describeForwardTableEntries(array $options = [])
  * @method DescribeHaVips describeHaVips(array $options = [])
@@ -124,6 +127,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeImages describeImages(array $options = [])
  * @method DescribeImageSharePermission describeImageSharePermission(array $options = [])
  * @method DescribeImageSupportInstanceTypes describeImageSupportInstanceTypes(array $options = [])
+ * @method DescribeInstanceAttachmentAttributes describeInstanceAttachmentAttributes(array $options = [])
  * @method DescribeInstanceAttribute describeInstanceAttribute(array $options = [])
  * @method DescribeInstanceAutoRenewAttribute describeInstanceAutoRenewAttribute(array $options = [])
  * @method DescribeInstanceHistoryEvents describeInstanceHistoryEvents(array $options = [])
@@ -227,6 +231,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyImageAttribute modifyImageAttribute(array $options = [])
  * @method ModifyImageShareGroupPermission modifyImageShareGroupPermission(array $options = [])
  * @method ModifyImageSharePermission modifyImageSharePermission(array $options = [])
+ * @method ModifyInstanceAttachmentAttributes modifyInstanceAttachmentAttributes(array $options = [])
  * @method ModifyInstanceAttribute modifyInstanceAttribute(array $options = [])
  * @method ModifyInstanceAutoReleaseTime modifyInstanceAutoReleaseTime(array $options = [])
  * @method ModifyInstanceAutoRenewAttribute modifyInstanceAutoRenewAttribute(array $options = [])
@@ -283,6 +288,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunCommand runCommand(array $options = [])
  * @method RunInstances runInstances(array $options = [])
  * @method SendFile sendFile(array $options = [])
+ * @method StartElasticityAssurance startElasticityAssurance(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartInstances startInstances(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
@@ -1526,6 +1532,106 @@ class CreateDisk extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
+ * @method string getPrivatePoolOptionsMatchCriteria()
+ * @method array getInstanceType()
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPrivatePoolOptionsName()
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAssuranceTimes()
+ * @method $this withAssuranceTimes($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getInstanceCpuCoreCount()
+ * @method $this withInstanceCpuCoreCount($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method array getZoneId()
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ * @method string getPackageType()
+ * @method $this withPackageType($value)
+ * @method string getInstanceAmount()
+ * @method $this withInstanceAmount($value)
+ */
+class CreateElasticityAssurance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsMatchCriteria($value)
+    {
+        $this->data['PrivatePoolOptionsMatchCriteria'] = $value;
+        $this->options['query']['PrivatePoolOptions.MatchCriteria'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $instanceType
+     *
+     * @return $this
+     */
+	public function withInstanceType(array $instanceType)
+	{
+	    $this->data['InstanceType'] = $instanceType;
+		foreach ($instanceType as $i => $iValue) {
+			$this->options['query']['InstanceType.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsName($value)
+    {
+        $this->data['PrivatePoolOptionsName'] = $value;
+        $this->options['query']['PrivatePoolOptions.Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $zoneId
+     *
+     * @return $this
+     */
+	public function withZoneId(array $zoneId)
+	{
+	    $this->data['ZoneId'] = $zoneId;
+		foreach ($zoneId as $i => $iValue) {
+			$this->options['query']['ZoneId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getForwardTableId()
  * @method $this withForwardTableId($value)
  * @method string getInternalIp()
@@ -1690,6 +1796,7 @@ class CreateImage extends Rpc
  * @method $this withDeletionProtection($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getPrivatePoolOptionsMatchCriteria()
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getPassword()
@@ -1699,6 +1806,7 @@ class CreateImage extends Rpc
  * @method string getStorageSetPartitionNumber()
  * @method $this withStorageSetPartitionNumber($value)
  * @method array getTag()
+ * @method string getPrivatePoolOptionsId()
  * @method string getAutoRenewPeriod()
  * @method $this withAutoRenewPeriod($value)
  * @method string getNodeControllerId()
@@ -1799,6 +1907,19 @@ class CreateInstance extends Rpc
 {
 
     /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsMatchCriteria($value)
+    {
+        $this->data['PrivatePoolOptionsMatchCriteria'] = $value;
+        $this->options['query']['PrivatePoolOptions.MatchCriteria'] = $value;
+
+        return $this;
+    }
+
+    /**
      * @param array $tag
      *
      * @return $this
@@ -1816,6 +1937,19 @@ class CreateInstance extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsId($value)
+    {
+        $this->data['PrivatePoolOptionsId'] = $value;
+        $this->options['query']['PrivatePoolOptions.Id'] = $value;
+
+        return $this;
     }
 
     /**
@@ -4638,6 +4772,74 @@ class DescribeEipMonitorData extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPrivatePoolOptionsId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getPackageType()
+ * @method $this withPackageType($value)
+ */
+class DescribeElasticityAssuranceInstances extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsId($value)
+    {
+        $this->data['PrivatePoolOptionsId'] = $value;
+        $this->options['query']['PrivatePoolOptions.Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPrivatePoolOptionsIds()
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getPackageType()
+ * @method $this withPackageType($value)
+ */
+class DescribeElasticityAssurances extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsIds($value)
+    {
+        $this->data['PrivatePoolOptionsIds'] = $value;
+        $this->options['query']['PrivatePoolOptions.Ids'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPeriod()
@@ -4905,6 +5107,26 @@ class DescribeImageSupportInstanceTypes extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class DescribeInstanceAttachmentAttributes extends Rpc
+{
 }
 
 /**
@@ -5575,6 +5797,7 @@ class DescribeInstanceTypeFamilies extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method array getInstanceTypes()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -5586,6 +5809,21 @@ class DescribeInstanceTypeFamilies extends Rpc
  */
 class DescribeInstanceTypes extends Rpc
 {
+
+    /**
+     * @param array $instanceTypes
+     *
+     * @return $this
+     */
+	public function withInstanceTypes(array $instanceTypes)
+	{
+	    $this->data['InstanceTypes'] = $instanceTypes;
+		foreach ($instanceTypes as $i => $iValue) {
+			$this->options['query']['InstanceTypes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -6132,14 +6370,19 @@ class DescribePhysicalConnections extends Rpc
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getDataDisk1PerformanceLevel()
+ * @method string getAssuranceTimes()
+ * @method $this withAssuranceTimes($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceCpuCoreCount()
+ * @method $this withInstanceCpuCoreCount($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
  * @method string getInstanceNetworkType()
  * @method $this withInstanceNetworkType($value)
  * @method string getInstanceAmount()
  * @method $this withInstanceAmount($value)
+ * @method array getInstanceTypeList()
  * @method string getDataDisk3PerformanceLevel()
  * @method string getImageId()
  * @method $this withImageId($value)
@@ -6229,6 +6472,21 @@ class DescribePrice extends Rpc
         $this->options['query']['DataDisk.1.PerformanceLevel'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $instanceTypeList
+     *
+     * @return $this
+     */
+	public function withInstanceTypeList(array $instanceTypeList)
+	{
+	    $this->data['InstanceTypeList'] = $instanceTypeList;
+		foreach ($instanceTypeList as $i => $iValue) {
+			$this->options['query']['InstanceTypeList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -8789,6 +9047,50 @@ class ModifyImageSharePermission extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPrivatePoolOptionsMatchCriteria()
+ * @method string getPrivatePoolOptionsId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyInstanceAttachmentAttributes extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsMatchCriteria($value)
+    {
+        $this->data['PrivatePoolOptionsMatchCriteria'] = $value;
+        $this->options['query']['PrivatePoolOptions.MatchCriteria'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsId($value)
+    {
+        $this->data['PrivatePoolOptionsId'] = $value;
+        $this->options['query']['PrivatePoolOptions.Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getRecyclable()
  * @method $this withRecyclable($value)
  * @method string getNetworkInterfaceQueueNumber()
@@ -10530,6 +10832,7 @@ class RunCommand extends Rpc
  * @method $this withDeletionProtection($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getPrivatePoolOptionsMatchCriteria()
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getPassword()
@@ -10605,6 +10908,7 @@ class RunCommand extends Rpc
  * @method string getStorageSetPartitionNumber()
  * @method $this withStorageSetPartitionNumber($value)
  * @method array getTag()
+ * @method string getPrivatePoolOptionsId()
  * @method string getAutoRenewPeriod()
  * @method $this withAutoRenewPeriod($value)
  * @method string getLaunchTemplateId()
@@ -10662,6 +10966,19 @@ class RunCommand extends Rpc
  */
 class RunInstances extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsMatchCriteria($value)
+    {
+        $this->data['PrivatePoolOptionsMatchCriteria'] = $value;
+        $this->options['query']['PrivatePoolOptions.MatchCriteria'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -10797,6 +11114,19 @@ class RunInstances extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsId($value)
+    {
+        $this->data['PrivatePoolOptionsId'] = $value;
+        $this->options['query']['PrivatePoolOptions.Id'] = $value;
+
+        return $this;
     }
 
     /**
@@ -10986,6 +11316,34 @@ class SendFile extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPrivatePoolOptionsId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartElasticityAssurance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrivatePoolOptionsId($value)
+    {
+        $this->data['PrivatePoolOptionsId'] = $value;
+        $this->options['query']['PrivatePoolOptions.Id'] = $value;
+
+        return $this;
     }
 }
 
