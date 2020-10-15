@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.536 - 2020-10-15
+- Add SaveTraceAppConfig api.
+
+
 ## 1.8.535 - 2020-10-15
 - Generated 2018-06-01 for `dataworks-public`.
 

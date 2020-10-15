@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateAlertContact createAlertContact(array $options = [])
  * @method CreateAlertContactGroup createAlertContactGroup(array $options = [])
  * @method CreateRetcodeApp createRetcodeApp(array $options = [])
+ * @method CreateWehook createWehook(array $options = [])
  * @method DeleteAlertContact deleteAlertContact(array $options = [])
  * @method DeleteAlertContactGroup deleteAlertContactGroup(array $options = [])
  * @method DeleteAlertRules deleteAlertRules(array $options = [])
@@ -38,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDataset queryDataset(array $options = [])
  * @method QueryMetric queryMetric(array $options = [])
  * @method QueryMetricByPage queryMetricByPage(array $options = [])
+ * @method SaveTraceAppConfig saveTraceAppConfig(array $options = [])
  * @method SearchAlertContact searchAlertContact(array $options = [])
  * @method SearchAlertContactGroup searchAlertContactGroup(array $options = [])
  * @method SearchAlertHistories searchAlertHistories(array $options = [])
@@ -54,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAlertContact updateAlertContact(array $options = [])
  * @method UpdateAlertContactGroup updateAlertContactGroup(array $options = [])
  * @method UpdateAlertRule updateAlertRule(array $options = [])
+ * @method UpdateWebhook updateWebhook(array $options = [])
  */
 class ARMSApiResolver extends ApiResolver
 {
@@ -169,6 +172,26 @@ class CreateAlertContactGroup extends Rpc
  * @method $this withRetcodeAppType($value)
  */
 class CreateRetcodeApp extends Rpc
+{
+}
+
+/**
+ * @method string getHeaders()
+ * @method $this withHeaders($value)
+ * @method string getMethod()
+ * @method $this withMethod($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getContactName()
+ * @method $this withContactName($value)
+ */
+class CreateWehook extends Rpc
 {
 }
 
@@ -663,10 +686,41 @@ class QueryMetricByPage extends Rpc
 }
 
 /**
+ * @method array getSettings()
+ * @method string getPid()
+ * @method $this withPid($value)
+ */
+class SaveTraceAppConfig extends Rpc
+{
+
+    /**
+     * @param array $settings
+     *
+     * @return $this
+     */
+	public function withSettings(array $settings)
+	{
+	    $this->data['Settings'] = $settings;
+		foreach ($settings as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Settings.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Settings.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
+ * @method string getContactIds()
+ * @method $this withContactIds($value)
  * @method string getContactName()
  * @method $this withContactName($value)
  * @method string getPhone()
@@ -681,14 +735,18 @@ class SearchAlertContact extends Rpc
 }
 
 /**
- * @method string getContactName()
- * @method $this withContactName($value)
  * @method string getContactId()
  * @method $this withContactId($value)
+ * @method string getIsDetail()
+ * @method $this withIsDetail($value)
  * @method string getContactGroupName()
  * @method $this withContactGroupName($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
+ * @method string getContactName()
+ * @method $this withContactName($value)
+ * @method string getContactGroupIds()
+ * @method $this withContactGroupIds($value)
  */
 class SearchAlertContactGroup extends Rpc
 {
@@ -976,5 +1034,27 @@ class UpdateAlertContactGroup extends Rpc
  * @method $this withTemplageAlertConfig($value)
  */
 class UpdateAlertRule extends Rpc
+{
+}
+
+/**
+ * @method string getHeaders()
+ * @method $this withHeaders($value)
+ * @method string getMethod()
+ * @method $this withMethod($value)
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getContactName()
+ * @method $this withContactName($value)
+ */
+class UpdateWebhook extends Rpc
 {
 }
