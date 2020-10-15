@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.537 - 2020-10-15
+- Supported TAG APIs.
+
+
 ## 1.8.536 - 2020-10-15
 - Add SaveTraceAppConfig api.
 
