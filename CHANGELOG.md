@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.535 - 2020-10-15
+- Generated 2018-06-01 for `dataworks-public`.
+
+
 ## 1.8.534 - 2020-10-15
 - Generated 2018-06-01 for `dataworks-public`.
 
