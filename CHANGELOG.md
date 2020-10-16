@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.541 - 2020-10-16
+- Update OTA API, including ListOTAModuleByProduct, DeleteOTAModule.
+
+
 ## 1.8.540 - 2020-10-16
 - Supported AndroidNotificationNotifyId for Push and MassPush.
 - Supported iOSNotificationCollapseId for Push and MassPush.

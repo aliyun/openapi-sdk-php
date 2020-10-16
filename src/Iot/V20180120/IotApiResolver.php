@@ -221,6 +221,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateSceneRule updateSceneRule(array $options = [])
  * @method UpdateSubscribeRelation updateSubscribeRelation(array $options = [])
  * @method UpdateThingModel updateThingModel(array $options = [])
+ * @method UpdateThingModelValidationConfig updateThingModelValidationConfig(array $options = [])
  */
 class IotApiResolver extends ApiResolver
 {
@@ -3904,10 +3905,6 @@ class DeleteOTAFirmware extends Rpc
 /**
  * @method string getAuthConfig()
  * @method $this withAuthConfig($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getModuleName()
@@ -3916,8 +3913,6 @@ class DeleteOTAFirmware extends Rpc
  * @method $this withProductKey($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
  */
 class DeleteOTAModule extends Rpc
 {
@@ -5652,18 +5647,12 @@ class ListOTAJobByFirmware extends Rpc
 /**
  * @method string getAuthConfig()
  * @method $this withAuthConfig($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getIotId()
- * @method $this withIotId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
  */
 class ListOTAModuleByProduct extends Rpc
 {
@@ -10418,6 +10407,46 @@ class UpdateSubscribeRelation extends Rpc
  * @method string getApiRevision()
  */
 class UpdateThingModel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getValidateType()
+ * @method $this withValidateType($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class UpdateThingModelValidationConfig extends Rpc
 {
 
     /**
