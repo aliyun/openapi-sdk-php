@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchSetDcdnIpaDomainConfigs batchSetDcdnIpaDomainConfigs(array $options = [])
  * @method BatchStartDcdnDomain batchStartDcdnDomain(array $options = [])
  * @method BatchStopDcdnDomain batchStopDcdnDomain(array $options = [])
+ * @method CreateDcdnCertificateSigningRequest createDcdnCertificateSigningRequest(array $options = [])
  * @method DeleteDcdnDomain deleteDcdnDomain(array $options = [])
  * @method DeleteDcdnIpaDomain deleteDcdnIpaDomain(array $options = [])
  * @method DeleteDcdnIpaSpecificConfig deleteDcdnIpaSpecificConfig(array $options = [])
@@ -76,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnUserQuota describeDcdnUserQuota(array $options = [])
  * @method DescribeDcdnUserResourcePackage describeDcdnUserResourcePackage(array $options = [])
  * @method DescribeDcdnUserTags describeDcdnUserTags(array $options = [])
+ * @method DescribeDcdnVerifyContent describeDcdnVerifyContent(array $options = [])
  * @method DescribeUserDcdnIpaStatus describeUserDcdnIpaStatus(array $options = [])
  * @method DescribeUserDcdnStatus describeUserDcdnStatus(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
@@ -85,6 +87,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RollbackDcdnStagingConfig rollbackDcdnStagingConfig(array $options = [])
  * @method SetDcdnConfigOfVersion setDcdnConfigOfVersion(array $options = [])
  * @method SetDcdnDomainCertificate setDcdnDomainCertificate(array $options = [])
+ * @method SetDcdnDomainCSRCertificate setDcdnDomainCSRCertificate(array $options = [])
  * @method SetDcdnDomainStagingConfig setDcdnDomainStagingConfig(array $options = [])
  * @method StartDcdnDomain startDcdnDomain(array $options = [])
  * @method StartDcdnIpaDomain startDcdnIpaDomain(array $options = [])
@@ -94,6 +97,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UntagDcdnResources untagDcdnResources(array $options = [])
  * @method UpdateDcdnDomain updateDcdnDomain(array $options = [])
  * @method UpdateDcdnIpaDomain updateDcdnIpaDomain(array $options = [])
+ * @method VerifyDcdnDomainOwner verifyDcdnDomainOwner(array $options = [])
  */
 class DcdnApiResolver extends ApiResolver
 {
@@ -276,6 +280,30 @@ class BatchStartDcdnDomain extends Rpc
  * @method $this withSecurityToken($value)
  */
 class BatchStopDcdnDomain extends Rpc
+{
+}
+
+/**
+ * @method string getCountry()
+ * @method $this withCountry($value)
+ * @method string getCity()
+ * @method $this withCity($value)
+ * @method string getCommonName()
+ * @method $this withCommonName($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ * @method string getSANs()
+ * @method $this withSANs($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOrganization()
+ * @method $this withOrganization($value)
+ * @method string getOrganizationUnit()
+ * @method $this withOrganizationUnit($value)
+ */
+class CreateDcdnCertificateSigningRequest extends Rpc
 {
 }
 
@@ -1309,6 +1337,16 @@ class DescribeDcdnUserTags extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnVerifyContent extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSecurityToken()
@@ -1437,6 +1475,18 @@ class SetDcdnConfigOfVersion extends Rpc
  * @method $this withRegion($value)
  */
 class SetDcdnDomainCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getServerCertificate()
+ * @method $this withServerCertificate($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetDcdnDomainCSRCertificate extends Rpc
 {
 }
 
@@ -1624,5 +1674,17 @@ class UpdateDcdnDomain extends Rpc
  * @method $this withOwnerId($value)
  */
 class UpdateDcdnIpaDomain extends Rpc
+{
+}
+
+/**
+ * @method string getVerifyType()
+ * @method $this withVerifyType($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class VerifyDcdnDomainOwner extends Rpc
 {
 }
