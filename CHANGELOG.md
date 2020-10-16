@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.539 - 2020-10-16
+- Update cert API.
+
+
 ## 1.8.538 - 2020-10-16
 - Update cert API.
 

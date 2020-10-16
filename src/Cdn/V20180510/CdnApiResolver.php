@@ -104,6 +104,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeStagingIp describeStagingIp(array $options = [])
  * @method DescribeTagResources describeTagResources(array $options = [])
  * @method DescribeTopDomainsByFlow describeTopDomainsByFlow(array $options = [])
+ * @method DescribeUserCertificateExpireCount describeUserCertificateExpireCount(array $options = [])
  * @method DescribeUserConfigs describeUserConfigs(array $options = [])
  * @method DescribeUserDomains describeUserDomains(array $options = [])
  * @method DescribeUserTags describeUserTags(array $options = [])
@@ -1860,6 +1861,14 @@ class DescribeTagResources extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeTopDomainsByFlow extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeUserCertificateExpireCount extends Rpc
 {
 }
 
