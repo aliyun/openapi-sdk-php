@@ -282,6 +282,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSRemind'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemind'] = $depth1Value['IOSRemind'];
 			}
+			if(isset($depth1Value['AndroidNotificationNotifyId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationNotifyId'] = $depth1Value['AndroidNotificationNotifyId'];
+			}
 			if(isset($depth1Value['TargetValue'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.TargetValue'] = $depth1Value['TargetValue'];
 			}
@@ -293,6 +296,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['AndroidXiaoMiNotifyTitle'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyTitle'] = $depth1Value['AndroidXiaoMiNotifyTitle'];
+			}
+			if(isset($depth1Value['IOSNotificationCollapseId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCollapseId'] = $depth1Value['IOSNotificationCollapseId'];
 			}
 			if(isset($depth1Value['PushType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.PushType'] = $depth1Value['PushType'];
@@ -351,6 +357,7 @@ class MassPush extends Rpc
  * @method string getIOSRemind()
  * @method string getAndroidMusic()
  * @method $this withAndroidMusic($value)
+ * @method string getIOSNotificationCollapseId()
  * @method string getPushType()
  * @method $this withPushType($value)
  * @method string getAndroidExtParameters()
@@ -379,6 +386,8 @@ class MassPush extends Rpc
  * @method $this withAndroidActivity($value)
  * @method string getSmsSignName()
  * @method $this withSmsSignName($value)
+ * @method string getAndroidNotificationNotifyId()
+ * @method $this withAndroidNotificationNotifyId($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
  * @method string getTargetValue()
@@ -478,6 +487,19 @@ class Push extends Rpc
     {
         $this->data['IOSRemind'] = $value;
         $this->options['query']['iOSRemind'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSNotificationCollapseId($value)
+    {
+        $this->data['IOSNotificationCollapseId'] = $value;
+        $this->options['query']['iOSNotificationCollapseId'] = $value;
 
         return $this;
     }

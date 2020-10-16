@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.540 - 2020-10-16
+- Supported AndroidNotificationNotifyId for Push and MassPush.
+- Supported iOSNotificationCollapseId for Push and MassPush.
+
+
 ## 1.8.539 - 2020-10-16
 - Update cert API.
 
