@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.542 - 2020-10-19
+- Add a new interface for asynchronous image translation.
+
+
 ## 1.8.541 - 2020-10-16
 - Update OTA API, including ListOTAModuleByProduct, DeleteOTAModule.
 

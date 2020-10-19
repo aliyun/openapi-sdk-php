@@ -6,10 +6,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateDocTranslateTask createDocTranslateTask(array $options = [])
+ * @method CreateImageTranslateTask createImageTranslateTask(array $options = [])
  * @method GetDetectLanguage getDetectLanguage(array $options = [])
  * @method GetDocTranslateTask getDocTranslateTask(array $options = [])
  * @method GetImageDiagnose getImageDiagnose(array $options = [])
  * @method GetImageTranslate getImageTranslate(array $options = [])
+ * @method GetImageTranslateTask getImageTranslateTask(array $options = [])
  * @method GetTitleDiagnose getTitleDiagnose(array $options = [])
  * @method GetTitleGenerate getTitleGenerate(array $options = [])
  * @method GetTitleIntelligence getTitleIntelligence(array $options = [])
@@ -122,6 +124,82 @@ class CreateDocTranslateTask extends Rpc
     {
         $this->data['CallbackUrl'] = $value;
         $this->options['form_params']['CallbackUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceLanguage()
+ * @method string getClientToken()
+ * @method string getUrlList()
+ * @method string getExtra()
+ * @method string getTargetLanguage()
+ */
+class CreateImageTranslateTask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrlList($value)
+    {
+        $this->data['UrlList'] = $value;
+        $this->options['form_params']['UrlList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtra($value)
+    {
+        $this->data['Extra'] = $value;
+        $this->options['form_params']['Extra'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
 
         return $this;
     }
@@ -249,6 +327,26 @@ class GetImageTranslate extends Rpc
     {
         $this->data['TargetLanguage'] = $value;
         $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTaskId()
+ */
+class GetImageTranslateTask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
 
         return $this;
     }
