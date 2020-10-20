@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.543 - 2020-10-20
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.542 - 2020-10-19
 - Add a new interface for asynchronous image translation.
 
