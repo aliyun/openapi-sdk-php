@@ -191,9 +191,6 @@ class DescribeVerifySDK extends Rpc
 class DetectFaceAttributes extends Rpc
 {
 
-    /** @var string */
-    public $scheme = 'https';
-
     /**
      * @param string $value
      *

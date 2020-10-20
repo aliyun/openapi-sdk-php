@@ -62,59 +62,27 @@ class DescribeSmartVerify extends Rpc
 }
 
 /**
- * @method string getIp()
- * @method string getCertName()
- * @method string getMobile()
  * @method string getUserId()
+ * @method string getCertifyId()
+ * @method string getFacePictureBase64()
  * @method string getMode()
  * @method string getCertNo()
  * @method string getOuterOrderNo()
  * @method string getCertType()
- * @method string getSceneId()
  * @method string getMetaInfo()
  * @method string getOcr()
+ * @method string getOssObjectName()
+ * @method string getFacePictureUrl()
+ * @method string getIp()
+ * @method string getCertName()
+ * @method string getMobile()
+ * @method string getSceneId()
+ * @method string getCallbackToken()
+ * @method string getOssBucketName()
+ * @method string getCallbackUrl()
  */
 class InitSmartVerify extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIp($value)
-    {
-        $this->data['Ip'] = $value;
-        $this->options['form_params']['Ip'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCertName($value)
-    {
-        $this->data['CertName'] = $value;
-        $this->options['form_params']['CertName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMobile($value)
-    {
-        $this->data['Mobile'] = $value;
-        $this->options['form_params']['Mobile'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -125,6 +93,32 @@ class InitSmartVerify extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertifyId($value)
+    {
+        $this->data['CertifyId'] = $value;
+        $this->options['form_params']['CertifyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFacePictureBase64($value)
+    {
+        $this->data['FacePictureBase64'] = $value;
+        $this->options['form_params']['FacePictureBase64'] = $value;
 
         return $this;
     }
@@ -186,19 +180,6 @@ class InitSmartVerify extends Rpc
      *
      * @return $this
      */
-    public function withSceneId($value)
-    {
-        $this->data['SceneId'] = $value;
-        $this->options['form_params']['SceneId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withMetaInfo($value)
     {
         $this->data['MetaInfo'] = $value;
@@ -216,6 +197,123 @@ class InitSmartVerify extends Rpc
     {
         $this->data['Ocr'] = $value;
         $this->options['form_params']['Ocr'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssObjectName($value)
+    {
+        $this->data['OssObjectName'] = $value;
+        $this->options['form_params']['OssObjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFacePictureUrl($value)
+    {
+        $this->data['FacePictureUrl'] = $value;
+        $this->options['form_params']['FacePictureUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['form_params']['Ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertName($value)
+    {
+        $this->data['CertName'] = $value;
+        $this->options['form_params']['CertName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['form_params']['SceneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackToken($value)
+    {
+        $this->data['CallbackToken'] = $value;
+        $this->options['form_params']['CallbackToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssBucketName($value)
+    {
+        $this->data['OssBucketName'] = $value;
+        $this->options['form_params']['OssBucketName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackUrl($value)
+    {
+        $this->data['CallbackUrl'] = $value;
+        $this->options['form_params']['CallbackUrl'] = $value;
 
         return $this;
     }

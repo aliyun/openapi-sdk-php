@@ -31,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectFaceAttributes detectFaceAttributes(array $options = [])
  * @method InitDevice initDevice(array $options = [])
  * @method InitFaceVerify initFaceVerify(array $options = [])
+ * @method LivenessFaceVerify livenessFaceVerify(array $options = [])
  * @method ModifyDeviceInfo modifyDeviceInfo(array $options = [])
  * @method UpdateAppPackage updateAppPackage(array $options = [])
  * @method UpdateVerifySetting updateVerifySetting(array $options = [])
@@ -60,6 +61,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getSourceImageType()
  * @method string getTargetImageType()
  * @method string getTargetImageValue()
+ * @method string getBizType()
  * @method string getSourceImageValue()
  */
 class CompareFaces extends Rpc
@@ -103,6 +105,19 @@ class CompareFaces extends Rpc
     {
         $this->data['TargetImageValue'] = $value;
         $this->options['form_params']['TargetImageValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizType($value)
+    {
+        $this->data['BizType'] = $value;
+        $this->options['form_params']['BizType'] = $value;
 
         return $this;
     }
@@ -824,10 +839,24 @@ class DescribeVerifyUsage extends Rpc
 }
 
 /**
+ * @method string getBizType()
  * @method string getMaterialValue()
  */
 class DetectFaceAttributes extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizType($value)
+    {
+        $this->data['BizType'] = $value;
+        $this->options['form_params']['BizType'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -930,8 +959,12 @@ class InitDevice extends Rpc
  * @method $this withSceneId($value)
  * @method string getOssBucketName()
  * @method $this withOssBucketName($value)
+ * @method string getCallbackToken()
+ * @method $this withCallbackToken($value)
  * @method string getReturnUrl()
  * @method $this withReturnUrl($value)
+ * @method string getCallbackUrl()
+ * @method $this withCallbackUrl($value)
  */
 class InitFaceVerify extends Rpc
 {
@@ -958,6 +991,182 @@ class InitFaceVerify extends Rpc
     {
         $this->data['Model'] = $value;
         $this->options['form_params']['Model'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProductCode()
+ * @method string getOssObjectName()
+ * @method string getFaceContrastPicture()
+ * @method string getIp()
+ * @method string getMobile()
+ * @method string getDeviceToken()
+ * @method string getUserId()
+ * @method string getCertifyId()
+ * @method string getOuterOrderNo()
+ * @method string getFaceContrastPictureUrl()
+ * @method string getSceneId()
+ * @method string getOssBucketName()
+ * @method string getModel()
+ * @method $this withModel($value)
+ */
+class LivenessFaceVerify extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['form_params']['ProductCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssObjectName($value)
+    {
+        $this->data['OssObjectName'] = $value;
+        $this->options['form_params']['OssObjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceContrastPicture($value)
+    {
+        $this->data['FaceContrastPicture'] = $value;
+        $this->options['form_params']['FaceContrastPicture'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['form_params']['Ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceToken($value)
+    {
+        $this->data['DeviceToken'] = $value;
+        $this->options['form_params']['DeviceToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertifyId($value)
+    {
+        $this->data['CertifyId'] = $value;
+        $this->options['form_params']['CertifyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOuterOrderNo($value)
+    {
+        $this->data['OuterOrderNo'] = $value;
+        $this->options['form_params']['OuterOrderNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceContrastPictureUrl($value)
+    {
+        $this->data['FaceContrastPictureUrl'] = $value;
+        $this->options['form_params']['FaceContrastPictureUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['form_params']['SceneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssBucketName($value)
+    {
+        $this->data['OssBucketName'] = $value;
+        $this->options['form_params']['OssBucketName'] = $value;
 
         return $this;
     }

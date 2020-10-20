@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.547 - 2020-10-20
+- Add LivenessFaceVerify API.
+
+
 ## 1.8.546 - 2020-10-20
 - Update Configuration.
 
