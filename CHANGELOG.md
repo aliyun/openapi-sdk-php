@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.546 - 2020-10-20
+- Update Configuration.
+
+
 ## 1.8.545 - 2020-10-20
 - Add isv interface.
 

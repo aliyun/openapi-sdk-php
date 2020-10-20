@@ -61,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListMotorAlgorithmResults listMotorAlgorithmResults(array $options = [])
  * @method ListPersons listPersons(array $options = [])
  * @method ListPersonTrace listPersonTrace(array $options = [])
+ * @method ListPersonTraceDetails listPersonTraceDetails(array $options = [])
  * @method ListPersonVisitCount listPersonVisitCount(array $options = [])
  * @method ListUserGroups listUserGroups(array $options = [])
  * @method ListUsers listUsers(array $options = [])
@@ -101,9 +102,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'vcs';
 }
 
 /**
@@ -4543,6 +4541,124 @@ class ListPersonTrace extends Rpc
     {
         $this->data['PersonId'] = $value;
         $this->options['form_params']['PersonId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getSubId()
+ * @method string getPageSize()
+ * @method string getPersonId()
+ * @method string getIsvId()
+ */
+class ListPersonTraceDetails extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubId($value)
+    {
+        $this->data['SubId'] = $value;
+        $this->options['form_params']['SubId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonId($value)
+    {
+        $this->data['PersonId'] = $value;
+        $this->options['form_params']['PersonId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvId($value)
+    {
+        $this->data['IsvId'] = $value;
+        $this->options['form_params']['IsvId'] = $value;
 
         return $this;
     }
