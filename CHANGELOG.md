@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.544 - 2020-10-20
+- AddDeleteSortScriptFileApi.
+
+
 ## 1.8.543 - 2020-10-20
 - Generated 2016-11-01 for `live`.
 
