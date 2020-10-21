@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddMediaWorkflow addMediaWorkflow(array $options = [])
  * @method AddPipeline addPipeline(array $options = [])
  * @method AddPornPipeline addPornPipeline(array $options = [])
+ * @method AddSmarttagTemplate addSmarttagTemplate(array $options = [])
  * @method AddTemplate addTemplate(array $options = [])
  * @method AddTerrorismPipeline addTerrorismPipeline(array $options = [])
  * @method AddWaterMarkTemplate addWaterMarkTemplate(array $options = [])
@@ -37,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteMediaTag deleteMediaTag(array $options = [])
  * @method DeleteMediaWorkflow deleteMediaWorkflow(array $options = [])
  * @method DeletePipeline deletePipeline(array $options = [])
+ * @method DeleteSmarttagTemplate deleteSmarttagTemplate(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteWaterMarkTemplate deleteWaterMarkTemplate(array $options = [])
  * @method DescribeMtsUserResourcePackage describeMtsUserResourcePackage(array $options = [])
@@ -47,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAsrPipeline listAsrPipeline(array $options = [])
  * @method ListCensorPipeline listCensorPipeline(array $options = [])
  * @method ListCoverPipeline listCoverPipeline(array $options = [])
+ * @method ListCustomPersons listCustomPersons(array $options = [])
  * @method ListFpShotDB listFpShotDB(array $options = [])
  * @method ListFpShotNotary listFpShotNotary(array $options = [])
  * @method ListJob listJob(array $options = [])
@@ -74,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryFpImportResult queryFpImportResult(array $options = [])
  * @method QueryFpShotJobList queryFpShotJobList(array $options = [])
  * @method QueryImageSearchJobList queryImageSearchJobList(array $options = [])
+ * @method QueryIProductionJob queryIProductionJob(array $options = [])
  * @method QueryIProductionJobList queryIProductionJobList(array $options = [])
  * @method QueryJobList queryJobList(array $options = [])
  * @method QueryMCJobList queryMCJobList(array $options = [])
@@ -93,6 +97,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryPornJobList queryPornJobList(array $options = [])
  * @method QueryPornPipelineList queryPornPipelineList(array $options = [])
  * @method QuerySmarttagJob querySmarttagJob(array $options = [])
+ * @method QuerySmarttagTemplateList querySmarttagTemplateList(array $options = [])
  * @method QuerySnapshotJobList querySnapshotJobList(array $options = [])
  * @method QuerySubtitleJobList querySubtitleJobList(array $options = [])
  * @method QueryTagJobList queryTagJobList(array $options = [])
@@ -105,6 +110,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryVideoSummaryJobList queryVideoSummaryJobList(array $options = [])
  * @method QueryWaterMarkTemplateList queryWaterMarkTemplateList(array $options = [])
  * @method RefreshCdnDomainConfigsCache refreshCdnDomainConfigsCache(array $options = [])
+ * @method RegisterCustomFace registerCustomFace(array $options = [])
  * @method RegisterMediaDetailPerson registerMediaDetailPerson(array $options = [])
  * @method RegisterMediaDetailScenario registerMediaDetailScenario(array $options = [])
  * @method ReportAnnotationJobResult reportAnnotationJobResult(array $options = [])
@@ -123,6 +129,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchTemplate searchTemplate(array $options = [])
  * @method SearchWaterMarkTemplate searchWaterMarkTemplate(array $options = [])
  * @method SetAuthConfig setAuthConfig(array $options = [])
+ * @method StopIProductionJob stopIProductionJob(array $options = [])
  * @method SubmitAnalysisJob submitAnalysisJob(array $options = [])
  * @method SubmitAnnotationJob submitAnnotationJob(array $options = [])
  * @method SubmitAsrJob submitAsrJob(array $options = [])
@@ -153,8 +160,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitVideoPoseJob submitVideoPoseJob(array $options = [])
  * @method SubmitVideoSplitJob submitVideoSplitJob(array $options = [])
  * @method SubmitVideoSummaryJob submitVideoSummaryJob(array $options = [])
+ * @method TagCustomPerson tagCustomPerson(array $options = [])
  * @method UnbindInputBucket unbindInputBucket(array $options = [])
  * @method UnbindOutputBucket unbindOutputBucket(array $options = [])
+ * @method UnregisterCustomFace unregisterCustomFace(array $options = [])
  * @method UpdateAsrPipeline updateAsrPipeline(array $options = [])
  * @method UpdateCategoryName updateCategoryName(array $options = [])
  * @method UpdateCensorPipeline updateCensorPipeline(array $options = [])
@@ -169,6 +178,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateMediaWorkflowTriggerMode updateMediaWorkflowTriggerMode(array $options = [])
  * @method UpdatePipeline updatePipeline(array $options = [])
  * @method UpdatePornPipeline updatePornPipeline(array $options = [])
+ * @method UpdateSmarttagTemplate updateSmarttagTemplate(array $options = [])
  * @method UpdateTemplate updateTemplate(array $options = [])
  * @method UpdateTerrorismPipeline updateTerrorismPipeline(array $options = [])
  * @method UpdateWaterMarkTemplate updateWaterMarkTemplate(array $options = [])
@@ -187,6 +197,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'mts';
 }
 
 /**
@@ -446,6 +459,32 @@ class AddPipeline extends Rpc
  * @method $this withName($value)
  */
 class AddPornPipeline extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getIndustry()
+ * @method $this withIndustry($value)
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ * @method string getFaceCategoryIds()
+ * @method $this withFaceCategoryIds($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAnalyseTypes()
+ * @method $this withAnalyseTypes($value)
+ */
+class AddSmarttagTemplate extends Rpc
 {
 }
 
@@ -847,6 +886,22 @@ class DeletePipeline extends Rpc
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  */
+class DeleteSmarttagTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
 class DeleteTemplate extends Rpc
 {
 }
@@ -1008,6 +1063,24 @@ class ListCensorPipeline extends Rpc
  * @method $this withOwnerId($value)
  */
 class ListCoverPipeline extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPersonId()
+ * @method $this withPersonId($value)
+ * @method string getCategoryId()
+ * @method $this withCategoryId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListCustomPersons extends Rpc
 {
 }
 
@@ -1558,6 +1631,22 @@ class QueryImageSearchJobList extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ */
+class QueryIProductionJob extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getIProductionJobIds()
  * @method $this withIProductionJobIds($value)
  */
@@ -1900,6 +1989,22 @@ class QuerySmarttagJob extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class QuerySmarttagTemplateList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
  * @method string getStartOfJobCreatedTimeRange()
@@ -2098,6 +2203,26 @@ class QueryWaterMarkTemplateList extends Rpc
  * @method $this withOwnerId($value)
  */
 class RefreshCdnDomainConfigsCache extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPersonId()
+ * @method $this withPersonId($value)
+ * @method string getCategoryId()
+ * @method $this withCategoryId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getImageUrl()
+ * @method $this withImageUrl($value)
+ */
+class RegisterCustomFace extends Rpc
 {
 }
 
@@ -2476,6 +2601,22 @@ class SetAuthConfig extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ */
+class StopIProductionJob extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAnalysisConfig()
  * @method $this withAnalysisConfig($value)
  * @method string getUserData()
@@ -2758,6 +2899,8 @@ class SubmitImageSearchJob extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getJobParams()
  * @method $this withJobParams($value)
+ * @method string getOutput()
+ * @method $this withOutput($value)
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getFunctionName()
@@ -2774,6 +2917,8 @@ class SubmitImageSearchJob extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
+ * @method string getInput()
+ * @method $this withInput($value)
  * @method string getScheduleParams()
  * @method $this withScheduleParams($value)
  */
@@ -3186,6 +3331,32 @@ class SubmitVideoSummaryJob extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPersonDescription()
+ * @method $this withPersonDescription($value)
+ * @method string getCategoryDescription()
+ * @method $this withCategoryDescription($value)
+ * @method string getPersonId()
+ * @method $this withPersonId($value)
+ * @method string getCategoryId()
+ * @method $this withCategoryId($value)
+ * @method string getPersonName()
+ * @method $this withPersonName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCategoryName()
+ * @method $this withCategoryName($value)
+ */
+class TagCustomPerson extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -3214,6 +3385,26 @@ class UnbindInputBucket extends Rpc
  * @method $this withBucket($value)
  */
 class UnbindOutputBucket extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPersonId()
+ * @method $this withPersonId($value)
+ * @method string getCategoryId()
+ * @method $this withCategoryId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getFaceId()
+ * @method $this withFaceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UnregisterCustomFace extends Rpc
 {
 }
 
@@ -3538,6 +3729,34 @@ class UpdatePipeline extends Rpc
  * @method $this withName($value)
  */
 class UpdatePornPipeline extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getIndustry()
+ * @method $this withIndustry($value)
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
+ * @method string getFaceCategoryIds()
+ * @method $this withFaceCategoryIds($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getAnalyseTypes()
+ * @method $this withAnalyseTypes($value)
+ */
+class UpdateSmarttagTemplate extends Rpc
 {
 }
 

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.550 - 2020-10-21
+- Add custom person interfaces, support registration, update etc.
+- Optimize updateSmarttagTemplate interface, set some parameters as optional.
+
+
 ## 1.8.549 - 2020-10-21
 - Update cert API.
 
