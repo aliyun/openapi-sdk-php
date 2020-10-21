@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.549 - 2020-10-21
+- Update cert API.
+
+
 ## 1.8.548 - 2020-10-21
 - Add PHP sdk.
 
