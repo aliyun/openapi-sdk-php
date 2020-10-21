@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.548 - 2020-10-21
+- Add PHP sdk.
+
+
 ## 1.8.547 - 2020-10-20
 - Add LivenessFaceVerify API.
 
