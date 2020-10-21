@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.555 - 2020-10-21
+- Change Documentation configuration.
+
+
 ## 1.8.554 - 2020-10-21
 - Cloud Storage Gateway openapi sdk is released.
 
