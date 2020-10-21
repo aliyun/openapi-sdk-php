@@ -4554,7 +4554,6 @@ class ListPersonTrace extends Rpc
  * @method string getSubId()
  * @method string getPageSize()
  * @method string getPersonId()
- * @method string getIsvId()
  */
 class ListPersonTraceDetails extends Rpc
 {
@@ -4646,19 +4645,6 @@ class ListPersonTraceDetails extends Rpc
     {
         $this->data['PersonId'] = $value;
         $this->options['form_params']['PersonId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIsvId($value)
-    {
-        $this->data['IsvId'] = $value;
-        $this->options['form_params']['IsvId'] = $value;
 
         return $this;
     }
