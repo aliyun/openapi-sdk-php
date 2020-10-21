@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.553 - 2020-10-21
+- Release latest features.
+
+
 ## 1.8.552 - 2020-10-21
 - Change Documentation configuration.
 

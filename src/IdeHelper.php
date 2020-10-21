@@ -159,6 +159,7 @@ namespace AlibabaCloud;
  * @method static Reid\Reid reid()
  * @method static Retailcloud\Retailcloud retailcloud()
  * @method static Rtc\Rtc rtc()
+ * @method static Sae\Sae sae()
  * @method static Saf\Saf saf()
  * @method static Sas\Sas sas()
  * @method static SasApi\SasApi sasApi()
