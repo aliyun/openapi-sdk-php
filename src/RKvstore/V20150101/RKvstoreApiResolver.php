@@ -5,6 +5,7 @@ namespace AlibabaCloud\RKvstore\V20150101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddShardingNode addShardingNode(array $options = [])
  * @method AllocateDirectConnection allocateDirectConnection(array $options = [])
  * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])
  * @method CreateAccount createAccount(array $options = [])
@@ -19,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDedicatedInstance deleteDedicatedInstance(array $options = [])
  * @method DeleteDedicatedUserCluster deleteDedicatedUserCluster(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DeleteShardingNode deleteShardingNode(array $options = [])
  * @method DeleteUserClusterHost deleteUserClusterHost(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method DescribeAuditRecords describeAuditRecords(array $options = [])
@@ -27,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBackups describeBackups(array $options = [])
  * @method DescribeCacheAnalysisReport describeCacheAnalysisReport(array $options = [])
  * @method DescribeCacheAnalysisReportList describeCacheAnalysisReportList(array $options = [])
+ * @method DescribeClusterMemberInfo describeClusterMemberInfo(array $options = [])
  * @method DescribeDBInstanceNetInfo describeDBInstanceNetInfo(array $options = [])
  * @method DescribeDedicatedClusterInstanceList describeDedicatedClusterInstanceList(array $options = [])
  * @method DescribeDedicatedUserCluster describeDedicatedUserCluster(array $options = [])
@@ -106,6 +109,34 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'redisa';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getShardCount()
+ * @method $this withShardCount($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getShardClass()
+ * @method $this withShardClass($value)
+ */
+class AddShardingNode extends Rpc
+{
 }
 
 /**
@@ -519,6 +550,26 @@ class DeleteInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteShardingNode extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getHostId()
  * @method $this withHostId($value)
  * @method string getSecurityToken()
@@ -617,6 +668,8 @@ class DescribeAuditRecords extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getOrderType()
@@ -727,6 +780,24 @@ class DescribeCacheAnalysisReport extends Rpc
  * @method $this withDays($value)
  */
 class DescribeCacheAnalysisReportList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeClusterMemberInfo extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.556 - 2020-10-21
+- DescribeAvailableResource support AcceptLanguage.
+
+
 ## 1.8.555 - 2020-10-21
 - Change Documentation configuration.
 
