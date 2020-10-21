@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.551 - 2020-10-21
+- Change Documentation configuration.
+
+
 ## 1.8.550 - 2020-10-21
 - Add custom person interfaces, support registration, update etc.
 - Optimize updateSmarttagTemplate interface, set some parameters as optional.
