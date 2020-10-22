@@ -51,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnDomainRealTimeSrcBpsData describeDcdnDomainRealTimeSrcBpsData(array $options = [])
  * @method DescribeDcdnDomainRealTimeSrcHttpCodeData describeDcdnDomainRealTimeSrcHttpCodeData(array $options = [])
  * @method DescribeDcdnDomainRealTimeSrcTrafficData describeDcdnDomainRealTimeSrcTrafficData(array $options = [])
+ * @method DescribeDcdnDomainRealTimeTrafficData describeDcdnDomainRealTimeTrafficData(array $options = [])
  * @method DescribeDcdnDomainRegionData describeDcdnDomainRegionData(array $options = [])
  * @method DescribeDcdnDomainStagingConfig describeDcdnDomainStagingConfig(array $options = [])
  * @method DescribeDcdnDomainTopReferVisit describeDcdnDomainTopReferVisit(array $options = [])
@@ -72,6 +73,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnStagingIp describeDcdnStagingIp(array $options = [])
  * @method DescribeDcdnTagResources describeDcdnTagResources(array $options = [])
  * @method DescribeDcdnTopDomainsByFlow describeDcdnTopDomainsByFlow(array $options = [])
+ * @method DescribeDcdnUserBillHistory describeDcdnUserBillHistory(array $options = [])
  * @method DescribeDcdnUserBillType describeDcdnUserBillType(array $options = [])
  * @method DescribeDcdnUserDomains describeDcdnUserDomains(array $options = [])
  * @method DescribeDcdnUserQuota describeDcdnUserQuota(array $options = [])
@@ -909,6 +911,20 @@ class DescribeDcdnDomainRealTimeSrcTrafficData extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
+class DescribeDcdnDomainRealTimeTrafficData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
 class DescribeDcdnDomainRegionData extends Rpc
 {
 }
@@ -1259,6 +1275,18 @@ class DescribeDcdnTagResources extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDcdnTopDomainsByFlow extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnUserBillHistory extends Rpc
 {
 }
 
