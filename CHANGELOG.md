@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.560 - 2020-10-22
+- Add Pipeline Member api.
+
+
 ## 1.8.559 - 2020-10-22
 - Update data API.
 

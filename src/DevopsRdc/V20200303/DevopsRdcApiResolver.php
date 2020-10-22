@@ -20,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDevopsProjectMembers deleteDevopsProjectMembers(array $options = [])
  * @method DeleteDevopsProjectSprint deleteDevopsProjectSprint(array $options = [])
  * @method DeleteDevopsProjectTask deleteDevopsProjectTask(array $options = [])
+ * @method DeletePipelineMember deletePipelineMember(array $options = [])
  * @method ExecutePipeline executePipeline(array $options = [])
  * @method GetDevopsOrganizationMembers getDevopsOrganizationMembers(array $options = [])
  * @method GetDevopsProjectInfo getDevopsProjectInfo(array $options = [])
@@ -34,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPipleineLatestInstanceStatus getPipleineLatestInstanceStatus(array $options = [])
  * @method GetUserByAliyunUid getUserByAliyunUid(array $options = [])
  * @method InsertDevopsUser insertDevopsUser(array $options = [])
+ * @method InsertPipelineMember insertPipelineMember(array $options = [])
  * @method InsertProjectMembers insertProjectMembers(array $options = [])
  * @method ListCredentials listCredentials(array $options = [])
  * @method ListDevopsProjectSprints listDevopsProjectSprints(array $options = [])
@@ -44,9 +46,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPipelines listPipelines(array $options = [])
  * @method ListServiceConnections listServiceConnections(array $options = [])
  * @method ListUserOrganization listUserOrganization(array $options = [])
+ * @method TransferPipelineOwner transferPipelineOwner(array $options = [])
  * @method UpdateDevopsProject updateDevopsProject(array $options = [])
  * @method UpdateDevopsProjectSprint updateDevopsProjectSprint(array $options = [])
  * @method UpdateDevopsProjectTask updateDevopsProjectTask(array $options = [])
+ * @method UpdatePipelineMember updatePipelineMember(array $options = [])
  */
 class DevopsRdcApiResolver extends ApiResolver
 {
@@ -995,6 +999,44 @@ class DeleteDevopsProjectTask extends Rpc
 }
 
 /**
+ * @method string getUserPk()
+ * @method string getUserId()
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class DeletePipelineMember extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getParameters()
  * @method string getUserPk()
  * @method string getOrgId()
@@ -1559,6 +1601,58 @@ class InsertDevopsUser extends Rpc
 }
 
 /**
+ * @method string getRoleName()
+ * @method string getUserPk()
+ * @method string getUserId()
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class InsertPipelineMember extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleName($value)
+    {
+        $this->data['RoleName'] = $value;
+        $this->options['form_params']['RoleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getMembers()
  * @method string getProjectId()
  * @method string getOrgId()
@@ -2041,6 +2135,44 @@ class ListUserOrganization extends Rpc
 }
 
 /**
+ * @method string getUserPk()
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ * @method string getNewOwnerId()
+ */
+class TransferPipelineOwner extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNewOwnerId($value)
+    {
+        $this->data['NewOwnerId'] = $value;
+        $this->options['form_params']['NewOwnerId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getName()
  * @method string getDescription()
  * @method string getProjectId()
@@ -2417,6 +2549,58 @@ class UpdateDevopsProjectTask extends Rpc
     {
         $this->data['TaskId'] = $value;
         $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRoleName()
+ * @method string getUserPk()
+ * @method string getUserId()
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class UpdatePipelineMember extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleName($value)
+    {
+        $this->data['RoleName'] = $value;
+        $this->options['form_params']['RoleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
 
         return $this;
     }
