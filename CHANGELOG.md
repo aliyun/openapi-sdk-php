@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.557 - 2020-10-22
+- Update cert API.
+
+
 ## 1.8.556 - 2020-10-21
 - DescribeAvailableResource support AcceptLanguage.
 
