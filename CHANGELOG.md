@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.562 - 2020-10-23
+- Change Configuration.
+
+
 ## 1.8.561 - 2020-10-23
 - Support feedback.
 

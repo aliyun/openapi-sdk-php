@@ -63,6 +63,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPersonTrace listPersonTrace(array $options = [])
  * @method ListPersonTraceDetails listPersonTraceDetails(array $options = [])
  * @method ListPersonVisitCount listPersonVisitCount(array $options = [])
+ * @method ListSubscribeDevice listSubscribeDevice(array $options = [])
  * @method ListUserGroups listUserGroups(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method RecognizeFaceQuality recognizeFaceQuality(array $options = [])
@@ -74,10 +75,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchFace searchFace(array $options = [])
  * @method SearchObject searchObject(array $options = [])
  * @method StopMonitor stopMonitor(array $options = [])
+ * @method SubscribeDeviceEvent subscribeDeviceEvent(array $options = [])
+ * @method SubscribeSpaceEvent subscribeSpaceEvent(array $options = [])
  * @method SyncDeviceTime syncDeviceTime(array $options = [])
  * @method UnbindCorpGroup unbindCorpGroup(array $options = [])
  * @method UnbindPerson unbindPerson(array $options = [])
  * @method UnbindUser unbindUser(array $options = [])
+ * @method UnsubscribeDeviceEvent unsubscribeDeviceEvent(array $options = [])
+ * @method UnsubscribeSpaceEvent unsubscribeSpaceEvent(array $options = [])
  * @method UpdateCorp updateCorp(array $options = [])
  * @method UpdateDevice updateDevice(array $options = [])
  * @method UpdateMonitor updateMonitor(array $options = [])
@@ -4553,6 +4558,7 @@ class ListPersonTrace extends Rpc
  * @method string getPageNumber()
  * @method string getSubId()
  * @method string getPageSize()
+ * @method string getDataSourceId()
  * @method string getPersonId()
  */
 class ListPersonTraceDetails extends Rpc
@@ -4632,6 +4638,19 @@ class ListPersonTraceDetails extends Rpc
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceId($value)
+    {
+        $this->data['DataSourceId'] = $value;
+        $this->options['form_params']['DataSourceId'] = $value;
 
         return $this;
     }
@@ -4808,6 +4827,16 @@ class ListPersonVisitCount extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ */
+class ListSubscribeDevice extends Rpc
+{
 }
 
 /**
@@ -5852,6 +5881,26 @@ class StopMonitor extends Rpc
 }
 
 /**
+ * @method string getPushConfig()
+ * @method $this withPushConfig($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class SubscribeDeviceEvent extends Rpc
+{
+}
+
+/**
+ * @method string getSpaceId()
+ * @method $this withSpaceId($value)
+ * @method string getPushConfig()
+ * @method $this withPushConfig($value)
+ */
+class SubscribeSpaceEvent extends Rpc
+{
+}
+
+/**
  * @method string getDeviceTimeStamp()
  * @method string getDeviceSn()
  */
@@ -6013,6 +6062,22 @@ class UnbindUser extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class UnsubscribeDeviceEvent extends Rpc
+{
+}
+
+/**
+ * @method string getSpaceId()
+ * @method $this withSpaceId($value)
+ */
+class UnsubscribeSpaceEvent extends Rpc
+{
 }
 
 /**
