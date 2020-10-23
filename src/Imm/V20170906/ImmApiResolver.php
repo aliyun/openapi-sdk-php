@@ -83,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateImage updateImage(array $options = [])
  * @method UpdateProject updateProject(array $options = [])
  * @method UpdateSet updateSet(array $options = [])
+ * @method VideoAnalyseFeedback videoAnalyseFeedback(array $options = [])
  */
 class ImmApiResolver extends ApiResolver
 {
@@ -1470,5 +1471,25 @@ class UpdateProject extends Rpc
  * @method $this withSetId($value)
  */
 class UpdateSet extends Rpc
+{
+}
+
+/**
+ * @method string getNote()
+ * @method $this withNote($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getFrames()
+ * @method $this withFrames($value)
+ * @method string getSuggestion()
+ * @method $this withSuggestion($value)
+ * @method string getUri()
+ * @method $this withUri($value)
+ * @method string getScenes()
+ * @method $this withScenes($value)
+ */
+class VideoAnalyseFeedback extends Rpc
 {
 }
