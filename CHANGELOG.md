@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.566 - 2020-10-26
+- Generated 2014-05-26 for `Ecs`.
+
+
 ## 1.8.565 - 2020-10-26
 - Generated 2016-11-01 for `live`.
 
