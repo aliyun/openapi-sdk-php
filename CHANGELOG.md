@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.564 - 2020-10-26
+- Supported PaymentType for DescribeDnsProductInstance.
+
+
 ## 1.8.563 - 2020-10-26
 - Update ScalingConfig parameters.
 
