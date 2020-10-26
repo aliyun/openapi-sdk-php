@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.563 - 2020-10-26
+- Update ScalingConfig parameters.
+
+
 ## 1.8.562 - 2020-10-23
 - Change Configuration.
 
