@@ -202,7 +202,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopLiveDomain stopLiveDomain(array $options = [])
  * @method StopLiveIndex stopLiveIndex(array $options = [])
  * @method TagLiveResources tagLiveResources(array $options = [])
- * @method TriggerRecord triggerRecord(array $options = [])
  * @method UnTagLiveResources unTagLiveResources(array $options = [])
  * @method UpdateBoard updateBoard(array $options = [])
  * @method UpdateBoardCallback updateBoardCallback(array $options = [])
@@ -3995,32 +3994,6 @@ class TagLiveResources extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getSource()
- * @method $this withSource($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getStreamName()
- * @method $this withStreamName($value)
- * @method string getAvMode()
- * @method $this withAvMode($value)
- * @method string getStorePath()
- * @method $this withStorePath($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getForceTranscode()
- * @method $this withForceTranscode($value)
- * @method string getNeedRecord()
- * @method $this withNeedRecord($value)
- */
-class TriggerRecord extends Rpc
-{
 }
 
 /**

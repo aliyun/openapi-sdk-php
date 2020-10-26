@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.565 - 2020-10-26
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.564 - 2020-10-26
 - Supported PaymentType for DescribeDnsProductInstance.
 
