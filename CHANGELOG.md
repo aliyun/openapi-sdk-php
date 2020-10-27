@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.567 - 2020-10-27
+- Add role authority management.
+
+
 ## 1.8.566 - 2020-10-26
 - Generated 2014-05-26 for `Ecs`.
 
