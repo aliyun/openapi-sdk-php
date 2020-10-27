@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.570 - 2020-10-27
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.569 - 2020-10-27
 - Support Sampling for jaeger.
 
