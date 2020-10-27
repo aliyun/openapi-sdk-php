@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.568 - 2020-10-27
+- Fix bug.
+
+
 ## 1.8.567 - 2020-10-27
 - Add role authority management.
 
