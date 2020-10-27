@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.569 - 2020-10-27
+- Support Sampling for jaeger.
+
+
 ## 1.8.568 - 2020-10-27
 - Fix bug.
 

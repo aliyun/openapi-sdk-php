@@ -5,15 +5,19 @@ namespace AlibabaCloud\Xtrace\V20190808;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
+ * @method GetSampling getSampling(array $options = [])
  * @method GetTagKey getTagKey(array $options = [])
  * @method GetTagVal getTagVal(array $options = [])
  * @method GetToken getToken(array $options = [])
  * @method GetTrace getTrace(array $options = [])
+ * @method GetTraceAnalysis getTraceAnalysis(array $options = [])
  * @method ListIpOrHosts listIpOrHosts(array $options = [])
  * @method ListServices listServices(array $options = [])
  * @method ListSpanNames listSpanNames(array $options = [])
  * @method QueryMetric queryMetric(array $options = [])
  * @method SearchTraces searchTraces(array $options = [])
+ * @method UpdateSampling updateSampling(array $options = [])
  */
 class XtraceApiResolver extends ApiResolver
 {
@@ -29,9 +33,28 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
 
-    /** @var string */
-    public $serviceCode = 'xtrace';
+/**
+ * @method string getSPIRegionId()
+ * @method $this withSPIRegionId($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
+ * @method string getDeletionTaskId()
+ * @method $this withDeletionTaskId($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ */
+class CheckServiceLinkedRoleForDeleting extends Rpc
+{
+}
+
+/**
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class GetSampling extends Rpc
+{
 }
 
 /**
@@ -67,6 +90,8 @@ class GetTagVal extends Rpc
 /**
  * @method string getAppType()
  * @method $this withAppType($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
  */
 class GetToken extends Rpc
 {
@@ -79,6 +104,18 @@ class GetToken extends Rpc
  * @method $this withAppType($value)
  */
 class GetTrace extends Rpc
+{
+}
+
+/**
+ * @method string getQuery()
+ * @method $this withQuery($value)
+ * @method string getApi()
+ * @method $this withApi($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class GetTraceAnalysis extends Rpc
 {
 }
 
@@ -122,6 +159,8 @@ class ListSpanNames extends Rpc
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method array getFilters()
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
  * @method array getMeasures()
  * @method string getIntervalInSec()
  * @method $this withIntervalInSec($value)
@@ -145,8 +184,12 @@ class QueryMetric extends Rpc
 	{
 	    $this->data['Filters'] = $filters;
 		foreach ($filters as $depth1 => $depth1Value) {
-			$this->options['query']['Filters.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Filters.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Filters.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Filters.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
@@ -218,10 +261,24 @@ class SearchTraces extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
 		}
 
 		return $this;
     }
+}
+
+/**
+ * @method string getSampling()
+ * @method $this withSampling($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class UpdateSampling extends Rpc
+{
 }
