@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.572 - 2020-10-28
+- Supported all language sdk.
+- Fixed some bugs for polardbx.
+
+
 ## 1.8.571 - 2020-10-28
 - Supported golang sdk.
 - Fixed some bugs for drds.
