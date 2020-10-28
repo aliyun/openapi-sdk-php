@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.573 - 2020-10-28
+- Support GetParameters, GetParametersByPath, GetSecretParameters, GetSecretParametersByPath.
+
+
 ## 1.8.572 - 2020-10-28
 - Supported all language sdk.
 - Fixed some bugs for polardbx.

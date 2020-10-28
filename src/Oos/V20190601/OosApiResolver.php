@@ -17,13 +17,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method GenerateExecutionPolicy generateExecutionPolicy(array $options = [])
  * @method GetExecutionTemplate getExecutionTemplate(array $options = [])
+ * @method GetInventorySchema getInventorySchema(array $options = [])
  * @method GetParameter getParameter(array $options = [])
+ * @method GetParameters getParameters(array $options = [])
+ * @method GetParametersByPath getParametersByPath(array $options = [])
  * @method GetSecretParameter getSecretParameter(array $options = [])
+ * @method GetSecretParameters getSecretParameters(array $options = [])
+ * @method GetSecretParametersByPath getSecretParametersByPath(array $options = [])
  * @method GetTemplate getTemplate(array $options = [])
  * @method ListActions listActions(array $options = [])
  * @method ListExecutionLogs listExecutionLogs(array $options = [])
  * @method ListExecutionRiskyTasks listExecutionRiskyTasks(array $options = [])
  * @method ListExecutions listExecutions(array $options = [])
+ * @method ListInventoryEntries listInventoryEntries(array $options = [])
  * @method ListParameters listParameters(array $options = [])
  * @method ListParameterVersions listParameterVersions(array $options = [])
  * @method ListResourceExecutionStatus listResourceExecutionStatus(array $options = [])
@@ -36,10 +42,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTemplates listTemplates(array $options = [])
  * @method ListTemplateVersions listTemplateVersions(array $options = [])
  * @method NotifyExecution notifyExecution(array $options = [])
+ * @method SearchInventory searchInventory(array $options = [])
  * @method StartExecution startExecution(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TriggerExecution triggerExecution(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method UpdateExecution updateExecution(array $options = [])
+ * @method UpdateInstanceInformation updateInstanceInformation(array $options = [])
  * @method UpdateParameter updateParameter(array $options = [])
  * @method UpdateSecretParameter updateSecretParameter(array $options = [])
  * @method UpdateTemplate updateTemplate(array $options = [])
@@ -79,6 +88,8 @@ class CancelExecution extends Rpc
  * @method $this withDescription($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getConstraints()
+ * @method $this withConstraints($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
@@ -97,6 +108,8 @@ class CreateParameter extends Rpc
  * @method $this withKeyId($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getConstraints()
+ * @method $this withConstraints($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
@@ -191,12 +204,48 @@ class GetExecutionTemplate extends Rpc
 }
 
 /**
+ * @method string getAggregator()
+ * @method $this withAggregator($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getTypeName()
+ * @method $this withTypeName($value)
+ */
+class GetInventorySchema extends Rpc
+{
+}
+
+/**
  * @method string getParameterVersion()
  * @method $this withParameterVersion($value)
  * @method string getName()
  * @method $this withName($value)
  */
 class GetParameter extends Rpc
+{
+}
+
+/**
+ * @method string getNames()
+ * @method $this withNames($value)
+ */
+class GetParameters extends Rpc
+{
+}
+
+/**
+ * @method string getRecursive()
+ * @method $this withRecursive($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class GetParametersByPath extends Rpc
 {
 }
 
@@ -209,6 +258,32 @@ class GetParameter extends Rpc
  * @method $this withName($value)
  */
 class GetSecretParameter extends Rpc
+{
+}
+
+/**
+ * @method string getWithDecryption()
+ * @method $this withWithDecryption($value)
+ * @method string getNames()
+ * @method $this withNames($value)
+ */
+class GetSecretParameters extends Rpc
+{
+}
+
+/**
+ * @method string getWithDecryption()
+ * @method $this withWithDecryption($value)
+ * @method string getRecursive()
+ * @method $this withRecursive($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class GetSecretParametersByPath extends Rpc
 {
 }
 
@@ -302,6 +377,44 @@ class ListExecutionRiskyTasks extends Rpc
  */
 class ListExecutions extends Rpc
 {
+}
+
+/**
+ * @method array getFilter()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getTypeName()
+ * @method $this withTypeName($value)
+ */
+class ListInventoryEntries extends Rpc
+{
+
+    /**
+     * @param array $filter
+     *
+     * @return $this
+     */
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['Operator'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Operator'] = $depth1Value['Operator'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -537,6 +650,56 @@ class NotifyExecution extends Rpc
 }
 
 /**
+ * @method array getAggregator()
+ * @method array getFilter()
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class SearchInventory extends Rpc
+{
+
+    /**
+     * @param array $aggregator
+     *
+     * @return $this
+     */
+	public function withAggregator(array $aggregator)
+	{
+	    $this->data['Aggregator'] = $aggregator;
+		foreach ($aggregator as $i => $iValue) {
+			$this->options['query']['Aggregator.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $filter
+     *
+     * @return $this
+     */
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['Operator'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Operator'] = $depth1Value['Operator'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getDescription()
@@ -599,6 +762,40 @@ class TriggerExecution extends Rpc
  * @method $this withResourceIds($value)
  */
 class UntagResources extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getExecutionId()
+ * @method $this withExecutionId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class UpdateExecution extends Rpc
+{
+}
+
+/**
+ * @method string getAgentVersion()
+ * @method $this withAgentVersion($value)
+ * @method string getIpAddress()
+ * @method $this withIpAddress($value)
+ * @method string getComputerName()
+ * @method $this withComputerName($value)
+ * @method string getPlatformName()
+ * @method $this withPlatformName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAgentName()
+ * @method $this withAgentName($value)
+ * @method string getPlatformType()
+ * @method $this withPlatformType($value)
+ * @method string getPlatformVersion()
+ * @method $this withPlatformVersion($value)
+ */
+class UpdateInstanceInformation extends Rpc
 {
 }
 
