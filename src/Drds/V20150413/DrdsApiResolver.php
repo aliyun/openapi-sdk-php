@@ -1,23 +1,26 @@
 <?php
 
-namespace AlibabaCloud\Drds\V20171016;
+namespace AlibabaCloud\Drds\V20150413;
 
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CreateDrdsAccount createDrdsAccount(array $options = [])
+ * @method AlterTable alterTable(array $options = [])
+ * @method CancelDDLTask cancelDDLTask(array $options = [])
+ * @method CancleDDLTask cancleDDLTask(array $options = [])
  * @method CreateDrdsDB createDrdsDB(array $options = [])
  * @method CreateDrdsInstance createDrdsInstance(array $options = [])
+ * @method CreateIndex createIndex(array $options = [])
  * @method CreateReadOnlyAccount createReadOnlyAccount(array $options = [])
+ * @method CreateTable createTable(array $options = [])
  * @method DeleteDrdsDB deleteDrdsDB(array $options = [])
  * @method DeleteFailedDrdsDB deleteFailedDrdsDB(array $options = [])
  * @method DescribeCreateDrdsInstanceStatus describeCreateDrdsInstanceStatus(array $options = [])
+ * @method DescribeDDLTask describeDDLTask(array $options = [])
  * @method DescribeDrdsDB describeDrdsDB(array $options = [])
  * @method DescribeDrdsDBIpWhiteList describeDrdsDBIpWhiteList(array $options = [])
  * @method DescribeDrdsDBs describeDrdsDBs(array $options = [])
  * @method DescribeDrdsInstance describeDrdsInstance(array $options = [])
- * @method DescribeDrdsInstanceDbMonitor describeDrdsInstanceDbMonitor(array $options = [])
- * @method DescribeDrdsInstanceMonitor describeDrdsInstanceMonitor(array $options = [])
  * @method DescribeDrdsInstanceNetInfoForInner describeDrdsInstanceNetInfoForInner(array $options = [])
  * @method DescribeDrdsInstances describeDrdsInstances(array $options = [])
  * @method DescribeRdsList describeRdsList(array $options = [])
@@ -25,13 +28,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeShardDbConnectionInfo describeShardDbConnectionInfo(array $options = [])
  * @method DescribeShardDBs describeShardDBs(array $options = [])
- * @method EnableInstance enableInstance(array $options = [])
+ * @method DrdsApiValidateOrder drdsApiValidateOrder(array $options = [])
+ * @method DropIndexes dropIndexes(array $options = [])
+ * @method DropTables dropTables(array $options = [])
+ * @method ListUnCompleteTasks listUnCompleteTasks(array $options = [])
  * @method ModifyDrdsDBPasswd modifyDrdsDBPasswd(array $options = [])
  * @method ModifyDrdsInstanceDescription modifyDrdsInstanceDescription(array $options = [])
  * @method ModifyDrdsIpWhiteList modifyDrdsIpWhiteList(array $options = [])
  * @method ModifyFullTableScan modifyFullTableScan(array $options = [])
  * @method ModifyRdsReadWeight modifyRdsReadWeight(array $options = [])
  * @method ModifyReadOnlyAccountPassword modifyReadOnlyAccountPassword(array $options = [])
+ * @method ProductInfoComplement productInfoComplement(array $options = [])
  * @method QueryInstanceInfoByConn queryInstanceInfoByConn(array $options = [])
  * @method RemoveDrdsInstance removeDrdsInstance(array $options = [])
  * @method RemoveReadOnlyAccount removeReadOnlyAccount(array $options = [])
@@ -46,7 +53,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $product = 'Drds';
 
     /** @var string */
-    public $version = '2017-10-16';
+    public $version = '2015-04-13';
 
     /** @var string */
     public $method = 'POST';
@@ -58,14 +65,36 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
- * @method string getPassword()
- * @method $this withPassword($value)
  * @method string getDbName()
  * @method $this withDbName($value)
- * @method string getUserName()
- * @method $this withUserName($value)
+ * @method string getDdlSql()
+ * @method $this withDdlSql($value)
  */
-class CreateDrdsAccount extends Rpc
+class AlterTable extends Rpc
+{
+}
+
+/**
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class CancelDDLTask extends Rpc
+{
+}
+
+/**
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class CancleDDLTask extends Rpc
 {
 }
 
@@ -86,24 +115,14 @@ class CreateDrdsDB extends Rpc
 }
 
 /**
- * @method string getIsAutoRenew()
- * @method $this withIsAutoRenew($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getDuration()
- * @method $this withDuration($value)
- * @method string getIsHa()
- * @method $this withIsHa($value)
- * @method string getInstanceSeries()
- * @method $this withInstanceSeries($value)
  * @method string getQuantity()
  * @method $this withQuantity($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getSpecification()
  * @method $this withSpecification($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getVswitchId()
  * @method $this withVswitchId($value)
  * @method string getVpcId()
@@ -112,10 +131,20 @@ class CreateDrdsDB extends Rpc
  * @method $this withZoneId($value)
  * @method string getPayType()
  * @method $this withPayType($value)
- * @method string getPricingCycle()
- * @method $this withPricingCycle($value)
  */
 class CreateDrdsInstance extends Rpc
+{
+}
+
+/**
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getDdlSql()
+ * @method $this withDdlSql($value)
+ */
+class CreateIndex extends Rpc
 {
 }
 
@@ -144,6 +173,24 @@ class CreateReadOnlyAccount extends Rpc
 }
 
 /**
+ * @method string getAllowFullTableScan()
+ * @method $this withAllowFullTableScan($value)
+ * @method string getShardKey()
+ * @method $this withShardKey($value)
+ * @method string getShardType()
+ * @method $this withShardType($value)
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getDdlSql()
+ * @method $this withDdlSql($value)
+ */
+class CreateTable extends Rpc
+{
+}
+
+/**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  * @method string getDbName()
@@ -168,6 +215,18 @@ class DeleteFailedDrdsDB extends Rpc
  * @method $this withDrdsInstanceId($value)
  */
 class DescribeCreateDrdsInstanceStatus extends Rpc
+{
+}
+
+/**
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DescribeDDLTask extends Rpc
 {
 }
 
@@ -210,38 +269,6 @@ class DescribeDrdsInstance extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getKey()
- * @method $this withKey($value)
- */
-class DescribeDrdsInstanceDbMonitor extends Rpc
-{
-}
-
-/**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getKey()
- * @method $this withKey($value)
- * @method string getPeriodMultiple()
- * @method $this withPeriodMultiple($value)
- */
-class DescribeDrdsInstanceMonitor extends Rpc
-{
-}
-
-/**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  */
@@ -252,8 +279,6 @@ class DescribeDrdsInstanceNetInfoForInner extends Rpc
 /**
  * @method string getType()
  * @method $this withType($value)
- * @method string getTags()
- * @method $this withTags($value)
  */
 class DescribeDrdsInstances extends Rpc
 {
@@ -306,28 +331,58 @@ class DescribeShardDBs extends Rpc
 }
 
 /**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getSourceDbInstId()
- * @method $this withSourceDbInstId($value)
- * @method string getRestoreTime()
- * @method $this withRestoreTime($value)
- * @method string getSwitchId()
- * @method $this withSwitchId($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
+ * @method string getData()
+ */
+class DrdsApiValidateOrder extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['query']['data'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
- * @method string getDbInstanceClass()
- * @method $this withDbInstanceClass($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getIndexes()
+ * @method $this withIndexes($value)
+ * @method string getTable()
+ * @method $this withTable($value)
  */
-class EnableInstance extends Rpc
+class DropIndexes extends Rpc
+{
+}
+
+/**
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getTables()
+ * @method $this withTables($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ */
+class DropTables extends Rpc
+{
+}
+
+/**
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ */
+class ListUnCompleteTasks extends Rpc
 {
 }
 
@@ -413,6 +468,40 @@ class ModifyRdsReadWeight extends Rpc
  */
 class ModifyReadOnlyAccountPassword extends Rpc
 {
+}
+
+/**
+ * @method string getGender()
+ * @method string getName()
+ */
+class ProductInfoComplement extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGender($value)
+    {
+        $this->data['Gender'] = $value;
+        $this->options['query']['gender'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['name'] = $value;
+
+        return $this;
+    }
 }
 
 /**

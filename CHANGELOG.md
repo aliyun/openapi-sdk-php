@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.571 - 2020-10-28
+- Supported golang sdk.
+- Fixed some bugs for drds.
+
+
 ## 1.8.570 - 2020-10-27
 - Generated 2020-05-18 for `dataworks-public`.
 
