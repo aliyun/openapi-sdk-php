@@ -9,23 +9,42 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddConnectableCluster addConnectableCluster(array $options = [])
  * @method AddSnapshotRepo addSnapshotRepo(array $options = [])
  * @method CancelTask cancelTask(array $options = [])
+ * @method CloseDiagnosis closeDiagnosis(array $options = [])
  * @method CloseHttps closeHttps(array $options = [])
+ * @method CreateDataTasks createDataTasks(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateLogstash createLogstash(array $options = [])
+ * @method CreatePipelines createPipelines(array $options = [])
  * @method CreateProject createProject(array $options = [])
+ * @method CreateSnapshot createSnapshot(array $options = [])
  * @method DeactivateZones deactivateZones(array $options = [])
+ * @method DeleteCollector deleteCollector(array $options = [])
  * @method DeleteConnectedCluster deleteConnectedCluster(array $options = [])
+ * @method DeleteDataTask deleteDataTask(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteLogstash deleteLogstash(array $options = [])
+ * @method DeletePipelines deletePipelines(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSnapshotRepo deleteSnapshotRepo(array $options = [])
+ * @method DescribeCollector describeCollector(array $options = [])
  * @method DescribeConnectableClusters describeConnectableClusters(array $options = [])
+ * @method DescribeDiagnoseReport describeDiagnoseReport(array $options = [])
+ * @method DescribeDiagnosisSettings describeDiagnosisSettings(array $options = [])
  * @method DescribeElasticsearchHealth describeElasticsearchHealth(array $options = [])
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeKibanaSettings describeKibanaSettings(array $options = [])
  * @method DescribeLogstash describeLogstash(array $options = [])
+ * @method DescribePipeline describePipeline(array $options = [])
  * @method DescribePipelineManagementConfig describePipelineManagementConfig(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeSnapshotSetting describeSnapshotSetting(array $options = [])
+ * @method DescribeTemplates describeTemplates(array $options = [])
+ * @method DescribeXpackMonitorConfig describeXpackMonitorConfig(array $options = [])
+ * @method DiagnoseInstance diagnoseInstance(array $options = [])
+ * @method EstimatedLogstashRestartTime estimatedLogstashRestartTime(array $options = [])
+ * @method EstimatedRestartTime estimatedRestartTime(array $options = [])
+ * @method GetClusterDataInformation getClusterDataInformation(array $options = [])
+ * @method GetElastictask getElastictask(array $options = [])
  * @method GetRegionConfiguration getRegionConfiguration(array $options = [])
  * @method GetSuggestShrinkableNodes getSuggestShrinkableNodes(array $options = [])
  * @method GetTransferableNodes getTransferableNodes(array $options = [])
@@ -37,19 +56,38 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InterruptLogstashTask interruptLogstashTask(array $options = [])
  * @method ListAllNode listAllNode(array $options = [])
  * @method ListAlternativeSnapshotRepos listAlternativeSnapshotRepos(array $options = [])
+ * @method ListAvailableEsInstanceIds listAvailableEsInstanceIds(array $options = [])
+ * @method ListCollectors listCollectors(array $options = [])
  * @method ListConnectedClusters listConnectedClusters(array $options = [])
+ * @method ListDataTasks listDataTasks(array $options = [])
+ * @method ListDiagnoseReport listDiagnoseReport(array $options = [])
+ * @method ListDiagnoseReportIds listDiagnoseReportIds(array $options = [])
+ * @method ListDictInformation listDictInformation(array $options = [])
+ * @method ListEcsInstances listEcsInstances(array $options = [])
+ * @method ListExtendfiles listExtendfiles(array $options = [])
  * @method ListInstance listInstance(array $options = [])
+ * @method ListInstanceIndices listInstanceIndices(array $options = [])
  * @method ListKibanaPlugins listKibanaPlugins(array $options = [])
  * @method ListLogstash listLogstash(array $options = [])
  * @method ListLogstashLog listLogstashLog(array $options = [])
  * @method ListLogstashPlugins listLogstashPlugins(array $options = [])
+ * @method ListNodes listNodes(array $options = [])
+ * @method ListPipeline listPipeline(array $options = [])
+ * @method ListPipelineIds listPipelineIds(array $options = [])
  * @method ListPlugins listPlugins(array $options = [])
  * @method ListSearchLog listSearchLog(array $options = [])
  * @method ListSnapshotReposByInstanceId listSnapshotReposByInstanceId(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method ListTags listTags(array $options = [])
+ * @method MigrateToOtherZone migrateToOtherZone(array $options = [])
+ * @method ModifyDeployMachine modifyDeployMachine(array $options = [])
+ * @method ModifyElastictask modifyElastictask(array $options = [])
+ * @method ModifyInstanceMaintainTime modifyInstanceMaintainTime(array $options = [])
  * @method ModifyWhiteIps modifyWhiteIps(array $options = [])
  * @method MoveResourceGroup moveResourceGroup(array $options = [])
+ * @method OpenDiagnosis openDiagnosis(array $options = [])
  * @method OpenHttps openHttps(array $options = [])
+ * @method ReinstallCollector reinstallCollector(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewLogstash renewLogstash(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
@@ -57,7 +95,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResumeElasticsearchTask resumeElasticsearchTask(array $options = [])
  * @method ResumeLogstashTask resumeLogstashTask(array $options = [])
  * @method RollbackInstance rollbackInstance(array $options = [])
+ * @method RunPipelines runPipelines(array $options = [])
  * @method ShrinkNode shrinkNode(array $options = [])
+ * @method StartCollector startCollector(array $options = [])
+ * @method StopCollector stopCollector(array $options = [])
+ * @method StopPipelines stopPipelines(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TransferNode transferNode(array $options = [])
  * @method TriggerNetwork triggerNetwork(array $options = [])
@@ -69,8 +111,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAdvancedSetting updateAdvancedSetting(array $options = [])
  * @method UpdateAliwsDict updateAliwsDict(array $options = [])
  * @method UpdateBlackIps updateBlackIps(array $options = [])
+ * @method UpdateCollector updateCollector(array $options = [])
+ * @method UpdateCollectorName updateCollectorName(array $options = [])
  * @method UpdateDescription updateDescription(array $options = [])
+ * @method UpdateDiagnosisSettings updateDiagnosisSettings(array $options = [])
  * @method UpdateDict updateDict(array $options = [])
+ * @method UpdateExtendConfig updateExtendConfig(array $options = [])
+ * @method UpdateExtendfiles updateExtendfiles(array $options = [])
  * @method UpdateHotIkDicts updateHotIkDicts(array $options = [])
  * @method UpdateInstance updateInstance(array $options = [])
  * @method UpdateInstanceChargeType updateInstanceChargeType(array $options = [])
@@ -86,10 +133,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdatePrivateNetworkWhiteIps updatePrivateNetworkWhiteIps(array $options = [])
  * @method UpdatePublicNetwork updatePublicNetwork(array $options = [])
  * @method UpdatePublicWhiteIps updatePublicWhiteIps(array $options = [])
+ * @method UpdateReadWritePolicy updateReadWritePolicy(array $options = [])
  * @method UpdateSnapshotSetting updateSnapshotSetting(array $options = [])
  * @method UpdateSynonymsDicts updateSynonymsDicts(array $options = [])
+ * @method UpdateTemplate updateTemplate(array $options = [])
  * @method UpdateWhiteIps updateWhiteIps(array $options = [])
+ * @method UpdateXpackMonitorConfig updateXpackMonitorConfig(array $options = [])
  * @method UpgradeEngineVersion upgradeEngineVersion(array $options = [])
+ * @method ValidateConnection validateConnection(array $options = [])
  * @method ValidateShrinkNodes validateShrinkNodes(array $options = [])
  * @method ValidateTransferableNodes validateTransferableNodes(array $options = [])
  */
@@ -212,6 +263,44 @@ class CancelTask extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getLang()
+ */
+class CloseDiagnosis extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/actions/close-diagnosis';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
  */
 class CloseHttps extends Roa
 {
@@ -227,6 +316,30 @@ class CloseHttps extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class CreateDataTasks extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/data-task';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
 
         return $this;
     }
@@ -277,6 +390,44 @@ class CreateLogstash extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ * @method string getTrigger()
+ */
+class CreatePipelines extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipelines';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrigger($value)
+    {
+        $this->data['Trigger'] = $value;
+        $this->options['query']['trigger'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  */
 class CreateProject extends Roa
@@ -303,6 +454,30 @@ class CreateProject extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  */
+class CreateSnapshot extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/snapshots';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
 class DeactivateZones extends Roa
 {
     /** @var string */
@@ -317,6 +492,33 @@ class DeactivateZones extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class DeleteCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
 
         return $this;
     }
@@ -358,6 +560,47 @@ class DeleteConnectedCluster extends Roa
     {
         $this->data['ConnectedInstanceId'] = $value;
         $this->options['query']['connectedInstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ * @method string getTaskId()
+ */
+class DeleteDataTask extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/data-task';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['query']['taskId'] = $value;
 
         return $this;
     }
@@ -418,6 +661,47 @@ class DeleteLogstash extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ * @method string getPipelineIds()
+ */
+class DeletePipelines extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipelines';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPipelineIds($value)
+    {
+        $this->data['PipelineIds'] = $value;
+        $this->options['query']['pipelineIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method string getId()
  * @method $this withId($value)
@@ -447,6 +731,7 @@ class DeleteProject extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getClientToken()
  * @method string getRepoPath()
  */
 class DeleteSnapshotRepo extends Roa
@@ -462,6 +747,19 @@ class DeleteSnapshotRepo extends Roa
      *
      * @return $this
      */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withRepoPath($value)
     {
         $this->data['RepoPath'] = $value;
@@ -469,6 +767,19 @@ class DeleteSnapshotRepo extends Roa
 
         return $this;
     }
+}
+
+/**
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class DescribeCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -493,6 +804,62 @@ class DescribeConnectableClusters extends Roa
     {
         $this->data['AlreadySetItems'] = $value;
         $this->options['query']['alreadySetItems'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getReportId()
+ * @method $this withReportId($value)
+ * @method string getLang()
+ */
+class DescribeDiagnoseReport extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/reports/[ReportId]';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getLang()
+ */
+class DescribeDiagnosisSettings extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/settings';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
 
         return $this;
     }
@@ -553,12 +920,27 @@ class DescribeLogstash extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class DescribePipeline extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipelines/[PipelineId]';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getClientToken()
  */
 class DescribePipelineManagementConfig extends Roa
 {
     /** @var string */
-    public $pathPattern = '/openapi/logstashes/[InstanceId]//pipeline-management-config';
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipeline-management-config';
 
     /** @var string */
     public $method = 'GET';
@@ -581,6 +963,150 @@ class DescribeRegions extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/regions';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeSnapshotSetting extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/snapshot-setting';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeTemplates extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/templates';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeXpackMonitorConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/xpack-monitor-config';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ * @method string getLang()
+ */
+class DiagnoseInstance extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/actions/diagnose';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getForce()
+ */
+class EstimatedLogstashRestartTime extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/estimated-time/restart-time';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withForce($value)
+    {
+        $this->data['Force'] = $value;
+        $this->options['query']['force'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getForce()
+ */
+class EstimatedRestartTime extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/estimated-time/restart-time';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withForce($value)
+    {
+        $this->data['Force'] = $value;
+        $this->options['query']['force'] = $value;
+
+        return $this;
+    }
+}
+
+class GetClusterDataInformation extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/cluster/data-information';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetElastictask extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/elastic-task';
 
     /** @var string */
     public $method = 'GET';
@@ -612,6 +1138,7 @@ class GetRegionConfiguration extends Roa
 }
 
 /**
+ * @method string getIgnoreStatus()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getNodeType()
@@ -624,6 +1151,19 @@ class GetSuggestShrinkableNodes extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIgnoreStatus($value)
+    {
+        $this->data['IgnoreStatus'] = $value;
+        $this->options['query']['ignoreStatus'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -867,10 +1407,488 @@ class ListAlternativeSnapshotRepos extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
+class ListAvailableEsInstanceIds extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/available-elasticsearch-for-centralized-management';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getSize()
+ * @method string getName()
+ * @method string getPage()
+ * @method string getResId()
+ */
+class ListCollectors extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResId($value)
+    {
+        $this->data['ResId'] = $value;
+        $this->options['query']['resId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
 class ListConnectedClusters extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/connected-clusters';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListDataTasks extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/data-task';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPage()
+ * @method string getDetail()
+ * @method string getTrigger()
+ * @method string getLang()
+ */
+class ListDiagnoseReport extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/reports';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDetail($value)
+    {
+        $this->data['Detail'] = $value;
+        $this->options['query']['detail'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrigger($value)
+    {
+        $this->data['Trigger'] = $value;
+        $this->options['query']['trigger'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPage()
+ * @method string getTrigger()
+ * @method string getLang()
+ */
+class ListDiagnoseReportIds extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/report-ids';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrigger($value)
+    {
+        $this->data['Trigger'] = $value;
+        $this->options['query']['trigger'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAnalyzerType()
+ * @method string getBucketName()
+ * @method string getKey()
+ */
+class ListDictInformation extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dict/_info';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAnalyzerType($value)
+    {
+        $this->data['AnalyzerType'] = $value;
+        $this->options['query']['analyzerType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBucketName($value)
+    {
+        $this->data['BucketName'] = $value;
+        $this->options['query']['bucketName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['query']['key'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEcsInstanceName()
+ * @method string getEcsInstanceIds()
+ * @method string getSize()
+ * @method string getVpcId()
+ * @method string getPage()
+ * @method string getTags()
+ */
+class ListEcsInstances extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/ecs';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsInstanceName($value)
+    {
+        $this->data['EcsInstanceName'] = $value;
+        $this->options['query']['ecsInstanceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsInstanceIds($value)
+    {
+        $this->data['EcsInstanceIds'] = $value;
+        $this->options['query']['ecsInstanceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcId($value)
+    {
+        $this->data['VpcId'] = $value;
+        $this->options['query']['vpcId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['query']['tags'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListExtendfiles extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/extendfiles';
 
     /** @var string */
     public $method = 'GET';
@@ -1050,6 +2068,33 @@ class ListInstance extends Roa
     {
         $this->data['PaymentType'] = $value;
         $this->options['query']['paymentType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getLang()
+ */
+class ListInstanceIndices extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/indices';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
 
         return $this;
     }
@@ -1372,6 +2417,154 @@ class ListLogstashPlugins extends Roa
 }
 
 /**
+ * @method string getEcsInstanceName()
+ * @method string getEcsInstanceIds()
+ * @method string getSize()
+ * @method string getPage()
+ * @method string getResId()
+ * @method $this withResId($value)
+ * @method string getTags()
+ */
+class ListNodes extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]/nodes';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsInstanceName($value)
+    {
+        $this->data['EcsInstanceName'] = $value;
+        $this->options['query']['ecsInstanceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEcsInstanceIds($value)
+    {
+        $this->data['EcsInstanceIds'] = $value;
+        $this->options['query']['ecsInstanceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['query']['tags'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getPage()
+ * @method string getPipelineId()
+ */
+class ListPipeline extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipelines';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPipelineId($value)
+    {
+        $this->data['PipelineId'] = $value;
+        $this->options['query']['pipelineId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListPipelineIds extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/pipeline-ids';
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getSize()
@@ -1646,6 +2839,127 @@ class ListTagResources extends Roa
 }
 
 /**
+ * @method string getPageSize()
+ * @method string getResourceType()
+ */
+class ListTags extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/tags/all-tags';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['query']['resourceType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDryRun()
+ */
+class MigrateToOtherZone extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/migrate-zones';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['query']['dryRun'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class ModifyDeployMachine extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]/actions/modify-deploy-machines';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyElastictask extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/elastic-task';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class ModifyInstanceMaintainTime extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/modify-maintaintime';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -1697,6 +3011,44 @@ class MoveResourceGroup extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getLang()
+ */
+class OpenDiagnosis extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/actions/open-diagnosis';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
  */
 class OpenHttps extends Roa
 {
@@ -1712,6 +3064,30 @@ class OpenHttps extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class ReinstallCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]/actions/reinstall';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
 
         return $this;
     }
@@ -1916,6 +3292,31 @@ class RollbackInstance extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class RunPipelines extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipelines/action/run';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIgnoreStatus()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNodeType()
  * @method string getClientToken()
  */
@@ -1923,6 +3324,19 @@ class ShrinkNode extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/shrink';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIgnoreStatus($value)
+    {
+        $this->data['IgnoreStatus'] = $value;
+        $this->options['query']['ignoreStatus'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1946,6 +3360,78 @@ class ShrinkNode extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class StartCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]/actions/start';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class StopCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]/actions/stop';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class StopPipelines extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/pipelines/action/stop';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
 
         return $this;
     }
@@ -2258,6 +3744,57 @@ class UpdateBlackIps extends Roa
 }
 
 /**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class UpdateCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class UpdateCollectorName extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]/actions/rename';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -2276,6 +3813,47 @@ class UpdateDescription extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ * @method string getLang()
+ */
+class UpdateDiagnosisSettings extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/settings';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
 
         return $this;
     }
@@ -2313,6 +3891,57 @@ class UpdateDict extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  */
+class UpdateExtendConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/extend-configs/actions/update';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class UpdateExtendfiles extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/extendfiles';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
 class UpdateHotIkDicts extends Roa
 {
     /** @var string */
@@ -2336,6 +3965,7 @@ class UpdateHotIkDicts extends Roa
 }
 
 /**
+ * @method string getIgnoreStatus()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -2347,6 +3977,19 @@ class UpdateInstance extends Roa
 
     /** @var string */
     public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIgnoreStatus($value)
+    {
+        $this->data['IgnoreStatus'] = $value;
+        $this->options['query']['ignoreStatus'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2469,7 +4112,7 @@ class UpdateLogstash extends Roa
     public $pathPattern = '/openapi/logstashes/[InstanceId]';
 
     /** @var string */
-    public $method = 'GET';
+    public $method = 'PUT';
 
     /**
      * @param string $value
@@ -2697,6 +4340,30 @@ class UpdatePublicWhiteIps extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class UpdateReadWritePolicy extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/update-read-write-policy';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class UpdateSnapshotSetting extends Roa
 {
@@ -2735,6 +4402,32 @@ class UpdateSynonymsDicts extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ */
+class UpdateTemplate extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/templates/[TemplateName]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
  */
 class UpdateWhiteIps extends Roa
 {
@@ -2750,6 +4443,30 @@ class UpdateWhiteIps extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class UpdateXpackMonitorConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/xpack-monitor-config';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
 
         return $this;
     }
@@ -2796,12 +4513,50 @@ class UpgradeEngineVersion extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class ValidateConnection extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/validate-connection';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIgnoreStatus()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNodeType()
  */
 class ValidateShrinkNodes extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/validate-shrink-nodes';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIgnoreStatus($value)
+    {
+        $this->data['IgnoreStatus'] = $value;
+        $this->options['query']['ignoreStatus'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
