@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.575 - 2020-11-2
+- Support create serverless by day price type.
+
+
 ## 1.8.574 - 2020-11-1
 - Supported All Console APIs.
 
