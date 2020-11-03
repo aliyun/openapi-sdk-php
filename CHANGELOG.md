@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.577 - 2020-11-3
+- Minor update for r-kvstore.
+
+
 ## 1.8.576 - 2020-11-3
 - Update data API.
 

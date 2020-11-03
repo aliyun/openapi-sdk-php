@@ -144,6 +144,8 @@ class AddShardingNode extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getConnectionString()
  * @method $this withConnectionString($value)
+ * @method string getOnlyAllocateIp()
+ * @method $this withOnlyAllocateIp($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
