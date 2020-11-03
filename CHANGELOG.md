@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.576 - 2020-11-3
+- Update data API.
+
+
 ## 1.8.575 - 2020-11-2
 - Support create serverless by day price type.
 
