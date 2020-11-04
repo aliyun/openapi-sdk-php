@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.580 - 2020-11-4
+- Support modifyInstnaceType.
+
+
 ## 1.8.579 - 2020-11-4
 - Generated 2018-07-13 for `Ft`.
 
