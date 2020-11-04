@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.583 - 2020-11-4
+- Generated 2019-01-01 for `Cassandra`.
+
+
 ## 1.8.582 - 2020-11-4
 - Support modifyInstnaceType.
 
