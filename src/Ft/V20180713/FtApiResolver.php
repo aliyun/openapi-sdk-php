@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FtGatedLaunchPolicy4 ftGatedLaunchPolicy4(array $options = [])
  * @method FtIpFlowControl ftIpFlowControl(array $options = [])
  * @method FtParamList ftParamList(array $options = [])
+ * @method TestFlowStrategy01 testFlowStrategy01(array $options = [])
  * @method TestHttpApi testHttpApi(array $options = [])
  */
 class FtApiResolver extends ApiResolver
@@ -138,6 +139,29 @@ class FtParamList extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getNames()
+ */
+class TestFlowStrategy01 extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNames($value)
+    {
+        $this->data['Names'] = $value;
+        $this->options['form_params']['Names'] = $value;
+
+        return $this;
     }
 }
 

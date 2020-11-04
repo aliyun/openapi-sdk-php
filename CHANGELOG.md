@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.578 - 2020-11-4
+- Generated 2018-07-13 for `Ft`.
+
+
 ## 1.8.577 - 2020-11-3
 - Minor update for r-kvstore.
 
