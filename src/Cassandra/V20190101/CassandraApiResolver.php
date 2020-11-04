@@ -23,12 +23,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeClusters describeClusters(array $options = [])
  * @method DescribeClusterStatus describeClusterStatus(array $options = [])
  * @method DescribeContactPoints describeContactPoints(array $options = [])
+ * @method DescribeDataCenter describeDataCenter(array $options = [])
  * @method DescribeDataCenters describeDataCenters(array $options = [])
  * @method DescribeDeletedClusters describeDeletedClusters(array $options = [])
  * @method DescribeInstanceType describeInstanceType(array $options = [])
  * @method DescribeIpWhitelist describeIpWhitelist(array $options = [])
  * @method DescribeIpWhitelistGroups describeIpWhitelistGroups(array $options = [])
  * @method DescribeNodeToolExecutionHistories describeNodeToolExecutionHistories(array $options = [])
+ * @method DescribeNodeToolExecutionHistory describeNodeToolExecutionHistory(array $options = [])
  * @method DescribeParameterModificationHistories describeParameterModificationHistories(array $options = [])
  * @method DescribeParameters describeParameters(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
@@ -337,6 +339,16 @@ class DescribeContactPoints extends Rpc
 }
 
 /**
+ * @method string getDataCenterId()
+ * @method $this withDataCenterId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeDataCenter extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -393,6 +405,18 @@ class DescribeNodeToolExecutionHistories extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getDcId()
+ * @method $this withDcId($value)
+ */
+class DescribeNodeToolExecutionHistory extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -431,6 +455,8 @@ class DescribeSecurityGroups extends Rpc
 }
 
 /**
+ * @method string getExecuteNodes()
+ * @method $this withExecuteNodes($value)
  * @method string getDataCenterId()
  * @method $this withDataCenterId($value)
  * @method string getClusterId()
@@ -632,6 +658,8 @@ class PurgeCluster extends Rpc
 }
 
 /**
+ * @method string getDataCenterId()
+ * @method $this withDataCenterId($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
