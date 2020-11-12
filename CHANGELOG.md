@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.609 - 2020-11-12
+- Release latest features.
+
+
 ## 1.8.608 - 2020-11-12
 - Update data API.
 
