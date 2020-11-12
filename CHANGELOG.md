@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.611 - 2020-11-12
+- Update cert API.
+
+
 ## 1.8.610 - 2020-11-12
 - Update cert API.
 
