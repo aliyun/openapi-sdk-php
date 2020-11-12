@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.613 - 2020-11-12
+- Support execute database script via open api.
+
+
 ## 1.8.612 - 2020-11-12
 - Generated 2014-05-26 for `Ecs`.
 

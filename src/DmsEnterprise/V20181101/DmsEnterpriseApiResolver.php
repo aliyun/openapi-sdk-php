@@ -25,9 +25,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataExportOrderDetail getDataExportOrderDetail(array $options = [])
  * @method GetInstance getInstance(array $options = [])
  * @method GetLogicDatabase getLogicDatabase(array $options = [])
+ * @method GetMetaTableColumn getMetaTableColumn(array $options = [])
+ * @method GetMetaTableDetailInfo getMetaTableDetailInfo(array $options = [])
  * @method GetOpLog getOpLog(array $options = [])
  * @method GetOrderBaseInfo getOrderBaseInfo(array $options = [])
+ * @method GetTableDBTopology getTableDBTopology(array $options = [])
  * @method GetUser getUser(array $options = [])
+ * @method GetUserActiveTenant getUserActiveTenant(array $options = [])
  * @method GrantUserPermission grantUserPermission(array $options = [])
  * @method ListColumns listColumns(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
@@ -42,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTables listTables(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
+ * @method ListUserTenants listUserTenants(array $options = [])
  * @method ListWorkFlowNodes listWorkFlowNodes(array $options = [])
  * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
@@ -78,6 +83,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getApprovalType()
  * @method $this withApprovalType($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getWorkflowInstanceId()
@@ -118,12 +125,24 @@ class CloseOrder extends Rpc
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPluginParam()
- * @method $this withPluginParam($value)
  * @method string getRelatedUserList()
  * @method $this withRelatedUserList($value)
  */
 class CreateOrder extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPluginParam($value)
+    {
+        $this->data['PluginParam'] = $value;
+        $this->options['form_params']['PluginParam'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -339,6 +358,26 @@ class GetLogicDatabase extends Rpc
 }
 
 /**
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetMetaTableColumn extends Rpc
+{
+}
+
+/**
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetMetaTableDetailInfo extends Rpc
+{
+}
+
+/**
  * @method string getModule()
  * @method $this withModule($value)
  * @method string getPageSize()
@@ -367,6 +406,16 @@ class GetOrderBaseInfo extends Rpc
 }
 
 /**
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetTableDBTopology extends Rpc
+{
+}
+
+/**
  * @method string getUid()
  * @method $this withUid($value)
  * @method string getUserId()
@@ -375,6 +424,10 @@ class GetOrderBaseInfo extends Rpc
  * @method $this withTid($value)
  */
 class GetUser extends Rpc
+{
+}
+
+class GetUserActiveTenant extends Rpc
 {
 }
 
@@ -429,6 +482,10 @@ class ListDatabases extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getPermType()
  * @method $this withPermType($value)
  * @method string getDbId()
@@ -437,10 +494,6 @@ class ListDatabases extends Rpc
  * @method $this withPageSize($value)
  * @method string getLogic()
  * @method $this withLogic($value)
- * @method string getTid()
- * @method $this withTid($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getUserName()
  * @method $this withUserName($value)
  */
@@ -499,6 +552,8 @@ class ListLogicDatabases extends Rpc
 /**
  * @method string getSearchName()
  * @method $this withSearchName($value)
+ * @method string getReturnGuid()
+ * @method $this withReturnGuid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDatabaseId()
@@ -541,18 +596,18 @@ class ListOrders extends Rpc
 /**
  * @method string getSchemaName()
  * @method $this withSchemaName($value)
- * @method string getSecurityLevel()
- * @method $this withSecurityLevel($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getTableName()
- * @method $this withTableName($value)
  * @method string getColumnName()
  * @method $this withColumnName($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSecurityLevel()
+ * @method $this withSecurityLevel($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
  */
 class ListSensitiveColumns extends Rpc
 {
@@ -575,6 +630,8 @@ class ListSensitiveColumnsDetail extends Rpc
 /**
  * @method string getSearchName()
  * @method $this withSearchName($value)
+ * @method string getReturnGuid()
+ * @method $this withReturnGuid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDatabaseId()
@@ -627,6 +684,10 @@ class ListUserPermissions extends Rpc
  * @method $this withPageNumber($value)
  */
 class ListUsers extends Rpc
+{
+}
+
+class ListUserTenants extends Rpc
 {
 }
 
@@ -691,6 +752,8 @@ class ListWorkFlowTemplates extends Rpc
  * @method $this withVpcId($value)
  * @method string getDbaUid()
  * @method $this withDbaUid($value)
+ * @method string getSkipTest()
+ * @method $this withSkipTest($value)
  * @method string getSafeRule()
  * @method $this withSafeRule($value)
  */
@@ -761,12 +824,8 @@ class SearchDatabase extends Rpc
 }
 
 /**
- * @method string getSearchTarget()
- * @method $this withSearchTarget($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
+ * @method string getReturnGuid()
+ * @method $this withReturnGuid($value)
  * @method string getSearchKey()
  * @method $this withSearchKey($value)
  * @method string getSearchRange()
@@ -775,6 +834,14 @@ class SearchDatabase extends Rpc
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getSearchTarget()
+ * @method $this withSearchTarget($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getDbType()
+ * @method $this withDbType($value)
  */
 class SearchTable extends Rpc
 {
@@ -871,6 +938,8 @@ class SyncInstanceMeta extends Rpc
  * @method $this withPort($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
+ * @method string getSkipTest()
+ * @method $this withSkipTest($value)
  */
 class UpdateInstance extends Rpc
 {
@@ -879,8 +948,6 @@ class UpdateInstance extends Rpc
 /**
  * @method string getRoleNames()
  * @method $this withRoleNames($value)
- * @method string getUid()
- * @method $this withUid($value)
  * @method string getMaxResultCount()
  * @method $this withMaxResultCount($value)
  * @method string getMaxExecuteCount()
@@ -891,6 +958,8 @@ class UpdateInstance extends Rpc
  * @method $this withMobile($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getUid()
+ * @method $this withUid($value)
  */
 class UpdateUser extends Rpc
 {
