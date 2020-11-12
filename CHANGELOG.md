@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.588 - 2020-11-12
+- Supported Open Api.
+
+
 ## 1.8.587 - 2020-11-12
 - Support OpenAPI.
 
