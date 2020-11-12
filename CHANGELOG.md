@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.599 - 2020-11-12
+- Add Content.
+
+
 ## 1.8.598 - 2020-11-12
 - Generated 2014-05-26 for `Ecs`.
 
