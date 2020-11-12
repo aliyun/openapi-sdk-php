@@ -104,8 +104,12 @@ class BindZoneVpc extends Rpc
 	{
 	    $this->data['Vpcs'] = $vpcs;
 		foreach ($vpcs as $depth1 => $depth1Value) {
-			$this->options['query']['Vpcs.' . ($depth1 + 1) . '.RegionId'] = $depth1Value['RegionId'];
-			$this->options['query']['Vpcs.' . ($depth1 + 1) . '.VpcId'] = $depth1Value['VpcId'];
+			if(isset($depth1Value['RegionId'])){
+				$this->options['query']['Vpcs.' . ($depth1 + 1) . '.RegionId'] = $depth1Value['RegionId'];
+			}
+			if(isset($depth1Value['VpcId'])){
+				$this->options['query']['Vpcs.' . ($depth1 + 1) . '.VpcId'] = $depth1Value['VpcId'];
+			}
 		}
 
 		return $this;
@@ -191,10 +195,14 @@ class DescribeRegions extends Rpc
  * @method $this withStartTimestamp($value)
  * @method string getEndTimestamp()
  * @method $this withEndTimestamp($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getLang()
