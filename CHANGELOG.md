@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.605 - 2020-11-12
+- Update HasRenewChangeOrder type to Boolean in DescribeInstances.
+
+
 ## 1.8.604 - 2020-11-12
 - Generated 2018-12-12 for `vs`.
 
