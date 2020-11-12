@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.604 - 2020-11-12
+- Generated 2018-12-12 for `vs`.
+
+
 ## 1.8.603 - 2020-11-12
 - Add Pipeline Member api.
 
