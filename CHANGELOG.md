@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.614 - 2020-11-12
+- Update Scdn API.
+
+
 ## 1.8.613 - 2020-11-12
 - Support execute database script via open api.
 
