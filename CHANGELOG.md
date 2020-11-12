@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.617 - 2020-11-12
+- Generated 2019-06-01 for `smc`.
+
+
 ## 1.8.616 - 2020-11-12
 - Update new version.
 
