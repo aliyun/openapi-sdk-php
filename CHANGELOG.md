@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.592 - 2020-11-12
+- Support Sampling for jaeger.
+
+
 ## 1.8.591 - 2020-11-12
 - Add alarm notification language settings.
 
