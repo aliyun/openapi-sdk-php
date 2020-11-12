@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.618 - 2020-11-12
+- Fixed the display problem of the repo page.
+
+
 ## 1.8.617 - 2020-11-12
 - Generated 2019-06-01 for `smc`.
 
