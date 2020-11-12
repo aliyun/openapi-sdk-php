@@ -3145,6 +3145,8 @@ class PutExporterRule extends Rpc
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getEscalationsWarnThreshold()
+ * @method string getContactGroups()
+ * @method $this withContactGroups($value)
  * @method string getEscalationsCriticalStatistics()
  * @method string getGroupId()
  * @method $this withGroupId($value)

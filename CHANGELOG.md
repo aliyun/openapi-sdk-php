@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.591 - 2020-11-12
+- Add alarm notification language settings.
+
+
 ## 1.8.590 - 2020-11-12
 - Generated 2018-06-01 for `dataworks-public`.
 
