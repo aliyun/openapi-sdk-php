@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.587 - 2020-11-12
+- Support OpenAPI.
+
+
 ## 1.8.586 - 2020-11-12
 - Generated 2018-07-13 for `Ft`.
 
