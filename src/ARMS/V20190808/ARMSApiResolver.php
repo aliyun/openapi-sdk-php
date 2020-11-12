@@ -21,6 +21,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTraceApp deleteTraceApp(array $options = [])
  * @method DescribeTraceLicenseKey describeTraceLicenseKey(array $options = [])
  * @method DescribeTraceLocation describeTraceLocation(array $options = [])
+ * @method ExportPrometheusRules exportPrometheusRules(array $options = [])
  * @method GetAppApiByPage getAppApiByPage(array $options = [])
  * @method GetConsistencySnapshot getConsistencySnapshot(array $options = [])
  * @method GetMultipleTrace getMultipleTrace(array $options = [])
@@ -31,6 +32,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTraceApp getTraceApp(array $options = [])
  * @method ImportAppAlertRules importAppAlertRules(array $options = [])
  * @method ImportCustomAlertRules importCustomAlertRules(array $options = [])
+ * @method ImportPrometheusRules importPrometheusRules(array $options = [])
  * @method ListClusterFromGrafana listClusterFromGrafana(array $options = [])
  * @method ListDashboards listDashboards(array $options = [])
  * @method ListPromClusters listPromClusters(array $options = [])
@@ -176,12 +178,12 @@ class CreateRetcodeApp extends Rpc
 }
 
 /**
- * @method string getHeaders()
- * @method $this withHeaders($value)
+ * @method string getHttpHeaders()
+ * @method $this withHttpHeaders($value)
  * @method string getMethod()
  * @method $this withMethod($value)
- * @method string getParams()
- * @method $this withParams($value)
+ * @method string getHttpParams()
+ * @method $this withHttpParams($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
  * @method string getBody()
@@ -250,6 +252,18 @@ class DescribeTraceLicenseKey extends Rpc
 }
 
 class DescribeTraceLocation extends Rpc
+{
+}
+
+/**
+ * @method string getNameSpace()
+ * @method $this withNameSpace($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ExportPrometheusRules extends Rpc
 {
 }
 
@@ -378,6 +392,20 @@ class ImportAppAlertRules extends Rpc
  * @method $this withTemplageAlertConfig($value)
  */
 class ImportCustomAlertRules extends Rpc
+{
+}
+
+/**
+ * @method string getNameSpace()
+ * @method $this withNameSpace($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ */
+class ImportPrometheusRules extends Rpc
 {
 }
 
@@ -1038,14 +1066,14 @@ class UpdateAlertRule extends Rpc
 }
 
 /**
- * @method string getHeaders()
- * @method $this withHeaders($value)
+ * @method string getHttpHeaders()
+ * @method $this withHttpHeaders($value)
  * @method string getMethod()
  * @method $this withMethod($value)
  * @method string getContactId()
  * @method $this withContactId($value)
- * @method string getParams()
- * @method $this withParams($value)
+ * @method string getHttpParams()
+ * @method $this withHttpParams($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
  * @method string getBody()

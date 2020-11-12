@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.606 - 2020-11-12
+- Add SaveTraceAppConfig api.
+
+
 ## 1.8.605 - 2020-11-12
 - Update HasRenewChangeOrder type to Boolean in DescribeInstances.
 
