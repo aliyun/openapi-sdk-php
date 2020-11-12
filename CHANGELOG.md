@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.610 - 2020-11-12
+- Update cert API.
+
+
 ## 1.8.609 - 2020-11-12
 - Release latest features.
 
