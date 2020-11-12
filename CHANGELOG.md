@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.607 - 2020-11-12
+- Add API OpenOnsService which can active ons service.
+
+
 ## 1.8.606 - 2020-11-12
 - Add SaveTraceAppConfig api.
 
