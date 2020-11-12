@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.615 - 2020-11-12
+- Add API OpenOnsService which can active ons service.
+
+
 ## 1.8.614 - 2020-11-12
 - Update Scdn API.
 
