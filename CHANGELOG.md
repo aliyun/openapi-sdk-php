@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.601 - 2020-11-12
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.600 - 2020-11-12
 - Sync cdn APIs.
 
