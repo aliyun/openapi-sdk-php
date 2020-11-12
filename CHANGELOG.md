@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.600 - 2020-11-12
+- Sync cdn APIs.
+
+
 ## 1.8.599 - 2020-11-12
 - Add Content.
 
