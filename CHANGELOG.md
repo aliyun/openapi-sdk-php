@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.594 - 2020-11-12
+- GetTitleIntelligence add interface.
+
+
 ## 1.8.593 - 2020-11-12
 - Fix bug.
 
