@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.585 - 2020-11-12
+- Update DescribeTrails Response.
+
+
 ## 1.8.584 - 2020-11-5
 - Support modifyInstnaceType.
 
