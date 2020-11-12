@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.619 - 2020-11-12
+- Support drm.
+
+
 ## 1.8.618 - 2020-11-12
 - Fixed the display problem of the repo page.
 
