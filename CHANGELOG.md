@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.590 - 2020-11-12
+- Generated 2018-06-01 for `dataworks-public`.
+
+
 ## 1.8.589 - 2020-11-12
 - Generated 2018-07-13 for `Ft`.
 
