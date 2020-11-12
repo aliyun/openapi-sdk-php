@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.612 - 2020-11-12
+- Generated 2014-05-26 for `Ecs`.
+
+
 ## 1.8.611 - 2020-11-12
 - Update cert API.
 
