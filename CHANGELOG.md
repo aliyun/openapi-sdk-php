@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.608 - 2020-11-12
+- Update data API.
+
+
 ## 1.8.607 - 2020-11-12
 - Add API OpenOnsService which can active ons service.
 
