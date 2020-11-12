@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.603 - 2020-11-12
+- Add Pipeline Member api.
+
+
 ## 1.8.602 - 2020-11-12
 - Generated 2020-05-18 for `dataworks-public`.
 
