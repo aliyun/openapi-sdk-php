@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.622 - 2020-11-13
+- Release DetectCardScreenshot RecognizePoiName.
+
+
 ## 1.8.621 - 2020-11-13
 - Release GenerateHumanAnimeStyle CountCrowd.
 

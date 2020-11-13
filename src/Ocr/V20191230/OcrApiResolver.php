@@ -5,6 +5,7 @@ namespace AlibabaCloud\Ocr\V20191230;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DetectCardScreenshot detectCardScreenshot(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method RecognizeAccountPage recognizeAccountPage(array $options = [])
  * @method RecognizeBankCard recognizeBankCard(array $options = [])
@@ -17,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeIdentityCard recognizeIdentityCard(array $options = [])
  * @method RecognizeLicensePlate recognizeLicensePlate(array $options = [])
  * @method RecognizePassportMRZ recognizePassportMRZ(array $options = [])
+ * @method RecognizePoiName recognizePoiName(array $options = [])
  * @method RecognizeQrCode recognizeQrCode(array $options = [])
  * @method RecognizeStamp recognizeStamp(array $options = [])
  * @method RecognizeTable recognizeTable(array $options = [])
@@ -45,6 +47,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ocr';
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectCardScreenshot extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -481,6 +503,26 @@ class RecognizeLicensePlate extends Rpc
  * @method string getImageURL()
  */
 class RecognizePassportMRZ extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizePoiName extends Rpc
 {
 
     /**
