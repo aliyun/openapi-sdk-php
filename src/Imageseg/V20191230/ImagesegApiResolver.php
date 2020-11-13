@@ -5,6 +5,7 @@ namespace AlibabaCloud\Imageseg\V20191230;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ChangeSky changeSky(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method ParseFace parseFace(array $options = [])
  * @method RefineMask refineMask(array $options = [])
@@ -18,9 +19,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SegmentFurniture segmentFurniture(array $options = [])
  * @method SegmentHair segmentHair(array $options = [])
  * @method SegmentHDBody segmentHDBody(array $options = [])
+ * @method SegmentHDCommonImage segmentHDCommonImage(array $options = [])
+ * @method SegmentHDSky segmentHDSky(array $options = [])
  * @method SegmentHead segmentHead(array $options = [])
  * @method SegmentLogo segmentLogo(array $options = [])
  * @method SegmentScene segmentScene(array $options = [])
+ * @method SegmentSkin segmentSkin(array $options = [])
  * @method SegmentSky segmentSky(array $options = [])
  * @method SegmentVehicle segmentVehicle(array $options = [])
  */
@@ -41,6 +45,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'imageseg';
+}
+
+/**
+ * @method string getReplaceImageURL()
+ * @method $this withReplaceImageURL($value)
+ * @method string getImageURL()
+ * @method $this withImageURL($value)
+ */
+class ChangeSky extends Rpc
+{
 }
 
 /**
@@ -226,6 +240,60 @@ class SegmentHDBody extends Rpc
 }
 
 /**
+ * @method string getAsync()
+ * @method string getImageUrl()
+ */
+class SegmentHDCommonImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class SegmentHDSky extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
@@ -247,6 +315,26 @@ class SegmentLogo extends Rpc
  */
 class SegmentScene extends Rpc
 {
+}
+
+/**
+ * @method string getURL()
+ */
+class SegmentSkin extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withURL($value)
+    {
+        $this->data['URL'] = $value;
+        $this->options['form_params']['URL'] = $value;
+
+        return $this;
+    }
 }
 
 /**

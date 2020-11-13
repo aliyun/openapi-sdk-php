@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.620 - 2020-11-13
+- Release SegmentHDSky SegmentHDCommonImage.
+
+
 ## 1.8.619 - 2020-11-12
 - Support drm.
 
