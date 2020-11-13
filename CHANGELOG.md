@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.624 - 2020-11-13
+- Fix GetBranchInfo and DeleteBranch API 404 error.
+- Add ListRepositoryBranches and GetGroupDetail API.
+
+
 ## 1.8.623 - 2020-11-13
 - Release ErasePerson.
 
