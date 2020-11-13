@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.623 - 2020-11-13
+- Release ErasePerson.
+
+
 ## 1.8.622 - 2020-11-13
 - Release DetectCardScreenshot RecognizePoiName.
 

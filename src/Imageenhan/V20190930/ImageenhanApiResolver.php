@@ -10,7 +10,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssessSharpness assessSharpness(array $options = [])
  * @method ChangeImageSize changeImageSize(array $options = [])
  * @method EnhanceImageColor enhanceImageColor(array $options = [])
+ * @method ErasePerson erasePerson(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
+ * @method GenerateDynamicImage generateDynamicImage(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method ImageBlindCharacterWatermark imageBlindCharacterWatermark(array $options = [])
  * @method ImageBlindPicWatermark imageBlindPicWatermark(array $options = [])
@@ -198,6 +200,40 @@ class EnhanceImageColor extends Rpc
 }
 
 /**
+ * @method string getImageURL()
+ * @method string getUserMask()
+ */
+class ErasePerson extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserMask($value)
+    {
+        $this->data['UserMask'] = $value;
+        $this->options['form_params']['UserMask'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getMajorUrl()
  * @method string getStyleUrl()
  */
@@ -226,6 +262,40 @@ class ExtendImageStyle extends Rpc
     {
         $this->data['StyleUrl'] = $value;
         $this->options['form_params']['StyleUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUrl()
+ * @method string getOperation()
+ */
+class GenerateDynamicImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrl($value)
+    {
+        $this->data['Url'] = $value;
+        $this->options['form_params']['Url'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperation($value)
+    {
+        $this->data['Operation'] = $value;
+        $this->options['form_params']['Operation'] = $value;
 
         return $this;
     }
