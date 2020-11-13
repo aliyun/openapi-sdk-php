@@ -58,11 +58,21 @@ class ScanImage extends Rpc
 	{
 	    $this->data['Task'] = $task;
 		foreach ($task as $depth1 => $depth1Value) {
-			$this->options['form_params']['Task.' . ($depth1 + 1) . '.DataId'] = $depth1Value['DataId'];
-			$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
-			$this->options['form_params']['Task.' . ($depth1 + 1) . '.MaxFrames'] = $depth1Value['MaxFrames'];
-			$this->options['form_params']['Task.' . ($depth1 + 1) . '.Interval'] = $depth1Value['Interval'];
-			$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageTimeMillisecond'] = $depth1Value['ImageTimeMillisecond'];
+			if(isset($depth1Value['DataId'])){
+				$this->options['form_params']['Task.' . ($depth1 + 1) . '.DataId'] = $depth1Value['DataId'];
+			}
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
+			if(isset($depth1Value['MaxFrames'])){
+				$this->options['form_params']['Task.' . ($depth1 + 1) . '.MaxFrames'] = $depth1Value['MaxFrames'];
+			}
+			if(isset($depth1Value['Interval'])){
+				$this->options['form_params']['Task.' . ($depth1 + 1) . '.Interval'] = $depth1Value['Interval'];
+			}
+			if(isset($depth1Value['ImageTimeMillisecond'])){
+				$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageTimeMillisecond'] = $depth1Value['ImageTimeMillisecond'];
+			}
 		}
 
 		return $this;
@@ -85,7 +95,9 @@ class ScanText extends Rpc
 	{
 	    $this->data['Labels'] = $labels;
 		foreach ($labels as $depth1 => $depth1Value) {
-			$this->options['form_params']['Labels.' . ($depth1 + 1) . '.Label'] = $depth1Value['Label'];
+			if(isset($depth1Value['Label'])){
+				$this->options['form_params']['Labels.' . ($depth1 + 1) . '.Label'] = $depth1Value['Label'];
+			}
 		}
 
 		return $this;
@@ -100,7 +112,9 @@ class ScanText extends Rpc
 	{
 	    $this->data['Tasks'] = $tasks;
 		foreach ($tasks as $depth1 => $depth1Value) {
-			$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.Content'] = $depth1Value['Content'];
+			if(isset($depth1Value['Content'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.Content'] = $depth1Value['Content'];
+			}
 		}
 
 		return $this;
