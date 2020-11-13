@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.621 - 2020-11-13
+- Release GenerateHumanAnimeStyle CountCrowd.
+
+
 ## 1.8.620 - 2020-11-13
 - Release SegmentHDSky SegmentHDCommonImage.
 

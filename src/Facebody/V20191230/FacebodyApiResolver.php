@@ -10,12 +10,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BlurFace blurFace(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
+ * @method CountCrowd countCrowd(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
  * @method DeleteFaceEntity deleteFaceEntity(array $options = [])
  * @method DetectBodyCount detectBodyCount(array $options = [])
  * @method DetectCelebrity detectCelebrity(array $options = [])
+ * @method DetectChefCap detectChefCap(array $options = [])
  * @method DetectFace detectFace(array $options = [])
  * @method DetectIPCPedestrian detectIPCPedestrian(array $options = [])
  * @method DetectLivingFace detectLivingFace(array $options = [])
@@ -23,15 +25,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectPedestrian detectPedestrian(array $options = [])
  * @method DetectVideoLivingFace detectVideoLivingFace(array $options = [])
  * @method EnhanceFace enhanceFace(array $options = [])
+ * @method ExtractPedestrianFeatureAttr extractPedestrianFeatureAttr(array $options = [])
  * @method ExtractPedestrianFeatureAttribute extractPedestrianFeatureAttribute(array $options = [])
  * @method FaceBeauty faceBeauty(array $options = [])
  * @method FaceFilter faceFilter(array $options = [])
  * @method FaceMakeup faceMakeup(array $options = [])
  * @method FaceTidyup faceTidyup(array $options = [])
+ * @method GenerateHumanAnimeStyle generateHumanAnimeStyle(array $options = [])
  * @method GetFaceEntity getFaceEntity(array $options = [])
  * @method HandPosture handPosture(array $options = [])
  * @method ListFaceDbs listFaceDbs(array $options = [])
  * @method ListFaceEntities listFaceEntities(array $options = [])
+ * @method PedestrianDetectAttribute pedestrianDetectAttribute(array $options = [])
  * @method RecognizeAction recognizeAction(array $options = [])
  * @method RecognizeExpression recognizeExpression(array $options = [])
  * @method RecognizeFace recognizeFace(array $options = [])
@@ -55,6 +60,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'facebody';
 }
 
 /**
@@ -256,6 +264,40 @@ class CompareFace extends Rpc
 }
 
 /**
+ * @method string getIsShow()
+ * @method string getImageURL()
+ */
+class CountCrowd extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsShow($value)
+    {
+        $this->data['IsShow'] = $value;
+        $this->options['form_params']['IsShow'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getName()
  */
 class CreateFaceDb extends Rpc
@@ -387,6 +429,26 @@ class DetectBodyCount extends Rpc
  * @method string getImageURL()
  */
 class DetectCelebrity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectChefCap extends Rpc
 {
 
     /**
@@ -625,10 +687,76 @@ class EnhanceFace extends Rpc
 }
 
 /**
+ * @method string getMode()
+ * @method string getImageURL()
+ */
+class ExtractPedestrianFeatureAttr extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getUrlList()
+ * @method string getMode()
  * @method string getImageURL()
  */
 class ExtractPedestrianFeatureAttribute extends Rpc
 {
+
+    /**
+     * @param array $urlList
+     *
+     * @return $this
+     */
+	public function withUrlList(array $urlList)
+	{
+	    $this->data['UrlList'] = $urlList;
+		foreach ($urlList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Url'])){
+				$this->options['form_params']['UrlList.' . ($depth1 + 1) . '.Url'] = $depth1Value['Url'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -865,6 +993,26 @@ class FaceTidyup extends Rpc
 }
 
 /**
+ * @method string getImageURL()
+ */
+class GenerateHumanAnimeStyle extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getEntityId()
  * @method string getDbName()
  */
@@ -1021,6 +1169,26 @@ class ListFaceEntities extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class PedestrianDetectAttribute extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
