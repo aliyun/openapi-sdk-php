@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.626 - 2020-11-13
+- Add DeccribeEngineVersion DescribeTasks DescribeInstanceConfig and more APIs.
+
+
 ## 1.8.625 - 2020-11-13
 - Update DetectLungNodule.
 

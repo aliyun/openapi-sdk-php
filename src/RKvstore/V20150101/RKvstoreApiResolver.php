@@ -33,22 +33,27 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBInstanceNetInfo describeDBInstanceNetInfo(array $options = [])
  * @method DescribeDedicatedClusterInstanceList describeDedicatedClusterInstanceList(array $options = [])
  * @method DescribeDedicatedUserCluster describeDedicatedUserCluster(array $options = [])
+ * @method DescribeEngineVersion describeEngineVersion(array $options = [])
  * @method DescribeGlobalDistributeCache describeGlobalDistributeCache(array $options = [])
  * @method DescribeHistoryMonitorValues describeHistoryMonitorValues(array $options = [])
  * @method DescribeInstanceAttribute describeInstanceAttribute(array $options = [])
  * @method DescribeInstanceAutoRenewalAttribute describeInstanceAutoRenewalAttribute(array $options = [])
+ * @method DescribeInstanceConfig describeInstanceConfig(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeInstanceSSL describeInstanceSSL(array $options = [])
  * @method DescribeIntranetAttribute describeIntranetAttribute(array $options = [])
  * @method DescribeLogicInstanceTopology describeLogicInstanceTopology(array $options = [])
  * @method DescribeMonitorItems describeMonitorItems(array $options = [])
  * @method DescribeParameters describeParameters(array $options = [])
+ * @method DescribeParameterTemplates describeParameterTemplates(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeRoleZoneInfo describeRoleZoneInfo(array $options = [])
  * @method DescribeRunningLogRecords describeRunningLogRecords(array $options = [])
  * @method DescribeSecurityGroupConfiguration describeSecurityGroupConfiguration(array $options = [])
  * @method DescribeSecurityIps describeSecurityIps(array $options = [])
  * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
+ * @method DescribeTasks describeTasks(array $options = [])
  * @method DescribeUserClusterHost describeUserClusterHost(array $options = [])
  * @method DescribeUserClusterHostInstance describeUserClusterHostInstance(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
@@ -876,6 +881,26 @@ class DescribeDedicatedUserCluster extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class DescribeEngineVersion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSecurityToken()
@@ -983,6 +1008,24 @@ class DescribeInstanceAutoRenewalAttribute extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeInstanceConfig extends Rpc
+{
 }
 
 /**
@@ -1155,6 +1198,28 @@ class DescribeParameters extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
+ */
+class DescribeParameterTemplates extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getNodeType()
  * @method $this withNodeType($value)
  * @method string getInstances()
@@ -1211,6 +1276,34 @@ class DescribePrice extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class DescribeRegions extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class DescribeRoleZoneInfo extends Rpc
 {
 }
 
@@ -1329,6 +1422,34 @@ class DescribeSecurityIps extends Rpc
  * @method $this withOrderType($value)
  */
 class DescribeSlowLogRecords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeTasks extends Rpc
 {
 }
 
