@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.625 - 2020-11-13
+- Update DetectLungNodule.
+
+
 ## 1.8.624 - 2020-11-13
 - Fix GetBranchInfo and DeleteBranch API 404 error.
 - Add ListRepositoryBranches and GetGroupDetail API.
