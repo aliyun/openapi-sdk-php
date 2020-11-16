@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.632 - 2020-11-16
+- Update videorecog.
+
+
 ## 1.8.631 - 2020-11-16
 - Update objectdet.
 
