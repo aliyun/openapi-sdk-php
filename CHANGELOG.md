@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.628 - 2020-11-16
+- Update goodstech.
+
+
 ## 1.8.627 - 2020-11-13
 - Update Imageaudit.
 
