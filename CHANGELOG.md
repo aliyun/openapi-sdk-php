@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.629 - 2020-11-16
+- Update imagerecog.
+
+
 ## 1.8.628 - 2020-11-16
 - Update goodstech.
 
