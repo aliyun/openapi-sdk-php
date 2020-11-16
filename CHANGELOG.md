@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.631 - 2020-11-16
+- Update objectdet.
+
+
 ## 1.8.630 - 2020-11-16
 - Update imgsearch.
 

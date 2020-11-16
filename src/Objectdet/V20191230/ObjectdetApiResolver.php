@@ -11,6 +11,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectTransparentImage detectTransparentImage(array $options = [])
  * @method DetectVehicle detectVehicle(array $options = [])
  * @method DetectWhiteBaseImage detectWhiteBaseImage(array $options = [])
+ * @method GenerateVehicleRepairPlan generateVehicleRepairPlan(array $options = [])
+ * @method GetVehicleRepairPlan getVehicleRepairPlan(array $options = [])
  * @method RecognizeVehicleDamage recognizeVehicleDamage(array $options = [])
  * @method RecognizeVehicleDashboard recognizeVehicleDashboard(array $options = [])
  * @method RecognizeVehicleParts recognizeVehicleParts(array $options = [])
@@ -151,6 +153,81 @@ class DetectWhiteBaseImage extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getDamageImageList()
+ */
+class GenerateVehicleRepairPlan extends Rpc
+{
+
+    /**
+     * @param array $damageImageList
+     *
+     * @return $this
+     */
+	public function withDamageImageList(array $damageImageList)
+	{
+	    $this->data['DamageImageList'] = $damageImageList;
+		foreach ($damageImageList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ImageUrl'])){
+				$this->options['form_params']['DamageImageList.' . ($depth1 + 1) . '.ImageUrl'] = $depth1Value['ImageUrl'];
+			}
+			if(isset($depth1Value['CreateTimeStamp'])){
+				$this->options['form_params']['DamageImageList.' . ($depth1 + 1) . '.CreateTimeStamp'] = $depth1Value['CreateTimeStamp'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getVinCodeImage()
+ * @method string getCarNumberImage()
+ * @method string getTaskId()
+ */
+class GetVehicleRepairPlan extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVinCodeImage($value)
+    {
+        $this->data['VinCodeImage'] = $value;
+        $this->options['form_params']['VinCodeImage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCarNumberImage($value)
+    {
+        $this->data['CarNumberImage'] = $value;
+        $this->options['form_params']['CarNumberImage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
 
         return $this;
     }
