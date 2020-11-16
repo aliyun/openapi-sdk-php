@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.630 - 2020-11-16
+- Update imgsearch.
+
+
 ## 1.8.629 - 2020-11-16
 - Update imagerecog.
 
