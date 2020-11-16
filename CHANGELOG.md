@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.635 - 2020-11-16
+- Add a new interface for asynchronous image translation.
+
+
 ## 1.8.634 - 2020-11-16
 - Update videoenhan.
 
