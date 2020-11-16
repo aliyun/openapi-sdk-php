@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.634 - 2020-11-16
+- Update videoenhan.
+
+
 ## 1.8.633 - 2020-11-16
 - Update videoseg.
 
