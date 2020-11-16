@@ -321,9 +321,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'ecs';
 }
 
 /**
@@ -1338,6 +1335,8 @@ class CreateAutoSnapshotPolicy extends Rpc
  * @method $this withResourceType($value)
  * @method string getPeriodUnit()
  * @method $this withPeriodUnit($value)
+ * @method string getTimeSlot()
+ * @method $this withTimeSlot($value)
  * @method array getZoneId()
  * @method string getChargeType()
  * @method $this withChargeType($value)
@@ -6540,6 +6539,8 @@ class DescribePhysicalConnections extends Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getDataDisk3Category()
+ * @method string getIsp()
+ * @method $this withIsp($value)
  * @method string getDataDisk4Size()
  * @method string getPriceUnit()
  * @method $this withPriceUnit($value)
@@ -9500,6 +9501,8 @@ class ModifyInstanceMetadataOptions extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getISP()
+ * @method $this withISP($value)
  * @method string getInternetMaxBandwidthOut()
  * @method $this withInternetMaxBandwidthOut($value)
  * @method string getStartTime()
@@ -11107,6 +11110,8 @@ class RunCommand extends Rpc
  * @method $this withHpcClusterId($value)
  * @method string getHttpPutResponseHopLimit()
  * @method $this withHttpPutResponseHopLimit($value)
+ * @method string getIsp()
+ * @method $this withIsp($value)
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
  * @method string getSpotPriceLimit()
