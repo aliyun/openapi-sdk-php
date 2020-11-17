@@ -53,6 +53,7 @@ namespace AlibabaCloud;
  * @method static Codeup\Codeup codeup()
  * @method static Commondriver\Commondriver commondriver()
  * @method static Companyreg\Companyreg companyreg()
+ * @method static Config\Config config()
  * @method static Cr\Cr cr()
  * @method static Crm\Crm crm()
  * @method static CusanalyticScOnline\CusanalyticScOnline cusanalyticScOnline()

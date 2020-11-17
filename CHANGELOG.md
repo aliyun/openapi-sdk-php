@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.639 - 2020-11-17
+- Support event type in timeline of resource properties.
+- Support resourceOwnerId in evaluation result.
+- Support resource directory in config rule scene.
+- Fix terraform related bugs.
+
+
 ## 1.8.638 - 2020-11-17
 - Supported International-26888 Sites Region Endpoints.
 
