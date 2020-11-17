@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.638 - 2020-11-17
+- Supported International-26888 Sites Region Endpoints.
+
+
 ## 1.8.637 - 2020-11-17
 - Supported International-26888 Sites Region Endpoints.
 
