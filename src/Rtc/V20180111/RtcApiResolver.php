@@ -8,13 +8,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddRecordTemplate addRecordTemplate(array $options = [])
  * @method CreateChannel createChannel(array $options = [])
  * @method CreateConference createConference(array $options = [])
- * @method CreateMAURule createMAURule(array $options = [])
  * @method CreateMPULayout createMPULayout(array $options = [])
  * @method CreateMPURule createMPURule(array $options = [])
  * @method CreateServiceLinkedRoleForRtc createServiceLinkedRoleForRtc(array $options = [])
  * @method DeleteChannel deleteChannel(array $options = [])
  * @method DeleteConference deleteConference(array $options = [])
- * @method DeleteMAURule deleteMAURule(array $options = [])
  * @method DeleteMPULayout deleteMPULayout(array $options = [])
  * @method DeleteMPURule deleteMPURule(array $options = [])
  * @method DeleteRecordTemplate deleteRecordTemplate(array $options = [])
@@ -22,27 +20,30 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
  * @method DescribeChannelUsers describeChannelUsers(array $options = [])
  * @method DescribeConferenceAuthInfo describeConferenceAuthInfo(array $options = [])
- * @method DescribeMAURule describeMAURule(array $options = [])
  * @method DescribeMPULayoutInfo describeMPULayoutInfo(array $options = [])
  * @method DescribeMPULayoutInfoList describeMPULayoutInfoList(array $options = [])
  * @method DescribeMPULayoutList describeMPULayoutList(array $options = [])
  * @method DescribeMPURule describeMPURule(array $options = [])
+ * @method DescribeRecordFiles describeRecordFiles(array $options = [])
+ * @method DescribeRecordTasks describeRecordTasks(array $options = [])
  * @method DescribeRecordTemplates describeRecordTemplates(array $options = [])
  * @method DescribeRTCAppKey describeRTCAppKey(array $options = [])
  * @method DescribeRtcChannelCntData describeRtcChannelCntData(array $options = [])
+ * @method DescribeRtcChannelDetail describeRtcChannelDetail(array $options = [])
  * @method DescribeRtcChannelList describeRtcChannelList(array $options = [])
  * @method DescribeRtcChannelMetric describeRtcChannelMetric(array $options = [])
+ * @method DescribeRtcChannelMetrics describeRtcChannelMetrics(array $options = [])
+ * @method DescribeRtcChannels describeRtcChannels(array $options = [])
  * @method DescribeRtcChannelUserList describeRtcChannelUserList(array $options = [])
  * @method DescribeRtcDurationData describeRtcDurationData(array $options = [])
  * @method DescribeRtcPeakChannelCntData describeRtcPeakChannelCntData(array $options = [])
  * @method DescribeRtcPeakUserCntData describeRtcPeakUserCntData(array $options = [])
  * @method DescribeRtcQualityMetric describeRtcQualityMetric(array $options = [])
  * @method DescribeRtcUserCntData describeRtcUserCntData(array $options = [])
+ * @method DescribeRtcUserEvents describeRtcUserEvents(array $options = [])
  * @method DescribeRtcUserList describeRtcUserList(array $options = [])
  * @method DescribeUserInfoInChannel describeUserInfoInChannel(array $options = [])
- * @method DisableMAURule disableMAURule(array $options = [])
  * @method DisableMPURule disableMPURule(array $options = [])
- * @method EnableMAURule enableMAURule(array $options = [])
  * @method EnableMPURule enableMPURule(array $options = [])
  * @method GetMPUTaskStatus getMPUTaskStatus(array $options = [])
  * @method ModifyApp modifyApp(array $options = [])
@@ -63,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnmuteAudioAll unmuteAudioAll(array $options = [])
  * @method UpdateChannel updateChannel(array $options = [])
  * @method UpdateMPULayout updateMPULayout(array $options = [])
+ * @method UpdateRecordTask updateRecordTask(array $options = [])
  * @method UpdateRecordTemplate updateRecordTemplate(array $options = [])
  */
 class RtcApiResolver extends ApiResolver
@@ -97,14 +99,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withShowLog($value)
  * @method string getOssBucket()
  * @method $this withOssBucket($value)
- * @method string getMnsQueue()
- * @method $this withMnsQueue($value)
+ * @method string getDelayStopTime()
+ * @method $this withDelayStopTime($value)
  * @method string getFileSplitInterval()
  * @method $this withFileSplitInterval($value)
+ * @method string getMnsQueue()
+ * @method $this withMnsQueue($value)
+ * @method string getHttpCallbackUrl()
+ * @method $this withHttpCallbackUrl($value)
+ * @method array getWatermarks()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method array getBackgrounds()
  * @method string getName()
  * @method $this withName($value)
  * @method string getMediaEncode()
@@ -138,6 +146,79 @@ class AddRecordTemplate extends Rpc
 	    $this->data['LayoutIds'] = $layoutIds;
 		foreach ($layoutIds as $i => $iValue) {
 			$this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $watermarks
+     *
+     * @return $this
+     */
+	public function withWatermarks(array $watermarks)
+	{
+	    $this->data['Watermarks'] = $watermarks;
+		foreach ($watermarks as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Url'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Url'] = $depth1Value['Url'];
+			}
+			if(isset($depth1Value['Alpha'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Alpha'] = $depth1Value['Alpha'];
+			}
+			if(isset($depth1Value['Display'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Display'] = $depth1Value['Display'];
+			}
+			if(isset($depth1Value['X'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.X'] = $depth1Value['X'];
+			}
+			if(isset($depth1Value['Y'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Y'] = $depth1Value['Y'];
+			}
+			if(isset($depth1Value['Width'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Width'] = $depth1Value['Width'];
+			}
+			if(isset($depth1Value['Height'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Height'] = $depth1Value['Height'];
+			}
+			if(isset($depth1Value['ZOrder'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $backgrounds
+     *
+     * @return $this
+     */
+	public function withBackgrounds(array $backgrounds)
+	{
+	    $this->data['Backgrounds'] = $backgrounds;
+		foreach ($backgrounds as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Url'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Url'] = $depth1Value['Url'];
+			}
+			if(isset($depth1Value['Display'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Display'] = $depth1Value['Display'];
+			}
+			if(isset($depth1Value['X'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.X'] = $depth1Value['X'];
+			}
+			if(isset($depth1Value['Y'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Y'] = $depth1Value['Y'];
+			}
+			if(isset($depth1Value['Width'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Width'] = $depth1Value['Width'];
+			}
+			if(isset($depth1Value['Height'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Height'] = $depth1Value['Height'];
+			}
+			if(isset($depth1Value['ZOrder'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
+			}
 		}
 
 		return $this;
@@ -177,26 +258,6 @@ class CreateChannel extends Rpc
  * @method $this withRemindNotice($value)
  */
 class CreateConference extends Rpc
-{
-}
-
-/**
- * @method string getUseridPrefix()
- * @method $this withUseridPrefix($value)
- * @method string getChannelPrefix()
- * @method $this withChannelPrefix($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getMauTemplateId()
- * @method $this withMauTemplateId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getCallBack()
- * @method $this withCallBack($value)
- */
-class CreateMAURule extends Rpc
 {
 }
 
@@ -333,20 +394,6 @@ class DeleteConference extends Rpc
 }
 
 /**
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class DeleteMAURule extends Rpc
-{
-}
-
-/**
  * @method string getLayoutId()
  * @method $this withLayoutId($value)
  * @method string getShowLog()
@@ -457,18 +504,6 @@ class DescribeConferenceAuthInfo extends Rpc
 }
 
 /**
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DescribeMAURule extends Rpc
-{
-}
-
-/**
  * @method string getLayoutId()
  * @method $this withLayoutId($value)
  * @method string getShowLog()
@@ -524,6 +559,84 @@ class DescribeMPULayoutList extends Rpc
  */
 class DescribeMPURule extends Rpc
 {
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method array getTaskIds()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRecordFiles extends Rpc
+{
+
+    /**
+     * @param array $taskIds
+     *
+     * @return $this
+     */
+	public function withTaskIds(array $taskIds)
+	{
+	    $this->data['TaskIds'] = $taskIds;
+		foreach ($taskIds as $i => $iValue) {
+			$this->options['query']['TaskIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method array getTaskIds()
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeRecordTasks extends Rpc
+{
+
+    /**
+     * @param array $taskIds
+     *
+     * @return $this
+     */
+	public function withTaskIds(array $taskIds)
+	{
+	    $this->data['TaskIds'] = $taskIds;
+		foreach ($taskIds as $i => $iValue) {
+			$this->options['query']['TaskIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -591,6 +704,28 @@ class DescribeRtcChannelCntData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRtcChannelDetail extends Rpc
+{
+}
+
+/**
  * @method string getSortType()
  * @method $this withSortType($value)
  * @method string getUserId()
@@ -629,6 +764,50 @@ class DescribeRtcChannelList extends Rpc
  * @method $this withTimePoint($value)
  */
 class DescribeRtcChannelMetric extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSubUid()
+ * @method $this withSubUid($value)
+ * @method string getPubUid()
+ * @method $this withPubUid($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRtcChannelMetrics extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRtcChannels extends Rpc
 {
 }
 
@@ -757,6 +936,26 @@ class DescribeRtcUserCntData extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DescribeRtcUserEvents extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getSubUser()
@@ -802,35 +1001,7 @@ class DescribeUserInfoInChannel extends Rpc
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
-class DisableMAURule extends Rpc
-{
-}
-
-/**
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
 class DisableMPURule extends Rpc
-{
-}
-
-/**
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
- */
-class EnableMAURule extends Rpc
 {
 }
 
@@ -1352,6 +1523,52 @@ class StartRecordTask extends Rpc
 			if(isset($depth1Value['SourceType'])){
 				$this->options['query']['UserPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
 			}
+			foreach ($depth1Value['Images'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Url'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Url'] = $depth2Value['Url'];
+				}
+				if(isset($depth2Value['Display'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Display'] = $depth2Value['Display'];
+				}
+				if(isset($depth2Value['X'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.X'] = $depth2Value['X'];
+				}
+				if(isset($depth2Value['Y'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Y'] = $depth2Value['Y'];
+				}
+				if(isset($depth2Value['Width'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Width'] = $depth2Value['Width'];
+				}
+				if(isset($depth2Value['Height'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Height'] = $depth2Value['Height'];
+				}
+				if(isset($depth2Value['ZOrder'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.ZOrder'] = $depth2Value['ZOrder'];
+				}
+			}
+			foreach ($depth1Value['Texts'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Text'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Text'] = $depth2Value['Text'];
+				}
+				if(isset($depth2Value['X'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.X'] = $depth2Value['X'];
+				}
+				if(isset($depth2Value['Y'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Y'] = $depth2Value['Y'];
+				}
+				if(isset($depth2Value['FontType'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontType'] = $depth2Value['FontType'];
+				}
+				if(isset($depth2Value['FontSize'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontSize'] = $depth2Value['FontSize'];
+				}
+				if(isset($depth2Value['FontColor'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontColor'] = $depth2Value['FontColor'];
+				}
+				if(isset($depth2Value['ZOrder'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.ZOrder'] = $depth2Value['ZOrder'];
+				}
+			}
 		}
 
 		return $this;
@@ -1659,6 +1876,110 @@ class UpdateMPULayout extends Rpc
 }
 
 /**
+ * @method array getUserPanes()
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method array getSubSpecUsers()
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class UpdateRecordTask extends Rpc
+{
+
+    /**
+     * @param array $userPanes
+     *
+     * @return $this
+     */
+	public function withUserPanes(array $userPanes)
+	{
+	    $this->data['UserPanes'] = $userPanes;
+		foreach ($userPanes as $depth1 => $depth1Value) {
+			if(isset($depth1Value['PaneId'])){
+				$this->options['query']['UserPanes.' . ($depth1 + 1) . '.PaneId'] = $depth1Value['PaneId'];
+			}
+			if(isset($depth1Value['UserId'])){
+				$this->options['query']['UserPanes.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
+			}
+			if(isset($depth1Value['SourceType'])){
+				$this->options['query']['UserPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
+			}
+			foreach ($depth1Value['Images'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Url'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Url'] = $depth2Value['Url'];
+				}
+				if(isset($depth2Value['Display'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Display'] = $depth2Value['Display'];
+				}
+				if(isset($depth2Value['X'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.X'] = $depth2Value['X'];
+				}
+				if(isset($depth2Value['Y'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Y'] = $depth2Value['Y'];
+				}
+				if(isset($depth2Value['Width'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Width'] = $depth2Value['Width'];
+				}
+				if(isset($depth2Value['Height'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.Height'] = $depth2Value['Height'];
+				}
+				if(isset($depth2Value['ZOrder'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Images.' . ($depth2 + 1) . '.ZOrder'] = $depth2Value['ZOrder'];
+				}
+			}
+			foreach ($depth1Value['Texts'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Text'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Text'] = $depth2Value['Text'];
+				}
+				if(isset($depth2Value['X'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.X'] = $depth2Value['X'];
+				}
+				if(isset($depth2Value['Y'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Y'] = $depth2Value['Y'];
+				}
+				if(isset($depth2Value['FontType'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontType'] = $depth2Value['FontType'];
+				}
+				if(isset($depth2Value['FontSize'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontSize'] = $depth2Value['FontSize'];
+				}
+				if(isset($depth2Value['FontColor'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontColor'] = $depth2Value['FontColor'];
+				}
+				if(isset($depth2Value['ZOrder'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.ZOrder'] = $depth2Value['ZOrder'];
+				}
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $subSpecUsers
+     *
+     * @return $this
+     */
+	public function withSubSpecUsers(array $subSpecUsers)
+	{
+	    $this->data['SubSpecUsers'] = $subSpecUsers;
+		foreach ($subSpecUsers as $i => $iValue) {
+			$this->options['query']['SubSpecUsers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method array getFormats()
  * @method string getOssFilePrefix()
  * @method $this withOssFilePrefix($value)
@@ -1675,12 +1996,16 @@ class UpdateMPULayout extends Rpc
  * @method $this withMnsQueue($value)
  * @method string getFileSplitInterval()
  * @method $this withFileSplitInterval($value)
+ * @method string getHttpCallbackUrl()
+ * @method $this withHttpCallbackUrl($value)
+ * @method array getWatermarks()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
+ * @method array getBackgrounds()
  * @method string getName()
  * @method $this withName($value)
  * @method string getMediaEncode()
@@ -1714,6 +2039,79 @@ class UpdateRecordTemplate extends Rpc
 	    $this->data['LayoutIds'] = $layoutIds;
 		foreach ($layoutIds as $i => $iValue) {
 			$this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $watermarks
+     *
+     * @return $this
+     */
+	public function withWatermarks(array $watermarks)
+	{
+	    $this->data['Watermarks'] = $watermarks;
+		foreach ($watermarks as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Url'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Url'] = $depth1Value['Url'];
+			}
+			if(isset($depth1Value['Alpha'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Alpha'] = $depth1Value['Alpha'];
+			}
+			if(isset($depth1Value['Display'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Display'] = $depth1Value['Display'];
+			}
+			if(isset($depth1Value['X'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.X'] = $depth1Value['X'];
+			}
+			if(isset($depth1Value['Y'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Y'] = $depth1Value['Y'];
+			}
+			if(isset($depth1Value['Width'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Width'] = $depth1Value['Width'];
+			}
+			if(isset($depth1Value['Height'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.Height'] = $depth1Value['Height'];
+			}
+			if(isset($depth1Value['ZOrder'])){
+				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $backgrounds
+     *
+     * @return $this
+     */
+	public function withBackgrounds(array $backgrounds)
+	{
+	    $this->data['Backgrounds'] = $backgrounds;
+		foreach ($backgrounds as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Url'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Url'] = $depth1Value['Url'];
+			}
+			if(isset($depth1Value['Display'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Display'] = $depth1Value['Display'];
+			}
+			if(isset($depth1Value['X'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.X'] = $depth1Value['X'];
+			}
+			if(isset($depth1Value['Y'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Y'] = $depth1Value['Y'];
+			}
+			if(isset($depth1Value['Width'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Width'] = $depth1Value['Width'];
+			}
+			if(isset($depth1Value['Height'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.Height'] = $depth1Value['Height'];
+			}
+			if(isset($depth1Value['ZOrder'])){
+				$this->options['query']['Backgrounds.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
+			}
 		}
 
 		return $this;

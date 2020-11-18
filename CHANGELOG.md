@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.641 - 2020-11-18
+- Generated 2018-01-11 for `rtc`.
+
+
 ## 1.8.640 - 2020-11-18
 - Supported webpage scan.
 
