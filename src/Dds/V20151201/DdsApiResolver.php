@@ -1318,6 +1318,8 @@ class DescribePrice extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
  */
 class DescribeRegions extends Rpc
 {
