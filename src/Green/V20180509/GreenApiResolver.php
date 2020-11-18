@@ -35,6 +35,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ImageSyncScan imageSyncScan(array $options = [])
  * @method ListSimilarityImages listSimilarityImages(array $options = [])
  * @method ListSimilarityLibraries listSimilarityLibraries(array $options = [])
+ * @method LiveStreamAsyncScan liveStreamAsyncScan(array $options = [])
+ * @method LiveStreamAsyncScanResults liveStreamAsyncScanResults(array $options = [])
+ * @method LiveStreamCancelScan liveStreamCancelScan(array $options = [])
  * @method SearchPerson searchPerson(array $options = [])
  * @method SetPerson setPerson(array $options = [])
  * @method TextFeedback textFeedback(array $options = [])
@@ -45,6 +48,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method VideoCancelScan videoCancelScan(array $options = [])
  * @method VideoFeedback videoFeedback(array $options = [])
  * @method VideoSyncScan videoSyncScan(array $options = [])
+ * @method VodAsyncScan vodAsyncScan(array $options = [])
+ * @method VodAsyncScanResults vodAsyncScanResults(array $options = [])
  * @method VoiceAsyncScan voiceAsyncScan(array $options = [])
  * @method VoiceAsyncScanResults voiceAsyncScanResults(array $options = [])
  * @method VoiceCancelScan voiceCancelScan(array $options = [])
@@ -54,6 +59,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method VoiceIdentityStartRegister voiceIdentityStartRegister(array $options = [])
  * @method VoiceIdentityUnregister voiceIdentityUnregister(array $options = [])
  * @method VoiceSyncScan voiceSyncScan(array $options = [])
+ * @method WebpageAsyncScan webpageAsyncScan(array $options = [])
+ * @method WebpageAsyncScanResults webpageAsyncScanResults(array $options = [])
+ * @method WebpageSyncScan webpageSyncScan(array $options = [])
  */
 class GreenApiResolver extends ApiResolver
 {
@@ -737,6 +745,72 @@ class ListSimilarityLibraries extends Roa
 /**
  * @method string getClientInfo()
  */
+class LiveStreamAsyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/livestream/asyncscan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class LiveStreamAsyncScanResults extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/livestream/results';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class LiveStreamCancelScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/livestream/cancelscan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
 class SearchPerson extends Roa
 {
     /** @var string */
@@ -957,6 +1031,50 @@ class VideoSyncScan extends Roa
 /**
  * @method string getClientInfo()
  */
+class VodAsyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/vod/asyncscan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class VodAsyncScanResults extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/vod/results';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
 class VoiceAsyncScan extends Roa
 {
     /** @var string */
@@ -1137,6 +1255,72 @@ class VoiceSyncScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/voice/syncscan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class WebpageAsyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/webpage/asyncscan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class WebpageAsyncScanResults extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/webpage/results';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class WebpageSyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/webpage/scan';
 
     /**
      * @param string $value

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.640 - 2020-11-18
+- Supported webpage scan.
+
+
 ## 1.8.639 - 2020-11-17
 - Support event type in timeline of resource properties.
 - Support resourceOwnerId in evaluation result.
