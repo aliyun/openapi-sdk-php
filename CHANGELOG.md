@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.645 - 2020-11-19
+- Update GenerateHumanAnimeStyle.
+
+
 ## 1.8.644 - 2020-11-19
 - Update SegmentBody.
 
