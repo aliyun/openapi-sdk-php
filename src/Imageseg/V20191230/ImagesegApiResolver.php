@@ -142,6 +142,8 @@ class SegmentAnimal extends Rpc
 }
 
 /**
+ * @method string getReturnForm()
+ * @method $this withReturnForm($value)
  * @method string getAsync()
  * @method string getImageURL()
  * @method $this withImageURL($value)

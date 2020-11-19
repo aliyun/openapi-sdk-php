@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.644 - 2020-11-19
+- Update SegmentBody.
+
+
 ## 1.8.643 - 2020-11-19
 - Supported backend interface for ICBU.
 
