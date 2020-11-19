@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.643 - 2020-11-19
+- Supported backend interface for ICBU.
+
+
 ## 1.8.642 - 2020-11-18
 - Update DescribeDedicatedClusterInstanceList InstanceStatus type.
 
