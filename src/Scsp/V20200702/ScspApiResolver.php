@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssignTicket assignTicket(array $options = [])
  * @method CloseTicket closeTicket(array $options = [])
  * @method CreateAgent createAgent(array $options = [])
+ * @method CreateCustomer createCustomer(array $options = [])
  * @method CreateRole createRole(array $options = [])
  * @method CreateSkillGroup createSkillGroup(array $options = [])
  * @method CreateTicket createTicket(array $options = [])
@@ -16,15 +17,23 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableRole disableRole(array $options = [])
  * @method EnableRole enableRole(array $options = [])
  * @method ExecuteActivity executeActivity(array $options = [])
+ * @method FetchCall fetchCall(array $options = [])
  * @method FinishHotlineService finishHotlineService(array $options = [])
  * @method GenerateWebSocketSign generateWebSocketSign(array $options = [])
  * @method GetAgent getAgent(array $options = [])
  * @method GetGrantedRoleIds getGrantedRoleIds(array $options = [])
  * @method GetHotlineAgentDetail getHotlineAgentDetail(array $options = [])
+ * @method GetHotlineAgentDetailReport getHotlineAgentDetailReport(array $options = [])
+ * @method GetHotlineGroupDetailReport getHotlineGroupDetailReport(array $options = [])
+ * @method GetHotlineWaitingNumber getHotlineWaitingNumber(array $options = [])
+ * @method GetOutbounNumList getOutbounNumList(array $options = [])
  * @method GetTicketTemplateSchema getTicketTemplateSchema(array $options = [])
  * @method GetUserToken getUserToken(array $options = [])
  * @method GrantRoles grantRoles(array $options = [])
  * @method HangupCall hangupCall(array $options = [])
+ * @method HangupThirdCall hangupThirdCall(array $options = [])
+ * @method HoldCall holdCall(array $options = [])
+ * @method JoinThirdCall joinThirdCall(array $options = [])
  * @method ListAgentBySkillGroupId listAgentBySkillGroupId(array $options = [])
  * @method ListHotlineRecord listHotlineRecord(array $options = [])
  * @method ListOutboundPhoneNumber listOutboundPhoneNumber(array $options = [])
@@ -36,12 +45,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchTicketList searchTicketList(array $options = [])
  * @method SendHotlineHeartBeat sendHotlineHeartBeat(array $options = [])
  * @method StartCall startCall(array $options = [])
+ * @method StartCallV2 startCallV2(array $options = [])
  * @method StartHotlineService startHotlineService(array $options = [])
  * @method SuspendHotlineService suspendHotlineService(array $options = [])
  * @method TransferCallToAgent transferCallToAgent(array $options = [])
  * @method TransferCallToPhone transferCallToPhone(array $options = [])
  * @method TransferCallToSkillGroup transferCallToSkillGroup(array $options = [])
+ * @method TransferToThirdCall transferToThirdCall(array $options = [])
  * @method UpdateAgent updateAgent(array $options = [])
+ * @method UpdateCustomer updateCustomer(array $options = [])
  * @method UpdateRole updateRole(array $options = [])
  * @method UpdateSkillGroup updateSkillGroup(array $options = [])
  * @method UpdateTicket updateTicket(array $options = [])
@@ -309,6 +321,7 @@ class CloseTicket extends Rpc
  * @method string getInstanceId()
  * @method string getAccountName()
  * @method string getDisplayName()
+ * @method array getSkillGroupId()
  * @method array getSkillGroupIdList()
  */
 class CreateAgent extends Rpc
@@ -367,6 +380,21 @@ class CreateAgent extends Rpc
     }
 
     /**
+     * @param array $skillGroupId
+     *
+     * @return $this
+     */
+	public function withSkillGroupId(array $skillGroupId)
+	{
+	    $this->data['SkillGroupId'] = $skillGroupId;
+		foreach ($skillGroupId as $i => $iValue) {
+			$this->options['form_params']['SkillGroupId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
      * @param array $skillGroupIdList
      *
      * @return $this
@@ -380,6 +408,40 @@ class CreateAgent extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getIndustry()
+ * @method $this withIndustry($value)
+ * @method string getOuterIdType()
+ * @method $this withOuterIdType($value)
+ * @method string getDingding()
+ * @method $this withDingding($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getTypeCode()
+ * @method $this withTypeCode($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getContacter()
+ * @method $this withContacter($value)
+ * @method string getProdLineId()
+ * @method $this withProdLineId($value)
+ * @method string getPhone()
+ * @method $this withPhone($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getManagerName()
+ * @method $this withManagerName($value)
+ * @method string getOuterId()
+ * @method $this withOuterId($value)
+ * @method string getPosition()
+ * @method $this withPosition($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ */
+class CreateCustomer extends Rpc
+{
 }
 
 /**
@@ -943,6 +1005,110 @@ class ExecuteActivity extends Rpc
  * @method string getClientToken()
  * @method string getInstanceId()
  * @method string getAccountName()
+ * @method string getCallId()
+ * @method string getJobId()
+ * @method string getConnectionId()
+ * @method string getHoldConnectionId()
+ */
+class FetchCall extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallId($value)
+    {
+        $this->data['CallId'] = $value;
+        $this->options['form_params']['CallId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConnectionId($value)
+    {
+        $this->data['ConnectionId'] = $value;
+        $this->options['form_params']['ConnectionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHoldConnectionId($value)
+    {
+        $this->data['HoldConnectionId'] = $value;
+        $this->options['form_params']['HoldConnectionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getAccountName()
  */
 class FinishHotlineService extends Rpc
 {
@@ -1078,6 +1244,165 @@ class GetHotlineAgentDetail extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method array getDepIds()
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getGroupIds()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ */
+class GetHotlineAgentDetailReport extends Rpc
+{
+
+    /**
+     * @param array $depIds
+     *
+     * @return $this
+     */
+	public function withDepIds(array $depIds)
+	{
+	    $this->data['DepIds'] = $depIds;
+		foreach ($depIds as $i => $iValue) {
+			$this->options['query']['DepIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $groupIds
+     *
+     * @return $this
+     */
+	public function withGroupIds(array $groupIds)
+	{
+	    $this->data['GroupIds'] = $groupIds;
+		foreach ($groupIds as $i => $iValue) {
+			$this->options['query']['GroupIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getDepIds()
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getGroupIds()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ */
+class GetHotlineGroupDetailReport extends Rpc
+{
+
+    /**
+     * @param array $depIds
+     *
+     * @return $this
+     */
+	public function withDepIds(array $depIds)
+	{
+	    $this->data['DepIds'] = $depIds;
+		foreach ($depIds as $i => $iValue) {
+			$this->options['query']['DepIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $groupIds
+     *
+     * @return $this
+     */
+	public function withGroupIds(array $groupIds)
+	{
+	    $this->data['GroupIds'] = $groupIds;
+		foreach ($groupIds as $i => $iValue) {
+			$this->options['query']['GroupIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ */
+class GetHotlineWaitingNumber extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getAccountName()
+ */
+class GetOutbounNumList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1327,6 +1652,290 @@ class HangupCall extends Rpc
 
 /**
  * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getAccountName()
+ * @method string getCallId()
+ * @method string getJobId()
+ * @method string getConnectionId()
+ */
+class HangupThirdCall extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallId($value)
+    {
+        $this->data['CallId'] = $value;
+        $this->options['form_params']['CallId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConnectionId($value)
+    {
+        $this->data['ConnectionId'] = $value;
+        $this->options['form_params']['ConnectionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getAccountName()
+ * @method string getCallId()
+ * @method string getJobId()
+ * @method string getConnectionId()
+ */
+class HoldCall extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallId($value)
+    {
+        $this->data['CallId'] = $value;
+        $this->options['form_params']['CallId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConnectionId($value)
+    {
+        $this->data['ConnectionId'] = $value;
+        $this->options['form_params']['ConnectionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getAccountName()
+ * @method string getCallId()
+ * @method string getJobId()
+ * @method string getConnectionId()
+ * @method string getHoldConnectionId()
+ */
+class JoinThirdCall extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallId($value)
+    {
+        $this->data['CallId'] = $value;
+        $this->options['form_params']['CallId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConnectionId($value)
+    {
+        $this->data['ConnectionId'] = $value;
+        $this->options['form_params']['ConnectionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHoldConnectionId($value)
+    {
+        $this->data['HoldConnectionId'] = $value;
+        $this->options['form_params']['HoldConnectionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -1496,6 +2105,8 @@ class RemoveSkillGroup extends Rpc
  * @method $this withInstanceId($value)
  * @method string getTicketId()
  * @method $this withTicketId($value)
+ * @method string getStatusCode()
+ * @method $this withStatusCode($value)
  */
 class SearchTicketById extends Rpc
 {
@@ -1517,6 +2128,10 @@ class SearchTicketById extends Rpc
  * @method $this withPageNo($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  */
 class SearchTicketList extends Rpc
 {
@@ -1595,6 +2210,82 @@ class SendHotlineHeartBeat extends Rpc
  * @method string getCallee()
  */
 class StartCall extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCaller($value)
+    {
+        $this->data['Caller'] = $value;
+        $this->options['form_params']['Caller'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallee($value)
+    {
+        $this->data['Callee'] = $value;
+        $this->options['form_params']['Callee'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getAccountName()
+ * @method string getCaller()
+ * @method string getCallee()
+ */
+class StartCallV2 extends Rpc
 {
 
     /**
@@ -1782,6 +2473,7 @@ class SuspendHotlineService extends Rpc
  * @method string getJobId()
  * @method string getConnectionId()
  * @method string getHoldConnectionId()
+ * @method string getType()
  * @method string getIsSingleTransfer()
  */
 class TransferCallToAgent extends Rpc
@@ -1896,6 +2588,19 @@ class TransferCallToAgent extends Rpc
      *
      * @return $this
      */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withIsSingleTransfer($value)
     {
         $this->data['IsSingleTransfer'] = $value;
@@ -1915,6 +2620,7 @@ class TransferCallToAgent extends Rpc
  * @method string getJobId()
  * @method string getConnectionId()
  * @method string getHoldConnectionId()
+ * @method string getType()
  * @method string getIsSingleTransfer()
  */
 class TransferCallToPhone extends Rpc
@@ -2042,6 +2748,19 @@ class TransferCallToPhone extends Rpc
      *
      * @return $this
      */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withIsSingleTransfer($value)
     {
         $this->data['IsSingleTransfer'] = $value;
@@ -2060,6 +2779,7 @@ class TransferCallToPhone extends Rpc
  * @method string getJobId()
  * @method string getConnectionId()
  * @method string getHoldConnectionId()
+ * @method string getType()
  * @method string getIsSingleTransfer()
  */
 class TransferCallToSkillGroup extends Rpc
@@ -2174,6 +2894,19 @@ class TransferCallToSkillGroup extends Rpc
      *
      * @return $this
      */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withIsSingleTransfer($value)
     {
         $this->data['IsSingleTransfer'] = $value;
@@ -2187,7 +2920,112 @@ class TransferCallToSkillGroup extends Rpc
  * @method string getClientToken()
  * @method string getInstanceId()
  * @method string getAccountName()
+ * @method string getCallId()
+ * @method string getJobId()
+ * @method string getConnectionId()
+ * @method string getHoldConnectionId()
+ */
+class TransferToThirdCall extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountName($value)
+    {
+        $this->data['AccountName'] = $value;
+        $this->options['form_params']['AccountName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallId($value)
+    {
+        $this->data['CallId'] = $value;
+        $this->options['form_params']['CallId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConnectionId($value)
+    {
+        $this->data['ConnectionId'] = $value;
+        $this->options['form_params']['ConnectionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHoldConnectionId($value)
+    {
+        $this->data['HoldConnectionId'] = $value;
+        $this->options['form_params']['HoldConnectionId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getInstanceId()
+ * @method string getAccountName()
  * @method string getDisplayName()
+ * @method array getSkillGroupId()
  * @method array getSkillGroupIdList()
  */
 class UpdateAgent extends Rpc
@@ -2249,6 +3087,21 @@ class UpdateAgent extends Rpc
     }
 
     /**
+     * @param array $skillGroupId
+     *
+     * @return $this
+     */
+	public function withSkillGroupId(array $skillGroupId)
+	{
+	    $this->data['SkillGroupId'] = $skillGroupId;
+		foreach ($skillGroupId as $i => $iValue) {
+			$this->options['form_params']['SkillGroupId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
      * @param array $skillGroupIdList
      *
      * @return $this
@@ -2262,6 +3115,42 @@ class UpdateAgent extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getIndustry()
+ * @method $this withIndustry($value)
+ * @method string getOuterIdType()
+ * @method $this withOuterIdType($value)
+ * @method string getDingding()
+ * @method $this withDingding($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getTypeCode()
+ * @method $this withTypeCode($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getContacter()
+ * @method $this withContacter($value)
+ * @method string getProdLineId()
+ * @method $this withProdLineId($value)
+ * @method string getPhone()
+ * @method $this withPhone($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getCustomerId()
+ * @method $this withCustomerId($value)
+ * @method string getManagerName()
+ * @method $this withManagerName($value)
+ * @method string getOuterId()
+ * @method $this withOuterId($value)
+ * @method string getPosition()
+ * @method $this withPosition($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ */
+class UpdateCustomer extends Rpc
+{
 }
 
 /**

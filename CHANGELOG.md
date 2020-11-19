@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.649 - 2020-11-19
+- Generated 2020-07-02 for `scsp`.
+
+
 ## 1.8.648 - 2020-11-19
 - Update DescribeDedicatedClusterInstanceList return data.
 
