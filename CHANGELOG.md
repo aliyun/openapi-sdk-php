@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.648 - 2020-11-19
+- Update DescribeDedicatedClusterInstanceList return data.
+
+
 ## 1.8.647 - 2020-11-19
 - Update data API.
 

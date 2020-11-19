@@ -1072,6 +1072,10 @@ class DescribeDBInstanceTDEInfo extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
  */
 class DescribeDedicatedClusterInstanceList extends Rpc
 {
