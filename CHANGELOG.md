@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.646 - 2020-11-19
+- Update data API.
+
+
 ## 1.8.645 - 2020-11-19
 - Update GenerateHumanAnimeStyle.
 
