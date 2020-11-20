@@ -34,6 +34,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2019-03-15';
+
+    /** @var string */
+    public $serviceCode = 'fnf';
 }
 
 /**
@@ -301,6 +304,10 @@ class GetExecutionHistory extends Rpc
 }
 
 /**
+ * @method string getStartedTimeBegin()
+ * @method $this withStartedTimeBegin($value)
+ * @method string getExecutionNamePrefix()
+ * @method $this withExecutionNamePrefix($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getRequestId()
@@ -309,6 +316,8 @@ class GetExecutionHistory extends Rpc
  * @method $this withLimit($value)
  * @method string getFlowName()
  * @method $this withFlowName($value)
+ * @method string getStartedTimeEnd()
+ * @method $this withStartedTimeEnd($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */

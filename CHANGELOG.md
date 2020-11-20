@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.653 - 2020-11-20
+- Support ListExecutions with filter functionality.
+
+
 ## 1.8.652 - 2020-11-20
 - Public beta version.
 - Add Api Overseas.
