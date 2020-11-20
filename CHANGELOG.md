@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.652 - 2020-11-20
+- Public beta version.
+- Add Api Overseas.
+
+
 ## 1.8.651 - 2020-11-20
 - Add a new interface for asynchronous image translation.
 
