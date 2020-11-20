@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTitleDiagnose getTitleDiagnose(array $options = [])
  * @method GetTitleGenerate getTitleGenerate(array $options = [])
  * @method GetTitleIntelligence getTitleIntelligence(array $options = [])
+ * @method OpenAlimtService openAlimtService(array $options = [])
  * @method Translate translate(array $options = [])
  * @method TranslateCertificate translateCertificate(array $options = [])
  * @method TranslateECommerce translateECommerce(array $options = [])
@@ -606,6 +607,16 @@ class GetTitleIntelligence extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class OpenAlimtService extends Rpc
+{
 }
 
 /**

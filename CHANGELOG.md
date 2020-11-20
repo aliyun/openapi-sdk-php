@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.651 - 2020-11-20
+- Add a new interface for asynchronous image translation.
+
+
 ## 1.8.650 - 2020-11-20
 - Update DetectFace.
 - Update RecognizeFace.
