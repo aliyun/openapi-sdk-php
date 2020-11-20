@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.650 - 2020-11-20
+- Update DetectFace.
+- Update RecognizeFace.
+
+
 ## 1.8.649 - 2020-11-19
 - Generated 2020-07-02 for `scsp`.
 
