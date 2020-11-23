@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.655 - 2020-11-23
+- Supported multiple Language.
+
+
 ## 1.8.654 - 2020-11-23
 - Add LivenessDetect API.
 
