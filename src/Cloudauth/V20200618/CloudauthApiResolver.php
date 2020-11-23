@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeSmartVerify describeSmartVerify(array $options = [])
+ * @method ElementSmartVerify elementSmartVerify(array $options = [])
  * @method InitSmartVerify initSmartVerify(array $options = [])
  */
 class CloudauthApiResolver extends ApiResolver
@@ -56,6 +57,124 @@ class DescribeSmartVerify extends Rpc
     {
         $this->data['CertifyId'] = $value;
         $this->options['form_params']['CertifyId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCertFile()
+ * @method string getCertName()
+ * @method string getMode()
+ * @method string getCertNo()
+ * @method string getOuterOrderNo()
+ * @method string getCertUrl()
+ * @method string getCertType()
+ * @method string getSceneId()
+ */
+class ElementSmartVerify extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertFile($value)
+    {
+        $this->data['CertFile'] = $value;
+        $this->options['form_params']['CertFile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertName($value)
+    {
+        $this->data['CertName'] = $value;
+        $this->options['form_params']['CertName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertNo($value)
+    {
+        $this->data['CertNo'] = $value;
+        $this->options['form_params']['CertNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOuterOrderNo($value)
+    {
+        $this->data['OuterOrderNo'] = $value;
+        $this->options['form_params']['OuterOrderNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertUrl($value)
+    {
+        $this->data['CertUrl'] = $value;
+        $this->options['form_params']['CertUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertType($value)
+    {
+        $this->data['CertType'] = $value;
+        $this->options['form_params']['CertType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['form_params']['SceneId'] = $value;
 
         return $this;
     }

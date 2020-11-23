@@ -9,11 +9,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CompareFaceVerify compareFaceVerify(array $options = [])
  * @method ContrastFaceVerify contrastFaceVerify(array $options = [])
  * @method CreateAuthKey createAuthKey(array $options = [])
+ * @method CreateFaceConfig createFaceConfig(array $options = [])
  * @method CreateRPSDK createRPSDK(array $options = [])
  * @method CreateVerifySDK createVerifySDK(array $options = [])
  * @method CreateVerifySetting createVerifySetting(array $options = [])
  * @method DescribeAppInfo describeAppInfo(array $options = [])
  * @method DescribeDeviceInfo describeDeviceInfo(array $options = [])
+ * @method DescribeFaceConfig describeFaceConfig(array $options = [])
  * @method DescribeFaceUsage describeFaceUsage(array $options = [])
  * @method DescribeFaceVerify describeFaceVerify(array $options = [])
  * @method DescribeOssUploadToken describeOssUploadToken(array $options = [])
@@ -34,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method LivenessFaceVerify livenessFaceVerify(array $options = [])
  * @method ModifyDeviceInfo modifyDeviceInfo(array $options = [])
  * @method UpdateAppPackage updateAppPackage(array $options = [])
+ * @method UpdateFaceConfig updateFaceConfig(array $options = [])
  * @method UpdateVerifySetting updateVerifySetting(array $options = [])
  * @method VerifyDevice verifyDevice(array $options = [])
  * @method VerifyMaterial verifyMaterial(array $options = [])
@@ -561,6 +564,20 @@ class CreateAuthKey extends Rpc
 }
 
 /**
+ * @method string getBizName()
+ * @method $this withBizName($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class CreateFaceConfig extends Rpc
+{
+}
+
+/**
  * @method string getAppUrl()
  * @method $this withAppUrl($value)
  * @method string getPlatform()
@@ -645,6 +662,16 @@ class DescribeAppInfo extends Rpc
  * @method $this withExpiredEndDay($value)
  */
 class DescribeDeviceInfo extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeFaceConfig extends Rpc
 {
 }
 
@@ -1205,6 +1232,20 @@ class ModifyDeviceInfo extends Rpc
  * @method $this withId($value)
  */
 class UpdateAppPackage extends Rpc
+{
+}
+
+/**
+ * @method string getBizName()
+ * @method $this withBizName($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class UpdateFaceConfig extends Rpc
 {
 }
 

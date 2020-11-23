@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.654 - 2020-11-23
+- Add LivenessDetect API.
+
+
 ## 1.8.653 - 2020-11-20
 - Support ListExecutions with filter functionality.
 
