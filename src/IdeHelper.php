@@ -96,6 +96,7 @@ namespace AlibabaCloud;
  * @method static HBase\HBase hBase()
  * @method static HPC\HPC hPC()
  * @method static Hiknoengine\Hiknoengine hiknoengine()
+ * @method static Hitsdb\Hitsdb hitsdb()
  * @method static Hsm\Hsm hsm()
  * @method static Httpdns\Httpdns httpdns()
  * @method static IDST\IDST iDST()
