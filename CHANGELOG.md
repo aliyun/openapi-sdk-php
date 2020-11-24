@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.659 - 2020-11-24
+- Create lindorm Open api.
+
+
 ## 1.8.658 - 2020-11-24
 - Create lindorm Open api.
 
