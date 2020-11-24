@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.657 - 2020-11-24
+- Update SearchFace.
+
+
 ## 1.8.656 - 2020-11-24
 - Generated 2020-01-01 for `ddoscoo`.
 

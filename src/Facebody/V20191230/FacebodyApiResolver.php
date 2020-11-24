@@ -1315,6 +1315,8 @@ class RecognizePublicFace extends Rpc
 }
 
 /**
+ * @method string getDbNames()
+ * @method $this withDbNames($value)
  * @method string getDbName()
  * @method string getImageUrl()
  * @method string getLimit()
