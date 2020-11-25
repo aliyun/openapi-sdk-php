@@ -154,7 +154,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetReqAuthConfig setReqAuthConfig(array $options = [])
  * @method SetReqHeaderConfig setReqHeaderConfig(array $options = [])
  * @method SetSourceHostConfig setSourceHostConfig(array $options = [])
- * @method SetVideoSeekConfig setVideoSeekConfig(array $options = [])
  * @method SetWaitingRoomConfig setWaitingRoomConfig(array $options = [])
  * @method StartCdnDomain startCdnDomain(array $options = [])
  * @method StopCdnDomain stopCdnDomain(array $options = [])
@@ -1163,8 +1162,6 @@ class DescribeDomainPathData extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
@@ -1645,16 +1642,14 @@ class DescribeDomainUsageData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeDomainUvData extends Rpc
 {
@@ -1974,17 +1969,18 @@ class DescribeUserUsageDetailDataExportTask extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
  * @method string getAvailable()
  * @method $this withAvailable($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeUserVipsByDomain extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2636,20 +2632,6 @@ class SetReqHeaderConfig extends Rpc
  * @method $this withBackSrcDomain($value)
  */
 class SetSourceHostConfig extends Rpc
-{
-}
-
-/**
- * @method string getEnable()
- * @method $this withEnable($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getConfigId()
- * @method $this withConfigId($value)
- */
-class SetVideoSeekConfig extends Rpc
 {
 }
 

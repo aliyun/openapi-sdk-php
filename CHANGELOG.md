@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.663 - 2020-11-25
+- Update SetVideoSeekConfig.
+
+
 ## 1.8.662 - 2020-11-25
 - Add extension field for image translation.
 
