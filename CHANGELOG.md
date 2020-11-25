@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.662 - 2020-11-25
+- Add extension field for image translation.
+
+
 ## 1.8.661 - 2020-11-24
 - Create TSDB Open api.
 
