@@ -20,17 +20,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRepository deleteRepository(array $options = [])
  * @method DeleteRepositoryGroup deleteRepositoryGroup(array $options = [])
  * @method DeleteRepositoryMember deleteRepositoryMember(array $options = [])
+ * @method DeleteRepositoryTag deleteRepositoryTag(array $options = [])
  * @method GetBranchInfo getBranchInfo(array $options = [])
  * @method GetCodeupOrganization getCodeupOrganization(array $options = [])
  * @method GetFileBlobs getFileBlobs(array $options = [])
  * @method GetGroupDetail getGroupDetail(array $options = [])
  * @method GetProjectMember getProjectMember(array $options = [])
  * @method GetRepositoryInfo getRepositoryInfo(array $options = [])
+ * @method GetRepositoryTag getRepositoryTag(array $options = [])
  * @method ListGroupMember listGroupMember(array $options = [])
  * @method ListGroupRepositories listGroupRepositories(array $options = [])
  * @method ListGroups listGroups(array $options = [])
  * @method ListRepositoryBranches listRepositoryBranches(array $options = [])
  * @method ListRepositoryMember listRepositoryMember(array $options = [])
+ * @method ListRepositoryTags listRepositoryTags(array $options = [])
  * @method ListRepositoryTree listRepositoryTree(array $options = [])
  * @method MergeMergeRequest mergeMergeRequest(array $options = [])
  * @method UpdateFile updateFile(array $options = [])
@@ -1017,6 +1020,49 @@ class DeleteRepositoryMember extends Roa
 
 /**
  * @method string getOrganizationId()
+ * @method string getTagName()
+ * @method $this withTagName($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class DeleteRepositoryTag extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/tags/[TagName]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
  * @method string getSubUserId()
  * @method string getAccessToken()
  * @method string getProjectId()
@@ -1391,6 +1437,46 @@ class GetRepositoryInfo extends Roa
     {
         $this->data['Identity'] = $value;
         $this->options['query']['Identity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getTagName()
+ * @method $this withTagName($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetRepositoryTag extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/tags/[TagName]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
 
         return $this;
     }
@@ -1873,6 +1959,114 @@ class ListRepositoryMember extends Roa
     {
         $this->data['AccessToken'] = $value;
         $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccessToken()
+ * @method string getShowSignature()
+ * @method string getSort()
+ * @method string getOrganizationId()
+ * @method string getSearch()
+ * @method string getPageSize()
+ * @method string getPage()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ListRepositoryTags extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/repository/tags';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShowSignature($value)
+    {
+        $this->data['ShowSignature'] = $value;
+        $this->options['query']['ShowSignature'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSort($value)
+    {
+        $this->data['Sort'] = $value;
+        $this->options['query']['Sort'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearch($value)
+    {
+        $this->data['Search'] = $value;
+        $this->options['query']['Search'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
 
         return $this;
     }

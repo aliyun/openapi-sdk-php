@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.665 - 2020-11-26
+- Add tags api, include GetRepositoryTag, ListRepositoryTags, DeleteRepositoryTag.
+
+
 ## 1.8.664 - 2020-11-25
 - Update DescribeScdnDomainCertificateInfo.
 
