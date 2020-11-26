@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.667 - 2020-11-26
+- Generated 2020-07-06, 2017-12-04 for `Actiontrail`.
+
+
 ## 1.8.666 - 2020-11-26
 - Generated 2020-07-06 for `Actiontrail`.
 
