@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.668 - 2020-11-26
+- ContrastFaceVerify Support Video.
+
+
 ## 1.8.667 - 2020-11-26
 - Generated 2020-07-06, 2017-12-04 for `Actiontrail`.
 

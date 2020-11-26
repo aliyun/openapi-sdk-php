@@ -343,6 +343,7 @@ class CompareFaceVerify extends Rpc
  * @method string getCertName()
  * @method string getIp()
  * @method string getMobile()
+ * @method string getFaceContrastFile()
  * @method string getSceneId()
  * @method string getOssBucketName()
  */
@@ -514,6 +515,19 @@ class ContrastFaceVerify extends Rpc
     {
         $this->data['Mobile'] = $value;
         $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceContrastFile($value)
+    {
+        $this->data['FaceContrastFile'] = $value;
+        $this->options['form_params']['FaceContrastFile'] = $value;
 
         return $this;
     }
