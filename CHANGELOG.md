@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.666 - 2020-11-26
+- Generated 2020-07-06 for `Actiontrail`.
+
+
 ## 1.8.665 - 2020-11-26
 - Add tags api, include GetRepositoryTag, ListRepositoryTags, DeleteRepositoryTag.
 
