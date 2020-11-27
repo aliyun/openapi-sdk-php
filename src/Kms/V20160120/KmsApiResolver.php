@@ -10,15 +10,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AsymmetricSign asymmetricSign(array $options = [])
  * @method AsymmetricVerify asymmetricVerify(array $options = [])
  * @method CancelKeyDeletion cancelKeyDeletion(array $options = [])
+ * @method CertificatePrivateKeyDecrypt certificatePrivateKeyDecrypt(array $options = [])
+ * @method CertificatePrivateKeySign certificatePrivateKeySign(array $options = [])
+ * @method CertificatePublicKeyEncrypt certificatePublicKeyEncrypt(array $options = [])
+ * @method CertificatePublicKeyVerify certificatePublicKeyVerify(array $options = [])
  * @method CreateAlias createAlias(array $options = [])
+ * @method CreateCertificate createCertificate(array $options = [])
  * @method CreateKey createKey(array $options = [])
  * @method CreateKeyVersion createKeyVersion(array $options = [])
  * @method CreateSecret createSecret(array $options = [])
  * @method Decrypt decrypt(array $options = [])
  * @method DeleteAlias deleteAlias(array $options = [])
+ * @method DeleteCertificate deleteCertificate(array $options = [])
  * @method DeleteKeyMaterial deleteKeyMaterial(array $options = [])
  * @method DeleteSecret deleteSecret(array $options = [])
  * @method DescribeAccountKmsStatus describeAccountKmsStatus(array $options = [])
+ * @method DescribeCertificate describeCertificate(array $options = [])
  * @method DescribeKey describeKey(array $options = [])
  * @method DescribeKeyVersion describeKeyVersion(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
@@ -27,17 +34,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableKey disableKey(array $options = [])
  * @method EnableKey enableKey(array $options = [])
  * @method Encrypt encrypt(array $options = [])
+ * @method ExportCertificate exportCertificate(array $options = [])
  * @method ExportDataKey exportDataKey(array $options = [])
  * @method GenerateAndExportDataKey generateAndExportDataKey(array $options = [])
  * @method GenerateDataKey generateDataKey(array $options = [])
  * @method GenerateDataKeyWithoutPlaintext generateDataKeyWithoutPlaintext(array $options = [])
+ * @method GetCertificate getCertificate(array $options = [])
  * @method GetParametersForImport getParametersForImport(array $options = [])
  * @method GetPublicKey getPublicKey(array $options = [])
  * @method GetRandomPassword getRandomPassword(array $options = [])
  * @method GetSecretValue getSecretValue(array $options = [])
+ * @method ImportCertificate importCertificate(array $options = [])
+ * @method ImportEncryptionCertificate importEncryptionCertificate(array $options = [])
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
  * @method ListAliases listAliases(array $options = [])
  * @method ListAliasesByKeyId listAliasesByKeyId(array $options = [])
+ * @method ListCertificates listCertificates(array $options = [])
  * @method ListKeys listKeys(array $options = [])
  * @method ListKeyVersions listKeyVersions(array $options = [])
  * @method ListResourceTags listResourceTags(array $options = [])
@@ -51,10 +63,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method TagResource tagResource(array $options = [])
  * @method UntagResource untagResource(array $options = [])
  * @method UpdateAlias updateAlias(array $options = [])
+ * @method UpdateCertificateStatus updateCertificateStatus(array $options = [])
  * @method UpdateKeyDescription updateKeyDescription(array $options = [])
  * @method UpdateRotationPolicy updateRotationPolicy(array $options = [])
  * @method UpdateSecret updateSecret(array $options = [])
  * @method UpdateSecretVersionStage updateSecretVersionStage(array $options = [])
+ * @method UploadCertificate uploadCertificate(array $options = [])
  */
 class KmsApiResolver extends ApiResolver
 {
@@ -75,7 +89,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     protected $scheme = 'https';
 
     /** @var string */
-    public $serviceCode = 'kms';
+    public $serviceCode = 'kms-service';
 }
 
 /**
@@ -145,12 +159,80 @@ class CancelKeyDeletion extends Rpc
 }
 
 /**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ * @method string getCiphertextBlob()
+ * @method $this withCiphertextBlob($value)
+ */
+class CertificatePrivateKeyDecrypt extends Rpc
+{
+}
+
+/**
+ * @method string getMessageType()
+ * @method $this withMessageType($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class CertificatePrivateKeySign extends Rpc
+{
+}
+
+/**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getPlaintext()
+ * @method $this withPlaintext($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class CertificatePublicKeyEncrypt extends Rpc
+{
+}
+
+/**
+ * @method string getSignatureValue()
+ * @method $this withSignatureValue($value)
+ * @method string getMessageType()
+ * @method $this withMessageType($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class CertificatePublicKeyVerify extends Rpc
+{
+}
+
+/**
  * @method string getAliasName()
  * @method $this withAliasName($value)
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
 class CreateAlias extends Rpc
+{
+}
+
+/**
+ * @method string getProtectionLevel()
+ * @method $this withProtectionLevel($value)
+ * @method string getSubject()
+ * @method $this withSubject($value)
+ * @method string getSubjectAlternativeNames()
+ * @method $this withSubjectAlternativeNames($value)
+ * @method string getKeySpec()
+ * @method $this withKeySpec($value)
+ */
+class CreateCertificate extends Rpc
 {
 }
 
@@ -221,6 +303,14 @@ class DeleteAlias extends Rpc
 }
 
 /**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ */
+class DeleteCertificate extends Rpc
+{
+}
+
+/**
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
@@ -241,6 +331,14 @@ class DeleteSecret extends Rpc
 }
 
 class DescribeAccountKmsStatus extends Rpc
+{
+}
+
+/**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ */
+class DescribeCertificate extends Rpc
 {
 }
 
@@ -309,6 +407,18 @@ class Encrypt extends Rpc
 }
 
 /**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getPassphrase()
+ * @method $this withPassphrase($value)
+ * @method string getExportFormat()
+ * @method $this withExportFormat($value)
+ */
+class ExportCertificate extends Rpc
+{
+}
+
+/**
  * @method string getEncryptionContext()
  * @method $this withEncryptionContext($value)
  * @method string getWrappingAlgorithm()
@@ -373,6 +483,14 @@ class GenerateDataKeyWithoutPlaintext extends Rpc
 }
 
 /**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ */
+class GetCertificate extends Rpc
+{
+}
+
+/**
  * @method string getKeyId()
  * @method $this withKeyId($value)
  * @method string getWrappingAlgorithm()
@@ -427,6 +545,36 @@ class GetSecretValue extends Rpc
 }
 
 /**
+ * @method string getPKCS12Blob()
+ * @method $this withPKCS12Blob($value)
+ * @method string getPassphrase()
+ * @method $this withPassphrase($value)
+ */
+class ImportCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getAsymmetricAlgorithm()
+ * @method $this withAsymmetricAlgorithm($value)
+ * @method string getSymmetricAlgorithm()
+ * @method $this withSymmetricAlgorithm($value)
+ * @method string getEncryptedPrivateKey()
+ * @method $this withEncryptedPrivateKey($value)
+ * @method string getEncryptedSymmetricKey()
+ * @method $this withEncryptedSymmetricKey($value)
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getCertificate()
+ * @method $this withCertificate($value)
+ * @method string getCertificateChain()
+ * @method $this withCertificateChain($value)
+ */
+class ImportEncryptionCertificate extends Rpc
+{
+}
+
+/**
  * @method string getImportToken()
  * @method $this withImportToken($value)
  * @method string getEncryptedKeyMaterial()
@@ -459,6 +607,22 @@ class ListAliases extends Rpc
  * @method $this withPageNumber($value)
  */
 class ListAliasesByKeyId extends Rpc
+{
+}
+
+/**
+ * @method string getSubject()
+ * @method $this withSubject($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getIssuer()
+ * @method $this withIssuer($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListCertificates extends Rpc
 {
 }
 
@@ -581,6 +745,8 @@ class ScheduleKeyDeletion extends Rpc
 }
 
 /**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
  * @method string getKeyId()
  * @method $this withKeyId($value)
  * @method string getSecretName()
@@ -593,6 +759,8 @@ class TagResource extends Rpc
 }
 
 /**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
  * @method string getTagKeys()
  * @method $this withTagKeys($value)
  * @method string getKeyId()
@@ -611,6 +779,16 @@ class UntagResource extends Rpc
  * @method $this withKeyId($value)
  */
 class UpdateAlias extends Rpc
+{
+}
+
+/**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateCertificateStatus extends Rpc
 {
 }
 
@@ -657,5 +835,17 @@ class UpdateSecret extends Rpc
  * @method $this withSecretName($value)
  */
 class UpdateSecretVersionStage extends Rpc
+{
+}
+
+/**
+ * @method string getCertificateId()
+ * @method $this withCertificateId($value)
+ * @method string getCertificate()
+ * @method $this withCertificate($value)
+ * @method string getCertificateChain()
+ * @method $this withCertificateChain($value)
+ */
+class UploadCertificate extends Rpc
 {
 }

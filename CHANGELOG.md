@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.670 - 2020-11-27
+- Add Certificate Manager Api.
+
+
 ## 1.8.669 - 2020-11-27
 - Support taskList.
 
