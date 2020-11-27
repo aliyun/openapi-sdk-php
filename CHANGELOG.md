@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.669 - 2020-11-27
+- Support taskList.
+
+
 ## 1.8.668 - 2020-11-26
 - ContrastFaceVerify Support Video.
 
