@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.672 - 2020-11-27
+- Supported all language sdk.
+- Fixed some bugs for polardbx.
+
+
 ## 1.8.671 - 2020-11-27
 - Generated 2018-01-11 for `rtc`.
 
