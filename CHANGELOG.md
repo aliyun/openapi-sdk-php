@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.671 - 2020-11-27
+- Generated 2018-01-11 for `rtc`.
+
+
 ## 1.8.670 - 2020-11-27
 - Add Certificate Manager Api.
 

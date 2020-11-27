@@ -39,6 +39,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRtcPeakChannelCntData describeRtcPeakChannelCntData(array $options = [])
  * @method DescribeRtcPeakUserCntData describeRtcPeakUserCntData(array $options = [])
  * @method DescribeRtcQualityMetric describeRtcQualityMetric(array $options = [])
+ * @method DescribeRtcScale describeRtcScale(array $options = [])
+ * @method DescribeRtcScaleDetail describeRtcScaleDetail(array $options = [])
  * @method DescribeRtcUserCntData describeRtcUserCntData(array $options = [])
  * @method DescribeRtcUserEvents describeRtcUserEvents(array $options = [])
  * @method DescribeRtcUserList describeRtcUserList(array $options = [])
@@ -916,6 +918,38 @@ class DescribeRtcQualityMetric extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeRtcScale extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeRtcScaleDetail extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getServiceArea()
  * @method $this withServiceArea($value)
  * @method string getShowLog()
@@ -1277,36 +1311,43 @@ class SetChannelProperty extends Rpc
  * @method string getPayloadType()
  * @method $this withPayloadType($value)
  * @method array getUserPanes()
- * @method string getRtpExtInfo()
- * @method $this withRtpExtInfo($value)
  * @method string getBackgroundColor()
  * @method $this withBackgroundColor($value)
- * @method string getCropMode()
- * @method $this withCropMode($value)
  * @method string getReportVad()
  * @method $this withReportVad($value)
- * @method string getTaskProfile()
- * @method $this withTaskProfile($value)
- * @method array getLayoutIds()
+ * @method string getSourceType()
+ * @method $this withSourceType($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method array getClockWidgets()
  * @method string getShowLog()
  * @method $this withShowLog($value)
- * @method string getStreamURL()
- * @method $this withStreamURL($value)
  * @method string getVadInterval()
  * @method $this withVadInterval($value)
  * @method array getWatermarks()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getMediaEncode()
+ * @method $this withMediaEncode($value)
+ * @method string getRtpExtInfo()
+ * @method $this withRtpExtInfo($value)
+ * @method string getCropMode()
+ * @method $this withCropMode($value)
+ * @method string getTaskProfile()
+ * @method $this withTaskProfile($value)
+ * @method array getLayoutIds()
+ * @method string getStreamURL()
+ * @method $this withStreamURL($value)
+ * @method string getStreamType()
+ * @method $this withStreamType($value)
  * @method array getSubSpecUsers()
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method array getBackgrounds()
  * @method string getTimeStampRef()
  * @method $this withTimeStampRef($value)
- * @method string getMediaEncode()
- * @method $this withMediaEncode($value)
+ * @method string getMixMode()
+ * @method $this withMixMode($value)
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
@@ -1383,15 +1424,32 @@ class StartMPUTask extends Rpc
     }
 
     /**
-     * @param array $layoutIds
+     * @param array $clockWidgets
      *
      * @return $this
      */
-	public function withLayoutIds(array $layoutIds)
+	public function withClockWidgets(array $clockWidgets)
 	{
-	    $this->data['LayoutIds'] = $layoutIds;
-		foreach ($layoutIds as $i => $iValue) {
-			$this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
+	    $this->data['ClockWidgets'] = $clockWidgets;
+		foreach ($clockWidgets as $depth1 => $depth1Value) {
+			if(isset($depth1Value['X'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.X'] = $depth1Value['X'];
+			}
+			if(isset($depth1Value['Y'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.Y'] = $depth1Value['Y'];
+			}
+			if(isset($depth1Value['FontType'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontType'] = $depth1Value['FontType'];
+			}
+			if(isset($depth1Value['FontSize'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontSize'] = $depth1Value['FontSize'];
+			}
+			if(isset($depth1Value['FontColor'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontColor'] = $depth1Value['FontColor'];
+			}
+			if(isset($depth1Value['ZOrder'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
+			}
 		}
 
 		return $this;
@@ -1430,6 +1488,21 @@ class StartMPUTask extends Rpc
 			if(isset($depth1Value['ZOrder'])){
 				$this->options['query']['Watermarks.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
 			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $layoutIds
+     *
+     * @return $this
+     */
+	public function withLayoutIds(array $layoutIds)
+	{
+	    $this->data['LayoutIds'] = $layoutIds;
+		foreach ($layoutIds as $i => $iValue) {
+			$this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -1705,6 +1778,7 @@ class UpdateChannel extends Rpc
  * @method array getLayoutIds()
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method array getClockWidgets()
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method array getWatermarks()
@@ -1796,6 +1870,38 @@ class UpdateMPULayout extends Rpc
 	    $this->data['LayoutIds'] = $layoutIds;
 		foreach ($layoutIds as $i => $iValue) {
 			$this->options['query']['LayoutIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $clockWidgets
+     *
+     * @return $this
+     */
+	public function withClockWidgets(array $clockWidgets)
+	{
+	    $this->data['ClockWidgets'] = $clockWidgets;
+		foreach ($clockWidgets as $depth1 => $depth1Value) {
+			if(isset($depth1Value['X'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.X'] = $depth1Value['X'];
+			}
+			if(isset($depth1Value['Y'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.Y'] = $depth1Value['Y'];
+			}
+			if(isset($depth1Value['FontType'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontType'] = $depth1Value['FontType'];
+			}
+			if(isset($depth1Value['FontSize'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontSize'] = $depth1Value['FontSize'];
+			}
+			if(isset($depth1Value['FontColor'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontColor'] = $depth1Value['FontColor'];
+			}
+			if(isset($depth1Value['ZOrder'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.ZOrder'] = $depth1Value['ZOrder'];
+			}
 		}
 
 		return $this;
