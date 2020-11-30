@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.676 - 2020-11-30
+- Update OpenDcdnService.
+
+
 ## 1.8.675 - 2020-11-30
 - Supported all language sdk.
 - Fixed some bugs for polardbx.

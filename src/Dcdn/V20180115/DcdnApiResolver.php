@@ -80,6 +80,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnUserResourcePackage describeDcdnUserResourcePackage(array $options = [])
  * @method DescribeDcdnUserTags describeDcdnUserTags(array $options = [])
  * @method DescribeDcdnVerifyContent describeDcdnVerifyContent(array $options = [])
+ * @method DescribeDcdnWafDomain describeDcdnWafDomain(array $options = [])
  * @method DescribeUserDcdnIpaStatus describeUserDcdnIpaStatus(array $options = [])
  * @method DescribeUserDcdnStatus describeUserDcdnStatus(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
@@ -146,6 +147,8 @@ class AddDcdnDomain extends Rpc
  * @method $this withSources($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getScope()
@@ -699,16 +702,14 @@ class DescribeDcdnDomainOriginTrafficData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeDcdnDomainPvData extends Rpc
 {
@@ -994,16 +995,14 @@ class DescribeDcdnDomainTrafficData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeDcdnDomainUvData extends Rpc
 {
@@ -1315,6 +1314,7 @@ class DescribeDcdnUserBillType extends Rpc
  * @method $this withChangeEndTime($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getFuncFilter()
  * @method $this withFuncFilter($value)
  * @method string getDomainName()
@@ -1332,6 +1332,26 @@ class DescribeDcdnUserBillType extends Rpc
  */
 class DescribeDcdnUserDomains extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1369,6 +1389,16 @@ class DescribeDcdnUserTags extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDcdnVerifyContent extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnWafDomain extends Rpc
 {
 }
 
