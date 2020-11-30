@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.683 - 2020-11-30
+- Add OpenARMS api.
+
+
 ## 1.8.682 - 2020-11-30
 - Update SetVideoSeekConfig.
 

@@ -40,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPromClusters listPromClusters(array $options = [])
  * @method ListRetcodeApps listRetcodeApps(array $options = [])
  * @method ListTraceApps listTraceApps(array $options = [])
+ * @method OpenArmsService openArmsService(array $options = [])
  * @method QueryDataset queryDataset(array $options = [])
  * @method QueryMetric queryMetric(array $options = [])
  * @method QueryMetricByPage queryMetricByPage(array $options = [])
@@ -458,6 +459,16 @@ class ListRetcodeApps extends Rpc
 }
 
 class ListTraceApps extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class OpenArmsService extends Rpc
 {
 }
 
