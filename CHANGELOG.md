@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.681 - 2020-11-30
+- Update DescribeScdnDomainCertificateInfo.
+
+
 ## 1.8.680 - 2020-11-30
 - Update SetVideoSeekConfig.
 
