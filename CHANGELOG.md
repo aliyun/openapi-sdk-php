@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.684 - 2020-11-30
+- Add OpenARMS api.
+
+
 ## 1.8.683 - 2020-11-30
 - Add OpenARMS api.
 
