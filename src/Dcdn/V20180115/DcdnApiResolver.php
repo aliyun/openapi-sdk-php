@@ -84,6 +84,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserDcdnIpaStatus describeUserDcdnIpaStatus(array $options = [])
  * @method DescribeUserDcdnStatus describeUserDcdnStatus(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
+ * @method ModifyDcdnService modifyDcdnService(array $options = [])
+ * @method OpenDcdnService openDcdnService(array $options = [])
  * @method PreloadDcdnObjectCaches preloadDcdnObjectCaches(array $options = [])
  * @method PublishDcdnStagingConfigToProduction publishDcdnStagingConfigToProduction(array $options = [])
  * @method RefreshDcdnObjectCaches refreshDcdnObjectCaches(array $options = [])
@@ -1431,6 +1433,34 @@ class DescribeUserDcdnStatus extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifyDCdnDomainSchdmByProperty extends Rpc
+{
+}
+
+/**
+ * @method string getWebsocketBillType()
+ * @method $this withWebsocketBillType($value)
+ * @method string getBillType()
+ * @method $this withBillType($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDcdnService extends Rpc
+{
+}
+
+/**
+ * @method string getWebsocketBillType()
+ * @method $this withWebsocketBillType($value)
+ * @method string getBillType()
+ * @method $this withBillType($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class OpenDcdnService extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.677 - 2020-11-30
+- Update OpenDcdnService.
+
+
 ## 1.8.676 - 2020-11-30
 - Update OpenDcdnService.
 
