@@ -19,11 +19,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAlertRules deleteAlertRules(array $options = [])
  * @method DeleteRetcodeApp deleteRetcodeApp(array $options = [])
  * @method DeleteTraceApp deleteTraceApp(array $options = [])
+ * @method DescribeDispatchRule describeDispatchRule(array $options = [])
  * @method DescribeTraceLicenseKey describeTraceLicenseKey(array $options = [])
  * @method DescribeTraceLocation describeTraceLocation(array $options = [])
  * @method ExportPrometheusRules exportPrometheusRules(array $options = [])
  * @method GetAppApiByPage getAppApiByPage(array $options = [])
  * @method GetConsistencySnapshot getConsistencySnapshot(array $options = [])
+ * @method GetIntegrationToken getIntegrationToken(array $options = [])
  * @method GetMultipleTrace getMultipleTrace(array $options = [])
  * @method GetPrometheusApiToken getPrometheusApiToken(array $options = [])
  * @method GetRetcodeShareUrl getRetcodeShareUrl(array $options = [])
@@ -52,6 +54,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchTraceAppByPage searchTraceAppByPage(array $options = [])
  * @method SearchTraces searchTraces(array $options = [])
  * @method SearchTracesByPage searchTracesByPage(array $options = [])
+ * @method SendCustomIncidents sendCustomIncidents(array $options = [])
+ * @method SendMseIncident sendMseIncident(array $options = [])
  * @method SetRetcodeShareStatus setRetcodeShareStatus(array $options = [])
  * @method StartAlert startAlert(array $options = [])
  * @method StopAlert stopAlert(array $options = [])
@@ -247,6 +251,16 @@ class DeleteTraceApp extends Rpc
 {
 }
 
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class DescribeDispatchRule extends Rpc
+{
+}
+
 class DescribeTraceLicenseKey extends Rpc
 {
 }
@@ -296,6 +310,16 @@ class GetAppApiByPage extends Rpc
  * @method $this withProxyUserId($value)
  */
 class GetConsistencySnapshot extends Rpc
+{
+}
+
+/**
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ */
+class GetIntegrationToken extends Rpc
 {
 }
 
@@ -983,6 +1007,28 @@ class SearchTracesByPage extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getIncidents()
+ * @method $this withIncidents($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ */
+class SendCustomIncidents extends Rpc
+{
+}
+
+/**
+ * @method string getIncidents()
+ * @method $this withIncidents($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class SendMseIncident extends Rpc
+{
 }
 
 /**

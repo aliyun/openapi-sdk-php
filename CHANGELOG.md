@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.679 - 2020-11-30
+- Add OpenARMS api.
+
+
 ## 1.8.678 - 2020-11-30
 - Support autoPtovisioning whth DiskConfigs.
 
