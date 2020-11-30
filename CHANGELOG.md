@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.678 - 2020-11-30
+- Support autoPtovisioning whth DiskConfigs.
+
+
 ## 1.8.677 - 2020-11-30
 - Update OpenDcdnService.
 
