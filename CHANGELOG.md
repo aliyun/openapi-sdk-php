@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.675 - 2020-11-30
+- Supported all language sdk.
+- Fixed some bugs for polardbx.
+
+
 ## 1.8.674 - 2020-11-29
 - Support CPP and Go and PHP.
 
