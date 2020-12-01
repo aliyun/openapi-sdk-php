@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSurvey deleteSurvey(array $options = [])
  * @method DialEx dialEx(array $options = [])
  * @method Dialogue dialogue(array $options = [])
+ * @method DisableTrunkProviders disableTrunkProviders(array $options = [])
  * @method DownloadAllTypeRecording downloadAllTypeRecording(array $options = [])
  * @method DownloadCabRecording downloadCabRecording(array $options = [])
  * @method DownloadOriginalStatisticsReport downloadOriginalStatisticsReport(array $options = [])
@@ -70,11 +71,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTURNCredentials getTURNCredentials(array $options = [])
  * @method GetTURNServerList getTURNServerList(array $options = [])
  * @method GetUser getUser(array $options = [])
+ * @method GetUserByExtension getUserByExtension(array $options = [])
  * @method InflightTaskTimeout inflightTaskTimeout(array $options = [])
  * @method LaunchAppraise launchAppraise(array $options = [])
  * @method LaunchShortMessageAppraise launchShortMessageAppraise(array $options = [])
  * @method ListAgentDevices listAgentDevices(array $options = [])
  * @method ListAgentEvents listAgentEvents(array $options = [])
+ * @method ListAgentStateLogs listAgentStateLogs(array $options = [])
  * @method ListAgentStates listAgentStates(array $options = [])
  * @method ListAgentSummaryReports listAgentSummaryReports(array $options = [])
  * @method ListAgentSummaryReportsByInterval listAgentSummaryReportsByInterval(array $options = [])
@@ -109,6 +112,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSkillGroupSummaryReportsByInterval listSkillGroupSummaryReportsByInterval(array $options = [])
  * @method ListSkillGroupSummaryReportsSinceMidnight listSkillGroupSummaryReportsSinceMidnight(array $options = [])
  * @method ListSurveys listSurveys(array $options = [])
+ * @method ListTransferableSkillGroups listTransferableSkillGroups(array $options = [])
+ * @method ListTrunkProviders listTrunkProviders(array $options = [])
+ * @method ListTrunksOfSkillGroup listTrunksOfSkillGroup(array $options = [])
  * @method ListUnreachableContacts listUnreachableContacts(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method ListUsersOfSkillGroup listUsersOfSkillGroup(array $options = [])
@@ -117,6 +123,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyCabInstance modifyCabInstance(array $options = [])
  * @method ModifyPhoneNumber modifyPhoneNumber(array $options = [])
  * @method ModifyPhoneTags modifyPhoneTags(array $options = [])
+ * @method ModifyPrimaryTrunksOfSkillGroup modifyPrimaryTrunksOfSkillGroup(array $options = [])
  * @method ModifyPrivacyNumberCallDetail modifyPrivacyNumberCallDetail(array $options = [])
  * @method ModifyScenario modifyScenario(array $options = [])
  * @method ModifySkillGroup modifySkillGroup(array $options = [])
@@ -274,6 +281,8 @@ class AddPhoneNumber extends Rpc
  * @method array getPhoneNumberList()
  * @method string getServiceTag()
  * @method $this withServiceTag($value)
+ * @method string getSipTag()
+ * @method $this withSipTag($value)
  * @method string getRegionNameCity()
  * @method $this withRegionNameCity($value)
  */
@@ -1135,6 +1144,28 @@ class Dialogue extends Rpc
 }
 
 /**
+ * @method array getProviderName()
+ */
+class DisableTrunkProviders extends Rpc
+{
+
+    /**
+     * @param array $providerName
+     *
+     * @return $this
+     */
+	public function withProviderName(array $providerName)
+	{
+	    $this->data['ProviderName'] = $providerName;
+		foreach ($providerName as $i => $iValue) {
+			$this->options['query']['ProviderName.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getContactId()
  * @method $this withContactId($value)
  * @method string getChannel()
@@ -1549,6 +1580,16 @@ class GetUser extends Rpc
 }
 
 /**
+ * @method string getExtension()
+ * @method $this withExtension($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetUserByExtension extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceOwnerId()
@@ -1642,6 +1683,24 @@ class ListAgentEvents extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getRamId()
+ * @method $this withRamId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListAgentStateLogs extends Rpc
+{
 }
 
 /**
@@ -2169,6 +2228,28 @@ class ListSurveys extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListTransferableSkillGroups extends Rpc
+{
+}
+
+class ListTrunkProviders extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ */
+class ListTrunksOfSkillGroup extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
@@ -2294,6 +2375,32 @@ class ModifyPhoneTags extends Rpc
 	    $this->data['SkillGroupIdList'] = $skillGroupIdList;
 		foreach ($skillGroupIdList as $i => $iValue) {
 			$this->options['query']['SkillGroupIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getPrimaryProviderName()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ */
+class ModifyPrimaryTrunksOfSkillGroup extends Rpc
+{
+
+    /**
+     * @param array $primaryProviderName
+     *
+     * @return $this
+     */
+	public function withPrimaryProviderName(array $primaryProviderName)
+	{
+	    $this->data['PrimaryProviderName'] = $primaryProviderName;
+		foreach ($primaryProviderName as $i => $iValue) {
+			$this->options['query']['PrimaryProviderName.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -2755,6 +2862,8 @@ class RemoveUsersFromSkillGroup extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  */
 class RequestLoginInfo extends Rpc
 {
@@ -2763,9 +2872,25 @@ class RequestLoginInfo extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method array getRamIdList()
  */
 class ResetUserStatus extends Rpc
 {
+
+    /**
+     * @param array $ramIdList
+     *
+     * @return $this
+     */
+	public function withRamIdList(array $ramIdList)
+	{
+	    $this->data['RamIdList'] = $ramIdList;
+		foreach ($ramIdList as $i => $iValue) {
+			$this->options['query']['RamIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

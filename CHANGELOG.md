@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.686 - 2020-12-1
+- Fixed bugs for CCC.
+
+
 ## 1.8.685 - 2020-12-1
 - Supported Open Api.
 
