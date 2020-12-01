@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchInsertMembers batchInsertMembers(array $options = [])
  * @method CancelPipeline cancelPipeline(array $options = [])
  * @method CheckAliyunAccountExists checkAliyunAccountExists(array $options = [])
+ * @method CreateCommonGroup createCommonGroup(array $options = [])
  * @method CreateCredential createCredential(array $options = [])
  * @method CreateDevopsOrganization createDevopsOrganization(array $options = [])
  * @method CreateDevopsProject createDevopsProject(array $options = [])
@@ -15,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDevopsProjectTask createDevopsProjectTask(array $options = [])
  * @method CreatePipeline createPipeline(array $options = [])
  * @method CreateServiceConnection createServiceConnection(array $options = [])
+ * @method DeleteCommonGroup deleteCommonGroup(array $options = [])
  * @method DeleteDevopsOrganizationMembers deleteDevopsOrganizationMembers(array $options = [])
  * @method DeleteDevopsProject deleteDevopsProject(array $options = [])
  * @method DeleteDevopsProjectMembers deleteDevopsProjectMembers(array $options = [])
@@ -33,10 +35,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPipelineInstanceStatus getPipelineInstanceStatus(array $options = [])
  * @method GetPipelineLog getPipelineLog(array $options = [])
  * @method GetPipleineLatestInstanceStatus getPipleineLatestInstanceStatus(array $options = [])
+ * @method GetProjectOption getProjectOption(array $options = [])
+ * @method GetTaskDetailActivity getTaskDetailActivity(array $options = [])
+ * @method GetTaskDetailBase getTaskDetailBase(array $options = [])
+ * @method GetTaskListFilter getTaskListFilter(array $options = [])
  * @method GetUserByAliyunUid getUserByAliyunUid(array $options = [])
+ * @method GetUserName getUserName(array $options = [])
  * @method InsertDevopsUser insertDevopsUser(array $options = [])
  * @method InsertPipelineMember insertPipelineMember(array $options = [])
  * @method InsertProjectMembers insertProjectMembers(array $options = [])
+ * @method ListCommonGroup listCommonGroup(array $options = [])
  * @method ListCredentials listCredentials(array $options = [])
  * @method ListDevopsProjectSprints listDevopsProjectSprints(array $options = [])
  * @method ListDevopsProjectTaskFlow listDevopsProjectTaskFlow(array $options = [])
@@ -46,8 +54,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDevopsScenarioFieldConfig listDevopsScenarioFieldConfig(array $options = [])
  * @method ListPipelines listPipelines(array $options = [])
  * @method ListServiceConnections listServiceConnections(array $options = [])
+ * @method ListSmartGroup listSmartGroup(array $options = [])
  * @method ListUserOrganization listUserOrganization(array $options = [])
  * @method TransferPipelineOwner transferPipelineOwner(array $options = [])
+ * @method UpdateCommonGroup updateCommonGroup(array $options = [])
  * @method UpdateDevopsProject updateDevopsProject(array $options = [])
  * @method UpdateDevopsProjectSprint updateDevopsProjectSprint(array $options = [])
  * @method UpdateDevopsProjectTask updateDevopsProjectTask(array $options = [])
@@ -194,6 +204,82 @@ class CheckAliyunAccountExists extends Rpc
     {
         $this->data['UserPk'] = $value;
         $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSmartGroupId()
+ * @method string getName()
+ * @method string getDescription()
+ * @method string getProjectId()
+ * @method string getOrgId()
+ */
+class CreateCommonGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSmartGroupId($value)
+    {
+        $this->data['SmartGroupId'] = $value;
+        $this->options['form_params']['SmartGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
 
         return $this;
     }
@@ -783,6 +869,54 @@ class CreateServiceConnection extends Rpc
     {
         $this->data['UserPk'] = $value;
         $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectId()
+ * @method string getCommonGroupId()
+ * @method string getOrgId()
+ */
+class DeleteCommonGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommonGroupId($value)
+    {
+        $this->data['CommonGroupId'] = $value;
+        $this->options['form_params']['CommonGroupId'] = $value;
 
         return $this;
     }
@@ -1506,6 +1640,450 @@ class GetPipleineLatestInstanceStatus extends Rpc
 }
 
 /**
+ * @method string getQuery()
+ * @method string getType()
+ * @method string getProjectId()
+ * @method string getOrgId()
+ */
+class GetProjectOption extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQuery($value)
+    {
+        $this->data['Query'] = $value;
+        $this->options['form_params']['Query'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectId()
+ * @method string getOrgId()
+ * @method string getTaskId()
+ */
+class GetTaskDetailActivity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectId()
+ * @method string getOrgId()
+ * @method string getTaskId()
+ */
+class GetTaskDetailBase extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInvolveMembers()
+ * @method string getExecutorId()
+ * @method string getOrderCondition()
+ * @method string getSprintId()
+ * @method string getExtra()
+ * @method string getPageSize()
+ * @method string getScenarioFieldConfigId()
+ * @method string getIsDone()
+ * @method string getObjectType()
+ * @method string getProjectId()
+ * @method string getPageToken()
+ * @method string getOrder()
+ * @method string getTagId()
+ * @method string getTaskFlowStatusId()
+ * @method string getDueDateStart()
+ * @method string getCreatorId()
+ * @method string getPriority()
+ * @method string getDueDateEnd()
+ * @method string getOrgId()
+ * @method string getName()
+ */
+class GetTaskListFilter extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInvolveMembers($value)
+    {
+        $this->data['InvolveMembers'] = $value;
+        $this->options['form_params']['InvolveMembers'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExecutorId($value)
+    {
+        $this->data['ExecutorId'] = $value;
+        $this->options['form_params']['ExecutorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrderCondition($value)
+    {
+        $this->data['OrderCondition'] = $value;
+        $this->options['form_params']['OrderCondition'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSprintId($value)
+    {
+        $this->data['SprintId'] = $value;
+        $this->options['form_params']['SprintId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtra($value)
+    {
+        $this->data['Extra'] = $value;
+        $this->options['form_params']['Extra'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScenarioFieldConfigId($value)
+    {
+        $this->data['ScenarioFieldConfigId'] = $value;
+        $this->options['form_params']['ScenarioFieldConfigId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsDone($value)
+    {
+        $this->data['IsDone'] = $value;
+        $this->options['form_params']['IsDone'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withObjectType($value)
+    {
+        $this->data['ObjectType'] = $value;
+        $this->options['form_params']['ObjectType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageToken($value)
+    {
+        $this->data['PageToken'] = $value;
+        $this->options['form_params']['PageToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['form_params']['Order'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagId($value)
+    {
+        $this->data['TagId'] = $value;
+        $this->options['form_params']['TagId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskFlowStatusId($value)
+    {
+        $this->data['TaskFlowStatusId'] = $value;
+        $this->options['form_params']['TaskFlowStatusId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDueDateStart($value)
+    {
+        $this->data['DueDateStart'] = $value;
+        $this->options['form_params']['DueDateStart'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCreatorId($value)
+    {
+        $this->data['CreatorId'] = $value;
+        $this->options['form_params']['CreatorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPriority($value)
+    {
+        $this->data['Priority'] = $value;
+        $this->options['form_params']['Priority'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDueDateEnd($value)
+    {
+        $this->data['DueDateEnd'] = $value;
+        $this->options['form_params']['DueDateEnd'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getUserPk()
  * @method string getOrgId()
  */
@@ -1521,6 +2099,40 @@ class GetUserByAliyunUid extends Rpc
     {
         $this->data['UserPk'] = $value;
         $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserId()
+ * @method string getOrgId()
+ */
+class GetUserName extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
 
         return $this;
     }
@@ -1670,6 +2282,68 @@ class InsertProjectMembers extends Rpc
     {
         $this->data['Members'] = $value;
         $this->options['form_params']['Members'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAll()
+ * @method string getSmartGroupId()
+ * @method string getProjectId()
+ * @method string getOrgId()
+ */
+class ListCommonGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAll($value)
+    {
+        $this->data['All'] = $value;
+        $this->options['form_params']['All'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSmartGroupId($value)
+    {
+        $this->data['SmartGroupId'] = $value;
+        $this->options['form_params']['SmartGroupId'] = $value;
 
         return $this;
     }
@@ -2150,6 +2824,40 @@ class ListServiceConnections extends Rpc
 }
 
 /**
+ * @method string getProjectId()
+ * @method string getOrgId()
+ */
+class ListSmartGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRealPk()
  */
 class ListUserOrganization extends Rpc
@@ -2202,6 +2910,96 @@ class TransferPipelineOwner extends Rpc
     {
         $this->data['NewOwnerId'] = $value;
         $this->options['form_params']['NewOwnerId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDescription()
+ * @method string getCommonGroupId()
+ * @method string getOrgId()
+ * @method string getSmartGroupId()
+ * @method string getName()
+ * @method string getProjectId()
+ */
+class UpdateCommonGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommonGroupId($value)
+    {
+        $this->data['CommonGroupId'] = $value;
+        $this->options['form_params']['CommonGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSmartGroupId($value)
+    {
+        $this->data['SmartGroupId'] = $value;
+        $this->options['form_params']['SmartGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.687 - 2020-12-1
+- Add task api.
+
+
 ## 1.8.686 - 2020-12-1
 - Fixed bugs for CCC.
 
