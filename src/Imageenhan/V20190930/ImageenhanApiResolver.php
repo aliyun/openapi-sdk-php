@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssessExposure assessExposure(array $options = [])
  * @method AssessSharpness assessSharpness(array $options = [])
  * @method ChangeImageSize changeImageSize(array $options = [])
+ * @method ColorizeImage colorizeImage(array $options = [])
  * @method EnhanceImageColor enhanceImageColor(array $options = [])
  * @method ErasePerson erasePerson(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
@@ -146,6 +147,26 @@ class ChangeImageSize extends Rpc
     {
         $this->data['Height'] = $value;
         $this->options['form_params']['Height'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class ColorizeImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }

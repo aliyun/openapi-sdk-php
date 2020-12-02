@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.691 - 2020-12-2
+- Release ColorizeImage.
+
+
 ## 1.8.690 - 2020-12-2
 - Release MergeVideoFace EnhanceVideoQuality.
 
