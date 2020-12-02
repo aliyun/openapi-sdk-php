@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.693 - 2020-12-2
+- Support TemplateContent.
+
+
 ## 1.8.692 - 2020-12-2
 - Supported OpenAPI for SDK.
 

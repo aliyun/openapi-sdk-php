@@ -24,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetSecretParameter getSecretParameter(array $options = [])
  * @method GetSecretParameters getSecretParameters(array $options = [])
  * @method GetSecretParametersByPath getSecretParametersByPath(array $options = [])
+ * @method GetServiceSettings getServiceSettings(array $options = [])
  * @method GetTemplate getTemplate(array $options = [])
  * @method ListActions listActions(array $options = [])
  * @method ListExecutionLogs listExecutionLogs(array $options = [])
@@ -43,6 +44,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTemplateVersions listTemplateVersions(array $options = [])
  * @method NotifyExecution notifyExecution(array $options = [])
  * @method SearchInventory searchInventory(array $options = [])
+ * @method SetServiceSettings setServiceSettings(array $options = [])
  * @method StartExecution startExecution(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TriggerExecution triggerExecution(array $options = [])
@@ -284,6 +286,10 @@ class GetSecretParameters extends Rpc
  * @method $this withMaxResults($value)
  */
 class GetSecretParametersByPath extends Rpc
+{
+}
+
+class GetServiceSettings extends Rpc
 {
 }
 
@@ -700,6 +706,22 @@ class SearchInventory extends Rpc
 }
 
 /**
+ * @method string getDeliverySlsEnabled()
+ * @method $this withDeliverySlsEnabled($value)
+ * @method string getDeliveryOssKeyPrefix()
+ * @method $this withDeliveryOssKeyPrefix($value)
+ * @method string getDeliveryOssEnabled()
+ * @method $this withDeliveryOssEnabled($value)
+ * @method string getDeliverySlsProjectName()
+ * @method $this withDeliverySlsProjectName($value)
+ * @method string getDeliveryOssBucketName()
+ * @method $this withDeliveryOssBucketName($value)
+ */
+class SetServiceSettings extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getDescription()
@@ -716,6 +738,8 @@ class SearchInventory extends Rpc
  * @method $this withSafetyCheck($value)
  * @method string getTags()
  * @method $this withTags($value)
+ * @method string getTemplateContent()
+ * @method $this withTemplateContent($value)
  * @method string getParentExecutionId()
  * @method $this withParentExecutionId($value)
  * @method string getParameters()
