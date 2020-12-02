@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.689 - 2020-12-2
+- Update SegmentHead.
+
+
 ## 1.8.688 - 2020-12-1
 - Add task api.
 
