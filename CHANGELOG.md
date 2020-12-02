@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.694 - 2020-12-2
+- Update version.
+
+
 ## 1.8.693 - 2020-12-2
 - Support TemplateContent.
 

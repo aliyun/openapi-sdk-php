@@ -34,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeScriptVoiceConfig describeScriptVoiceConfig(array $options = [])
  * @method DescribeTagHitsSummary describeTagHitsSummary(array $options = [])
  * @method DescribeTTSConfig describeTTSConfig(array $options = [])
+ * @method DescribeTTSDemo describeTTSDemo(array $options = [])
  * @method Dialogue dialogue(array $options = [])
  * @method DownloadRecording downloadRecording(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
@@ -594,6 +595,24 @@ class DescribeTTSConfig extends Rpc
 }
 
 /**
+ * @method string getVoice()
+ * @method $this withVoice($value)
+ * @method string getVolume()
+ * @method $this withVolume($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getText()
+ * @method $this withText($value)
+ * @method string getSpeechRate()
+ * @method $this withSpeechRate($value)
+ */
+class DescribeTTSDemo extends Rpc
+{
+}
+
+/**
  * @method string getCallId()
  * @method $this withCallId($value)
  * @method string getInstanceOwnerId()
@@ -882,6 +901,8 @@ class ModifyBatchJobs extends Rpc
 }
 
 /**
+ * @method string getIsDrafted()
+ * @method $this withIsDrafted($value)
  * @method string getScriptId()
  * @method $this withScriptId($value)
  * @method string getInstanceId()
