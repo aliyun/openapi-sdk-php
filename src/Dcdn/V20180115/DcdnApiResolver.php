@@ -40,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnDomainMultiUsageData describeDcdnDomainMultiUsageData(array $options = [])
  * @method DescribeDcdnDomainOriginBpsData describeDcdnDomainOriginBpsData(array $options = [])
  * @method DescribeDcdnDomainOriginTrafficData describeDcdnDomainOriginTrafficData(array $options = [])
+ * @method DescribeDcdnDomainProperty describeDcdnDomainProperty(array $options = [])
  * @method DescribeDcdnDomainPvData describeDcdnDomainPvData(array $options = [])
  * @method DescribeDcdnDomainQpsData describeDcdnDomainQpsData(array $options = [])
  * @method DescribeDcdnDomainRealTimeBpsData describeDcdnDomainRealTimeBpsData(array $options = [])
@@ -704,6 +705,16 @@ class DescribeDcdnDomainOriginTrafficData extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnDomainProperty extends Rpc
+{
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getDomainName()
@@ -961,14 +972,12 @@ class DescribeDcdnDomainTopReferVisit extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getSortBy()
  * @method $this withSortBy($value)
  */
