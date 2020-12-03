@@ -673,14 +673,12 @@ class DescribeScdnDomainTopReferVisit extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getSortBy()
  * @method $this withSortBy($value)
  */
