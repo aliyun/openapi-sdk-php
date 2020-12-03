@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.697 - 2020-12-3
+- Support data retrieval of Ota module.
+- Added script management API,including CreateThingScript,UpdateThingScript,GetThingScript.
+- Update OTA API, including DeleteOTAModule,UpdateOTAModule,ListOTATaskByJob.
+- Add OTA API, ListOTAModuleVersionsByDevice.
+
+
 ## 1.8.696 - 2020-12-3
 - Update DetectLungNodule.
 
