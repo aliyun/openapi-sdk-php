@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.698 - 2020-12-3
+- Supported all language sdk.
+- Fixed some bugs for polardbx.
+
+
 ## 1.8.697 - 2020-12-3
 - Support data retrieval of Ota module.
 - Added script management API,including CreateThingScript,UpdateThingScript,GetThingScript.

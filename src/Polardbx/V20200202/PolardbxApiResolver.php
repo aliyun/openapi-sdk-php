@@ -6,11 +6,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])
+ * @method CancelPolarxOrder cancelPolarxOrder(array $options = [])
  * @method CheckHealth checkHealth(array $options = [])
  * @method CreateAccount createAccount(array $options = [])
  * @method CreateDB createDB(array $options = [])
  * @method CreateDBInstance createDBInstance(array $options = [])
  * @method CreatePolarxInstance createPolarxInstance(array $options = [])
+ * @method CreatePolarxOrder createPolarxOrder(array $options = [])
  * @method CreateSuperAccount createSuperAccount(array $options = [])
  * @method DeleteAccount deleteAccount(array $options = [])
  * @method DeleteDB deleteDB(array $options = [])
@@ -37,6 +39,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTasks describeTasks(array $options = [])
  * @method DisableSqlAudit disableSqlAudit(array $options = [])
  * @method EnableSqlAudit enableSqlAudit(array $options = [])
+ * @method GetPolarxCommodity getPolarxCommodity(array $options = [])
+ * @method GetPolarXPrice getPolarXPrice(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyAccountPrivilege modifyAccountPrivilege(array $options = [])
  * @method ModifyDatabaseDescription modifyDatabaseDescription(array $options = [])
@@ -50,6 +54,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method ResetPolarxPgAccountPassword resetPolarxPgAccountPassword(array $options = [])
  * @method RestartDBInstance restartDBInstance(array $options = [])
+ * @method RetryPolarxOrder retryPolarxOrder(array $options = [])
+ * @method UpdatePolarDBXInstanceNode updatePolarDBXInstanceNode(array $options = [])
  * @method UpgradeDBInstanceKernelVersion upgradeDBInstanceKernelVersion(array $options = [])
  */
 class PolardbxApiResolver extends ApiResolver
@@ -88,6 +94,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withPort($value)
  */
 class AllocateInstancePublicConnection extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getScaleOutToken()
+ * @method $this withScaleOutToken($value)
+ */
+class CancelPolarxOrder extends Rpc
 {
 }
 
@@ -132,24 +148,26 @@ class CreateDB extends Rpc
 }
 
 /**
+ * @method string getNetworkType()
+ * @method $this withNetworkType($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getDBNodeClass()
  * @method $this withDBNodeClass($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
- * @method string getSecurityIPList()
- * @method $this withSecurityIPList($value)
+ * @method string getIsReadDBInstance()
+ * @method $this withIsReadDBInstance($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method string getAutoRenew()
  * @method $this withAutoRenew($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
+ * @method string getPrimaryDBInstanceName()
+ * @method $this withPrimaryDBInstanceName($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getDBNodeCount()
@@ -213,6 +231,16 @@ class CreatePolarxInstance extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getNodeCount()
+ * @method $this withNodeCount($value)
+ */
+class CreatePolarxOrder extends Rpc
+{
 }
 
 /**
@@ -522,6 +550,26 @@ class EnableSqlAudit extends Rpc
 /**
  * @method string getDBInstanceName()
  * @method $this withDBInstanceName($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class GetPolarxCommodity extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getNodeCount()
+ * @method $this withNodeCount($value)
+ */
+class GetPolarXPrice extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
  * @method string getAccountDescription()
  * @method $this withAccountDescription($value)
  * @method string getAccountName()
@@ -678,6 +726,28 @@ class ResetPolarxPgAccountPassword extends Rpc
  * @method $this withDBInstanceName($value)
  */
 class RestartDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getScaleOutToken()
+ * @method $this withScaleOutToken($value)
+ */
+class RetryPolarxOrder extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceName()
+ * @method $this withDBInstanceName($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDbInstanceNodeCount()
+ * @method $this withDbInstanceNodeCount($value)
+ */
+class UpdatePolarDBXInstanceNode extends Rpc
 {
 }
 
