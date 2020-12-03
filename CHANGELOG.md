@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.699 - 2020-12-3
+- Add new api.
+
+
 ## 1.8.698 - 2020-12-3
 - Supported all language sdk.
 - Fixed some bugs for polardbx.
