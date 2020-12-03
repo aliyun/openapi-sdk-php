@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.705 - 2020-12-3
+- Update DescribeDomainMax95BpsData.
+
+
 ## 1.8.704 - 2020-12-3
 - Update ModifyDcdnService.
 
