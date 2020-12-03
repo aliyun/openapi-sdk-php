@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.706 - 2020-12-3
+- Update DescribeScdnDomainCertificateInfo.
+
+
 ## 1.8.705 - 2020-12-3
 - Update DescribeDomainMax95BpsData.
 
