@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDataServiceGroup createDataServiceGroup(array $options = [])
  * @method CreateFile createFile(array $options = [])
  * @method CreateFolder createFolder(array $options = [])
+ * @method CreateManualDag createManualDag(array $options = [])
  * @method CreateMetaCategory createMetaCategory(array $options = [])
  * @method CreateProjectMember createProjectMember(array $options = [])
  * @method CreateQualityEntity createQualityEntity(array $options = [])
@@ -53,6 +54,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetBaselineKeyPath getBaselineKeyPath(array $options = [])
  * @method GetBaselineStatus getBaselineStatus(array $options = [])
  * @method GetBusiness getBusiness(array $options = [])
+ * @method GetDag getDag(array $options = [])
  * @method GetDataServiceApi getDataServiceApi(array $options = [])
  * @method GetDataServiceApplication getDataServiceApplication(array $options = [])
  * @method GetDataServiceFolder getDataServiceFolder(array $options = [])
@@ -69,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetInstanceErrorRank getInstanceErrorRank(array $options = [])
  * @method GetInstanceLog getInstanceLog(array $options = [])
  * @method GetInstanceStatusCount getInstanceStatusCount(array $options = [])
+ * @method GetManualDagInstances getManualDagInstances(array $options = [])
  * @method GetMetaCategory getMetaCategory(array $options = [])
  * @method GetMetaColumnLineage getMetaColumnLineage(array $options = [])
  * @method GetMetaDBInfo getMetaDBInfo(array $options = [])
@@ -130,7 +133,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveProjectMemberFromRole removeProjectMemberFromRole(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method ResumeInstance resumeInstance(array $options = [])
+ * @method RunTriggerNode runTriggerNode(array $options = [])
  * @method SearchMetaTables searchMetaTables(array $options = [])
+ * @method SearchNodesByOutput searchNodesByOutput(array $options = [])
  * @method SetSuccessInstance setSuccessInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method SubmitFile submitFile(array $options = [])
@@ -1365,6 +1370,96 @@ class CreateFolder extends Rpc
 }
 
 /**
+ * @method string getProjectEnv()
+ * @method string getProjectName()
+ * @method string getBizDate()
+ * @method string getFlowName()
+ * @method string getDagParameters()
+ * @method string getNodeParameters()
+ */
+class CreateManualDag extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->options['form_params']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizDate($value)
+    {
+        $this->data['BizDate'] = $value;
+        $this->options['form_params']['BizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlowName($value)
+    {
+        $this->data['FlowName'] = $value;
+        $this->options['form_params']['FlowName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDagParameters($value)
+    {
+        $this->data['DagParameters'] = $value;
+        $this->options['form_params']['DagParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeParameters($value)
+    {
+        $this->data['NodeParameters'] = $value;
+        $this->options['form_params']['NodeParameters'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getName()
  * @method string getComment()
  * @method string getParentId()
@@ -2182,6 +2277,8 @@ class CreateRemind extends Rpc
  * @method $this withHasPart($value)
  * @method string getLocation()
  * @method $this withLocation($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  * @method string getTableName()
  * @method $this withTableName($value)
  * @method string getAppGuid()
@@ -3382,6 +3479,40 @@ class GetBusiness extends Rpc
 }
 
 /**
+ * @method string getProjectEnv()
+ * @method string getDagId()
+ */
+class GetDag extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDagId($value)
+    {
+        $this->data['DagId'] = $value;
+        $this->options['form_params']['DagId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTenantId()
  * @method string getProjectId()
  * @method string getApiId()
@@ -4065,6 +4196,54 @@ class GetInstanceStatusCount extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getProjectName()
+ * @method string getDagId()
+ */
+class GetManualDagInstances extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->options['form_params']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDagId($value)
+    {
+        $this->data['DagId'] = $value;
+        $this->options['form_params']['DagId'] = $value;
 
         return $this;
     }
@@ -6121,6 +6300,7 @@ class ListFolders extends Rpc
  * @method string getProjectEnv()
  * @method string getOwner()
  * @method string getBizName()
+ * @method string getDagId()
  * @method string getPageNumber()
  * @method string getNodeName()
  * @method string getProgramType()
@@ -6166,6 +6346,19 @@ class ListInstances extends Rpc
     {
         $this->data['BizName'] = $value;
         $this->options['form_params']['BizName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDagId($value)
+    {
+        $this->data['DagId'] = $value;
+        $this->options['form_params']['DagId'] = $value;
 
         return $this;
     }
@@ -7139,6 +7332,71 @@ class ResumeInstance extends Rpc
 }
 
 /**
+ * @method string getBizDate()
+ * @method string getAppId()
+ * @method string getCycleTime()
+ * @method string getNodeId()
+ */
+class RunTriggerNode extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizDate($value)
+    {
+        $this->data['BizDate'] = $value;
+        $this->options['form_params']['BizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCycleTime($value)
+    {
+        $this->data['CycleTime'] = $value;
+        $this->options['form_params']['CycleTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDataSourceType()
  * @method $this withDataSourceType($value)
  * @method string getClusterId()
@@ -7156,6 +7414,40 @@ class ResumeInstance extends Rpc
  */
 class SearchMetaTables extends Rpc
 {
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getOutputs()
+ */
+class SearchNodesByOutput extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputs($value)
+    {
+        $this->data['Outputs'] = $value;
+        $this->options['form_params']['Outputs'] = $value;
+
+        return $this;
+    }
 }
 
 /**
