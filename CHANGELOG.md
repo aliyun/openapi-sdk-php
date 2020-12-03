@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.696 - 2020-12-3
+- Update DetectLungNodule.
+
+
 ## 1.8.695 - 2020-12-2
 - Update version.
 
