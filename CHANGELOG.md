@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.701 - 2020-12-3
+- Generated 2020-06-29 for `alinlp`.
+
+
 ## 1.8.700 - 2020-12-3
 - Generated 2020-05-18 for `dataworks-public`.
 

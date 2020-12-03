@@ -26,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetSaSeaEcom getSaSeaEcom(array $options = [])
  * @method GetSimilarityChMedical getSimilarityChMedical(array $options = [])
  * @method GetSummaryChEcom getSummaryChEcom(array $options = [])
+ * @method GetTcChEcom getTcChEcom(array $options = [])
  * @method GetTcChGeneral getTcChGeneral(array $options = [])
  * @method GetTsChEcom getTsChEcom(array $options = [])
  * @method GetWeChComment getWeChComment(array $options = [])
@@ -930,6 +931,40 @@ class GetSimilarityChMedical extends Rpc
  * @method string getText()
  */
 class GetSummaryChEcom extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getServiceCode()
+ * @method string getText()
+ */
+class GetTcChEcom extends Rpc
 {
 
     /**
