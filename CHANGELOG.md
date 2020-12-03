@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.710 - 2020-12-3
+- Update DescribeScdnDomainCertificateInfo.
+
+
 ## 1.8.709 - 2020-12-3
 - Update ModifyDcdnService.
 
