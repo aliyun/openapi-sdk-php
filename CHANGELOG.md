@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.711 - 2020-12-4
+- ReportInstancesStatus OpenAPI supports IssueCategory parameter.
+
+
 ## 1.8.710 - 2020-12-3
 - Update DescribeScdnDomainCertificateInfo.
 

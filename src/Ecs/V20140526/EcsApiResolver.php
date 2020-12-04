@@ -175,6 +175,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSnapshotPackage describeSnapshotPackage(array $options = [])
  * @method DescribeSnapshots describeSnapshots(array $options = [])
  * @method DescribeSnapshotsUsage describeSnapshotsUsage(array $options = [])
+ * @method DescribeSpotAdvice describeSpotAdvice(array $options = [])
  * @method DescribeSpotPriceHistory describeSpotPriceHistory(array $options = [])
  * @method DescribeStorageCapacityUnits describeStorageCapacityUnits(array $options = [])
  * @method DescribeStorageSetDetails describeStorageSetDetails(array $options = [])
@@ -321,9 +322,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'ecs';
 }
 
 /**
@@ -7862,6 +7860,34 @@ class DescribeSnapshotsUsage extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getMemory()
+ * @method $this withMemory($value)
+ * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
+ * @method string getMinCores()
+ * @method $this withMinCores($value)
+ * @method string getNetworkType()
+ * @method $this withNetworkType($value)
+ * @method string getCores()
+ * @method $this withCores($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getMinMemory()
+ * @method $this withMinMemory($value)
+ */
+class DescribeSpotAdvice extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getIoOptimized()
  * @method $this withIoOptimized($value)
  * @method string getNetworkType()
@@ -8763,6 +8789,8 @@ class InstallCloudAssistant extends Rpc
  * @method array getInstanceId()
  * @method string getParameters()
  * @method $this withParameters($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
  */
 class InvokeCommand extends Rpc
 {
@@ -11181,6 +11209,8 @@ class ReplaceSystemDisk extends Rpc
  * @method $this withDescription($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getIssueCategory()
+ * @method $this withIssueCategory($value)
  * @method array getDiskId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -11408,6 +11438,8 @@ class RevokeSecurityGroupEgress extends Rpc
  * @method $this withParameters($value)
  * @method string getEnableParameter()
  * @method $this withEnableParameter($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
  */
 class RunCommand extends Rpc
 {
