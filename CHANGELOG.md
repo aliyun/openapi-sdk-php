@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.713 - 2020-12-4
+- Supported broker demand.
+
+
 ## 1.8.712 - 2020-12-4
 - Support manual scan interface.
 
