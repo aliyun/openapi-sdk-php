@@ -29,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAuditSetting describeAuditSetting(array $options = [])
  * @method DescribeBizTypes describeBizTypes(array $options = [])
  * @method DescribeBizTypeSetting describeBizTypeSetting(array $options = [])
+ * @method DescribeCloudMonitorServices describeCloudMonitorServices(array $options = [])
  * @method DescribeCustomOcrTemplate describeCustomOcrTemplate(array $options = [])
  * @method DescribeImageFromLib describeImageFromLib(array $options = [])
  * @method DescribeImageLib describeImageLib(array $options = [])
@@ -488,6 +489,18 @@ class DescribeBizTypeSetting extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ */
+class DescribeCloudMonitorServices extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getIds()
  * @method $this withIds($value)
  */
@@ -694,6 +707,8 @@ class DescribeOssResultItems extends Rpc
 }
 
 /**
+ * @method string getStockTaskId()
+ * @method $this withStockTaskId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
@@ -1376,8 +1391,12 @@ class UpdateOssCallbackSetting extends Rpc
  * @method $this withVideoSceneList($value)
  * @method string getImageSceneList()
  * @method $this withImageSceneList($value)
+ * @method string getAudioSceneList()
+ * @method $this withAudioSceneList($value)
  * @method string getVideoFrameInterval()
  * @method $this withVideoFrameInterval($value)
+ * @method string getAudioAutoFreezeOpened()
+ * @method $this withAudioAutoFreezeOpened($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getCallbackId()
@@ -1386,10 +1405,14 @@ class UpdateOssCallbackSetting extends Rpc
  * @method $this withImageScanLimit($value)
  * @method string getVideoAutoFreezeSceneList()
  * @method $this withVideoAutoFreezeSceneList($value)
+ * @method string getAudioMaxSize()
+ * @method $this withAudioMaxSize($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getImageAutoFreeze()
  * @method $this withImageAutoFreeze($value)
+ * @method string getAudioAntispamFreezeConfig()
+ * @method $this withAudioAntispamFreezeConfig($value)
  * @method string getVideoMaxSize()
  * @method $this withVideoMaxSize($value)
  * @method string getAutoFreezeType()
@@ -1414,10 +1437,14 @@ class UpdateOssIncrementCheckSetting extends Rpc
  * @method $this withSourceIp($value)
  * @method string getVideoAutoFreezeSceneList()
  * @method $this withVideoAutoFreezeSceneList($value)
+ * @method string getAudioMaxSize()
+ * @method $this withAudioMaxSize($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getImageAutoFreeze()
  * @method $this withImageAutoFreeze($value)
+ * @method string getAudioAutoFreezeSceneList()
+ * @method $this withAudioAutoFreezeSceneList($value)
  * @method string getVideoMaxSize()
  * @method $this withVideoMaxSize($value)
  * @method string getAutoFreezeType()
