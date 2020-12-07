@@ -30,7 +30,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSubscriptionInstanceAlert describeSubscriptionInstanceAlert(array $options = [])
  * @method DescribeSubscriptionInstances describeSubscriptionInstances(array $options = [])
  * @method DescribeSubscriptionInstanceStatus describeSubscriptionInstanceStatus(array $options = [])
- * @method DescribeSubscriptionObjectModifyStatus describeSubscriptionObjectModifyStatus(array $options = [])
  * @method DescribeSynchronizationJobAlert describeSynchronizationJobAlert(array $options = [])
  * @method DescribeSynchronizationJobReplicatorCompare describeSynchronizationJobReplicatorCompare(array $options = [])
  * @method DescribeSynchronizationJobs describeSynchronizationJobs(array $options = [])
@@ -1479,20 +1478,6 @@ class DescribeSubscriptionInstances extends Rpc
  * @method $this withAccountId($value)
  */
 class DescribeSubscriptionInstanceStatus extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getSubscriptionInstanceId()
- * @method $this withSubscriptionInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAccountId()
- * @method $this withAccountId($value)
- */
-class DescribeSubscriptionObjectModifyStatus extends Rpc
 {
 }
 

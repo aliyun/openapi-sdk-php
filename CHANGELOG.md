@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.714 - 2020-12-7
+- Remove DescribeSubscriptionObjectModifyStatus.
+
+
 ## 1.8.713 - 2020-12-4
 - Supported broker demand.
 
