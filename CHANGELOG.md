@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.715 - 2020-12-7
+- Add Listdashboard Api.
+
+
 ## 1.8.714 - 2020-12-7
 - Remove DescribeSubscriptionObjectModifyStatus.
 

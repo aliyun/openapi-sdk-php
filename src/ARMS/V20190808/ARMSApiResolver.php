@@ -439,8 +439,12 @@ class ListClusterFromGrafana extends Rpc
 }
 
 /**
+ * @method string getClusterType()
+ * @method $this withClusterType($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
  */
 class ListDashboards extends Rpc
 {
