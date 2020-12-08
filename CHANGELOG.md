@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.716 - 2020-12-8
+- Update goodstech.
+
+
 ## 1.8.715 - 2020-12-7
 - Add Listdashboard Api.
 
