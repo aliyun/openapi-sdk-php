@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.726 - 2020-12-8
+- Update new version.
+
+
 ## 1.8.725 - 2020-12-8
 - Generated 2018-12-12 for `vs`.
 
