@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.724 - 2020-12-8
+- Support filtering keys and secrets.
+- Support opening KMS service and describing service status by API.
+- Add a prefix limitation for SecretName.
+
+
 ## 1.8.723 - 2020-12-8
 - Update DescribeScdnDomainCertificateInfo.
 
