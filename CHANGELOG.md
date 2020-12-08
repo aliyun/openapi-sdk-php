@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.720 - 2020-12-8
+- Release DetectCardScreenshot RecognizePoiName.
+
+
 ## 1.8.719 - 2020-12-8
 - Update data API.
 
