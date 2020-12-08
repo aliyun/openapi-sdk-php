@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.718 - 2020-12-8
+- Supported AndroidNotificationNotifyId for Push and MassPush.
+- Supported iOSNotificationCollapseId for Push and MassPush.
+
+
 ## 1.8.717 - 2020-12-8
 - Some new parameters are supported.
 
