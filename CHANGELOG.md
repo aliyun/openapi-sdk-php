@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.725 - 2020-12-8
+- Generated 2018-12-12 for `vs`.
+
+
 ## 1.8.724 - 2020-12-8
 - Support filtering keys and secrets.
 - Support opening KMS service and describing service status by API.
