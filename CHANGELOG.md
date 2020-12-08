@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.722 - 2020-12-8
+- Generated 2018-01-11 for `rtc`.
+
+
 ## 1.8.721 - 2020-12-8
 - Support Open Service API.
 
