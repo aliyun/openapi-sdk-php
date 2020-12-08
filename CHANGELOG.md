@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.719 - 2020-12-8
+- Update data API.
+
+
 ## 1.8.718 - 2020-12-8
 - Supported AndroidNotificationNotifyId for Push and MassPush.
 - Supported iOSNotificationCollapseId for Push and MassPush.
