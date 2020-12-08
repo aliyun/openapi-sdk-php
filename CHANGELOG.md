@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.717 - 2020-12-8
+- Some new parameters are supported.
+
+
 ## 1.8.716 - 2020-12-8
 - Update goodstech.
 
