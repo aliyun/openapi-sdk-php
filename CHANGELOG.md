@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.721 - 2020-12-8
+- Support Open Service API.
+
+
 ## 1.8.720 - 2020-12-8
 - Release DetectCardScreenshot RecognizePoiName.
 
