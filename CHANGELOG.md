@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.727 - 2020-12-9
+- Update SegmentCommodity.
+
+
 ## 1.8.726 - 2020-12-8
 - Update new version.
 
