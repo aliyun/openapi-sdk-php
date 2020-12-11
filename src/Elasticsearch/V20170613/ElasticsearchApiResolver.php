@@ -45,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EstimatedRestartTime estimatedRestartTime(array $options = [])
  * @method GetClusterDataInformation getClusterDataInformation(array $options = [])
  * @method GetElastictask getElastictask(array $options = [])
+ * @method GetEmonMonitorData getEmonMonitorData(array $options = [])
  * @method GetRegionConfiguration getRegionConfiguration(array $options = [])
  * @method GetSuggestShrinkableNodes getSuggestShrinkableNodes(array $options = [])
  * @method GetTransferableNodes getTransferableNodes(array $options = [])
@@ -1110,6 +1111,16 @@ class GetElastictask extends Roa
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetEmonMonitorData extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/emon/projects/[ProjectId]/metrics/query';
 }
 
 /**
@@ -2962,7 +2973,9 @@ class ModifyInstanceMaintainTime extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getNodeType()
  * @method string getClientToken()
+ * @method string getNetworkType()
  */
 class ModifyWhiteIps extends Roa
 {
@@ -2974,10 +2987,36 @@ class ModifyWhiteIps extends Roa
      *
      * @return $this
      */
+    public function withNodeType($value)
+    {
+        $this->data['NodeType'] = $value;
+        $this->options['form_params']['nodeType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withClientToken($value)
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNetworkType($value)
+    {
+        $this->data['NetworkType'] = $value;
+        $this->options['form_params']['networkType'] = $value;
 
         return $this;
     }
@@ -3482,9 +3521,12 @@ class TransferNode extends Roa
 }
 
 /**
+ * @method string getActionType()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getNodeType()
  * @method string getClientToken()
+ * @method string getNetworkType()
  */
 class TriggerNetwork extends Roa
 {
@@ -3496,10 +3538,49 @@ class TriggerNetwork extends Roa
      *
      * @return $this
      */
+    public function withActionType($value)
+    {
+        $this->data['ActionType'] = $value;
+        $this->options['form_params']['actionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeType($value)
+    {
+        $this->data['NodeType'] = $value;
+        $this->options['form_params']['nodeType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withClientToken($value)
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNetworkType($value)
+    {
+        $this->data['NetworkType'] = $value;
+        $this->options['form_params']['networkType'] = $value;
 
         return $this;
     }
@@ -3798,6 +3879,7 @@ class UpdateCollectorName extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getDescription()
  */
 class UpdateDescription extends Roa
 {
@@ -3813,6 +3895,19 @@ class UpdateDescription extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['description'] = $value;
 
         return $this;
     }
@@ -4477,6 +4572,8 @@ class UpdateXpackMonitorConfig extends Roa
  * @method $this withInstanceId($value)
  * @method string getDryRun()
  * @method string getClientToken()
+ * @method string getType()
+ * @method string getVersion()
  */
 class UpgradeEngineVersion extends Roa
 {
@@ -4505,6 +4602,32 @@ class UpgradeEngineVersion extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVersion($value)
+    {
+        $this->data['Version'] = $value;
+        $this->options['form_params']['version'] = $value;
 
         return $this;
     }

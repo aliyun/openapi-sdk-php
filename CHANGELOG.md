@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.728 - 2020-12-11
+- Add Emon route-API support.
+
+
 ## 1.8.727 - 2020-12-9
 - Update SegmentCommodity.
 
