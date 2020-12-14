@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.731 - 2020-12-14
+- Add update task api.
+
+
 ## 1.8.730 - 2020-12-14
 - CDRS First edition.
 
