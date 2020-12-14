@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.729 - 2020-12-14
+- Add update task api.
+
+
 ## 1.8.728 - 2020-12-11
 - Add Emon route-API support.
 
