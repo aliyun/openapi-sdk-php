@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.734 - 2020-12-15
+- CDRS First edition.
+
+
 ## 1.8.733 - 2020-12-15
 - CDRS First edition.
 
