@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.736 - 2020-12-16
+- Add Face Attributes.
+
+
 ## 1.8.735 - 2020-12-15
 - Update Open API.
 
