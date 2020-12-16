@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.738 - 2020-12-16
+- Generated 2019-09-10 for `waf-openapi`.
+
+
 ## 1.8.737 - 2020-12-16
 - Support show pipeline history.
 - Support show log details.
