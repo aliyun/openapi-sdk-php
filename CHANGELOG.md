@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.737 - 2020-12-16
+- Support show pipeline history.
+- Support show log details.
+
+
 ## 1.8.736 - 2020-12-16
 - Add Face Attributes.
 

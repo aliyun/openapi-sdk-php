@@ -33,7 +33,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPipelineInstanceGroupStatus getPipelineInstanceGroupStatus(array $options = [])
  * @method GetPipelineInstanceInfo getPipelineInstanceInfo(array $options = [])
  * @method GetPipelineInstanceStatus getPipelineInstanceStatus(array $options = [])
+ * @method GetPipelineInstHistory getPipelineInstHistory(array $options = [])
  * @method GetPipelineLog getPipelineLog(array $options = [])
+ * @method GetPipelineStepLog getPipelineStepLog(array $options = [])
  * @method GetPipleineLatestInstanceStatus getPipleineLatestInstanceStatus(array $options = [])
  * @method GetProjectOption getProjectOption(array $options = [])
  * @method GetTaskDetailActivity getTaskDetailActivity(array $options = [])
@@ -1556,6 +1558,110 @@ class GetPipelineInstanceStatus extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getUserPk()
+ * @method string getOrgId()
+ * @method string getPipelineId()
+ * @method string getPageSize()
+ * @method string getPageStart()
+ */
+class GetPipelineInstHistory extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPipelineId($value)
+    {
+        $this->data['PipelineId'] = $value;
+        $this->options['form_params']['PipelineId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageStart($value)
+    {
+        $this->data['PageStart'] = $value;
+        $this->options['form_params']['PageStart'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getUserPk()
  * @method string getOrgId()
  * @method string getPipelineId()
@@ -1612,6 +1718,110 @@ class GetPipelineLog extends Rpc
     {
         $this->data['JobId'] = $value;
         $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOffset()
+ * @method string getUserPk()
+ * @method string getOrgId()
+ * @method string getPipelineId()
+ * @method string getJobId()
+ * @method string getStepIndex()
+ * @method string getLimit()
+ */
+class GetPipelineStepLog extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOffset($value)
+    {
+        $this->data['Offset'] = $value;
+        $this->options['form_params']['Offset'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserPk($value)
+    {
+        $this->data['UserPk'] = $value;
+        $this->options['form_params']['UserPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPipelineId($value)
+    {
+        $this->data['PipelineId'] = $value;
+        $this->options['form_params']['PipelineId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStepIndex($value)
+    {
+        $this->data['StepIndex'] = $value;
+        $this->options['form_params']['StepIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
 
         return $this;
     }
