@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.745 - 2020-12-17
+- Update SegmentFood.
+
+
 ## 1.8.744 - 2020-12-17
 - Update DeleteScdnDomain.
 

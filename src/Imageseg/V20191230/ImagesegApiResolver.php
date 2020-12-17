@@ -200,6 +200,8 @@ class SegmentFace extends Rpc
 }
 
 /**
+ * @method string getReturnForm()
+ * @method $this withReturnForm($value)
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
