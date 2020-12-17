@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.742 - 2020-12-17
+- Update DeleteDcdnDomain.
+
+
 ## 1.8.741 - 2020-12-17
 - Update DeleteCdnDomain.
 
