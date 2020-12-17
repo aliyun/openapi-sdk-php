@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.744 - 2020-12-17
+- Update DeleteScdnDomain.
+
+
 ## 1.8.743 - 2020-12-17
 - Generated 2014-05-26 for `Ecs`.
 
