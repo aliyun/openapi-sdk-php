@@ -128,6 +128,7 @@ namespace AlibabaCloud;
  * @method static Lubancloud\Lubancloud lubancloud()
  * @method static Lubanruler\Lubanruler lubanruler()
  * @method static MPServerless\MPServerless mPServerless()
+ * @method static MPaaS\MPaaS mPaaS()
  * @method static Market\Market market()
  * @method static MoPen\MoPen moPen()
  * @method static Mts\Mts mts()
