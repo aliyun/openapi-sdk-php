@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.747 - 2020-12-18
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.746 - 2020-12-17
 - Add onex PHP sdk.
 - Add onex python sdk.
