@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.750 - 2020-12-18
+- Add GetAgentDownloadUrl api.
+
+
 ## 1.8.749 - 2020-12-18
 - Release EvaluateCertificateQuality.
 

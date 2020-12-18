@@ -25,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTraceLicenseKey describeTraceLicenseKey(array $options = [])
  * @method DescribeTraceLocation describeTraceLocation(array $options = [])
  * @method ExportPrometheusRules exportPrometheusRules(array $options = [])
+ * @method GetAgentDownloadUrl getAgentDownloadUrl(array $options = [])
  * @method GetAppApiByPage getAppApiByPage(array $options = [])
  * @method GetConsistencySnapshot getConsistencySnapshot(array $options = [])
  * @method GetIntegrationToken getIntegrationToken(array $options = [])
@@ -317,6 +318,13 @@ class DescribeTraceLocation extends Rpc
  */
 class ExportPrometheusRules extends Rpc
 {
+}
+
+class GetAgentDownloadUrl extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
