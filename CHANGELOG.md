@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.748 - 2020-12-18
+- Add ListScenario Api.
+- Add ApplyScenario Api.
+- Add DeleteScenario Api.
+
+
 ## 1.8.747 - 2020-12-18
 - Generated 2020-05-18 for `dataworks-public`.
 

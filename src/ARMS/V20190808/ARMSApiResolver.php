@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddGrafana addGrafana(array $options = [])
  * @method AddIntegration addIntegration(array $options = [])
+ * @method ApplyScenario applyScenario(array $options = [])
  * @method CheckDataConsistency checkDataConsistency(array $options = [])
  * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
  * @method ConfigApp configApp(array $options = [])
@@ -18,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAlertContactGroup deleteAlertContactGroup(array $options = [])
  * @method DeleteAlertRules deleteAlertRules(array $options = [])
  * @method DeleteRetcodeApp deleteRetcodeApp(array $options = [])
+ * @method DeleteScenario deleteScenario(array $options = [])
  * @method DeleteTraceApp deleteTraceApp(array $options = [])
  * @method DescribeDispatchRule describeDispatchRule(array $options = [])
  * @method DescribeTraceLicenseKey describeTraceLicenseKey(array $options = [])
@@ -39,6 +41,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDashboards listDashboards(array $options = [])
  * @method ListPromClusters listPromClusters(array $options = [])
  * @method ListRetcodeApps listRetcodeApps(array $options = [])
+ * @method ListScenario listScenario(array $options = [])
  * @method ListTraceApps listTraceApps(array $options = [])
  * @method OpenArmsService openArmsService(array $options = [])
  * @method QueryDataset queryDataset(array $options = [])
@@ -101,6 +104,32 @@ class AddGrafana extends Rpc
  * @method $this withClusterId($value)
  */
 class AddIntegration extends Rpc
+{
+}
+
+/**
+ * @method string getSnForce()
+ * @method $this withSnForce($value)
+ * @method string getSign()
+ * @method $this withSign($value)
+ * @method string getSnStat()
+ * @method $this withSnStat($value)
+ * @method string getScenario()
+ * @method $this withScenario($value)
+ * @method string getSnDump()
+ * @method $this withSnDump($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSnTransfer()
+ * @method $this withSnTransfer($value)
+ * @method string getUpdateOption()
+ * @method $this withUpdateOption($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ */
+class ApplyScenario extends Rpc
 {
 }
 
@@ -237,6 +266,14 @@ class DeleteAlertRules extends Rpc
  * @method $this withAppId($value)
  */
 class DeleteRetcodeApp extends Rpc
+{
+}
+
+/**
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ */
+class DeleteScenario extends Rpc
 {
 }
 
@@ -459,6 +496,20 @@ class ListPromClusters extends Rpc
  * @method $this withSecurityToken($value)
  */
 class ListRetcodeApps extends Rpc
+{
+}
+
+/**
+ * @method string getScenario()
+ * @method $this withScenario($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSign()
+ * @method $this withSign($value)
+ */
+class ListScenario extends Rpc
 {
 }
 
