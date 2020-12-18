@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.749 - 2020-12-18
+- Release EvaluateCertificateQuality.
+
+
 ## 1.8.748 - 2020-12-18
 - Add ListScenario Api.
 - Add ApplyScenario Api.
