@@ -9,7 +9,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AsymmetricEncrypt asymmetricEncrypt(array $options = [])
  * @method AsymmetricSign asymmetricSign(array $options = [])
  * @method AsymmetricVerify asymmetricVerify(array $options = [])
- * @method BindingInternalAppWhitebox bindingInternalAppWhitebox(array $options = [])
  * @method CancelKeyDeletion cancelKeyDeletion(array $options = [])
  * @method CertificatePrivateKeyDecrypt certificatePrivateKeyDecrypt(array $options = [])
  * @method CertificatePrivateKeySign certificatePrivateKeySign(array $options = [])
@@ -20,7 +19,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateKey createKey(array $options = [])
  * @method CreateKeyVersion createKeyVersion(array $options = [])
  * @method CreateSecret createSecret(array $options = [])
- * @method CreateWhiteBoxKey createWhiteBoxKey(array $options = [])
  * @method Decrypt decrypt(array $options = [])
  * @method DeleteAlias deleteAlias(array $options = [])
  * @method DeleteCertificate deleteCertificate(array $options = [])
@@ -33,11 +31,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSecret describeSecret(array $options = [])
  * @method DescribeService describeService(array $options = [])
- * @method DescribeWhiteBoxKey describeWhiteBoxKey(array $options = [])
  * @method DisableKey disableKey(array $options = [])
  * @method EnableKey enableKey(array $options = [])
  * @method Encrypt encrypt(array $options = [])
- * @method EncryptByWhiteBox encryptByWhiteBox(array $options = [])
  * @method ExportCertificate exportCertificate(array $options = [])
  * @method ExportDataKey exportDataKey(array $options = [])
  * @method GenerateAndExportDataKey generateAndExportDataKey(array $options = [])
@@ -48,7 +44,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPublicKey getPublicKey(array $options = [])
  * @method GetRandomPassword getRandomPassword(array $options = [])
  * @method GetSecretValue getSecretValue(array $options = [])
- * @method GetWhiteBoxKey getWhiteBoxKey(array $options = [])
  * @method ImportCertificate importCertificate(array $options = [])
  * @method ImportEncryptionCertificate importEncryptionCertificate(array $options = [])
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
@@ -60,10 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListResourceTags listResourceTags(array $options = [])
  * @method ListSecrets listSecrets(array $options = [])
  * @method ListSecretVersionIds listSecretVersionIds(array $options = [])
- * @method ListTags listTags(array $options = [])
- * @method ListWhiteBoxKeys listWhiteBoxKeys(array $options = [])
  * @method OpenKmsService openKmsService(array $options = [])
- * @method OverwriteWhiteBoxDeviceFingerprints overwriteWhiteBoxDeviceFingerprints(array $options = [])
  * @method PutSecretValue putSecretValue(array $options = [])
  * @method ReEncrypt reEncrypt(array $options = [])
  * @method RestoreSecret restoreSecret(array $options = [])
@@ -79,10 +71,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateSecretRotationPolicy updateSecretRotationPolicy(array $options = [])
  * @method UpdateSecretVersionStage updateSecretVersionStage(array $options = [])
  * @method UploadCertificate uploadCertificate(array $options = [])
- * @method WhiteBoxAppCipherKeybox whiteBoxAppCipherKeybox(array $options = [])
- * @method WhiteBoxAppEnvPrintsCipherKeybox whiteBoxAppEnvPrintsCipherKeybox(array $options = [])
- * @method WhiteBoxAppSecretEncryptSecrets whiteBoxAppSecretEncryptSecrets(array $options = [])
- * @method WhiteBoxAppSecretsCipherKeybox whiteBoxAppSecretsCipherKeybox(array $options = [])
  */
 class KmsApiResolver extends ApiResolver
 {
@@ -139,8 +127,6 @@ class AsymmetricEncrypt extends Rpc
  * @method $this withKeyVersionId($value)
  * @method string getDigest()
  * @method $this withDigest($value)
- * @method string getRecipient()
- * @method $this withRecipient($value)
  * @method string getKeyId()
  * @method $this withKeyId($value)
  * @method string getAlgorithm()
@@ -163,18 +149,6 @@ class AsymmetricSign extends Rpc
  * @method $this withAlgorithm($value)
  */
 class AsymmetricVerify extends Rpc
-{
-}
-
-/**
- * @method string getKeyBox()
- * @method $this withKeyBox($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- */
-class BindingInternalAppWhitebox extends Rpc
 {
 }
 
@@ -321,18 +295,6 @@ class CreateSecret extends Rpc
 }
 
 /**
- * @method string getName()
- * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getAlgorithm()
- * @method $this withAlgorithm($value)
- */
-class CreateWhiteBoxKey extends Rpc
-{
-}
-
-/**
  * @method string getEncryptionContext()
  * @method $this withEncryptionContext($value)
  * @method string getCiphertextBlob()
@@ -430,14 +392,6 @@ class DescribeService extends Rpc
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
-class DescribeWhiteBoxKey extends Rpc
-{
-}
-
-/**
- * @method string getKeyId()
- * @method $this withKeyId($value)
- */
 class DisableKey extends Rpc
 {
 }
@@ -463,18 +417,6 @@ class Encrypt extends Rpc
 }
 
 /**
- * @method string getKeyId()
- * @method $this withKeyId($value)
- * @method string getPlainText()
- * @method $this withPlainText($value)
- * @method string getInitializationVector()
- * @method $this withInitializationVector($value)
- */
-class EncryptByWhiteBox extends Rpc
-{
-}
-
-/**
  * @method string getCertificateId()
  * @method $this withCertificateId($value)
  * @method string getPassphrase()
@@ -489,8 +431,6 @@ class ExportCertificate extends Rpc
 /**
  * @method string getEncryptionContext()
  * @method $this withEncryptionContext($value)
- * @method string getRecipient()
- * @method $this withRecipient($value)
  * @method string getWrappingAlgorithm()
  * @method $this withWrappingAlgorithm($value)
  * @method string getCiphertextBlob()
@@ -541,8 +481,6 @@ class GenerateDataKey extends Rpc
 /**
  * @method string getEncryptionContext()
  * @method $this withEncryptionContext($value)
- * @method string getRecipient()
- * @method $this withRecipient($value)
  * @method string getKeyId()
  * @method $this withKeyId($value)
  * @method string getKeySpec()
@@ -616,17 +554,6 @@ class GetRandomPassword extends Rpc
  */
 class GetSecretValue extends Rpc
 {
-}
-
-/**
- * @method string getKeyId()
- * @method $this withKeyId($value)
- */
-class GetWhiteBoxKey extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -771,37 +698,7 @@ class ListSecretVersionIds extends Rpc
 {
 }
 
-/**
- * @method string getKeyId()
- * @method $this withKeyId($value)
- * @method string getSTSToken()
- * @method $this withSTSToken($value)
- */
-class ListTags extends Rpc
-{
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListWhiteBoxKeys extends Rpc
-{
-}
-
 class OpenKmsService extends Rpc
-{
-}
-
-/**
- * @method string getKeyId()
- * @method $this withKeyId($value)
- * @method string getDeviceFingerprint()
- * @method $this withDeviceFingerprint($value)
- */
-class OverwriteWhiteBoxDeviceFingerprints extends Rpc
 {
 }
 
@@ -832,8 +729,6 @@ class PutSecretValue extends Rpc
  * @method $this withDestinationKeyId($value)
  * @method string getSourceKeyId()
  * @method $this withSourceKeyId($value)
- * @method string getRecipient()
- * @method $this withRecipient($value)
  * @method string getSourceEncryptionContext()
  * @method $this withSourceEncryptionContext($value)
  * @method string getCiphertextBlob()
@@ -859,9 +754,6 @@ class RestoreSecret extends Rpc
  */
 class RotateSecret extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -947,13 +839,25 @@ class UpdateRotationPolicy extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getCustomExtendedConfig()
- * @method $this withCustomExtendedConfig($value)
  * @method string getSecretName()
  * @method $this withSecretName($value)
+ * @method string getExtendedConfigCustomData()
  */
 class UpdateSecret extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtendedConfigCustomData($value)
+    {
+        $this->data['ExtendedConfigCustomData'] = $value;
+        $this->options['query']['ExtendedConfig.CustomData'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -966,9 +870,6 @@ class UpdateSecret extends Rpc
  */
 class UpdateSecretRotationPolicy extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -994,51 +895,5 @@ class UpdateSecretVersionStage extends Rpc
  * @method $this withCertificateChain($value)
  */
 class UploadCertificate extends Rpc
-{
-}
-
-/**
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- */
-class WhiteBoxAppCipherKeybox extends Rpc
-{
-}
-
-/**
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getEnvPrints()
- * @method $this withEnvPrints($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- */
-class WhiteBoxAppEnvPrintsCipherKeybox extends Rpc
-{
-}
-
-/**
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- * @method string getSecrets()
- * @method $this withSecrets($value)
- */
-class WhiteBoxAppSecretEncryptSecrets extends Rpc
-{
-}
-
-/**
- * @method string getKeyBox()
- * @method $this withKeyBox($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- */
-class WhiteBoxAppSecretsCipherKeybox extends Rpc
 {
 }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.751 - 2020-12-18
+- Release Full Managed Credentials for Aliyun RDS.
+
+
 ## 1.8.750 - 2020-12-18
 - Add GetAgentDownloadUrl api.
 
