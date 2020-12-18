@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.752 - 2020-12-18
+- Support ListRepositories, ListOrganizations, GetUserInfo, ListRepositoryWebhook, DeleteRepositoryWebhook api.
+- AddWebhook api support SecretToken.
+
+
 ## 1.8.751 - 2020-12-18
 - Release Full Managed Credentials for Aliyun RDS.
 
