@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.753 - 2020-12-21
+- Support Device of LaunchConfiguration_DataDisk.
+
+
 ## 1.8.752 - 2020-12-18
 - Support ListRepositories, ListOrganizations, GetUserInfo, ListRepositoryWebhook, DeleteRepositoryWebhook api.
 - AddWebhook api support SecretToken.

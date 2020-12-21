@@ -1222,6 +1222,27 @@ class CreateAutoProvisioningGroup extends Rpc
 			if(isset($depth1Value['PerformanceLevel'])){
 				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
 			}
+			if(isset($depth1Value['Device'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
+			}
+			if(isset($depth1Value['SnapshotId'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
+			}
+			if(isset($depth1Value['DeleteWithInstance'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
+			}
+			if(isset($depth1Value['Encrypted'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
+			}
+			if(isset($depth1Value['KmsKeyId'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.KmsKeyId'] = $depth1Value['KmsKeyId'];
+			}
+			if(isset($depth1Value['DiskName'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+			}
+			if(isset($depth1Value['Description'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+			}
 		}
 
 		return $this;
