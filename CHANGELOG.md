@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.761 - 2020-12-22
+- Minor chagnes.
+
+
 ## 1.8.760 - 2020-12-22
 - Update SegmentAnimal SegmentCommonImage.
 

@@ -32,7 +32,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteVideoTask deleteVideoTask(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DetectImageBodies detectImageBodies(array $options = [])
- * @method DetectImageCelebrity detectImageCelebrity(array $options = [])
  * @method DetectImageFaces detectImageFaces(array $options = [])
  * @method DetectImageLogos detectImageLogos(array $options = [])
  * @method DetectImageQRCodes detectImageQRCodes(array $options = [])
@@ -619,20 +618,6 @@ class DescribeRegions extends Rpc
  * @method $this withImageUri($value)
  */
 class DetectImageBodies extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getLibrary()
- * @method $this withLibrary($value)
- * @method string getRealUid()
- * @method $this withRealUid($value)
- * @method string getImageUri()
- * @method $this withImageUri($value)
- */
-class DetectImageCelebrity extends Rpc
 {
 }
 
