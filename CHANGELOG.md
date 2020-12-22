@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.759 - 2020-12-22
+- Support SLB latest OpenAPIs.
+
+
 ## 1.8.758 - 2020-12-22
 - Release InterpolateVideoFrame ToneSdrVideo ConvertHdrVideo.
 
