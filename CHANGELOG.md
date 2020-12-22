@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.758 - 2020-12-22
+- Release InterpolateVideoFrame ToneSdrVideo ConvertHdrVideo.
+
+
 ## 1.8.757 - 2020-12-22
 - Release InterpolateVideoFrame.
 

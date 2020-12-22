@@ -9,13 +9,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AbstractFilmVideo abstractFilmVideo(array $options = [])
  * @method AdjustVideoColor adjustVideoColor(array $options = [])
  * @method ChangeVideoSize changeVideoSize(array $options = [])
+ * @method ConvertHdrVideo convertHdrVideo(array $options = [])
  * @method EnhanceVideoQuality enhanceVideoQuality(array $options = [])
  * @method EraseVideoLogo eraseVideoLogo(array $options = [])
  * @method EraseVideoSubtitles eraseVideoSubtitles(array $options = [])
  * @method GenerateVideo generateVideo(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
+ * @method InterpolateVideoFrame interpolateVideoFrame(array $options = [])
  * @method MergeVideoFace mergeVideoFace(array $options = [])
  * @method SuperResolveVideo superResolveVideo(array $options = [])
+ * @method ToneSdrVideo toneSdrVideo(array $options = [])
  */
 class VideoenhanApiResolver extends ApiResolver
 {
@@ -391,6 +394,82 @@ class ChangeVideoSize extends Rpc
     {
         $this->data['Tightness'] = $value;
         $this->options['form_params']['Tightness'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getHDRFormat()
+ * @method string getMaxIlluminance()
+ * @method string getBitrate()
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class ConvertHdrVideo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHDRFormat($value)
+    {
+        $this->data['HDRFormat'] = $value;
+        $this->options['form_params']['HDRFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxIlluminance($value)
+    {
+        $this->data['MaxIlluminance'] = $value;
+        $this->options['form_params']['MaxIlluminance'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBitrate($value)
+    {
+        $this->data['Bitrate'] = $value;
+        $this->options['form_params']['Bitrate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoURL($value)
+    {
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
 
         return $this;
     }
@@ -884,6 +963,68 @@ class GetAsyncJobResult extends Rpc
 }
 
 /**
+ * @method string getFrameRate()
+ * @method string getBitrate()
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class InterpolateVideoFrame extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFrameRate($value)
+    {
+        $this->data['FrameRate'] = $value;
+        $this->options['form_params']['FrameRate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBitrate($value)
+    {
+        $this->data['Bitrate'] = $value;
+        $this->options['form_params']['Bitrate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoURL($value)
+    {
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPostURL()
  * @method string getReferenceURL()
  * @method string getAsync()
@@ -988,6 +1129,68 @@ class SuperResolveVideo extends Rpc
     {
         $this->data['VideoUrl'] = $value;
         $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRecolorModel()
+ * @method string getBitrate()
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class ToneSdrVideo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRecolorModel($value)
+    {
+        $this->data['RecolorModel'] = $value;
+        $this->options['form_params']['RecolorModel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBitrate($value)
+    {
+        $this->data['Bitrate'] = $value;
+        $this->options['form_params']['Bitrate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoURL($value)
+    {
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
 
         return $this;
     }
