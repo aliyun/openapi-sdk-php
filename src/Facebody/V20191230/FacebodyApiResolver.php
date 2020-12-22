@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectLivingFace detectLivingFace(array $options = [])
  * @method DetectMask detectMask(array $options = [])
  * @method DetectPedestrian detectPedestrian(array $options = [])
+ * @method DetectPedestrianIntrusion detectPedestrianIntrusion(array $options = [])
  * @method DetectVideoLivingFace detectVideoLivingFace(array $options = [])
  * @method EnhanceFace enhanceFace(array $options = [])
  * @method ExtractPedestrianFeatureAttr extractPedestrianFeatureAttr(array $options = [])
@@ -641,6 +642,54 @@ class DetectPedestrian extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRegionType()
+ * @method string getImageURL()
+ * @method string getRegion()
+ */
+class DetectPedestrianIntrusion extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegionType($value)
+    {
+        $this->data['RegionType'] = $value;
+        $this->options['form_params']['RegionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegion($value)
+    {
+        $this->data['Region'] = $value;
+        $this->options['form_params']['Region'] = $value;
 
         return $this;
     }

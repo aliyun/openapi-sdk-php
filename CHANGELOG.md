@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.757 - 2020-12-22
+- Release InterpolateVideoFrame.
+
+
 ## 1.8.756 - 2020-12-22
 - Release DetectRibFracture.
 
