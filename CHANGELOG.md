@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.756 - 2020-12-22
+- Release DetectRibFracture.
+
+
 ## 1.8.755 - 2020-12-22
 - Minor chagnes.
 

@@ -12,11 +12,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectKneeKeypointXRay detectKneeKeypointXRay(array $options = [])
  * @method DetectKneeXRay detectKneeXRay(array $options = [])
  * @method DetectLungNodule detectLungNodule(array $options = [])
+ * @method DetectRibFracture detectRibFracture(array $options = [])
  * @method DetectSkinDisease detectSkinDisease(array $options = [])
  * @method DetectSpineMRI detectSpineMRI(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method RunCTRegistration runCTRegistration(array $options = [])
  * @method RunMedQA runMedQA(array $options = [])
+ * @method ScreenChestCT screenChestCT(array $options = [])
  * @method TranslateMed translateMed(array $options = [])
  */
 class ImageprocessApiResolver extends ApiResolver
@@ -583,6 +585,100 @@ class DetectLungNodule extends Rpc
 }
 
 /**
+ * @method string getDataFormat()
+ * @method array getURLList()
+ * @method string getOrgId()
+ * @method string getAsync()
+ * @method string getOrgName()
+ * @method string getSourceType()
+ */
+class DetectRibFracture extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataFormat($value)
+    {
+        $this->data['DataFormat'] = $value;
+        $this->options['form_params']['DataFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgName($value)
+    {
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceType($value)
+    {
+        $this->data['SourceType'] = $value;
+        $this->options['form_params']['SourceType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getUrl()
  * @method string getOrgId()
  * @method string getOrgName()
@@ -872,6 +968,86 @@ class RunMedQA extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgName($value)
+    {
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDataFormat()
+ * @method array getURLList()
+ * @method string getOrgId()
+ * @method string getAsync()
+ * @method string getOrgName()
+ */
+class ScreenChestCT extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataFormat($value)
+    {
+        $this->data['DataFormat'] = $value;
+        $this->options['form_params']['DataFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
 
         return $this;
     }
