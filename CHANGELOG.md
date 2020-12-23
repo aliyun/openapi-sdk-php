@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.765 - 2020-12-23
+- CDRS First edition.
+
+
 ## 1.8.764 - 2020-12-23
 - Release DetectPedestrianIntrusion.
 

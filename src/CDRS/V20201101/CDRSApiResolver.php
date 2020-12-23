@@ -5,6 +5,8 @@ namespace AlibabaCloud\CDRS\V20201101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method BindDevice bindDevice(array $options = [])
+ * @method CreateProject createProject(array $options = [])
  * @method ListCityMapAois listCityMapAois(array $options = [])
  * @method ListCityMapCameraResults listCityMapCameraResults(array $options = [])
  * @method ListCityMapCameraStatistics listCityMapCameraStatistics(array $options = [])
@@ -33,6 +35,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVehicleTrack listVehicleTrack(array $options = [])
  * @method RecognizeImage recognizeImage(array $options = [])
  * @method SearchObject searchObject(array $options = [])
+ * @method UnbindDevice unbindDevice(array $options = [])
+ * @method UpdateProject updateProject(array $options = [])
  */
 class CDRSApiResolver extends ApiResolver
 {
@@ -48,6 +52,165 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getCorpId()
+ * @method array getDevices()
+ * @method string getAppName()
+ * @method string getNameSpace()
+ */
+class BindDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $devices
+     *
+     * @return $this
+     */
+	public function withDevices(array $devices)
+	{
+	    $this->data['Devices'] = $devices;
+		foreach ($devices as $depth1 => $depth1Value) {
+			if(isset($depth1Value['CorpId'])){
+				$this->options['form_params']['Devices.' . ($depth1 + 1) . '.CorpId'] = $depth1Value['CorpId'];
+			}
+			if(isset($depth1Value['DeviceId'])){
+				$this->options['form_params']['Devices.' . ($depth1 + 1) . '.DeviceId'] = $depth1Value['DeviceId'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['form_params']['AppName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNameSpace($value)
+    {
+        $this->data['NameSpace'] = $value;
+        $this->options['form_params']['NameSpace'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getIcon()
+ * @method string getDescription()
+ * @method string getAppName()
+ * @method string getNameSpace()
+ * @method string getName()
+ */
+class CreateProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIcon($value)
+    {
+        $this->data['Icon'] = $value;
+        $this->options['form_params']['Icon'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['form_params']['AppName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNameSpace($value)
+    {
+        $this->data['NameSpace'] = $value;
+        $this->options['form_params']['NameSpace'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2047,6 +2210,158 @@ class SearchObject extends Rpc
     {
         $this->data['ShotTimeStart'] = $value;
         $this->options['form_params']['ShotTimeStart'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDeviceIds()
+ * @method string getCorpId()
+ * @method string getAppName()
+ * @method string getNameSpace()
+ */
+class UnbindDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceIds($value)
+    {
+        $this->data['DeviceIds'] = $value;
+        $this->options['form_params']['DeviceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['form_params']['AppName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNameSpace($value)
+    {
+        $this->data['NameSpace'] = $value;
+        $this->options['form_params']['NameSpace'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getIcon()
+ * @method string getDescription()
+ * @method string getAppName()
+ * @method string getNameSpace()
+ * @method string getName()
+ */
+class UpdateProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIcon($value)
+    {
+        $this->data['Icon'] = $value;
+        $this->options['form_params']['Icon'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['form_params']['AppName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNameSpace($value)
+    {
+        $this->data['NameSpace'] = $value;
+        $this->options['form_params']['NameSpace'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
 
         return $this;
     }
