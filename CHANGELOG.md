@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.763 - 2020-12-23
+- Create Lindorm Open api.
+
+
 ## 1.8.762 - 2020-12-23
 - Create TSDB Open api.
 
