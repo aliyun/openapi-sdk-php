@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.764 - 2020-12-23
+- Release DetectPedestrianIntrusion.
+
+
 ## 1.8.763 - 2020-12-23
 - Create Lindorm Open api.
 

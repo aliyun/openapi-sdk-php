@@ -648,12 +648,25 @@ class DetectPedestrian extends Rpc
 }
 
 /**
+ * @method string getDetectRegion()
  * @method string getRegionType()
  * @method string getImageURL()
- * @method string getRegion()
  */
 class DetectPedestrianIntrusion extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDetectRegion($value)
+    {
+        $this->data['DetectRegion'] = $value;
+        $this->options['form_params']['DetectRegion'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -677,19 +690,6 @@ class DetectPedestrianIntrusion extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegion($value)
-    {
-        $this->data['Region'] = $value;
-        $this->options['form_params']['Region'] = $value;
 
         return $this;
     }
