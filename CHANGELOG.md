@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.762 - 2020-12-23
+- Create TSDB Open api.
+
+
 ## 1.8.761 - 2020-12-22
 - Minor chagnes.
 

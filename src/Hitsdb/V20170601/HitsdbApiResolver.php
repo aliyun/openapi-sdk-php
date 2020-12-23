@@ -7,26 +7,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CreateHiTSDBInstance createHiTSDBInstance(array $options = [])
  * @method DeleteHiTSDBInstance deleteHiTSDBInstance(array $options = [])
- * @method DeleteHiTSDBInstanceData deleteHiTSDBInstanceData(array $options = [])
- * @method DeleteHiTSDBInstanceMeta deleteHiTSDBInstanceMeta(array $options = [])
  * @method DescribeHiTSDBInstance describeHiTSDBInstance(array $options = [])
- * @method DescribeHiTSDBInstanceDataTtl describeHiTSDBInstanceDataTtl(array $options = [])
  * @method DescribeHiTSDBInstanceList describeHiTSDBInstanceList(array $options = [])
  * @method DescribeHiTSDBInstanceSecurityIpList describeHiTSDBInstanceSecurityIpList(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
- * @method ExploreHiTSDBInstanceData exploreHiTSDBInstanceData(array $options = [])
- * @method ExploreHiTSDBInstanceDataMetricList exploreHiTSDBInstanceDataMetricList(array $options = [])
- * @method ExploreHiTSDBInstanceDataTagKeyList exploreHiTSDBInstanceDataTagKeyList(array $options = [])
- * @method ExploreHiTSDBInstanceDataTagValueList exploreHiTSDBInstanceDataTagValueList(array $options = [])
- * @method ExploreHiTSDBInstanceDeletionJobList exploreHiTSDBInstanceDeletionJobList(array $options = [])
  * @method ModifyHiTSDBInstanceClass modifyHiTSDBInstanceClass(array $options = [])
  * @method ModifyHiTSDBInstanceSecurityIpList modifyHiTSDBInstanceSecurityIpList(array $options = [])
  * @method RenameHiTSDBInstanceAlias renameHiTSDBInstanceAlias(array $options = [])
  * @method RenewTSDBInstance renewTSDBInstance(array $options = [])
  * @method RestartHiTSDBInstance restartHiTSDBInstance(array $options = [])
  * @method SwitchHiTSDBInstancePublicNet switchHiTSDBInstancePublicNet(array $options = [])
- * @method UpdateHiTSDBInstanceDataTtl updateHiTSDBInstanceDataTtl(array $options = [])
  */
 class HitsdbApiResolver extends ApiResolver
 {
@@ -50,8 +41,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getConnectionString()
- * @method $this withConnectionString($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getInstanceClass()
@@ -120,70 +109,6 @@ class DeleteHiTSDBInstance extends Rpc
 }
 
 /**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getEnd()
- * @method $this withEnd($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getStart()
- * @method $this withStart($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTags()
- * @method $this withTags($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class DeleteHiTSDBInstanceData extends Rpc
-{
-}
-
-/**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTags()
- * @method $this withTags($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class DeleteHiTSDBInstanceMeta extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
@@ -198,32 +123,6 @@ class DeleteHiTSDBInstanceMeta extends Rpc
  * @method $this withInstanceId($value)
  */
 class DescribeHiTSDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class DescribeHiTSDBInstanceDataTtl extends Rpc
 {
 }
 
@@ -304,168 +203,6 @@ class DescribeRegions extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeZones extends Rpc
-{
-}
-
-/**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getEnd()
- * @method $this withEnd($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getAggregator()
- * @method $this withAggregator($value)
- * @method string getStart()
- * @method $this withStart($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTagFilter()
- * @method $this withTagFilter($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getDownSampleAggregator()
- * @method $this withDownSampleAggregator($value)
- * @method string getDownSampleTime()
- * @method $this withDownSampleTime($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class ExploreHiTSDBInstanceData extends Rpc
-{
-}
-
-/**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPrefix()
- * @method $this withPrefix($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getMax()
- * @method $this withMax($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class ExploreHiTSDBInstanceDataMetricList extends Rpc
-{
-}
-
-/**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPrefix()
- * @method $this withPrefix($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getMax()
- * @method $this withMax($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getMetric()
- * @method $this withMetric($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class ExploreHiTSDBInstanceDataTagKeyList extends Rpc
-{
-}
-
-/**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPrefix()
- * @method $this withPrefix($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getMax()
- * @method $this withMax($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getTagKey()
- * @method $this withTagKey($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class ExploreHiTSDBInstanceDataTagValueList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getJobType()
- * @method $this withJobType($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class ExploreHiTSDBInstanceDeletionJobList extends Rpc
 {
 }
 
@@ -588,33 +325,5 @@ class RestartHiTSDBInstance extends Rpc
  * @method $this withInstanceId($value)
  */
 class SwitchHiTSDBInstancePublicNet extends Rpc
-{
-}
-
-/**
- * @method string getReverseVpcIp()
- * @method $this withReverseVpcIp($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getReverseVpcPort()
- * @method $this withReverseVpcPort($value)
- * @method string getPassWord()
- * @method $this withPassWord($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTtl()
- * @method $this withTtl($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class UpdateHiTSDBInstanceDataTtl extends Rpc
 {
 }
