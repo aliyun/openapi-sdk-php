@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.767 - 2020-12-24
+- Modify ConfigureBackupPlan.
+
+
 ## 1.8.766 - 2020-12-24
 - Release CreateBodyDb ListBodyDbs DeleteBodyDb CreateBodyPerson GetBodyPerson ListBodyPerson DeleteBodyPerson AddBodyTrace SearchBodyTrace.
 
