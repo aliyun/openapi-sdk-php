@@ -5,13 +5,18 @@ namespace AlibabaCloud\Facebody\V20191230;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddBodyTrace addBodyTrace(array $options = [])
  * @method AddFace addFace(array $options = [])
  * @method AddFaceEntity addFaceEntity(array $options = [])
  * @method BlurFace blurFace(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
  * @method CountCrowd countCrowd(array $options = [])
+ * @method CreateBodyDb createBodyDb(array $options = [])
+ * @method CreateBodyPerson createBodyPerson(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
+ * @method DeleteBodyDb deleteBodyDb(array $options = [])
+ * @method DeleteBodyPerson deleteBodyPerson(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
  * @method DeleteFaceEntity deleteFaceEntity(array $options = [])
@@ -33,8 +38,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FaceMakeup faceMakeup(array $options = [])
  * @method FaceTidyup faceTidyup(array $options = [])
  * @method GenerateHumanAnimeStyle generateHumanAnimeStyle(array $options = [])
+ * @method GetBodyPerson getBodyPerson(array $options = [])
  * @method GetFaceEntity getFaceEntity(array $options = [])
  * @method HandPosture handPosture(array $options = [])
+ * @method ListBodyDbs listBodyDbs(array $options = [])
+ * @method ListBodyPerson listBodyPerson(array $options = [])
  * @method ListFaceDbs listFaceDbs(array $options = [])
  * @method ListFaceEntities listFaceEntities(array $options = [])
  * @method PedestrianDetectAttribute pedestrianDetectAttribute(array $options = [])
@@ -42,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeExpression recognizeExpression(array $options = [])
  * @method RecognizeFace recognizeFace(array $options = [])
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
+ * @method SearchBodyTrace searchBodyTrace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
  * @method SwapFacialFeatures swapFacialFeatures(array $options = [])
  * @method UpdateFaceEntity updateFaceEntity(array $options = [])
@@ -64,6 +73,68 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'facebody';
+}
+
+/**
+ * @method string getExtraData()
+ * @method string getPersonId()
+ * @method string getImages()
+ * @method string getDbId()
+ */
+class AddBodyTrace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraData($value)
+    {
+        $this->data['ExtraData'] = $value;
+        $this->options['form_params']['ExtraData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonId($value)
+    {
+        $this->data['PersonId'] = $value;
+        $this->options['form_params']['PersonId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImages($value)
+    {
+        $this->data['Images'] = $value;
+        $this->options['form_params']['Images'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbId($value)
+    {
+        $this->data['DbId'] = $value;
+        $this->options['form_params']['DbId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -301,6 +372,60 @@ class CountCrowd extends Rpc
 /**
  * @method string getName()
  */
+class CreateBodyDb extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDbId()
+ * @method string getName()
+ */
+class CreateBodyPerson extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbId($value)
+    {
+        $this->data['DbId'] = $value;
+        $this->options['form_params']['DbId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getName()
+ */
 class CreateFaceDb extends Rpc
 {
 
@@ -313,6 +438,60 @@ class CreateFaceDb extends Rpc
     {
         $this->data['Name'] = $value;
         $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class DeleteBodyDb extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPersonId()
+ * @method string getDbId()
+ */
+class DeleteBodyPerson extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPersonId($value)
+    {
+        $this->data['PersonId'] = $value;
+        $this->options['form_params']['PersonId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbId($value)
+    {
+        $this->data['DbId'] = $value;
+        $this->options['form_params']['DbId'] = $value;
 
         return $this;
     }
@@ -1052,6 +1231,19 @@ class GenerateHumanAnimeStyle extends Rpc
 }
 
 /**
+ * @method string getPersonId()
+ * @method $this withPersonId($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ */
+class GetBodyPerson extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getEntityId()
  * @method string getDbName()
  */
@@ -1103,6 +1295,34 @@ class HandPosture extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getOffset()
+ * @method $this withOffset($value)
+ */
+class ListBodyDbs extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getOffset()
+ * @method $this withOffset($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ */
+class ListBodyPerson extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 class ListFaceDbs extends Rpc
@@ -1360,6 +1580,68 @@ class RecognizePublicFace extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getMinScore()
+ * @method string getLimit()
+ * @method string getImages()
+ * @method string getDbId()
+ */
+class SearchBodyTrace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinScore($value)
+    {
+        $this->data['MinScore'] = $value;
+        $this->options['form_params']['MinScore'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImages($value)
+    {
+        $this->data['Images'] = $value;
+        $this->options['form_params']['Images'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbId($value)
+    {
+        $this->data['DbId'] = $value;
+        $this->options['form_params']['DbId'] = $value;
+
+        return $this;
     }
 }
 
