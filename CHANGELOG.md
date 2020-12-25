@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.769 - 2020-12-25
+- Generated 2016-04-08 for `Emr`.
+
+
 ## 1.8.768 - 2020-12-25
 - Supported for weboffice edit.
 
