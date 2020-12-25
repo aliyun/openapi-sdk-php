@@ -57,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetSet getSet(array $options = [])
  * @method GetVideo getVideo(array $options = [])
  * @method GetVideoTask getVideoTask(array $options = [])
+ * @method GetWebofficeURL getWebofficeURL(array $options = [])
  * @method IndexImage indexImage(array $options = [])
  * @method IndexVideo indexVideo(array $options = [])
  * @method ListFaceGroups listFaceGroups(array $options = [])
@@ -75,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PutProject putProject(array $options = [])
  * @method RefreshOfficeEditToken refreshOfficeEditToken(array $options = [])
  * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
+ * @method RefreshWebofficeToken refreshWebofficeToken(array $options = [])
  * @method SearchDocIndex searchDocIndex(array $options = [])
  * @method StopStreamAnalyseTask stopStreamAnalyseTask(array $options = [])
  * @method UpdateDocIndexMeta updateDocIndexMeta(array $options = [])
@@ -98,9 +100,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'imm';
 }
 
 /**
@@ -1002,6 +1001,28 @@ class GetVideoTask extends Rpc
 }
 
 /**
+ * @method string getSrcType()
+ * @method $this withSrcType($value)
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getFile()
+ * @method $this withFile($value)
+ * @method string getNotifyEndpoint()
+ * @method $this withNotifyEndpoint($value)
+ * @method string getFileID()
+ * @method $this withFileID($value)
+ * @method string getNotifyTopicName()
+ * @method $this withNotifyTopicName($value)
+ * @method string getPermission()
+ * @method $this withPermission($value)
+ * @method string getUser()
+ * @method $this withUser($value)
+ */
+class GetWebofficeURL extends Rpc
+{
+}
+
+/**
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getExternalId()
@@ -1290,6 +1311,18 @@ class RefreshOfficeEditToken extends Rpc
  * @method $this withRefreshToken($value)
  */
 class RefreshOfficePreviewToken extends Rpc
+{
+}
+
+/**
+ * @method string getProject()
+ * @method $this withProject($value)
+ * @method string getAccessToken()
+ * @method $this withAccessToken($value)
+ * @method string getRefreshToken()
+ * @method $this withRefreshToken($value)
+ */
+class RefreshWebofficeToken extends Rpc
 {
 }
 

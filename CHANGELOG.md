@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.768 - 2020-12-25
+- Supported for weboffice edit.
+
+
 ## 1.8.767 - 2020-12-24
 - Modify ConfigureBackupPlan.
 
