@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.771 - 2020-12-28
+- Ecs confirm.
+
+
 ## 1.8.770 - 2020-12-28
 - Add some console API operations.
 
