@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.774 - 2020-12-28
+- Release InterpolateVideoFrame ToneSdrVideo ConvertHdrVideo.
+
+
 ## 1.8.773 - 2020-12-28
 - Release GenRealPersonVerificationToken GetRealPersonVerificationResult.
 
