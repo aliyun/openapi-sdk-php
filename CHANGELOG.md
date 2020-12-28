@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.775 - 2020-12-28
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.774 - 2020-12-28
 - Release InterpolateVideoFrame ToneSdrVideo ConvertHdrVideo.
 
