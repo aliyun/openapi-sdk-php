@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.770 - 2020-12-28
+- Add some console API operations.
+
+
 ## 1.8.769 - 2020-12-25
 - Generated 2016-04-08 for `Emr`.
 
