@@ -29,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstance modifyInstance(array $options = [])
  * @method QueryAccountBalance queryAccountBalance(array $options = [])
  * @method QueryAccountBill queryAccountBill(array $options = [])
+ * @method QueryAccountTransactionDetails queryAccountTransactionDetails(array $options = [])
  * @method QueryAccountTransactions queryAccountTransactions(array $options = [])
  * @method QueryAvailableInstances queryAvailableInstances(array $options = [])
  * @method QueryBill queryBill(array $options = [])
@@ -110,11 +111,11 @@ class AllocateCostUnitResource extends Rpc
 			if(isset($depth1Value['CommodityCode'])){
 				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.CommodityCode'] = $depth1Value['CommodityCode'];
 			}
-			if(isset($depth1Value['ResourceUserId'])){
-				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ResourceUserId'] = $depth1Value['ResourceUserId'];
-			}
 			if(isset($depth1Value['ApportionCode'])){
 				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ApportionCode'] = $depth1Value['ApportionCode'];
+			}
+			if(isset($depth1Value['ResourceUserId'])){
+				$this->options['query']['ResourceInstanceList.' . ($depth1 + 1) . '.ResourceUserId'] = $depth1Value['ResourceUserId'];
 			}
 		}
 
@@ -617,6 +618,30 @@ class QueryAccountBalance extends Rpc
  * @method $this withPageSize($value)
  */
 class QueryAccountBill extends Rpc
+{
+}
+
+/**
+ * @method string getTransactionType()
+ * @method $this withTransactionType($value)
+ * @method string getCreateTimeEnd()
+ * @method $this withCreateTimeEnd($value)
+ * @method string getRecordID()
+ * @method $this withRecordID($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getTransactionChannel()
+ * @method $this withTransactionChannel($value)
+ * @method string getTransactionChannelSN()
+ * @method $this withTransactionChannelSN($value)
+ * @method string getCreateTimeStart()
+ * @method $this withCreateTimeStart($value)
+ * @method string getTransactionNumber()
+ * @method $this withTransactionNumber($value)
+ */
+class QueryAccountTransactionDetails extends Rpc
 {
 }
 

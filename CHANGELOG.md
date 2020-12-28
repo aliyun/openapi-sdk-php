@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.772 - 2020-12-28
+- Add CommodityCode For QueryOrderAPI.
+
+
 ## 1.8.771 - 2020-12-28
 - Ecs confirm.
 
