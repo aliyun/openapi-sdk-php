@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.773 - 2020-12-28
+- Release GenRealPersonVerificationToken GetRealPersonVerificationResult.
+
+
 ## 1.8.772 - 2020-12-28
 - Add CommodityCode For QueryOrderAPI.
 

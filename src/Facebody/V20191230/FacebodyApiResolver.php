@@ -38,8 +38,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FaceMakeup faceMakeup(array $options = [])
  * @method FaceTidyup faceTidyup(array $options = [])
  * @method GenerateHumanAnimeStyle generateHumanAnimeStyle(array $options = [])
+ * @method GenRealPersonVerificationToken genRealPersonVerificationToken(array $options = [])
  * @method GetBodyPerson getBodyPerson(array $options = [])
  * @method GetFaceEntity getFaceEntity(array $options = [])
+ * @method GetRealPersonVerificationResult getRealPersonVerificationResult(array $options = [])
  * @method HandPosture handPosture(array $options = [])
  * @method ListBodyDbs listBodyDbs(array $options = [])
  * @method ListBodyPerson listBodyPerson(array $options = [])
@@ -1231,6 +1233,54 @@ class GenerateHumanAnimeStyle extends Rpc
 }
 
 /**
+ * @method string getCertificateNumber()
+ * @method string getCertificateName()
+ * @method string getMetaInfo()
+ */
+class GenRealPersonVerificationToken extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertificateNumber($value)
+    {
+        $this->data['CertificateNumber'] = $value;
+        $this->options['form_params']['CertificateNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertificateName($value)
+    {
+        $this->data['CertificateName'] = $value;
+        $this->options['form_params']['CertificateName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetaInfo($value)
+    {
+        $this->data['MetaInfo'] = $value;
+        $this->options['form_params']['MetaInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPersonId()
  * @method $this withPersonId($value)
  * @method string getDbId()
@@ -1272,6 +1322,40 @@ class GetFaceEntity extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getVerificationToken()
+ * @method string getMaterialHash()
+ */
+class GetRealPersonVerificationResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerificationToken($value)
+    {
+        $this->data['VerificationToken'] = $value;
+        $this->options['form_params']['VerificationToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialHash($value)
+    {
+        $this->data['MaterialHash'] = $value;
+        $this->options['form_params']['MaterialHash'] = $value;
 
         return $this;
     }
