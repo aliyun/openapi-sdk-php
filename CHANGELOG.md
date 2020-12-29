@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.777 - 2020-12-29
+- Supported SystemDiskPerformanceLevel, SystemDiskDeleteWithInstance, DataDiskPerformanceLevel, NetworkInterfaceSecurityGroupIds, SecurityGroupIds, PrivateIpAddress for CreateLaunchTemplate, CreateLaunchTemplateVersion, DescribeLaunchTemplateVersion.
+
+
 ## 1.8.776 - 2020-12-29
 - ListNodesNoPaging return with instance type.
 

@@ -752,6 +752,8 @@ class AttachDisk extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getRamRoleName()
@@ -2648,6 +2650,8 @@ class CreateKeyPair extends Rpc
  * @method $this withVSwitchId($value)
  * @method string getSpotStrategy()
  * @method $this withSpotStrategy($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getInternetChargeType()
@@ -2658,6 +2662,7 @@ class CreateKeyPair extends Rpc
  * @method $this withInternetMaxBandwidthIn($value)
  * @method string getVersionDescription()
  * @method $this withVersionDescription($value)
+ * @method string getSystemDiskDeleteWithInstance()
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getIoOptimized()
@@ -2669,6 +2674,7 @@ class CreateKeyPair extends Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getSystemDiskCategory()
+ * @method string getSystemDiskPerformanceLevel()
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getPasswordInherit()
@@ -2691,6 +2697,7 @@ class CreateKeyPair extends Rpc
  * @method $this withAutoReleaseTime($value)
  * @method string getSpotDuration()
  * @method $this withSpotDuration($value)
+ * @method array getSecurityGroupIds()
  * @method array getDataDisk()
  * @method string getSystemDiskSize()
  * @method string getVpcId()
@@ -2758,10 +2765,36 @@ class CreateLaunchTemplate extends Rpc
      *
      * @return $this
      */
+    public function withSystemDiskDeleteWithInstance($value)
+    {
+        $this->data['SystemDiskDeleteWithInstance'] = $value;
+        $this->options['query']['SystemDisk.DeleteWithInstance'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withSystemDiskCategory($value)
     {
         $this->data['SystemDiskCategory'] = $value;
         $this->options['query']['SystemDisk.Category'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskPerformanceLevel($value)
+    {
+        $this->data['SystemDiskPerformanceLevel'] = $value;
+        $this->options['query']['SystemDisk.PerformanceLevel'] = $value;
 
         return $this;
     }
@@ -2790,6 +2823,9 @@ class CreateLaunchTemplate extends Rpc
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
 			}
+			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
+			}
 		}
 
 		return $this;
@@ -2806,6 +2842,21 @@ class CreateLaunchTemplate extends Rpc
         $this->options['query']['SystemDisk.DiskName'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $securityGroupIds
+     *
+     * @return $this
+     */
+	public function withSecurityGroupIds(array $securityGroupIds)
+	{
+	    $this->data['SecurityGroupIds'] = $securityGroupIds;
+		foreach ($securityGroupIds as $i => $iValue) {
+			$this->options['query']['SecurityGroupIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -2840,6 +2891,9 @@ class CreateLaunchTemplate extends Rpc
 			}
 			if(isset($depth1Value['Device'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
+			}
+			if(isset($depth1Value['PerformanceLevel'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
 			}
 		}
 
@@ -2904,6 +2958,8 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withVSwitchId($value)
  * @method string getSpotStrategy()
  * @method $this withSpotStrategy($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getInternetChargeType()
@@ -2914,6 +2970,7 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withInternetMaxBandwidthIn($value)
  * @method string getVersionDescription()
  * @method $this withVersionDescription($value)
+ * @method string getSystemDiskDeleteWithInstance()
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getIoOptimized()
@@ -2925,6 +2982,7 @@ class CreateLaunchTemplate extends Rpc
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getSystemDiskCategory()
+ * @method string getSystemDiskPerformanceLevel()
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getPasswordInherit()
@@ -2947,6 +3005,7 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withAutoReleaseTime($value)
  * @method string getSpotDuration()
  * @method $this withSpotDuration($value)
+ * @method array getSecurityGroupIds()
  * @method array getDataDisk()
  * @method string getSystemDiskSize()
  * @method string getVpcId()
@@ -2994,10 +3053,36 @@ class CreateLaunchTemplateVersion extends Rpc
      *
      * @return $this
      */
+    public function withSystemDiskDeleteWithInstance($value)
+    {
+        $this->data['SystemDiskDeleteWithInstance'] = $value;
+        $this->options['query']['SystemDisk.DeleteWithInstance'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withSystemDiskCategory($value)
     {
         $this->data['SystemDiskCategory'] = $value;
         $this->options['query']['SystemDisk.Category'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskPerformanceLevel($value)
+    {
+        $this->data['SystemDiskPerformanceLevel'] = $value;
+        $this->options['query']['SystemDisk.PerformanceLevel'] = $value;
 
         return $this;
     }
@@ -3026,6 +3111,9 @@ class CreateLaunchTemplateVersion extends Rpc
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
 			}
+			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
+			}
 		}
 
 		return $this;
@@ -3042,6 +3130,21 @@ class CreateLaunchTemplateVersion extends Rpc
         $this->options['query']['SystemDisk.DiskName'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $securityGroupIds
+     *
+     * @return $this
+     */
+	public function withSecurityGroupIds(array $securityGroupIds)
+	{
+	    $this->data['SecurityGroupIds'] = $securityGroupIds;
+		foreach ($securityGroupIds as $i => $iValue) {
+			$this->options['query']['SecurityGroupIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -3076,6 +3179,9 @@ class CreateLaunchTemplateVersion extends Rpc
 			}
 			if(isset($depth1Value['Device'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
+			}
+			if(isset($depth1Value['PerformanceLevel'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
 			}
 		}
 
