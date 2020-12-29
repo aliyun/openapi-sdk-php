@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.776 - 2020-12-29
+- ListNodesNoPaging return with instance type.
+
+
 ## 1.8.775 - 2020-12-28
 - Generated 2020-05-18 for `dataworks-public`.
 

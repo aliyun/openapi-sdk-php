@@ -51,10 +51,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetCloudMetricProfiling getCloudMetricProfiling(array $options = [])
  * @method GetClusterVolumes getClusterVolumes(array $options = [])
  * @method GetGWSConnectTicket getGWSConnectTicket(array $options = [])
+ * @method GetHealthMonitorLogs getHealthMonitorLogs(array $options = [])
  * @method GetHybridClusterConfig getHybridClusterConfig(array $options = [])
  * @method GetIfEcsTypeSupportHtConfig getIfEcsTypeSupportHtConfig(array $options = [])
  * @method GetVisualServiceStatus getVisualServiceStatus(array $options = [])
  * @method GetWorkbenchToken getWorkbenchToken(array $options = [])
+ * @method InitializeEHPC initializeEHPC(array $options = [])
  * @method InstallSoftware installSoftware(array $options = [])
  * @method InvokeShellCommand invokeShellCommand(array $options = [])
  * @method ListAccountMapping listAccountMapping(array $options = [])
@@ -165,6 +167,8 @@ class AddLocalNodes extends Rpc
 /**
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getSystemDiskLevel()
+ * @method $this withSystemDiskLevel($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getAllocatePublicAddress()
@@ -279,6 +283,8 @@ class AddUsers extends Rpc
  * @method $this withImageId($value)
  * @method string getMemory()
  * @method $this withMemory($value)
+ * @method string getSystemDiskLevel()
+ * @method $this withSystemDiskLevel($value)
  * @method string getAllocatePublicAddress()
  * @method $this withAllocatePublicAddress($value)
  * @method string getInternetMaxBandWidthOut()
@@ -432,6 +438,8 @@ class BindAccountToClusterUser extends Rpc
  * @method $this withSccClusterId($value)
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getSystemDiskLevel()
+ * @method $this withSystemDiskLevel($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getEhpcVersion()
@@ -1349,6 +1357,22 @@ class GetGWSConnectTicket extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEnableReverse()
+ * @method $this withEnableReverse($value)
+ * @method string getFilter()
+ * @method $this withFilter($value)
+ */
+class GetHealthMonitorLogs extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getNode()
@@ -1391,6 +1415,10 @@ class GetVisualServiceStatus extends Rpc
  * @method $this withUserName($value)
  */
 class GetWorkbenchToken extends Rpc
+{
+}
+
+class InitializeEHPC extends Rpc
 {
 }
 
@@ -1681,12 +1709,18 @@ class ListJobTemplates extends Rpc
  * @method $this withClusterId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getFilter()
+ * @method $this withFilter($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
  * @method string getSequence()
  * @method $this withSequence($value)
  * @method string getHostName()
  * @method $this withHostName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getSortBy()
+ * @method $this withSortBy($value)
  */
 class ListNodes extends Rpc
 {
@@ -2360,6 +2394,8 @@ class StopVisualService extends Rpc
  * @method $this withStderrRedirectPath($value)
  * @method string getRunasUserPassword()
  * @method $this withRunasUserPassword($value)
+ * @method string getClockTime()
+ * @method $this withClockTime($value)
  * @method string getCommandLine()
  * @method $this withCommandLine($value)
  * @method string getJobQueue()
@@ -2370,6 +2406,8 @@ class StopVisualService extends Rpc
  * @method $this withUnzipCmd($value)
  * @method string getPackagePath()
  * @method $this withPackagePath($value)
+ * @method string getMem()
+ * @method $this withMem($value)
  * @method string getStdoutRedirectPath()
  * @method $this withStdoutRedirectPath($value)
  * @method string getVariables()
@@ -2382,8 +2420,16 @@ class StopVisualService extends Rpc
  * @method $this withClusterId($value)
  * @method string getReRunable()
  * @method $this withReRunable($value)
+ * @method string getThread()
+ * @method $this withThread($value)
  * @method string getPriority()
  * @method $this withPriority($value)
+ * @method string getGpu()
+ * @method $this withGpu($value)
+ * @method string getNode()
+ * @method $this withNode($value)
+ * @method string getTask()
+ * @method $this withTask($value)
  * @method string getInputFileUrl()
  * @method $this withInputFileUrl($value)
  * @method string getName()
