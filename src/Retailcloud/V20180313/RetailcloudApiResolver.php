@@ -99,9 +99,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'retailcloud';
 }
 
 /**
@@ -1040,14 +1037,10 @@ class DeleteSlbAP extends Rpc
 }
 
 /**
- * @method string getDeployPacketId()
- * @method $this withDeployPacketId($value)
  * @method string getDeployPacketUrl()
  * @method $this withDeployPacketUrl($value)
  * @method string getTotalPartitions()
  * @method $this withTotalPartitions($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getEnvId()
@@ -1056,11 +1049,47 @@ class DeleteSlbAP extends Rpc
  * @method $this withUpdateStrategyType($value)
  * @method string getPauseType()
  * @method $this withPauseType($value)
+ * @method string getDeployPacketId()
+ * @method $this withDeployPacketId($value)
+ * @method array getContainerImageList()
+ * @method string getName()
+ * @method $this withName($value)
+ * @method array getInitContainerImageList()
  * @method string getArmsFlag()
  * @method $this withArmsFlag($value)
  */
 class DeployApp extends Rpc
 {
+
+    /**
+     * @param array $containerImageList
+     *
+     * @return $this
+     */
+	public function withContainerImageList(array $containerImageList)
+	{
+	    $this->data['ContainerImageList'] = $containerImageList;
+		foreach ($containerImageList as $i => $iValue) {
+			$this->options['query']['ContainerImageList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $initContainerImageList
+     *
+     * @return $this
+     */
+	public function withInitContainerImageList(array $initContainerImageList)
+	{
+	    $this->data['InitContainerImageList'] = $initContainerImageList;
+		foreach ($initContainerImageList as $i => $iValue) {
+			$this->options['query']['InitContainerImageList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

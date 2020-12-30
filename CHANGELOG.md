@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.778 - 2020-12-30
+- Support directly specify image version deploy.
+
+
 ## 1.8.777 - 2020-12-29
 - Supported SystemDiskPerformanceLevel, SystemDiskDeleteWithInstance, DataDiskPerformanceLevel, NetworkInterfaceSecurityGroupIds, SecurityGroupIds, PrivateIpAddress for CreateLaunchTemplate, CreateLaunchTemplateVersion, DescribeLaunchTemplateVersion.
 
