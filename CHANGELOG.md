@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.779 - 2020-12-30
+- Add DescribeActiveOperationTask API.
+- Add ModifyActiveOperationTask API.
+
+
 ## 1.8.778 - 2020-12-30
 - Support directly specify image version deploy.
 
