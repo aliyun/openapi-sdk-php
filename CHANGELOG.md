@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.781 - 2020-12-31
+- Add support for thing model function block features, including thing model APIs like CreateThingModel,UpdateThingModel,SetDeviceProperty,InvokeThingService etc.
+
+
 ## 1.8.780 - 2020-12-31
 - Update Open API.
 
