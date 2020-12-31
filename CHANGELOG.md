@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.780 - 2020-12-31
+- Update Open API.
+
+
 ## 1.8.779 - 2020-12-30
 - Add DescribeActiveOperationTask API.
 - Add ModifyActiveOperationTask API.
