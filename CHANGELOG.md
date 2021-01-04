@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.782 - 2021-1-4
+- Supported API for GTM.
+
+
 ## 1.8.781 - 2020-12-31
 - Add support for thing model function block features, including thing model APIs like CreateThingModel,UpdateThingModel,SetDeviceProperty,InvokeThingService etc.
 

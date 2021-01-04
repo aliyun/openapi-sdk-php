@@ -6,6 +6,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddCustomLine addCustomLine(array $options = [])
+ * @method AddDnsGtmAccessStrategy addDnsGtmAccessStrategy(array $options = [])
+ * @method AddDnsGtmAddressPool addDnsGtmAddressPool(array $options = [])
+ * @method AddDnsGtmMonitor addDnsGtmMonitor(array $options = [])
  * @method AddDomain addDomain(array $options = [])
  * @method AddDomainBackup addDomainBackup(array $options = [])
  * @method AddDomainGroup addDomainGroup(array $options = [])
@@ -19,6 +22,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeDomainOfDnsProduct changeDomainOfDnsProduct(array $options = [])
  * @method CopyGtmConfig copyGtmConfig(array $options = [])
  * @method DeleteCustomLines deleteCustomLines(array $options = [])
+ * @method DeleteDnsGtmAccessStrategy deleteDnsGtmAccessStrategy(array $options = [])
+ * @method DeleteDnsGtmAddressPool deleteDnsGtmAddressPool(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DeleteDomainGroup deleteDomainGroup(array $options = [])
  * @method DeleteDomainRecord deleteDomainRecord(array $options = [])
@@ -30,6 +35,21 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBatchResultDetail describeBatchResultDetail(array $options = [])
  * @method DescribeCustomLine describeCustomLine(array $options = [])
  * @method DescribeCustomLines describeCustomLines(array $options = [])
+ * @method DescribeDnsGtmAccessStrategies describeDnsGtmAccessStrategies(array $options = [])
+ * @method DescribeDnsGtmAccessStrategy describeDnsGtmAccessStrategy(array $options = [])
+ * @method DescribeDnsGtmAccessStrategyAvailableConfig describeDnsGtmAccessStrategyAvailableConfig(array $options = [])
+ * @method DescribeDnsGtmAddrAttributeInfo describeDnsGtmAddrAttributeInfo(array $options = [])
+ * @method DescribeDnsGtmAddressPoolAvailableConfig describeDnsGtmAddressPoolAvailableConfig(array $options = [])
+ * @method DescribeDnsGtmAvailableAlertGroup describeDnsGtmAvailableAlertGroup(array $options = [])
+ * @method DescribeDnsGtmInstance describeDnsGtmInstance(array $options = [])
+ * @method DescribeDnsGtmInstanceAddressPool describeDnsGtmInstanceAddressPool(array $options = [])
+ * @method DescribeDnsGtmInstanceAddressPools describeDnsGtmInstanceAddressPools(array $options = [])
+ * @method DescribeDnsGtmInstances describeDnsGtmInstances(array $options = [])
+ * @method DescribeDnsGtmInstanceStatus describeDnsGtmInstanceStatus(array $options = [])
+ * @method DescribeDnsGtmInstanceSystemCname describeDnsGtmInstanceSystemCname(array $options = [])
+ * @method DescribeDnsGtmLogs describeDnsGtmLogs(array $options = [])
+ * @method DescribeDnsGtmMonitorAvailableConfig describeDnsGtmMonitorAvailableConfig(array $options = [])
+ * @method DescribeDnsGtmMonitorConfig describeDnsGtmMonitorConfig(array $options = [])
  * @method DescribeDnsProductInstance describeDnsProductInstance(array $options = [])
  * @method DescribeDnsProductInstances describeDnsProductInstances(array $options = [])
  * @method DescribeDNSSLBSubDomains describeDNSSLBSubDomains(array $options = [])
@@ -78,20 +98,29 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTxtRecordForVerify getTxtRecordForVerify(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyHichinaDomainDNS modifyHichinaDomainDNS(array $options = [])
+ * @method MoveDomainResourceGroup moveDomainResourceGroup(array $options = [])
+ * @method MoveGtmResourceGroup moveGtmResourceGroup(array $options = [])
  * @method OperateBatchDomain operateBatchDomain(array $options = [])
  * @method PreviewGtmRecoveryPlan previewGtmRecoveryPlan(array $options = [])
  * @method RetrieveDomain retrieveDomain(array $options = [])
  * @method RollbackGtmRecoveryPlan rollbackGtmRecoveryPlan(array $options = [])
+ * @method SetDnsGtmAccessMode setDnsGtmAccessMode(array $options = [])
+ * @method SetDnsGtmMonitorStatus setDnsGtmMonitorStatus(array $options = [])
  * @method SetDNSSLBStatus setDNSSLBStatus(array $options = [])
  * @method SetDomainDnssecStatus setDomainDnssecStatus(array $options = [])
  * @method SetDomainRecordStatus setDomainRecordStatus(array $options = [])
  * @method SetGtmAccessMode setGtmAccessMode(array $options = [])
  * @method SetGtmMonitorStatus setGtmMonitorStatus(array $options = [])
+ * @method SwitchDnsGtmInstanceStrategyMode switchDnsGtmInstanceStrategyMode(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TransferDomain transferDomain(array $options = [])
  * @method UnbindInstanceDomains unbindInstanceDomains(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateCustomLine updateCustomLine(array $options = [])
+ * @method UpdateDnsGtmAccessStrategy updateDnsGtmAccessStrategy(array $options = [])
+ * @method UpdateDnsGtmAddressPool updateDnsGtmAddressPool(array $options = [])
+ * @method UpdateDnsGtmInstanceGlobalConfig updateDnsGtmInstanceGlobalConfig(array $options = [])
+ * @method UpdateDnsGtmMonitor updateDnsGtmMonitor(array $options = [])
  * @method UpdateDNSSLBWeight updateDNSSLBWeight(array $options = [])
  * @method UpdateDomainGroup updateDomainGroup(array $options = [])
  * @method UpdateDomainRecord updateDomainRecord(array $options = [])
@@ -150,6 +179,210 @@ class AddCustomLine extends Rpc
 			}
 			if(isset($depth1Value['StartIp'])){
 				$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getDefaultLbaStrategy()
+ * @method $this withDefaultLbaStrategy($value)
+ * @method string getFailoverAddrPoolType()
+ * @method $this withFailoverAddrPoolType($value)
+ * @method string getDefaultAddrPoolType()
+ * @method $this withDefaultAddrPoolType($value)
+ * @method string getFailoverMaxReturnAddrNum()
+ * @method $this withFailoverMaxReturnAddrNum($value)
+ * @method string getFailoverLbaStrategy()
+ * @method $this withFailoverLbaStrategy($value)
+ * @method array getDefaultAddrPool()
+ * @method string getFailoverMinAvailableAddrNum()
+ * @method $this withFailoverMinAvailableAddrNum($value)
+ * @method string getDefaultMaxReturnAddrNum()
+ * @method $this withDefaultMaxReturnAddrNum($value)
+ * @method string getDefaultMinAvailableAddrNum()
+ * @method $this withDefaultMinAvailableAddrNum($value)
+ * @method string getStrategyMode()
+ * @method $this withStrategyMode($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getLines()
+ * @method $this withLines($value)
+ * @method string getStrategyName()
+ * @method $this withStrategyName($value)
+ * @method string getDefaultLatencyOptimization()
+ * @method $this withDefaultLatencyOptimization($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFailoverLatencyOptimization()
+ * @method $this withFailoverLatencyOptimization($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method array getFailoverAddrPool()
+ */
+class AddDnsGtmAccessStrategy extends Rpc
+{
+
+    /**
+     * @param array $defaultAddrPool
+     *
+     * @return $this
+     */
+	public function withDefaultAddrPool(array $defaultAddrPool)
+	{
+	    $this->data['DefaultAddrPool'] = $defaultAddrPool;
+		foreach ($defaultAddrPool as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Id'])){
+				$this->options['query']['DefaultAddrPool.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['DefaultAddrPool.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $failoverAddrPool
+     *
+     * @return $this
+     */
+	public function withFailoverAddrPool(array $failoverAddrPool)
+	{
+	    $this->data['FailoverAddrPool'] = $failoverAddrPool;
+		foreach ($failoverAddrPool as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Id'])){
+				$this->options['query']['FailoverAddrPool.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['FailoverAddrPool.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getMonitorExtendInfo()
+ * @method $this withMonitorExtendInfo($value)
+ * @method string getLbaStrategy()
+ * @method $this withLbaStrategy($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method array getAddr()
+ * @method string getMonitorStatus()
+ * @method $this withMonitorStatus($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getProtocolType()
+ * @method $this withProtocolType($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method array getIspCityNode()
+ */
+class AddDnsGtmAddressPool extends Rpc
+{
+
+    /**
+     * @param array $addr
+     *
+     * @return $this
+     */
+	public function withAddr(array $addr)
+	{
+	    $this->data['Addr'] = $addr;
+		foreach ($addr as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Mode'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
+			}
+			if(isset($depth1Value['AttributeInfo'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.AttributeInfo'] = $depth1Value['AttributeInfo'];
+			}
+			if(isset($depth1Value['Remark'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Remark'] = $depth1Value['Remark'];
+			}
+			if(isset($depth1Value['Addr'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Addr'] = $depth1Value['Addr'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $ispCityNode
+     *
+     * @return $this
+     */
+	public function withIspCityNode(array $ispCityNode)
+	{
+	    $this->data['IspCityNode'] = $ispCityNode;
+		foreach ($ispCityNode as $depth1 => $depth1Value) {
+			if(isset($depth1Value['CityCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
+			}
+			if(isset($depth1Value['IspCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getMonitorExtendInfo()
+ * @method $this withMonitorExtendInfo($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getAddrPoolId()
+ * @method $this withAddrPoolId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
+ * @method string getProtocolType()
+ * @method $this withProtocolType($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method array getIspCityNode()
+ */
+class AddDnsGtmMonitor extends Rpc
+{
+
+    /**
+     * @param array $ispCityNode
+     *
+     * @return $this
+     */
+	public function withIspCityNode(array $ispCityNode)
+	{
+	    $this->data['IspCityNode'] = $ispCityNode;
+		foreach ($ispCityNode as $depth1 => $depth1Value) {
+			if(isset($depth1Value['CityCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
+			}
+			if(isset($depth1Value['IspCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
 			}
 		}
 
@@ -450,6 +683,30 @@ class DeleteCustomLines extends Rpc
 }
 
 /**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getStrategyId()
+ * @method $this withStrategyId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DeleteDnsGtmAccessStrategy extends Rpc
+{
+}
+
+/**
+ * @method string getAddrPoolId()
+ * @method $this withAddrPoolId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DeleteDnsGtmAddressPool extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getUserClientIp()
@@ -600,6 +857,212 @@ class DescribeCustomLines extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStrategyMode()
+ * @method $this withStrategyMode($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmAccessStrategies extends Rpc
+{
+}
+
+/**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getStrategyId()
+ * @method $this withStrategyId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmAccessStrategy extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getStrategyMode()
+ * @method $this withStrategyMode($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmAccessStrategyAvailableConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAddrs()
+ * @method $this withAddrs($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmAddrAttributeInfo extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmAddressPoolAvailableConfig extends Rpc
+{
+}
+
+/**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmAvailableAlertGroup extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmInstance extends Rpc
+{
+}
+
+/**
+ * @method string getAddrPoolId()
+ * @method $this withAddrPoolId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmInstanceAddressPool extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmInstanceAddressPools extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class DescribeDnsGtmInstances extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmInstanceStatus extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmInstanceSystemCname extends Rpc
+{
+}
+
+/**
+ * @method string getStartTimestamp()
+ * @method $this withStartTimestamp($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getEndTimestamp()
+ * @method $this withEndTimestamp($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class DescribeDnsGtmLogs extends Rpc
+{
+}
+
+/**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmMonitorAvailableConfig extends Rpc
+{
+}
+
+/**
+ * @method string getMonitorConfigId()
+ * @method $this withMonitorConfigId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDnsGtmMonitorConfig extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getUserClientIp()
@@ -614,6 +1077,8 @@ class DescribeDnsProductInstance extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getDomainType()
+ * @method $this withDomainType($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getPageSize()
@@ -822,6 +1287,8 @@ class DescribeDomainLogs extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getDomainType()
+ * @method $this withDomainType($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getLang()
@@ -941,6 +1408,8 @@ class DescribeDomains extends Rpc
  * @method $this withStartDate($value)
  * @method string getEndDate()
  * @method $this withEndDate($value)
+ * @method string getDomainType()
+ * @method $this withDomainType($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getLang()
@@ -1255,6 +1724,8 @@ class DescribeRecordLogs extends Rpc
  * @method $this withStartDate($value)
  * @method string getEndDate()
  * @method $this withEndDate($value)
+ * @method string getDomainType()
+ * @method $this withDomainType($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getLang()
@@ -1271,6 +1742,8 @@ class DescribeRecordStatistics extends Rpc
  * @method $this withStartDate($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getDomainType()
+ * @method $this withDomainType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
@@ -1470,6 +1943,34 @@ class ModifyHichinaDomainDNS extends Rpc
 }
 
 /**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class MoveDomainResourceGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class MoveGtmResourceGroup extends Rpc
+{
+}
+
+/**
  * @method array getDomainRecordInfo()
  * @method string getType()
  * @method $this withType($value)
@@ -1567,6 +2068,34 @@ class RollbackGtmRecoveryPlan extends Rpc
 }
 
 /**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getStrategyId()
+ * @method $this withStrategyId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getAccessMode()
+ * @method $this withAccessMode($value)
+ */
+class SetDnsGtmAccessMode extends Rpc
+{
+}
+
+/**
+ * @method string getMonitorConfigId()
+ * @method $this withMonitorConfigId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class SetDnsGtmMonitorStatus extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getType()
@@ -1637,6 +2166,20 @@ class SetGtmAccessMode extends Rpc
  * @method $this withStatus($value)
  */
 class SetGtmMonitorStatus extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getStrategyMode()
+ * @method $this withStrategyMode($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class SwitchDnsGtmInstanceStrategyMode extends Rpc
 {
 }
 
@@ -1795,6 +2338,223 @@ class UpdateCustomLine extends Rpc
 			}
 			if(isset($depth1Value['StartIp'])){
 				$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getDefaultLbaStrategy()
+ * @method $this withDefaultLbaStrategy($value)
+ * @method string getFailoverAddrPoolType()
+ * @method $this withFailoverAddrPoolType($value)
+ * @method string getDefaultAddrPoolType()
+ * @method $this withDefaultAddrPoolType($value)
+ * @method string getFailoverMaxReturnAddrNum()
+ * @method $this withFailoverMaxReturnAddrNum($value)
+ * @method string getFailoverLbaStrategy()
+ * @method $this withFailoverLbaStrategy($value)
+ * @method array getDefaultAddrPool()
+ * @method string getFailoverMinAvailableAddrNum()
+ * @method $this withFailoverMinAvailableAddrNum($value)
+ * @method string getDefaultMaxReturnAddrNum()
+ * @method $this withDefaultMaxReturnAddrNum($value)
+ * @method string getDefaultMinAvailableAddrNum()
+ * @method $this withDefaultMinAvailableAddrNum($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getLines()
+ * @method $this withLines($value)
+ * @method string getStrategyName()
+ * @method $this withStrategyName($value)
+ * @method string getDefaultLatencyOptimization()
+ * @method $this withDefaultLatencyOptimization($value)
+ * @method string getFailoverLatencyOptimization()
+ * @method $this withFailoverLatencyOptimization($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getStrategyId()
+ * @method $this withStrategyId($value)
+ * @method array getFailoverAddrPool()
+ */
+class UpdateDnsGtmAccessStrategy extends Rpc
+{
+
+    /**
+     * @param array $defaultAddrPool
+     *
+     * @return $this
+     */
+	public function withDefaultAddrPool(array $defaultAddrPool)
+	{
+	    $this->data['DefaultAddrPool'] = $defaultAddrPool;
+		foreach ($defaultAddrPool as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Id'])){
+				$this->options['query']['DefaultAddrPool.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['DefaultAddrPool.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $failoverAddrPool
+     *
+     * @return $this
+     */
+	public function withFailoverAddrPool(array $failoverAddrPool)
+	{
+	    $this->data['FailoverAddrPool'] = $failoverAddrPool;
+		foreach ($failoverAddrPool as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Id'])){
+				$this->options['query']['FailoverAddrPool.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['FailoverAddrPool.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getLbaStrategy()
+ * @method $this withLbaStrategy($value)
+ * @method string getAddrPoolId()
+ * @method $this withAddrPoolId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method array getAddr()
+ */
+class UpdateDnsGtmAddressPool extends Rpc
+{
+
+    /**
+     * @param array $addr
+     *
+     * @return $this
+     */
+	public function withAddr(array $addr)
+	{
+	    $this->data['Addr'] = $addr;
+		foreach ($addr as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Mode'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
+			}
+			if(isset($depth1Value['AttributeInfo'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.AttributeInfo'] = $depth1Value['AttributeInfo'];
+			}
+			if(isset($depth1Value['Remark'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Remark'] = $depth1Value['Remark'];
+			}
+			if(isset($depth1Value['Addr'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.Addr'] = $depth1Value['Addr'];
+			}
+			if(isset($depth1Value['LbaWeight'])){
+				$this->options['query']['Addr.' . ($depth1 + 1) . '.LbaWeight'] = $depth1Value['LbaWeight'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getAlertGroup()
+ * @method $this withAlertGroup($value)
+ * @method string getCnameType()
+ * @method $this withCnameType($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method array getAlertConfig()
+ * @method string getPublicCnameMode()
+ * @method $this withPublicCnameMode($value)
+ * @method string getPublicUserDomainName()
+ * @method $this withPublicUserDomainName($value)
+ * @method string getTtl()
+ * @method $this withTtl($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPublicZoneName()
+ * @method $this withPublicZoneName($value)
+ */
+class UpdateDnsGtmInstanceGlobalConfig extends Rpc
+{
+
+    /**
+     * @param array $alertConfig
+     *
+     * @return $this
+     */
+	public function withAlertConfig(array $alertConfig)
+	{
+	    $this->data['AlertConfig'] = $alertConfig;
+		foreach ($alertConfig as $depth1 => $depth1Value) {
+			if(isset($depth1Value['SmsNotice'])){
+				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.SmsNotice'] = $depth1Value['SmsNotice'];
+			}
+			if(isset($depth1Value['NoticeType'])){
+				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.NoticeType'] = $depth1Value['NoticeType'];
+			}
+			if(isset($depth1Value['EmailNotice'])){
+				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.EmailNotice'] = $depth1Value['EmailNotice'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getMonitorExtendInfo()
+ * @method $this withMonitorExtendInfo($value)
+ * @method string getMonitorConfigId()
+ * @method $this withMonitorConfigId($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getEvaluationCount()
+ * @method $this withEvaluationCount($value)
+ * @method string getProtocolType()
+ * @method $this withProtocolType($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method array getIspCityNode()
+ */
+class UpdateDnsGtmMonitor extends Rpc
+{
+
+    /**
+     * @param array $ispCityNode
+     *
+     * @return $this
+     */
+	public function withIspCityNode(array $ispCityNode)
+	{
+	    $this->data['IspCityNode'] = $ispCityNode;
+		foreach ($ispCityNode as $depth1 => $depth1Value) {
+			if(isset($depth1Value['CityCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.CityCode'] = $depth1Value['CityCode'];
+			}
+			if(isset($depth1Value['IspCode'])){
+				$this->options['query']['IspCityNode.' . ($depth1 + 1) . '.IspCode'] = $depth1Value['IspCode'];
 			}
 		}
 
