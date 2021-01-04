@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.783 - 2021-1-4
+- Generated 2014-05-26 for `Ecs`.
+
+
 ## 1.8.782 - 2021-1-4
 - Supported API for GTM.
 
