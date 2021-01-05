@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.785 - 2021-1-5
+- Remove legacy APIs.
+
+
 ## 1.8.784 - 2021-1-5
 - Add DescribeBackupTasks API.
 

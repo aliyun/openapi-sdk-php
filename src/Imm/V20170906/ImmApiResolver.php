@@ -7,8 +7,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CompareImageFaces compareImageFaces(array $options = [])
  * @method ConvertOfficeFormat convertOfficeFormat(array $options = [])
- * @method CreateCADConversionTask createCADConversionTask(array $options = [])
- * @method CreateDocIndexTask createDocIndexTask(array $options = [])
  * @method CreateGrabFrameTask createGrabFrameTask(array $options = [])
  * @method CreateGroupFacesJob createGroupFacesJob(array $options = [])
  * @method CreateImageProcessTask createImageProcessTask(array $options = [])
@@ -22,7 +20,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
  * @method CreateVideoProduceTask createVideoProduceTask(array $options = [])
  * @method DecodeBlindWatermark decodeBlindWatermark(array $options = [])
- * @method DeleteDocIndex deleteDocIndex(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
  * @method DeleteImageJob deleteImageJob(array $options = [])
  * @method DeleteOfficeConversionTask deleteOfficeConversionTask(array $options = [])
@@ -36,18 +33,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectImageLogos detectImageLogos(array $options = [])
  * @method DetectImageQRCodes detectImageQRCodes(array $options = [])
  * @method DetectImageTags detectImageTags(array $options = [])
- * @method DetectImageTexts detectImageTexts(array $options = [])
  * @method DetectQRCodes detectQRCodes(array $options = [])
  * @method EncodeBlindWatermark encodeBlindWatermark(array $options = [])
  * @method FindImages findImages(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
  * @method GetContentKey getContentKey(array $options = [])
- * @method GetDocIndex getDocIndex(array $options = [])
- * @method GetDocIndexTask getDocIndexTask(array $options = [])
  * @method GetDRMLicense getDRMLicense(array $options = [])
  * @method GetImage getImage(array $options = [])
  * @method GetImageCroppingSuggestions getImageCroppingSuggestions(array $options = [])
- * @method GetImageJob getImageJob(array $options = [])
  * @method GetImageQuality getImageQuality(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method GetOfficeConversionTask getOfficeConversionTask(array $options = [])
@@ -61,7 +54,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method IndexImage indexImage(array $options = [])
  * @method IndexVideo indexVideo(array $options = [])
  * @method ListFaceGroups listFaceGroups(array $options = [])
- * @method ListImageJobs listImageJobs(array $options = [])
  * @method ListImages listImages(array $options = [])
  * @method ListOfficeConversionTask listOfficeConversionTask(array $options = [])
  * @method ListProjectAPIs listProjectAPIs(array $options = [])
@@ -77,14 +69,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefreshOfficeEditToken refreshOfficeEditToken(array $options = [])
  * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
  * @method RefreshWebofficeToken refreshWebofficeToken(array $options = [])
- * @method SearchDocIndex searchDocIndex(array $options = [])
- * @method StopStreamAnalyseTask stopStreamAnalyseTask(array $options = [])
- * @method UpdateDocIndexMeta updateDocIndexMeta(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
  * @method UpdateImage updateImage(array $options = [])
  * @method UpdateProject updateProject(array $options = [])
  * @method UpdateSet updateSet(array $options = [])
- * @method VideoAnalyseFeedback videoAnalyseFeedback(array $options = [])
  */
 class ImmApiResolver extends ApiResolver
 {
@@ -100,6 +88,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'imm';
 }
 
 /**
@@ -163,72 +154,6 @@ class CompareImageFaces extends Rpc
  * @method $this withTgtUri($value)
  */
 class ConvertOfficeFormat extends Rpc
-{
-}
-
-/**
- * @method string getSrcType()
- * @method $this withSrcType($value)
- * @method string getBaseRow()
- * @method $this withBaseRow($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getZoomFactor()
- * @method $this withZoomFactor($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getBaseCol()
- * @method $this withBaseCol($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getUnitWidth()
- * @method $this withUnitWidth($value)
- * @method string getZoomLevel()
- * @method $this withZoomLevel($value)
- * @method string getModelId()
- * @method $this withModelId($value)
- * @method string getTgtType()
- * @method $this withTgtType($value)
- * @method string getUnitHeight()
- * @method $this withUnitHeight($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- * @method string getThumbnails()
- * @method $this withThumbnails($value)
- * @method string getTgtUri()
- * @method $this withTgtUri($value)
- */
-class CreateCADConversionTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getUniqueId()
- * @method $this withUniqueId($value)
- * @method string getCustomKey1()
- * @method $this withCustomKey1($value)
- * @method string getSet()
- * @method $this withSet($value)
- * @method string getCustomKey5()
- * @method $this withCustomKey5($value)
- * @method string getCustomKey4()
- * @method $this withCustomKey4($value)
- * @method string getCustomKey3()
- * @method $this withCustomKey3($value)
- * @method string getCustomKey2()
- * @method $this withCustomKey2($value)
- * @method string getCustomKey6()
- * @method $this withCustomKey6($value)
- * @method string getContentType()
- * @method $this withContentType($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- */
-class CreateDocIndexTask extends Rpc
 {
 }
 
@@ -519,18 +444,6 @@ class DecodeBlindWatermark extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getUniqueId()
- * @method $this withUniqueId($value)
- * @method string getSet()
- * @method $this withSet($value)
- */
-class DeleteDocIndex extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
  * @method string getSetId()
@@ -661,16 +574,6 @@ class DetectImageQRCodes extends Rpc
  * @method $this withImageUri($value)
  */
 class DetectImageTags extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getImageUri()
- * @method $this withImageUri($value)
- */
-class DetectImageTexts extends Rpc
 {
 }
 
@@ -809,28 +712,6 @@ class GetContentKey extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getUniqueId()
- * @method $this withUniqueId($value)
- * @method string getSet()
- * @method $this withSet($value)
- */
-class GetDocIndex extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class GetDocIndexTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getDRMType()
  * @method $this withDRMType($value)
  * @method string getDRMLicense()
@@ -861,18 +742,6 @@ class GetImage extends Rpc
  * @method $this withImageUri($value)
  */
 class GetImageCroppingSuggestions extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getJobType()
- * @method $this withJobType($value)
- */
-class GetImageJob extends Rpc
 {
 }
 
@@ -1131,20 +1000,6 @@ class ListFaceGroups extends Rpc
 }
 
 /**
- * @method string getMaxKeys()
- * @method $this withMaxKeys($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getJobType()
- * @method $this withJobType($value)
- * @method string getMarker()
- * @method $this withMarker($value)
- */
-class ListImageJobs extends Rpc
-{
-}
-
-/**
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getLimit()
@@ -1327,86 +1182,6 @@ class RefreshWebofficeToken extends Rpc
 }
 
 /**
- * @method string getModifiedTimeEnd()
- * @method $this withModifiedTimeEnd($value)
- * @method string getSizeLimitEnd()
- * @method $this withSizeLimitEnd($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getModifiedTimeStart()
- * @method $this withModifiedTimeStart($value)
- * @method string getPageNumLimitStart()
- * @method $this withPageNumLimitStart($value)
- * @method string getContent()
- * @method $this withContent($value)
- * @method string getSizeLimitStart()
- * @method $this withSizeLimitStart($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getCustomKey1()
- * @method $this withCustomKey1($value)
- * @method string getSet()
- * @method $this withSet($value)
- * @method string getCustomKey5()
- * @method $this withCustomKey5($value)
- * @method string getOffset()
- * @method $this withOffset($value)
- * @method string getCustomKey4()
- * @method $this withCustomKey4($value)
- * @method string getCustomKey3()
- * @method $this withCustomKey3($value)
- * @method string getCustomKey2()
- * @method $this withCustomKey2($value)
- * @method string getCustomKey6()
- * @method $this withCustomKey6($value)
- * @method string getPageNumLimitEnd()
- * @method $this withPageNumLimitEnd($value)
- * @method string getContentType()
- * @method $this withContentType($value)
- * @method string getName()
- * @method $this withName($value)
- */
-class SearchDocIndex extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StopStreamAnalyseTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getUniqueId()
- * @method $this withUniqueId($value)
- * @method string getCustomKey1()
- * @method $this withCustomKey1($value)
- * @method string getSet()
- * @method $this withSet($value)
- * @method string getCustomKey5()
- * @method $this withCustomKey5($value)
- * @method string getCustomKey4()
- * @method $this withCustomKey4($value)
- * @method string getCustomKey3()
- * @method $this withCustomKey3($value)
- * @method string getCustomKey2()
- * @method $this withCustomKey2($value)
- * @method string getCustomKey6()
- * @method $this withCustomKey6($value)
- * @method string getName()
- * @method $this withName($value)
- */
-class UpdateDocIndexMeta extends Rpc
-{
-}
-
-/**
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getExternalId()
@@ -1489,25 +1264,5 @@ class UpdateProject extends Rpc
  * @method $this withSetId($value)
  */
 class UpdateSet extends Rpc
-{
-}
-
-/**
- * @method string getNote()
- * @method $this withNote($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getFrames()
- * @method $this withFrames($value)
- * @method string getSuggestion()
- * @method $this withSuggestion($value)
- * @method string getUri()
- * @method $this withUri($value)
- * @method string getScenes()
- * @method $this withScenes($value)
- */
-class VideoAnalyseFeedback extends Rpc
 {
 }
