@@ -1160,6 +1160,8 @@ class CopySnapshot extends Rpc
  * @method string getMaxSpotPrice()
  * @method $this withMaxSpotPrice($value)
  * @method string getLaunchConfigurationPasswordInherit()
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getLaunchConfigurationSecurityGroupId()
  * @method string getDescription()
  * @method $this withDescription($value)

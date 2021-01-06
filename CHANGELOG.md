@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.787 - 2021-1-6
+- Support input parameter ClientToken for CreateAutoProvisioningGroup.
+
+
 ## 1.8.786 - 2021-1-6
 - Add API.
 
