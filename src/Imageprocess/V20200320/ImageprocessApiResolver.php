@@ -506,6 +506,7 @@ class DetectKneeXRay extends Rpc
 
 /**
  * @method string getDataFormat()
+ * @method string getThreshold()
  * @method array getURLList()
  * @method string getOrgId()
  * @method string getAsync()
@@ -523,6 +524,19 @@ class DetectLungNodule extends Rpc
     {
         $this->data['DataFormat'] = $value;
         $this->options['form_params']['DataFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withThreshold($value)
+    {
+        $this->data['Threshold'] = $value;
+        $this->options['form_params']['Threshold'] = $value;
 
         return $this;
     }

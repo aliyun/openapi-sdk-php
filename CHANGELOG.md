@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.788 - 2021-1-6
+- Update DetectLungNodule.
+
+
 ## 1.8.787 - 2021-1-6
 - Support input parameter ClientToken for CreateAutoProvisioningGroup.
 
