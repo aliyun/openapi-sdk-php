@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.786 - 2021-1-6
+- Add API.
+
+
 ## 1.8.785 - 2021-1-5
 - Remove legacy APIs.
 
