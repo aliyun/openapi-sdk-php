@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.792 - 2021-1-7
+- Add new API for configuration and report.
+
+
 ## 1.8.791 - 2021-1-7
 - Add CreateAndStartBackupPlan.
 - Add DescribeDLAService.
