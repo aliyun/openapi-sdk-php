@@ -437,8 +437,6 @@ class DescribeProtectionModuleStatus extends Rpc
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getRegion()
- * @method $this withRegion($value)
  */
 class DescribeWafSourceIpSegment extends Rpc
 {

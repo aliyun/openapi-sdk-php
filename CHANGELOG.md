@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.790 - 2021-1-7
+- Generated 2019-09-10 for `waf-openapi`.
+
+
 ## 1.8.789 - 2021-1-7
 - Generated 2020-11-26 for `Airec`.
 
