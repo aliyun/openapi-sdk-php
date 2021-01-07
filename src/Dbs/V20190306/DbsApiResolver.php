@@ -5,8 +5,11 @@ namespace AlibabaCloud\Dbs\V20190306;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CloseDLAService closeDLAService(array $options = [])
  * @method ConfigureBackupPlan configureBackupPlan(array $options = [])
+ * @method CreateAndStartBackupPlan createAndStartBackupPlan(array $options = [])
  * @method CreateBackupPlan createBackupPlan(array $options = [])
+ * @method CreateDLAService createDLAService(array $options = [])
  * @method CreateFullBackupSetDownload createFullBackupSetDownload(array $options = [])
  * @method CreateGetDBListFromAgentTask createGetDBListFromAgentTask(array $options = [])
  * @method CreateIncrementBackupSetDownload createIncrementBackupSetDownload(array $options = [])
@@ -15,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBackupPlanBilling describeBackupPlanBilling(array $options = [])
  * @method DescribeBackupPlanList describeBackupPlanList(array $options = [])
  * @method DescribeBackupSetDownloadTaskList describeBackupSetDownloadTaskList(array $options = [])
+ * @method DescribeDLAService describeDLAService(array $options = [])
  * @method DescribeFullBackupList describeFullBackupList(array $options = [])
  * @method DescribeIncrementBackupList describeIncrementBackupList(array $options = [])
  * @method DescribeJobErrorCode describeJobErrorCode(array $options = [])
@@ -36,7 +40,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RenewBackupPlan renewBackupPlan(array $options = [])
  * @method StartBackupPlan startBackupPlan(array $options = [])
  * @method StartRestoreTask startRestoreTask(array $options = [])
- * @method StartTask startTask(array $options = [])
  * @method StopBackupPlan stopBackupPlan(array $options = [])
  * @method UpgradeBackupPlan upgradeBackupPlan(array $options = [])
  */
@@ -57,6 +60,18 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cbs';
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CloseDLAService extends Rpc
+{
 }
 
 /**
@@ -128,6 +143,94 @@ class ConfigureBackupPlan extends Rpc
 /**
  * @method string getDatabaseType()
  * @method $this withDatabaseType($value)
+ * @method string getBackupGatewayId()
+ * @method $this withBackupGatewayId($value)
+ * @method string getSourceEndpointUserName()
+ * @method $this withSourceEndpointUserName($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getDatabaseRegion()
+ * @method $this withDatabaseRegion($value)
+ * @method string getBackupStartTime()
+ * @method $this withBackupStartTime($value)
+ * @method string getSourceEndpointIP()
+ * @method $this withSourceEndpointIP($value)
+ * @method string getCrossRoleName()
+ * @method $this withCrossRoleName($value)
+ * @method string getBackupStorageType()
+ * @method $this withBackupStorageType($value)
+ * @method string getDuplicationArchivePeriod()
+ * @method $this withDuplicationArchivePeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBackupLogIntervalSeconds()
+ * @method $this withBackupLogIntervalSeconds($value)
+ * @method string getFromApp()
+ * @method $this withFromApp($value)
+ * @method string getSourceEndpointPassword()
+ * @method $this withSourceEndpointPassword($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBackupMethod()
+ * @method $this withBackupMethod($value)
+ * @method string getBackupRetentionPeriod()
+ * @method $this withBackupRetentionPeriod($value)
+ * @method string getBackupPeriod()
+ * @method $this withBackupPeriod($value)
+ * @method string getBackupSpeedLimit()
+ * @method $this withBackupSpeedLimit($value)
+ * @method string getSourceEndpointInstanceType()
+ * @method $this withSourceEndpointInstanceType($value)
+ * @method string getBackupPlanName()
+ * @method $this withBackupPlanName($value)
+ * @method string getOSSBucketName()
+ * @method $this withOSSBucketName($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getSourceEndpointInstanceID()
+ * @method $this withSourceEndpointInstanceID($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getSourceEndpointDatabaseName()
+ * @method $this withSourceEndpointDatabaseName($value)
+ * @method string getDuplicationInfrequentAccessPeriod()
+ * @method $this withDuplicationInfrequentAccessPeriod($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getEnableBackupLog()
+ * @method $this withEnableBackupLog($value)
+ * @method string getCrossAliyunId()
+ * @method $this withCrossAliyunId($value)
+ * @method string getBackupObjects()
+ * @method $this withBackupObjects($value)
+ * @method string getBackupRateLimit()
+ * @method $this withBackupRateLimit($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getSourceEndpointPort()
+ * @method $this withSourceEndpointPort($value)
+ * @method string getStorageRegion()
+ * @method $this withStorageRegion($value)
+ * @method string getSourceEndpointOracleSID()
+ * @method $this withSourceEndpointOracleSID($value)
+ * @method string getBackupStrategyType()
+ * @method $this withBackupStrategyType($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class CreateAndStartBackupPlan extends Rpc
+{
+}
+
+/**
+ * @method string getDatabaseType()
+ * @method $this withDatabaseType($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getInstanceClass()
@@ -156,6 +259,22 @@ class ConfigureBackupPlan extends Rpc
  * @method $this withPayType($value)
  */
 class CreateBackupPlan extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getAutoAdd()
+ * @method $this withAutoAdd($value)
+ * @method string getBackupSetIds()
+ * @method $this withBackupSetIds($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateDLAService extends Rpc
 {
 }
 
@@ -328,6 +447,18 @@ class DescribeBackupPlanList extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeBackupSetDownloadTaskList extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBackupPlanId()
+ * @method $this withBackupPlanId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDLAService extends Rpc
 {
 }
 
@@ -674,18 +805,6 @@ class StartBackupPlan extends Rpc
  * @method $this withRestoreTaskId($value)
  */
 class StartRestoreTask extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StartTask extends Rpc
 {
 }
 

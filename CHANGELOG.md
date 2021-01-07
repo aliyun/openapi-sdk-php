@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.791 - 2021-1-7
+- Add CreateAndStartBackupPlan.
+- Add DescribeDLAService.
+- Add CreateDLAService.
+- Add CloseDLAService.
+
+
 ## 1.8.790 - 2021-1-7
 - Generated 2019-09-10 for `waf-openapi`.
 
