@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.789 - 2021-1-7
+- Generated 2020-11-26 for `Airec`.
+
+
 ## 1.8.788 - 2021-1-6
 - Update DetectLungNodule.
 
