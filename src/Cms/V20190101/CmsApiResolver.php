@@ -7,6 +7,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddTags addTags(array $options = [])
  * @method ApplyMetricRuleTemplate applyMetricRuleTemplate(array $options = [])
+ * @method CreateCmsCallNumOrder createCmsCallNumOrder(array $options = [])
+ * @method CreateCmsOrder createCmsOrder(array $options = [])
+ * @method CreateCmsSmspackageOrder createCmsSmspackageOrder(array $options = [])
  * @method CreateDynamicTagGroup createDynamicTagGroup(array $options = [])
  * @method CreateGroupMetricRules createGroupMetricRules(array $options = [])
  * @method CreateGroupMonitoringAgentProcess createGroupMonitoringAgentProcess(array $options = [])
@@ -15,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateMetricRuleTemplate createMetricRuleTemplate(array $options = [])
  * @method CreateMonitorAgentProcess createMonitorAgentProcess(array $options = [])
  * @method CreateMonitorGroup createMonitorGroup(array $options = [])
+ * @method CreateMonitorGroupByResourceGroupId createMonitorGroupByResourceGroupId(array $options = [])
  * @method CreateMonitorGroupInstances createMonitorGroupInstances(array $options = [])
  * @method CreateMonitorGroupNotifyPolicy createMonitorGroupNotifyPolicy(array $options = [])
  * @method CreateMonitoringAgentProcess createMonitoringAgentProcess(array $options = [])
@@ -43,6 +47,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeActiveMetricRuleList describeActiveMetricRuleList(array $options = [])
  * @method DescribeAlertHistoryList describeAlertHistoryList(array $options = [])
  * @method DescribeAlertingMetricRuleResources describeAlertingMetricRuleResources(array $options = [])
+ * @method DescribeAlertLogCount describeAlertLogCount(array $options = [])
+ * @method DescribeAlertLogHistogram describeAlertLogHistogram(array $options = [])
+ * @method DescribeAlertLogList describeAlertLogList(array $options = [])
  * @method DescribeContactGroupList describeContactGroupList(array $options = [])
  * @method DescribeContactList describeContactList(array $options = [])
  * @method DescribeContactListByContactGroup describeContactListByContactGroup(array $options = [])
@@ -56,7 +63,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEventRuleTargetList describeEventRuleTargetList(array $options = [])
  * @method DescribeExporterOutputList describeExporterOutputList(array $options = [])
  * @method DescribeExporterRuleList describeExporterRuleList(array $options = [])
- * @method DescribeFolderList describeFolderList(array $options = [])
  * @method DescribeGroupMonitoringAgentProcess describeGroupMonitoringAgentProcess(array $options = [])
  * @method DescribeHostAvailabilityList describeHostAvailabilityList(array $options = [])
  * @method DescribeLogMonitorAttribute describeLogMonitorAttribute(array $options = [])
@@ -83,6 +89,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeMonitoringAgentProcesses describeMonitoringAgentProcesses(array $options = [])
  * @method DescribeMonitoringAgentStatuses describeMonitoringAgentStatuses(array $options = [])
  * @method DescribeMonitoringConfig describeMonitoringConfig(array $options = [])
+ * @method DescribeMonitorResourceQuotaAttribute describeMonitorResourceQuotaAttribute(array $options = [])
  * @method DescribeProductResourceTagKeyList describeProductResourceTagKeyList(array $options = [])
  * @method DescribeProductsOfActiveMetricRule describeProductsOfActiveMetricRule(array $options = [])
  * @method DescribeProjectMeta describeProjectMeta(array $options = [])
@@ -117,6 +124,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyMonitorGroup modifyMonitorGroup(array $options = [])
  * @method ModifyMonitorGroupInstances modifyMonitorGroupInstances(array $options = [])
  * @method ModifySiteMonitor modifySiteMonitor(array $options = [])
+ * @method OpenCmsService openCmsService(array $options = [])
  * @method PutContact putContact(array $options = [])
  * @method PutContactGroup putContactGroup(array $options = [])
  * @method PutCustomEvent putCustomEvent(array $options = [])
@@ -219,6 +227,82 @@ class AddTags extends Rpc
  * @method $this withSilenceTime($value)
  */
 class ApplyMetricRuleTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getAutoUseCoupon()
+ * @method $this withAutoUseCoupon($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getPhoneCount()
+ * @method $this withPhoneCount($value)
+ */
+class CreateCmsCallNumOrder extends Rpc
+{
+}
+
+/**
+ * @method string getSmsCount()
+ * @method $this withSmsCount($value)
+ * @method string getAutoUseCoupon()
+ * @method $this withAutoUseCoupon($value)
+ * @method string getLogMonitorStream()
+ * @method $this withLogMonitorStream($value)
+ * @method string getCustomTimeSeries()
+ * @method $this withCustomTimeSeries($value)
+ * @method string getApiCount()
+ * @method $this withApiCount($value)
+ * @method string getPhoneCount()
+ * @method $this withPhoneCount($value)
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getSuggestType()
+ * @method $this withSuggestType($value)
+ * @method string getEventStoreNum()
+ * @method $this withEventStoreNum($value)
+ * @method string getSiteTaskNum()
+ * @method $this withSiteTaskNum($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getSiteOperatorNum()
+ * @method $this withSiteOperatorNum($value)
+ * @method string getSiteEcsNum()
+ * @method $this withSiteEcsNum($value)
+ * @method string getEventStoreTime()
+ * @method $this withEventStoreTime($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class CreateCmsOrder extends Rpc
+{
+}
+
+/**
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getSmsCount()
+ * @method $this withSmsCount($value)
+ * @method string getAutoUseCoupon()
+ * @method $this withAutoUseCoupon($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ */
+class CreateCmsSmspackageOrder extends Rpc
 {
 }
 
@@ -485,6 +569,7 @@ class CreateGroupMonitoringAgentProcess extends Rpc
  * @method string getTaskOptionHttpURI()
  * @method string getTaskScope()
  * @method $this withTaskScope($value)
+ * @method string getTaskOptionHttpPostContent()
  * @method string getAlertConfigStartTime()
  * @method string getAlertConfigWebHook()
  */
@@ -657,6 +742,19 @@ class CreateHostAvailability extends Rpc
      *
      * @return $this
      */
+    public function withTaskOptionHttpPostContent($value)
+    {
+        $this->data['TaskOptionHttpPostContent'] = $value;
+        $this->options['query']['TaskOption.HttpPostContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withAlertConfigStartTime($value)
     {
         $this->data['AlertConfigStartTime'] = $value;
@@ -801,6 +899,36 @@ class CreateMonitorAgentProcess extends Rpc
  */
 class CreateMonitorGroup extends Rpc
 {
+}
+
+/**
+ * @method string getResourceGroupName()
+ * @method $this withResourceGroupName($value)
+ * @method string getEnableSubscribeEvent()
+ * @method $this withEnableSubscribeEvent($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getEnableInstallAgent()
+ * @method $this withEnableInstallAgent($value)
+ * @method array getContactGroupList()
+ */
+class CreateMonitorGroupByResourceGroupId extends Rpc
+{
+
+    /**
+     * @param array $contactGroupList
+     *
+     * @return $this
+     */
+	public function withContactGroupList(array $contactGroupList)
+	{
+	    $this->data['ContactGroupList'] = $contactGroupList;
+		foreach ($contactGroupList as $i => $iValue) {
+			$this->options['query']['ContactGroupList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1209,6 +1337,114 @@ class DescribeAlertingMetricRuleResources extends Rpc
 }
 
 /**
+ * @method string getSendStatus()
+ * @method $this withSendStatus($value)
+ * @method string getContactGroup()
+ * @method $this withContactGroup($value)
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLastMin()
+ * @method $this withLastMin($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getGroupBy()
+ * @method $this withGroupBy($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class DescribeAlertLogCount extends Rpc
+{
+}
+
+/**
+ * @method string getSendStatus()
+ * @method $this withSendStatus($value)
+ * @method string getContactGroup()
+ * @method $this withContactGroup($value)
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLastMin()
+ * @method $this withLastMin($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getGroupBy()
+ * @method $this withGroupBy($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class DescribeAlertLogHistogram extends Rpc
+{
+}
+
+/**
+ * @method string getSendStatus()
+ * @method $this withSendStatus($value)
+ * @method string getContactGroup()
+ * @method $this withContactGroup($value)
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLastMin()
+ * @method $this withLastMin($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getGroupBy()
+ * @method $this withGroupBy($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class DescribeAlertLogList extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1380,17 +1616,6 @@ class DescribeExporterOutputList extends Rpc
  */
 class DescribeExporterRuleList extends Rpc
 {
-}
-
-/**
- * @method string getAppName()
- * @method $this withAppName($value)
- */
-class DescribeFolderList extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -1582,10 +1807,10 @@ class DescribeMetricRuleTargets extends Rpc
 }
 
 /**
- * @method string getName()
- * @method $this withName($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeMetricRuleTemplateAttribute extends Rpc
 {
@@ -1714,6 +1939,8 @@ class DescribeMonitorGroupNotifyPolicyList extends Rpc
  * @method $this withType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -1801,6 +2028,14 @@ class DescribeMonitoringAgentStatuses extends Rpc
 }
 
 class DescribeMonitoringConfig extends Rpc
+{
+}
+
+/**
+ * @method string getShowUsed()
+ * @method $this withShowUsed($value)
+ */
+class DescribeMonitorResourceQuotaAttribute extends Rpc
 {
 }
 
@@ -2294,6 +2529,7 @@ class ModifyGroupMonitoringAgentProcess extends Rpc
  * @method string getTaskOptionHttpURI()
  * @method string getTaskScope()
  * @method $this withTaskScope($value)
+ * @method string getTaskOptionHttpPostContent()
  * @method string getAlertConfigStartTime()
  * @method string getAlertConfigWebHook()
  */
@@ -2457,6 +2693,19 @@ class ModifyHostAvailability extends Rpc
     {
         $this->data['TaskOptionHttpURI'] = $value;
         $this->options['query']['TaskOption.HttpURI'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskOptionHttpPostContent($value)
+    {
+        $this->data['TaskOptionHttpPostContent'] = $value;
+        $this->options['query']['TaskOption.HttpPostContent'] = $value;
 
         return $this;
     }
@@ -2655,6 +2904,10 @@ class ModifySiteMonitor extends Rpc
 {
 }
 
+class OpenCmsService extends Rpc
+{
+}
+
 /**
  * @method string getChannelsDingWebHook()
  * @method string getContactName()
@@ -2728,8 +2981,6 @@ class PutContact extends Rpc
  * @method $this withEnableSubscribed($value)
  * @method string getContactGroupName()
  * @method $this withContactGroupName($value)
- * @method string getEnabledWeeklyReport()
- * @method $this withEnabledWeeklyReport($value)
  * @method string getDescribe()
  * @method $this withDescribe($value)
  * @method array getContactNames()

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.793 - 2021-1-8
+- Add API related to resource quota of source monitoring.
+- Add a new version of alert log API.
+
+
 ## 1.8.792 - 2021-1-7
 - Add new API for configuration and report.
 
