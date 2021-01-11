@@ -5,6 +5,7 @@ namespace AlibabaCloud\Dts\V20200101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ConfigureDtsJob configureDtsJob(array $options = [])
  * @method ConfigureMigrationJob configureMigrationJob(array $options = [])
  * @method ConfigureMigrationJobAlert configureMigrationJobAlert(array $options = [])
  * @method ConfigureSubscriptionInstance configureSubscriptionInstance(array $options = [])
@@ -13,14 +14,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConfigureSynchronizationJobAlert configureSynchronizationJobAlert(array $options = [])
  * @method ConfigureSynchronizationJobReplicatorCompare configureSynchronizationJobReplicatorCompare(array $options = [])
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
+ * @method CreateDtsInstance createDtsInstance(array $options = [])
  * @method CreateMigrationJob createMigrationJob(array $options = [])
  * @method CreateSubscriptionInstance createSubscriptionInstance(array $options = [])
  * @method CreateSynchronizationJob createSynchronizationJob(array $options = [])
  * @method DeleteConsumerGroup deleteConsumerGroup(array $options = [])
+ * @method DeleteDtsJob deleteDtsJob(array $options = [])
  * @method DeleteMigrationJob deleteMigrationJob(array $options = [])
  * @method DeleteSubscriptionInstance deleteSubscriptionInstance(array $options = [])
  * @method DeleteSynchronizationJob deleteSynchronizationJob(array $options = [])
+ * @method DescribeConnectionStatus describeConnectionStatus(array $options = [])
  * @method DescribeConsumerGroup describeConsumerGroup(array $options = [])
+ * @method DescribeDTSIP describeDTSIP(array $options = [])
+ * @method DescribeDtsJobDetail describeDtsJobDetail(array $options = [])
+ * @method DescribeDtsJobs describeDtsJobs(array $options = [])
  * @method DescribeEndpointSwitchStatus describeEndpointSwitchStatus(array $options = [])
  * @method DescribeInitializationStatus describeInitializationStatus(array $options = [])
  * @method DescribeMigrationJobAlert describeMigrationJobAlert(array $options = [])
@@ -39,20 +46,28 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyConsumerGroupPassword modifyConsumerGroupPassword(array $options = [])
  * @method ModifyConsumptionTimestamp modifyConsumptionTimestamp(array $options = [])
+ * @method ModifyDtsJob modifyDtsJob(array $options = [])
+ * @method ModifyDtsJobName modifyDtsJobName(array $options = [])
+ * @method ModifyDtsJobPassword modifyDtsJobPassword(array $options = [])
  * @method ModifyMigrationObject modifyMigrationObject(array $options = [])
  * @method ModifySubscriptionObject modifySubscriptionObject(array $options = [])
  * @method ModifySynchronizationObject modifySynchronizationObject(array $options = [])
+ * @method ResetDtsJob resetDtsJob(array $options = [])
  * @method ResetSynchronizationJob resetSynchronizationJob(array $options = [])
  * @method ShieldPrecheck shieldPrecheck(array $options = [])
+ * @method StartDtsJob startDtsJob(array $options = [])
  * @method StartMigrationJob startMigrationJob(array $options = [])
  * @method StartSubscriptionInstance startSubscriptionInstance(array $options = [])
  * @method StartSynchronizationJob startSynchronizationJob(array $options = [])
+ * @method StopDtsJob stopDtsJob(array $options = [])
  * @method StopMigrationJob stopMigrationJob(array $options = [])
+ * @method SuspendDtsJob suspendDtsJob(array $options = [])
  * @method SuspendMigrationJob suspendMigrationJob(array $options = [])
  * @method SuspendSynchronizationJob suspendSynchronizationJob(array $options = [])
  * @method SwitchSynchronizationEndpoint switchSynchronizationEndpoint(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method WhiteIpList whiteIpList(array $options = [])
  */
 class DtsApiResolver extends ApiResolver
 {
@@ -71,6 +86,88 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'dts';
+}
+
+/**
+ * @method string getCheckpoint()
+ * @method $this withCheckpoint($value)
+ * @method string getSourceEndpointUserName()
+ * @method $this withSourceEndpointUserName($value)
+ * @method string getDelayPhone()
+ * @method $this withDelayPhone($value)
+ * @method string getSourceEndpointIP()
+ * @method $this withSourceEndpointIP($value)
+ * @method string getErrorPhone()
+ * @method $this withErrorPhone($value)
+ * @method string getDestinationEndpointUserName()
+ * @method $this withDestinationEndpointUserName($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDbList()
+ * @method $this withDbList($value)
+ * @method string getDestinationEndpointOracleSID()
+ * @method $this withDestinationEndpointOracleSID($value)
+ * @method string getDestinationEndpointPort()
+ * @method $this withDestinationEndpointPort($value)
+ * @method string getSourceEndpointPassword()
+ * @method $this withSourceEndpointPassword($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getJobType()
+ * @method $this withJobType($value)
+ * @method string getDelayRuleTime()
+ * @method $this withDelayRuleTime($value)
+ * @method string getDestinationEndpointIP()
+ * @method $this withDestinationEndpointIP($value)
+ * @method string getSourceEndpointInstanceType()
+ * @method $this withSourceEndpointInstanceType($value)
+ * @method string getDtsJobName()
+ * @method $this withDtsJobName($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getDelayNotice()
+ * @method $this withDelayNotice($value)
+ * @method string getDestinationEndpointInstanceType()
+ * @method $this withDestinationEndpointInstanceType($value)
+ * @method string getDataInitialization()
+ * @method $this withDataInitialization($value)
+ * @method string getSourceEndpointInstanceID()
+ * @method $this withSourceEndpointInstanceID($value)
+ * @method string getStructureInitialization()
+ * @method $this withStructureInitialization($value)
+ * @method string getSourceEndpointOwnerID()
+ * @method $this withSourceEndpointOwnerID($value)
+ * @method string getSourceEndpointDatabaseName()
+ * @method $this withSourceEndpointDatabaseName($value)
+ * @method string getDestinationEndpointRegion()
+ * @method $this withDestinationEndpointRegion($value)
+ * @method string getReserve()
+ * @method $this withReserve($value)
+ * @method string getDataSynchronization()
+ * @method $this withDataSynchronization($value)
+ * @method string getDestinationEndpointEngineName()
+ * @method $this withDestinationEndpointEngineName($value)
+ * @method string getDestinationEndpointInstanceID()
+ * @method $this withDestinationEndpointInstanceID($value)
+ * @method string getSourceEndpointPort()
+ * @method $this withSourceEndpointPort($value)
+ * @method string getSourceEndpointOracleSID()
+ * @method $this withSourceEndpointOracleSID($value)
+ * @method string getDestinationEndpointDataBaseName()
+ * @method $this withDestinationEndpointDataBaseName($value)
+ * @method string getErrorNotice()
+ * @method $this withErrorNotice($value)
+ * @method string getSourceEndpointRole()
+ * @method $this withSourceEndpointRole($value)
+ * @method string getDestinationEndpointPassword()
+ * @method $this withDestinationEndpointPassword($value)
+ * @method string getSourceEndpointEngineName()
+ * @method $this withSourceEndpointEngineName($value)
+ */
+class ConfigureDtsJob extends Rpc
+{
 }
 
 /**
@@ -1118,6 +1215,24 @@ class CreateConsumerGroup extends Rpc
 }
 
 /**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAutoStart()
+ * @method $this withAutoStart($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getSyncArchitecture()
+ * @method $this withSyncArchitecture($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class CreateDtsInstance extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getOwnerId()
@@ -1252,6 +1367,18 @@ class DeleteConsumerGroup extends Rpc
 }
 
 /**
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
+ */
+class DeleteDtsJob extends Rpc
+{
+}
+
+/**
  * @method string getMigrationJobId()
  * @method $this withMigrationJobId($value)
  * @method string getOwnerId()
@@ -1288,6 +1415,56 @@ class DeleteSynchronizationJob extends Rpc
 }
 
 /**
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getSourceEndpointArchitecture()
+ * @method $this withSourceEndpointArchitecture($value)
+ * @method string getDestinationEndpointInstanceType()
+ * @method $this withDestinationEndpointInstanceType($value)
+ * @method string getSourceEndpointInstanceID()
+ * @method $this withSourceEndpointInstanceID($value)
+ * @method string getSourceEndpointUserName()
+ * @method $this withSourceEndpointUserName($value)
+ * @method string getSourceEndpointDatabaseName()
+ * @method $this withSourceEndpointDatabaseName($value)
+ * @method string getDestinationEndpointRegion()
+ * @method $this withDestinationEndpointRegion($value)
+ * @method string getSourceEndpointIP()
+ * @method $this withSourceEndpointIP($value)
+ * @method string getDestinationEndpointUserName()
+ * @method $this withDestinationEndpointUserName($value)
+ * @method string getDestinationEndpointArchitecture()
+ * @method $this withDestinationEndpointArchitecture($value)
+ * @method string getDestinationEndpointOracleSID()
+ * @method $this withDestinationEndpointOracleSID($value)
+ * @method string getDestinationEndpointEngineName()
+ * @method $this withDestinationEndpointEngineName($value)
+ * @method string getDestinationEndpointInstanceID()
+ * @method $this withDestinationEndpointInstanceID($value)
+ * @method string getDestinationEndpointPort()
+ * @method $this withDestinationEndpointPort($value)
+ * @method string getSourceEndpointPassword()
+ * @method $this withSourceEndpointPassword($value)
+ * @method string getSourceEndpointPort()
+ * @method $this withSourceEndpointPort($value)
+ * @method string getDestinationEndpointIP()
+ * @method $this withDestinationEndpointIP($value)
+ * @method string getSourceEndpointInstanceType()
+ * @method $this withSourceEndpointInstanceType($value)
+ * @method string getSourceEndpointOracleSID()
+ * @method $this withSourceEndpointOracleSID($value)
+ * @method string getDestinationEndpointDatabaseName()
+ * @method $this withDestinationEndpointDatabaseName($value)
+ * @method string getDestinationEndpointPassword()
+ * @method $this withDestinationEndpointPassword($value)
+ * @method string getSourceEndpointEngineName()
+ * @method $this withSourceEndpointEngineName($value)
+ */
+class DescribeConnectionStatus extends Rpc
+{
+}
+
+/**
  * @method string getSubscriptionInstanceId()
  * @method $this withSubscriptionInstanceId($value)
  * @method string getPageNum()
@@ -1300,6 +1477,50 @@ class DeleteSynchronizationJob extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeConsumerGroup extends Rpc
+{
+}
+
+/**
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getDestinationEndpointRegion()
+ * @method $this withDestinationEndpointRegion($value)
+ */
+class DescribeDTSIP extends Rpc
+{
+}
+
+/**
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ */
+class DescribeDtsJobDetail extends Rpc
+{
+}
+
+/**
+ * @method string getOrderDirection()
+ * @method $this withOrderDirection($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getJobType()
+ * @method $this withJobType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getOrderColumn()
+ * @method $this withOrderColumn($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeDtsJobs extends Rpc
 {
 }
 
@@ -1418,9 +1639,30 @@ class DescribeMigrationJobDetail extends Rpc
  * @method $this withPageSize($value)
  * @method string getMigrationJobName()
  * @method $this withMigrationJobName($value)
+ * @method array getTag()
  */
 class DescribeMigrationJobs extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1464,9 +1706,30 @@ class DescribeSubscriptionInstanceAlert extends Rpc
  * @method $this withPageSize($value)
  * @method string getSubscriptionInstanceName()
  * @method $this withSubscriptionInstanceName($value)
+ * @method array getTag()
  */
 class DescribeSubscriptionInstances extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1526,9 +1789,30 @@ class DescribeSynchronizationJobReplicatorCompare extends Rpc
  * @method $this withAccountId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  */
 class DescribeSynchronizationJobs extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1671,6 +1955,58 @@ class ModifyConsumptionTimestamp extends Rpc
 }
 
 /**
+ * @method string getDbList()
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
+ */
+class ModifyDtsJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbList($value)
+    {
+        $this->data['DbList'] = $value;
+        $this->options['form_params']['DbList'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDtsJobName()
+ * @method $this withDtsJobName($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ */
+class ModifyDtsJobName extends Rpc
+{
+}
+
+/**
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getEndpoint()
+ * @method $this withEndpoint($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class ModifyDtsJobPassword extends Rpc
+{
+}
+
+/**
  * @method string getMigrationObject()
  * @method $this withMigrationObject($value)
  * @method string getClientToken()
@@ -1717,6 +2053,18 @@ class ModifySynchronizationObject extends Rpc
 }
 
 /**
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
+ */
+class ResetDtsJob extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSynchronizationJobId()
@@ -1737,6 +2085,18 @@ class ResetSynchronizationJob extends Rpc
  * @method $this withDtsInstanceId($value)
  */
 class ShieldPrecheck extends Rpc
+{
+}
+
+/**
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
+ */
+class StartDtsJob extends Rpc
 {
 }
 
@@ -1779,6 +2139,18 @@ class StartSynchronizationJob extends Rpc
 }
 
 /**
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
+ */
+class StopDtsJob extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getMigrationJobId()
@@ -1789,6 +2161,18 @@ class StartSynchronizationJob extends Rpc
  * @method $this withAccountId($value)
  */
 class StopMigrationJob extends Rpc
+{
+}
+
+/**
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
+ */
+class SuspendDtsJob extends Rpc
 {
 }
 
@@ -2017,4 +2401,16 @@ class UntagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getDestinationRegion()
+ * @method $this withDestinationRegion($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class WhiteIpList extends Rpc
+{
 }

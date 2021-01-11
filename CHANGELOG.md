@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.794 - 2021-1-11
+- Add DescribeConnectionStatus and DescribeDTSIP, remove UpgradeTwoWay.
+
+
 ## 1.8.793 - 2021-1-8
 - Add API related to resource quota of source monitoring.
 - Add a new version of alert log API.
