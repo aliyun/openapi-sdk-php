@@ -5,8 +5,6 @@ namespace AlibabaCloud\Xtrace\V20190808;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
- * @method GetSampling getSampling(array $options = [])
  * @method GetTagKey getTagKey(array $options = [])
  * @method GetTagVal getTagVal(array $options = [])
  * @method GetToken getToken(array $options = [])
@@ -17,7 +15,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSpanNames listSpanNames(array $options = [])
  * @method QueryMetric queryMetric(array $options = [])
  * @method SearchTraces searchTraces(array $options = [])
- * @method UpdateSampling updateSampling(array $options = [])
  */
 class XtraceApiResolver extends ApiResolver
 {
@@ -33,28 +30,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-}
-
-/**
- * @method string getSPIRegionId()
- * @method $this withSPIRegionId($value)
- * @method string getRoleArn()
- * @method $this withRoleArn($value)
- * @method string getDeletionTaskId()
- * @method $this withDeletionTaskId($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
- */
-class CheckServiceLinkedRoleForDeleting extends Rpc
-{
-}
-
-/**
- * @method string getProxyUserId()
- * @method $this withProxyUserId($value)
- */
-class GetSampling extends Rpc
-{
 }
 
 /**
@@ -92,6 +67,8 @@ class GetTagVal extends Rpc
  * @method $this withAppType($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
+ * @method string getIsForce()
+ * @method $this withIsForce($value)
  */
 class GetToken extends Rpc
 {
@@ -271,14 +248,4 @@ class SearchTraces extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getSampling()
- * @method $this withSampling($value)
- * @method string getProxyUserId()
- * @method $this withProxyUserId($value)
- */
-class UpdateSampling extends Rpc
-{
 }

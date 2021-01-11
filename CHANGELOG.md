@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.795 - 2021-1-11
+- Add result value spanId for GetTrace api.
+
+
 ## 1.8.794 - 2021-1-11
 - Add DescribeConnectionStatus and DescribeDTSIP, remove UpgradeTwoWay.
 
