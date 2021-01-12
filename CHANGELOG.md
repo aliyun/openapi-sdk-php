@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.796 - 2021-1-12
+- Update ExtractPedestrianFeatureAttr.
+
+
 ## 1.8.795 - 2021-1-11
 - Add result value spanId for GetTrace api.
 

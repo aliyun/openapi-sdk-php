@@ -290,25 +290,12 @@ class BodyPosture extends Rpc
 }
 
 /**
- * @method string getImageType()
  * @method string getImageURLB()
  * @method string getImageURLA()
+ * @method string getImageType()
  */
 class CompareFace extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageType($value)
-    {
-        $this->data['ImageType'] = $value;
-        $this->options['form_params']['ImageType'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -332,6 +319,19 @@ class CompareFace extends Rpc
     {
         $this->data['ImageURLA'] = $value;
         $this->options['form_params']['ImageURLA'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageType($value)
+    {
+        $this->data['ImageType'] = $value;
+        $this->options['form_params']['ImageType'] = $value;
 
         return $this;
     }
@@ -919,6 +919,7 @@ class EnhanceFace extends Rpc
 /**
  * @method string getMode()
  * @method string getImageURL()
+ * @method string getServiceVersion()
  */
 class ExtractPedestrianFeatureAttr extends Rpc
 {
@@ -945,6 +946,19 @@ class ExtractPedestrianFeatureAttr extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceVersion($value)
+    {
+        $this->data['ServiceVersion'] = $value;
+        $this->options['form_params']['ServiceVersion'] = $value;
 
         return $this;
     }
