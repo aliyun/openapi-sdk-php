@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.797 - 2021-1-12
+- Add support for IoT jobs, including job management and query APIs like CreateJob, UpdateJob, QueryJob, CancelJob, ListTask, QueryTask, QueryJobStatistics etc.
+
+
 ## 1.8.796 - 2021-1-12
 - Update ExtractPedestrianFeatureAttr.
 
