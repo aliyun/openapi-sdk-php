@@ -63,6 +63,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveDetectNotifyConfig deleteLiveDetectNotifyConfig(array $options = [])
  * @method DeleteLiveDomain deleteLiveDomain(array $options = [])
  * @method DeleteLiveDomainMapping deleteLiveDomainMapping(array $options = [])
+ * @method DeleteLiveDomainPlayMapping deleteLiveDomainPlayMapping(array $options = [])
  * @method DeleteLiveLazyPullStreamInfoConfig deleteLiveLazyPullStreamInfoConfig(array $options = [])
  * @method DeleteLivePullStreamInfoConfig deleteLivePullStreamInfoConfig(array $options = [])
  * @method DeleteLiveRealtimeLogDelivery deleteLiveRealtimeLogDelivery(array $options = [])
@@ -89,6 +90,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCasterStreamUrl describeCasterStreamUrl(array $options = [])
  * @method DescribeCasterSyncGroup describeCasterSyncGroup(array $options = [])
  * @method DescribeCasterVideoResources describeCasterVideoResources(array $options = [])
+ * @method DescribeDomainUsageData describeDomainUsageData(array $options = [])
  * @method DescribeForbidPushStreamRoomList describeForbidPushStreamRoomList(array $options = [])
  * @method DescribeHlsLiveStreamRealTimeBpsData describeHlsLiveStreamRealTimeBpsData(array $options = [])
  * @method DescribeHtmlResource describeHtmlResource(array $options = [])
@@ -110,6 +112,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainOnlineUserNum describeLiveDomainOnlineUserNum(array $options = [])
  * @method DescribeLiveDomainPushBpsData describeLiveDomainPushBpsData(array $options = [])
  * @method DescribeLiveDomainPushTrafficData describeLiveDomainPushTrafficData(array $options = [])
+ * @method DescribeLiveDomainPvUvData describeLiveDomainPvUvData(array $options = [])
  * @method DescribeLiveDomainRealTimeBpsData describeLiveDomainRealTimeBpsData(array $options = [])
  * @method DescribeLiveDomainRealTimeHttpCodeData describeLiveDomainRealTimeHttpCodeData(array $options = [])
  * @method DescribeLiveDomainRealtimeLogDelivery describeLiveDomainRealtimeLogDelivery(array $options = [])
@@ -132,14 +135,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamCount describeLiveStreamCount(array $options = [])
  * @method DescribeLiveStreamDelayConfig describeLiveStreamDelayConfig(array $options = [])
  * @method DescribeLiveStreamHistoryUserNum describeLiveStreamHistoryUserNum(array $options = [])
- * @method DescribeLiveStreamOnlineUserNum describeLiveStreamOnlineUserNum(array $options = [])
  * @method DescribeLiveStreamOptimizedFeatureConfig describeLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method DescribeLiveStreamRecordContent describeLiveStreamRecordContent(array $options = [])
  * @method DescribeLiveStreamRecordIndexFile describeLiveStreamRecordIndexFile(array $options = [])
  * @method DescribeLiveStreamRecordIndexFiles describeLiveStreamRecordIndexFiles(array $options = [])
  * @method DescribeLiveStreamsBlockList describeLiveStreamsBlockList(array $options = [])
  * @method DescribeLiveStreamsControlHistory describeLiveStreamsControlHistory(array $options = [])
- * @method DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData(array $options = [])
  * @method DescribeLiveStreamSnapshotInfo describeLiveStreamSnapshotInfo(array $options = [])
  * @method DescribeLiveStreamsNotifyUrlConfig describeLiveStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeLiveStreamsOnlineList describeLiveStreamsOnlineList(array $options = [])
@@ -150,6 +151,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveTopDomainsByFlow describeLiveTopDomainsByFlow(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
+ * @method DescribeLiveVerifyContent describeLiveVerifyContent(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRecord describeRecord(array $options = [])
  * @method DescribeRecords describeRecords(array $options = [])
@@ -216,6 +218,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveSnapshotDetectPornConfig updateLiveSnapshotDetectPornConfig(array $options = [])
  * @method UpdateLiveTopLevelDomain updateLiveTopLevelDomain(array $options = [])
  * @method UpdateMixStream updateMixStream(array $options = [])
+ * @method VerifyLiveDomainOwner verifyLiveDomainOwner(array $options = [])
  */
 class LiveApiResolver extends ApiResolver
 {
@@ -884,6 +887,8 @@ class AddLiveSnapshotDetectPornConfig extends Rpc
  * @method $this withMix($value)
  * @method string getApp()
  * @method $this withApp($value)
+ * @method string getEncryptParameters()
+ * @method $this withEncryptParameters($value)
  * @method string getWatermark()
  * @method $this withWatermark($value)
  * @method string getOwnerId()
@@ -1471,6 +1476,18 @@ class DeleteLiveDomainMapping extends Rpc
 }
 
 /**
+ * @method string getPlayDomain()
+ * @method $this withPlayDomain($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPullDomain()
+ * @method $this withPullDomain($value)
+ */
+class DeleteLiveDomainPlayMapping extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -1825,6 +1842,28 @@ class DescribeCasterVideoResources extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getArea()
+ * @method $this withArea($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getField()
+ * @method $this withField($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeDomainUsageData extends Rpc
+{
+}
+
+/**
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getPageSize()
@@ -2139,6 +2178,20 @@ class DescribeLiveDomainPushBpsData extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeLiveDomainPushTrafficData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveDomainPvUvData extends Rpc
 {
 }
 
@@ -2505,26 +2558,6 @@ class DescribeLiveStreamHistoryUserNum extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getStreamName()
- * @method $this withStreamName($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveStreamOnlineUserNum extends Rpc
-{
-}
-
-/**
  * @method string getConfigName()
  * @method $this withConfigName($value)
  * @method string getDomainName()
@@ -2621,36 +2654,18 @@ class DescribeLiveStreamsBlockList extends Rpc
  * @method $this withStartTime($value)
  * @method string getAppName()
  * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRows()
+ * @method $this withRows($value)
+ * @method string getPage()
+ * @method $this withPage($value)
  */
 class DescribeLiveStreamsControlHistory extends Rpc
-{
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getStreamName()
- * @method $this withStreamName($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveStreamsFrameRateAndBitRateData extends Rpc
 {
 }
 
@@ -2877,6 +2892,16 @@ class DescribeLiveUserDomains extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveUserTags extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveVerifyContent extends Rpc
 {
 }
 
@@ -3814,6 +3839,8 @@ class SetLiveStreamOptimizedFeatureConfig extends Rpc
  * @method $this withAuthType($value)
  * @method string getNotifyUrl()
  * @method $this withNotifyUrl($value)
+ * @method string getNotifyType()
+ * @method $this withNotifyType($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -4337,5 +4364,17 @@ class UpdateLiveTopLevelDomain extends Rpc
  * @method $this withOwnerId($value)
  */
 class UpdateMixStream extends Rpc
+{
+}
+
+/**
+ * @method string getVerifyType()
+ * @method $this withVerifyType($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class VerifyLiveDomainOwner extends Rpc
 {
 }
