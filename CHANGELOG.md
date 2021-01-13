@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.799 - 2021-1-13
+- Add SwitchInstanceHA API.
+- ModifyInstanceSpec add SourceBiz param.
+
+
 ## 1.8.798 - 2021-1-13
 - Generated 2016-11-01 for `live`.
 

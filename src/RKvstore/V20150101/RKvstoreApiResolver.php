@@ -88,6 +88,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method RestoreInstance restoreInstance(array $options = [])
+ * @method SwitchInstanceHA switchInstanceHA(array $options = [])
  * @method SwitchNetwork switchNetwork(array $options = [])
  * @method SyncDtsStatus syncDtsStatus(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -1900,6 +1901,8 @@ class ModifyInstanceNetExpireTime extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getEffectiveTime()
  * @method $this withEffectiveTime($value)
+ * @method string getSourceBiz()
+ * @method $this withSourceBiz($value)
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  * @method string getAutoPay()
@@ -2272,6 +2275,34 @@ class RestartInstance extends Rpc
  * @method $this withInstanceId($value)
  */
 class RestoreInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSwitchType()
+ * @method $this withSwitchType($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class SwitchInstanceHA extends Rpc
 {
 }
 
