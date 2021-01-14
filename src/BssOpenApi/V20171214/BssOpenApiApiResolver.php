@@ -52,12 +52,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryResellerAvailableQuota queryResellerAvailableQuota(array $options = [])
  * @method QueryResourcePackageInstances queryResourcePackageInstances(array $options = [])
  * @method QueryRIUtilizationDetail queryRIUtilizationDetail(array $options = [])
+ * @method QuerySavingsPlansDeductLog querySavingsPlansDeductLog(array $options = [])
+ * @method QuerySavingsPlansInstance querySavingsPlansInstance(array $options = [])
  * @method QuerySettleBill querySettleBill(array $options = [])
  * @method QuerySettlementBill querySettlementBill(array $options = [])
  * @method QuerySplitItemBill querySplitItemBill(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewResourcePackage renewResourcePackage(array $options = [])
+ * @method SaveUserCredit saveUserCredit(array $options = [])
+ * @method SetCreditLabelAction setCreditLabelAction(array $options = [])
  * @method SetRenewal setRenewal(array $options = [])
  * @method SetResellerUserAlarmThreshold setResellerUserAlarmThreshold(array $options = [])
  * @method SetResellerUserQuota setResellerUserQuota(array $options = [])
@@ -612,8 +616,12 @@ class QueryAccountBalance extends Rpc
  * @method $this withOwnerID($value)
  * @method string getBillOwnerId()
  * @method $this withBillOwnerId($value)
+ * @method string getBillingDate()
+ * @method $this withBillingDate($value)
  * @method string getIsGroupByProduct()
  * @method $this withIsGroupByProduct($value)
+ * @method string getGranularity()
+ * @method $this withGranularity($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
@@ -1045,6 +1053,48 @@ class QueryRIUtilizationDetail extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getLocale()
+ * @method $this withLocale($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ */
+class QuerySavingsPlansDeductLog extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getLocale()
+ * @method $this withLocale($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class QuerySavingsPlansInstance extends Rpc
+{
+}
+
+/**
  * @method string getProductCode()
  * @method $this withProductCode($value)
  * @method string getIsHideZeroCharge()
@@ -1174,6 +1224,74 @@ class RenewInstance extends Rpc
  */
 class RenewResourcePackage extends Rpc
 {
+}
+
+/**
+ * @method string getAvoidExpiration()
+ * @method $this withAvoidExpiration($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAvoidPrepaidNotification()
+ * @method $this withAvoidPrepaidNotification($value)
+ * @method string getAvoidPrepaidExpiration()
+ * @method $this withAvoidPrepaidExpiration($value)
+ * @method string getAvoidNotification()
+ * @method $this withAvoidNotification($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ * @method string getCreditValue()
+ * @method $this withCreditValue($value)
+ * @method string getCreditType()
+ * @method $this withCreditType($value)
+ */
+class SaveUserCredit extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getActionType()
+ * @method $this withActionType($value)
+ * @method string getIsNeedSaveNotifyRule()
+ * @method $this withIsNeedSaveNotifyRule($value)
+ * @method string getIsNeedAdjustCreditAccount()
+ * @method $this withIsNeedAdjustCreditAccount($value)
+ * @method string getNewCreateMode()
+ * @method $this withNewCreateMode($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getCurrencyCode()
+ * @method $this withCurrencyCode($value)
+ * @method string getDailyCycle()
+ * @method $this withDailyCycle($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getSiteCode()
+ * @method $this withSiteCode($value)
+ * @method string getClearCycle()
+ * @method $this withClearCycle($value)
+ * @method string getNeedNotice()
+ * @method $this withNeedNotice($value)
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getIsNeedSetCreditAmount()
+ * @method $this withIsNeedSetCreditAmount($value)
+ * @method string getCreditAmount()
+ * @method $this withCreditAmount($value)
+ * @method string getIsNeedAddSettleLabel()
+ * @method $this withIsNeedAddSettleLabel($value)
+ */
+class SetCreditLabelAction extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

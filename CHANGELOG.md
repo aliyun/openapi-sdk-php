@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.803 - 2021-1-14
+- Add BillingDate support in QueryAccontBill.
+- Add SplitAccountId, SplitAccountName, SplitBillingCycle, SplitProductDetail, SplitCommodityCode, ServicePeriodUnit support in QuerySplitItemBill.
+
+
 ## 1.8.802 - 2021-1-14
 - Update Open API.
 
