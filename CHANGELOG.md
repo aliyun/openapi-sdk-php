@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.801 - 2021-1-14
+- Update function.
+
+
 ## 1.8.800 - 2021-1-14
 - Create Lindorm Open api.
 
