@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.802 - 2021-1-14
+- Update Open API.
+
+
 ## 1.8.801 - 2021-1-14
 - Update function.
 
