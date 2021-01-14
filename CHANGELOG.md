@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.800 - 2021-1-14
+- Create Lindorm Open api.
+
+
 ## 1.8.799 - 2021-1-13
 - Add SwitchInstanceHA API.
 - ModifyInstanceSpec add SourceBiz param.
