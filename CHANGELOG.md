@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.808 - 2021-1-15
+- Add result value spanId for GetTrace api.
+
+
 ## 1.8.807 - 2021-1-15
 - Update Function.
 
