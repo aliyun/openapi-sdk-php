@@ -2179,6 +2179,7 @@ class ListMetrics extends Rpc
 }
 
 /**
+ * @method string getSchema()
  * @method string getCorpId()
  * @method string getEndTime()
  * @method string getStartTime()
@@ -2188,6 +2189,19 @@ class ListMetrics extends Rpc
  */
 class ListPersonDetails extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchema($value)
+    {
+        $this->data['Schema'] = $value;
+        $this->options['form_params']['Schema'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2401,6 +2415,7 @@ class ListPersonResult extends Rpc
 }
 
 /**
+ * @method string getSchema()
  * @method string getCorpId()
  * @method string getPageNumber()
  * @method string getTagCode()
@@ -2408,6 +2423,19 @@ class ListPersonResult extends Rpc
  */
 class ListPersonTag extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchema($value)
+    {
+        $this->data['Schema'] = $value;
+        $this->options['form_params']['Schema'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2463,13 +2491,29 @@ class ListPersonTag extends Rpc
 }
 
 /**
+ * @method string getSchema()
  * @method string getCorpId()
  * @method string getEndTime()
  * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getPageSize()
  * @method string getPersonId()
  */
 class ListPersonTop extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchema($value)
+    {
+        $this->data['Schema'] = $value;
+        $this->options['form_params']['Schema'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2506,6 +2550,32 @@ class ListPersonTop extends Rpc
     {
         $this->data['StartTime'] = $value;
         $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -2629,6 +2699,7 @@ class ListPersonTrace extends Rpc
 }
 
 /**
+ * @method string getSchema()
  * @method string getCorpId()
  * @method string getEndTime()
  * @method string getStartTime()
@@ -2638,6 +2709,19 @@ class ListPersonTrace extends Rpc
  */
 class ListPersonTrack extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchema($value)
+    {
+        $this->data['Schema'] = $value;
+        $this->options['form_params']['Schema'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
