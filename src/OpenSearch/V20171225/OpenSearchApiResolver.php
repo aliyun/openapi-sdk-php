@@ -49,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableSlowQuery enableSlowQuery(array $options = [])
  * @method GetModelProgress getModelProgress(array $options = [])
  * @method GetModelReport getModelReport(array $options = [])
+ * @method GetScriptFileNames getScriptFileNames(array $options = [])
  * @method GetSortScript getSortScript(array $options = [])
  * @method GetSortScriptFile getSortScriptFile(array $options = [])
  * @method GetValidationError getValidationError(array $options = [])
@@ -1751,6 +1752,56 @@ class GetModelReport extends Roa
  * @method string getScriptName()
  * @method string getAppGroupIdentity()
  */
+class GetScriptFileNames extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/apps/[appVersionId]/sort-scripts/[scriptName]/file-names';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppVersionId($value)
+    {
+        $this->data['AppVersionId'] = $value;
+        $this->pathParameters['appVersionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScriptName($value)
+    {
+        $this->data['ScriptName'] = $value;
+        $this->pathParameters['scriptName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppVersionId()
+ * @method string getScriptName()
+ * @method string getAppGroupIdentity()
+ */
 class GetSortScript extends Roa
 {
     /** @var string */
@@ -2325,6 +2376,7 @@ class ListAppGroupMetrics extends Roa
 }
 
 /**
+ * @method string getResourceGroupId()
  * @method string getInstanceId()
  * @method string getPageSize()
  * @method string getName()
@@ -2336,6 +2388,19 @@ class ListAppGroups extends Roa
 {
     /** @var string */
     public $pathPattern = '/v4/openapi/app-groups';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['query']['resourceGroupId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

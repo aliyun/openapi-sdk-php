@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.805 - 2021-1-15
+- Add API CreateSortScriptValidation.
+- Add parameter resourceGroupId to API ListAppGroups.
+
+
 ## 1.8.804 - 2021-1-14
 - Add function.
 
