@@ -43,6 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
  * @method CreateConsumerGroupSubscribeRelation createConsumerGroupSubscribeRelation(array $options = [])
  * @method CreateDataAPIService createDataAPIService(array $options = [])
+ * @method CreateDeviceDistributeJob createDeviceDistributeJob(array $options = [])
  * @method CreateDeviceGroup createDeviceGroup(array $options = [])
  * @method CreateEdgeDriver createEdgeDriver(array $options = [])
  * @method CreateEdgeDriverVersion createEdgeDriverVersion(array $options = [])
@@ -58,6 +59,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateOTAStaticUpgradeJob createOTAStaticUpgradeJob(array $options = [])
  * @method CreateOTAVerifyJob createOTAVerifyJob(array $options = [])
  * @method CreateProduct createProduct(array $options = [])
+ * @method CreateProductDistributeJob createProductDistributeJob(array $options = [])
  * @method CreateProductTags createProductTags(array $options = [])
  * @method CreateProductTopic createProductTopic(array $options = [])
  * @method CreateRule createRule(array $options = [])
@@ -71,6 +73,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteConsumerGroup deleteConsumerGroup(array $options = [])
  * @method DeleteConsumerGroupSubscribeRelation deleteConsumerGroupSubscribeRelation(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
+ * @method DeleteDeviceDistributeJob deleteDeviceDistributeJob(array $options = [])
  * @method DeleteDeviceFile deleteDeviceFile(array $options = [])
  * @method DeleteDeviceGroup deleteDeviceGroup(array $options = [])
  * @method DeleteDeviceProp deleteDeviceProp(array $options = [])
@@ -117,6 +120,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
+ * @method ListDeviceDistributeJob listDeviceDistributeJob(array $options = [])
+ * @method ListDistributedDevice listDistributedDevice(array $options = [])
+ * @method ListDistributedProduct listDistributedProduct(array $options = [])
  * @method ListJob listJob(array $options = [])
  * @method ListOTAFirmware listOTAFirmware(array $options = [])
  * @method ListOTAJobByDevice listOTAJobByDevice(array $options = [])
@@ -151,6 +157,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDeviceCert queryDeviceCert(array $options = [])
  * @method QueryDeviceDesiredProperty queryDeviceDesiredProperty(array $options = [])
  * @method QueryDeviceDetail queryDeviceDetail(array $options = [])
+ * @method QueryDeviceDistributeDetail queryDeviceDistributeDetail(array $options = [])
+ * @method QueryDeviceDistributeJob queryDeviceDistributeJob(array $options = [])
  * @method QueryDeviceEventData queryDeviceEventData(array $options = [])
  * @method QueryDeviceFile queryDeviceFile(array $options = [])
  * @method QueryDeviceFileList queryDeviceFileList(array $options = [])
@@ -2364,6 +2372,158 @@ class CreateDataAPIService extends Rpc
 }
 
 /**
+ * @method string getCaptcha()
+ * @method string getSourceInstanceId()
+ * @method string getTargetAliyunId()
+ * @method array getTargetInstanceConfig()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method array getDeviceName()
+ * @method string getTargetUid()
+ * @method string getStrategy()
+ */
+class CreateDeviceDistributeJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCaptcha($value)
+    {
+        $this->data['Captcha'] = $value;
+        $this->options['form_params']['Captcha'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceInstanceId($value)
+    {
+        $this->data['SourceInstanceId'] = $value;
+        $this->options['form_params']['SourceInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetAliyunId($value)
+    {
+        $this->data['TargetAliyunId'] = $value;
+        $this->options['form_params']['TargetAliyunId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $targetInstanceConfig
+     *
+     * @return $this
+     */
+	public function withTargetInstanceConfig(array $targetInstanceConfig)
+	{
+	    $this->data['TargetInstanceConfig'] = $targetInstanceConfig;
+		foreach ($targetInstanceConfig as $depth1 => $depth1Value) {
+			if(isset($depth1Value['TargetInstanceId'])){
+				$this->options['form_params']['TargetInstanceConfig.' . ($depth1 + 1) . '.TargetInstanceId'] = $depth1Value['TargetInstanceId'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $deviceName
+     *
+     * @return $this
+     */
+	public function withDeviceName(array $deviceName)
+	{
+	    $this->data['DeviceName'] = $deviceName;
+		foreach ($deviceName as $i => $iValue) {
+			$this->options['form_params']['DeviceName.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUid($value)
+    {
+        $this->data['TargetUid'] = $value;
+        $this->options['form_params']['TargetUid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStrategy($value)
+    {
+        $this->data['Strategy'] = $value;
+        $this->options['form_params']['Strategy'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRealTenantId()
  * @method $this withRealTenantId($value)
  * @method string getSuperGroupId()
@@ -3249,6 +3409,52 @@ class CreateProduct extends Rpc
 }
 
 /**
+ * @method string getCaptcha()
+ * @method $this withCaptcha($value)
+ * @method string getSourceInstanceId()
+ * @method $this withSourceInstanceId($value)
+ * @method string getTargetAliyunId()
+ * @method $this withTargetAliyunId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getTargetInstanceId()
+ * @method $this withTargetInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getTargetUid()
+ * @method $this withTargetUid($value)
+ */
+class CreateProductDistributeJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRealTenantId()
  * @method $this withRealTenantId($value)
  * @method string getRealTripartiteKey()
@@ -3854,6 +4060,42 @@ class DeleteConsumerGroupSubscribeRelation extends Rpc
  * @method $this withDeviceName($value)
  */
 class DeleteDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteDeviceDistributeJob extends Rpc
 {
 
     /**
@@ -5934,6 +6176,142 @@ class InvokeThingsService extends Rpc
 }
 
 /**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getTargetUid()
+ * @method $this withTargetUid($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListDeviceDistributeJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSourceInstanceId()
+ * @method $this withSourceInstanceId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getTargetInstanceId()
+ * @method $this withTargetInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getTargetUid()
+ * @method $this withTargetUid($value)
+ */
+class ListDistributedDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSourceInstanceId()
+ * @method $this withSourceInstanceId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getTargetInstanceId()
+ * @method $this withTargetInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getTargetUid()
+ * @method $this withTargetUid($value)
+ */
+class ListDistributedProduct extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()
@@ -7513,6 +7891,78 @@ class QueryDeviceDesiredProperty extends Rpc
  * @method $this withDeviceName($value)
  */
 class QueryDeviceDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QueryDeviceDistributeDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QueryDeviceDistributeJob extends Rpc
 {
 
     /**

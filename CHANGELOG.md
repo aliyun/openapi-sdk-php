@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.810 - 2021-1-18
+- Add a set of api to support device distribution management, including CreateProductDistributeJob, CreateDeviceDistributeJob, QueryDeviceDistributeJob, ListDeviceDistributeJob, QueryDeviceDistributeDetail, DeleteDeviceDistributeJob, ListDistributedDevice, ListDistributedProduct etc.
+
+
 ## 1.8.809 - 2021-1-18
 - Add ListMergeRequests api.
 - Add protected branch api, CreateRepositoryProtectedBranch and DeleteRepositoryProtectedBranch.
