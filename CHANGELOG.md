@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.812 - 2021-1-18
+- Generated 2019-03-27 for `dg`.
+
+
 ## 1.8.811 - 2021-1-18
 - Add a set of API to support device distribution management, including CreateProductDistributeJob, CreateDeviceDistributeJob, QueryDeviceDistributeJob, ListDeviceDistributeJob, QueryDeviceDistributeDetail, DeleteDeviceDistributeJob, ListDistributedDevice, ListDistributedProduct etc.
 
