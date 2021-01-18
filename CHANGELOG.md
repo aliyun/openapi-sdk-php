@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.8.809 - 2021-1-18
+- Add ListMergeRequests api.
+- Add protected branch api, CreateRepositoryProtectedBranch and DeleteRepositoryProtectedBranch.
+- Add repository deploy key api, EnableRepositoryDeployKey and CreateRepositoryDeployKey.
+- Add UpdateRepository api.
+- Update GetUserInfo, support use OrganizationId param to get user organization name.
+
+
+
 ## 1.8.808 - 2021-1-15
 - Add result value spanId for GetTrace api.
 

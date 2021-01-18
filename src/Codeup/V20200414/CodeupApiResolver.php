@@ -12,7 +12,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateFile createFile(array $options = [])
  * @method CreateMergeRequest createMergeRequest(array $options = [])
  * @method CreateRepository createRepository(array $options = [])
+ * @method CreateRepositoryDeployKey createRepositoryDeployKey(array $options = [])
  * @method CreateRepositoryGroup createRepositoryGroup(array $options = [])
+ * @method CreateRepositoryProtectedBranch createRepositoryProtectedBranch(array $options = [])
  * @method CreateTag createTag(array $options = [])
  * @method DeleteBranch deleteBranch(array $options = [])
  * @method DeleteFile deleteFile(array $options = [])
@@ -20,8 +22,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRepository deleteRepository(array $options = [])
  * @method DeleteRepositoryGroup deleteRepositoryGroup(array $options = [])
  * @method DeleteRepositoryMember deleteRepositoryMember(array $options = [])
+ * @method DeleteRepositoryProtectedBranch deleteRepositoryProtectedBranch(array $options = [])
  * @method DeleteRepositoryTag deleteRepositoryTag(array $options = [])
  * @method DeleteRepositoryWebhook deleteRepositoryWebhook(array $options = [])
+ * @method EnableRepositoryDeployKey enableRepositoryDeployKey(array $options = [])
  * @method GetBranchInfo getBranchInfo(array $options = [])
  * @method GetCodeupOrganization getCodeupOrganization(array $options = [])
  * @method GetFileBlobs getFileBlobs(array $options = [])
@@ -33,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListGroupMember listGroupMember(array $options = [])
  * @method ListGroupRepositories listGroupRepositories(array $options = [])
  * @method ListGroups listGroups(array $options = [])
+ * @method ListMergeRequests listMergeRequests(array $options = [])
  * @method ListOrganizations listOrganizations(array $options = [])
  * @method ListRepositories listRepositories(array $options = [])
  * @method ListRepositoryBranches listRepositoryBranches(array $options = [])
@@ -43,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method MergeMergeRequest mergeMergeRequest(array $options = [])
  * @method UpdateFile updateFile(array $options = [])
  * @method UpdateGroupMember updateGroupMember(array $options = [])
+ * @method UpdateRepository updateRepository(array $options = [])
  * @method UpdateRepositoryMember updateRepositoryMember(array $options = [])
  */
 class CodeupApiResolver extends ApiResolver
@@ -514,6 +520,61 @@ class CreateRepository extends Roa
 /**
  * @method string getOrganizationId()
  * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class CreateRepositoryDeployKey extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/keys';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
  * @method string getClientToken()
  * @method string getAccessToken()
  */
@@ -560,6 +621,47 @@ class CreateRepositoryGroup extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class CreateRepositoryProtectedBranch extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/repository/protect_branches';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
 
         return $this;
     }
@@ -1025,6 +1127,49 @@ class DeleteRepositoryMember extends Roa
 
 /**
  * @method string getOrganizationId()
+ * @method string getProtectedBranchId()
+ * @method $this withProtectedBranchId($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class DeleteRepositoryProtectedBranch extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/repository/protect_branches/[ProtectedBranchId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
  * @method string getTagName()
  * @method $this withTagName($value)
  * @method string getAccessToken()
@@ -1091,6 +1236,63 @@ class DeleteRepositoryWebhook extends Roa
     {
         $this->data['OrganizationId'] = $value;
         $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getSubUserId()
+ * @method string getAccessToken()
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class EnableRepositoryDeployKey extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/keys/[KeyId]/enable';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubUserId($value)
+    {
+        $this->data['SubUserId'] = $value;
+        $this->options['query']['SubUserId'] = $value;
 
         return $this;
     }
@@ -1544,12 +1746,26 @@ class GetRepositoryTag extends Roa
 }
 
 /**
+ * @method string getOrganizationId()
  * @method string getAccessToken()
  */
 class GetUserInfo extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v3/user/current';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1854,6 +2070,238 @@ class ListGroups extends Roa
     {
         $this->data['Page'] = $value;
         $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBeforeDate()
+ * @method string getAssigneeIdList()
+ * @method string getAccessToken()
+ * @method string getSubscriberCodeupIdList()
+ * @method string getAfterDate()
+ * @method string getOrganizationId()
+ * @method string getGroupIdList()
+ * @method string getSearch()
+ * @method string getAuthorCodeupIdList()
+ * @method string getAuthorIdList()
+ * @method string getPageSize()
+ * @method string getProjectIdList()
+ * @method string getPage()
+ * @method string getAssigneeCodeupIdList()
+ * @method string getState()
+ * @method string getOrder()
+ */
+class ListMergeRequests extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/merge_requests/advanced_search';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBeforeDate($value)
+    {
+        $this->data['BeforeDate'] = $value;
+        $this->options['query']['BeforeDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAssigneeIdList($value)
+    {
+        $this->data['AssigneeIdList'] = $value;
+        $this->options['query']['AssigneeIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubscriberCodeupIdList($value)
+    {
+        $this->data['SubscriberCodeupIdList'] = $value;
+        $this->options['query']['SubscriberCodeupIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAfterDate($value)
+    {
+        $this->data['AfterDate'] = $value;
+        $this->options['query']['AfterDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupIdList($value)
+    {
+        $this->data['GroupIdList'] = $value;
+        $this->options['query']['GroupIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearch($value)
+    {
+        $this->data['Search'] = $value;
+        $this->options['query']['Search'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuthorCodeupIdList($value)
+    {
+        $this->data['AuthorCodeupIdList'] = $value;
+        $this->options['query']['AuthorCodeupIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAuthorIdList($value)
+    {
+        $this->data['AuthorIdList'] = $value;
+        $this->options['query']['AuthorIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectIdList($value)
+    {
+        $this->data['ProjectIdList'] = $value;
+        $this->options['query']['ProjectIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAssigneeCodeupIdList($value)
+    {
+        $this->data['AssigneeCodeupIdList'] = $value;
+        $this->options['query']['AssigneeCodeupIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withState($value)
+    {
+        $this->data['State'] = $value;
+        $this->options['query']['State'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['query']['Order'] = $value;
 
         return $this;
     }
@@ -2636,6 +3084,47 @@ class UpdateGroupMember extends Roa
     {
         $this->data['SubUserId'] = $value;
         $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class UpdateRepository extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
 
         return $this;
     }
