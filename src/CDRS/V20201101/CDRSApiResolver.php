@@ -8,10 +8,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddCdrsMonitor addCdrsMonitor(array $options = [])
  * @method BindDevice bindDevice(array $options = [])
  * @method CreateProject createProject(array $options = [])
- * @method DetectTrajectoryRegularPattern detectTrajectoryRegularPattern(array $options = [])
  * @method GetCdrsMonitorList getCdrsMonitorList(array $options = [])
  * @method GetCdrsMonitorResult getCdrsMonitorResult(array $options = [])
- * @method IntersectTrajectory intersectTrajectory(array $options = [])
  * @method ListAreaHotSpotMetrics listAreaHotSpotMetrics(array $options = [])
  * @method ListCityMapAois listCityMapAois(array $options = [])
  * @method ListCityMapCameraResults listCityMapCameraResults(array $options = [])
@@ -48,17 +46,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVehicleTrack listVehicleTrack(array $options = [])
  * @method PaginateDevice paginateDevice(array $options = [])
  * @method PaginateProject paginateProject(array $options = [])
- * @method PredictTrajectoryDestination predictTrajectoryDestination(array $options = [])
- * @method QueryTrajectoryById queryTrajectoryById(array $options = [])
- * @method RecallTrajectoryByCoordinate recallTrajectoryByCoordinate(array $options = [])
- * @method RecallTrajectoryById recallTrajectoryById(array $options = [])
  * @method RecognizeImage recognizeImage(array $options = [])
  * @method SearchObject searchObject(array $options = [])
  * @method StopCdrsMonitor stopCdrsMonitor(array $options = [])
  * @method UnbindDevice unbindDevice(array $options = [])
  * @method UpdateCdrsMonitor updateCdrsMonitor(array $options = [])
  * @method UpdateProject updateProject(array $options = [])
- * @method ValidateTrajectory validateTrajectory(array $options = [])
  */
 class CDRSApiResolver extends ApiResolver
 {
@@ -396,68 +389,6 @@ class CreateProject extends Rpc
 }
 
 /**
- * @method string getPredictDate()
- * @method string getCorpId()
- * @method string getIdValue()
- * @method string getIdType()
- */
-class DetectTrajectoryRegularPattern extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPredictDate($value)
-    {
-        $this->data['PredictDate'] = $value;
-        $this->options['form_params']['PredictDate'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCorpId($value)
-    {
-        $this->data['CorpId'] = $value;
-        $this->options['form_params']['CorpId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdValue($value)
-    {
-        $this->data['IdValue'] = $value;
-        $this->options['form_params']['IdValue'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdType($value)
-    {
-        $this->data['IdType'] = $value;
-        $this->options['form_params']['IdType'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getCorpId()
  * @method string getPageNo()
  * @method string getPageSize()
@@ -592,103 +523,6 @@ class GetCdrsMonitorResult extends Rpc
         $this->options['form_params']['TaskId'] = $value;
 
         return $this;
-    }
-}
-
-/**
- * @method string getCorpId()
- * @method string getEndTime()
- * @method string getDeltaDistance()
- * @method string getStartTime()
- * @method string getDeltaTime()
- * @method array getIdList()
- */
-class IntersectTrajectory extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCorpId($value)
-    {
-        $this->data['CorpId'] = $value;
-        $this->options['form_params']['CorpId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeltaDistance($value)
-    {
-        $this->data['DeltaDistance'] = $value;
-        $this->options['form_params']['DeltaDistance'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeltaTime($value)
-    {
-        $this->data['DeltaTime'] = $value;
-        $this->options['form_params']['DeltaTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $idList
-     *
-     * @return $this
-     */
-	public function withIdList(array $idList)
-	{
-	    $this->data['IdList'] = $idList;
-		foreach ($idList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['IdType'])){
-				$this->options['form_params']['IdList.' . ($depth1 + 1) . '.IdType'] = $depth1Value['IdType'];
-			}
-			if(isset($depth1Value['IdValue'])){
-				$this->options['form_params']['IdList.' . ($depth1 + 1) . '.IdValue'] = $depth1Value['IdValue'];
-			}
-		}
-
-		return $this;
     }
 }
 
@@ -2701,6 +2535,8 @@ class ListPersonTrace extends Rpc
 /**
  * @method string getSchema()
  * @method string getCorpId()
+ * @method string getAggregateDimension()
+ * @method string getImageSourceType()
  * @method string getEndTime()
  * @method string getStartTime()
  * @method string getPageNumber()
@@ -2732,6 +2568,32 @@ class ListPersonTrack extends Rpc
     {
         $this->data['CorpId'] = $value;
         $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAggregateDimension($value)
+    {
+        $this->data['AggregateDimension'] = $value;
+        $this->options['form_params']['AggregateDimension'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageSourceType($value)
+    {
+        $this->data['ImageSourceType'] = $value;
+        $this->options['form_params']['ImageSourceType'] = $value;
 
         return $this;
     }
@@ -3640,416 +3502,6 @@ class PaginateProject extends Rpc
 
 /**
  * @method string getCorpId()
- * @method string getIdValue()
- * @method string getIdType()
- * @method string getPredictTimeSpan()
- */
-class PredictTrajectoryDestination extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCorpId($value)
-    {
-        $this->data['CorpId'] = $value;
-        $this->options['form_params']['CorpId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdValue($value)
-    {
-        $this->data['IdValue'] = $value;
-        $this->options['form_params']['IdValue'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdType($value)
-    {
-        $this->data['IdType'] = $value;
-        $this->options['form_params']['IdType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPredictTimeSpan($value)
-    {
-        $this->data['PredictTimeSpan'] = $value;
-        $this->options['form_params']['PredictTimeSpan'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCorpId()
- * @method string getEndTime()
- * @method string getStartTime()
- * @method array getDeviceList()
- * @method array getIdList()
- */
-class QueryTrajectoryById extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCorpId($value)
-    {
-        $this->data['CorpId'] = $value;
-        $this->options['form_params']['CorpId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $deviceList
-     *
-     * @return $this
-     */
-	public function withDeviceList(array $deviceList)
-	{
-	    $this->data['DeviceList'] = $deviceList;
-		foreach ($deviceList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['DeviceId'])){
-				$this->options['form_params']['DeviceList.' . ($depth1 + 1) . '.DeviceId'] = $depth1Value['DeviceId'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $idList
-     *
-     * @return $this
-     */
-	public function withIdList(array $idList)
-	{
-	    $this->data['IdList'] = $idList;
-		foreach ($idList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['IdType'])){
-				$this->options['form_params']['IdList.' . ($depth1 + 1) . '.IdType'] = $depth1Value['IdType'];
-			}
-			if(isset($depth1Value['IdValue'])){
-				$this->options['form_params']['IdList.' . ($depth1 + 1) . '.IdValue'] = $depth1Value['IdValue'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getCorpId()
- * @method array getPointList()
- * @method string getEndTime()
- * @method string getDeltaDistance()
- * @method string getStartTime()
- * @method array getOutputIdTypeList()
- * @method string getDeltaTime()
- * @method string getOutputIdCount()
- */
-class RecallTrajectoryByCoordinate extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCorpId($value)
-    {
-        $this->data['CorpId'] = $value;
-        $this->options['form_params']['CorpId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $pointList
-     *
-     * @return $this
-     */
-	public function withPointList(array $pointList)
-	{
-	    $this->data['PointList'] = $pointList;
-		foreach ($pointList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Latitude'])){
-				$this->options['form_params']['PointList.' . ($depth1 + 1) . '.Latitude'] = $depth1Value['Latitude'];
-			}
-			if(isset($depth1Value['Longitude'])){
-				$this->options['form_params']['PointList.' . ($depth1 + 1) . '.Longitude'] = $depth1Value['Longitude'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeltaDistance($value)
-    {
-        $this->data['DeltaDistance'] = $value;
-        $this->options['form_params']['DeltaDistance'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $outputIdTypeList
-     *
-     * @return $this
-     */
-	public function withOutputIdTypeList(array $outputIdTypeList)
-	{
-	    $this->data['OutputIdTypeList'] = $outputIdTypeList;
-		foreach ($outputIdTypeList as $i => $iValue) {
-			$this->options['form_params']['OutputIdTypeList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeltaTime($value)
-    {
-        $this->data['DeltaTime'] = $value;
-        $this->options['form_params']['DeltaTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutputIdCount($value)
-    {
-        $this->data['OutputIdCount'] = $value;
-        $this->options['form_params']['OutputIdCount'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCorpId()
- * @method string getEndTime()
- * @method string getIdValue()
- * @method string getDeltaDistance()
- * @method string getStartTime()
- * @method string getIdType()
- * @method array getOutputIdTypeList()
- * @method string getDeltaTime()
- * @method string getOutputIdCount()
- */
-class RecallTrajectoryById extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCorpId($value)
-    {
-        $this->data['CorpId'] = $value;
-        $this->options['form_params']['CorpId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdValue($value)
-    {
-        $this->data['IdValue'] = $value;
-        $this->options['form_params']['IdValue'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeltaDistance($value)
-    {
-        $this->data['DeltaDistance'] = $value;
-        $this->options['form_params']['DeltaDistance'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdType($value)
-    {
-        $this->data['IdType'] = $value;
-        $this->options['form_params']['IdType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $outputIdTypeList
-     *
-     * @return $this
-     */
-	public function withOutputIdTypeList(array $outputIdTypeList)
-	{
-	    $this->data['OutputIdTypeList'] = $outputIdTypeList;
-		foreach ($outputIdTypeList as $i => $iValue) {
-			$this->options['form_params']['OutputIdTypeList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeltaTime($value)
-    {
-        $this->data['DeltaTime'] = $value;
-        $this->options['form_params']['DeltaTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutputIdCount($value)
-    {
-        $this->data['OutputIdCount'] = $value;
-        $this->options['form_params']['OutputIdCount'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCorpId()
  * @method string getVendor()
  * @method string getImageUrl()
  * @method string getImageContent()
@@ -4751,82 +4203,6 @@ class UpdateProject extends Rpc
     {
         $this->data['AggregateSceneCode'] = $value;
         $this->options['form_params']['AggregateSceneCode'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getCorpId()
- * @method string getEndTime()
- * @method string getIdValue()
- * @method string getStartTime()
- * @method string getIdType()
- */
-class ValidateTrajectory extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCorpId($value)
-    {
-        $this->data['CorpId'] = $value;
-        $this->options['form_params']['CorpId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdValue($value)
-    {
-        $this->data['IdValue'] = $value;
-        $this->options['form_params']['IdValue'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIdType($value)
-    {
-        $this->data['IdType'] = $value;
-        $this->options['form_params']['IdType'] = $value;
 
         return $this;
     }

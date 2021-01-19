@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.813 - 2021-1-19
+- Update Function.
+
+
 ## 1.8.812 - 2021-1-18
 - Generated 2019-03-27 for `dg`.
 
