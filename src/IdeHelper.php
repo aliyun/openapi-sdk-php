@@ -85,6 +85,7 @@ namespace AlibabaCloud;
  * @method static Edas\Edas edas()
  * @method static Elasticsearch\Elasticsearch elasticsearch()
  * @method static Emap\Emap emap()
+ * @method static EmasAppmonitor\EmasAppmonitor emasAppmonitor()
  * @method static Emr\Emr emr()
  * @method static Ess\Ess ess()
  * @method static Facebody\Facebody facebody()
