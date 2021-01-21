@@ -29,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDevopsProjectMembers getDevopsProjectMembers(array $options = [])
  * @method GetDevopsProjectSprintInfo getDevopsProjectSprintInfo(array $options = [])
  * @method GetDevopsProjectTaskInfo getDevopsProjectTaskInfo(array $options = [])
+ * @method GetLastWorkspace getLastWorkspace(array $options = [])
  * @method GetPipelineInstanceBuildNumberStatus getPipelineInstanceBuildNumberStatus(array $options = [])
  * @method GetPipelineInstanceGroupStatus getPipelineInstanceGroupStatus(array $options = [])
  * @method GetPipelineInstanceInfo getPipelineInstanceInfo(array $options = [])
@@ -1388,6 +1389,40 @@ class GetDevopsProjectTaskInfo extends Rpc
     {
         $this->data['TaskId'] = $value;
         $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRealPk()
+ * @method string getOrgId()
+ */
+class GetLastWorkspace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealPk($value)
+    {
+        $this->data['RealPk'] = $value;
+        $this->options['form_params']['RealPk'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
 
         return $this;
     }
