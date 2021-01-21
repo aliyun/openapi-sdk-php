@@ -22,12 +22,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceInfo describeInstanceInfo(array $options = [])
  * @method DescribeInstanceInfos describeInstanceInfos(array $options = [])
  * @method DescribeInstanceSpecInfo describeInstanceSpecInfo(array $options = [])
+ * @method DescribeProtectionModuleCodeConfig describeProtectionModuleCodeConfig(array $options = [])
  * @method DescribeProtectionModuleMode describeProtectionModuleMode(array $options = [])
  * @method DescribeProtectionModuleRules describeProtectionModuleRules(array $options = [])
  * @method DescribeProtectionModuleStatus describeProtectionModuleStatus(array $options = [])
  * @method DescribeWafSourceIpSegment describeWafSourceIpSegment(array $options = [])
  * @method ModifyDomain modifyDomain(array $options = [])
- * @method ModifyDomainClusterType modifyDomainClusterType(array $options = [])
  * @method ModifyDomainIpv6Status modifyDomainIpv6Status(array $options = [])
  * @method ModifyLogRetrievalStatus modifyLogRetrievalStatus(array $options = [])
  * @method ModifyLogServiceStatus modifyLogServiceStatus(array $options = [])
@@ -371,6 +371,24 @@ class DescribeInstanceSpecInfo extends Rpc
 }
 
 /**
+ * @method string getCodeValue()
+ * @method $this withCodeValue($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCodeType()
+ * @method $this withCodeType($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeProtectionModuleCodeConfig extends Rpc
+{
+}
+
+/**
  * @method string getDefenseType()
  * @method $this withDefenseType($value)
  * @method string getResourceGroupId()
@@ -491,20 +509,6 @@ class DescribeWafSourceIpSegment extends Rpc
  * @method $this withHttpToUserIp($value)
  */
 class ModifyDomain extends Rpc
-{
-}
-
-/**
- * @method string getClusterType()
- * @method $this withClusterType($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- */
-class ModifyDomainClusterType extends Rpc
 {
 }
 

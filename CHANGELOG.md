@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.816 - 2021-1-21
+- Generated 2019-09-10 for `waf-openapi`.
+
+
 ## 1.8.815 - 2021-1-21
 - Add.
 
