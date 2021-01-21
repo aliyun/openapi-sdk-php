@@ -158,6 +158,7 @@ namespace AlibabaCloud;
  * @method static PetaData\PetaData petaData()
  * @method static Polardb\Polardb polardb()
  * @method static Polardbx\Polardbx polardbx()
+ * @method static Privatelink\Privatelink privatelink()
  * @method static ProductCatalog\ProductCatalog productCatalog()
  * @method static Push\Push push()
  * @method static Pvtz\Pvtz pvtz()
