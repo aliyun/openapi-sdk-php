@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.820 - 2021-1-25
+- Regenerate SDK to override list implement.
+
+
 ## 1.8.819 - 2021-1-25
 - Update Open API.
 
