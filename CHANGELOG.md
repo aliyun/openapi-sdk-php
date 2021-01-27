@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.821 - 2021-1-27
+- DetectFaceAttributes Add Score.
+
+
 ## 1.8.820 - 2021-1-25
 - Regenerate SDK to override list implement.
 

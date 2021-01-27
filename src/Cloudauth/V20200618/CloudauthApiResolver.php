@@ -5,6 +5,7 @@ namespace AlibabaCloud\Cloudauth\V20200618;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ContrastSmartVerify contrastSmartVerify(array $options = [])
  * @method DescribeSmartVerify describeSmartVerify(array $options = [])
  * @method ElementSmartVerify elementSmartVerify(array $options = [])
  * @method InitSmartVerify initSmartVerify(array $options = [])
@@ -29,11 +30,164 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getFacePicFile()
+ * @method string getIp()
+ * @method string getCertName()
+ * @method string getFacePicString()
+ * @method string getMobile()
+ * @method string getUserId()
+ * @method string getMode()
+ * @method string getCertNo()
+ * @method string getOuterOrderNo()
+ * @method string getFacePicUrl()
+ * @method string getCertType()
  * @method string getSceneId()
- * @method string getCertifyId()
  */
-class DescribeSmartVerify extends Rpc
+class ContrastSmartVerify extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFacePicFile($value)
+    {
+        $this->data['FacePicFile'] = $value;
+        $this->options['form_params']['FacePicFile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['form_params']['Ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertName($value)
+    {
+        $this->data['CertName'] = $value;
+        $this->options['form_params']['CertName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFacePicString($value)
+    {
+        $this->data['FacePicString'] = $value;
+        $this->options['form_params']['FacePicString'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertNo($value)
+    {
+        $this->data['CertNo'] = $value;
+        $this->options['form_params']['CertNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOuterOrderNo($value)
+    {
+        $this->data['OuterOrderNo'] = $value;
+        $this->options['form_params']['OuterOrderNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFacePicUrl($value)
+    {
+        $this->data['FacePicUrl'] = $value;
+        $this->options['form_params']['FacePicUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertType($value)
+    {
+        $this->data['CertType'] = $value;
+        $this->options['form_params']['CertType'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -47,6 +201,15 @@ class DescribeSmartVerify extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getCertifyId()
+ * @method string getPictureReturnType()
+ * @method string getSceneId()
+ */
+class DescribeSmartVerify extends Rpc
+{
 
     /**
      * @param string $value
@@ -57,6 +220,32 @@ class DescribeSmartVerify extends Rpc
     {
         $this->data['CertifyId'] = $value;
         $this->options['form_params']['CertifyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPictureReturnType($value)
+    {
+        $this->data['PictureReturnType'] = $value;
+        $this->options['form_params']['PictureReturnType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['form_params']['SceneId'] = $value;
 
         return $this;
     }

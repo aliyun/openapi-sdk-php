@@ -13,6 +13,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateRPSDK createRPSDK(array $options = [])
  * @method CreateVerifySDK createVerifySDK(array $options = [])
  * @method CreateVerifySetting createVerifySetting(array $options = [])
+ * @method CreateWhitelist createWhitelist(array $options = [])
+ * @method DeleteWhitelist deleteWhitelist(array $options = [])
  * @method DescribeAppInfo describeAppInfo(array $options = [])
  * @method DescribeDeviceInfo describeDeviceInfo(array $options = [])
  * @method DescribeFaceConfig describeFaceConfig(array $options = [])
@@ -30,6 +32,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVerifySetting describeVerifySetting(array $options = [])
  * @method DescribeVerifyToken describeVerifyToken(array $options = [])
  * @method DescribeVerifyUsage describeVerifyUsage(array $options = [])
+ * @method DescribeWhitelist describeWhitelist(array $options = [])
  * @method DetectFaceAttributes detectFaceAttributes(array $options = [])
  * @method InitDevice initDevice(array $options = [])
  * @method InitFaceVerify initFaceVerify(array $options = [])
@@ -640,6 +643,36 @@ class CreateVerifySetting extends Rpc
 }
 
 /**
+ * @method string getValidDay()
+ * @method $this withValidDay($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getIdCardNum()
+ * @method $this withIdCardNum($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class CreateWhitelist extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getIds()
+ * @method $this withIds($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DeleteWhitelist extends Rpc
+{
+}
+
+/**
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getPlatform()
@@ -702,10 +735,12 @@ class DescribeFaceUsage extends Rpc
 }
 
 /**
- * @method string getSceneId()
- * @method $this withSceneId($value)
  * @method string getCertifyId()
  * @method $this withCertifyId($value)
+ * @method string getPictureReturnType()
+ * @method $this withPictureReturnType($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
  */
 class DescribeFaceVerify extends Rpc
 {
@@ -876,6 +911,32 @@ class DescribeVerifyToken extends Rpc
  * @method $this withSourceIp($value)
  */
 class DescribeVerifyUsage extends Rpc
+{
+}
+
+/**
+ * @method string getValidEndDate()
+ * @method $this withValidEndDate($value)
+ * @method string getValid()
+ * @method $this withValid($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getIdCardNum()
+ * @method $this withIdCardNum($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getValidStartDate()
+ * @method $this withValidStartDate($value)
+ */
+class DescribeWhitelist extends Rpc
 {
 }
 
@@ -1289,6 +1350,7 @@ class UpdateVerifySetting extends Rpc
  * @method $this withCertifyData($value)
  * @method string getAppVersion()
  * @method $this withAppVersion($value)
+ * @method string getDeviceToken()
  * @method string getCertifyId()
  * @method $this withCertifyId($value)
  */
@@ -1304,6 +1366,19 @@ class VerifyDevice extends Rpc
     {
         $this->data['ExtInfo'] = $value;
         $this->options['form_params']['ExtInfo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceToken($value)
+    {
+        $this->data['DeviceToken'] = $value;
+        $this->options['form_params']['DeviceToken'] = $value;
 
         return $this;
     }
