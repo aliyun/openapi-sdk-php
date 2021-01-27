@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.822 - 2021-1-27
+- Add New BatchTranslate API.
+
+
 ## 1.8.821 - 2021-1-27
 - DetectFaceAttributes Add Score.
 

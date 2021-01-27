@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CreateDocTranslateTask createDocTranslateTask(array $options = [])
  * @method CreateImageTranslateTask createImageTranslateTask(array $options = [])
+ * @method GetBatchTranslate getBatchTranslate(array $options = [])
  * @method GetDetectLanguage getDetectLanguage(array $options = [])
  * @method GetDocTranslateTask getDocTranslateTask(array $options = [])
  * @method GetImageDiagnose getImageDiagnose(array $options = [])
@@ -188,6 +189,96 @@ class CreateImageTranslateTask extends Rpc
     {
         $this->data['Extra'] = $value;
         $this->options['form_params']['Extra'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceLanguage()
+ * @method string getSourceText()
+ * @method string getFormatType()
+ * @method string getApiType()
+ * @method string getScene()
+ * @method string getTargetLanguage()
+ */
+class GetBatchTranslate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceText($value)
+    {
+        $this->data['SourceText'] = $value;
+        $this->options['form_params']['SourceText'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFormatType($value)
+    {
+        $this->data['FormatType'] = $value;
+        $this->options['form_params']['FormatType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiType($value)
+    {
+        $this->data['ApiType'] = $value;
+        $this->options['form_params']['ApiType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScene($value)
+    {
+        $this->data['Scene'] = $value;
+        $this->options['form_params']['Scene'] = $value;
 
         return $this;
     }
