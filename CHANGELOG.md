@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.823 - 2021-1-28
+- Generated 2018-03-13 for `retailcloud`.
+
+
 ## 1.8.822 - 2021-1-27
 - Add New BatchTranslate API.
 

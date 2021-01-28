@@ -38,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAppDetail describeAppDetail(array $options = [])
  * @method DescribeAppEnvironmentDetail describeAppEnvironmentDetail(array $options = [])
  * @method DescribeAppResourceAlloc describeAppResourceAlloc(array $options = [])
+ * @method DescribeClusterDetail describeClusterDetail(array $options = [])
  * @method DescribeDatabases describeDatabases(array $options = [])
  * @method DescribeDeployOrderDetail describeDeployOrderDetail(array $options = [])
  * @method DescribeJobLog describeJobLog(array $options = [])
@@ -99,6 +100,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'retailcloud';
 }
 
 /**
@@ -1122,6 +1126,14 @@ class DescribeAppResourceAlloc extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getClusterInstanceId()
+ * @method $this withClusterInstanceId($value)
+ */
+class DescribeClusterDetail extends Rpc
+{
 }
 
 /**
