@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.824 - 2021-1-28
+- Update QueryMetric api support customFilters parameter.
+
+
 ## 1.8.823 - 2021-1-28
 - Generated 2018-03-13 for `retailcloud`.
 

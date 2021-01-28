@@ -13,11 +13,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConfigApp configApp(array $options = [])
  * @method CreateAlertContact createAlertContact(array $options = [])
  * @method CreateAlertContactGroup createAlertContactGroup(array $options = [])
+ * @method CreateDispatchRule createDispatchRule(array $options = [])
  * @method CreateRetcodeApp createRetcodeApp(array $options = [])
  * @method CreateWehook createWehook(array $options = [])
  * @method DeleteAlertContact deleteAlertContact(array $options = [])
  * @method DeleteAlertContactGroup deleteAlertContactGroup(array $options = [])
  * @method DeleteAlertRules deleteAlertRules(array $options = [])
+ * @method DeleteDispatchRule deleteDispatchRule(array $options = [])
  * @method DeleteRetcodeApp deleteRetcodeApp(array $options = [])
  * @method DeleteScenario deleteScenario(array $options = [])
  * @method DeleteTraceApp deleteTraceApp(array $options = [])
@@ -67,6 +69,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAlertContact updateAlertContact(array $options = [])
  * @method UpdateAlertContactGroup updateAlertContactGroup(array $options = [])
  * @method UpdateAlertRule updateAlertRule(array $options = [])
+ * @method UpdateDispatchRule updateDispatchRule(array $options = [])
  * @method UpdateWebhook updateWebhook(array $options = [])
  */
 class ARMSApiResolver extends ApiResolver
@@ -203,6 +206,16 @@ class CreateAlertContactGroup extends Rpc
 }
 
 /**
+ * @method string getDispatchRule()
+ * @method $this withDispatchRule($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class CreateDispatchRule extends Rpc
+{
+}
+
+/**
  * @method string getRetcodeAppName()
  * @method $this withRetcodeAppName($value)
  * @method string getRetcodeAppType()
@@ -259,6 +272,16 @@ class DeleteAlertContactGroup extends Rpc
  * @method $this withProxyUserId($value)
  */
 class DeleteAlertRules extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class DeleteDispatchRule extends Rpc
 {
 }
 
@@ -751,6 +774,7 @@ class QueryMetric extends Rpc
  * @method $this withIntervalInSec($value)
  * @method string getMetric()
  * @method $this withMetric($value)
+ * @method array getCustomFilters()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getDimensions()
@@ -790,6 +814,21 @@ class QueryMetricByPage extends Rpc
 	    $this->data['Measures'] = $measures;
 		foreach ($measures as $i => $iValue) {
 			$this->options['query']['Measures.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $customFilters
+     *
+     * @return $this
+     */
+	public function withCustomFilters(array $customFilters)
+	{
+	    $this->data['CustomFilters'] = $customFilters;
+		foreach ($customFilters as $i => $iValue) {
+			$this->options['query']['CustomFilters.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -1182,6 +1221,16 @@ class UpdateAlertContactGroup extends Rpc
  * @method $this withTemplageAlertConfig($value)
  */
 class UpdateAlertRule extends Rpc
+{
+}
+
+/**
+ * @method string getDispatchRule()
+ * @method $this withDispatchRule($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class UpdateDispatchRule extends Rpc
 {
 }
 
