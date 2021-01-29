@@ -6,10 +6,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddCdrsMonitor addCdrsMonitor(array $options = [])
+ * @method AddMonitor addMonitor(array $options = [])
  * @method BindDevice bindDevice(array $options = [])
  * @method CreateProject createProject(array $options = [])
  * @method GetCdrsMonitorList getCdrsMonitorList(array $options = [])
  * @method GetCdrsMonitorResult getCdrsMonitorResult(array $options = [])
+ * @method GetMonitorList getMonitorList(array $options = [])
+ * @method GetMonitorResult getMonitorResult(array $options = [])
  * @method ListAreaHotSpotMetrics listAreaHotSpotMetrics(array $options = [])
  * @method ListCityMapAois listCityMapAois(array $options = [])
  * @method ListCityMapCameraResults listCityMapCameraResults(array $options = [])
@@ -46,8 +49,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchAggregateObject searchAggregateObject(array $options = [])
  * @method SearchObject searchObject(array $options = [])
  * @method StopCdrsMonitor stopCdrsMonitor(array $options = [])
+ * @method StopMonitor stopMonitor(array $options = [])
  * @method UnbindDevice unbindDevice(array $options = [])
  * @method UpdateCdrsMonitor updateCdrsMonitor(array $options = [])
+ * @method UpdateMonitor updateMonitor(array $options = [])
  * @method UpdateProject updateProject(array $options = [])
  */
 class CDRSApiResolver extends ApiResolver
@@ -80,6 +85,166 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getAlgorithmVendor()
  */
 class AddCdrsMonitor extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMonitorType($value)
+    {
+        $this->data['MonitorType'] = $value;
+        $this->options['form_params']['MonitorType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierAppSecret($value)
+    {
+        $this->data['NotifierAppSecret'] = $value;
+        $this->options['form_params']['NotifierAppSecret'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierExtendValues($value)
+    {
+        $this->data['NotifierExtendValues'] = $value;
+        $this->options['form_params']['NotifierExtendValues'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierUrl($value)
+    {
+        $this->data['NotifierUrl'] = $value;
+        $this->options['form_params']['NotifierUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierType($value)
+    {
+        $this->data['NotifierType'] = $value;
+        $this->options['form_params']['NotifierType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchIndicator($value)
+    {
+        $this->data['BatchIndicator'] = $value;
+        $this->options['form_params']['BatchIndicator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierTimeOut($value)
+    {
+        $this->data['NotifierTimeOut'] = $value;
+        $this->options['form_params']['NotifierTimeOut'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMonitorType()
+ * @method string getCorpId()
+ * @method string getDescription()
+ * @method string getNotifierAppSecret()
+ * @method string getNotifierExtendValues()
+ * @method string getNotifierUrl()
+ * @method string getNotifierType()
+ * @method string getBatchIndicator()
+ * @method string getBizId()
+ * @method string getNotifierTimeOut()
+ * @method string getAlgorithmVendor()
+ */
+class AddMonitor extends Rpc
 {
 
     /**
@@ -471,6 +636,172 @@ class GetCdrsMonitorList extends Rpc
  * @method string getTaskId()
  */
 class GetCdrsMonitorResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinRecordId($value)
+    {
+        $this->data['MinRecordId'] = $value;
+        $this->options['form_params']['MinRecordId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getBizId()
+ */
+class GetMonitorList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getBizId()
+ * @method string getAlgorithmVendor()
+ * @method string getMinRecordId()
+ * @method string getTaskId()
+ */
+class GetMonitorResult extends Rpc
 {
 
     /**
@@ -3233,6 +3564,7 @@ class RecognizeImage extends Rpc
  * @method string getPageNumber()
  * @method string getFeature()
  * @method string getVendor()
+ * @method string getRequireTotalCount()
  * @method string getPageSize()
  * @method string getImageContent()
  * @method string getObjectType()
@@ -3305,6 +3637,19 @@ class SearchAggregateObject extends Rpc
     {
         $this->data['Vendor'] = $value;
         $this->options['form_params']['Vendor'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequireTotalCount($value)
+    {
+        $this->data['RequireTotalCount'] = $value;
+        $this->options['form_params']['RequireTotalCount'] = $value;
 
         return $this;
     }
@@ -3638,6 +3983,68 @@ class StopCdrsMonitor extends Rpc
 }
 
 /**
+ * @method string getCorpId()
+ * @method string getBizId()
+ * @method string getAlgorithmVendor()
+ * @method string getTaskId()
+ */
+class StopMonitor extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDeviceIds()
  * @method string getCorpId()
  * @method string getAppName()
@@ -3721,6 +4128,278 @@ class UnbindDevice extends Rpc
  * @method string getAlgorithmVendor()
  */
 class UpdateCdrsMonitor extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCorpId($value)
+    {
+        $this->data['CorpId'] = $value;
+        $this->options['form_params']['CorpId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleName($value)
+    {
+        $this->data['RuleName'] = $value;
+        $this->options['form_params']['RuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicOperateType($value)
+    {
+        $this->data['PicOperateType'] = $value;
+        $this->options['form_params']['PicOperateType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAttributeName($value)
+    {
+        $this->data['AttributeName'] = $value;
+        $this->options['form_params']['AttributeName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAttributeOperateType($value)
+    {
+        $this->data['AttributeOperateType'] = $value;
+        $this->options['form_params']['AttributeOperateType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleExpression($value)
+    {
+        $this->data['RuleExpression'] = $value;
+        $this->options['form_params']['RuleExpression'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierTimeOut($value)
+    {
+        $this->data['NotifierTimeOut'] = $value;
+        $this->options['form_params']['NotifierTimeOut'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceOperateType($value)
+    {
+        $this->data['DeviceOperateType'] = $value;
+        $this->options['form_params']['DeviceOperateType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicList($value)
+    {
+        $this->data['PicList'] = $value;
+        $this->options['form_params']['PicList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAttributeValueList($value)
+    {
+        $this->data['AttributeValueList'] = $value;
+        $this->options['form_params']['AttributeValueList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierAppSecret($value)
+    {
+        $this->data['NotifierAppSecret'] = $value;
+        $this->options['form_params']['NotifierAppSecret'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierExtendValues($value)
+    {
+        $this->data['NotifierExtendValues'] = $value;
+        $this->options['form_params']['NotifierExtendValues'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceList($value)
+    {
+        $this->data['DeviceList'] = $value;
+        $this->options['form_params']['DeviceList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierUrl($value)
+    {
+        $this->data['NotifierUrl'] = $value;
+        $this->options['form_params']['NotifierUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotifierType($value)
+    {
+        $this->data['NotifierType'] = $value;
+        $this->options['form_params']['NotifierType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlgorithmVendor($value)
+    {
+        $this->data['AlgorithmVendor'] = $value;
+        $this->options['form_params']['AlgorithmVendor'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCorpId()
+ * @method string getDescription()
+ * @method string getRuleName()
+ * @method string getPicOperateType()
+ * @method string getAttributeName()
+ * @method string getAttributeOperateType()
+ * @method string getRuleExpression()
+ * @method string getNotifierTimeOut()
+ * @method string getTaskId()
+ * @method string getDeviceOperateType()
+ * @method string getPicList()
+ * @method string getAttributeValueList()
+ * @method string getNotifierAppSecret()
+ * @method string getNotifierExtendValues()
+ * @method string getDeviceList()
+ * @method string getNotifierUrl()
+ * @method string getNotifierType()
+ * @method string getBizId()
+ * @method string getAlgorithmVendor()
+ */
+class UpdateMonitor extends Rpc
 {
 
     /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.825 - 2021-1-29
+- Update Monitor Api.
+
+
 ## 1.8.824 - 2021-1-28
 - Update QueryMetric api support customFilters parameter.
 
