@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
+ * @method SegmentGreenScreenVideo segmentGreenScreenVideo(array $options = [])
  * @method SegmentHalfBody segmentHalfBody(array $options = [])
  * @method SegmentVideoBody segmentVideoBody(array $options = [])
  */
@@ -57,6 +58,40 @@ class GetAsyncJobResult extends Rpc
     {
         $this->data['JobId'] = $value;
         $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class SegmentGreenScreenVideo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoURL($value)
+    {
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
 
         return $this;
     }

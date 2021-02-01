@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.827 - 2021-2-1
+- Release SegmentGreenScreenVideo.
+
+
 ## 1.8.826 - 2021-2-1
 - Release DetectVehicleIllegalParking DetectVehicleICongestion.
 
