@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.830 - 2021-2-1
+- Release GenerateHumanSketchStyle MergeImageFace AddFaceImageTemplate QueryFaceImageTemplate DeleteFaceImageTemplate.
+
+
 ## 1.8.829 - 2021-2-1
 - Release RecognizeFood.
 
