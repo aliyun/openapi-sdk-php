@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.833 - 2021-2-1
+- Support device credential for mqtt.
+
+
 ## 1.8.832 - 2021-2-1
 - Release GenerateHumanSketchStyle MergeImageFace AddFaceImageTemplate QueryFaceImageTemplate DeleteFaceImageTemplate.
 
