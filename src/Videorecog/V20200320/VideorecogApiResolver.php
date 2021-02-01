@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectVideoShot detectVideoShot(array $options = [])
  * @method GenerateVideoCover generateVideoCover(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
+ * @method UnderstandVideoContent understandVideoContent(array $options = [])
  */
 class VideorecogApiResolver extends ApiResolver
 {
@@ -111,10 +112,44 @@ class GenerateVideoCover extends Rpc
 }
 
 /**
- * @method string getAsync()
  * @method string getJobId()
+ * @method string getAsync()
  */
 class GetAsyncJobResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class UnderstandVideoContent extends Rpc
 {
 
     /**
@@ -135,10 +170,10 @@ class GetAsyncJobResult extends Rpc
      *
      * @return $this
      */
-    public function withJobId($value)
+    public function withVideoURL($value)
     {
-        $this->data['JobId'] = $value;
-        $this->options['form_params']['JobId'] = $value;
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.828 - 2021-2-1
+- Release UnderstandVideoContent.
+
+
 ## 1.8.827 - 2021-2-1
 - Release SegmentGreenScreenVideo.
 
