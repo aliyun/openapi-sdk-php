@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.829 - 2021-2-1
+- Release RecognizeFood.
+
+
 ## 1.8.828 - 2021-2-1
 - Release UnderstandVideoContent.
 

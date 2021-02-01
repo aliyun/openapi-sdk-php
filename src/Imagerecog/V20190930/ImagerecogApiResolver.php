@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectFruits detectFruits(array $options = [])
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method EvaluateCertificateQuality evaluateCertificateQuality(array $options = [])
+ * @method RecognizeFood recognizeFood(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
  * @method RecognizeLogo recognizeLogo(array $options = [])
@@ -114,6 +115,26 @@ class EvaluateCertificateQuality extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizeFood extends Rpc
+{
 
     /**
      * @param string $value
