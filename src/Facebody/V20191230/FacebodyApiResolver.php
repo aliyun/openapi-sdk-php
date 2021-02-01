@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddBodyTrace addBodyTrace(array $options = [])
  * @method AddFace addFace(array $options = [])
  * @method AddFaceEntity addFaceEntity(array $options = [])
+ * @method AddFaceImageTemplate addFaceImageTemplate(array $options = [])
  * @method BlurFace blurFace(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
@@ -20,6 +21,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
  * @method DeleteFaceEntity deleteFaceEntity(array $options = [])
+ * @method DeleteFaceImageTemplate deleteFaceImageTemplate(array $options = [])
  * @method DetectBodyCount detectBodyCount(array $options = [])
  * @method DetectCelebrity detectCelebrity(array $options = [])
  * @method DetectChefCap detectChefCap(array $options = [])
@@ -38,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FaceMakeup faceMakeup(array $options = [])
  * @method FaceTidyup faceTidyup(array $options = [])
  * @method GenerateHumanAnimeStyle generateHumanAnimeStyle(array $options = [])
+ * @method GenerateHumanSketchStyle generateHumanSketchStyle(array $options = [])
  * @method GenRealPersonVerificationToken genRealPersonVerificationToken(array $options = [])
  * @method GetBodyPerson getBodyPerson(array $options = [])
  * @method GetFaceEntity getFaceEntity(array $options = [])
@@ -47,7 +50,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListBodyPerson listBodyPerson(array $options = [])
  * @method ListFaceDbs listFaceDbs(array $options = [])
  * @method ListFaceEntities listFaceEntities(array $options = [])
+ * @method MergeImageFace mergeImageFace(array $options = [])
  * @method PedestrianDetectAttribute pedestrianDetectAttribute(array $options = [])
+ * @method QueryFaceImageTemplate queryFaceImageTemplate(array $options = [])
  * @method RecognizeAction recognizeAction(array $options = [])
  * @method RecognizeExpression recognizeExpression(array $options = [])
  * @method RecognizeFace recognizeFace(array $options = [])
@@ -244,6 +249,40 @@ class AddFaceEntity extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserId()
+ * @method string getImageURL()
+ */
+class AddFaceImageTemplate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
@@ -582,6 +621,40 @@ class DeleteFaceEntity extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserId()
+ * @method string getTemplateId()
+ */
+class DeleteFaceImageTemplate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateId($value)
+    {
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
 
         return $this;
     }
@@ -1247,6 +1320,26 @@ class GenerateHumanAnimeStyle extends Rpc
 }
 
 /**
+ * @method string getImageURL()
+ */
+class GenerateHumanSketchStyle extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCertificateNumber()
  * @method string getCertificateName()
  * @method string getMetaInfo()
@@ -1532,6 +1625,54 @@ class ListFaceEntities extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method string getTemplateId()
+ * @method string getImageURL()
+ */
+class MergeImageFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateId($value)
+    {
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  */
 class PedestrianDetectAttribute extends Rpc
@@ -1549,6 +1690,19 @@ class PedestrianDetectAttribute extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class QueryFaceImageTemplate extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
