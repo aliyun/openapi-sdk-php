@@ -6,10 +6,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ClassifyVehicleInsurance classifyVehicleInsurance(array $options = [])
+ * @method DetectIPCObject detectIPCObject(array $options = [])
  * @method DetectMainBody detectMainBody(array $options = [])
  * @method DetectObject detectObject(array $options = [])
  * @method DetectTransparentImage detectTransparentImage(array $options = [])
  * @method DetectVehicle detectVehicle(array $options = [])
+ * @method DetectVehicleICongestion detectVehicleICongestion(array $options = [])
+ * @method DetectVehicleIllegalParking detectVehicleIllegalParking(array $options = [])
  * @method DetectWhiteBaseImage detectWhiteBaseImage(array $options = [])
  * @method GenerateVehicleRepairPlan generateVehicleRepairPlan(array $options = [])
  * @method GetVehicleRepairPlan getVehicleRepairPlan(array $options = [])
@@ -40,6 +43,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getImageURL()
  */
 class ClassifyVehicleInsurance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class DetectIPCObject extends Rpc
 {
 
     /**
@@ -120,6 +143,88 @@ class DetectVehicle extends Rpc
     {
         $this->data['ImageType'] = $value;
         $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRoadRegions()
+ * @method string getPreRegionIntersectFeatures()
+ * @method string getImageURL()
+ */
+class DetectVehicleICongestion extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoadRegions($value)
+    {
+        $this->data['RoadRegions'] = $value;
+        $this->options['form_params']['RoadRegions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPreRegionIntersectFeatures($value)
+    {
+        $this->data['PreRegionIntersectFeatures'] = $value;
+        $this->options['form_params']['PreRegionIntersectFeatures'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRoadRegions()
+ * @method string getImageURL()
+ */
+class DetectVehicleIllegalParking extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoadRegions($value)
+    {
+        $this->data['RoadRegions'] = $value;
+        $this->options['form_params']['RoadRegions'] = $value;
 
         return $this;
     }

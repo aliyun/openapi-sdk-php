@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.826 - 2021-2-1
+- Release DetectVehicleIllegalParking DetectVehicleICongestion.
+
+
 ## 1.8.825 - 2021-1-29
 - Update Monitor Api.
 
