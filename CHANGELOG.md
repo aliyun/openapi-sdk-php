@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.831 - 2021-2-1
+- Add.
+
+
 ## 1.8.830 - 2021-2-1
 - Release GenerateHumanSketchStyle MergeImageFace AddFaceImageTemplate QueryFaceImageTemplate DeleteFaceImageTemplate.
 
