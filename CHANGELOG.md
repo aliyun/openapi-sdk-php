@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.834 - 2021-2-2
+- CreateShardingDBInstance add ReadOnlyReplicas in ReplicaSet.
+
+
 ## 1.8.833 - 2021-2-1
 - Support device credential for mqtt.
 

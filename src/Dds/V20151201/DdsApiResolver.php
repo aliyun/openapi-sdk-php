@@ -39,7 +39,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBInstanceTDEInfo describeDBInstanceTDEInfo(array $options = [])
  * @method DescribeDedicatedClusterInstanceList describeDedicatedClusterInstanceList(array $options = [])
  * @method DescribeErrorLogRecords describeErrorLogRecords(array $options = [])
- * @method DescribeIndexRecommendation describeIndexRecommendation(array $options = [])
  * @method DescribeInstanceAutoRenewalAttribute describeInstanceAutoRenewalAttribute(array $options = [])
  * @method DescribeKernelReleaseNotes describeKernelReleaseNotes(array $options = [])
  * @method DescribeMongoDBLogConfig describeMongoDBLogConfig(array $options = [])
@@ -301,6 +300,8 @@ class CreateDBInstance extends Rpc
  * @method $this withNodeType($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getReadonlyReplicas()
+ * @method $this withReadonlyReplicas($value)
  * @method string getNodeClass()
  * @method $this withNodeClass($value)
  * @method string getSecurityToken()
@@ -429,11 +430,11 @@ class CreateServerlessDBInstance extends Rpc
  * @method array getConfigServer()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method array getMongos()
  * @method string getSecurityIPList()
  * @method $this withSecurityIPList($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method array getMongos()
  * @method string getAccountPassword()
  * @method $this withAccountPassword($value)
  * @method string getAutoRenew()
@@ -459,6 +460,9 @@ class CreateShardingDBInstance extends Rpc
 	{
 	    $this->data['ReplicaSet'] = $replicaSet;
 		foreach ($replicaSet as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ReadonlyReplicas'])){
+				$this->options['query']['ReplicaSet.' . ($depth1 + 1) . '.ReadonlyReplicas'] = $depth1Value['ReadonlyReplicas'];
+			}
 			if(isset($depth1Value['Storage'])){
 				$this->options['query']['ReplicaSet.' . ($depth1 + 1) . '.Storage'] = $depth1Value['Storage'];
 			}
@@ -1118,42 +1122,6 @@ class DescribeErrorLogRecords extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getDatabase()
- * @method $this withDatabase($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getNodeId()
- * @method $this withNodeId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getCollection()
- * @method $this withCollection($value)
- * @method string getOperationType()
- * @method $this withOperationType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class DescribeIndexRecommendation extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSecurityToken()
@@ -1390,6 +1358,8 @@ class DescribeRoleZoneInfo extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -2063,6 +2033,8 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getReadonlyReplicas()
+ * @method $this withReadonlyReplicas($value)
  * @method string getNodeClass()
  * @method $this withNodeClass($value)
  * @method string getSecurityToken()
