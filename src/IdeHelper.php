@@ -79,6 +79,7 @@ namespace AlibabaCloud;
  * @method static Dysmsapi\Dysmsapi dysmsapi()
  * @method static Dyvmsapi\Dyvmsapi dyvmsapi()
  * @method static EHPC\EHPC eHPC()
+ * @method static Eais\Eais eais()
  * @method static Eci\Eci eci()
  * @method static Ecs\Ecs ecs()
  * @method static EcsInc\EcsInc ecsInc()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.837 - 2021-2-3
+- After normalizing the API group name, regenerate the SDK.
+
+
 ## 1.8.836 - 2021-2-3
 - Support connection drain.
 
