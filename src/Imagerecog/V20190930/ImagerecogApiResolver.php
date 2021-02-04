@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectFruits detectFruits(array $options = [])
  * @method DetectImageElements detectImageElements(array $options = [])
  * @method EvaluateCertificateQuality evaluateCertificateQuality(array $options = [])
+ * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method RecognizeFood recognizeFood(array $options = [])
  * @method RecognizeImageColor recognizeImageColor(array $options = [])
  * @method RecognizeImageStyle recognizeImageStyle(array $options = [])
@@ -128,6 +129,19 @@ class EvaluateCertificateQuality extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
+ */
+class GetAsyncJobResult extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -284,6 +298,7 @@ class RecognizeVehicleType extends Rpc
 
 /**
  * @method string getImageType()
+ * @method string getAsync()
  * @method string getImageURL()
  */
 class TaggingImage extends Rpc
@@ -298,6 +313,19 @@ class TaggingImage extends Rpc
     {
         $this->data['ImageType'] = $value;
         $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
 
         return $this;
     }
