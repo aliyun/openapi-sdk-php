@@ -173,6 +173,7 @@ namespace AlibabaCloud;
  * @method static Rtc\Rtc rtc()
  * @method static Sae\Sae sae()
  * @method static Saf\Saf saf()
+ * @method static Safconsole\Safconsole safconsole()
  * @method static Sas\Sas sas()
  * @method static SasApi\SasApi sasApi()
  * @method static Scdn\Scdn scdn()
