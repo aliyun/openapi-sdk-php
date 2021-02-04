@@ -40,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
  * @method ImportScript importScript(array $options = [])
+ * @method InflightTaskTimeout inflightTaskTimeout(array $options = [])
  * @method ListDialogueFlows listDialogueFlows(array $options = [])
  * @method ListGlobalQuestions listGlobalQuestions(array $options = [])
  * @method ListInstances listInstances(array $options = [])
@@ -49,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListJobsByGroup listJobsByGroup(array $options = [])
  * @method ListMedia listMedia(array $options = [])
  * @method ListOutboundCallNumbers listOutboundCallNumbers(array $options = [])
+ * @method ListSchedulerInstances listSchedulerInstances(array $options = [])
  * @method ListScriptPublishHistories listScriptPublishHistories(array $options = [])
  * @method ListScripts listScripts(array $options = [])
  * @method ListScriptVoiceConfigs listScriptVoiceConfigs(array $options = [])
@@ -77,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitRecording submitRecording(array $options = [])
  * @method SubmitScriptReview submitScriptReview(array $options = [])
  * @method SuspendJobs suspendJobs(array $options = [])
+ * @method TaskPreparing taskPreparing(array $options = [])
  * @method WithdrawScriptReview withdrawScriptReview(array $options = [])
  */
 class OutboundBotApiResolver extends ApiResolver
@@ -683,6 +686,18 @@ class ImportScript extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class InflightTaskTimeout extends Rpc
+{
+}
+
+/**
  * @method string getScriptId()
  * @method $this withScriptId($value)
  * @method string getInstanceId()
@@ -807,6 +822,14 @@ class ListMedia extends Rpc
  * @method $this withPageSize($value)
  */
 class ListOutboundCallNumbers extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ */
+class ListSchedulerInstances extends Rpc
 {
 }
 
@@ -1386,6 +1409,18 @@ class SuspendJobs extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ */
+class TaskPreparing extends Rpc
+{
 }
 
 /**
