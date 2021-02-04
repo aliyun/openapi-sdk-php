@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.842 - 2021-2-4
+- Update DetectVehicleIllegalParking DetectVehicleICongestion.
+
+
 ## 1.8.841 - 2021-2-4
 - Supported scheduler for outbound call.
 
