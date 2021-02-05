@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.843 - 2021-2-5
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.842 - 2021-2-4
 - Update DetectVehicleIllegalParking DetectVehicleICongestion.
 
