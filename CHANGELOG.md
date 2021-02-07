@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.849 - 2021-2-7
+- Add IoT Studio BatchBindDevicesIntoProject API.
+- Add IoT Studio BatchBindProductsIntoProject API.
+- Add IoT Studio BatchUnbindProjectDevices API.
+- Add IoT Studio BatchUnbindProjectProducts API.
+
+
 ## 1.8.848 - 2021-2-7
 - Support patch manager apis.
 
