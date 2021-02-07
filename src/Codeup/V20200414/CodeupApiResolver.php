@@ -5,12 +5,14 @@ namespace AlibabaCloud\Codeup\V20200414;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AcceptMergeRequest acceptMergeRequest(array $options = [])
  * @method AddGroupMember addGroupMember(array $options = [])
  * @method AddRepositoryMember addRepositoryMember(array $options = [])
  * @method AddWebhook addWebhook(array $options = [])
  * @method CreateBranch createBranch(array $options = [])
  * @method CreateFile createFile(array $options = [])
  * @method CreateMergeRequest createMergeRequest(array $options = [])
+ * @method CreateMergeRequestComment createMergeRequestComment(array $options = [])
  * @method CreateRepository createRepository(array $options = [])
  * @method CreateRepositoryDeployKey createRepositoryDeployKey(array $options = [])
  * @method CreateRepositoryGroup createRepositoryGroup(array $options = [])
@@ -30,6 +32,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetCodeupOrganization getCodeupOrganization(array $options = [])
  * @method GetFileBlobs getFileBlobs(array $options = [])
  * @method GetGroupDetail getGroupDetail(array $options = [])
+ * @method GetMergeRequestApproveStatus getMergeRequestApproveStatus(array $options = [])
+ * @method GetMergeRequestDetail getMergeRequestDetail(array $options = [])
+ * @method GetMergeRequestSetting getMergeRequestSetting(array $options = [])
  * @method GetProjectMember getProjectMember(array $options = [])
  * @method GetRepositoryInfo getRepositoryInfo(array $options = [])
  * @method GetRepositoryTag getRepositoryTag(array $options = [])
@@ -37,10 +42,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListGroupMember listGroupMember(array $options = [])
  * @method ListGroupRepositories listGroupRepositories(array $options = [])
  * @method ListGroups listGroups(array $options = [])
+ * @method ListMergeRequestComments listMergeRequestComments(array $options = [])
  * @method ListMergeRequests listMergeRequests(array $options = [])
  * @method ListOrganizations listOrganizations(array $options = [])
  * @method ListRepositories listRepositories(array $options = [])
  * @method ListRepositoryBranches listRepositoryBranches(array $options = [])
+ * @method ListRepositoryCommits listRepositoryCommits(array $options = [])
  * @method ListRepositoryMember listRepositoryMember(array $options = [])
  * @method ListRepositoryTags listRepositoryTags(array $options = [])
  * @method ListRepositoryTree listRepositoryTree(array $options = [])
@@ -48,6 +55,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method MergeMergeRequest mergeMergeRequest(array $options = [])
  * @method UpdateFile updateFile(array $options = [])
  * @method UpdateGroupMember updateGroupMember(array $options = [])
+ * @method UpdateMergeRequest updateMergeRequest(array $options = [])
+ * @method UpdateMergeRequestComment updateMergeRequestComment(array $options = [])
+ * @method UpdateMergeRequestSetting updateMergeRequestSetting(array $options = [])
  * @method UpdateRepository updateRepository(array $options = [])
  * @method UpdateRepositoryMember updateRepositoryMember(array $options = [])
  */
@@ -62,6 +72,49 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $version = '2020-04-14';
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class AcceptMergeRequest extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/merge_request/[MergeRequestId]/accept';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -404,6 +457,49 @@ class CreateMergeRequest extends Roa
     {
         $this->data['SubUserId'] = $value;
         $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class CreateMergeRequestComment extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/merge_request/[MergeRequestId]/comments';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
 
         return $this;
     }
@@ -1603,6 +1699,124 @@ class GetGroupDetail extends Roa
 
 /**
  * @method string getOrganizationId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetMergeRequestApproveStatus extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/merge_request/[MergeRequestId]/approve_status';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetMergeRequestDetail extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/merge_request/[MergeRequestId]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetMergeRequestSetting extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/settings/merge_requests';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
  * @method string getSubUserId()
  * @method string getAccessToken()
  * @method string getProjectId()
@@ -2070,6 +2284,74 @@ class ListGroups extends Roa
     {
         $this->data['Page'] = $value;
         $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getFromCommit()
+ * @method string getAccessToken()
+ * @method string getToCommit()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ListMergeRequestComments extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/merge_request/[MergeRequestId]/comments';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFromCommit($value)
+    {
+        $this->data['FromCommit'] = $value;
+        $this->options['query']['FromCommit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToCommit($value)
+    {
+        $this->data['ToCommit'] = $value;
+        $this->options['query']['ToCommit'] = $value;
 
         return $this;
     }
@@ -2553,6 +2835,128 @@ class ListRepositoryBranches extends Roa
     {
         $this->data['AccessToken'] = $value;
         $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccessToken()
+ * @method string getShowSignature()
+ * @method string getRefName()
+ * @method string getOrganizationId()
+ * @method string getPath()
+ * @method string getSearch()
+ * @method string getPageSize()
+ * @method string getPage()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ListRepositoryCommits extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/repository/commits';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShowSignature($value)
+    {
+        $this->data['ShowSignature'] = $value;
+        $this->options['query']['ShowSignature'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRefName($value)
+    {
+        $this->data['RefName'] = $value;
+        $this->options['query']['RefName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPath($value)
+    {
+        $this->data['Path'] = $value;
+        $this->options['query']['Path'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearch($value)
+    {
+        $this->data['Search'] = $value;
+        $this->options['query']['Search'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
 
         return $this;
     }
@@ -3084,6 +3488,135 @@ class UpdateGroupMember extends Roa
     {
         $this->data['SubUserId'] = $value;
         $this->options['query']['SubUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class UpdateMergeRequest extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/merge_request/[MergeRequestId]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getMergeRequestId()
+ * @method $this withMergeRequestId($value)
+ * @method string getAccessToken()
+ * @method string getNoteId()
+ * @method $this withNoteId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class UpdateMergeRequestComment extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/merge_requests/[MergeRequestId]/notes/[NoteId]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class UpdateMergeRequestSetting extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/settings/merge_requests';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.847 - 2021-2-7
+- Support some MergeRequest API.
+
+
 ## 1.8.846 - 2021-2-5
 - Generated 2020-05-18 for `dataworks-public`.
 
