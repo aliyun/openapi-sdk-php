@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.848 - 2021-2-7
+- Support patch manager apis.
+
+
 ## 1.8.847 - 2021-2-7
 - Support some MergeRequest API.
 

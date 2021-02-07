@@ -7,11 +7,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CancelExecution cancelExecution(array $options = [])
  * @method CreateParameter createParameter(array $options = [])
+ * @method CreatePatchBaseline createPatchBaseline(array $options = [])
  * @method CreateSecretParameter createSecretParameter(array $options = [])
+ * @method CreateStateConfiguration createStateConfiguration(array $options = [])
  * @method CreateTemplate createTemplate(array $options = [])
  * @method DeleteExecutions deleteExecutions(array $options = [])
  * @method DeleteParameter deleteParameter(array $options = [])
+ * @method DeletePatchBaseline deletePatchBaseline(array $options = [])
  * @method DeleteSecretParameter deleteSecretParameter(array $options = [])
+ * @method DeleteStateConfigurations deleteStateConfigurations(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteTemplates deleteTemplates(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
@@ -21,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetParameter getParameter(array $options = [])
  * @method GetParameters getParameters(array $options = [])
  * @method GetParametersByPath getParametersByPath(array $options = [])
+ * @method GetPatchBaseline getPatchBaseline(array $options = [])
  * @method GetSecretParameter getSecretParameter(array $options = [])
  * @method GetSecretParameters getSecretParameters(array $options = [])
  * @method GetSecretParametersByPath getSecretParametersByPath(array $options = [])
@@ -30,12 +35,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListExecutionLogs listExecutionLogs(array $options = [])
  * @method ListExecutionRiskyTasks listExecutionRiskyTasks(array $options = [])
  * @method ListExecutions listExecutions(array $options = [])
+ * @method ListInstancePatches listInstancePatches(array $options = [])
+ * @method ListInstancePatchStates listInstancePatchStates(array $options = [])
+ * @method ListInstanceStateReports listInstanceStateReports(array $options = [])
  * @method ListInventoryEntries listInventoryEntries(array $options = [])
  * @method ListParameters listParameters(array $options = [])
  * @method ListParameterVersions listParameterVersions(array $options = [])
+ * @method ListPatchBaselines listPatchBaselines(array $options = [])
  * @method ListResourceExecutionStatus listResourceExecutionStatus(array $options = [])
  * @method ListSecretParameters listSecretParameters(array $options = [])
  * @method ListSecretParameterVersions listSecretParameterVersions(array $options = [])
+ * @method ListStateConfigurations listStateConfigurations(array $options = [])
  * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTagValues listTagValues(array $options = [])
@@ -43,6 +53,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTemplates listTemplates(array $options = [])
  * @method ListTemplateVersions listTemplateVersions(array $options = [])
  * @method NotifyExecution notifyExecution(array $options = [])
+ * @method RegisterDefaultPatchBaseline registerDefaultPatchBaseline(array $options = [])
  * @method SearchInventory searchInventory(array $options = [])
  * @method SetServiceSettings setServiceSettings(array $options = [])
  * @method StartExecution startExecution(array $options = [])
@@ -52,7 +63,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateExecution updateExecution(array $options = [])
  * @method UpdateInstanceInformation updateInstanceInformation(array $options = [])
  * @method UpdateParameter updateParameter(array $options = [])
+ * @method UpdatePatchBaseline updatePatchBaseline(array $options = [])
  * @method UpdateSecretParameter updateSecretParameter(array $options = [])
+ * @method UpdateStateConfiguration updateStateConfiguration(array $options = [])
  * @method UpdateTemplate updateTemplate(array $options = [])
  * @method ValidateTemplateContent validateTemplateContent(array $options = [])
  */
@@ -104,6 +117,22 @@ class CreateParameter extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getApprovalRules()
+ * @method $this withApprovalRules($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getOperationSystem()
+ * @method $this withOperationSystem($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreatePatchBaseline extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getKeyId()
@@ -118,6 +147,32 @@ class CreateParameter extends Rpc
  * @method $this withValue($value)
  */
 class CreateSecretParameter extends Rpc
+{
+}
+
+/**
+ * @method string getScheduleType()
+ * @method $this withScheduleType($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTargets()
+ * @method $this withTargets($value)
+ * @method string getTemplateVersion()
+ * @method $this withTemplateVersion($value)
+ * @method string getScheduleExpression()
+ * @method $this withScheduleExpression($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getConfigureMode()
+ * @method $this withConfigureMode($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class CreateStateConfiguration extends Rpc
 {
 }
 
@@ -155,7 +210,25 @@ class DeleteParameter extends Rpc
  * @method string getName()
  * @method $this withName($value)
  */
+class DeletePatchBaseline extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
 class DeleteSecretParameter extends Rpc
+{
+}
+
+/**
+ * @method string getStateConfigurationIds()
+ * @method $this withStateConfigurationIds($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ */
+class DeleteStateConfigurations extends Rpc
 {
 }
 
@@ -248,6 +321,14 @@ class GetParameters extends Rpc
  * @method $this withMaxResults($value)
  */
 class GetParametersByPath extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class GetPatchBaseline extends Rpc
 {
 }
 
@@ -386,6 +467,44 @@ class ListExecutions extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListInstancePatches extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListInstancePatchStates extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getStateConfigurationId()
+ * @method $this withStateConfigurationId($value)
+ */
+class ListInstanceStateReports extends Rpc
+{
+}
+
+/**
  * @method array getFilter()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -460,6 +579,22 @@ class ListParameterVersions extends Rpc
 }
 
 /**
+ * @method string getOperationSystem()
+ * @method $this withOperationSystem($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getShareType()
+ * @method $this withShareType($value)
+ */
+class ListPatchBaselines extends Rpc
+{
+}
+
+/**
  * @method string getExecutionId()
  * @method $this withExecutionId($value)
  * @method string getNextToken()
@@ -504,6 +639,24 @@ class ListSecretParameters extends Rpc
  * @method $this withShareType($value)
  */
 class ListSecretParameterVersions extends Rpc
+{
+}
+
+/**
+ * @method string getStateConfigurationIds()
+ * @method $this withStateConfigurationIds($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getTemplateVersion()
+ * @method $this withTemplateVersion($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ */
+class ListStateConfigurations extends Rpc
 {
 }
 
@@ -652,6 +805,14 @@ class ListTemplateVersions extends Rpc
  * @method $this withParameters($value)
  */
 class NotifyExecution extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class RegisterDefaultPatchBaseline extends Rpc
 {
 }
 
@@ -836,6 +997,20 @@ class UpdateParameter extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getApprovalRules()
+ * @method $this withApprovalRules($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdatePatchBaseline extends Rpc
+{
+}
+
+/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getName()
@@ -844,6 +1019,30 @@ class UpdateParameter extends Rpc
  * @method $this withValue($value)
  */
 class UpdateSecretParameter extends Rpc
+{
+}
+
+/**
+ * @method string getScheduleType()
+ * @method $this withScheduleType($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTargets()
+ * @method $this withTargets($value)
+ * @method string getScheduleExpression()
+ * @method $this withScheduleExpression($value)
+ * @method string getConfigureMode()
+ * @method $this withConfigureMode($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ * @method string getStateConfigurationId()
+ * @method $this withStateConfigurationId($value)
+ */
+class UpdateStateConfiguration extends Rpc
 {
 }
 
