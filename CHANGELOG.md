@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.852 - 2021-2-8
+- Fix IoT Studio BatchBindDevicesIntoProject API return datatype.
+- Fix IoT Studio BatchBindProductsIntoProject API return datatype.
+- Fix IoT Studio BatchUnbindProjectDevices API return datatype.
+- Fix IoT Studio BatchUnbindProjectProducts API return datatype.
+
+
 ## 1.8.851 - 2021-2-8
 - Add username for RunCommand and InvokeCommand.
 

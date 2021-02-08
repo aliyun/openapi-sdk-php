@@ -2454,6 +2454,10 @@ class CopyThingModel extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getGroupName()
@@ -7766,6 +7770,10 @@ class QueryConsumerGroupByGroupId extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()
@@ -7810,6 +7818,10 @@ class QueryConsumerGroupList extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getGroupId()
@@ -10063,6 +10075,10 @@ class QueryProductList extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -10143,8 +10159,12 @@ class QuerySceneRule extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
