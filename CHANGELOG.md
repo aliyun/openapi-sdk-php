@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.851 - 2021-2-8
+- Add username for RunCommand and InvokeCommand.
+
+
 ## 1.8.850 - 2021-2-8
 - Update PedestrianDetectAttribute.
 
