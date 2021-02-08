@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.850 - 2021-2-8
+- Update PedestrianDetectAttribute.
+
+
 ## 1.8.849 - 2021-2-7
 - Add IoT Studio BatchBindDevicesIntoProject API.
 - Add IoT Studio BatchBindProductsIntoProject API.
