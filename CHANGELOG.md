@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.866 - 2021-2-19
+- Update videorecog.
+
+
 ## 1.8.865 - 2021-2-19
 - Create Lindorm Open api.
 
