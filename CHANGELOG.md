@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.871 - 2021-2-19
+- Supported all language sdk.
+- Fixed some bugs for polardbx.
+
+
 ## 1.8.870 - 2021-2-19
 - Release UnderstandVideoContent.
 
