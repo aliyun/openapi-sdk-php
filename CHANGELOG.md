@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.859 - 2021-2-19
+- Update ModifyDcdnService.
+
+
 ## 1.8.858 - 2021-2-19
 - Supported console.
 
