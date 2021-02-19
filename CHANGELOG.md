@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.864 - 2021-2-19
+- Supported SystemDiskPerformanceLevel, SystemDiskDeleteWithInstance, DataDiskPerformanceLevel, NetworkInterfaceSecurityGroupIds, SecurityGroupIds, PrivateIpAddress for CreateLaunchTemplate, CreateLaunchTemplateVersion, DescribeLaunchTemplateVersion.
+
+
 ## 1.8.863 - 2021-2-19
 - Minor chagnes.
 
