@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.858 - 2021-2-19
+- Supported console.
+
+
 ## 1.8.857 - 2021-2-19
 - Add update task api.
 
