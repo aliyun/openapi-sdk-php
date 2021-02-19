@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.853 - 2021-2-19
+- Generated 2018-01-11 for `rtc`.
+
+
 ## 1.8.852 - 2021-2-8
 - Fix IoT Studio BatchBindDevicesIntoProject API return datatype.
 - Fix IoT Studio BatchBindProductsIntoProject API return datatype.

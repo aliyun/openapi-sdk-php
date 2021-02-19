@@ -16,7 +16,7 @@ class Release
     /**
      * Version of the SDK
      */
-    const VERSION = '1.8.852';
+    const VERSION = '1.8.853';
 
     /**
      * @param Event $event
