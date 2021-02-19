@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.867 - 2021-2-19
+- Add username for RunCommand and InvokeCommand.
+
+
 ## 1.8.866 - 2021-2-19
 - Update videorecog.
 
