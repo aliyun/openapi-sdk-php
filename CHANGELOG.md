@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.860 - 2021-2-19
+- Add GetImageQuality API.
+- Add more info as parameters to Images related APIs.
+
+
 ## 1.8.859 - 2021-2-19
 - Update ModifyDcdnService.
 
