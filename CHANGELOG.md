@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.857 - 2021-2-19
+- Add update task api.
+
+
 ## 1.8.856 - 2021-2-19
 - Generated 2018-01-11 for `rtc`.
 
