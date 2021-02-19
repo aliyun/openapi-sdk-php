@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.861 - 2021-2-19
+- Supported International-26888 Sites Region Endpoints.
+
+
 ## 1.8.860 - 2021-2-19
 - Add GetImageQuality API.
 - Add more info as parameters to Images related APIs.
