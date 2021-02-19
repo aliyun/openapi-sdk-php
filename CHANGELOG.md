@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.870 - 2021-2-19
+- Release UnderstandVideoContent.
+
+
 ## 1.8.869 - 2021-2-19
 - ReportInstancesStatus OpenAPI supports IssueCategory parameter.
 
