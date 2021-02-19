@@ -4396,6 +4396,7 @@ class UpdateCdrsMonitor extends Rpc
  * @method string getDeviceList()
  * @method string getNotifierUrl()
  * @method string getNotifierType()
+ * @method string getPicExtendList()
  * @method string getBizId()
  * @method string getAlgorithmVendor()
  */
@@ -4619,6 +4620,19 @@ class UpdateMonitor extends Rpc
     {
         $this->data['NotifierType'] = $value;
         $this->options['form_params']['NotifierType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPicExtendList($value)
+    {
+        $this->data['PicExtendList'] = $value;
+        $this->options['form_params']['PicExtendList'] = $value;
 
         return $this;
     }
