@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.855 - 2021-2-19
+- Support Open Service API.
+
+
 ## 1.8.854 - 2021-2-19
 - Update Function.
 
