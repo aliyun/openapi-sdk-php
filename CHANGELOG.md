@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.869 - 2021-2-19
+- ReportInstancesStatus OpenAPI supports IssueCategory parameter.
+
+
 ## 1.8.868 - 2021-2-19
 - Generated 2018-07-13 for `Ft`.
 
