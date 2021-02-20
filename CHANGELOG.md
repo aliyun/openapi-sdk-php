@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.873 - 2021-2-20
+- Add CheckServiceStatus.
+- Add OpenXtraceDefaultSLR.
+- Add OpenArmsDefaultSLR.
+
+
 ## 1.8.872 - 2021-2-19
 - Update Imageaudit.
 

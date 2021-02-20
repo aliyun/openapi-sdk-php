@@ -10,6 +10,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ApplyScenario applyScenario(array $options = [])
  * @method CheckDataConsistency checkDataConsistency(array $options = [])
  * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
+ * @method CheckServiceStatus checkServiceStatus(array $options = [])
  * @method ConfigApp configApp(array $options = [])
  * @method CreateAlertContact createAlertContact(array $options = [])
  * @method CreateAlertContactGroup createAlertContactGroup(array $options = [])
@@ -42,11 +43,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ImportPrometheusRules importPrometheusRules(array $options = [])
  * @method ListClusterFromGrafana listClusterFromGrafana(array $options = [])
  * @method ListDashboards listDashboards(array $options = [])
+ * @method ListDispatchRule listDispatchRule(array $options = [])
  * @method ListPromClusters listPromClusters(array $options = [])
  * @method ListRetcodeApps listRetcodeApps(array $options = [])
  * @method ListScenario listScenario(array $options = [])
  * @method ListTraceApps listTraceApps(array $options = [])
  * @method OpenArmsService openArmsService(array $options = [])
+ * @method OpenVCluster openVCluster(array $options = [])
  * @method QueryDataset queryDataset(array $options = [])
  * @method QueryMetric queryMetric(array $options = [])
  * @method QueryMetricByPage queryMetricByPage(array $options = [])
@@ -162,6 +165,14 @@ class CheckDataConsistency extends Rpc
  * @method $this withServiceName($value)
  */
 class CheckServiceLinkedRoleForDeleting extends Rpc
+{
+}
+
+/**
+ * @method string getSvcCode()
+ * @method $this withSvcCode($value)
+ */
+class CheckServiceStatus extends Rpc
 {
 }
 
@@ -518,6 +529,18 @@ class ListDashboards extends Rpc
 {
 }
 
+/**
+ * @method string getSystem()
+ * @method $this withSystem($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class ListDispatchRule extends Rpc
+{
+}
+
 class ListPromClusters extends Rpc
 {
 }
@@ -555,6 +578,16 @@ class ListTraceApps extends Rpc
  * @method $this withType($value)
  */
 class OpenArmsService extends Rpc
+{
+}
+
+/**
+ * @method string getClusterType()
+ * @method $this withClusterType($value)
+ * @method string getLength()
+ * @method $this withLength($value)
+ */
+class OpenVCluster extends Rpc
 {
 }
 
