@@ -5,6 +5,9 @@ namespace AlibabaCloud\Schedulerx2\V20190430;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method BatchDeleteJobs batchDeleteJobs(array $options = [])
+ * @method BatchDisableJobs batchDisableJobs(array $options = [])
+ * @method BatchEnableJobs batchEnableJobs(array $options = [])
  * @method CreateAppGroup createAppGroup(array $options = [])
  * @method CreateJob createJob(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
@@ -20,6 +23,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobInstance getJobInstance(array $options = [])
  * @method GetJobInstanceList getJobInstanceList(array $options = [])
  * @method GrantPermission grantPermission(array $options = [])
+ * @method ListGroups listGroups(array $options = [])
+ * @method ListJobs listJobs(array $options = [])
+ * @method ListNamespaces listNamespaces(array $options = [])
  * @method RevokePermission revokePermission(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
@@ -35,9 +41,99 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2019-04-30';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method array getJobIdList()
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class BatchDeleteJobs extends Rpc
+{
 
     /** @var string */
-    protected $scheme = 'https';
+    public $method = 'POST';
+
+    /**
+     * @param array $jobIdList
+     *
+     * @return $this
+     */
+	public function withJobIdList(array $jobIdList)
+	{
+	    $this->data['JobIdList'] = $jobIdList;
+		foreach ($jobIdList as $i => $iValue) {
+			$this->options['form_params']['JobIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method array getJobIdList()
+ */
+class BatchDisableJobs extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param array $jobIdList
+     *
+     * @return $this
+     */
+	public function withJobIdList(array $jobIdList)
+	{
+	    $this->data['JobIdList'] = $jobIdList;
+		foreach ($jobIdList as $i => $iValue) {
+			$this->options['form_params']['JobIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method array getJobIdList()
+ */
+class BatchEnableJobs extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param array $jobIdList
+     *
+     * @return $this
+     */
+	public function withJobIdList(array $jobIdList)
+	{
+	    $this->data['JobIdList'] = $jobIdList;
+		foreach ($jobIdList as $i => $iValue) {
+			$this->options['form_params']['JobIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -62,6 +158,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class CreateAppGroup extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -526,13 +625,13 @@ class DeleteJob extends Rpc
  */
 class DeleteWorkflow extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 class DescribeRegions extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 
     /** @var string */
     public $method = 'POST';
@@ -550,9 +649,6 @@ class DescribeRegions extends Rpc
  */
 class DisableJob extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -567,6 +663,9 @@ class DisableJob extends Rpc
  */
 class DisableWorkflow extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -581,9 +680,6 @@ class DisableWorkflow extends Rpc
  */
 class EnableJob extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 }
 
 /**
@@ -598,6 +694,9 @@ class EnableJob extends Rpc
  */
 class EnableWorkflow extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -630,6 +729,9 @@ class ExecuteJob extends Rpc
  */
 class ExecuteWorkflow extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -660,6 +762,9 @@ class GetJobInfo extends Rpc
  */
 class GetJobInstance extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -694,10 +799,37 @@ class GrantPermission extends Rpc
 {
 
     /** @var string */
-    public $scheme = 'http';
-
-    /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class ListGroups extends Rpc
+{
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getJobName()
+ * @method $this withJobName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListJobs extends Rpc
+{
+}
+
+class ListNamespaces extends Rpc
+{
 }
 
 /**
@@ -712,9 +844,6 @@ class GrantPermission extends Rpc
  */
 class RevokePermission extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'http';
 
     /** @var string */
     public $method = 'POST';
@@ -734,6 +863,9 @@ class RevokePermission extends Rpc
  */
 class StopInstance extends Rpc
 {
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

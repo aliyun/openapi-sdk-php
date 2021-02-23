@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.874 - 2021-2-23
+- Supported List Namespaces.
+- Supported List Groups.
+- Supported List Jobs.
+
+
 ## 1.8.873 - 2021-2-20
 - Add CheckServiceStatus.
 - Add OpenXtraceDefaultSLR.
