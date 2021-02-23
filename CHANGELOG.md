@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.875 - 2021-2-23
+- Support version in ListAppInstance response.
+- Support clusterId in CreateEnvironment request.
+
+
 ## 1.8.874 - 2021-2-23
 - Supported List Namespaces.
 - Supported List Groups.

@@ -100,9 +100,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'retailcloud';
 }
 
 /**
@@ -606,6 +603,8 @@ class CreateDeployConfig extends Rpc
  * @method $this withEnvType($value)
  * @method string getAppSchemaId()
  * @method $this withAppSchemaId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
