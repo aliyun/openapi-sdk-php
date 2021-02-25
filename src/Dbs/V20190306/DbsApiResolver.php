@@ -27,9 +27,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRestoreRangeInfo describeRestoreRangeInfo(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
+ * @method DescribeSandboxFromRDS describeSandboxFromRDS(array $options = [])
  * @method DisableBackupLog disableBackupLog(array $options = [])
  * @method EnableBackupLog enableBackupLog(array $options = [])
  * @method GetDBListFromAgent getDBListFromAgent(array $options = [])
+ * @method InitializeDbsServiceLinkedRole initializeDbsServiceLinkedRole(array $options = [])
  * @method ModifyBackupObjects modifyBackupObjects(array $options = [])
  * @method ModifyBackupPlanName modifyBackupPlanName(array $options = [])
  * @method ModifyBackupSetDownloadRules modifyBackupSetDownloadRules(array $options = [])
@@ -473,6 +475,10 @@ class DescribeDLAService extends Rpc
  * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getStartTimestamp()
+ * @method $this withStartTimestamp($value)
+ * @method string getEndTimestamp()
+ * @method $this withEndTimestamp($value)
  * @method string getShowStorageType()
  * @method $this withShowStorageType($value)
  * @method string getPageSize()
@@ -491,6 +497,10 @@ class DescribeFullBackupList extends Rpc
  * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getStartTimestamp()
+ * @method $this withStartTimestamp($value)
+ * @method string getEndTimestamp()
+ * @method $this withEndTimestamp($value)
  * @method string getShowStorageType()
  * @method $this withShowStorageType($value)
  * @method string getPageSize()
@@ -589,6 +599,18 @@ class DescribeRestoreTaskList extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getRdsInstanceID()
+ * @method $this withRdsInstanceID($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeSandboxFromRDS extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getBackupPlanId()
  * @method $this withBackupPlanId($value)
  * @method string getOwnerId()
@@ -623,6 +645,10 @@ class EnableBackupLog extends Rpc
  * @method $this withTaskId($value)
  */
 class GetDBListFromAgent extends Rpc
+{
+}
+
+class InitializeDbsServiceLinkedRole extends Rpc
 {
 }
 

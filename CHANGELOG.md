@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.877 - 2021-2-25
+- Support SLR by InitializeDbsServiceLinkedRole action.
+- Change DescribeIncrementBackupList and DescribeFullBackupList to Support Range filter.
+
+
 ## 1.8.876 - 2021-2-24
 - ALL API.
 
