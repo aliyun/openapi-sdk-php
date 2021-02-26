@@ -47,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPromClusters listPromClusters(array $options = [])
  * @method ListRetcodeApps listRetcodeApps(array $options = [])
  * @method ListScenario listScenario(array $options = [])
+ * @method ListServerlessTopNApps listServerlessTopNApps(array $options = [])
  * @method ListTraceApps listTraceApps(array $options = [])
  * @method OpenArmsService openArmsService(array $options = [])
  * @method OpenVCluster openVCluster(array $options = [])
@@ -564,6 +565,16 @@ class ListRetcodeApps extends Rpc
  * @method $this withSign($value)
  */
 class ListScenario extends Rpc
+{
+}
+
+/**
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ */
+class ListServerlessTopNApps extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.879 - 2021-2-26
+- Add ListServerlessTopNApps.
+
+
 ## 1.8.878 - 2021-2-26
 - Support SLR by InitializeDbsServiceLinkedRole action.
 - Change DescribeIncrementBackupList and DescribeFullBackupList to Support Range filter by endTimestamp.
