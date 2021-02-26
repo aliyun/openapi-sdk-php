@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.878 - 2021-2-26
+- Support SLR by InitializeDbsServiceLinkedRole action.
+- Change DescribeIncrementBackupList and DescribeFullBackupList to Support Range filter by endTimestamp.
+- Change DescribeRestoreTaskList to Support Range filter by createTime.
+
+
 ## 1.8.877 - 2021-2-25
 - Support SLR by InitializeDbsServiceLinkedRole action.
 - Change DescribeIncrementBackupList and DescribeFullBackupList to Support Range filter.
