@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FTApiAliasApi fTApiAliasApi(array $options = [])
  * @method FtDynamicAddressDubbo ftDynamicAddressDubbo(array $options = [])
  * @method FtDynamicAddressHsf ftDynamicAddressHsf(array $options = [])
+ * @method FtDynamicAddressHttpVpc ftDynamicAddressHttpVpc(array $options = [])
  * @method FtEagleEye ftEagleEye(array $options = [])
  * @method FtFlowSpecial ftFlowSpecial(array $options = [])
  * @method FtGatedLaunchPolicy4 ftGatedLaunchPolicy4(array $options = [])
@@ -78,6 +79,22 @@ class FtDynamicAddressDubbo extends Rpc
 }
 
 class FtDynamicAddressHsf extends Rpc
+{
+}
+
+/**
+ * @method string getP1()
+ * @method $this withP1($value)
+ * @method string getStringValue()
+ * @method $this withStringValue($value)
+ * @method string getOtherParam()
+ * @method $this withOtherParam($value)
+ * @method string getBooleanParam()
+ * @method $this withBooleanParam($value)
+ * @method string getDefaultValue()
+ * @method $this withDefaultValue($value)
+ */
+class FtDynamicAddressHttpVpc extends Rpc
 {
 }
 
