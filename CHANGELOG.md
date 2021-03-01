@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.882 - 2021-3-1
+- AMP Version Change.
+
+
 ## 1.8.881 - 2021-3-1
 - Mod ListServerlessTopNApps.
 
