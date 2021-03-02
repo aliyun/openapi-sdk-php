@@ -221,6 +221,7 @@ namespace AlibabaCloud;
  * @method static YqBridge\YqBridge yqBridge()
  * @method static Yundun\Yundun yundun()
  * @method static imm\imm imm()
+ * @method static sgw\sgw sgw()
  */
 trait IdeHelper
 {

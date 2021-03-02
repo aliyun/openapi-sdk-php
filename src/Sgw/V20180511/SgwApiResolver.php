@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckSlrRole checkSlrRole(array $options = [])
  * @method CheckUpgradeVersion checkUpgradeVersion(array $options = [])
  * @method CreateCache createCache(array $options = [])
+ * @method CreateElasticGatewayPrivateZone createElasticGatewayPrivateZone(array $options = [])
  * @method CreateExpressSync createExpressSync(array $options = [])
  * @method CreateGateway createGateway(array $options = [])
  * @method CreateGatewayBlockVolume createGatewayBlockVolume(array $options = [])
@@ -25,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateGatewayLogging createGatewayLogging(array $options = [])
  * @method CreateGatewaySMBUser createGatewaySMBUser(array $options = [])
  * @method CreateStorageBundle createStorageBundle(array $options = [])
+ * @method DeleteElasticGatewayPrivateZone deleteElasticGatewayPrivateZone(array $options = [])
  * @method DeleteExpressSync deleteExpressSync(array $options = [])
  * @method DeleteGateway deleteGateway(array $options = [])
  * @method DeleteGatewayBlockVolumes deleteGatewayBlockVolumes(array $options = [])
@@ -62,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeGatewayLogging describeGatewayLogging(array $options = [])
  * @method DescribeGatewayLogs describeGatewayLogs(array $options = [])
  * @method DescribeGatewayModificationClasses describeGatewayModificationClasses(array $options = [])
+ * @method DescribeGatewayNFSClients describeGatewayNFSClients(array $options = [])
  * @method DescribeGateways describeGateways(array $options = [])
  * @method DescribeGatewaysForCms describeGatewaysForCms(array $options = [])
  * @method DescribeGatewaySMBUsers describeGatewaySMBUsers(array $options = [])
@@ -85,6 +88,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVSwitches describeVSwitches(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
  * @method DisableGatewayLogging disableGatewayLogging(array $options = [])
+ * @method DisableGatewayNFSVersion disableGatewayNFSVersion(array $options = [])
+ * @method EnableGatewayIpv6 enableGatewayIpv6(array $options = [])
  * @method EnableGatewayLogging enableGatewayLogging(array $options = [])
  * @method ExpandCacheDisk expandCacheDisk(array $options = [])
  * @method ExpandGatewayNetworkBandwidth expandGatewayNetworkBandwidth(array $options = [])
@@ -96,7 +101,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyGatewayBlockVolume modifyGatewayBlockVolume(array $options = [])
  * @method ModifyGatewayClass modifyGatewayClass(array $options = [])
  * @method ModifyGatewayFileShare modifyGatewayFileShare(array $options = [])
+ * @method ModifyGatewayFileShareWatermark modifyGatewayFileShareWatermark(array $options = [])
  * @method ModifyStorageBundle modifyStorageBundle(array $options = [])
+ * @method OpenSgwService openSgwService(array $options = [])
  * @method OperateGateway operateGateway(array $options = [])
  * @method ReleaseService releaseService(array $options = [])
  * @method RemoveSharesFromExpressSync removeSharesFromExpressSync(array $options = [])
@@ -303,6 +310,16 @@ class CreateCache extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class CreateElasticGatewayPrivateZone extends Rpc
+{
+}
+
+/**
  * @method string getBucketRegion()
  * @method $this withBucketRegion($value)
  * @method string getDescription()
@@ -469,6 +486,8 @@ class CreateGatewayCacheDisk extends Rpc
  * @method $this withPollingInterval($value)
  * @method string getEnabled()
  * @method $this withEnabled($value)
+ * @method string getServerSideAlgorithm()
+ * @method $this withServerSideAlgorithm($value)
  * @method string getServerSideCmk()
  * @method $this withServerSideCmk($value)
  * @method string getServerSideEncryption()
@@ -539,6 +558,16 @@ class CreateStorageBundle extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class DeleteElasticGatewayPrivateZone extends Rpc
+{
+}
+
+/**
  * @method string getExpressSyncId()
  * @method $this withExpressSyncId($value)
  * @method string getSecurityToken()
@@ -549,10 +578,14 @@ class DeleteExpressSync extends Rpc
 }
 
 /**
+ * @method string getReasonDetail()
+ * @method $this withReasonDetail($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGatewayId()
  * @method $this withGatewayId($value)
+ * @method string getReasonType()
+ * @method $this withReasonType($value)
  */
 class DeleteGateway extends Rpc
 {
@@ -991,6 +1024,20 @@ class DescribeGatewayModificationClasses extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class DescribeGatewayNFSClients extends Rpc
+{
+}
+
+/**
  * @method string getEcsInstanceIds()
  * @method $this withEcsInstanceIds($value)
  * @method string getPageNumber()
@@ -1289,6 +1336,28 @@ class DisableGatewayLogging extends Rpc
 }
 
 /**
+ * @method string getNFSVersion()
+ * @method $this withNFSVersion($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class DisableGatewayNFSVersion extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class EnableGatewayIpv6 extends Rpc
+{
+}
+
+/**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGatewayId()
@@ -1464,6 +1533,20 @@ class ModifyGatewayFileShare extends Rpc
 }
 
 /**
+ * @method string getWatermark()
+ * @method $this withWatermark($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getIndexId()
+ * @method $this withIndexId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class ModifyGatewayFileShareWatermark extends Rpc
+{
+}
+
+/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getSecurityToken()
@@ -1474,6 +1557,10 @@ class ModifyGatewayFileShare extends Rpc
  * @method $this withStorageBundleId($value)
  */
 class ModifyStorageBundle extends Rpc
+{
+}
+
+class OpenSgwService extends Rpc
 {
 }
 
