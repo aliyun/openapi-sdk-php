@@ -1194,6 +1194,8 @@ class RefreshWebofficeToken extends Rpc
  * @method $this withRemarksA($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
+ * @method string getResetItems()
+ * @method $this withResetItems($value)
  * @method string getRemarksArrayA()
  * @method $this withRemarksArrayA($value)
  * @method string getRemarksArrayB()

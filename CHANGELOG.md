@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.883 - 2021-3-2
+- Support GroupCoverFace ExternalId for ListFaceGroups.
+- Support ResetItems for UpdateFaceGroup.
+
+
 ## 1.8.882 - 2021-3-1
 - AMP Version Change.
 
