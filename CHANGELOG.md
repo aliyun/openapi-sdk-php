@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.886 - 2021-3-2
+- Update default endpoints.
+
+
 ## 1.8.885 - 2021-3-2
 - Supported API for dnsCache.
 - Supported API for GTM.
