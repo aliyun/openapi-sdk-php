@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddCustomLine addCustomLine(array $options = [])
+ * @method AddDnsCacheDomain addDnsCacheDomain(array $options = [])
  * @method AddDnsGtmAccessStrategy addDnsGtmAccessStrategy(array $options = [])
  * @method AddDnsGtmAddressPool addDnsGtmAddressPool(array $options = [])
  * @method AddDnsGtmMonitor addDnsGtmMonitor(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeDomainOfDnsProduct changeDomainOfDnsProduct(array $options = [])
  * @method CopyGtmConfig copyGtmConfig(array $options = [])
  * @method DeleteCustomLines deleteCustomLines(array $options = [])
+ * @method DeleteDnsCacheDomain deleteDnsCacheDomain(array $options = [])
  * @method DeleteDnsGtmAccessStrategy deleteDnsGtmAccessStrategy(array $options = [])
  * @method DeleteDnsGtmAddressPool deleteDnsGtmAddressPool(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
@@ -35,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBatchResultDetail describeBatchResultDetail(array $options = [])
  * @method DescribeCustomLine describeCustomLine(array $options = [])
  * @method DescribeCustomLines describeCustomLines(array $options = [])
+ * @method DescribeDnsCacheDomains describeDnsCacheDomains(array $options = [])
  * @method DescribeDnsGtmAccessStrategies describeDnsGtmAccessStrategies(array $options = [])
  * @method DescribeDnsGtmAccessStrategy describeDnsGtmAccessStrategy(array $options = [])
  * @method DescribeDnsGtmAccessStrategyAvailableConfig describeDnsGtmAccessStrategyAvailableConfig(array $options = [])
@@ -117,6 +120,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnbindInstanceDomains unbindInstanceDomains(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateCustomLine updateCustomLine(array $options = [])
+ * @method UpdateDnsCacheDomain updateDnsCacheDomain(array $options = [])
+ * @method UpdateDnsCacheDomainRemark updateDnsCacheDomainRemark(array $options = [])
  * @method UpdateDnsGtmAccessStrategy updateDnsGtmAccessStrategy(array $options = [])
  * @method UpdateDnsGtmAddressPool updateDnsGtmAddressPool(array $options = [])
  * @method UpdateDnsGtmInstanceGlobalConfig updateDnsGtmInstanceGlobalConfig(array $options = [])
@@ -179,6 +184,51 @@ class AddCustomLine extends Rpc
 			}
 			if(isset($depth1Value['StartIp'])){
 				$this->options['query']['IpSegment.' . ($depth1 + 1) . '.StartIp'] = $depth1Value['StartIp'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getSourceProtocol()
+ * @method $this withSourceProtocol($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getCacheTtlMax()
+ * @method $this withCacheTtlMax($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceEdns()
+ * @method $this withSourceEdns($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getCacheTtlMin()
+ * @method $this withCacheTtlMin($value)
+ * @method array getSourceDnsServer()
+ */
+class AddDnsCacheDomain extends Rpc
+{
+
+    /**
+     * @param array $sourceDnsServer
+     *
+     * @return $this
+     */
+	public function withSourceDnsServer(array $sourceDnsServer)
+	{
+	    $this->data['SourceDnsServer'] = $sourceDnsServer;
+		foreach ($sourceDnsServer as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Port'])){
+				$this->options['query']['SourceDnsServer.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['Host'])){
+				$this->options['query']['SourceDnsServer.' . ($depth1 + 1) . '.Host'] = $depth1Value['Host'];
 			}
 		}
 
@@ -683,6 +733,18 @@ class DeleteCustomLines extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DeleteDnsCacheDomain extends Rpc
+{
+}
+
+/**
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getStrategyId()
@@ -853,6 +915,22 @@ class DescribeCustomLine extends Rpc
  * @method $this withLang($value)
  */
 class DescribeCustomLines extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class DescribeDnsCacheDomains extends Rpc
 {
 }
 
@@ -1093,6 +1171,8 @@ class DescribeDnsProductInstances extends Rpc
 }
 
 /**
+ * @method string getRr()
+ * @method $this withRr($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getPageNumber()
@@ -2096,6 +2176,8 @@ class SetDnsGtmMonitorStatus extends Rpc
 }
 
 /**
+ * @method string getLine()
+ * @method $this withLine($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getType()
@@ -2343,6 +2425,63 @@ class UpdateCustomLine extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getSourceProtocol()
+ * @method $this withSourceProtocol($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getCacheTtlMax()
+ * @method $this withCacheTtlMax($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceEdns()
+ * @method $this withSourceEdns($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getCacheTtlMin()
+ * @method $this withCacheTtlMin($value)
+ * @method array getSourceDnsServer()
+ */
+class UpdateDnsCacheDomain extends Rpc
+{
+
+    /**
+     * @param array $sourceDnsServer
+     *
+     * @return $this
+     */
+	public function withSourceDnsServer(array $sourceDnsServer)
+	{
+	    $this->data['SourceDnsServer'] = $sourceDnsServer;
+		foreach ($sourceDnsServer as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Port'])){
+				$this->options['query']['SourceDnsServer.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['Host'])){
+				$this->options['query']['SourceDnsServer.' . ($depth1 + 1) . '.Host'] = $depth1Value['Host'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class UpdateDnsCacheDomainRemark extends Rpc
+{
 }
 
 /**

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.885 - 2021-3-2
+- Supported API for dnsCache.
+- Supported API for GTM.
+
+
 ## 1.8.884 - 2021-3-2
 - Cloud Storage Gateway openapi sdk is released.
 
