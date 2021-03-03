@@ -146,9 +146,9 @@ class AddBodyTrace extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getExtraData()
  * @method string getDbName()
  * @method string getImageUrl()
- * @method string getExtraData()
  */
 class AddFace extends Rpc
 {
@@ -162,6 +162,19 @@ class AddFace extends Rpc
     {
         $this->data['EntityId'] = $value;
         $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraData($value)
+    {
+        $this->data['ExtraData'] = $value;
+        $this->options['form_params']['ExtraData'] = $value;
 
         return $this;
     }
@@ -188,19 +201,6 @@ class AddFace extends Rpc
     {
         $this->data['ImageUrl'] = $value;
         $this->options['form_params']['ImageUrl'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraData($value)
-    {
-        $this->data['ExtraData'] = $value;
-        $this->options['form_params']['ExtraData'] = $value;
 
         return $this;
     }
@@ -329,12 +329,26 @@ class BodyPosture extends Rpc
 }
 
 /**
+ * @method string getQualityScoreThreshold()
  * @method string getImageURLB()
  * @method string getImageURLA()
  * @method string getImageType()
  */
 class CompareFace extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQualityScoreThreshold($value)
+    {
+        $this->data['QualityScoreThreshold'] = $value;
+        $this->options['form_params']['QualityScoreThreshold'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1090,26 +1104,13 @@ class ExtractPedestrianFeatureAttribute extends Rpc
 }
 
 /**
- * @method string getSharp()
  * @method string getWhite()
- * @method string getImageURL()
  * @method string getSmooth()
+ * @method string getSharp()
+ * @method string getImageURL()
  */
 class FaceBeauty extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSharp($value)
-    {
-        $this->data['Sharp'] = $value;
-        $this->options['form_params']['Sharp'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -1129,10 +1130,10 @@ class FaceBeauty extends Rpc
      *
      * @return $this
      */
-    public function withImageURL($value)
+    public function withSmooth($value)
     {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
+        $this->data['Smooth'] = $value;
+        $this->options['form_params']['Smooth'] = $value;
 
         return $this;
     }
@@ -1142,10 +1143,23 @@ class FaceBeauty extends Rpc
      *
      * @return $this
      */
-    public function withSmooth($value)
+    public function withSharp($value)
     {
-        $this->data['Smooth'] = $value;
-        $this->options['form_params']['Smooth'] = $value;
+        $this->data['Sharp'] = $value;
+        $this->options['form_params']['Sharp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
@@ -1898,14 +1912,27 @@ class SearchBodyTrace extends Rpc
 }
 
 /**
+ * @method string getLimit()
  * @method string getDbNames()
  * @method $this withDbNames($value)
  * @method string getDbName()
  * @method string getImageUrl()
- * @method string getLimit()
  */
 class SearchFace extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1929,19 +1956,6 @@ class SearchFace extends Rpc
     {
         $this->data['ImageUrl'] = $value;
         $this->options['form_params']['ImageUrl'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLimit($value)
-    {
-        $this->data['Limit'] = $value;
-        $this->options['form_params']['Limit'] = $value;
 
         return $this;
     }

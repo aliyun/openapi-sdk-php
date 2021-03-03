@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='UTF-8'?><Version product="facebody" apiStyle="ROA" name="2020-09-10" isolationType="outer"><ErrorMapping exceptionExpress=""><ErrorCodes /></ErrorMapping><Apis><Api name="ExecuteServerSideVerification" /><Api name="DetectIPCPedestrianOptimized" /></Apis></Version>

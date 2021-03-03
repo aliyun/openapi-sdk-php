@@ -221,6 +221,7 @@ namespace AlibabaCloud;
  * @method static YqBridge\YqBridge yqBridge()
  * @method static Yundun\Yundun yundun()
  * @method static dcdn\dcdn dcdn()
+ * @method static facebody\facebody facebody()
  * @method static imageprocess\imageprocess imageprocess()
  * @method static imm\imm imm()
  * @method static sgw\sgw sgw()
