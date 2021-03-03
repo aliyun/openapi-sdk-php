@@ -26,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRepositoryMember deleteRepositoryMember(array $options = [])
  * @method DeleteRepositoryProtectedBranch deleteRepositoryProtectedBranch(array $options = [])
  * @method DeleteRepositoryTag deleteRepositoryTag(array $options = [])
+ * @method DeleteRepositoryTagV2 deleteRepositoryTagV2(array $options = [])
  * @method DeleteRepositoryWebhook deleteRepositoryWebhook(array $options = [])
  * @method EnableRepositoryDeployKey enableRepositoryDeployKey(array $options = [])
  * @method GetBranchInfo getBranchInfo(array $options = [])
@@ -38,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetProjectMember getProjectMember(array $options = [])
  * @method GetRepositoryInfo getRepositoryInfo(array $options = [])
  * @method GetRepositoryTag getRepositoryTag(array $options = [])
+ * @method GetRepositoryTagV2 getRepositoryTagV2(array $options = [])
  * @method GetUserInfo getUserInfo(array $options = [])
  * @method ListGroupMember listGroupMember(array $options = [])
  * @method ListGroupRepositories listGroupRepositories(array $options = [])
@@ -1309,6 +1311,61 @@ class DeleteRepositoryTag extends Roa
 
 /**
  * @method string getOrganizationId()
+ * @method string getTagName()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class DeleteRepositoryTagV2 extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/tag/delete';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagName($value)
+    {
+        $this->data['TagName'] = $value;
+        $this->options['query']['TagName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
  * @method string getWebhookId()
  * @method $this withWebhookId($value)
  * @method string getAccessToken()
@@ -1941,6 +1998,58 @@ class GetRepositoryTag extends Roa
     {
         $this->data['OrganizationId'] = $value;
         $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getTagName()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetRepositoryTagV2 extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/tag/info';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagName($value)
+    {
+        $this->data['TagName'] = $value;
+        $this->options['query']['TagName'] = $value;
 
         return $this;
     }

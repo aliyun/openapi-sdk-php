@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.892 - 2021-3-3
+- Add GetRepositoryTagV2 and DeleteRepositoryTagV2 API.
+
+
 ## 1.8.891 - 2021-3-3
 - Update Compareface.
 
