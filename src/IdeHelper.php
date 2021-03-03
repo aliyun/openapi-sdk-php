@@ -220,6 +220,7 @@ namespace AlibabaCloud;
  * @method static Xtrace\Xtrace xtrace()
  * @method static YqBridge\YqBridge yqBridge()
  * @method static Yundun\Yundun yundun()
+ * @method static imageprocess\imageprocess imageprocess()
  * @method static imm\imm imm()
  * @method static sgw\sgw sgw()
  */

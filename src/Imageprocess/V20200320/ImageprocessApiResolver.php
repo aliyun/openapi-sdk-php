@@ -1001,14 +1001,27 @@ class RunMedQA extends Rpc
 }
 
 /**
+ * @method string getOrgName()
  * @method string getDataFormat()
  * @method array getURLList()
  * @method string getOrgId()
  * @method string getAsync()
- * @method string getOrgName()
  */
 class ScreenChestCT extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgName($value)
+    {
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1062,19 +1075,6 @@ class ScreenChestCT extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['form_params']['Async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrgName($value)
-    {
-        $this->data['OrgName'] = $value;
-        $this->options['form_params']['OrgName'] = $value;
 
         return $this;
     }
