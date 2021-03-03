@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.888 - 2021-3-3
+- Delete API.
+
+
 ## 1.8.887 - 2021-3-3
 - Update ScreenChestCT.
 

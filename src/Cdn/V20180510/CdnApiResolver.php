@@ -121,7 +121,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUserCustomLogConfig listUserCustomLogConfig(array $options = [])
  * @method ModifyCdnDomain modifyCdnDomain(array $options = [])
  * @method ModifyCdnDomainSchdmByProperty modifyCdnDomainSchdmByProperty(array $options = [])
- * @method ModifyCdnService modifyCdnService(array $options = [])
  * @method ModifyDomainCustomLogConfig modifyDomainCustomLogConfig(array $options = [])
  * @method ModifyRealtimeLogDelivery modifyRealtimeLogDelivery(array $options = [])
  * @method ModifyUserCustomLogConfig modifyUserCustomLogConfig(array $options = [])
@@ -2115,18 +2114,6 @@ class ModifyCdnDomain extends Rpc
  * @method $this withProperty($value)
  */
 class ModifyCdnDomainSchdmByProperty extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getInternetChargeType()
- * @method $this withInternetChargeType($value)
- */
-class ModifyCdnService extends Rpc
 {
 }
 
