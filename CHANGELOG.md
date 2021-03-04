@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.894 - 2021-3-4
+- Release RecognizeHandGesture.
+
+
 ## 1.8.893 - 2021-3-4
 - Update Ocr.
 

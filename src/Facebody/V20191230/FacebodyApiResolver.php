@@ -56,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeAction recognizeAction(array $options = [])
  * @method RecognizeExpression recognizeExpression(array $options = [])
  * @method RecognizeFace recognizeFace(array $options = [])
+ * @method RecognizeHandGesture recognizeHandGesture(array $options = [])
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
  * @method SearchBodyTrace searchBodyTrace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
@@ -1807,6 +1808,54 @@ class RecognizeFace extends Rpc
     {
         $this->data['ImageType'] = $value;
         $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGestureType()
+ * @method string getAppId()
+ * @method string getImageURL()
+ */
+class RecognizeHandGesture extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGestureType($value)
+    {
+        $this->data['GestureType'] = $value;
+        $this->options['form_params']['GestureType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
 
         return $this;
     }
