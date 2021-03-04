@@ -225,6 +225,7 @@ namespace AlibabaCloud;
  * @method static facebody\facebody facebody()
  * @method static imageprocess\imageprocess imageprocess()
  * @method static imm\imm imm()
+ * @method static ocr\ocr ocr()
  * @method static sgw\sgw sgw()
  */
 trait IdeHelper

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.893 - 2021-3-4
+- Update Ocr.
+
+
 ## 1.8.892 - 2021-3-3
 - Add GetRepositoryTagV2 and DeleteRepositoryTagV2 API.
 
