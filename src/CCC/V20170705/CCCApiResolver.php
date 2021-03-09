@@ -5,6 +5,7 @@ namespace AlibabaCloud\CCC\V20170705;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AbortPredictiveJobs abortPredictiveJobs(array $options = [])
  * @method AddAgentDevice addAgentDevice(array $options = [])
  * @method AddBulkPhoneNumbers addBulkPhoneNumbers(array $options = [])
  * @method AddPhoneNumber addPhoneNumber(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateJobGroup createJobGroup(array $options = [])
  * @method CreateMedia createMedia(array $options = [])
+ * @method CreatePredictiveJobGroup createPredictiveJobGroup(array $options = [])
  * @method CreateScenario createScenario(array $options = [])
  * @method CreateScenarioFromTemplate createScenarioFromTemplate(array $options = [])
  * @method CreateSkillGroup createSkillGroup(array $options = [])
@@ -56,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetInstanceSummaryReportSinceMidnight getInstanceSummaryReportSinceMidnight(array $options = [])
  * @method GetJob getJob(array $options = [])
  * @method GetJobDataUploadParams getJobDataUploadParams(array $options = [])
+ * @method GetJobFileUploadUrl getJobFileUploadUrl(array $options = [])
  * @method GetJobGroup getJobGroup(array $options = [])
  * @method GetJobList getJobList(array $options = [])
  * @method GetJobStatusByCallId getJobStatusByCallId(array $options = [])
@@ -135,6 +138,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PickLocalNumber pickLocalNumber(array $options = [])
  * @method PickOutboundNumbers pickOutboundNumbers(array $options = [])
  * @method PublishContactFlowVersion publishContactFlowVersion(array $options = [])
+ * @method PublishPredictiveJobGroup publishPredictiveJobGroup(array $options = [])
  * @method PublishSurvey publishSurvey(array $options = [])
  * @method RefreshToken refreshToken(array $options = [])
  * @method RemovePhoneNumber removePhoneNumber(array $options = [])
@@ -143,7 +147,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RequestLoginInfo requestLoginInfo(array $options = [])
  * @method ResetUserStatus resetUserStatus(array $options = [])
  * @method ResumeJobs resumeJobs(array $options = [])
- * @method SaveStats saveStats(array $options = [])
+ * @method ResumePredictiveJobs resumePredictiveJobs(array $options = [])
  * @method SaveWebRTCStats saveWebRTCStats(array $options = [])
  * @method SendPredefinedShortMessage sendPredefinedShortMessage(array $options = [])
  * @method StartBack2BackCall startBack2BackCall(array $options = [])
@@ -151,6 +155,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitBatchJobs submitBatchJobs(array $options = [])
  * @method SubmitCabRecording submitCabRecording(array $options = [])
  * @method SuspendJobs suspendJobs(array $options = [])
+ * @method SuspendPredictiveJobs suspendPredictiveJobs(array $options = [])
  * @method TaskPreparing taskPreparing(array $options = [])
  */
 class CCCApiResolver extends ApiResolver
@@ -167,6 +172,39 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'CCC';
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getJobId()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class AbortPredictiveJobs extends Rpc
+{
+
+    /**
+     * @param array $jobId
+     *
+     * @return $this
+     */
+	public function withJobId(array $jobId)
+	{
+	    $this->data['JobId'] = $jobId;
+		foreach ($jobId as $i => $iValue) {
+			$this->options['query']['JobId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -794,6 +832,44 @@ class CreateMedia extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTimingSchedule()
+ * @method $this withTimingSchedule($value)
+ * @method array getJobsJson()
+ * @method string getJobFilePath()
+ * @method $this withJobFilePath($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIsDraft()
+ * @method $this withIsDraft($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getStrategyJson()
+ * @method $this withStrategyJson($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreatePredictiveJobGroup extends Rpc
+{
+
+    /**
+     * @param array $jobsJson
+     *
+     * @return $this
+     */
+	public function withJobsJson(array $jobsJson)
+	{
+	    $this->data['JobsJson'] = $jobsJson;
+		foreach ($jobsJson as $i => $iValue) {
+			$this->options['form_params']['JobsJson.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method array getSurveysJson()
  * @method string getDescription()
  * @method $this withDescription($value)
@@ -1404,6 +1480,16 @@ class GetJob extends Rpc
  * @method $this withFileName($value)
  */
 class GetJobDataUploadParams extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ */
+class GetJobFileUploadUrl extends Rpc
 {
 }
 
@@ -2780,6 +2866,18 @@ class PublishContactFlowVersion extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class PublishPredictiveJobGroup extends Rpc
+{
+}
+
+/**
  * @method string getSurveyId()
  * @method $this withSurveyId($value)
  * @method string getInstanceId()
@@ -2940,27 +3038,33 @@ class ResumeJobs extends Rpc
 }
 
 /**
- * @method string getCallId()
- * @method $this withCallId($value)
- * @method string getRecordTime()
- * @method $this withRecordTime($value)
- * @method string getCallStartTime()
- * @method $this withCallStartTime($value)
- * @method string getUid()
- * @method $this withUid($value)
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getJobId()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getStats()
- * @method $this withStats($value)
- * @method string getTenantId()
- * @method $this withTenantId($value)
- * @method string getCalleeNumber()
- * @method $this withCalleeNumber($value)
- * @method string getCallerNumber()
- * @method $this withCallerNumber($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
  */
-class SaveStats extends Rpc
+class ResumePredictiveJobs extends Rpc
 {
+
+    /**
+     * @param array $jobId
+     *
+     * @return $this
+     */
+	public function withJobId(array $jobId)
+	{
+	    $this->data['JobId'] = $jobId;
+		foreach ($jobId as $i => $iValue) {
+			$this->options['query']['JobId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -3104,6 +3208,36 @@ class SuspendJobs extends Rpc
 
 		return $this;
     }
+
+    /**
+     * @param array $jobId
+     *
+     * @return $this
+     */
+	public function withJobId(array $jobId)
+	{
+	    $this->data['JobId'] = $jobId;
+		foreach ($jobId as $i => $iValue) {
+			$this->options['query']['JobId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getJobId()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class SuspendPredictiveJobs extends Rpc
+{
 
     /**
      * @param array $jobId

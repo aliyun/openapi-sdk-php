@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.895 - 2021-3-9
+- Export new API for predictive dialer.
+
+
 ## 1.8.894 - 2021-3-4
 - Release RecognizeHandGesture.
 
