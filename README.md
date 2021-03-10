@@ -44,13 +44,13 @@ Please see the [Installation](/docs/en-US/1-Installation.md) for more detailed i
 
 
 ## Online Demo
-[API Explorer](https://api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate SDK Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API.
+[Alibaba Cloud OpenAPI Developer Portal](https://next.api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate SDK Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API.
 
 
 ## Quick Examples
 Before you begin, you need to sign up for an Alibaba Cloud account and retrieve your [Credentials](https://usercenter.console.aliyun.com/#/manage/ak). Before request, please [Understanding the Clients][clients], after request, please [Understanding the Result][result].
 
-> Currently, only some Alibaba Cloud products are supported, [Supported Products](/SUPPORTED-EN.md), For products that are not supported, you can use [Alibaba Cloud Client for PHP][request] to initiate custom requests, and you can use [API Explorer](https://api.aliyun.com) to generate Alibaba Cloud Client for PHP code online.
+> Currently, only some Alibaba Cloud products are supported, [Supported Products](/SUPPORTED-EN.md), For products that are not supported, you can use [Alibaba Cloud Client for PHP][request] to initiate custom requests, and you can use [Alibaba Cloud OpenAPI Developer Portal](https://next.api.aliyun.com/) to generate Alibaba Cloud Client for PHP code online.
 
 ```php
 <?php
@@ -132,7 +132,7 @@ Please make sure to read the [Contributing Guide](/CONTRIBUTING.md) before makin
 
 ## References
 * [Alibaba Cloud Regions & Endpoints][endpoints]
-* [OpenAPI Explorer][open-api]
+* [Alibaba Cloud OpenAPI Developer Portal][open-api]
 * [Packagist][packagist]
 * [Composer][composer]
 * [Guzzle Documentation][guzzle-docs]
@@ -145,7 +145,7 @@ Please make sure to read the [Contributing Guide](/CONTRIBUTING.md) before makin
 Copyright (c) 2009-present, Alibaba Cloud All rights reserved.
 
 
-[open-api]: https://api.alibabacloud.com
+[open-api]: https://next.api.aliyun.com
 [latest-release]: https://github.com/aliyun/openapi-sdk-php
 [guzzle-docs]: http://docs.guzzlephp.org/en/stable/request-options.html
 [composer]: http://getcomposer.org
