@@ -330,6 +330,8 @@ class BodyPosture extends Rpc
 }
 
 /**
+ * @method string getImageDataA()
+ * @method string getImageDataB()
  * @method string getQualityScoreThreshold()
  * @method string getImageURLB()
  * @method string getImageURLA()
@@ -337,6 +339,32 @@ class BodyPosture extends Rpc
  */
 class CompareFace extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageDataA($value)
+    {
+        $this->data['ImageDataA'] = $value;
+        $this->options['form_params']['ImageDataA'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageDataB($value)
+    {
+        $this->data['ImageDataB'] = $value;
+        $this->options['form_params']['ImageDataB'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -770,47 +798,15 @@ class DetectFace extends Rpc
 }
 
 /**
- * @method string getImageData()
- * @method array getURLList()
  * @method string getContinueOnError()
- * @method string getWidth()
  * @method string getHeight()
+ * @method string getImageData()
+ * @method string getDataId()
+ * @method string getImageURL()
+ * @method string getWidth()
  */
 class DetectIPCPedestrian extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageData($value)
-    {
-        $this->data['ImageData'] = $value;
-        $this->options['form_params']['ImageData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $uRLList
-     *
-     * @return $this
-     */
-	public function withURLList(array $uRLList)
-	{
-	    $this->data['URLList'] = $uRLList;
-		foreach ($uRLList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['DataId'])){
-				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.DataId'] = $depth1Value['DataId'];
-			}
-			if(isset($depth1Value['ImageURL'])){
-				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
-			}
-		}
-
-		return $this;
-    }
 
     /**
      * @param string $value
@@ -830,10 +826,10 @@ class DetectIPCPedestrian extends Rpc
      *
      * @return $this
      */
-    public function withWidth($value)
+    public function withHeight($value)
     {
-        $this->data['Width'] = $value;
-        $this->options['form_params']['Width'] = $value;
+        $this->data['Height'] = $value;
+        $this->options['form_params']['Height'] = $value;
 
         return $this;
     }
@@ -843,10 +839,49 @@ class DetectIPCPedestrian extends Rpc
      *
      * @return $this
      */
-    public function withHeight($value)
+    public function withImageData($value)
     {
-        $this->data['Height'] = $value;
-        $this->options['form_params']['Height'] = $value;
+        $this->data['ImageData'] = $value;
+        $this->options['form_params']['ImageData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataId($value)
+    {
+        $this->data['DataId'] = $value;
+        $this->options['form_params']['DataId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWidth($value)
+    {
+        $this->data['Width'] = $value;
+        $this->options['form_params']['Width'] = $value;
 
         return $this;
     }
@@ -1721,29 +1756,13 @@ class QueryFaceImageTemplate extends Rpc
 }
 
 /**
- * @method array getURLList()
  * @method string getType()
+ * @method string getVideoData()
+ * @method array getURLList()
  * @method string getVideoUrl()
  */
 class RecognizeAction extends Rpc
 {
-
-    /**
-     * @param array $uRLList
-     *
-     * @return $this
-     */
-	public function withURLList(array $uRLList)
-	{
-	    $this->data['URLList'] = $uRLList;
-		foreach ($uRLList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['URL'])){
-				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
-			}
-		}
-
-		return $this;
-    }
 
     /**
      * @param string $value
@@ -1756,6 +1775,39 @@ class RecognizeAction extends Rpc
         $this->options['form_params']['Type'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoData($value)
+    {
+        $this->data['VideoData'] = $value;
+        $this->options['form_params']['VideoData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ImageData'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.imageData'] = $depth1Value['ImageData'];
+			}
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
     }
 
     /**
@@ -2012,7 +2064,9 @@ class SearchFace extends Rpc
 
 /**
  * @method string getTargetImageURL()
+ * @method string getSourceImageData()
  * @method string getSourceImageURL()
+ * @method string getTargetImageData()
  * @method string getEditPart()
  */
 class SwapFacialFeatures extends Rpc
@@ -2036,10 +2090,36 @@ class SwapFacialFeatures extends Rpc
      *
      * @return $this
      */
+    public function withSourceImageData($value)
+    {
+        $this->data['SourceImageData'] = $value;
+        $this->options['form_params']['SourceImageData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withSourceImageURL($value)
     {
         $this->data['SourceImageURL'] = $value;
         $this->options['form_params']['SourceImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetImageData($value)
+    {
+        $this->data['TargetImageData'] = $value;
+        $this->options['form_params']['TargetImageData'] = $value;
 
         return $this;
     }
@@ -2107,11 +2187,39 @@ class UpdateFaceEntity extends Rpc
 }
 
 /**
+ * @method string getRefData()
+ * @method string getImageData()
  * @method string getImageURL()
  * @method string getRefUrl()
  */
 class VerifyFaceMask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRefData($value)
+    {
+        $this->data['RefData'] = $value;
+        $this->options['form_params']['RefData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageData($value)
+    {
+        $this->data['ImageData'] = $value;
+        $this->options['form_params']['ImageData'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

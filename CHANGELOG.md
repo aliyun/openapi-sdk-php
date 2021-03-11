@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.896 - 2021-3-11
+- Update DetectIPCPedestrian.
+
+
 ## 1.8.895 - 2021-3-9
 - Export new API for predictive dialer.
 
