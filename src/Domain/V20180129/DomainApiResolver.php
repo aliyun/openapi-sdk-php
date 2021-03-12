@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckProcessingServerLockApply checkProcessingServerLockApply(array $options = [])
  * @method CheckTransferInFeasibility checkTransferInFeasibility(array $options = [])
  * @method ConfirmTransferInEmail confirmTransferInEmail(array $options = [])
+ * @method DeleteContactTemplates deleteContactTemplates(array $options = [])
  * @method DeleteDomainGroup deleteDomainGroup(array $options = [])
  * @method DeleteEmailVerification deleteEmailVerification(array $options = [])
  * @method DeleteRegistrantProfile deleteRegistrantProfile(array $options = [])
@@ -70,12 +71,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SaveBatchTaskForCreatingOrderTransfer saveBatchTaskForCreatingOrderTransfer(array $options = [])
  * @method SaveBatchTaskForDomainNameProxyService saveBatchTaskForDomainNameProxyService(array $options = [])
  * @method SaveBatchTaskForModifyingDomainDns saveBatchTaskForModifyingDomainDns(array $options = [])
+ * @method SaveBatchTaskForReserveDropListDomain saveBatchTaskForReserveDropListDomain(array $options = [])
  * @method SaveBatchTaskForTransferProhibitionLock saveBatchTaskForTransferProhibitionLock(array $options = [])
  * @method SaveBatchTaskForUpdateProhibitionLock saveBatchTaskForUpdateProhibitionLock(array $options = [])
  * @method SaveBatchTaskForUpdatingContactInfoByNewContact saveBatchTaskForUpdatingContactInfoByNewContact(array $options = [])
  * @method SaveBatchTaskForUpdatingContactInfoByRegistrantProfileId saveBatchTaskForUpdatingContactInfoByRegistrantProfileId(array $options = [])
  * @method SaveDomainGroup saveDomainGroup(array $options = [])
  * @method SaveRegistrantProfile saveRegistrantProfile(array $options = [])
+ * @method SaveRegistrantProfileRealNameVerification saveRegistrantProfileRealNameVerification(array $options = [])
  * @method SaveSingleTaskForAddingDSRecord saveSingleTaskForAddingDSRecord(array $options = [])
  * @method SaveSingleTaskForApprovingTransferOut saveSingleTaskForApprovingTransferOut(array $options = [])
  * @method SaveSingleTaskForAssociatingEns saveSingleTaskForAssociatingEns(array $options = [])
@@ -105,6 +108,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SaveTaskForUpdatingRegistrantInfoByIdentityCredential saveTaskForUpdatingRegistrantInfoByIdentityCredential(array $options = [])
  * @method SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID saveTaskForUpdatingRegistrantInfoByRegistrantProfileID(array $options = [])
  * @method ScrollDomainList scrollDomainList(array $options = [])
+ * @method SetDefaultRegistrantProfile setDefaultRegistrantProfile(array $options = [])
  * @method SubmitEmailVerification submitEmailVerification(array $options = [])
  * @method SubmitOperationAuditInfo submitOperationAuditInfo(array $options = [])
  * @method SubmitOperationCredentials submitOperationCredentials(array $options = [])
@@ -130,6 +134,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'domain';
 }
 
 /**
@@ -316,6 +323,16 @@ class ConfirmTransferInEmail extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getRegistrantProfileIds()
+ * @method $this withRegistrantProfileIds($value)
+ */
+class DeleteContactTemplates extends Rpc
+{
 }
 
 /**
@@ -1398,6 +1415,32 @@ class SaveBatchTaskForModifyingDomainDns extends Rpc
 }
 
 /**
+ * @method array getDomains()
+ * @method string getContactTemplateId()
+ * @method $this withContactTemplateId($value)
+ */
+class SaveBatchTaskForReserveDropListDomain extends Rpc
+{
+
+    /**
+     * @param array $domains
+     *
+     * @return $this
+     */
+	public function withDomains(array $domains)
+	{
+	    $this->data['Domains'] = $domains;
+		foreach ($domains as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DomainName'])){
+				$this->options['query']['Domains.' . ($depth1 + 1) . '.DomainName'] = $depth1Value['DomainName'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method array getDomainName()
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
@@ -1610,6 +1653,60 @@ class SaveDomainGroup extends Rpc
  * @method $this withRegistrantName($value)
  */
 class SaveRegistrantProfile extends Rpc
+{
+}
+
+/**
+ * @method string getCountry()
+ * @method $this withCountry($value)
+ * @method string getIdentityCredentialType()
+ * @method $this withIdentityCredentialType($value)
+ * @method string getCity()
+ * @method $this withCity($value)
+ * @method string getRegistrantProfileId()
+ * @method $this withRegistrantProfileId($value)
+ * @method string getIdentityCredential()
+ * @method $this withIdentityCredential($value)
+ * @method string getZhCity()
+ * @method $this withZhCity($value)
+ * @method string getTelExt()
+ * @method $this withTelExt($value)
+ * @method string getProvince()
+ * @method $this withProvince($value)
+ * @method string getZhRegistrantName()
+ * @method $this withZhRegistrantName($value)
+ * @method string getPostalCode()
+ * @method $this withPostalCode($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ * @method string getZhRegistrantOrganization()
+ * @method $this withZhRegistrantOrganization($value)
+ * @method string getAddress()
+ * @method $this withAddress($value)
+ * @method string getTelArea()
+ * @method $this withTelArea($value)
+ * @method string getZhAddress()
+ * @method $this withZhAddress($value)
+ * @method string getRegistrantType()
+ * @method $this withRegistrantType($value)
+ * @method string getRegistrantProfileType()
+ * @method $this withRegistrantProfileType($value)
+ * @method string getTelephone()
+ * @method $this withTelephone($value)
+ * @method string getZhProvince()
+ * @method $this withZhProvince($value)
+ * @method string getRegistrantOrganization()
+ * @method $this withRegistrantOrganization($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getIdentityCredentialNo()
+ * @method $this withIdentityCredentialNo($value)
+ * @method string getRegistrantName()
+ * @method $this withRegistrantName($value)
+ */
+class SaveRegistrantProfileRealNameVerification extends Rpc
 {
 }
 
@@ -2302,6 +2399,16 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends Rpc
  * @method $this withEndLength($value)
  */
 class ScrollDomainList extends Rpc
+{
+}
+
+/**
+ * @method string getRegistrantProfileId()
+ * @method $this withRegistrantProfileId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ */
+class SetDefaultRegistrantProfile extends Rpc
 {
 }
 

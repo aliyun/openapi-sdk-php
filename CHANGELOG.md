@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.897 - 2021-3-12
+- Supported batch delete for contact template.
+- Supported save for contact template.
+- Supported set default for contact template.
+
+
 ## 1.8.896 - 2021-3-11
 - Update DetectIPCPedestrian.
 
