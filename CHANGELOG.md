@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.898 - 2021-3-13
+- Supportd DescribeTableStatisticsRequest.
+
+
 ## 1.8.897 - 2021-3-12
 - Supported batch delete for contact template.
 - Supported save for contact template.

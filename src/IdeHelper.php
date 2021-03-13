@@ -220,6 +220,7 @@ namespace AlibabaCloud;
  * @method static Xtrace\Xtrace xtrace()
  * @method static YqBridge\YqBridge yqBridge()
  * @method static Yundun\Yundun yundun()
+ * @method static adb\adb adb()
  * @method static codeup\codeup codeup()
  * @method static dcdn\dcdn dcdn()
  * @method static facebody\facebody facebody()
