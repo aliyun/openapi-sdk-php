@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.899 - 2021-3-17
+- Update MakeSuperResolutionImage.
+
+
 ## 1.8.898 - 2021-3-13
 - Supportd DescribeTableStatisticsRequest.
 

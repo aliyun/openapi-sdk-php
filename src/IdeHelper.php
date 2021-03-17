@@ -224,6 +224,7 @@ namespace AlibabaCloud;
  * @method static codeup\codeup codeup()
  * @method static dcdn\dcdn dcdn()
  * @method static facebody\facebody facebody()
+ * @method static imageenhan\imageenhan imageenhan()
  * @method static imageprocess\imageprocess imageprocess()
  * @method static imm\imm imm()
  * @method static ocr\ocr ocr()
