@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.900 - 2021-3-17
+- Add organizaition security center API.
+
+
 ## 1.8.899 - 2021-3-17
 - Update MakeSuperResolutionImage.
 

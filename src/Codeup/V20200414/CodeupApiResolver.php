@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMergeRequestApproveStatus getMergeRequestApproveStatus(array $options = [])
  * @method GetMergeRequestDetail getMergeRequestDetail(array $options = [])
  * @method GetMergeRequestSetting getMergeRequestSetting(array $options = [])
+ * @method GetOrganizationSecurityCenterStatus getOrganizationSecurityCenterStatus(array $options = [])
  * @method GetProjectMember getProjectMember(array $options = [])
  * @method GetRepositoryInfo getRepositoryInfo(array $options = [])
  * @method GetRepositoryTag getRepositoryTag(array $options = [])
@@ -47,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListMergeRequestComments listMergeRequestComments(array $options = [])
  * @method ListMergeRequests listMergeRequests(array $options = [])
  * @method ListOrganizations listOrganizations(array $options = [])
+ * @method ListOrganizationSecurityScores listOrganizationSecurityScores(array $options = [])
  * @method ListRepositories listRepositories(array $options = [])
  * @method ListRepositoryBranches listRepositoryBranches(array $options = [])
  * @method ListRepositoryCommits listRepositoryCommits(array $options = [])
@@ -1873,6 +1875,28 @@ class GetMergeRequestSetting extends Roa
 }
 
 /**
+ * @method string getAccessToken()
+ */
+class GetOrganizationSecurityCenterStatus extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/organization/security/status';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getOrganizationId()
  * @method string getSubUserId()
  * @method string getAccessToken()
@@ -2733,6 +2757,28 @@ class ListOrganizations extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccessToken()
+ */
+class ListOrganizationSecurityScores extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/organization/security/scores';
 
     /**
      * @param string $value
