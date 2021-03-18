@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.904 - 2021-3-18
+- Edit GetTrace api.
+- Edit GetMultipleTrace api.
+
+
 ## 1.8.903 - 2021-3-18
 - Generated 2018-07-13 for `Ft`.
 
