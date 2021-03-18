@@ -1,1 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?><Version product="Cloudauth" apiStyle="RPC" name="2020-11-12" isolationType="outer"><ErrorMapping exceptionExpress=""><ErrorCodes /></ErrorMapping><Apis><Api name="UploadDeviceInfos" /><Api name="LivenessDetect" /></Apis></Version>
