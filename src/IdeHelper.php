@@ -220,15 +220,7 @@ namespace AlibabaCloud;
  * @method static Xtrace\Xtrace xtrace()
  * @method static YqBridge\YqBridge yqBridge()
  * @method static Yundun\Yundun yundun()
- * @method static adb\adb adb()
- * @method static codeup\codeup codeup()
- * @method static dcdn\dcdn dcdn()
- * @method static facebody\facebody facebody()
- * @method static imageenhan\imageenhan imageenhan()
- * @method static imageprocess\imageprocess imageprocess()
- * @method static imm\imm imm()
- * @method static ocr\ocr ocr()
- * @method static sgw\sgw sgw()
+ * @method static meta\meta meta()
  */
 trait IdeHelper
 {
