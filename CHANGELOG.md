@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.906 - 2021-3-19
+- Modify the helpUrl parameter of OnsTopicList and OnsGroupList API to be invisible.
+
+
 ## 1.8.905 - 2021-3-19
 - Export new API.
 
