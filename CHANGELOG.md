@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.907 - 2021-3-19
+- StateConfiguration in CreateStateConfigurationResponse changes from list to single object.
+
+
 ## 1.8.906 - 2021-3-19
 - Modify the helpUrl parameter of OnsTopicList and OnsGroupList API to be invisible.
 

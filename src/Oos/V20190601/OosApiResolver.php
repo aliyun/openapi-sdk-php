@@ -83,9 +83,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'oos';
 }
 
 /**
@@ -105,6 +102,8 @@ class CancelExecution extends Rpc
  * @method $this withType($value)
  * @method string getConstraints()
  * @method $this withConstraints($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
@@ -135,16 +134,18 @@ class CreatePatchBaseline extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getKeyId()
- * @method $this withKeyId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getConstraints()
  * @method $this withConstraints($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getValue()
  * @method $this withValue($value)
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class CreateSecretParameter extends Rpc
 {
@@ -551,12 +552,14 @@ class ListInventoryEntries extends Rpc
  * @method $this withPath($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getSortOrder()
+ * @method $this withSortOrder($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
- * @method string getSortOrder()
- * @method $this withSortOrder($value)
  * @method string getSortField()
  * @method $this withSortField($value)
  */
@@ -609,6 +612,8 @@ class ListResourceExecutionStatus extends Rpc
 /**
  * @method string getRecursive()
  * @method $this withRecursive($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getPath()
  * @method $this withPath($value)
  * @method string getNextToken()
@@ -987,6 +992,8 @@ class UpdateInstanceInformation extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
@@ -1013,6 +1020,8 @@ class UpdatePatchBaseline extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getValue()
