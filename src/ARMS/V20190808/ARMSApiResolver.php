@@ -519,12 +519,16 @@ class ListClusterFromGrafana extends Rpc
 }
 
 /**
- * @method string getClusterType()
- * @method $this withClusterType($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getRecreateSwitch()
+ * @method $this withRecreateSwitch($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getTitle()
  * @method $this withTitle($value)
+ * @method string getClusterType()
+ * @method $this withClusterType($value)
  */
 class ListDashboards extends Rpc
 {
@@ -599,6 +603,10 @@ class OpenArmsService extends Rpc
 /**
  * @method string getClusterType()
  * @method $this withClusterType($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getRecreateSwitch()
+ * @method $this withRecreateSwitch($value)
  * @method string getLength()
  * @method $this withLength($value)
  */

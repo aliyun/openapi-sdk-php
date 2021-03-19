@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.908 - 2021-3-19
+- Mod OpenVCluster add parameters, support cloud product assess.
+- Mod ListDashboards add parameters, support cloud product query.
+
+
 ## 1.8.907 - 2021-3-19
 - StateConfiguration in CreateStateConfigurationResponse changes from list to single object.
 
