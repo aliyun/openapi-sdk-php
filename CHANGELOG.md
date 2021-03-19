@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.905 - 2021-3-19
+- Export new API.
+
+
 ## 1.8.904 - 2021-3-18
 - Edit GetTrace api.
 - Edit GetMultipleTrace api.

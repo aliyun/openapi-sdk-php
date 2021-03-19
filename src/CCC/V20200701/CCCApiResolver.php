@@ -12,6 +12,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeWorkMode changeWorkMode(array $options = [])
  * @method CompleteAttendedTransfer completeAttendedTransfer(array $options = [])
  * @method GetLoginDetails getLoginDetails(array $options = [])
+ * @method GetMonoRecording getMonoRecording(array $options = [])
+ * @method GetMultiChannelRecording getMultiChannelRecording(array $options = [])
  * @method GetNumberLocation getNumberLocation(array $options = [])
  * @method GetTurnCredentials getTurnCredentials(array $options = [])
  * @method GetTurnServerList getTurnServerList(array $options = [])
@@ -21,10 +23,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method LaunchAuthentication launchAuthentication(array $options = [])
  * @method LaunchSurvey launchSurvey(array $options = [])
  * @method ListBriefSkillGroups listBriefSkillGroups(array $options = [])
+ * @method ListCallDetailRecords listCallDetailRecords(array $options = [])
  * @method ListConfigItems listConfigItems(array $options = [])
  * @method ListDevices listDevices(array $options = [])
+ * @method ListHistoricalAgentReport listHistoricalAgentReport(array $options = [])
  * @method ListOutboundNumbersOfUser listOutboundNumbersOfUser(array $options = [])
  * @method ListPrivilegesOfUser listPrivilegesOfUser(array $options = [])
+ * @method ListRealtimeAgentStates listRealtimeAgentStates(array $options = [])
+ * @method ListRecentCallDetailRecords listRecentCallDetailRecords(array $options = [])
  * @method ListSkillLevelsOfUser listSkillLevelsOfUser(array $options = [])
  * @method MakeCall makeCall(array $options = [])
  * @method MonitorCall monitorCall(array $options = [])
@@ -38,6 +44,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RetrieveCall retrieveCall(array $options = [])
  * @method SendDtmfSignaling sendDtmfSignaling(array $options = [])
  * @method SignInGroup signInGroup(array $options = [])
+ * @method SignOutGroup signOutGroup(array $options = [])
  * @method TakeBreak takeBreak(array $options = [])
  * @method UnmuteCall unmuteCall(array $options = [])
  */
@@ -161,6 +168,26 @@ class CompleteAttendedTransfer extends Rpc
  * @method $this withInstanceId($value)
  */
 class GetLoginDetails extends Rpc
+{
+}
+
+/**
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetMonoRecording extends Rpc
+{
+}
+
+/**
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetMultiChannelRecording extends Rpc
 {
 }
 
@@ -295,6 +322,42 @@ class ListBriefSkillGroups extends Rpc
 }
 
 /**
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getOrderByField()
+ * @method $this withOrderByField($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSortOrder()
+ * @method $this withSortOrder($value)
+ * @method string getWithRecording()
+ * @method $this withWithRecording($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
+ * @method string getContactType()
+ * @method $this withContactType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
+ * @method string getContactDisposition()
+ * @method $this withContactDisposition($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ */
+class ListCallDetailRecords extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getObjectType()
@@ -314,6 +377,36 @@ class ListConfigItems extends Rpc
  */
 class ListDevices extends Rpc
 {
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStopTime()
+ * @method $this withStopTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAgentIdList()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListHistoricalAgentReport extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgentIdList($value)
+    {
+        $this->data['AgentIdList'] = $value;
+        $this->options['form_params']['AgentIdList'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -338,6 +431,78 @@ class ListOutboundNumbersOfUser extends Rpc
  */
 class ListPrivilegesOfUser extends Rpc
 {
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAgentIdList()
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getAgentName()
+ * @method $this withAgentName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStateList()
+ */
+class ListRealtimeAgentStates extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgentIdList($value)
+    {
+        $this->data['AgentIdList'] = $value;
+        $this->options['form_params']['AgentIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStateList($value)
+    {
+        $this->data['StateList'] = $value;
+        $this->options['form_params']['StateList'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListRecentCallDetailRecords extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -535,6 +700,18 @@ class SendDtmfSignaling extends Rpc
  * @method $this withInstanceId($value)
  */
 class SignInGroup extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class SignOutGroup extends Rpc
 {
 }
 
