@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.909 - 2021-3-21
+- Support watermark.
+- Support pdf preview.
+
+
 ## 1.8.908 - 2021-3-19
 - Mod OpenVCluster add parameters, support cloud product assess.
 - Mod ListDashboards add parameters, support cloud product query.
