@@ -47,6 +47,10 @@ class AttachEai extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getInstanceType()

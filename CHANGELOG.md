@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.911 - 2021-3-22
+- CreateEai api adds SecurityGroupId, VSwitchId parameters.
+
+
 ## 1.8.910 - 2021-3-22
 - Add OneConsole support.
 - Add ACK support.
