@@ -8,9 +8,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ActivateZones activateZones(array $options = [])
  * @method AddConnectableCluster addConnectableCluster(array $options = [])
  * @method AddSnapshotRepo addSnapshotRepo(array $options = [])
+ * @method CancelDeletion cancelDeletion(array $options = [])
+ * @method CancelLogstashDeletion cancelLogstashDeletion(array $options = [])
  * @method CancelTask cancelTask(array $options = [])
  * @method CloseDiagnosis closeDiagnosis(array $options = [])
  * @method CloseHttps closeHttps(array $options = [])
+ * @method CreateCollector createCollector(array $options = [])
  * @method CreateDataTasks createDataTasks(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateLogstash createLogstash(array $options = [])
@@ -26,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeletePipelines deletePipelines(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSnapshotRepo deleteSnapshotRepo(array $options = [])
+ * @method DescribeAckOperator describeAckOperator(array $options = [])
  * @method DescribeCollector describeCollector(array $options = [])
  * @method DescribeConnectableClusters describeConnectableClusters(array $options = [])
  * @method DescribeDiagnoseReport describeDiagnoseReport(array $options = [])
@@ -49,18 +53,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRegionConfiguration getRegionConfiguration(array $options = [])
  * @method GetSuggestShrinkableNodes getSuggestShrinkableNodes(array $options = [])
  * @method GetTransferableNodes getTransferableNodes(array $options = [])
+ * @method InitializeOperationRole initializeOperationRole(array $options = [])
+ * @method InstallAckOperator installAckOperator(array $options = [])
  * @method InstallKibanaSystemPlugin installKibanaSystemPlugin(array $options = [])
  * @method InstallLogstashSystemPlugin installLogstashSystemPlugin(array $options = [])
  * @method InstallSystemPlugin installSystemPlugin(array $options = [])
  * @method InstallUserPlugins installUserPlugins(array $options = [])
  * @method InterruptElasticsearchTask interruptElasticsearchTask(array $options = [])
  * @method InterruptLogstashTask interruptLogstashTask(array $options = [])
+ * @method ListAckClusters listAckClusters(array $options = [])
+ * @method ListAckNamespaces listAckNamespaces(array $options = [])
  * @method ListAllNode listAllNode(array $options = [])
  * @method ListAlternativeSnapshotRepos listAlternativeSnapshotRepos(array $options = [])
  * @method ListAvailableEsInstanceIds listAvailableEsInstanceIds(array $options = [])
  * @method ListCollectors listCollectors(array $options = [])
  * @method ListConnectedClusters listConnectedClusters(array $options = [])
  * @method ListDataTasks listDataTasks(array $options = [])
+ * @method ListDefaultCollectorConfigurations listDefaultCollectorConfigurations(array $options = [])
+ * @method ListDiagnoseIndices listDiagnoseIndices(array $options = [])
  * @method ListDiagnoseReport listDiagnoseReport(array $options = [])
  * @method ListDiagnoseReportIds listDiagnoseReportIds(array $options = [])
  * @method ListDictInformation listDictInformation(array $options = [])
@@ -88,9 +98,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method MoveResourceGroup moveResourceGroup(array $options = [])
  * @method OpenDiagnosis openDiagnosis(array $options = [])
  * @method OpenHttps openHttps(array $options = [])
+ * @method RecommendTemplates recommendTemplates(array $options = [])
  * @method ReinstallCollector reinstallCollector(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewLogstash renewLogstash(array $options = [])
+ * @method RestartCollector restartCollector(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method RestartLogstash restartLogstash(array $options = [])
  * @method ResumeElasticsearchTask resumeElasticsearchTask(array $options = [])
@@ -143,6 +155,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpgradeEngineVersion upgradeEngineVersion(array $options = [])
  * @method ValidateConnection validateConnection(array $options = [])
  * @method ValidateShrinkNodes validateShrinkNodes(array $options = [])
+ * @method ValidateSlrPermission validateSlrPermission(array $options = [])
  * @method ValidateTransferableNodes validateTransferableNodes(array $options = [])
  */
 class ElasticsearchApiResolver extends ApiResolver
@@ -220,6 +233,54 @@ class AddSnapshotRepo extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/snapshot-repos';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class CancelDeletion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/cancel-deletion';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ */
+class CancelLogstashDeletion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/logstashes/[InstanceId]/actions/cancel-deletion';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -307,6 +368,28 @@ class CloseHttps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/close-https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ */
+class CreateCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors';
 
     /**
      * @param string $value
@@ -611,6 +694,7 @@ class DeleteDataTask extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getDeleteType()
  */
 class DeleteInstance extends Roa
 {
@@ -632,12 +716,26 @@ class DeleteInstance extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeleteType($value)
+    {
+        $this->data['DeleteType'] = $value;
+        $this->options['query']['deleteType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getDeleteType()
  */
 class DeleteLogstash extends Roa
 {
@@ -656,6 +754,19 @@ class DeleteLogstash extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeleteType($value)
+    {
+        $this->data['DeleteType'] = $value;
+        $this->options['query']['deleteType'] = $value;
 
         return $this;
     }
@@ -768,6 +879,19 @@ class DeleteSnapshotRepo extends Roa
 
         return $this;
     }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeAckOperator extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/ack-clusters/[ClusterId]/operator';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1245,6 +1369,52 @@ class GetTransferableNodes extends Roa
 }
 
 /**
+ * @method string getClientToken()
+ */
+class InitializeOperationRole extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/user/slr';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class InstallAckOperator extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/ack-clusters/[ClusterId]/operator';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -1375,6 +1545,100 @@ class InterruptLogstashTask extends Roa
 }
 
 /**
+ * @method string getSize()
+ * @method string getVpcId()
+ * @method string getPage()
+ */
+class ListAckClusters extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/ack-clusters';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcId($value)
+    {
+        $this->data['VpcId'] = $value;
+        $this->options['query']['vpcId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSize()
+ * @method string getPage()
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class ListAckNamespaces extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/ack-clusters/[ClusterId]/namespaces';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -1431,6 +1695,7 @@ class ListAvailableEsInstanceIds extends Roa
  * @method string getInstanceId()
  * @method string getSize()
  * @method string getName()
+ * @method string getSourceType()
  * @method string getPage()
  * @method string getResId()
  */
@@ -1486,6 +1751,19 @@ class ListCollectors extends Roa
      *
      * @return $this
      */
+    public function withSourceType($value)
+    {
+        $this->data['SourceType'] = $value;
+        $this->options['query']['sourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPage($value)
     {
         $this->data['Page'] = $value;
@@ -1532,6 +1810,86 @@ class ListDataTasks extends Roa
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getResType()
+ * @method string getResVersion()
+ * @method string getSourceType()
+ */
+class ListDefaultCollectorConfigurations extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/beats/default-configurations';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResType($value)
+    {
+        $this->data['ResType'] = $value;
+        $this->options['query']['resType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResVersion($value)
+    {
+        $this->data['ResVersion'] = $value;
+        $this->options['query']['resVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceType($value)
+    {
+        $this->data['SourceType'] = $value;
+        $this->options['query']['sourceType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getLang()
+ */
+class ListDiagnoseIndices extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/indices';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2092,7 +2450,7 @@ class ListInstance extends Roa
 class ListInstanceIndices extends Roa
 {
     /** @var string */
-    public $pathPattern = '/openapi/diagnosis/instances/[InstanceId]/indices';
+    public $pathPattern = '/openapi/instances/[InstanceId]/indices';
 
     /** @var string */
     public $method = 'GET';
@@ -3109,6 +3467,33 @@ class OpenHttps extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUsageScenario()
+ */
+class RecommendTemplates extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/recommended-templates';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUsageScenario($value)
+    {
+        $this->data['UsageScenario'] = $value;
+        $this->options['query']['usageScenario'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method string getResId()
  * @method $this withResId($value)
@@ -3175,6 +3560,30 @@ class RenewLogstash extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getResId()
+ * @method $this withResId($value)
+ */
+class RestartCollector extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/collectors/[ResId]/actions/restart';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
 
         return $this;
     }
@@ -4064,6 +4473,7 @@ class UpdateHotIkDicts extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getOrderActionType()
  */
 class UpdateInstance extends Roa
 {
@@ -4095,6 +4505,19 @@ class UpdateInstance extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrderActionType($value)
+    {
+        $this->data['OrderActionType'] = $value;
+        $this->options['query']['orderActionType'] = $value;
 
         return $this;
     }
@@ -4690,6 +5113,45 @@ class ValidateShrinkNodes extends Roa
     {
         $this->data['NodeType'] = $value;
         $this->options['query']['nodeType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getRolename()
+ */
+class ValidateSlrPermission extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/user/servicerolepermission';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRolename($value)
+    {
+        $this->data['Rolename'] = $value;
+        $this->options['query']['rolename'] = $value;
 
         return $this;
     }
