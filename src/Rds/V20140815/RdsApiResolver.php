@@ -86,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDTCSecurityIpHostsForSQLServer describeDTCSecurityIpHostsForSQLServer(array $options = [])
  * @method DescribeErrorLogs describeErrorLogs(array $options = [])
  * @method DescribeEvents describeEvents(array $options = [])
+ * @method DescribeHADiagnoseConfig describeHADiagnoseConfig(array $options = [])
  * @method DescribeHASwitchConfig describeHASwitchConfig(array $options = [])
  * @method DescribeInstanceAutoRenewalAttribute describeInstanceAutoRenewalAttribute(array $options = [])
  * @method DescribeInstanceCrossBackupPolicy describeInstanceCrossBackupPolicy(array $options = [])
@@ -117,11 +118,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSQLLogRecords describeSQLLogRecords(array $options = [])
  * @method DescribeSQLLogReportList describeSQLLogReportList(array $options = [])
  * @method DescribeSQLLogReports describeSQLLogReports(array $options = [])
- * @method DescribeSQLReports describeSQLReports(array $options = [])
  * @method DescribeTags describeTags(array $options = [])
  * @method DescribeTasks describeTasks(array $options = [])
- * @method DescribeUpgradeMajorVersionPrecheckTask describeUpgradeMajorVersionPrecheckTask(array $options = [])
- * @method DescribeUpgradeMajorVersionTasks describeUpgradeMajorVersionTasks(array $options = [])
  * @method DestroyDBInstance destroyDBInstance(array $options = [])
  * @method GetDbProxyInstanceSsl getDbProxyInstanceSsl(array $options = [])
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
@@ -159,6 +157,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBProxyInstance modifyDBProxyInstance(array $options = [])
  * @method ModifyDbProxyInstanceSsl modifyDbProxyInstanceSsl(array $options = [])
  * @method ModifyDTCSecurityIpHostsForSQLServer modifyDTCSecurityIpHostsForSQLServer(array $options = [])
+ * @method ModifyHADiagnoseConfig modifyHADiagnoseConfig(array $options = [])
  * @method ModifyHASwitchConfig modifyHASwitchConfig(array $options = [])
  * @method ModifyInstanceAutoRenewalAttribute modifyInstanceAutoRenewalAttribute(array $options = [])
  * @method ModifyInstanceCrossBackupPolicy modifyInstanceCrossBackupPolicy(array $options = [])
@@ -198,8 +197,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UntagResources untagResources(array $options = [])
  * @method UpgradeDBInstanceEngineVersion upgradeDBInstanceEngineVersion(array $options = [])
  * @method UpgradeDBInstanceKernelVersion upgradeDBInstanceKernelVersion(array $options = [])
- * @method UpgradeDBInstanceMajorVersion upgradeDBInstanceMajorVersion(array $options = [])
- * @method UpgradeDBInstanceMajorVersionPrecheck upgradeDBInstanceMajorVersionPrecheck(array $options = [])
  * @method UpgradeDBProxyInstanceKernelVersion upgradeDBProxyInstanceKernelVersion(array $options = [])
  */
 class RdsApiResolver extends ApiResolver
@@ -2697,6 +2694,20 @@ class DescribeEvents extends Rpc
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  */
+class DescribeHADiagnoseConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
 class DescribeHASwitchConfig extends Rpc
 {
 }
@@ -3358,30 +3369,6 @@ class DescribeSQLLogReports extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSQLReports extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getDBInstanceId()
@@ -3438,54 +3425,6 @@ class DescribeTags extends Rpc
  * @method $this withStatus($value)
  */
 class DescribeTasks extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTargetMajorVersion()
- * @method $this withTargetMajorVersion($value)
- */
-class DescribeUpgradeMajorVersionPrecheckTask extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTargetMajorVersion()
- * @method $this withTargetMajorVersion($value)
- */
-class DescribeUpgradeMajorVersionTasks extends Rpc
 {
 }
 
@@ -3829,6 +3768,8 @@ class ModifyActionEventPolicy extends Rpc
  * @method $this withPreferredBackupTime($value)
  * @method string getBackupRetentionPeriod()
  * @method $this withBackupRetentionPeriod($value)
+ * @method string getBackupMethod()
+ * @method $this withBackupMethod($value)
  * @method string getDuplicationLocation()
  * @method $this withDuplicationLocation($value)
  * @method string getArchiveBackupRetentionPeriod()
@@ -4357,6 +4298,22 @@ class ModifyDbProxyInstanceSsl extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifyDTCSecurityIpHostsForSQLServer extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getTcpConnectionType()
+ * @method $this withTcpConnectionType($value)
+ */
+class ModifyHADiagnoseConfig extends Rpc
 {
 }
 
@@ -5454,76 +5411,6 @@ class UpgradeDBInstanceEngineVersion extends Rpc
  * @method $this withUpgradeTime($value)
  */
 class UpgradeDBInstanceKernelVersion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceStorage()
- * @method $this withDBInstanceStorage($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getSwitchTimeMode()
- * @method $this withSwitchTimeMode($value)
- * @method string getSwitchOver()
- * @method $this withSwitchOver($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getCollectStatMode()
- * @method $this withCollectStatMode($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- * @method string getSwitchTime()
- * @method $this withSwitchTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getDBInstanceStorageType()
- * @method $this withDBInstanceStorageType($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUsedTime()
- * @method $this withUsedTime($value)
- * @method string getDBInstanceClass()
- * @method $this withDBInstanceClass($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getPrivateIpAddress()
- * @method $this withPrivateIpAddress($value)
- * @method string getVPCId()
- * @method $this withVPCId($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getInstanceNetworkType()
- * @method $this withInstanceNetworkType($value)
- * @method string getTargetMajorVersion()
- * @method $this withTargetMajorVersion($value)
- */
-class UpgradeDBInstanceMajorVersion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getTargetMajorVersion()
- * @method $this withTargetMajorVersion($value)
- */
-class UpgradeDBInstanceMajorVersionPrecheck extends Rpc
 {
 }
 
