@@ -478,6 +478,8 @@ class ListRealtimeAgentStates extends Rpc
 }
 
 /**
+ * @method string getCriteria()
+ * @method $this withCriteria($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()

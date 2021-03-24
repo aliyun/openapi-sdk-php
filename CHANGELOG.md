@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.913 - 2021-3-24
+- Export new API.
+
+
 ## 1.8.912 - 2021-3-23
 - Update Open API.
 
