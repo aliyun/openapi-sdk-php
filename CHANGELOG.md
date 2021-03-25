@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.914 - 2021-3-25
+- Change indicator date type of ListHistoriticalAgentReport.
+
+
 ## 1.8.913 - 2021-3-24
 - Export new API.
 
