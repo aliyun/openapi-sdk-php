@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.915 - 2021-3-25
+- Release autoscaling apis for timer features.
+
+
 ## 1.8.914 - 2021-3-25
 - Change indicator date type of ListHistoriticalAgentReport.
 

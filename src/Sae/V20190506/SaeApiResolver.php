@@ -12,10 +12,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BindSlb bindSlb(array $options = [])
  * @method ConfirmPipelineBatch confirmPipelineBatch(array $options = [])
  * @method CreateApplication createApplication(array $options = [])
+ * @method CreateApplicationScalingRule createApplicationScalingRule(array $options = [])
  * @method CreateConfigMap createConfigMap(array $options = [])
  * @method CreateIngress createIngress(array $options = [])
  * @method CreateNamespace createNamespace(array $options = [])
  * @method DeleteApplication deleteApplication(array $options = [])
+ * @method DeleteApplicationScalingRule deleteApplicationScalingRule(array $options = [])
  * @method DeleteConfigMap deleteConfigMap(array $options = [])
  * @method DeleteIngress deleteIngress(array $options = [])
  * @method DeleteNamespace deleteNamespace(array $options = [])
@@ -24,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeApplicationGroups describeApplicationGroups(array $options = [])
  * @method DescribeApplicationImage describeApplicationImage(array $options = [])
  * @method DescribeApplicationInstances describeApplicationInstances(array $options = [])
+ * @method DescribeApplicationScalingRules describeApplicationScalingRules(array $options = [])
  * @method DescribeApplicationSlbs describeApplicationSlbs(array $options = [])
  * @method DescribeApplicationStatus describeApplicationStatus(array $options = [])
  * @method DescribeChangeOrder describeChangeOrder(array $options = [])
@@ -37,7 +40,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeNamespaceList describeNamespaceList(array $options = [])
  * @method DescribeNamespaceResources describeNamespaceResources(array $options = [])
  * @method DescribeNamespaces describeNamespaces(array $options = [])
+ * @method DescribePipeline describePipeline(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DisableApplicationScalingRule disableApplicationScalingRule(array $options = [])
+ * @method EnableApplicationScalingRule enableApplicationScalingRule(array $options = [])
  * @method ListAppEvents listAppEvents(array $options = [])
  * @method ListApplications listApplications(array $options = [])
  * @method ListAppVersions listAppVersions(array $options = [])
@@ -49,16 +55,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListNamespacedConfigMaps listNamespacedConfigMaps(array $options = [])
  * @method ListPublishedServices listPublishedServices(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method OpenSaeService openSaeService(array $options = [])
  * @method QueryResourceStatics queryResourceStatics(array $options = [])
  * @method RescaleApplication rescaleApplication(array $options = [])
  * @method RescaleApplicationVertically rescaleApplicationVertically(array $options = [])
  * @method RestartApplication restartApplication(array $options = [])
+ * @method RestartInstances restartInstances(array $options = [])
  * @method RollbackApplication rollbackApplication(array $options = [])
  * @method StartApplication startApplication(array $options = [])
  * @method StopApplication stopApplication(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UnbindSlb unbindSlb(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method UpdateApplicationScalingRule updateApplicationScalingRule(array $options = [])
  * @method UpdateAppSecurityGroup updateAppSecurityGroup(array $options = [])
  * @method UpdateConfigMap updateConfigMap(array $options = [])
  * @method UpdateIngress updateIngress(array $options = [])
@@ -333,6 +342,7 @@ class ConfirmPipelineBatch extends Roa
  * @method string getMemory()
  * @method string getSlsConfigs()
  * @method string getCommandArgs()
+ * @method string getAcrAssumeRoleArn()
  * @method string getReadiness()
  * @method string getTimezone()
  * @method string getMountHost()
@@ -450,6 +460,19 @@ class CreateApplication extends Roa
     {
         $this->data['CommandArgs'] = $value;
         $this->options['query']['CommandArgs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcrAssumeRoleArn($value)
+    {
+        $this->data['AcrAssumeRoleArn'] = $value;
+        $this->options['query']['AcrAssumeRoleArn'] = $value;
 
         return $this;
     }
@@ -898,6 +921,101 @@ class CreateApplication extends Roa
 }
 
 /**
+ * @method string getScalingRuleName()
+ * @method string getMinReadyInstances()
+ * @method string getScalingRuleTimer()
+ * @method string getScalingRuleMetric()
+ * @method string getAppId()
+ * @method string getScalingRuleType()
+ */
+class CreateApplicationScalingRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/scale/applicationScalingRule';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleName($value)
+    {
+        $this->data['ScalingRuleName'] = $value;
+        $this->options['query']['ScalingRuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstances($value)
+    {
+        $this->data['MinReadyInstances'] = $value;
+        $this->options['query']['MinReadyInstances'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleTimer($value)
+    {
+        $this->data['ScalingRuleTimer'] = $value;
+        $this->options['query']['ScalingRuleTimer'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleMetric($value)
+    {
+        $this->data['ScalingRuleMetric'] = $value;
+        $this->options['query']['ScalingRuleMetric'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleType($value)
+    {
+        $this->data['ScalingRuleType'] = $value;
+        $this->options['query']['ScalingRuleType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getData()
  * @method string getNamespaceId()
  * @method string getName()
@@ -1152,6 +1270,45 @@ class DeleteApplication extends Roa
 }
 
 /**
+ * @method string getScalingRuleName()
+ * @method string getAppId()
+ */
+class DeleteApplicationScalingRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/scale/applicationScalingRule';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleName($value)
+    {
+        $this->data['ScalingRuleName'] = $value;
+        $this->options['query']['ScalingRuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getConfigMapId()
  */
 class DeleteConfigMap extends Roa
@@ -1228,16 +1385,15 @@ class DeleteNamespace extends Roa
 
 /**
  * @method string getNasId()
- * @method $this withNasId($value)
  * @method string getWebContainer()
  * @method string getJarStartArgs()
  * @method string getEnableAhas()
  * @method string getSlsConfigs()
  * @method string getCommandArgs()
+ * @method string getAcrAssumeRoleArn()
  * @method string getReadiness()
  * @method string getTimezone()
  * @method string getMountHost()
- * @method $this withMountHost($value)
  * @method string getBatchWaitTime()
  * @method string getLiveness()
  * @method string getEnvs()
@@ -1256,7 +1412,6 @@ class DeleteNamespace extends Roa
  * @method string getCommand()
  * @method string getUpdateStrategy()
  * @method string getMountDesc()
- * @method $this withMountDesc($value)
  * @method string getJdk()
  * @method string getMinReadyInstances()
  * @method string getChangeOrderDesc()
@@ -1273,6 +1428,19 @@ class DeployApplication extends Roa
 
     /** @var string */
     public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNasId($value)
+    {
+        $this->data['NasId'] = $value;
+        $this->options['query']['NasId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1344,6 +1512,19 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
+    public function withAcrAssumeRoleArn($value)
+    {
+        $this->data['AcrAssumeRoleArn'] = $value;
+        $this->options['query']['AcrAssumeRoleArn'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withReadiness($value)
     {
         $this->data['Readiness'] = $value;
@@ -1361,6 +1542,19 @@ class DeployApplication extends Roa
     {
         $this->data['Timezone'] = $value;
         $this->options['query']['Timezone'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMountHost($value)
+    {
+        $this->data['MountHost'] = $value;
+        $this->options['query']['MountHost'] = $value;
 
         return $this;
     }
@@ -1582,6 +1776,19 @@ class DeployApplication extends Roa
     {
         $this->data['UpdateStrategy'] = $value;
         $this->options['query']['UpdateStrategy'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMountDesc($value)
+    {
+        $this->data['MountDesc'] = $value;
+        $this->options['query']['MountDesc'] = $value;
 
         return $this;
     }
@@ -1872,6 +2079,28 @@ class DescribeApplicationInstances extends Roa
     {
         $this->data['CurrentPage'] = $value;
         $this->options['query']['CurrentPage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ */
+class DescribeApplicationScalingRules extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/scale/applicationScalingRules';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
 
         return $this;
     }
@@ -2173,10 +2402,110 @@ class DescribeNamespaces extends Roa
     }
 }
 
+/**
+ * @method string getPipelineId()
+ */
+class DescribePipeline extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/changeorder/DescribePipeline';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPipelineId($value)
+    {
+        $this->data['PipelineId'] = $value;
+        $this->options['query']['PipelineId'] = $value;
+
+        return $this;
+    }
+}
+
 class DescribeRegions extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v1/paas/regionConfig';
+}
+
+/**
+ * @method string getScalingRuleName()
+ * @method string getAppId()
+ */
+class DisableApplicationScalingRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/scale/disableApplicationScalingRule';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleName($value)
+    {
+        $this->data['ScalingRuleName'] = $value;
+        $this->options['query']['ScalingRuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScalingRuleName()
+ * @method string getAppId()
+ */
+class EnableApplicationScalingRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/scale/enableApplicationScalingRule';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleName($value)
+    {
+        $this->data['ScalingRuleName'] = $value;
+        $this->options['query']['ScalingRuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2799,6 +3128,15 @@ class ListTagResources extends Roa
     }
 }
 
+class OpenSaeService extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/service/open';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
 /**
  * @method string getAppId()
  */
@@ -2948,6 +3286,45 @@ class RestartApplication extends Roa
     {
         $this->data['MinReadyInstances'] = $value;
         $this->options['query']['MinReadyInstances'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceIds()
+ * @method string getAppId()
+ */
+class RestartInstances extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/app/restartInstances';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceIds($value)
+    {
+        $this->data['InstanceIds'] = $value;
+        $this->options['query']['InstanceIds'] = $value;
 
         return $this;
     }
@@ -3279,6 +3656,87 @@ class UntagResources extends Roa
     {
         $this->data['ResourceIds'] = $value;
         $this->options['query']['ResourceIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScalingRuleName()
+ * @method string getMinReadyInstances()
+ * @method string getScalingRuleTimer()
+ * @method string getScalingRuleMetric()
+ * @method string getAppId()
+ */
+class UpdateApplicationScalingRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/scale/applicationScalingRule';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleName($value)
+    {
+        $this->data['ScalingRuleName'] = $value;
+        $this->options['query']['ScalingRuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstances($value)
+    {
+        $this->data['MinReadyInstances'] = $value;
+        $this->options['query']['MinReadyInstances'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleTimer($value)
+    {
+        $this->data['ScalingRuleTimer'] = $value;
+        $this->options['query']['ScalingRuleTimer'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleMetric($value)
+    {
+        $this->data['ScalingRuleMetric'] = $value;
+        $this->options['query']['ScalingRuleMetric'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
 
         return $this;
     }
