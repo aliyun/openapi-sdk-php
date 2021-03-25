@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.916 - 2021-3-25
+- Add DescribeInstanceBill.
+- Update QuerySettleBill to support RecordID filter.
+
+
 ## 1.8.915 - 2021-3-25
 - Release autoscaling apis for timer features.
 
