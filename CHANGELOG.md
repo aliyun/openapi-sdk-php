@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.919 - 2021-3-26
+- Update api.
+
+
 ## 1.8.918 - 2021-3-26
 - Add RenewAdditionalBandwidth API.
 

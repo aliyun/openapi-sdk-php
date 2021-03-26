@@ -9,7 +9,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddRuleCategory addRuleCategory(array $options = [])
  * @method AddThesaurusForApi addThesaurusForApi(array $options = [])
  * @method AssignReviewer assignReviewer(array $options = [])
- * @method CloseService closeService(array $options = [])
  * @method CreateAsrVocab createAsrVocab(array $options = [])
  * @method CreateSkillGroupConfig createSkillGroupConfig(array $options = [])
  * @method CreateTaskAssignRule createTaskAssignRule(array $options = [])
@@ -32,11 +31,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAsrVocab getAsrVocab(array $options = [])
  * @method GetBusinessCategoryList getBusinessCategoryList(array $options = [])
  * @method GetCustomizationConfigList getCustomizationConfigList(array $options = [])
- * @method GetDataSetList getDataSetList(array $options = [])
  * @method GetHitResult getHitResult(array $options = [])
  * @method GetNextResultToVerify getNextResultToVerify(array $options = [])
  * @method GetPrecisionTask getPrecisionTask(array $options = [])
- * @method GetRecognizeResult getRecognizeResult(array $options = [])
  * @method GetResult getResult(array $options = [])
  * @method GetResultCallback getResultCallback(array $options = [])
  * @method GetResultToReview getResultToReview(array $options = [])
@@ -60,20 +57,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTaskAssignRules listTaskAssignRules(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method ListWarningConfig listWarningConfig(array $options = [])
- * @method OpenService openService(array $options = [])
- * @method RegisterNotice registerNotice(array $options = [])
  * @method RestartAsrTask restartAsrTask(array $options = [])
- * @method RetrySubmitAsr retrySubmitAsr(array $options = [])
  * @method SaveConfigDataSet saveConfigDataSet(array $options = [])
  * @method SubmitComplaint submitComplaint(array $options = [])
- * @method SubmitModelTestTask submitModelTestTask(array $options = [])
  * @method SubmitPrecisionTask submitPrecisionTask(array $options = [])
  * @method SubmitQualityCheckTask submitQualityCheckTask(array $options = [])
  * @method SubmitReviewInfo submitReviewInfo(array $options = [])
  * @method SyncQualityCheck syncQualityCheck(array $options = [])
  * @method UpdateAsrVocab updateAsrVocab(array $options = [])
  * @method UpdateRule updateRule(array $options = [])
- * @method UpdateRuleForAnt updateRuleForAnt(array $options = [])
  * @method UpdateScoreForApi updateScoreForApi(array $options = [])
  * @method UpdateSkillGroupConfig updateSkillGroupConfig(array $options = [])
  * @method UpdateSubScoreForApi updateSubScoreForApi(array $options = [])
@@ -86,7 +78,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UploadData uploadData(array $options = [])
  * @method UploadDataSync uploadDataSync(array $options = [])
  * @method UploadRule uploadRule(array $options = [])
- * @method ValidateRoleSet validateRoleSet(array $options = [])
  * @method VerifyFile verifyFile(array $options = [])
  * @method VerifySentence verifySentence(array $options = [])
  */
@@ -146,16 +137,6 @@ class AddThesaurusForApi extends Rpc
  * @method $this withJsonStr($value)
  */
 class AssignReviewer extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class CloseService extends Rpc
 {
 }
 
@@ -385,16 +366,6 @@ class GetCustomizationConfigList extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class GetDataSetList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
 class GetHitResult extends Rpc
 {
 }
@@ -416,16 +387,6 @@ class GetNextResultToVerify extends Rpc
  * @method $this withJsonStr($value)
  */
 class GetPrecisionTask extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class GetRecognizeResult extends Rpc
 {
 }
 
@@ -663,37 +624,7 @@ class ListWarningConfig extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
-class OpenService extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class RegisterNotice extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
 class RestartAsrTask extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class RetrySubmitAsr extends Rpc
 {
 }
 
@@ -714,16 +645,6 @@ class SaveConfigDataSet extends Rpc
  * @method $this withJsonStr($value)
  */
 class SubmitComplaint extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class SubmitModelTestTask extends Rpc
 {
 }
 
@@ -784,16 +705,6 @@ class UpdateAsrVocab extends Rpc
  * @method $this withJsonStr($value)
  */
 class UpdateRule extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class UpdateRuleForAnt extends Rpc
 {
 }
 
@@ -914,16 +825,6 @@ class UploadDataSync extends Rpc
  * @method $this withJsonStr($value)
  */
 class UploadRule extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJsonStr()
- * @method $this withJsonStr($value)
- */
-class ValidateRoleSet extends Rpc
 {
 }
 
