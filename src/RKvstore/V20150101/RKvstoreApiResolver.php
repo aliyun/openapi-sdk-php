@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCacheAnalysisTask createCacheAnalysisTask(array $options = [])
  * @method CreateGlobalDistributeCache createGlobalDistributeCache(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
+ * @method CreateTairInstance createTairInstance(array $options = [])
  * @method CreateUserClusterHost createUserClusterHost(array $options = [])
  * @method DeleteAccount deleteAccount(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
@@ -54,6 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserClusterHost describeUserClusterHost(array $options = [])
  * @method DescribeUserClusterHostInstance describeUserClusterHostInstance(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
+ * @method EnableAdditionalBandwidth enableAdditionalBandwidth(array $options = [])
  * @method FlushExpireKeys flushExpireKeys(array $options = [])
  * @method FlushInstance flushInstance(array $options = [])
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
@@ -63,6 +65,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyAccountPassword modifyAccountPassword(array $options = [])
  * @method ModifyActiveOperationTask modifyActiveOperationTask(array $options = [])
+ * @method ModifyAuditLogConfig modifyAuditLogConfig(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
  * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
  * @method ModifyInstanceAttribute modifyInstanceAttribute(array $options = [])
@@ -83,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyUserClusterHost modifyUserClusterHost(array $options = [])
  * @method ReleaseDirectConnection releaseDirectConnection(array $options = [])
  * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
+ * @method RenewAdditionalBandwidth renewAdditionalBandwidth(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method ReplaceUserClusterHost replaceUserClusterHost(array $options = [])
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
@@ -123,6 +127,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withCouponNo($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getSourceBiz()
+ * @method $this withSourceBiz($value)
  * @method string getShardCount()
  * @method $this withShardCount($value)
  * @method string getBusinessInfo()
@@ -283,6 +289,8 @@ class CreateGlobalDistributeCache extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecondaryZoneId()
+ * @method $this withSecondaryZoneId($value)
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
  * @method string getNetworkType()
@@ -351,6 +359,72 @@ class CreateGlobalDistributeCache extends Rpc
  * @method $this withConfig($value)
  */
 class CreateInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getShardCount()
+ * @method $this withShardCount($value)
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getShardType()
+ * @method $this withShardType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getAutoUseCoupon()
+ * @method $this withAutoUseCoupon($value)
+ * @method string getStorage()
+ * @method $this withStorage($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getSrcDBInstanceId()
+ * @method $this withSrcDBInstanceId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ */
+class CreateTairInstance extends Rpc
 {
 }
 
@@ -567,6 +641,8 @@ class DescribeAuditRecords extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
@@ -988,6 +1064,8 @@ class DescribeInstanceConfig extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getGlobalInstance()
  * @method $this withGlobalInstance($value)
+ * @method string getPrivateIp()
+ * @method $this withPrivateIp($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getVSwitchId()
@@ -1126,6 +1204,8 @@ class DescribeParameters extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getEngine()
@@ -1208,6 +1288,8 @@ class DescribeRegions extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRole()
+ * @method $this withRole($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSecurityToken()
@@ -1440,6 +1522,8 @@ class DescribeUserClusterHostInstance extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getAll()
+ * @method $this withAll($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1450,6 +1534,40 @@ class DescribeUserClusterHostInstance extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class DescribeZones extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSourceBiz()
+ * @method $this withSourceBiz($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getOrderTimeLength()
+ * @method $this withOrderTimeLength($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class EnableAdditionalBandwidth extends Rpc
 {
 }
 
@@ -1673,6 +1791,36 @@ class ModifyAccountPassword extends Rpc
  * @method $this withIds($value)
  */
 class ModifyActiveOperationTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAuditCommand()
+ * @method $this withAuditCommand($value)
+ * @method string getAuditLogSwitchSource()
+ * @method $this withAuditLogSwitchSource($value)
+ * @method string getProxyAudit()
+ * @method $this withProxyAudit($value)
+ * @method string getRetention()
+ * @method $this withRetention($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDbAudit()
+ * @method $this withDbAudit($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getServiceType()
+ * @method $this withServiceType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyAuditLogConfig extends Rpc
 {
 }
 
@@ -1973,8 +2121,12 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getBandWidth()
+ * @method $this withBandWidth($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
@@ -2149,6 +2301,36 @@ class ReleaseDirectConnection extends Rpc
  * @method $this withInstanceId($value)
  */
 class ReleaseInstancePublicConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSourceBiz()
+ * @method $this withSourceBiz($value)
+ * @method string getOrderTimeLength()
+ * @method $this withOrderTimeLength($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class RenewAdditionalBandwidth extends Rpc
 {
 }
 

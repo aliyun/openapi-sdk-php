@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.918 - 2021-3-26
+- Add RenewAdditionalBandwidth API.
+
+
 ## 1.8.917 - 2021-3-26
 - Upgrade mongodb sdk.
 
