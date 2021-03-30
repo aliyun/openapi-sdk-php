@@ -29,11 +29,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeFilteringAlgorithm describeFilteringAlgorithm(array $options = [])
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeLatestTask describeLatestTask(array $options = [])
+ * @method DescribeQuota describeQuota(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRule describeRule(array $options = [])
  * @method DescribeScene describeScene(array $options = [])
  * @method DescribeSceneBucket describeSceneBucket(array $options = [])
  * @method DescribeSceneThroughput describeSceneThroughput(array $options = [])
+ * @method DescribeSyncReportDetail describeSyncReportDetail(array $options = [])
+ * @method DescribeSyncReportOutliers describeSyncReportOutliers(array $options = [])
  * @method DescribeUserMetrics describeUserMetrics(array $options = [])
  * @method DowngradeInstance downgradeInstance(array $options = [])
  * @method EnableExperiment enableExperiment(array $options = [])
@@ -49,6 +52,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstance listInstance(array $options = [])
  * @method ListInstanceTask listInstanceTask(array $options = [])
  * @method ListItems listItems(array $options = [])
+ * @method ListLogs listLogs(array $options = [])
+ * @method ListMixCategories listMixCategories(array $options = [])
  * @method ListRankingModels listRankingModels(array $options = [])
  * @method ListRuleConditions listRuleConditions(array $options = [])
  * @method ListRules listRules(array $options = [])
@@ -56,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSceneItems listSceneItems(array $options = [])
  * @method ListSceneParameters listSceneParameters(array $options = [])
  * @method ListScenes listScenes(array $options = [])
+ * @method ListUmengAppkeys listUmengAppkeys(array $options = [])
  * @method ListUserClusters listUserClusters(array $options = [])
  * @method ModifyDataSource modifyDataSource(array $options = [])
  * @method ModifyFilteringAlgorithmMeta modifyFilteringAlgorithmMeta(array $options = [])
@@ -70,7 +76,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PushIntervention pushIntervention(array $options = [])
  * @method QueryDataMessage queryDataMessage(array $options = [])
  * @method QueryDataMessageStatistics queryDataMessageStatistics(array $options = [])
+ * @method QueryExceptionHistory queryExceptionHistory(array $options = [])
  * @method QueryRawData queryRawData(array $options = [])
+ * @method QuerySingleAggregationReport querySingleAggregationReport(array $options = [])
+ * @method QuerySingleReport querySingleReport(array $options = [])
+ * @method QuerySyncReportAggregation querySyncReportAggregation(array $options = [])
  * @method RebuildIndex rebuildIndex(array $options = [])
  * @method Recommend recommend(array $options = [])
  * @method RunInstance runInstance(array $options = [])
@@ -1014,6 +1024,28 @@ class DescribeLatestTask extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ */
+class DescribeQuota extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/quota';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAcceptLanguage()
  */
 class DescribeRegions extends Roa
@@ -1202,6 +1234,176 @@ class DescribeSceneThroughput extends Roa
     {
         $this->data['SceneId'] = $value;
         $this->pathParameters['sceneId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getLevelType()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getType()
+ */
+class DescribeSyncReportDetail extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/sync-reports/detail';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLevelType($value)
+    {
+        $this->data['LevelType'] = $value;
+        $this->options['query']['levelType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['type'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getLevelType()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getType()
+ * @method string getKey()
+ */
+class DescribeSyncReportOutliers extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/sync-reports/outliers';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLevelType($value)
+    {
+        $this->data['LevelType'] = $value;
+        $this->options['query']['levelType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['query']['key'] = $value;
 
         return $this;
     }
@@ -2039,6 +2241,104 @@ class ListItems extends Roa
 /**
  * @method string getInstanceId()
  * @method string getSize()
+ * @method string getQueryParams()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getPage()
+ */
+class ListLogs extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/logs';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueryParams($value)
+    {
+        $this->data['QueryParams'] = $value;
+        $this->options['query']['queryParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+}
+
+class ListMixCategories extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/configurations/mixCategories';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getSize()
  * @method string getRankingModelId()
  * @method string getPage()
  */
@@ -2496,6 +2796,12 @@ class ListScenes extends Roa
 
         return $this;
     }
+}
+
+class ListUmengAppkeys extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/umeng/appkeys';
 }
 
 /**
@@ -3344,6 +3650,70 @@ class QueryDataMessageStatistics extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getType()
+ */
+class QueryExceptionHistory extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/sync-reports/exception-history';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['type'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getItemId()
  * @method string getInstanceId()
  * @method string getItemType()
@@ -3430,6 +3800,114 @@ class QueryRawData extends Roa
     {
         $this->data['Table'] = $value;
         $this->pathParameters['table'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ */
+class QuerySingleAggregationReport extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/sync-reports/single-aggregation-report';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getReportType()
+ */
+class QuerySingleReport extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/sync-reports/single-report';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReportType($value)
+    {
+        $this->data['ReportType'] = $value;
+        $this->options['query']['reportType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ */
+class QuerySyncReportAggregation extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v2/openapi/instances/[instanceId]/sync-reports/aggregation';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
 
         return $this;
     }

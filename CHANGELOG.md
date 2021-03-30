@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.925 - 2021-3-30
+- Generated 2020-11-26 for `Airec`.
+
+
 ## 1.8.924 - 2021-3-30
 - Supported MultiMedia Post scan.
 
