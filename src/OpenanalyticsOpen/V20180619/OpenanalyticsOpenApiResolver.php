@@ -7,8 +7,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddAccount addAccount(array $options = [])
  * @method AddEndPoint addEndPoint(array $options = [])
+ * @method CancelQueryByExecuteId cancelQueryByExecuteId(array $options = [])
+ * @method CancelQueryById cancelQueryById(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method DeleteAccount deleteAccount(array $options = [])
+ * @method DescribeTags describeTags(array $options = [])
  * @method GetAllowIP getAllowIP(array $options = [])
  * @method GetEndPoint getEndPoint(array $options = [])
  * @method GetEndPointByDomain getEndPointByDomain(array $options = [])
@@ -17,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobStatus getJobStatus(array $options = [])
  * @method KillSparkJob killSparkJob(array $options = [])
  * @method ListSparkJob listSparkJob(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method QueryAccountList queryAccountList(array $options = [])
  * @method QueryEndPointList queryEndPointList(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
@@ -24,9 +28,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResetMainPassword resetMainPassword(array $options = [])
  * @method SetAllowIP setAllowIP(array $options = [])
  * @method SubmitSparkJob submitSparkJob(array $options = [])
+ * @method TagResources tagResources(array $options = [])
  * @method UnSubscribeRegion unSubscribeRegion(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method UpdateAccountPassword updateAccountPassword(array $options = [])
  * @method UpgradeInstance upgradeInstance(array $options = [])
+ * @method ValidateVirtualClusterName validateVirtualClusterName(array $options = [])
  */
 class OpenanalyticsOpenApiResolver extends ApiResolver
 {
@@ -228,6 +235,46 @@ class AddEndPoint extends Rpc
 }
 
 /**
+ * @method string getExecuteId()
+ */
+class CancelQueryByExecuteId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExecuteId($value)
+    {
+        $this->data['ExecuteId'] = $value;
+        $this->options['form_params']['ExecuteId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getQueryId()
+ */
+class CancelQueryById extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueryId($value)
+    {
+        $this->data['QueryId'] = $value;
+        $this->options['form_params']['QueryId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getChargeType()
  * @method string getInstanceType()
  * @method string getComponent()
@@ -321,6 +368,14 @@ class DeleteAccount extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class DescribeTags extends Rpc
+{
 }
 
 /**
@@ -536,6 +591,8 @@ class KillSparkJob extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getCondition()
+ * @method $this withCondition($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getVcName()
@@ -543,6 +600,55 @@ class KillSparkJob extends Rpc
  */
 class ListSparkJob extends Rpc
 {
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -809,8 +915,95 @@ class SubmitSparkJob extends Rpc
     }
 }
 
+/**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTag()
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+}
+
 class UnSubscribeRegion extends Rpc
 {
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -946,6 +1139,26 @@ class UpgradeInstance extends Rpc
     {
         $this->data['Component'] = $value;
         $this->options['form_params']['Component'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getVcName()
+ */
+class ValidateVirtualClusterName extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVcName($value)
+    {
+        $this->data['VcName'] = $value;
+        $this->options['form_params']['VcName'] = $value;
 
         return $this;
     }

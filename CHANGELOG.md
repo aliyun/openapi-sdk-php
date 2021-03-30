@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.922 - 2021-3-30
+- Supported Open Api.
+
+
 ## 1.8.921 - 2021-3-30
 - Monitor.
 
