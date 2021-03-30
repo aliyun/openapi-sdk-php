@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.920 - 2021-3-30
+- Support ListDDLPublishRecords API.
+- Fixed GetMetaTableColumn, GetMetaTableDetailInfo API response param DataLength lack of precision.
+
+
 ## 1.8.919 - 2021-3-26
 - Update api.
 
