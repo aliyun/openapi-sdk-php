@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CloseDeployOrder closeDeployOrder(array $options = [])
  * @method CreateAccount createAccount(array $options = [])
  * @method CreateApp createApp(array $options = [])
+ * @method CreateAppMonitors createAppMonitors(array $options = [])
  * @method CreateAppResourceAlloc createAppResourceAlloc(array $options = [])
  * @method CreateCluster createCluster(array $options = [])
  * @method CreateDb createDb(array $options = [])
@@ -83,6 +84,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SyncPodInfo syncPodInfo(array $options = [])
  * @method UnbindNodeLabel unbindNodeLabel(array $options = [])
  * @method UpdateApp updateApp(array $options = [])
+ * @method UpdateAppMonitors updateAppMonitors(array $options = [])
  * @method UpdateDeployConfig updateDeployConfig(array $options = [])
  * @method UpdateEnvironment updateEnvironment(array $options = [])
  */
@@ -403,6 +405,36 @@ class CreateApp extends Rpc
         $this->options['form_params']['Namespace'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method array getAppIds()
+ * @method string getMainUserId()
+ * @method $this withMainUserId($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getAlarmTemplateId()
+ * @method $this withAlarmTemplateId($value)
+ * @method string getSilenceTime()
+ * @method $this withSilenceTime($value)
+ */
+class CreateAppMonitors extends Rpc
+{
+
+    /**
+     * @param array $appIds
+     *
+     * @return $this
+     */
+	public function withAppIds(array $appIds)
+	{
+	    $this->data['AppIds'] = $appIds;
+		foreach ($appIds as $i => $iValue) {
+			$this->options['form_params']['AppIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 }
 
@@ -2333,6 +2365,70 @@ class UpdateApp extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getMainUserId()
+ * @method string getSilenceTime()
+ * @method array getMonitorIds()
+ * @method string getTemplateId()
+ */
+class UpdateAppMonitors extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMainUserId($value)
+    {
+        $this->data['MainUserId'] = $value;
+        $this->options['form_params']['MainUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSilenceTime($value)
+    {
+        $this->data['SilenceTime'] = $value;
+        $this->options['form_params']['SilenceTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $monitorIds
+     *
+     * @return $this
+     */
+	public function withMonitorIds(array $monitorIds)
+	{
+	    $this->data['MonitorIds'] = $monitorIds;
+		foreach ($monitorIds as $i => $iValue) {
+			$this->options['form_params']['MonitorIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateId($value)
+    {
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
+
+        return $this;
     }
 }
 
