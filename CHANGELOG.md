@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.924 - 2021-3-30
+- Supported MultiMedia Post scan.
+
+
 ## 1.8.923 - 2021-3-30
 - Supported Open Api.
 

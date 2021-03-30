@@ -27,8 +27,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAuditContentItem describeAuditContentItem(array $options = [])
  * @method DescribeAuditRange describeAuditRange(array $options = [])
  * @method DescribeAuditSetting describeAuditSetting(array $options = [])
+ * @method DescribeBizTypeImageLib describeBizTypeImageLib(array $options = [])
  * @method DescribeBizTypes describeBizTypes(array $options = [])
  * @method DescribeBizTypeSetting describeBizTypeSetting(array $options = [])
+ * @method DescribeBizTypeTextLib describeBizTypeTextLib(array $options = [])
  * @method DescribeCloudMonitorServices describeCloudMonitorServices(array $options = [])
  * @method DescribeCustomOcrTemplate describeCustomOcrTemplate(array $options = [])
  * @method DescribeImageFromLib describeImageFromLib(array $options = [])
@@ -79,6 +81,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAuditCallback updateAuditCallback(array $options = [])
  * @method UpdateAuditRange updateAuditRange(array $options = [])
  * @method UpdateAuditSetting updateAuditSetting(array $options = [])
+ * @method UpdateBizType updateBizType(array $options = [])
  * @method UpdateBizTypeImageLib updateBizTypeImageLib(array $options = [])
  * @method UpdateBizTypeSetting updateBizTypeSetting(array $options = [])
  * @method UpdateBizTypeTextLib updateBizTypeTextLib(array $options = [])
@@ -135,6 +138,8 @@ class CreatCustomOcrTemplate extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getBizTypeImport()
  * @method $this withBizTypeImport($value)
  * @method string getCiteTemplate()
@@ -465,6 +470,20 @@ class DescribeAuditSetting extends Rpc
 }
 
 /**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ */
+class DescribeBizTypeImageLib extends Rpc
+{
+}
+
+/**
  * @method string getImportFlag()
  * @method $this withImportFlag($value)
  * @method string getSourceIp()
@@ -483,6 +502,20 @@ class DescribeBizTypes extends Rpc
  * @method $this withBizTypeName($value)
  */
 class DescribeBizTypeSetting extends Rpc
+{
+}
+
+/**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getScene()
+ * @method $this withScene($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ */
+class DescribeBizTypeTextLib extends Rpc
 {
 }
 
@@ -1025,6 +1058,8 @@ class ImportKeywords extends Rpc
 }
 
 /**
+ * @method string getBizTypes()
+ * @method $this withBizTypes($value)
  * @method string getAuditIllegalReasons()
  * @method $this withAuditIllegalReasons($value)
  * @method string getSourceIp()
@@ -1039,6 +1074,8 @@ class MarkAuditContent extends Rpc
 }
 
 /**
+ * @method string getBizTypes()
+ * @method $this withBizTypes($value)
  * @method string getAuditIllegalReasons()
  * @method $this withAuditIllegalReasons($value)
  * @method string getSourceIp()
@@ -1197,6 +1234,8 @@ class UpdateAppPackage extends Rpc
 /**
  * @method string getSeed()
  * @method $this withSeed($value)
+ * @method string getCryptType()
+ * @method $this withCryptType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getCallback()
@@ -1231,6 +1270,18 @@ class UpdateAuditSetting extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBizTypeName()
+ * @method $this withBizTypeName($value)
+ */
+class UpdateBizType extends Rpc
+{
+}
+
+/**
  * @method string getScene()
  * @method $this withScene($value)
  * @method string getSourceIp()
@@ -1261,6 +1312,8 @@ class UpdateBizTypeImageLib extends Rpc
  * @method $this withTerrorism($value)
  * @method string getBizTypeName()
  * @method $this withBizTypeName($value)
+ * @method string getLive()
+ * @method $this withLive($value)
  * @method string getAd()
  * @method $this withAd($value)
  * @method string getResourceType()
@@ -1389,6 +1442,8 @@ class UpdateOssCallbackSetting extends Rpc
 /**
  * @method string getVideoSceneList()
  * @method $this withVideoSceneList($value)
+ * @method string getScanImageNoFileType()
+ * @method $this withScanImageNoFileType($value)
  * @method string getImageSceneList()
  * @method $this withImageSceneList($value)
  * @method string getAudioSceneList()

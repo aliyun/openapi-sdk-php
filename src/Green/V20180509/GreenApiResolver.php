@@ -40,6 +40,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method LiveStreamAsyncScan liveStreamAsyncScan(array $options = [])
  * @method LiveStreamAsyncScanResults liveStreamAsyncScanResults(array $options = [])
  * @method LiveStreamCancelScan liveStreamCancelScan(array $options = [])
+ * @method PostAsyncScan postAsyncScan(array $options = [])
+ * @method PostAsyncScanResults postAsyncScanResults(array $options = [])
  * @method SearchPerson searchPerson(array $options = [])
  * @method SetPerson setPerson(array $options = [])
  * @method TextAsyncManualScan textAsyncManualScan(array $options = [])
@@ -845,6 +847,50 @@ class LiveStreamCancelScan extends Roa
 {
     /** @var string */
     public $pathPattern = '/green/livestream/cancelscan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class PostAsyncScan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/post/asyncscan';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientInfo($value)
+    {
+        $this->data['ClientInfo'] = $value;
+        $this->options['query']['ClientInfo'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientInfo()
+ */
+class PostAsyncScanResults extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/green/post/results';
 
     /**
      * @param string $value
