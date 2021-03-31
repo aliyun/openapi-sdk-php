@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.926 - 2021-3-31
+- Ecs support hibernation.
+- DescribeSnapshotGroups add ProgressStatus.
+
+
 ## 1.8.925 - 2021-3-30
 - Generated 2020-11-26 for `Airec`.
 
