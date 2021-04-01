@@ -124,6 +124,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
+ * @method ListAnalyticsData listAnalyticsData(array $options = [])
  * @method ListDeviceDistributeJob listDeviceDistributeJob(array $options = [])
  * @method ListDistributedDevice listDistributedDevice(array $options = [])
  * @method ListDistributedProduct listDistributedProduct(array $options = [])
@@ -144,6 +145,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListThingTemplates listThingTemplates(array $options = [])
  * @method NotifyAddThingTopo notifyAddThingTopo(array $options = [])
  * @method OpenIotService openIotService(array $options = [])
+ * @method PrintByTemplate printByTemplate(array $options = [])
  * @method Pub pub(array $options = [])
  * @method PubBroadcast pubBroadcast(array $options = [])
  * @method PublishThingModel publishThingModel(array $options = [])
@@ -3860,6 +3862,10 @@ class CreateProductTags extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getTopicShortName()
@@ -4086,6 +4092,8 @@ class CreateSceneRule extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
  * @method string getOtaEventFlag()
  * @method $this withOtaEventFlag($value)
  * @method string getDeviceTopoLifeCycleFlag()
@@ -4094,6 +4102,8 @@ class CreateSceneRule extends Rpc
  * @method $this withDeviceLifeCycleFlag($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getDeviceStatusChangeFlag()
@@ -4254,6 +4264,10 @@ class CreateThingScript extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method array getDstTopic()
@@ -5482,6 +5496,8 @@ class GenerateDeviceNameListURL extends Rpc
  * @method $this withFileSuffix($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
  * @method string getBizCode()
  * @method $this withBizCode($value)
  * @method string getApiProduct()
@@ -6526,6 +6542,80 @@ class InvokeThingsService extends Rpc
 }
 
 /**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getIsoId()
+ * @method $this withIsoId($value)
+ * @method string getApiPath()
+ * @method $this withApiPath($value)
+ * @method array getCondition()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class ListAnalyticsData extends Rpc
+{
+
+    /**
+     * @param array $condition
+     *
+     * @return $this
+     */
+	public function withCondition(array $condition)
+	{
+	    $this->data['Condition'] = $condition;
+		foreach ($condition as $depth1 => $depth1Value) {
+			if(isset($depth1Value['FieldName'])){
+				$this->options['query']['Condition.' . ($depth1 + 1) . '.FieldName'] = $depth1Value['FieldName'];
+			}
+			if(isset($depth1Value['Operate'])){
+				$this->options['query']['Condition.' . ($depth1 + 1) . '.Operate'] = $depth1Value['Operate'];
+			}
+			if(isset($depth1Value['BetweenStart'])){
+				$this->options['query']['Condition.' . ($depth1 + 1) . '.BetweenStart'] = $depth1Value['BetweenStart'];
+			}
+			if(isset($depth1Value['BetweenEnd'])){
+				$this->options['query']['Condition.' . ($depth1 + 1) . '.BetweenEnd'] = $depth1Value['BetweenEnd'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Condition.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
@@ -7393,6 +7483,138 @@ class NotifyAddThingTopo extends Rpc
  */
 class OpenIotService extends Rpc
 {
+}
+
+/**
+ * @method string getProjectCode()
+ * @method string getTemplateBizCode()
+ * @method string getIotId()
+ * @method string getIotInstanceId()
+ * @method string getProductKey()
+ * @method string getParamsJsonString()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ */
+class PrintByTemplate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectCode($value)
+    {
+        $this->data['ProjectCode'] = $value;
+        $this->options['form_params']['ProjectCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateBizCode($value)
+    {
+        $this->data['TemplateBizCode'] = $value;
+        $this->options['form_params']['TemplateBizCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParamsJsonString($value)
+    {
+        $this->data['ParamsJsonString'] = $value;
+        $this->options['form_params']['ParamsJsonString'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
 }
 
 /**

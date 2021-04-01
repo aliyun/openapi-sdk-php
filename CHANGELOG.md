@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.927 - 2021-4-1
+- Add data service api, including ListAnalyticsData.
+- Update file uploading api, including GenerateFileUploadURL.
+
+
 ## 1.8.926 - 2021-3-31
 - Ecs support hibernation.
 - DescribeSnapshotGroups add ProgressStatus.
