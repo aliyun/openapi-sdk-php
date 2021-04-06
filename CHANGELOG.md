@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.928 - 2021-4-6
+- Update ScreenChestCT DetectRibFracture.
+
+
 ## 1.8.927 - 2021-4-1
 - Add data service api, including ListAnalyticsData.
 - Update file uploading api, including GenerateFileUploadURL.
