@@ -51,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListFaceDbs listFaceDbs(array $options = [])
  * @method ListFaceEntities listFaceEntities(array $options = [])
  * @method MergeImageFace mergeImageFace(array $options = [])
+ * @method MonitorExamination monitorExamination(array $options = [])
  * @method PedestrianDetectAttribute pedestrianDetectAttribute(array $options = [])
  * @method QueryFaceImageTemplate queryFaceImageTemplate(array $options = [])
  * @method RecognizeAction recognizeAction(array $options = [])
@@ -905,6 +906,9 @@ class DetectLivingFace extends Rpc
 			if(isset($depth1Value['ImageURL'])){
 				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
 			}
+			if(isset($depth1Value['ImageData'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageData'] = $depth1Value['ImageData'];
+			}
 		}
 
 		return $this;
@@ -1723,6 +1727,40 @@ class MergeImageFace extends Rpc
 }
 
 /**
+ * @method string getType()
+ * @method string getImageURL()
+ */
+class MonitorExamination extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  */
 class PedestrianDetectAttribute extends Rpc
@@ -1943,6 +1981,9 @@ class RecognizePublicFace extends Rpc
 		foreach ($task as $depth1 => $depth1Value) {
 			if(isset($depth1Value['ImageURL'])){
 				$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
+			if(isset($depth1Value['ImageData'])){
+				$this->options['form_params']['Task.' . ($depth1 + 1) . '.ImageData'] = $depth1Value['ImageData'];
 			}
 		}
 

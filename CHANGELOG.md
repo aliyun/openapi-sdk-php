@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.929 - 2021-4-6
+- Release MonitorExamination.
+
+
 ## 1.8.928 - 2021-4-6
 - Update ScreenChestCT DetectRibFracture.
 
