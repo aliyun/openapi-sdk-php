@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.930 - 2021-4-8
+- Release DetectVideoIPCObject.
+
+
 ## 1.8.929 - 2021-4-6
 - Release MonitorExamination.
 

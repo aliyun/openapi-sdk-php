@@ -13,8 +13,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectVehicle detectVehicle(array $options = [])
  * @method DetectVehicleICongestion detectVehicleICongestion(array $options = [])
  * @method DetectVehicleIllegalParking detectVehicleIllegalParking(array $options = [])
+ * @method DetectVideoIPCObject detectVideoIPCObject(array $options = [])
  * @method DetectWhiteBaseImage detectWhiteBaseImage(array $options = [])
  * @method GenerateVehicleRepairPlan generateVehicleRepairPlan(array $options = [])
+ * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method GetVehicleRepairPlan getVehicleRepairPlan(array $options = [])
  * @method RecognizeVehicleDamage recognizeVehicleDamage(array $options = [])
  * @method RecognizeVehicleDashboard recognizeVehicleDashboard(array $options = [])
@@ -244,6 +246,40 @@ class DetectVehicleIllegalParking extends Rpc
 }
 
 /**
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class DetectVideoIPCObject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoURL($value)
+    {
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  */
 class DetectWhiteBaseImage extends Rpc
@@ -287,6 +323,40 @@ class GenerateVehicleRepairPlan extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ * @method string getAsync()
+ */
+class GetAsyncJobResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
     }
 }
 
