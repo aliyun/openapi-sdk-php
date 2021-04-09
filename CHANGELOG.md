@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.932 - 2021-4-9
+- Bank Card Ocr and Verify.
+
+
 ## 1.8.931 - 2021-4-9
 - Update API param.
 

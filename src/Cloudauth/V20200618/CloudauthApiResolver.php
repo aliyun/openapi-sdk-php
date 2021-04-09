@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSmartVerify describeSmartVerify(array $options = [])
  * @method ElementSmartVerify elementSmartVerify(array $options = [])
  * @method InitSmartVerify initSmartVerify(array $options = [])
+ * @method VerifyBankElement verifyBankElement(array $options = [])
  */
 class CloudauthApiResolver extends ApiResolver
 {
@@ -253,6 +254,7 @@ class DescribeSmartVerify extends Rpc
 
 /**
  * @method string getCertFile()
+ * @method string getCertNationalEmblemUrl()
  * @method string getCertName()
  * @method string getMode()
  * @method string getCertNo()
@@ -273,6 +275,19 @@ class ElementSmartVerify extends Rpc
     {
         $this->data['CertFile'] = $value;
         $this->options['form_params']['CertFile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertNationalEmblemUrl($value)
+    {
+        $this->data['CertNationalEmblemUrl'] = $value;
+        $this->options['form_params']['CertNationalEmblemUrl'] = $value;
 
         return $this;
     }
@@ -370,6 +385,7 @@ class ElementSmartVerify extends Rpc
 }
 
 /**
+ * @method string getIdName()
  * @method string getUserId()
  * @method string getCertifyId()
  * @method string getFacePictureBase64()
@@ -384,6 +400,7 @@ class ElementSmartVerify extends Rpc
  * @method string getIp()
  * @method string getCertName()
  * @method string getMobile()
+ * @method string getIdNo()
  * @method string getSceneId()
  * @method string getCallbackToken()
  * @method string getOssBucketName()
@@ -391,6 +408,19 @@ class ElementSmartVerify extends Rpc
  */
 class InitSmartVerify extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdName($value)
+    {
+        $this->data['IdName'] = $value;
+        $this->options['form_params']['IdName'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -579,6 +609,19 @@ class InitSmartVerify extends Rpc
      *
      * @return $this
      */
+    public function withIdNo($value)
+    {
+        $this->data['IdNo'] = $value;
+        $this->options['form_params']['IdNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withSceneId($value)
     {
         $this->data['SceneId'] = $value;
@@ -622,6 +665,138 @@ class InitSmartVerify extends Rpc
     {
         $this->data['CallbackUrl'] = $value;
         $this->options['form_params']['CallbackUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIdName()
+ * @method string getMobile()
+ * @method string getBankCardUrl()
+ * @method string getIdNo()
+ * @method string getBankCardNo()
+ * @method string getMode()
+ * @method string getOuterOrderNo()
+ * @method string getBankCardFile()
+ * @method string getSceneId()
+ */
+class VerifyBankElement extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdName($value)
+    {
+        $this->data['IdName'] = $value;
+        $this->options['form_params']['IdName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBankCardUrl($value)
+    {
+        $this->data['BankCardUrl'] = $value;
+        $this->options['form_params']['BankCardUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdNo($value)
+    {
+        $this->data['IdNo'] = $value;
+        $this->options['form_params']['IdNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBankCardNo($value)
+    {
+        $this->data['BankCardNo'] = $value;
+        $this->options['form_params']['BankCardNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOuterOrderNo($value)
+    {
+        $this->data['OuterOrderNo'] = $value;
+        $this->options['form_params']['OuterOrderNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBankCardFile($value)
+    {
+        $this->data['BankCardFile'] = $value;
+        $this->options['form_params']['BankCardFile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneId($value)
+    {
+        $this->data['SceneId'] = $value;
+        $this->options['form_params']['SceneId'] = $value;
 
         return $this;
     }
