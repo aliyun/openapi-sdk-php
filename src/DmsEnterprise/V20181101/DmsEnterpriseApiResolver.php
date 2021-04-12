@@ -33,6 +33,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataCronClearTaskDetailList getDataCronClearTaskDetailList(array $options = [])
  * @method GetDataExportDownloadURL getDataExportDownloadURL(array $options = [])
  * @method GetDataExportOrderDetail getDataExportOrderDetail(array $options = [])
+ * @method GetDBTopology getDBTopology(array $options = [])
  * @method GetInstance getInstance(array $options = [])
  * @method GetLogicDatabase getLogicDatabase(array $options = [])
  * @method GetMetaTableColumn getMetaTableColumn(array $options = [])
@@ -499,6 +500,16 @@ class GetDataExportOrderDetail extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getLogicDbId()
+ * @method $this withLogicDbId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetDBTopology extends Rpc
+{
 }
 
 /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.933 - 2021-4-12
+- Support GetDBTopology API.
+
+
 ## 1.8.932 - 2021-4-9
 - Bank Card Ocr and Verify.
 
