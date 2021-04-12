@@ -5,12 +5,18 @@ namespace AlibabaCloud\CCC\V20200701;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddNumbersToSkillGroup addNumbersToSkillGroup(array $options = [])
+ * @method AddPhoneNumberToSkillGroups addPhoneNumberToSkillGroups(array $options = [])
+ * @method AddSkillGroupsToUser addSkillGroupsToUser(array $options = [])
  * @method AnswerCall answerCall(array $options = [])
  * @method BargeInCall bargeInCall(array $options = [])
  * @method BlindTransfer blindTransfer(array $options = [])
  * @method CancelAttendedTransfer cancelAttendedTransfer(array $options = [])
  * @method ChangeWorkMode changeWorkMode(array $options = [])
  * @method CompleteAttendedTransfer completeAttendedTransfer(array $options = [])
+ * @method CreateSkillGroup createSkillGroup(array $options = [])
+ * @method CreateUser createUser(array $options = [])
+ * @method DeleteSkillGroup deleteSkillGroup(array $options = [])
  * @method GetLoginDetails getLoginDetails(array $options = [])
  * @method GetMonoRecording getMonoRecording(array $options = [])
  * @method GetMultiChannelRecording getMultiChannelRecording(array $options = [])
@@ -25,14 +31,21 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListBriefSkillGroups listBriefSkillGroups(array $options = [])
  * @method ListCallDetailRecords listCallDetailRecords(array $options = [])
  * @method ListConfigItems listConfigItems(array $options = [])
+ * @method ListContactFlows listContactFlows(array $options = [])
  * @method ListDevices listDevices(array $options = [])
  * @method ListHistoricalAgentReport listHistoricalAgentReport(array $options = [])
+ * @method ListInstancesOfUser listInstancesOfUser(array $options = [])
  * @method ListOutboundNumbersOfUser listOutboundNumbersOfUser(array $options = [])
  * @method ListPrivilegesOfUser listPrivilegesOfUser(array $options = [])
  * @method ListRealtimeAgentStates listRealtimeAgentStates(array $options = [])
  * @method ListRecentCallDetailRecords listRecentCallDetailRecords(array $options = [])
  * @method ListSkillLevelsOfUser listSkillLevelsOfUser(array $options = [])
+ * @method ListUserLevelsOfSkillGroup listUserLevelsOfSkillGroup(array $options = [])
  * @method MakeCall makeCall(array $options = [])
+ * @method ModifyPhoneNumber modifyPhoneNumber(array $options = [])
+ * @method ModifySkillGroup modifySkillGroup(array $options = [])
+ * @method ModifyUser modifyUser(array $options = [])
+ * @method ModifyUserLevelsOfSkillGroup modifyUserLevelsOfSkillGroup(array $options = [])
  * @method MonitorCall monitorCall(array $options = [])
  * @method MuteCall muteCall(array $options = [])
  * @method PickOutboundNumbers pickOutboundNumbers(array $options = [])
@@ -40,11 +53,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ReadyForService readyForService(array $options = [])
  * @method RegisterDevice registerDevice(array $options = [])
  * @method ReleaseCall releaseCall(array $options = [])
+ * @method RemovePhoneNumbersFromSkillGroup removePhoneNumbersFromSkillGroup(array $options = [])
  * @method ResetAgentState resetAgentState(array $options = [])
  * @method RetrieveCall retrieveCall(array $options = [])
  * @method SendDtmfSignaling sendDtmfSignaling(array $options = [])
  * @method SignInGroup signInGroup(array $options = [])
  * @method SignOutGroup signOutGroup(array $options = [])
+ * @method StartBack2BackCall startBack2BackCall(array $options = [])
  * @method TakeBreak takeBreak(array $options = [])
  * @method UnmuteCall unmuteCall(array $options = [])
  */
@@ -65,6 +80,42 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'CCC';
+}
+
+/**
+ * @method string getNumberList()
+ * @method $this withNumberList($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ */
+class AddNumbersToSkillGroup extends Rpc
+{
+}
+
+/**
+ * @method string getNumber()
+ * @method $this withNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupIdList()
+ * @method $this withSkillGroupIdList($value)
+ */
+class AddPhoneNumberToSkillGroups extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillLevelList()
+ * @method $this withSkillLevelList($value)
+ */
+class AddSkillGroupsToUser extends Rpc
+{
 }
 
 /**
@@ -158,6 +209,56 @@ class ChangeWorkMode extends Rpc
  * @method $this withInstanceId($value)
  */
 class CompleteAttendedTransfer extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDisplayName()
+ * @method $this withDisplayName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateSkillGroup extends Rpc
+{
+}
+
+/**
+ * @method string getLoginName()
+ * @method $this withLoginName($value)
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
+ * @method string getWorkMode()
+ * @method $this withWorkMode($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDisplayName()
+ * @method $this withDisplayName($value)
+ * @method string getResetPassword()
+ * @method $this withResetPassword($value)
+ * @method string getSkillLevelList()
+ * @method $this withSkillLevelList($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ */
+class CreateUser extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
+ */
+class DeleteSkillGroup extends Rpc
 {
 }
 
@@ -370,6 +471,20 @@ class ListConfigItems extends Rpc
 }
 
 /**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListContactFlows extends Rpc
+{
+}
+
+/**
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getInstanceId()
@@ -407,6 +522,16 @@ class ListHistoricalAgentReport extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListInstancesOfUser extends Rpc
+{
 }
 
 /**
@@ -526,6 +651,24 @@ class ListSkillLevelsOfUser extends Rpc
 }
 
 /**
+ * @method string getIsMember()
+ * @method $this withIsMember($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSearchPattern()
+ * @method $this withSearchPattern($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListUserLevelsOfSkillGroup extends Rpc
+{
+}
+
+/**
  * @method string getCallee()
  * @method $this withCallee($value)
  * @method string getUserId()
@@ -540,6 +683,62 @@ class ListSkillLevelsOfUser extends Rpc
  * @method $this withInstanceId($value)
  */
 class MakeCall extends Rpc
+{
+}
+
+/**
+ * @method string getContactFlowId()
+ * @method $this withContactFlowId($value)
+ * @method string getUsage()
+ * @method $this withUsage($value)
+ * @method string getNumber()
+ * @method $this withNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyPhoneNumber extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getDisplayName()
+ * @method $this withDisplayName($value)
+ */
+class ModifySkillGroup extends Rpc
+{
+}
+
+/**
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
+ * @method string getWorkMode()
+ * @method $this withWorkMode($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyUser extends Rpc
+{
+}
+
+/**
+ * @method string getUserLevelList()
+ * @method $this withUserLevelList($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ */
+class ModifyUserLevelsOfSkillGroup extends Rpc
 {
 }
 
@@ -646,6 +845,18 @@ class ReleaseCall extends Rpc
 }
 
 /**
+ * @method string getNumberList()
+ * @method $this withNumberList($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ */
+class RemovePhoneNumbersFromSkillGroup extends Rpc
+{
+}
+
+/**
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getDeviceId()
@@ -714,6 +925,28 @@ class SignInGroup extends Rpc
  * @method $this withInstanceId($value)
  */
 class SignOutGroup extends Rpc
+{
+}
+
+/**
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ * @method string getBroker()
+ * @method $this withBroker($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getAdditionalBroker()
+ * @method $this withAdditionalBroker($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getTimeoutSeconds()
+ * @method $this withTimeoutSeconds($value)
+ * @method string getCaller()
+ * @method $this withCaller($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class StartBack2BackCall extends Rpc
 {
 }
 
