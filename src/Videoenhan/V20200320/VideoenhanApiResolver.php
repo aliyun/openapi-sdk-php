@@ -7,9 +7,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AbstractEcommerceVideo abstractEcommerceVideo(array $options = [])
  * @method AbstractFilmVideo abstractFilmVideo(array $options = [])
+ * @method AddFaceVideoTemplate addFaceVideoTemplate(array $options = [])
  * @method AdjustVideoColor adjustVideoColor(array $options = [])
  * @method ChangeVideoSize changeVideoSize(array $options = [])
  * @method ConvertHdrVideo convertHdrVideo(array $options = [])
+ * @method DeleteFaceVideoTemplate deleteFaceVideoTemplate(array $options = [])
  * @method EnhanceVideoQuality enhanceVideoQuality(array $options = [])
  * @method EraseVideoLogo eraseVideoLogo(array $options = [])
  * @method EraseVideoSubtitles eraseVideoSubtitles(array $options = [])
@@ -17,6 +19,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method InterpolateVideoFrame interpolateVideoFrame(array $options = [])
  * @method MergeVideoFace mergeVideoFace(array $options = [])
+ * @method MergeVideoModelFace mergeVideoModelFace(array $options = [])
+ * @method QueryFaceVideoTemplate queryFaceVideoTemplate(array $options = [])
  * @method SuperResolveVideo superResolveVideo(array $options = [])
  * @method ToneSdrVideo toneSdrVideo(array $options = [])
  */
@@ -158,6 +162,54 @@ class AbstractFilmVideo extends Rpc
     {
         $this->data['VideoUrl'] = $value;
         $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserId()
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class AddFaceVideoTemplate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoURL($value)
+    {
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
 
         return $this;
     }
@@ -470,6 +522,40 @@ class ConvertHdrVideo extends Rpc
     {
         $this->data['VideoURL'] = $value;
         $this->options['form_params']['VideoURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserId()
+ * @method string getTemplateId()
+ */
+class DeleteFaceVideoTemplate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateId($value)
+    {
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
 
         return $this;
     }
@@ -929,24 +1015,11 @@ class GenerateVideo extends Rpc
 }
 
 /**
- * @method string getAsync()
  * @method string getJobId()
+ * @method string getAsync()
  */
 class GetAsyncJobResult extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['form_params']['Async'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -957,6 +1030,19 @@ class GetAsyncJobResult extends Rpc
     {
         $this->data['JobId'] = $value;
         $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
 
         return $this;
     }
@@ -1084,6 +1170,78 @@ class MergeVideoFace extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getFaceImageURL()
+ * @method string getUserId()
+ * @method string getTemplateId()
+ * @method string getAsync()
+ */
+class MergeVideoModelFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceImageURL($value)
+    {
+        $this->data['FaceImageURL'] = $value;
+        $this->options['form_params']['FaceImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateId($value)
+    {
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class QueryFaceVideoTemplate extends Rpc
+{
 }
 
 /**

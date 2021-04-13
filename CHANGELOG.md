@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.935 - 2021-4-13
+- Release AddFaceVideoTemplate DeleteFaceVideoTemplate QueryFaceVideoTemplate MergeVideoModelFace.
+
+
 ## 1.8.934 - 2021-4-12
 - Export config api.
 
