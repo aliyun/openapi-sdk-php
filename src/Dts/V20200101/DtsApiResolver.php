@@ -34,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeMigrationJobDetail describeMigrationJobDetail(array $options = [])
  * @method DescribeMigrationJobs describeMigrationJobs(array $options = [])
  * @method DescribeMigrationJobStatus describeMigrationJobStatus(array $options = [])
+ * @method DescribePreCheckStatus describePreCheckStatus(array $options = [])
  * @method DescribeSubscriptionInstanceAlert describeSubscriptionInstanceAlert(array $options = [])
  * @method DescribeSubscriptionInstances describeSubscriptionInstances(array $options = [])
  * @method DescribeSubscriptionInstanceStatus describeSubscriptionInstanceStatus(array $options = [])
@@ -49,12 +50,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDtsJob modifyDtsJob(array $options = [])
  * @method ModifyDtsJobName modifyDtsJobName(array $options = [])
  * @method ModifyDtsJobPassword modifyDtsJobPassword(array $options = [])
- * @method ModifyMigrationObject modifyMigrationObject(array $options = [])
  * @method ModifySubscriptionObject modifySubscriptionObject(array $options = [])
  * @method ModifySynchronizationObject modifySynchronizationObject(array $options = [])
  * @method ResetDtsJob resetDtsJob(array $options = [])
  * @method ResetSynchronizationJob resetSynchronizationJob(array $options = [])
  * @method ShieldPrecheck shieldPrecheck(array $options = [])
+ * @method SkipPreCheck skipPreCheck(array $options = [])
  * @method StartDtsJob startDtsJob(array $options = [])
  * @method StartMigrationJob startMigrationJob(array $options = [])
  * @method StartSubscriptionInstance startSubscriptionInstance(array $options = [])
@@ -67,7 +68,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SwitchSynchronizationEndpoint switchSynchronizationEndpoint(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
- * @method WhiteIpList whiteIpList(array $options = [])
  */
 class DtsApiResolver extends ApiResolver
 {
@@ -125,6 +125,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withDtsJobName($value)
  * @method string getDtsInstanceId()
  * @method $this withDtsInstanceId($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
  * @method string getSourceEndpointRegion()
  * @method $this withSourceEndpointRegion($value)
  * @method string getDelayNotice()
@@ -1215,18 +1217,36 @@ class CreateConsumerGroup extends Rpc
 }
 
 /**
- * @method string getPeriod()
- * @method $this withPeriod($value)
  * @method string getAutoStart()
  * @method $this withAutoStart($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getInstanceClass()
  * @method $this withInstanceClass($value)
- * @method string getSyncArchitecture()
- * @method $this withSyncArchitecture($value)
+ * @method string getDatabaseCount()
+ * @method $this withDatabaseCount($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getDestinationRegion()
+ * @method $this withDestinationRegion($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getDestinationEndpointEngineName()
+ * @method $this withDestinationEndpointEngineName($value)
+ * @method string getQuantity()
+ * @method $this withQuantity($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getSyncArchitecture()
+ * @method $this withSyncArchitecture($value)
  * @method string getPayType()
  * @method $this withPayType($value)
+ * @method string getSourceRegion()
+ * @method $this withSourceRegion($value)
+ * @method string getSourceEndpointEngineName()
+ * @method $this withSourceEndpointEngineName($value)
  */
 class CreateDtsInstance extends Rpc
 {
@@ -1493,6 +1513,10 @@ class DescribeDTSIP extends Rpc
 /**
  * @method string getDtsJobId()
  * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceID()
+ * @method $this withDtsInstanceID($value)
+ * @method string getSynchronizationDirection()
+ * @method $this withSynchronizationDirection($value)
  */
 class DescribeDtsJobDetail extends Rpc
 {
@@ -1629,6 +1653,8 @@ class DescribeMigrationJobDetail extends Rpc
 }
 
 /**
+ * @method string getInstFilterRegion()
+ * @method $this withInstFilterRegion($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerId()
@@ -1680,6 +1706,22 @@ class DescribeMigrationJobStatus extends Rpc
 }
 
 /**
+ * @method string getStructType()
+ * @method $this withStructType($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getJobCode()
+ * @method $this withJobCode($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ */
+class DescribePreCheckStatus extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getSubscriptionInstanceId()
@@ -1696,6 +1738,8 @@ class DescribeSubscriptionInstanceAlert extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getInstFilterRegion()
+ * @method $this withInstFilterRegion($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerId()
@@ -1779,6 +1823,8 @@ class DescribeSynchronizationJobReplicatorCompare extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getInstFilterRegion()
+ * @method $this withInstFilterRegion($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOwnerId()
@@ -2007,22 +2053,6 @@ class ModifyDtsJobPassword extends Rpc
 }
 
 /**
- * @method string getMigrationObject()
- * @method $this withMigrationObject($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAccountId()
- * @method $this withAccountId($value)
- */
-class ModifyMigrationObject extends Rpc
-{
-}
-
-/**
  * @method string getSubscriptionInstanceId()
  * @method $this withSubscriptionInstanceId($value)
  * @method string getOwnerId()
@@ -2085,6 +2115,20 @@ class ResetSynchronizationJob extends Rpc
  * @method $this withDtsInstanceId($value)
  */
 class ShieldPrecheck extends Rpc
+{
+}
+
+/**
+ * @method string getSkipPreCheckItems()
+ * @method $this withSkipPreCheckItems($value)
+ * @method string getSkip()
+ * @method $this withSkip($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getSkipPreCheckNames()
+ * @method $this withSkipPreCheckNames($value)
+ */
+class SkipPreCheck extends Rpc
 {
 }
 
@@ -2401,16 +2445,4 @@ class UntagResources extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getDestinationRegion()
- * @method $this withDestinationRegion($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class WhiteIpList extends Rpc
-{
 }

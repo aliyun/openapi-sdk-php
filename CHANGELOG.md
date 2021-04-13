@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.936 - 2021-4-13
+- Supported ConfigureDtsJob SynchronizationDirection.
+- Fixed DescribePreCheckStatus JobProgress bootTime.
+
+
 ## 1.8.935 - 2021-4-13
 - Release AddFaceVideoTemplate DeleteFaceVideoTemplate QueryFaceVideoTemplate MergeVideoModelFace.
 
