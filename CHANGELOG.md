@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.938 - 2021-4-14
+- Support latest openAPIs.
+
+
 ## 1.8.937 - 2021-4-14
 - Delete MultiMedia Post Scan API.
 
