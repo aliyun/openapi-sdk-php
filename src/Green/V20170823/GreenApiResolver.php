@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreatCustomOcrTemplate creatCustomOcrTemplate(array $options = [])
+ * @method CreateAuditCallback createAuditCallback(array $options = [])
  * @method CreateBizType createBizType(array $options = [])
  * @method CreateCdiBag createCdiBag(array $options = [])
  * @method CreateCdiBaseBag createCdiBaseBag(array $options = [])
@@ -23,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteNotificationContacts deleteNotificationContacts(array $options = [])
  * @method DescribeAppInfo describeAppInfo(array $options = [])
  * @method DescribeAuditCallback describeAuditCallback(array $options = [])
+ * @method DescribeAuditCallbackList describeAuditCallbackList(array $options = [])
  * @method DescribeAuditContent describeAuditContent(array $options = [])
  * @method DescribeAuditContentItem describeAuditContentItem(array $options = [])
  * @method DescribeAuditRange describeAuditRange(array $options = [])
@@ -134,6 +136,24 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withName($value)
  */
 class CreatCustomOcrTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getCallbackTypes()
+ * @method $this withCallbackTypes($value)
+ * @method string getCallbackSuggestions()
+ * @method $this withCallbackSuggestions($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getCryptType()
+ * @method $this withCryptType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateAuditCallback extends Rpc
 {
 }
 
@@ -386,6 +406,14 @@ class DescribeAppInfo extends Rpc
  * @method $this withSourceIp($value)
  */
 class DescribeAuditCallback extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeAuditCallbackList extends Rpc
 {
 }
 

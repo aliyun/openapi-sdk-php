@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.937 - 2021-4-14
+- Delete MultiMedia Post Scan API.
+
+
 ## 1.8.936 - 2021-4-13
 - Supported ConfigureDtsJob SynchronizationDirection.
 - Fixed DescribePreCheckStatus JobProgress bootTime.
