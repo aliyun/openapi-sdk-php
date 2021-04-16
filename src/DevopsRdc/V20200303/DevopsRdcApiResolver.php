@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreatePipeline createPipeline(array $options = [])
  * @method CreateServiceConnection createServiceConnection(array $options = [])
  * @method DeleteCommonGroup deleteCommonGroup(array $options = [])
+ * @method DeleteDevopsOrganization deleteDevopsOrganization(array $options = [])
  * @method DeleteDevopsOrganizationMembers deleteDevopsOrganizationMembers(array $options = [])
  * @method DeleteDevopsProject deleteDevopsProject(array $options = [])
  * @method DeleteDevopsProjectMembers deleteDevopsProjectMembers(array $options = [])
@@ -925,6 +926,26 @@ class DeleteCommonGroup extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrgId()
+ */
+class DeleteDevopsOrganization extends Rpc
+{
 
     /**
      * @param string $value

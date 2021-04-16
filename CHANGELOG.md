@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.941 - 2021-4-16
+- Support devops organization deletion.
+
+
 ## 1.8.940 - 2021-4-16
 - Add CheckProductOpen.
 - Add az routing policy.
