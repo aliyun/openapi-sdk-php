@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.939 - 2021-4-16
+- Add API GetDomain.
+- Add API ListSystemAnalyzers.
+- Add parameter domain to API ListAppGroups, ModifyAppGroup, CreateAppGroup, DescribeAppGroup, DescribeApp.
+
+
 ## 1.8.938 - 2021-4-14
 - Support latest openAPIs.
 
