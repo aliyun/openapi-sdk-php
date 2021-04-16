@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.940 - 2021-4-16
+- Add CheckProductOpen.
+- Add az routing policy.
+
+
 ## 1.8.939 - 2021-4-16
 - Add API GetDomain.
 - Add API ListSystemAnalyzers.

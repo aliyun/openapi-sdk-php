@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddZoneToVpcEndpoint addZoneToVpcEndpoint(array $options = [])
  * @method AttachResourceToVpcEndpointService attachResourceToVpcEndpointService(array $options = [])
  * @method AttachSecurityGroupToVpcEndpoint attachSecurityGroupToVpcEndpoint(array $options = [])
+ * @method CheckProductOpen checkProductOpen(array $options = [])
  * @method CreateVpcEndpoint createVpcEndpoint(array $options = [])
  * @method CreateVpcEndpointService createVpcEndpointService(array $options = [])
  * @method DeleteVpcEndpoint deleteVpcEndpoint(array $options = [])
@@ -79,6 +80,7 @@ class AddUserToVpcEndpointService extends Rpc
  * @method $this withEndpointId($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
+ * @method string getIp()
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method string getZoneId()
@@ -86,6 +88,19 @@ class AddUserToVpcEndpointService extends Rpc
  */
 class AddZoneToVpcEndpoint extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['query']['ip'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -115,6 +130,13 @@ class AttachResourceToVpcEndpointService extends Rpc
  * @method $this withDryRun($value)
  */
 class AttachSecurityGroupToVpcEndpoint extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+}
+
+class CheckProductOpen extends Rpc
 {
 
     /** @var string */
@@ -172,6 +194,9 @@ class CreateVpcEndpoint extends Rpc
 			if(isset($depth1Value['ZoneId'])){
 				$this->options['query']['Zone.' . ($depth1 + 1) . '.ZoneId'] = $depth1Value['ZoneId'];
 			}
+			if(isset($depth1Value['Ip'])){
+				$this->options['query']['Zone.' . ($depth1 + 1) . '.ip'] = $depth1Value['Ip'];
+			}
 		}
 
 		return $this;
@@ -185,6 +210,8 @@ class CreateVpcEndpoint extends Rpc
  * @method $this withClientToken($value)
  * @method string getPayer()
  * @method $this withPayer($value)
+ * @method string getZoneAffinityEnabled()
+ * @method $this withZoneAffinityEnabled($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
  * @method array getResource()
@@ -203,11 +230,11 @@ class CreateVpcEndpointService extends Rpc
 	{
 	    $this->data['Resource'] = $resource;
 		foreach ($resource as $depth1 => $depth1Value) {
-			if(isset($depth1Value['ResourceId'])){
-				$this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
-			}
 			if(isset($depth1Value['ResourceType'])){
 				$this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceType'] = $depth1Value['ResourceType'];
+			}
+			if(isset($depth1Value['ResourceId'])){
+				$this->options['query']['Resource.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
 			}
 		}
 
@@ -396,6 +423,8 @@ class ListVpcEndpointServiceResources extends Rpc
  * @method $this withServiceStatus($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getZoneAffinityEnabled()
+ * @method $this withZoneAffinityEnabled($value)
  * @method string getServiceName()
  * @method $this withServiceName($value)
  * @method string getMaxResults()
@@ -525,6 +554,8 @@ class UpdateVpcEndpointConnectionAttribute extends Rpc
  * @method $this withClientToken($value)
  * @method string getConnectBandwidth()
  * @method $this withConnectBandwidth($value)
+ * @method string getZoneAffinityEnabled()
+ * @method $this withZoneAffinityEnabled($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
  * @method string getServiceDescription()
