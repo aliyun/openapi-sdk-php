@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.942 - 2021-4-17
+- Update RunMedQA.
+
+
 ## 1.8.941 - 2021-4-16
 - Support devops organization deletion.
 
