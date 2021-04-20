@@ -245,6 +245,8 @@ class CreateMergeFaceGroupsJob extends Rpc
  * @method $this withIdempotentToken($value)
  * @method string getPdfVector()
  * @method $this withPdfVector($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getPassword()
  * @method $this withPassword($value)
  * @method string getStartPage()
@@ -363,6 +365,8 @@ class CreateVideoAnalyseTask extends Rpc
  * @method $this withTargetList($value)
  * @method string getVideoUri()
  * @method $this withVideoUri($value)
+ * @method string getTargetSegment()
+ * @method $this withTargetSegment($value)
  */
 class CreateVideoCompressTask extends Rpc
 {
