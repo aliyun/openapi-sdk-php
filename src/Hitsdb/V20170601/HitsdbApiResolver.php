@@ -81,6 +81,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withZoneId($value)
  * @method string getTSDBVersion()
  * @method $this withTSDBVersion($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  * @method string getPricingCycle()
@@ -103,6 +105,8 @@ class CreateHiTSDBInstance extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
 class DeleteHiTSDBInstance extends Rpc
 {
@@ -121,6 +125,8 @@ class DeleteHiTSDBInstance extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
 class DescribeHiTSDBInstance extends Rpc
 {
@@ -147,6 +153,8 @@ class DescribeHiTSDBInstance extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
 class DescribeHiTSDBInstanceList extends Rpc
 {
@@ -163,6 +171,8 @@ class DescribeHiTSDBInstanceList extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -223,6 +233,8 @@ class DescribeZones extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
 class ModifyHiTSDBInstanceClass extends Rpc
 {
@@ -239,6 +251,8 @@ class ModifyHiTSDBInstanceClass extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
  * @method string getSecurityIpList()
  * @method $this withSecurityIpList($value)
  * @method string getInstanceId()
@@ -263,6 +277,8 @@ class ModifyHiTSDBInstanceSecurityIpList extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
  */
 class RenameHiTSDBInstanceAlias extends Rpc
 {

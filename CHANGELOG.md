@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.944 - 2021-4-20
+- Create Lindorm Open api.
+
+
 ## 1.8.943 - 2021-4-20
 - LivenessFaceVerify ContrastFaceVerify CompareFaceVerify API Return CertifyId.
 
