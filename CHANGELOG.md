@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.943 - 2021-4-20
+- LivenessFaceVerify ContrastFaceVerify CompareFaceVerify API Return CertifyId.
+
+
 ## 1.8.942 - 2021-4-17
 - Update RunMedQA.
 
