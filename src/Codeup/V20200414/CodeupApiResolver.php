@@ -30,6 +30,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRepositoryWebhook deleteRepositoryWebhook(array $options = [])
  * @method EnableRepositoryDeployKey enableRepositoryDeployKey(array $options = [])
  * @method GetBranchInfo getBranchInfo(array $options = [])
+ * @method GetCodeCompletion getCodeCompletion(array $options = [])
  * @method GetCodeupOrganization getCodeupOrganization(array $options = [])
  * @method GetFileBlobs getFileBlobs(array $options = [])
  * @method GetGroupDetail getGroupDetail(array $options = [])
@@ -53,6 +54,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRepositoryBranches listRepositoryBranches(array $options = [])
  * @method ListRepositoryCommits listRepositoryCommits(array $options = [])
  * @method ListRepositoryMember listRepositoryMember(array $options = [])
+ * @method ListRepositoryMemberWithInherited listRepositoryMemberWithInherited(array $options = [])
  * @method ListRepositoryTags listRepositoryTags(array $options = [])
  * @method ListRepositoryTree listRepositoryTree(array $options = [])
  * @method ListRepositoryWebhook listRepositoryWebhook(array $options = [])
@@ -1527,6 +1529,47 @@ class GetBranchInfo extends Roa
     {
         $this->data['BranchName'] = $value;
         $this->options['query']['BranchName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIsEncrypted()
+ * @method string getFetchKeys()
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ */
+class GetCodeCompletion extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/service/invoke/[ServiceName]';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsEncrypted($value)
+    {
+        $this->data['IsEncrypted'] = $value;
+        $this->options['query']['IsEncrypted'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFetchKeys($value)
+    {
+        $this->data['FetchKeys'] = $value;
+        $this->options['query']['FetchKeys'] = $value;
 
         return $this;
     }
@@ -3219,6 +3262,44 @@ class ListRepositoryMember extends Roa
     {
         $this->data['Page'] = $value;
         $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ListRepositoryMemberWithInherited extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/all_members';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
 
         return $this;
     }
