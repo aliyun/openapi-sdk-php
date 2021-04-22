@@ -1,6 +1,5 @@
 English | [简体中文](/README-zh-CN.md)
 
-
 # Alibaba Cloud SDK for PHP
 [![Latest Stable Version](https://poser.pugx.org/alibabacloud/sdk/v/stable)](https://packagist.org/packages/alibabacloud/sdk)
 [![composer.lock](https://poser.pugx.org/alibabacloud/sdk/composerlock)](https://packagist.org/packages/alibabacloud/sdk)
@@ -10,44 +9,42 @@ English | [简体中文](/README-zh-CN.md)
 [![Travis Build Status](https://travis-ci.org/aliyun/openapi-sdk-php.svg?branch=master)](https://travis-ci.org/aliyun/openapi-sdk-php)
 [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/mddt341e3hpju1nw/branch/master?svg=true)](https://ci.appveyor.com/project/aliyun/openapi-sdk-php/branch/master)
 
-
-![](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
-
+![AlibabaCloud](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
 
 Alibaba Cloud SDK for PHP is a development kit that supports quick access to products, dependency on [Alibaba Cloud Client for PHP][client].
 
-
 ## Release Notes
+
 We developed a new kernel on the principle of `eliminating known issues` and `compatible with old grammar`, adding the following features:
 - [Support Composer][packagist]
 - [Support for multiple client and client profiles][clients]
 - [Result is a powerful object][result]
 - [More flexible configuration per request][request]
 
-
 ## Prerequisites
+
 Your system will need to meet the [Prerequisites](/docs/en-US/0-Prerequisites.md), including having PHP >= 5.5. We highly recommend having it compiled with the cURL extension and cURL 7.16.2+.
 
-
 ## Installation
+
 If Composer is already [installed globally on your system](https://getcomposer.org/doc/00-intro.md#globally), run the following in the base directory of your project to install Alibaba Cloud SDK for PHP as a dependency:
-```
+
+```bash
 composer require alibabacloud/sdk
 ```
-> Some users may not be able to install due to network problems, you can try to switch the Composer mirror.
 
 Please see the [Installation](/docs/en-US/1-Installation.md) for more detailed information about installing through Composer and other ways.
 
-
 ## Troubleshoot
-[Troubleshoot](https://troubleshoot.api.aliyun.com/?source=github_sdk) Provide OpenAPI diagnosis service to help developers locate quickly and provide solutions for developers through `RequestID` or `error message`.
 
+[Troubleshoot](https://next.api.aliyun.com/troubleshoot?source=github_sdk) Provide OpenAPI diagnosis service to help developers locate quickly and provide solutions for developers through `RequestID` or `error message`.
 
 ## Online Demo
+
 [Alibaba Cloud OpenAPI Developer Portal](https://next.api.aliyun.com) provides the ability to call the cloud product OpenAPI online, and dynamically generate SDK Example code and quick retrieval interface, which can significantly reduce the difficulty of using the cloud API.
 
-
 ## Quick Examples
+
 Before you begin, you need to sign up for an Alibaba Cloud account and retrieve your [Credentials](https://usercenter.console.aliyun.com/#/manage/ak). Before request, please [Understanding the Clients][clients], after request, please [Understanding the Result][result].
 
 > Currently, only some Alibaba Cloud products are supported, [Supported Products](/SUPPORTED-EN.md), For products that are not supported, you can use [Alibaba Cloud Client for PHP][request] to initiate custom requests, and you can use [Alibaba Cloud OpenAPI Developer Portal](https://next.api.aliyun.com/) to generate Alibaba Cloud Client for PHP code online.
@@ -117,33 +114,32 @@ try {
 }
 ```
 
-
 ## Issues
+
 [Opening an Issue](https://github.com/aliyun/openapi-sdk-php/issues/new/choose), Issues not conforming to the guidelines may be closed immediately.
 
-
 ## Changelog
+
 Detailed changes for each release are documented in the [release notes](/CHANGELOG.md).
 
-
 ## Contribution
+
 Please make sure to read the [Contributing Guide](/CONTRIBUTING.md) before making a pull request.
 
-
 ## References
-* [Alibaba Cloud Regions & Endpoints][endpoints]
-* [Alibaba Cloud OpenAPI Developer Portal][open-api]
-* [Packagist][packagist]
-* [Composer][composer]
-* [Guzzle Documentation][guzzle-docs]
-* [Latest Release][latest-release]
 
+- [Alibaba Cloud Regions & Endpoints][endpoints]
+- [Alibaba Cloud OpenAPI Developer Portal][open-api]
+- [Packagist][packagist]
+- [Composer][composer]
+- [Guzzle Documentation][guzzle-docs]
+- [Latest Release][latest-release]
 
 ## License
+
 [Apache-2.0](/LICENSE.md)
 
 Copyright (c) 2009-present, Alibaba Cloud All rights reserved.
-
 
 [open-api]: https://next.api.aliyun.com
 [latest-release]: https://github.com/aliyun/openapi-sdk-php
