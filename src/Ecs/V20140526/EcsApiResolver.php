@@ -39,10 +39,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateAutoSnapshotPolicy createAutoSnapshotPolicy(array $options = [])
  * @method CreateCapacityReservation createCapacityReservation(array $options = [])
  * @method CreateCommand createCommand(array $options = [])
+ * @method CreateDedicatedBlockStorageCluster createDedicatedBlockStorageCluster(array $options = [])
  * @method CreateDedicatedHostCluster createDedicatedHostCluster(array $options = [])
  * @method CreateDemand createDemand(array $options = [])
  * @method CreateDeploymentSet createDeploymentSet(array $options = [])
  * @method CreateDisk createDisk(array $options = [])
+ * @method CreateDiskReplicaPair createDiskReplicaPair(array $options = [])
  * @method CreateElasticityAssurance createElasticityAssurance(array $options = [])
  * @method CreateForwardEntry createForwardEntry(array $options = [])
  * @method CreateHaVip createHaVip(array $options = [])
@@ -78,6 +80,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDemand deleteDemand(array $options = [])
  * @method DeleteDeploymentSet deleteDeploymentSet(array $options = [])
  * @method DeleteDisk deleteDisk(array $options = [])
+ * @method DeleteDiskReplicaPair deleteDiskReplicaPair(array $options = [])
  * @method DeleteForwardEntry deleteForwardEntry(array $options = [])
  * @method DeleteHaVip deleteHaVip(array $options = [])
  * @method DeleteHpcCluster deleteHpcCluster(array $options = [])
@@ -119,6 +122,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCloudAssistantStatus describeCloudAssistantStatus(array $options = [])
  * @method DescribeClusters describeClusters(array $options = [])
  * @method DescribeCommands describeCommands(array $options = [])
+ * @method DescribeDedicatedBlockStorageClusters describeDedicatedBlockStorageClusters(array $options = [])
  * @method DescribeDedicatedHostAutoRenew describeDedicatedHostAutoRenew(array $options = [])
  * @method DescribeDedicatedHostClusters describeDedicatedHostClusters(array $options = [])
  * @method DescribeDedicatedHosts describeDedicatedHosts(array $options = [])
@@ -127,6 +131,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDeploymentSets describeDeploymentSets(array $options = [])
  * @method DescribeDeploymentSetSupportedInstanceTypeFamily describeDeploymentSetSupportedInstanceTypeFamily(array $options = [])
  * @method DescribeDiskMonitorData describeDiskMonitorData(array $options = [])
+ * @method DescribeDiskReplicaPairs describeDiskReplicaPairs(array $options = [])
  * @method DescribeDisks describeDisks(array $options = [])
  * @method DescribeDisksFullStatus describeDisksFullStatus(array $options = [])
  * @method DescribeEipAddresses describeEipAddresses(array $options = [])
@@ -316,10 +321,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunCommand runCommand(array $options = [])
  * @method RunInstances runInstances(array $options = [])
  * @method SendFile sendFile(array $options = [])
+ * @method StartDiskReplicaPair startDiskReplicaPair(array $options = [])
  * @method StartElasticityAssurance startElasticityAssurance(array $options = [])
  * @method StartImagePipelineExecution startImagePipelineExecution(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartInstances startInstances(array $options = [])
+ * @method StopDiskReplicaPair stopDiskReplicaPair(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method StopInstances stopInstances(array $options = [])
  * @method StopInvocation stopInvocation(array $options = [])
@@ -362,6 +369,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getChoice()
+ * @method $this withChoice($value)
  */
 class AcceptInquiredSystemEvent extends Rpc
 {
@@ -1961,6 +1970,40 @@ class CreateCommand extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDedicatedBlockStorageClusterName()
+ * @method $this withDedicatedBlockStorageClusterName($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getCapacity()
+ * @method $this withCapacity($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getFromApp()
+ * @method $this withFromApp($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPerformanceLevel()
+ * @method $this withPerformanceLevel($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class CreateDedicatedBlockStorageCluster extends Rpc
+{
+}
+
+/**
  * @method string getDedicatedHostClusterName()
  * @method $this withDedicatedHostClusterName($value)
  * @method string getResourceOwnerId()
@@ -2094,6 +2137,8 @@ class CreateDeploymentSet extends Rpc
  * @method array getArn()
  * @method string getAdvancedFeatures()
  * @method $this withAdvancedFeatures($value)
+ * @method string getDedicatedBlockStorageClusterId()
+ * @method $this withDedicatedBlockStorageClusterId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getPerformanceLevel()
@@ -2160,6 +2205,32 @@ class CreateDisk extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPairName()
+ * @method $this withPairName($value)
+ * @method string getDestinationRegionId()
+ * @method $this withDestinationRegionId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ * @method string getAsyncCycle()
+ * @method $this withAsyncCycle($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDestinationDiskId()
+ * @method $this withDestinationDiskId($value)
+ */
+class CreateDiskReplicaPair extends Rpc
+{
 }
 
 /**
@@ -3612,9 +3683,13 @@ class CreateNatGateway extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getQueuePairNumber()
+ * @method $this withQueuePairNumber($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method array getSecurityGroupIds()
+ * @method string getNetworkInterfaceTrafficMode()
+ * @method $this withNetworkInterfaceTrafficMode($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method array getPrivateIpAddress()
@@ -4303,6 +4378,22 @@ class DeleteDeploymentSet extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteDisk extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getReplicaPairId()
+ * @method $this withReplicaPairId($value)
+ */
+class DeleteDiskReplicaPair extends Rpc
 {
 }
 
@@ -5361,6 +5452,60 @@ class DescribeCommands extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getDedicatedBlockStorageClusterId()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ * @method array getStatus()
+ */
+class DescribeDedicatedBlockStorageClusters extends Rpc
+{
+
+    /**
+     * @param array $dedicatedBlockStorageClusterId
+     *
+     * @return $this
+     */
+	public function withDedicatedBlockStorageClusterId(array $dedicatedBlockStorageClusterId)
+	{
+	    $this->data['DedicatedBlockStorageClusterId'] = $dedicatedBlockStorageClusterId;
+		foreach ($dedicatedBlockStorageClusterId as $i => $iValue) {
+			$this->options['query']['DedicatedBlockStorageClusterId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $status
+     *
+     * @return $this
+     */
+	public function withStatus(array $status)
+	{
+	    $this->data['Status'] = $status;
+		foreach ($status as $i => $iValue) {
+			$this->options['query']['Status.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getDedicatedHostIds()
  * @method $this withDedicatedHostIds($value)
  * @method string getResourceOwnerId()
@@ -5632,6 +5777,24 @@ class DescribeDeploymentSetSupportedInstanceTypeFamily extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDiskMonitorData extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeDiskReplicaPairs extends Rpc
 {
 }
 
@@ -6596,6 +6759,7 @@ class DescribeInstanceAutoRenewAttribute extends Rpc
  * @method $this withPageSize($value)
  * @method array getInstanceEventCycleStatus()
  * @method string getEventPublishTimeEnd()
+ * @method array getResourceId()
  * @method array getInstanceEventType()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -6604,6 +6768,8 @@ class DescribeInstanceAutoRenewAttribute extends Rpc
  * @method string getNotBeforeStart()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getEventPublishTimeStart()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -6655,6 +6821,21 @@ class DescribeInstanceHistoryEvents extends Rpc
         $this->options['query']['EventPublishTime.End'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -9844,6 +10025,8 @@ class InstallCloudAssistant extends Rpc
  * @method $this withCommandId($value)
  * @method string getFrequency()
  * @method $this withFrequency($value)
+ * @method string getRepeatMode()
+ * @method $this withRepeatMode($value)
  * @method string getWindowsPasswordName()
  * @method $this withWindowsPasswordName($value)
  * @method string getTimed()
@@ -12698,6 +12881,8 @@ class RevokeSecurityGroupEgress extends Rpc
  * @method $this withFrequency($value)
  * @method string getContentEncoding()
  * @method $this withContentEncoding($value)
+ * @method string getRepeatMode()
+ * @method $this withRepeatMode($value)
  * @method string getWindowsPasswordName()
  * @method $this withWindowsPasswordName($value)
  * @method string getKeepCommand()
@@ -13310,6 +13495,22 @@ class SendFile extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getReplicaPairId()
+ * @method $this withReplicaPairId($value)
+ */
+class StartDiskReplicaPair extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPrivatePoolOptionsId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -13428,6 +13629,22 @@ class StartInstances extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getReplicaPairId()
+ * @method $this withReplicaPairId($value)
+ */
+class StopDiskReplicaPair extends Rpc
+{
 }
 
 /**
