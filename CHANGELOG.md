@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.950 - 2021-4-22
+- Support NetworkInterface TrafficMode.
+
+
 ## 1.8.949 - 2021-4-22
 - AcceptInquiredSystemEvent adds Choice parameter.
 - DescribeInstanceHistoryEvents supports multiple resource types.
