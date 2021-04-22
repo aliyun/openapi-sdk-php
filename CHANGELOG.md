@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.947 - 2021-4-22
+- Support GetPhysicalDatabase API.
+
+
 ## 1.8.946 - 2021-4-21
 - Add API to list repo members with group inherited info.
 

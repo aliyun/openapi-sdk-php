@@ -42,6 +42,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetOrderBaseInfo getOrderBaseInfo(array $options = [])
  * @method GetOwnerApplyOrderDetail getOwnerApplyOrderDetail(array $options = [])
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
+ * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
  * @method GetStructSyncExecSqlDetail getStructSyncExecSqlDetail(array $options = [])
  * @method GetStructSyncJobAnalyzeResult getStructSyncJobAnalyzeResult(array $options = [])
  * @method GetStructSyncJobDetail getStructSyncJobDetail(array $options = [])
@@ -98,6 +99,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'dms-enterprise';
 }
 
 /**
@@ -601,6 +605,16 @@ class GetOwnerApplyOrderDetail extends Rpc
  * @method $this withTid($value)
  */
 class GetPermApplyOrderDetail extends Rpc
+{
+}
+
+/**
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetPhysicalDatabase extends Rpc
 {
 }
 
