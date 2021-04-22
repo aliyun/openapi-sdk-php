@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.948 - 2021-4-22
+- Support CEN latest Apis.
+
+
 ## 1.8.947 - 2021-4-22
 - Support GetPhysicalDatabase API.
 
