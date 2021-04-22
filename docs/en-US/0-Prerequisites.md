@@ -2,16 +2,17 @@
 ***
 
 # Requirements and Recommendations
+
 Before using the Alibaba Cloud SDK for PHP, please ensure your environment supports the following requirements and recommendations.
 
-
 ## Requirements
+
 - You must use PHP 5.5.0 or later.
 - Use [Composer][composer] and optimize automatic loading `composer dump-autoload --optimize`
-- if you use the `RsaKeyPair` (Only Japan station is supported) client, you will also need [OpenSSL PHP extension][OpenSSL]. 
-
+- if you use the `RsaKeyPair` (Only Japan station is supported) client, you will also need [OpenSSL PHP extension][OpenSSL].
 
 ## Recommendations
+
 - Install [cURL][cURL] 7.16.2 or later version
 - Use [OPCache][OPCache]
 - In a production environment, do not use [Xdebug][xdebug]

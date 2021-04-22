@@ -1,6 +1,5 @@
 [English](/README.md) | 简体中文
 
-
 # Alibaba Cloud SDK for PHP
 [![Latest Stable Version](https://poser.pugx.org/alibabacloud/sdk/v/stable)](https://packagist.org/packages/alibabacloud/sdk)
 [![composer.lock](https://poser.pugx.org/alibabacloud/sdk/composerlock)](https://packagist.org/packages/alibabacloud/sdk)
@@ -10,42 +9,43 @@
 [![Travis Build Status](https://travis-ci.org/aliyun/openapi-sdk-php.svg?branch=master)](https://travis-ci.org/aliyun/openapi-sdk-php)
 [![Appveyor Build Status](https://ci.appveyor.com/api/projects/status/mddt341e3hpju1nw/branch/master?svg=true)](https://ci.appveyor.com/project/aliyun/openapi-sdk-php/branch/master)
 
-
-![](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
-
+![AlibabaCloud](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
 
 Alibaba Cloud SDK for PHP 是支持产品快捷访问的开发包，由 [Alibaba Cloud Client for PHP][client] 提供底层支持。
 
-
 ## 发行说明
+
 我们在 `消除已知问题` 和 `兼容旧语法` 的原则上开发了新内核，增加了如下特性：
+
 - [支持 Composer][packagist]
 - [支持多客户端和客户端配置文件][clients]
 - [结果是一个强大的对象][result]
 - [每一个请求配置更加灵活][request]
 
-
 ## 先决条件
+
 您的系统需要满足[先决条件](/docs/zh-CN/0-Prerequisites.md)，包括 PHP >= 5.5。 我们强烈建议使用cURL扩展，并使用 TLS 后端编译 cURL 7.16.2+。
 
-
 ## 安装依赖
+
 如果已在系统上[全局安装 Composer](https://getcomposer.org/doc/00-intro.md#globally)，请直接在项目目录中运行以下内容来安装 Alibaba Cloud SDK for PHP 作为依赖项：
-```
+
+```bash
 composer require alibabacloud/sdk
 ```
-> 一些用户可能由于网络问题无法安装，可以使用[阿里云 Composer 全量镜像](https://developer.aliyun.com/composer)。
 
 请看[安装](/docs/zh-CN/1-Installation.md)有关通过 Composer 和其他方式安装的详细信息。
 
-
 ## 使用诊断
-[Troubleshoot](https://troubleshoot.api.aliyun.com/?source=github_sdk) 提供 OpenAPI 使用诊断服务，通过 `RequestID` 或 `报错信息` ，帮助开发者快速定位，为开发者提供解决方案。
+
+[Troubleshoot](https://next.api.aliyun.com/troubleshoot?source=github_sdk) 提供 OpenAPI 使用诊断服务，通过 `RequestID` 或 `报错信息` ，帮助开发者快速定位，为开发者提供解决方案。
 
 ## 在线示例
+
 [阿里云 OpenAPI 开发者门户](https://next.api.aliyun.com/) 提供在线调用阿里云产品，并动态生成 SDK 代码和快速检索接口等能力，能显著降低使用云 API 的难度。
 
 ## 快速使用
+
 在您开始之前，您需要注册阿里云帐户并获取您的[凭证](https://usercenter.console.aliyun.com/#/manage/ak)。请求之前，请[了解使用客户端][clients]，请求之后，请[了解结果对象][result]。
 
 > 目前仅支持部分阿里云产品，[已支持产品列表](/SUPPORTED.md)，对于没有支持的产品，您可使用 [Alibaba Cloud Client for PHP][request] 发起自定义请求，还可使用 [阿里云 OpenAPI 开发者门户](https://next.api.aliyun.com/) 在线生成 Alibaba Cloud Client for PHP 代码。
@@ -115,29 +115,29 @@ try {
 }
 ```
 
-
 ## 问题
+
 [提交 Issue](https://github.com/aliyun/openapi-sdk-php/issues/new/choose)，不符合指南的问题可能会立即关闭。
 
+## 发布日志
 
-## 发行说明
 每个版本的详细更改记录在[发行说明](/CHANGELOG.md)中。
 
-
 ## 贡献
+
 提交 Pull Request 之前请阅读[贡献指南](/CONTRIBUTING.md)。
 
-
 ## 相关
-* [阿里云服务 Regions & Endpoints][endpoints]
-* [阿里云 OpenAPI 开发者门户][open-api]
-* [Packagist][packagist]
-* [Composer][composer]
-* [Guzzle中文文档][guzzle-docs]
-* [Latest Release][latest-release]
 
+- [阿里云服务 Regions & Endpoints][endpoints]
+- [阿里云 OpenAPI 开发者门户][open-api]
+- [Packagist][packagist]
+- [Composer][composer]
+- [Guzzle中文文档][guzzle-docs]
+- [Latest Release][latest-release]
 
 ## 许可证
+
 [Apache-2.0](/LICENSE.md)
 
 Copyright (c) 2009-present, Alibaba Cloud All rights reserved.
