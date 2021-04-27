@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.953 - 2021-4-27
+- GetProjectMember support pageSize.
+
+
 ## 1.8.952 - 2021-4-27
 - Generated 2016-11-01 for `live`.
 

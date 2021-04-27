@@ -1314,11 +1314,26 @@ class GetDevopsProjectInfo extends Rpc
 }
 
 /**
+ * @method string getPageSize()
  * @method string getProjectId()
  * @method string getOrgId()
+ * @method string getPageToken()
  */
 class GetDevopsProjectMembers extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1342,6 +1357,19 @@ class GetDevopsProjectMembers extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageToken($value)
+    {
+        $this->data['PageToken'] = $value;
+        $this->options['form_params']['PageToken'] = $value;
 
         return $this;
     }
