@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.951 - 2021-4-27
+- Add CustomMessage to CreateMergeFaceGroupsJob.
+
+
 ## 1.8.950 - 2021-4-22
 - Support NetworkInterface TrafficMode.
 
