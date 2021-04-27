@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.952 - 2021-4-27
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.951 - 2021-4-27
 - Add CustomMessage to CreateMergeFaceGroupsJob.
 
