@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.954 - 2021-4-28
+- Export new API.
+
+
 ## 1.8.953 - 2021-4-27
 - GetProjectMember support pageSize.
 
