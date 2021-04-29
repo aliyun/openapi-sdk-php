@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.960 - 2021-4-29
+- ModifyNodeSpec API add SwitchTime.
+
+
 ## 1.8.959 - 2021-4-29
 - Add DescribeInstances API.
 
