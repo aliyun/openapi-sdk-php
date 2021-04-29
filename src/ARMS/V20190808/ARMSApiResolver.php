@@ -14,19 +14,28 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConfigApp configApp(array $options = [])
  * @method CreateAlertContact createAlertContact(array $options = [])
  * @method CreateAlertContactGroup createAlertContactGroup(array $options = [])
+ * @method CreateAlertTemplate createAlertTemplate(array $options = [])
  * @method CreateDispatchRule createDispatchRule(array $options = [])
+ * @method CreatePrometheusAlertRule createPrometheusAlertRule(array $options = [])
  * @method CreateRetcodeApp createRetcodeApp(array $options = [])
+ * @method CreateWebhook createWebhook(array $options = [])
  * @method CreateWehook createWehook(array $options = [])
  * @method DeleteAlertContact deleteAlertContact(array $options = [])
  * @method DeleteAlertContactGroup deleteAlertContactGroup(array $options = [])
  * @method DeleteAlertRules deleteAlertRules(array $options = [])
+ * @method DeleteAlertTemplate deleteAlertTemplate(array $options = [])
  * @method DeleteDispatchRule deleteDispatchRule(array $options = [])
+ * @method DeleteGrafanaResource deleteGrafanaResource(array $options = [])
+ * @method DeletePrometheusAlertRule deletePrometheusAlertRule(array $options = [])
  * @method DeleteRetcodeApp deleteRetcodeApp(array $options = [])
  * @method DeleteScenario deleteScenario(array $options = [])
  * @method DeleteTraceApp deleteTraceApp(array $options = [])
  * @method DescribeDispatchRule describeDispatchRule(array $options = [])
+ * @method DescribePrometheusAlertRule describePrometheusAlertRule(array $options = [])
  * @method DescribeTraceLicenseKey describeTraceLicenseKey(array $options = [])
  * @method DescribeTraceLocation describeTraceLocation(array $options = [])
+ * @method DisableAlertTemplate disableAlertTemplate(array $options = [])
+ * @method EnableAlertTemplate enableAlertTemplate(array $options = [])
  * @method ExportPrometheusRules exportPrometheusRules(array $options = [])
  * @method GetAgentDownloadUrl getAgentDownloadUrl(array $options = [])
  * @method GetAppApiByPage getAppApiByPage(array $options = [])
@@ -41,16 +50,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ImportAppAlertRules importAppAlertRules(array $options = [])
  * @method ImportCustomAlertRules importCustomAlertRules(array $options = [])
  * @method ImportPrometheusRules importPrometheusRules(array $options = [])
+ * @method ListActivatedAlerts listActivatedAlerts(array $options = [])
+ * @method ListAlertTemplates listAlertTemplates(array $options = [])
  * @method ListClusterFromGrafana listClusterFromGrafana(array $options = [])
  * @method ListDashboards listDashboards(array $options = [])
  * @method ListDispatchRule listDispatchRule(array $options = [])
  * @method ListPromClusters listPromClusters(array $options = [])
+ * @method ListPrometheusAlertRules listPrometheusAlertRules(array $options = [])
+ * @method ListPrometheusAlertTemplates listPrometheusAlertTemplates(array $options = [])
  * @method ListRetcodeApps listRetcodeApps(array $options = [])
  * @method ListScenario listScenario(array $options = [])
  * @method ListServerlessTopNApps listServerlessTopNApps(array $options = [])
  * @method ListTraceApps listTraceApps(array $options = [])
+ * @method OpenArmsDefaultSLR openArmsDefaultSLR(array $options = [])
  * @method OpenArmsService openArmsService(array $options = [])
  * @method OpenVCluster openVCluster(array $options = [])
+ * @method OpenXtraceDefaultSLR openXtraceDefaultSLR(array $options = [])
  * @method QueryDataset queryDataset(array $options = [])
  * @method QueryMetric queryMetric(array $options = [])
  * @method QueryMetricByPage queryMetricByPage(array $options = [])
@@ -73,7 +88,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAlertContact updateAlertContact(array $options = [])
  * @method UpdateAlertContactGroup updateAlertContactGroup(array $options = [])
  * @method UpdateAlertRule updateAlertRule(array $options = [])
+ * @method UpdateAlertTemplate updateAlertTemplate(array $options = [])
  * @method UpdateDispatchRule updateDispatchRule(array $options = [])
+ * @method UpdatePrometheusAlertRule updatePrometheusAlertRule(array $options = [])
  * @method UpdateWebhook updateWebhook(array $options = [])
  */
 class ARMSApiResolver extends ApiResolver
@@ -218,6 +235,32 @@ class CreateAlertContactGroup extends Rpc
 }
 
 /**
+ * @method string getTemplateProvider()
+ * @method $this withTemplateProvider($value)
+ * @method string getAnnotations()
+ * @method $this withAnnotations($value)
+ * @method string getRule()
+ * @method $this withRule($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getMatchExpressions()
+ * @method $this withMatchExpressions($value)
+ */
+class CreateAlertTemplate extends Rpc
+{
+}
+
+/**
  * @method string getDispatchRule()
  * @method $this withDispatchRule($value)
  * @method string getProxyUserId()
@@ -228,12 +271,62 @@ class CreateDispatchRule extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method string getAlertName()
+ * @method $this withAlertName($value)
+ * @method string getAnnotations()
+ * @method $this withAnnotations($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getDispatchRuleId()
+ * @method $this withDispatchRuleId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getNotifyType()
+ * @method $this withNotifyType($value)
+ */
+class CreatePrometheusAlertRule extends Rpc
+{
+}
+
+/**
  * @method string getRetcodeAppName()
  * @method $this withRetcodeAppName($value)
  * @method string getRetcodeAppType()
  * @method $this withRetcodeAppType($value)
  */
 class CreateRetcodeApp extends Rpc
+{
+}
+
+/**
+ * @method string getHttpHeaders()
+ * @method $this withHttpHeaders($value)
+ * @method string getMethod()
+ * @method $this withMethod($value)
+ * @method string getHttpParams()
+ * @method $this withHttpParams($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getContactName()
+ * @method $this withContactName($value)
+ */
+class CreateWebhook extends Rpc
 {
 }
 
@@ -293,7 +386,73 @@ class DeleteAlertRules extends Rpc
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
  */
+class DeleteAlertTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
 class DeleteDispatchRule extends Rpc
+{
+}
+
+/**
+ * @method string getClusterName()
+ * @method string getClusterId()
+ * @method string getUserId()
+ */
+class DeleteGrafanaResource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterName($value)
+    {
+        $this->data['ClusterName'] = $value;
+        $this->options['form_params']['ClusterName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['form_params']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAlertId()
+ * @method $this withAlertId($value)
+ */
+class DeletePrometheusAlertRule extends Rpc
 {
 }
 
@@ -335,11 +494,39 @@ class DescribeDispatchRule extends Rpc
 {
 }
 
+/**
+ * @method string getAlertId()
+ * @method $this withAlertId($value)
+ */
+class DescribePrometheusAlertRule extends Rpc
+{
+}
+
 class DescribeTraceLicenseKey extends Rpc
 {
 }
 
 class DescribeTraceLocation extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class DisableAlertTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class EnableAlertTemplate extends Rpc
 {
 }
 
@@ -514,11 +701,47 @@ class ImportPrometheusRules extends Rpc
 {
 }
 
+/**
+ * @method string getFilter()
+ * @method $this withFilter($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class ListActivatedAlerts extends Rpc
+{
+}
+
+/**
+ * @method string getAlertProvider()
+ * @method $this withAlertProvider($value)
+ * @method string getTemplateProvider()
+ * @method $this withTemplateProvider($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListAlertTemplates extends Rpc
+{
+}
+
 class ListClusterFromGrafana extends Rpc
 {
 }
 
 /**
+ * @method string getDashboardName()
+ * @method $this withDashboardName($value)
  * @method string getProduct()
  * @method $this withProduct($value)
  * @method string getRecreateSwitch()
@@ -547,6 +770,36 @@ class ListDispatchRule extends Rpc
 }
 
 class ListPromClusters extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getMatchExpressions()
+ * @method $this withMatchExpressions($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListPrometheusAlertRules extends Rpc
+{
+}
+
+/**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ */
+class ListPrometheusAlertTemplates extends Rpc
 {
 }
 
@@ -590,6 +843,10 @@ class ListTraceApps extends Rpc
 {
 }
 
+class OpenArmsDefaultSLR extends Rpc
+{
+}
+
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
@@ -611,6 +868,10 @@ class OpenArmsService extends Rpc
  * @method $this withLength($value)
  */
 class OpenVCluster extends Rpc
+{
+}
+
+class OpenXtraceDefaultSLR extends Rpc
 {
 }
 
@@ -1281,12 +1542,68 @@ class UpdateAlertRule extends Rpc
 }
 
 /**
+ * @method string getAnnotations()
+ * @method $this withAnnotations($value)
+ * @method string getRule()
+ * @method $this withRule($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getMatchExpressions()
+ * @method $this withMatchExpressions($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateAlertTemplate extends Rpc
+{
+}
+
+/**
  * @method string getDispatchRule()
  * @method $this withDispatchRule($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
  */
 class UpdateDispatchRule extends Rpc
+{
+}
+
+/**
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method string getAlertName()
+ * @method $this withAlertName($value)
+ * @method string getAnnotations()
+ * @method $this withAnnotations($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getDispatchRuleId()
+ * @method $this withDispatchRuleId($value)
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getAlertId()
+ * @method $this withAlertId($value)
+ * @method string getNotifyType()
+ * @method $this withNotifyType($value)
+ */
+class UpdatePrometheusAlertRule extends Rpc
 {
 }
 
