@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.958 - 2021-4-29
+- Update RecognizeFace.
+
+
 ## 1.8.957 - 2021-4-29
 - Mod ListDashboards add parameters,support dashboardName query.
 
