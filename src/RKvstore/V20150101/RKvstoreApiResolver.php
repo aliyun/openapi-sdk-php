@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCacheAnalysisTask createCacheAnalysisTask(array $options = [])
  * @method CreateGlobalDistributeCache createGlobalDistributeCache(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
+ * @method CreateInstances createInstances(array $options = [])
  * @method CreateTairInstance createTairInstance(array $options = [])
  * @method CreateUserClusterHost createUserClusterHost(array $options = [])
  * @method DeleteAccount deleteAccount(array $options = [])
@@ -96,6 +97,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SwitchNetwork switchNetwork(array $options = [])
  * @method SyncDtsStatus syncDtsStatus(array $options = [])
  * @method TagResources tagResources(array $options = [])
+ * @method TransformInstanceChargeType transformInstanceChargeType(array $options = [])
  * @method TransformToPrePaid transformToPrePaid(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  */
@@ -359,6 +361,44 @@ class CreateGlobalDistributeCache extends Rpc
  * @method $this withConfig($value)
  */
 class CreateInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInstances()
+ * @method $this withInstances($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getRebuildInstance()
+ * @method $this withRebuildInstance($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getToken()
+ * @method $this withToken($value)
+ * @method string getPrivateIpAddress()
+ * @method $this withPrivateIpAddress($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
+ */
+class CreateInstances extends Rpc
 {
 }
 
@@ -1242,6 +1282,8 @@ class DescribeParameterTemplates extends Rpc
  * @method $this withBusinessInfo($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getQuantity()
  * @method $this withQuantity($value)
  * @method string getResourceOwnerAccount()
@@ -1258,6 +1300,8 @@ class DescribeParameterTemplates extends Rpc
  * @method $this withZoneId($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  * @method string getForceUpgrade()
  * @method $this withForceUpgrade($value)
  * @method string getOrderType()
@@ -1707,6 +1751,8 @@ class ListTagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecondaryZoneId()
+ * @method $this withSecondaryZoneId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getEffectiveTime()
@@ -1929,6 +1975,8 @@ class ModifyInstanceAutoRenewalAttribute extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1937,6 +1985,8 @@ class ModifyInstanceAutoRenewalAttribute extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  * @method string getConfig()
  * @method $this withConfig($value)
  */
@@ -2610,6 +2660,34 @@ class TagResources extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ */
+class TransformInstanceChargeType extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getFromApp()
+ * @method $this withFromApp($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
  */
 class TransformToPrePaid extends Rpc
 {

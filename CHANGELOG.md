@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.959 - 2021-4-29
+- Add DescribeInstances API.
+
+
 ## 1.8.958 - 2021-4-29
 - Update RecognizeFace.
 
