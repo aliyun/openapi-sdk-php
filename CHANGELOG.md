@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.956 - 2021-4-29
+- Support sag reseller.
+
+
 ## 1.8.955 - 2021-4-29
 - Generated 2018-12-12, 2018-12-07 for `UniMkt`.
 
