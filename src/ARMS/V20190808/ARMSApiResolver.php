@@ -64,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTraceApps listTraceApps(array $options = [])
  * @method OpenArmsDefaultSLR openArmsDefaultSLR(array $options = [])
  * @method OpenArmsService openArmsService(array $options = [])
+ * @method OpenArmsServiceSecondVersion openArmsServiceSecondVersion(array $options = [])
  * @method OpenVCluster openVCluster(array $options = [])
  * @method OpenXtraceDefaultSLR openXtraceDefaultSLR(array $options = [])
  * @method QueryDataset queryDataset(array $options = [])
@@ -854,6 +855,14 @@ class OpenArmsDefaultSLR extends Rpc
  * @method $this withType($value)
  */
 class OpenArmsService extends Rpc
+{
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class OpenArmsServiceSecondVersion extends Rpc
 {
 }
 

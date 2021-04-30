@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.961 - 2021-4-30
+- Add OpenArmsServiceSecondVersion.
+
+
 ## 1.8.960 - 2021-4-29
 - ModifyNodeSpec API add SwitchTime.
 
