@@ -2503,6 +2503,8 @@ class DescribeLiveDomainSnapshotData extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeLiveDomainStreamTranscodeData extends Rpc
 {
