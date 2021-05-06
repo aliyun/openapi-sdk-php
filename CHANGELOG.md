@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.962 - 2021-5-6
+- Update Open API.
+
+
 ## 1.8.961 - 2021-4-30
 - Add OpenArmsServiceSecondVersion.
 
