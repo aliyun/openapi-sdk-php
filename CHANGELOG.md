@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.964 - 2021-5-7
+- Support interface DescribeDBInstanceEncryptionKey for DB Instance Cloud Disk Encryption.
+
+
 ## 1.8.963 - 2021-5-6
 - Generated 2016-11-01 for `live`.
 
