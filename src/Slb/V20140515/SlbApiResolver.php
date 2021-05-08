@@ -42,6 +42,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLoadBalancerAttribute describeLoadBalancerAttribute(array $options = [])
  * @method DescribeLoadBalancerHTTPListenerAttribute describeLoadBalancerHTTPListenerAttribute(array $options = [])
  * @method DescribeLoadBalancerHTTPSListenerAttribute describeLoadBalancerHTTPSListenerAttribute(array $options = [])
+ * @method DescribeLoadBalancerListeners describeLoadBalancerListeners(array $options = [])
  * @method DescribeLoadBalancers describeLoadBalancers(array $options = [])
  * @method DescribeLoadBalancerTCPListenerAttribute describeLoadBalancerTCPListenerAttribute(array $options = [])
  * @method DescribeLoadBalancerUDPListenerAttribute describeLoadBalancerUDPListenerAttribute(array $options = [])
@@ -985,8 +986,6 @@ class CreateLoadBalancerHTTPSListener extends Rpc
  * @method $this withHealthCheckDomain($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getProxyProtocolVpcIdEnabled()
- * @method $this withProxyProtocolVpcIdEnabled($value)
  * @method string getTags()
  * @method $this withTags($value)
  * @method string getLoadBalancerId()
@@ -1116,8 +1115,6 @@ class CreateLoadBalancerTCPListener extends Rpc
  * @method $this withHealthCheckDomain($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getProxyProtocolVpcIdEnabled()
- * @method $this withProxyProtocolVpcIdEnabled($value)
  * @method string getTags()
  * @method $this withTags($value)
  * @method string getLoadBalancerId()
@@ -2160,6 +2157,42 @@ class DescribeLoadBalancerHTTPSListenerAttribute extends Rpc
         $this->options['query']['access_key_id'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getListenerProtocol()
+ * @method $this withListenerProtocol($value)
+ * @method array getLoadBalancerId()
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeLoadBalancerListeners extends Rpc
+{
+
+    /**
+     * @param array $loadBalancerId
+     *
+     * @return $this
+     */
+	public function withLoadBalancerId(array $loadBalancerId)
+	{
+	    $this->data['LoadBalancerId'] = $loadBalancerId;
+		foreach ($loadBalancerId as $i => $iValue) {
+			$this->options['query']['LoadBalancerId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 }
 
@@ -3956,8 +3989,6 @@ class SetLoadBalancerStatus extends Rpc
  * @method $this withSynProxy($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getProxyProtocolVpcIdEnabled()
- * @method $this withProxyProtocolVpcIdEnabled($value)
  * @method string getTags()
  * @method $this withTags($value)
  * @method string getLoadBalancerId()
@@ -4077,8 +4108,6 @@ class SetLoadBalancerTCPListenerAttribute extends Rpc
  * @method $this withHealthCheckDomain($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getProxyProtocolVpcIdEnabled()
- * @method $this withProxyProtocolVpcIdEnabled($value)
  * @method string getTags()
  * @method $this withTags($value)
  * @method string getLoadBalancerId()
