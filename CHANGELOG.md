@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.966 - 2021-5-8
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.965 - 2021-5-8
 - Generated 2018-01-20 for `Iot`.
 

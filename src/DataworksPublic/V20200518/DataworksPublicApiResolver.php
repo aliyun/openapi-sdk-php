@@ -8,6 +8,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AbolishDataServiceApi abolishDataServiceApi(array $options = [])
  * @method AddProjectMemberToRole addProjectMemberToRole(array $options = [])
  * @method AddToMetaCategory addToMetaCategory(array $options = [])
+ * @method ApprovePermissionApplyOrder approvePermissionApplyOrder(array $options = [])
+ * @method CheckFileDeployment checkFileDeployment(array $options = [])
  * @method CheckMetaPartition checkMetaPartition(array $options = [])
  * @method CheckMetaTable checkMetaTable(array $options = [])
  * @method CreateBusiness createBusiness(array $options = [])
@@ -18,10 +20,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDataServiceApiAuthority createDataServiceApiAuthority(array $options = [])
  * @method CreateDataServiceFolder createDataServiceFolder(array $options = [])
  * @method CreateDataServiceGroup createDataServiceGroup(array $options = [])
+ * @method CreateDataSource createDataSource(array $options = [])
  * @method CreateFile createFile(array $options = [])
  * @method CreateFolder createFolder(array $options = [])
+ * @method CreateImportMigration createImportMigration(array $options = [])
  * @method CreateManualDag createManualDag(array $options = [])
  * @method CreateMetaCategory createMetaCategory(array $options = [])
+ * @method CreatePermissionApplyOrder createPermissionApplyOrder(array $options = [])
  * @method CreateProjectMember createProjectMember(array $options = [])
  * @method CreateQualityEntity createQualityEntity(array $options = [])
  * @method CreateQualityFollower createQualityFollower(array $options = [])
@@ -32,10 +37,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateTableLevel createTableLevel(array $options = [])
  * @method CreateTableTheme createTableTheme(array $options = [])
  * @method CreateUdfFile createUdfFile(array $options = [])
+ * @method CreateView createView(array $options = [])
  * @method DeleteBusiness deleteBusiness(array $options = [])
  * @method DeleteConnection deleteConnection(array $options = [])
  * @method DeleteDataServiceApi deleteDataServiceApi(array $options = [])
  * @method DeleteDataServiceApiAuthority deleteDataServiceApiAuthority(array $options = [])
+ * @method DeleteDataSource deleteDataSource(array $options = [])
  * @method DeleteFile deleteFile(array $options = [])
  * @method DeleteFolder deleteFolder(array $options = [])
  * @method DeleteFromMetaCategory deleteFromMetaCategory(array $options = [])
@@ -49,8 +56,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTable deleteTable(array $options = [])
  * @method DeleteTableLevel deleteTableLevel(array $options = [])
  * @method DeleteTableTheme deleteTableTheme(array $options = [])
+ * @method DeleteView deleteView(array $options = [])
  * @method DeployFile deployFile(array $options = [])
+ * @method DesensitizeData desensitizeData(array $options = [])
  * @method EstablishRelationTableToBusiness establishRelationTableToBusiness(array $options = [])
+ * @method ExportDISyncTasks exportDISyncTasks(array $options = [])
  * @method GetBaselineConfig getBaselineConfig(array $options = [])
  * @method GetBaselineKeyPath getBaselineKeyPath(array $options = [])
  * @method GetBaselineStatus getBaselineStatus(array $options = [])
@@ -64,6 +74,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDDLJobStatus getDDLJobStatus(array $options = [])
  * @method GetDeployment getDeployment(array $options = [])
  * @method GetFile getFile(array $options = [])
+ * @method GetFileTypeStatistic getFileTypeStatistic(array $options = [])
  * @method GetFileVersion getFileVersion(array $options = [])
  * @method GetFolder getFolder(array $options = [])
  * @method GetInstance getInstance(array $options = [])
@@ -72,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetInstanceErrorRank getInstanceErrorRank(array $options = [])
  * @method GetInstanceLog getInstanceLog(array $options = [])
  * @method GetInstanceStatusCount getInstanceStatusCount(array $options = [])
+ * @method GetInstanceStatusStatistic getInstanceStatusStatistic(array $options = [])
  * @method GetManualDagInstances getManualDagInstances(array $options = [])
  * @method GetMetaCategory getMetaCategory(array $options = [])
  * @method GetMetaColumnLineage getMetaColumnLineage(array $options = [])
@@ -86,18 +98,28 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMetaTableListByCategory getMetaTableListByCategory(array $options = [])
  * @method GetMetaTableOutput getMetaTableOutput(array $options = [])
  * @method GetMetaTablePartition getMetaTablePartition(array $options = [])
+ * @method GetMetaTableThemeLevel getMetaTableThemeLevel(array $options = [])
+ * @method GetMigrationProcess getMigrationProcess(array $options = [])
  * @method GetNode getNode(array $options = [])
+ * @method GetNodeChildren getNodeChildren(array $options = [])
  * @method GetNodeCode getNodeCode(array $options = [])
  * @method GetNodeOnBaseline getNodeOnBaseline(array $options = [])
+ * @method GetNodeParents getNodeParents(array $options = [])
  * @method GetNodeTypeListInfo getNodeTypeListInfo(array $options = [])
+ * @method GetOpRiskData getOpRiskData(array $options = [])
+ * @method GetOpSensitiveData getOpSensitiveData(array $options = [])
+ * @method GetPermissionApplyOrderDetail getPermissionApplyOrderDetail(array $options = [])
+ * @method GetProject getProject(array $options = [])
  * @method GetProjectDetail getProjectDetail(array $options = [])
  * @method GetQualityEntity getQualityEntity(array $options = [])
  * @method GetQualityFollower getQualityFollower(array $options = [])
  * @method GetQualityRule getQualityRule(array $options = [])
  * @method GetRemind getRemind(array $options = [])
+ * @method GetSensitiveData getSensitiveData(array $options = [])
  * @method GetSuccessInstanceTrend getSuccessInstanceTrend(array $options = [])
  * @method GetTopic getTopic(array $options = [])
  * @method GetTopicInfluence getTopicInfluence(array $options = [])
+ * @method ImportDISyncTasks importDISyncTasks(array $options = [])
  * @method ListAlertMessages listAlertMessages(array $options = [])
  * @method ListBaselineConfigs listBaselineConfigs(array $options = [])
  * @method ListBaselineStatuses listBaselineStatuses(array $options = [])
@@ -111,13 +133,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDataServiceFolders listDataServiceFolders(array $options = [])
  * @method ListDataServiceGroups listDataServiceGroups(array $options = [])
  * @method ListDataServicePublishedApis listDataServicePublishedApis(array $options = [])
+ * @method ListDataSources listDataSources(array $options = [])
+ * @method ListDISyncTasks listDISyncTasks(array $options = [])
  * @method ListFiles listFiles(array $options = [])
+ * @method ListFileType listFileType(array $options = [])
  * @method ListFileVersions listFileVersions(array $options = [])
  * @method ListFolders listFolders(array $options = [])
+ * @method ListInstanceAmount listInstanceAmount(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ListManualDagInstances listManualDagInstances(array $options = [])
  * @method ListMetaDB listMetaDB(array $options = [])
+ * @method ListNodeInputOrOutput listNodeInputOrOutput(array $options = [])
  * @method ListNodeIO listNodeIO(array $options = [])
  * @method ListNodes listNodes(array $options = [])
+ * @method ListNodesByBaseline listNodesByBaseline(array $options = [])
+ * @method ListNodesByOutput listNodesByOutput(array $options = [])
+ * @method ListPermissionApplyOrders listPermissionApplyOrders(array $options = [])
  * @method ListProgramTypeCount listProgramTypeCount(array $options = [])
  * @method ListProjectMembers listProjectMembers(array $options = [])
  * @method ListProjectRoles listProjectRoles(array $options = [])
@@ -127,6 +158,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListQualityRules listQualityRules(array $options = [])
  * @method ListReminds listReminds(array $options = [])
  * @method ListResourceGroups listResourceGroups(array $options = [])
+ * @method ListSuccessInstanceAmount listSuccessInstanceAmount(array $options = [])
  * @method ListTableLevel listTableLevel(array $options = [])
  * @method ListTableTheme listTableTheme(array $options = [])
  * @method ListTopics listTopics(array $options = [])
@@ -134,16 +166,26 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveProjectMemberFromRole removeProjectMemberFromRole(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method ResumeInstance resumeInstance(array $options = [])
+ * @method RevokeColumnPermission revokeColumnPermission(array $options = [])
+ * @method RevokeTablePermission revokeTablePermission(array $options = [])
+ * @method RunCycleDagNodes runCycleDagNodes(array $options = [])
+ * @method RunManualDagNodes runManualDagNodes(array $options = [])
+ * @method RunSmokeTest runSmokeTest(array $options = [])
  * @method RunTriggerNode runTriggerNode(array $options = [])
+ * @method ScanSensitiveData scanSensitiveData(array $options = [])
  * @method SearchMetaTables searchMetaTables(array $options = [])
  * @method SearchNodesByOutput searchNodesByOutput(array $options = [])
  * @method SetSuccessInstance setSuccessInstance(array $options = [])
+ * @method StartMigration startMigration(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method SubmitFile submitFile(array $options = [])
  * @method SuspendInstance suspendInstance(array $options = [])
+ * @method TopTenElapsedTimeInstance topTenElapsedTimeInstance(array $options = [])
+ * @method TopTenErrorTimesInstance topTenErrorTimesInstance(array $options = [])
  * @method UpdateBusiness updateBusiness(array $options = [])
  * @method UpdateConnection updateConnection(array $options = [])
  * @method UpdateDataServiceApi updateDataServiceApi(array $options = [])
+ * @method UpdateDataSource updateDataSource(array $options = [])
  * @method UpdateFile updateFile(array $options = [])
  * @method UpdateFolder updateFolder(array $options = [])
  * @method UpdateMetaCategory updateMetaCategory(array $options = [])
@@ -153,6 +195,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateQualityRule updateQualityRule(array $options = [])
  * @method UpdateRemind updateRemind(array $options = [])
  * @method UpdateTable updateTable(array $options = [])
+ * @method UpdateTableAddColumn updateTableAddColumn(array $options = [])
  * @method UpdateTableLevel updateTableLevel(array $options = [])
  * @method UpdateTableModelInfo updateTableModelInfo(array $options = [])
  * @method UpdateTableTheme updateTableTheme(array $options = [])
@@ -244,6 +287,66 @@ class AddProjectMemberToRole extends Rpc
  */
 class AddToMetaCategory extends Rpc
 {
+}
+
+/**
+ * @method string getFlowId()
+ * @method $this withFlowId($value)
+ * @method string getApproveComment()
+ * @method $this withApproveComment($value)
+ * @method string getApproveAction()
+ * @method $this withApproveAction($value)
+ */
+class ApprovePermissionApplyOrder extends Rpc
+{
+}
+
+/**
+ * @method string getCheckDetailUrl()
+ * @method string getCheckerInstanceId()
+ * @method string getStatus()
+ */
+class CheckFileDeployment extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCheckDetailUrl($value)
+    {
+        $this->data['CheckDetailUrl'] = $value;
+        $this->options['form_params']['CheckDetailUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCheckerInstanceId($value)
+    {
+        $this->data['CheckerInstanceId'] = $value;
+        $this->options['form_params']['CheckerInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1085,6 +1188,26 @@ class CreateDataServiceGroup extends Rpc
 }
 
 /**
+ * @method string getDataSourceType()
+ * @method $this withDataSourceType($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getSubType()
+ * @method $this withSubType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class CreateDataSource extends Rpc
+{
+}
+
+/**
  * @method string getFileType()
  * @method string getDependentNodeIdList()
  * @method string getContent()
@@ -1461,6 +1584,138 @@ class CreateFolder extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method string getCommitRule()
+ * @method string getWorkspaceMap()
+ * @method string getCalculateEngineMap()
+ * @method string getPackageFile()
+ * @method string getName()
+ * @method string getPackageType()
+ * @method string getProjectId()
+ * @method string getResourceGroupMap()
+ */
+class CreateImportMigration extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommitRule($value)
+    {
+        $this->data['CommitRule'] = $value;
+        $this->options['form_params']['CommitRule'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkspaceMap($value)
+    {
+        $this->data['WorkspaceMap'] = $value;
+        $this->options['form_params']['WorkspaceMap'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCalculateEngineMap($value)
+    {
+        $this->data['CalculateEngineMap'] = $value;
+        $this->options['form_params']['CalculateEngineMap'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageFile($value)
+    {
+        $this->data['PackageFile'] = $value;
+        $this->options['form_params']['PackageFile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageType($value)
+    {
+        $this->data['PackageType'] = $value;
+        $this->options['form_params']['PackageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupMap($value)
+    {
+        $this->data['ResourceGroupMap'] = $value;
+        $this->options['form_params']['ResourceGroupMap'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getProjectEnv()
  * @method string getProjectName()
  * @method string getBizDate()
@@ -1595,6 +1850,52 @@ class CreateMetaCategory extends Rpc
         $this->options['form_params']['ParentId'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getApplyReason()
+ * @method $this withApplyReason($value)
+ * @method string getMaxComputeProjectName()
+ * @method $this withMaxComputeProjectName($value)
+ * @method array getApplyObject()
+ * @method string getApplyUserIds()
+ * @method $this withApplyUserIds($value)
+ * @method string getDeadline()
+ * @method $this withDeadline($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ * @method string getEngineType()
+ * @method $this withEngineType($value)
+ */
+class CreatePermissionApplyOrder extends Rpc
+{
+
+    /**
+     * @param array $applyObject
+     *
+     * @return $this
+     */
+	public function withApplyObject(array $applyObject)
+	{
+	    $this->data['ApplyObject'] = $applyObject;
+		foreach ($applyObject as $depth1 => $depth1Value) {
+			foreach ($depth1Value['ColumnMetaList'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Name'])){
+					$this->options['query']['ApplyObject.' . ($depth1 + 1) . '.ColumnMetaList.' . ($depth2 + 1) . '.Name'] = $depth2Value['Name'];
+				}
+			}
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['ApplyObject.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Actions'])){
+				$this->options['query']['ApplyObject.' . ($depth1 + 1) . '.Actions'] = $depth1Value['Actions'];
+			}
+		}
+
+		return $this;
     }
 }
 
@@ -2343,30 +2644,18 @@ class CreateRemind extends Rpc
 }
 
 /**
- * @method string getVisibility()
- * @method $this withVisibility($value)
- * @method string getPhysicsLevelId()
- * @method $this withPhysicsLevelId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method array getColumns()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getLifeCycle()
  * @method $this withLifeCycle($value)
  * @method array getThemes()
  * @method string getLogicalLevelId()
  * @method $this withLogicalLevelId($value)
  * @method string getEndpoint()
- * @method string getIsView()
- * @method $this withIsView($value)
- * @method string getExternalTableType()
- * @method $this withExternalTableType($value)
  * @method string getEnvType()
  * @method string getHasPart()
  * @method $this withHasPart($value)
- * @method string getLocation()
- * @method $this withLocation($value)
- * @method string getComment()
- * @method $this withComment($value)
  * @method string getTableName()
  * @method $this withTableName($value)
  * @method string getAppGuid()
@@ -2375,6 +2664,20 @@ class CreateRemind extends Rpc
  * @method $this withProjectId($value)
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
+ * @method string getVisibility()
+ * @method $this withVisibility($value)
+ * @method string getPhysicsLevelId()
+ * @method $this withPhysicsLevelId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIsView()
+ * @method $this withIsView($value)
+ * @method string getExternalTableType()
+ * @method $this withExternalTableType($value)
+ * @method string getLocation()
+ * @method $this withLocation($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  */
 class CreateTable extends Rpc
 {
@@ -2400,14 +2703,8 @@ class CreateTable extends Rpc
 			if(isset($depth1Value['Length'])){
 				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.Length'] = $depth1Value['Length'];
 			}
-			if(isset($depth1Value['IsNullable'])){
-				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.IsNullable'] = $depth1Value['IsNullable'];
-			}
 			if(isset($depth1Value['Comment'])){
 				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.Comment'] = $depth1Value['Comment'];
-			}
-			if(isset($depth1Value['IsPrimaryKey'])){
-				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.IsPrimaryKey'] = $depth1Value['IsPrimaryKey'];
 			}
 			if(isset($depth1Value['ColumnName'])){
 				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.ColumnName'] = $depth1Value['ColumnName'];
@@ -2670,6 +2967,145 @@ class CreateUdfFile extends Rpc
 }
 
 /**
+ * @method string getViewName()
+ * @method string getClientToken()
+ * @method string getSelectSQL()
+ * @method string getSelectWhere()
+ * @method string getSelectTableName()
+ * @method string getComment()
+ * @method string getSelectColumn()
+ * @method string getAppGuid()
+ * @method array getViewColumn()
+ */
+class CreateView extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withViewName($value)
+    {
+        $this->data['ViewName'] = $value;
+        $this->options['form_params']['ViewName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSelectSQL($value)
+    {
+        $this->data['SelectSQL'] = $value;
+        $this->options['form_params']['SelectSQL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSelectWhere($value)
+    {
+        $this->data['SelectWhere'] = $value;
+        $this->options['form_params']['SelectWhere'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSelectTableName($value)
+    {
+        $this->data['SelectTableName'] = $value;
+        $this->options['form_params']['SelectTableName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withComment($value)
+    {
+        $this->data['Comment'] = $value;
+        $this->options['form_params']['Comment'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSelectColumn($value)
+    {
+        $this->data['SelectColumn'] = $value;
+        $this->options['form_params']['SelectColumn'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGuid($value)
+    {
+        $this->data['AppGuid'] = $value;
+        $this->options['form_params']['AppGuid'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $viewColumn
+     *
+     * @return $this
+     */
+	public function withViewColumn(array $viewColumn)
+	{
+	    $this->data['ViewColumn'] = $viewColumn;
+		foreach ($viewColumn as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Comment'])){
+				$this->options['form_params']['ViewColumn.' . ($depth1 + 1) . '.Comment'] = $depth1Value['Comment'];
+			}
+			if(isset($depth1Value['ColumnName'])){
+				$this->options['form_params']['ViewColumn.' . ($depth1 + 1) . '.ColumnName'] = $depth1Value['ColumnName'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getBusinessId()
  * @method string getProjectId()
  * @method string getProjectIdentifier()
@@ -2833,6 +3269,14 @@ class DeleteDataServiceApiAuthority extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getDataSourceId()
+ * @method $this withDataSourceId($value)
+ */
+class DeleteDataSource extends Rpc
+{
 }
 
 /**
@@ -3251,6 +3695,16 @@ class DeleteTableTheme extends Rpc
 }
 
 /**
+ * @method string getViewName()
+ * @method $this withViewName($value)
+ * @method string getAppGuid()
+ * @method $this withAppGuid($value)
+ */
+class DeleteView extends Rpc
+{
+}
+
+/**
  * @method string getComment()
  * @method string getProjectId()
  * @method string getNodeId()
@@ -3321,6 +3775,43 @@ class DeployFile extends Rpc
     {
         $this->data['FileId'] = $value;
         $this->options['form_params']['FileId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSceneCode()
+ * @method string getData()
+ */
+class DesensitizeData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSceneCode($value)
+    {
+        $this->data['SceneCode'] = $value;
+        $this->options['form_params']['SceneCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
 
         return $this;
     }
@@ -3400,6 +3891,18 @@ class EstablishRelationTableToBusiness extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getTaskParam()
+ * @method $this withTaskParam($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ExportDISyncTasks extends Rpc
+{
 }
 
 /**
@@ -3948,6 +4451,40 @@ class GetFile extends Rpc
 }
 
 /**
+ * @method string getProjectEnv()
+ * @method string getProjectId()
+ */
+class GetFileTypeStatistic extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getFileVersion()
  * @method string getProjectId()
  * @method string getProjectIdentifier()
@@ -4291,6 +4828,54 @@ class GetInstanceStatusCount extends Rpc
 
 /**
  * @method string getProjectEnv()
+ * @method string getBizDate()
+ * @method string getProjectId()
+ */
+class GetInstanceStatusStatistic extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizDate($value)
+    {
+        $this->data['BizDate'] = $value;
+        $this->options['form_params']['BizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
  * @method string getProjectName()
  * @method string getDagId()
  */
@@ -4411,6 +4996,8 @@ class GetMetaDBTableList extends Rpc
 /**
  * @method string getDataSourceType()
  * @method $this withDataSourceType($value)
+ * @method string getExtension()
+ * @method $this withExtension($value)
  * @method string getTableGuid()
  * @method $this withTableGuid($value)
  * @method string getDatabaseName()
@@ -4661,10 +5248,91 @@ class GetMetaTablePartition extends Rpc
 }
 
 /**
+ * @method string getDataSourceType()
+ * @method $this withDataSourceType($value)
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
+ */
+class GetMetaTableThemeLevel extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getMigrationId()
+ * @method string getProjectId()
+ */
+class GetMigrationProcess extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMigrationId($value)
+    {
+        $this->data['MigrationId'] = $value;
+        $this->options['form_params']['MigrationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getProjectEnv()
  * @method string getNodeId()
  */
 class GetNode extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getNodeId()
+ */
+class GetNodeChildren extends Rpc
 {
 
     /**
@@ -4743,6 +5411,40 @@ class GetNodeOnBaseline extends Rpc
     {
         $this->data['BaselineId'] = $value;
         $this->options['form_params']['BaselineId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getNodeId()
+ */
+class GetNodeParents extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
 
         return $this;
     }
@@ -4836,6 +5538,60 @@ class GetNodeTypeListInfo extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getDate()
+ * @method $this withDate($value)
+ * @method string getRiskType()
+ * @method $this withRiskType($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class GetOpRiskData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getDate()
+ * @method $this withDate($value)
+ * @method string getOpType()
+ * @method $this withOpType($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class GetOpSensitiveData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getFlowId()
+ * @method $this withFlowId($value)
+ */
+class GetPermissionApplyOrderDetail extends Rpc
+{
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetProject extends Rpc
+{
 }
 
 /**
@@ -4997,6 +5753,21 @@ class GetRemind extends Rpc
 }
 
 /**
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class GetSensitiveData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getProjectId()
  */
 class GetSuccessInstanceTrend extends Rpc
@@ -5054,6 +5825,20 @@ class GetTopicInfluence extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getTaskContent()
+ * @method $this withTaskContent($value)
+ * @method string getTaskParam()
+ * @method $this withTaskParam($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class ImportDISyncTasks extends Rpc
+{
 }
 
 /**
@@ -6098,6 +6883,45 @@ class ListDataServicePublishedApis extends Rpc
 }
 
 /**
+ * @method string getDataSourceType()
+ * @method $this withDataSourceType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSubType()
+ * @method $this withSubType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListDataSources extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListDISyncTasks extends Rpc
+{
+}
+
+/**
  * @method string getOwner()
  * @method string getFileTypes()
  * @method string getProjectIdentifier()
@@ -6224,6 +7048,96 @@ class ListFiles extends Rpc
     {
         $this->data['UseType'] = $value;
         $this->options['form_params']['UseType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageSize()
+ * @method string getKeyword()
+ * @method string getLocale()
+ * @method string getProjectId()
+ * @method string getProjectIdentifier()
+ * @method string getPageNumber()
+ */
+class ListFileType extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKeyword($value)
+    {
+        $this->data['Keyword'] = $value;
+        $this->options['form_params']['Keyword'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLocale($value)
+    {
+        $this->data['Locale'] = $value;
+        $this->options['form_params']['Locale'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectIdentifier($value)
+    {
+        $this->data['ProjectIdentifier'] = $value;
+        $this->options['form_params']['ProjectIdentifier'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
 
         return $this;
     }
@@ -6382,13 +7296,64 @@ class ListFolders extends Rpc
 }
 
 /**
+ * @method string getBeginDate()
+ * @method string getEndDate()
+ * @method string getProjectId()
+ */
+class ListInstanceAmount extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBeginDate($value)
+    {
+        $this->data['BeginDate'] = $value;
+        $this->options['form_params']['BeginDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndDate($value)
+    {
+        $this->data['EndDate'] = $value;
+        $this->options['form_params']['EndDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getProjectEnv()
  * @method string getOwner()
  * @method string getBizName()
+ * @method string getBeginBizdate()
+ * @method string getEndBizdate()
  * @method string getDagId()
  * @method string getPageNumber()
  * @method string getNodeName()
  * @method string getProgramType()
+ * @method string getBizdate()
  * @method string getPageSize()
  * @method string getNodeId()
  * @method string getProjectId()
@@ -6431,6 +7396,32 @@ class ListInstances extends Rpc
     {
         $this->data['BizName'] = $value;
         $this->options['form_params']['BizName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBeginBizdate($value)
+    {
+        $this->data['BeginBizdate'] = $value;
+        $this->options['form_params']['BeginBizdate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndBizdate($value)
+    {
+        $this->data['EndBizdate'] = $value;
+        $this->options['form_params']['EndBizdate'] = $value;
 
         return $this;
     }
@@ -6492,6 +7483,19 @@ class ListInstances extends Rpc
      *
      * @return $this
      */
+    public function withBizdate($value)
+    {
+        $this->data['Bizdate'] = $value;
+        $this->options['form_params']['Bizdate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPageSize($value)
     {
         $this->data['PageSize'] = $value;
@@ -6528,6 +7532,54 @@ class ListInstances extends Rpc
 }
 
 /**
+ * @method string getProjectEnv()
+ * @method string getProjectName()
+ * @method string getDagId()
+ */
+class ListManualDagInstances extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->options['form_params']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDagId($value)
+    {
+        $this->data['DagId'] = $value;
+        $this->options['form_params']['DagId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDataSourceType()
  * @method $this withDataSourceType($value)
  * @method string getPageSize()
@@ -6542,6 +7594,54 @@ class ListMetaDB extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getNodeId()
+ * @method string getIoType()
+ */
+class ListNodeInputOrOutput extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIoType($value)
+    {
+        $this->data['IoType'] = $value;
+        $this->options['form_params']['IoType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -6708,6 +7808,102 @@ class ListNodes extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getBaselineId()
+ */
+class ListNodesByBaseline extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBaselineId($value)
+    {
+        $this->data['BaselineId'] = $value;
+        $this->options['form_params']['BaselineId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getOutputs()
+ * @method string getOutputNodeListAsMap()
+ */
+class ListNodesByOutput extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputs($value)
+    {
+        $this->data['Outputs'] = $value;
+        $this->options['form_params']['Outputs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputNodeListAsMap($value)
+    {
+        $this->data['OutputNodeListAsMap'] = $value;
+        $this->options['form_params']['OutputNodeListAsMap'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMaxComputeProjectName()
+ * @method $this withMaxComputeProjectName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getFlowStatus()
+ * @method $this withFlowStatus($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ * @method string getEngineType()
+ * @method $this withEngineType($value)
+ */
+class ListPermissionApplyOrders extends Rpc
+{
 }
 
 /**
@@ -7121,6 +8317,8 @@ class ListReminds extends Rpc
 }
 
 /**
+ * @method string getBizExtKey()
+ * @method $this withBizExtKey($value)
  * @method string getResourceGroupType()
  * @method $this withResourceGroupType($value)
  * @method string getKeyword()
@@ -7131,8 +8329,32 @@ class ListResourceGroups extends Rpc
 }
 
 /**
+ * @method string getProjectId()
+ */
+class ListSuccessInstanceAmount extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getLevelType()
  * @method $this withLevelType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
@@ -7421,6 +8643,368 @@ class ResumeInstance extends Rpc
 }
 
 /**
+ * @method string getRevokeUserName()
+ * @method $this withRevokeUserName($value)
+ * @method string getMaxComputeProjectName()
+ * @method $this withMaxComputeProjectName($value)
+ * @method string getColumns()
+ * @method $this withColumns($value)
+ * @method string getRevokeUserId()
+ * @method $this withRevokeUserId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class RevokeColumnPermission extends Rpc
+{
+}
+
+/**
+ * @method string getRevokeUserName()
+ * @method $this withRevokeUserName($value)
+ * @method string getMaxComputeProjectName()
+ * @method $this withMaxComputeProjectName($value)
+ * @method string getRevokeUserId()
+ * @method $this withRevokeUserId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getActions()
+ * @method $this withActions($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class RevokeTablePermission extends Rpc
+{
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getStartBizDate()
+ * @method string getParallelism()
+ * @method string getRootNodeId()
+ * @method string getBizBeginTime()
+ * @method string getEndBizDate()
+ * @method string getIncludeNodeIds()
+ * @method string getBizEndTime()
+ * @method string getName()
+ * @method string getExcludeNodeIds()
+ * @method string getNodeParams()
+ */
+class RunCycleDagNodes extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartBizDate($value)
+    {
+        $this->data['StartBizDate'] = $value;
+        $this->options['form_params']['StartBizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParallelism($value)
+    {
+        $this->data['Parallelism'] = $value;
+        $this->options['form_params']['Parallelism'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRootNodeId($value)
+    {
+        $this->data['RootNodeId'] = $value;
+        $this->options['form_params']['RootNodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizBeginTime($value)
+    {
+        $this->data['BizBeginTime'] = $value;
+        $this->options['form_params']['BizBeginTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndBizDate($value)
+    {
+        $this->data['EndBizDate'] = $value;
+        $this->options['form_params']['EndBizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIncludeNodeIds($value)
+    {
+        $this->data['IncludeNodeIds'] = $value;
+        $this->options['form_params']['IncludeNodeIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizEndTime($value)
+    {
+        $this->data['BizEndTime'] = $value;
+        $this->options['form_params']['BizEndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExcludeNodeIds($value)
+    {
+        $this->data['ExcludeNodeIds'] = $value;
+        $this->options['form_params']['ExcludeNodeIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeParams($value)
+    {
+        $this->data['NodeParams'] = $value;
+        $this->options['form_params']['NodeParams'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getProjectName()
+ * @method string getBizDate()
+ * @method string getFlowName()
+ * @method string getDagParameters()
+ * @method string getNodeParameters()
+ */
+class RunManualDagNodes extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->options['form_params']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizDate($value)
+    {
+        $this->data['BizDate'] = $value;
+        $this->options['form_params']['BizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlowName($value)
+    {
+        $this->data['FlowName'] = $value;
+        $this->options['form_params']['FlowName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDagParameters($value)
+    {
+        $this->data['DagParameters'] = $value;
+        $this->options['form_params']['DagParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeParameters($value)
+    {
+        $this->data['NodeParameters'] = $value;
+        $this->options['form_params']['NodeParameters'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getBizdate()
+ * @method string getName()
+ * @method string getNodeParams()
+ * @method string getNodeId()
+ */
+class RunSmokeTest extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizdate($value)
+    {
+        $this->data['Bizdate'] = $value;
+        $this->options['form_params']['Bizdate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeParams($value)
+    {
+        $this->data['NodeParams'] = $value;
+        $this->options['form_params']['NodeParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getBizDate()
  * @method string getAppId()
  * @method string getCycleTime()
@@ -7480,6 +9064,17 @@ class RunTriggerNode extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getData()
+ * @method $this withData($value)
+ */
+class ScanSensitiveData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -7565,6 +9160,40 @@ class SetSuccessInstance extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMigrationId()
+ * @method string getProjectId()
+ */
+class StartMigration extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMigrationId($value)
+    {
+        $this->data['MigrationId'] = $value;
+        $this->options['form_params']['MigrationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -7695,6 +9324,60 @@ class SuspendInstance extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBusinessDate()
+ * @method string getProjectId()
+ */
+class TopTenElapsedTimeInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBusinessDate($value)
+    {
+        $this->data['BusinessDate'] = $value;
+        $this->options['form_params']['BusinessDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectId()
+ */
+class TopTenErrorTimesInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -7995,6 +9678,25 @@ class UpdateDataServiceApi extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getDataSourceId()
+ * @method $this withDataSourceId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateDataSource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -9086,28 +10788,16 @@ class UpdateRemind extends Rpc
 }
 
 /**
- * @method string getVisibility()
- * @method $this withVisibility($value)
- * @method string getPhysicsLevelId()
- * @method $this withPhysicsLevelId($value)
  * @method array getColumns()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getLifeCycle()
  * @method $this withLifeCycle($value)
  * @method array getThemes()
  * @method string getLogicalLevelId()
  * @method $this withLogicalLevelId($value)
  * @method string getEndpoint()
- * @method string getIsView()
- * @method $this withIsView($value)
- * @method string getExternalTableType()
- * @method $this withExternalTableType($value)
  * @method string getEnvType()
  * @method string getHasPart()
  * @method $this withHasPart($value)
- * @method string getLocation()
- * @method $this withLocation($value)
  * @method string getTableName()
  * @method $this withTableName($value)
  * @method string getAppGuid()
@@ -9116,6 +10806,20 @@ class UpdateRemind extends Rpc
  * @method $this withProjectId($value)
  * @method string getCategoryId()
  * @method $this withCategoryId($value)
+ * @method string getVisibility()
+ * @method $this withVisibility($value)
+ * @method string getPhysicsLevelId()
+ * @method $this withPhysicsLevelId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIsView()
+ * @method $this withIsView($value)
+ * @method string getExternalTableType()
+ * @method $this withExternalTableType($value)
+ * @method string getLocation()
+ * @method $this withLocation($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  * @method string getCreateIfNotExists()
  * @method $this withCreateIfNotExists($value)
  */
@@ -9143,14 +10847,8 @@ class UpdateTable extends Rpc
 			if(isset($depth1Value['Length'])){
 				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.Length'] = $depth1Value['Length'];
 			}
-			if(isset($depth1Value['IsNullable'])){
-				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.IsNullable'] = $depth1Value['IsNullable'];
-			}
 			if(isset($depth1Value['Comment'])){
 				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.Comment'] = $depth1Value['Comment'];
-			}
-			if(isset($depth1Value['IsPrimaryKey'])){
-				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.IsPrimaryKey'] = $depth1Value['IsPrimaryKey'];
 			}
 			if(isset($depth1Value['ColumnName'])){
 				$this->options['form_params']['Columns.' . ($depth1 + 1) . '.ColumnName'] = $depth1Value['ColumnName'];
@@ -9207,6 +10905,41 @@ class UpdateTable extends Rpc
         $this->options['form_params']['EnvType'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
+ * @method array getColumn()
+ */
+class UpdateTableAddColumn extends Rpc
+{
+
+    /**
+     * @param array $column
+     *
+     * @return $this
+     */
+	public function withColumn(array $column)
+	{
+	    $this->data['Column'] = $column;
+		foreach ($column as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ColumnNameCn'])){
+				$this->options['form_params']['Column.' . ($depth1 + 1) . '.ColumnNameCn'] = $depth1Value['ColumnNameCn'];
+			}
+			if(isset($depth1Value['Comment'])){
+				$this->options['form_params']['Column.' . ($depth1 + 1) . '.Comment'] = $depth1Value['Comment'];
+			}
+			if(isset($depth1Value['ColumnName'])){
+				$this->options['form_params']['Column.' . ($depth1 + 1) . '.ColumnName'] = $depth1Value['ColumnName'];
+			}
+			if(isset($depth1Value['ColumnType'])){
+				$this->options['form_params']['Column.' . ($depth1 + 1) . '.ColumnType'] = $depth1Value['ColumnType'];
+			}
+		}
+
+		return $this;
     }
 }
 
