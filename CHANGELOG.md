@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.965 - 2021-5-8
+- Generated 2018-01-20 for `Iot`.
+
+
 ## 1.8.964 - 2021-5-7
 - Support interface DescribeDBInstanceEncryptionKey for DB Instance Cloud Disk Encryption.
 

@@ -41,6 +41,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelOTAStrategyByJob cancelOTAStrategyByJob(array $options = [])
  * @method CancelOTATaskByDevice cancelOTATaskByDevice(array $options = [])
  * @method CancelOTATaskByJob cancelOTATaskByJob(array $options = [])
+ * @method CancelReleaseProduct cancelReleaseProduct(array $options = [])
  * @method ClearEdgeInstanceDriverConfigs clearEdgeInstanceDriverConfigs(array $options = [])
  * @method CloseEdgeInstanceDeployment closeEdgeInstanceDeployment(array $options = [])
  * @method CopyThingModel copyThingModel(array $options = [])
@@ -54,6 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEdgeInstance createEdgeInstance(array $options = [])
  * @method CreateEdgeInstanceChannel createEdgeInstanceChannel(array $options = [])
  * @method CreateEdgeInstanceDeployment createEdgeInstanceDeployment(array $options = [])
+ * @method CreateEdgeInstanceMessageRouting createEdgeInstanceMessageRouting(array $options = [])
  * @method CreateEdgeOssPreSignedAddress createEdgeOssPreSignedAddress(array $options = [])
  * @method CreateJob createJob(array $options = [])
  * @method CreateLoRaNodesTask createLoRaNodesTask(array $options = [])
@@ -84,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteEdgeDriver deleteEdgeDriver(array $options = [])
  * @method DeleteEdgeDriverVersion deleteEdgeDriverVersion(array $options = [])
  * @method DeleteEdgeInstance deleteEdgeInstance(array $options = [])
+ * @method DeleteEdgeInstanceMessageRouting deleteEdgeInstanceMessageRouting(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteOTAFirmware deleteOTAFirmware(array $options = [])
  * @method DeleteOTAModule deleteOTAModule(array $options = [])
@@ -93,11 +96,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRule deleteRule(array $options = [])
  * @method DeleteRuleAction deleteRuleAction(array $options = [])
  * @method DeleteSceneRule deleteSceneRule(array $options = [])
+ * @method DeleteSpeech deleteSpeech(array $options = [])
  * @method DeleteSubscribeRelation deleteSubscribeRelation(array $options = [])
  * @method DeleteThingModel deleteThingModel(array $options = [])
  * @method DeleteTopicRouteTable deleteTopicRouteTable(array $options = [])
+ * @method DisableDeviceTunnel disableDeviceTunnel(array $options = [])
+ * @method DisableDeviceTunnelShare disableDeviceTunnelShare(array $options = [])
  * @method DisableSceneRule disableSceneRule(array $options = [])
  * @method DisableThing disableThing(array $options = [])
+ * @method EnableDeviceTunnel enableDeviceTunnel(array $options = [])
+ * @method EnableDeviceTunnelShare enableDeviceTunnelShare(array $options = [])
  * @method EnableSceneRule enableSceneRule(array $options = [])
  * @method EnableThing enableThing(array $options = [])
  * @method GenerateDeviceNameListURL generateDeviceNameListURL(array $options = [])
@@ -106,9 +114,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataAPIServiceDetail getDataAPIServiceDetail(array $options = [])
  * @method GetDeviceShadow getDeviceShadow(array $options = [])
  * @method GetDeviceStatus getDeviceStatus(array $options = [])
+ * @method GetDeviceTunnelShareStatus getDeviceTunnelShareStatus(array $options = [])
+ * @method GetDeviceTunnelStatus getDeviceTunnelStatus(array $options = [])
  * @method GetEdgeDriverVersion getEdgeDriverVersion(array $options = [])
  * @method GetEdgeInstance getEdgeInstance(array $options = [])
  * @method GetEdgeInstanceDeployment getEdgeInstanceDeployment(array $options = [])
+ * @method GetEdgeInstanceMessageRouting getEdgeInstanceMessageRouting(array $options = [])
  * @method GetGatewayBySubDevice getGatewayBySubDevice(array $options = [])
  * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
  * @method GetNodesAddingTask getNodesAddingTask(array $options = [])
@@ -193,6 +204,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryEdgeInstanceDriver queryEdgeInstanceDriver(array $options = [])
  * @method QueryEdgeInstanceGateway queryEdgeInstanceGateway(array $options = [])
  * @method QueryEdgeInstanceHistoricDeployment queryEdgeInstanceHistoricDeployment(array $options = [])
+ * @method QueryEdgeInstanceMessageRouting queryEdgeInstanceMessageRouting(array $options = [])
  * @method QueryEdgeInstanceSceneRule queryEdgeInstanceSceneRule(array $options = [])
  * @method QueryJob queryJob(array $options = [])
  * @method QueryJobStatistics queryJobStatistics(array $options = [])
@@ -215,8 +227,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryThingModelPublished queryThingModelPublished(array $options = [])
  * @method QueryTopicReverseRouteTable queryTopicReverseRouteTable(array $options = [])
  * @method QueryTopicRouteTable queryTopicRouteTable(array $options = [])
+ * @method RefreshDeviceTunnelSharePassword refreshDeviceTunnelSharePassword(array $options = [])
  * @method RegisterDevice registerDevice(array $options = [])
  * @method ReleaseEdgeDriverVersion releaseEdgeDriverVersion(array $options = [])
+ * @method ReleaseProduct releaseProduct(array $options = [])
  * @method RemoveThingTopo removeThingTopo(array $options = [])
  * @method ReplaceEdgeInstanceGateway replaceEdgeInstanceGateway(array $options = [])
  * @method ResetConsumerGroupPosition resetConsumerGroupPosition(array $options = [])
@@ -244,6 +258,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateEdgeDriverVersion updateEdgeDriverVersion(array $options = [])
  * @method UpdateEdgeInstance updateEdgeInstance(array $options = [])
  * @method UpdateEdgeInstanceChannel updateEdgeInstanceChannel(array $options = [])
+ * @method UpdateEdgeInstanceMessageRouting updateEdgeInstanceMessageRouting(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
  * @method UpdateOTAModule updateOTAModule(array $options = [])
  * @method UpdateProduct updateProduct(array $options = [])
@@ -272,9 +287,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'iot';
 }
 
 /**
@@ -937,6 +949,10 @@ class BatchGetDeviceBindStatus extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method array getIotId()
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
@@ -2330,6 +2346,50 @@ class CancelOTATaskByJob extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getBizTenantId()
+ * @method $this withBizTenantId($value)
+ */
+class CancelReleaseProduct extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDriverId()
  * @method $this withDriverId($value)
  * @method string getIotInstanceId()
@@ -3162,6 +3222,58 @@ class CreateEdgeInstanceDeployment extends Rpc
 }
 
 /**
+ * @method string getSourceData()
+ * @method $this withSourceData($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getSourceType()
+ * @method $this withSourceType($value)
+ * @method string getTopicFilter()
+ * @method $this withTopicFilter($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTargetData()
+ * @method $this withTargetData($value)
+ * @method string getApiProduct()
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getApiRevision()
+ * @method string getTargetIotHubQos()
+ * @method $this withTargetIotHubQos($value)
+ */
+class CreateEdgeInstanceMessageRouting extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getType()
  * @method $this withType($value)
  * @method string getIotInstanceId()
@@ -3228,6 +3340,8 @@ class CreateEdgeOssPreSignedAddress extends Rpc
  * @method $this withJobFile($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
+ * @method string getScheduledTime()
+ * @method $this withScheduledTime($value)
  */
 class CreateJob extends Rpc
 {
@@ -4568,8 +4682,12 @@ class DeleteDeviceGroup extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
  * @method string getPropKey()
  * @method $this withPropKey($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
@@ -4698,6 +4816,46 @@ class DeleteEdgeDriverVersion extends Rpc
  * @method string getApiRevision()
  */
 class DeleteEdgeInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRouteId()
+ * @method $this withRouteId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteEdgeInstanceMessageRouting extends Rpc
 {
 
     /**
@@ -5098,6 +5256,70 @@ class DeleteSceneRule extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method array getSpeechCodeList()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteSpeech extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $speechCodeList
+     *
+     * @return $this
+     */
+	public function withSpeechCodeList(array $speechCodeList)
+	{
+	    $this->data['SpeechCodeList'] = $speechCodeList;
+		foreach ($speechCodeList as $i => $iValue) {
+			$this->options['form_params']['SpeechCodeList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getType()
  * @method $this withType($value)
  * @method string getIotInstanceId()
@@ -5290,6 +5512,86 @@ class DeleteTopicRouteTable extends Rpc
 /**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class DisableDeviceTunnel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class DisableDeviceTunnelShare extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
  * @method string getRuleId()
@@ -5342,6 +5644,86 @@ class DisableSceneRule extends Rpc
  * @method $this withDeviceName($value)
  */
 class DisableThing extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class EnableDeviceTunnel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class EnableDeviceTunnelShare extends Rpc
 {
 
     /**
@@ -5716,6 +6098,86 @@ class GetDeviceStatus extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class GetDeviceTunnelShareStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class GetDeviceTunnelStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDriverId()
  * @method $this withDriverId($value)
  * @method string getIotInstanceId()
@@ -5804,6 +6266,46 @@ class GetEdgeInstance extends Rpc
  * @method string getApiRevision()
  */
 class GetEdgeInstanceDeployment extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRouteId()
+ * @method $this withRouteId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class GetEdgeInstanceMessageRouting extends Rpc
 {
 
     /**
@@ -6072,8 +6574,6 @@ class GetSceneRule extends Rpc
  * @method $this withSimple($value)
  * @method string getRealTripartiteKey()
  * @method $this withRealTripartiteKey($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -6244,6 +6744,10 @@ class GetThingTemplate extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
@@ -6616,6 +7120,7 @@ class ListAnalyticsData extends Rpc
 }
 
 /**
+ * @method string getJobId()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
@@ -6629,6 +7134,19 @@ class ListAnalyticsData extends Rpc
  */
 class ListDeviceDistributeJob extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -7356,8 +7874,6 @@ class ListTaskByPage extends Rpc
 }
 
 /**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -7396,8 +7912,6 @@ class ListThingModelVersion extends Rpc
 }
 
 /**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getApiProduct()
@@ -8176,8 +8690,12 @@ class QueryDevice extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
  * @method string getSQL()
  * @method $this withSQL($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getApiProduct()
@@ -9901,6 +10419,48 @@ class QueryEdgeInstanceHistoricDeployment extends Rpc
  * @method string getApiProduct()
  * @method string getApiRevision()
  */
+class QueryEdgeInstanceMessageRouting extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
 class QueryEdgeInstanceSceneRule extends Rpc
 {
 
@@ -10815,6 +11375,46 @@ class QueryTopicRouteTable extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class RefreshDeviceTunnelSharePassword extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRealTenantId()
  * @method $this withRealTenantId($value)
  * @method string getRealTripartiteKey()
@@ -10881,6 +11481,56 @@ class RegisterDevice extends Rpc
  * @method string getApiRevision()
  */
 class ReleaseEdgeDriverVersion extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
+ * @method string getCategoryKey()
+ * @method $this withCategoryKey($value)
+ * @method string getTemplateIdentifier()
+ * @method $this withTemplateIdentifier($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getCategoryName()
+ * @method $this withCategoryName($value)
+ * @method string getBizTenantId()
+ * @method $this withBizTenantId($value)
+ */
+class ReleaseProduct extends Rpc
 {
 
     /**
@@ -12208,6 +12858,60 @@ class UpdateEdgeInstanceChannel extends Rpc
 
 		return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceData()
+ * @method $this withSourceData($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getSourceType()
+ * @method $this withSourceType($value)
+ * @method string getTopicFilter()
+ * @method $this withTopicFilter($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRouteId()
+ * @method $this withRouteId($value)
+ * @method string getTargetData()
+ * @method $this withTargetData($value)
+ * @method string getApiProduct()
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getApiRevision()
+ * @method string getTargetIotHubQos()
+ * @method $this withTargetIotHubQos($value)
+ */
+class UpdateEdgeInstanceMessageRouting extends Rpc
+{
 
     /**
      * @param string $value
