@@ -47,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserAnalyzer describeUserAnalyzer(array $options = [])
  * @method DisableSlowQuery disableSlowQuery(array $options = [])
  * @method EnableSlowQuery enableSlowQuery(array $options = [])
+ * @method GenerateMergedTable generateMergedTable(array $options = [])
  * @method GetDomain getDomain(array $options = [])
  * @method GetModelProgress getModelProgress(array $options = [])
  * @method GetModelReport getModelReport(array $options = [])
@@ -65,6 +66,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAppGroups listAppGroups(array $options = [])
  * @method ListApps listApps(array $options = [])
  * @method ListDataCollections listDataCollections(array $options = [])
+ * @method ListDataSourceTableFields listDataSourceTableFields(array $options = [])
+ * @method ListDataSourceTables listDataSourceTables(array $options = [])
  * @method ListDeployedAlgorithmModels listDeployedAlgorithmModels(array $options = [])
  * @method ListFirstRanks listFirstRanks(array $options = [])
  * @method ListInterventionDictionaries listInterventionDictionaries(array $options = [])
@@ -74,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListModels listModels(array $options = [])
  * @method ListQueryProcessorNers listQueryProcessorNers(array $options = [])
  * @method ListQueryProcessors listQueryProcessors(array $options = [])
+ * @method ListRamRoles listRamRoles(array $options = [])
  * @method ListScheduledTasks listScheduledTasks(array $options = [])
  * @method ListSecondRanks listSecondRanks(array $options = [])
  * @method ListSlowQueryCategories listSlowQueryCategories(array $options = [])
@@ -1677,6 +1681,31 @@ class EnableSlowQuery extends Roa
 }
 
 /**
+ * @method string getSpec()
+ */
+class GenerateMergedTable extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/assist/schema/actions/merge';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpec($value)
+    {
+        $this->data['Spec'] = $value;
+        $this->options['query']['spec'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDomainName()
  * @method string getAppGroupIdentity()
  */
@@ -2619,6 +2648,78 @@ class ListDataCollections extends Roa
 }
 
 /**
+ * @method string getDataSourceType()
+ * @method string getParams()
+ */
+class ListDataSourceTableFields extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/assist/data-sources/[dataSourceType]/fields';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceType($value)
+    {
+        $this->data['DataSourceType'] = $value;
+        $this->pathParameters['dataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['query']['params'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDataSourceType()
+ * @method string getParams()
+ */
+class ListDataSourceTables extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/assist/data-sources/[dataSourceType]/tables';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceType($value)
+    {
+        $this->data['DataSourceType'] = $value;
+        $this->pathParameters['dataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['query']['params'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAlgorithmType()
  * @method string getInServiceOnly()
  * @method string getAppGroupIdentity()
@@ -3010,6 +3111,12 @@ class ListQueryProcessors extends Roa
 
         return $this;
     }
+}
+
+class ListRamRoles extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/assist/ram/roles';
 }
 
 /**

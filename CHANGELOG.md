@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.972 - 2021-5-10
+- Add API GenerateMergedTable.
+- Add API ListDateSourceTables.
+- Add API ListDateSourceTableFields.
+- Add API ListRamRoles.
+
+
 ## 1.8.971 - 2021-5-10
 - Delete API.
 
