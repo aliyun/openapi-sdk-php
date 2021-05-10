@@ -17,8 +17,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeScdnCcTopUrl describeScdnCcTopUrl(array $options = [])
  * @method DescribeScdnCertificateDetail describeScdnCertificateDetail(array $options = [])
  * @method DescribeScdnCertificateList describeScdnCertificateList(array $options = [])
- * @method DescribeScdnDdosInfo describeScdnDdosInfo(array $options = [])
- * @method DescribeScdnDdosTrafficInfo describeScdnDdosTrafficInfo(array $options = [])
+ * @method DescribeScdnDDoSInfo describeScdnDDoSInfo(array $options = [])
+ * @method DescribeScdnDDoSTrafficInfo describeScdnDDoSTrafficInfo(array $options = [])
  * @method DescribeScdnDomainBpsData describeScdnDomainBpsData(array $options = [])
  * @method DescribeScdnDomainCertificateInfo describeScdnDomainCertificateInfo(array $options = [])
  * @method DescribeScdnDomainCname describeScdnDomainCname(array $options = [])
@@ -57,7 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefreshScdnObjectCaches refreshScdnObjectCaches(array $options = [])
  * @method SetScdnBotInfo setScdnBotInfo(array $options = [])
  * @method SetScdnCcInfo setScdnCcInfo(array $options = [])
- * @method SetScdnDdosInfo setScdnDdosInfo(array $options = [])
+ * @method SetScdnDDoSInfo setScdnDDoSInfo(array $options = [])
  * @method SetScdnDomainBizInfo setScdnDomainBizInfo(array $options = [])
  * @method SetScdnDomainCertificate setScdnDomainCertificate(array $options = [])
  * @method StartScdnDomain startScdnDomain(array $options = [])
@@ -277,7 +277,7 @@ class DescribeScdnCertificateList extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeScdnDdosInfo extends Rpc
+class DescribeScdnDDoSInfo extends Rpc
 {
 
     /** @var string */
@@ -294,7 +294,7 @@ class DescribeScdnDdosInfo extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeScdnDdosTrafficInfo extends Rpc
+class DescribeScdnDDoSTrafficInfo extends Rpc
 {
 
     /** @var string */
@@ -925,7 +925,7 @@ class SetScdnCcInfo extends Rpc
  * @method string getElasticBandwidth()
  * @method $this withElasticBandwidth($value)
  */
-class SetScdnDdosInfo extends Rpc
+class SetScdnDDoSInfo extends Rpc
 {
 
     /** @var string */

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.968 - 2021-5-10
+- Delete API.
+
+
 ## 1.8.967 - 2021-5-8
 - Support SLB DescribeLoadBalancerListeners.
 
