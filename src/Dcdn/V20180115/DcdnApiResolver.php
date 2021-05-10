@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDcdnSubTask deleteDcdnSubTask(array $options = [])
  * @method DescribeDcdnBgpBpsData describeDcdnBgpBpsData(array $options = [])
  * @method DescribeDcdnBgpTrafficData describeDcdnBgpTrafficData(array $options = [])
+ * @method DescribeDcdnBlockedRegions describeDcdnBlockedRegions(array $options = [])
  * @method DescribeDcdnCertificateDetail describeDcdnCertificateDetail(array $options = [])
  * @method DescribeDcdnCertificateList describeDcdnCertificateList(array $options = [])
  * @method DescribeDcdnConfigOfVersion describeDcdnConfigOfVersion(array $options = [])
@@ -83,6 +84,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnRegionAndIsp describeDcdnRegionAndIsp(array $options = [])
  * @method DescribeDcdnReport describeDcdnReport(array $options = [])
  * @method DescribeDcdnReportList describeDcdnReportList(array $options = [])
+ * @method DescribeDcdnSecFuncInfo describeDcdnSecFuncInfo(array $options = [])
  * @method DescribeDcdnService describeDcdnService(array $options = [])
  * @method DescribeDcdnStagingIp describeDcdnStagingIp(array $options = [])
  * @method DescribeDcdnSubList describeDcdnSubList(array $options = [])
@@ -95,11 +97,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnUserQuota describeDcdnUserQuota(array $options = [])
  * @method DescribeDcdnUserResourcePackage describeDcdnUserResourcePackage(array $options = [])
  * @method DescribeDcdnUserSecDrop describeDcdnUserSecDrop(array $options = [])
+ * @method DescribeDcdnUserSecDropByMinute describeDcdnUserSecDropByMinute(array $options = [])
  * @method DescribeDcdnUserTags describeDcdnUserTags(array $options = [])
  * @method DescribeDcdnVerifyContent describeDcdnVerifyContent(array $options = [])
  * @method DescribeDcdnWafDomain describeDcdnWafDomain(array $options = [])
  * @method DescribeUserDcdnIpaStatus describeUserDcdnIpaStatus(array $options = [])
  * @method DescribeUserDcdnStatus describeUserDcdnStatus(array $options = [])
+ * @method DescribeUserErStatus describeUserErStatus(array $options = [])
+ * @method DescribeUserLogserviceStatus describeUserLogserviceStatus(array $options = [])
  * @method DisableDcdnDomainOfflineLogDelivery disableDcdnDomainOfflineLogDelivery(array $options = [])
  * @method DisableDcdnOfflineLogDelivery disableDcdnOfflineLogDelivery(array $options = [])
  * @method EnableDcdnDomainOfflineLogDelivery enableDcdnDomainOfflineLogDelivery(array $options = [])
@@ -659,6 +664,19 @@ class DescribeDcdnBgpBpsData extends Rpc
  */
 class DescribeDcdnBgpTrafficData extends Rpc
 {
+}
+
+/**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnBlockedRegions extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1536,6 +1554,18 @@ class DescribeDcdnReportList extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecFuncType()
+ * @method $this withSecFuncType($value)
+ */
+class DescribeDcdnSecFuncInfo extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSecurityToken()
@@ -1754,6 +1784,32 @@ class DescribeDcdnUserSecDrop extends Rpc
 }
 
 /**
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecFunc()
+ * @method $this withSecFunc($value)
+ * @method string getObject()
+ * @method $this withObject($value)
+ */
+class DescribeDcdnUserSecDropByMinute extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -1798,6 +1854,26 @@ class DescribeUserDcdnIpaStatus extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeUserDcdnStatus extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeUserErStatus extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeUserLogserviceStatus extends Rpc
 {
 }
 

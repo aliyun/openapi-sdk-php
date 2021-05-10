@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.969 - 2021-5-10
+- Delete Api.
+
+
 ## 1.8.968 - 2021-5-10
 - Delete API.
 
