@@ -7,7 +7,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddCdnDomain addCdnDomain(array $options = [])
  * @method AddLiveAppRecordConfig addLiveAppRecordConfig(array $options = [])
- * @method AddLiveStreamTranscode addLiveStreamTranscode(array $options = [])
  * @method BatchDeleteCdnDomainConfig batchDeleteCdnDomainConfig(array $options = [])
  * @method BatchSetCdnDomainConfig batchSetCdnDomainConfig(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
@@ -84,9 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserCustomLogConfig describeUserCustomLogConfig(array $options = [])
  * @method DescribeUserDomains describeUserDomains(array $options = [])
  * @method ForbidLiveStream forbidLiveStream(array $options = [])
- * @method ListDomainsByLogConfigId listDomainsByLogConfigId(array $options = [])
  * @method ModifyCdnDomain modifyCdnDomain(array $options = [])
- * @method ModifyPathCacheExpiredConfig modifyPathCacheExpiredConfig(array $options = [])
  * @method OpenCdnService openCdnService(array $options = [])
  * @method PushObjectCache pushObjectCache(array $options = [])
  * @method RefreshObjectCaches refreshObjectCaches(array $options = [])
@@ -108,7 +105,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetReqAuthConfig setReqAuthConfig(array $options = [])
  * @method SetReqHeaderConfig setReqHeaderConfig(array $options = [])
  * @method SetSourceHostConfig setSourceHostConfig(array $options = [])
- * @method SetVideoSeekConfig setVideoSeekConfig(array $options = [])
  * @method StartCdnDomain startCdnDomain(array $options = [])
  * @method StopCdnDomain stopCdnDomain(array $options = [])
  */
@@ -179,28 +175,6 @@ class AddCdnDomain extends Rpc
  * @method $this withOssObjectPrefix($value)
  */
 class AddLiveAppRecordConfig extends Rpc
-{
-}
-
-/**
- * @method string getTemplate()
- * @method $this withTemplate($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getRecord()
- * @method $this withRecord($value)
- * @method string getApp()
- * @method $this withApp($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getSnapshot()
- * @method $this withSnapshot($value)
- */
-class AddLiveStreamTranscode extends Rpc
 {
 }
 
@@ -1488,19 +1462,6 @@ class ForbidLiveStream extends Rpc
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getConfigId()
- * @method $this withConfigId($value)
- */
-class ListDomainsByLogConfigId extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
  * @method string getSources()
  * @method $this withSources($value)
  * @method string getSourcePort()
@@ -1521,26 +1482,6 @@ class ListDomainsByLogConfigId extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifyCdnDomain extends Rpc
-{
-}
-
-/**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getWeight()
- * @method $this withWeight($value)
- * @method string getCacheContent()
- * @method $this withCacheContent($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTTL()
- * @method $this withTTL($value)
- * @method string getConfigID()
- * @method $this withConfigID($value)
- */
-class ModifyPathCacheExpiredConfig extends Rpc
 {
 }
 
@@ -1885,20 +1826,6 @@ class SetReqHeaderConfig extends Rpc
  * @method $this withBackSrcDomain($value)
  */
 class SetSourceHostConfig extends Rpc
-{
-}
-
-/**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getEnable()
- * @method $this withEnable($value)
- */
-class SetVideoSeekConfig extends Rpc
 {
 }
 
