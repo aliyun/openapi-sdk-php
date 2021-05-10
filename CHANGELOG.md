@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.973 - 2021-5-10
+- Update RecognizeDriverLicense RecognizeLicensePlate.
+
+
 ## 1.8.972 - 2021-5-10
 - Add API GenerateMergedTable.
 - Add API ListDateSourceTables.
