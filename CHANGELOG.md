@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.971 - 2021-5-10
+- Delete API.
+
+
 ## 1.8.970 - 2021-5-10
 - Delete live API.
 
