@@ -305,6 +305,7 @@ class CreateGlobalDistributeCache extends Rpc
  * @method $this withPassword($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method array getTag()
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  * @method string getShardCount()
@@ -313,6 +314,8 @@ class CreateGlobalDistributeCache extends Rpc
  * @method $this withAutoRenewPeriod($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getBackupId()
  * @method $this withBackupId($value)
  * @method string getOwnerId()
@@ -325,6 +328,8 @@ class CreateGlobalDistributeCache extends Rpc
  * @method $this withInstanceName($value)
  * @method string getAutoRenew()
  * @method $this withAutoRenew($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getNodeType()
@@ -362,6 +367,26 @@ class CreateGlobalDistributeCache extends Rpc
  */
 class CreateInstance extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**

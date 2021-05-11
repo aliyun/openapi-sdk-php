@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.974 - 2021-5-11
+- CreateInstance API add Port, Tags, DryRun.
+
+
 ## 1.8.973 - 2021-5-10
 - Update RecognizeDriverLicense RecognizeLicensePlate.
 
