@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.977 - 2021-5-12
+- Add GetRepositoryCommit and ListRepositoryCommitDiff API.
+
+
 ## 1.8.976 - 2021-5-12
 - Create Lindorm Open api.
 

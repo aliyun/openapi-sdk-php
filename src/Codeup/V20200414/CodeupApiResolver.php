@@ -39,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMergeRequestSetting getMergeRequestSetting(array $options = [])
  * @method GetOrganizationSecurityCenterStatus getOrganizationSecurityCenterStatus(array $options = [])
  * @method GetProjectMember getProjectMember(array $options = [])
+ * @method GetRepositoryCommit getRepositoryCommit(array $options = [])
  * @method GetRepositoryInfo getRepositoryInfo(array $options = [])
  * @method GetRepositoryTag getRepositoryTag(array $options = [])
  * @method GetRepositoryTagV2 getRepositoryTagV2(array $options = [])
@@ -52,6 +53,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListOrganizationSecurityScores listOrganizationSecurityScores(array $options = [])
  * @method ListRepositories listRepositories(array $options = [])
  * @method ListRepositoryBranches listRepositoryBranches(array $options = [])
+ * @method ListRepositoryCommitDiff listRepositoryCommitDiff(array $options = [])
  * @method ListRepositoryCommits listRepositoryCommits(array $options = [])
  * @method ListRepositoryMember listRepositoryMember(array $options = [])
  * @method ListRepositoryMemberWithInherited listRepositoryMemberWithInherited(array $options = [])
@@ -1995,6 +1997,46 @@ class GetProjectMember extends Roa
 
 /**
  * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getSha()
+ * @method $this withSha($value)
+ */
+class GetRepositoryCommit extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v4/projects/[ProjectId]/repository/commits/[Sha]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
  * @method string getIdentity()
  * @method string getAccessToken()
  */
@@ -3046,6 +3088,60 @@ class ListRepositoryBranches extends Roa
     {
         $this->data['Page'] = $value;
         $this->options['query']['Page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOrganizationId()
+ * @method string getAccessToken()
+ * @method string getContextLine()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getSha()
+ * @method $this withSha($value)
+ */
+class ListRepositoryCommitDiff extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/projects/[ProjectId]/repository/commits/[Sha]/diff';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrganizationId($value)
+    {
+        $this->data['OrganizationId'] = $value;
+        $this->options['query']['OrganizationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContextLine($value)
+    {
+        $this->data['ContextLine'] = $value;
+        $this->options['query']['ContextLine'] = $value;
 
         return $this;
     }
