@@ -163,6 +163,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTableTheme listTableTheme(array $options = [])
  * @method ListTopics listTopics(array $options = [])
  * @method PublishDataServiceApi publishDataServiceApi(array $options = [])
+ * @method QueryPublicModelEngine queryPublicModelEngine(array $options = [])
  * @method RemoveProjectMemberFromRole removeProjectMemberFromRole(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method ResumeInstance resumeInstance(array $options = [])
@@ -8557,6 +8558,54 @@ class PublishDataServiceApi extends Rpc
     {
         $this->data['ApiId'] = $value;
         $this->options['form_params']['ApiId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTenantId()
+ * @method string getText()
+ * @method string getProjectId()
+ */
+class QueryPublicModelEngine extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
