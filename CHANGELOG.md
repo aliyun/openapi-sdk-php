@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.978 - 2021-5-13
+- Add Indexing-Service support.
+- Remove jsonItem form.
+
+
 ## 1.8.977 - 2021-5-12
 - Add GetRepositoryCommit and ListRepositoryCommitDiff API.
 
