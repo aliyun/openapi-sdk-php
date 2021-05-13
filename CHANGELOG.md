@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.979 - 2021-5-13
+- Generated 2020-01-01 for `ddoscoo`.
+
+
 ## 1.8.978 - 2021-5-13
 - Add Indexing-Service support.
 - Remove jsonItem form.

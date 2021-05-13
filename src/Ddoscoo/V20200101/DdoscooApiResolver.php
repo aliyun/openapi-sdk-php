@@ -9,12 +9,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddAutoCcWhitelist addAutoCcWhitelist(array $options = [])
  * @method AssociateWebCert associateWebCert(array $options = [])
  * @method AttachSceneDefenseObject attachSceneDefenseObject(array $options = [])
+ * @method ConfigL7RsPolicy configL7RsPolicy(array $options = [])
  * @method ConfigNetworkRegionBlock configNetworkRegionBlock(array $options = [])
  * @method ConfigNetworkRules configNetworkRules(array $options = [])
+ * @method ConfigUdpReflect configUdpReflect(array $options = [])
  * @method ConfigWebCCTemplate configWebCCTemplate(array $options = [])
  * @method ConfigWebIpSet configWebIpSet(array $options = [])
  * @method CreateAsyncTask createAsyncTask(array $options = [])
+ * @method CreateDomainResource createDomainResource(array $options = [])
  * @method CreateNetworkRules createNetworkRules(array $options = [])
+ * @method CreatePort createPort(array $options = [])
  * @method CreateSceneDefensePolicy createSceneDefensePolicy(array $options = [])
  * @method CreateSchedulerRule createSchedulerRule(array $options = [])
  * @method CreateTagResources createTagResources(array $options = [])
@@ -23,7 +27,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAsyncTask deleteAsyncTask(array $options = [])
  * @method DeleteAutoCcBlacklist deleteAutoCcBlacklist(array $options = [])
  * @method DeleteAutoCcWhitelist deleteAutoCcWhitelist(array $options = [])
+ * @method DeleteDomainResource deleteDomainResource(array $options = [])
  * @method DeleteNetworkRule deleteNetworkRule(array $options = [])
+ * @method DeletePort deletePort(array $options = [])
  * @method DeleteSceneDefensePolicy deleteSceneDefensePolicy(array $options = [])
  * @method DeleteSchedulerRule deleteSchedulerRule(array $options = [])
  * @method DeleteTagResources deleteTagResources(array $options = [])
@@ -53,6 +59,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainOverview describeDomainOverview(array $options = [])
  * @method DescribeDomainQPSList describeDomainQPSList(array $options = [])
  * @method DescribeDomainQpsWithCache describeDomainQpsWithCache(array $options = [])
+ * @method DescribeDomainResource describeDomainResource(array $options = [])
  * @method DescribeDomains describeDomains(array $options = [])
  * @method DescribeDomainStatusCodeCount describeDomainStatusCodeCount(array $options = [])
  * @method DescribeDomainStatusCodeList describeDomainStatusCodeList(array $options = [])
@@ -69,11 +76,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeInstanceSpecs describeInstanceSpecs(array $options = [])
  * @method DescribeInstanceStatistics describeInstanceStatistics(array $options = [])
+ * @method DescribeInstanceStatus describeInstanceStatus(array $options = [])
+ * @method DescribeL7RsPolicy describeL7RsPolicy(array $options = [])
  * @method DescribeLogStoreExistStatus describeLogStoreExistStatus(array $options = [])
  * @method DescribeNetworkRegionBlock describeNetworkRegionBlock(array $options = [])
  * @method DescribeNetworkRuleAttributes describeNetworkRuleAttributes(array $options = [])
  * @method DescribeNetworkRules describeNetworkRules(array $options = [])
  * @method DescribeOpEntities describeOpEntities(array $options = [])
+ * @method DescribePort describePort(array $options = [])
  * @method DescribePortAttackMaxFlow describePortAttackMaxFlow(array $options = [])
  * @method DescribePortAutoCcStatus describePortAutoCcStatus(array $options = [])
  * @method DescribePortConnsCount describePortConnsCount(array $options = [])
@@ -92,6 +102,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeStsGrantStatus describeStsGrantStatus(array $options = [])
  * @method DescribeTagKeys describeTagKeys(array $options = [])
  * @method DescribeTagResources describeTagResources(array $options = [])
+ * @method DescribeUdpReflect describeUdpReflect(array $options = [])
  * @method DescribeUnBlackholeCount describeUnBlackholeCount(array $options = [])
  * @method DescribeUnBlockCount describeUnBlockCount(array $options = [])
  * @method DescribeWebAccessLogDispatchStatus describeWebAccessLogDispatchStatus(array $options = [])
@@ -121,12 +132,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyBlackholeStatus modifyBlackholeStatus(array $options = [])
  * @method ModifyBlockStatus modifyBlockStatus(array $options = [])
  * @method ModifyCnameReuse modifyCnameReuse(array $options = [])
+ * @method ModifyDomainResource modifyDomainResource(array $options = [])
  * @method ModifyElasticBandWidth modifyElasticBandWidth(array $options = [])
  * @method ModifyFullLogTtl modifyFullLogTtl(array $options = [])
  * @method ModifyHealthCheckConfig modifyHealthCheckConfig(array $options = [])
  * @method ModifyHttp2Enable modifyHttp2Enable(array $options = [])
  * @method ModifyInstanceRemark modifyInstanceRemark(array $options = [])
  * @method ModifyNetworkRuleAttribute modifyNetworkRuleAttribute(array $options = [])
+ * @method ModifyPort modifyPort(array $options = [])
  * @method ModifyPortAutoCcStatus modifyPortAutoCcStatus(array $options = [])
  * @method ModifySceneDefensePolicy modifySceneDefensePolicy(array $options = [])
  * @method ModifySchedulerRule modifySchedulerRule(array $options = [])
@@ -226,6 +239,20 @@ class AttachSceneDefenseObject extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
+ */
+class ConfigL7RsPolicy extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getSourceIp()
@@ -244,6 +271,18 @@ class ConfigNetworkRegionBlock extends Rpc
  * @method $this withSourceIp($value)
  */
 class ConfigNetworkRules extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ */
+class ConfigUdpReflect extends Rpc
 {
 }
 
@@ -322,6 +361,73 @@ class CreateAsyncTask extends Rpc
 }
 
 /**
+ * @method string getHttpsExt()
+ * @method $this withHttpsExt($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getRsType()
+ * @method $this withRsType($value)
+ * @method array getRealServers()
+ * @method array getInstanceIds()
+ * @method array getProxyTypes()
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class CreateDomainResource extends Rpc
+{
+
+    /**
+     * @param array $realServers
+     *
+     * @return $this
+     */
+	public function withRealServers(array $realServers)
+	{
+	    $this->data['RealServers'] = $realServers;
+		foreach ($realServers as $i => $iValue) {
+			$this->options['query']['RealServers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $proxyTypes
+     *
+     * @return $this
+     */
+	public function withProxyTypes(array $proxyTypes)
+	{
+	    $this->data['ProxyTypes'] = $proxyTypes;
+		foreach ($proxyTypes as $depth1 => $depth1Value) {
+			foreach ($depth1Value['ProxyPorts'] as $i => $iValue) {
+				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyPorts.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['ProxyType'])){
+				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyType'] = $depth1Value['ProxyType'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getNetworkRules()
  * @method $this withNetworkRules($value)
  * @method string getSourceIp()
@@ -329,6 +435,38 @@ class CreateAsyncTask extends Rpc
  */
 class CreateNetworkRules extends Rpc
 {
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBackendPort()
+ * @method $this withBackendPort($value)
+ * @method string getFrontendProtocol()
+ * @method $this withFrontendProtocol($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getRealServers()
+ * @method string getFrontendPort()
+ * @method $this withFrontendPort($value)
+ */
+class CreatePort extends Rpc
+{
+
+    /**
+     * @param array $realServers
+     *
+     * @return $this
+     */
+	public function withRealServers(array $realServers)
+	{
+	    $this->data['RealServers'] = $realServers;
+		foreach ($realServers as $i => $iValue) {
+			$this->options['query']['RealServers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -441,6 +579,8 @@ class CreateWebCCRule extends Rpc
 }
 
 /**
+ * @method string getHttpsExt()
+ * @method $this withHttpsExt($value)
  * @method string getRules()
  * @method $this withRules($value)
  * @method string getResourceGroupId()
@@ -449,6 +589,8 @@ class CreateWebCCRule extends Rpc
  * @method $this withSourceIp($value)
  * @method string getRsType()
  * @method $this withRsType($value)
+ * @method string getDefenseId()
+ * @method $this withDefenseId($value)
  * @method array getInstanceIds()
  * @method string getDomain()
  * @method $this withDomain($value)
@@ -511,6 +653,16 @@ class DeleteAutoCcWhitelist extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DeleteDomainResource extends Rpc
+{
+}
+
+/**
  * @method string getNetworkRule()
  * @method $this withNetworkRule($value)
  * @method string getSourceIp()
@@ -518,6 +670,38 @@ class DeleteAutoCcWhitelist extends Rpc
  */
 class DeleteNetworkRule extends Rpc
 {
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBackendPort()
+ * @method $this withBackendPort($value)
+ * @method string getFrontendProtocol()
+ * @method $this withFrontendProtocol($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getRealServers()
+ * @method string getFrontendPort()
+ * @method $this withFrontendPort($value)
+ */
+class DeletePort extends Rpc
+{
+
+    /**
+     * @param array $realServers
+     *
+     * @return $this
+     */
+	public function withRealServers(array $realServers)
+	{
+	    $this->data['RealServers'] = $realServers;
+		foreach ($realServers as $i => $iValue) {
+			$this->options['query']['RealServers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1057,6 +1241,38 @@ class DescribeDomainQpsWithCache extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getInstanceIds()
+ * @method string getQueryDomainPattern()
+ * @method $this withQueryDomainPattern($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeDomainResource extends Rpc
+{
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
@@ -1412,6 +1628,46 @@ class DescribeInstanceStatistics extends Rpc
 }
 
 /**
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeInstanceStatus extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method array getRealServers()
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeL7RsPolicy extends Rpc
+{
+
+    /**
+     * @param array $realServers
+     *
+     * @return $this
+     */
+	public function withRealServers(array $realServers)
+	{
+	    $this->data['RealServers'] = $realServers;
+		foreach ($realServers as $i => $iValue) {
+			$this->options['query']['RealServers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
@@ -1482,6 +1738,26 @@ class DescribeNetworkRules extends Rpc
  * @method $this withEntityType($value)
  */
 class DescribeOpEntities extends Rpc
+{
+}
+
+/**
+ * @method string getIsOffset()
+ * @method $this withIsOffset($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getFrontendProtocol()
+ * @method $this withFrontendProtocol($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFrontendPort()
+ * @method $this withFrontendPort($value)
+ */
+class DescribePort extends Rpc
 {
 }
 
@@ -1916,6 +2192,16 @@ class DescribeTagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeUdpReflect extends Rpc
+{
 }
 
 /**
@@ -2405,6 +2691,73 @@ class ModifyCnameReuse extends Rpc
 }
 
 /**
+ * @method string getHttpsExt()
+ * @method $this withHttpsExt($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getRsType()
+ * @method $this withRsType($value)
+ * @method array getRealServers()
+ * @method array getProxyTypes()
+ * @method array getInstanceIds()
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class ModifyDomainResource extends Rpc
+{
+
+    /**
+     * @param array $realServers
+     *
+     * @return $this
+     */
+	public function withRealServers(array $realServers)
+	{
+	    $this->data['RealServers'] = $realServers;
+		foreach ($realServers as $i => $iValue) {
+			$this->options['query']['RealServers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $proxyTypes
+     *
+     * @return $this
+     */
+	public function withProxyTypes(array $proxyTypes)
+	{
+	    $this->data['ProxyTypes'] = $proxyTypes;
+		foreach ($proxyTypes as $depth1 => $depth1Value) {
+			foreach ($depth1Value['ProxyPorts'] as $i => $iValue) {
+				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyPorts.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['ProxyType'])){
+				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyType'] = $depth1Value['ProxyType'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getSourceIp()
@@ -2486,6 +2839,38 @@ class ModifyInstanceRemark extends Rpc
  */
 class ModifyNetworkRuleAttribute extends Rpc
 {
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getBackendPort()
+ * @method $this withBackendPort($value)
+ * @method string getFrontendProtocol()
+ * @method $this withFrontendProtocol($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getRealServers()
+ * @method string getFrontendPort()
+ * @method $this withFrontendPort($value)
+ */
+class ModifyPort extends Rpc
+{
+
+    /**
+     * @param array $realServers
+     *
+     * @return $this
+     */
+	public function withRealServers(array $realServers)
+	{
+	    $this->data['RealServers'] = $realServers;
+		foreach ($realServers as $i => $iValue) {
+			$this->options['query']['RealServers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2749,6 +3134,8 @@ class ModifyWebPreciseAccessSwitch extends Rpc
 }
 
 /**
+ * @method string getHttpsExt()
+ * @method $this withHttpsExt($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
