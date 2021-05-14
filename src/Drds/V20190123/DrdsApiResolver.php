@@ -5,50 +5,24 @@ namespace AlibabaCloud\Drds\V20190123;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method AsyncTaskCancel asyncTaskCancel(array $options = [])
- * @method ChangeAccountPassword changeAccountPassword(array $options = [])
- * @method CheckConnectivity checkConnectivity(array $options = [])
  * @method CheckDrdsDbName checkDrdsDbName(array $options = [])
  * @method CheckExpandStatus checkExpandStatus(array $options = [])
- * @method CheckNewTableNameValid checkNewTableNameValid(array $options = [])
  * @method CheckSqlAuditEnableStatus checkSqlAuditEnableStatus(array $options = [])
- * @method CreateCustomDataExportPreCheckTask createCustomDataExportPreCheckTask(array $options = [])
- * @method CreateCustomDataExportTask createCustomDataExportTask(array $options = [])
- * @method CreateCustomDataImportPreCheckTask createCustomDataImportPreCheckTask(array $options = [])
- * @method CreateCustomDataImportTask createCustomDataImportTask(array $options = [])
  * @method CreateDrdsDB createDrdsDB(array $options = [])
  * @method CreateDrdsInstance createDrdsInstance(array $options = [])
- * @method CreateEvaluateDataImportPreCheckTask createEvaluateDataImportPreCheckTask(array $options = [])
- * @method CreateEvaluateDataImportTask createEvaluateDataImportTask(array $options = [])
- * @method CreateEvaluatePreCheckTask createEvaluatePreCheckTask(array $options = [])
- * @method CreateEvaluateTask createEvaluateTask(array $options = [])
  * @method CreateInstanceAccount createInstanceAccount(array $options = [])
  * @method CreateInstanceInternetAddress createInstanceInternetAddress(array $options = [])
- * @method CreateMyCatCustomImport createMyCatCustomImport(array $options = [])
- * @method CreateMyCatEvaluate createMyCatEvaluate(array $options = [])
  * @method CreateOrderForRds createOrderForRds(array $options = [])
  * @method CreateShardTask createShardTask(array $options = [])
- * @method DatalinkReplicationPrecheck datalinkReplicationPrecheck(array $options = [])
- * @method DeleteShardTasks deleteShardTasks(array $options = [])
  * @method DescribeBackMenu describeBackMenu(array $options = [])
  * @method DescribeBackupDbs describeBackupDbs(array $options = [])
  * @method DescribeBackupLocal describeBackupLocal(array $options = [])
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
  * @method DescribeBackupSets describeBackupSets(array $options = [])
  * @method DescribeBackupTimes describeBackupTimes(array $options = [])
- * @method DescribeBatchEvaluateTaskReport describeBatchEvaluateTaskReport(array $options = [])
  * @method DescribeBroadcastTables describeBroadcastTables(array $options = [])
- * @method DescribeCustomDataExportSrcDstTables describeCustomDataExportSrcDstTables(array $options = [])
- * @method DescribeCustomDataImportSrcDstTables describeCustomDataImportSrcDstTables(array $options = [])
- * @method DescribeDataExportPreCheckResult describeDataExportPreCheckResult(array $options = [])
- * @method DescribeDataExportTaskReport describeDataExportTaskReport(array $options = [])
- * @method DescribeDataExportTasks describeDataExportTasks(array $options = [])
- * @method DescribeDataImportPreCheckResult describeDataImportPreCheckResult(array $options = [])
- * @method DescribeDataImportTaskReport describeDataImportTaskReport(array $options = [])
- * @method DescribeDataImportTasks describeDataImportTasks(array $options = [])
  * @method DescribeDbInstanceDbs describeDbInstanceDbs(array $options = [])
  * @method DescribeDbInstances describeDbInstances(array $options = [])
- * @method DescribeDrdsComponents describeDrdsComponents(array $options = [])
  * @method DescribeDrdsDB describeDrdsDB(array $options = [])
  * @method DescribeDrdsDBCluster describeDrdsDBCluster(array $options = [])
  * @method DescribeDrdsDbInstance describeDrdsDbInstance(array $options = [])
@@ -57,7 +31,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDrdsDbRdsNameList describeDrdsDbRdsNameList(array $options = [])
  * @method DescribeDrdsDBs describeDrdsDBs(array $options = [])
  * @method DescribeDrdsDbTasks describeDrdsDbTasks(array $options = [])
- * @method DescribeDrdsDbTestLink describeDrdsDbTestLink(array $options = [])
  * @method DescribeDrdsInstance describeDrdsInstance(array $options = [])
  * @method DescribeDrdsInstanceDbMonitor describeDrdsInstanceDbMonitor(array $options = [])
  * @method DescribeDrdsInstanceLevelTasks describeDrdsInstanceLevelTasks(array $options = [])
@@ -70,13 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDrdsSlowSqls describeDrdsSlowSqls(array $options = [])
  * @method DescribeDrdsSqlAuditStatus describeDrdsSqlAuditStatus(array $options = [])
  * @method DescribeDrdsTasks describeDrdsTasks(array $options = [])
- * @method DescribeEvaluateDataImportDbTopologys describeEvaluateDataImportDbTopologys(array $options = [])
- * @method DescribeEvaluatePreCheckResult describeEvaluatePreCheckResult(array $options = [])
- * @method DescribeEvaluateTaskReport describeEvaluateTaskReport(array $options = [])
- * @method DescribeEvaluateTasks describeEvaluateTasks(array $options = [])
  * @method DescribeExpandLogicTableInfoList describeExpandLogicTableInfoList(array $options = [])
- * @method DescribeFirstDrdsInstanceByOrderId describeFirstDrdsInstanceByOrderId(array $options = [])
- * @method DescribeGlobalBroadcastType describeGlobalBroadcastType(array $options = [])
  * @method DescribeHiStoreInstanceInfo describeHiStoreInstanceInfo(array $options = [])
  * @method DescribeHotDbList describeHotDbList(array $options = [])
  * @method DescribeInstanceAccounts describeInstanceAccounts(array $options = [])
@@ -85,19 +52,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceSwitchNetwork describeInstanceSwitchNetwork(array $options = [])
  * @method DescribeInstDbLogInfo describeInstDbLogInfo(array $options = [])
  * @method DescribeInstDbSlsInfo describeInstDbSlsInfo(array $options = [])
- * @method DescribeMyCatDbList describeMyCatDbList(array $options = [])
- * @method DescribeMyCatReportInfo describeMyCatReportInfo(array $options = [])
  * @method DescribePreCheckResult describePreCheckResult(array $options = [])
  * @method DescribeRdsCommodity describeRdsCommodity(array $options = [])
- * @method DescribeRdsDbInfos describeRdsDbInfos(array $options = [])
- * @method DescribeRdsDrdsDB describeRdsDrdsDB(array $options = [])
- * @method DescribeRdsInstInfos describeRdsInstInfos(array $options = [])
  * @method DescribeRDSPerformance describeRDSPerformance(array $options = [])
  * @method DescribeRdsPerformanceSummary describeRdsPerformanceSummary(array $options = [])
- * @method DescribeRdsReadOnly describeRdsReadOnly(array $options = [])
  * @method DescribeRdsSuperAccountInstances describeRdsSuperAccountInstances(array $options = [])
- * @method DescribeRecycleBinStatus describeRecycleBinStatus(array $options = [])
- * @method DescribeRecycleBinTables describeRecycleBinTables(array $options = [])
  * @method DescribeRestoreOrder describeRestoreOrder(array $options = [])
  * @method DescribeShardTaskInfo describeShardTaskInfo(array $options = [])
  * @method DescribeShardTaskList describeShardTaskList(array $options = [])
@@ -105,77 +64,40 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTable describeTable(array $options = [])
  * @method DescribeTableListByType describeTableListByType(array $options = [])
  * @method DescribeTables describeTables(array $options = [])
- * @method DescribeTableShardingInfo describeTableShardingInfo(array $options = [])
- * @method DescribeUnCompatibilitySql describeUnCompatibilitySql(array $options = [])
  * @method DisableSqlAudit disableSqlAudit(array $options = [])
- * @method EnableInstanceIpv6Address enableInstanceIpv6Address(array $options = [])
  * @method EnableSqlAudit enableSqlAudit(array $options = [])
  * @method EnableSqlFlashbackMatchSwitch enableSqlFlashbackMatchSwitch(array $options = [])
- * @method FlashbackRecycleBinTable flashbackRecycleBinTable(array $options = [])
- * @method GetBatchEvaluateTaskReport getBatchEvaluateTaskReport(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
- * @method ListUserReports listUserReports(array $options = [])
- * @method ListVersions listVersions(array $options = [])
  * @method ManagePrivateRds managePrivateRds(array $options = [])
- * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
- * @method ModifyAccountPrivilege modifyAccountPrivilege(array $options = [])
  * @method ModifyDrdsInstanceDescription modifyDrdsInstanceDescription(array $options = [])
  * @method ModifyDrdsIpWhiteList modifyDrdsIpWhiteList(array $options = [])
- * @method ModifyPolarDbReadWeight modifyPolarDbReadWeight(array $options = [])
  * @method ModifyRdsReadWeight modifyRdsReadWeight(array $options = [])
- * @method MyCatConnectTest myCatConnectTest(array $options = [])
- * @method MyCatCustomImportPreCheck myCatCustomImportPreCheck(array $options = [])
- * @method PreCheckModifyTableShardingKeyParam preCheckModifyTableShardingKeyParam(array $options = [])
- * @method PrecheckMyCatEvaluate precheckMyCatEvaluate(array $options = [])
  * @method PutStartBackup putStartBackup(array $options = [])
- * @method RefreshDrdsAtomUrl refreshDrdsAtomUrl(array $options = [])
- * @method ReleaseHiStoreInstance releaseHiStoreInstance(array $options = [])
  * @method ReleaseInstanceInternetAddress releaseInstanceInternetAddress(array $options = [])
  * @method RemoveBackupsSet removeBackupsSet(array $options = [])
- * @method RemoveDataExportTask removeDataExportTask(array $options = [])
- * @method RemoveDataImportTask removeDataImportTask(array $options = [])
  * @method RemoveDrdsDb removeDrdsDb(array $options = [])
  * @method RemoveDrdsDbFailedRecord removeDrdsDbFailedRecord(array $options = [])
  * @method RemoveDrdsInstance removeDrdsInstance(array $options = [])
- * @method RemoveDrdsMysql removeDrdsMysql(array $options = [])
- * @method RemoveEvaluateTask removeEvaluateTask(array $options = [])
  * @method RemoveInstanceAccount removeInstanceAccount(array $options = [])
- * @method RemoveRecycleBinTable removeRecycleBinTable(array $options = [])
- * @method ResetDrdsToRdsConnections resetDrdsToRdsConnections(array $options = [])
- * @method RestartDrdsInstance restartDrdsInstance(array $options = [])
- * @method RollbackHiStoreInstance rollbackHiStoreInstance(array $options = [])
- * @method RollbackInstanceVersion rollbackInstanceVersion(array $options = [])
  * @method SetBackupLocal setBackupLocal(array $options = [])
  * @method SetBackupPolicy setBackupPolicy(array $options = [])
  * @method SetupBroadcastTables setupBroadcastTables(array $options = [])
  * @method SetupDrdsParams setupDrdsParams(array $options = [])
- * @method SetupRecycleBinStatus setupRecycleBinStatus(array $options = [])
  * @method SetupTable setupTable(array $options = [])
- * @method SqlCompatibilityCancel sqlCompatibilityCancel(array $options = [])
- * @method SqlCompatibilityStart sqlCompatibilityStart(array $options = [])
- * @method StartDataImportTask startDataImportTask(array $options = [])
- * @method StartEvaluateTask startEvaluateTask(array $options = [])
  * @method StartRestore startRestore(array $options = [])
- * @method StopDataExportTask stopDataExportTask(array $options = [])
- * @method StopDataImportTask stopDataImportTask(array $options = [])
- * @method StopEvaluateTask stopEvaluateTask(array $options = [])
- * @method SubmitCleanTableShardingKeyModify submitCleanTableShardingKeyModify(array $options = [])
  * @method SubmitCleanTask submitCleanTask(array $options = [])
  * @method SubmitHotExpandPreCheckTask submitHotExpandPreCheckTask(array $options = [])
  * @method SubmitHotExpandTask submitHotExpandTask(array $options = [])
- * @method SubmitRollbackShardingKeyModify submitRollbackShardingKeyModify(array $options = [])
- * @method SubmitRollbackTask submitRollbackTask(array $options = [])
  * @method SubmitSmoothExpandPreCheck submitSmoothExpandPreCheck(array $options = [])
  * @method SubmitSmoothExpandPreCheckTask submitSmoothExpandPreCheckTask(array $options = [])
  * @method SubmitSmoothExpandTask submitSmoothExpandTask(array $options = [])
  * @method SubmitSqlFlashbackTask submitSqlFlashbackTask(array $options = [])
- * @method SubmitSwitchTableShardingKeyModify submitSwitchTableShardingKeyModify(array $options = [])
  * @method SubmitSwitchTask submitSwitchTask(array $options = [])
- * @method SubmitTableShardingKeyModify submitTableShardingKeyModify(array $options = [])
  * @method SwitchGlobalBroadcastType switchGlobalBroadcastType(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateInstanceNetwork updateInstanceNetwork(array $options = [])
+ * @method UpdatePrivateRdsClass updatePrivateRdsClass(array $options = [])
  * @method UpdateResourceGroupAttribute updateResourceGroupAttribute(array $options = [])
  * @method UpgradeHiStoreInstance upgradeHiStoreInstance(array $options = [])
  * @method UpgradeInstanceVersion upgradeInstanceVersion(array $options = [])
@@ -197,39 +119,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'Drds';
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class AsyncTaskCancel extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getPassword()
- * @method $this withPassword($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- */
-class ChangeAccountPassword extends Rpc
-{
-}
-
-/**
- * @method string getDbInfo()
- * @method $this withDbInfo($value)
- * @method string getDbType()
- * @method $this withDbType($value)
- */
-class CheckConnectivity extends Rpc
-{
+    public $serviceCode = 'drds';
 }
 
 /**
@@ -257,52 +147,8 @@ class CheckExpandStatus extends Rpc
  * @method $this withDrdsInstanceId($value)
  * @method string getDbName()
  * @method $this withDbName($value)
- * @method string getTableName()
- * @method $this withTableName($value)
- */
-class CheckNewTableNameValid extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
  */
 class CheckSqlAuditEnableStatus extends Rpc
-{
-}
-
-/**
- * @method string getExportParam()
- * @method $this withExportParam($value)
- */
-class CreateCustomDataExportPreCheckTask extends Rpc
-{
-}
-
-/**
- * @method string getExportParam()
- * @method $this withExportParam($value)
- */
-class CreateCustomDataExportTask extends Rpc
-{
-}
-
-/**
- * @method string getImportParam()
- * @method $this withImportParam($value)
- */
-class CreateCustomDataImportPreCheckTask extends Rpc
-{
-}
-
-/**
- * @method string getImportParam()
- * @method $this withImportParam($value)
- */
-class CreateCustomDataImportTask extends Rpc
 {
 }
 
@@ -442,110 +288,6 @@ class CreateDrdsInstance extends Rpc
 }
 
 /**
- * @method string getImportParam()
- * @method $this withImportParam($value)
- */
-class CreateEvaluateDataImportPreCheckTask extends Rpc
-{
-}
-
-/**
- * @method string getImportParam()
- * @method $this withImportParam($value)
- */
-class CreateEvaluateDataImportTask extends Rpc
-{
-}
-
-/**
- * @method string getAvgQpsGrowthScale()
- * @method $this withAvgQpsGrowthScale($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
- * @method string getDataGrowthScale()
- * @method $this withDataGrowthScale($value)
- * @method array getDbInfo()
- * @method string getEvaluateHours()
- * @method $this withEvaluateHours($value)
- */
-class CreateEvaluatePreCheckTask extends Rpc
-{
-
-    /**
-     * @param array $dbInfo
-     *
-     * @return $this
-     */
-	public function withDbInfo(array $dbInfo)
-	{
-	    $this->data['DbInfo'] = $dbInfo;
-		foreach ($dbInfo as $depth1 => $depth1Value) {
-			if(isset($depth1Value['InstId'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.InstId'] = $depth1Value['InstId'];
-			}
-			if(isset($depth1Value['DbPort'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbPort'] = $depth1Value['DbPort'];
-			}
-			if(isset($depth1Value['DbName'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbName'] = $depth1Value['DbName'];
-			}
-			if(isset($depth1Value['DbPassword'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbPassword'] = $depth1Value['DbPassword'];
-			}
-			if(isset($depth1Value['DbUser'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbUser'] = $depth1Value['DbUser'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getAvgQpsGrowthScale()
- * @method $this withAvgQpsGrowthScale($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
- * @method string getDataGrowthScale()
- * @method $this withDataGrowthScale($value)
- * @method array getDbInfo()
- * @method string getEvaluateHours()
- * @method $this withEvaluateHours($value)
- */
-class CreateEvaluateTask extends Rpc
-{
-
-    /**
-     * @param array $dbInfo
-     *
-     * @return $this
-     */
-	public function withDbInfo(array $dbInfo)
-	{
-	    $this->data['DbInfo'] = $dbInfo;
-		foreach ($dbInfo as $depth1 => $depth1Value) {
-			if(isset($depth1Value['InstId'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.InstId'] = $depth1Value['InstId'];
-			}
-			if(isset($depth1Value['DbPort'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbPort'] = $depth1Value['DbPort'];
-			}
-			if(isset($depth1Value['DbName'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbName'] = $depth1Value['DbName'];
-			}
-			if(isset($depth1Value['DbPassword'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbPassword'] = $depth1Value['DbPassword'];
-			}
-			if(isset($depth1Value['DbUser'])){
-				$this->options['query']['DbInfo.' . ($depth1 + 1) . '.DbUser'] = $depth1Value['DbUser'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  * @method string getPassword()
@@ -589,70 +331,6 @@ class CreateInstanceInternetAddress extends Rpc
 }
 
 /**
- * @method string getDstPort()
- * @method $this withDstPort($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
- * @method string getSchemaUrl()
- * @method $this withSchemaUrl($value)
- * @method string getDstUser()
- * @method $this withDstUser($value)
- * @method string getDstDbNme()
- * @method $this withDstDbNme($value)
- * @method string getTableMap()
- * @method $this withTableMap($value)
- * @method string getImportDb()
- * @method $this withImportDb($value)
- * @method string getDstPwd()
- * @method $this withDstPwd($value)
- * @method string getRuleUrl()
- * @method $this withRuleUrl($value)
- * @method string getDstDrdsInstanceId()
- * @method $this withDstDrdsInstanceId($value)
- */
-class CreateMyCatCustomImport extends Rpc
-{
-}
-
-/**
- * @method string getSequenceType()
- * @method $this withSequenceType($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
- * @method string getSchemaUrl()
- * @method $this withSchemaUrl($value)
- * @method string getBusPeakQps()
- * @method $this withBusPeakQps($value)
- * @method string getQpsIncPercent()
- * @method $this withQpsIncPercent($value)
- * @method string getServerUrl()
- * @method $this withServerUrl($value)
- * @method string getCapacityIncPercent()
- * @method $this withCapacityIncPercent($value)
- * @method string getRuleUrl()
- * @method $this withRuleUrl($value)
- * @method array getImportDbList()
- */
-class CreateMyCatEvaluate extends Rpc
-{
-
-    /**
-     * @param array $importDbList
-     *
-     * @return $this
-     */
-	public function withImportDbList(array $importDbList)
-	{
-	    $this->data['ImportDbList'] = $importDbList;
-		foreach ($importDbList as $i => $iValue) {
-			$this->options['query']['ImportDbList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
  * @method string getParams()
  * @method $this withParams($value)
  */
@@ -674,51 +352,6 @@ class CreateOrderForRds extends Rpc
  */
 class CreateShardTask extends Rpc
 {
-}
-
-/**
- * @method string getSrcTableName()
- * @method $this withSrcTableName($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getDstTableName()
- * @method $this withDstTableName($value)
- */
-class DatalinkReplicationPrecheck extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method array getTableName()
- */
-class DeleteShardTasks extends Rpc
-{
-
-    /**
-     * @param array $tableName
-     *
-     * @return $this
-     */
-	public function withTableName(array $tableName)
-	{
-	    $this->data['TableName'] = $tableName;
-		foreach ($tableName as $depth1 => $depth1Value) {
-			if(isset($depth1Value['SourceTableName'])){
-				$this->options['query']['TableName.' . ($depth1 + 1) . '.SourceTableName'] = $depth1Value['SourceTableName'];
-			}
-			if(isset($depth1Value['TargetTableName'])){
-				$this->options['query']['TableName.' . ($depth1 + 1) . '.TargetTableName'] = $depth1Value['TargetTableName'];
-			}
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -778,14 +411,6 @@ class DescribeBackupTimes extends Rpc
 }
 
 /**
- * @method string getBatchEvaluateTaskId()
- * @method $this withBatchEvaluateTaskId($value)
- */
-class DescribeBatchEvaluateTaskReport extends Rpc
-{
-}
-
-/**
  * @method string getQuery()
  * @method $this withQuery($value)
  * @method string getCurrentPage()
@@ -798,74 +423,6 @@ class DescribeBatchEvaluateTaskReport extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeBroadcastTables extends Rpc
-{
-}
-
-/**
- * @method string getExportParam()
- * @method $this withExportParam($value)
- */
-class DescribeCustomDataExportSrcDstTables extends Rpc
-{
-}
-
-/**
- * @method string getImportParam()
- * @method $this withImportParam($value)
- */
-class DescribeCustomDataImportSrcDstTables extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeDataExportPreCheckResult extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeDataExportTaskReport extends Rpc
-{
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class DescribeDataExportTasks extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeDataImportPreCheckResult extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeDataImportTaskReport extends Rpc
-{
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class DescribeDataImportTasks extends Rpc
 {
 }
 
@@ -898,14 +455,6 @@ class DescribeDbInstanceDbs extends Rpc
  * @method $this withDbInstType($value)
  */
 class DescribeDbInstances extends Rpc
-{
-}
-
-/**
- * @method string getCommodityCode()
- * @method $this withCommodityCode($value)
- */
-class DescribeDrdsComponents extends Rpc
 {
 }
 
@@ -1006,16 +555,6 @@ class DescribeDrdsDbTasks extends Rpc
 /**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- */
-class DescribeDrdsDbTestLink extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
  */
 class DescribeDrdsInstance extends Rpc
 {
@@ -1064,6 +603,8 @@ class DescribeDrdsInstanceMonitor extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getProductVersion()
+ * @method $this withProductVersion($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getPageNumber()
@@ -1189,64 +730,12 @@ class DescribeDrdsTasks extends Rpc
 }
 
 /**
- * @method string getImportParam()
- * @method $this withImportParam($value)
- */
-class DescribeEvaluateDataImportDbTopologys extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeEvaluatePreCheckResult extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeEvaluateTaskReport extends Rpc
-{
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class DescribeEvaluateTasks extends Rpc
-{
-}
-
-/**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  * @method string getDbName()
  * @method $this withDbName($value)
  */
 class DescribeExpandLogicTableInfoList extends Rpc
-{
-}
-
-/**
- * @method string getOrderId()
- * @method $this withOrderId($value)
- */
-class DescribeFirstDrdsInstanceByOrderId extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- */
-class DescribeGlobalBroadcastType extends Rpc
 {
 }
 
@@ -1323,24 +812,6 @@ class DescribeInstDbSlsInfo extends Rpc
 }
 
 /**
- * @method string getSchemaUrl()
- * @method $this withSchemaUrl($value)
- * @method string getRuleUrl()
- * @method $this withRuleUrl($value)
- */
-class DescribeMyCatDbList extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeMyCatReportInfo extends Rpc
-{
-}
-
-/**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  * @method string getTaskId()
@@ -1359,52 +830,6 @@ class DescribePreCheckResult extends Rpc
  * @method $this withOrderType($value)
  */
 class DescribeRdsCommodity extends Rpc
-{
-}
-
-/**
- * @method string getRdsInstId()
- * @method $this withRdsInstId($value)
- * @method string getSearch()
- * @method $this withSearch($value)
- */
-class DescribeRdsDbInfos extends Rpc
-{
-}
-
-/**
- * @method array getRdsInstanceId()
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class DescribeRdsDrdsDB extends Rpc
-{
-
-    /**
-     * @param array $rdsInstanceId
-     *
-     * @return $this
-     */
-	public function withRdsInstanceId(array $rdsInstanceId)
-	{
-	    $this->data['RdsInstanceId'] = $rdsInstanceId;
-		foreach ($rdsInstanceId as $i => $iValue) {
-			$this->options['query']['RdsInstanceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getSearch()
- * @method $this withSearch($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class DescribeRdsInstInfos extends Rpc
 {
 }
 
@@ -1451,18 +876,6 @@ class DescribeRdsPerformanceSummary extends Rpc
 }
 
 /**
- * @method string getRdsInstanceId()
- * @method $this withRdsInstanceId($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbInstType()
- * @method $this withDbInstType($value)
- */
-class DescribeRdsReadOnly extends Rpc
-{
-}
-
-/**
  * @method array getRdsInstance()
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
@@ -1486,26 +899,6 @@ class DescribeRdsSuperAccountInstances extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- */
-class DescribeRecycleBinStatus extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- */
-class DescribeRecycleBinTables extends Rpc
-{
 }
 
 /**
@@ -1617,40 +1010,8 @@ class DescribeTables extends Rpc
  * @method $this withDrdsInstanceId($value)
  * @method string getDbName()
  * @method $this withDbName($value)
- * @method string getTableName()
- * @method $this withTableName($value)
- */
-class DescribeTableShardingInfo extends Rpc
-{
-}
-
-/**
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeUnCompatibilitySql extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
  */
 class DisableSqlAudit extends Rpc
-{
-}
-
-/**
- * @method string getDrdsPassword()
- * @method $this withDrdsPassword($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class EnableInstanceIpv6Address extends Rpc
 {
 }
 
@@ -1677,26 +1038,6 @@ class EnableSqlAudit extends Rpc
  * @method $this withDbName($value)
  */
 class EnableSqlFlashbackMatchSwitch extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getTableName()
- * @method $this withTableName($value)
- */
-class FlashbackRecycleBinTable extends Rpc
-{
-}
-
-/**
- * @method string getBatchEvaluateTaskId()
- * @method $this withBatchEvaluateTaskId($value)
- */
-class GetBatchEvaluateTaskReport extends Rpc
 {
 }
 
@@ -1750,26 +1091,6 @@ class ListTagResources extends Rpc
 }
 
 /**
- * @method string getReportId()
- * @method $this withReportId($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class ListUserReports extends Rpc
-{
-}
-
-/**
- * @method string getDrdsVer()
- * @method $this withDrdsVer($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class ListVersions extends Rpc
-{
-}
-
-/**
  * @method string getParams()
  * @method $this withParams($value)
  * @method string getDrdsInstanceId()
@@ -1781,49 +1102,6 @@ class ListVersions extends Rpc
  */
 class ManagePrivateRds extends Rpc
 {
-}
-
-/**
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- */
-class ModifyAccountDescription extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getAccountName()
- * @method $this withAccountName($value)
- * @method array getDbPrivilege()
- */
-class ModifyAccountPrivilege extends Rpc
-{
-
-    /**
-     * @param array $dbPrivilege
-     *
-     * @return $this
-     */
-	public function withDbPrivilege(array $dbPrivilege)
-	{
-	    $this->data['DbPrivilege'] = $dbPrivilege;
-		foreach ($dbPrivilege as $depth1 => $depth1Value) {
-			if(isset($depth1Value['DbName'])){
-				$this->options['query']['DbPrivilege.' . ($depth1 + 1) . '.DbName'] = $depth1Value['DbName'];
-			}
-			if(isset($depth1Value['Privilege'])){
-				$this->options['query']['DbPrivilege.' . ($depth1 + 1) . '.Privilege'] = $depth1Value['Privilege'];
-			}
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -1859,22 +1137,6 @@ class ModifyDrdsIpWhiteList extends Rpc
  * @method $this withWeights($value)
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
- * @method string getDbNodeIds()
- * @method $this withDbNodeIds($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getDbInstanceId()
- * @method $this withDbInstanceId($value)
- */
-class ModifyPolarDbReadWeight extends Rpc
-{
-}
-
-/**
- * @method string getWeights()
- * @method $this withWeights($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
  * @method string getInstanceNames()
  * @method $this withInstanceNames($value)
  * @method string getDbName()
@@ -1882,116 +1144,6 @@ class ModifyPolarDbReadWeight extends Rpc
  */
 class ModifyRdsReadWeight extends Rpc
 {
-}
-
-/**
- * @method string getSchemaUrl()
- * @method $this withSchemaUrl($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getRuleUrl()
- * @method $this withRuleUrl($value)
- */
-class MyCatConnectTest extends Rpc
-{
-}
-
-/**
- * @method string getDstPort()
- * @method $this withDstPort($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
- * @method string getSchemaUrl()
- * @method $this withSchemaUrl($value)
- * @method string getDstUser()
- * @method $this withDstUser($value)
- * @method string getDstDbNme()
- * @method $this withDstDbNme($value)
- * @method string getTableMap()
- * @method $this withTableMap($value)
- * @method string getImportDb()
- * @method $this withImportDb($value)
- * @method string getDstPwd()
- * @method $this withDstPwd($value)
- * @method string getRuleUrl()
- * @method $this withRuleUrl($value)
- * @method string getDstDrdsInstanceId()
- * @method $this withDstDrdsInstanceId($value)
- */
-class MyCatCustomImportPreCheck extends Rpc
-{
-}
-
-/**
- * @method string getTbPartitions()
- * @method $this withTbPartitions($value)
- * @method string getIsShard()
- * @method $this withIsShard($value)
- * @method string getTbShardingFunction()
- * @method $this withTbShardingFunction($value)
- * @method string getDbShardingColumnList()
- * @method $this withDbShardingColumnList($value)
- * @method string getTbComputeLength()
- * @method $this withTbComputeLength($value)
- * @method string getTbRightShiftOffset()
- * @method $this withTbRightShiftOffset($value)
- * @method string getDbComputeLength()
- * @method $this withDbComputeLength($value)
- * @method string getSrcTableName()
- * @method $this withSrcTableName($value)
- * @method string getDbRightShiftOffset()
- * @method $this withDbRightShiftOffset($value)
- * @method string getTargetTableName()
- * @method $this withTargetTableName($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbShardingFunction()
- * @method $this withDbShardingFunction($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getTbShardingColumnList()
- * @method $this withTbShardingColumnList($value)
- */
-class PreCheckModifyTableShardingKeyParam extends Rpc
-{
-}
-
-/**
- * @method string getSequenceType()
- * @method $this withSequenceType($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
- * @method string getSchemaUrl()
- * @method $this withSchemaUrl($value)
- * @method string getBusPeakQps()
- * @method $this withBusPeakQps($value)
- * @method string getQpsIncPercent()
- * @method $this withQpsIncPercent($value)
- * @method string getServerUrl()
- * @method $this withServerUrl($value)
- * @method string getCapacityIncPercent()
- * @method $this withCapacityIncPercent($value)
- * @method string getRuleUrl()
- * @method $this withRuleUrl($value)
- * @method array getImportDbList()
- */
-class PrecheckMyCatEvaluate extends Rpc
-{
-
-    /**
-     * @param array $importDbList
-     *
-     * @return $this
-     */
-	public function withImportDbList(array $importDbList)
-	{
-	    $this->data['ImportDbList'] = $importDbList;
-		foreach ($importDbList as $i => $iValue) {
-			$this->options['query']['ImportDbList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -2005,28 +1157,6 @@ class PrecheckMyCatEvaluate extends Rpc
  * @method $this withBackupMode($value)
  */
 class PutStartBackup extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- */
-class RefreshDrdsAtomUrl extends Rpc
-{
-}
-
-/**
- * @method string getHistoreInstanceId()
- * @method $this withHistoreInstanceId($value)
- * @method string getDrdsPassword()
- * @method $this withDrdsPassword($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class ReleaseHiStoreInstance extends Rpc
 {
 }
 
@@ -2047,22 +1177,6 @@ class ReleaseInstanceInternetAddress extends Rpc
  * @method $this withDrdsInstanceId($value)
  */
 class RemoveBackupsSet extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class RemoveDataExportTask extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class RemoveDataImportTask extends Rpc
 {
 }
 
@@ -2095,88 +1209,12 @@ class RemoveDrdsInstance extends Rpc
 }
 
 /**
- * @method string getRoDbInstanceId()
- * @method $this withRoDbInstanceId($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getDbInstanceId()
- * @method $this withDbInstanceId($value)
- * @method string getForce()
- * @method $this withForce($value)
- */
-class RemoveDrdsMysql extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class RemoveEvaluateTask extends Rpc
-{
-}
-
-/**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
  * @method string getAccountName()
  * @method $this withAccountName($value)
  */
 class RemoveInstanceAccount extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getTableName()
- * @method $this withTableName($value)
- */
-class RemoveRecycleBinTable extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- */
-class ResetDrdsToRdsConnections extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class RestartDrdsInstance extends Rpc
-{
-}
-
-/**
- * @method string getHistoreInstanceId()
- * @method $this withHistoreInstanceId($value)
- * @method string getDrdsPassword()
- * @method $this withDrdsPassword($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class RollbackHiStoreInstance extends Rpc
-{
-}
-
-/**
- * @method string getDrdsPassword()
- * @method $this withDrdsPassword($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- */
-class RollbackInstanceVersion extends Rpc
 {
 }
 
@@ -2289,18 +1327,6 @@ class SetupDrdsParams extends Rpc
 }
 
 /**
- * @method string getStatusAction()
- * @method $this withStatusAction($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- */
-class SetupRecycleBinStatus extends Rpc
-{
-}
-
-/**
  * @method string getAllowFullTableScan()
  * @method $this withAllowFullTableScan($value)
  * @method string getDrdsInstanceId()
@@ -2329,44 +1355,6 @@ class SetupTable extends Rpc
 }
 
 /**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class SqlCompatibilityCancel extends Rpc
-{
-}
-
-/**
- * @method string getTargetVersion()
- * @method $this withTargetVersion($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getPerformanceTest()
- * @method $this withPerformanceTest($value)
- */
-class SqlCompatibilityStart extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StartDataImportTask extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StartEvaluateTask extends Rpc
-{
-}
-
-/**
  * @method string getBackupDbNames()
  * @method $this withBackupDbNames($value)
  * @method string getBackupId()
@@ -2381,42 +1369,6 @@ class StartEvaluateTask extends Rpc
  * @method $this withBackupMode($value)
  */
 class StartRestore extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StopDataExportTask extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StopDataImportTask extends Rpc
-{
-}
-
-/**
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class StopEvaluateTask extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class SubmitCleanTableShardingKeyModify extends Rpc
 {
 }
 
@@ -2585,34 +1537,6 @@ class SubmitHotExpandTask extends Rpc
  * @method $this withDrdsInstanceId($value)
  * @method string getDbName()
  * @method $this withDbName($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class SubmitRollbackShardingKeyModify extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getExpandType()
- * @method $this withExpandType($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getParentJobId()
- * @method $this withParentJobId($value)
- */
-class SubmitRollbackTask extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
  * @method string getDbInstType()
  * @method $this withDbInstType($value)
  */
@@ -2722,18 +1646,6 @@ class SubmitSqlFlashbackTask extends Rpc
 /**
  * @method string getDrdsInstanceId()
  * @method $this withDrdsInstanceId($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class SubmitSwitchTableShardingKeyModify extends Rpc
-{
-}
-
-/**
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
  * @method string getExpandType()
  * @method $this withExpandType($value)
  * @method string getJobId()
@@ -2744,40 +1656,6 @@ class SubmitSwitchTableShardingKeyModify extends Rpc
  * @method $this withParentJobId($value)
  */
 class SubmitSwitchTask extends Rpc
-{
-}
-
-/**
- * @method string getTbPartitions()
- * @method $this withTbPartitions($value)
- * @method string getIsShard()
- * @method $this withIsShard($value)
- * @method string getTbShardingFunction()
- * @method $this withTbShardingFunction($value)
- * @method string getDbShardingColumnList()
- * @method $this withDbShardingColumnList($value)
- * @method string getTbComputeLength()
- * @method $this withTbComputeLength($value)
- * @method string getTbRightShiftOffset()
- * @method $this withTbRightShiftOffset($value)
- * @method string getDbComputeLength()
- * @method $this withDbComputeLength($value)
- * @method string getSrcTableName()
- * @method $this withSrcTableName($value)
- * @method string getDbRightShiftOffset()
- * @method $this withDbRightShiftOffset($value)
- * @method string getTargetTableName()
- * @method $this withTargetTableName($value)
- * @method string getDrdsInstanceId()
- * @method $this withDrdsInstanceId($value)
- * @method string getDbShardingFunction()
- * @method $this withDbShardingFunction($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getTbShardingColumnList()
- * @method $this withTbShardingColumnList($value)
- */
-class SubmitTableShardingKeyModify extends Rpc
 {
 }
 
@@ -2893,6 +1771,24 @@ class UntagResources extends Rpc
  * @method $this withSrcInstanceNetworkType($value)
  */
 class UpdateInstanceNetwork extends Rpc
+{
+}
+
+/**
+ * @method string getStorage()
+ * @method $this withStorage($value)
+ * @method string getAutoUseCoupon()
+ * @method $this withAutoUseCoupon($value)
+ * @method string getDrdsInstanceId()
+ * @method $this withDrdsInstanceId($value)
+ * @method string getRdsClass()
+ * @method $this withRdsClass($value)
+ * @method string getPrePayDuration()
+ * @method $this withPrePayDuration($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class UpdatePrivateRdsClass extends Rpc
 {
 }
 

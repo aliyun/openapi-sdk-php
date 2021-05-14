@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.980 - 2021-5-14
+- Support Private RDS management through OpenAPI.
+- ManagePrivateRds to do RDS information query and some management.
+- DescribeDrdsRdsInstances to find RDS under a certain DRDS instance.
+- UpdatePrivateRdsClass to Upgrade or Downgrade your Private RDS class.
+
+
 ## 1.8.979 - 2021-5-13
 - Generated 2020-01-01 for `ddoscoo`.
 
