@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.983 - 2021-5-14
+- EnableAdditionalBandwidth add AutoRenew,AutoRenewPeriod parameter.
+
+
 ## 1.8.982 - 2021-5-14
 - Update ScreenChestCT.
 

@@ -1619,6 +1619,8 @@ class DescribeZones extends Rpc
  * @method $this withNodeId($value)
  * @method string getOrderTimeLength()
  * @method $this withOrderTimeLength($value)
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
  * @method string getProduct()
  * @method $this withProduct($value)
  * @method string getAutoPay()
@@ -1633,6 +1635,8 @@ class DescribeZones extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
  * @method string getCategory()
  * @method $this withCategory($value)
  */
