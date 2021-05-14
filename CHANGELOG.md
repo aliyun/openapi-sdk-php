@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.984 - 2021-5-14
+- Release ExtractFingerPrint.
+
+
 ## 1.8.983 - 2021-5-14
 - EnableAdditionalBandwidth add AutoRenew,AutoRenewPeriod parameter.
 

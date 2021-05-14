@@ -33,6 +33,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectPedestrianIntrusion detectPedestrianIntrusion(array $options = [])
  * @method DetectVideoLivingFace detectVideoLivingFace(array $options = [])
  * @method EnhanceFace enhanceFace(array $options = [])
+ * @method ExtractFingerPrint extractFingerPrint(array $options = [])
  * @method ExtractPedestrianFeatureAttr extractPedestrianFeatureAttr(array $options = [])
  * @method ExtractPedestrianFeatureAttribute extractPedestrianFeatureAttribute(array $options = [])
  * @method FaceBeauty faceBeauty(array $options = [])
@@ -1044,6 +1045,40 @@ class EnhanceFace extends Rpc
 }
 
 /**
+ * @method string getImageData()
+ * @method string getImageURL()
+ */
+class ExtractFingerPrint extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageData($value)
+    {
+        $this->data['ImageData'] = $value;
+        $this->options['form_params']['ImageData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getMode()
  * @method string getImageURL()
  * @method string getServiceVersion()
@@ -1374,10 +1409,24 @@ class GenerateHumanAnimeStyle extends Rpc
 }
 
 /**
+ * @method string getReturnType()
  * @method string getImageURL()
  */
 class GenerateHumanSketchStyle extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReturnType($value)
+    {
+        $this->data['ReturnType'] = $value;
+        $this->options['form_params']['ReturnType'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1489,24 +1538,11 @@ class GetFaceEntity extends Rpc
 }
 
 /**
- * @method string getVerificationToken()
  * @method string getMaterialHash()
+ * @method string getVerificationToken()
  */
 class GetRealPersonVerificationResult extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVerificationToken($value)
-    {
-        $this->data['VerificationToken'] = $value;
-        $this->options['form_params']['VerificationToken'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -1517,6 +1553,19 @@ class GetRealPersonVerificationResult extends Rpc
     {
         $this->data['MaterialHash'] = $value;
         $this->options['form_params']['MaterialHash'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerificationToken($value)
+    {
+        $this->data['VerificationToken'] = $value;
+        $this->options['form_params']['VerificationToken'] = $value;
 
         return $this;
     }
