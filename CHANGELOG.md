@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.982 - 2021-5-14
+- Update ScreenChestCT.
+
+
 ## 1.8.981 - 2021-5-14
 - Support Private RDS management through OpenAPI.
 - ManagePrivateRds to do RDS information query and some management.

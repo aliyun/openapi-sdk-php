@@ -1084,6 +1084,7 @@ class RunMedQA extends Rpc
 
 /**
  * @method string getOrgName()
+ * @method string getMask()
  * @method string getDataFormat()
  * @method array getURLList()
  * @method string getOrgId()
@@ -1101,6 +1102,19 @@ class ScreenChestCT extends Rpc
     {
         $this->data['OrgName'] = $value;
         $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMask($value)
+    {
+        $this->data['Mask'] = $value;
+        $this->options['form_params']['Mask'] = $value;
 
         return $this;
     }
