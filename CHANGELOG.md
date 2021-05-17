@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.985 - 2021-5-17
+- Add DescribeDcdnRefreshTaskById.
+
+
 ## 1.8.984 - 2021-5-14
 - Release ExtractFingerPrint.
 

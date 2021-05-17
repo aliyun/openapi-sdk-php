@@ -80,6 +80,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnOfflineLogDeliveryRegions describeDcdnOfflineLogDeliveryRegions(array $options = [])
  * @method DescribeDcdnOfflineLogDeliveryStatus describeDcdnOfflineLogDeliveryStatus(array $options = [])
  * @method DescribeDcdnRefreshQuota describeDcdnRefreshQuota(array $options = [])
+ * @method DescribeDcdnRefreshTaskById describeDcdnRefreshTaskById(array $options = [])
  * @method DescribeDcdnRefreshTasks describeDcdnRefreshTasks(array $options = [])
  * @method DescribeDcdnRegionAndIsp describeDcdnRegionAndIsp(array $options = [])
  * @method DescribeDcdnReport describeDcdnReport(array $options = [])
@@ -1476,6 +1477,16 @@ class DescribeDcdnOfflineLogDeliveryStatus extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeDcdnRefreshQuota extends Rpc
+{
+}
+
+/**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnRefreshTaskById extends Rpc
 {
 }
 
