@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.986 - 2021-5-17
+- Export new API for predictive dialer.
+
+
 ## 1.8.985 - 2021-5-17
 - Add DescribeDcdnRefreshTaskById.
 

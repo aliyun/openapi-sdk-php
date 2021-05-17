@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AbortPredictiveJobs abortPredictiveJobs(array $options = [])
  * @method AddAgentDevice addAgentDevice(array $options = [])
  * @method AddBulkPhoneNumbers addBulkPhoneNumbers(array $options = [])
+ * @method AddJobsToPredictiveJobGroup addJobsToPredictiveJobGroup(array $options = [])
  * @method AddPhoneNumber addPhoneNumber(array $options = [])
  * @method AddPhoneTags addPhoneTags(array $options = [])
  * @method AssignJobs assignJobs(array $options = [])
@@ -49,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAgentData getAgentData(array $options = [])
  * @method GetCallMeasureSummaryReport getCallMeasureSummaryReport(array $options = [])
  * @method GetConfig getConfig(array $options = [])
+ * @method GetContactInfoByOutboundTaskId getContactInfoByOutboundTaskId(array $options = [])
  * @method GetConversationDetailByContactId getConversationDetailByContactId(array $options = [])
  * @method GetConversationList getConversationList(array $options = [])
  * @method GetInstance getInstance(array $options = [])
@@ -148,6 +150,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResetUserStatus resetUserStatus(array $options = [])
  * @method ResumeJobs resumeJobs(array $options = [])
  * @method ResumePredictiveJobs resumePredictiveJobs(array $options = [])
+ * @method SaveTerminalLog saveTerminalLog(array $options = [])
  * @method SaveWebRTCStats saveWebRTCStats(array $options = [])
  * @method SendPredefinedShortMessage sendPredefinedShortMessage(array $options = [])
  * @method StartBack2BackCall startBack2BackCall(array $options = [])
@@ -285,6 +288,36 @@ class AddBulkPhoneNumbers extends Rpc
 	    $this->data['SkillGroupId'] = $skillGroupId;
 		foreach ($skillGroupId as $i => $iValue) {
 			$this->options['query']['SkillGroupId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method array getJobsJson()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class AddJobsToPredictiveJobGroup extends Rpc
+{
+
+    /**
+     * @param array $jobsJson
+     *
+     * @return $this
+     */
+	public function withJobsJson(array $jobsJson)
+	{
+	    $this->data['JobsJson'] = $jobsJson;
+		foreach ($jobsJson as $i => $iValue) {
+			$this->options['form_params']['JobsJson.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -1374,6 +1407,18 @@ class GetCallMeasureSummaryReport extends Rpc
  * @method $this withObjectId($value)
  */
 class GetConfig extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getOutboundTaskId()
+ * @method $this withOutboundTaskId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ */
+class GetContactInfoByOutboundTaskId extends Rpc
 {
 }
 
@@ -3065,6 +3110,30 @@ class ResumePredictiveJobs extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getUniqueRequestId()
+ * @method $this withUniqueRequestId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getDataType()
+ * @method $this withDataType($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ * @method string getMethodName()
+ * @method $this withMethodName($value)
+ */
+class SaveTerminalLog extends Rpc
+{
 }
 
 /**
