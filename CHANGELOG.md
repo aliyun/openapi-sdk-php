@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.987 - 2021-5-17
+- Support DescribeInstallCaptcha API.
+
+
 ## 1.8.986 - 2021-5-17
 - Export new API for predictive dialer.
 
