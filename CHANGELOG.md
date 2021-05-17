@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.988 - 2021-5-17
+- Add API ListQuotaReviewTasks.
+
+
 ## 1.8.987 - 2021-5-17
 - Support DescribeInstallCaptcha API.
 

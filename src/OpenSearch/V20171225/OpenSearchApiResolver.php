@@ -77,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListModels listModels(array $options = [])
  * @method ListQueryProcessorNers listQueryProcessorNers(array $options = [])
  * @method ListQueryProcessors listQueryProcessors(array $options = [])
+ * @method ListQuotaReviewTasks listQuotaReviewTasks(array $options = [])
  * @method ListRamRoles listRamRoles(array $options = [])
  * @method ListScheduledTasks listScheduledTasks(array $options = [])
  * @method ListSecondRanks listSecondRanks(array $options = [])
@@ -119,6 +120,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateABTestGroup updateABTestGroup(array $options = [])
  * @method UpdateABTestScene updateABTestScene(array $options = [])
  * @method UpdateFetchFields updateFetchFields(array $options = [])
+ * @method UpdateSortScript updateSortScript(array $options = [])
  * @method UpdateSummaries updateSummaries(array $options = [])
  */
 class OpenSearchApiResolver extends ApiResolver
@@ -3113,6 +3115,56 @@ class ListQueryProcessors extends Roa
     }
 }
 
+/**
+ * @method string getPageSize()
+ * @method string getAppGroupIdentity()
+ * @method string getPageNumber()
+ */
+class ListQuotaReviewTasks extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/quota-review-tasks';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['pageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['pageNumber'] = $value;
+
+        return $this;
+    }
+}
+
 class ListRamRoles extends Roa
 {
     /** @var string */
@@ -5031,6 +5083,59 @@ class UpdateFetchFields extends Roa
     {
         $this->data['AppId'] = $value;
         $this->pathParameters['appId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppGroupIdentity($value)
+    {
+        $this->data['AppGroupIdentity'] = $value;
+        $this->pathParameters['appGroupIdentity'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppVersionId()
+ * @method string getScriptName()
+ * @method string getAppGroupIdentity()
+ */
+class UpdateSortScript extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/v4/openapi/app-groups/[appGroupIdentity]/apps/[appVersionId]/sort-scripts/[scriptName]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppVersionId($value)
+    {
+        $this->data['AppVersionId'] = $value;
+        $this->pathParameters['appVersionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScriptName($value)
+    {
+        $this->data['ScriptName'] = $value;
+        $this->pathParameters['scriptName'] = $value;
 
         return $this;
     }
