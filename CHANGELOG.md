@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 1.8.990 - 2021-5-18
+- Add IoT Studio SetStudioProjectCooperation API.
+- Add IoT Studio QueryStudioProjectList API.
+- Add IoT Studio QueryStudioAppList API.
+- Add IoT Studio QueryStudioAppPageListOpen API.
+- Add IoT Studio QueryStudioAppDomainListOpen API.
+- Add IoT Studio DeleteStudioAppDomainOpen API.
+- Add IoT Studio CreateStudioAppDomainOpen API.
+- Add IoT Studio GetStudioAppTokenOpen API.
+- Add IoT Studio SetupStudioAppAuthModeOpen API.
+- Add IoT Studio RefreshStudioAppTokenOpen API.
+- Add IoT Studio PublishStudioApp API.
+
+
 ## 1.8.989 - 2021-5-18
 - Support MinCount for AddNodes.
 - Support HostNamePreffix and HostNameSuffix for ListNodes.
