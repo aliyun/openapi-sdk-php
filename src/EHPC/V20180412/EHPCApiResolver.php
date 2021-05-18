@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddContainerApp addContainerApp(array $options = [])
+ * @method AddExistedNodes addExistedNodes(array $options = [])
  * @method AddLocalNodes addLocalNodes(array $options = [])
  * @method AddNodes addNodes(array $options = [])
  * @method AddQueue addQueue(array $options = [])
@@ -44,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeJob describeJob(array $options = [])
  * @method DescribeNFSClientStatus describeNFSClientStatus(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
+ * @method EcdDeleteDesktops ecdDeleteDesktops(array $options = [])
  * @method EditJobTemplate editJobTemplate(array $options = [])
  * @method GetAccountingReport getAccountingReport(array $options = [])
  * @method GetAutoScaleConfig getAutoScaleConfig(array $options = [])
@@ -155,6 +157,40 @@ class AddContainerApp extends Rpc
 }
 
 /**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method array getInstance()
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getJobQueue()
+ * @method $this withJobQueue($value)
+ * @method string getImageOwnerAlias()
+ * @method $this withImageOwnerAlias($value)
+ */
+class AddExistedNodes extends Rpc
+{
+
+    /**
+     * @param array $instance
+     *
+     * @return $this
+     */
+	public function withInstance(array $instance)
+	{
+	    $this->data['Instance'] = $instance;
+		foreach ($instance as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Id'])){
+				$this->options['query']['Instance.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getNodes()
@@ -181,6 +217,8 @@ class AddLocalNodes extends Rpc
  * @method $this withImageOwnerAlias($value)
  * @method string getSystemDiskType()
  * @method $this withSystemDiskType($value)
+ * @method string getMinCount()
+ * @method $this withMinCount($value)
  * @method string getSystemDiskSize()
  * @method $this withSystemDiskSize($value)
  * @method string getInstanceType()
@@ -463,6 +501,8 @@ class BindAccountToClusterUser extends Rpc
  * @method $this withClientVersion($value)
  * @method string getOsTag()
  * @method $this withOsTag($value)
+ * @method string getIsComputeEss()
+ * @method $this withIsComputeEss($value)
  * @method array getApplication()
  * @method string getEcsChargeType()
  * @method $this withEcsChargeType($value)
@@ -707,6 +747,8 @@ class CreateGWSInstance extends Rpc
 /**
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
+ * @method string getMultiOs()
+ * @method $this withMultiOs($value)
  * @method string getSecurityGroupName()
  * @method $this withSecurityGroupName($value)
  * @method string getOnPremiseVolumeRemotePath()
@@ -874,12 +916,16 @@ class CreateJobFile extends Rpc
 /**
  * @method string getStderrRedirectPath()
  * @method $this withStderrRedirectPath($value)
+ * @method string getClockTime()
+ * @method $this withClockTime($value)
  * @method string getCommandLine()
  * @method $this withCommandLine($value)
  * @method string getArrayRequest()
  * @method $this withArrayRequest($value)
  * @method string getPackagePath()
  * @method $this withPackagePath($value)
+ * @method string getMem()
+ * @method $this withMem($value)
  * @method string getStdoutRedirectPath()
  * @method $this withStdoutRedirectPath($value)
  * @method string getVariables()
@@ -888,10 +934,20 @@ class CreateJobFile extends Rpc
  * @method $this withRunasUser($value)
  * @method string getReRunable()
  * @method $this withReRunable($value)
+ * @method string getThread()
+ * @method $this withThread($value)
  * @method string getPriority()
  * @method $this withPriority($value)
+ * @method string getGpu()
+ * @method $this withGpu($value)
+ * @method string getNode()
+ * @method $this withNode($value)
+ * @method string getTask()
+ * @method $this withTask($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getQueue()
+ * @method $this withQueue($value)
  */
 class CreateJobTemplate extends Rpc
 {
@@ -1226,6 +1282,9 @@ class DescribePrice extends Rpc
 			if(isset($depth1Value['InternetChargeType'])){
 				$this->options['query']['Commodities.' . ($depth1 + 1) . '.InternetChargeType'] = $depth1Value['InternetChargeType'];
 			}
+			if(isset($depth1Value['SystemDiskPerformanceLevel'])){
+				$this->options['query']['Commodities.' . ($depth1 + 1) . '.SystemDiskPerformanceLevel'] = $depth1Value['SystemDiskPerformanceLevel'];
+			}
 			if(isset($depth1Value['SystemDiskSize'])){
 				$this->options['query']['Commodities.' . ($depth1 + 1) . '.SystemDiskSize'] = $depth1Value['SystemDiskSize'];
 			}
@@ -1245,14 +1304,40 @@ class DescribePrice extends Rpc
 }
 
 /**
+ * @method array getDesktopId()
+ */
+class EcdDeleteDesktops extends Rpc
+{
+
+    /**
+     * @param array $desktopId
+     *
+     * @return $this
+     */
+	public function withDesktopId(array $desktopId)
+	{
+	    $this->data['DesktopId'] = $desktopId;
+		foreach ($desktopId as $i => $iValue) {
+			$this->options['query']['DesktopId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getStderrRedirectPath()
  * @method $this withStderrRedirectPath($value)
+ * @method string getClockTime()
+ * @method $this withClockTime($value)
  * @method string getCommandLine()
  * @method $this withCommandLine($value)
  * @method string getArrayRequest()
  * @method $this withArrayRequest($value)
  * @method string getPackagePath()
  * @method $this withPackagePath($value)
+ * @method string getMem()
+ * @method $this withMem($value)
  * @method string getStdoutRedirectPath()
  * @method $this withStdoutRedirectPath($value)
  * @method string getVariables()
@@ -1261,12 +1346,22 @@ class DescribePrice extends Rpc
  * @method $this withRunasUser($value)
  * @method string getReRunable()
  * @method $this withReRunable($value)
+ * @method string getThread()
+ * @method $this withThread($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  * @method string getPriority()
  * @method $this withPriority($value)
+ * @method string getGpu()
+ * @method $this withGpu($value)
+ * @method string getNode()
+ * @method $this withNode($value)
+ * @method string getTask()
+ * @method $this withTask($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getQueue()
+ * @method $this withQueue($value)
  */
 class EditJobTemplate extends Rpc
 {
@@ -1589,6 +1684,8 @@ class ListCurrentClientVersion extends Rpc
 }
 
 /**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getImageOwnerAlias()
  * @method $this withImageOwnerAlias($value)
  * @method string getBaseOsTag()
@@ -1705,20 +1802,24 @@ class ListJobTemplates extends Rpc
 /**
  * @method string getRole()
  * @method $this withRole($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getHostName()
+ * @method $this withHostName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getHostNamePrefix()
+ * @method $this withHostNamePrefix($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getHostNameSuffix()
+ * @method $this withHostNameSuffix($value)
  * @method string getFilter()
  * @method $this withFilter($value)
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
  * @method string getSequence()
  * @method $this withSequence($value)
- * @method string getHostName()
- * @method $this withHostName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getSortBy()
  * @method $this withSortBy($value)
  */

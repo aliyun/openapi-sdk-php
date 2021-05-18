@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.989 - 2021-5-18
+- Support MinCount for AddNodes.
+- Support HostNamePreffix and HostNameSuffix for ListNodes.
+
+
 ## 1.8.988 - 2021-5-17
 - Add API ListQuotaReviewTasks.
 
