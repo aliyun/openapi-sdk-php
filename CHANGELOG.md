@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.992 - 2021-5-19
+- Update API.
+
+
 ## 1.8.991 - 2021-5-19
 - Publish multi language sdk.
 
