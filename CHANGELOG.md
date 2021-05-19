@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.991 - 2021-5-19
+- Publish multi language sdk.
+
+
 ## 1.8.990 - 2021-5-18
 - Add IoT Studio SetStudioProjectCooperation API.
 - Add IoT Studio QueryStudioProjectList API.
