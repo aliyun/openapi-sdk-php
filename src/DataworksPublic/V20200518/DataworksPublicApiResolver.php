@@ -192,6 +192,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateMetaCategory updateMetaCategory(array $options = [])
  * @method UpdateMetaTable updateMetaTable(array $options = [])
  * @method UpdateMetaTableIntroWiki updateMetaTableIntroWiki(array $options = [])
+ * @method UpdateNodeOwner updateNodeOwner(array $options = [])
+ * @method UpdateNodeRunMode updateNodeRunMode(array $options = [])
  * @method UpdateQualityFollower updateQualityFollower(array $options = [])
  * @method UpdateQualityRule updateQualityRule(array $options = [])
  * @method UpdateRemind updateRemind(array $options = [])
@@ -1232,6 +1234,7 @@ class CreateDataSource extends Rpc
  * @method string getDependentType()
  * @method string getFileFolderPath()
  * @method string getFileDescription()
+ * @method string getAutoParsing()
  */
 class CreateFile extends Rpc
 {
@@ -1531,6 +1534,19 @@ class CreateFile extends Rpc
     {
         $this->data['FileDescription'] = $value;
         $this->options['form_params']['FileDescription'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAutoParsing($value)
+    {
+        $this->data['AutoParsing'] = $value;
+        $this->options['form_params']['AutoParsing'] = $value;
 
         return $this;
     }
@@ -9772,6 +9788,7 @@ class UpdateDataSource extends Rpc
  * @method string getDependentType()
  * @method string getFileFolderPath()
  * @method string getFileDescription()
+ * @method string getAutoParsing()
  */
 class UpdateFile extends Rpc
 {
@@ -10074,6 +10091,19 @@ class UpdateFile extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAutoParsing($value)
+    {
+        $this->data['AutoParsing'] = $value;
+        $this->options['form_params']['AutoParsing'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -10253,6 +10283,102 @@ class UpdateMetaTableIntroWiki extends Rpc
     {
         $this->data['Content'] = $value;
         $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getNodeId()
+ * @method string getUserId()
+ */
+class UpdateNodeOwner extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getSchedulerType()
+ * @method string getNodeId()
+ */
+class UpdateNodeRunMode extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchedulerType($value)
+    {
+        $this->data['SchedulerType'] = $value;
+        $this->options['form_params']['SchedulerType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
 
         return $this;
     }

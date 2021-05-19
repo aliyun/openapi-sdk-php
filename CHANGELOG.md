@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.993 - 2021-5-19
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.992 - 2021-5-19
 - Update API.
 
