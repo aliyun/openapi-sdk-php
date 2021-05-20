@@ -108,9 +108,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'Dds';
 }
 
 /**
@@ -2035,8 +2032,6 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withClientToken($value)
  * @method string getReadonlyReplicas()
  * @method $this withReadonlyReplicas($value)
- * @method string getCouponNo()
- * @method $this withCouponNo($value)
  * @method string getNodeClass()
  * @method $this withNodeClass($value)
  * @method string getSecurityToken()
@@ -2045,12 +2040,8 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withEffectiveTime($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
- * @method string getSwitchTime()
- * @method $this withSwitchTime($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
- * @method string getBusinessInfo()
- * @method $this withBusinessInfo($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getFromApp()
