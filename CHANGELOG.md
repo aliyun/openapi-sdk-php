@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.995 - 2021-5-21
+- Support StrictResourceProvision in ApplyNodes.
+
+
 ## 1.8.994 - 2021-5-20
 - Upgrade mongodb sdk.
 

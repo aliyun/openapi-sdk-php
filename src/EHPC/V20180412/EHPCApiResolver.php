@@ -329,6 +329,8 @@ class AddUsers extends Rpc
  * @method $this withInternetMaxBandWidthOut($value)
  * @method string getResourceAmountType()
  * @method $this withResourceAmountType($value)
+ * @method string getStrictResourceProvision()
+ * @method $this withStrictResourceProvision($value)
  * @method string getSystemDiskType()
  * @method $this withSystemDiskType($value)
  * @method string getCores()
