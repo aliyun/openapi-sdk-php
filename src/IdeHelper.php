@@ -14,6 +14,7 @@ namespace AlibabaCloud;
  * @method static AcmsOpen\AcmsOpen acmsOpen()
  * @method static Actiontrail\Actiontrail actiontrail()
  * @method static Adb\Adb adb()
+ * @method static AddressPurification\AddressPurification addressPurification()
  * @method static Aegis\Aegis aegis()
  * @method static Afs\Afs afs()
  * @method static Aiccs\Aiccs aiccs()
