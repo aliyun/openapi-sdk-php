@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.999 - 2021-5-27
+- Generated 2019-09-10 for `waf-openapi`.
+
+
 ## 1.8.998 - 2021-5-24
 - Support a2a openapi.
 

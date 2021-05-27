@@ -17,11 +17,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomain describeDomain(array $options = [])
  * @method DescribeDomainAdvanceConfigs describeDomainAdvanceConfigs(array $options = [])
  * @method DescribeDomainBasicConfigs describeDomainBasicConfigs(array $options = [])
+ * @method DescribeDomainList describeDomainList(array $options = [])
  * @method DescribeDomainNames describeDomainNames(array $options = [])
  * @method DescribeDomainRuleGroup describeDomainRuleGroup(array $options = [])
  * @method DescribeInstanceInfo describeInstanceInfo(array $options = [])
  * @method DescribeInstanceInfos describeInstanceInfos(array $options = [])
  * @method DescribeInstanceSpecInfo describeInstanceSpecInfo(array $options = [])
+ * @method DescribeLogServiceStatus describeLogServiceStatus(array $options = [])
  * @method DescribeProtectionModuleCodeConfig describeProtectionModuleCodeConfig(array $options = [])
  * @method DescribeProtectionModuleMode describeProtectionModuleMode(array $options = [])
  * @method DescribeProtectionModuleRules describeProtectionModuleRules(array $options = [])
@@ -108,10 +110,14 @@ class CreateCertificateByCertificateId extends Rpc
  * @method $this withWriteTime($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getAccessHeaderMode()
+ * @method $this withAccessHeaderMode($value)
  * @method string getAccessType()
  * @method $this withAccessType($value)
  * @method string getLogHeaders()
  * @method $this withLogHeaders($value)
+ * @method string getAccessHeaders()
+ * @method $this withAccessHeaders($value)
  * @method string getConnectionTime()
  * @method $this withConnectionTime($value)
  * @method string getClusterType()
@@ -241,14 +247,14 @@ class DescribeCertMatchStatus extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getDomain()
- * @method $this withDomain($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
  */
 class DescribeDomain extends Rpc
 {
@@ -292,6 +298,42 @@ class DescribeDomainAdvanceConfigs extends Rpc
  */
 class DescribeDomainBasicConfigs extends Rpc
 {
+}
+
+/**
+ * @method array getDomainNames()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getIsSub()
+ * @method $this withIsSub($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeDomainList extends Rpc
+{
+
+    /**
+     * @param array $domainNames
+     *
+     * @return $this
+     */
+	public function withDomainNames(array $domainNames)
+	{
+	    $this->data['DomainNames'] = $domainNames;
+		foreach ($domainNames as $i => $iValue) {
+			$this->options['query']['DomainNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -368,6 +410,40 @@ class DescribeInstanceInfos extends Rpc
  */
 class DescribeInstanceSpecInfo extends Rpc
 {
+}
+
+/**
+ * @method array getDomainNames()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeLogServiceStatus extends Rpc
+{
+
+    /**
+     * @param array $domainNames
+     *
+     * @return $this
+     */
+	public function withDomainNames(array $domainNames)
+	{
+	    $this->data['DomainNames'] = $domainNames;
+		foreach ($domainNames as $i => $iValue) {
+			$this->options['query']['DomainNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -463,10 +539,10 @@ class DescribeWafSourceIpSegment extends Rpc
 /**
  * @method string getIpFollowStatus()
  * @method $this withIpFollowStatus($value)
+ * @method string getHybridCloudType()
+ * @method $this withHybridCloudType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getXffHeaderMode()
- * @method $this withXffHeaderMode($value)
  * @method string getHttpPort()
  * @method $this withHttpPort($value)
  * @method string getHttp2Port()
@@ -475,14 +551,16 @@ class DescribeWafSourceIpSegment extends Rpc
  * @method $this withWriteTime($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getXffHeaders()
- * @method $this withXffHeaders($value)
+ * @method string getAccessHeaderMode()
+ * @method $this withAccessHeaderMode($value)
  * @method string getAccessType()
  * @method $this withAccessType($value)
  * @method string getBindingIpv6()
  * @method $this withBindingIpv6($value)
  * @method string getLogHeaders()
  * @method $this withLogHeaders($value)
+ * @method string getAccessHeaders()
+ * @method $this withAccessHeaders($value)
  * @method string getConnectionTime()
  * @method $this withConnectionTime($value)
  * @method string getClusterType()
