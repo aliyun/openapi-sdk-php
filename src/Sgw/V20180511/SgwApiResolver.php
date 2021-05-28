@@ -120,6 +120,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SwitchGatewayExpirationPolicy switchGatewayExpirationPolicy(array $options = [])
  * @method SwitchToSubscription switchToSubscription(array $options = [])
  * @method TagResources tagResources(array $options = [])
+ * @method TriggerGatewayRemoteSync triggerGatewayRemoteSync(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateGatewayBlockVolume updateGatewayBlockVolume(array $options = [])
  * @method UpdateGatewayFileShare updateGatewayFileShare(array $options = [])
@@ -432,6 +433,8 @@ class CreateGatewayCacheDisk extends Rpc
  * @method $this withOssEndpoint($value)
  * @method string getReadWriteClientList()
  * @method $this withReadWriteClientList($value)
+ * @method string getBypassCacheRead()
+ * @method $this withBypassCacheRead($value)
  * @method string getBackendLimit()
  * @method $this withBackendLimit($value)
  * @method string getSquash()
@@ -1818,6 +1821,20 @@ class TagResources extends Rpc
 }
 
 /**
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getIndexId()
+ * @method $this withIndexId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class TriggerGatewayRemoteSync extends Rpc
+{
+}
+
+/**
  * @method string getAll()
  * @method $this withAll($value)
  * @method array getResourceId()
@@ -1894,6 +1911,8 @@ class UpdateGatewayBlockVolume extends Rpc
  * @method $this withPollingInterval($value)
  * @method string getReadWriteClientList()
  * @method $this withReadWriteClientList($value)
+ * @method string getBypassCacheRead()
+ * @method $this withBypassCacheRead($value)
  * @method string getBackendLimit()
  * @method $this withBackendLimit($value)
  * @method string getSquash()
