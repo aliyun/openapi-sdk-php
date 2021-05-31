@@ -59,6 +59,7 @@ namespace AlibabaCloud;
  * @method static Cr\Cr cr()
  * @method static Crm\Crm crm()
  * @method static CusanalyticScOnline\CusanalyticScOnline cusanalyticScOnline()
+ * @method static DBFS\DBFS dBFS()
  * @method static DataworksPublic\DataworksPublic dataworksPublic()
  * @method static Dbs\Dbs dbs()
  * @method static Dcdn\Dcdn dcdn()

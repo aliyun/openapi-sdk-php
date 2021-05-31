@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1003 - 2021-5-31
+- Support upgrade.
+
+
 ## 1.8.1002 - 2021-5-28
 - Add TriggerRemoteSync api.
 
