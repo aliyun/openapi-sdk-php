@@ -61,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RestoreSecret restoreSecret(array $options = [])
  * @method RotateSecret rotateSecret(array $options = [])
  * @method ScheduleKeyDeletion scheduleKeyDeletion(array $options = [])
+ * @method SetDeletionProtection setDeletionProtection(array $options = [])
  * @method TagResource tagResource(array $options = [])
  * @method UntagResource untagResource(array $options = [])
  * @method UpdateAlias updateAlias(array $options = [])
@@ -227,6 +228,10 @@ class CreateAlias extends Rpc
 /**
  * @method string getProtectionLevel()
  * @method $this withProtectionLevel($value)
+ * @method string getExportablePrivateKey()
+ * @method $this withExportablePrivateKey($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getSubject()
  * @method $this withSubject($value)
  * @method string getSubjectAlternativeNames()
@@ -763,6 +768,18 @@ class RotateSecret extends Rpc
  * @method $this withKeyId($value)
  */
 class ScheduleKeyDeletion extends Rpc
+{
+}
+
+/**
+ * @method string getEnableDeletionProtection()
+ * @method $this withEnableDeletionProtection($value)
+ * @method string getProtectedResourceArn()
+ * @method $this withProtectedResourceArn($value)
+ * @method string getDeletionProtectionDescription()
+ * @method $this withDeletionProtectionDescription($value)
+ */
+class SetDeletionProtection extends Rpc
 {
 }
 

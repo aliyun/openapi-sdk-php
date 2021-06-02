@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1004 - 2021-6-2
+- Support key deletion protection.
+
+
 ## 1.8.1003 - 2021-5-31
 - Support upgrade.
 
