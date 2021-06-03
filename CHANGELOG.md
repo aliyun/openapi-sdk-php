@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1005 - 2021-6-3
+- Support name.
+
+
 ## 1.8.1004 - 2021-6-2
 - Support key deletion protection.
 
