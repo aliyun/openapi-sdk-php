@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1006 - 2021-6-3
+- Add name.
+
+
 ## 1.8.1005 - 2021-6-3
 - Support name.
 
