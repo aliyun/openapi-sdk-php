@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1008 - 2021-6-4
+- Supported multi attach feature for disk.
+
+
 ## 1.8.1007 - 2021-6-4
 - Delete live API.
 
