@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1009 - 2021-6-4
+- Add Emon-Service support.
+- Remove Deprecated Interfaces.
+
+
 ## 1.8.1008 - 2021-6-4
 - Supported multi attach feature for disk.
 

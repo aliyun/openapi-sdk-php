@@ -22,7 +22,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateLogstash createLogstash(array $options = [])
  * @method CreatePipelines createPipelines(array $options = [])
- * @method CreateProject createProject(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
  * @method DeactivateZones deactivateZones(array $options = [])
  * @method DeleteCollector deleteCollector(array $options = [])
@@ -34,7 +33,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteLogstash deleteLogstash(array $options = [])
  * @method DeletePipelines deletePipelines(array $options = [])
- * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSnapshotRepo deleteSnapshotRepo(array $options = [])
  * @method DescribeAckOperator describeAckOperator(array $options = [])
  * @method DescribeCollector describeCollector(array $options = [])
@@ -58,6 +56,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EstimatedRestartTime estimatedRestartTime(array $options = [])
  * @method GetClusterDataInformation getClusterDataInformation(array $options = [])
  * @method GetElastictask getElastictask(array $options = [])
+ * @method GetEmonGrafanaAlerts getEmonGrafanaAlerts(array $options = [])
+ * @method GetEmonGrafanaDashboards getEmonGrafanaDashboards(array $options = [])
  * @method GetEmonMonitorData getEmonMonitorData(array $options = [])
  * @method GetRegionConfiguration getRegionConfiguration(array $options = [])
  * @method GetSuggestShrinkableNodes getSuggestShrinkableNodes(array $options = [])
@@ -110,6 +110,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method MoveResourceGroup moveResourceGroup(array $options = [])
  * @method OpenDiagnosis openDiagnosis(array $options = [])
  * @method OpenHttps openHttps(array $options = [])
+ * @method PostEmonTryAlarmRule postEmonTryAlarmRule(array $options = [])
  * @method RecommendTemplates recommendTemplates(array $options = [])
  * @method ReinstallCollector reinstallCollector(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
@@ -119,7 +120,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RestartLogstash restartLogstash(array $options = [])
  * @method ResumeElasticsearchTask resumeElasticsearchTask(array $options = [])
  * @method ResumeLogstashTask resumeLogstashTask(array $options = [])
- * @method RollbackInstance rollbackInstance(array $options = [])
  * @method RolloverDataStream rolloverDataStream(array $options = [])
  * @method RunPipelines runPipelines(array $options = [])
  * @method ShrinkNode shrinkNode(array $options = [])
@@ -625,28 +625,6 @@ class CreatePipelines extends Roa
 }
 
 /**
- * @method string getClientToken()
- */
-class CreateProject extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/openapi/projects';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['query']['clientToken'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -980,33 +958,6 @@ class DeletePipelines extends Roa
     {
         $this->data['PipelineIds'] = $value;
         $this->options['query']['pipelineIds'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getClientToken()
- * @method string getId()
- * @method $this withId($value)
- */
-class DeleteProject extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/openapi/projects/[Id]';
-
-    /** @var string */
-    public $method = 'DELETE';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['query']['clientToken'] = $value;
 
         return $this;
     }
@@ -1434,6 +1385,32 @@ class GetElastictask extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/elastic-task';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetEmonGrafanaAlerts extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/emon/projects/[ProjectId]/grafana/proxy/api/alerts';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class GetEmonGrafanaDashboards extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/emon/projects/[ProjectId]/grafana/proxy/api/search';
 
     /** @var string */
     public $method = 'GET';
@@ -2563,7 +2540,6 @@ class ListIndexTemplates extends Roa
 /**
  * @method string getDescription()
  * @method string getInstanceCategory()
- * @method string getOwnerId()
  * @method string getTags()
  * @method string getResourceGroupId()
  * @method string getInstanceId()
@@ -2604,19 +2580,6 @@ class ListInstance extends Roa
     {
         $this->data['InstanceCategory'] = $value;
         $this->options['query']['instanceCategory'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOwnerId($value)
-    {
-        $this->data['OwnerId'] = $value;
-        $this->options['query']['ownerId'] = $value;
 
         return $this;
     }
@@ -3792,6 +3755,18 @@ class OpenHttps extends Roa
 }
 
 /**
+ * @method string getAlarmGroupId()
+ * @method $this withAlarmGroupId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ */
+class PostEmonTryAlarmRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/emon/projects/[ProjectId]/alarm-groups/[AlarmGroupId]/alarm-rules/_test';
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getUsageScenario()
@@ -4023,30 +3998,6 @@ class ResumeLogstashTask extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/logstashes/[InstanceId]/actions/resume';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['query']['clientToken'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getClientToken()
- */
-class RollbackInstance extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/openapi/instances/[InstanceId]/actions/rollback';
 
     /**
      * @param string $value
