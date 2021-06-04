@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1007 - 2021-6-4
+- Delete live API.
+
+
 ## 1.8.1006 - 2021-6-3
 - Add name.
 
