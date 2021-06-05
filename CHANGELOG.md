@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1010 - 2021-6-5
+- New API Version of Work Order System.
+
+
 ## 1.8.1009 - 2021-6-4
 - Add Emon-Service support.
 - Remove Deprecated Interfaces.
