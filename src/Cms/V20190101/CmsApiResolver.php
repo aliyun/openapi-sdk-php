@@ -551,12 +551,14 @@ class CreateGroupMonitoringAgentProcess extends Rpc
 
 /**
  * @method string getTaskOptionHttpMethod()
+ * @method string getTaskOptionHttpHeader()
  * @method array getAlertConfigEscalationList()
  * @method string getTaskName()
  * @method $this withTaskName($value)
  * @method string getAlertConfigSilenceTime()
  * @method string getTaskOptionHttpResponseCharset()
  * @method string getTaskOptionHttpNegative()
+ * @method string getTaskOptionInterval()
  * @method string getAlertConfigNotifyType()
  * @method string getTaskOptionTelnetOrPingHost()
  * @method string getTaskOptionHttpResponseMatchContent()
@@ -585,6 +587,19 @@ class CreateHostAvailability extends Rpc
     {
         $this->data['TaskOptionHttpMethod'] = $value;
         $this->options['query']['TaskOption.HttpMethod'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskOptionHttpHeader($value)
+    {
+        $this->data['TaskOptionHttpHeader'] = $value;
+        $this->options['query']['TaskOption.HttpHeader'] = $value;
 
         return $this;
     }
@@ -653,6 +668,19 @@ class CreateHostAvailability extends Rpc
     {
         $this->data['TaskOptionHttpNegative'] = $value;
         $this->options['query']['TaskOption.HttpNegative'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskOptionInterval($value)
+    {
+        $this->data['TaskOptionInterval'] = $value;
+        $this->options['query']['TaskOption.Interval'] = $value;
 
         return $this;
     }
@@ -993,18 +1021,22 @@ class CreateMonitoringAgentProcess extends Rpc
 }
 
 /**
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getAlertIds()
+ * @method $this withAlertIds($value)
  * @method string getAddress()
  * @method $this withAddress($value)
  * @method string getTaskType()
  * @method $this withTaskType($value)
- * @method string getTaskName()
- * @method $this withTaskName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getIspCities()
  * @method $this withIspCities($value)
  * @method string getOptionsJson()
  * @method $this withOptionsJson($value)
- * @method string getAlertIds()
- * @method $this withAlertIds($value)
+ * @method string getIntervalUnit()
+ * @method $this withIntervalUnit($value)
  * @method string getInterval()
  * @method $this withInterval($value)
  */
@@ -1324,6 +1356,8 @@ class DescribeAlertHistoryList extends Rpc
  * @method $this withGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
  * @method string getPage()
  * @method $this withPage($value)
  * @method string getRuleId()
@@ -2100,6 +2134,8 @@ class DescribeSiteMonitorData extends Rpc
  * @method $this withCity($value)
  * @method string getIsp()
  * @method $this withIsp($value)
+ * @method string getAPIProbe()
+ * @method $this withAPIProbe($value)
  * @method string getIPV4()
  * @method $this withIPV4($value)
  * @method string getIPV6()
@@ -2511,12 +2547,14 @@ class ModifyGroupMonitoringAgentProcess extends Rpc
 
 /**
  * @method string getTaskOptionHttpMethod()
+ * @method string getTaskOptionHttpHeader()
  * @method array getAlertConfigEscalationList()
  * @method string getTaskName()
  * @method $this withTaskName($value)
  * @method string getAlertConfigSilenceTime()
  * @method string getTaskOptionHttpResponseCharset()
  * @method string getTaskOptionHttpNegative()
+ * @method string getTaskOptionInterval()
  * @method string getAlertConfigNotifyType()
  * @method string getTaskOptionTelnetOrPingHost()
  * @method string getTaskOptionHttpResponseMatchContent()
@@ -2545,6 +2583,19 @@ class ModifyHostAvailability extends Rpc
     {
         $this->data['TaskOptionHttpMethod'] = $value;
         $this->options['query']['TaskOption.HttpMethod'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskOptionHttpHeader($value)
+    {
+        $this->data['TaskOptionHttpHeader'] = $value;
+        $this->options['query']['TaskOption.HttpHeader'] = $value;
 
         return $this;
     }
@@ -2613,6 +2664,19 @@ class ModifyHostAvailability extends Rpc
     {
         $this->data['TaskOptionHttpNegative'] = $value;
         $this->options['query']['TaskOption.HttpNegative'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskOptionInterval($value)
+    {
+        $this->data['TaskOptionInterval'] = $value;
+        $this->options['query']['TaskOption.Interval'] = $value;
 
         return $this;
     }
@@ -2895,6 +2959,8 @@ class ModifyMonitorGroupInstances extends Rpc
  * @method $this withOptionsJson($value)
  * @method string getAlertIds()
  * @method $this withAlertIds($value)
+ * @method string getIntervalUnit()
+ * @method $this withIntervalUnit($value)
  * @method string getInterval()
  * @method $this withInterval($value)
  * @method string getTaskId()
@@ -3402,6 +3468,8 @@ class PutExporterRule extends Rpc
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEscalationsInfoTimes()
+ * @method string getExtraDimensionJson()
+ * @method $this withExtraDimensionJson($value)
  * @method string getEscalationsCriticalTimes()
  * @method string getEscalationsWarnStatistics()
  * @method string getEscalationsInfoThreshold()
@@ -3783,6 +3851,8 @@ class PutMonitoringConfig extends Rpc
  * @method string getResources()
  * @method $this withResources($value)
  * @method string getEscalationsInfoTimes()
+ * @method string getGroupBy()
+ * @method $this withGroupBy($value)
  * @method string getEscalationsCriticalTimes()
  * @method string getEscalationsWarnStatistics()
  * @method string getEscalationsInfoThreshold()

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1011 - 2021-6-8
+- Increase detection frequency for availability monitoring.
+- Add application group to query in batch according to group ID.
+
+
 ## 1.8.1010 - 2021-6-5
 - New API Version of Work Order System.
 
