@@ -1241,6 +1241,7 @@ class CreateActivation extends Rpc
  * @method string getAutoProvisioningGroupType()
  * @method $this withAutoProvisioningGroupType($value)
  * @method string getLaunchConfigurationSystemDiskPerformanceLevel()
+ * @method array getLaunchConfigurationHostNames()
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getLaunchConfigurationImageId()
@@ -1262,6 +1263,8 @@ class CreateActivation extends Rpc
  * @method string getLaunchConfigurationSystemDiskSize()
  * @method string getLaunchConfigurationInternetMaxBandwidthOut()
  * @method string getLaunchConfigurationHostName()
+ * @method string getMinTargetCapacity()
+ * @method $this withMinTargetCapacity($value)
  * @method string getMaxSpotPrice()
  * @method $this withMaxSpotPrice($value)
  * @method string getLaunchConfigurationPasswordInherit()
@@ -1325,35 +1328,35 @@ class CreateAutoProvisioningGroup extends Rpc
 	{
 	    $this->data['LaunchConfigurationDataDisk'] = $launchConfigurationDataDisk;
 		foreach ($launchConfigurationDataDisk as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Size'])){
-				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
-			}
-			if(isset($depth1Value['Category'])){
-				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
-			}
 			if(isset($depth1Value['PerformanceLevel'])){
 				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			}
+			if(isset($depth1Value['KmsKeyId'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.KmsKeyId'] = $depth1Value['KmsKeyId'];
+			}
+			if(isset($depth1Value['Description'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+			}
+			if(isset($depth1Value['SnapshotId'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
+			}
+			if(isset($depth1Value['Size'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
 			}
 			if(isset($depth1Value['Device'])){
 				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
 			}
-			if(isset($depth1Value['SnapshotId'])){
-				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
+			if(isset($depth1Value['DiskName'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+			}
+			if(isset($depth1Value['Category'])){
+				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
 			}
 			if(isset($depth1Value['DeleteWithInstance'])){
 				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
 			}
 			if(isset($depth1Value['Encrypted'])){
 				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
-			}
-			if(isset($depth1Value['KmsKeyId'])){
-				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.KmsKeyId'] = $depth1Value['KmsKeyId'];
-			}
-			if(isset($depth1Value['DiskName'])){
-				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
-			}
-			if(isset($depth1Value['Description'])){
-				$this->options['query']['LaunchConfiguration.DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
 			}
 		}
 
@@ -1384,6 +1387,21 @@ class CreateAutoProvisioningGroup extends Rpc
         $this->options['query']['LaunchConfiguration.SystemDiskPerformanceLevel'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $launchConfigurationHostNames
+     *
+     * @return $this
+     */
+	public function withLaunchConfigurationHostNames(array $launchConfigurationHostNames)
+	{
+	    $this->data['LaunchConfigurationHostNames'] = $launchConfigurationHostNames;
+		foreach ($launchConfigurationHostNames as $i => $iValue) {
+			$this->options['query']['LaunchConfiguration.HostNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -1624,20 +1642,20 @@ class CreateAutoProvisioningGroup extends Rpc
 	{
 	    $this->data['LaunchTemplateConfig'] = $launchTemplateConfig;
 		foreach ($launchTemplateConfig as $depth1 => $depth1Value) {
-			if(isset($depth1Value['InstanceType'])){
-				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+			if(isset($depth1Value['VSwitchId'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
 			}
 			if(isset($depth1Value['MaxPrice'])){
 				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.MaxPrice'] = $depth1Value['MaxPrice'];
 			}
-			if(isset($depth1Value['VSwitchId'])){
-				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
+			if(isset($depth1Value['Priority'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
+			}
+			if(isset($depth1Value['InstanceType'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
 			}
 			if(isset($depth1Value['WeightedCapacity'])){
 				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.WeightedCapacity'] = $depth1Value['WeightedCapacity'];
-			}
-			if(isset($depth1Value['Priority'])){
-				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
 			}
 		}
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1012 - 2021-6-8
+- Support input parameter LaunchConfigurationHostNames and MinTargetCapacity for CreateAutoProvisioningGroup.
+
+
 ## 1.8.1011 - 2021-6-8
 - Increase detection frequency for availability monitoring.
 - Add application group to query in batch according to group ID.
