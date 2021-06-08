@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1013 - 2021-6-8
+- Support Aliyun Workorder OpenAPI.
+
+
 ## 1.8.1012 - 2021-6-8
 - Support input parameter LaunchConfigurationHostNames and MinTargetCapacity for CreateAutoProvisioningGroup.
 
