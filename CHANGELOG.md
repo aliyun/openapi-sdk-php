@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1014 - 2021-6-9
+- Edit GetTrace.
+
+
 ## 1.8.1013 - 2021-6-8
 - Support Aliyun Workorder OpenAPI.
 

@@ -39,7 +39,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExportPrometheusRules exportPrometheusRules(array $options = [])
  * @method GetAgentDownloadUrl getAgentDownloadUrl(array $options = [])
  * @method GetAppApiByPage getAppApiByPage(array $options = [])
+ * @method GetArmsConsoleUrl getArmsConsoleUrl(array $options = [])
  * @method GetConsistencySnapshot getConsistencySnapshot(array $options = [])
+ * @method GetExploreUrl getExploreUrl(array $options = [])
  * @method GetIntegrationToken getIntegrationToken(array $options = [])
  * @method GetMultipleTrace getMultipleTrace(array $options = [])
  * @method GetPrometheusApiToken getPrometheusApiToken(array $options = [])
@@ -568,6 +570,13 @@ class GetAppApiByPage extends Rpc
 {
 }
 
+class GetArmsConsoleUrl extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
 /**
  * @method string getCurrentTimestamp()
  * @method $this withCurrentTimestamp($value)
@@ -579,6 +588,18 @@ class GetAppApiByPage extends Rpc
  * @method $this withProxyUserId($value)
  */
 class GetConsistencySnapshot extends Rpc
+{
+}
+
+/**
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class GetExploreUrl extends Rpc
 {
 }
 
@@ -641,6 +662,10 @@ class GetStack extends Rpc
 /**
  * @method string getTraceID()
  * @method $this withTraceID($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class GetTrace extends Rpc
 {
