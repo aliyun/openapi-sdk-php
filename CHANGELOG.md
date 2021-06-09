@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1017 - 2021-6-9
+- Update TMP API, including QueryDevice, CreateThingModel, UpdateThingModel, ImportThingModelTsl, BatchPickThingModel, ListDeviceDistributeJob.
+- Add TMP API, including QueryDeviceInfo.
+- Update OTA API, including CreateOTAVerifyJob, CreateOTAStaticUpgradeJob, CreateOTADynamicUpgradeJob, CancelOTATaskByJob, QueryOTAJob.
+- Add OTA API, including ListOTAUnfinishedTaskByDevice,ConfirmOTATask.
+
+
 ## 1.8.1016 - 2021-6-9
 - Create Lindorm Open api.
 
