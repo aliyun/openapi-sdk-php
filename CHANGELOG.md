@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1018 - 2021-6-10
+- Generated 2016-04-28 for `Vpc`.
+
+
 ## 1.8.1017 - 2021-6-9
 - Update TMP API, including QueryDevice, CreateThingModel, UpdateThingModel, ImportThingModelTsl, BatchPickThingModel, ListDeviceDistributeJob.
 - Add TMP API, including QueryDeviceInfo.
