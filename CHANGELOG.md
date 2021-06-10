@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1019 - 2021-6-10
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.1018 - 2021-6-10
 - Generated 2016-04-28 for `Vpc`.
 

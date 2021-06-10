@@ -77,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveRecordNotifyConfig deleteLiveRecordNotifyConfig(array $options = [])
  * @method DeleteLiveRecordVodConfig deleteLiveRecordVodConfig(array $options = [])
  * @method DeleteLiveSnapshotDetectPornConfig deleteLiveSnapshotDetectPornConfig(array $options = [])
+ * @method DeleteLiveSpecificStagingConfig deleteLiveSpecificStagingConfig(array $options = [])
  * @method DeleteLiveStreamsNotifyUrlConfig deleteLiveStreamsNotifyUrlConfig(array $options = [])
  * @method DeleteLiveStreamTranscode deleteLiveStreamTranscode(array $options = [])
  * @method DeleteMixStream deleteMixStream(array $options = [])
@@ -130,6 +131,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainRealTimeTrafficData describeLiveDomainRealTimeTrafficData(array $options = [])
  * @method DescribeLiveDomainRecordData describeLiveDomainRecordData(array $options = [])
  * @method DescribeLiveDomainSnapshotData describeLiveDomainSnapshotData(array $options = [])
+ * @method DescribeLiveDomainStagingConfig describeLiveDomainStagingConfig(array $options = [])
  * @method DescribeLiveDomainStreamTranscodeData describeLiveDomainStreamTranscodeData(array $options = [])
  * @method DescribeLiveDomainTimeShiftData describeLiveDomainTimeShiftData(array $options = [])
  * @method DescribeLiveDomainTrafficData describeLiveDomainTrafficData(array $options = [])
@@ -144,6 +146,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveShiftConfigs describeLiveShiftConfigs(array $options = [])
  * @method DescribeLiveSnapshotConfig describeLiveSnapshotConfig(array $options = [])
  * @method DescribeLiveSnapshotDetectPornConfig describeLiveSnapshotDetectPornConfig(array $options = [])
+ * @method DescribeLiveStagingIp describeLiveStagingIp(array $options = [])
  * @method DescribeLiveStreamBitRateData describeLiveStreamBitRateData(array $options = [])
  * @method DescribeLiveStreamCount describeLiveStreamCount(array $options = [])
  * @method DescribeLiveStreamDelayConfig describeLiveStreamDelayConfig(array $options = [])
@@ -200,9 +203,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyLiveRealtimeLogDelivery modifyLiveRealtimeLogDelivery(array $options = [])
  * @method ModifyStudioLayout modifyStudioLayout(array $options = [])
  * @method OpenLiveShift openLiveShift(array $options = [])
+ * @method PublishLiveStagingConfigToProduction publishLiveStagingConfigToProduction(array $options = [])
  * @method RealTimeRecordCommand realTimeRecordCommand(array $options = [])
  * @method RealTimeSnapshotCommand realTimeSnapshotCommand(array $options = [])
  * @method ResumeLiveStream resumeLiveStream(array $options = [])
+ * @method RollbackLiveStagingConfig rollbackLiveStagingConfig(array $options = [])
  * @method SendRoomNotification sendRoomNotification(array $options = [])
  * @method SendRoomUserNotification sendRoomUserNotification(array $options = [])
  * @method SetBoardCallback setBoardCallback(array $options = [])
@@ -211,6 +216,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetCasterSceneConfig setCasterSceneConfig(array $options = [])
  * @method SetCasterSyncGroup setCasterSyncGroup(array $options = [])
  * @method SetLiveDomainCertificate setLiveDomainCertificate(array $options = [])
+ * @method SetLiveDomainStagingConfig setLiveDomainStagingConfig(array $options = [])
  * @method SetLiveLazyPullStreamInfoConfig setLiveLazyPullStreamInfoConfig(array $options = [])
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
  * @method SetLiveStreamOptimizedFeatureConfig setLiveStreamOptimizedFeatureConfig(array $options = [])
@@ -1725,6 +1731,20 @@ class DeleteLiveSnapshotDetectPornConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
+ */
+class DeleteLiveSpecificStagingConfig extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -2493,6 +2513,18 @@ class DescribeLiveDomainSnapshotData extends Rpc
 }
 
 /**
+ * @method string getFunctionNames()
+ * @method $this withFunctionNames($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveDomainStagingConfig extends Rpc
+{
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getSplit()
@@ -2716,6 +2748,14 @@ class DescribeLiveSnapshotConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveSnapshotDetectPornConfig extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStagingIp extends Rpc
 {
 }
 
@@ -3857,6 +3897,18 @@ class OpenLiveShift extends Rpc
 }
 
 /**
+ * @method string getFunctionName()
+ * @method $this withFunctionName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class PublishLiveStagingConfigToProduction extends Rpc
+{
+}
+
+/**
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getStreamName()
@@ -3907,6 +3959,18 @@ class RealTimeSnapshotCommand extends Rpc
  * @method $this withOwnerId($value)
  */
 class ResumeLiveStream extends Rpc
+{
+}
+
+/**
+ * @method string getFunctionName()
+ * @method $this withFunctionName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RollbackLiveStagingConfig extends Rpc
 {
 }
 
@@ -4108,6 +4172,18 @@ class SetCasterSyncGroup extends Rpc
  * @method $this withSSLPub($value)
  */
 class SetLiveDomainCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getFunctions()
+ * @method $this withFunctions($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetLiveDomainStagingConfig extends Rpc
 {
 }
 
