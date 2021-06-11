@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1021 - 2021-6-11
+- Add CreateSshKey OpenAPI.
+
+
 ## 1.8.1020 - 2021-6-10
 - Support SQLReview Order API.
 

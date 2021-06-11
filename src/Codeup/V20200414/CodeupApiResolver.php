@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateRepositoryDeployKey createRepositoryDeployKey(array $options = [])
  * @method CreateRepositoryGroup createRepositoryGroup(array $options = [])
  * @method CreateRepositoryProtectedBranch createRepositoryProtectedBranch(array $options = [])
+ * @method CreateSshKey createSshKey(array $options = [])
  * @method CreateTag createTag(array $options = [])
  * @method DeleteBranch deleteBranch(array $options = [])
  * @method DeleteFile deleteFile(array $options = [])
@@ -769,6 +770,31 @@ class CreateRepositoryProtectedBranch extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccessToken($value)
+    {
+        $this->data['AccessToken'] = $value;
+        $this->options['query']['AccessToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccessToken()
+ */
+class CreateSshKey extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v3/user/keys';
+
+    /** @var string */
+    public $method = 'POST';
 
     /**
      * @param string $value
