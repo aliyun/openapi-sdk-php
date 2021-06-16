@@ -235,8 +235,8 @@ class ListTickets extends Rpc
 }
 
 /**
- * @method string getSecContent()
  * @method string getContent()
+ * @method string getEncrypt()
  * @method string getTicketId()
  */
 class ReplyTicket extends Rpc
@@ -247,10 +247,10 @@ class ReplyTicket extends Rpc
      *
      * @return $this
      */
-    public function withSecContent($value)
+    public function withContent($value)
     {
-        $this->data['SecContent'] = $value;
-        $this->options['form_params']['SecContent'] = $value;
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
 
         return $this;
     }
@@ -260,10 +260,10 @@ class ReplyTicket extends Rpc
      *
      * @return $this
      */
-    public function withContent($value)
+    public function withEncrypt($value)
     {
-        $this->data['Content'] = $value;
-        $this->options['form_params']['Content'] = $value;
+        $this->data['Encrypt'] = $value;
+        $this->options['form_params']['Encrypt'] = $value;
 
         return $this;
     }

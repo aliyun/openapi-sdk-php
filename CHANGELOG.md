@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1023 - 2021-6-16
+- Encrypt Dialog Content.
+
+
 ## 1.8.1022 - 2021-6-15
 - Add ListDevopsProjects.
 
