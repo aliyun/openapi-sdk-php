@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1024 - 2021-6-16
+- Update imageaudit.
+
+
 ## 1.8.1023 - 2021-6-16
 - Encrypt Dialog Content.
 
