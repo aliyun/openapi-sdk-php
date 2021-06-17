@@ -95,6 +95,7 @@ namespace AlibabaCloud;
  * @method static Fnf\Fnf fnf()
  * @method static Foas\Foas foas()
  * @method static Ft\Ft ft()
+ * @method static Ga\Ga ga()
  * @method static Geoip\Geoip geoip()
  * @method static Goodstech\Goodstech goodstech()
  * @method static Gpdb\Gpdb gpdb()
