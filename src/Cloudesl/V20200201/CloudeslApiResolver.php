@@ -34,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRoleActions describeRoleActions(array $options = [])
  * @method DescribeStoreConfig describeStoreConfig(array $options = [])
  * @method DescribeStores describeStores(array $options = [])
+ * @method DescribeStoreStatistics describeStoreStatistics(array $options = [])
  * @method DescribeUserLog describeUserLog(array $options = [])
  * @method DescribeUsers describeUsers(array $options = [])
  * @method DissociatePlanogramRail dissociatePlanogramRail(array $options = [])
@@ -118,6 +119,7 @@ class ActivateApDevice extends Rpc
  * @method string getRemark()
  * @method string getApMac()
  * @method string getStoreId()
+ * @method string getSerialNumber()
  */
 class AddApDevice extends Rpc
 {
@@ -183,6 +185,19 @@ class AddApDevice extends Rpc
     {
         $this->data['StoreId'] = $value;
         $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSerialNumber($value)
+    {
+        $this->data['SerialNumber'] = $value;
+        $this->options['form_params']['SerialNumber'] = $value;
 
         return $this;
     }
@@ -543,6 +558,7 @@ class AssociatePlanogramRail extends Rpc
 /**
  * @method string getExtraParams()
  * @method string getStoreId()
+ * @method string getSyncByItemId()
  * @method array getItemInfo()
  */
 class BatchInsertItems extends Rpc
@@ -570,6 +586,19 @@ class BatchInsertItems extends Rpc
     {
         $this->data['StoreId'] = $value;
         $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSyncByItemId($value)
+    {
+        $this->data['SyncByItemId'] = $value;
+        $this->options['form_params']['SyncByItemId'] = $value;
 
         return $this;
     }
@@ -690,6 +719,12 @@ class BatchInsertItems extends Rpc
 			}
 			if(isset($depth1Value['ItemId'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
+			}
+			if(isset($depth1Value['BeMember'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.BeMember'] = $depth1Value['BeMember'];
+			}
+			if(isset($depth1Value['TemplateSceneId'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.TemplateSceneId'] = $depth1Value['TemplateSceneId'];
 			}
 			if(isset($depth1Value['SalesPrice'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.SalesPrice'] = $depth1Value['SalesPrice'];
@@ -2326,6 +2361,7 @@ class DescribeStoreConfig extends Rpc
  * @method string getStoreId()
  * @method string getPageNumber()
  * @method string getFromDate()
+ * @method string getTemplateVersion()
  * @method string getToDate()
  * @method string getPageSize()
  * @method string getUserStoreCode()
@@ -2403,6 +2439,19 @@ class DescribeStores extends Rpc
      *
      * @return $this
      */
+    public function withTemplateVersion($value)
+    {
+        $this->data['TemplateVersion'] = $value;
+        $this->options['form_params']['TemplateVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withToDate($value)
     {
         $this->data['ToDate'] = $value;
@@ -2433,6 +2482,68 @@ class DescribeStores extends Rpc
     {
         $this->data['UserStoreCode'] = $value;
         $this->options['form_params']['UserStoreCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExtraParams()
+ * @method string getStoreId()
+ * @method string getFromDate()
+ * @method string getToDate()
+ */
+class DescribeStoreStatistics extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraParams($value)
+    {
+        $this->data['ExtraParams'] = $value;
+        $this->options['form_params']['ExtraParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFromDate($value)
+    {
+        $this->data['FromDate'] = $value;
+        $this->options['form_params']['FromDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToDate($value)
+    {
+        $this->data['ToDate'] = $value;
+        $this->options['form_params']['ToDate'] = $value;
 
         return $this;
     }
@@ -3044,6 +3155,7 @@ class UpdateEslDeviceLight extends Rpc
  * @method string getExtraParams()
  * @method string getStoreName()
  * @method string getStoreId()
+ * @method string getTemplateVersion()
  * @method string getUserStoreCode()
  * @method string getPhone()
  */
@@ -3085,6 +3197,19 @@ class UpdateStore extends Rpc
     {
         $this->data['StoreId'] = $value;
         $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateVersion($value)
+    {
+        $this->data['TemplateVersion'] = $value;
+        $this->options['form_params']['TemplateVersion'] = $value;
 
         return $this;
     }

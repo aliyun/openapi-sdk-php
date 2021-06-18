@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1026 - 2021-6-18
+- Supported 20210618 version for sdk.
+
+
 ## 1.8.1025 - 2021-6-17
 - Generated 2019-11-20 for `Ga`.
 
