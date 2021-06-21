@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1027 - 2021-6-21
+- Generated 2016-04-28 for `Vpc`.
+
+
 ## 1.8.1026 - 2021-6-18
 - Supported 20210618 version for sdk.
 
