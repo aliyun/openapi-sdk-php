@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1028 - 2021-6-21
+- Generated 2019-11-20 for `Ga`.
+
+
 ## 1.8.1027 - 2021-6-21
 - Generated 2016-04-28 for `Vpc`.
 
