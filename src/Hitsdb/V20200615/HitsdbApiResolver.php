@@ -6,11 +6,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeRegions describeRegions(array $options = [])
- * @method GetInstanceIpWhiteList getInstanceIpWhiteList(array $options = [])
  * @method GetLindormInstance getLindormInstance(array $options = [])
- * @method GetLindormInstanceEngineList getLindormInstanceEngineList(array $options = [])
  * @method GetLindormInstanceList getLindormInstanceList(array $options = [])
- * @method UpdateInstanceIpWhiteList updateInstanceIpWhiteList(array $options = [])
  */
 class HitsdbApiResolver extends ApiResolver
 {
@@ -60,48 +57,10 @@ class DescribeRegions extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class GetInstanceIpWhiteList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class GetLindormInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class GetLindormInstanceEngineList extends Rpc
 {
 }
 
@@ -128,27 +87,5 @@ class GetLindormInstanceEngineList extends Rpc
  * @method $this withServiceType($value)
  */
 class GetLindormInstanceList extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
- * @method string getSecurityIpList()
- * @method $this withSecurityIpList($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class UpdateInstanceIpWhiteList extends Rpc
 {
 }
