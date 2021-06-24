@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1030 - 2021-6-24
+- Update QueryBillOverview, QuerySettleBill, QueryAccountBill, DescribeInstanceBill and support trusteeship bill query.
+
+
 ## 1.8.1029 - 2021-6-21
 - Generated 2019-11-20 for `Ga`.
 
