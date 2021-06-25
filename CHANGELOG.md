@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1032 - 2021-6-25
+- Update DescribeSplitItemBill to support daily report.
+
+
 ## 1.8.1031 - 2021-6-24
 - Create Lindorm Open api.
 
