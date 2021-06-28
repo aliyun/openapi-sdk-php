@@ -45,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
  * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
  * @method GetSQLReviewCheckResultStatus getSQLReviewCheckResultStatus(array $options = [])
+ * @method GetSQLReviewOptimizeDetail getSQLReviewOptimizeDetail(array $options = [])
  * @method GetStructSyncExecSqlDetail getStructSyncExecSqlDetail(array $options = [])
  * @method GetStructSyncJobAnalyzeResult getStructSyncJobAnalyzeResult(array $options = [])
  * @method GetStructSyncJobDetail getStructSyncJobDetail(array $options = [])
@@ -644,6 +645,16 @@ class GetPhysicalDatabase extends Rpc
  * @method $this withOrderActionName($value)
  */
 class GetSQLReviewCheckResultStatus extends Rpc
+{
+}
+
+/**
+ * @method string getSQLReviewQueryKey()
+ * @method $this withSQLReviewQueryKey($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetSQLReviewOptimizeDetail extends Rpc
 {
 }
 

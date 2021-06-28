@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1033 - 2021-6-28
+- Support GetSQLReviewOptimizeDetail,ListSQLReviewOriginSQL Order API.
+
+
 ## 1.8.1032 - 2021-6-25
 - Update DescribeSplitItemBill to support daily report.
 
