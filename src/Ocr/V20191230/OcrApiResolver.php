@@ -18,12 +18,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeIdentityCard recognizeIdentityCard(array $options = [])
  * @method RecognizeLicensePlate recognizeLicensePlate(array $options = [])
  * @method RecognizePassportMRZ recognizePassportMRZ(array $options = [])
+ * @method RecognizePDF recognizePDF(array $options = [])
  * @method RecognizePoiName recognizePoiName(array $options = [])
  * @method RecognizeQrCode recognizeQrCode(array $options = [])
+ * @method RecognizeQuotaInvoice recognizeQuotaInvoice(array $options = [])
  * @method RecognizeStamp recognizeStamp(array $options = [])
  * @method RecognizeTable recognizeTable(array $options = [])
  * @method RecognizeTakeoutOrder recognizeTakeoutOrder(array $options = [])
  * @method RecognizeTaxiInvoice recognizeTaxiInvoice(array $options = [])
+ * @method RecognizeTicketInvoice recognizeTicketInvoice(array $options = [])
  * @method RecognizeTrainTicket recognizeTrainTicket(array $options = [])
  * @method RecognizeVATInvoice recognizeVATInvoice(array $options = [])
  * @method RecognizeVerificationcode recognizeVerificationcode(array $options = [])
@@ -520,6 +523,26 @@ class RecognizePassportMRZ extends Rpc
 }
 
 /**
+ * @method string getFileURL()
+ */
+class RecognizePDF extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileURL($value)
+    {
+        $this->data['FileURL'] = $value;
+        $this->options['form_params']['FileURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageURL()
  */
 class RecognizePoiName extends Rpc
@@ -560,6 +583,26 @@ class RecognizeQrCode extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizeQuotaInvoice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
     }
 }
 
@@ -740,6 +783,26 @@ class RecognizeTaxiInvoice extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageURL()
+ */
+class RecognizeTicketInvoice extends Rpc
+{
 
     /**
      * @param string $value

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1036 - 2021-7-2
+- Release RecognizeQuotaInvoice RecognizeTicketInvoice RecognizePdf.
+
+
 ## 1.8.1035 - 2021-7-2
 - Release AnalyzeChestVessel.
 
