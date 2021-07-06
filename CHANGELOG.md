@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1037 - 2021-7-6
+- Support ListDataCorrectPreCheckDB,ListDataCorrectPreCheckSQL Order API.
+
+
 ## 1.8.1036 - 2021-7-2
 - Release RecognizeQuotaInvoice RecognizeTicketInvoice RecognizePdf.
 

@@ -59,6 +59,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListColumns listColumns(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
  * @method ListDatabaseUserPermssions listDatabaseUserPermssions(array $options = [])
+ * @method ListDataCorrectPreCheckDB listDataCorrectPreCheckDB(array $options = [])
+ * @method ListDataCorrectPreCheckSQL listDataCorrectPreCheckSQL(array $options = [])
  * @method ListDBTaskSQLJob listDBTaskSQLJob(array $options = [])
  * @method ListDBTaskSQLJobDetail listDBTaskSQLJobDetail(array $options = [])
  * @method ListDDLPublishRecords listDDLPublishRecords(array $options = [])
@@ -825,6 +827,36 @@ class ListDatabases extends Rpc
  * @method $this withUserName($value)
  */
 class ListDatabaseUserPermssions extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListDataCorrectPreCheckDB extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListDataCorrectPreCheckSQL extends Rpc
 {
 }
 
