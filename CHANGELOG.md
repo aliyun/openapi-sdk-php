@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1040 - 2021-7-7
+- Add ModifyResourceGroup API.
+
+
 ## 1.8.1039 - 2021-7-7
 - Support FilterKey for RestoreInstance.
 - DescribeInstanceAttribute add return argument BackupLogStartTime.

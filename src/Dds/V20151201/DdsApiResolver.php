@@ -78,7 +78,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstanceAutoRenewalAttribute modifyInstanceAutoRenewalAttribute(array $options = [])
  * @method ModifyInstanceVpcAuthMode modifyInstanceVpcAuthMode(array $options = [])
  * @method ModifyNodeSpec modifyNodeSpec(array $options = [])
+ * @method ModifyNodeSpecBatch modifyNodeSpecBatch(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])
+ * @method ModifyResourceGroup modifyResourceGroup(array $options = [])
  * @method ModifySecurityGroupConfiguration modifySecurityGroupConfiguration(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method ReleaseNodePrivateNetworkAddress releaseNodePrivateNetworkAddress(array $options = [])
@@ -108,6 +110,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'Dds';
 }
 
 /**
@@ -299,12 +304,16 @@ class CreateDBInstance extends Rpc
  * @method $this withClientToken($value)
  * @method string getReadonlyReplicas()
  * @method $this withReadonlyReplicas($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
  * @method string getNodeClass()
  * @method $this withNodeClass($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getFromApp()
@@ -2064,6 +2073,40 @@ class ModifyNodeSpec extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getNodesInfo()
+ * @method $this withNodesInfo($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getFromApp()
+ * @method $this withFromApp($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class ModifyNodeSpecBatch extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
@@ -2082,6 +2125,26 @@ class ModifyNodeSpec extends Rpc
  * @method $this withCharacterType($value)
  */
 class ModifyParameters extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyResourceGroup extends Rpc
 {
 }
 
