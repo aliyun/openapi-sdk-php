@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1038 - 2021-7-7
+- Supported AAA for BBB.
+
+
 ## 1.8.1037 - 2021-7-6
 - Support ListDataCorrectPreCheckDB,ListDataCorrectPreCheckSQL Order API.
 

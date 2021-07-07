@@ -86,6 +86,7 @@ namespace AlibabaCloud;
  * @method static Ecs\Ecs ecs()
  * @method static EcsInc\EcsInc ecsInc()
  * @method static Edas\Edas edas()
+ * @method static Eipanycast\Eipanycast eipanycast()
  * @method static Elasticsearch\Elasticsearch elasticsearch()
  * @method static Emap\Emap emap()
  * @method static EmasAppmonitor\EmasAppmonitor emasAppmonitor()
