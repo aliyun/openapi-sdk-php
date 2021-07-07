@@ -87,6 +87,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyUserClusterHost modifyUserClusterHost(array $options = [])
  * @method ReleaseDirectConnection releaseDirectConnection(array $options = [])
  * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
+ * @method RemoveSubInstance removeSubInstance(array $options = [])
  * @method RenewAdditionalBandwidth renewAdditionalBandwidth(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method ReplaceUserClusterHost replaceUserClusterHost(array $options = [])
@@ -94,6 +95,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RestartInstance restartInstance(array $options = [])
  * @method RestoreInstance restoreInstance(array $options = [])
  * @method SwitchInstanceHA switchInstanceHA(array $options = [])
+ * @method SwitchInstanceProxy switchInstanceProxy(array $options = [])
  * @method SwitchNetwork switchNetwork(array $options = [])
  * @method SyncDtsStatus syncDtsStatus(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -430,6 +432,8 @@ class CreateInstances extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecondaryZoneId()
+ * @method $this withSecondaryZoneId($value)
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
  * @method string getEngineVersion()
@@ -936,6 +940,8 @@ class DescribeDBInstanceNetInfo extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
  */
 class DescribeDedicatedClusterInstanceList extends Rpc
 {
@@ -1281,6 +1287,8 @@ class DescribeParameters extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getCharacterType()
  * @method $this withCharacterType($value)
  */
@@ -2386,6 +2394,26 @@ class ReleaseInstancePublicConnection extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getReleaseSubInstance()
+ * @method $this withReleaseSubInstance($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class RemoveSubInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
  * @method string getSecurityToken()
@@ -2518,6 +2546,8 @@ class RestartInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getFilterKey()
+ * @method $this withFilterKey($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getRestoreTime()
@@ -2564,6 +2594,28 @@ class RestoreInstance extends Rpc
  * @method $this withCategory($value)
  */
 class SwitchInstanceHA extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class SwitchInstanceProxy extends Rpc
 {
 }
 

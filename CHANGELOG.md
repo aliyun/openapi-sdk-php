@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1039 - 2021-7-7
+- Support FilterKey for RestoreInstance.
+- DescribeInstanceAttribute add return argument BackupLogStartTime.
+- Add RemoveSubInstance for Global Distributed Cache.
+
+
 ## 1.8.1038 - 2021-7-7
 - Supported AAA for BBB.
 
