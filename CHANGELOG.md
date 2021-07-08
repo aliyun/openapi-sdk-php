@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1041 - 2021-7-8
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.1040 - 2021-7-7
 - Add ModifyResourceGroup API.
 

@@ -130,12 +130,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainRealtimeLogDelivery describeLiveDomainRealtimeLogDelivery(array $options = [])
  * @method DescribeLiveDomainRealTimeTrafficData describeLiveDomainRealTimeTrafficData(array $options = [])
  * @method DescribeLiveDomainRecordData describeLiveDomainRecordData(array $options = [])
+ * @method DescribeLiveDomainRecordUsageData describeLiveDomainRecordUsageData(array $options = [])
  * @method DescribeLiveDomainSnapshotData describeLiveDomainSnapshotData(array $options = [])
  * @method DescribeLiveDomainStagingConfig describeLiveDomainStagingConfig(array $options = [])
  * @method DescribeLiveDomainStreamTranscodeData describeLiveDomainStreamTranscodeData(array $options = [])
  * @method DescribeLiveDomainTimeShiftData describeLiveDomainTimeShiftData(array $options = [])
  * @method DescribeLiveDomainTrafficData describeLiveDomainTrafficData(array $options = [])
  * @method DescribeLiveDomainTranscodeData describeLiveDomainTranscodeData(array $options = [])
+ * @method DescribeLiveDrmUsageData describeLiveDrmUsageData(array $options = [])
  * @method DescribeLiveLazyPullStreamConfig describeLiveLazyPullStreamConfig(array $options = [])
  * @method DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
  * @method DescribeLiveRealtimeDeliveryAcc describeLiveRealtimeDeliveryAcc(array $options = [])
@@ -175,6 +177,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRoomList describeRoomList(array $options = [])
  * @method DescribeRoomStatus describeRoomStatus(array $options = [])
  * @method DescribeStudioLayouts describeStudioLayouts(array $options = [])
+ * @method DescribeToutiaoLivePlay describeToutiaoLivePlay(array $options = [])
+ * @method DescribeToutiaoLivePublish describeToutiaoLivePublish(array $options = [])
  * @method DescribeUpBpsPeakData describeUpBpsPeakData(array $options = [])
  * @method DescribeUpBpsPeakOfLine describeUpBpsPeakOfLine(array $options = [])
  * @method DescribeUpPeakPublishStreamData describeUpPeakPublishStreamData(array $options = [])
@@ -243,6 +247,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveAudioAuditConfig updateLiveAudioAuditConfig(array $options = [])
  * @method UpdateLiveAudioAuditNotifyConfig updateLiveAudioAuditNotifyConfig(array $options = [])
  * @method UpdateLiveDetectNotifyConfig updateLiveDetectNotifyConfig(array $options = [])
+ * @method UpdateLivePullStreamInfoConfig updateLivePullStreamInfoConfig(array $options = [])
  * @method UpdateLiveRecordNotifyConfig updateLiveRecordNotifyConfig(array $options = [])
  * @method UpdateLiveSnapshotDetectPornConfig updateLiveSnapshotDetectPornConfig(array $options = [])
  * @method UpdateLiveTopLevelDomain updateLiveTopLevelDomain(array $options = [])
@@ -571,8 +576,12 @@ class AddCasterVideoResource extends Rpc
  * @method $this withLazy($value)
  * @method string getGop()
  * @method $this withGop($value)
+ * @method string getKmsKeyExpireInterval()
+ * @method $this withKmsKeyExpireInterval($value)
  * @method string getAudioCodec()
  * @method $this withAudioCodec($value)
+ * @method string getKmsUID()
+ * @method $this withKmsUID($value)
  * @method string getTemplateType()
  * @method $this withTemplateType($value)
  * @method string getAudioProfile()
@@ -581,6 +590,8 @@ class AddCasterVideoResource extends Rpc
  * @method $this withHeight($value)
  * @method string getApp()
  * @method $this withApp($value)
+ * @method string getEncryptParameters()
+ * @method $this withEncryptParameters($value)
  * @method string getAudioChannelNum()
  * @method $this withAudioChannelNum($value)
  * @method string getProfile()
@@ -599,6 +610,8 @@ class AddCasterVideoResource extends Rpc
  * @method $this withWidth($value)
  * @method string getVideoBitrate()
  * @method $this withVideoBitrate($value)
+ * @method string getKmsKeyID()
+ * @method $this withKmsKeyID($value)
  */
 class AddCustomLiveStreamTranscode extends Rpc
 {
@@ -2501,6 +2514,22 @@ class DescribeLiveDomainRecordData extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveDomainRecordUsageData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
@@ -2593,6 +2622,24 @@ class DescribeLiveDomainTranscodeData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeLiveDrmUsageData extends Rpc
+{
+}
+
+/**
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getLiveapiRequestFrom()
@@ -2623,6 +2670,8 @@ class DescribeLivePullStreamConfig extends Rpc
  * @method $this withProject($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getOwnerId()
@@ -3287,6 +3336,42 @@ class DescribeRoomStatus extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeStudioLayouts extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeToutiaoLivePlay extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeToutiaoLivePublish extends Rpc
 {
 }
 
@@ -4724,6 +4809,31 @@ class UpdateLiveAudioAuditNotifyConfig extends Rpc
  */
 class UpdateLiveDetectNotifyConfig extends Rpc
 {
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getPullAlways()
+ * @method $this withPullAlways($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSourceUrl()
+ * @method $this withSourceUrl($value)
+ */
+class UpdateLivePullStreamInfoConfig extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
