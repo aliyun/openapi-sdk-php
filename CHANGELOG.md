@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1042 - 2021-7-8
+- Support APP auth.
+
+
 ## 1.8.1041 - 2021-7-8
 - Generated 2016-11-01 for `live`.
 
