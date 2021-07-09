@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BindPhone bindPhone(array $options = [])
  * @method BindTag bindTag(array $options = [])
  * @method CancelPush cancelPush(array $options = [])
+ * @method CheckCertificate checkCertificate(array $options = [])
  * @method CheckDevice checkDevice(array $options = [])
  * @method CheckDevices checkDevices(array $options = [])
  * @method CompleteContinuouslyPush completeContinuouslyPush(array $options = [])
@@ -102,6 +103,14 @@ class CancelPush extends Rpc
 }
 
 /**
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ */
+class CheckCertificate extends Rpc
+{
+}
+
+/**
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
  * @method string getAppKey()
@@ -183,6 +192,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSBadge'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSBadge'] = $depth1Value['IOSBadge'];
 			}
+			if(isset($depth1Value['AndroidBigBody'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigBody'] = $depth1Value['AndroidBigBody'];
+			}
 			if(isset($depth1Value['IOSBadgeAutoIncrement'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSBadgeAutoIncrement'] = $depth1Value['IOSBadgeAutoIncrement'];
 			}
@@ -212,6 +224,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['IOSRemindBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemindBody'] = $depth1Value['IOSRemindBody'];
+			}
+			if(isset($depth1Value['AndroidRenderStyle'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidRenderStyle'] = $depth1Value['AndroidRenderStyle'];
 			}
 			if(isset($depth1Value['IOSExtParameters'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSExtParameters'] = $depth1Value['IOSExtParameters'];
@@ -261,6 +276,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['Target'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Target'] = $depth1Value['Target'];
 			}
+			if(isset($depth1Value['AndroidBigTitle'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigTitle'] = $depth1Value['AndroidBigTitle'];
+			}
 			if(isset($depth1Value['AndroidOpenUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidOpenUrl'] = $depth1Value['AndroidOpenUrl'];
 			}
@@ -278,6 +296,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['IOSSubtitle'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSSubtitle'] = $depth1Value['IOSSubtitle'];
+			}
+			if(isset($depth1Value['AndroidXiaomiBigPictureUrl'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaomiBigPictureUrl'] = $depth1Value['AndroidXiaomiBigPictureUrl'];
 			}
 			if(isset($depth1Value['IOSRemind'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemind'] = $depth1Value['IOSRemind'];
@@ -354,6 +375,8 @@ class MassPush extends Rpc
  * @method string getAndroidXiaoMiNotifyBody()
  * @method $this withAndroidXiaoMiNotifyBody($value)
  * @method string getIOSSubtitle()
+ * @method string getAndroidXiaomiBigPictureUrl()
+ * @method $this withAndroidXiaomiBigPictureUrl($value)
  * @method string getIOSRemind()
  * @method string getAndroidMusic()
  * @method $this withAndroidMusic($value)
@@ -363,6 +386,8 @@ class MassPush extends Rpc
  * @method string getAndroidExtParameters()
  * @method $this withAndroidExtParameters($value)
  * @method string getIOSBadge()
+ * @method string getAndroidBigBody()
+ * @method $this withAndroidBigBody($value)
  * @method string getIOSBadgeAutoIncrement()
  * @method string getAndroidOpenType()
  * @method $this withAndroidOpenType($value)
@@ -370,6 +395,8 @@ class MassPush extends Rpc
  * @method $this withTitle($value)
  * @method string getSmsDelaySecs()
  * @method $this withSmsDelaySecs($value)
+ * @method string getAndroidRenderStyle()
+ * @method $this withAndroidRenderStyle($value)
  * @method string getIOSExtParameters()
  * @method string getSmsTemplateName()
  * @method $this withSmsTemplateName($value)
@@ -378,6 +405,8 @@ class MassPush extends Rpc
  * @method string getIOSSilentNotification()
  * @method string getTarget()
  * @method $this withTarget($value)
+ * @method string getAndroidBigTitle()
+ * @method $this withAndroidBigTitle($value)
  * @method string getAndroidNotificationChannel()
  * @method $this withAndroidNotificationChannel($value)
  * @method string getAndroidRemind()
@@ -720,6 +749,8 @@ class QueryDeviceStat extends Rpc
  * @method $this withTarget($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
+ * @method string getPage()
+ * @method $this withPage($value)
  * @method string getPushType()
  * @method $this withPushType($value)
  */

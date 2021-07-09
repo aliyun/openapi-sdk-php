@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1045 - 2021-7-9
+- Add `CheckCertificate` Api.
+- Supported AndroidRenderStyle, AndroidBigTitle, AndroidBigBody, AndroidXiaomiBigPictureUrl for Push and MassPush.
+
+
 ## 1.8.1044 - 2021-7-9
 - Fix ListPIpelineTemplates.
 
