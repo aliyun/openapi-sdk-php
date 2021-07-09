@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1044 - 2021-7-9
+- Fix ListPIpelineTemplates.
+
+
 ## 1.8.1043 - 2021-7-8
 - Support app group.
 

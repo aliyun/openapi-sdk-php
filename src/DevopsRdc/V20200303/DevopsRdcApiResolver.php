@@ -5,6 +5,7 @@ namespace AlibabaCloud\DevopsRdc\V20200303;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddCodeupSourceToPipeline addCodeupSourceToPipeline(array $options = [])
  * @method BatchInsertMembers batchInsertMembers(array $options = [])
  * @method CancelPipeline cancelPipeline(array $options = [])
  * @method CheckAliyunAccountExists checkAliyunAccountExists(array $options = [])
@@ -15,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDevopsProjectSprint createDevopsProjectSprint(array $options = [])
  * @method CreateDevopsProjectTask createDevopsProjectTask(array $options = [])
  * @method CreatePipeline createPipeline(array $options = [])
+ * @method CreatePipelineFromTemplate createPipelineFromTemplate(array $options = [])
  * @method CreateServiceConnection createServiceConnection(array $options = [])
  * @method DeleteCommonGroup deleteCommonGroup(array $options = [])
  * @method DeleteDevopsOrganization deleteDevopsOrganization(array $options = [])
@@ -58,6 +60,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDevopsProjectTasks listDevopsProjectTasks(array $options = [])
  * @method ListDevopsScenarioFieldConfig listDevopsScenarioFieldConfig(array $options = [])
  * @method ListPipelines listPipelines(array $options = [])
+ * @method ListPipelineTemplates listPipelineTemplates(array $options = [])
  * @method ListProjectCustomFields listProjectCustomFields(array $options = [])
  * @method ListServiceConnections listServiceConnections(array $options = [])
  * @method ListSmartGroup listSmartGroup(array $options = [])
@@ -67,6 +70,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateDevopsProject updateDevopsProject(array $options = [])
  * @method UpdateDevopsProjectSprint updateDevopsProjectSprint(array $options = [])
  * @method UpdateDevopsProjectTask updateDevopsProjectTask(array $options = [])
+ * @method UpdatePipelineEnvVars updatePipelineEnvVars(array $options = [])
  * @method UpdatePipelineMember updatePipelineMember(array $options = [])
  * @method UpdateTaskDetail updateTaskDetail(array $options = [])
  */
@@ -84,6 +88,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getCodePath()
+ * @method $this withCodePath($value)
+ * @method string getCodeBranch()
+ * @method $this withCodeBranch($value)
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class AddCodeupSourceToPipeline extends Rpc
+{
 }
 
 /**
@@ -844,6 +862,18 @@ class CreatePipeline extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPipelineName()
+ * @method $this withPipelineName($value)
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineTemplateId()
+ * @method $this withPipelineTemplateId($value)
+ */
+class CreatePipelineFromTemplate extends Rpc
+{
 }
 
 /**
@@ -2783,11 +2813,26 @@ class ListDevopsProjects extends Rpc
 }
 
 /**
+ * @method string getPageSize()
  * @method string getProjectId()
  * @method string getOrgId()
+ * @method string getPageToken()
  */
 class ListDevopsProjectSprints extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2811,6 +2856,19 @@ class ListDevopsProjectSprints extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageToken($value)
+    {
+        $this->data['PageToken'] = $value;
+        $this->options['form_params']['PageToken'] = $value;
 
         return $this;
     }
@@ -3146,6 +3204,21 @@ class ListPipelines extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPageStart()
+ * @method $this withPageStart($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ */
+class ListPipelineTemplates extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -3792,6 +3865,18 @@ class UpdateDevopsProjectTask extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getEnvVars()
+ * @method $this withEnvVars($value)
+ * @method string getOrgId()
+ * @method $this withOrgId($value)
+ * @method string getPipelineId()
+ * @method $this withPipelineId($value)
+ */
+class UpdatePipelineEnvVars extends Rpc
+{
 }
 
 /**
