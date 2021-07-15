@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1046 - 2021-7-15
+- Generated 2020-01-01 for `ddoscoo`.
+
+
 ## 1.8.1045 - 2021-7-9
 - Add `CheckCertificate` Api.
 - Supported AndroidRenderStyle, AndroidBigTitle, AndroidBigBody, AndroidXiaomiBigPictureUrl for Push and MassPush.

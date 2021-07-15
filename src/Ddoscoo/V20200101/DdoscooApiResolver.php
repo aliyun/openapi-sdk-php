@@ -38,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteWebPreciseAccessRule deleteWebPreciseAccessRule(array $options = [])
  * @method DeleteWebRule deleteWebRule(array $options = [])
  * @method DescribeAsyncTasks describeAsyncTasks(array $options = [])
+ * @method DescribeAttackAnalysisMaxQps describeAttackAnalysisMaxQps(array $options = [])
  * @method DescribeAutoCcBlacklist describeAutoCcBlacklist(array $options = [])
  * @method DescribeAutoCcListCount describeAutoCcListCount(array $options = [])
  * @method DescribeAutoCcWhitelist describeAutoCcWhitelist(array $options = [])
@@ -301,12 +302,12 @@ class ConfigWebCCTemplate extends Rpc
 }
 
 /**
- * @method array getBlackList()
- * @method array getWhiteList()
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method array getBlackList()
+ * @method array getWhiteList()
  * @method string getDomain()
  * @method $this withDomain($value)
  */
@@ -871,6 +872,18 @@ class DescribeAsyncTasks extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeAttackAnalysisMaxQps extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
@@ -1191,14 +1204,14 @@ class DescribeDomainAttackEvents extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getDomain()
  * @method $this withDomain($value)
  */
@@ -1301,14 +1314,14 @@ class DescribeDomains extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getDomain()
  * @method $this withDomain($value)
  */
