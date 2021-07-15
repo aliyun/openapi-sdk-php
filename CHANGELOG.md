@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1047 - 2021-7-15
+- Support Alb Open API.
+
+
 ## 1.8.1046 - 2021-7-15
 - Generated 2020-01-01 for `ddoscoo`.
 
