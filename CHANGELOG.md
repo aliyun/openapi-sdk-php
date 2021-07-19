@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1049 - 2021-7-19
+- CreateNetworkInterface supports to allocate Ipv6.
+
+
 ## 1.8.1048 - 2021-7-19
 - Update ScreenChestCT.
 
