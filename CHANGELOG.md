@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1050 - 2021-7-21
+- Support HealthCheckMethod for HTTP and HTTPS listener.
+
+
 ## 1.8.1049 - 2021-7-19
 - CreateNetworkInterface supports to allocate Ipv6.
 

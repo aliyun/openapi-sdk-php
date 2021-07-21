@@ -405,6 +405,8 @@ class CreateDomainExtension extends Rpc
  * @method $this withMasterZoneId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getSpecType()
+ * @method $this withSpecType($value)
  * @method string getLoadBalancerName()
  * @method $this withLoadBalancerName($value)
  * @method string getSlaveZoneId()
