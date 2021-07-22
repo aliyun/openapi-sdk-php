@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLogstash createLogstash(array $options = [])
  * @method CreatePipelines createPipelines(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
+ * @method CreateVpcEndpoint createVpcEndpoint(array $options = [])
  * @method DeactivateZones deactivateZones(array $options = [])
  * @method DeleteCollector deleteCollector(array $options = [])
  * @method DeleteConnectedCluster deleteConnectedCluster(array $options = [])
@@ -34,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLogstash deleteLogstash(array $options = [])
  * @method DeletePipelines deletePipelines(array $options = [])
  * @method DeleteSnapshotRepo deleteSnapshotRepo(array $options = [])
+ * @method DeleteVpcEndpoint deleteVpcEndpoint(array $options = [])
  * @method DescribeAckOperator describeAckOperator(array $options = [])
  * @method DescribeCollector describeCollector(array $options = [])
  * @method DescribeConnectableClusters describeConnectableClusters(array $options = [])
@@ -84,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDiagnoseReport listDiagnoseReport(array $options = [])
  * @method ListDiagnoseReportIds listDiagnoseReportIds(array $options = [])
  * @method ListDictInformation listDictInformation(array $options = [])
+ * @method ListDicts listDicts(array $options = [])
  * @method ListEcsInstances listEcsInstances(array $options = [])
  * @method ListExtendfiles listExtendfiles(array $options = [])
  * @method ListILMPolicies listILMPolicies(array $options = [])
@@ -99,9 +102,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPipelineIds listPipelineIds(array $options = [])
  * @method ListPlugins listPlugins(array $options = [])
  * @method ListSearchLog listSearchLog(array $options = [])
+ * @method ListShardRecoveries listShardRecoveries(array $options = [])
  * @method ListSnapshotReposByInstanceId listSnapshotReposByInstanceId(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTags listTags(array $options = [])
+ * @method ListVpcEndpoints listVpcEndpoints(array $options = [])
  * @method MigrateToOtherZone migrateToOtherZone(array $options = [])
  * @method ModifyDeployMachine modifyDeployMachine(array $options = [])
  * @method ModifyElastictask modifyElastictask(array $options = [])
@@ -651,6 +656,44 @@ class CreateSnapshot extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getDryRun()
+ * @method string getClientToken()
+ */
+class CreateVpcEndpoint extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/vpc-endpoints';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['query']['dryRun'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getClientToken()
  */
 class DeactivateZones extends Roa
@@ -999,6 +1042,35 @@ class DeleteSnapshotRepo extends Roa
     {
         $this->data['RepoPath'] = $value;
         $this->options['query']['repoPath'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ * @method string getEndpointId()
+ * @method $this withEndpointId($value)
+ */
+class DeleteVpcEndpoint extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/vpc-endpoints/[EndpointId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
 
         return $this;
     }
@@ -2376,6 +2448,47 @@ class ListDictInformation extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAnalyzerType()
+ * @method string getName()
+ */
+class ListDicts extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dicts';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAnalyzerType($value)
+    {
+        $this->data['AnalyzerType'] = $value;
+        $this->options['query']['analyzerType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getEcsInstanceName()
  * @method string getEcsInstanceIds()
  * @method string getSize()
@@ -2703,11 +2816,11 @@ class ListInstance extends Roa
 }
 
 /**
+ * @method string getAll()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getIsManaged()
  * @method string getName()
- * @method string getLang()
  */
 class ListInstanceIndices extends Roa
 {
@@ -2716,6 +2829,19 @@ class ListInstanceIndices extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAll($value)
+    {
+        $this->data['All'] = $value;
+        $this->options['query']['all'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2739,19 +2865,6 @@ class ListInstanceIndices extends Roa
     {
         $this->data['Name'] = $value;
         $this->options['query']['name'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLang($value)
-    {
-        $this->data['Lang'] = $value;
-        $this->options['query']['lang'] = $value;
 
         return $this;
     }
@@ -3388,6 +3501,33 @@ class ListSearchLog extends Roa
 }
 
 /**
+ * @method string getActiveOnly()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListShardRecoveries extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/cat-recovery';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActiveOnly($value)
+    {
+        $this->data['ActiveOnly'] = $value;
+        $this->options['query']['activeOnly'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -3537,6 +3677,47 @@ class ListTags extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getPage()
+ */
+class ListVpcEndpoints extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/vpc-endpoints';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getDryRun()
  */
 class MigrateToOtherZone extends Roa
@@ -3617,6 +3798,7 @@ class ModifyInstanceMaintainTime extends Roa
 }
 
 /**
+ * @method string getModifyMode()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getNodeType()
@@ -3627,6 +3809,19 @@ class ModifyWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/modify-white-ips';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModifyMode($value)
+    {
+        $this->data['ModifyMode'] = $value;
+        $this->options['form_params']['modifyMode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -4956,6 +5151,7 @@ class UpdateKibanaSettings extends Roa
 }
 
 /**
+ * @method string getModifyMode()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -4964,6 +5160,19 @@ class UpdateKibanaWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/kibana-white-ips';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModifyMode($value)
+    {
+        $this->data['ModifyMode'] = $value;
+        $this->options['query']['modifyMode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -5144,6 +5353,7 @@ class UpdatePipelines extends Roa
 }
 
 /**
+ * @method string getModifyMode()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -5152,6 +5362,19 @@ class UpdatePrivateNetworkWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/private-network-white-ips';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModifyMode($value)
+    {
+        $this->data['ModifyMode'] = $value;
+        $this->options['query']['modifyMode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -5192,6 +5415,7 @@ class UpdatePublicNetwork extends Roa
 }
 
 /**
+ * @method string getModifyMode()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -5200,6 +5424,19 @@ class UpdatePublicWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/public-white-ips';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModifyMode($value)
+    {
+        $this->data['ModifyMode'] = $value;
+        $this->options['query']['modifyMode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -5303,6 +5540,7 @@ class UpdateTemplate extends Roa
 }
 
 /**
+ * @method string getModifyMode()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -5311,6 +5549,19 @@ class UpdateWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/white-ips';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModifyMode($value)
+    {
+        $this->data['ModifyMode'] = $value;
+        $this->options['query']['modifyMode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

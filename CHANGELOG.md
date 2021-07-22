@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1053 - 2021-7-22
+- Add private-link support.
+- Add download dicts.
+- Add whiteIpGroup support.
+- Add recovery infos support.
+
+
 ## 1.8.1052 - 2021-7-21
 - Create Lindorm Open api.
 
