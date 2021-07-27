@@ -22,6 +22,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteUserClusterHost deleteUserClusterHost(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method DescribeActiveOperationTask describeActiveOperationTask(array $options = [])
+ * @method DescribeAuditLogConfig describeAuditLogConfig(array $options = [])
  * @method DescribeAuditRecords describeAuditRecords(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
@@ -668,6 +669,24 @@ class DescribeAccounts extends Rpc
  * @method $this withRegion($value)
  */
 class DescribeActiveOperationTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeAuditLogConfig extends Rpc
 {
 }
 

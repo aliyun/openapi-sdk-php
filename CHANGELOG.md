@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1054 - 2021-7-27
+- Add DescribeAuditLogConfig API.
+
+
 ## 1.8.1053 - 2021-7-22
 - Add private-link support.
 - Add download dicts.
