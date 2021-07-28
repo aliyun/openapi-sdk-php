@@ -41,11 +41,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeployApp deployApp(array $options = [])
  * @method DescribeAppDetail describeAppDetail(array $options = [])
  * @method DescribeAppEnvironmentDetail describeAppEnvironmentDetail(array $options = [])
+ * @method DescribeAppMonitorMetric describeAppMonitorMetric(array $options = [])
  * @method DescribeAppResourceAlloc describeAppResourceAlloc(array $options = [])
  * @method DescribeClusterDetail describeClusterDetail(array $options = [])
  * @method DescribeDatabases describeDatabases(array $options = [])
  * @method DescribeDeployOrderDetail describeDeployOrderDetail(array $options = [])
+ * @method DescribeEventMonitorList describeEventMonitorList(array $options = [])
  * @method DescribeJobLog describeJobLog(array $options = [])
+ * @method DescribePodContainerLogList describePodContainerLogList(array $options = [])
  * @method DescribePodEvents describePodEvents(array $options = [])
  * @method DescribePodLog describePodLog(array $options = [])
  * @method DescribeRdsAccounts describeRdsAccounts(array $options = [])
@@ -108,6 +111,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'retailcloud';
 }
 
 /**
@@ -1166,6 +1172,8 @@ class DeleteSlbAP extends Rpc
  * @method string getName()
  * @method $this withName($value)
  * @method array getInitContainerImageList()
+ * @method string getDefaultPacketOfAppGroup()
+ * @method $this withDefaultPacketOfAppGroup($value)
  * @method string getArmsFlag()
  * @method $this withArmsFlag($value)
  */
@@ -1225,6 +1233,28 @@ class DescribeAppEnvironmentDetail extends Rpc
 }
 
 /**
+ * @method string getDeployOrderId()
+ * @method $this withDeployOrderId($value)
+ * @method string getMetric()
+ * @method $this withMetric($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPodName()
+ * @method $this withPodName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DescribeAppMonitorMetric extends Rpc
+{
+}
+
+/**
  * @method string getAppEnvId()
  * @method $this withAppEnvId($value)
  */
@@ -1263,6 +1293,30 @@ class DescribeDeployOrderDetail extends Rpc
 }
 
 /**
+ * @method string getEventLevel()
+ * @method $this withEventLevel($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPodName()
+ * @method $this withPodName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getEventType()
+ * @method $this withEventType($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ */
+class DescribeEventMonitorList extends Rpc
+{
+}
+
+/**
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getPodName()
@@ -1275,6 +1329,20 @@ class DescribeJobLog extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getLine()
+ * @method $this withLine($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPodName()
+ * @method $this withPodName($value)
+ * @method string getEnvId()
+ * @method $this withEnvId($value)
+ */
+class DescribePodContainerLogList extends Rpc
+{
 }
 
 /**

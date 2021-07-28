@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1055 - 2021-7-28
+- Generated 2018-03-13 for `retailcloud`.
+
+
 ## 1.8.1054 - 2021-7-27
 - Add DescribeAuditLogConfig API.
 
