@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1056 - 2021-7-29
+- ListAppInstanceResponse add status field.
+
+
 ## 1.8.1055 - 2021-7-28
 - Generated 2018-03-13 for `retailcloud`.
 
