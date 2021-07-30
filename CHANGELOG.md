@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1058 - 2021-7-30
+- Update Dyvmsapi SDK.
+
+
 ## 1.8.1057 - 2021-7-29
 - Support Alb Open API.
 
