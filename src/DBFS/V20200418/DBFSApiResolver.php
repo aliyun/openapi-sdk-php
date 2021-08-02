@@ -147,12 +147,12 @@ class CreateSnapshot extends Rpc
 }
 
 /**
+ * @method string getData()
+ * @method $this withData($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getBatchStrategyNo()
- * @method $this withBatchStrategyNo($value)
  */
 class DbfsRecord extends Rpc
 {

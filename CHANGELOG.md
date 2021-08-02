@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1059 - 2021-8-2
+- Support upgrade.
+
+
 ## 1.8.1058 - 2021-7-30
 - Update Dyvmsapi SDK.
 
