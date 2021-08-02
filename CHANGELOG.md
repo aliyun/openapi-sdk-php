@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1060 - 2021-8-2
+- Update TaggingImage.
+
+
 ## 1.8.1059 - 2021-8-2
 - Support upgrade.
 

@@ -297,12 +297,26 @@ class RecognizeVehicleType extends Rpc
 }
 
 /**
+ * @method string getMode()
  * @method string getImageType()
  * @method string getAsync()
  * @method string getImageURL()
  */
 class TaggingImage extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
