@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1063 - 2021-8-4
+- Release TaggingAdImage.
+
+
 ## 1.8.1062 - 2021-8-4
 - Create Lindorm Open api.
 

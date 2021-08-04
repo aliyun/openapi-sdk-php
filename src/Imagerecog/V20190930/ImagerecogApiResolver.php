@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeLogo recognizeLogo(array $options = [])
  * @method RecognizeScene recognizeScene(array $options = [])
  * @method RecognizeVehicleType recognizeVehicleType(array $options = [])
+ * @method TaggingAdImage taggingAdImage(array $options = [])
  * @method TaggingImage taggingImage(array $options = [])
  */
 class ImagerecogApiResolver extends ApiResolver
@@ -281,6 +282,54 @@ class RecognizeScene extends Rpc
  */
 class RecognizeVehicleType extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageType()
+ * @method string getAsync()
+ * @method string getImageURL()
+ */
+class TaggingAdImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageType($value)
+    {
+        $this->data['ImageType'] = $value;
+        $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
