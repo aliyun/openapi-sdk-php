@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1061 - 2021-8-4
+- Create Lindorm Open api.
+
+
 ## 1.8.1060 - 2021-8-2
 - Update TaggingImage.
 
