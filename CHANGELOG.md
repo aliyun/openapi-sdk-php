@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1064 - 2021-8-6
+- Update TaggingAdImage.
+
+
 ## 1.8.1063 - 2021-8-4
 - Release TaggingAdImage.
 
