@@ -8,33 +8,33 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConfigureDtsJob configureDtsJob(array $options = [])
  * @method ConfigureMigrationJob configureMigrationJob(array $options = [])
  * @method ConfigureMigrationJobAlert configureMigrationJobAlert(array $options = [])
+ * @method ConfigureSubscription configureSubscription(array $options = [])
  * @method ConfigureSubscriptionInstance configureSubscriptionInstance(array $options = [])
  * @method ConfigureSubscriptionInstanceAlert configureSubscriptionInstanceAlert(array $options = [])
  * @method ConfigureSynchronizationJob configureSynchronizationJob(array $options = [])
  * @method ConfigureSynchronizationJobAlert configureSynchronizationJobAlert(array $options = [])
  * @method ConfigureSynchronizationJobReplicatorCompare configureSynchronizationJobReplicatorCompare(array $options = [])
+ * @method CreateConsumerChannel createConsumerChannel(array $options = [])
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
  * @method CreateDtsInstance createDtsInstance(array $options = [])
  * @method CreateJobMonitorRule createJobMonitorRule(array $options = [])
  * @method CreateMigrationJob createMigrationJob(array $options = [])
  * @method CreateSubscriptionInstance createSubscriptionInstance(array $options = [])
  * @method CreateSynchronizationJob createSynchronizationJob(array $options = [])
+ * @method DeleteConsumerChannel deleteConsumerChannel(array $options = [])
  * @method DeleteConsumerGroup deleteConsumerGroup(array $options = [])
  * @method DeleteDtsJob deleteDtsJob(array $options = [])
  * @method DeleteMigrationJob deleteMigrationJob(array $options = [])
  * @method DeleteSubscriptionInstance deleteSubscriptionInstance(array $options = [])
  * @method DeleteSynchronizationJob deleteSynchronizationJob(array $options = [])
- * @method DescribeCenVpc describeCenVpc(array $options = [])
  * @method DescribeConnectionStatus describeConnectionStatus(array $options = [])
+ * @method DescribeConsumerChannel describeConsumerChannel(array $options = [])
  * @method DescribeConsumerGroup describeConsumerGroup(array $options = [])
- * @method DescribeDgDatabases describeDgDatabases(array $options = [])
  * @method DescribeDTSIP describeDTSIP(array $options = [])
  * @method DescribeDtsJobDetail describeDtsJobDetail(array $options = [])
- * @method DescribeDtsJobLogs describeDtsJobLogs(array $options = [])
  * @method DescribeDtsJobs describeDtsJobs(array $options = [])
  * @method DescribeEndpointSwitchStatus describeEndpointSwitchStatus(array $options = [])
  * @method DescribeInitializationStatus describeInitializationStatus(array $options = [])
- * @method DescribeJobDiffStatus describeJobDiffStatus(array $options = [])
  * @method DescribeJobMonitorRule describeJobMonitorRule(array $options = [])
  * @method DescribeMigrationJobAlert describeMigrationJobAlert(array $options = [])
  * @method DescribeMigrationJobDetail describeMigrationJobDetail(array $options = [])
@@ -51,15 +51,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSynchronizationJobStatusList describeSynchronizationJobStatusList(array $options = [])
  * @method DescribeSynchronizationObjectModifyStatus describeSynchronizationObjectModifyStatus(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method ModifyConsumerChannel modifyConsumerChannel(array $options = [])
  * @method ModifyConsumerGroupPassword modifyConsumerGroupPassword(array $options = [])
  * @method ModifyConsumptionTimestamp modifyConsumptionTimestamp(array $options = [])
  * @method ModifyDtsJob modifyDtsJob(array $options = [])
  * @method ModifyDtsJobName modifyDtsJobName(array $options = [])
  * @method ModifyDtsJobPassword modifyDtsJobPassword(array $options = [])
+ * @method ModifySubscription modifySubscription(array $options = [])
  * @method ModifySubscriptionObject modifySubscriptionObject(array $options = [])
  * @method ModifySynchronizationObject modifySynchronizationObject(array $options = [])
- * @method PreviewSql previewSql(array $options = [])
- * @method ReplaceInstance replaceInstance(array $options = [])
+ * @method RenewInstance renewInstance(array $options = [])
  * @method ResetDtsJob resetDtsJob(array $options = [])
  * @method ResetSynchronizationJob resetSynchronizationJob(array $options = [])
  * @method ShieldPrecheck shieldPrecheck(array $options = [])
@@ -75,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SuspendSynchronizationJob suspendSynchronizationJob(array $options = [])
  * @method SwitchSynchronizationEndpoint switchSynchronizationEndpoint(array $options = [])
  * @method TagResources tagResources(array $options = [])
+ * @method TransferInstanceClass transferInstanceClass(array $options = [])
  * @method TransferPayType transferPayType(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpgradeTwoWay upgradeTwoWay(array $options = [])
@@ -584,6 +586,68 @@ class ConfigureMigrationJob extends Rpc
  * @method $this withErrorAlertStatus($value)
  */
 class ConfigureMigrationJobAlert extends Rpc
+{
+}
+
+/**
+ * @method string getSourceEndpointRegion()
+ * @method $this withSourceEndpointRegion($value)
+ * @method string getCheckpoint()
+ * @method $this withCheckpoint($value)
+ * @method string getSubscriptionInstanceVSwitchId()
+ * @method $this withSubscriptionInstanceVSwitchId($value)
+ * @method string getDelayNotice()
+ * @method $this withDelayNotice($value)
+ * @method string getSourceEndpointInstanceID()
+ * @method $this withSourceEndpointInstanceID($value)
+ * @method string getSourceEndpointUserName()
+ * @method $this withSourceEndpointUserName($value)
+ * @method string getSourceEndpointOwnerID()
+ * @method $this withSourceEndpointOwnerID($value)
+ * @method string getDelayPhone()
+ * @method $this withDelayPhone($value)
+ * @method string getSubscriptionDataTypeDML()
+ * @method $this withSubscriptionDataTypeDML($value)
+ * @method string getSourceEndpointDatabaseName()
+ * @method $this withSourceEndpointDatabaseName($value)
+ * @method string getSourceEndpointIP()
+ * @method $this withSourceEndpointIP($value)
+ * @method string getErrorPhone()
+ * @method $this withErrorPhone($value)
+ * @method string getReserve()
+ * @method $this withReserve($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDbList()
+ * @method $this withDbList($value)
+ * @method string getSubscriptionInstanceNetworkType()
+ * @method $this withSubscriptionInstanceNetworkType($value)
+ * @method string getSubscriptionDataTypeDDL()
+ * @method $this withSubscriptionDataTypeDDL($value)
+ * @method string getSourceEndpointPassword()
+ * @method $this withSourceEndpointPassword($value)
+ * @method string getSourceEndpointPort()
+ * @method $this withSourceEndpointPort($value)
+ * @method string getSubscriptionInstanceVPCId()
+ * @method $this withSubscriptionInstanceVPCId($value)
+ * @method string getDelayRuleTime()
+ * @method $this withDelayRuleTime($value)
+ * @method string getSourceEndpointInstanceType()
+ * @method $this withSourceEndpointInstanceType($value)
+ * @method string getDtsJobName()
+ * @method $this withDtsJobName($value)
+ * @method string getSourceEndpointOracleSID()
+ * @method $this withSourceEndpointOracleSID($value)
+ * @method string getErrorNotice()
+ * @method $this withErrorNotice($value)
+ * @method string getSourceEndpointRole()
+ * @method $this withSourceEndpointRole($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ * @method string getSourceEndpointEngineName()
+ * @method $this withSourceEndpointEngineName($value)
+ */
+class ConfigureSubscription extends Rpc
 {
 }
 
@@ -1212,6 +1276,22 @@ class ConfigureSynchronizationJobReplicatorCompare extends Rpc
 /**
  * @method string getConsumerGroupName()
  * @method $this withConsumerGroupName($value)
+ * @method string getConsumerGroupPassword()
+ * @method $this withConsumerGroupPassword($value)
+ * @method string getConsumerGroupUserName()
+ * @method $this withConsumerGroupUserName($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ */
+class CreateConsumerChannel extends Rpc
+{
+}
+
+/**
+ * @method string getConsumerGroupName()
+ * @method $this withConsumerGroupName($value)
  * @method string getSubscriptionInstanceId()
  * @method $this withSubscriptionInstanceId($value)
  * @method string getOwnerId()
@@ -1402,6 +1482,18 @@ class CreateSynchronizationJob extends Rpc
 }
 
 /**
+ * @method string getConsumerGroupId()
+ * @method $this withConsumerGroupId($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ */
+class DeleteConsumerChannel extends Rpc
+{
+}
+
+/**
  * @method string getConsumerGroupID()
  * @method $this withConsumerGroupID($value)
  * @method string getSubscriptionInstanceId()
@@ -1464,32 +1556,6 @@ class DeleteSynchronizationJob extends Rpc
 }
 
 /**
- * @method string getType()
- * @method $this withType($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getRoleName()
- * @method $this withRoleName($value)
- * @method string getIp()
- * @method $this withIp($value)
- * @method string getAliyunId()
- * @method $this withAliyunId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class DescribeCenVpc extends Rpc
-{
-}
-
-/**
  * @method string getSourceEndpointRegion()
  * @method $this withSourceEndpointRegion($value)
  * @method string getSourceEndpointArchitecture()
@@ -1540,6 +1606,20 @@ class DescribeConnectionStatus extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ */
+class DescribeConsumerChannel extends Rpc
+{
+}
+
+/**
  * @method string getSubscriptionInstanceId()
  * @method $this withSubscriptionInstanceId($value)
  * @method string getPageNum()
@@ -1552,32 +1632,6 @@ class DescribeConnectionStatus extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeConsumerGroup extends Rpc
-{
-}
-
-/**
- * @method string getType()
- * @method $this withType($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getRoleName()
- * @method $this withRoleName($value)
- * @method string getIp()
- * @method $this withIp($value)
- * @method string getAliyunId()
- * @method $this withAliyunId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getPort()
- * @method $this withPort($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- */
-class DescribeDgDatabases extends Rpc
 {
 }
 
@@ -1600,26 +1654,6 @@ class DescribeDTSIP extends Rpc
  * @method $this withSynchronizationDirection($value)
  */
 class DescribeDtsJobDetail extends Rpc
-{
-}
-
-/**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDtsJobId()
- * @method $this withDtsJobId($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeDtsJobLogs extends Rpc
 {
 }
 
@@ -1678,22 +1712,6 @@ class DescribeEndpointSwitchStatus extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeInitializationStatus extends Rpc
-{
-}
-
-/**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getTbName()
- * @method $this withTbName($value)
- * @method string getDbName()
- * @method $this withDbName($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDtsJobId()
- * @method $this withDtsJobId($value)
- */
-class DescribeJobDiffStatus extends Rpc
 {
 }
 
@@ -1843,6 +1861,8 @@ class DescribeMigrationJobStatus extends Rpc
  * @method $this withJobCode($value)
  * @method string getDtsJobId()
  * @method $this withDtsJobId($value)
+ * @method string getStructPhase()
+ * @method $this withStructPhase($value)
  */
 class DescribePreCheckStatus extends Rpc
 {
@@ -2082,6 +2102,24 @@ class ListTagResources extends Rpc
 /**
  * @method string getConsumerGroupName()
  * @method $this withConsumerGroupName($value)
+ * @method string getConsumerGroupId()
+ * @method $this withConsumerGroupId($value)
+ * @method string getConsumerGroupPassword()
+ * @method $this withConsumerGroupPassword($value)
+ * @method string getConsumerGroupUserName()
+ * @method $this withConsumerGroupUserName($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ */
+class ModifyConsumerChannel extends Rpc
+{
+}
+
+/**
+ * @method string getConsumerGroupName()
+ * @method $this withConsumerGroupName($value)
  * @method string getConsumerGroupID()
  * @method $this withConsumerGroupID($value)
  * @method string getSubscriptionInstanceId()
@@ -2180,6 +2218,22 @@ class ModifyDtsJobPassword extends Rpc
 }
 
 /**
+ * @method string getDbList()
+ * @method $this withDbList($value)
+ * @method string getSubscriptionDataTypeDDL()
+ * @method $this withSubscriptionDataTypeDDL($value)
+ * @method string getSubscriptionDataTypeDML()
+ * @method $this withSubscriptionDataTypeDML($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getDtsInstanceId()
+ * @method $this withDtsInstanceId($value)
+ */
+class ModifySubscription extends Rpc
+{
+}
+
+/**
  * @method string getSubscriptionInstanceId()
  * @method $this withSubscriptionInstanceId($value)
  * @method string getOwnerId()
@@ -2210,22 +2264,16 @@ class ModifySynchronizationObject extends Rpc
 }
 
 /**
- * @method string getEtlCalculator()
- * @method $this withEtlCalculator($value)
- */
-class PreviewSql extends Rpc
-{
-}
-
-/**
- * @method string getNewInstanceId()
- * @method $this withNewInstanceId($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBuyCount()
+ * @method $this withBuyCount($value)
  * @method string getDtsJobId()
  * @method $this withDtsJobId($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
  */
-class ReplaceInstance extends Rpc
+class RenewInstance extends Rpc
 {
 }
 
@@ -2282,6 +2330,10 @@ class SkipPreCheck extends Rpc
 }
 
 /**
+ * @method string getResetCheckpoint()
+ * @method $this withResetCheckpoint($value)
+ * @method string getResumeHoldJob()
+ * @method $this withResumeHoldJob($value)
  * @method string getDtsJobId()
  * @method $this withDtsJobId($value)
  * @method string getDtsInstanceId()
@@ -2555,12 +2607,22 @@ class TagResources extends Rpc
 }
 
 /**
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getDtsJobId()
+ * @method $this withDtsJobId($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class TransferInstanceClass extends Rpc
+{
+}
+
+/**
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getBuyCount()
  * @method $this withBuyCount($value)
- * @method string getInstanceClass()
- * @method $this withInstanceClass($value)
  * @method string getDtsJobId()
  * @method $this withDtsJobId($value)
  * @method string getChargeType()

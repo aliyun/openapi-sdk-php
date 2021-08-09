@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1065 - 2021-8-9
+- Support Job Status With Phase.
+
+
 ## 1.8.1064 - 2021-8-6
 - Update TaggingAdImage.
 
