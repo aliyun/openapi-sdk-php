@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1066 - 2021-8-9
+- Supported DescribeSubscriptionMeta for distributed subscription.
+- Supported ParentChannelId for DescribeConsumerChannel.
+- Supported Reserve for ModifyDtsJob.
+
+
 ## 1.8.1065 - 2021-8-9
 - Support Job Status With Phase.
 
