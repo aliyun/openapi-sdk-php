@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1067 - 2021-8-10
+- Update TaggingAdImage.
+
+
 ## 1.8.1066 - 2021-8-9
 - Supported DescribeSubscriptionMeta for distributed subscription.
 - Supported ParentChannelId for DescribeConsumerChannel.
