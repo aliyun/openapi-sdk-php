@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1069 - 2021-8-10
+- Supported DescribeSavingsPlansUsageTotal.
+- Supported DescribeSavingsPlansUsageDetail.
+- Supported DescribeSavingsPlansCoverageTotal.
+- Supported DescribeSavingsPlansCoverageDetail.
+
+
 ## 1.8.1068 - 2021-8-10
 - Export instance relative API.
 

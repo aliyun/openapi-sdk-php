@@ -25,6 +25,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeResourcePackageProduct describeResourcePackageProduct(array $options = [])
  * @method DescribeResourceUsageDetail describeResourceUsageDetail(array $options = [])
  * @method DescribeResourceUsageTotal describeResourceUsageTotal(array $options = [])
+ * @method DescribeSavingsPlansCoverageDetail describeSavingsPlansCoverageDetail(array $options = [])
+ * @method DescribeSavingsPlansCoverageTotal describeSavingsPlansCoverageTotal(array $options = [])
+ * @method DescribeSavingsPlansUsageDetail describeSavingsPlansUsageDetail(array $options = [])
+ * @method DescribeSavingsPlansUsageTotal describeSavingsPlansUsageTotal(array $options = [])
  * @method DescribeSplitItemBill describeSplitItemBill(array $options = [])
  * @method EnableBillGeneration enableBillGeneration(array $options = [])
  * @method GetCustomerAccountInfo getCustomerAccountInfo(array $options = [])
@@ -588,6 +592,70 @@ class DescribeResourceUsageTotal extends Rpc
 }
 
 /**
+ * @method string getPeriodType()
+ * @method $this withPeriodType($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
+ * @method string getStartPeriod()
+ * @method $this withStartPeriod($value)
+ * @method string getEndPeriod()
+ * @method $this withEndPeriod($value)
+ * @method string getToken()
+ * @method $this withToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeSavingsPlansCoverageDetail extends Rpc
+{
+}
+
+/**
+ * @method string getPeriodType()
+ * @method $this withPeriodType($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
+ * @method string getStartPeriod()
+ * @method $this withStartPeriod($value)
+ * @method string getEndPeriod()
+ * @method $this withEndPeriod($value)
+ */
+class DescribeSavingsPlansCoverageTotal extends Rpc
+{
+}
+
+/**
+ * @method string getPeriodType()
+ * @method $this withPeriodType($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
+ * @method string getStartPeriod()
+ * @method $this withStartPeriod($value)
+ * @method string getEndPeriod()
+ * @method $this withEndPeriod($value)
+ * @method string getToken()
+ * @method $this withToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeSavingsPlansUsageDetail extends Rpc
+{
+}
+
+/**
+ * @method string getPeriodType()
+ * @method $this withPeriodType($value)
+ * @method string getBillOwnerId()
+ * @method $this withBillOwnerId($value)
+ * @method string getStartPeriod()
+ * @method $this withStartPeriod($value)
+ * @method string getEndPeriod()
+ * @method $this withEndPeriod($value)
+ */
+class DescribeSavingsPlansUsageTotal extends Rpc
+{
+}
+
+/**
  * @method string getProductCode()
  * @method $this withProductCode($value)
  * @method string getSubscriptionType()
@@ -1115,6 +1183,8 @@ class QueryCustomerAddressList extends Rpc
  * @method $this withLastToken($value)
  * @method string getInstanceSpec()
  * @method $this withInstanceSpec($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getIncludeShare()
