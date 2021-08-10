@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1068 - 2021-8-10
+- Export instance relative API.
+
+
 ## 1.8.1067 - 2021-8-10
 - Update TaggingAdImage.
 
