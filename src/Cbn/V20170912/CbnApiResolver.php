@@ -7,12 +7,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ActiveFlowLog activeFlowLog(array $options = [])
  * @method AssociateCenBandwidthPackage associateCenBandwidthPackage(array $options = [])
+ * @method AssociateTransitRouterAttachmentWithRouteTable associateTransitRouterAttachmentWithRouteTable(array $options = [])
  * @method AttachCenChildInstance attachCenChildInstance(array $options = [])
  * @method CreateCen createCen(array $options = [])
  * @method CreateCenBandwidthPackage createCenBandwidthPackage(array $options = [])
  * @method CreateCenChildInstanceRouteEntryToCen createCenChildInstanceRouteEntryToCen(array $options = [])
  * @method CreateCenRouteMap createCenRouteMap(array $options = [])
  * @method CreateFlowlog createFlowlog(array $options = [])
+ * @method CreateTransitRouter createTransitRouter(array $options = [])
+ * @method CreateTransitRouterPeerAttachment createTransitRouterPeerAttachment(array $options = [])
+ * @method CreateTransitRouterRouteEntry createTransitRouterRouteEntry(array $options = [])
+ * @method CreateTransitRouterRouteTable createTransitRouterRouteTable(array $options = [])
+ * @method CreateTransitRouterVbrAttachment createTransitRouterVbrAttachment(array $options = [])
+ * @method CreateTransitRouterVpcAttachment createTransitRouterVpcAttachment(array $options = [])
  * @method DeactiveFlowLog deactiveFlowLog(array $options = [])
  * @method DeleteCen deleteCen(array $options = [])
  * @method DeleteCenBandwidthPackage deleteCenBandwidthPackage(array $options = [])
@@ -20,6 +27,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCenRouteMap deleteCenRouteMap(array $options = [])
  * @method DeleteFlowlog deleteFlowlog(array $options = [])
  * @method DeleteRouteServiceInCen deleteRouteServiceInCen(array $options = [])
+ * @method DeleteTransitRouterPeerAttachment deleteTransitRouterPeerAttachment(array $options = [])
+ * @method DeleteTransitRouterRouteEntry deleteTransitRouterRouteEntry(array $options = [])
+ * @method DeleteTransitRouterRouteTable deleteTransitRouterRouteTable(array $options = [])
+ * @method DeleteTransitRouterVbrAttachment deleteTransitRouterVbrAttachment(array $options = [])
+ * @method DeleteTransitRouterVpcAttachment deleteTransitRouterVpcAttachment(array $options = [])
  * @method DescribeCenAttachedChildInstanceAttribute describeCenAttachedChildInstanceAttribute(array $options = [])
  * @method DescribeCenAttachedChildInstances describeCenAttachedChildInstances(array $options = [])
  * @method DescribeCenBandwidthPackages describeCenBandwidthPackages(array $options = [])
@@ -41,8 +53,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRouteServicesInCen describeRouteServicesInCen(array $options = [])
  * @method DetachCenChildInstance detachCenChildInstance(array $options = [])
  * @method DisableCenVbrHealthCheck disableCenVbrHealthCheck(array $options = [])
+ * @method DisableTransitRouterRouteTablePropagation disableTransitRouterRouteTablePropagation(array $options = [])
+ * @method DissociateTransitRouterAttachmentFromRouteTable dissociateTransitRouterAttachmentFromRouteTable(array $options = [])
  * @method EnableCenVbrHealthCheck enableCenVbrHealthCheck(array $options = [])
+ * @method EnableTransitRouterRouteTablePropagation enableTransitRouterRouteTablePropagation(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method ListTransitRouterAvailableResource listTransitRouterAvailableResource(array $options = [])
+ * @method ListTransitRouterPeerAttachments listTransitRouterPeerAttachments(array $options = [])
+ * @method ListTransitRouterRouteEntries listTransitRouterRouteEntries(array $options = [])
+ * @method ListTransitRouterRouteTableAssociations listTransitRouterRouteTableAssociations(array $options = [])
+ * @method ListTransitRouterRouteTablePropagations listTransitRouterRouteTablePropagations(array $options = [])
+ * @method ListTransitRouterRouteTables listTransitRouterRouteTables(array $options = [])
+ * @method ListTransitRouters listTransitRouters(array $options = [])
+ * @method ListTransitRouterVbrAttachments listTransitRouterVbrAttachments(array $options = [])
+ * @method ListTransitRouterVpcAttachments listTransitRouterVpcAttachments(array $options = [])
  * @method ModifyCenAttribute modifyCenAttribute(array $options = [])
  * @method ModifyCenBandwidthPackageAttribute modifyCenBandwidthPackageAttribute(array $options = [])
  * @method ModifyCenBandwidthPackageSpec modifyCenBandwidthPackageSpec(array $options = [])
@@ -57,6 +81,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnassociateCenBandwidthPackage unassociateCenBandwidthPackage(array $options = [])
  * @method UnroutePrivateZoneInCenToVpc unroutePrivateZoneInCenToVpc(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method UpdateTransitRouter updateTransitRouter(array $options = [])
+ * @method UpdateTransitRouterPeerAttachmentAttribute updateTransitRouterPeerAttachmentAttribute(array $options = [])
+ * @method UpdateTransitRouterRouteEntry updateTransitRouterRouteEntry(array $options = [])
+ * @method UpdateTransitRouterRouteTable updateTransitRouterRouteTable(array $options = [])
+ * @method UpdateTransitRouterVbrAttachmentAttribute updateTransitRouterVbrAttachmentAttribute(array $options = [])
+ * @method UpdateTransitRouterVpcAttachmentAttribute updateTransitRouterVpcAttachmentAttribute(array $options = [])
  * @method WithdrawPublishedRouteEntries withdrawPublishedRouteEntries(array $options = [])
  */
 class CbnApiResolver extends ApiResolver
@@ -119,6 +149,28 @@ class AssociateCenBandwidthPackage extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ */
+class AssociateTransitRouterAttachmentWithRouteTable extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getCenId()
  * @method $this withCenId($value)
  * @method string getChildInstanceRegionId()
@@ -149,6 +201,8 @@ class AttachCenChildInstance extends Rpc
  * @method $this withIpv6Level($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -175,6 +229,8 @@ class CreateCen extends Rpc
  * @method $this withAutoRenewDuration($value)
  * @method string getBandwidthPackageChargeType()
  * @method $this withBandwidthPackageChargeType($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getGeographicRegionBId()
  * @method $this withGeographicRegionBId($value)
  * @method string getPeriod()
@@ -248,6 +304,8 @@ class CreateCenChildInstanceRouteEntryToCen extends Rpc
  * @method string getSystemPolicy()
  * @method $this withSystemPolicy($value)
  * @method array getOriginalRouteTableIds()
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
  * @method array getSourceInstanceIds()
  * @method array getSourceRegionIds()
  * @method string getGatewayZoneId()
@@ -565,6 +623,227 @@ class CreateFlowlog extends Rpc
 }
 
 /**
+ * @method string getTransitRouterName()
+ * @method $this withTransitRouterName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterDescription()
+ * @method $this withTransitRouterDescription($value)
+ */
+class CreateTransitRouter extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getRouteTableAssociationEnabled()
+ * @method $this withRouteTableAssociationEnabled($value)
+ * @method string getTransitRouterAttachmentName()
+ * @method $this withTransitRouterAttachmentName($value)
+ * @method string getAutoPublishRouteEnabled()
+ * @method $this withAutoPublishRouteEnabled($value)
+ * @method string getRouteTablePropagationEnabled()
+ * @method $this withRouteTablePropagationEnabled($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentDescription()
+ * @method $this withTransitRouterAttachmentDescription($value)
+ * @method string getPeerTransitRouterRegionId()
+ * @method $this withPeerTransitRouterRegionId($value)
+ * @method string getCenBandwidthPackageId()
+ * @method $this withCenBandwidthPackageId($value)
+ * @method string getPeerTransitRouterId()
+ * @method $this withPeerTransitRouterId($value)
+ */
+class CreateTransitRouterPeerAttachment extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteEntryNextHopType()
+ * @method $this withTransitRouterRouteEntryNextHopType($value)
+ * @method string getTransitRouterRouteEntryDestinationCidrBlock()
+ * @method $this withTransitRouterRouteEntryDestinationCidrBlock($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getTransitRouterRouteEntryNextHopId()
+ * @method $this withTransitRouterRouteEntryNextHopId($value)
+ * @method string getTransitRouterRouteEntryDescription()
+ * @method $this withTransitRouterRouteEntryDescription($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterRouteEntryName()
+ * @method $this withTransitRouterRouteEntryName($value)
+ */
+class CreateTransitRouterRouteEntry extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteTableDescription()
+ * @method $this withTransitRouterRouteTableDescription($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getTransitRouterRouteTableName()
+ * @method $this withTransitRouterRouteTableName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ */
+class CreateTransitRouterRouteTable extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getRouteTableAssociationEnabled()
+ * @method $this withRouteTableAssociationEnabled($value)
+ * @method string getVbrId()
+ * @method $this withVbrId($value)
+ * @method string getTransitRouterAttachmentName()
+ * @method $this withTransitRouterAttachmentName($value)
+ * @method string getAutoPublishRouteEnabled()
+ * @method $this withAutoPublishRouteEnabled($value)
+ * @method string getRouteTablePropagationEnabled()
+ * @method $this withRouteTablePropagationEnabled($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentDescription()
+ * @method $this withTransitRouterAttachmentDescription($value)
+ * @method string getVbrOwnerId()
+ * @method $this withVbrOwnerId($value)
+ */
+class CreateTransitRouterVbrAttachment extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getVpcOwnerId()
+ * @method $this withVpcOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getRouteTableAssociationEnabled()
+ * @method $this withRouteTableAssociationEnabled($value)
+ * @method string getTransitRouterAttachmentName()
+ * @method $this withTransitRouterAttachmentName($value)
+ * @method string getAutoCreateVpcRoute()
+ * @method $this withAutoCreateVpcRoute($value)
+ * @method string getRouteTablePropagationEnabled()
+ * @method $this withRouteTablePropagationEnabled($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method array getZoneMappings()
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentDescription()
+ * @method $this withTransitRouterAttachmentDescription($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ */
+class CreateTransitRouterVpcAttachment extends Rpc
+{
+
+    /**
+     * @param array $zoneMappings
+     *
+     * @return $this
+     */
+	public function withZoneMappings(array $zoneMappings)
+	{
+	    $this->data['ZoneMappings'] = $zoneMappings;
+		foreach ($zoneMappings as $depth1 => $depth1Value) {
+			if(isset($depth1Value['VSwitchId'])){
+				$this->options['query']['ZoneMappings.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
+			}
+			if(isset($depth1Value['ZoneId'])){
+				$this->options['query']['ZoneMappings.' . ($depth1 + 1) . '.ZoneId'] = $depth1Value['ZoneId'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
@@ -709,6 +988,120 @@ class DeleteRouteServiceInCen extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ */
+class DeleteTransitRouterPeerAttachment extends Rpc
+{
+}
+
+/**
+ * @method string getTransitRouterRouteEntryId()
+ * @method $this withTransitRouterRouteEntryId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteEntryNextHopType()
+ * @method $this withTransitRouterRouteEntryNextHopType($value)
+ * @method string getTransitRouterRouteEntryDestinationCidrBlock()
+ * @method $this withTransitRouterRouteEntryDestinationCidrBlock($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getTransitRouterRouteEntryNextHopId()
+ * @method $this withTransitRouterRouteEntryNextHopId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteTransitRouterRouteEntry extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteTransitRouterRouteTable extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ */
+class DeleteTransitRouterVbrAttachment extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ */
+class DeleteTransitRouterVpcAttachment extends Rpc
+{
+}
+
+/**
  * @method string getIncludeRouteTable()
  * @method $this withIncludeRouteTable($value)
  * @method string getResourceOwnerId()
@@ -765,6 +1158,8 @@ class DescribeCenAttachedChildInstances extends Rpc
  * @method $this withPageNumber($value)
  * @method string getIsOrKey()
  * @method $this withIsOrKey($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -969,6 +1364,8 @@ class DescribeCenRegionDomainRouteEntries extends Rpc
  * @method $this withCenId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getTransmitDirection()
@@ -1014,6 +1411,8 @@ class DescribeCenRouteMaps extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -1318,6 +1717,50 @@ class DisableCenVbrHealthCheck extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ */
+class DisableTransitRouterRouteTablePropagation extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ */
+class DissociateTransitRouterAttachmentFromRouteTable extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getCenId()
  * @method $this withCenId($value)
  * @method string getHealthCheckTargetIp()
@@ -1342,6 +1785,28 @@ class DisableCenVbrHealthCheck extends Rpc
  * @method $this withVbrInstanceId($value)
  */
 class EnableCenVbrHealthCheck extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ */
+class EnableTransitRouterRouteTablePropagation extends Rpc
 {
 }
 
@@ -1400,6 +1865,328 @@ class ListTagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListTransitRouterAvailableResource extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListTransitRouterPeerAttachments extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTransitRouterRouteEntryDestinationCidrBlock()
+ * @method $this withTransitRouterRouteEntryDestinationCidrBlock($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getTransitRouterRouteEntryStatus()
+ * @method $this withTransitRouterRouteEntryStatus($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method array getTransitRouterRouteEntryNames()
+ * @method array getTransitRouterRouteEntryIds()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListTransitRouterRouteEntries extends Rpc
+{
+
+    /**
+     * @param array $transitRouterRouteEntryNames
+     *
+     * @return $this
+     */
+	public function withTransitRouterRouteEntryNames(array $transitRouterRouteEntryNames)
+	{
+	    $this->data['TransitRouterRouteEntryNames'] = $transitRouterRouteEntryNames;
+		foreach ($transitRouterRouteEntryNames as $i => $iValue) {
+			$this->options['query']['TransitRouterRouteEntryNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $transitRouterRouteEntryIds
+     *
+     * @return $this
+     */
+	public function withTransitRouterRouteEntryIds(array $transitRouterRouteEntryIds)
+	{
+	    $this->data['TransitRouterRouteEntryIds'] = $transitRouterRouteEntryIds;
+		foreach ($transitRouterRouteEntryIds as $i => $iValue) {
+			$this->options['query']['TransitRouterRouteEntryIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method array getTransitRouterAttachmentIds()
+ */
+class ListTransitRouterRouteTableAssociations extends Rpc
+{
+
+    /**
+     * @param array $transitRouterAttachmentIds
+     *
+     * @return $this
+     */
+	public function withTransitRouterAttachmentIds(array $transitRouterAttachmentIds)
+	{
+	    $this->data['TransitRouterAttachmentIds'] = $transitRouterAttachmentIds;
+		foreach ($transitRouterAttachmentIds as $i => $iValue) {
+			$this->options['query']['TransitRouterAttachmentIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method array getTransitRouterAttachmentIds()
+ */
+class ListTransitRouterRouteTablePropagations extends Rpc
+{
+
+    /**
+     * @param array $transitRouterAttachmentIds
+     *
+     * @return $this
+     */
+	public function withTransitRouterAttachmentIds(array $transitRouterAttachmentIds)
+	{
+	    $this->data['TransitRouterAttachmentIds'] = $transitRouterAttachmentIds;
+		foreach ($transitRouterAttachmentIds as $i => $iValue) {
+			$this->options['query']['TransitRouterAttachmentIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method array getTransitRouterRouteTableNames()
+ * @method string getTransitRouterRouteTableType()
+ * @method $this withTransitRouterRouteTableType($value)
+ * @method string getTransitRouterRouteTableStatus()
+ * @method $this withTransitRouterRouteTableStatus($value)
+ * @method array getTransitRouterRouteTableIds()
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListTransitRouterRouteTables extends Rpc
+{
+
+    /**
+     * @param array $transitRouterRouteTableNames
+     *
+     * @return $this
+     */
+	public function withTransitRouterRouteTableNames(array $transitRouterRouteTableNames)
+	{
+	    $this->data['TransitRouterRouteTableNames'] = $transitRouterRouteTableNames;
+		foreach ($transitRouterRouteTableNames as $i => $iValue) {
+			$this->options['query']['TransitRouterRouteTableNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $transitRouterRouteTableIds
+     *
+     * @return $this
+     */
+	public function withTransitRouterRouteTableIds(array $transitRouterRouteTableIds)
+	{
+	    $this->data['TransitRouterRouteTableIds'] = $transitRouterRouteTableIds;
+		foreach ($transitRouterRouteTableIds as $i => $iValue) {
+			$this->options['query']['TransitRouterRouteTableIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method array getTransitRouterIds()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ */
+class ListTransitRouters extends Rpc
+{
+
+    /**
+     * @param array $transitRouterIds
+     *
+     * @return $this
+     */
+	public function withTransitRouterIds(array $transitRouterIds)
+	{
+	    $this->data['TransitRouterIds'] = $transitRouterIds;
+		foreach ($transitRouterIds as $i => $iValue) {
+			$this->options['query']['TransitRouterIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListTransitRouterVbrAttachments extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCenId()
+ * @method $this withCenId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListTransitRouterVpcAttachments extends Rpc
+{
 }
 
 /**
@@ -2059,6 +2846,164 @@ class UntagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getTransitRouterName()
+ * @method $this withTransitRouterName($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterId()
+ * @method $this withTransitRouterId($value)
+ * @method string getTransitRouterDescription()
+ * @method $this withTransitRouterDescription($value)
+ */
+class UpdateTransitRouter extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterAttachmentName()
+ * @method $this withTransitRouterAttachmentName($value)
+ * @method string getAutoPublishRouteEnabled()
+ * @method $this withAutoPublishRouteEnabled($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBandwidth()
+ * @method $this withBandwidth($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getTransitRouterAttachmentDescription()
+ * @method $this withTransitRouterAttachmentDescription($value)
+ * @method string getCenBandwidthPackageId()
+ * @method $this withCenBandwidthPackageId($value)
+ */
+class UpdateTransitRouterPeerAttachmentAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getTransitRouterRouteEntryId()
+ * @method $this withTransitRouterRouteEntryId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteEntryDescription()
+ * @method $this withTransitRouterRouteEntryDescription($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTransitRouterRouteEntryName()
+ * @method $this withTransitRouterRouteEntryName($value)
+ */
+class UpdateTransitRouterRouteEntry extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterRouteTableId()
+ * @method $this withTransitRouterRouteTableId($value)
+ * @method string getTransitRouterRouteTableDescription()
+ * @method $this withTransitRouterRouteTableDescription($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getTransitRouterRouteTableName()
+ * @method $this withTransitRouterRouteTableName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UpdateTransitRouterRouteTable extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterAttachmentName()
+ * @method $this withTransitRouterAttachmentName($value)
+ * @method string getAutoPublishRouteEnabled()
+ * @method $this withAutoPublishRouteEnabled($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getTransitRouterAttachmentDescription()
+ * @method $this withTransitRouterAttachmentDescription($value)
+ */
+class UpdateTransitRouterVbrAttachmentAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTransitRouterAttachmentName()
+ * @method $this withTransitRouterAttachmentName($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getTransitRouterAttachmentId()
+ * @method $this withTransitRouterAttachmentId($value)
+ * @method string getTransitRouterAttachmentDescription()
+ * @method $this withTransitRouterAttachmentDescription($value)
+ */
+class UpdateTransitRouterVpcAttachmentAttribute extends Rpc
+{
 }
 
 /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1070 - 2021-8-11
+- Support CEN latest Apis.
+
+
 ## 1.8.1069 - 2021-8-10
 - Supported DescribeSavingsPlansUsageTotal.
 - Supported DescribeSavingsPlansUsageDetail.
