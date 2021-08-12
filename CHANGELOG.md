@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1073 - 2021-8-12
+- Support query dbfs specification.
+
+
 ## 1.8.1072 - 2021-8-12
 - DescirbeAvailableResource add NodeId input parameter.
 - CreateTairInstance add GlobalInstanceId input paramter.

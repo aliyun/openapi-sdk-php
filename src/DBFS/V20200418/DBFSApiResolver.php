@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDbfs deleteDbfs(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
  * @method DeleteTagsBatch deleteTagsBatch(array $options = [])
+ * @method DescribeDbfsSpecifications describeDbfsSpecifications(array $options = [])
  * @method DetachDbfs detachDbfs(array $options = [])
  * @method GenerateUpgradeRecord generateUpgradeRecord(array $options = [])
  * @method GetDbfs getDbfs(array $options = [])
@@ -195,6 +196,16 @@ class DeleteSnapshot extends Rpc
  * @method $this withTags($value)
  */
 class DeleteTagsBatch extends Rpc
+{
+}
+
+/**
+ * @method string getEcsInstanceType()
+ * @method $this withEcsInstanceType($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
+ */
+class DescribeDbfsSpecifications extends Rpc
 {
 }
 
