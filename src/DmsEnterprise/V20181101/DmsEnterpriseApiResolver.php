@@ -12,12 +12,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDataImportOrder createDataImportOrder(array $options = [])
  * @method CreateFreeLockCorrectOrder createFreeLockCorrectOrder(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
+ * @method CreateProxy createProxy(array $options = [])
+ * @method CreateProxyAccess createProxyAccess(array $options = [])
  * @method CreatePublishGroupTask createPublishGroupTask(array $options = [])
  * @method CreateSQLReviewOrder createSQLReviewOrder(array $options = [])
  * @method CreateStructSyncOrder createStructSyncOrder(array $options = [])
  * @method CreateUploadFileJob createUploadFileJob(array $options = [])
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DeleteProxy deleteProxy(array $options = [])
+ * @method DeleteProxyAccess deleteProxyAccess(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
  * @method EnableUser enableUser(array $options = [])
@@ -44,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetOwnerApplyOrderDetail getOwnerApplyOrderDetail(array $options = [])
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
  * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
+ * @method GetProxy getProxy(array $options = [])
  * @method GetSQLReviewCheckResultStatus getSQLReviewCheckResultStatus(array $options = [])
  * @method GetSQLReviewOptimizeDetail getSQLReviewOptimizeDetail(array $options = [])
  * @method GetStructSyncExecSqlDetail getStructSyncExecSqlDetail(array $options = [])
@@ -56,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetUserActiveTenant getUserActiveTenant(array $options = [])
  * @method GetUserUploadFileJob getUserUploadFileJob(array $options = [])
  * @method GrantUserPermission grantUserPermission(array $options = [])
+ * @method InspectProxyAccessSecret inspectProxyAccessSecret(array $options = [])
  * @method ListColumns listColumns(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
  * @method ListDatabaseUserPermssions listDatabaseUserPermssions(array $options = [])
@@ -69,6 +75,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListLogicDatabases listLogicDatabases(array $options = [])
  * @method ListLogicTables listLogicTables(array $options = [])
  * @method ListOrders listOrders(array $options = [])
+ * @method ListProxies listProxies(array $options = [])
+ * @method ListProxyAccesses listProxyAccesses(array $options = [])
  * @method ListSensitiveColumns listSensitiveColumns(array $options = [])
  * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
  * @method ListSQLReviewOriginSQL listSQLReviewOriginSQL(array $options = [])
@@ -231,6 +239,36 @@ class CreateOrder extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ */
+class CreateProxy extends Rpc
+{
+}
+
+/**
+ * @method string getIndepAccount()
+ * @method $this withIndepAccount($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getIndepPassword()
+ * @method $this withIndepPassword($value)
+ * @method string getProxyId()
+ * @method $this withProxyId($value)
+ */
+class CreateProxyAccess extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getTid()
@@ -321,6 +359,26 @@ class CreateUploadOSSFileJob extends Rpc
  * @method $this withHost($value)
  */
 class DeleteInstance extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getProxyId()
+ * @method $this withProxyId($value)
+ */
+class DeleteProxy extends Rpc
+{
+}
+
+/**
+ * @method string getProxyAccessId()
+ * @method $this withProxyAccessId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class DeleteProxyAccess extends Rpc
 {
 }
 
@@ -639,6 +697,18 @@ class GetPhysicalDatabase extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getProxyId()
+ * @method $this withProxyId($value)
+ */
+class GetProxy extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getTid()
@@ -781,6 +851,16 @@ class GetUserUploadFileJob extends Rpc
  * @method $this withTableName($value)
  */
 class GrantUserPermission extends Rpc
+{
+}
+
+/**
+ * @method string getProxyAccessId()
+ * @method $this withProxyAccessId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class InspectProxyAccessSecret extends Rpc
 {
 }
 
@@ -987,6 +1067,24 @@ class ListLogicTables extends Rpc
  * @method $this withOrderResultType($value)
  */
 class ListOrders extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListProxies extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getProxyId()
+ * @method $this withProxyId($value)
+ */
+class ListProxyAccesses extends Rpc
 {
 }
 

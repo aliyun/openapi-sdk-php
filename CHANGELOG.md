@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1071 - 2021-8-12
+- Support CreateProxy, DeleteProxy, GetProxy, ListProxies, CreateProxyAccess, DeleteProxyAccess, ListProxyAccesses, InspectProxyAccessSecret Safety Protection Management APIs.
+
+
 ## 1.8.1070 - 2021-8-11
 - Support CEN latest Apis.
 
