@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1072 - 2021-8-12
+- DescirbeAvailableResource add NodeId input parameter.
+- CreateTairInstance add GlobalInstanceId input paramter.
+
+
 ## 1.8.1071 - 2021-8-12
 - Support CreateProxy, DeleteProxy, GetProxy, ListProxies, CreateProxyAccess, DeleteProxyAccess, ListProxyAccesses, InspectProxyAccessSecret Safety Protection Management APIs.
 
