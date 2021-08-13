@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1074 - 2021-8-13
+- Supported etlOperatorColumnReference for ModifyDtsJob.
+
+
 ## 1.8.1073 - 2021-8-12
 - Support query dbfs specification.
 
