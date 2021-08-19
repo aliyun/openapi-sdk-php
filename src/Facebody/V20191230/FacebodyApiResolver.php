@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddFace addFace(array $options = [])
  * @method AddFaceEntity addFaceEntity(array $options = [])
  * @method AddFaceImageTemplate addFaceImageTemplate(array $options = [])
+ * @method BeautifyBody beautifyBody(array $options = [])
  * @method BlurFace blurFace(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
@@ -286,6 +287,166 @@ class AddFaceImageTemplate extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBodyBoxes()
+ * @method string getLengthenDegree()
+ * @method string getMaleLiquifyDegree()
+ * @method string getOriginalWidth()
+ * @method string getFaceList()
+ * @method string getAgeRange()
+ * @method string getCustom()
+ * @method string getOriginalHeight()
+ * @method string getImageURL()
+ * @method string getFemaleLiquifyDegree()
+ * @method string getPoseList()
+ */
+class BeautifyBody extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBodyBoxes($value)
+    {
+        $this->data['BodyBoxes'] = $value;
+        $this->options['form_params']['BodyBoxes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLengthenDegree($value)
+    {
+        $this->data['LengthenDegree'] = $value;
+        $this->options['form_params']['LengthenDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaleLiquifyDegree($value)
+    {
+        $this->data['MaleLiquifyDegree'] = $value;
+        $this->options['form_params']['MaleLiquifyDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginalWidth($value)
+    {
+        $this->data['OriginalWidth'] = $value;
+        $this->options['form_params']['OriginalWidth'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceList($value)
+    {
+        $this->data['FaceList'] = $value;
+        $this->options['form_params']['FaceList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgeRange($value)
+    {
+        $this->data['AgeRange'] = $value;
+        $this->options['form_params']['AgeRange'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustom($value)
+    {
+        $this->data['Custom'] = $value;
+        $this->options['form_params']['Custom'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginalHeight($value)
+    {
+        $this->data['OriginalHeight'] = $value;
+        $this->options['form_params']['OriginalHeight'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFemaleLiquifyDegree($value)
+    {
+        $this->data['FemaleLiquifyDegree'] = $value;
+        $this->options['form_params']['FemaleLiquifyDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPoseList($value)
+    {
+        $this->data['PoseList'] = $value;
+        $this->options['form_params']['PoseList'] = $value;
 
         return $this;
     }
@@ -1443,12 +1604,25 @@ class GenerateHumanSketchStyle extends Rpc
 }
 
 /**
+ * @method string getMetaInfo()
  * @method string getCertificateNumber()
  * @method string getCertificateName()
- * @method string getMetaInfo()
  */
 class GenRealPersonVerificationToken extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetaInfo($value)
+    {
+        $this->data['MetaInfo'] = $value;
+        $this->options['form_params']['MetaInfo'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1472,19 +1646,6 @@ class GenRealPersonVerificationToken extends Rpc
     {
         $this->data['CertificateName'] = $value;
         $this->options['form_params']['CertificateName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMetaInfo($value)
-    {
-        $this->data['MetaInfo'] = $value;
-        $this->options['form_params']['MetaInfo'] = $value;
 
         return $this;
     }

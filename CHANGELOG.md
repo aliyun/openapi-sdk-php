@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1075 - 2021-8-19
+- Release BeautifyBody.
+
+
 ## 1.8.1074 - 2021-8-13
 - Supported etlOperatorColumnReference for ModifyDtsJob.
 
