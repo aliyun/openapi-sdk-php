@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1076 - 2021-8-19
+- Support Round and Interval for ApplyNodes API.
+
+
 ## 1.8.1075 - 2021-8-19
 - Release BeautifyBody.
 
