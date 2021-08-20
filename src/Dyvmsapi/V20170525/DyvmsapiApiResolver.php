@@ -22,6 +22,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DoRtcNumberAuth doRtcNumberAuth(array $options = [])
  * @method DoubleCallSeat doubleCallSeat(array $options = [])
  * @method ExecuteCallTask executeCallTask(array $options = [])
+ * @method GetCallInfo getCallInfo(array $options = [])
  * @method GetHotlineQualificationByOrder getHotlineQualificationByOrder(array $options = [])
  * @method GetRtcToken getRtcToken(array $options = [])
  * @method GetToken getToken(array $options = [])
@@ -440,6 +441,20 @@ class DoubleCallSeat extends Rpc
  * @method $this withStatus($value)
  */
 class ExecuteCallTask extends Rpc
+{
+}
+
+/**
+ * @method string getRtcId()
+ * @method $this withRtcId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetCallInfo extends Rpc
 {
 }
 

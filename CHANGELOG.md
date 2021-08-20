@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1077 - 2021-8-20
+- Update Dyvmsapi SDK.
+- Add GetCallInfo.
+
+
 ## 1.8.1076 - 2021-8-19
 - Support Round and Interval for ApplyNodes API.
 
