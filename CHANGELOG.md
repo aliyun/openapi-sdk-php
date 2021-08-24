@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1079 - 2021-8-24
+- Release RetouchBody.
+
+
 ## 1.8.1078 - 2021-8-24
 - Publish Python ververica.
 

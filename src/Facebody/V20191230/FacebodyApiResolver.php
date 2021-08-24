@@ -61,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeFace recognizeFace(array $options = [])
  * @method RecognizeHandGesture recognizeHandGesture(array $options = [])
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
+ * @method RetouchBody retouchBody(array $options = [])
  * @method SearchBodyTrace searchBodyTrace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
  * @method SwapFacialFeatures swapFacialFeatures(array $options = [])
@@ -2198,6 +2199,54 @@ class RecognizePublicFace extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getLengthenDegree()
+ * @method string getSlimDegree()
+ * @method string getImageURL()
+ */
+class RetouchBody extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLengthenDegree($value)
+    {
+        $this->data['LengthenDegree'] = $value;
+        $this->options['form_params']['LengthenDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSlimDegree($value)
+    {
+        $this->data['SlimDegree'] = $value;
+        $this->options['form_params']['SlimDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
     }
 }
 
