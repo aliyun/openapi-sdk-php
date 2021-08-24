@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1078 - 2021-8-24
+- Publish Python ververica.
+
+
 ## 1.8.1077 - 2021-8-20
 - Update Dyvmsapi SDK.
 - Add GetCallInfo.
