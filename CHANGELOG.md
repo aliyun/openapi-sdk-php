@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1080 - 2021-8-26
+- ListAvailableEcsTypes set param ZoneId not required.
+- ListAvailableEcsTypes return ZoneIds.
+
+
 ## 1.8.1079 - 2021-8-24
 - Release RetouchBody.
 
