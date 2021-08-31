@@ -175,6 +175,7 @@ namespace AlibabaCloud;
  * @method static Ram\Ram ram()
  * @method static Rds\Rds rds()
  * @method static Reid\Reid reid()
+ * @method static ReidCloud\ReidCloud reidCloud()
  * @method static RetailadvqaPublic\RetailadvqaPublic retailadvqaPublic()
  * @method static Retailcloud\Retailcloud retailcloud()
  * @method static Rtc\Rtc rtc()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1085 - 2021-8-31
+- Supported cro algorithm.
+
+
 ## 1.8.1084 - 2021-8-31
 - Supported AndroidBigPictureUrl, AndroidInboxBody, AndroidImageUrl, AndroidOppoImageId, AndroidXiaomiImageUrl, iOSNotificationThreadId for Push and MassPush.
 
