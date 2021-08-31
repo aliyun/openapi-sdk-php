@@ -186,24 +186,6 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidNotificationBarType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationBarType'] = $depth1Value['AndroidNotificationBarType'];
 			}
-			if(isset($depth1Value['AndroidExtParameters'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidExtParameters'] = $depth1Value['AndroidExtParameters'];
-			}
-			if(isset($depth1Value['IOSBadge'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSBadge'] = $depth1Value['IOSBadge'];
-			}
-			if(isset($depth1Value['AndroidBigBody'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigBody'] = $depth1Value['AndroidBigBody'];
-			}
-			if(isset($depth1Value['IOSBadgeAutoIncrement'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSBadgeAutoIncrement'] = $depth1Value['IOSBadgeAutoIncrement'];
-			}
-			if(isset($depth1Value['AndroidOpenType'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidOpenType'] = $depth1Value['AndroidOpenType'];
-			}
-			if(isset($depth1Value['Title'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Title'] = $depth1Value['Title'];
-			}
 			if(isset($depth1Value['Body'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Body'] = $depth1Value['Body'];
 			}
@@ -224,12 +206,6 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['IOSRemindBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemindBody'] = $depth1Value['IOSRemindBody'];
-			}
-			if(isset($depth1Value['AndroidRenderStyle'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidRenderStyle'] = $depth1Value['AndroidRenderStyle'];
-			}
-			if(isset($depth1Value['IOSExtParameters'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSExtParameters'] = $depth1Value['IOSExtParameters'];
 			}
 			if(isset($depth1Value['AndroidNotifyType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotifyType'] = $depth1Value['AndroidNotifyType'];
@@ -252,11 +228,11 @@ class MassPush extends Rpc
 			if(isset($depth1Value['ExpireTime'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.ExpireTime'] = $depth1Value['ExpireTime'];
 			}
+			if(isset($depth1Value['AndroidImageUrl'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidImageUrl'] = $depth1Value['AndroidImageUrl'];
+			}
 			if(isset($depth1Value['AndroidNotificationVivoChannel'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationVivoChannel'] = $depth1Value['AndroidNotificationVivoChannel'];
-			}
-			if(isset($depth1Value['AndroidPopupBody'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidPopupBody'] = $depth1Value['AndroidPopupBody'];
 			}
 			if(isset($depth1Value['IOSNotificationCategory'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCategory'] = $depth1Value['IOSNotificationCategory'];
@@ -267,29 +243,14 @@ class MassPush extends Rpc
 			if(isset($depth1Value['StoreOffline'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.StoreOffline'] = $depth1Value['StoreOffline'];
 			}
-			if(isset($depth1Value['IOSSilentNotification'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSSilentNotification'] = $depth1Value['IOSSilentNotification'];
+			if(isset($depth1Value['AndroidInboxBody'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidInboxBody'] = $depth1Value['AndroidInboxBody'];
 			}
 			if(isset($depth1Value['JobKey'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.JobKey'] = $depth1Value['JobKey'];
 			}
-			if(isset($depth1Value['Target'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Target'] = $depth1Value['Target'];
-			}
-			if(isset($depth1Value['AndroidBigTitle'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigTitle'] = $depth1Value['AndroidBigTitle'];
-			}
 			if(isset($depth1Value['AndroidOpenUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidOpenUrl'] = $depth1Value['AndroidOpenUrl'];
-			}
-			if(isset($depth1Value['AndroidNotificationChannel'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationChannel'] = $depth1Value['AndroidNotificationChannel'];
-			}
-			if(isset($depth1Value['AndroidRemind'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidRemind'] = $depth1Value['AndroidRemind'];
-			}
-			if(isset($depth1Value['AndroidActivity'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidActivity'] = $depth1Value['AndroidActivity'];
 			}
 			if(isset($depth1Value['AndroidXiaoMiNotifyBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyBody'] = $depth1Value['AndroidXiaoMiNotifyBody'];
@@ -303,26 +264,80 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSRemind'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemind'] = $depth1Value['IOSRemind'];
 			}
-			if(isset($depth1Value['AndroidNotificationNotifyId'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationNotifyId'] = $depth1Value['AndroidNotificationNotifyId'];
-			}
-			if(isset($depth1Value['TargetValue'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.TargetValue'] = $depth1Value['TargetValue'];
+			if(isset($depth1Value['IOSNotificationThreadId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationThreadId'] = $depth1Value['IOSNotificationThreadId'];
 			}
 			if(isset($depth1Value['AndroidMusic'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidMusic'] = $depth1Value['AndroidMusic'];
-			}
-			if(isset($depth1Value['AndroidXiaoMiActivity'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiActivity'] = $depth1Value['AndroidXiaoMiActivity'];
-			}
-			if(isset($depth1Value['AndroidXiaoMiNotifyTitle'])){
-				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyTitle'] = $depth1Value['AndroidXiaoMiNotifyTitle'];
 			}
 			if(isset($depth1Value['IOSNotificationCollapseId'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCollapseId'] = $depth1Value['IOSNotificationCollapseId'];
 			}
 			if(isset($depth1Value['PushType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.PushType'] = $depth1Value['PushType'];
+			}
+			if(isset($depth1Value['AndroidExtParameters'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidExtParameters'] = $depth1Value['AndroidExtParameters'];
+			}
+			if(isset($depth1Value['IOSBadge'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSBadge'] = $depth1Value['IOSBadge'];
+			}
+			if(isset($depth1Value['AndroidBigBody'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigBody'] = $depth1Value['AndroidBigBody'];
+			}
+			if(isset($depth1Value['IOSBadgeAutoIncrement'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSBadgeAutoIncrement'] = $depth1Value['IOSBadgeAutoIncrement'];
+			}
+			if(isset($depth1Value['AndroidOpenType'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidOpenType'] = $depth1Value['AndroidOpenType'];
+			}
+			if(isset($depth1Value['Title'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Title'] = $depth1Value['Title'];
+			}
+			if(isset($depth1Value['AndroidRenderStyle'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidRenderStyle'] = $depth1Value['AndroidRenderStyle'];
+			}
+			if(isset($depth1Value['IOSExtParameters'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSExtParameters'] = $depth1Value['IOSExtParameters'];
+			}
+			if(isset($depth1Value['AndroidXiaomiImageUrl'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaomiImageUrl'] = $depth1Value['AndroidXiaomiImageUrl'];
+			}
+			if(isset($depth1Value['AndroidPopupBody'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidPopupBody'] = $depth1Value['AndroidPopupBody'];
+			}
+			if(isset($depth1Value['AndroidBigPictureUrl'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigPictureUrl'] = $depth1Value['AndroidBigPictureUrl'];
+			}
+			if(isset($depth1Value['IOSSilentNotification'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSSilentNotification'] = $depth1Value['IOSSilentNotification'];
+			}
+			if(isset($depth1Value['Target'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Target'] = $depth1Value['Target'];
+			}
+			if(isset($depth1Value['AndroidBigTitle'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigTitle'] = $depth1Value['AndroidBigTitle'];
+			}
+			if(isset($depth1Value['AndroidNotificationChannel'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationChannel'] = $depth1Value['AndroidNotificationChannel'];
+			}
+			if(isset($depth1Value['AndroidRemind'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidRemind'] = $depth1Value['AndroidRemind'];
+			}
+			if(isset($depth1Value['AndroidActivity'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidActivity'] = $depth1Value['AndroidActivity'];
+			}
+			if(isset($depth1Value['AndroidNotificationNotifyId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationNotifyId'] = $depth1Value['AndroidNotificationNotifyId'];
+			}
+			if(isset($depth1Value['TargetValue'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.TargetValue'] = $depth1Value['TargetValue'];
+			}
+			if(isset($depth1Value['AndroidXiaoMiNotifyTitle'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyTitle'] = $depth1Value['AndroidXiaoMiNotifyTitle'];
+			}
+			if(isset($depth1Value['AndroidXiaoMiActivity'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiActivity'] = $depth1Value['AndroidXiaoMiActivity'];
 			}
 		}
 
@@ -359,6 +374,8 @@ class MassPush extends Rpc
  * @method $this withAndroidNotificationBarPriority($value)
  * @method string getExpireTime()
  * @method $this withExpireTime($value)
+ * @method string getAndroidImageUrl()
+ * @method $this withAndroidImageUrl($value)
  * @method string getAndroidNotificationVivoChannel()
  * @method $this withAndroidNotificationVivoChannel($value)
  * @method string getIOSNotificationCategory()
@@ -368,6 +385,8 @@ class MassPush extends Rpc
  * @method $this withStoreOffline($value)
  * @method string getSmsParams()
  * @method $this withSmsParams($value)
+ * @method string getAndroidInboxBody()
+ * @method $this withAndroidInboxBody($value)
  * @method string getJobKey()
  * @method $this withJobKey($value)
  * @method string getAndroidOpenUrl()
@@ -378,6 +397,7 @@ class MassPush extends Rpc
  * @method string getAndroidXiaomiBigPictureUrl()
  * @method $this withAndroidXiaomiBigPictureUrl($value)
  * @method string getIOSRemind()
+ * @method string getIOSNotificationThreadId()
  * @method string getAndroidMusic()
  * @method $this withAndroidMusic($value)
  * @method string getIOSNotificationCollapseId()
@@ -398,10 +418,14 @@ class MassPush extends Rpc
  * @method string getAndroidRenderStyle()
  * @method $this withAndroidRenderStyle($value)
  * @method string getIOSExtParameters()
+ * @method string getAndroidXiaomiImageUrl()
+ * @method $this withAndroidXiaomiImageUrl($value)
  * @method string getSmsTemplateName()
  * @method $this withSmsTemplateName($value)
  * @method string getAndroidPopupBody()
  * @method $this withAndroidPopupBody($value)
+ * @method string getAndroidBigPictureUrl()
+ * @method $this withAndroidBigPictureUrl($value)
  * @method string getIOSSilentNotification()
  * @method string getTarget()
  * @method $this withTarget($value)
@@ -516,6 +540,19 @@ class Push extends Rpc
     {
         $this->data['IOSRemind'] = $value;
         $this->options['query']['iOSRemind'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSNotificationThreadId($value)
+    {
+        $this->data['IOSNotificationThreadId'] = $value;
+        $this->options['query']['iOSNotificationThreadId'] = $value;
 
         return $this;
     }

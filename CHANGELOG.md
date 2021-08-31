@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1084 - 2021-8-31
+- Supported AndroidBigPictureUrl, AndroidInboxBody, AndroidImageUrl, AndroidOppoImageId, AndroidXiaomiImageUrl, iOSNotificationThreadId for Push and MassPush.
+
+
 ## 1.8.1083 - 2021-8-31
 - Release BeautifyBody.
 
