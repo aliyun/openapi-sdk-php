@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1082 - 2021-8-31
+- Generated 2017-08-01 for `Edas`.
+
+
 ## 1.8.1081 - 2021-8-27
 - ListAvailableEcsTypes set param ZoneId not required.
 - ListAvailableEcsTypes return ZoneIds.
