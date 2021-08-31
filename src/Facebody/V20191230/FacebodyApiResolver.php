@@ -298,6 +298,7 @@ class AddFaceImageTemplate extends Rpc
  * @method string getLengthenDegree()
  * @method string getMaleLiquifyDegree()
  * @method string getOriginalWidth()
+ * @method string getIsPregnant()
  * @method string getFaceList()
  * @method string getAgeRange()
  * @method string getCustom()
@@ -357,6 +358,19 @@ class BeautifyBody extends Rpc
     {
         $this->data['OriginalWidth'] = $value;
         $this->options['form_params']['OriginalWidth'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsPregnant($value)
+    {
+        $this->data['IsPregnant'] = $value;
+        $this->options['form_params']['IsPregnant'] = $value;
 
         return $this;
     }

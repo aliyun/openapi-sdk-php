@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1083 - 2021-8-31
+- Release BeautifyBody.
+
+
 ## 1.8.1082 - 2021-8-31
 - Generated 2017-08-01 for `Edas`.
 
