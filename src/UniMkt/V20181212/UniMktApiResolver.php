@@ -8,22 +8,28 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeMediaStatus changeMediaStatus(array $options = [])
  * @method ChangeSlotStatus changeSlotStatus(array $options = [])
  * @method ChangeTenantStatus changeTenantStatus(array $options = [])
+ * @method ChangeTenantUserStatus changeTenantUserStatus(array $options = [])
  * @method ChargeLaunch chargeLaunch(array $options = [])
  * @method CheckDevice checkDevice(array $options = [])
  * @method CheckReceivingDetail checkReceivingDetail(array $options = [])
  * @method CheckTenantBiz checkTenantBiz(array $options = [])
+ * @method CountUser countUser(array $options = [])
  * @method CreateCalculation createCalculation(array $options = [])
+ * @method CreateFlow createFlow(array $options = [])
  * @method CreateMedia createMedia(array $options = [])
  * @method CreateProxyBrandUser createProxyBrandUser(array $options = [])
  * @method CreateRule createRule(array $options = [])
  * @method CreateSlot createSlot(array $options = [])
  * @method CreatesSlotTemplate createsSlotTemplate(array $options = [])
  * @method CreateTenant createTenant(array $options = [])
+ * @method CreateTenantUser createTenantUser(array $options = [])
  * @method CreateUnionTask createUnionTask(array $options = [])
- * @method DeleteProxyBrandUser deleteProxyBrandUser(array $options = [])
+ * @method CreateUser createUser(array $options = [])
+ * @method DeleteRule deleteRule(array $options = [])
  * @method EndUnionTask endUnionTask(array $options = [])
  * @method GetUnionTaskStatus getUnionTaskStatus(array $options = [])
  * @method KeepAlive keepAlive(array $options = [])
+ * @method ListFlow listFlow(array $options = [])
  * @method ListMedia listMedia(array $options = [])
  * @method ListMediaName listMediaName(array $options = [])
  * @method ListRule listRule(array $options = [])
@@ -31,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSlot listSlot(array $options = [])
  * @method ListTenant listTenant(array $options = [])
  * @method ListTenantName listTenantName(array $options = [])
+ * @method ListUser listUser(array $options = [])
  * @method ModifyMedia modifyMedia(array $options = [])
  * @method ModifyRule modifyRule(array $options = [])
  * @method ModifySlot modifySlot(array $options = [])
@@ -43,8 +50,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryAppPromotion queryAppPromotion(array $options = [])
  * @method QueryAppTasks queryAppTasks(array $options = [])
  * @method QueryAvailableBalance queryAvailableBalance(array $options = [])
+ * @method QueryChannelHistoryData queryChannelHistoryData(array $options = [])
  * @method QueryContentInfo queryContentInfo(array $options = [])
  * @method QueryContentList queryContentList(array $options = [])
+ * @method QueryFlow queryFlow(array $options = [])
  * @method QueryIncomeData queryIncomeData(array $options = [])
  * @method QueryIncomeTrend queryIncomeTrend(array $options = [])
  * @method QueryIndustryLabelBag queryIndustryLabelBag(array $options = [])
@@ -59,17 +68,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryTenantBizConfig queryTenantBizConfig(array $options = [])
  * @method QueryTenantInfo queryTenantInfo(array $options = [])
  * @method QueryTenantUser queryTenantUser(array $options = [])
+ * @method QueryTenantUserByUserId queryTenantUserByUserId(array $options = [])
  * @method QueryUnionChannel queryUnionChannel(array $options = [])
  * @method QueryUnionContentInfo queryUnionContentInfo(array $options = [])
  * @method QueryUnionPromotion queryUnionPromotion(array $options = [])
+ * @method QueryUnionSumChannelData queryUnionSumChannelData(array $options = [])
  * @method QueryUnionTaskInfo queryUnionTaskInfo(array $options = [])
  * @method QueryUnionTaskList queryUnionTaskList(array $options = [])
+ * @method QueryUser queryUser(array $options = [])
  * @method ReduceAmount reduceAmount(array $options = [])
  * @method RegistDevice registDevice(array $options = [])
  * @method SaveCpmTrade saveCpmTrade(array $options = [])
  * @method ScanCodeNotification scanCodeNotification(array $options = [])
  * @method SendTaokeInfo sendTaokeInfo(array $options = [])
  * @method SyncUnionOrder syncUnionOrder(array $options = [])
+ * @method UpdateFlow updateFlow(array $options = [])
+ * @method UpdateUser updateUser(array $options = [])
  */
 class UniMktApiResolver extends ApiResolver
 {
@@ -85,9 +99,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'uniMkt';
 }
 
 /**
@@ -333,6 +344,68 @@ class ChangeTenantStatus extends Rpc
 }
 
 /**
+ * @method string getMessageKey()
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getMessage()
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ * @method string getStatus()
+ */
+class ChangeTenantUserStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMessageKey($value)
+    {
+        $this->data['MessageKey'] = $value;
+        $this->options['form_params']['MessageKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMessage($value)
+    {
+        $this->data['Message'] = $value;
+        $this->options['form_params']['Message'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getExtra()
  * @method $this withExtra($value)
  * @method string getAlipayOpenId()
@@ -459,6 +532,42 @@ class CheckTenantBiz extends Rpc
 }
 
 /**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getSspUser()
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ */
+class CountUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSspUser($value)
+    {
+        $this->data['SspUser'] = $value;
+        $this->options['form_params']['SspUser'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCloudCodeUserId()
  * @method $this withCloudCodeUserId($value)
  * @method string getClientToken()
@@ -468,6 +577,42 @@ class CheckTenantBiz extends Rpc
  */
 class CreateCalculation extends Rpc
 {
+}
+
+/**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ * @method string getFlow()
+ */
+class CreateFlow extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlow($value)
+    {
+        $this->data['Flow'] = $value;
+        $this->options['form_params']['Flow'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -673,8 +818,46 @@ class CreateTenant extends Rpc
 }
 
 /**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getTenantUser()
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ */
+class CreateTenantUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantUser($value)
+    {
+        $this->data['TenantUser'] = $value;
+        $this->options['form_params']['TenantUser'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTaskType()
  * @method $this withTaskType($value)
+ * @method string getCustomCreativeType()
+ * @method $this withCustomCreativeType($value)
  * @method string getTaskBizType()
  * @method $this withTaskBizType($value)
  * @method string getClientToken()
@@ -693,6 +876,8 @@ class CreateTenant extends Rpc
  * @method $this withStartTime($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
+ * @method string getContentUrl()
+ * @method $this withContentUrl($value)
  * @method string getTaskRuleType()
  * @method $this withTaskRuleType($value)
  * @method string getQuota()
@@ -711,15 +896,81 @@ class CreateUnionTask extends Rpc
 }
 
 /**
- * @method string getBrandUserNick()
- * @method $this withBrandUserNick($value)
- * @method string getProxyUserId()
- * @method $this withProxyUserId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getSspUser()
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
  */
-class DeleteProxyBrandUser extends Rpc
+class CreateUser extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSspUser($value)
+    {
+        $this->data['SspUser'] = $value;
+        $this->options['form_params']['SspUser'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMessageKey()
+ * @method $this withMessageKey($value)
+ * @method string getAdRule()
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DeleteRule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAdRule($value)
+    {
+        $this->data['AdRule'] = $value;
+        $this->options['form_params']['AdRule'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -830,14 +1081,70 @@ class KeepAlive extends Rpc
 }
 
 /**
- * @method string getEndCreateTime()
- * @method $this withEndCreateTime($value)
  * @method string getBusiness()
  * @method $this withBusiness($value)
- * @method string getOs()
- * @method $this withOs($value)
- * @method string getMediaStatus()
- * @method $this withMediaStatus($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getPageNumber()
+ * @method string getListFlow()
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getPageSize()
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ */
+class ListFlow extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withListFlow($value)
+    {
+        $this->data['ListFlow'] = $value;
+        $this->options['form_params']['ListFlow'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getOriginSiteUserId()
@@ -846,36 +1153,40 @@ class KeepAlive extends Rpc
  * @method $this withPageNumber($value)
  * @method string getMediaName()
  * @method $this withMediaName($value)
- * @method string getEnvironment()
- * @method $this withEnvironment($value)
  * @method string getAppName()
  * @method $this withAppName($value)
- * @method string getStartCreateTime()
- * @method $this withStartCreateTime($value)
  * @method string getTenantId()
  * @method $this withTenantId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getUserSite()
- * @method $this withUserSite($value)
- * @method string getMediaType()
- * @method $this withMediaType($value)
  * @method string getAccessStatus()
  * @method $this withAccessStatus($value)
+ * @method string getFirstScene()
+ * @method $this withFirstScene($value)
+ * @method string getEndCreateTime()
+ * @method $this withEndCreateTime($value)
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getOs()
+ * @method $this withOs($value)
+ * @method string getMediaStatus()
+ * @method $this withMediaStatus($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getStartCreateTime()
+ * @method $this withStartCreateTime($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ * @method string getSecondScene()
+ * @method $this withSecondScene($value)
+ * @method string getMediaType()
+ * @method $this withMediaType($value)
  */
 class ListMedia extends Rpc
 {
 }
 
 /**
- * @method string getEndCreateTime()
- * @method $this withEndCreateTime($value)
- * @method string getBusiness()
- * @method $this withBusiness($value)
- * @method string getOs()
- * @method $this withOs($value)
- * @method string getMediaStatus()
- * @method $this withMediaStatus($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getOriginSiteUserId()
@@ -884,22 +1195,34 @@ class ListMedia extends Rpc
  * @method $this withPageNumber($value)
  * @method string getMediaName()
  * @method $this withMediaName($value)
- * @method string getEnvironment()
- * @method $this withEnvironment($value)
  * @method string getAppName()
  * @method $this withAppName($value)
- * @method string getStartCreateTime()
- * @method $this withStartCreateTime($value)
  * @method string getTenantId()
  * @method $this withTenantId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getUserSite()
- * @method $this withUserSite($value)
- * @method string getMediaType()
- * @method $this withMediaType($value)
  * @method string getAccessStatus()
  * @method $this withAccessStatus($value)
+ * @method string getFirstScene()
+ * @method $this withFirstScene($value)
+ * @method string getEndCreateTime()
+ * @method $this withEndCreateTime($value)
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getOs()
+ * @method $this withOs($value)
+ * @method string getMediaStatus()
+ * @method $this withMediaStatus($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getStartCreateTime()
+ * @method $this withStartCreateTime($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ * @method string getSecondScene()
+ * @method $this withSecondScene($value)
+ * @method string getMediaType()
+ * @method $this withMediaType($value)
  */
 class ListMediaName extends Rpc
 {
@@ -916,6 +1239,8 @@ class ListMediaName extends Rpc
  * @method $this withOriginSiteUserId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getMediaName()
+ * @method $this withMediaName($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getTenantId()
@@ -940,6 +1265,8 @@ class ListMediaName extends Rpc
  * @method $this withStartCreateTime($value)
  * @method string getUserSite()
  * @method $this withUserSite($value)
+ * @method string getAdSlotName()
+ * @method $this withAdSlotName($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
@@ -1093,6 +1420,70 @@ class ListTenant extends Rpc
  */
 class ListTenantName extends Rpc
 {
+}
+
+/**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getPageNumber()
+ * @method string getSspUser()
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getPageSize()
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ */
+class ListUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSspUser($value)
+    {
+        $this->data['SspUser'] = $value;
+        $this->options['form_params']['SspUser'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1790,6 +2181,24 @@ class QueryAvailableBalance extends Rpc
 }
 
 /**
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class QueryChannelHistoryData extends Rpc
+{
+}
+
+/**
  * @method string getContentId()
  * @method $this withContentId($value)
  */
@@ -1811,6 +2220,42 @@ class QueryContentInfo extends Rpc
  */
 class QueryContentList extends Rpc
 {
+}
+
+/**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ * @method string getFlowId()
+ */
+class QueryFlow extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlowId($value)
+    {
+        $this->data['FlowId'] = $value;
+        $this->options['form_params']['FlowId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2147,6 +2592,26 @@ class QueryTenantUser extends Rpc
 }
 
 /**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ */
+class QueryTenantUserByUserId extends Rpc
+{
+}
+
+/**
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
@@ -2169,6 +2634,8 @@ class QueryUnionContentInfo extends Rpc
 /**
  * @method string getUnionBizType()
  * @method $this withUnionBizType($value)
+ * @method string getProxyChannelId()
+ * @method $this withProxyChannelId($value)
  * @method string getUserNick()
  * @method $this withUserNick($value)
  * @method string getSign()
@@ -2181,6 +2648,16 @@ class QueryUnionContentInfo extends Rpc
  * @method $this withChannelId($value)
  */
 class QueryUnionPromotion extends Rpc
+{
+}
+
+/**
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class QueryUnionSumChannelData extends Rpc
 {
 }
 
@@ -2210,6 +2687,42 @@ class QueryUnionTaskInfo extends Rpc
  */
 class QueryUnionTaskList extends Rpc
 {
+}
+
+/**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getSspUser()
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ */
+class QueryUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSspUser($value)
+    {
+        $this->data['SspUser'] = $value;
+        $this->options['form_params']['SspUser'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2850,6 +3363,8 @@ class SendTaokeInfo extends Rpc
 }
 
 /**
+ * @method string getProxyChannelId()
+ * @method $this withProxyChannelId($value)
  * @method string getTaskType()
  * @method $this withTaskType($value)
  * @method string getRealCostAmount()
@@ -2872,6 +3387,8 @@ class SendTaokeInfo extends Rpc
  * @method $this withBizSerialNumber($value)
  * @method string getTaskRuleType()
  * @method $this withTaskRuleType($value)
+ * @method string getV()
+ * @method $this withV($value)
  * @method string getIndustryLabelBagId()
  * @method $this withIndustryLabelBagId($value)
  * @method string getApplyPrice()
@@ -2889,4 +3406,76 @@ class SendTaokeInfo extends Rpc
  */
 class SyncUnionOrder extends Rpc
 {
+}
+
+/**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ * @method string getFlow()
+ */
+class UpdateFlow extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlow($value)
+    {
+        $this->data['Flow'] = $value;
+        $this->options['form_params']['Flow'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getOriginSiteUserId()
+ * @method $this withOriginSiteUserId($value)
+ * @method string getSspUser()
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getUserSite()
+ * @method $this withUserSite($value)
+ */
+class UpdateUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSspUser($value)
+    {
+        $this->data['SspUser'] = $value;
+        $this->options['form_params']['SspUser'] = $value;
+
+        return $this;
+    }
 }

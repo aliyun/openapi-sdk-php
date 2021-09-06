@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1087 - 2021-9-6
+- Supported for custom creative union task.
+
+
 ## 1.8.1086 - 2021-9-1
 - SDK updated.
 
