@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1088 - 2021-9-9
+- Public version.
+
+
 ## 1.8.1087 - 2021-9-6
 - Supported for custom creative union task.
 
