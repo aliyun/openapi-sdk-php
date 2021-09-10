@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1089 - 2021-9-10
+- Support crop face image.
+
+
 ## 1.8.1088 - 2021-9-9
 - Public version.
 

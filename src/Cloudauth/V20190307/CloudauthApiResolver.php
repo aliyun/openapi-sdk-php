@@ -14,7 +14,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateVerifySDK createVerifySDK(array $options = [])
  * @method CreateVerifySetting createVerifySetting(array $options = [])
  * @method CreateWhitelist createWhitelist(array $options = [])
+ * @method CreateWhitelistSetting createWhitelistSetting(array $options = [])
  * @method DeleteWhitelist deleteWhitelist(array $options = [])
+ * @method DeleteWhitelistSetting deleteWhitelistSetting(array $options = [])
  * @method DescribeAppInfo describeAppInfo(array $options = [])
  * @method DescribeDeviceInfo describeDeviceInfo(array $options = [])
  * @method DescribeFaceConfig describeFaceConfig(array $options = [])
@@ -33,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVerifyToken describeVerifyToken(array $options = [])
  * @method DescribeVerifyUsage describeVerifyUsage(array $options = [])
  * @method DescribeWhitelist describeWhitelist(array $options = [])
+ * @method DescribeWhitelistSetting describeWhitelistSetting(array $options = [])
  * @method DetectFaceAttributes detectFaceAttributes(array $options = [])
  * @method InitDevice initDevice(array $options = [])
  * @method InitFaceVerify initFaceVerify(array $options = [])
@@ -58,9 +61,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'cloudauth';
 }
 
 /**
@@ -156,6 +156,7 @@ class CompareFaces extends Rpc
  * @method string getSceneId()
  * @method string getSourceFaceContrastPictureUrl()
  * @method string getSourceCertifyId()
+ * @method string getCrop()
  */
 class CompareFaceVerify extends Rpc
 {
@@ -328,6 +329,19 @@ class CompareFaceVerify extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCrop($value)
+    {
+        $this->data['Crop'] = $value;
+        $this->options['form_params']['Crop'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -349,6 +363,7 @@ class CompareFaceVerify extends Rpc
  * @method string getFaceContrastFile()
  * @method string getSceneId()
  * @method string getOssBucketName()
+ * @method string getCrop()
  */
 class ContrastFaceVerify extends Rpc
 {
@@ -560,6 +575,19 @@ class ContrastFaceVerify extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCrop($value)
+    {
+        $this->data['Crop'] = $value;
+        $this->options['form_params']['Crop'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -661,6 +689,26 @@ class CreateWhitelist extends Rpc
 }
 
 /**
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
+ * @method string getCertNo()
+ * @method $this withCertNo($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getValidDay()
+ * @method $this withValidDay($value)
+ * @method string getServiceCode()
+ * @method $this withServiceCode($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ */
+class CreateWhitelistSetting extends Rpc
+{
+}
+
+/**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getIds()
@@ -669,6 +717,20 @@ class CreateWhitelist extends Rpc
  * @method $this withLang($value)
  */
 class DeleteWhitelist extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getServiceCode()
+ * @method $this withServiceCode($value)
+ * @method string getIds()
+ * @method $this withIds($value)
+ */
+class DeleteWhitelistSetting extends Rpc
 {
 }
 
@@ -941,6 +1003,34 @@ class DescribeWhitelist extends Rpc
 }
 
 /**
+ * @method string getValidEndDate()
+ * @method $this withValidEndDate($value)
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
+ * @method string getCertNo()
+ * @method $this withCertNo($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getServiceCode()
+ * @method $this withServiceCode($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getValidStartDate()
+ * @method $this withValidStartDate($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeWhitelistSetting extends Rpc
+{
+}
+
+/**
  * @method string getBizType()
  * @method string getMaterialValue()
  */
@@ -1067,6 +1157,7 @@ class InitDevice extends Rpc
  * @method $this withReturnUrl($value)
  * @method string getCallbackUrl()
  * @method $this withCallbackUrl($value)
+ * @method string getCrop()
  */
 class InitFaceVerify extends Rpc
 {
@@ -1096,6 +1187,19 @@ class InitFaceVerify extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCrop($value)
+    {
+        $this->data['Crop'] = $value;
+        $this->options['form_params']['Crop'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1113,6 +1217,7 @@ class InitFaceVerify extends Rpc
  * @method string getOssBucketName()
  * @method string getModel()
  * @method $this withModel($value)
+ * @method string getCrop()
  */
 class LivenessFaceVerify extends Rpc
 {
@@ -1269,6 +1374,19 @@ class LivenessFaceVerify extends Rpc
     {
         $this->data['OssBucketName'] = $value;
         $this->options['form_params']['OssBucketName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCrop($value)
+    {
+        $this->data['Crop'] = $value;
+        $this->options['form_params']['Crop'] = $value;
 
         return $this;
     }
