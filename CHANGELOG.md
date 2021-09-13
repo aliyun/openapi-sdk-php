@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1090 - 2021-9-13
+- Generated 2019-03-01 for `LinkWAN`.
+
+
 ## 1.8.1089 - 2021-9-10
 - Support crop face image.
 
