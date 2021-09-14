@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1091 - 2021-9-14
+- Add DiskIds for CreateSnapshotGroup.
+
+
 ## 1.8.1090 - 2021-9-13
 - Generated 2019-03-01 for `LinkWAN`.
 
