@@ -151,7 +151,10 @@ class AddBodyTrace extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getQualityScoreThreshold()
+ * @method string getSimilarityScoreThresholdBetweenEntity()
  * @method string getExtraData()
+ * @method string getSimilarityScoreThresholdInEntity()
  * @method string getDbName()
  * @method string getImageUrl()
  */
@@ -176,10 +179,49 @@ class AddFace extends Rpc
      *
      * @return $this
      */
+    public function withQualityScoreThreshold($value)
+    {
+        $this->data['QualityScoreThreshold'] = $value;
+        $this->options['form_params']['QualityScoreThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSimilarityScoreThresholdBetweenEntity($value)
+    {
+        $this->data['SimilarityScoreThresholdBetweenEntity'] = $value;
+        $this->options['form_params']['SimilarityScoreThresholdBetweenEntity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withExtraData($value)
     {
         $this->data['ExtraData'] = $value;
         $this->options['form_params']['ExtraData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSimilarityScoreThresholdInEntity($value)
+    {
+        $this->data['SimilarityScoreThresholdInEntity'] = $value;
+        $this->options['form_params']['SimilarityScoreThresholdInEntity'] = $value;
 
         return $this;
     }
@@ -2327,9 +2369,9 @@ class SearchBodyTrace extends Rpc
 }
 
 /**
+ * @method string getQualityScoreThreshold()
  * @method string getLimit()
  * @method string getDbNames()
- * @method $this withDbNames($value)
  * @method string getDbName()
  * @method string getImageUrl()
  */
@@ -2341,10 +2383,36 @@ class SearchFace extends Rpc
      *
      * @return $this
      */
+    public function withQualityScoreThreshold($value)
+    {
+        $this->data['QualityScoreThreshold'] = $value;
+        $this->options['form_params']['QualityScoreThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withLimit($value)
     {
         $this->data['Limit'] = $value;
         $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbNames($value)
+    {
+        $this->data['DbNames'] = $value;
+        $this->options['form_params']['DbNames'] = $value;
 
         return $this;
     }

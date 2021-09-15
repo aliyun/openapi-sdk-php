@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1092 - 2021-9-15
+- Update AddFace SearchFace.
+
+
 ## 1.8.1091 - 2021-9-14
 - Add DiskIds for CreateSnapshotGroup.
 
