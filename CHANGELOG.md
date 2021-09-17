@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1093 - 2021-9-17
+- Fixed bug for GetSecretAsrDetail.
+
+
 ## 1.8.1092 - 2021-9-15
 - Update AddFace SearchFace.
 
