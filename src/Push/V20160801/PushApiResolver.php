@@ -213,6 +213,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidPopupTitle'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidPopupTitle'] = $depth1Value['AndroidPopupTitle'];
 			}
+			if(isset($depth1Value['AndroidMessageHuaweiCategory'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidMessageHuaweiCategory'] = $depth1Value['AndroidMessageHuaweiCategory'];
+			}
 			if(isset($depth1Value['IOSMusic'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSMusic'] = $depth1Value['IOSMusic'];
 			}
@@ -273,6 +276,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSNotificationCollapseId'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCollapseId'] = $depth1Value['IOSNotificationCollapseId'];
 			}
+			if(isset($depth1Value['AndroidMessageHuaweiUrgency'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidMessageHuaweiUrgency'] = $depth1Value['AndroidMessageHuaweiUrgency'];
+			}
 			if(isset($depth1Value['PushType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.PushType'] = $depth1Value['PushType'];
 			}
@@ -311,6 +317,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['IOSSilentNotification'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSSilentNotification'] = $depth1Value['IOSSilentNotification'];
+			}
+			if(isset($depth1Value['SendChannels'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.SendChannels'] = $depth1Value['SendChannels'];
 			}
 			if(isset($depth1Value['Target'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Target'] = $depth1Value['Target'];
@@ -367,6 +376,8 @@ class MassPush extends Rpc
  * @method $this withAndroidNotifyType($value)
  * @method string getAndroidPopupTitle()
  * @method $this withAndroidPopupTitle($value)
+ * @method string getAndroidMessageHuaweiCategory()
+ * @method $this withAndroidMessageHuaweiCategory($value)
  * @method string getIOSMusic()
  * @method string getIOSApnsEnv()
  * @method string getIOSMutableContent()
@@ -401,6 +412,8 @@ class MassPush extends Rpc
  * @method string getAndroidMusic()
  * @method $this withAndroidMusic($value)
  * @method string getIOSNotificationCollapseId()
+ * @method string getAndroidMessageHuaweiUrgency()
+ * @method $this withAndroidMessageHuaweiUrgency($value)
  * @method string getPushType()
  * @method $this withPushType($value)
  * @method string getAndroidExtParameters()
@@ -427,6 +440,8 @@ class MassPush extends Rpc
  * @method string getAndroidBigPictureUrl()
  * @method $this withAndroidBigPictureUrl($value)
  * @method string getIOSSilentNotification()
+ * @method string getSendChannels()
+ * @method $this withSendChannels($value)
  * @method string getTarget()
  * @method $this withTarget($value)
  * @method string getAndroidBigTitle()

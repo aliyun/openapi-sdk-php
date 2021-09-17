@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1094 - 2021-9-17
+- Supported SendChannels, AndroidMessageHuaweiUrgency, AndroidMessageHuaweiCategory for Push and MassPush.
+
+
 ## 1.8.1093 - 2021-9-17
 - Fixed bug for GetSecretAsrDetail.
 
