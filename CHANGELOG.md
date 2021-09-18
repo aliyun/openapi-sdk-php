@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1095 - 2021-9-18
+- Add copyright invasion detection APIs.
+
+
 ## 1.8.1094 - 2021-9-17
 - Supported SendChannels, AndroidMessageHuaweiUrgency, AndroidMessageHuaweiCategory for Push and MassPush.
 
