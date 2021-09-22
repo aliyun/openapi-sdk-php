@@ -5,7 +5,6 @@ namespace AlibabaCloud\Dypnsapi\V20170525;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
  * @method CreateVerifyScheme createVerifyScheme(array $options = [])
  * @method DeleteVerifyScheme deleteVerifyScheme(array $options = [])
  * @method DescribeVerifyScheme describeVerifyScheme(array $options = [])
@@ -14,7 +13,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetCertifyResult getCertifyResult(array $options = [])
  * @method GetMobile getMobile(array $options = [])
  * @method GetSmsAuthTokens getSmsAuthTokens(array $options = [])
- * @method GetSmsCode getSmsCode(array $options = [])
  * @method TwiceTelVerify twiceTelVerify(array $options = [])
  * @method VerifyMobile verifyMobile(array $options = [])
  * @method VerifyPhoneWithToken verifyPhoneWithToken(array $options = [])
@@ -34,28 +32,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDeletionTaskId()
- * @method $this withDeletionTaskId($value)
- * @method string getAccountId()
- * @method $this withAccountId($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSPIRegionId()
- * @method $this withSPIRegionId($value)
- * @method string getRoleArn()
- * @method $this withRoleArn($value)
- */
-class CheckServiceLinkedRoleForDeleting extends Rpc
-{
 }
 
 /**
@@ -210,28 +186,6 @@ class GetMobile extends Rpc
  * @method $this withExpire($value)
  */
 class GetSmsAuthTokens extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getProductCode()
- * @method $this withProductCode($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getBizToken()
- * @method $this withBizToken($value)
- * @method string getSceneCode()
- * @method $this withSceneCode($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOsType()
- * @method $this withOsType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetSmsCode extends Rpc
 {
 }
 

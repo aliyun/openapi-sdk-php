@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1098 - 2021-9-22
+- Support Sms Verification for Dypnsapi.
+
+
 ## 1.8.1097 - 2021-9-22
 - Support Sms Verification for Dypnsapi.
 
