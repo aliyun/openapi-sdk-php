@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1096 - 2021-9-22
+- Modify CreateK8sSecret.
+
+
 ## 1.8.1095 - 2021-9-18
 - Add copyright invasion detection APIs.
 

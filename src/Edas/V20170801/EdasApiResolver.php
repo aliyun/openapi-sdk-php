@@ -20,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ContinuePipeline continuePipeline(array $options = [])
  * @method ConvertK8sResource convertK8sResource(array $options = [])
  * @method CreateApplicationScalingRule createApplicationScalingRule(array $options = [])
+ * @method CreateApplicationTemplate createApplicationTemplate(array $options = [])
  * @method CreateEnvAppGroup createEnvAppGroup(array $options = [])
  * @method CreateEnvHsfTrafficControl createEnvHsfTrafficControl(array $options = [])
  * @method CreateEnvHttpTrafficControl createEnvHttpTrafficControl(array $options = [])
@@ -1421,6 +1422,504 @@ class CreateApplicationScalingRule extends Roa
 }
 
 /**
+ * @method string getNasId()
+ * @method string getEnableAhas()
+ * @method string getSlsConfigs()
+ * @method string getCommandArgs()
+ * @method string getReadiness()
+ * @method string getLiveness()
+ * @method string getDescription()
+ * @method string getEnvs()
+ * @method string getEnvFroms()
+ * @method string getRequestCpu()
+ * @method string getRequestMem()
+ * @method string getShowName()
+ * @method string getLimitMem()
+ * @method string getConfigMountDescs()
+ * @method string getDeployAcrossZones()
+ * @method string getDeployAcrossNodes()
+ * @method string getPreStop()
+ * @method string getReplicas()
+ * @method string getLimitCpu()
+ * @method string getWebContainerConfig()
+ * @method string getPackageConfig()
+ * @method string getIsMultilingualApp()
+ * @method string getNasMountDescs()
+ * @method string getLocalVolumes()
+ * @method string getCommand()
+ * @method string getNasStorageType()
+ * @method string getImageConfig()
+ * @method string getSourceConfig()
+ * @method string getEmptyDirs()
+ * @method string getPvcMountDescs()
+ * @method string getName()
+ * @method string getAttributes()
+ * @method string getRuntimeClassName()
+ * @method string getJavaStartUpConfig()
+ * @method string getPostStart()
+ */
+class CreateApplicationTemplate extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v5/cnedas/app_template';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNasId($value)
+    {
+        $this->data['NasId'] = $value;
+        $this->options['form_params']['NasId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableAhas($value)
+    {
+        $this->data['EnableAhas'] = $value;
+        $this->options['form_params']['EnableAhas'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSlsConfigs($value)
+    {
+        $this->data['SlsConfigs'] = $value;
+        $this->options['form_params']['SlsConfigs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommandArgs($value)
+    {
+        $this->data['CommandArgs'] = $value;
+        $this->options['form_params']['CommandArgs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReadiness($value)
+    {
+        $this->data['Readiness'] = $value;
+        $this->options['form_params']['Readiness'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLiveness($value)
+    {
+        $this->data['Liveness'] = $value;
+        $this->options['form_params']['Liveness'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnvs($value)
+    {
+        $this->data['Envs'] = $value;
+        $this->options['form_params']['Envs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnvFroms($value)
+    {
+        $this->data['EnvFroms'] = $value;
+        $this->options['form_params']['EnvFroms'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestCpu($value)
+    {
+        $this->data['RequestCpu'] = $value;
+        $this->options['form_params']['RequestCpu'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestMem($value)
+    {
+        $this->data['RequestMem'] = $value;
+        $this->options['form_params']['RequestMem'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShowName($value)
+    {
+        $this->data['ShowName'] = $value;
+        $this->options['form_params']['ShowName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimitMem($value)
+    {
+        $this->data['LimitMem'] = $value;
+        $this->options['form_params']['LimitMem'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigMountDescs($value)
+    {
+        $this->data['ConfigMountDescs'] = $value;
+        $this->options['form_params']['ConfigMountDescs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeployAcrossZones($value)
+    {
+        $this->data['DeployAcrossZones'] = $value;
+        $this->options['form_params']['DeployAcrossZones'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeployAcrossNodes($value)
+    {
+        $this->data['DeployAcrossNodes'] = $value;
+        $this->options['form_params']['DeployAcrossNodes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPreStop($value)
+    {
+        $this->data['PreStop'] = $value;
+        $this->options['form_params']['PreStop'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReplicas($value)
+    {
+        $this->data['Replicas'] = $value;
+        $this->options['form_params']['Replicas'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimitCpu($value)
+    {
+        $this->data['LimitCpu'] = $value;
+        $this->options['form_params']['LimitCpu'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWebContainerConfig($value)
+    {
+        $this->data['WebContainerConfig'] = $value;
+        $this->options['form_params']['WebContainerConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPackageConfig($value)
+    {
+        $this->data['PackageConfig'] = $value;
+        $this->options['form_params']['PackageConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsMultilingualApp($value)
+    {
+        $this->data['IsMultilingualApp'] = $value;
+        $this->options['form_params']['IsMultilingualApp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNasMountDescs($value)
+    {
+        $this->data['NasMountDescs'] = $value;
+        $this->options['form_params']['NasMountDescs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLocalVolumes($value)
+    {
+        $this->data['LocalVolumes'] = $value;
+        $this->options['form_params']['LocalVolumes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommand($value)
+    {
+        $this->data['Command'] = $value;
+        $this->options['form_params']['Command'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNasStorageType($value)
+    {
+        $this->data['NasStorageType'] = $value;
+        $this->options['form_params']['NasStorageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageConfig($value)
+    {
+        $this->data['ImageConfig'] = $value;
+        $this->options['form_params']['ImageConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceConfig($value)
+    {
+        $this->data['SourceConfig'] = $value;
+        $this->options['form_params']['SourceConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEmptyDirs($value)
+    {
+        $this->data['EmptyDirs'] = $value;
+        $this->options['form_params']['EmptyDirs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPvcMountDescs($value)
+    {
+        $this->data['PvcMountDescs'] = $value;
+        $this->options['form_params']['PvcMountDescs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAttributes($value)
+    {
+        $this->data['Attributes'] = $value;
+        $this->options['form_params']['Attributes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuntimeClassName($value)
+    {
+        $this->data['RuntimeClassName'] = $value;
+        $this->options['form_params']['RuntimeClassName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJavaStartUpConfig($value)
+    {
+        $this->data['JavaStartUpConfig'] = $value;
+        $this->options['form_params']['JavaStartUpConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPostStart($value)
+    {
+        $this->data['PostStart'] = $value;
+        $this->options['form_params']['PostStart'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPointcutName()
  * @method string getScopes()
  */
@@ -1897,6 +2396,7 @@ class CreateK8sIngressRule extends Roa
 }
 
 /**
+ * @method string getBase64Encoded()
  * @method string getData()
  * @method string getName()
  * @method string getNamespace()
@@ -1909,6 +2409,19 @@ class CreateK8sSecret extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v5/k8s/acs/k8s_secret';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBase64Encoded($value)
+    {
+        $this->data['Base64Encoded'] = $value;
+        $this->options['form_params']['Base64Encoded'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -13555,6 +14068,7 @@ class UpdateK8sResource extends Roa
 }
 
 /**
+ * @method string getBase64Encoded()
  * @method string getData()
  * @method string getName()
  * @method string getNamespace()
@@ -13570,6 +14084,19 @@ class UpdateK8sSecret extends Roa
 
     /** @var string */
     public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBase64Encoded($value)
+    {
+        $this->data['Base64Encoded'] = $value;
+        $this->options['form_params']['Base64Encoded'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
