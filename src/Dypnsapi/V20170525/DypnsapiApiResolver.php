@@ -5,14 +5,20 @@ namespace AlibabaCloud\Dypnsapi\V20170525;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
  * @method CreateVerifyScheme createVerifyScheme(array $options = [])
  * @method DeleteVerifyScheme deleteVerifyScheme(array $options = [])
  * @method DescribeVerifyScheme describeVerifyScheme(array $options = [])
+ * @method GetAuthorizationUrl getAuthorizationUrl(array $options = [])
  * @method GetAuthToken getAuthToken(array $options = [])
+ * @method GetCertifyResult getCertifyResult(array $options = [])
  * @method GetMobile getMobile(array $options = [])
+ * @method GetSmsAuthTokens getSmsAuthTokens(array $options = [])
+ * @method GetSmsCode getSmsCode(array $options = [])
  * @method TwiceTelVerify twiceTelVerify(array $options = [])
  * @method VerifyMobile verifyMobile(array $options = [])
  * @method VerifyPhoneWithToken verifyPhoneWithToken(array $options = [])
+ * @method VerifySmsCode verifySmsCode(array $options = [])
  */
 class DypnsapiApiResolver extends ApiResolver
 {
@@ -28,9 +34,28 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
 
-    /** @var string */
-    public $serviceCode = 'dypns';
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDeletionTaskId()
+ * @method $this withDeletionTaskId($value)
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSPIRegionId()
+ * @method $this withSPIRegionId($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
+ */
+class CheckServiceLinkedRoleForDeleting extends Rpc
+{
 }
 
 /**
@@ -94,6 +119,24 @@ class DescribeVerifyScheme extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getSchemeId()
+ * @method $this withSchemeId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPhoneNo()
+ * @method $this withPhoneNo($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ */
+class GetAuthorizationUrl extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOrigin()
  * @method $this withOrigin($value)
  * @method string getOwnerId()
@@ -102,6 +145,22 @@ class DescribeVerifyScheme extends Rpc
  * @method $this withUrl($value)
  */
 class GetAuthToken extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getToken()
+ * @method $this withToken($value)
+ */
+class GetCertifyResult extends Rpc
 {
 }
 
@@ -122,6 +181,58 @@ class GetMobile extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getBundleId()
+ * @method $this withBundleId($value)
+ * @method string getSignName()
+ * @method $this withSignName($value)
+ * @method string getSceneCode()
+ * @method $this withSceneCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getSmsCodeExpire()
+ * @method $this withSmsCodeExpire($value)
+ * @method string getPackageName()
+ * @method $this withPackageName($value)
+ * @method string getOsType()
+ * @method $this withOsType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmsTemplateCode()
+ * @method $this withSmsTemplateCode($value)
+ * @method string getExpire()
+ * @method $this withExpire($value)
+ */
+class GetSmsAuthTokens extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getBizToken()
+ * @method $this withBizToken($value)
+ * @method string getSceneCode()
+ * @method $this withSceneCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOsType()
+ * @method $this withOsType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetSmsCode extends Rpc
+{
 }
 
 /**
@@ -174,5 +285,25 @@ class VerifyMobile extends Rpc
  * @method $this withSpToken($value)
  */
 class VerifyPhoneWithToken extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getSmsToken()
+ * @method $this withSmsToken($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSmsCode()
+ * @method $this withSmsCode($value)
+ */
+class VerifySmsCode extends Rpc
 {
 }
