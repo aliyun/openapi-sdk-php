@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateBackup createBackup(array $options = [])
  * @method CreateDBInstance createDBInstance(array $options = [])
  * @method CreateNode createNode(array $options = [])
+ * @method CreateNodeBatch createNodeBatch(array $options = [])
  * @method CreateRecommendationTask createRecommendationTask(array $options = [])
  * @method CreateServerlessDBInstance createServerlessDBInstance(array $options = [])
  * @method CreateShardingDBInstance createShardingDBInstance(array $options = [])
@@ -112,7 +113,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'Dds';
+    public $serviceCode = 'dds';
 }
 
 /**
@@ -328,6 +329,36 @@ class CreateDBInstance extends Rpc
  * @method $this withOwnerId($value)
  */
 class CreateNode extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getNodesInfo()
+ * @method $this withNodesInfo($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getFromApp()
+ * @method $this withFromApp($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateNodeBatch extends Rpc
 {
 }
 
@@ -739,16 +770,22 @@ class DescribeAvailableEngineVersion extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getDbType()
+ * @method $this withDbType($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
@@ -1753,6 +1790,8 @@ class ModifyAuditPolicy extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getEnableBackupLog()
+ * @method $this withEnableBackupLog($value)
  * @method string getPreferredBackupPeriod()
  * @method $this withPreferredBackupPeriod($value)
  * @method string getResourceOwnerAccount()
@@ -1763,6 +1802,10 @@ class ModifyAuditPolicy extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPreferredBackupTime()
  * @method $this withPreferredBackupTime($value)
+ * @method string getBackupRetentionPeriod()
+ * @method $this withBackupRetentionPeriod($value)
+ * @method string getLogBackupRetentionPeriod()
+ * @method $this withLogBackupRetentionPeriod($value)
  */
 class ModifyBackupPolicy extends Rpc
 {
@@ -2041,6 +2084,8 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withClientToken($value)
  * @method string getReadonlyReplicas()
  * @method $this withReadonlyReplicas($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
  * @method string getNodeClass()
  * @method $this withNodeClass($value)
  * @method string getSecurityToken()
@@ -2049,8 +2094,12 @@ class ModifyInstanceVpcAuthMode extends Rpc
  * @method $this withEffectiveTime($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getSwitchTime()
+ * @method $this withSwitchTime($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
+ * @method string getBusinessInfo()
+ * @method $this withBusinessInfo($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getFromApp()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1099 - 2021-9-23
+- Update by sdk platform.
+
+
 ## 1.8.1098 - 2021-9-22
 - Support Sms Verification for Dypnsapi.
 
