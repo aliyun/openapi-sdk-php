@@ -48,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetFaceEntity getFaceEntity(array $options = [])
  * @method GetRealPersonVerificationResult getRealPersonVerificationResult(array $options = [])
  * @method HandPosture handPosture(array $options = [])
+ * @method LiquifyFace liquifyFace(array $options = [])
  * @method ListBodyDbs listBodyDbs(array $options = [])
  * @method ListBodyPerson listBodyPerson(array $options = [])
  * @method ListFaceDbs listFaceDbs(array $options = [])
@@ -62,6 +63,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeHandGesture recognizeHandGesture(array $options = [])
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
  * @method RetouchBody retouchBody(array $options = [])
+ * @method RetouchSkin retouchSkin(array $options = [])
  * @method SearchBodyTrace searchBodyTrace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
  * @method SwapFacialFeatures swapFacialFeatures(array $options = [])
@@ -1810,6 +1812,40 @@ class HandPosture extends Rpc
 }
 
 /**
+ * @method string getSlimDegree()
+ * @method string getImageURL()
+ */
+class LiquifyFace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSlimDegree($value)
+    {
+        $this->data['SlimDegree'] = $value;
+        $this->options['form_params']['SlimDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getLimit()
  * @method $this withLimit($value)
  * @method string getOffset()
@@ -2288,6 +2324,54 @@ class RetouchBody extends Rpc
     {
         $this->data['SlimDegree'] = $value;
         $this->options['form_params']['SlimDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRetouchDegree()
+ * @method string getWhiteningDegree()
+ * @method string getImageURL()
+ */
+class RetouchSkin extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRetouchDegree($value)
+    {
+        $this->data['RetouchDegree'] = $value;
+        $this->options['form_params']['RetouchDegree'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWhiteningDegree($value)
+    {
+        $this->data['WhiteningDegree'] = $value;
+        $this->options['form_params']['WhiteningDegree'] = $value;
 
         return $this;
     }

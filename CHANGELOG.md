@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1100 - 2021-9-24
+- Release RetouchSkin LiquifyFace.
+
+
 ## 1.8.1099 - 2021-9-23
 - Update by sdk platform.
 
