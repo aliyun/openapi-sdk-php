@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1101 - 2021-9-24
+- Fixed SDK update delay.
+
+
 ## 1.8.1100 - 2021-9-24
 - Release RetouchSkin LiquifyFace.
 
