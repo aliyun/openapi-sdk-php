@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1104 - 2021-9-26
+- Support odcap device.
+
+
 ## 1.8.1103 - 2021-9-26
 - Update imageenhan.
 

@@ -5,6 +5,8 @@ namespace AlibabaCloud\Vs\V20181212;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddDevice addDevice(array $options = [])
+ * @method AddRenderingDeviceInternetPorts addRenderingDeviceInternetPorts(array $options = [])
  * @method AddVsPullStreamInfoConfig addVsPullStreamInfoConfig(array $options = [])
  * @method BatchBindDirectories batchBindDirectories(array $options = [])
  * @method BatchBindParentPlatformDevices batchBindParentPlatformDevices(array $options = [])
@@ -31,22 +33,32 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BindTemplate bindTemplate(array $options = [])
  * @method ContinuousAdjust continuousAdjust(array $options = [])
  * @method ContinuousMove continuousMove(array $options = [])
+ * @method CreateCluster createCluster(array $options = [])
  * @method CreateDevice createDevice(array $options = [])
  * @method CreateDeviceAlarm createDeviceAlarm(array $options = [])
+ * @method CreateDeviceSnapshot createDeviceSnapshot(array $options = [])
  * @method CreateDirectory createDirectory(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
  * @method CreateParentPlatform createParentPlatform(array $options = [])
+ * @method CreateRenderingDevice createRenderingDevice(array $options = [])
  * @method CreateStreamSnapshot createStreamSnapshot(array $options = [])
  * @method CreateTemplate createTemplate(array $options = [])
+ * @method DeleteBucket deleteBucket(array $options = [])
+ * @method DeleteCluster deleteCluster(array $options = [])
  * @method DeleteDevice deleteDevice(array $options = [])
  * @method DeleteDirectory deleteDirectory(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
  * @method DeleteParentPlatform deleteParentPlatform(array $options = [])
  * @method DeletePreset deletePreset(array $options = [])
+ * @method DeleteRenderingDeviceInternetPorts deleteRenderingDeviceInternetPorts(array $options = [])
+ * @method DeleteRenderingDevices deleteRenderingDevices(array $options = [])
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteVsPullStreamInfoConfig deleteVsPullStreamInfoConfig(array $options = [])
  * @method DeleteVsStreamsNotifyUrlConfig deleteVsStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeAccountStat describeAccountStat(array $options = [])
+ * @method DescribeCluster describeCluster(array $options = [])
+ * @method DescribeClusterDevices describeClusterDevices(array $options = [])
+ * @method DescribeClusters describeClusters(array $options = [])
  * @method DescribeDevice describeDevice(array $options = [])
  * @method DescribeDeviceChannels describeDeviceChannels(array $options = [])
  * @method DescribeDeviceGateway describeDeviceGateway(array $options = [])
@@ -56,6 +68,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDirectory describeDirectory(array $options = [])
  * @method DescribeGroup describeGroup(array $options = [])
  * @method DescribeGroups describeGroups(array $options = [])
+ * @method DescribeNodeDevicesInfo describeNodeDevicesInfo(array $options = [])
  * @method DescribeParentPlatform describeParentPlatform(array $options = [])
  * @method DescribeParentPlatformDevices describeParentPlatformDevices(array $options = [])
  * @method DescribeParentPlatforms describeParentPlatforms(array $options = [])
@@ -63,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePurchasedDevice describePurchasedDevice(array $options = [])
  * @method DescribePurchasedDevices describePurchasedDevices(array $options = [])
  * @method DescribeRecords describeRecords(array $options = [])
+ * @method DescribeRenderingDevices describeRenderingDevices(array $options = [])
  * @method DescribeStream describeStream(array $options = [])
  * @method DescribeStreams describeStreams(array $options = [])
  * @method DescribeStreamURL describeStreamURL(array $options = [])
@@ -86,6 +100,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVsDomainTrafficData describeVsDomainTrafficData(array $options = [])
  * @method DescribeVsDomainUvData describeVsDomainUvData(array $options = [])
  * @method DescribeVsPullStreamInfoConfig describeVsPullStreamInfoConfig(array $options = [])
+ * @method DescribeVsStorageTrafficUsageData describeVsStorageTrafficUsageData(array $options = [])
+ * @method DescribeVsStorageUsageData describeVsStorageUsageData(array $options = [])
  * @method DescribeVsStreamsNotifyUrlConfig describeVsStreamsNotifyUrlConfig(array $options = [])
  * @method DescribeVsStreamsOnlineList describeVsStreamsOnlineList(array $options = [])
  * @method DescribeVsStreamsPublishList describeVsStreamsPublishList(array $options = [])
@@ -93,7 +109,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVsUpPeakPublishStreamData describeVsUpPeakPublishStreamData(array $options = [])
  * @method DescribeVsUserResourcePackage describeVsUserResourcePackage(array $options = [])
  * @method ForbidVsStream forbidVsStream(array $options = [])
+ * @method GetBucketInfo getBucketInfo(array $options = [])
  * @method GotoPreset gotoPreset(array $options = [])
+ * @method ListBuckets listBuckets(array $options = [])
+ * @method ListDeviceChannels listDeviceChannels(array $options = [])
+ * @method ListDeviceRecords listDeviceRecords(array $options = [])
+ * @method ListObjects listObjects(array $options = [])
  * @method ModifyDevice modifyDevice(array $options = [])
  * @method ModifyDeviceAlarm modifyDeviceAlarm(array $options = [])
  * @method ModifyDeviceCapture modifyDeviceCapture(array $options = [])
@@ -102,6 +123,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyGroup modifyGroup(array $options = [])
  * @method ModifyParentPlatform modifyParentPlatform(array $options = [])
  * @method ModifyTemplate modifyTemplate(array $options = [])
+ * @method OpenVsService openVsService(array $options = [])
+ * @method OperateRenderingDevices operateRenderingDevices(array $options = [])
+ * @method PrepareUpload prepareUpload(array $options = [])
+ * @method PutBucket putBucket(array $options = [])
+ * @method ResetRenderingDevices resetRenderingDevices(array $options = [])
  * @method ResumeVsStream resumeVsStream(array $options = [])
  * @method SetPreset setPreset(array $options = [])
  * @method SetVsDomainCertificate setVsDomainCertificate(array $options = [])
@@ -118,12 +144,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopStream stopStream(array $options = [])
  * @method StopTransferStream stopTransferStream(array $options = [])
  * @method SyncCatalogs syncCatalogs(array $options = [])
+ * @method SyncDeviceChannels syncDeviceChannels(array $options = [])
  * @method UnbindDirectory unbindDirectory(array $options = [])
  * @method UnbindParentPlatformDevice unbindParentPlatformDevice(array $options = [])
  * @method UnbindPurchasedDevice unbindPurchasedDevice(array $options = [])
  * @method UnbindTemplate unbindTemplate(array $options = [])
  * @method UnlockDevice unlockDevice(array $options = [])
+ * @method UpdateBucketInfo updateBucketInfo(array $options = [])
+ * @method UpdateCluster updateCluster(array $options = [])
+ * @method UpdateRenderingDeviceSpec updateRenderingDeviceSpec(array $options = [])
  * @method UpdateVsPullStreamInfoConfig updateVsPullStreamInfoConfig(array $options = [])
+ * @method UploadDeviceRecord uploadDeviceRecord(array $options = [])
  */
 class VsApiResolver extends ApiResolver
 {
@@ -142,6 +173,40 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'vs';
+}
+
+/**
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ */
+class AddDevice extends Rpc
+{
+}
+
+/**
+ * @method string getISP()
+ * @method $this withISP($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getIpProtocol()
+ * @method $this withIpProtocol($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getInternalPort()
+ * @method $this withInternalPort($value)
+ */
+class AddRenderingDeviceInternetPorts extends Rpc
+{
 }
 
 /**
@@ -531,6 +596,8 @@ class BindTemplate extends Rpc
 /**
  * @method string getFocus()
  * @method $this withFocus($value)
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -547,6 +614,8 @@ class ContinuousAdjust extends Rpc
 /**
  * @method string getTilt()
  * @method $this withTilt($value)
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getPan()
@@ -559,6 +628,26 @@ class ContinuousAdjust extends Rpc
  * @method $this withOwnerId($value)
  */
 class ContinuousMove extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getMaintainTime()
+ * @method $this withMaintainTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getInternalPorts()
+ * @method $this withInternalPorts($value)
+ */
+class CreateCluster extends Rpc
 {
 }
 
@@ -637,6 +726,24 @@ class CreateDevice extends Rpc
  * @method $this withChannelId($value)
  */
 class CreateDeviceAlarm extends Rpc
+{
+}
+
+/**
+ * @method string getSnapshotConfig()
+ * @method $this withSnapshotConfig($value)
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getStreamId()
+ * @method $this withStreamId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class CreateDeviceSnapshot extends Rpc
 {
 }
 
@@ -729,6 +836,40 @@ class CreateParentPlatform extends Rpc
 }
 
 /**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getCount()
+ * @method $this withCount($value)
+ * @method string getSpecification()
+ * @method $this withSpecification($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
+ * @method string getEdgeNodeName()
+ * @method $this withEdgeNodeName($value)
+ */
+class CreateRenderingDevice extends Rpc
+{
+}
+
+/**
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -797,6 +938,30 @@ class CreateTemplate extends Rpc
 }
 
 /**
+ * @method string getBucketName()
+ * @method $this withBucketName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteBucket extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteCluster extends Rpc
+{
+}
+
+/**
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -845,6 +1010,8 @@ class DeleteParentPlatform extends Rpc
 }
 
 /**
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getPresetId()
@@ -855,6 +1022,36 @@ class DeleteParentPlatform extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeletePreset extends Rpc
+{
+}
+
+/**
+ * @method string getISP()
+ * @method $this withISP($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getIpProtocol()
+ * @method $this withIpProtocol($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getInternalPort()
+ * @method $this withInternalPort($value)
+ */
+class DeleteRenderingDeviceInternetPorts extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class DeleteRenderingDevices extends Rpc
 {
 }
 
@@ -907,6 +1104,52 @@ class DeleteVsStreamsNotifyUrlConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeAccountStat extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeCluster extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getSpecification()
+ * @method $this withSpecification($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class DescribeClusterDevices extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class DescribeClusters extends Rpc
 {
 }
 
@@ -1103,6 +1346,18 @@ class DescribeGroups extends Rpc
 }
 
 /**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
+ */
+class DescribeNodeDevicesInfo extends Rpc
+{
+}
+
+/**
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -1157,6 +1412,8 @@ class DescribeParentPlatforms extends Rpc
 }
 
 /**
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -1235,6 +1492,18 @@ class DescribePurchasedDevices extends Rpc
  * @method $this withSortBy($value)
  */
 class DescribeRecords extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class DescribeRenderingDevices extends Rpc
 {
 }
 
@@ -1639,6 +1908,46 @@ class DescribeVsPullStreamInfoConfig extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBucket()
+ * @method $this withBucket($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVsStorageTrafficUsageData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBucket()
+ * @method $this withBucket($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVsStorageUsageData extends Rpc
+{
+}
+
+/**
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getDomainName()
@@ -1781,6 +2090,20 @@ class ForbidVsStream extends Rpc
 }
 
 /**
+ * @method string getBucketName()
+ * @method $this withBucketName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetBucketInfo extends Rpc
+{
+}
+
+/**
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getPresetId()
@@ -1791,6 +2114,88 @@ class ForbidVsStream extends Rpc
  * @method $this withOwnerId($value)
  */
 class GotoPreset extends Rpc
+{
+}
+
+/**
+ * @method string getPrefix()
+ * @method $this withPrefix($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMarker()
+ * @method $this withMarker($value)
+ */
+class ListBuckets extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class ListDeviceChannels extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getSearchCriteria()
+ * @method $this withSearchCriteria($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getStreamId()
+ * @method $this withStreamId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class ListDeviceRecords extends Rpc
+{
+}
+
+/**
+ * @method string getMaxKeys()
+ * @method $this withMaxKeys($value)
+ * @method string getContinuationToken()
+ * @method $this withContinuationToken($value)
+ * @method string getPrefix()
+ * @method $this withPrefix($value)
+ * @method string getDelimiter()
+ * @method $this withDelimiter($value)
+ * @method string getBucketName()
+ * @method $this withBucketName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getEncodingType()
+ * @method $this withEncodingType($value)
+ * @method string getStartAfter()
+ * @method $this withStartAfter($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMarker()
+ * @method $this withMarker($value)
+ */
+class ListObjects extends Rpc
 {
 }
 
@@ -2040,6 +2445,80 @@ class ModifyTemplate extends Rpc
 {
 }
 
+class OpenVsService extends Rpc
+{
+}
+
+/**
+ * @method string getForceStop()
+ * @method $this withForceStop($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getOperation()
+ * @method $this withOperation($value)
+ */
+class OperateRenderingDevices extends Rpc
+{
+}
+
+/**
+ * @method string getBucketName()
+ * @method $this withBucketName($value)
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAdditionType()
+ * @method $this withAdditionType($value)
+ */
+class PrepareUpload extends Rpc
+{
+}
+
+/**
+ * @method string getDataRedundancyType()
+ * @method $this withDataRedundancyType($value)
+ * @method string getEndpoint()
+ * @method $this withEndpoint($value)
+ * @method string getBucketName()
+ * @method $this withBucketName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getBucketAcl()
+ * @method $this withBucketAcl($value)
+ * @method string getDispatcherType()
+ * @method $this withDispatcherType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getStorageClass()
+ * @method $this withStorageClass($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class PutBucket extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class ResetRenderingDevices extends Rpc
+{
+}
+
 /**
  * @method string getAppName()
  * @method $this withAppName($value)
@@ -2061,6 +2540,8 @@ class ResumeVsStream extends Rpc
 }
 
 /**
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getPresetId()
@@ -2195,6 +2676,8 @@ class StartTransferStream extends Rpc
 /**
  * @method string getFocus()
  * @method $this withFocus($value)
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getShowLog()
@@ -2225,6 +2708,8 @@ class StopDevice extends Rpc
 /**
  * @method string getTilt()
  * @method $this withTilt($value)
+ * @method string getSubProtocol()
+ * @method $this withSubProtocol($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getPan()
@@ -2301,6 +2786,18 @@ class SyncCatalogs extends Rpc
 }
 
 /**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class SyncDeviceChannels extends Rpc
+{
+}
+
+/**
  * @method string getDirectoryId()
  * @method $this withDirectoryId($value)
  * @method string getShowLog()
@@ -2371,6 +2868,70 @@ class UnlockDevice extends Rpc
 }
 
 /**
+ * @method string getBucketName()
+ * @method $this withBucketName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class UpdateBucketInfo extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getMaintainTime()
+ * @method $this withMaintainTime($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getInternalPorts()
+ * @method $this withInternalPorts($value)
+ */
+class UpdateCluster extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getEffectiveTime()
+ * @method $this withEffectiveTime($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getSpecification()
+ * @method $this withSpecification($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class UpdateRenderingDeviceSpec extends Rpc
+{
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getAppName()
@@ -2391,5 +2952,29 @@ class UnlockDevice extends Rpc
  * @method $this withSourceUrl($value)
  */
 class UpdateVsPullStreamInfoConfig extends Rpc
+{
+}
+
+/**
+ * @method string getSearchCriteria()
+ * @method $this withSearchCriteria($value)
+ * @method string getUploadParams()
+ * @method $this withUploadParams($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getStreamId()
+ * @method $this withStreamId($value)
+ * @method string getUploadId()
+ * @method $this withUploadId($value)
+ * @method string getUploadType()
+ * @method $this withUploadType($value)
+ * @method string getUploadMode()
+ * @method $this withUploadMode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class UploadDeviceRecord extends Rpc
 {
 }
