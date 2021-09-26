@@ -188,6 +188,7 @@ namespace AlibabaCloud;
  * @method static Scdn\Scdn scdn()
  * @method static Schedulerx2\Schedulerx2 schedulerx2()
  * @method static Scsp\Scsp scsp()
+ * @method static Sddp\Sddp sddp()
  * @method static Servicemesh\Servicemesh servicemesh()
  * @method static Sgw\Sgw sgw()
  * @method static Skyeye\Skyeye skyeye()
