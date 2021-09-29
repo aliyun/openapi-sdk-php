@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1106 - 2021-9-29
+- Supported AssumeRoleWithOIDC.
+
+
 ## 1.8.1105 - 2021-9-26
 - Support odcap device.
 
