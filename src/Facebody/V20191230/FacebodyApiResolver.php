@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddFace addFace(array $options = [])
  * @method AddFaceEntity addFaceEntity(array $options = [])
  * @method AddFaceImageTemplate addFaceImageTemplate(array $options = [])
+ * @method BatchAddFaces batchAddFaces(array $options = [])
  * @method BeautifyBody beautifyBody(array $options = [])
  * @method BlurFace blurFace(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
@@ -332,6 +333,96 @@ class AddFaceImageTemplate extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEntityId()
+ * @method string getQualityScoreThreshold()
+ * @method string getSimilarityScoreThresholdBetweenEntity()
+ * @method string getSimilarityScoreThresholdInEntity()
+ * @method string getDbName()
+ * @method string getFaces()
+ */
+class BatchAddFaces extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEntityId($value)
+    {
+        $this->data['EntityId'] = $value;
+        $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQualityScoreThreshold($value)
+    {
+        $this->data['QualityScoreThreshold'] = $value;
+        $this->options['form_params']['QualityScoreThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSimilarityScoreThresholdBetweenEntity($value)
+    {
+        $this->data['SimilarityScoreThresholdBetweenEntity'] = $value;
+        $this->options['form_params']['SimilarityScoreThresholdBetweenEntity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSimilarityScoreThresholdInEntity($value)
+    {
+        $this->data['SimilarityScoreThresholdInEntity'] = $value;
+        $this->options['form_params']['SimilarityScoreThresholdInEntity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaces($value)
+    {
+        $this->data['Faces'] = $value;
+        $this->options['form_params']['Faces'] = $value;
 
         return $this;
     }
@@ -986,7 +1077,11 @@ class DetectChefCap extends Rpc
 }
 
 /**
+ * @method string getMaxFaceNumber()
+ * @method string getLandmark()
  * @method string getImageType()
+ * @method string getPose()
+ * @method string getQuality()
  * @method string getImageURL()
  */
 class DetectFace extends Rpc
@@ -997,10 +1092,62 @@ class DetectFace extends Rpc
      *
      * @return $this
      */
+    public function withMaxFaceNumber($value)
+    {
+        $this->data['MaxFaceNumber'] = $value;
+        $this->options['form_params']['MaxFaceNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLandmark($value)
+    {
+        $this->data['Landmark'] = $value;
+        $this->options['form_params']['Landmark'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withImageType($value)
     {
         $this->data['ImageType'] = $value;
         $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPose($value)
+    {
+        $this->data['Pose'] = $value;
+        $this->options['form_params']['Pose'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQuality($value)
+    {
+        $this->data['Quality'] = $value;
+        $this->options['form_params']['Quality'] = $value;
 
         return $this;
     }
@@ -2453,6 +2600,7 @@ class SearchBodyTrace extends Rpc
 }
 
 /**
+ * @method string getMaxFaceNum()
  * @method string getQualityScoreThreshold()
  * @method string getLimit()
  * @method string getDbNames()
@@ -2461,6 +2609,19 @@ class SearchBodyTrace extends Rpc
  */
 class SearchFace extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxFaceNum($value)
+    {
+        $this->data['MaxFaceNum'] = $value;
+        $this->options['form_params']['MaxFaceNum'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

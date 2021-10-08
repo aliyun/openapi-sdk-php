@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1107 - 2021-10-8
+- Release SearchFace BatchAddFaces.
+
+
 ## 1.8.1106 - 2021-9-29
 - Supported AssumeRoleWithOIDC.
 
