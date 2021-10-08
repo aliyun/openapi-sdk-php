@@ -443,7 +443,7 @@ class AddTags extends Rpc
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
 			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.value'] = $depth1Value['Value'];
 			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
@@ -3113,9 +3113,9 @@ class CreateKeyPair extends Rpc
  * @method $this withInstanceChargeType($value)
  * @method string getEnableVmOsConfig()
  * @method $this withEnableVmOsConfig($value)
- * @method array getNetworkInterface()
  * @method string getDeploymentSetId()
  * @method $this withDeploymentSetId($value)
+ * @method array getNetworkInterface()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -3238,20 +3238,20 @@ class CreateLaunchTemplate extends Rpc
 	{
 	    $this->data['NetworkInterface'] = $networkInterface;
 		foreach ($networkInterface as $depth1 => $depth1Value) {
-			if(isset($depth1Value['PrimaryIpAddress'])){
-				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.PrimaryIpAddress'] = $depth1Value['PrimaryIpAddress'];
-			}
 			if(isset($depth1Value['VSwitchId'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
-			}
-			if(isset($depth1Value['SecurityGroupId'])){
-				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupId'] = $depth1Value['SecurityGroupId'];
 			}
 			if(isset($depth1Value['NetworkInterfaceName'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.NetworkInterfaceName'] = $depth1Value['NetworkInterfaceName'];
 			}
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+			}
+			if(isset($depth1Value['SecurityGroupId'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupId'] = $depth1Value['SecurityGroupId'];
+			}
+			if(isset($depth1Value['PrimaryIpAddress'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.PrimaryIpAddress'] = $depth1Value['PrimaryIpAddress'];
 			}
 			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
@@ -3298,32 +3298,32 @@ class CreateLaunchTemplate extends Rpc
 	{
 	    $this->data['DataDisk'] = $dataDisk;
 		foreach ($dataDisk as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Size'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
-			}
-			if(isset($depth1Value['SnapshotId'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
-			}
-			if(isset($depth1Value['Category'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
-			}
-			if(isset($depth1Value['Encrypted'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
-			}
-			if(isset($depth1Value['DiskName'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+			if(isset($depth1Value['PerformanceLevel'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
 			}
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
 			}
-			if(isset($depth1Value['DeleteWithInstance'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
+			if(isset($depth1Value['SnapshotId'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
+			}
+			if(isset($depth1Value['Size'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
 			}
 			if(isset($depth1Value['Device'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
 			}
-			if(isset($depth1Value['PerformanceLevel'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			if(isset($depth1Value['DiskName'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+			}
+			if(isset($depth1Value['Category'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
+			}
+			if(isset($depth1Value['DeleteWithInstance'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
+			}
+			if(isset($depth1Value['Encrypted'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
 			}
 		}
 
@@ -3423,9 +3423,9 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withInstanceChargeType($value)
  * @method string getEnableVmOsConfig()
  * @method $this withEnableVmOsConfig($value)
- * @method array getNetworkInterface()
  * @method string getDeploymentSetId()
  * @method $this withDeploymentSetId($value)
+ * @method array getNetworkInterface()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -3528,20 +3528,20 @@ class CreateLaunchTemplateVersion extends Rpc
 	{
 	    $this->data['NetworkInterface'] = $networkInterface;
 		foreach ($networkInterface as $depth1 => $depth1Value) {
-			if(isset($depth1Value['PrimaryIpAddress'])){
-				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.PrimaryIpAddress'] = $depth1Value['PrimaryIpAddress'];
-			}
 			if(isset($depth1Value['VSwitchId'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
-			}
-			if(isset($depth1Value['SecurityGroupId'])){
-				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupId'] = $depth1Value['SecurityGroupId'];
 			}
 			if(isset($depth1Value['NetworkInterfaceName'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.NetworkInterfaceName'] = $depth1Value['NetworkInterfaceName'];
 			}
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+			}
+			if(isset($depth1Value['SecurityGroupId'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupId'] = $depth1Value['SecurityGroupId'];
+			}
+			if(isset($depth1Value['PrimaryIpAddress'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.PrimaryIpAddress'] = $depth1Value['PrimaryIpAddress'];
 			}
 			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
@@ -3588,32 +3588,32 @@ class CreateLaunchTemplateVersion extends Rpc
 	{
 	    $this->data['DataDisk'] = $dataDisk;
 		foreach ($dataDisk as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Size'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
-			}
-			if(isset($depth1Value['SnapshotId'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
-			}
-			if(isset($depth1Value['Category'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
-			}
-			if(isset($depth1Value['Encrypted'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
-			}
-			if(isset($depth1Value['DiskName'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+			if(isset($depth1Value['PerformanceLevel'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
 			}
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
 			}
-			if(isset($depth1Value['DeleteWithInstance'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
+			if(isset($depth1Value['SnapshotId'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.SnapshotId'] = $depth1Value['SnapshotId'];
+			}
+			if(isset($depth1Value['Size'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
 			}
 			if(isset($depth1Value['Device'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Device'] = $depth1Value['Device'];
 			}
-			if(isset($depth1Value['PerformanceLevel'])){
-				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			if(isset($depth1Value['DiskName'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DiskName'] = $depth1Value['DiskName'];
+			}
+			if(isset($depth1Value['Category'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
+			}
+			if(isset($depth1Value['DeleteWithInstance'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.DeleteWithInstance'] = $depth1Value['DeleteWithInstance'];
+			}
+			if(isset($depth1Value['Encrypted'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
 			}
 		}
 
@@ -3909,11 +3909,11 @@ class CreatePrefixList extends Rpc
 	{
 	    $this->data['Entry'] = $entry;
 		foreach ($entry as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Cidr'])){
-				$this->options['query']['Entry.' . ($depth1 + 1) . '.Cidr'] = $depth1Value['Cidr'];
-			}
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['Entry.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+			}
+			if(isset($depth1Value['Cidr'])){
+				$this->options['query']['Entry.' . ($depth1 + 1) . '.Cidr'] = $depth1Value['Cidr'];
 			}
 		}
 
@@ -4060,7 +4060,7 @@ class CreateSecurityGroup extends Rpc
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
 			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.value'] = $depth1Value['Value'];
 			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
@@ -8325,9 +8325,9 @@ class DescribePrefixListAttributes extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method array getPrefixListId()
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method array getPrefixListId()
  * @method string getAddressFamily()
  * @method $this withAddressFamily($value)
  * @method string getResourceOwnerAccount()
@@ -8775,9 +8775,9 @@ class DescribeRenewalPrice extends Rpc
  * @method $this withZoneId($value)
  * @method string getReservedInstanceName()
  * @method $this withReservedInstanceName($value)
- * @method array getStatus()
  * @method string getAllocationType()
  * @method $this withAllocationType($value)
+ * @method array getStatus()
  */
 class DescribeReservedInstances extends Rpc
 {
@@ -8861,7 +8861,7 @@ class DescribeResourceByTags extends Rpc
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
 			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.value'] = $depth1Value['Value'];
 			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
@@ -9407,9 +9407,9 @@ class DescribeSnapshotsUsage extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getMemory()
  * @method $this withMemory($value)
- * @method array getInstanceTypes()
  * @method string getIoOptimized()
  * @method $this withIoOptimized($value)
+ * @method array getInstanceTypes()
  * @method string getMinCores()
  * @method $this withMinCores($value)
  * @method string getNetworkType()
@@ -9645,7 +9645,7 @@ class DescribeTags extends Rpc
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
 			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.value'] = $depth1Value['Value'];
 			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
@@ -10596,20 +10596,20 @@ class ModifyAutoProvisioningGroup extends Rpc
 	{
 	    $this->data['LaunchTemplateConfig'] = $launchTemplateConfig;
 		foreach ($launchTemplateConfig as $depth1 => $depth1Value) {
-			if(isset($depth1Value['InstanceType'])){
-				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+			if(isset($depth1Value['VSwitchId'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
 			}
 			if(isset($depth1Value['MaxPrice'])){
 				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.MaxPrice'] = $depth1Value['MaxPrice'];
 			}
-			if(isset($depth1Value['VSwitchId'])){
-				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
+			if(isset($depth1Value['Priority'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
+			}
+			if(isset($depth1Value['InstanceType'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
 			}
 			if(isset($depth1Value['WeightedCapacity'])){
 				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.WeightedCapacity'] = $depth1Value['WeightedCapacity'];
-			}
-			if(isset($depth1Value['Priority'])){
-				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
 			}
 		}
 
@@ -11603,9 +11603,9 @@ class ModifyInstanceDeployment extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method array getInstanceId()
  * @method string getNotifyOnMaintenance()
  * @method $this withNotifyOnMaintenance($value)
+ * @method array getInstanceId()
  */
 class ModifyInstanceMaintenanceAttributes extends Rpc
 {
@@ -11619,11 +11619,11 @@ class ModifyInstanceMaintenanceAttributes extends Rpc
 	{
 	    $this->data['MaintenanceWindow'] = $maintenanceWindow;
 		foreach ($maintenanceWindow as $depth1 => $depth1Value) {
-			if(isset($depth1Value['StartTime'])){
-				$this->options['query']['MaintenanceWindow.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
-			}
 			if(isset($depth1Value['EndTime'])){
 				$this->options['query']['MaintenanceWindow.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
+			}
+			if(isset($depth1Value['StartTime'])){
+				$this->options['query']['MaintenanceWindow.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
 			}
 		}
 
@@ -11994,11 +11994,11 @@ class ModifyPrefixList extends Rpc
 	{
 	    $this->data['AddEntry'] = $addEntry;
 		foreach ($addEntry as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Cidr'])){
-				$this->options['query']['AddEntry.' . ($depth1 + 1) . '.Cidr'] = $depth1Value['Cidr'];
-			}
 			if(isset($depth1Value['Description'])){
 				$this->options['query']['AddEntry.' . ($depth1 + 1) . '.Description'] = $depth1Value['Description'];
+			}
+			if(isset($depth1Value['Cidr'])){
+				$this->options['query']['AddEntry.' . ($depth1 + 1) . '.Cidr'] = $depth1Value['Cidr'];
 			}
 		}
 
@@ -12113,17 +12113,17 @@ class ModifyReservedInstances extends Rpc
 	{
 	    $this->data['Configuration'] = $configuration;
 		foreach ($configuration as $depth1 => $depth1Value) {
-			if(isset($depth1Value['ZoneId'])){
-				$this->options['query']['Configuration.' . ($depth1 + 1) . '.ZoneId'] = $depth1Value['ZoneId'];
-			}
 			if(isset($depth1Value['ReservedInstanceName'])){
 				$this->options['query']['Configuration.' . ($depth1 + 1) . '.ReservedInstanceName'] = $depth1Value['ReservedInstanceName'];
 			}
-			if(isset($depth1Value['InstanceType'])){
-				$this->options['query']['Configuration.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+			if(isset($depth1Value['ZoneId'])){
+				$this->options['query']['Configuration.' . ($depth1 + 1) . '.ZoneId'] = $depth1Value['ZoneId'];
 			}
 			if(isset($depth1Value['Scope'])){
 				$this->options['query']['Configuration.' . ($depth1 + 1) . '.Scope'] = $depth1Value['Scope'];
+			}
+			if(isset($depth1Value['InstanceType'])){
+				$this->options['query']['Configuration.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
 			}
 			if(isset($depth1Value['InstanceAmount'])){
 				$this->options['query']['Configuration.' . ($depth1 + 1) . '.InstanceAmount'] = $depth1Value['InstanceAmount'];
@@ -12963,7 +12963,7 @@ class RemoveTags extends Rpc
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
 			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.value'] = $depth1Value['Value'];
 			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];

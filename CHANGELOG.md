@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1111 - 2021-10-8
+- Adjust ecs openapi endpoint.
+
+
 ## 1.8.1110 - 2021-10-8
 - Fixed SDK update delay.
 
