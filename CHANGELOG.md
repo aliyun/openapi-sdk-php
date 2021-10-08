@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1110 - 2021-10-8
+- Fixed SDK update delay.
+
+
 ## 1.8.1109 - 2021-10-8
 - Fixed SDK update delay.
 

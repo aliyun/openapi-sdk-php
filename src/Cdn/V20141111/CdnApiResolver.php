@@ -59,7 +59,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRefreshQuota describeRefreshQuota(array $options = [])
  * @method DescribeRefreshTasks describeRefreshTasks(array $options = [])
  * @method DescribeTopDomainsByFlow describeTopDomainsByFlow(array $options = [])
- * @method DescribeUserCustomerLabels describeUserCustomerLabels(array $options = [])
  * @method DescribeUserDomains describeUserDomains(array $options = [])
  * @method ForbidLiveStream forbidLiveStream(array $options = [])
  * @method ModifyCdnDomain modifyCdnDomain(array $options = [])
@@ -1031,18 +1030,6 @@ class DescribeRefreshTasks extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeTopDomainsByFlow extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUid()
- * @method $this withUid($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class DescribeUserCustomerLabels extends Rpc
 {
 }
 
