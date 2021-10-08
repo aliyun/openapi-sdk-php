@@ -8,6 +8,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddScdnDomain addScdnDomain(array $options = [])
  * @method BatchDeleteScdnDomainConfigs batchDeleteScdnDomainConfigs(array $options = [])
  * @method BatchSetScdnDomainConfigs batchSetScdnDomainConfigs(array $options = [])
+ * @method BatchStartScdnDomain batchStartScdnDomain(array $options = [])
+ * @method BatchStopScdnDomain batchStopScdnDomain(array $options = [])
  * @method BatchUpdateScdnDomain batchUpdateScdnDomain(array $options = [])
  * @method CheckScdnService checkScdnService(array $options = [])
  * @method DeleteScdnDomain deleteScdnDomain(array $options = [])
@@ -131,6 +133,30 @@ class BatchDeleteScdnDomainConfigs extends Rpc
  * @method $this withSecurityToken($value)
  */
 class BatchSetScdnDomainConfigs extends Rpc
+{
+}
+
+/**
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class BatchStartScdnDomain extends Rpc
+{
+}
+
+/**
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class BatchStopScdnDomain extends Rpc
 {
 }
 
@@ -353,6 +379,8 @@ class DescribeScdnDomainCname extends Rpc
  * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
  */
 class DescribeScdnDomainConfigs extends Rpc
 {

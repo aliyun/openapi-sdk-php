@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1108 - 2021-10-8
+- Fixed SDK update delay.
+
+
 ## 1.8.1107 - 2021-10-8
 - Release SearchFace BatchAddFaces.
 
