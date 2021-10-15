@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeImageUrls describeImageUrls(array $options = [])
  * @method DescribeIpcLiveAddress describeIpcLiveAddress(array $options = [])
  * @method DescribeOverviewData describeOverviewData(array $options = [])
+ * @method DescribePredictGroupResult describePredictGroupResult(array $options = [])
  * @method ImportSpecialPersonnel importSpecialPersonnel(array $options = [])
  * @method ListActionData listActionData(array $options = [])
  * @method ListDevicesImages listDevicesImages(array $options = [])
@@ -42,7 +43,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = '1.2.2';
+    public $serviceCode = '1.2.3';
 }
 
 /**
@@ -576,6 +577,124 @@ class DescribeOverviewData extends Rpc
     {
         $this->data['StoreIds'] = $value;
         $this->options['form_params']['StoreIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getIpcId()
+ * @method string getStoreId()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getTrackletId()
+ * @method string getEndTime()
+ * @method string getPredictType()
+ */
+class DescribePredictGroupResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIpcId($value)
+    {
+        $this->data['IpcId'] = $value;
+        $this->options['form_params']['IpcId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrackletId($value)
+    {
+        $this->data['TrackletId'] = $value;
+        $this->options['form_params']['TrackletId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPredictType($value)
+    {
+        $this->data['PredictType'] = $value;
+        $this->options['form_params']['PredictType'] = $value;
 
         return $this;
     }

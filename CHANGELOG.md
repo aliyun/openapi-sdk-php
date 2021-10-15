@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1113 - 2021-10-15
+- Generated 2020-10-29 for `reid_cloud`.
+
+
 ## 1.8.1112 - 2021-10-11
 - Fixed SDK update delay.
 
