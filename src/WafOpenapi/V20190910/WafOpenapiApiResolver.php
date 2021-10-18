@@ -38,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyProtectionModuleStatus modifyProtectionModuleStatus(array $options = [])
  * @method ModifyProtectionRuleCacheStatus modifyProtectionRuleCacheStatus(array $options = [])
  * @method ModifyProtectionRuleStatus modifyProtectionRuleStatus(array $options = [])
+ * @method MoveResourceGroup moveResourceGroup(array $options = [])
  * @method SetDomainRuleGroup setDomainRuleGroup(array $options = [])
  */
 class WafOpenapiApiResolver extends ApiResolver
@@ -98,6 +99,8 @@ class CreateCertificateByCertificateId extends Rpc
 /**
  * @method string getIpFollowStatus()
  * @method $this withIpFollowStatus($value)
+ * @method string getSniHost()
+ * @method $this withSniHost($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
@@ -108,6 +111,8 @@ class CreateCertificateByCertificateId extends Rpc
  * @method $this withHttp2Port($value)
  * @method string getWriteTime()
  * @method $this withWriteTime($value)
+ * @method string getSniStatus()
+ * @method $this withSniStatus($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getAccessHeaderMode()
@@ -539,6 +544,8 @@ class DescribeWafSourceIpSegment extends Rpc
 /**
  * @method string getIpFollowStatus()
  * @method $this withIpFollowStatus($value)
+ * @method string getSniHost()
+ * @method $this withSniHost($value)
  * @method string getHybridCloudType()
  * @method $this withHybridCloudType($value)
  * @method string getSourceIp()
@@ -549,6 +556,8 @@ class DescribeWafSourceIpSegment extends Rpc
  * @method $this withHttp2Port($value)
  * @method string getWriteTime()
  * @method $this withWriteTime($value)
+ * @method string getSniStatus()
+ * @method $this withSniStatus($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getAccessHeaderMode()
@@ -735,6 +744,20 @@ class ModifyProtectionRuleCacheStatus extends Rpc
  * @method $this withRuleId($value)
  */
 class ModifyProtectionRuleStatus extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class MoveResourceGroup extends Rpc
 {
 }
 
