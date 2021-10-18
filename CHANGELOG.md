@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1114 - 2021-10-18
+- Adjust ecs openapi endpoint.
+- Fix SDK array format.
+
+
 ## 1.8.1113 - 2021-10-15
 - Generated 2020-10-29 for `reid_cloud`.
 
