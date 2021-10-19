@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1116 - 2021-10-19
+- Supported ScaleApp totalPartitions.
+
+
 ## 1.8.1115 - 2021-10-18
 - Generated 2019-09-10, 2018-01-17 for `waf-openapi`.
 

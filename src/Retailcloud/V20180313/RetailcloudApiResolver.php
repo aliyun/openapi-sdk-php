@@ -2303,6 +2303,8 @@ class ResumeDeploy extends Rpc
 }
 
 /**
+ * @method string getTotalPartitions()
+ * @method $this withTotalPartitions($value)
  * @method string getReplicas()
  * @method $this withReplicas($value)
  * @method string getEnvId()
