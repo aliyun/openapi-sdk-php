@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1117 - 2021-10-20
+- Add DeviceCenter API, including CreateDeviceDynamicGroup, DeleteDeviceDynamicGroup, QueryDynamicGroupDevices.
+- Update DeviceCenter API, including SetDeviceGroupTags, QueryDeviceGroupByFuzzyName, QueryDeviceGroupByDevice, QueryDeviceGroupTagList, UpdateDeviceGroup, QueryDeviceGroupList, QueryDeviceGroupInfo.
+- Update OTA API, including CreateOTADynamicUpgradeJob, CreateOTAStaticUpgradeJob, QueryOTAJob.
+
+
 ## 1.8.1116 - 2021-10-19
 - Supported ScaleApp totalPartitions.
 
