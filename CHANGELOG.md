@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1118 - 2021-10-21
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1117 - 2021-10-20
 - Add DeviceCenter API, including CreateDeviceDynamicGroup, DeleteDeviceDynamicGroup, QueryDynamicGroupDevices.
 - Update DeviceCenter API, including SetDeviceGroupTags, QueryDeviceGroupByFuzzyName, QueryDeviceGroupByDevice, QueryDeviceGroupTagList, UpdateDeviceGroup, QueryDeviceGroupList, QueryDeviceGroupInfo.
