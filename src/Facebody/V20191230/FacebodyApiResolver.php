@@ -85,9 +85,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'facebody';
 }
 
 /**
@@ -2333,11 +2330,85 @@ class RecognizeExpression extends Rpc
 }
 
 /**
+ * @method string getGender()
+ * @method string getBeauty()
+ * @method string getMaxFaceNumber()
+ * @method string getHat()
+ * @method string getMask()
  * @method string getImageType()
+ * @method string getGlass()
+ * @method string getExpression()
+ * @method string getQuality()
  * @method string getImageURL()
+ * @method string getAge()
  */
 class RecognizeFace extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGender($value)
+    {
+        $this->data['Gender'] = $value;
+        $this->options['form_params']['Gender'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBeauty($value)
+    {
+        $this->data['Beauty'] = $value;
+        $this->options['form_params']['Beauty'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxFaceNumber($value)
+    {
+        $this->data['MaxFaceNumber'] = $value;
+        $this->options['form_params']['MaxFaceNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHat($value)
+    {
+        $this->data['Hat'] = $value;
+        $this->options['form_params']['Hat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMask($value)
+    {
+        $this->data['Mask'] = $value;
+        $this->options['form_params']['Mask'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2357,10 +2428,62 @@ class RecognizeFace extends Rpc
      *
      * @return $this
      */
+    public function withGlass($value)
+    {
+        $this->data['Glass'] = $value;
+        $this->options['form_params']['Glass'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExpression($value)
+    {
+        $this->data['Expression'] = $value;
+        $this->options['form_params']['Expression'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQuality($value)
+    {
+        $this->data['Quality'] = $value;
+        $this->options['form_params']['Quality'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withImageURL($value)
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAge($value)
+    {
+        $this->data['Age'] = $value;
+        $this->options['form_params']['Age'] = $value;
 
         return $this;
     }

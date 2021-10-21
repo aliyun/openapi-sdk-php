@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1119 - 2021-10-21
+- Release AddQualityScore.
+
+
 ## 1.8.1118 - 2021-10-21
 - Generated 2020-05-18 for `dataworks-public`.
 
