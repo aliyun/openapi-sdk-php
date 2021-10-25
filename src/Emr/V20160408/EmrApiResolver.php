@@ -9,13 +9,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddScalingConfigItemV2 addScalingConfigItemV2(array $options = [])
  * @method AuthorizeSecurityGroup authorizeSecurityGroup(array $options = [])
  * @method CancelOrder cancelOrder(array $options = [])
- * @method CleanupFlowEntitySnapshot cleanupFlowEntitySnapshot(array $options = [])
  * @method CloneFlow cloneFlow(array $options = [])
  * @method CloneFlowJob cloneFlowJob(array $options = [])
- * @method CommitFlowEntitySnapshot commitFlowEntitySnapshot(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
  * @method CreateBackupPlan createBackupPlan(array $options = [])
  * @method CreateClusterBootstrapAction createClusterBootstrapAction(array $options = [])
+ * @method CreateClusterHostGroup createClusterHostGroup(array $options = [])
  * @method CreateClusterTemplate createClusterTemplate(array $options = [])
  * @method CreateClusterV2 createClusterV2(array $options = [])
  * @method CreateClusterWithTemplate createClusterWithTemplate(array $options = [])
@@ -23,7 +22,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateExecutionPlan createExecutionPlan(array $options = [])
  * @method CreateFlow createFlow(array $options = [])
  * @method CreateFlowCategory createFlowCategory(array $options = [])
- * @method CreateFlowEditLock createFlowEditLock(array $options = [])
  * @method CreateFlowForWeb createFlowForWeb(array $options = [])
  * @method CreateFlowJob createFlowJob(array $options = [])
  * @method CreateFlowProject createFlowProject(array $options = [])
@@ -32,8 +30,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateJob createJob(array $options = [])
  * @method CreateLibrary createLibrary(array $options = [])
  * @method CreateMetaTablePreviewTask createMetaTablePreviewTask(array $options = [])
- * @method CreateNote createNote(array $options = [])
- * @method CreateParagraph createParagraph(array $options = [])
  * @method CreateResourcePool createResourcePool(array $options = [])
  * @method CreateResourceQueue createResourceQueue(array $options = [])
  * @method CreateScalingGroupV2 createScalingGroupV2(array $options = [])
@@ -46,14 +42,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteExecutionPlan deleteExecutionPlan(array $options = [])
  * @method DeleteFlow deleteFlow(array $options = [])
  * @method DeleteFlowCategory deleteFlowCategory(array $options = [])
- * @method DeleteFlowEditLock deleteFlowEditLock(array $options = [])
  * @method DeleteFlowJob deleteFlowJob(array $options = [])
  * @method DeleteFlowProject deleteFlowProject(array $options = [])
  * @method DeleteFlowProjectClusterSetting deleteFlowProjectClusterSetting(array $options = [])
  * @method DeleteFlowProjectUser deleteFlowProjectUser(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteLibraries deleteLibraries(array $options = [])
- * @method DeleteNote deleteNote(array $options = [])
  * @method DeleteResourcePool deleteResourcePool(array $options = [])
  * @method DeleteResourceQueue deleteResourceQueue(array $options = [])
  * @method DeleteScalingRule deleteScalingRule(array $options = [])
@@ -70,13 +64,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeClusterTemplate describeClusterTemplate(array $options = [])
  * @method DescribeClusterV2 describeClusterV2(array $options = [])
  * @method DescribeDataSource describeDataSource(array $options = [])
+ * @method DescribeDiskOpsActivity describeDiskOpsActivity(array $options = [])
+ * @method DescribeEmrMainVersion describeEmrMainVersion(array $options = [])
  * @method DescribeExecutionPlan describeExecutionPlan(array $options = [])
  * @method DescribeFlow describeFlow(array $options = [])
- * @method DescribeFlowAgentToken describeFlowAgentToken(array $options = [])
- * @method DescribeFlowAgentUser describeFlowAgentUser(array $options = [])
  * @method DescribeFlowCategory describeFlowCategory(array $options = [])
  * @method DescribeFlowCategoryTree describeFlowCategoryTree(array $options = [])
- * @method DescribeFlowEntitySnapshot describeFlowEntitySnapshot(array $options = [])
  * @method DescribeFlowInstance describeFlowInstance(array $options = [])
  * @method DescribeFlowJob describeFlowJob(array $options = [])
  * @method DescribeFlowNodeInstance describeFlowNodeInstance(array $options = [])
@@ -96,9 +89,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeScalingRule describeScalingRule(array $options = [])
  * @method DescribeSecurityGroupAttribute describeSecurityGroupAttribute(array $options = [])
  * @method DetachAndReleaseClusterEni detachAndReleaseClusterEni(array $options = [])
- * @method DiffFlowEntitySnapshot diffFlowEntitySnapshot(array $options = [])
- * @method DumpMetaDataSourceForOuter dumpMetaDataSourceForOuter(array $options = [])
- * @method GetFlowEntityRelationGraph getFlowEntityRelationGraph(array $options = [])
  * @method GetHdfsCapacityStatisticInfo getHdfsCapacityStatisticInfo(array $options = [])
  * @method GetJobInputStatisticInfo getJobInputStatisticInfo(array $options = [])
  * @method GetJobOutputStatisticInfo getJobOutputStatisticInfo(array $options = [])
@@ -111,7 +101,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetUserSubmissionStatisticInfo getUserSubmissionStatisticInfo(array $options = [])
  * @method InstallLibraries installLibraries(array $options = [])
  * @method JoinResourceGroup joinResourceGroup(array $options = [])
- * @method KillExecutionJobInstance killExecutionJobInstance(array $options = [])
  * @method KillFlowJob killFlowJob(array $options = [])
  * @method ListAdviceAction listAdviceAction(array $options = [])
  * @method ListApmApplication listApmApplication(array $options = [])
@@ -132,18 +121,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListClusterServiceQuickLink listClusterServiceQuickLink(array $options = [])
  * @method ListClusterTemplates listClusterTemplates(array $options = [])
  * @method ListDataSource listDataSource(array $options = [])
+ * @method ListDiskOpsEvents listDiskOpsEvents(array $options = [])
  * @method ListEmrAvailableConfig listEmrAvailableConfig(array $options = [])
  * @method ListEmrAvailableResource listEmrAvailableResource(array $options = [])
  * @method ListEmrMainVersion listEmrMainVersion(array $options = [])
  * @method ListExecutionPlanInstances listExecutionPlanInstances(array $options = [])
- * @method ListExecutionPlans listExecutionPlans(array $options = [])
  * @method ListFlow listFlow(array $options = [])
  * @method ListFlowCategory listFlowCategory(array $options = [])
  * @method ListFlowCluster listFlowCluster(array $options = [])
  * @method ListFlowClusterAll listFlowClusterAll(array $options = [])
  * @method ListFlowClusterAllHosts listFlowClusterAllHosts(array $options = [])
  * @method ListFlowClusterHost listFlowClusterHost(array $options = [])
- * @method ListFlowEntitySnapshot listFlowEntitySnapshot(array $options = [])
  * @method ListFlowInstance listFlowInstance(array $options = [])
  * @method ListFlowJob listFlowJob(array $options = [])
  * @method ListFlowJobHistory listFlowJobHistory(array $options = [])
@@ -154,14 +142,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListFlowProjectClusterSetting listFlowProjectClusterSetting(array $options = [])
  * @method ListFlowProjectUser listFlowProjectUser(array $options = [])
  * @method ListJobExecutionInstances listJobExecutionInstances(array $options = [])
- * @method ListJobInstanceWorkers listJobInstanceWorkers(array $options = [])
  * @method ListJobs listJobs(array $options = [])
  * @method ListLibraries listLibraries(array $options = [])
  * @method ListLibraryInstallTasks listLibraryInstallTasks(array $options = [])
  * @method ListLibraryStatus listLibraryStatus(array $options = [])
- * @method ListMetaCluster listMetaCluster(array $options = [])
- * @method ListMetaDataSourceClusterForOuter listMetaDataSourceClusterForOuter(array $options = [])
- * @method ListNotes listNotes(array $options = [])
+ * @method ListLocalDiskComponentInfo listLocalDiskComponentInfo(array $options = [])
  * @method ListResourcePool listResourcePool(array $options = [])
  * @method ListRoles listRoles(array $options = [])
  * @method ListScalingActivityV2 listScalingActivityV2(array $options = [])
@@ -196,24 +181,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyScalingGroupV2 modifyScalingGroupV2(array $options = [])
  * @method ModifyScalingRule modifyScalingRule(array $options = [])
  * @method ModifyScalingTaskGroup modifyScalingTaskGroup(array $options = [])
- * @method QueryAlarmHistory queryAlarmHistory(array $options = [])
  * @method QueryEntity queryEntity(array $options = [])
- * @method QueryTableData queryTableData(array $options = [])
  * @method QueryTag queryTag(array $options = [])
- * @method QueryTrendData queryTrendData(array $options = [])
  * @method RefreshClusterResourcePool refreshClusterResourcePool(array $options = [])
  * @method ReleaseCluster releaseCluster(array $options = [])
- * @method ReleaseClusterByTemplateTagForInternal releaseClusterByTemplateTagForInternal(array $options = [])
  * @method ReleaseClusterHostGroup releaseClusterHostGroup(array $options = [])
  * @method RemoveScalingConfigItemV2 removeScalingConfigItemV2(array $options = [])
  * @method RerunFlow rerunFlow(array $options = [])
  * @method ResizeClusterV2 resizeClusterV2(array $options = [])
- * @method RestoreBackup restoreBackup(array $options = [])
- * @method RestoreFlowEntitySnapshot restoreFlowEntitySnapshot(array $options = [])
  * @method ResumeExecutionPlanScheduler resumeExecutionPlanScheduler(array $options = [])
  * @method ResumeFlow resumeFlow(array $options = [])
  * @method RetryOperation retryOperation(array $options = [])
  * @method RunClusterServiceAction runClusterServiceAction(array $options = [])
+ * @method RunDiskOpsActivity runDiskOpsActivity(array $options = [])
  * @method RunExecutionPlan runExecutionPlan(array $options = [])
  * @method RunScalingActionV2 runScalingActionV2(array $options = [])
  * @method SearchLog searchLog(array $options = [])
@@ -223,10 +203,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SuspendExecutionPlanScheduler suspendExecutionPlanScheduler(array $options = [])
  * @method SuspendFlow suspendFlow(array $options = [])
  * @method TagResources tagResources(array $options = [])
- * @method TagResourcesSystemTags tagResourcesSystemTags(array $options = [])
  * @method UninstallLibraries uninstallLibraries(array $options = [])
  * @method UntagResources untagResources(array $options = [])
- * @method UntagResourcesSystemTags untagResourcesSystemTags(array $options = [])
  * @method UpdateDataSource updateDataSource(array $options = [])
  * @method UpdateLibraryInstallTaskStatus updateLibraryInstallTaskStatus(array $options = [])
  * @method UpdateTag updateTag(array $options = [])
@@ -325,16 +303,6 @@ class CancelOrder extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEntityIdList()
- * @method $this withEntityIdList($value)
- */
-class CleanupFlowEntitySnapshot extends Rpc
-{
-}
-
-/**
  * @method string getId()
  * @method $this withId($value)
  * @method string getProjectId()
@@ -353,20 +321,6 @@ class CloneFlow extends Rpc
  * @method $this withProjectId($value)
  */
 class CloneFlowJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getMessage()
- * @method $this withMessage($value)
- */
-class CommitFlowEntitySnapshot extends Rpc
 {
 }
 
@@ -444,6 +398,30 @@ class CreateClusterBootstrapAction extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getHostGroupParams()
+ * @method $this withHostGroupParams($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getHostGroupName()
+ * @method $this withHostGroupName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getVswitchId()
+ * @method $this withVswitchId($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ * @method string getHostGroupType()
+ * @method $this withHostGroupType($value)
+ */
+class CreateClusterHostGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getLogPath()
  * @method $this withLogPath($value)
  * @method string getMasterPwd()
@@ -489,6 +467,8 @@ class CreateClusterBootstrapAction extends Rpc
  * @method $this withUseCustomHiveMetaDb($value)
  * @method string getInitCustomHiveMetaDb()
  * @method $this withInitCustomHiveMetaDb($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getIoOptimized()
  * @method $this withIoOptimized($value)
  * @method string getSecurityGroupId()
@@ -595,6 +575,9 @@ class CreateClusterTemplate extends Rpc
 			if(isset($depth1Value['SysDiskCapacity'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.SysDiskCapacity'] = $depth1Value['SysDiskCapacity'];
 			}
+			if(isset($depth1Value['PrivatePoolOptionsId'])){
+				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.PrivatePoolOptionsId'] = $depth1Value['PrivatePoolOptionsId'];
+			}
 			if(isset($depth1Value['DiskCapacity'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.DiskCapacity'] = $depth1Value['DiskCapacity'];
 			}
@@ -642,6 +625,9 @@ class CreateClusterTemplate extends Rpc
 			}
 			if(isset($depth1Value['HostGroupType'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.HostGroupType'] = $depth1Value['HostGroupType'];
+			}
+			if(isset($depth1Value['PrivatePoolOptionsMatchCriteria'])){
+				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.PrivatePoolOptionsMatchCriteria'] = $depth1Value['PrivatePoolOptionsMatchCriteria'];
 			}
 		}
 
@@ -740,6 +726,8 @@ class CreateClusterTemplate extends Rpc
  * @method $this withUseCustomHiveMetaDB($value)
  * @method string getInitCustomHiveMetaDB()
  * @method $this withInitCustomHiveMetaDB($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getIoOptimized()
  * @method $this withIoOptimized($value)
  * @method string getSecurityGroupId()
@@ -922,6 +910,9 @@ class CreateClusterV2 extends Rpc
 			if(isset($depth1Value['SysDiskCapacity'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.SysDiskCapacity'] = $depth1Value['SysDiskCapacity'];
 			}
+			if(isset($depth1Value['PrivatePoolOptionsId'])){
+				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.PrivatePoolOptionsId'] = $depth1Value['PrivatePoolOptionsId'];
+			}
 			if(isset($depth1Value['DiskCapacity'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.DiskCapacity'] = $depth1Value['DiskCapacity'];
 			}
@@ -969,6 +960,9 @@ class CreateClusterV2 extends Rpc
 			}
 			if(isset($depth1Value['HostGroupType'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.HostGroupType'] = $depth1Value['HostGroupType'];
+			}
+			if(isset($depth1Value['PrivatePoolOptionsMatchCriteria'])){
+				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.PrivatePoolOptionsMatchCriteria'] = $depth1Value['PrivatePoolOptionsMatchCriteria'];
 			}
 		}
 
@@ -1325,18 +1319,6 @@ class CreateFlowCategory extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getForce()
- * @method $this withForce($value)
- */
-class CreateFlowEditLock extends Rpc
-{
-}
-
-/**
  * @method string getCronExpr()
  * @method $this withCronExpr($value)
  * @method string getDescription()
@@ -1382,20 +1364,16 @@ class CreateFlowForWeb extends Rpc
  * @method string getRetryPolicy()
  * @method $this withRetryPolicy($value)
  * @method string getRunConf()
- * @method $this withRunConf($value)
  * @method string getDescription()
- * @method $this withDescription($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getParamConf()
- * @method $this withParamConf($value)
  * @method array getResourceList()
  * @method string getFailAct()
  * @method $this withFailAct($value)
  * @method string getMode()
  * @method $this withMode($value)
  * @method string getMonitorConf()
- * @method $this withMonitorConf($value)
  * @method string getMaxRetry()
  * @method $this withMaxRetry($value)
  * @method string getAlertConf()
@@ -1403,15 +1381,12 @@ class CreateFlowForWeb extends Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  * @method string getEnvConf()
- * @method $this withEnvConf($value)
  * @method string getMaxRunningTimeSec()
  * @method $this withMaxRunningTimeSec($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getParams()
- * @method $this withParams($value)
  * @method string getCustomVariables()
- * @method $this withCustomVariables($value)
  * @method string getRetryInterval()
  * @method $this withRetryInterval($value)
  * @method string getName()
@@ -1425,6 +1400,45 @@ class CreateFlowJob extends Rpc
 {
 
     /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRunConf($value)
+    {
+        $this->data['RunConf'] = $value;
+        $this->options['form_params']['RunConf'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParamConf($value)
+    {
+        $this->data['ParamConf'] = $value;
+        $this->options['form_params']['ParamConf'] = $value;
+
+        return $this;
+    }
+
+    /**
      * @param array $resourceList
      *
      * @return $this
@@ -1434,14 +1448,66 @@ class CreateFlowJob extends Rpc
 	    $this->data['ResourceList'] = $resourceList;
 		foreach ($resourceList as $depth1 => $depth1Value) {
 			if(isset($depth1Value['Path'])){
-				$this->options['query']['ResourceList.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
+				$this->options['form_params']['ResourceList.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
 			}
 			if(isset($depth1Value['Alias'])){
-				$this->options['query']['ResourceList.' . ($depth1 + 1) . '.Alias'] = $depth1Value['Alias'];
+				$this->options['form_params']['ResourceList.' . ($depth1 + 1) . '.Alias'] = $depth1Value['Alias'];
 			}
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMonitorConf($value)
+    {
+        $this->data['MonitorConf'] = $value;
+        $this->options['form_params']['MonitorConf'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnvConf($value)
+    {
+        $this->data['EnvConf'] = $value;
+        $this->options['form_params']['EnvConf'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustomVariables($value)
+    {
+        $this->data['CustomVariables'] = $value;
+        $this->options['form_params']['CustomVariables'] = $value;
+
+        return $this;
     }
 }
 
@@ -1611,34 +1677,6 @@ class CreateLibrary extends Rpc
  * @method $this withUser($value)
  */
 class CreateMetaTablePreviewTask extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getName()
- * @method $this withName($value)
- */
-class CreateNote extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getNoteId()
- * @method $this withNoteId($value)
- * @method string getText()
- * @method $this withText($value)
- */
-class CreateParagraph extends Rpc
 {
 }
 
@@ -2042,16 +2080,6 @@ class DeleteFlowCategory extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- */
-class DeleteFlowEditLock extends Rpc
-{
-}
-
-/**
  * @method string getId()
  * @method $this withId($value)
  * @method string getProjectId()
@@ -2123,18 +2151,6 @@ class DeleteLibraries extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class DeleteNote extends Rpc
-{
 }
 
 /**
@@ -2348,6 +2364,36 @@ class DescribeDataSource extends Rpc
 }
 
 /**
+ * @method string getEventId()
+ * @method $this withEventId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCurrentStage()
+ * @method $this withCurrentStage($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ * @method string getCurrentState()
+ * @method $this withCurrentState($value)
+ */
+class DescribeDiskOpsActivity extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getEmrVersion()
+ * @method $this withEmrVersion($value)
+ */
+class DescribeEmrMainVersion extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getId()
@@ -2364,30 +2410,6 @@ class DescribeExecutionPlan extends Rpc
  * @method $this withProjectId($value)
  */
 class DescribeFlow extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterBizId()
- * @method $this withClusterBizId($value)
- * @method string getInnerIP()
- * @method $this withInnerIP($value)
- */
-class DescribeFlowAgentToken extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterBizId()
- * @method $this withClusterBizId($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- */
-class DescribeFlowAgentUser extends Rpc
 {
 }
 
@@ -2414,38 +2436,6 @@ class DescribeFlowCategory extends Rpc
  * @method $this withCategoryId($value)
  */
 class DescribeFlowCategoryTree extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCommitterId()
- * @method $this withCommitterId($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method string getOrderField()
- * @method $this withOrderField($value)
- * @method string getEntityGroupId()
- * @method $this withEntityGroupId($value)
- * @method string getRevision()
- * @method $this withRevision($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class DescribeFlowEntitySnapshot extends Rpc
 {
 }
 
@@ -2692,92 +2682,6 @@ class DetachAndReleaseClusterEni extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSrcRevision()
- * @method $this withSrcRevision($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getDstRevision()
- * @method $this withDstRevision($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class DiffFlowEntitySnapshot extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDumpAllDatabase()
- * @method $this withDumpAllDatabase($value)
- * @method string getDumpLimit()
- * @method $this withDumpLimit($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getDumpAllTable()
- * @method $this withDumpAllTable($value)
- * @method array getPartitionValues()
- * @method string getTableId()
- * @method $this withTableId($value)
- * @method string getDatabaseId()
- * @method $this withDatabaseId($value)
- * @method string getDumpAllPartition()
- * @method $this withDumpAllPartition($value)
- */
-class DumpMetaDataSourceForOuter extends Rpc
-{
-
-    /**
-     * @param array $partitionValues
-     *
-     * @return $this
-     */
-	public function withPartitionValues(array $partitionValues)
-	{
-	    $this->data['PartitionValues'] = $partitionValues;
-		foreach ($partitionValues as $i => $iValue) {
-			$this->options['query']['PartitionValues.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getRelationship()
- * @method $this withRelationship($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method string getOrderField()
- * @method $this withOrderField($value)
- * @method string getDirection()
- * @method $this withDirection($value)
- * @method string getEntityGroupId()
- * @method $this withEntityGroupId($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class GetFlowEntityRelationGraph extends Rpc
-{
-}
-
-/**
  * @method string getFromDatetime()
  * @method $this withFromDatetime($value)
  * @method string getResourceOwnerId()
@@ -2974,16 +2878,6 @@ class InstallLibraries extends Rpc
  * @method $this withResourceGroupId($value)
  */
 class JoinResourceGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getJobInstanceId()
- * @method $this withJobInstanceId($value)
- */
-class KillExecutionJobInstance extends Rpc
 {
 }
 
@@ -3234,6 +3128,8 @@ class ListClusterInstalledService extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getOperationId()
+ * @method $this withOperationId($value)
  * @method string getServiceName()
  * @method $this withServiceName($value)
  * @method string getStatus()
@@ -3321,6 +3217,8 @@ class ListClusterOperationTask extends Rpc
  * @method array getExpiredTagList()
  * @method string getDefaultStatus()
  * @method $this withDefaultStatus($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getName()
  * @method $this withName($value)
  * @method array getClusterTypeList()
@@ -3433,6 +3331,8 @@ class ListClusterServiceComponent extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getComponentName()
+ * @method $this withComponentName($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getServiceName()
@@ -3531,6 +3431,24 @@ class ListDataSource extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListDiskOpsEvents extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  */
@@ -3549,6 +3467,8 @@ class ListEmrAvailableConfig extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getEmrVersion()
+ * @method $this withEmrVersion($value)
  * @method string getInstanceChargeType()
  * @method $this withInstanceChargeType($value)
  * @method string getClusterId()
@@ -3619,46 +3539,6 @@ class ListExecutionPlanInstances extends Rpc
 
 		return $this;
     }
-
-    /**
-     * @param array $statusList
-     *
-     * @return $this
-     */
-	public function withStatusList(array $statusList)
-	{
-	    $this->data['StatusList'] = $statusList;
-		foreach ($statusList as $i => $iValue) {
-			$this->options['query']['StatusList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getStatusList()
- * @method string getIsDesc()
- * @method $this withIsDesc($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getQueryType()
- * @method $this withQueryType($value)
- * @method string getQueryString()
- * @method $this withQueryString($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getStrategy()
- * @method $this withStrategy($value)
- */
-class ListExecutionPlans extends Rpc
-{
 
     /**
      * @param array $statusList
@@ -3761,38 +3641,6 @@ class ListFlowClusterAllHosts extends Rpc
  * @method $this withProjectId($value)
  */
 class ListFlowClusterHost extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCommitterId()
- * @method $this withCommitterId($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method string getOrderField()
- * @method $this withOrderField($value)
- * @method string getEntityGroupId()
- * @method $this withEntityGroupId($value)
- * @method string getRevision()
- * @method $this withRevision($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class ListFlowEntitySnapshot extends Rpc
 {
 }
 
@@ -4025,16 +3873,6 @@ class ListJobExecutionInstances extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getJobInstanceId()
- * @method $this withJobInstanceId($value)
- */
-class ListJobInstanceWorkers extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getQueryString()
  * @method $this withQueryString($value)
  * @method string getIsDesc()
@@ -4131,70 +3969,12 @@ class ListLibraryStatus extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getSourceType()
- * @method $this withSourceType($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
-class ListMetaCluster extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getClusterId()
- * @method string getUserId()
- * @method $this withUserId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method array getDataSourceId()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListMetaDataSourceClusterForOuter extends Rpc
-{
-
-    /**
-     * @param array $clusterId
-     *
-     * @return $this
-     */
-	public function withClusterId(array $clusterId)
-	{
-	    $this->data['ClusterId'] = $clusterId;
-		foreach ($clusterId as $i => $iValue) {
-			$this->options['query']['ClusterId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $dataSourceId
-     *
-     * @return $this
-     */
-	public function withDataSourceId(array $dataSourceId)
-	{
-	    $this->data['DataSourceId'] = $dataSourceId;
-		foreach ($dataSourceId as $i => $iValue) {
-			$this->options['query']['DataSourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- */
-class ListNotes extends Rpc
+class ListLocalDiskComponentInfo extends Rpc
 {
 }
 
@@ -4261,28 +4041,18 @@ class ListScalingActivityV2 extends Rpc
 }
 
 /**
+ * @method string getConfigItemType()
+ * @method $this withConfigItemType($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getScalingGroupBizId()
  * @method $this withScalingGroupBizId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
- * @method string getLimit()
- * @method $this withLimit($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method string getOrderField()
- * @method $this withOrderField($value)
- * @method string getConfigItemType()
- * @method $this withConfigItemType($value)
  */
 class ListScalingConfigItemV2 extends Rpc
 {
@@ -5597,24 +5367,6 @@ class ModifyScalingTaskGroup extends Rpc
 }
 
 /**
- * @method string getCursor()
- * @method $this withCursor($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getStartTimeStamp()
- * @method $this withStartTimeStamp($value)
- * @method string getEndTimeStamp()
- * @method $this withEndTimeStamp($value)
- * @method string getSize()
- * @method $this withSize($value)
- */
-class QueryAlarmHistory extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getDescription()
@@ -5633,16 +5385,6 @@ class QueryEntity extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPayload()
- * @method $this withPayload($value)
- */
-class QueryTableData extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getTagId()
  * @method $this withTagId($value)
  * @method string getEntityId()
@@ -5651,16 +5393,6 @@ class QueryTableData extends Rpc
  * @method $this withEntityType($value)
  */
 class QueryTag extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPayload()
- * @method $this withPayload($value)
- */
-class QueryTrendData extends Rpc
 {
 }
 
@@ -5686,30 +5418,6 @@ class RefreshClusterResourcePool extends Rpc
  */
 class ReleaseCluster extends Rpc
 {
-}
-
-/**
- * @method array getTemplateTagSet()
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- */
-class ReleaseClusterByTemplateTagForInternal extends Rpc
-{
-
-    /**
-     * @param array $templateTagSet
-     *
-     * @return $this
-     */
-	public function withTemplateTagSet(array $templateTagSet)
-	{
-	    $this->data['TemplateTagSet'] = $templateTagSet;
-		foreach ($templateTagSet as $i => $iValue) {
-			$this->options['query']['TemplateTagSet.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -5764,6 +5472,8 @@ class RerunFlow extends Rpc
  * @method string getVswitchId()
  * @method $this withVswitchId($value)
  * @method array getHostComponentInfo()
+ * @method string getClickhouseConf()
+ * @method $this withClickhouseConf($value)
  * @method array getHostGroup()
  * @method array getPromotionInfo()
  */
@@ -5810,6 +5520,9 @@ class ResizeClusterV2 extends Rpc
 			}
 			if(isset($depth1Value['HostKeyPairName'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.HostKeyPairName'] = $depth1Value['HostKeyPairName'];
+			}
+			if(isset($depth1Value['PrivatePoolOptionsId'])){
+				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.PrivatePoolOptionsId'] = $depth1Value['PrivatePoolOptionsId'];
 			}
 			if(isset($depth1Value['DiskCapacity'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.DiskCapacity'] = $depth1Value['DiskCapacity'];
@@ -5859,6 +5572,9 @@ class ResizeClusterV2 extends Rpc
 			if(isset($depth1Value['HostGroupType'])){
 				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.HostGroupType'] = $depth1Value['HostGroupType'];
 			}
+			if(isset($depth1Value['PrivatePoolOptionsMatchCriteria'])){
+				$this->options['query']['HostGroup.' . ($depth1 + 1) . '.PrivatePoolOptionsMatchCriteria'] = $depth1Value['PrivatePoolOptionsMatchCriteria'];
+			}
 		}
 
 		return $this;
@@ -5886,34 +5602,6 @@ class ResizeClusterV2 extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getBackupPlanId()
- * @method $this withBackupPlanId($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- */
-class RestoreBackup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getRevision()
- * @method $this withRevision($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- * @method string getOperatorId()
- * @method $this withOperatorId($value)
- */
-class RestoreFlowEntitySnapshot extends Rpc
-{
 }
 
 /**
@@ -5998,6 +5686,26 @@ class RunClusterServiceAction extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getEventId()
+ * @method $this withEventId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCurrentStage()
+ * @method $this withCurrentStage($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ * @method string getCurrentState()
+ * @method $this withCurrentState($value)
+ */
+class RunDiskOpsActivity extends Rpc
+{
 }
 
 /**
@@ -6168,57 +5876,6 @@ class TagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method array getResourceId()
- * @method string getTagOwnerUid()
- * @method $this withTagOwnerUid($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getScope()
- * @method $this withScope($value)
- * @method array getTag()
- */
-class TagResourcesSystemTags extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-	public function withResourceId(array $resourceId)
-	{
-	    $this->data['ResourceId'] = $resourceId;
-		foreach ($resourceId as $i => $iValue) {
-			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-	public function withTag(array $tag)
-	{
-	    $this->data['Tag'] = $tag;
-		foreach ($tag as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Key'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-			}
-			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getLibraryBizId()
  * @method $this withLibraryBizId($value)
  * @method array getClusterBizIdList()
@@ -6253,52 +5910,6 @@ class UninstallLibraries extends Rpc
  * @method array getTagKey()
  */
 class UntagResources extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-	public function withResourceId(array $resourceId)
-	{
-	    $this->data['ResourceId'] = $resourceId;
-		foreach ($resourceId as $i => $iValue) {
-			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $tagKey
-     *
-     * @return $this
-     */
-	public function withTagKey(array $tagKey)
-	{
-	    $this->data['TagKey'] = $tagKey;
-		foreach ($tagKey as $i => $iValue) {
-			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getAll()
- * @method $this withAll($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getResourceId()
- * @method string getTagOwnerUid()
- * @method $this withTagOwnerUid($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method array getTagKey()
- */
-class UntagResourcesSystemTags extends Rpc
 {
 
     /**
