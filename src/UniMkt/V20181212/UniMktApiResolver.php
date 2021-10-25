@@ -3393,6 +3393,8 @@ class SendTaokeInfo extends Rpc
  * @method $this withIndustryLabelBagId($value)
  * @method string getApplyPrice()
  * @method $this withApplyPrice($value)
+ * @method string getTradeTimeString()
+ * @method $this withTradeTimeString($value)
  * @method string getExtendInfo()
  * @method $this withExtendInfo($value)
  * @method string getChannelId()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1120 - 2021-10-25
+- Supported for custom creative union task.
+
+
 ## 1.8.1119 - 2021-10-21
 - Release AddQualityScore.
 
