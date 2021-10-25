@@ -6,11 +6,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method ApproveOrder approveOrder(array $options = [])
+ * @method ChangeColumnSecLevel changeColumnSecLevel(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
  * @method CreateDataCorrectOrder createDataCorrectOrder(array $options = [])
  * @method CreateDataCronClearOrder createDataCronClearOrder(array $options = [])
  * @method CreateDataImportOrder createDataImportOrder(array $options = [])
  * @method CreateFreeLockCorrectOrder createFreeLockCorrectOrder(array $options = [])
+ * @method CreateLogicDatabase createLogicDatabase(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
  * @method CreateProxy createProxy(array $options = [])
  * @method CreateProxyAccess createProxyAccess(array $options = [])
@@ -20,10 +22,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateUploadFileJob createUploadFileJob(array $options = [])
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DeleteLogicDatabase deleteLogicDatabase(array $options = [])
  * @method DeleteProxy deleteProxy(array $options = [])
  * @method DeleteProxyAccess deleteProxyAccess(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
+ * @method EditLogicDatabase editLogicDatabase(array $options = [])
  * @method EnableUser enableUser(array $options = [])
  * @method ExecuteDataCorrect executeDataCorrect(array $options = [])
  * @method ExecuteDataExport executeDataExport(array $options = [])
@@ -72,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDDLPublishRecords listDDLPublishRecords(array $options = [])
  * @method ListIndexes listIndexes(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ListInstanceUserPermissions listInstanceUserPermissions(array $options = [])
  * @method ListLogicDatabases listLogicDatabases(array $options = [])
  * @method ListLogicTables listLogicTables(array $options = [])
  * @method ListOrders listOrders(array $options = [])
@@ -129,6 +134,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withComment($value)
  */
 class ApproveOrder extends Rpc
+{
+}
+
+/**
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getIsLogic()
+ * @method $this withIsLogic($value)
+ * @method string getNewLevel()
+ * @method $this withNewLevel($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ */
+class ChangeColumnSecLevel extends Rpc
 {
 }
 
@@ -205,6 +230,18 @@ class CreateDataImportOrder extends Rpc
  * @method $this withRelatedUserList($value)
  */
 class CreateFreeLockCorrectOrder extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDatabaseIds()
+ * @method $this withDatabaseIds($value)
+ * @method string getAlias()
+ * @method $this withAlias($value)
+ */
+class CreateLogicDatabase extends Rpc
 {
 }
 
@@ -363,6 +400,16 @@ class DeleteInstance extends Rpc
 }
 
 /**
+ * @method string getLogicDbId()
+ * @method $this withLogicDbId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class DeleteLogicDatabase extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getProxyId()
@@ -399,6 +446,20 @@ class DeleteUser extends Rpc
  * @method $this withTid($value)
  */
 class DisableUser extends Rpc
+{
+}
+
+/**
+ * @method string getLogicDbId()
+ * @method $this withLogicDbId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDatabaseIds()
+ * @method $this withDatabaseIds($value)
+ * @method string getAlias()
+ * @method $this withAlias($value)
+ */
+class EditLogicDatabase extends Rpc
 {
 }
 
@@ -841,6 +902,8 @@ class GetUserUploadFileJob extends Rpc
  * @method $this withUserId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getDbId()
  * @method $this withDbId($value)
  * @method string getTableId()
@@ -1019,6 +1082,22 @@ class ListInstances extends Rpc
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class ListInstanceUserPermissions extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
@@ -1099,8 +1178,12 @@ class ListProxyAccesses extends Rpc
  * @method $this withPageNumber($value)
  * @method string getSecurityLevel()
  * @method $this withSecurityLevel($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
  * @method string getTableName()
  * @method $this withTableName($value)
  */
@@ -1115,6 +1198,10 @@ class ListSensitiveColumns extends Rpc
  * @method $this withColumnName($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
  * @method string getTableName()
  * @method $this withTableName($value)
  */
@@ -1155,6 +1242,8 @@ class ListTables extends Rpc
 }
 
 /**
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getTid()
@@ -1301,6 +1390,8 @@ class RegisterUser extends Rpc
  * @method $this withUserId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getDbId()
  * @method $this withDbId($value)
  * @method string getTableId()
