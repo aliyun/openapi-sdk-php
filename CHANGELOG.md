@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1124 - 2021-10-26
+- Add QueryEmbedTokenInfo,DeleteEmbedToken,CreateEmbedToken,DelayEmbedToken,BuildSignatureUrl, and update QueryDatasetInfo,AuthorizeMenu,AddUserTagMeta,AddUser.
+
+
 ## 1.8.1123 - 2021-10-26
 - Update Dyvmsapi SDK.
 

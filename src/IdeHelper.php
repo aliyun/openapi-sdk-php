@@ -171,6 +171,7 @@ namespace AlibabaCloud;
  * @method static Push\Push push()
  * @method static Pvtz\Pvtz pvtz()
  * @method static Qualitycheck\Qualitycheck qualitycheck()
+ * @method static QuickbiPublic\QuickbiPublic quickbiPublic()
  * @method static RKvstore\RKvstore rKvstore()
  * @method static ROS\ROS rOS()
  * @method static Ram\Ram ram()
