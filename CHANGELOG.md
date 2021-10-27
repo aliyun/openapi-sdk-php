@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1125 - 2021-10-27
+- Generated 2019-03-07 for `Cloudauth`.
+
+
 ## 1.8.1124 - 2021-10-26
 - Add QueryEmbedTokenInfo,DeleteEmbedToken,CreateEmbedToken,DelayEmbedToken,BuildSignatureUrl, and update QueryDatasetInfo,AuthorizeMenu,AddUserTagMeta,AddUser.
 

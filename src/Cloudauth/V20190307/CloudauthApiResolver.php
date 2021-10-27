@@ -61,6 +61,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'cloudauth';
 }
 
 /**
@@ -1158,6 +1161,8 @@ class InitDevice extends Rpc
  * @method string getCallbackUrl()
  * @method $this withCallbackUrl($value)
  * @method string getCrop()
+ * @method string getCertifyUrlType()
+ * @method $this withCertifyUrlType($value)
  */
 class InitFaceVerify extends Rpc
 {
