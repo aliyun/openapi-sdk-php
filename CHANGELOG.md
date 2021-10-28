@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1127 - 2021-10-28
+- Updated tag api.
+- Updated DescribeTask api to get relatedResourceId info.
+
+
 ## 1.8.1126 - 2021-10-28
 - Generated 2019-03-07, 2020-06-18, 2018-09-16, 2020-11-12 for `Cloudauth`.
 

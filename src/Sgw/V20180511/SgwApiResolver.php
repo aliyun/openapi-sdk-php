@@ -26,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateGatewayLogging createGatewayLogging(array $options = [])
  * @method CreateGatewaySMBUser createGatewaySMBUser(array $options = [])
  * @method CreateStorageBundle createStorageBundle(array $options = [])
+ * @method DeleteCSGClients deleteCSGClients(array $options = [])
  * @method DeleteElasticGatewayPrivateZone deleteElasticGatewayPrivateZone(array $options = [])
  * @method DeleteExpressSync deleteExpressSync(array $options = [])
  * @method DeleteGateway deleteGateway(array $options = [])
@@ -36,9 +37,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteGatewaySMBUser deleteGatewaySMBUser(array $options = [])
  * @method DeleteStorageBundle deleteStorageBundle(array $options = [])
  * @method DeployCacheDisk deployCacheDisk(array $options = [])
+ * @method DeployCSGClients deployCSGClients(array $options = [])
  * @method DeployGateway deployGateway(array $options = [])
  * @method DescribeAccountConfig describeAccountConfig(array $options = [])
  * @method DescribeBlockVolumeSnapshots describeBlockVolumeSnapshots(array $options = [])
+ * @method DescribeCSGClients describeCSGClients(array $options = [])
+ * @method DescribeCSGClientTasks describeCSGClientTasks(array $options = [])
  * @method DescribeDashboard describeDashboard(array $options = [])
  * @method DescribeExpireCaches describeExpireCaches(array $options = [])
  * @method DescribeExpressSyncs describeExpressSyncs(array $options = [])
@@ -117,6 +121,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetGatewayADInfo setGatewayADInfo(array $options = [])
  * @method SetGatewayDNS setGatewayDNS(array $options = [])
  * @method SetGatewayLDAPInfo setGatewayLDAPInfo(array $options = [])
+ * @method SwitchCSGClientsReverseSyncConfiguration switchCSGClientsReverseSyncConfiguration(array $options = [])
  * @method SwitchGatewayExpirationPolicy switchGatewayExpirationPolicy(array $options = [])
  * @method SwitchToSubscription switchToSubscription(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -125,6 +130,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateGatewayBlockVolume updateGatewayBlockVolume(array $options = [])
  * @method UpdateGatewayFileShare updateGatewayFileShare(array $options = [])
  * @method UpgradeGateway upgradeGateway(array $options = [])
+ * @method UploadCSGClientLog uploadCSGClientLog(array $options = [])
  * @method UploadGatewayLog uploadGatewayLog(array $options = [])
  * @method ValidateExpressSyncConfig validateExpressSyncConfig(array $options = [])
  * @method ValidateGatewayName validateGatewayName(array $options = [])
@@ -561,6 +567,18 @@ class CreateStorageBundle extends Rpc
 }
 
 /**
+ * @method string getClientIds()
+ * @method $this withClientIds($value)
+ * @method string getClientRegionId()
+ * @method $this withClientRegionId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DeleteCSGClients extends Rpc
+{
+}
+
+/**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGatewayId()
@@ -685,6 +703,20 @@ class DeployCacheDisk extends Rpc
 }
 
 /**
+ * @method string getEcsInstanceIds()
+ * @method $this withEcsInstanceIds($value)
+ * @method string getClientRegionId()
+ * @method $this withClientRegionId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class DeployCSGClients extends Rpc
+{
+}
+
+/**
  * @method string getGatewayClass()
  * @method $this withGatewayClass($value)
  * @method string getGatewayVersion()
@@ -747,6 +779,36 @@ class DescribeAccountConfig extends Rpc
  * @method $this withGatewayId($value)
  */
 class DescribeBlockVolumeSnapshots extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getClientRegionId()
+ * @method $this withClientRegionId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeCSGClients extends Rpc
+{
+}
+
+/**
+ * @method string getClientId()
+ * @method $this withClientId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getClientRegionId()
+ * @method $this withClientRegionId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeCSGClientTasks extends Rpc
 {
 }
 
@@ -1441,6 +1503,8 @@ class GenerateStsToken extends Rpc
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method array getTag()
+ * @method string getResourceRegionId()
+ * @method $this withResourceRegionId($value)
  */
 class ListTagResources extends Rpc
 {
@@ -1754,6 +1818,22 @@ class SetGatewayLDAPInfo extends Rpc
 }
 
 /**
+ * @method string getReverseSyncInternalSecond()
+ * @method $this withReverseSyncInternalSecond($value)
+ * @method string getClientIds()
+ * @method $this withClientIds($value)
+ * @method string getClientRegionId()
+ * @method $this withClientRegionId($value)
+ * @method string getIsReverseSync()
+ * @method $this withIsReverseSync($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class SwitchCSGClientsReverseSyncConfiguration extends Rpc
+{
+}
+
+/**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGatewayId()
@@ -1780,6 +1860,8 @@ class SwitchToSubscription extends Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method array getTag()
+ * @method string getResourceRegionId()
+ * @method $this withResourceRegionId($value)
  */
 class TagResources extends Rpc
 {
@@ -1843,6 +1925,8 @@ class TriggerGatewayRemoteSync extends Rpc
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method array getTagKey()
+ * @method string getResourceRegionId()
+ * @method $this withResourceRegionId($value)
  */
 class UntagResources extends Rpc
 {
@@ -1973,6 +2057,18 @@ class UpdateGatewayFileShare extends Rpc
  * @method $this withGatewayId($value)
  */
 class UpgradeGateway extends Rpc
+{
+}
+
+/**
+ * @method string getClientId()
+ * @method $this withClientId($value)
+ * @method string getClientRegionId()
+ * @method $this withClientRegionId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class UploadCSGClientLog extends Rpc
 {
 }
 
