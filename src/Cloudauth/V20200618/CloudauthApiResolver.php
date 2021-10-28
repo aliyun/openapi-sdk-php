@@ -7,8 +7,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ContrastSmartVerify contrastSmartVerify(array $options = [])
  * @method DescribeSmartVerify describeSmartVerify(array $options = [])
+ * @method DescribeSmsDetail describeSmsDetail(array $options = [])
  * @method ElementSmartVerify elementSmartVerify(array $options = [])
  * @method InitSmartVerify initSmartVerify(array $options = [])
+ * @method SendSms sendSms(array $options = [])
  * @method VerifyBankElement verifyBankElement(array $options = [])
  */
 class CloudauthApiResolver extends ApiResolver
@@ -247,6 +249,152 @@ class DescribeSmartVerify extends Rpc
     {
         $this->data['SceneId'] = $value;
         $this->options['form_params']['SceneId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSendStatus()
+ * @method string getMobile()
+ * @method string getCurrentPage()
+ * @method string getOuterOrderNo()
+ * @method string getSignName()
+ * @method string getSendDate()
+ * @method string getPageSize()
+ * @method string getBizId()
+ * @method string getTemplateCode()
+ * @method string getErrorCode()
+ */
+class DescribeSmsDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSendStatus($value)
+    {
+        $this->data['SendStatus'] = $value;
+        $this->options['form_params']['SendStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOuterOrderNo($value)
+    {
+        $this->data['OuterOrderNo'] = $value;
+        $this->options['form_params']['OuterOrderNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSignName($value)
+    {
+        $this->data['SignName'] = $value;
+        $this->options['form_params']['SignName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSendDate($value)
+    {
+        $this->data['SendDate'] = $value;
+        $this->options['form_params']['SendDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateCode($value)
+    {
+        $this->data['TemplateCode'] = $value;
+        $this->options['form_params']['TemplateCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withErrorCode($value)
+    {
+        $this->data['ErrorCode'] = $value;
+        $this->options['form_params']['ErrorCode'] = $value;
 
         return $this;
     }
@@ -665,6 +813,82 @@ class InitSmartVerify extends Rpc
     {
         $this->data['CallbackUrl'] = $value;
         $this->options['form_params']['CallbackUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMobile()
+ * @method string getSignName()
+ * @method string getOuterOrderNo()
+ * @method string getTemplateCode()
+ * @method string getTemplateParam()
+ */
+class SendSms extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSignName($value)
+    {
+        $this->data['SignName'] = $value;
+        $this->options['form_params']['SignName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOuterOrderNo($value)
+    {
+        $this->data['OuterOrderNo'] = $value;
+        $this->options['form_params']['OuterOrderNo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateCode($value)
+    {
+        $this->data['TemplateCode'] = $value;
+        $this->options['form_params']['TemplateCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateParam($value)
+    {
+        $this->data['TemplateParam'] = $value;
+        $this->options['form_params']['TemplateParam'] = $value;
 
         return $this;
     }

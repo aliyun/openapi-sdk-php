@@ -291,9 +291,6 @@ class GetMaterials extends Rpc
  */
 class GetStatus extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 }
 
 /**
@@ -309,9 +306,6 @@ class GetStatus extends Rpc
  */
 class GetVerifyToken extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 
     /**
      * @param string $value
