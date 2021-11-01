@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1128 - 2021-11-1
+- Release DetectKitchenAnimals DetectWorkwear.
+
+
 ## 1.8.1127 - 2021-10-28
 - Updated tag api.
 - Updated DescribeTask api to get relatedResourceId info.
