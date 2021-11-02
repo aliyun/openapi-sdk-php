@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1130 - 2021-11-2
+- Add API UploadStreamByURL.
+
+
 ## 1.8.1129 - 2021-11-2
 - Fixed SDK update delay.
 

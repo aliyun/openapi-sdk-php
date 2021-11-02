@@ -169,6 +169,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateVodTemplate updateVodTemplate(array $options = [])
  * @method UpdateWatermark updateWatermark(array $options = [])
  * @method UploadMediaByURL uploadMediaByURL(array $options = [])
+ * @method UploadStreamByURL uploadStreamByURL(array $options = [])
  * @method VerifyVodDomainOwner verifyVodDomainOwner(array $options = [])
  */
 class VodApiResolver extends ApiResolver
@@ -2761,6 +2762,22 @@ class UpdateWatermark extends Rpc
  * @method $this withAppId($value)
  */
 class UploadMediaByURL extends Rpc
+{
+}
+
+/**
+ * @method string getFileExtension()
+ * @method $this withFileExtension($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getDefinition()
+ * @method $this withDefinition($value)
+ * @method string getStreamURL()
+ * @method $this withStreamURL($value)
+ */
+class UploadStreamByURL extends Rpc
 {
 }
 
