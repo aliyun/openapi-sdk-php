@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1132 - 2021-11-2
+- Add GetVideoPlayAuth API parameter.
+
+
 ## 1.8.1131 - 2021-11-2
 - Support multi language.
 

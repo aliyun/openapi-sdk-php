@@ -186,9 +186,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'vod';
 }
 
 /**
@@ -1618,12 +1615,14 @@ class GetVideoList extends Rpc
 }
 
 /**
- * @method string getVideoId()
- * @method $this withVideoId($value)
  * @method string getReAuthInfo()
  * @method $this withReAuthInfo($value)
  * @method string getPlayConfig()
  * @method $this withPlayConfig($value)
+ * @method string getVideoId()
+ * @method $this withVideoId($value)
+ * @method string getApiVersion()
+ * @method $this withApiVersion($value)
  * @method string getAuthInfoTimeout()
  * @method $this withAuthInfoTimeout($value)
  */
