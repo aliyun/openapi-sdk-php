@@ -31,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteUsageDetailDataExportTask deleteUsageDetailDataExportTask(array $options = [])
  * @method DeleteUserUsageDataExportTask deleteUserUsageDataExportTask(array $options = [])
  * @method DescribeActiveVersionOfConfigGroup describeActiveVersionOfConfigGroup(array $options = [])
+ * @method DescribeBlockedRegions describeBlockedRegions(array $options = [])
  * @method DescribeCdnCertificateDetail describeCdnCertificateDetail(array $options = [])
  * @method DescribeCdnCertificateList describeCdnCertificateList(array $options = [])
  * @method DescribeCdnDeletedDomains describeCdnDeletedDomains(array $options = [])
@@ -55,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCdnUserResourcePackage describeCdnUserResourcePackage(array $options = [])
  * @method DescribeCdnWafDomain describeCdnWafDomain(array $options = [])
  * @method DescribeCertificateInfoByID describeCertificateInfoByID(array $options = [])
+ * @method DescribeConfigGroupDetail describeConfigGroupDetail(array $options = [])
  * @method DescribeConfigOfVersion describeConfigOfVersion(array $options = [])
  * @method DescribeCustomLogConfig describeCustomLogConfig(array $options = [])
  * @method DescribeDomainAverageResponseTime describeDomainAverageResponseTime(array $options = [])
@@ -764,6 +766,19 @@ class DescribeActiveVersionOfConfigGroup extends Rpc
 }
 
 /**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeBlockedRegions extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getCertName()
  * @method $this withCertName($value)
  * @method string getOwnerId()
@@ -1060,6 +1075,18 @@ class DescribeCertificateInfoByID extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getConfigGroupName()
+ * @method $this withConfigGroupName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getConfigGroupId()
+ * @method $this withConfigGroupId($value)
+ */
+class DescribeConfigGroupDetail extends Rpc
+{
 }
 
 /**

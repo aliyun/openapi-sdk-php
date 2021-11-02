@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1129 - 2021-11-2
+- Fixed SDK update delay.
+
+
 ## 1.8.1128 - 2021-11-1
 - Release DetectKitchenAnimals DetectWorkwear.
 
