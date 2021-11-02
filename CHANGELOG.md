@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1131 - 2021-11-2
+- Support multi language.
+
+
 ## 1.8.1130 - 2021-11-2
 - Add API UploadStreamByURL.
 
