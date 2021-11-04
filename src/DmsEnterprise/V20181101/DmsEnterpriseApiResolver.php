@@ -84,6 +84,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListProxyAccesses listProxyAccesses(array $options = [])
  * @method ListSensitiveColumns listSensitiveColumns(array $options = [])
  * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
+ * @method ListSQLExecAuditLog listSQLExecAuditLog(array $options = [])
  * @method ListSQLReviewOriginSQL listSQLReviewOriginSQL(array $options = [])
  * @method ListTables listTables(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
@@ -1206,6 +1207,30 @@ class ListSensitiveColumns extends Rpc
  * @method $this withTableName($value)
  */
 class ListSensitiveColumnsDetail extends Rpc
+{
+}
+
+/**
+ * @method string getSqlType()
+ * @method $this withSqlType($value)
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
+ * @method string getOpUserName()
+ * @method $this withOpUserName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getExecState()
+ * @method $this withExecState($value)
+ */
+class ListSQLExecAuditLog extends Rpc
 {
 }
 

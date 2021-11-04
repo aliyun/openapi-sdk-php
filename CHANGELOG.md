@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1134 - 2021-11-4
+- Support ListSQLExecAuditLog API.
+- Support ListUsers, GetUser API to return information of Email, Webhook and DingRobot.
+- Support GetApprovalDetail API to return information of CreateTime.
+
+
 ## 1.8.1133 - 2021-11-2
 - Add GetVideoPlayAuth API parameter.
 
