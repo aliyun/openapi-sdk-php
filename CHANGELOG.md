@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1135 - 2021-11-5
+- Add SetCdnDomainSMCertificate.
+
+
 ## 1.8.1134 - 2021-11-4
 - Support ListSQLExecAuditLog API.
 - Support ListUsers, GetUser API to return information of Email, Webhook and DingRobot.

@@ -46,6 +46,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCdnReport describeCdnReport(array $options = [])
  * @method DescribeCdnReportList describeCdnReportList(array $options = [])
  * @method DescribeCdnService describeCdnService(array $options = [])
+ * @method DescribeCdnSMCertificateDetail describeCdnSMCertificateDetail(array $options = [])
+ * @method DescribeCdnSMCertificateList describeCdnSMCertificateList(array $options = [])
  * @method DescribeCdnSubList describeCdnSubList(array $options = [])
  * @method DescribeCdnUserBillHistory describeCdnUserBillHistory(array $options = [])
  * @method DescribeCdnUserBillPrediction describeCdnUserBillPrediction(array $options = [])
@@ -145,6 +147,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RollbackStagingConfig rollbackStagingConfig(array $options = [])
  * @method SetCcConfig setCcConfig(array $options = [])
  * @method SetCdnDomainCSRCertificate setCdnDomainCSRCertificate(array $options = [])
+ * @method SetCdnDomainSMCertificate setCdnDomainSMCertificate(array $options = [])
  * @method SetCdnDomainStagingConfig setCdnDomainStagingConfig(array $options = [])
  * @method SetConfigOfVersion setConfigOfVersion(array $options = [])
  * @method SetDomainServerCertificate setDomainServerCertificate(array $options = [])
@@ -961,6 +964,30 @@ class DescribeCdnService extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ */
+class DescribeCdnSMCertificateDetail extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeCdnSMCertificateList extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeCdnSubList extends Rpc
 {
@@ -1047,6 +1074,8 @@ class DescribeCdnUserQuota extends Rpc
  * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeCdnUserResourcePackage extends Rpc
 {
@@ -2543,6 +2572,20 @@ class SetCcConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class SetCdnDomainCSRCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ */
+class SetCdnDomainSMCertificate extends Rpc
 {
 }
 
