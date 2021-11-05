@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1136 - 2021-11-5
+- Add SetDcdnDomainSMCertificate.
+
+
 ## 1.8.1135 - 2021-11-5
 - Add SetCdnDomainSMCertificate.
 

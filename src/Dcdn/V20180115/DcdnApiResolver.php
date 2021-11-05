@@ -30,11 +30,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRoutine deleteRoutine(array $options = [])
  * @method DeleteRoutineCodeRevision deleteRoutineCodeRevision(array $options = [])
  * @method DeleteRoutineConfEnvs deleteRoutineConfEnvs(array $options = [])
+ * @method DescribeDcdnAclFields describeDcdnAclFields(array $options = [])
  * @method DescribeDcdnBgpBpsData describeDcdnBgpBpsData(array $options = [])
  * @method DescribeDcdnBgpTrafficData describeDcdnBgpTrafficData(array $options = [])
  * @method DescribeDcdnBlockedRegions describeDcdnBlockedRegions(array $options = [])
  * @method DescribeDcdnCertificateDetail describeDcdnCertificateDetail(array $options = [])
  * @method DescribeDcdnCertificateList describeDcdnCertificateList(array $options = [])
+ * @method DescribeDcdnConfigGroupDetail describeDcdnConfigGroupDetail(array $options = [])
  * @method DescribeDcdnConfigOfVersion describeDcdnConfigOfVersion(array $options = [])
  * @method DescribeDcdnDeletedDomains describeDcdnDeletedDomains(array $options = [])
  * @method DescribeDcdnDeliverList describeDcdnDeliverList(array $options = [])
@@ -95,7 +97,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnReportList describeDcdnReportList(array $options = [])
  * @method DescribeDcdnSecFuncInfo describeDcdnSecFuncInfo(array $options = [])
  * @method DescribeDcdnsecService describeDcdnsecService(array $options = [])
+ * @method DescribeDcdnSecSpecInfo describeDcdnSecSpecInfo(array $options = [])
  * @method DescribeDcdnService describeDcdnService(array $options = [])
+ * @method DescribeDcdnSMCertificateDetail describeDcdnSMCertificateDetail(array $options = [])
+ * @method DescribeDcdnSMCertificateList describeDcdnSMCertificateList(array $options = [])
  * @method DescribeDcdnStagingIp describeDcdnStagingIp(array $options = [])
  * @method DescribeDcdnSubList describeDcdnSubList(array $options = [])
  * @method DescribeDcdnTagResources describeDcdnTagResources(array $options = [])
@@ -134,6 +139,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDcdnConfigOfVersion setDcdnConfigOfVersion(array $options = [])
  * @method SetDcdnDomainCertificate setDcdnDomainCertificate(array $options = [])
  * @method SetDcdnDomainCSRCertificate setDcdnDomainCSRCertificate(array $options = [])
+ * @method SetDcdnDomainSMCertificate setDcdnDomainSMCertificate(array $options = [])
  * @method SetDcdnDomainStagingConfig setDcdnDomainStagingConfig(array $options = [])
  * @method SetDcdnUserConfig setDcdnUserConfig(array $options = [])
  * @method SetRoutineSubdomain setRoutineSubdomain(array $options = [])
@@ -780,6 +786,16 @@ class DeleteRoutineConfEnvs extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnAclFields extends Rpc
+{
+}
+
+/**
  * @method string getIsp()
  * @method $this withIsp($value)
  * @method string getStartTime()
@@ -845,6 +861,18 @@ class DescribeDcdnCertificateDetail extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeDcdnCertificateList extends Rpc
+{
+}
+
+/**
+ * @method string getConfigGroupName()
+ * @method $this withConfigGroupName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getConfigGroupId()
+ * @method $this withConfigGroupId($value)
+ */
+class DescribeDcdnConfigGroupDetail extends Rpc
 {
 }
 
@@ -1808,10 +1836,42 @@ class DescribeDcdnsecService extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ */
+class DescribeDcdnSecSpecInfo extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
 class DescribeDcdnService extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ */
+class DescribeDcdnSMCertificateDetail extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeDcdnSMCertificateList extends Rpc
 {
 }
 
@@ -2008,6 +2068,8 @@ class DescribeDcdnUserQuota extends Rpc
  * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeDcdnUserResourcePackage extends Rpc
 {
@@ -2490,6 +2552,20 @@ class SetDcdnDomainCertificate extends Rpc
  * @method $this withOwnerId($value)
  */
 class SetDcdnDomainCSRCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ */
+class SetDcdnDomainSMCertificate extends Rpc
 {
 }
 
