@@ -11,6 +11,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelDeletion cancelDeletion(array $options = [])
  * @method CancelLogstashDeletion cancelLogstashDeletion(array $options = [])
  * @method CancelTask cancelTask(array $options = [])
+ * @method CapacityPlan capacityPlan(array $options = [])
  * @method CloseDiagnosis closeDiagnosis(array $options = [])
  * @method CloseHttps closeHttps(array $options = [])
  * @method CloseManagedIndex closeManagedIndex(array $options = [])
@@ -37,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSnapshotRepo deleteSnapshotRepo(array $options = [])
  * @method DeleteVpcEndpoint deleteVpcEndpoint(array $options = [])
  * @method DescribeAckOperator describeAckOperator(array $options = [])
+ * @method DescribeApm describeApm(array $options = [])
  * @method DescribeCollector describeCollector(array $options = [])
  * @method DescribeConnectableClusters describeConnectableClusters(array $options = [])
  * @method DescribeDiagnoseReport describeDiagnoseReport(array $options = [])
@@ -61,6 +63,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEmonGrafanaAlerts getEmonGrafanaAlerts(array $options = [])
  * @method GetEmonGrafanaDashboards getEmonGrafanaDashboards(array $options = [])
  * @method GetEmonMonitorData getEmonMonitorData(array $options = [])
+ * @method GetOpenStoreUsage getOpenStoreUsage(array $options = [])
  * @method GetRegionConfiguration getRegionConfiguration(array $options = [])
  * @method GetSuggestShrinkableNodes getSuggestShrinkableNodes(array $options = [])
  * @method GetTransferableNodes getTransferableNodes(array $options = [])
@@ -118,6 +121,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PostEmonTryAlarmRule postEmonTryAlarmRule(array $options = [])
  * @method RecommendTemplates recommendTemplates(array $options = [])
  * @method ReinstallCollector reinstallCollector(array $options = [])
+ * @method RemoveApm removeApm(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewLogstash renewLogstash(array $options = [])
  * @method RestartCollector restartCollector(array $options = [])
@@ -128,7 +132,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RolloverDataStream rolloverDataStream(array $options = [])
  * @method RunPipelines runPipelines(array $options = [])
  * @method ShrinkNode shrinkNode(array $options = [])
+ * @method StartApm startApm(array $options = [])
  * @method StartCollector startCollector(array $options = [])
+ * @method StopApm stopApm(array $options = [])
  * @method StopCollector stopCollector(array $options = [])
  * @method StopPipelines stopPipelines(array $options = [])
  * @method TagResources tagResources(array $options = [])
@@ -141,6 +147,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAdminPassword updateAdminPassword(array $options = [])
  * @method UpdateAdvancedSetting updateAdvancedSetting(array $options = [])
  * @method UpdateAliwsDict updateAliwsDict(array $options = [])
+ * @method UpdateApm updateApm(array $options = [])
  * @method UpdateBlackIps updateBlackIps(array $options = [])
  * @method UpdateCollector updateCollector(array $options = [])
  * @method UpdateCollectorName updateCollectorName(array $options = [])
@@ -339,6 +346,12 @@ class CancelTask extends Roa
 
         return $this;
     }
+}
+
+class CapacityPlan extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/assist/actions/capacity-plan';
 }
 
 /**
@@ -1090,6 +1103,31 @@ class DescribeAckOperator extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ */
+class DescribeApm extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/apm/[instanceId]';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getResId()
  * @method $this withResId($value)
  */
@@ -1499,6 +1537,19 @@ class GetEmonMonitorData extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetOpenStoreUsage extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/openstore/usage';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getZoneId()
  */
 class GetRegionConfiguration extends Roa
@@ -1892,6 +1943,7 @@ class ListAckNamespaces extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getExtended()
  */
 class ListAllNode extends Roa
 {
@@ -1900,6 +1952,19 @@ class ListAllNode extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtended($value)
+    {
+        $this->data['Extended'] = $value;
+        $this->options['query']['extended'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2820,7 +2885,10 @@ class ListInstance extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getIsManaged()
+ * @method string getSize()
  * @method string getName()
+ * @method string getPage()
+ * @method string getIsOpenstore()
  */
 class ListInstanceIndices extends Roa
 {
@@ -2861,10 +2929,49 @@ class ListInstanceIndices extends Roa
      *
      * @return $this
      */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withName($value)
     {
         $this->data['Name'] = $value;
         $this->options['query']['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsOpenstore($value)
+    {
+        $this->data['IsOpenstore'] = $value;
+        $this->options['query']['isOpenstore'] = $value;
 
         return $this;
     }
@@ -4014,6 +4121,31 @@ class ReinstallCollector extends Roa
 
 /**
  * @method string getInstanceId()
+ */
+class RemoveApm extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/apm/[instanceId]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  */
@@ -4311,6 +4443,28 @@ class ShrinkNode extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ */
+class StartApm extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/apm/[instanceId]/actions/start';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method string getResId()
  * @method $this withResId($value)
@@ -4329,6 +4483,28 @@ class StartCollector extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ */
+class StopApm extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/apm/[instanceId]/actions/stop';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
 
         return $this;
     }
@@ -4707,6 +4883,101 @@ class UpdateAliwsDict extends Roa
 }
 
 /**
+ * @method string getOutputES()
+ * @method string getOutputESPassword()
+ * @method string getInstanceId()
+ * @method string getYml()
+ * @method string getOutputESUserName()
+ * @method string getToken()
+ */
+class UpdateApm extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/apm/[instanceId]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputES($value)
+    {
+        $this->data['OutputES'] = $value;
+        $this->options['query']['outputES'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputESPassword($value)
+    {
+        $this->data['OutputESPassword'] = $value;
+        $this->options['query']['outputESPassword'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->pathParameters['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withYml($value)
+    {
+        $this->data['Yml'] = $value;
+        $this->options['query']['yml'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputESUserName($value)
+    {
+        $this->data['OutputESUserName'] = $value;
+        $this->options['query']['outputESUserName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToken($value)
+    {
+        $this->data['Token'] = $value;
+        $this->options['query']['token'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
@@ -4785,7 +5056,7 @@ class UpdateCollectorName extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
- * @method string getDescription()
+ * @method string getBody()
  */
 class UpdateDescription extends Roa
 {
@@ -4810,10 +5081,10 @@ class UpdateDescription extends Roa
      *
      * @return $this
      */
-    public function withDescription($value)
+    public function withBody($value)
     {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['description'] = $value;
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
