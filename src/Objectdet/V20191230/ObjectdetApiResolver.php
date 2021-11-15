@@ -211,10 +211,16 @@ class DetectVehicle extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getRoadRegions()
  * @method string getOriginRequestId()
  * @method $this withOriginRequestId($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getPreRegionIntersectFeatures()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getStreamArn()
  * @method $this withStreamArn($value)
  * @method string getImageURL()
@@ -263,9 +269,15 @@ class DetectVehicleICongestion extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getRoadRegions()
  * @method string getOriginRequestId()
  * @method $this withOriginRequestId($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getStreamArn()
  * @method $this withStreamArn($value)
  * @method string getImageURL()

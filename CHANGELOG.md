@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1139 - 2021-11-15
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+
 ## 1.8.1138 - 2021-11-12
 - Update by sdk platform.
 
