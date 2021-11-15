@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1140 - 2021-11-15
+- Add Ext parameter to image translation API.
+
+
 ## 1.8.1139 - 2021-11-15
 - Update DetectVehicleICongestion DetectVehicleIllegalParking.
 

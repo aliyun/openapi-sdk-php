@@ -16,11 +16,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTitleDiagnose getTitleDiagnose(array $options = [])
  * @method GetTitleGenerate getTitleGenerate(array $options = [])
  * @method GetTitleIntelligence getTitleIntelligence(array $options = [])
+ * @method GetTranslateReport getTranslateReport(array $options = [])
+ * @method GetUser getUser(array $options = [])
  * @method OpenAlimtService openAlimtService(array $options = [])
  * @method Translate translate(array $options = [])
  * @method TranslateCertificate translateCertificate(array $options = [])
  * @method TranslateECommerce translateECommerce(array $options = [])
  * @method TranslateGeneral translateGeneral(array $options = [])
+ * @method TranslateImage translateImage(array $options = [])
  */
 class AlimtApiResolver extends ApiResolver
 {
@@ -36,9 +39,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'alimt';
 }
 
 /**
@@ -701,6 +701,24 @@ class GetTitleIntelligence extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getApiName()
+ * @method $this withApiName($value)
+ * @method string getGroup()
+ * @method $this withGroup($value)
+ */
+class GetTranslateReport extends Rpc
+{
+}
+
+class GetUser extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getType()
@@ -787,6 +805,7 @@ class Translate extends Rpc
 }
 
 /**
+ * @method string getExt()
  * @method string getSourceLanguage()
  * @method string getCertificateType()
  * @method string getResultType()
@@ -795,6 +814,19 @@ class Translate extends Rpc
  */
 class TranslateCertificate extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExt($value)
+    {
+        $this->data['Ext'] = $value;
+        $this->options['form_params']['Ext'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1009,6 +1041,96 @@ class TranslateGeneral extends Rpc
     {
         $this->data['TargetLanguage'] = $value;
         $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExt()
+ * @method string getSourceLanguage()
+ * @method string getField()
+ * @method string getImageUrl()
+ * @method string getTargetLanguage()
+ * @method string getImageBase64()
+ */
+class TranslateImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExt($value)
+    {
+        $this->data['Ext'] = $value;
+        $this->options['form_params']['Ext'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withField($value)
+    {
+        $this->data['Field'] = $value;
+        $this->options['form_params']['Field'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageBase64($value)
+    {
+        $this->data['ImageBase64'] = $value;
+        $this->options['form_params']['ImageBase64'] = $value;
 
         return $this;
     }
