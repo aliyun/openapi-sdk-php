@@ -10,6 +10,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssociateWebCert associateWebCert(array $options = [])
  * @method AttachSceneDefenseObject attachSceneDefenseObject(array $options = [])
  * @method ConfigL7RsPolicy configL7RsPolicy(array $options = [])
+ * @method ConfigLayer4Remark configLayer4Remark(array $options = [])
+ * @method ConfigLayer4RuleBakMode configLayer4RuleBakMode(array $options = [])
+ * @method ConfigLayer4RulePolicy configLayer4RulePolicy(array $options = [])
  * @method ConfigNetworkRegionBlock configNetworkRegionBlock(array $options = [])
  * @method ConfigNetworkRules configNetworkRules(array $options = [])
  * @method ConfigUdpReflect configUdpReflect(array $options = [])
@@ -79,6 +82,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceStatistics describeInstanceStatistics(array $options = [])
  * @method DescribeInstanceStatus describeInstanceStatus(array $options = [])
  * @method DescribeL7RsPolicy describeL7RsPolicy(array $options = [])
+ * @method DescribeLayer4RulePolicy describeLayer4RulePolicy(array $options = [])
  * @method DescribeLogStoreExistStatus describeLogStoreExistStatus(array $options = [])
  * @method DescribeNetworkRegionBlock describeNetworkRegionBlock(array $options = [])
  * @method DescribeNetworkRuleAttributes describeNetworkRuleAttributes(array $options = [])
@@ -101,6 +105,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSlsLogstoreInfo describeSlsLogstoreInfo(array $options = [])
  * @method DescribeSlsOpenStatus describeSlsOpenStatus(array $options = [])
  * @method DescribeStsGrantStatus describeStsGrantStatus(array $options = [])
+ * @method DescribeSystemLog describeSystemLog(array $options = [])
  * @method DescribeTagKeys describeTagKeys(array $options = [])
  * @method DescribeTagResources describeTagResources(array $options = [])
  * @method DescribeUdpReflect describeUdpReflect(array $options = [])
@@ -250,6 +255,38 @@ class AttachSceneDefenseObject extends Rpc
  * @method $this withPolicy($value)
  */
 class ConfigL7RsPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getListeners()
+ * @method $this withListeners($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class ConfigLayer4Remark extends Rpc
+{
+}
+
+/**
+ * @method string getBakMode()
+ * @method $this withBakMode($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getListeners()
+ * @method $this withListeners($value)
+ */
+class ConfigLayer4RuleBakMode extends Rpc
+{
+}
+
+/**
+ * @method string getListeners()
+ * @method $this withListeners($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class ConfigLayer4RulePolicy extends Rpc
 {
 }
 
@@ -1030,8 +1067,6 @@ class DescribeCnameReuses extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -1040,6 +1075,8 @@ class DescribeCnameReuses extends Rpc
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getEventType()
  * @method $this withEventType($value)
  */
@@ -1681,6 +1718,16 @@ class DescribeL7RsPolicy extends Rpc
 }
 
 /**
+ * @method string getListeners()
+ * @method $this withListeners($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeLayer4RulePolicy extends Rpc
+{
+}
+
+/**
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
@@ -2137,6 +2184,26 @@ class DescribeSlsOpenStatus extends Rpc
  * @method $this withSourceIp($value)
  */
 class DescribeStsGrantStatus extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getEntityObject()
+ * @method $this withEntityObject($value)
+ * @method string getEntityType()
+ * @method $this withEntityType($value)
+ */
+class DescribeSystemLog extends Rpc
 {
 }
 
@@ -2829,10 +2896,10 @@ class ModifyHttp2Enable extends Rpc
 /**
  * @method string getRemark()
  * @method $this withRemark($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ModifyInstanceRemark extends Rpc
 {

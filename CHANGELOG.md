@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1141 - 2021-11-15
+- Generated 2020-01-01 for `ddoscoo`.
+
+
 ## 1.8.1140 - 2021-11-15
 - Add Ext parameter to image translation API.
 
