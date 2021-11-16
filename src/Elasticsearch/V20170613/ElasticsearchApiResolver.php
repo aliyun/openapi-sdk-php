@@ -4883,12 +4883,8 @@ class UpdateAliwsDict extends Roa
 }
 
 /**
- * @method string getOutputES()
- * @method string getOutputESPassword()
  * @method string getInstanceId()
- * @method string getYml()
- * @method string getOutputESUserName()
- * @method string getToken()
+ * @method string getBody()
  */
 class UpdateApm extends Roa
 {
@@ -4897,32 +4893,6 @@ class UpdateApm extends Roa
 
     /** @var string */
     public $method = 'PUT';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutputES($value)
-    {
-        $this->data['OutputES'] = $value;
-        $this->options['query']['outputES'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutputESPassword($value)
-    {
-        $this->data['OutputESPassword'] = $value;
-        $this->options['query']['outputESPassword'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -4942,36 +4912,10 @@ class UpdateApm extends Roa
      *
      * @return $this
      */
-    public function withYml($value)
+    public function withBody($value)
     {
-        $this->data['Yml'] = $value;
-        $this->options['query']['yml'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutputESUserName($value)
-    {
-        $this->data['OutputESUserName'] = $value;
-        $this->options['query']['outputESUserName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withToken($value)
-    {
-        $this->data['Token'] = $value;
-        $this->options['query']['token'] = $value;
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }

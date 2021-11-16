@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1142 - 2021-11-16
+- Update apm interface parameter.
+
+
 ## 1.8.1141 - 2021-11-15
 - Generated 2020-01-01 for `ddoscoo`.
 
