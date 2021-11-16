@@ -79,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAckNamespaces listAckNamespaces(array $options = [])
  * @method ListAllNode listAllNode(array $options = [])
  * @method ListAlternativeSnapshotRepos listAlternativeSnapshotRepos(array $options = [])
+ * @method ListApm listApm(array $options = [])
  * @method ListAvailableEsInstanceIds listAvailableEsInstanceIds(array $options = [])
  * @method ListCollectors listCollectors(array $options = [])
  * @method ListConnectedClusters listConnectedClusters(array $options = [])
@@ -1989,6 +1990,87 @@ class ListAlternativeSnapshotRepos extends Roa
     {
         $this->data['AlreadySetItems'] = $value;
         $this->options['query']['alreadySetItems'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOutput()
+ * @method string getInstanceId()
+ * @method string getSize()
+ * @method string getDescription()
+ * @method string getPage()
+ */
+class ListApm extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/apm';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutput($value)
+    {
+        $this->data['Output'] = $value;
+        $this->options['query']['output'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['query']['description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
 
         return $this;
     }
