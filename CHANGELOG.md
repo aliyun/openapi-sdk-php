@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1143 - 2021-11-16
+- Update SetCdnDomainSMCertificate.
+
+
 ## 1.8.1142 - 2021-11-16
 - Update apm interface parameter.
 
