@@ -162,6 +162,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateDetectionTemplate updateDetectionTemplate(array $options = [])
  * @method UpdateEditingProject updateEditingProject(array $options = [])
  * @method UpdateImageInfos updateImageInfos(array $options = [])
+ * @method UpdateStreamInfo updateStreamInfo(array $options = [])
  * @method UpdateTranscodeTemplateGroup updateTranscodeTemplateGroup(array $options = [])
  * @method UpdateVideoInfo updateVideoInfo(array $options = [])
  * @method UpdateVideoInfos updateVideoInfos(array $options = [])
@@ -186,6 +187,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'vod';
 }
 
 /**
@@ -2653,6 +2657,20 @@ class UpdateImageInfos extends Rpc
 }
 
 /**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getHDRType()
+ * @method $this withHDRType($value)
+ * @method string getDefinition()
+ * @method $this withDefinition($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class UpdateStreamInfo extends Rpc
+{
+}
+
+/**
  * @method string getTranscodeTemplateList()
  * @method $this withTranscodeTemplateList($value)
  * @method string getTranscodeTemplateGroupId()
@@ -2767,14 +2785,16 @@ class UploadMediaByURL extends Rpc
 /**
  * @method string getFileExtension()
  * @method $this withFileExtension($value)
- * @method string getMediaId()
- * @method $this withMediaId($value)
  * @method string getUserData()
  * @method $this withUserData($value)
+ * @method string getHDRType()
+ * @method $this withHDRType($value)
  * @method string getDefinition()
  * @method $this withDefinition($value)
  * @method string getStreamURL()
  * @method $this withStreamURL($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
  */
 class UploadStreamByURL extends Rpc
 {
