@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1148 - 2021-11-17
+- Update apm interface parameter.
+
+
 ## 1.8.1147 - 2021-11-16
 - Add parameter type HDRType.
 
