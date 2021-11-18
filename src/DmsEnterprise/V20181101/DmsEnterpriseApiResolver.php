@@ -75,6 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDBTaskSQLJobDetail listDBTaskSQLJobDetail(array $options = [])
  * @method ListDDLPublishRecords listDDLPublishRecords(array $options = [])
  * @method ListIndexes listIndexes(array $options = [])
+ * @method ListInstanceLoginAuditLog listInstanceLoginAuditLog(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListInstanceUserPermissions listInstanceUserPermissions(array $options = [])
  * @method ListLogicDatabases listLogicDatabases(array $options = [])
@@ -82,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListOrders listOrders(array $options = [])
  * @method ListProxies listProxies(array $options = [])
  * @method ListProxyAccesses listProxyAccesses(array $options = [])
+ * @method ListProxySQLExecAuditLog listProxySQLExecAuditLog(array $options = [])
  * @method ListSensitiveColumns listSensitiveColumns(array $options = [])
  * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
  * @method ListSQLExecAuditLog listSQLExecAuditLog(array $options = [])
@@ -1055,6 +1057,26 @@ class ListIndexes extends Rpc
 }
 
 /**
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
+ * @method string getOpUserName()
+ * @method $this withOpUserName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListInstanceLoginAuditLog extends Rpc
+{
+}
+
+/**
  * @method string getSearchKey()
  * @method $this withSearchKey($value)
  * @method string getTid()
@@ -1165,6 +1187,30 @@ class ListProxies extends Rpc
  * @method $this withProxyId($value)
  */
 class ListProxyAccesses extends Rpc
+{
+}
+
+/**
+ * @method string getSQLType()
+ * @method $this withSQLType($value)
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
+ * @method string getOpUserName()
+ * @method $this withOpUserName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getExecState()
+ * @method $this withExecState($value)
+ */
+class ListProxySQLExecAuditLog extends Rpc
 {
 }
 

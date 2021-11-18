@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1149 - 2021-11-18
+- Support ListInstanceLoginAuditLog, ListProxySQLExecAuditLog API.
+- Support GetOpLog API to return OpUserId information.
+
+
 ## 1.8.1148 - 2021-11-17
 - Update apm interface parameter.
 
