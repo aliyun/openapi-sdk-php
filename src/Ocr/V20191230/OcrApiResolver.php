@@ -30,6 +30,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeTrainTicket recognizeTrainTicket(array $options = [])
  * @method RecognizeVATInvoice recognizeVATInvoice(array $options = [])
  * @method RecognizeVerificationcode recognizeVerificationcode(array $options = [])
+ * @method RecognizeVideoCharacter recognizeVideoCharacter(array $options = [])
  * @method RecognizeVINCode recognizeVINCode(array $options = [])
  * @method TrimDocument trimDocument(array $options = [])
  */
@@ -243,13 +244,32 @@ class RecognizeBusinessLicense extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getMinHeight()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getOutputProbability()
  * @method string getImageURL()
- * @method string getMinHeight()
  */
 class RecognizeCharacter extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinHeight($value)
+    {
+        $this->data['MinHeight'] = $value;
+        $this->options['form_params']['MinHeight'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -286,19 +306,6 @@ class RecognizeCharacter extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMinHeight($value)
-    {
-        $this->data['MinHeight'] = $value;
-        $this->options['form_params']['MinHeight'] = $value;
 
         return $this;
     }
@@ -901,6 +908,46 @@ class RecognizeVerificationcode extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
+ * @method string getAsync()
+ * @method string getVideoURL()
+ */
+class RecognizeVideoCharacter extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoURL($value)
+    {
+        $this->data['VideoURL'] = $value;
+        $this->options['form_params']['VideoURL'] = $value;
 
         return $this;
     }

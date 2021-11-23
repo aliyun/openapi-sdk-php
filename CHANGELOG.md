@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1152 - 2021-11-23
+- Update RecognizeCharacter.
+
+
 ## 1.8.1151 - 2021-11-23
 - Generated 2016-04-08 for `Emr`.
 
