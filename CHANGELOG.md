@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1153 - 2021-11-23
+- Delete some abandoned interface in SDK.
+- Add AutoLiveStream series interfaces.
+- Add UpdateMPUTask, CreateRecordIndexFile interfaces.
+
+
 ## 1.8.1152 - 2021-11-23
 - Update RecognizeCharacter.
 
