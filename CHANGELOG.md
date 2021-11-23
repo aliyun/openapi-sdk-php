@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1150 - 2021-11-23
+- Support the IP restrictions in ram policy.
+
+
 ## 1.8.1149 - 2021-11-18
 - Support ListInstanceLoginAuditLog, ListProxySQLExecAuditLog API.
 - Support GetOpLog API to return OpUserId information.
