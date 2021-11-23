@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1151 - 2021-11-23
+- Generated 2016-04-08 for `Emr`.
+
+
 ## 1.8.1150 - 2021-11-23
 - Support the IP restrictions in ram policy.
 
