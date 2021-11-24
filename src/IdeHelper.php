@@ -141,6 +141,7 @@ namespace AlibabaCloud;
  * @method static Market\Market market()
  * @method static MoPen\MoPen moPen()
  * @method static MoguanSdk\MoguanSdk moguanSdk()
+ * @method static Mse\Mse mse()
  * @method static Mts\Mts mts()
  * @method static Multimediaai\Multimediaai multimediaai()
  * @method static NAS\NAS nAS()
