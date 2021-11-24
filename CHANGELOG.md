@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1155 - 2021-11-24
+- Delete some abandoned interface in SDK.
+
+
 ## 1.8.1154 - 2021-11-24
 - Set API DescribeVodDomainSrcBpsData to public.
 

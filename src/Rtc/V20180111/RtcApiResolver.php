@@ -9,7 +9,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateAutoLiveStreamRule createAutoLiveStreamRule(array $options = [])
  * @method CreateEventSubscribe createEventSubscribe(array $options = [])
  * @method CreateMPULayout createMPULayout(array $options = [])
- * @method CreateRecordIndexFile createRecordIndexFile(array $options = [])
  * @method DeleteAutoLiveStreamRule deleteAutoLiveStreamRule(array $options = [])
  * @method DeleteEventSubscribe deleteEventSubscribe(array $options = [])
  * @method DeleteMPULayout deleteMPULayout(array $options = [])
@@ -19,7 +18,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeChannelUsers describeChannelUsers(array $options = [])
  * @method DescribeMPULayoutInfoList describeMPULayoutInfoList(array $options = [])
  * @method DescribeRecordFiles describeRecordFiles(array $options = [])
- * @method DescribeRecordTasks describeRecordTasks(array $options = [])
  * @method DescribeRecordTemplates describeRecordTemplates(array $options = [])
  * @method DescribeUserInfoInChannel describeUserInfoInChannel(array $options = [])
  * @method DisableAutoLiveStreamRule disableAutoLiveStreamRule(array $options = [])
@@ -382,32 +380,6 @@ class CreateMPULayout extends Rpc
 }
 
 /**
- * @method string getOssEndpoint()
- * @method $this withOssEndpoint($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getOssObject()
- * @method $this withOssObject($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOssBucket()
- * @method $this withOssBucket($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class CreateRecordIndexFile extends Rpc
-{
-}
-
-/**
  * @method string getShowLog()
  * @method $this withShowLog($value)
  * @method string getOwnerId()
@@ -549,46 +521,6 @@ class DescribeMPULayoutInfoList extends Rpc
  * @method $this withChannelId($value)
  */
 class DescribeRecordFiles extends Rpc
-{
-
-    /**
-     * @param array $taskIds
-     *
-     * @return $this
-     */
-	public function withTaskIds(array $taskIds)
-	{
-	    $this->data['TaskIds'] = $taskIds;
-		foreach ($taskIds as $i => $iValue) {
-			$this->options['query']['TaskIds.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method array getTaskIds()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class DescribeRecordTasks extends Rpc
 {
 
     /**
