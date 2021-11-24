@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1154 - 2021-11-24
+- Set API DescribeVodDomainSrcBpsData to public.
+
+
 ## 1.8.1153 - 2021-11-23
 - Delete some abandoned interface in SDK.
 - Add AutoLiveStream series interfaces.

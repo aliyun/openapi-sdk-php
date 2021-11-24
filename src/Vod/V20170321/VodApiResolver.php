@@ -19,7 +19,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelUrlUploadJobs cancelUrlUploadJobs(array $options = [])
  * @method CreateAppInfo createAppInfo(array $options = [])
  * @method CreateAudit createAudit(array $options = [])
- * @method CreateDetectionTemplate createDetectionTemplate(array $options = [])
  * @method CreateUploadAttachedMedia createUploadAttachedMedia(array $options = [])
  * @method CreateUploadImage createUploadImage(array $options = [])
  * @method CreateUploadVideo createUploadVideo(array $options = [])
@@ -29,7 +28,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAppInfo deleteAppInfo(array $options = [])
  * @method DeleteAttachedMedia deleteAttachedMedia(array $options = [])
  * @method DeleteCategory deleteCategory(array $options = [])
- * @method DeleteDetectionTemplate deleteDetectionTemplate(array $options = [])
  * @method DeleteDynamicImage deleteDynamicImage(array $options = [])
  * @method DeleteEditingProject deleteEditingProject(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
@@ -56,6 +54,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodDomainDetail describeVodDomainDetail(array $options = [])
  * @method DescribeVodDomainLog describeVodDomainLog(array $options = [])
  * @method DescribeVodDomainRealtimeLogDelivery describeVodDomainRealtimeLogDelivery(array $options = [])
+ * @method DescribeVodDomainSrcBpsData describeVodDomainSrcBpsData(array $options = [])
  * @method DescribeVodDomainTrafficData describeVodDomainTrafficData(array $options = [])
  * @method DescribeVodDomainUsageData describeVodDomainUsageData(array $options = [])
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
@@ -69,7 +68,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetachAppPolicyFromIdentity detachAppPolicyFromIdentity(array $options = [])
  * @method DisableVodRealtimeLogDelivery disableVodRealtimeLogDelivery(array $options = [])
  * @method EnableVodRealtimeLogDelivery enableVodRealtimeLogDelivery(array $options = [])
- * @method GetAICaptionExtractionJobs getAICaptionExtractionJobs(array $options = [])
  * @method GetAIImageJobs getAIImageJobs(array $options = [])
  * @method GetAIMediaAuditJob getAIMediaAuditJob(array $options = [])
  * @method GetAITemplate getAITemplate(array $options = [])
@@ -79,9 +77,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAuditHistory getAuditHistory(array $options = [])
  * @method GetCategories getCategories(array $options = [])
  * @method GetDefaultAITemplate getDefaultAITemplate(array $options = [])
- * @method GetDetectionJob getDetectionJob(array $options = [])
- * @method GetDetectionResult getDetectionResult(array $options = [])
- * @method GetDetectionTemplate getDetectionTemplate(array $options = [])
  * @method GetEditingProject getEditingProject(array $options = [])
  * @method GetEditingProjectMaterials getEditingProjectMaterials(array $options = [])
  * @method GetImageInfo getImageInfo(array $options = [])
@@ -110,10 +105,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAppInfo listAppInfo(array $options = [])
  * @method ListAppPoliciesForIdentity listAppPoliciesForIdentity(array $options = [])
  * @method ListAuditSecurityIp listAuditSecurityIp(array $options = [])
- * @method ListDetectionJob listDetectionJob(array $options = [])
- * @method ListDetectionTemplate listDetectionTemplate(array $options = [])
  * @method ListDynamicImage listDynamicImage(array $options = [])
- * @method ListLetterSendJob listLetterSendJob(array $options = [])
  * @method ListLiveRecordVideo listLiveRecordVideo(array $options = [])
  * @method ListMediaDNADeleteJob listMediaDNADeleteJob(array $options = [])
  * @method ListSnapshots listSnapshots(array $options = [])
@@ -139,12 +131,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetEditingProjectMaterials setEditingProjectMaterials(array $options = [])
  * @method SetMessageCallback setMessageCallback(array $options = [])
  * @method SetVodDomainCertificate setVodDomainCertificate(array $options = [])
- * @method SubmitAICaptionExtractionJob submitAICaptionExtractionJob(array $options = [])
  * @method SubmitAIImageAuditJob submitAIImageAuditJob(array $options = [])
  * @method SubmitAIImageJob submitAIImageJob(array $options = [])
  * @method SubmitAIJob submitAIJob(array $options = [])
  * @method SubmitAIMediaAuditJob submitAIMediaAuditJob(array $options = [])
- * @method SubmitDetectionJob submitDetectionJob(array $options = [])
  * @method SubmitDynamicImageJob submitDynamicImageJob(array $options = [])
  * @method SubmitLiveEditing submitLiveEditing(array $options = [])
  * @method SubmitMediaDNADeleteJob submitMediaDNADeleteJob(array $options = [])
@@ -158,8 +148,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateAppInfo updateAppInfo(array $options = [])
  * @method UpdateAttachedMediaInfos updateAttachedMediaInfos(array $options = [])
  * @method UpdateCategory updateCategory(array $options = [])
- * @method UpdateDetectionJob updateDetectionJob(array $options = [])
- * @method UpdateDetectionTemplate updateDetectionTemplate(array $options = [])
  * @method UpdateEditingProject updateEditingProject(array $options = [])
  * @method UpdateImageInfos updateImageInfos(array $options = [])
  * @method UpdateStreamInfo updateStreamInfo(array $options = [])
@@ -399,30 +387,6 @@ class CreateAudit extends Rpc
 }
 
 /**
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getAutoEvidenceSuspect()
- * @method $this withAutoEvidenceSuspect($value)
- * @method string getLetterSendTime()
- * @method $this withLetterSendTime($value)
- * @method string getAutoLetterSuspect()
- * @method $this withAutoLetterSuspect($value)
- * @method string getPlatform()
- * @method $this withPlatform($value)
- * @method string getAutoLetter()
- * @method $this withAutoLetter($value)
- * @method string getTemplateName()
- * @method $this withTemplateName($value)
- * @method string getAutoEvidence()
- * @method $this withAutoEvidence($value)
- * @method string getLetterTemplateId()
- * @method $this withLetterTemplateId($value)
- */
-class CreateDetectionTemplate extends Rpc
-{
-}
-
-/**
  * @method string getIcon()
  * @method $this withIcon($value)
  * @method string getDescription()
@@ -574,14 +538,6 @@ class DeleteAttachedMedia extends Rpc
  * @method $this withCateId($value)
  */
 class DeleteCategory extends Rpc
-{
-}
-
-/**
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- */
-class DeleteDetectionTemplate extends Rpc
 {
 }
 
@@ -924,6 +880,22 @@ class DescribeVodDomainRealtimeLogDelivery extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVodDomainSrcBpsData extends Rpc
+{
+}
+
+/**
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
@@ -1198,14 +1170,6 @@ class EnableVodRealtimeLogDelivery extends Rpc
 }
 
 /**
- * @method string getJobIds()
- * @method $this withJobIds($value)
- */
-class GetAICaptionExtractionJobs extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -1313,47 +1277,6 @@ class GetCategories extends Rpc
  */
 class GetDefaultAITemplate extends Rpc
 {
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- */
-class GetDetectionJob extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getCountByPage()
- * @method $this withCountByPage($value)
- * @method string getDesensitization()
- * @method $this withDesensitization($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getPage()
- * @method $this withPage($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class GetDetectionResult extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- */
-class GetDetectionTemplate extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -1720,49 +1643,8 @@ class ListAuditSecurityIp extends Rpc
  * @method string getVideoId()
  * @method $this withVideoId($value)
  */
-class ListDetectionJob extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getTemplateName()
- * @method $this withTemplateName($value)
- * @method string getLetterTemplateId()
- * @method $this withLetterTemplateId($value)
- */
-class ListDetectionTemplate extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getVideoId()
- * @method $this withVideoId($value)
- */
 class ListDynamicImage extends Rpc
 {
-}
-
-/**
- * @method string getToAddress()
- * @method $this withToAddress($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- * @method string getDetectionId()
- * @method $this withDetectionId($value)
- */
-class ListLetterSendJob extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2172,20 +2054,6 @@ class SetVodDomainCertificate extends Rpc
 }
 
 /**
- * @method string getJobConfig()
- * @method $this withJobConfig($value)
- * @method string getVideoId()
- * @method $this withVideoId($value)
- * @method string getAIPipelineId()
- * @method $this withAIPipelineId($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- */
-class SubmitAICaptionExtractionJob extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -2264,34 +2132,6 @@ class SubmitAIJob extends Rpc
  * @method $this withMediaType($value)
  */
 class SubmitAIMediaAuditJob extends Rpc
-{
-}
-
-/**
- * @method string getWhiteListUrls()
- * @method $this withWhiteListUrls($value)
- * @method string getCopyrightEndTime()
- * @method $this withCopyrightEndTime($value)
- * @method string getCopyrightStatus()
- * @method $this withCopyrightStatus($value)
- * @method string getCopyrightBeginTime()
- * @method $this withCopyrightBeginTime($value)
- * @method string getDuration()
- * @method $this withDuration($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getVideoId()
- * @method $this withVideoId($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getShortVideo()
- * @method $this withShortVideo($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- * @method string getCopyrightFile()
- * @method $this withCopyrightFile($value)
- */
-class SubmitDetectionJob extends Rpc
 {
 }
 
@@ -2563,58 +2403,6 @@ class UpdateAttachedMediaInfos extends Rpc
  * @method $this withCateName($value)
  */
 class UpdateCategory extends Rpc
-{
-}
-
-/**
- * @method string getWhiteListUrls()
- * @method $this withWhiteListUrls($value)
- * @method string getCopyrightEndTime()
- * @method $this withCopyrightEndTime($value)
- * @method string getCopyrightStatus()
- * @method $this withCopyrightStatus($value)
- * @method string getCopyrightBeginTime()
- * @method $this withCopyrightBeginTime($value)
- * @method string getDuration()
- * @method $this withDuration($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- * @method string getCopyrightFile()
- * @method $this withCopyrightFile($value)
- */
-class UpdateDetectionJob extends Rpc
-{
-}
-
-/**
- * @method string getLetterSendTime()
- * @method $this withLetterSendTime($value)
- * @method string getAutoLetterSuspect()
- * @method $this withAutoLetterSuspect($value)
- * @method string getPlatform()
- * @method $this withPlatform($value)
- * @method string getAutoLetter()
- * @method $this withAutoLetter($value)
- * @method string getTemplateName()
- * @method $this withTemplateName($value)
- * @method string getAutoEvidence()
- * @method $this withAutoEvidence($value)
- * @method string getLetterTemplateId()
- * @method $this withLetterTemplateId($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getAutoEvidenceSuspect()
- * @method $this withAutoEvidenceSuspect($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
- */
-class UpdateDetectionTemplate extends Rpc
 {
 }
 
