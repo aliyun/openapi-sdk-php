@@ -7,16 +7,23 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AssignJobs assignJobs(array $options = [])
  * @method CancelJobs cancelJobs(array $options = [])
+ * @method ChangeResourceGroup changeResourceGroup(array $options = [])
  * @method CreateBatchJobs createBatchJobs(array $options = [])
+ * @method CreateBatchRepeatJob createBatchRepeatJob(array $options = [])
  * @method CreateDialogueFlow createDialogueFlow(array $options = [])
+ * @method CreateDownloadUrl createDownloadUrl(array $options = [])
  * @method CreateGlobalQuestion createGlobalQuestion(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateIntent createIntent(array $options = [])
+ * @method CreateJobDataParsingTask createJobDataParsingTask(array $options = [])
  * @method CreateJobGroup createJobGroup(array $options = [])
+ * @method CreateJobGroupExportTask createJobGroupExportTask(array $options = [])
  * @method CreateOutboundCallNumber createOutboundCallNumber(array $options = [])
  * @method CreateScript createScript(array $options = [])
  * @method CreateScriptWaveform createScriptWaveform(array $options = [])
  * @method CreateTag createTag(array $options = [])
+ * @method DeleteContactBlockList deleteContactBlockList(array $options = [])
+ * @method DeleteContactWhiteList deleteContactWhiteList(array $options = [])
  * @method DeleteDialogueFlow deleteDialogueFlow(array $options = [])
  * @method DeleteGlobalQuestion deleteGlobalQuestion(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
@@ -25,11 +32,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteOutboundCallNumber deleteOutboundCallNumber(array $options = [])
  * @method DeleteScript deleteScript(array $options = [])
  * @method DeleteScriptWaveform deleteScriptWaveform(array $options = [])
+ * @method DescribeDialogueNodeStatistics describeDialogueNodeStatistics(array $options = [])
+ * @method DescribeDsReports describeDsReports(array $options = [])
  * @method DescribeGlobalQuestion describeGlobalQuestion(array $options = [])
+ * @method DescribeGroupExecutingInfo describeGroupExecutingInfo(array $options = [])
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeIntent describeIntent(array $options = [])
+ * @method DescribeIntentStatistics describeIntentStatistics(array $options = [])
  * @method DescribeJob describeJob(array $options = [])
+ * @method DescribeJobDataParsingTaskProgress describeJobDataParsingTaskProgress(array $options = [])
  * @method DescribeJobGroup describeJobGroup(array $options = [])
+ * @method DescribeJobGroupExportTaskProgress describeJobGroupExportTaskProgress(array $options = [])
  * @method DescribeScript describeScript(array $options = [])
  * @method DescribeScriptVoiceConfig describeScriptVoiceConfig(array $options = [])
  * @method DescribeTagHitsSummary describeTagHitsSummary(array $options = [])
@@ -39,24 +52,42 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DownloadRecording downloadRecording(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
+ * @method GetAfterAnswerDelayPlayback getAfterAnswerDelayPlayback(array $options = [])
+ * @method GetAsrServerInfo getAsrServerInfo(array $options = [])
+ * @method GetBaseStrategyPeriod getBaseStrategyPeriod(array $options = [])
+ * @method GetConcurrentConversationQuota getConcurrentConversationQuota(array $options = [])
+ * @method GetContactBlockList getContactBlockList(array $options = [])
+ * @method GetContactWhiteList getContactWhiteList(array $options = [])
+ * @method GetCurrentConcurrency getCurrentConcurrency(array $options = [])
+ * @method GetEffectiveDays getEffectiveDays(array $options = [])
+ * @method GetEmptyNumberNoMoreCallsInfo getEmptyNumberNoMoreCallsInfo(array $options = [])
+ * @method GetInstanceConfig getInstanceConfig(array $options = [])
+ * @method GetMaxAttemptsPerDay getMaxAttemptsPerDay(array $options = [])
+ * @method GetSummaryInfo getSummaryInfo(array $options = [])
+ * @method GetTaskByUuid getTaskByUuid(array $options = [])
+ * @method GetVersion getVersion(array $options = [])
  * @method ImportScript importScript(array $options = [])
  * @method InflightTaskTimeout inflightTaskTimeout(array $options = [])
  * @method ListDialogueFlows listDialogueFlows(array $options = [])
+ * @method ListDownloadTasks listDownloadTasks(array $options = [])
  * @method ListGlobalQuestions listGlobalQuestions(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListIntents listIntents(array $options = [])
  * @method ListJobGroups listJobGroups(array $options = [])
+ * @method ListJobGroupsAsync listJobGroupsAsync(array $options = [])
  * @method ListJobs listJobs(array $options = [])
  * @method ListJobsByGroup listJobsByGroup(array $options = [])
- * @method ListMedia listMedia(array $options = [])
  * @method ListOutboundCallNumbers listOutboundCallNumbers(array $options = [])
+ * @method ListResourceTags listResourceTags(array $options = [])
  * @method ListSchedulerInstances listSchedulerInstances(array $options = [])
  * @method ListScriptPublishHistories listScriptPublishHistories(array $options = [])
  * @method ListScripts listScripts(array $options = [])
  * @method ListScriptVoiceConfigs listScriptVoiceConfigs(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method ListTags listTags(array $options = [])
  * @method ModifyBatchJobs modifyBatchJobs(array $options = [])
  * @method ModifyDialogueFlow modifyDialogueFlow(array $options = [])
+ * @method ModifyEmptyNumberNoMoreCallsInfo modifyEmptyNumberNoMoreCallsInfo(array $options = [])
  * @method ModifyGlobalQuestion modifyGlobalQuestion(array $options = [])
  * @method ModifyInstance modifyInstance(array $options = [])
  * @method ModifyIntent modifyIntent(array $options = [])
@@ -69,17 +100,30 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PublishScript publishScript(array $options = [])
  * @method PublishScriptForDebug publishScriptForDebug(array $options = [])
  * @method QueryJobs queryJobs(array $options = [])
+ * @method QueryJobsWithResult queryJobsWithResult(array $options = [])
  * @method QueryScriptsByStatus queryScriptsByStatus(array $options = [])
  * @method QueryScriptWaveforms queryScriptWaveforms(array $options = [])
  * @method RecordFailure recordFailure(array $options = [])
  * @method ResumeJobs resumeJobs(array $options = [])
  * @method RollbackScript rollbackScript(array $options = [])
+ * @method SaveAfterAnswerDelayPlayback saveAfterAnswerDelayPlayback(array $options = [])
+ * @method SaveBaseStrategyPeriod saveBaseStrategyPeriod(array $options = [])
+ * @method SaveContactBlockList saveContactBlockList(array $options = [])
+ * @method SaveContactWhiteList saveContactWhiteList(array $options = [])
+ * @method SaveEffectiveDays saveEffectiveDays(array $options = [])
+ * @method SaveMaxAttemptsPerDay saveMaxAttemptsPerDay(array $options = [])
+ * @method SearchTask searchTask(array $options = [])
  * @method StartJob startJob(array $options = [])
  * @method SubmitBatchJobs submitBatchJobs(array $options = [])
  * @method SubmitRecording submitRecording(array $options = [])
  * @method SubmitScriptReview submitScriptReview(array $options = [])
+ * @method SuspendCall suspendCall(array $options = [])
+ * @method SuspendCallWithFile suspendCallWithFile(array $options = [])
  * @method SuspendJobs suspendJobs(array $options = [])
+ * @method TagResources tagResources(array $options = [])
  * @method TaskPreparing taskPreparing(array $options = [])
+ * @method TerminateCall terminateCall(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method WithdrawScriptReview withdrawScriptReview(array $options = [])
  */
 class OutboundBotApiResolver extends ApiResolver
@@ -106,10 +150,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getRosterType()
+ * @method $this withRosterType($value)
+ * @method string getJobDataParsingTaskId()
+ * @method $this withJobDataParsingTaskId($value)
  * @method string getStrategyJson()
  * @method $this withStrategyJson($value)
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
+ * @method string getIsAsynchrony()
+ * @method $this withIsAsynchrony($value)
  */
 class AssignJobs extends Rpc
 {
@@ -192,6 +242,16 @@ class CancelJobs extends Rpc
 }
 
 /**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ */
+class ChangeResourceGroup extends Rpc
+{
+}
+
+/**
  * @method string getJobFilePath()
  * @method $this withJobFilePath($value)
  * @method string getScriptId()
@@ -230,6 +290,42 @@ class CreateBatchJobs extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method array getCallingNumber()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFilterStatus()
+ * @method $this withFilterStatus($value)
+ * @method string getStrategyJson()
+ * @method $this withStrategyJson($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSourceGroupId()
+ * @method $this withSourceGroupId($value)
+ */
+class CreateBatchRepeatJob extends Rpc
+{
+
+    /**
+     * @param array $callingNumber
+     *
+     * @return $this
+     */
+	public function withCallingNumber(array $callingNumber)
+	{
+	    $this->data['CallingNumber'] = $callingNumber;
+		foreach ($callingNumber as $i => $iValue) {
+			$this->options['query']['CallingNumber.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getDialogueFlowType()
  * @method $this withDialogueFlowType($value)
  * @method string getDialogueName()
@@ -241,6 +337,19 @@ class CreateBatchJobs extends Rpc
  */
 class CreateDialogueFlow extends Rpc
 {
+}
+
+/**
+ * @method string getDownloadTaskId()
+ * @method $this withDownloadTaskId($value)
+ * @method string getFileId()
+ * @method $this withFileId($value)
+ */
+class CreateDownloadUrl extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -266,8 +375,11 @@ class CreateGlobalQuestion extends Rpc
  * @method $this withMaxConcurrentConversation($value)
  * @method string getSecretKey()
  * @method $this withSecretKey($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEndpoint()
  * @method $this withEndpoint($value)
+ * @method array getCallingNumber()
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getCallCenterInstanceId()
@@ -281,6 +393,21 @@ class CreateGlobalQuestion extends Rpc
  */
 class CreateInstance extends Rpc
 {
+
+    /**
+     * @param array $callingNumber
+     *
+     * @return $this
+     */
+	public function withCallingNumber(array $callingNumber)
+	{
+	    $this->data['CallingNumber'] = $callingNumber;
+		foreach ($callingNumber as $i => $iValue) {
+			$this->options['query']['CallingNumber.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -298,6 +425,16 @@ class CreateInstance extends Rpc
  * @method $this withIntentName($value)
  */
 class CreateIntent extends Rpc
+{
+}
+
+/**
+ * @method string getJobFilePath()
+ * @method $this withJobFilePath($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateJobDataParsingTask extends Rpc
 {
 }
 
@@ -336,6 +473,32 @@ class CreateJobGroup extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ * @method array getOption()
+ */
+class CreateJobGroupExportTask extends Rpc
+{
+
+    /**
+     * @param array $option
+     *
+     * @return $this
+     */
+	public function withOption(array $option)
+	{
+	    $this->data['Option'] = $option;
+		foreach ($option as $i => $iValue) {
+			$this->options['query']['Option.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getRateLimitCount()
  * @method $this withRateLimitCount($value)
  * @method string getNumber()
@@ -362,13 +525,45 @@ class CreateOutboundCallNumber extends Rpc
  * @method $this withChatbotId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method array getScriptWaveform()
  * @method string getAsrConfig()
  * @method $this withAsrConfig($value)
  * @method string getScriptDescription()
  * @method $this withScriptDescription($value)
+ * @method array getScriptContent()
  */
 class CreateScript extends Rpc
 {
+
+    /**
+     * @param array $scriptWaveform
+     *
+     * @return $this
+     */
+	public function withScriptWaveform(array $scriptWaveform)
+	{
+	    $this->data['ScriptWaveform'] = $scriptWaveform;
+		foreach ($scriptWaveform as $i => $iValue) {
+			$this->options['query']['ScriptWaveform.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $scriptContent
+     *
+     * @return $this
+     */
+	public function withScriptContent(array $scriptContent)
+	{
+	    $this->data['ScriptContent'] = $scriptContent;
+		foreach ($scriptContent as $i => $iValue) {
+			$this->options['query']['ScriptContent.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -398,6 +593,30 @@ class CreateScriptWaveform extends Rpc
  * @method $this withInstanceId($value)
  */
 class CreateTag extends Rpc
+{
+}
+
+/**
+ * @method string getContactBlockListId()
+ * @method $this withContactBlockListId($value)
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteContactBlockList extends Rpc
+{
+}
+
+/**
+ * @method string getOperator()
+ * @method $this withOperator($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getContactWhiteListId()
+ * @method $this withContactWhiteListId($value)
+ */
+class DeleteContactWhiteList extends Rpc
 {
 }
 
@@ -488,6 +707,28 @@ class DeleteScriptWaveform extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ */
+class DescribeDialogueNodeStatistics extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class DescribeDsReports extends Rpc
+{
+}
+
+/**
  * @method string getGlobalQuestionId()
  * @method $this withGlobalQuestionId($value)
  * @method string getScriptId()
@@ -496,6 +737,16 @@ class DeleteScriptWaveform extends Rpc
  * @method $this withInstanceId($value)
  */
 class DescribeGlobalQuestion extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class DescribeGroupExecutingInfo extends Rpc
 {
 }
 
@@ -520,12 +771,34 @@ class DescribeIntent extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ */
+class DescribeIntentStatistics extends Rpc
+{
+}
+
+/**
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class DescribeJob extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobDataParsingTaskId()
+ * @method $this withJobDataParsingTaskId($value)
+ */
+class DescribeJobDataParsingTaskProgress extends Rpc
 {
 }
 
@@ -553,6 +826,16 @@ class DescribeJobGroup extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DescribeJobGroupExportTaskProgress extends Rpc
+{
 }
 
 /**
@@ -676,6 +959,155 @@ class ExportScript extends Rpc
 }
 
 /**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class GetAfterAnswerDelayPlayback extends Rpc
+{
+}
+
+/**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class GetAsrServerInfo extends Rpc
+{
+}
+
+/**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class GetBaseStrategyPeriod extends Rpc
+{
+}
+
+class GetConcurrentConversationQuota extends Rpc
+{
+}
+
+/**
+ * @method string getCountTotalRow()
+ * @method $this withCountTotalRow($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class GetContactBlockList extends Rpc
+{
+}
+
+/**
+ * @method string getCountTotalRow()
+ * @method $this withCountTotalRow($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class GetContactWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetCurrentConcurrency extends Rpc
+{
+}
+
+/**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class GetEffectiveDays extends Rpc
+{
+}
+
+/**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class GetEmptyNumberNoMoreCallsInfo extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetInstanceConfig extends Rpc
+{
+}
+
+/**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class GetMaxAttemptsPerDay extends Rpc
+{
+}
+
+/**
+ * @method array getInstanceIdList()
+ */
+class GetSummaryInfo extends Rpc
+{
+
+    /**
+     * @param array $instanceIdList
+     *
+     * @return $this
+     */
+	public function withInstanceIdList(array $instanceIdList)
+	{
+	    $this->data['InstanceIdList'] = $instanceIdList;
+		foreach ($instanceIdList as $i => $iValue) {
+			$this->options['query']['InstanceIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getWithConversations()
+ * @method $this withWithConversations($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetTaskByUuid extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+class GetVersion extends Rpc
+{
+}
+
+/**
  * @method string getSignatureUrl()
  * @method $this withSignatureUrl($value)
  * @method string getInstanceId()
@@ -710,6 +1142,19 @@ class ListDialogueFlows extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListDownloadTasks extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getScriptId()
  * @method $this withScriptId($value)
  * @method string getInstanceId()
@@ -721,8 +1166,33 @@ class ListGlobalQuestions extends Rpc
 {
 }
 
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method array getTag()
+ */
 class ListInstances extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -742,6 +1212,10 @@ class ListIntents extends Rpc
 }
 
 /**
+ * @method string getAsyncQuery()
+ * @method $this withAsyncQuery($value)
+ * @method string getSearchText()
+ * @method $this withSearchText($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
@@ -750,11 +1224,24 @@ class ListIntents extends Rpc
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getJobGroupStatusFilter()
+ * @method $this withJobGroupStatusFilter($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
 class ListJobGroups extends Rpc
 {
+}
+
+/**
+ * @method string getAsyncTaskId()
+ * @method $this withAsyncTaskId($value)
+ */
+class ListJobGroupsAsync extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -806,22 +1293,20 @@ class ListJobsByGroup extends Rpc
  * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getNamePrefix()
- * @method $this withNamePrefix($value)
  */
-class ListMedia extends Rpc
+class ListOutboundCallNumbers extends Rpc
 {
 }
 
 /**
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
-class ListOutboundCallNumbers extends Rpc
+class ListResourceTags extends Rpc
 {
 }
 
@@ -871,6 +1356,53 @@ class ListScripts extends Rpc
  */
 class ListScriptVoiceConfigs extends Rpc
 {
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -940,6 +1472,18 @@ class ModifyDialogueFlow extends Rpc
 }
 
 /**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEmptyNumberNoMoreCalls()
+ * @method $this withEmptyNumberNoMoreCalls($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class ModifyEmptyNumberNoMoreCallsInfo extends Rpc
+{
+}
+
+/**
  * @method string getGlobalQuestionId()
  * @method $this withGlobalQuestionId($value)
  * @method string getGlobalQuestionName()
@@ -966,6 +1510,7 @@ class ModifyGlobalQuestion extends Rpc
  * @method $this withSecretKey($value)
  * @method string getEndpoint()
  * @method $this withEndpoint($value)
+ * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceName()
@@ -981,6 +1526,21 @@ class ModifyGlobalQuestion extends Rpc
  */
 class ModifyInstance extends Rpc
 {
+
+    /**
+     * @param array $callingNumber
+     *
+     * @return $this
+     */
+	public function withCallingNumber(array $callingNumber)
+	{
+	    $this->data['CallingNumber'] = $callingNumber;
+		foreach ($callingNumber as $i => $iValue) {
+			$this->options['query']['CallingNumber.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1066,17 +1626,51 @@ class ModifyOutboundCallNumber extends Rpc
  * @method $this withScene($value)
  * @method string getScriptId()
  * @method $this withScriptId($value)
+ * @method array getScriptWaveform()
+ * @method string getAsrConfig()
+ * @method $this withAsrConfig($value)
+ * @method string getMiniPlaybackEnabled()
+ * @method $this withMiniPlaybackEnabled($value)
  * @method string getChatbotId()
  * @method $this withChatbotId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getAsrConfig()
- * @method $this withAsrConfig($value)
  * @method string getScriptDescription()
  * @method $this withScriptDescription($value)
+ * @method array getScriptContent()
  */
 class ModifyScript extends Rpc
 {
+
+    /**
+     * @param array $scriptWaveform
+     *
+     * @return $this
+     */
+	public function withScriptWaveform(array $scriptWaveform)
+	{
+	    $this->data['ScriptWaveform'] = $scriptWaveform;
+		foreach ($scriptWaveform as $i => $iValue) {
+			$this->options['query']['ScriptWaveform.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $scriptContent
+     *
+     * @return $this
+     */
+	public function withScriptContent(array $scriptContent)
+	{
+	    $this->data['ScriptContent'] = $scriptContent;
+		foreach ($scriptContent as $i => $iValue) {
+			$this->options['query']['ScriptContent.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1176,6 +1770,30 @@ class QueryJobs extends Rpc
 }
 
 /**
+ * @method string getHasReachedEndOfFlowFilter()
+ * @method $this withHasReachedEndOfFlowFilter($value)
+ * @method string getHasAnsweredFilter()
+ * @method $this withHasAnsweredFilter($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getQueryText()
+ * @method $this withQueryText($value)
+ * @method string getHasHangUpByRejectionFilter()
+ * @method $this withHasHangUpByRejectionFilter($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobStatusFilter()
+ * @method $this withJobStatusFilter($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class QueryJobsWithResult extends Rpc
+{
+}
+
+/**
  * @method array getStatusList()
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
@@ -1232,6 +1850,8 @@ class QueryScriptWaveforms extends Rpc
  * @method $this withInstanceOwnerId($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method string getExceptionCodes()
+ * @method $this withExceptionCodes($value)
  */
 class RecordFailure extends Rpc
 {
@@ -1296,9 +1916,182 @@ class RollbackScript extends Rpc
 }
 
 /**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ * @method string getAfterAnswerDelayPlayback()
+ * @method $this withAfterAnswerDelayPlayback($value)
+ */
+class SaveAfterAnswerDelayPlayback extends Rpc
+{
+}
+
+/**
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ * @method string getOnlyWeekdays()
+ * @method $this withOnlyWeekdays($value)
+ * @method string getWorkingTimeFramesJson()
+ * @method $this withWorkingTimeFramesJson($value)
+ * @method array getWorkingTime()
+ */
+class SaveBaseStrategyPeriod extends Rpc
+{
+
+    /**
+     * @param array $workingTime
+     *
+     * @return $this
+     */
+	public function withWorkingTime(array $workingTime)
+	{
+	    $this->data['WorkingTime'] = $workingTime;
+		foreach ($workingTime as $i => $iValue) {
+			$this->options['query']['WorkingTime.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getContactBlockListList()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getContactBlockListsJson()
+ * @method $this withContactBlockListsJson($value)
+ */
+class SaveContactBlockList extends Rpc
+{
+
+    /**
+     * @param array $contactBlockListList
+     *
+     * @return $this
+     */
+	public function withContactBlockListList(array $contactBlockListList)
+	{
+	    $this->data['ContactBlockListList'] = $contactBlockListList;
+		foreach ($contactBlockListList as $i => $iValue) {
+			$this->options['query']['ContactBlockListList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getContactWhiteListList()
+ * @method string getContactWhiteListsJson()
+ * @method $this withContactWhiteListsJson($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class SaveContactWhiteList extends Rpc
+{
+
+    /**
+     * @param array $contactWhiteListList
+     *
+     * @return $this
+     */
+	public function withContactWhiteListList(array $contactWhiteListList)
+	{
+	    $this->data['ContactWhiteListList'] = $contactWhiteListList;
+		foreach ($contactWhiteListList as $i => $iValue) {
+			$this->options['query']['ContactWhiteListList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getEffectiveDays()
+ * @method $this withEffectiveDays($value)
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class SaveEffectiveDays extends Rpc
+{
+}
+
+/**
+ * @method string getMaxAttemptsPerDay()
+ * @method $this withMaxAttemptsPerDay($value)
+ * @method string getStrategyLevel()
+ * @method $this withStrategyLevel($value)
+ * @method string getEntryId()
+ * @method $this withEntryId($value)
+ */
+class SaveMaxAttemptsPerDay extends Rpc
+{
+}
+
+/**
+ * @method string getActualTimeLte()
+ * @method $this withActualTimeLte($value)
+ * @method string getOtherId()
+ * @method $this withOtherId($value)
+ * @method string getTaskCreateTimeLte()
+ * @method $this withTaskCreateTimeLte($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getTaskCreateTimeGte()
+ * @method $this withTaskCreateTimeGte($value)
+ * @method string getCalledNumber()
+ * @method $this withCalledNumber($value)
+ * @method string getUserIdMatch()
+ * @method $this withUserIdMatch($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ * @method string getSortOrder()
+ * @method $this withSortOrder($value)
+ * @method string getTaskStatusStringList()
+ * @method $this withTaskStatusStringList($value)
+ * @method string getJobGroupNameQuery()
+ * @method $this withJobGroupNameQuery($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRecordingDurationGte()
+ * @method $this withRecordingDurationGte($value)
+ * @method string getCallDurationLte()
+ * @method $this withCallDurationLte($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ * @method string getSortBy()
+ * @method $this withSortBy($value)
+ * @method string getJobStatusStringList()
+ * @method $this withJobStatusStringList($value)
+ * @method string getActualTimeGte()
+ * @method $this withActualTimeGte($value)
+ * @method string getCallDurationGte()
+ * @method $this withCallDurationGte($value)
+ * @method string getRecordingDurationLte()
+ * @method $this withRecordingDurationLte($value)
+ */
+class SearchTask extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getJobJson()
  * @method $this withJobJson($value)
  * @method array getCallingNumber()
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getJobGroupId()
@@ -1366,6 +2159,44 @@ class SubmitScriptReview extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method array getCalledNumbers()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class SuspendCall extends Rpc
+{
+
+    /**
+     * @param array $calledNumbers
+     *
+     * @return $this
+     */
+	public function withCalledNumbers(array $calledNumbers)
+	{
+	    $this->data['CalledNumbers'] = $calledNumbers;
+		foreach ($calledNumbers as $i => $iValue) {
+			$this->options['query']['CalledNumbers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFilePath()
+ * @method $this withFilePath($value)
+ */
+class SuspendCallWithFile extends Rpc
+{
+}
+
+/**
  * @method string getAll()
  * @method $this withAll($value)
  * @method array getJobReferenceId()
@@ -1412,6 +2243,51 @@ class SuspendJobs extends Rpc
 }
 
 /**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTag()
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getInstanceId()
@@ -1421,6 +2297,58 @@ class SuspendJobs extends Rpc
  */
 class TaskPreparing extends Rpc
 {
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class TerminateCall extends Rpc
+{
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

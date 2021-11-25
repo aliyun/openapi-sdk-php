@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1162 - 2021-11-25
+- Supported new features for outbound.
+
+
 ## 1.8.1161 - 2021-11-25
 - GetUnionTaskStatus add channelId.
 
