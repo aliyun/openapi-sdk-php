@@ -9,11 +9,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AuditTTSVoice auditTTSVoice(array $options = [])
  * @method BeginDialogue beginDialogue(array $options = [])
  * @method CollectedNumber collectedNumber(array $options = [])
+ * @method CreateDownloadUrl createDownloadUrl(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method DebugBeginDialogue debugBeginDialogue(array $options = [])
  * @method DebugCollectedNumber debugCollectedNumber(array $options = [])
  * @method DebugDialogue debugDialogue(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DescribeAsrVadConfig describeAsrVadConfig(array $options = [])
  * @method DescribeConversation describeConversation(array $options = [])
  * @method DescribeConversationContext describeConversationContext(array $options = [])
  * @method DescribeExportProgress describeExportProgress(array $options = [])
@@ -22,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRecording describeRecording(array $options = [])
  * @method DescribeStatisticalData describeStatisticalData(array $options = [])
  * @method DescribeTTSConfig describeTTSConfig(array $options = [])
+ * @method DescribeVoiceConfig describeVoiceConfig(array $options = [])
  * @method Dialogue dialogue(array $options = [])
  * @method DisableInstance disableInstance(array $options = [])
  * @method EnableInstance enableInstance(array $options = [])
@@ -31,7 +34,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListChatbotInstances listChatbotInstances(array $options = [])
  * @method ListConversationDetails listConversationDetails(array $options = [])
  * @method ListConversations listConversations(array $options = [])
+ * @method ListDownloadTasks listDownloadTasks(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ModifyAsrVadConfig modifyAsrVadConfig(array $options = [])
  * @method ModifyGreetingConfig modifyGreetingConfig(array $options = [])
  * @method ModifyInstance modifyInstance(array $options = [])
  * @method ModifySilenceTimeoutConfig modifySilenceTimeoutConfig(array $options = [])
@@ -99,6 +104,8 @@ class AuditTTSVoice extends Rpc
  * @method $this withInstanceId($value)
  * @method string getCalledNumber()
  * @method $this withCalledNumber($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  */
 class BeginDialogue extends Rpc
 {
@@ -111,9 +118,24 @@ class BeginDialogue extends Rpc
  * @method $this withNumber($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  */
 class CollectedNumber extends Rpc
 {
+}
+
+/**
+ * @method string getDownloadTaskId()
+ * @method $this withDownloadTaskId($value)
+ * @method string getFileId()
+ * @method $this withFileId($value)
+ */
+class CreateDownloadUrl extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -182,6 +204,17 @@ class DebugDialogue extends Rpc
  */
 class DeleteInstance extends Rpc
 {
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeAsrVadConfig extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -278,8 +311,23 @@ class DescribeStatisticalData extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  */
 class DescribeTTSConfig extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
+ */
+class DescribeVoiceConfig extends Rpc
 {
 
     /** @var string */
@@ -297,6 +345,8 @@ class DescribeTTSConfig extends Rpc
  * @method $this withCalledNumber($value)
  * @method string getAdditionalContext()
  * @method $this withAdditionalContext($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  * @method string getUtterance()
  * @method $this withUtterance($value)
  */
@@ -325,6 +375,8 @@ class EnableInstance extends Rpc
  * @method $this withConversationId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  */
 class EndDialogue extends Rpc
 {
@@ -389,10 +441,20 @@ class ListConversationDetails extends Rpc
 }
 
 /**
+ * @method string getBeginTimeLeftRange()
+ * @method $this withBeginTimeLeftRange($value)
+ * @method string getQuery()
+ * @method $this withQuery($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResult()
+ * @method $this withResult($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getBeginTimeRightRange()
+ * @method $this withBeginTimeRightRange($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
@@ -409,7 +471,33 @@ class ListConversations extends Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
+class ListDownloadTasks extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
 class ListInstances extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSpeechNoiseThreshold()
+ * @method $this withSpeechNoiseThreshold($value)
+ */
+class ModifyAsrVadConfig extends Rpc
 {
 
     /** @var string */
@@ -536,6 +624,8 @@ class QueryConversations extends Rpc
  * @method $this withFileName($value)
  * @method string getFilePath()
  * @method $this withFilePath($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  */
 class SaveRecording extends Rpc
 {
@@ -548,6 +638,8 @@ class SaveRecording extends Rpc
  * @method $this withInitialContext($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceOwnerId()
+ * @method $this withInstanceOwnerId($value)
  */
 class SilenceTimeout extends Rpc
 {
