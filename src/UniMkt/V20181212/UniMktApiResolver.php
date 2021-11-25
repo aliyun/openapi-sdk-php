@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateUser createUser(array $options = [])
  * @method DeleteRule deleteRule(array $options = [])
  * @method EndUnionTask endUnionTask(array $options = [])
+ * @method GetMainPartList getMainPartList(array $options = [])
  * @method GetUnionTaskStatus getUnionTaskStatus(array $options = [])
  * @method KeepAlive keepAlive(array $options = [])
  * @method ListFlow listFlow(array $options = [])
@@ -99,6 +100,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = '1.0.0';
 }
 
 /**
@@ -986,6 +990,24 @@ class EndUnionTask extends Rpc
 }
 
 /**
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ * @method string getMainType()
+ * @method $this withMainType($value)
+ * @method string getParentMainId()
+ * @method $this withParentMainId($value)
+ * @method string getMainName()
+ * @method $this withMainName($value)
+ */
+class GetMainPartList extends Rpc
+{
+}
+
+/**
  * @method string getUserNick()
  * @method $this withUserNick($value)
  * @method string getSign()
@@ -996,6 +1018,8 @@ class EndUnionTask extends Rpc
  * @method $this withUserId($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
  */
 class GetUnionTaskStatus extends Rpc
 {
@@ -2373,6 +2397,7 @@ class QueryMedia extends Rpc
 }
 
 /**
+ * @method string getProxyChannelId()
  * @method string getExtra()
  * @method string getAlipayOpenId()
  * @method string getUserId()
@@ -2383,6 +2408,19 @@ class QueryPromotion extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyChannelId($value)
+    {
+        $this->data['ProxyChannelId'] = $value;
+        $this->options['form_params']['ProxyChannelId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

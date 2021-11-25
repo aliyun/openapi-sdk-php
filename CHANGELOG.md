@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1160 - 2021-11-25
+- GetUnionTaskStatus add channelId.
+
+
 ## 1.8.1159 - 2021-11-25
 - Delete some abandoned interface.
 - Add some interfaces.
