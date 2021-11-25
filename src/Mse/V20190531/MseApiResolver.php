@@ -1001,6 +1001,8 @@ class QueryZnodeDetail extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getPodNameList()
+ * @method $this withPodNameList($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getRequestPars()
