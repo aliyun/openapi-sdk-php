@@ -10,9 +10,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEventSubscribe createEventSubscribe(array $options = [])
  * @method CreateMPULayout createMPULayout(array $options = [])
  * @method DeleteAutoLiveStreamRule deleteAutoLiveStreamRule(array $options = [])
+ * @method DeleteChannel deleteChannel(array $options = [])
  * @method DeleteEventSubscribe deleteEventSubscribe(array $options = [])
  * @method DeleteMPULayout deleteMPULayout(array $options = [])
  * @method DeleteRecordTemplate deleteRecordTemplate(array $options = [])
+ * @method DescribeApps describeApps(array $options = [])
  * @method DescribeAutoLiveStreamRule describeAutoLiveStreamRule(array $options = [])
  * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
  * @method DescribeChannelUsers describeChannelUsers(array $options = [])
@@ -23,11 +25,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableAutoLiveStreamRule disableAutoLiveStreamRule(array $options = [])
  * @method EnableAutoLiveStreamRule enableAutoLiveStreamRule(array $options = [])
  * @method GetMPUTaskStatus getMPUTaskStatus(array $options = [])
+ * @method ModifyApp modifyApp(array $options = [])
  * @method ModifyMPULayout modifyMPULayout(array $options = [])
  * @method RemoveTerminals removeTerminals(array $options = [])
  * @method StartMPUTask startMPUTask(array $options = [])
  * @method StartRecordTask startRecordTask(array $options = [])
- * @method StopChannelUserPublish stopChannelUserPublish(array $options = [])
  * @method StopMPUTask stopMPUTask(array $options = [])
  * @method StopRecordTask stopRecordTask(array $options = [])
  * @method UpdateAutoLiveStreamRule updateAutoLiveStreamRule(array $options = [])
@@ -394,6 +396,20 @@ class DeleteAutoLiveStreamRule extends Rpc
 }
 
 /**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class DeleteChannel extends Rpc
+{
+}
+
+/**
  * @method string getSubscribeId()
  * @method $this withSubscribeId($value)
  * @method string getShowLog()
@@ -432,6 +448,26 @@ class DeleteMPULayout extends Rpc
  * @method $this withAppId($value)
  */
 class DeleteRecordTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeApps extends Rpc
 {
 }
 
@@ -626,6 +662,20 @@ class EnableAutoLiveStreamRule extends Rpc
  * @method $this withAppId($value)
  */
 class GetMPUTaskStatus extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class ModifyApp extends Rpc
 {
 }
 
@@ -1306,22 +1356,6 @@ class StartRecordTask extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getUserId()
- * @method $this withUserId($value)
- * @method string getShowLog()
- * @method $this withShowLog($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getChannelId()
- * @method $this withChannelId($value)
- */
-class StopChannelUserPublish extends Rpc
-{
 }
 
 /**
