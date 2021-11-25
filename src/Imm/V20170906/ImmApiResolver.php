@@ -29,7 +29,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DetectImageBodies detectImageBodies(array $options = [])
  * @method DetectImageFaces detectImageFaces(array $options = [])
- * @method DetectImageLogos detectImageLogos(array $options = [])
  * @method DetectImageQRCodes detectImageQRCodes(array $options = [])
  * @method DetectImageTags detectImageTags(array $options = [])
  * @method DetectQRCodes detectQRCodes(array $options = [])
@@ -353,6 +352,8 @@ class CreateVideoAnalyseTask extends Rpc
 }
 
 /**
+ * @method string getTargetSubtitle()
+ * @method $this withTargetSubtitle($value)
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getNotifyEndpoint()
@@ -521,16 +522,6 @@ class DetectImageBodies extends Rpc
  * @method $this withImageUri($value)
  */
 class DetectImageFaces extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getImageUri()
- * @method $this withImageUri($value)
- */
-class DetectImageLogos extends Rpc
 {
 }
 
@@ -1115,14 +1106,10 @@ class OpenImmService extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getCU()
- * @method $this withCU($value)
+ * @method string getBCTaskVersion()
+ * @method $this withBCTaskVersion($value)
  * @method string getServiceRole()
  * @method $this withServiceRole($value)
- * @method string getBillingType()
- * @method $this withBillingType($value)
  */
 class PutProject extends Rpc
 {
@@ -1223,6 +1210,8 @@ class UpdateFaceGroup extends Rpc
  * @method $this withRemarksC($value)
  * @method string getSetId()
  * @method $this withSetId($value)
+ * @method string getFaces()
+ * @method $this withFaces($value)
  */
 class UpdateImage extends Rpc
 {
@@ -1231,6 +1220,8 @@ class UpdateImage extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getNewBCTaskVersion()
+ * @method $this withNewBCTaskVersion($value)
  * @method string getNewServiceRole()
  * @method $this withNewServiceRole($value)
  * @method string getNewCU()
