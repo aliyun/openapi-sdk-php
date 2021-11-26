@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1165 - 2021-11-26
+- Update GetSyncResult.
+
+
 ## 1.8.1164 - 2021-11-25
 - Supported new features etc.
 
