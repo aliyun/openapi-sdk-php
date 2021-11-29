@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1170 - 2021-11-29
+- Add API for unregister sip phone device, masked callee, etc.
+
+
 ## 1.8.1169 - 2021-11-29
 - GetUnionTaskStatus add channelId.
 

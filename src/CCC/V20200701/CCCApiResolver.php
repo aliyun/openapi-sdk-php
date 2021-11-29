@@ -5,6 +5,7 @@ namespace AlibabaCloud\CCC\V20200701;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AbortCampaign abortCampaign(array $options = [])
  * @method AddNumbersToSkillGroup addNumbersToSkillGroup(array $options = [])
  * @method AddPersonalNumbersToUser addPersonalNumbersToUser(array $options = [])
  * @method AddPhoneNumbers addPhoneNumbers(array $options = [])
@@ -19,11 +20,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeWorkMode changeWorkMode(array $options = [])
  * @method CoachCall coachCall(array $options = [])
  * @method CompleteAttendedTransfer completeAttendedTransfer(array $options = [])
+ * @method CreateCampaign createCampaign(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateSkillGroup createSkillGroup(array $options = [])
  * @method CreateUser createUser(array $options = [])
  * @method DeleteSkillGroup deleteSkillGroup(array $options = [])
  * @method GetCallDetailRecord getCallDetailRecord(array $options = [])
+ * @method GetCampaign getCampaign(array $options = [])
  * @method GetHistoricalCallerReport getHistoricalCallerReport(array $options = [])
  * @method GetHistoricalInstanceReport getHistoricalInstanceReport(array $options = [])
  * @method GetInstance getInstance(array $options = [])
@@ -42,8 +45,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method LaunchAuthentication launchAuthentication(array $options = [])
  * @method LaunchSurvey launchSurvey(array $options = [])
  * @method ListAgentStateLogs listAgentStateLogs(array $options = [])
+ * @method ListAttempts listAttempts(array $options = [])
  * @method ListBriefSkillGroups listBriefSkillGroups(array $options = [])
  * @method ListCallDetailRecords listCallDetailRecords(array $options = [])
+ * @method ListCampaigns listCampaigns(array $options = [])
+ * @method ListCampaignTrendingReport listCampaignTrendingReport(array $options = [])
+ * @method ListCases listCases(array $options = [])
  * @method ListConfigItems listConfigItems(array $options = [])
  * @method ListContactFlows listContactFlows(array $options = [])
  * @method ListDevices listDevices(array $options = [])
@@ -65,8 +72,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRealtimeSkillGroupStates listRealtimeSkillGroupStates(array $options = [])
  * @method ListRecentCallDetailRecords listRecentCallDetailRecords(array $options = [])
  * @method ListRoles listRoles(array $options = [])
+ * @method ListSipCallRecords listSipCallRecords(array $options = [])
+ * @method ListSipTraces listSipTraces(array $options = [])
  * @method ListSkillGroups listSkillGroups(array $options = [])
  * @method ListSkillLevelsOfUser listSkillLevelsOfUser(array $options = [])
+ * @method ListUnassignedNumbers listUnassignedNumbers(array $options = [])
  * @method ListUserLevelsOfSkillGroup listUserLevelsOfSkillGroup(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method MakeCall makeCall(array $options = [])
@@ -78,6 +88,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyUserLevelsOfSkillGroup modifyUserLevelsOfSkillGroup(array $options = [])
  * @method MonitorCall monitorCall(array $options = [])
  * @method MuteCall muteCall(array $options = [])
+ * @method PauseCampaign pauseCampaign(array $options = [])
  * @method PickOutboundNumbers pickOutboundNumbers(array $options = [])
  * @method PollUserStatus pollUserStatus(array $options = [])
  * @method ReadyForService readyForService(array $options = [])
@@ -92,6 +103,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveUsersFromSkillGroup removeUsersFromSkillGroup(array $options = [])
  * @method ResetAgentState resetAgentState(array $options = [])
  * @method ResetUserPassword resetUserPassword(array $options = [])
+ * @method ResumeCampaign resumeCampaign(array $options = [])
  * @method RetrieveCall retrieveCall(array $options = [])
  * @method SaveRTCStatsV2 saveRTCStatsV2(array $options = [])
  * @method SaveTerminalLog saveTerminalLog(array $options = [])
@@ -101,6 +113,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SignInGroup signInGroup(array $options = [])
  * @method SignOutGroup signOutGroup(array $options = [])
  * @method StartBack2BackCall startBack2BackCall(array $options = [])
+ * @method StartPredictiveCall startPredictiveCall(array $options = [])
+ * @method SubmitCampaign submitCampaign(array $options = [])
  * @method TakeBreak takeBreak(array $options = [])
  * @method UnmuteCall unmuteCall(array $options = [])
  * @method UpdateConfigItems updateConfigItems(array $options = [])
@@ -122,6 +136,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'CCC';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ */
+class AbortCampaign extends Rpc
+{
 }
 
 /**
@@ -329,6 +353,42 @@ class CompleteAttendedTransfer extends Rpc
 }
 
 /**
+ * @method string getQueueId()
+ * @method $this withQueueId($value)
+ * @method string getContactFlowId()
+ * @method $this withContactFlowId($value)
+ * @method string getSimulation()
+ * @method $this withSimulation($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getMaxAttemptCount()
+ * @method $this withMaxAttemptCount($value)
+ * @method string getStrategyParameters()
+ * @method $this withStrategyParameters($value)
+ * @method string getCaseFileKey()
+ * @method $this withCaseFileKey($value)
+ * @method string getMinAttemptInterval()
+ * @method $this withMinAttemptInterval($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSimulationParameters()
+ * @method $this withSimulationParameters($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getStrategyType()
+ * @method $this withStrategyType($value)
+ * @method string getCaseList()
+ * @method $this withCaseList($value)
+ * @method string getCallableTime()
+ * @method $this withCallableTime($value)
+ */
+class CreateCampaign extends Rpc
+{
+}
+
+/**
  * @method string getAdminRamIdList()
  * @method $this withAdminRamIdList($value)
  * @method string getDomainName()
@@ -401,6 +461,16 @@ class DeleteSkillGroup extends Rpc
  * @method $this withContactId($value)
  */
 class GetCallDetailRecord extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ */
+class GetCampaign extends Rpc
 {
 }
 
@@ -631,6 +701,41 @@ class ListAgentStateLogs extends Rpc
 }
 
 /**
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getQueueId()
+ * @method $this withQueueId($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getCaller()
+ * @method $this withCaller($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCaseId()
+ * @method $this withCaseId($value)
+ * @method string getAttemptId()
+ * @method $this withAttemptId($value)
+ */
+class ListAttempts extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSearchPattern()
@@ -683,6 +788,65 @@ class ListBriefSkillGroups extends Rpc
  * @method $this withSkillGroupId($value)
  */
 class ListCallDetailRecords extends Rpc
+{
+}
+
+/**
+ * @method string getActualStartTimeTo()
+ * @method $this withActualStartTimeTo($value)
+ * @method string getQueueId()
+ * @method $this withQueueId($value)
+ * @method string getActualStartTimeFrom()
+ * @method $this withActualStartTimeFrom($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPlanedStartTimeFrom()
+ * @method $this withPlanedStartTimeFrom($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPlanedStartTimeTo()
+ * @method $this withPlanedStartTimeTo($value)
+ * @method string getState()
+ * @method $this withState($value)
+ */
+class ListCampaigns extends Rpc
+{
+}
+
+/**
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListCampaignTrendingReport extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListCases extends Rpc
 {
 }
 
@@ -1065,6 +1229,26 @@ class ListRoles extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getContactIdList()
+ * @method $this withContactIdList($value)
+ */
+class ListSipCallRecords extends Rpc
+{
+}
+
+/**
+ * @method string getCallId()
+ * @method $this withCallId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListSipTraces extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSearchPattern()
@@ -1093,6 +1277,20 @@ class ListSkillGroups extends Rpc
  * @method $this withPageSize($value)
  */
 class ListSkillLevelsOfUser extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSearchPattern()
+ * @method $this withSearchPattern($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListUnassignedNumbers extends Rpc
 {
 }
 
@@ -1131,10 +1329,14 @@ class ListUsers extends Rpc
 /**
  * @method string getCallee()
  * @method $this withCallee($value)
+ * @method string getMaskedCallee()
+ * @method $this withMaskedCallee($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getDeviceId()
  * @method $this withDeviceId($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getTimeoutSeconds()
  * @method $this withTimeoutSeconds($value)
  * @method string getCaller()
@@ -1253,6 +1455,16 @@ class MonitorCall extends Rpc
  * @method $this withChannelId($value)
  */
 class MuteCall extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ */
+class PauseCampaign extends Rpc
 {
 }
 
@@ -1431,6 +1643,16 @@ class ResetUserPassword extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ */
+class ResumeCampaign extends Rpc
+{
+}
+
+/**
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getDeviceId()
@@ -1571,10 +1793,6 @@ class SignOutGroup extends Rpc
  * @method $this withCallee($value)
  * @method string getBroker()
  * @method $this withBroker($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- * @method string getDeviceId()
- * @method $this withDeviceId($value)
  * @method string getAdditionalBroker()
  * @method $this withAdditionalBroker($value)
  * @method string getTags()
@@ -1587,6 +1805,38 @@ class SignOutGroup extends Rpc
  * @method $this withInstanceId($value)
  */
 class StartBack2BackCall extends Rpc
+{
+}
+
+/**
+ * @method string getContactFlowId()
+ * @method $this withContactFlowId($value)
+ * @method string getCallee()
+ * @method $this withCallee($value)
+ * @method string getMaskedCallee()
+ * @method $this withMaskedCallee($value)
+ * @method string getContactFlowVariables()
+ * @method $this withContactFlowVariables($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getTimeoutSeconds()
+ * @method $this withTimeoutSeconds($value)
+ * @method string getCaller()
+ * @method $this withCaller($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class StartPredictiveCall extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCampaignId()
+ * @method $this withCampaignId($value)
+ */
+class SubmitCampaign extends Rpc
 {
 }
 
