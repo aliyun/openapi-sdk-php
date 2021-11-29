@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1167 - 2021-11-29
+- Update SetDcdnDomainSMCertificate.
+
+
 ## 1.8.1166 - 2021-11-29
 - Supported ListLogicTableRouteConfig, AddLogicTableRouteConfig, DeleteLogicTableRouteConfig API.
 - Supported ModifyDataCorrectExecSQL, RetryDataCorrectPreCheck API.

@@ -14,16 +14,20 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchSetDcdnIpaDomainConfigs batchSetDcdnIpaDomainConfigs(array $options = [])
  * @method BatchStartDcdnDomain batchStartDcdnDomain(array $options = [])
  * @method BatchStopDcdnDomain batchStopDcdnDomain(array $options = [])
+ * @method CheckDcdnProjectExist checkDcdnProjectExist(array $options = [])
  * @method CommitStagingRoutineCode commitStagingRoutineCode(array $options = [])
  * @method CreateDcdnCertificateSigningRequest createDcdnCertificateSigningRequest(array $options = [])
  * @method CreateDcdnDeliverTask createDcdnDeliverTask(array $options = [])
  * @method CreateDcdnDomainOfflineLogDelivery createDcdnDomainOfflineLogDelivery(array $options = [])
+ * @method CreateDcdnSLSRealTimeLogDelivery createDcdnSLSRealTimeLogDelivery(array $options = [])
  * @method CreateDcdnSubTask createDcdnSubTask(array $options = [])
  * @method CreateRoutine createRoutine(array $options = [])
+ * @method CreateSlrAndSlsProject createSlrAndSlsProject(array $options = [])
  * @method DeleteDcdnDeliverTask deleteDcdnDeliverTask(array $options = [])
  * @method DeleteDcdnDomain deleteDcdnDomain(array $options = [])
  * @method DeleteDcdnIpaDomain deleteDcdnIpaDomain(array $options = [])
  * @method DeleteDcdnIpaSpecificConfig deleteDcdnIpaSpecificConfig(array $options = [])
+ * @method DeleteDcdnRealTimeLogProject deleteDcdnRealTimeLogProject(array $options = [])
  * @method DeleteDcdnSpecificConfig deleteDcdnSpecificConfig(array $options = [])
  * @method DeleteDcdnSpecificStagingConfig deleteDcdnSpecificStagingConfig(array $options = [])
  * @method DeleteDcdnSubTask deleteDcdnSubTask(array $options = [])
@@ -89,6 +93,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnOfflineLogDeliveryField describeDcdnOfflineLogDeliveryField(array $options = [])
  * @method DescribeDcdnOfflineLogDeliveryRegions describeDcdnOfflineLogDeliveryRegions(array $options = [])
  * @method DescribeDcdnOfflineLogDeliveryStatus describeDcdnOfflineLogDeliveryStatus(array $options = [])
+ * @method DescribeDcdnRealTimeDeliveryField describeDcdnRealTimeDeliveryField(array $options = [])
  * @method DescribeDcdnRefreshQuota describeDcdnRefreshQuota(array $options = [])
  * @method DescribeDcdnRefreshTaskById describeDcdnRefreshTaskById(array $options = [])
  * @method DescribeDcdnRefreshTasks describeDcdnRefreshTasks(array $options = [])
@@ -99,6 +104,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnsecService describeDcdnsecService(array $options = [])
  * @method DescribeDcdnSecSpecInfo describeDcdnSecSpecInfo(array $options = [])
  * @method DescribeDcdnService describeDcdnService(array $options = [])
+ * @method DescribeDcdnSLSRealtimeLogDelivery describeDcdnSLSRealtimeLogDelivery(array $options = [])
  * @method DescribeDcdnSMCertificateDetail describeDcdnSMCertificateDetail(array $options = [])
  * @method DescribeDcdnSMCertificateList describeDcdnSMCertificateList(array $options = [])
  * @method DescribeDcdnStagingIp describeDcdnStagingIp(array $options = [])
@@ -110,6 +116,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnUserDomains describeDcdnUserDomains(array $options = [])
  * @method DescribeDcdnUserDomainsByFunc describeDcdnUserDomainsByFunc(array $options = [])
  * @method DescribeDcdnUserQuota describeDcdnUserQuota(array $options = [])
+ * @method DescribeDcdnUserRealTimeDeliveryField describeDcdnUserRealTimeDeliveryField(array $options = [])
  * @method DescribeDcdnUserResourcePackage describeDcdnUserResourcePackage(array $options = [])
  * @method DescribeDcdnUserSecDrop describeDcdnUserSecDrop(array $options = [])
  * @method DescribeDcdnUserSecDropByMinute describeDcdnUserSecDropByMinute(array $options = [])
@@ -129,6 +136,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableDcdnOfflineLogDelivery disableDcdnOfflineLogDelivery(array $options = [])
  * @method EditRoutineConf editRoutineConf(array $options = [])
  * @method EnableDcdnDomainOfflineLogDelivery enableDcdnDomainOfflineLogDelivery(array $options = [])
+ * @method ListDcdnRealTimeDeliveryProject listDcdnRealTimeDeliveryProject(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
  * @method OpenDcdnService openDcdnService(array $options = [])
  * @method PreloadDcdnObjectCaches preloadDcdnObjectCaches(array $options = [])
@@ -141,6 +149,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDcdnDomainCSRCertificate setDcdnDomainCSRCertificate(array $options = [])
  * @method SetDcdnDomainSMCertificate setDcdnDomainSMCertificate(array $options = [])
  * @method SetDcdnDomainStagingConfig setDcdnDomainStagingConfig(array $options = [])
+ * @method SetDcdnFullDomainsBlockIP setDcdnFullDomainsBlockIP(array $options = [])
  * @method SetDcdnUserConfig setDcdnUserConfig(array $options = [])
  * @method SetRoutineSubdomain setRoutineSubdomain(array $options = [])
  * @method StartDcdnDomain startDcdnDomain(array $options = [])
@@ -152,7 +161,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateDcdnDeliverTask updateDcdnDeliverTask(array $options = [])
  * @method UpdateDcdnDomain updateDcdnDomain(array $options = [])
  * @method UpdateDcdnIpaDomain updateDcdnIpaDomain(array $options = [])
+ * @method UpdateDcdnSLSRealtimeLogDelivery updateDcdnSLSRealtimeLogDelivery(array $options = [])
  * @method UpdateDcdnSubTask updateDcdnSubTask(array $options = [])
+ * @method UpdateDcdnUserRealTimeDeliveryField updateDcdnUserRealTimeDeliveryField(array $options = [])
  * @method UploadRoutineCode uploadRoutineCode(array $options = [])
  * @method UploadStagingRoutineCode uploadStagingRoutineCode(array $options = [])
  * @method VerifyDcdnDomainOwner verifyDcdnDomainOwner(array $options = [])
@@ -292,12 +303,12 @@ class BatchSetDcdnDomainCertificate extends Rpc
  * @method $this withFunctions($value)
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class BatchSetDcdnDomainConfigs extends Rpc
 {
@@ -341,6 +352,19 @@ class BatchStartDcdnDomain extends Rpc
  */
 class BatchStopDcdnDomain extends Rpc
 {
+}
+
+/**
+ * @method string getProjectName()
+ * @method $this withProjectName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CheckDcdnProjectExist extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -518,6 +542,126 @@ class CreateDcdnDomainOfflineLogDelivery extends Rpc
 }
 
 /**
+ * @method string getSLSLogStore()
+ * @method string getSLSProject()
+ * @method string getBusinessType()
+ * @method string getSLSRegion()
+ * @method string getProjectName()
+ * @method string getDomainName()
+ * @method string getSamplingRate()
+ * @method string getDataCenter()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateDcdnSLSRealTimeLogDelivery extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSLogStore($value)
+    {
+        $this->data['SLSLogStore'] = $value;
+        $this->options['form_params']['SLSLogStore'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSProject($value)
+    {
+        $this->data['SLSProject'] = $value;
+        $this->options['form_params']['SLSProject'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBusinessType($value)
+    {
+        $this->data['BusinessType'] = $value;
+        $this->options['form_params']['BusinessType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSRegion($value)
+    {
+        $this->data['SLSRegion'] = $value;
+        $this->options['form_params']['SLSRegion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->options['form_params']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSamplingRate($value)
+    {
+        $this->data['SamplingRate'] = $value;
+        $this->options['form_params']['SamplingRate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataCenter($value)
+    {
+        $this->data['DataCenter'] = $value;
+        $this->options['form_params']['DataCenter'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDomainName()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
@@ -604,6 +748,28 @@ class CreateRoutine extends Rpc
 }
 
 /**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ */
+class CreateSlrAndSlsProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegion($value)
+    {
+        $this->data['Region'] = $value;
+        $this->options['form_params']['Region'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDeliverId()
  * @method $this withDeliverId($value)
  * @method string getOwnerId()
@@ -614,14 +780,14 @@ class DeleteDcdnDeliverTask extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DeleteDcdnDomain extends Rpc
 {
@@ -652,6 +818,18 @@ class DeleteDcdnIpaDomain extends Rpc
  * @method $this withConfigId($value)
  */
 class DeleteDcdnIpaSpecificConfig extends Rpc
+{
+}
+
+/**
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getProjectName()
+ * @method $this withProjectName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteDcdnRealTimeLogProject extends Rpc
 {
 }
 
@@ -1722,6 +1900,16 @@ class DescribeDcdnOfflineLogDeliveryStatus extends Rpc
 }
 
 /**
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnRealTimeDeliveryField extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSecurityToken()
@@ -1848,6 +2036,18 @@ class DescribeDcdnSecSpecInfo extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeDcdnService extends Rpc
+{
+}
+
+/**
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getProjectName()
+ * @method $this withProjectName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnSLSRealtimeLogDelivery extends Rpc
 {
 }
 
@@ -2061,6 +2261,19 @@ class DescribeDcdnUserDomainsByFunc extends Rpc
  */
 class DescribeDcdnUserQuota extends Rpc
 {
+}
+
+/**
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDcdnUserRealTimeDeliveryField extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2370,6 +2583,22 @@ class EnableDcdnDomainOfflineLogDelivery extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListDcdnRealTimeDeliveryProject extends Rpc
+{
+}
+
+/**
  * @method string getProperty()
  * @method $this withProperty($value)
  * @method string getDomainName()
@@ -2556,6 +2785,8 @@ class SetDcdnDomainCSRCertificate extends Rpc
 }
 
 /**
+ * @method string getSSLProtocol()
+ * @method $this withSSLProtocol($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -2579,6 +2810,56 @@ class SetDcdnDomainSMCertificate extends Rpc
  */
 class SetDcdnDomainStagingConfig extends Rpc
 {
+}
+
+/**
+ * @method string getIPList()
+ * @method string getBlockInterval()
+ * @method string getOperationType()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetDcdnFullDomainsBlockIP extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIPList($value)
+    {
+        $this->data['IPList'] = $value;
+        $this->options['form_params']['IPList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBlockInterval($value)
+    {
+        $this->data['BlockInterval'] = $value;
+        $this->options['form_params']['BlockInterval'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperationType($value)
+    {
+        $this->data['OperationType'] = $value;
+        $this->options['form_params']['OperationType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2632,12 +2913,12 @@ class StartDcdnDomain extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class StartDcdnIpaDomain extends Rpc
 {
@@ -2656,12 +2937,12 @@ class StopDcdnDomain extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class StopDcdnIpaDomain extends Rpc
 {
@@ -2887,6 +3168,112 @@ class UpdateDcdnIpaDomain extends Rpc
 }
 
 /**
+ * @method string getSLSLogStore()
+ * @method string getSLSProject()
+ * @method string getSLSRegion()
+ * @method string getProjectName()
+ * @method string getDomainName()
+ * @method string getSamplingRate()
+ * @method string getDataCenter()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UpdateDcdnSLSRealtimeLogDelivery extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSLogStore($value)
+    {
+        $this->data['SLSLogStore'] = $value;
+        $this->options['form_params']['SLSLogStore'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSProject($value)
+    {
+        $this->data['SLSProject'] = $value;
+        $this->options['form_params']['SLSProject'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSRegion($value)
+    {
+        $this->data['SLSRegion'] = $value;
+        $this->options['form_params']['SLSRegion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->options['form_params']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSamplingRate($value)
+    {
+        $this->data['SamplingRate'] = $value;
+        $this->options['form_params']['SamplingRate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataCenter($value)
+    {
+        $this->data['DataCenter'] = $value;
+        $this->options['form_params']['DataCenter'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getStartTime()
  * @method string getDomainName()
  * @method string getEndTime()
@@ -2948,6 +3335,21 @@ class UpdateDcdnSubTask extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getFields()
+ * @method $this withFields($value)
+ */
+class UpdateDcdnUserRealTimeDeliveryField extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
