@@ -401,10 +401,10 @@ class BatchSetCdnDomainServerCertificate extends Rpc
 /**
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class BatchStartCdnDomain extends Rpc
 {
@@ -413,10 +413,10 @@ class BatchStartCdnDomain extends Rpc
 /**
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class BatchStopCdnDomain extends Rpc
 {
@@ -658,14 +658,14 @@ class DeleteCdnDeliverTask extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DeleteCdnDomain extends Rpc
 {
@@ -2576,6 +2576,8 @@ class SetCdnDomainCSRCertificate extends Rpc
 }
 
 /**
+ * @method string getSSLProtocol()
+ * @method $this withSSLProtocol($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -2946,24 +2948,24 @@ class SetWaitingRoomConfig extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class StartCdnDomain extends Rpc
 {
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class StopCdnDomain extends Rpc
 {

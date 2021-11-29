@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1168 - 2021-11-29
+- Update DescribeCdnSMCertificateDetail.
+
+
 ## 1.8.1167 - 2021-11-29
 - Update SetDcdnDomainSMCertificate.
 
