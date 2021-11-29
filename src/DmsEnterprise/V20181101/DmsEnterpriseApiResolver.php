@@ -5,6 +5,7 @@ namespace AlibabaCloud\DmsEnterprise\V20181101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddLogicTableRouteConfig addLogicTableRouteConfig(array $options = [])
  * @method ApproveOrder approveOrder(array $options = [])
  * @method ChangeColumnSecLevel changeColumnSecLevel(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
@@ -23,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteLogicDatabase deleteLogicDatabase(array $options = [])
+ * @method DeleteLogicTableRouteConfig deleteLogicTableRouteConfig(array $options = [])
  * @method DeleteProxy deleteProxy(array $options = [])
  * @method DeleteProxyAccess deleteProxyAccess(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
@@ -42,6 +44,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataCronClearTaskDetailList getDataCronClearTaskDetailList(array $options = [])
  * @method GetDataExportDownloadURL getDataExportDownloadURL(array $options = [])
  * @method GetDataExportOrderDetail getDataExportOrderDetail(array $options = [])
+ * @method GetDBTaskSQLJobLog getDBTaskSQLJobLog(array $options = [])
  * @method GetDBTopology getDBTopology(array $options = [])
  * @method GetInstance getInstance(array $options = [])
  * @method GetLogicDatabase getLogicDatabase(array $options = [])
@@ -79,6 +82,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstances listInstances(array $options = [])
  * @method ListInstanceUserPermissions listInstanceUserPermissions(array $options = [])
  * @method ListLogicDatabases listLogicDatabases(array $options = [])
+ * @method ListLogicTableRouteConfig listLogicTableRouteConfig(array $options = [])
  * @method ListLogicTables listLogicTables(array $options = [])
  * @method ListOrders listOrders(array $options = [])
  * @method ListProxies listProxies(array $options = [])
@@ -94,8 +98,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUserTenants listUserTenants(array $options = [])
  * @method ListWorkFlowNodes listWorkFlowNodes(array $options = [])
  * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
+ * @method ModifyDataCorrectExecSQL modifyDataCorrectExecSQL(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  * @method RegisterUser registerUser(array $options = [])
+ * @method RetryDataCorrectPreCheck retryDataCorrectPreCheck(array $options = [])
  * @method RevokeUserPermission revokeUserPermission(array $options = [])
  * @method SearchDatabase searchDatabase(array $options = [])
  * @method SearchTable searchTable(array $options = [])
@@ -124,6 +130,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'dms-enterprise';
+}
+
+/**
+ * @method string getRouteKey()
+ * @method $this withRouteKey($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getRouteExpr()
+ * @method $this withRouteExpr($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ */
+class AddLogicTableRouteConfig extends Rpc
+{
 }
 
 /**
@@ -413,6 +433,18 @@ class DeleteLogicDatabase extends Rpc
 }
 
 /**
+ * @method string getRouteKey()
+ * @method $this withRouteKey($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ */
+class DeleteLogicTableRouteConfig extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getProxyId()
@@ -646,6 +678,16 @@ class GetDataExportOrderDetail extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetDBTaskSQLJobLog extends Rpc
+{
 }
 
 /**
@@ -1129,6 +1171,16 @@ class ListLogicDatabases extends Rpc
 }
 
 /**
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListLogicTableRouteConfig extends Rpc
+{
+}
+
+/**
  * @method string getSearchName()
  * @method $this withSearchName($value)
  * @method string getReturnGuid()
@@ -1385,6 +1437,18 @@ class ListWorkFlowTemplates extends Rpc
 }
 
 /**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getExecSQL()
+ * @method $this withExecSQL($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ModifyDataCorrectExecSQL extends Rpc
+{
+}
+
+/**
  * @method string getEcsRegion()
  * @method $this withEcsRegion($value)
  * @method string getDdlOnline()
@@ -1447,6 +1511,16 @@ class RegisterInstance extends Rpc
  * @method $this withUid($value)
  */
 class RegisterUser extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class RetryDataCorrectPreCheck extends Rpc
 {
 }
 

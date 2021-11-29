@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1166 - 2021-11-29
+- Supported ListLogicTableRouteConfig, AddLogicTableRouteConfig, DeleteLogicTableRouteConfig API.
+- Supported ModifyDataCorrectExecSQL, RetryDataCorrectPreCheck API.
+- Supported GetDBTaskSQLJobLog API.
+- Supported ListDBTaskSQLJobDetail to return execute log information.
+
+
 ## 1.8.1165 - 2021-11-26
 - Update GetSyncResult.
 
