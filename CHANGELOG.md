@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1169 - 2021-11-29
+- GetUnionTaskStatus add channelId.
+
+
 ## 1.8.1168 - 2021-11-29
 - Update DescribeCdnSMCertificateDetail.
 
