@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1172 - 2021-12-1
+- Supported RequestDecision For YN.
+
+
 ## 1.8.1171 - 2021-11-29
 - GetUnionTaskStatus add channelId.
 
