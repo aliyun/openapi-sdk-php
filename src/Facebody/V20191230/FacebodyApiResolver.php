@@ -85,6 +85,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'facebody';
 }
 
 /**
@@ -302,7 +305,13 @@ class AddFaceEntity extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getUserId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class AddFaceImageTemplate extends Rpc
@@ -980,8 +989,14 @@ class DeleteFaceEntity extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getUserId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getTemplateId()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class DeleteFaceImageTemplate extends Rpc
 {
@@ -2126,8 +2141,14 @@ class ListFaceEntities extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getUserId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getTemplateId()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class MergeImageFace extends Rpc
@@ -2228,10 +2249,16 @@ class PedestrianDetectAttribute extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class QueryFaceImageTemplate extends Rpc
 {
@@ -2538,6 +2565,12 @@ class RecognizeHandGesture extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method array getTask()
  */
 class RecognizePublicFace extends Rpc

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1173 - 2021-12-2
+- Update MergeImageFace QueryFaceImageTemplate AddFaceImageTemplate DeleteFaceImageTemplate.
+
+
 ## 1.8.1172 - 2021-12-1
 - Supported RequestDecision For YN.
 
