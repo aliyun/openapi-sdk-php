@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1174 - 2021-12-6
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1173 - 2021-12-2
 - Update MergeImageFace QueryFaceImageTemplate AddFaceImageTemplate DeleteFaceImageTemplate.
 
