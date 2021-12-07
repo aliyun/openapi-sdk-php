@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1177 - 2021-12-7
+- Support params for QuerySmarttagJob Api.
+- Support params for AddSmarttagTemplate,UpdateSmarttagTemplate,QuerySmarttagTemplateList Api.
+
+
 ## 1.8.1176 - 2021-12-7
 - Add MetaTag APIs.
 
