@@ -12,8 +12,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BindAxn bindAxn(array $options = [])
  * @method BindAxnExtension bindAxnExtension(array $options = [])
  * @method BuySecretNo buySecretNo(array $options = [])
+ * @method CancelPickUpWaybill cancelPickUpWaybill(array $options = [])
  * @method ConfirmSendSms confirmSendSms(array $options = [])
  * @method CreateAxgGroup createAxgGroup(array $options = [])
+ * @method CreatePickUpWaybill createPickUpWaybill(array $options = [])
  * @method CreateSubscription createSubscription(array $options = [])
  * @method DeleteSecretBlacklist deleteSecretBlacklist(array $options = [])
  * @method GetFaceVerify getFaceVerify(array $options = [])
@@ -27,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryCallStatus queryCallStatus(array $options = [])
  * @method QueryPhoneNoAByTrackNo queryPhoneNoAByTrackNo(array $options = [])
  * @method QueryRecordFileDownloadUrl queryRecordFileDownloadUrl(array $options = [])
+ * @method QuerySecretNoDetail querySecretNoDetail(array $options = [])
  * @method QuerySecretNoRemain querySecretNoRemain(array $options = [])
  * @method QuerySubscriptionDetail querySubscriptionDetail(array $options = [])
  * @method QuerySubsId querySubsId(array $options = [])
@@ -301,6 +304,36 @@ class BuySecretNo extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getOuterOrderCode()
+ * @method $this withOuterOrderCode($value)
+ * @method string getCancelDesc()
+ * @method $this withCancelDesc($value)
+ * @method string getContentType()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CancelPickUpWaybill extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContentType($value)
+    {
+        $this->data['ContentType'] = $value;
+        $this->options['headers']['Content-Type'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCallId()
  * @method $this withCallId($value)
  * @method string getResourceOwnerId()
@@ -338,6 +371,52 @@ class ConfirmSendSms extends Rpc
  */
 class CreateAxgGroup extends Rpc
 {
+}
+
+/**
+ * @method string getConsigneeName()
+ * @method $this withConsigneeName($value)
+ * @method string getOrderChannels()
+ * @method $this withOrderChannels($value)
+ * @method string getSendAddress()
+ * @method $this withSendAddress($value)
+ * @method string getOuterOrderCode()
+ * @method $this withOuterOrderCode($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getCpCode()
+ * @method $this withCpCode($value)
+ * @method string getSendMobile()
+ * @method $this withSendMobile($value)
+ * @method string getConsigneeMobile()
+ * @method $this withConsigneeMobile($value)
+ * @method string getContentType()
+ * @method string getConsigneeAddress()
+ * @method $this withConsigneeAddress($value)
+ * @method string getSendPhone()
+ * @method $this withSendPhone($value)
+ * @method string getGoodsInfos()
+ * @method $this withGoodsInfos($value)
+ * @method string getSendName()
+ * @method $this withSendName($value)
+ * @method string getConsigneePhone()
+ * @method $this withConsigneePhone($value)
+ */
+class CreatePickUpWaybill extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContentType($value)
+    {
+        $this->data['ContentType'] = $value;
+        $this->options['headers']['Content-Type'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -595,6 +674,24 @@ class QueryPhoneNoAByTrackNo extends Rpc
  * @method $this withPoolKey($value)
  */
 class QueryRecordFileDownloadUrl extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecretNo()
+ * @method $this withSecretNo($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPoolKey()
+ * @method $this withPoolKey($value)
+ */
+class QuerySecretNoDetail extends Rpc
 {
 }
 
