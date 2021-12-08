@@ -235,6 +235,8 @@ class CreateApplication extends Rpc
  * @method $this withVpcId($value)
  * @method string getNetType()
  * @method $this withNetType($value)
+ * @method string getMseVersion()
+ * @method $this withMseVersion($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
