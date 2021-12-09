@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1180 - 2021-12-9
+- Support ACR EE, OSS, EIP for deploy.
+
+
 ## 1.8.1179 - 2021-12-8
 - HeterogeInterworking.
 
