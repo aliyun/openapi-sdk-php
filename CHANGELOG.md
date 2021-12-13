@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1184 - 2021-12-13
+- Openapi support querydisplay.
+
+
 ## 1.8.1183 - 2021-12-13
 - Support query resourceType.
 
