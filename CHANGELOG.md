@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1181 - 2021-12-13
+- Support query resourceType.
+
+
 ## 1.8.1180 - 2021-12-9
 - Support ACR EE, OSS, EIP for deploy.
 

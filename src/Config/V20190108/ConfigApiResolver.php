@@ -14,13 +14,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDeliveryChannels describeDeliveryChannels(array $options = [])
  * @method DescribeDiscoveredResource describeDiscoveredResource(array $options = [])
  * @method DescribeEvaluationResults describeEvaluationResults(array $options = [])
+ * @method GetAggregateDiscoveredResource getAggregateDiscoveredResource(array $options = [])
  * @method GetDiscoveredResourceCounts getDiscoveredResourceCounts(array $options = [])
  * @method GetDiscoveredResourceSummary getDiscoveredResourceSummary(array $options = [])
  * @method GetResourceComplianceTimeline getResourceComplianceTimeline(array $options = [])
  * @method GetResourceConfigurationTimeline getResourceConfigurationTimeline(array $options = [])
  * @method GetSupportedResourceTypes getSupportedResourceTypes(array $options = [])
+ * @method ListAggregateDiscoveredResources listAggregateDiscoveredResources(array $options = [])
  * @method ListConfigRules listConfigRules(array $options = [])
  * @method ListDiscoveredResources listDiscoveredResources(array $options = [])
+ * @method ListRemediationTemplates listRemediationTemplates(array $options = [])
  * @method PutConfigRule putConfigRule(array $options = [])
  * @method PutConfigurationRecorder putConfigurationRecorder(array $options = [])
  * @method PutDeliveryChannel putDeliveryChannel(array $options = [])
@@ -40,9 +43,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2019-01-08';
-
-    /** @var string */
-    public $serviceCode = 'Config';
 }
 
 /**
@@ -158,6 +158,22 @@ class DescribeEvaluationResults extends Rpc
 }
 
 /**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class GetAggregateDiscoveredResource extends Rpc
+{
+}
+
+/**
  * @method string getMultiAccount()
  * @method $this withMultiAccount($value)
  * @method string getGroupByKey()
@@ -232,22 +248,56 @@ class GetSupportedResourceTypes extends Rpc
 }
 
 /**
+ * @method string getResourceDeleted()
+ * @method $this withResourceDeleted($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRegions()
+ * @method $this withRegions($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFolderId()
+ * @method $this withFolderId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getComplianceType()
+ * @method $this withComplianceType($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceTypes()
+ * @method $this withResourceTypes($value)
+ */
+class ListAggregateDiscoveredResources extends Rpc
+{
+}
+
+/**
  * @method string getMultiAccount()
  * @method $this withMultiAccount($value)
+ * @method string getFilterInCompliancePack()
+ * @method $this withFilterInCompliancePack($value)
  * @method string getMessageType()
  * @method $this withMessageType($value)
  * @method string getConfigRuleState()
  * @method $this withConfigRuleState($value)
+ * @method string getFilterInCompliancePackExcludeIds()
+ * @method $this withFilterInCompliancePackExcludeIds($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCompliancePackId()
+ * @method $this withCompliancePackId($value)
  * @method string getComplianceType()
  * @method $this withComplianceType($value)
  * @method string getConfigRuleSceneId()
  * @method $this withConfigRuleSceneId($value)
  * @method string getRiskLevel()
  * @method $this withRiskLevel($value)
+ * @method string getConfigRuleName()
+ * @method $this withConfigRuleName($value)
  * @method string getMemberId()
  * @method $this withMemberId($value)
  */
@@ -280,6 +330,19 @@ class ListDiscoveredResources extends Rpc
 }
 
 /**
+ * @method string getManagedRuleIdentifier()
+ * @method $this withManagedRuleIdentifier($value)
+ * @method string getRemediationType()
+ * @method $this withRemediationType($value)
+ */
+class ListRemediationTemplates extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
  * @method string getConfigRuleId()
  * @method string getMultiAccount()
  * @method $this withMultiAccount($value)
@@ -292,8 +355,11 @@ class ListDiscoveredResources extends Rpc
  * @method string getRiskLevel()
  * @method string getSourceOwner()
  * @method string getInputParameters()
+ * @method string getScopeComplianceExcludeResourceIds()
  * @method string getConfigRuleName()
  * @method string getScopeComplianceResourceId()
+ * @method string getScopeComplianceResourceIds()
+ * @method string getScopeComplianceRegionIds()
  * @method string getMemberId()
  * @method $this withMemberId($value)
  */
@@ -438,6 +504,19 @@ class PutConfigRule extends Rpc
      *
      * @return $this
      */
+    public function withScopeComplianceExcludeResourceIds($value)
+    {
+        $this->data['ScopeComplianceExcludeResourceIds'] = $value;
+        $this->options['form_params']['ScopeComplianceExcludeResourceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withConfigRuleName($value)
     {
         $this->data['ConfigRuleName'] = $value;
@@ -455,6 +534,32 @@ class PutConfigRule extends Rpc
     {
         $this->data['ScopeComplianceResourceId'] = $value;
         $this->options['form_params']['ScopeComplianceResourceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScopeComplianceResourceIds($value)
+    {
+        $this->data['ScopeComplianceResourceIds'] = $value;
+        $this->options['form_params']['ScopeComplianceResourceIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScopeComplianceRegionIds($value)
+    {
+        $this->data['ScopeComplianceRegionIds'] = $value;
+        $this->options['form_params']['ScopeComplianceRegionIds'] = $value;
 
         return $this;
     }
@@ -620,6 +725,7 @@ class PutDeliveryChannel extends Rpc
 
 /**
  * @method string getEvaluations()
+ * @method string getDeleteMode()
  * @method string getResultToken()
  */
 class PutEvaluations extends Rpc
@@ -646,6 +752,19 @@ class PutEvaluations extends Rpc
      *
      * @return $this
      */
+    public function withDeleteMode($value)
+    {
+        $this->data['DeleteMode'] = $value;
+        $this->options['form_params']['DeleteMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withResultToken($value)
     {
         $this->data['ResultToken'] = $value;
@@ -660,6 +779,10 @@ class PutEvaluations extends Rpc
  * @method $this withConfigRuleId($value)
  * @method string getMultiAccount()
  * @method $this withMultiAccount($value)
+ * @method string getCompliancePackId()
+ * @method $this withCompliancePackId($value)
+ * @method string getRevertEvaluation()
+ * @method $this withRevertEvaluation($value)
  * @method string getMemberId()
  * @method $this withMemberId($value)
  */
