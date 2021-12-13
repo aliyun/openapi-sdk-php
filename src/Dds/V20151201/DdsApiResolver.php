@@ -387,6 +387,8 @@ class CreateRecommendationTask extends Rpc
 }
 
 /**
+ * @method string getCapacityUnit()
+ * @method $this withCapacityUnit($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceStorage()
@@ -1593,10 +1595,14 @@ class DestroyInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getReadonlyReplicas()
+ * @method $this withReadonlyReplicas($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
  * @method string getShardsInfo()
  * @method $this withShardsInfo($value)
+ * @method string getReplicationFactor()
+ * @method $this withReplicationFactor($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getEngine()

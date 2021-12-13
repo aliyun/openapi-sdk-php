@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1185 - 2021-12-13
+- CreateServerlessDBInstance Add CapacityUnit.
+
+
 ## 1.8.1184 - 2021-12-13
 - Openapi support querydisplay.
 
