@@ -21,11 +21,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainNames describeDomainNames(array $options = [])
  * @method DescribeDomainRuleGroup describeDomainRuleGroup(array $options = [])
  * @method DescribeInstanceInfo describeInstanceInfo(array $options = [])
- * @method DescribeInstanceInfos describeInstanceInfos(array $options = [])
  * @method DescribeInstanceSpecInfo describeInstanceSpecInfo(array $options = [])
  * @method DescribeLogServiceStatus describeLogServiceStatus(array $options = [])
  * @method DescribeProtectionModuleCodeConfig describeProtectionModuleCodeConfig(array $options = [])
- * @method DescribeProtectionModuleMode describeProtectionModuleMode(array $options = [])
  * @method DescribeProtectionModuleRules describeProtectionModuleRules(array $options = [])
  * @method DescribeProtectionModuleStatus describeProtectionModuleStatus(array $options = [])
  * @method DescribeWafSourceIpSegment describeWafSourceIpSegment(array $options = [])
@@ -394,22 +392,6 @@ class DescribeInstanceInfo extends Rpc
  * @method $this withInstanceId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getInstanceSource()
- * @method $this withInstanceSource($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeInstanceInfos extends Rpc
-{
-}
-
-/**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
@@ -452,38 +434,20 @@ class DescribeLogServiceStatus extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getCodeValue()
  * @method $this withCodeValue($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getCodeType()
  * @method $this withCodeType($value)
- * @method string getLang()
- * @method $this withLang($value)
  */
 class DescribeProtectionModuleCodeConfig extends Rpc
-{
-}
-
-/**
- * @method string getDefenseType()
- * @method $this withDefenseType($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeProtectionModuleMode extends Rpc
 {
 }
 
