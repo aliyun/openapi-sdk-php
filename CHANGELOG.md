@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1187 - 2021-12-14
+- Support query resourceType.
+
+
 ## 1.8.1186 - 2021-12-14
 - Generated 2019-09-10 for `waf-openapi`.
 
