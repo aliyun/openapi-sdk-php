@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1189 - 2021-12-17
+- Support Endpoint Protect.
+
+
 ## 1.8.1188 - 2021-12-17
 - Supported ACL for SMB.
 
