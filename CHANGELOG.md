@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1188 - 2021-12-17
+- Supported ACL for SMB.
+
+
 ## 1.8.1187 - 2021-12-14
 - Support query resourceType.
 
