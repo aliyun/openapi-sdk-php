@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1190 - 2021-12-20
+- Supported ListLogicDatabases to return Alias information.
+- Supported ListDBTaskSQLJobDetail to return sql execute startTime and endTime information.
+
+
 ## 1.8.1189 - 2021-12-17
 - Support Endpoint Protect.
 
