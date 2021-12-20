@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1191 - 2021-12-20
+- Generated 2016-04-08 for `Emr`.
+
+
 ## 1.8.1190 - 2021-12-20
 - Supported ListLogicDatabases to return Alias information.
 - Supported ListDBTaskSQLJobDetail to return sql execute startTime and endTime information.

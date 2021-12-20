@@ -7,19 +7,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddClusterService addClusterService(array $options = [])
  * @method AddScalingConfigItemV2 addScalingConfigItemV2(array $options = [])
- * @method AuthorizeSecurityGroup authorizeSecurityGroup(array $options = [])
- * @method CancelOrder cancelOrder(array $options = [])
  * @method CloneFlow cloneFlow(array $options = [])
  * @method CloneFlowJob cloneFlowJob(array $options = [])
- * @method CreateBackup createBackup(array $options = [])
- * @method CreateBackupPlan createBackupPlan(array $options = [])
- * @method CreateClusterBootstrapAction createClusterBootstrapAction(array $options = [])
- * @method CreateClusterHostGroup createClusterHostGroup(array $options = [])
  * @method CreateClusterTemplate createClusterTemplate(array $options = [])
  * @method CreateClusterV2 createClusterV2(array $options = [])
  * @method CreateClusterWithTemplate createClusterWithTemplate(array $options = [])
- * @method CreateDataSource createDataSource(array $options = [])
- * @method CreateExecutionPlan createExecutionPlan(array $options = [])
  * @method CreateFlow createFlow(array $options = [])
  * @method CreateFlowCategory createFlowCategory(array $options = [])
  * @method CreateFlowForWeb createFlowForWeb(array $options = [])
@@ -27,46 +19,26 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateFlowProject createFlowProject(array $options = [])
  * @method CreateFlowProjectClusterSetting createFlowProjectClusterSetting(array $options = [])
  * @method CreateFlowProjectUser createFlowProjectUser(array $options = [])
- * @method CreateJob createJob(array $options = [])
- * @method CreateLibrary createLibrary(array $options = [])
- * @method CreateMetaTablePreviewTask createMetaTablePreviewTask(array $options = [])
  * @method CreateResourcePool createResourcePool(array $options = [])
  * @method CreateResourceQueue createResourceQueue(array $options = [])
  * @method CreateScalingGroupV2 createScalingGroupV2(array $options = [])
- * @method CreateScalingRule createScalingRule(array $options = [])
- * @method CreateTag createTag(array $options = [])
- * @method CreateUser createUser(array $options = [])
- * @method CreateUsers createUsers(array $options = [])
- * @method DecommissionHostComponent decommissionHostComponent(array $options = [])
  * @method DeleteClusterTemplate deleteClusterTemplate(array $options = [])
- * @method DeleteExecutionPlan deleteExecutionPlan(array $options = [])
  * @method DeleteFlow deleteFlow(array $options = [])
  * @method DeleteFlowCategory deleteFlowCategory(array $options = [])
  * @method DeleteFlowJob deleteFlowJob(array $options = [])
  * @method DeleteFlowProject deleteFlowProject(array $options = [])
  * @method DeleteFlowProjectClusterSetting deleteFlowProjectClusterSetting(array $options = [])
  * @method DeleteFlowProjectUser deleteFlowProjectUser(array $options = [])
- * @method DeleteJob deleteJob(array $options = [])
- * @method DeleteLibraries deleteLibraries(array $options = [])
  * @method DeleteResourcePool deleteResourcePool(array $options = [])
  * @method DeleteResourceQueue deleteResourceQueue(array $options = [])
- * @method DeleteScalingRule deleteScalingRule(array $options = [])
- * @method DeleteTag deleteTag(array $options = [])
- * @method DeleteUser deleteUser(array $options = [])
  * @method DescribeClusterBasicInfo describeClusterBasicInfo(array $options = [])
- * @method DescribeClusterMetaCollect describeClusterMetaCollect(array $options = [])
  * @method DescribeClusterOperationHostTaskLog describeClusterOperationHostTaskLog(array $options = [])
  * @method DescribeClusterResourcePoolSchedulerType describeClusterResourcePoolSchedulerType(array $options = [])
  * @method DescribeClusterService describeClusterService(array $options = [])
  * @method DescribeClusterServiceConfig describeClusterServiceConfig(array $options = [])
- * @method DescribeClusterServiceConfigHistory describeClusterServiceConfigHistory(array $options = [])
  * @method DescribeClusterServiceConfigTag describeClusterServiceConfigTag(array $options = [])
  * @method DescribeClusterTemplate describeClusterTemplate(array $options = [])
  * @method DescribeClusterV2 describeClusterV2(array $options = [])
- * @method DescribeDataSource describeDataSource(array $options = [])
- * @method DescribeDiskOpsActivity describeDiskOpsActivity(array $options = [])
- * @method DescribeEmrMainVersion describeEmrMainVersion(array $options = [])
- * @method DescribeExecutionPlan describeExecutionPlan(array $options = [])
  * @method DescribeFlow describeFlow(array $options = [])
  * @method DescribeFlowCategory describeFlowCategory(array $options = [])
  * @method DescribeFlowCategoryTree describeFlowCategoryTree(array $options = [])
@@ -77,34 +49,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeFlowNodeInstanceLauncherLog describeFlowNodeInstanceLauncherLog(array $options = [])
  * @method DescribeFlowProject describeFlowProject(array $options = [])
  * @method DescribeFlowProjectClusterSetting describeFlowProjectClusterSetting(array $options = [])
- * @method DescribeJob describeJob(array $options = [])
- * @method DescribeLibraryDetail describeLibraryDetail(array $options = [])
- * @method DescribeLibraryInstallTaskDetail describeLibraryInstallTaskDetail(array $options = [])
- * @method DescribeMetaTablePreviewTask describeMetaTablePreviewTask(array $options = [])
- * @method DescribeScalingActivity describeScalingActivity(array $options = [])
  * @method DescribeScalingCommonConfig describeScalingCommonConfig(array $options = [])
  * @method DescribeScalingConfigItemV2 describeScalingConfigItemV2(array $options = [])
  * @method DescribeScalingGroupInstanceV2 describeScalingGroupInstanceV2(array $options = [])
  * @method DescribeScalingGroupV2 describeScalingGroupV2(array $options = [])
- * @method DescribeScalingRule describeScalingRule(array $options = [])
- * @method DescribeSecurityGroupAttribute describeSecurityGroupAttribute(array $options = [])
- * @method DetachAndReleaseClusterEni detachAndReleaseClusterEni(array $options = [])
- * @method GetHdfsCapacityStatisticInfo getHdfsCapacityStatisticInfo(array $options = [])
- * @method GetJobInputStatisticInfo getJobInputStatisticInfo(array $options = [])
- * @method GetJobOutputStatisticInfo getJobOutputStatisticInfo(array $options = [])
- * @method GetJobRunningTimeStatisticInfo getJobRunningTimeStatisticInfo(array $options = [])
- * @method GetQueueInputStatisticInfo getQueueInputStatisticInfo(array $options = [])
- * @method GetQueueOutputStatisticInfo getQueueOutputStatisticInfo(array $options = [])
- * @method GetQueueSubmissionStatisticInfo getQueueSubmissionStatisticInfo(array $options = [])
- * @method GetUserInputStatisticInfo getUserInputStatisticInfo(array $options = [])
- * @method GetUserOutputStatisticInfo getUserOutputStatisticInfo(array $options = [])
- * @method GetUserSubmissionStatisticInfo getUserSubmissionStatisticInfo(array $options = [])
- * @method InstallLibraries installLibraries(array $options = [])
  * @method JoinResourceGroup joinResourceGroup(array $options = [])
  * @method KillFlowJob killFlowJob(array $options = [])
- * @method ListAdviceAction listAdviceAction(array $options = [])
  * @method ListApmApplication listApmApplication(array $options = [])
- * @method ListBackups listBackups(array $options = [])
  * @method ListClusterHost listClusterHost(array $options = [])
  * @method ListClusterHostComponent listClusterHostComponent(array $options = [])
  * @method ListClusterHostGroup listClusterHostGroup(array $options = [])
@@ -120,12 +71,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListClusterServiceConfigHistory listClusterServiceConfigHistory(array $options = [])
  * @method ListClusterServiceQuickLink listClusterServiceQuickLink(array $options = [])
  * @method ListClusterTemplates listClusterTemplates(array $options = [])
- * @method ListDataSource listDataSource(array $options = [])
- * @method ListDiskOpsEvents listDiskOpsEvents(array $options = [])
  * @method ListEmrAvailableConfig listEmrAvailableConfig(array $options = [])
  * @method ListEmrAvailableResource listEmrAvailableResource(array $options = [])
  * @method ListEmrMainVersion listEmrMainVersion(array $options = [])
- * @method ListExecutionPlanInstances listExecutionPlanInstances(array $options = [])
  * @method ListFlow listFlow(array $options = [])
  * @method ListFlowCategory listFlowCategory(array $options = [])
  * @method ListFlowCluster listFlowCluster(array $options = [])
@@ -141,74 +89,38 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListFlowProject listFlowProject(array $options = [])
  * @method ListFlowProjectClusterSetting listFlowProjectClusterSetting(array $options = [])
  * @method ListFlowProjectUser listFlowProjectUser(array $options = [])
- * @method ListJobExecutionInstances listJobExecutionInstances(array $options = [])
- * @method ListJobs listJobs(array $options = [])
- * @method ListLibraries listLibraries(array $options = [])
- * @method ListLibraryInstallTasks listLibraryInstallTasks(array $options = [])
- * @method ListLibraryStatus listLibraryStatus(array $options = [])
- * @method ListLocalDiskComponentInfo listLocalDiskComponentInfo(array $options = [])
  * @method ListResourcePool listResourcePool(array $options = [])
- * @method ListRoles listRoles(array $options = [])
  * @method ListScalingActivityV2 listScalingActivityV2(array $options = [])
  * @method ListScalingConfigItemV2 listScalingConfigItemV2(array $options = [])
  * @method ListScalingGroupV2 listScalingGroupV2(array $options = [])
- * @method ListSecurityGroup listSecurityGroup(array $options = [])
- * @method ListStack listStack(array $options = [])
- * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
- * @method ListTagValues listTagValues(array $options = [])
- * @method ListUsers listUsers(array $options = [])
- * @method ListVswitch listVswitch(array $options = [])
- * @method ModifyClusterBootstrapAction modifyClusterBootstrapAction(array $options = [])
- * @method ModifyClusterHostGroup modifyClusterHostGroup(array $options = [])
- * @method ModifyClusterMetaCollect modifyClusterMetaCollect(array $options = [])
  * @method ModifyClusterName modifyClusterName(array $options = [])
- * @method ModifyClusterSecurityGroupRule modifyClusterSecurityGroupRule(array $options = [])
  * @method ModifyClusterServiceConfig modifyClusterServiceConfig(array $options = [])
  * @method ModifyClusterTemplate modifyClusterTemplate(array $options = [])
- * @method ModifyExecutionPlan modifyExecutionPlan(array $options = [])
- * @method ModifyFlow modifyFlow(array $options = [])
  * @method ModifyFlowCategory modifyFlowCategory(array $options = [])
  * @method ModifyFlowForWeb modifyFlowForWeb(array $options = [])
- * @method ModifyFlowJob modifyFlowJob(array $options = [])
  * @method ModifyFlowProject modifyFlowProject(array $options = [])
  * @method ModifyFlowProjectClusterSetting modifyFlowProjectClusterSetting(array $options = [])
- * @method ModifyJob modifyJob(array $options = [])
  * @method ModifyResourcePool modifyResourcePool(array $options = [])
  * @method ModifyResourcePoolSchedulerType modifyResourcePoolSchedulerType(array $options = [])
  * @method ModifyResourceQueue modifyResourceQueue(array $options = [])
  * @method ModifyScalingConfigItemV2 modifyScalingConfigItemV2(array $options = [])
  * @method ModifyScalingGroupV2 modifyScalingGroupV2(array $options = [])
- * @method ModifyScalingRule modifyScalingRule(array $options = [])
- * @method ModifyScalingTaskGroup modifyScalingTaskGroup(array $options = [])
- * @method QueryEntity queryEntity(array $options = [])
- * @method QueryTag queryTag(array $options = [])
  * @method RefreshClusterResourcePool refreshClusterResourcePool(array $options = [])
  * @method ReleaseCluster releaseCluster(array $options = [])
  * @method ReleaseClusterHostGroup releaseClusterHostGroup(array $options = [])
  * @method RemoveScalingConfigItemV2 removeScalingConfigItemV2(array $options = [])
  * @method RerunFlow rerunFlow(array $options = [])
  * @method ResizeClusterV2 resizeClusterV2(array $options = [])
- * @method ResumeExecutionPlanScheduler resumeExecutionPlanScheduler(array $options = [])
  * @method ResumeFlow resumeFlow(array $options = [])
- * @method RetryOperation retryOperation(array $options = [])
  * @method RunClusterServiceAction runClusterServiceAction(array $options = [])
- * @method RunDiskOpsActivity runDiskOpsActivity(array $options = [])
- * @method RunExecutionPlan runExecutionPlan(array $options = [])
  * @method RunScalingActionV2 runScalingActionV2(array $options = [])
- * @method SearchLog searchLog(array $options = [])
  * @method StartFlow startFlow(array $options = [])
  * @method SubmitFlow submitFlow(array $options = [])
  * @method SubmitFlowJob submitFlowJob(array $options = [])
- * @method SuspendExecutionPlanScheduler suspendExecutionPlanScheduler(array $options = [])
  * @method SuspendFlow suspendFlow(array $options = [])
  * @method TagResources tagResources(array $options = [])
- * @method UninstallLibraries uninstallLibraries(array $options = [])
  * @method UntagResources untagResources(array $options = [])
- * @method UpdateDataSource updateDataSource(array $options = [])
- * @method UpdateLibraryInstallTaskStatus updateLibraryInstallTaskStatus(array $options = [])
- * @method UpdateTag updateTag(array $options = [])
- * @method UpdateUser updateUser(array $options = [])
  */
 class EmrApiResolver extends ApiResolver
 {
@@ -279,30 +191,6 @@ class AddScalingConfigItemV2 extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getBizType()
- * @method $this withBizType($value)
- * @method string getBizContent()
- * @method $this withBizContent($value)
- */
-class AuthorizeSecurityGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class CancelOrder extends Rpc
-{
-}
-
-/**
  * @method string getId()
  * @method $this withId($value)
  * @method string getProjectId()
@@ -321,101 +209,6 @@ class CloneFlow extends Rpc
  * @method $this withProjectId($value)
  */
 class CloneFlowJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getBackupPlanId()
- * @method $this withBackupPlanId($value)
- * @method string getMetadataType()
- * @method $this withMetadataType($value)
- */
-class CreateBackup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getRootPath()
- * @method $this withRootPath($value)
- */
-class CreateBackupPlan extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method array getBootstrapAction()
- */
-class CreateClusterBootstrapAction extends Rpc
-{
-
-    /**
-     * @param array $bootstrapAction
-     *
-     * @return $this
-     */
-	public function withBootstrapAction(array $bootstrapAction)
-	{
-	    $this->data['BootstrapAction'] = $bootstrapAction;
-		foreach ($bootstrapAction as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Path'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
-			}
-			if(isset($depth1Value['ExecutionTarget'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionTarget'] = $depth1Value['ExecutionTarget'];
-			}
-			if(isset($depth1Value['ExecutionMoment'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionMoment'] = $depth1Value['ExecutionMoment'];
-			}
-			if(isset($depth1Value['Arg'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Arg'] = $depth1Value['Arg'];
-			}
-			if(isset($depth1Value['Name'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-			}
-			if(isset($depth1Value['ExecutionFailStrategy'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionFailStrategy'] = $depth1Value['ExecutionFailStrategy'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getHostGroupParams()
- * @method $this withHostGroupParams($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getHostGroupName()
- * @method $this withHostGroupName($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getVswitchId()
- * @method $this withVswitchId($value)
- * @method string getComment()
- * @method $this withComment($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getHostGroupType()
- * @method $this withHostGroupType($value)
- */
-class CreateClusterHostGroup extends Rpc
 {
 }
 
@@ -1047,230 +840,6 @@ class CreateClusterWithTemplate extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getNavParentId()
- * @method $this withNavParentId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getConf()
- * @method $this withConf($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getSourceType()
- * @method $this withSourceType($value)
- */
-class CreateDataSource extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTimeInterval()
- * @method $this withTimeInterval($value)
- * @method string getLogPath()
- * @method $this withLogPath($value)
- * @method string getClusterName()
- * @method $this withClusterName($value)
- * @method string getConfigurations()
- * @method $this withConfigurations($value)
- * @method string getCreateClusterOnDemand()
- * @method $this withCreateClusterOnDemand($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method array getBootstrapAction()
- * @method string getEmrVer()
- * @method $this withEmrVer($value)
- * @method string getIsOpenPublicIp()
- * @method $this withIsOpenPublicIp($value)
- * @method string getInstanceGeneration()
- * @method $this withInstanceGeneration($value)
- * @method string getClusterType()
- * @method $this withClusterType($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method array getOptionSoftWareList()
- * @method string getNetType()
- * @method $this withNetType($value)
- * @method array getEcsOrder()
- * @method string getName()
- * @method $this withName($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getUseCustomHiveMetaDB()
- * @method $this withUseCustomHiveMetaDB($value)
- * @method string getInitCustomHiveMetaDB()
- * @method $this withInitCustomHiveMetaDB($value)
- * @method string getIoOptimized()
- * @method $this withIoOptimized($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getEasEnable()
- * @method $this withEasEnable($value)
- * @method array getJobIdList()
- * @method string getDayOfMonth()
- * @method $this withDayOfMonth($value)
- * @method string getUseLocalMetaDb()
- * @method $this withUseLocalMetaDb($value)
- * @method string getUserDefinedEmrEcsRole()
- * @method $this withUserDefinedEmrEcsRole($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getTimeUnit()
- * @method $this withTimeUnit($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getWorkflowDefinition()
- * @method $this withWorkflowDefinition($value)
- * @method string getDayOfWeek()
- * @method $this withDayOfWeek($value)
- * @method string getStrategy()
- * @method $this withStrategy($value)
- * @method array getConfig()
- * @method string getHighAvailabilityEnable()
- * @method $this withHighAvailabilityEnable($value)
- * @method string getLogEnable()
- * @method $this withLogEnable($value)
- */
-class CreateExecutionPlan extends Rpc
-{
-
-    /**
-     * @param array $bootstrapAction
-     *
-     * @return $this
-     */
-	public function withBootstrapAction(array $bootstrapAction)
-	{
-	    $this->data['BootstrapAction'] = $bootstrapAction;
-		foreach ($bootstrapAction as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Path'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
-			}
-			if(isset($depth1Value['ExecutionTarget'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionTarget'] = $depth1Value['ExecutionTarget'];
-			}
-			if(isset($depth1Value['ExecutionMoment'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionMoment'] = $depth1Value['ExecutionMoment'];
-			}
-			if(isset($depth1Value['Arg'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Arg'] = $depth1Value['Arg'];
-			}
-			if(isset($depth1Value['Name'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-			}
-			if(isset($depth1Value['ExecutionFailStrategy'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionFailStrategy'] = $depth1Value['ExecutionFailStrategy'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $optionSoftWareList
-     *
-     * @return $this
-     */
-	public function withOptionSoftWareList(array $optionSoftWareList)
-	{
-	    $this->data['OptionSoftWareList'] = $optionSoftWareList;
-		foreach ($optionSoftWareList as $i => $iValue) {
-			$this->options['query']['OptionSoftWareList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $ecsOrder
-     *
-     * @return $this
-     */
-	public function withEcsOrder(array $ecsOrder)
-	{
-	    $this->data['EcsOrder'] = $ecsOrder;
-		foreach ($ecsOrder as $depth1 => $depth1Value) {
-			if(isset($depth1Value['NodeType'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.NodeType'] = $depth1Value['NodeType'];
-			}
-			if(isset($depth1Value['DiskCount'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.DiskCount'] = $depth1Value['DiskCount'];
-			}
-			if(isset($depth1Value['NodeCount'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.NodeCount'] = $depth1Value['NodeCount'];
-			}
-			if(isset($depth1Value['DiskCapacity'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.DiskCapacity'] = $depth1Value['DiskCapacity'];
-			}
-			if(isset($depth1Value['Index'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.Index'] = $depth1Value['Index'];
-			}
-			if(isset($depth1Value['InstanceType'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
-			}
-			if(isset($depth1Value['DiskType'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.DiskType'] = $depth1Value['DiskType'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $jobIdList
-     *
-     * @return $this
-     */
-	public function withJobIdList(array $jobIdList)
-	{
-	    $this->data['JobIdList'] = $jobIdList;
-		foreach ($jobIdList as $i => $iValue) {
-			$this->options['query']['JobIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $config
-     *
-     * @return $this
-     */
-	public function withConfig(array $config)
-	{
-	    $this->data['Config'] = $config;
-		foreach ($config as $depth1 => $depth1Value) {
-			if(isset($depth1Value['ConfigKey'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.ConfigKey'] = $depth1Value['ConfigKey'];
-			}
-			if(isset($depth1Value['FileName'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.FileName'] = $depth1Value['FileName'];
-			}
-			if(isset($depth1Value['Encrypt'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.Encrypt'] = $depth1Value['Encrypt'];
-			}
-			if(isset($depth1Value['Replace'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.Replace'] = $depth1Value['Replace'];
-			}
-			if(isset($depth1Value['ConfigValue'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.ConfigValue'] = $depth1Value['ConfigValue'];
-			}
-			if(isset($depth1Value['ServiceName'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.ServiceName'] = $depth1Value['ServiceName'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
  * @method string getCronExpr()
  * @method $this withCronExpr($value)
  * @method string getDescription()
@@ -1625,70 +1194,6 @@ class CreateFlowProjectUser extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getFailAct()
- * @method $this withFailAct($value)
- * @method string getRunParameter()
- * @method $this withRunParameter($value)
- * @method string getRetryInterval()
- * @method $this withRetryInterval($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getMaxRetry()
- * @method $this withMaxRetry($value)
- */
-class CreateJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getLibraryVersion()
- * @method $this withLibraryVersion($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getScope()
- * @method $this withScope($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getSourceType()
- * @method $this withSourceType($value)
- * @method string getProperties()
- * @method $this withProperties($value)
- * @method string getSourceLocation()
- * @method $this withSourceLocation($value)
- */
-class CreateLibrary extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getPassword()
- * @method $this withPassword($value)
- * @method string getTableId()
- * @method $this withTableId($value)
- * @method string getDatabaseId()
- * @method $this withDatabaseId($value)
- * @method string getUser()
- * @method $this withUser($value)
- */
-class CreateMetaTablePreviewTask extends Rpc
-{
-}
-
-/**
  * @method string getNote()
  * @method $this withNote($value)
  * @method string getResourceOwnerId()
@@ -1807,263 +1312,12 @@ class CreateScalingGroupV2 extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getRuleName()
- * @method $this withRuleName($value)
- * @method string getRecurrenceEndTime()
- * @method $this withRecurrenceEndTime($value)
- * @method array getCloudWatchTrigger()
- * @method string getTimeoutWithGrace()
- * @method $this withTimeoutWithGrace($value)
- * @method string getCooldown()
- * @method $this withCooldown($value)
- * @method string getLaunchTime()
- * @method $this withLaunchTime($value)
- * @method string getWithGrace()
- * @method $this withWithGrace($value)
- * @method string getRuleCategory()
- * @method $this withRuleCategory($value)
- * @method string getAdjustmentValue()
- * @method $this withAdjustmentValue($value)
- * @method string getAdjustmentType()
- * @method $this withAdjustmentType($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getLaunchExpirationTime()
- * @method $this withLaunchExpirationTime($value)
- * @method string getRecurrenceValue()
- * @method $this withRecurrenceValue($value)
- * @method string getHostGroupId()
- * @method $this withHostGroupId($value)
- * @method array getSchedulerTrigger()
- * @method string getRecurrenceType()
- * @method $this withRecurrenceType($value)
- */
-class CreateScalingRule extends Rpc
-{
-
-    /**
-     * @param array $cloudWatchTrigger
-     *
-     * @return $this
-     */
-	public function withCloudWatchTrigger(array $cloudWatchTrigger)
-	{
-	    $this->data['CloudWatchTrigger'] = $cloudWatchTrigger;
-		foreach ($cloudWatchTrigger as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Period'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.Period'] = $depth1Value['Period'];
-			}
-			if(isset($depth1Value['EvaluationCount'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.EvaluationCount'] = $depth1Value['EvaluationCount'];
-			}
-			if(isset($depth1Value['Threshold'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.Threshold'] = $depth1Value['Threshold'];
-			}
-			if(isset($depth1Value['MetricName'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
-			}
-			if(isset($depth1Value['ComparisonOperator'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.ComparisonOperator'] = $depth1Value['ComparisonOperator'];
-			}
-			if(isset($depth1Value['Statistics'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.Statistics'] = $depth1Value['Statistics'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $schedulerTrigger
-     *
-     * @return $this
-     */
-	public function withSchedulerTrigger(array $schedulerTrigger)
-	{
-	    $this->data['SchedulerTrigger'] = $schedulerTrigger;
-		foreach ($schedulerTrigger as $depth1 => $depth1Value) {
-			if(isset($depth1Value['LaunchTime'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.LaunchTime'] = $depth1Value['LaunchTime'];
-			}
-			if(isset($depth1Value['LaunchExpirationTime'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.LaunchExpirationTime'] = $depth1Value['LaunchExpirationTime'];
-			}
-			if(isset($depth1Value['RecurrenceValue'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.RecurrenceValue'] = $depth1Value['RecurrenceValue'];
-			}
-			if(isset($depth1Value['RecurrenceEndTime'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.RecurrenceEndTime'] = $depth1Value['RecurrenceEndTime'];
-			}
-			if(isset($depth1Value['RecurrenceType'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.RecurrenceType'] = $depth1Value['RecurrenceType'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class CreateTag extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUserType()
- * @method $this withUserType($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method array getUserAccountParamList()
- * @method array getGroupIdList()
- * @method array getRoleIdList()
- * @method string getAliyunUserId()
- * @method $this withAliyunUserId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class CreateUser extends Rpc
-{
-
-    /**
-     * @param array $userAccountParamList
-     *
-     * @return $this
-     */
-	public function withUserAccountParamList(array $userAccountParamList)
-	{
-	    $this->data['UserAccountParamList'] = $userAccountParamList;
-		foreach ($userAccountParamList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['AccountType'])){
-				$this->options['query']['UserAccountParamList.' . ($depth1 + 1) . '.AccountType'] = $depth1Value['AccountType'];
-			}
-			if(isset($depth1Value['AuthType'])){
-				$this->options['query']['UserAccountParamList.' . ($depth1 + 1) . '.AuthType'] = $depth1Value['AuthType'];
-			}
-			if(isset($depth1Value['AccountPassword'])){
-				$this->options['query']['UserAccountParamList.' . ($depth1 + 1) . '.AccountPassword'] = $depth1Value['AccountPassword'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $groupIdList
-     *
-     * @return $this
-     */
-	public function withGroupIdList(array $groupIdList)
-	{
-	    $this->data['GroupIdList'] = $groupIdList;
-		foreach ($groupIdList as $i => $iValue) {
-			$this->options['query']['GroupIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $roleIdList
-     *
-     * @return $this
-     */
-	public function withRoleIdList(array $roleIdList)
-	{
-	    $this->data['RoleIdList'] = $roleIdList;
-		foreach ($roleIdList as $i => $iValue) {
-			$this->options['query']['RoleIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method array getUserInfo()
- */
-class CreateUsers extends Rpc
-{
-
-    /**
-     * @param array $userInfo
-     *
-     * @return $this
-     */
-	public function withUserInfo(array $userInfo)
-	{
-	    $this->data['UserInfo'] = $userInfo;
-		foreach ($userInfo as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Type'])){
-				$this->options['query']['UserInfo.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
-			}
-			if(isset($depth1Value['UserId'])){
-				$this->options['query']['UserInfo.' . ($depth1 + 1) . '.UserId'] = $depth1Value['UserId'];
-			}
-			if(isset($depth1Value['UserName'])){
-				$this->options['query']['UserInfo.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getHostInstanceId()
- * @method $this withHostInstanceId($value)
- * @method string getComponentName()
- * @method $this withComponentName($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getTimeoutSeconds()
- * @method $this withTimeoutSeconds($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
- */
-class DecommissionHostComponent extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getBizId()
  * @method $this withBizId($value)
  */
 class DeleteClusterTemplate extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class DeleteExecutionPlan extends Rpc
 {
 }
 
@@ -2128,42 +1382,6 @@ class DeleteFlowProjectUser extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class DeleteJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getLibraryBizIdList()
- */
-class DeleteLibraries extends Rpc
-{
-
-    /**
-     * @param array $libraryBizIdList
-     *
-     * @return $this
-     */
-	public function withLibraryBizIdList(array $libraryBizIdList)
-	{
-	    $this->data['LibraryBizIdList'] = $libraryBizIdList;
-		foreach ($libraryBizIdList as $i => $iValue) {
-			$this->options['query']['LibraryBizIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourcePoolId()
  * @method $this withResourcePoolId($value)
  * @method string getClusterId()
@@ -2190,62 +1408,8 @@ class DeleteResourceQueue extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getScalingRuleId()
- * @method $this withScalingRuleId($value)
- * @method string getHostGroupId()
- * @method $this withHostGroupId($value)
- */
-class DeleteScalingRule extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class DeleteTag extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- */
-class DeleteUser extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
  */
 class DescribeClusterBasicInfo extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- */
-class DescribeClusterMetaCollect extends Rpc
 {
 }
 
@@ -2314,20 +1478,6 @@ class DescribeClusterServiceConfig extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getConfigVersion()
- * @method $this withConfigVersion($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
- */
-class DescribeClusterServiceConfigHistory extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
  * @method string getConfigTag()
  * @method $this withConfigTag($value)
  * @method string getServiceName()
@@ -2356,58 +1506,6 @@ class DescribeClusterTemplate extends Rpc
  * @method $this withId($value)
  */
 class DescribeClusterV2 extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class DescribeDataSource extends Rpc
-{
-}
-
-/**
- * @method string getEventId()
- * @method $this withEventId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getCurrentStage()
- * @method $this withCurrentStage($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDiskId()
- * @method $this withDiskId($value)
- * @method string getCurrentState()
- * @method $this withCurrentState($value)
- */
-class DescribeDiskOpsActivity extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEmrVersion()
- * @method $this withEmrVersion($value)
- */
-class DescribeEmrMainVersion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class DescribeExecutionPlan extends Rpc
 {
 }
 
@@ -2544,64 +1642,6 @@ class DescribeFlowProjectClusterSetting extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class DescribeJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getLibraryBizId()
- * @method $this withLibraryBizId($value)
- */
-class DescribeLibraryDetail extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTaskBizId()
- * @method $this withTaskBizId($value)
- */
-class DescribeLibraryInstallTaskDetail extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeMetaTablePreviewTask extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getScalingActivityId()
- * @method $this withScalingActivityId($value)
- * @method string getHostGroupId()
- * @method $this withHostGroupId($value)
- */
-class DescribeScalingActivity extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
  */
 class DescribeScalingCommonConfig extends Rpc
 {
@@ -2654,230 +1694,6 @@ class DescribeScalingGroupV2 extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getScalingRuleId()
- * @method $this withScalingRuleId($value)
- * @method string getHostGroupId()
- * @method $this withHostGroupId($value)
- */
-class DescribeScalingRule extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- */
-class DescribeSecurityGroupAttribute extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTargetClusterId()
- * @method $this withTargetClusterId($value)
- * @method string getVswitchId()
- * @method $this withVswitchId($value)
- */
-class DetachAndReleaseClusterEni extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetHdfsCapacityStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class GetJobInputStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class GetJobOutputStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class GetJobRunningTimeStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetQueueInputStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetQueueOutputStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- * @method string getFinalStatus()
- * @method $this withFinalStatus($value)
- * @method string getApplicationType()
- * @method $this withApplicationType($value)
- */
-class GetQueueSubmissionStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetUserInputStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- */
-class GetUserOutputStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getFromDatetime()
- * @method $this withFromDatetime($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getToDatetime()
- * @method $this withToDatetime($value)
- * @method string getFinalStatus()
- * @method $this withFinalStatus($value)
- * @method string getApplicationType()
- * @method $this withApplicationType($value)
- */
-class GetUserSubmissionStatisticInfo extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getLibraryBizId()
- * @method $this withLibraryBizId($value)
- * @method array getClusterBizIdList()
- */
-class InstallLibraries extends Rpc
-{
-
-    /**
-     * @param array $clusterBizIdList
-     *
-     * @return $this
-     */
-	public function withClusterBizIdList(array $clusterBizIdList)
-	{
-	    $this->data['ClusterBizIdList'] = $clusterBizIdList;
-		foreach ($clusterBizIdList as $i => $iValue) {
-			$this->options['query']['ClusterBizIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getResourceType()
@@ -2896,24 +1712,6 @@ class JoinResourceGroup extends Rpc
  * @method $this withProjectId($value)
  */
 class KillFlowJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getComponent()
- * @method $this withComponent($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
- */
-class ListAdviceAction extends Rpc
 {
 }
 
@@ -2955,56 +1753,6 @@ class ListAdviceAction extends Rpc
  */
 class ListApmApplication extends Rpc
 {
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
- * @method string getBackupPlanId()
- * @method $this withBackupPlanId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method array getBackupId()
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getMetadataType()
- * @method $this withMetadataType($value)
- * @method string getBizId()
- * @method $this withBizId($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class ListBackups extends Rpc
-{
-
-    /**
-     * @param array $backupId
-     *
-     * @return $this
-     */
-	public function withBackupId(array $backupId)
-	{
-	    $this->data['BackupId'] = $backupId;
-		foreach ($backupId as $i => $iValue) {
-			$this->options['query']['BackupId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -3415,48 +2163,6 @@ class ListClusterTemplates extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCreateFrom()
- * @method $this withCreateFrom($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getSourceType()
- * @method $this withSourceType($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- */
-class ListDataSource extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListDiskOpsEvents extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  */
@@ -3514,54 +2220,6 @@ class ListEmrAvailableResource extends Rpc
  */
 class ListEmrMainVersion extends Rpc
 {
-}
-
-/**
- * @method string getOnlyLastInstance()
- * @method $this withOnlyLastInstance($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method array getExecutionPlanIdList()
- * @method array getStatusList()
- * @method string getIsDesc()
- * @method $this withIsDesc($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListExecutionPlanInstances extends Rpc
-{
-
-    /**
-     * @param array $executionPlanIdList
-     *
-     * @return $this
-     */
-	public function withExecutionPlanIdList(array $executionPlanIdList)
-	{
-	    $this->data['ExecutionPlanIdList'] = $executionPlanIdList;
-		foreach ($executionPlanIdList as $i => $iValue) {
-			$this->options['query']['ExecutionPlanIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $statusList
-     *
-     * @return $this
-     */
-	public function withStatusList(array $statusList)
-	{
-	    $this->data['StatusList'] = $statusList;
-		foreach ($statusList as $i => $iValue) {
-			$this->options['query']['StatusList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -3865,130 +2523,6 @@ class ListFlowProjectUser extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getIsDesc()
- * @method $this withIsDesc($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getExecutionPlanInstanceId()
- * @method $this withExecutionPlanInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- */
-class ListJobExecutionInstances extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getQueryString()
- * @method $this withQueryString($value)
- * @method string getIsDesc()
- * @method $this withIsDesc($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getQueryType()
- * @method $this withQueryType($value)
- */
-class ListJobs extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
- * @method string getClusterBizId()
- * @method $this withClusterBizId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method string getOrderField()
- * @method $this withOrderField($value)
- */
-class ListLibraries extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
- * @method string getClusterBizId()
- * @method $this withClusterBizId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method string getOrderField()
- * @method $this withOrderField($value)
- * @method string getLibraryBizId()
- * @method $this withLibraryBizId($value)
- */
-class ListLibraryInstallTasks extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageCount()
- * @method $this withPageCount($value)
- * @method string getOrderMode()
- * @method $this withOrderMode($value)
- * @method string getClusterBizId()
- * @method $this withClusterBizId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentSize()
- * @method $this withCurrentSize($value)
- * @method string getOrderField()
- * @method $this withOrderField($value)
- * @method string getLibraryBizId()
- * @method $this withLibraryBizId($value)
- */
-class ListLibraryStatus extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class ListLocalDiskComponentInfo extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getPageNumber()
@@ -3999,16 +2533,6 @@ class ListLocalDiskComponentInfo extends Rpc
  * @method $this withPoolType($value)
  */
 class ListResourcePool extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class ListRoles extends Rpc
 {
 }
 
@@ -4093,54 +2617,6 @@ class ListScalingGroupV2 extends Rpc
 }
 
 /**
- * @method string getDepositType()
- * @method $this withDepositType($value)
- * @method string getProductType()
- * @method $this withProductType($value)
- * @method string getNetType()
- * @method $this withNetType($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- */
-class ListSecurityGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getStackName()
- * @method $this withStackName($value)
- * @method string getStackVersion()
- * @method $this withStackVersion($value)
- */
-class ListStack extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method string getScope()
- * @method $this withScope($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class ListTagKeys extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method array getResourceId()
@@ -4192,153 +2668,12 @@ class ListTagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method string getScope()
- * @method $this withScope($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getKey()
- * @method $this withKey($value)
- */
-class ListTagValues extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getType()
- * @method $this withType($value)
- */
-class ListUsers extends Rpc
-{
-}
-
-/**
- * @method string getDepositType()
- * @method $this withDepositType($value)
- * @method string getProductType()
- * @method $this withProductType($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- */
-class ListVswitch extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method array getBootstrapAction()
- * @method string getId()
- * @method $this withId($value)
- */
-class ModifyClusterBootstrapAction extends Rpc
-{
-
-    /**
-     * @param array $bootstrapAction
-     *
-     * @return $this
-     */
-	public function withBootstrapAction(array $bootstrapAction)
-	{
-	    $this->data['BootstrapAction'] = $bootstrapAction;
-		foreach ($bootstrapAction as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Path'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
-			}
-			if(isset($depth1Value['ExecutionTarget'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionTarget'] = $depth1Value['ExecutionTarget'];
-			}
-			if(isset($depth1Value['ExecutionMoment'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionMoment'] = $depth1Value['ExecutionMoment'];
-			}
-			if(isset($depth1Value['Arg'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Arg'] = $depth1Value['Arg'];
-			}
-			if(isset($depth1Value['Name'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-			}
-			if(isset($depth1Value['ExecutionFailStrategy'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionFailStrategy'] = $depth1Value['ExecutionFailStrategy'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getHostGroupName()
- * @method $this withHostGroupName($value)
- * @method string getVswitchId()
- * @method $this withVswitchId($value)
- * @method string getHostGroupId()
- * @method $this withHostGroupId($value)
- * @method string getComment()
- * @method $this withComment($value)
- */
-class ModifyClusterHostGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getSwitchOn()
- * @method $this withSwitchOn($value)
- */
-class ModifyClusterMetaCollect extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getId()
  * @method $this withId($value)
  */
 class ModifyClusterName extends Rpc
-{
-}
-
-/**
- * @method string getNicType()
- * @method $this withNicType($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPortRange()
- * @method $this withPortRange($value)
- * @method string getIpProtocol()
- * @method $this withIpProtocol($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getWhiteIp()
- * @method $this withWhiteIp($value)
- * @method string getModifyType()
- * @method $this withModifyType($value)
- */
-class ModifyClusterSecurityGroupRule extends Rpc
 {
 }
 
@@ -4440,12 +2775,16 @@ class ModifyClusterServiceConfig extends Rpc
  * @method $this withEasEnable($value)
  * @method string getDepositType()
  * @method $this withDepositType($value)
+ * @method string getDataDiskKMSKeyId()
+ * @method $this withDataDiskKMSKeyId($value)
  * @method string getUseLocalMetaDb()
  * @method $this withUseLocalMetaDb($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
  * @method string getUserDefinedEmrEcsRole()
  * @method $this withUserDefinedEmrEcsRole($value)
+ * @method string getDataDiskEncrypted()
+ * @method $this withDataDiskEncrypted($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getBizId()
@@ -4629,260 +2968,6 @@ class ModifyClusterTemplate extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getLogPath()
- * @method $this withLogPath($value)
- * @method string getTimeInterval()
- * @method $this withTimeInterval($value)
- * @method string getClusterName()
- * @method $this withClusterName($value)
- * @method string getConfigurations()
- * @method $this withConfigurations($value)
- * @method string getCreateClusterOnDemand()
- * @method $this withCreateClusterOnDemand($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method array getBootstrapAction()
- * @method string getEmrVer()
- * @method $this withEmrVer($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getIsOpenPublicIp()
- * @method $this withIsOpenPublicIp($value)
- * @method string getExecutionPlanVersion()
- * @method $this withExecutionPlanVersion($value)
- * @method string getInstanceGeneration()
- * @method $this withInstanceGeneration($value)
- * @method string getClusterType()
- * @method $this withClusterType($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method array getOptionSoftWareList()
- * @method string getNetType()
- * @method $this withNetType($value)
- * @method array getEcsOrder()
- * @method string getName()
- * @method $this withName($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getUseCustomHiveMetaDB()
- * @method $this withUseCustomHiveMetaDB($value)
- * @method string getInitCustomHiveMetaDB()
- * @method $this withInitCustomHiveMetaDB($value)
- * @method string getIoOptimized()
- * @method $this withIoOptimized($value)
- * @method string getSecurityGroupId()
- * @method $this withSecurityGroupId($value)
- * @method string getEasEnable()
- * @method $this withEasEnable($value)
- * @method array getJobIdList()
- * @method string getDayOfMonth()
- * @method $this withDayOfMonth($value)
- * @method string getUseLocalMetaDb()
- * @method $this withUseLocalMetaDb($value)
- * @method string getUserDefinedEmrEcsRole()
- * @method $this withUserDefinedEmrEcsRole($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getTimeUnit()
- * @method $this withTimeUnit($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getWorkflowDefinition()
- * @method $this withWorkflowDefinition($value)
- * @method string getDayOfWeek()
- * @method $this withDayOfWeek($value)
- * @method string getStrategy()
- * @method $this withStrategy($value)
- * @method array getConfig()
- * @method string getHighAvailabilityEnable()
- * @method $this withHighAvailabilityEnable($value)
- * @method string getLogEnable()
- * @method $this withLogEnable($value)
- */
-class ModifyExecutionPlan extends Rpc
-{
-
-    /**
-     * @param array $bootstrapAction
-     *
-     * @return $this
-     */
-	public function withBootstrapAction(array $bootstrapAction)
-	{
-	    $this->data['BootstrapAction'] = $bootstrapAction;
-		foreach ($bootstrapAction as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Path'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
-			}
-			if(isset($depth1Value['ExecutionTarget'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionTarget'] = $depth1Value['ExecutionTarget'];
-			}
-			if(isset($depth1Value['ExecutionMoment'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionMoment'] = $depth1Value['ExecutionMoment'];
-			}
-			if(isset($depth1Value['Arg'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Arg'] = $depth1Value['Arg'];
-			}
-			if(isset($depth1Value['Name'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
-			}
-			if(isset($depth1Value['ExecutionFailStrategy'])){
-				$this->options['query']['BootstrapAction.' . ($depth1 + 1) . '.ExecutionFailStrategy'] = $depth1Value['ExecutionFailStrategy'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $optionSoftWareList
-     *
-     * @return $this
-     */
-	public function withOptionSoftWareList(array $optionSoftWareList)
-	{
-	    $this->data['OptionSoftWareList'] = $optionSoftWareList;
-		foreach ($optionSoftWareList as $i => $iValue) {
-			$this->options['query']['OptionSoftWareList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $ecsOrder
-     *
-     * @return $this
-     */
-	public function withEcsOrder(array $ecsOrder)
-	{
-	    $this->data['EcsOrder'] = $ecsOrder;
-		foreach ($ecsOrder as $depth1 => $depth1Value) {
-			if(isset($depth1Value['NodeType'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.NodeType'] = $depth1Value['NodeType'];
-			}
-			if(isset($depth1Value['DiskCount'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.DiskCount'] = $depth1Value['DiskCount'];
-			}
-			if(isset($depth1Value['NodeCount'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.NodeCount'] = $depth1Value['NodeCount'];
-			}
-			if(isset($depth1Value['DiskCapacity'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.DiskCapacity'] = $depth1Value['DiskCapacity'];
-			}
-			if(isset($depth1Value['Index'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.Index'] = $depth1Value['Index'];
-			}
-			if(isset($depth1Value['InstanceType'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
-			}
-			if(isset($depth1Value['DiskType'])){
-				$this->options['query']['EcsOrder.' . ($depth1 + 1) . '.DiskType'] = $depth1Value['DiskType'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $jobIdList
-     *
-     * @return $this
-     */
-	public function withJobIdList(array $jobIdList)
-	{
-	    $this->data['JobIdList'] = $jobIdList;
-		foreach ($jobIdList as $i => $iValue) {
-			$this->options['query']['JobIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $config
-     *
-     * @return $this
-     */
-	public function withConfig(array $config)
-	{
-	    $this->data['Config'] = $config;
-		foreach ($config as $depth1 => $depth1Value) {
-			if(isset($depth1Value['ConfigKey'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.ConfigKey'] = $depth1Value['ConfigKey'];
-			}
-			if(isset($depth1Value['FileName'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.FileName'] = $depth1Value['FileName'];
-			}
-			if(isset($depth1Value['Encrypt'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.Encrypt'] = $depth1Value['Encrypt'];
-			}
-			if(isset($depth1Value['Replace'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.Replace'] = $depth1Value['Replace'];
-			}
-			if(isset($depth1Value['ConfigValue'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.ConfigValue'] = $depth1Value['ConfigValue'];
-			}
-			if(isset($depth1Value['ServiceName'])){
-				$this->options['query']['Config.' . ($depth1 + 1) . '.ServiceName'] = $depth1Value['ServiceName'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getCronExpr()
- * @method $this withCronExpr($value)
- * @method string getPeriodic()
- * @method $this withPeriodic($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getAlertUserGroupBizId()
- * @method $this withAlertUserGroupBizId($value)
- * @method string getLifecycle()
- * @method $this withLifecycle($value)
- * @method string getHostName()
- * @method $this withHostName($value)
- * @method string getCreateCluster()
- * @method $this withCreateCluster($value)
- * @method string getEndSchedule()
- * @method $this withEndSchedule($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getAlertConf()
- * @method $this withAlertConf($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- * @method string getParentFlowList()
- * @method $this withParentFlowList($value)
- * @method string getLogArchiveLocation()
- * @method $this withLogArchiveLocation($value)
- * @method string getAlertDingDingGroupBizId()
- * @method $this withAlertDingDingGroupBizId($value)
- * @method string getStartSchedule()
- * @method $this withStartSchedule($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getApplication()
- * @method $this withApplication($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getNamespace()
- * @method $this withNamespace($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- * @method string getParentCategory()
- * @method $this withParentCategory($value)
- */
-class ModifyFlow extends Rpc
-{
-}
-
-/**
  * @method string getParentId()
  * @method $this withParentId($value)
  * @method string getName()
@@ -4942,69 +3027,6 @@ class ModifyFlowCategory extends Rpc
  */
 class ModifyFlowForWeb extends Rpc
 {
-}
-
-/**
- * @method string getRetryPolicy()
- * @method $this withRetryPolicy($value)
- * @method string getRunConf()
- * @method $this withRunConf($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getParamConf()
- * @method $this withParamConf($value)
- * @method array getResourceList()
- * @method string getFailAct()
- * @method $this withFailAct($value)
- * @method string getMode()
- * @method $this withMode($value)
- * @method string getMonitorConf()
- * @method $this withMonitorConf($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getMaxRetry()
- * @method $this withMaxRetry($value)
- * @method string getAlertConf()
- * @method $this withAlertConf($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- * @method string getEnvConf()
- * @method $this withEnvConf($value)
- * @method string getMaxRunningTimeSec()
- * @method $this withMaxRunningTimeSec($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getParams()
- * @method $this withParams($value)
- * @method string getCustomVariables()
- * @method $this withCustomVariables($value)
- * @method string getRetryInterval()
- * @method $this withRetryInterval($value)
- * @method string getName()
- * @method $this withName($value)
- */
-class ModifyFlowJob extends Rpc
-{
-
-    /**
-     * @param array $resourceList
-     *
-     * @return $this
-     */
-	public function withResourceList(array $resourceList)
-	{
-	    $this->data['ResourceList'] = $resourceList;
-		foreach ($resourceList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Path'])){
-				$this->options['query']['ResourceList.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
-			}
-			if(isset($depth1Value['Alias'])){
-				$this->options['query']['ResourceList.' . ($depth1 + 1) . '.Alias'] = $depth1Value['Alias'];
-			}
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -5079,30 +3101,6 @@ class ModifyFlowProjectClusterSetting extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getType()
- * @method $this withType($value)
- * @method string getFailAct()
- * @method $this withFailAct($value)
- * @method string getRunParameter()
- * @method $this withRunParameter($value)
- * @method string getRetryInterval()
- * @method $this withRetryInterval($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getMaxRetry()
- * @method $this withMaxRetry($value)
- */
-class ModifyJob extends Rpc
-{
 }
 
 /**
@@ -5248,159 +3246,6 @@ class ModifyScalingConfigItemV2 extends Rpc
  * @method $this withName($value)
  */
 class ModifyScalingGroupV2 extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getRuleName()
- * @method $this withRuleName($value)
- * @method string getScalingRuleId()
- * @method $this withScalingRuleId($value)
- * @method string getRecurrenceEndTime()
- * @method $this withRecurrenceEndTime($value)
- * @method array getCloudWatchTrigger()
- * @method string getTimeoutWithGrace()
- * @method $this withTimeoutWithGrace($value)
- * @method string getCooldown()
- * @method $this withCooldown($value)
- * @method string getLaunchTime()
- * @method $this withLaunchTime($value)
- * @method string getWithGrace()
- * @method $this withWithGrace($value)
- * @method string getAdjustmentValue()
- * @method $this withAdjustmentValue($value)
- * @method string getAdjustmentType()
- * @method $this withAdjustmentType($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getLaunchExpirationTime()
- * @method $this withLaunchExpirationTime($value)
- * @method string getRecurrenceValue()
- * @method $this withRecurrenceValue($value)
- * @method string getHostGroupId()
- * @method $this withHostGroupId($value)
- * @method array getSchedulerTrigger()
- * @method string getRecurrenceType()
- * @method $this withRecurrenceType($value)
- */
-class ModifyScalingRule extends Rpc
-{
-
-    /**
-     * @param array $cloudWatchTrigger
-     *
-     * @return $this
-     */
-	public function withCloudWatchTrigger(array $cloudWatchTrigger)
-	{
-	    $this->data['CloudWatchTrigger'] = $cloudWatchTrigger;
-		foreach ($cloudWatchTrigger as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Period'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.Period'] = $depth1Value['Period'];
-			}
-			if(isset($depth1Value['EvaluationCount'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.EvaluationCount'] = $depth1Value['EvaluationCount'];
-			}
-			if(isset($depth1Value['Threshold'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.Threshold'] = $depth1Value['Threshold'];
-			}
-			if(isset($depth1Value['MetricName'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
-			}
-			if(isset($depth1Value['ComparisonOperator'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.ComparisonOperator'] = $depth1Value['ComparisonOperator'];
-			}
-			if(isset($depth1Value['Statistics'])){
-				$this->options['query']['CloudWatchTrigger.' . ($depth1 + 1) . '.Statistics'] = $depth1Value['Statistics'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $schedulerTrigger
-     *
-     * @return $this
-     */
-	public function withSchedulerTrigger(array $schedulerTrigger)
-	{
-	    $this->data['SchedulerTrigger'] = $schedulerTrigger;
-		foreach ($schedulerTrigger as $depth1 => $depth1Value) {
-			if(isset($depth1Value['LaunchTime'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.LaunchTime'] = $depth1Value['LaunchTime'];
-			}
-			if(isset($depth1Value['LaunchExpirationTime'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.LaunchExpirationTime'] = $depth1Value['LaunchExpirationTime'];
-			}
-			if(isset($depth1Value['RecurrenceValue'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.RecurrenceValue'] = $depth1Value['RecurrenceValue'];
-			}
-			if(isset($depth1Value['RecurrenceEndTime'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.RecurrenceEndTime'] = $depth1Value['RecurrenceEndTime'];
-			}
-			if(isset($depth1Value['RecurrenceType'])){
-				$this->options['query']['SchedulerTrigger.' . ($depth1 + 1) . '.RecurrenceType'] = $depth1Value['RecurrenceType'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getWithGrace()
- * @method $this withWithGrace($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getMinSize()
- * @method $this withMinSize($value)
- * @method string getTimeoutWithGrace()
- * @method $this withTimeoutWithGrace($value)
- * @method string getHostGroupId()
- * @method $this withHostGroupId($value)
- * @method string getActiveRuleCategory()
- * @method $this withActiveRuleCategory($value)
- * @method string getMaxSize()
- * @method $this withMaxSize($value)
- * @method string getDefaultCooldown()
- * @method $this withDefaultCooldown($value)
- */
-class ModifyScalingTaskGroup extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class QueryEntity extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTagId()
- * @method $this withTagId($value)
- * @method string getEntityId()
- * @method $this withEntityId($value)
- * @method string getEntityType()
- * @method $this withEntityType($value)
- */
-class QueryTag extends Rpc
 {
 }
 
@@ -5613,32 +3458,12 @@ class ResizeClusterV2 extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class ResumeExecutionPlanScheduler extends Rpc
-{
-}
-
-/**
  * @method string getFlowInstanceId()
  * @method $this withFlowInstanceId($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
 class ResumeFlow extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getOperationId()
- * @method $this withOperationId($value)
- */
-class RetryOperation extends Rpc
 {
 }
 
@@ -5697,38 +3522,6 @@ class RunClusterServiceAction extends Rpc
 }
 
 /**
- * @method string getEventId()
- * @method $this withEventId($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getCurrentStage()
- * @method $this withCurrentStage($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getDiskId()
- * @method $this withDiskId($value)
- * @method string getCurrentState()
- * @method $this withCurrentState($value)
- */
-class RunDiskOpsActivity extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getArguments()
- * @method $this withArguments($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class RunExecutionPlan extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getScalingActionType()
@@ -5741,34 +3534,6 @@ class RunExecutionPlan extends Rpc
  * @method $this withActionParam($value)
  */
 class RunScalingActionV2 extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getLine()
- * @method $this withLine($value)
- * @method string getHostName()
- * @method $this withHostName($value)
- * @method string getLogstoreName()
- * @method $this withLogstoreName($value)
- * @method string getFromTimestamp()
- * @method $this withFromTimestamp($value)
- * @method string getOffset()
- * @method $this withOffset($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getReverse()
- * @method $this withReverse($value)
- * @method string getHostInnerIp()
- * @method $this withHostInnerIp($value)
- * @method string getToTimestamp()
- * @method $this withToTimestamp($value)
- * @method string getSlsQueryString()
- * @method $this withSlsQueryString($value)
- */
-class SearchLog extends Rpc
 {
 }
 
@@ -5811,16 +3576,6 @@ class SubmitFlow extends Rpc
  * @method $this withProjectId($value)
  */
 class SubmitFlowJob extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class SuspendExecutionPlanScheduler extends Rpc
 {
 }
 
@@ -5882,32 +3637,6 @@ class TagResources extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getLibraryBizId()
- * @method $this withLibraryBizId($value)
- * @method array getClusterBizIdList()
- */
-class UninstallLibraries extends Rpc
-{
-
-    /**
-     * @param array $clusterBizIdList
-     *
-     * @return $this
-     */
-	public function withClusterBizIdList(array $clusterBizIdList)
-	{
-	    $this->data['ClusterBizIdList'] = $clusterBizIdList;
-		foreach ($clusterBizIdList as $i => $iValue) {
-			$this->options['query']['ClusterBizIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
  * @method string getAll()
  * @method $this withAll($value)
  * @method string getResourceOwnerId()
@@ -5945,126 +3674,6 @@ class UntagResources extends Rpc
 	    $this->data['TagKey'] = $tagKey;
 		foreach ($tagKey as $i => $iValue) {
 			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getConf()
- * @method $this withConf($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getId()
- * @method $this withId($value)
- */
-class UpdateDataSource extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getTaskBizId()
- * @method $this withTaskBizId($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class UpdateLibraryInstallTaskStatus extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class UpdateTag extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getUserType()
- * @method $this withUserType($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method array getUserAccountParamList()
- * @method array getGroupIdList()
- * @method array getRoleIdList()
- * @method string getAliyunUserId()
- * @method $this withAliyunUserId($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class UpdateUser extends Rpc
-{
-
-    /**
-     * @param array $userAccountParamList
-     *
-     * @return $this
-     */
-	public function withUserAccountParamList(array $userAccountParamList)
-	{
-	    $this->data['UserAccountParamList'] = $userAccountParamList;
-		foreach ($userAccountParamList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['AccountType'])){
-				$this->options['query']['UserAccountParamList.' . ($depth1 + 1) . '.AccountType'] = $depth1Value['AccountType'];
-			}
-			if(isset($depth1Value['AuthType'])){
-				$this->options['query']['UserAccountParamList.' . ($depth1 + 1) . '.AuthType'] = $depth1Value['AuthType'];
-			}
-			if(isset($depth1Value['AccountPassword'])){
-				$this->options['query']['UserAccountParamList.' . ($depth1 + 1) . '.AccountPassword'] = $depth1Value['AccountPassword'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $groupIdList
-     *
-     * @return $this
-     */
-	public function withGroupIdList(array $groupIdList)
-	{
-	    $this->data['GroupIdList'] = $groupIdList;
-		foreach ($groupIdList as $i => $iValue) {
-			$this->options['query']['GroupIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $roleIdList
-     *
-     * @return $this
-     */
-	public function withRoleIdList(array $roleIdList)
-	{
-	    $this->data['RoleIdList'] = $roleIdList;
-		foreach ($roleIdList as $i => $iValue) {
-			$this->options['query']['RoleIdList.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
