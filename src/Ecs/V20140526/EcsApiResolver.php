@@ -44,7 +44,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDemand createDemand(array $options = [])
  * @method CreateDeploymentSet createDeploymentSet(array $options = [])
  * @method CreateDisk createDisk(array $options = [])
- * @method CreateDiskReplicaPair createDiskReplicaPair(array $options = [])
  * @method CreateElasticityAssurance createElasticityAssurance(array $options = [])
  * @method CreateForwardEntry createForwardEntry(array $options = [])
  * @method CreateHaVip createHaVip(array $options = [])
@@ -81,7 +80,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDemand deleteDemand(array $options = [])
  * @method DeleteDeploymentSet deleteDeploymentSet(array $options = [])
  * @method DeleteDisk deleteDisk(array $options = [])
- * @method DeleteDiskReplicaPair deleteDiskReplicaPair(array $options = [])
  * @method DeleteForwardEntry deleteForwardEntry(array $options = [])
  * @method DeleteHaVip deleteHaVip(array $options = [])
  * @method DeleteHpcCluster deleteHpcCluster(array $options = [])
@@ -133,7 +131,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDeploymentSets describeDeploymentSets(array $options = [])
  * @method DescribeDeploymentSetSupportedInstanceTypeFamily describeDeploymentSetSupportedInstanceTypeFamily(array $options = [])
  * @method DescribeDiskMonitorData describeDiskMonitorData(array $options = [])
- * @method DescribeDiskReplicaPairs describeDiskReplicaPairs(array $options = [])
  * @method DescribeDisks describeDisks(array $options = [])
  * @method DescribeDisksFullStatus describeDisksFullStatus(array $options = [])
  * @method DescribeEipAddresses describeEipAddresses(array $options = [])
@@ -327,13 +324,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunCommand runCommand(array $options = [])
  * @method RunInstances runInstances(array $options = [])
  * @method SendFile sendFile(array $options = [])
- * @method StartDiskReplicaPair startDiskReplicaPair(array $options = [])
  * @method StartElasticityAssurance startElasticityAssurance(array $options = [])
  * @method StartImagePipelineExecution startImagePipelineExecution(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartInstances startInstances(array $options = [])
  * @method StartTerminalSession startTerminalSession(array $options = [])
- * @method StopDiskReplicaPair stopDiskReplicaPair(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method StopInstances stopInstances(array $options = [])
  * @method StopInvocation stopInvocation(array $options = [])
@@ -2243,32 +2238,6 @@ class CreateDisk extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPairName()
- * @method $this withPairName($value)
- * @method string getDestinationRegionId()
- * @method $this withDestinationRegionId($value)
- * @method string getDescription()
- * @method $this withDescription($value)
- * @method string getDiskId()
- * @method $this withDiskId($value)
- * @method string getAsyncCycle()
- * @method $this withAsyncCycle($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getDestinationDiskId()
- * @method $this withDestinationDiskId($value)
- */
-class CreateDiskReplicaPair extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getDescription()
@@ -3070,6 +3039,8 @@ class CreateKeyPair extends Rpc
  * @method array getTag()
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getIpv6AddressCount()
+ * @method $this withIpv6AddressCount($value)
  * @method string getTemplateResourceGroupId()
  * @method $this withTemplateResourceGroupId($value)
  * @method string getOwnerId()
@@ -3382,6 +3353,8 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withPeriod($value)
  * @method string getLaunchTemplateId()
  * @method $this withLaunchTemplateId($value)
+ * @method string getIpv6AddressCount()
+ * @method $this withIpv6AddressCount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getVSwitchId()
@@ -4518,22 +4491,6 @@ class DeleteDeploymentSet extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteDisk extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getReplicaPairId()
- * @method $this withReplicaPairId($value)
- */
-class DeleteDiskReplicaPair extends Rpc
 {
 }
 
@@ -5943,24 +5900,6 @@ class DescribeDiskMonitorData extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getMaxResults()
- * @method $this withMaxResults($value)
- */
-class DescribeDiskReplicaPairs extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getFilter2Value()
  * @method string getAutoSnapshotPolicyId()
  * @method $this withAutoSnapshotPolicyId($value)
@@ -6124,9 +6063,12 @@ class DescribeDisks extends Rpc
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getEventTimeStart()
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getDiskId()
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -6182,6 +6124,26 @@ class DescribeDisksFullStatus extends Rpc
 	    $this->data['DiskId'] = $diskId;
 		foreach ($diskId as $i => $iValue) {
 			$this->options['query']['DiskId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -13149,6 +13111,8 @@ class ReportInstancesStatus extends Rpc
  * @method $this withSnapshotId($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -13163,6 +13127,8 @@ class ResetDisk extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -13825,6 +13791,21 @@ class RunInstances extends Rpc
 			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
 			}
+			if(isset($depth1Value['NetworkInterfaceTrafficMode'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.NetworkInterfaceTrafficMode'] = $depth1Value['NetworkInterfaceTrafficMode'];
+			}
+			if(isset($depth1Value['QueuePairNumber'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.QueuePairNumber'] = $depth1Value['QueuePairNumber'];
+			}
+			if(isset($depth1Value['InstanceType'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+			}
+			if(isset($depth1Value['Ipv6AddressCount'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.Ipv6AddressCount'] = $depth1Value['Ipv6AddressCount'];
+			}
+			foreach ($depth1Value['Ipv6Address'] as $i => $iValue) {
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.Ipv6Address.' . ($i + 1)] = $iValue;
+			}
 		}
 
 		return $this;
@@ -13963,22 +13944,6 @@ class SendFile extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getReplicaPairId()
- * @method $this withReplicaPairId($value)
- */
-class StartDiskReplicaPair extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getPrivatePoolOptionsId()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -14109,6 +14074,8 @@ class StartInstances extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method array getInstanceId()
+ * @method string getPortNumber()
+ * @method $this withPortNumber($value)
  */
 class StartTerminalSession extends Rpc
 {
@@ -14127,22 +14094,6 @@ class StartTerminalSession extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getReplicaPairId()
- * @method $this withReplicaPairId($value)
- */
-class StopDiskReplicaPair extends Rpc
-{
 }
 
 /**

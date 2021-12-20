@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1192 - 2021-12-20
+- Add Request Param Ipv6AddressCount For API CreateLaunchTemplate AND CreateLaunchTemplateVersion.
+- Add Response Data Ipv6AddressCount For API DescribeLaunchTemplateVersions.
+
+
 ## 1.8.1191 - 2021-12-20
 - Generated 2016-04-08 for `Emr`.
 
