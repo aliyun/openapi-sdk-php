@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1193 - 2021-12-21
+- Supported Designate Workers.
+- Supported Get WorkFlow.
+
+
 ## 1.8.1192 - 2021-12-20
 - Add Request Param Ipv6AddressCount For API CreateLaunchTemplate AND CreateLaunchTemplateVersion.
 - Add Response Data Ipv6AddressCount For API DescribeLaunchTemplateVersions.

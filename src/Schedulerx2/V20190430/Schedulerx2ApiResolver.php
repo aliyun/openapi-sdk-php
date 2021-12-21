@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteWorkflow deleteWorkflow(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DesignateWorkers designateWorkers(array $options = [])
  * @method DisableJob disableJob(array $options = [])
  * @method DisableWorkflow disableWorkflow(array $options = [])
  * @method EnableJob enableJob(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobInfo getJobInfo(array $options = [])
  * @method GetJobInstance getJobInstance(array $options = [])
  * @method GetJobInstanceList getJobInstanceList(array $options = [])
+ * @method GetWorkFlow getWorkFlow(array $options = [])
  * @method GrantPermission grantPermission(array $options = [])
  * @method ListGroups listGroups(array $options = [])
  * @method ListJobs listJobs(array $options = [])
@@ -638,6 +640,28 @@ class DescribeRegions extends Rpc
 }
 
 /**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getTransferable()
+ * @method $this withTransferable($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ * @method string getDesignateType()
+ * @method $this withDesignateType($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getWorkers()
+ * @method $this withWorkers($value)
+ */
+class DesignateWorkers extends Rpc
+{
+}
+
+/**
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getNamespaceSource()
@@ -700,12 +724,14 @@ class EnableWorkflow extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
+ * @method string getCheckJobStatus()
+ * @method $this withCheckJobStatus($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  * @method string getInstanceParameters()
@@ -778,6 +804,20 @@ class GetJobInstance extends Rpc
  * @method $this withNamespace($value)
  */
 class GetJobInstanceList extends Rpc
+{
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getWorkflowId()
+ * @method $this withWorkflowId($value)
+ */
+class GetWorkFlow extends Rpc
 {
 }
 
