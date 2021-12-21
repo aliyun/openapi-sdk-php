@@ -126,12 +126,12 @@ class AttachConfigRuleToCompliancePack extends Rpc
 }
 
 /**
- * @method string getConfigRules()
  * @method string getCompliancePackName()
  * @method string getClientToken()
  * @method string getCompliancePackTemplateId()
  * @method string getDescription()
  * @method string getAggregatorId()
+ * @method string getConfigRules()
  * @method string getRiskLevel()
  */
 class CreateAggregateCompliancePack extends Rpc
@@ -139,19 +139,6 @@ class CreateAggregateCompliancePack extends Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withConfigRules($value)
-    {
-        $this->data['ConfigRules'] = $value;
-        $this->options['form_params']['ConfigRules'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -214,6 +201,19 @@ class CreateAggregateCompliancePack extends Rpc
     {
         $this->data['AggregatorId'] = $value;
         $this->options['form_params']['AggregatorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigRules($value)
+    {
+        $this->data['ConfigRules'] = $value;
+        $this->options['form_params']['ConfigRules'] = $value;
 
         return $this;
     }
@@ -545,11 +545,11 @@ class CreateAggregator extends Rpc
 }
 
 /**
- * @method string getConfigRules()
  * @method string getCompliancePackName()
  * @method string getClientToken()
  * @method string getCompliancePackTemplateId()
  * @method string getDescription()
+ * @method string getConfigRules()
  * @method string getRiskLevel()
  */
 class CreateCompliancePack extends Rpc
@@ -557,19 +557,6 @@ class CreateCompliancePack extends Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withConfigRules($value)
-    {
-        $this->data['ConfigRules'] = $value;
-        $this->options['form_params']['ConfigRules'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -619,6 +606,19 @@ class CreateCompliancePack extends Rpc
     {
         $this->data['Description'] = $value;
         $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigRules($value)
+    {
+        $this->data['ConfigRules'] = $value;
+        $this->options['form_params']['ConfigRules'] = $value;
 
         return $this;
     }
@@ -1886,32 +1886,19 @@ class StartAggregateConfigRuleEvaluation extends Rpc
 }
 
 /**
- * @method string getConfigRules()
  * @method string getCompliancePackName()
  * @method string getClientToken()
  * @method string getDescription()
  * @method string getAggregatorId()
- * @method string getRiskLevel()
  * @method string getCompliancePackId()
+ * @method string getConfigRules()
+ * @method string getRiskLevel()
  */
 class UpdateAggregateCompliancePack extends Rpc
 {
 
     /** @var string */
     public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withConfigRules($value)
-    {
-        $this->data['ConfigRules'] = $value;
-        $this->options['form_params']['ConfigRules'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -1970,10 +1957,10 @@ class UpdateAggregateCompliancePack extends Rpc
      *
      * @return $this
      */
-    public function withRiskLevel($value)
+    public function withCompliancePackId($value)
     {
-        $this->data['RiskLevel'] = $value;
-        $this->options['form_params']['RiskLevel'] = $value;
+        $this->data['CompliancePackId'] = $value;
+        $this->options['form_params']['CompliancePackId'] = $value;
 
         return $this;
     }
@@ -1983,10 +1970,23 @@ class UpdateAggregateCompliancePack extends Rpc
      *
      * @return $this
      */
-    public function withCompliancePackId($value)
+    public function withConfigRules($value)
     {
-        $this->data['CompliancePackId'] = $value;
-        $this->options['form_params']['CompliancePackId'] = $value;
+        $this->data['ConfigRules'] = $value;
+        $this->options['form_params']['ConfigRules'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRiskLevel($value)
+    {
+        $this->data['RiskLevel'] = $value;
+        $this->options['form_params']['RiskLevel'] = $value;
 
         return $this;
     }
@@ -2291,31 +2291,18 @@ class UpdateAggregator extends Rpc
 }
 
 /**
- * @method string getConfigRules()
  * @method string getCompliancePackName()
  * @method string getClientToken()
  * @method string getDescription()
- * @method string getRiskLevel()
  * @method string getCompliancePackId()
+ * @method string getConfigRules()
+ * @method string getRiskLevel()
  */
 class UpdateCompliancePack extends Rpc
 {
 
     /** @var string */
     public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withConfigRules($value)
-    {
-        $this->data['ConfigRules'] = $value;
-        $this->options['form_params']['ConfigRules'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -2361,10 +2348,10 @@ class UpdateCompliancePack extends Rpc
      *
      * @return $this
      */
-    public function withRiskLevel($value)
+    public function withCompliancePackId($value)
     {
-        $this->data['RiskLevel'] = $value;
-        $this->options['form_params']['RiskLevel'] = $value;
+        $this->data['CompliancePackId'] = $value;
+        $this->options['form_params']['CompliancePackId'] = $value;
 
         return $this;
     }
@@ -2374,10 +2361,23 @@ class UpdateCompliancePack extends Rpc
      *
      * @return $this
      */
-    public function withCompliancePackId($value)
+    public function withConfigRules($value)
     {
-        $this->data['CompliancePackId'] = $value;
-        $this->options['form_params']['CompliancePackId'] = $value;
+        $this->data['ConfigRules'] = $value;
+        $this->options['form_params']['ConfigRules'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRiskLevel($value)
+    {
+        $this->data['RiskLevel'] = $value;
+        $this->options['form_params']['RiskLevel'] = $value;
 
         return $this;
     }

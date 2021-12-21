@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1194 - 2021-12-21
+- Fix array params.
+
+
 ## 1.8.1193 - 2021-12-21
 - Supported Designate Workers.
 - Supported Get WorkFlow.
