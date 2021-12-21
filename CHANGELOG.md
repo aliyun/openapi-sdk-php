@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1195 - 2021-12-21
+- Add RAM ID in resonse of listUsers API.
+
+
 ## 1.8.1194 - 2021-12-21
 - Fix array params.
 

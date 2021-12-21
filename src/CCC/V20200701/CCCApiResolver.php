@@ -133,9 +133,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'CCC';
 }
 
 /**
@@ -760,6 +757,8 @@ class ListBriefSkillGroups extends Rpc
  * @method $this withStartTime($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getEarlyMediaStateList()
+ * @method $this withEarlyMediaStateList($value)
  * @method string getCalledNumber()
  * @method $this withCalledNumber($value)
  * @method string getSatisfactionList()
@@ -1825,6 +1824,8 @@ class StartBack2BackCall extends Rpc
  * @method $this withCaller($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
  */
 class StartPredictiveCall extends Rpc
 {
