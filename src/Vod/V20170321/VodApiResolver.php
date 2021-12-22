@@ -55,6 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodDomainLog describeVodDomainLog(array $options = [])
  * @method DescribeVodDomainRealtimeLogDelivery describeVodDomainRealtimeLogDelivery(array $options = [])
  * @method DescribeVodDomainSrcBpsData describeVodDomainSrcBpsData(array $options = [])
+ * @method DescribeVodDomainSrcTrafficData describeVodDomainSrcTrafficData(array $options = [])
  * @method DescribeVodDomainTrafficData describeVodDomainTrafficData(array $options = [])
  * @method DescribeVodDomainUsageData describeVodDomainUsageData(array $options = [])
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
@@ -892,6 +893,22 @@ class DescribeVodDomainRealtimeLogDelivery extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeVodDomainSrcBpsData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVodDomainSrcTrafficData extends Rpc
 {
 }
 

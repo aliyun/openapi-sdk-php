@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1196 - 2021-12-22
+- Add return fields to UploadStreamByURL.
+- Set DescribeVodDomainSrcTrafficData pulic.
+
+
 ## 1.8.1195 - 2021-12-21
 - Add RAM ID in resonse of listUsers API.
 
