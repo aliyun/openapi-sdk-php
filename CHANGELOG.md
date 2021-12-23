@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1197 - 2021-12-23
+- Fix array params.
+
+
 ## 1.8.1196 - 2021-12-22
 - Add return fields to UploadStreamByURL.
 - Set DescribeVodDomainSrcTrafficData pulic.
