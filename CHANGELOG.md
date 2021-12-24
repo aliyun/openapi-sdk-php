@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1199 - 2021-12-24
+- Supported CheckBlockVolumeName api for Checking the volume name has been already used by the OSS bucket folder.
+
+
 ## 1.8.1198 - 2021-12-24
 - Add Event Rule Target.
 
