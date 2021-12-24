@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1198 - 2021-12-24
+- Add Event Rule Target.
+
+
 ## 1.8.1197 - 2021-12-23
 - Fix array params.
 
