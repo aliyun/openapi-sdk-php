@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckScdnService checkScdnService(array $options = [])
  * @method DeleteScdnDomain deleteScdnDomain(array $options = [])
  * @method DeleteScdnSpecificConfig deleteScdnSpecificConfig(array $options = [])
+ * @method DescribeScdnCcInfo describeScdnCcInfo(array $options = [])
  * @method DescribeScdnCcQpsInfo describeScdnCcQpsInfo(array $options = [])
  * @method DescribeScdnCcTopIp describeScdnCcTopIp(array $options = [])
  * @method DescribeScdnCcTopUrl describeScdnCcTopUrl(array $options = [])
@@ -125,12 +126,12 @@ class BatchDeleteScdnDomainConfigs extends Rpc
  * @method $this withFunctions($value)
  * @method string getDomainNames()
  * @method $this withDomainNames($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class BatchSetScdnDomainConfigs extends Rpc
 {
@@ -189,14 +190,14 @@ class CheckScdnService extends Rpc
 }
 
 /**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DeleteScdnDomain extends Rpc
 {
@@ -214,6 +215,17 @@ class DeleteScdnDomain extends Rpc
  */
 class DeleteScdnSpecificConfig extends Rpc
 {
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeScdnCcInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1028,14 +1040,14 @@ class StopScdnDomain extends Rpc
 /**
  * @method string getSources()
  * @method $this withSources($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class UpdateScdnDomain extends Rpc
 {
