@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1201 - 2021-12-27
+- Add CreateDcdnSubTask.
+
+
 ## 1.8.1200 - 2021-12-27
 - Add DescribeScdnDomainCcInfo.
 

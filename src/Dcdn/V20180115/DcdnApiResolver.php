@@ -18,7 +18,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CommitStagingRoutineCode commitStagingRoutineCode(array $options = [])
  * @method CreateDcdnCertificateSigningRequest createDcdnCertificateSigningRequest(array $options = [])
  * @method CreateDcdnDeliverTask createDcdnDeliverTask(array $options = [])
- * @method CreateDcdnDomainOfflineLogDelivery createDcdnDomainOfflineLogDelivery(array $options = [])
  * @method CreateDcdnSLSRealTimeLogDelivery createDcdnSLSRealTimeLogDelivery(array $options = [])
  * @method CreateDcdnSubTask createDcdnSubTask(array $options = [])
  * @method CreateRoutine createRoutine(array $options = [])
@@ -83,16 +82,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnDomainWebsocketBpsData describeDcdnDomainWebsocketBpsData(array $options = [])
  * @method DescribeDcdnDomainWebsocketHttpCodeData describeDcdnDomainWebsocketHttpCodeData(array $options = [])
  * @method DescribeDcdnDomainWebsocketTrafficData describeDcdnDomainWebsocketTrafficData(array $options = [])
+ * @method DescribeDcdnEsExceptionData describeDcdnEsExceptionData(array $options = [])
+ * @method DescribeDcdnEsExecuteData describeDcdnEsExecuteData(array $options = [])
  * @method DescribeDcdnHttpsDomainList describeDcdnHttpsDomainList(array $options = [])
  * @method DescribeDcdnIpaDomainConfigs describeDcdnIpaDomainConfigs(array $options = [])
  * @method DescribeDcdnIpaDomainDetail describeDcdnIpaDomainDetail(array $options = [])
  * @method DescribeDcdnIpaService describeDcdnIpaService(array $options = [])
  * @method DescribeDcdnIpaUserDomains describeDcdnIpaUserDomains(array $options = [])
  * @method DescribeDcdnIpInfo describeDcdnIpInfo(array $options = [])
- * @method DescribeDcdnOfflineLogDelivery describeDcdnOfflineLogDelivery(array $options = [])
- * @method DescribeDcdnOfflineLogDeliveryField describeDcdnOfflineLogDeliveryField(array $options = [])
- * @method DescribeDcdnOfflineLogDeliveryRegions describeDcdnOfflineLogDeliveryRegions(array $options = [])
- * @method DescribeDcdnOfflineLogDeliveryStatus describeDcdnOfflineLogDeliveryStatus(array $options = [])
  * @method DescribeDcdnRealTimeDeliveryField describeDcdnRealTimeDeliveryField(array $options = [])
  * @method DescribeDcdnRefreshQuota describeDcdnRefreshQuota(array $options = [])
  * @method DescribeDcdnRefreshTaskById describeDcdnRefreshTaskById(array $options = [])
@@ -132,10 +129,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserDcdnStatus describeUserDcdnStatus(array $options = [])
  * @method DescribeUserErStatus describeUserErStatus(array $options = [])
  * @method DescribeUserLogserviceStatus describeUserLogserviceStatus(array $options = [])
- * @method DisableDcdnDomainOfflineLogDelivery disableDcdnDomainOfflineLogDelivery(array $options = [])
- * @method DisableDcdnOfflineLogDelivery disableDcdnOfflineLogDelivery(array $options = [])
  * @method EditRoutineConf editRoutineConf(array $options = [])
- * @method EnableDcdnDomainOfflineLogDelivery enableDcdnDomainOfflineLogDelivery(array $options = [])
  * @method ListDcdnRealTimeDeliveryProject listDcdnRealTimeDeliveryProject(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
  * @method OpenDcdnService openDcdnService(array $options = [])
@@ -500,42 +494,6 @@ class CreateDcdnDeliverTask extends Rpc
     {
         $this->data['Name'] = $value;
         $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDomainName()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFieldId()
- */
-class CreateDcdnDomainOfflineLogDelivery extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomainName($value)
-    {
-        $this->data['DomainName'] = $value;
-        $this->options['form_params']['DomainName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFieldId($value)
-    {
-        $this->data['FieldId'] = $value;
-        $this->options['form_params']['FieldId'] = $value;
 
         return $this;
     }
@@ -1757,6 +1715,34 @@ class DescribeDcdnDomainWebsocketTrafficData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DescribeDcdnEsExceptionData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DescribeDcdnEsExecuteData extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1864,38 +1850,6 @@ class DescribeDcdnIpaUserDomains extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeDcdnIpInfo extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDcdnOfflineLogDelivery extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDcdnOfflineLogDeliveryField extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDcdnOfflineLogDeliveryRegions extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDcdnOfflineLogDeliveryStatus extends Rpc
 {
 }
 
@@ -2481,36 +2435,6 @@ class DescribeUserLogserviceStatus extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DisableDcdnDomainOfflineLogDelivery extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomainName($value)
-    {
-        $this->data['DomainName'] = $value;
-        $this->options['form_params']['DomainName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DisableDcdnOfflineLogDelivery extends Rpc
-{
-}
-
-/**
  * @method string getDescription()
  * @method string getEnvConf()
  * @method string getOwnerId()
@@ -2555,28 +2479,6 @@ class EditRoutineConf extends Rpc
     {
         $this->data['Name'] = $value;
         $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDomainName()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class EnableDcdnDomainOfflineLogDelivery extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomainName($value)
-    {
-        $this->data['DomainName'] = $value;
-        $this->options['form_params']['DomainName'] = $value;
 
         return $this;
     }
