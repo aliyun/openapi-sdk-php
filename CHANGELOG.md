@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1202 - 2021-12-27
+- Update DeleteFCTrigger.
+
+
 ## 1.8.1201 - 2021-12-27
 - Add CreateDcdnSubTask.
 

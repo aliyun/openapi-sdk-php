@@ -167,7 +167,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetReqAuthConfig setReqAuthConfig(array $options = [])
  * @method SetReqHeaderConfig setReqHeaderConfig(array $options = [])
  * @method SetSourceHostConfig setSourceHostConfig(array $options = [])
- * @method SetUserGreenManagerConfig setUserGreenManagerConfig(array $options = [])
  * @method SetWaitingRoomConfig setWaitingRoomConfig(array $options = [])
  * @method StartCdnDomain startCdnDomain(array $options = [])
  * @method StopCdnDomain stopCdnDomain(array $options = [])
@@ -2910,20 +2909,6 @@ class SetReqHeaderConfig extends Rpc
  * @method $this withBackSrcDomain($value)
  */
 class SetSourceHostConfig extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getQuota()
- * @method $this withQuota($value)
- * @method string getRatio()
- * @method $this withRatio($value)
- */
-class SetUserGreenManagerConfig extends Rpc
 {
 }
 

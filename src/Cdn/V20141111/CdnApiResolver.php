@@ -10,7 +10,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
  * @method DeleteCacheExpiredConfig deleteCacheExpiredConfig(array $options = [])
  * @method DeleteCdnDomain deleteCdnDomain(array $options = [])
- * @method DescribeCdnDomainConfigs describeCdnDomainConfigs(array $options = [])
  * @method DescribeCdnDomainDetail describeCdnDomainDetail(array $options = [])
  * @method DescribeCdnDomainLogs describeCdnDomainLogs(array $options = [])
  * @method DescribeCdnMonitorData describeCdnMonitorData(array $options = [])
@@ -32,7 +31,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainPvData describeDomainPvData(array $options = [])
  * @method DescribeDomainQpsData describeDomainQpsData(array $options = [])
  * @method DescribeDomainRealTimeBpsData describeDomainRealTimeBpsData(array $options = [])
- * @method DescribeDomainRealTimeSrcBpsData describeDomainRealTimeSrcBpsData(array $options = [])
  * @method DescribeDomainRegionData describeDomainRegionData(array $options = [])
  * @method DescribeDomainReqHitRateData describeDomainReqHitRateData(array $options = [])
  * @method DescribeDomainsBySource describeDomainsBySource(array $options = [])
@@ -45,12 +43,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeIpInfo describeIpInfo(array $options = [])
  * @method DescribeL2VipsByDomain describeL2VipsByDomain(array $options = [])
  * @method DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
- * @method DescribeLiveStreamBitRateData describeLiveStreamBitRateData(array $options = [])
  * @method DescribeLiveStreamOnlineUserNum describeLiveStreamOnlineUserNum(array $options = [])
  * @method DescribeLiveStreamRecordContent describeLiveStreamRecordContent(array $options = [])
  * @method DescribeLiveStreamRecordIndexFile describeLiveStreamRecordIndexFile(array $options = [])
  * @method DescribeLiveStreamRecordIndexFiles describeLiveStreamRecordIndexFiles(array $options = [])
- * @method DescribeLiveStreamsBlockList describeLiveStreamsBlockList(array $options = [])
  * @method DescribeLiveStreamsFrameRateAndBitRateData describeLiveStreamsFrameRateAndBitRateData(array $options = [])
  * @method DescribeLiveStreamSnapshotInfo describeLiveStreamSnapshotInfo(array $options = [])
  * @method DescribeLiveStreamsOnlineList describeLiveStreamsOnlineList(array $options = [])
@@ -59,6 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRefreshQuota describeRefreshQuota(array $options = [])
  * @method DescribeRefreshTasks describeRefreshTasks(array $options = [])
  * @method DescribeTopDomainsByFlow describeTopDomainsByFlow(array $options = [])
+ * @method DescribeUserConfigs describeUserConfigs(array $options = [])
  * @method DescribeUserDomains describeUserDomains(array $options = [])
  * @method ForbidLiveStream forbidLiveStream(array $options = [])
  * @method ModifyCdnDomain modifyCdnDomain(array $options = [])
@@ -200,20 +197,6 @@ class DeleteCacheExpiredConfig extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DeleteCdnDomain extends Rpc
-{
-}
-
-/**
- * @method string getFunctionNames()
- * @method $this withFunctionNames($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class DescribeCdnDomainConfigs extends Rpc
 {
 }
 
@@ -577,20 +560,6 @@ class DescribeDomainRealTimeBpsData extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class DescribeDomainRealTimeSrcBpsData extends Rpc
-{
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeDomainRegionData extends Rpc
 {
 }
@@ -768,26 +737,6 @@ class DescribeLivePullStreamConfig extends Rpc
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getStreamName()
- * @method $this withStreamName($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveStreamBitRateData extends Rpc
-{
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getHlsSwitch()
  * @method $this withHlsSwitch($value)
  * @method string getStreamName()
@@ -858,18 +807,6 @@ class DescribeLiveStreamRecordIndexFile extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveStreamRecordIndexFiles extends Rpc
-{
-}
-
-/**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class DescribeLiveStreamsBlockList extends Rpc
 {
 }
 
@@ -1030,6 +967,18 @@ class DescribeRefreshTasks extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeTopDomainsByFlow extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ */
+class DescribeUserConfigs extends Rpc
 {
 }
 
