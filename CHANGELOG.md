@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1204 - 2021-12-28
+- Support managed rule query.
+
+
 ## 1.8.1203 - 2021-12-27
 - Support ACR EE, OSS, EIP for deploy.
 

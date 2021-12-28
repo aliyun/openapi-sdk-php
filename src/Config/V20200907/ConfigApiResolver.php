@@ -34,6 +34,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAggregateConfigRuleSummaryByRiskLevel getAggregateConfigRuleSummaryByRiskLevel(array $options = [])
  * @method GetAggregateResourceComplianceByConfigRule getAggregateResourceComplianceByConfigRule(array $options = [])
  * @method GetAggregateResourceComplianceByPack getAggregateResourceComplianceByPack(array $options = [])
+ * @method GetAggregateResourceComplianceGroupByRegion getAggregateResourceComplianceGroupByRegion(array $options = [])
+ * @method GetAggregateResourceComplianceGroupByResourceType getAggregateResourceComplianceGroupByResourceType(array $options = [])
  * @method GetAggregateResourceComplianceTimeline getAggregateResourceComplianceTimeline(array $options = [])
  * @method GetAggregateResourceConfigurationTimeline getAggregateResourceConfigurationTimeline(array $options = [])
  * @method GetAggregateResourceCountsGroupByRegion getAggregateResourceCountsGroupByRegion(array $options = [])
@@ -47,8 +49,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetConfigRuleSummaryByRiskLevel getConfigRuleSummaryByRiskLevel(array $options = [])
  * @method GetDiscoveredResourceCountsGroupByRegion getDiscoveredResourceCountsGroupByRegion(array $options = [])
  * @method GetDiscoveredResourceCountsGroupByResourceType getDiscoveredResourceCountsGroupByResourceType(array $options = [])
+ * @method GetManagedRule getManagedRule(array $options = [])
  * @method GetResourceComplianceByConfigRule getResourceComplianceByConfigRule(array $options = [])
  * @method GetResourceComplianceByPack getResourceComplianceByPack(array $options = [])
+ * @method GetResourceComplianceGroupByRegion getResourceComplianceGroupByRegion(array $options = [])
+ * @method GetResourceComplianceGroupByResourceType getResourceComplianceGroupByResourceType(array $options = [])
  * @method GetResourceComplianceTimeline getResourceComplianceTimeline(array $options = [])
  * @method GetResourceConfigurationTimeline getResourceConfigurationTimeline(array $options = [])
  * @method IgnoreAggregateEvaluationResults ignoreAggregateEvaluationResults(array $options = [])
@@ -61,6 +66,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListCompliancePacks listCompliancePacks(array $options = [])
  * @method ListCompliancePackTemplates listCompliancePackTemplates(array $options = [])
  * @method ListConfigRuleEvaluationResults listConfigRuleEvaluationResults(array $options = [])
+ * @method ListManagedRules listManagedRules(array $options = [])
  * @method ListResourceEvaluationResults listResourceEvaluationResults(array $options = [])
  * @method RevertAggregateEvaluationResults revertAggregateEvaluationResults(array $options = [])
  * @method RevertEvaluationResults revertEvaluationResults(array $options = [])
@@ -82,6 +88,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2020-09-07';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -92,9 +101,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class ActiveAggregateConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -107,9 +113,6 @@ class ActiveAggregateConfigRules extends Rpc
  */
 class AttachAggregateConfigRuleToCompliancePack extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -120,9 +123,6 @@ class AttachAggregateConfigRuleToCompliancePack extends Rpc
  */
 class AttachConfigRuleToCompliancePack extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -136,9 +136,6 @@ class AttachConfigRuleToCompliancePack extends Rpc
  */
 class CreateAggregateCompliancePack extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -247,14 +244,12 @@ class CreateAggregateCompliancePack extends Rpc
  * @method string getResourceGroupIdsScope()
  * @method string getInputParameters()
  * @method string getConfigRuleName()
+ * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
  * @method string getExcludeResourceIdsScope()
  */
 class CreateAggregateConfigRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -443,6 +438,19 @@ class CreateAggregateConfigRule extends Rpc
      *
      * @return $this
      */
+    public function withTagKeyLogicScope($value)
+    {
+        $this->data['TagKeyLogicScope'] = $value;
+        $this->options['form_params']['TagKeyLogicScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withMaximumExecutionFrequency($value)
     {
         $this->data['MaximumExecutionFrequency'] = $value;
@@ -474,9 +482,6 @@ class CreateAggregateConfigRule extends Rpc
  */
 class CreateAggregator extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -555,9 +560,6 @@ class CreateAggregator extends Rpc
 class CreateCompliancePack extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -651,14 +653,12 @@ class CreateCompliancePack extends Rpc
  * @method string getResourceGroupIdsScope()
  * @method string getInputParameters()
  * @method string getConfigRuleName()
+ * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
  * @method string getExcludeResourceIdsScope()
  */
 class CreateConfigRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -834,6 +834,19 @@ class CreateConfigRule extends Rpc
      *
      * @return $this
      */
+    public function withTagKeyLogicScope($value)
+    {
+        $this->data['TagKeyLogicScope'] = $value;
+        $this->options['form_params']['TagKeyLogicScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withMaximumExecutionFrequency($value)
     {
         $this->data['MaximumExecutionFrequency'] = $value;
@@ -864,9 +877,6 @@ class CreateConfigRule extends Rpc
  */
 class DeactiveAggregateConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -875,9 +885,6 @@ class DeactiveAggregateConfigRules extends Rpc
  */
 class DeactiveConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -888,9 +895,6 @@ class DeactiveConfigRules extends Rpc
  */
 class DeleteAggregateCompliancePacks extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -953,9 +957,6 @@ class DeleteAggregateCompliancePacks extends Rpc
  */
 class DeleteAggregateConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -964,9 +965,6 @@ class DeleteAggregateConfigRules extends Rpc
  */
 class DeleteAggregators extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1002,9 +1000,6 @@ class DeleteAggregators extends Rpc
  */
 class DeleteCompliancePacks extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1056,9 +1051,6 @@ class DeleteCompliancePacks extends Rpc
  */
 class DetachAggregateConfigRuleToCompliancePack extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1069,9 +1061,6 @@ class DetachAggregateConfigRuleToCompliancePack extends Rpc
  */
 class DetachConfigRuleToCompliancePack extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1081,9 +1070,6 @@ class DetachConfigRuleToCompliancePack extends Rpc
  */
 class GenerateAggregateCompliancePackReport extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1127,13 +1113,11 @@ class GenerateAggregateCompliancePackReport extends Rpc
 
 /**
  * @method string getClientToken()
+ * @method string getConfigRuleIds()
  * @method string getAggregatorId()
  */
 class GenerateAggregateConfigRulesReport extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1144,6 +1128,19 @@ class GenerateAggregateConfigRulesReport extends Rpc
     {
         $this->data['ClientToken'] = $value;
         $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigRuleIds($value)
+    {
+        $this->data['ConfigRuleIds'] = $value;
+        $this->options['form_params']['ConfigRuleIds'] = $value;
 
         return $this;
     }
@@ -1169,9 +1166,6 @@ class GenerateAggregateConfigRulesReport extends Rpc
 class GenerateCompliancePackReport extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1201,12 +1195,10 @@ class GenerateCompliancePackReport extends Rpc
 
 /**
  * @method string getClientToken()
+ * @method string getConfigRuleIds()
  */
 class GenerateConfigRulesReport extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1220,6 +1212,19 @@ class GenerateConfigRulesReport extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigRuleIds($value)
+    {
+        $this->data['ConfigRuleIds'] = $value;
+        $this->options['form_params']['ConfigRuleIds'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1230,6 +1235,9 @@ class GenerateConfigRulesReport extends Rpc
  */
 class GetAggregateAccountComplianceByPack extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1240,6 +1248,9 @@ class GetAggregateAccountComplianceByPack extends Rpc
  */
 class GetAggregateCompliancePack extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1250,6 +1261,9 @@ class GetAggregateCompliancePack extends Rpc
  */
 class GetAggregateCompliancePackReport extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1260,9 +1274,6 @@ class GetAggregateCompliancePackReport extends Rpc
  */
 class GetAggregateConfigRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1273,9 +1284,14 @@ class GetAggregateConfigRule extends Rpc
  */
 class GetAggregateConfigRuleComplianceByPack extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
+ * @method string getReportId()
+ * @method $this withReportId($value)
  * @method string getAggregatorId()
  * @method $this withAggregatorId($value)
  */
@@ -1289,6 +1305,9 @@ class GetAggregateConfigRulesReport extends Rpc
  */
 class GetAggregateConfigRuleSummaryByRiskLevel extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1310,6 +1329,29 @@ class GetAggregateResourceComplianceByConfigRule extends Rpc
  * @method $this withCompliancePackId($value)
  */
 class GetAggregateResourceComplianceByPack extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getConfigRuleIds()
+ * @method $this withConfigRuleIds($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ */
+class GetAggregateResourceComplianceGroupByRegion extends Rpc
+{
+}
+
+/**
+ * @method string getConfigRuleIds()
+ * @method $this withConfigRuleIds($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ */
+class GetAggregateResourceComplianceGroupByResourceType extends Rpc
 {
 }
 
@@ -1335,6 +1377,9 @@ class GetAggregateResourceComplianceByPack extends Rpc
  */
 class GetAggregateResourceComplianceTimeline extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1359,6 +1404,9 @@ class GetAggregateResourceComplianceTimeline extends Rpc
  */
 class GetAggregateResourceConfigurationTimeline extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1373,6 +1421,9 @@ class GetAggregateResourceConfigurationTimeline extends Rpc
  */
 class GetAggregateResourceCountsGroupByRegion extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1387,6 +1438,9 @@ class GetAggregateResourceCountsGroupByRegion extends Rpc
  */
 class GetAggregateResourceCountsGroupByResourceType extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1395,6 +1449,9 @@ class GetAggregateResourceCountsGroupByResourceType extends Rpc
  */
 class GetAggregator extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1403,6 +1460,9 @@ class GetAggregator extends Rpc
  */
 class GetCompliancePack extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1411,6 +1471,9 @@ class GetCompliancePack extends Rpc
  */
 class GetCompliancePackReport extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1419,9 +1482,6 @@ class GetCompliancePackReport extends Rpc
  */
 class GetConfigRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1430,14 +1490,24 @@ class GetConfigRule extends Rpc
  */
 class GetConfigRuleComplianceByPack extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
+/**
+ * @method string getReportId()
+ * @method $this withReportId($value)
+ */
 class GetConfigRulesReport extends Rpc
 {
 }
 
 class GetConfigRuleSummaryByRiskLevel extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1446,6 +1516,9 @@ class GetConfigRuleSummaryByRiskLevel extends Rpc
  */
 class GetDiscoveredResourceCountsGroupByRegion extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1453,6 +1526,17 @@ class GetDiscoveredResourceCountsGroupByRegion extends Rpc
  * @method $this withRegion($value)
  */
 class GetDiscoveredResourceCountsGroupByResourceType extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getIdentifier()
+ * @method $this withIdentifier($value)
+ */
+class GetManagedRule extends Rpc
 {
 }
 
@@ -1464,6 +1548,9 @@ class GetDiscoveredResourceCountsGroupByResourceType extends Rpc
  */
 class GetResourceComplianceByConfigRule extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1471,6 +1558,25 @@ class GetResourceComplianceByConfigRule extends Rpc
  * @method $this withCompliancePackId($value)
  */
 class GetResourceComplianceByPack extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getConfigRuleIds()
+ * @method $this withConfigRuleIds($value)
+ */
+class GetResourceComplianceGroupByRegion extends Rpc
+{
+}
+
+/**
+ * @method string getConfigRuleIds()
+ * @method $this withConfigRuleIds($value)
+ */
+class GetResourceComplianceGroupByResourceType extends Rpc
 {
 }
 
@@ -1492,6 +1598,9 @@ class GetResourceComplianceByPack extends Rpc
  */
 class GetResourceComplianceTimeline extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1512,6 +1621,9 @@ class GetResourceComplianceTimeline extends Rpc
  */
 class GetResourceConfigurationTimeline extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1522,9 +1634,6 @@ class GetResourceConfigurationTimeline extends Rpc
  */
 class IgnoreAggregateEvaluationResults extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1587,9 +1696,6 @@ class IgnoreAggregateEvaluationResults extends Rpc
 class IgnoreEvaluationResults extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1642,6 +1748,9 @@ class IgnoreEvaluationResults extends Rpc
  */
 class ListAggregateCompliancePacks extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1662,6 +1771,9 @@ class ListAggregateCompliancePacks extends Rpc
  */
 class ListAggregateConfigRuleEvaluationResults extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1690,6 +1802,9 @@ class ListAggregateConfigRuleEvaluationResults extends Rpc
  */
 class ListAggregateConfigRules extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1720,6 +1835,9 @@ class ListAggregateResourceEvaluationResults extends Rpc
  */
 class ListAggregators extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1732,6 +1850,9 @@ class ListAggregators extends Rpc
  */
 class ListCompliancePacks extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1744,6 +1865,9 @@ class ListCompliancePacks extends Rpc
  */
 class ListCompliancePackTemplates extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1759,6 +1883,23 @@ class ListCompliancePackTemplates extends Rpc
  * @method $this withComplianceType($value)
  */
 class ListConfigRuleEvaluationResults extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getRiskLevel()
+ * @method $this withRiskLevel($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class ListManagedRules extends Rpc
 {
 }
 
@@ -1787,9 +1928,6 @@ class ListResourceEvaluationResults extends Rpc
  */
 class RevertAggregateEvaluationResults extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1838,9 +1976,6 @@ class RevertAggregateEvaluationResults extends Rpc
 class RevertEvaluationResults extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1880,9 +2015,6 @@ class RevertEvaluationResults extends Rpc
  */
 class StartAggregateConfigRuleEvaluation extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1896,9 +2028,6 @@ class StartAggregateConfigRuleEvaluation extends Rpc
  */
 class UpdateAggregateCompliancePack extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -2006,14 +2135,12 @@ class UpdateAggregateCompliancePack extends Rpc
  * @method string getResourceGroupIdsScope()
  * @method string getInputParameters()
  * @method string getConfigRuleName()
+ * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
  * @method string getExcludeResourceIdsScope()
  */
 class UpdateAggregateConfigRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -2189,6 +2316,19 @@ class UpdateAggregateConfigRule extends Rpc
      *
      * @return $this
      */
+    public function withTagKeyLogicScope($value)
+    {
+        $this->data['TagKeyLogicScope'] = $value;
+        $this->options['form_params']['TagKeyLogicScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withMaximumExecutionFrequency($value)
     {
         $this->data['MaximumExecutionFrequency'] = $value;
@@ -2220,9 +2360,6 @@ class UpdateAggregateConfigRule extends Rpc
  */
 class UpdateAggregator extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -2301,9 +2438,6 @@ class UpdateAggregator extends Rpc
 class UpdateCompliancePack extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -2396,14 +2530,12 @@ class UpdateCompliancePack extends Rpc
  * @method string getResourceGroupIdsScope()
  * @method string getInputParameters()
  * @method string getConfigRuleName()
+ * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
  * @method string getExcludeResourceIdsScope()
  */
 class UpdateConfigRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -2557,6 +2689,19 @@ class UpdateConfigRule extends Rpc
     {
         $this->data['ConfigRuleName'] = $value;
         $this->options['form_params']['ConfigRuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagKeyLogicScope($value)
+    {
+        $this->data['TagKeyLogicScope'] = $value;
+        $this->options['form_params']['TagKeyLogicScope'] = $value;
 
         return $this;
     }
