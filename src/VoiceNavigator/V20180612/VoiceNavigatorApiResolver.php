@@ -31,6 +31,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EndDialogue endDialogue(array $options = [])
  * @method ExportConversationDetails exportConversationDetails(array $options = [])
  * @method ExportStatisticalData exportStatisticalData(array $options = [])
+ * @method GetInstanceConfig getInstanceConfig(array $options = [])
+ * @method GetNewBargeInSwitch getNewBargeInSwitch(array $options = [])
  * @method ListChatbotInstances listChatbotInstances(array $options = [])
  * @method ListConversationDetails listConversationDetails(array $options = [])
  * @method ListConversations listConversations(array $options = [])
@@ -45,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryConversations queryConversations(array $options = [])
  * @method SaveRecording saveRecording(array $options = [])
  * @method SilenceTimeout silenceTimeout(array $options = [])
+ * @method UpdateNewBargeInSwitch updateNewBargeInSwitch(array $options = [])
  */
 class VoiceNavigatorApiResolver extends ApiResolver
 {
@@ -373,6 +376,8 @@ class EnableInstance extends Rpc
 /**
  * @method string getConversationId()
  * @method $this withConversationId($value)
+ * @method string getHangUpParams()
+ * @method $this withHangUpParams($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceOwnerId()
@@ -409,6 +414,22 @@ class ExportConversationDetails extends Rpc
  * @method $this withBeginTimeRightRange($value)
  */
 class ExportStatisticalData extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetInstanceConfig extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetNewBargeInSwitch extends Rpc
 {
 }
 
@@ -642,5 +663,15 @@ class SaveRecording extends Rpc
  * @method $this withInstanceOwnerId($value)
  */
 class SilenceTimeout extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ */
+class UpdateNewBargeInSwitch extends Rpc
 {
 }

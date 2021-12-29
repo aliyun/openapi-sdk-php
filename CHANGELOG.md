@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1208 - 2021-12-29
+- Supported new features etc.
+
+
 ## 1.8.1207 - 2021-12-29
 - Supported new features for outbound.
 
