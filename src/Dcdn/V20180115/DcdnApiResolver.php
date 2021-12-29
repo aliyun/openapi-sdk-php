@@ -22,6 +22,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDcdnSubTask createDcdnSubTask(array $options = [])
  * @method CreateRoutine createRoutine(array $options = [])
  * @method CreateSlrAndSlsProject createSlrAndSlsProject(array $options = [])
+ * @method DcdnHttpRequestTestTool dcdnHttpRequestTestTool(array $options = [])
  * @method DeleteDcdnDeliverTask deleteDcdnDeliverTask(array $options = [])
  * @method DeleteDcdnDomain deleteDcdnDomain(array $options = [])
  * @method DeleteDcdnIpaDomain deleteDcdnIpaDomain(array $options = [])
@@ -130,6 +131,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserErStatus describeUserErStatus(array $options = [])
  * @method DescribeUserLogserviceStatus describeUserLogserviceStatus(array $options = [])
  * @method EditRoutineConf editRoutineConf(array $options = [])
+ * @method ListDcdnEsTemplateInfo listDcdnEsTemplateInfo(array $options = [])
  * @method ListDcdnRealTimeDeliveryProject listDcdnRealTimeDeliveryProject(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
  * @method OpenDcdnService openDcdnService(array $options = [])
@@ -722,6 +724,126 @@ class CreateSlrAndSlsProject extends Rpc
     {
         $this->data['Region'] = $value;
         $this->options['form_params']['Region'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProxyIp()
+ * @method string getScheme()
+ * @method string getBody()
+ * @method string getHost()
+ * @method string getMethod()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUri()
+ * @method string getArgs()
+ * @method string getHeader()
+ */
+class DcdnHttpRequestTestTool extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyIp($value)
+    {
+        $this->data['ProxyIp'] = $value;
+        $this->options['form_params']['ProxyIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheme($value)
+    {
+        $this->data['Scheme'] = $value;
+        $this->options['form_params']['Scheme'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['Body'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHost($value)
+    {
+        $this->data['Host'] = $value;
+        $this->options['form_params']['Host'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethod($value)
+    {
+        $this->data['Method'] = $value;
+        $this->options['form_params']['Method'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUri($value)
+    {
+        $this->data['Uri'] = $value;
+        $this->options['form_params']['Uri'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withArgs($value)
+    {
+        $this->data['Args'] = $value;
+        $this->options['form_params']['Args'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHeader($value)
+    {
+        $this->data['Header'] = $value;
+        $this->options['form_params']['Header'] = $value;
 
         return $this;
     }
@@ -2482,6 +2604,25 @@ class EditRoutineConf extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOp()
+ * @method $this withOp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ListDcdnEsTemplateInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1205 - 2021-12-29
+- Add ListDcdnEsTemplateInfo.
+
+
 ## 1.8.1204 - 2021-12-28
 - Support managed rule query.
 
