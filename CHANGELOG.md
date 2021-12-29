@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1206 - 2021-12-29
+- Add ListDcdnEsTemplateInfo.
+
+
 ## 1.8.1205 - 2021-12-29
 - Add ListDcdnEsTemplateInfo.
 
