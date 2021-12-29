@@ -290,6 +290,8 @@ class CreateBatchJobs extends Rpc
 }
 
 /**
+ * @method string getRecallStrategyJson()
+ * @method $this withRecallStrategyJson($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getScriptId()
@@ -439,6 +441,8 @@ class CreateJobDataParsingTask extends Rpc
 }
 
 /**
+ * @method string getRecallStrategyJson()
+ * @method $this withRecallStrategyJson($value)
  * @method string getJobGroupDescription()
  * @method $this withJobGroupDescription($value)
  * @method string getJobGroupName()
@@ -521,13 +525,17 @@ class CreateOutboundCallNumber extends Rpc
  * @method $this withScriptName($value)
  * @method string getScene()
  * @method $this withScene($value)
+ * @method array getScriptWaveform()
+ * @method string getAsrConfig()
+ * @method $this withAsrConfig($value)
+ * @method string getNewBargeInEnable()
+ * @method $this withNewBargeInEnable($value)
+ * @method string getMiniPlaybackEnable()
+ * @method $this withMiniPlaybackEnable($value)
  * @method string getChatbotId()
  * @method $this withChatbotId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method array getScriptWaveform()
- * @method string getAsrConfig()
- * @method $this withAsrConfig($value)
  * @method string getScriptDescription()
  * @method $this withScriptDescription($value)
  * @method array getScriptContent()
@@ -1564,11 +1572,13 @@ class ModifyIntent extends Rpc
 }
 
 /**
+ * @method string getRecallStrategyJson()
+ * @method $this withRecallStrategyJson($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method array getCallingNumber()
  * @method string getScriptId()
  * @method $this withScriptId($value)
+ * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getStrategyJson()

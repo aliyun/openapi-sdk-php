@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1207 - 2021-12-29
+- Supported new features for outbound.
+
+
 ## 1.8.1206 - 2021-12-29
 - Add ListDcdnEsTemplateInfo.
 
