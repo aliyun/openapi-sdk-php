@@ -66,6 +66,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobStatusByCallId getJobStatusByCallId(array $options = [])
  * @method GetJobTemplateDownloadParams getJobTemplateDownloadParams(array $options = [])
  * @method GetNumberRegionInfo getNumberRegionInfo(array $options = [])
+ * @method GetPredictiveJobGroup getPredictiveJobGroup(array $options = [])
+ * @method GetPredictiveTaskData getPredictiveTaskData(array $options = [])
  * @method GetRecordOssUploadParam getRecordOssUploadParam(array $options = [])
  * @method GetRoutePoint getRoutePoint(array $options = [])
  * @method GetScenario getScenario(array $options = [])
@@ -126,6 +128,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVoiceAppraise listVoiceAppraise(array $options = [])
  * @method ModifyAgentDevice modifyAgentDevice(array $options = [])
  * @method ModifyCabInstance modifyCabInstance(array $options = [])
+ * @method ModifyCallRatio modifyCallRatio(array $options = [])
  * @method ModifyPhoneNumber modifyPhoneNumber(array $options = [])
  * @method ModifyPhoneTags modifyPhoneTags(array $options = [])
  * @method ModifyPrimaryTrunksOfSkillGroup modifyPrimaryTrunksOfSkillGroup(array $options = [])
@@ -175,9 +178,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'CCC';
 }
 
 /**
@@ -869,9 +869,9 @@ class CreateMedia extends Rpc
  * @method $this withDescription($value)
  * @method string getTimingSchedule()
  * @method $this withTimingSchedule($value)
- * @method array getJobsJson()
  * @method string getJobFilePath()
  * @method $this withJobFilePath($value)
+ * @method array getJobsJson()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getIsDraft()
@@ -882,6 +882,8 @@ class CreateMedia extends Rpc
  * @method $this withStrategyJson($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getRatio()
+ * @method $this withRatio($value)
  */
 class CreatePredictiveJobGroup extends Rpc
 {
@@ -1594,6 +1596,33 @@ class GetJobTemplateDownloadParams extends Rpc
  */
 class GetNumberRegionInfo extends Rpc
 {
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ */
+class GetPredictiveJobGroup extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetPredictiveTaskData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2457,6 +2486,20 @@ class ModifyCabInstance extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSkillGroupId()
+ * @method $this withSkillGroupId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ * @method string getRatio()
+ * @method $this withRatio($value)
+ */
+class ModifyCallRatio extends Rpc
+{
+}
+
+/**
  * @method string getContactFlowId()
  * @method $this withContactFlowId($value)
  * @method string getUsage()
@@ -3237,6 +3280,8 @@ class SubmitBatchJobs extends Rpc
  * @method $this withMergedRecording($value)
  * @method string getResourceRecording()
  * @method $this withResourceRecording($value)
+ * @method string getEarlyMediaRecording()
+ * @method $this withEarlyMediaRecording($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceOwnerId()
