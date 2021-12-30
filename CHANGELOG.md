@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1214 - 2021-12-30
+- Add faceCustomParamsConfig params for AddSmarttagTemplate,UpdateSmarttagTemplate,QuerySmarttagTemplateList interface.
+
+
 ## 1.8.1213 - 2021-12-30
 - Supported Get Worker List.
 - Execute Job Support Designate Machine.
