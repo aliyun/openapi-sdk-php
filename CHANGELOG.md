@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1210 - 2021-12-30
+- Update by sdk platform.
+
+
 ## 1.8.1209 - 2021-12-30
 - Add new interface.
 
