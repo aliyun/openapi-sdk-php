@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobInfo getJobInfo(array $options = [])
  * @method GetJobInstance getJobInstance(array $options = [])
  * @method GetJobInstanceList getJobInstanceList(array $options = [])
+ * @method GetWorkerList getWorkerList(array $options = [])
  * @method GetWorkFlow getWorkFlow(array $options = [])
  * @method GrantPermission grantPermission(array $options = [])
  * @method ListGroups listGroups(array $options = [])
@@ -730,10 +731,16 @@ class EnableWorkflow extends Rpc
  * @method $this withCheckJobStatus($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getLabel()
+ * @method $this withLabel($value)
+ * @method string getDesignateType()
+ * @method $this withDesignateType($value)
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
+ * @method string getWorker()
+ * @method $this withWorker($value)
  * @method string getInstanceParameters()
  * @method $this withInstanceParameters($value)
  */
@@ -804,6 +811,18 @@ class GetJobInstance extends Rpc
  * @method $this withNamespace($value)
  */
 class GetJobInstanceList extends Rpc
+{
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class GetWorkerList extends Rpc
 {
 }
 

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1213 - 2021-12-30
+- Supported Get Worker List.
+- Execute Job Support Designate Machine.
+
+
 ## 1.8.1212 - 2021-12-30
 - Create Lindorm Open api.
 
