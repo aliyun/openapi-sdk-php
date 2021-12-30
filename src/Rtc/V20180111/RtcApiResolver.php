@@ -282,6 +282,8 @@ class CreateAutoLiveStreamRule extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getNeedCallbackAuth()
+ * @method $this withNeedCallbackAuth($value)
  * @method array getEvents()
  * @method string getShowLog()
  * @method $this withShowLog($value)
@@ -796,6 +798,7 @@ class RemoveTerminals extends Rpc
  * @method string getCropMode()
  * @method $this withCropMode($value)
  * @method array getSubSpecCameraUsers()
+ * @method array getOutputStreamParams()
  * @method string getTaskProfile()
  * @method $this withTaskProfile($value)
  * @method array getLayoutIds()
@@ -1029,6 +1032,23 @@ class StartMPUTask extends Rpc
 	    $this->data['SubSpecCameraUsers'] = $subSpecCameraUsers;
 		foreach ($subSpecCameraUsers as $i => $iValue) {
 			$this->options['query']['SubSpecCameraUsers.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $outputStreamParams
+     *
+     * @return $this
+     */
+	public function withOutputStreamParams(array $outputStreamParams)
+	{
+	    $this->data['OutputStreamParams'] = $outputStreamParams;
+		foreach ($outputStreamParams as $depth1 => $depth1Value) {
+			if(isset($depth1Value['StreamURL'])){
+				$this->options['query']['OutputStreamParams.' . ($depth1 + 1) . '.StreamURL'] = $depth1Value['StreamURL'];
+			}
 		}
 
 		return $this;

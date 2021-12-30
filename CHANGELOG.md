@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1211 - 2021-12-30
+- Support AUTH for CreateEventSubscribe.
+
+
 ## 1.8.1210 - 2021-12-30
 - Update by sdk platform.
 
