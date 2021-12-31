@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1215 - 2021-12-31
+- Update ErrorCode.
+
+
 ## 1.8.1214 - 2021-12-30
 - Add faceCustomParamsConfig params for AddSmarttagTemplate,UpdateSmarttagTemplate,QuerySmarttagTemplateList interface.
 
