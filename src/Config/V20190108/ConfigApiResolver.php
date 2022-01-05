@@ -271,6 +271,9 @@ class GetSupportedResourceTypes extends Rpc
  */
 class ListAggregateDiscoveredResources extends Rpc
 {
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -327,6 +330,9 @@ class ListConfigRules extends Rpc
  */
 class ListDiscoveredResources extends Rpc
 {
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
