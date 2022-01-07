@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddUserGroupMember addUserGroupMember(array $options = [])
+ * @method AddUserGroupMembers addUserGroupMembers(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
  * @method DeleteUserGroup deleteUserGroup(array $options = [])
  * @method DeleteUserGroupMember deleteUserGroupMember(array $options = [])
@@ -50,6 +51,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withSignType($value)
  */
 class AddUserGroupMember extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserGroupIds()
+ * @method $this withUserGroupIds($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class AddUserGroupMembers extends Rpc
 {
 }
 
