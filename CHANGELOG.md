@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1219 - 2022-1-7
+- Supported GetSparkJobDetail,GetSparkJobExecutorLogs,KillSparkJob,GetSparkJobDriverLog,GetSparkJobLog,SubmitSparkJob API.
+
+
 ## 1.8.1218 - 2022-1-7
 - Support New API for Dypnsapi.
 
