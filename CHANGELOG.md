@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1218 - 2022-1-7
+- Support New API for Dypnsapi.
+
+
 ## 1.8.1217 - 2022-1-6
 - Fix bugs.
 

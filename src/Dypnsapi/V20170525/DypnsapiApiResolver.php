@@ -13,7 +13,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetCertifyResult getCertifyResult(array $options = [])
  * @method GetMobile getMobile(array $options = [])
  * @method GetSmsAuthTokens getSmsAuthTokens(array $options = [])
- * @method TwiceTelVerify twiceTelVerify(array $options = [])
+ * @method QueryGateVerifyBillingPublic queryGateVerifyBillingPublic(array $options = [])
+ * @method QueryGateVerifyStatisticPublic queryGateVerifyStatisticPublic(array $options = [])
  * @method VerifyMobile verifyMobile(array $options = [])
  * @method VerifyPhoneWithToken verifyPhoneWithToken(array $options = [])
  * @method VerifySmsCode verifySmsCode(array $options = [])
@@ -192,16 +193,42 @@ class GetSmsAuthTokens extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAuthenticationType()
+ * @method $this withAuthenticationType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSince()
- * @method $this withSince($value)
+ * @method string getMonth()
+ * @method $this withMonth($value)
  */
-class TwiceTelVerify extends Rpc
+class QueryGateVerifyBillingPublic extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAuthenticationType()
+ * @method $this withAuthenticationType($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getSceneCode()
+ * @method $this withSceneCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getOsType()
+ * @method $this withOsType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ */
+class QueryGateVerifyStatisticPublic extends Rpc
 {
 }
 
