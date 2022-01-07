@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1221 - 2022-1-7
+- Add or modify APIs, include, QueryEmbeddedStaus, QueryWorks, QueryWorksByWorkspace.
+
+
 ## 1.8.1220 - 2022-1-7
 - Add or modify APIs, include, QueryEmbeddedStaus, QueryWorks, QueryWorksByWorkspace.
 
