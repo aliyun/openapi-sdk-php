@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1224 - 2022-1-11
+- Fix bugs.
+
+
 ## 1.8.1223 - 2022-1-11
 - Added reserve price range.
 
