@@ -8,6 +8,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AcceptDemand acceptDemand(array $options = [])
  * @method BidDomain bidDomain(array $options = [])
  * @method ChangeAuction changeAuction(array $options = [])
+ * @method CheckDomainStatus checkDomainStatus(array $options = [])
+ * @method CreateFixedPriceDemandOrder createFixedPriceDemandOrder(array $options = [])
  * @method FailDemand failDemand(array $options = [])
  * @method FinishDemand finishDemand(array $options = [])
  * @method GetReserveDomainUrl getReserveDomainUrl(array $options = [])
@@ -37,9 +39,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'domain';
 }
 
 /**
@@ -157,6 +156,31 @@ class ChangeAuction extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class CheckDomainStatus extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ */
+class CreateFixedPriceDemandOrder extends Rpc
+{
 }
 
 /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1223 - 2022-1-11
+- Added reserve price range.
+
+
 ## 1.8.1222 - 2022-1-7
 - Support resource scheduler.
 
