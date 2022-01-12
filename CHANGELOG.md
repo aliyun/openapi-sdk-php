@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1227 - 2022-1-12
+- Supported new features for outbound.
+
+
 ## 1.8.1226 - 2022-1-12
 - Support folder for rule.
 

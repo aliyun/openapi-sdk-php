@@ -5,6 +5,7 @@ namespace AlibabaCloud\OutboundBot\V20191226;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ApplyNumberDistrictInfoParsingResult applyNumberDistrictInfoParsingResult(array $options = [])
  * @method AssignJobs assignJobs(array $options = [])
  * @method CancelJobs cancelJobs(array $options = [])
  * @method ChangeResourceGroup changeResourceGroup(array $options = [])
@@ -18,10 +19,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateJobDataParsingTask createJobDataParsingTask(array $options = [])
  * @method CreateJobGroup createJobGroup(array $options = [])
  * @method CreateJobGroupExportTask createJobGroupExportTask(array $options = [])
+ * @method CreateNumberDistrictInfoDownloadUrl createNumberDistrictInfoDownloadUrl(array $options = [])
+ * @method CreateNumberDistrictInfoParsingTask createNumberDistrictInfoParsingTask(array $options = [])
  * @method CreateOutboundCallNumber createOutboundCallNumber(array $options = [])
  * @method CreateScript createScript(array $options = [])
  * @method CreateScriptWaveform createScriptWaveform(array $options = [])
  * @method CreateTag createTag(array $options = [])
+ * @method DeleteAllNumberDistrictInfo deleteAllNumberDistrictInfo(array $options = [])
  * @method DeleteContactBlockList deleteContactBlockList(array $options = [])
  * @method DeleteContactWhiteList deleteContactWhiteList(array $options = [])
  * @method DeleteDialogueFlow deleteDialogueFlow(array $options = [])
@@ -43,12 +47,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeJobDataParsingTaskProgress describeJobDataParsingTaskProgress(array $options = [])
  * @method DescribeJobGroup describeJobGroup(array $options = [])
  * @method DescribeJobGroupExportTaskProgress describeJobGroupExportTaskProgress(array $options = [])
+ * @method DescribeNumberDistrictInfoStatus describeNumberDistrictInfoStatus(array $options = [])
  * @method DescribeScript describeScript(array $options = [])
  * @method DescribeScriptVoiceConfig describeScriptVoiceConfig(array $options = [])
  * @method DescribeTagHitsSummary describeTagHitsSummary(array $options = [])
  * @method DescribeTTSConfig describeTTSConfig(array $options = [])
  * @method DescribeTTSDemo describeTTSDemo(array $options = [])
  * @method Dialogue dialogue(array $options = [])
+ * @method DismissNumberDistrictInfoParsingResult dismissNumberDistrictInfoParsingResult(array $options = [])
  * @method DownloadRecording downloadRecording(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
@@ -63,11 +69,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEmptyNumberNoMoreCallsInfo getEmptyNumberNoMoreCallsInfo(array $options = [])
  * @method GetInstanceConfig getInstanceConfig(array $options = [])
  * @method GetMaxAttemptsPerDay getMaxAttemptsPerDay(array $options = [])
+ * @method GetNumberDistrictInfoTemplateDownloadUrl getNumberDistrictInfoTemplateDownloadUrl(array $options = [])
  * @method GetSummaryInfo getSummaryInfo(array $options = [])
  * @method GetTaskByUuid getTaskByUuid(array $options = [])
  * @method GetVersion getVersion(array $options = [])
  * @method ImportScript importScript(array $options = [])
  * @method InflightTaskTimeout inflightTaskTimeout(array $options = [])
+ * @method ListChatbotInstances listChatbotInstances(array $options = [])
  * @method ListDialogueFlows listDialogueFlows(array $options = [])
  * @method ListDownloadTasks listDownloadTasks(array $options = [])
  * @method ListGlobalQuestions listGlobalQuestions(array $options = [])
@@ -143,6 +151,14 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'outboundbot';
+}
+
+/**
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ */
+class ApplyNumberDistrictInfoParsingResult extends Rpc
+{
 }
 
 /**
@@ -307,6 +323,8 @@ class CreateBatchJobs extends Rpc
  * @method $this withName($value)
  * @method string getSourceGroupId()
  * @method $this withSourceGroupId($value)
+ * @method string getRingingDuration()
+ * @method $this withRingingDuration($value)
  */
 class CreateBatchRepeatJob extends Rpc
 {
@@ -454,6 +472,8 @@ class CreateJobDataParsingTask extends Rpc
  * @method $this withInstanceId($value)
  * @method string getStrategyJson()
  * @method $this withStrategyJson($value)
+ * @method string getRingingDuration()
+ * @method $this withRingingDuration($value)
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
  */
@@ -500,6 +520,24 @@ class CreateJobGroupExportTask extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ */
+class CreateNumberDistrictInfoDownloadUrl extends Rpc
+{
+}
+
+/**
+ * @method string getFileSize()
+ * @method $this withFileSize($value)
+ * @method string getFilePath()
+ * @method $this withFilePath($value)
+ */
+class CreateNumberDistrictInfoParsingTask extends Rpc
+{
 }
 
 /**
@@ -601,6 +639,10 @@ class CreateScriptWaveform extends Rpc
  * @method $this withInstanceId($value)
  */
 class CreateTag extends Rpc
+{
+}
+
+class DeleteAllNumberDistrictInfo extends Rpc
 {
 }
 
@@ -846,6 +888,10 @@ class DescribeJobGroupExportTaskProgress extends Rpc
 {
 }
 
+class DescribeNumberDistrictInfoStatus extends Rpc
+{
+}
+
 /**
  * @method string getScriptId()
  * @method $this withScriptId($value)
@@ -931,6 +977,14 @@ class DescribeTTSDemo extends Rpc
  * @method $this withActionKey($value)
  */
 class Dialogue extends Rpc
+{
+}
+
+/**
+ * @method string getVersionId()
+ * @method $this withVersionId($value)
+ */
+class DismissNumberDistrictInfoParsingResult extends Rpc
 {
 }
 
@@ -1074,6 +1128,10 @@ class GetMaxAttemptsPerDay extends Rpc
 {
 }
 
+class GetNumberDistrictInfoTemplateDownloadUrl extends Rpc
+{
+}
+
 /**
  * @method array getInstanceIdList()
  */
@@ -1134,6 +1192,16 @@ class ImportScript extends Rpc
  * @method $this withTaskId($value)
  */
 class InflightTaskTimeout extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListChatbotInstances extends Rpc
 {
 }
 
@@ -1578,17 +1646,21 @@ class ModifyIntent extends Rpc
  * @method $this withDescription($value)
  * @method string getScriptId()
  * @method $this withScriptId($value)
+ * @method string getStrategyJson()
+ * @method $this withStrategyJson($value)
+ * @method string getRingingDuration()
+ * @method $this withRingingDuration($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ * @method string getJobGroupStatus()
+ * @method $this withJobGroupStatus($value)
  * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getStrategyJson()
- * @method $this withStrategyJson($value)
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getScenarioId()
- * @method $this withScenarioId($value)
  */
 class ModifyJobGroup extends Rpc
 {
