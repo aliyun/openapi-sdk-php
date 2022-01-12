@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1226 - 2022-1-12
+- Support folder for rule.
+
+
 ## 1.8.1225 - 2022-1-11
 - Fix bugs.
 

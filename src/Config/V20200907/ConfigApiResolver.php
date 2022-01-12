@@ -238,7 +238,9 @@ class CreateAggregateCompliancePack extends Rpc
  * @method string getConfigRuleTriggerTypes()
  * @method string getSourceIdentifier()
  * @method string getTagValueScope()
+ * @method string getExcludeAccountIdsScope()
  * @method string getRegionIdsScope()
+ * @method string getExcludeFolderIdsScope()
  * @method string getRiskLevel()
  * @method string getSourceOwner()
  * @method string getResourceGroupIdsScope()
@@ -246,6 +248,7 @@ class CreateAggregateCompliancePack extends Rpc
  * @method string getConfigRuleName()
  * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
+ * @method string getFolderIdsScope()
  * @method string getExcludeResourceIdsScope()
  */
 class CreateAggregateConfigRule extends Rpc
@@ -360,10 +363,36 @@ class CreateAggregateConfigRule extends Rpc
      *
      * @return $this
      */
+    public function withExcludeAccountIdsScope($value)
+    {
+        $this->data['ExcludeAccountIdsScope'] = $value;
+        $this->options['form_params']['ExcludeAccountIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withRegionIdsScope($value)
     {
         $this->data['RegionIdsScope'] = $value;
         $this->options['form_params']['RegionIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExcludeFolderIdsScope($value)
+    {
+        $this->data['ExcludeFolderIdsScope'] = $value;
+        $this->options['form_params']['ExcludeFolderIdsScope'] = $value;
 
         return $this;
     }
@@ -455,6 +484,19 @@ class CreateAggregateConfigRule extends Rpc
     {
         $this->data['MaximumExecutionFrequency'] = $value;
         $this->options['form_params']['MaximumExecutionFrequency'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFolderIdsScope($value)
+    {
+        $this->data['FolderIdsScope'] = $value;
+        $this->options['form_params']['FolderIdsScope'] = $value;
 
         return $this;
     }
@@ -2130,13 +2172,16 @@ class UpdateAggregateCompliancePack extends Rpc
  * @method string getAggregatorId()
  * @method string getConfigRuleTriggerTypes()
  * @method string getTagValueScope()
+ * @method string getExcludeAccountIdsScope()
  * @method string getRegionIdsScope()
+ * @method string getExcludeFolderIdsScope()
  * @method string getRiskLevel()
  * @method string getResourceGroupIdsScope()
  * @method string getInputParameters()
  * @method string getConfigRuleName()
  * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
+ * @method string getFolderIdsScope()
  * @method string getExcludeResourceIdsScope()
  */
 class UpdateAggregateConfigRule extends Rpc
@@ -2251,10 +2296,36 @@ class UpdateAggregateConfigRule extends Rpc
      *
      * @return $this
      */
+    public function withExcludeAccountIdsScope($value)
+    {
+        $this->data['ExcludeAccountIdsScope'] = $value;
+        $this->options['form_params']['ExcludeAccountIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withRegionIdsScope($value)
     {
         $this->data['RegionIdsScope'] = $value;
         $this->options['form_params']['RegionIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExcludeFolderIdsScope($value)
+    {
+        $this->data['ExcludeFolderIdsScope'] = $value;
+        $this->options['form_params']['ExcludeFolderIdsScope'] = $value;
 
         return $this;
     }
@@ -2333,6 +2404,19 @@ class UpdateAggregateConfigRule extends Rpc
     {
         $this->data['MaximumExecutionFrequency'] = $value;
         $this->options['form_params']['MaximumExecutionFrequency'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFolderIdsScope($value)
+    {
+        $this->data['FolderIdsScope'] = $value;
+        $this->options['form_params']['FolderIdsScope'] = $value;
 
         return $this;
     }
