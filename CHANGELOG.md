@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1230 - 2022-1-14
+- Supported more query conditions when searching resource group.
+
+
 ## 1.8.1229 - 2022-1-14
 - Supported more query conditions when searching resource group.
 
