@@ -5,6 +5,7 @@ namespace AlibabaCloud\Companyreg\V20201022;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AppFailClear appFailClear(array $options = [])
  * @method CheckCopyPayroll checkCopyPayroll(array $options = [])
  * @method CheckSavePayroll checkSavePayroll(array $options = [])
  * @method CheckSavePayrollDetail checkSavePayrollDetail(array $options = [])
@@ -15,8 +16,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFee deleteFee(array $options = [])
  * @method DeleteInvoice deleteInvoice(array $options = [])
  * @method DeletePayroll deletePayroll(array $options = [])
+ * @method GetAcctgpltAliGenerate getAcctgpltAliGenerate(array $options = [])
+ * @method GetAppletIntelligent getAppletIntelligent(array $options = [])
+ * @method GetBalanceCash getBalanceCash(array $options = [])
  * @method GetBalanceSheetInfo getBalanceSheetInfo(array $options = [])
  * @method GetCashFlowInfo getCashFlowInfo(array $options = [])
+ * @method GetElementEstimate getElementEstimate(array $options = [])
+ * @method GetEmployeeCountSum getEmployeeCountSum(array $options = [])
  * @method GetEnterprisesInfo getEnterprisesInfo(array $options = [])
  * @method GetFee getFee(array $options = [])
  * @method GetHomePage getHomePage(array $options = [])
@@ -37,6 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTaxationCalendar getTaxationCalendar(array $options = [])
  * @method GetTaxationInfo getTaxationInfo(array $options = [])
  * @method GetTaxInfo getTaxInfo(array $options = [])
+ * @method GetTaxTypeForAli getTaxTypeForAli(array $options = [])
  * @method GetTypeList getTypeList(array $options = [])
  * @method GetVoucherCount getVoucherCount(array $options = [])
  * @method ListCashJournal listCashJournal(array $options = [])
@@ -47,6 +54,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVoucher listVoucher(array $options = [])
  * @method PhotoInvoice photoInvoice(array $options = [])
  * @method PrintAcctgTrans printAcctgTrans(array $options = [])
+ * @method QueryPaymentInAdvancePersonList queryPaymentInAdvancePersonList(array $options = [])
  * @method RefreshCustomerInfo refreshCustomerInfo(array $options = [])
  * @method SaveOpeningBalanceStatus saveOpeningBalanceStatus(array $options = [])
  * @method SavePayroll savePayroll(array $options = [])
@@ -70,9 +78,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2020-10-22';
+}
 
-    /** @var string */
-    public $serviceCode = 'companyreg';
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class AppFailClear extends Rpc
+{
 }
 
 /**
@@ -297,6 +312,43 @@ class DeletePayroll extends Rpc
 /**
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getLoanBillTO()
+ * @method $this withLoanBillTO($value)
+ */
+class GetAcctgpltAliGenerate extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetAppletIntelligent extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetBalanceCash extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
  * @method string getIsReclassification()
  * @method $this withIsReclassification($value)
  * @method string getBizId()
@@ -313,6 +365,26 @@ class GetBalanceSheetInfo extends Rpc
  * @method $this withBizId($value)
  */
 class GetCashFlowInfo extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetElementEstimate extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetEmployeeCountSum extends Rpc
 {
 }
 
@@ -509,6 +581,16 @@ class GetTaxInfo extends Rpc
 }
 
 /**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetTaxTypeForAli extends Rpc
+{
+}
+
+/**
  * @method string getBizId()
  * @method $this withBizId($value)
  */
@@ -645,6 +727,14 @@ class PhotoInvoice extends Rpc
  * @method $this withVoucherIds($value)
  */
 class PrintAcctgTrans extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class QueryPaymentInAdvancePersonList extends Rpc
 {
 }
 
