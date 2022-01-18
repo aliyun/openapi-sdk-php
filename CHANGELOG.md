@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1232 - 2022-1-18
+- Support describe price.
+
+
 ## 1.8.1231 - 2022-1-17
 - Supported esp for partner.
 

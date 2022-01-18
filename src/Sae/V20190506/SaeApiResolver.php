@@ -28,6 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeApplicationGroups describeApplicationGroups(array $options = [])
  * @method DescribeApplicationImage describeApplicationImage(array $options = [])
  * @method DescribeApplicationInstances describeApplicationInstances(array $options = [])
+ * @method DescribeApplicationScalingRule describeApplicationScalingRule(array $options = [])
  * @method DescribeApplicationScalingRules describeApplicationScalingRules(array $options = [])
  * @method DescribeApplicationSlbs describeApplicationSlbs(array $options = [])
  * @method DescribeApplicationStatus describeApplicationStatus(array $options = [])
@@ -35,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeChangeOrder describeChangeOrder(array $options = [])
  * @method DescribeComponents describeComponents(array $options = [])
  * @method DescribeConfigMap describeConfigMap(array $options = [])
+ * @method DescribeConfigurationPrice describeConfigurationPrice(array $options = [])
  * @method DescribeEdasContainers describeEdasContainers(array $options = [])
  * @method DescribeGreyTagRoute describeGreyTagRoute(array $options = [])
  * @method DescribeIngress describeIngress(array $options = [])
@@ -1049,6 +1051,7 @@ class CreateApplication extends Roa
  * @method string getScalingRuleTimer()
  * @method string getScalingRuleMetric()
  * @method string getAppId()
+ * @method string getMinReadyInstanceRatio()
  * @method string getScalingRuleType()
  */
 class CreateApplicationScalingRule extends Roa
@@ -1133,6 +1136,19 @@ class CreateApplicationScalingRule extends Roa
     {
         $this->data['AppId'] = $value;
         $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstanceRatio($value)
+    {
+        $this->data['MinReadyInstanceRatio'] = $value;
+        $this->options['query']['MinReadyInstanceRatio'] = $value;
 
         return $this;
     }
@@ -1665,6 +1681,7 @@ class DeleteNamespace extends Roa
  * @method string getAcrInstanceId()
  * @method string getAppId()
  * @method string getImageUrl()
+ * @method string getMinReadyInstanceRatio()
  * @method string getPhp()
  * @method string getAutoEnableApplicationScalingRule()
  * @method string getPhpConfigLocation()
@@ -2192,6 +2209,19 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
+    public function withMinReadyInstanceRatio($value)
+    {
+        $this->data['MinReadyInstanceRatio'] = $value;
+        $this->options['query']['MinReadyInstanceRatio'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPhp($value)
     {
         $this->data['Php'] = $value;
@@ -2389,6 +2419,7 @@ class DescribeApplicationImage extends Roa
 }
 
 /**
+ * @method string getJobId()
  * @method string getAppId()
  * @method string getGroupId()
  * @method string getPageSize()
@@ -2399,6 +2430,19 @@ class DescribeApplicationInstances extends Roa
 {
     /** @var string */
     public $pathPattern = '/pop/v1/sam/app/describeApplicationInstances';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['query']['JobId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2461,6 +2505,42 @@ class DescribeApplicationInstances extends Roa
     {
         $this->data['Reverse'] = $value;
         $this->options['query']['Reverse'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScalingRuleName()
+ * @method string getAppId()
+ */
+class DescribeApplicationScalingRule extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/sam/scale/applicationScalingRule';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScalingRuleName($value)
+    {
+        $this->data['ScalingRuleName'] = $value;
+        $this->options['query']['ScalingRuleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['AppId'] = $value;
 
         return $this;
     }
@@ -2685,6 +2765,42 @@ class DescribeConfigMap extends Roa
     {
         $this->data['ConfigMapId'] = $value;
         $this->options['query']['ConfigMapId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMemory()
+ * @method string getCpu()
+ */
+class DescribeConfigurationPrice extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/pop/v1/paas/configurationPrice';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMemory($value)
+    {
+        $this->data['Memory'] = $value;
+        $this->options['query']['Memory'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCpu($value)
+    {
+        $this->data['Cpu'] = $value;
+        $this->options['query']['Cpu'] = $value;
 
         return $this;
     }
@@ -3879,6 +3995,7 @@ class ReduceApplicationCapacityByInstanceIds extends Roa
  * @method string getMinReadyInstances()
  * @method string getReplicas()
  * @method string getAppId()
+ * @method string getMinReadyInstanceRatio()
  * @method string getAutoEnableApplicationScalingRule()
  */
 class RescaleApplication extends Roa
@@ -3924,6 +4041,19 @@ class RescaleApplication extends Roa
     {
         $this->data['AppId'] = $value;
         $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstanceRatio($value)
+    {
+        $this->data['MinReadyInstanceRatio'] = $value;
+        $this->options['query']['MinReadyInstanceRatio'] = $value;
 
         return $this;
     }
@@ -3998,6 +4128,7 @@ class RescaleApplicationVertically extends Roa
 /**
  * @method string getMinReadyInstances()
  * @method string getAppId()
+ * @method string getMinReadyInstanceRatio()
  */
 class RestartApplication extends Roa
 {
@@ -4029,6 +4160,19 @@ class RestartApplication extends Roa
     {
         $this->data['AppId'] = $value;
         $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstanceRatio($value)
+    {
+        $this->data['MinReadyInstanceRatio'] = $value;
+        $this->options['query']['MinReadyInstanceRatio'] = $value;
 
         return $this;
     }
@@ -4078,6 +4222,7 @@ class RestartInstances extends Roa
  * @method string getVersionId()
  * @method string getAppId()
  * @method string getBatchWaitTime()
+ * @method string getMinReadyInstanceRatio()
  * @method string getAutoEnableApplicationScalingRule()
  * @method string getUpdateStrategy()
  */
@@ -4137,6 +4282,19 @@ class RollbackApplication extends Roa
     {
         $this->data['BatchWaitTime'] = $value;
         $this->options['query']['BatchWaitTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstanceRatio($value)
+    {
+        $this->data['MinReadyInstanceRatio'] = $value;
+        $this->options['query']['MinReadyInstanceRatio'] = $value;
 
         return $this;
     }
@@ -4397,6 +4555,7 @@ class UntagResources extends Roa
  * @method string getScalingRuleTimer()
  * @method string getScalingRuleMetric()
  * @method string getAppId()
+ * @method string getMinReadyInstanceRatio()
  */
 class UpdateApplicationScalingRule extends Roa
 {
@@ -4467,6 +4626,19 @@ class UpdateApplicationScalingRule extends Roa
     {
         $this->data['AppId'] = $value;
         $this->options['query']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstanceRatio($value)
+    {
+        $this->data['MinReadyInstanceRatio'] = $value;
+        $this->options['query']['MinReadyInstanceRatio'] = $value;
 
         return $this;
     }
