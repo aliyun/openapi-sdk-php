@@ -728,6 +728,8 @@ class MoveResourceGroup extends Rpc
 /**
  * @method string getWafVersion()
  * @method $this withWafVersion($value)
+ * @method string getWafAiStatus()
+ * @method $this withWafAiStatus($value)
  * @method string getRuleGroupId()
  * @method $this withRuleGroupId($value)
  * @method string getResourceGroupId()
