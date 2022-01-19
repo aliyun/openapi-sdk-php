@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1234 - 2022-1-19
+- ReportOneAgentInfo.
+
+
+
 ## 1.8.1233 - 2022-1-18
 - Upgrade SDK.
 

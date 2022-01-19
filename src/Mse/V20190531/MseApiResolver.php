@@ -5,36 +5,56 @@ namespace AlibabaCloud\Mse\V20190531;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddAuthResource addAuthResource(array $options = [])
+ * @method AddBlackWhiteList addBlackWhiteList(array $options = [])
+ * @method AddGateway addGateway(array $options = [])
+ * @method AddGatewayDomain addGatewayDomain(array $options = [])
+ * @method AddGatewayServiceVersion addGatewayServiceVersion(array $options = [])
+ * @method AddGatewaySlb addGatewaySlb(array $options = [])
  * @method AddMockRule addMockRule(array $options = [])
  * @method AddServiceSource addServiceSource(array $options = [])
+ * @method AddSSLCert addSSLCert(array $options = [])
  * @method CloneNacosConfig cloneNacosConfig(array $options = [])
  * @method CreateAlarmRule createAlarmRule(array $options = [])
  * @method CreateApplication createApplication(array $options = [])
  * @method CreateCluster createCluster(array $options = [])
  * @method CreateEngineNamespace createEngineNamespace(array $options = [])
- * @method CreateGovernanceKubernetesCluster createGovernanceKubernetesCluster(array $options = [])
  * @method CreateNacosConfig createNacosConfig(array $options = [])
+ * @method CreateNacosInstance createNacosInstance(array $options = [])
+ * @method CreateNacosService createNacosService(array $options = [])
  * @method CreateZnode createZnode(array $options = [])
  * @method DeleteAlarmRule deleteAlarmRule(array $options = [])
+ * @method DeleteAuthResource deleteAuthResource(array $options = [])
  * @method DeleteCluster deleteCluster(array $options = [])
  * @method DeleteEngineNamespace deleteEngineNamespace(array $options = [])
+ * @method DeleteGateway deleteGateway(array $options = [])
+ * @method DeleteGatewayDomain deleteGatewayDomain(array $options = [])
+ * @method DeleteGatewayServiceVersion deleteGatewayServiceVersion(array $options = [])
+ * @method DeleteGatewaySlb deleteGatewaySlb(array $options = [])
  * @method DeleteNacosConfig deleteNacosConfig(array $options = [])
  * @method DeleteNacosConfigs deleteNacosConfigs(array $options = [])
  * @method DeleteNacosService deleteNacosService(array $options = [])
+ * @method DeleteServiceSource deleteServiceSource(array $options = [])
  * @method DeleteZnode deleteZnode(array $options = [])
  * @method ExportNacosConfig exportNacosConfig(array $options = [])
+ * @method GetBlackWhiteList getBlackWhiteList(array $options = [])
  * @method GetEngineNamepace getEngineNamepace(array $options = [])
  * @method GetGateway getGateway(array $options = [])
+ * @method GetGatewayDomainDetail getGatewayDomainDetail(array $options = [])
  * @method GetGatewayOption getGatewayOption(array $options = [])
+ * @method GetGatewayServiceDetail getGatewayServiceDetail(array $options = [])
  * @method GetGovernanceKubernetesCluster getGovernanceKubernetesCluster(array $options = [])
  * @method GetGovernanceKubernetesClusterList getGovernanceKubernetesClusterList(array $options = [])
  * @method GetImage getImage(array $options = [])
  * @method GetImportFileUrl getImportFileUrl(array $options = [])
+ * @method GetKubernetesSource getKubernetesSource(array $options = [])
  * @method GetMseFeatureSwitch getMseFeatureSwitch(array $options = [])
+ * @method GetMseSource getMseSource(array $options = [])
  * @method GetNacosConfig getNacosConfig(array $options = [])
  * @method GetNacosHistoryConfig getNacosHistoryConfig(array $options = [])
  * @method GetOverview getOverview(array $options = [])
  * @method ImportNacosConfig importNacosConfig(array $options = [])
+ * @method ImportServices importServices(array $options = [])
  * @method ListAlarmContactGroups listAlarmContactGroups(array $options = [])
  * @method ListAlarmHistories listAlarmHistories(array $options = [])
  * @method ListAlarmItems listAlarmItems(array $options = [])
@@ -50,12 +70,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListEurekaInstances listEurekaInstances(array $options = [])
  * @method ListEurekaServices listEurekaServices(array $options = [])
  * @method ListGateway listGateway(array $options = [])
+ * @method ListGatewayDomain listGatewayDomain(array $options = [])
+ * @method ListGatewayService listGatewayService(array $options = [])
+ * @method ListGatewaySlb listGatewaySlb(array $options = [])
  * @method ListListenersByConfig listListenersByConfig(array $options = [])
  * @method ListListenersByIp listListenersByIp(array $options = [])
  * @method ListNacosConfigs listNacosConfigs(array $options = [])
  * @method ListNacosHistoryConfigs listNacosHistoryConfigs(array $options = [])
+ * @method ListServiceSource listServiceSource(array $options = [])
+ * @method ListSSLCert listSSLCert(array $options = [])
  * @method ListZnodeChildren listZnodeChildren(array $options = [])
  * @method ModifyGovernanceKubernetesCluster modifyGovernanceKubernetesCluster(array $options = [])
+ * @method PullServices pullServices(array $options = [])
  * @method QueryBusinessLocations queryBusinessLocations(array $options = [])
  * @method QueryClusterDetail queryClusterDetail(array $options = [])
  * @method QueryClusterDiskSpecification queryClusterDiskSpecification(array $options = [])
@@ -63,22 +89,30 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryConfig queryConfig(array $options = [])
  * @method QueryGatewayRegion queryGatewayRegion(array $options = [])
  * @method QueryGatewayType queryGatewayType(array $options = [])
+ * @method QueryGovernanceKubernetesCluster queryGovernanceKubernetesCluster(array $options = [])
  * @method QueryMonitor queryMonitor(array $options = [])
  * @method QuerySlbSpec querySlbSpec(array $options = [])
  * @method QueryZnodeDetail queryZnodeDetail(array $options = [])
  * @method RestartCluster restartCluster(array $options = [])
  * @method RetryCluster retryCluster(array $options = [])
  * @method ScalingCluster scalingCluster(array $options = [])
+ * @method SelectGatewaySlb selectGatewaySlb(array $options = [])
  * @method UpdateAcl updateAcl(array $options = [])
+ * @method UpdateBlackWhiteList updateBlackWhiteList(array $options = [])
  * @method UpdateCluster updateCluster(array $options = [])
  * @method UpdateConfig updateConfig(array $options = [])
  * @method UpdateEngineNamespace updateEngineNamespace(array $options = [])
+ * @method UpdateGatewayDomain updateGatewayDomain(array $options = [])
  * @method UpdateGatewayName updateGatewayName(array $options = [])
  * @method UpdateGatewayOption updateGatewayOption(array $options = [])
  * @method UpdateGatewayRouteHTTPRewrite updateGatewayRouteHTTPRewrite(array $options = [])
+ * @method UpdateGatewayServiceVersion updateGatewayServiceVersion(array $options = [])
  * @method UpdateImage updateImage(array $options = [])
+ * @method UpdateNacosCluster updateNacosCluster(array $options = [])
  * @method UpdateNacosConfig updateNacosConfig(array $options = [])
  * @method UpdateNacosInstance updateNacosInstance(array $options = [])
+ * @method UpdateNacosService updateNacosService(array $options = [])
+ * @method UpdateSSLCert updateSSLCert(array $options = [])
  * @method UpdateZnode updateZnode(array $options = [])
  * @method UpgradeCluster upgradeCluster(array $options = [])
  */
@@ -96,6 +130,119 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'mse';
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAuthId()
+ * @method $this withAuthId($value)
+ * @method string getDomainId()
+ * @method $this withDomainId($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class AddAuthResource extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getIsWhite()
+ * @method $this withIsWhite($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class AddBlackWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getInternetSlbSpec()
+ * @method $this withInternetSlbSpec($value)
+ * @method string getReplica()
+ * @method $this withReplica($value)
+ * @method string getVSwitchId2()
+ * @method $this withVSwitchId2($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getEnterpriseSecurityGroup()
+ * @method $this withEnterpriseSecurityGroup($value)
+ * @method string getVpc()
+ * @method $this withVpc($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getSlbSpec()
+ * @method $this withSlbSpec($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class AddGateway extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getMustHttps()
+ * @method $this withMustHttps($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class AddGatewayDomain extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getServiceVersion()
+ * @method $this withServiceVersion($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class AddGatewayServiceVersion extends Rpc
+{
+}
+
+/**
+ * @method string getSlbId()
+ * @method $this withSlbId($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class AddGatewaySlb extends Rpc
+{
 }
 
 /**
@@ -117,6 +264,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withDubboMockItems($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getMockType()
  * @method $this withMockType($value)
  * @method string getRegion()
@@ -133,19 +282,32 @@ class AddMockRule extends Rpc
  * @method $this withSource($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getGatewayId()
- * @method $this withGatewayId($value)
  * @method string getAddress()
  * @method $this withAddress($value)
- * @method string getInfo1()
- * @method $this withInfo1($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getInfo2()
- * @method $this withInfo2($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class AddServiceSource extends Rpc
 {
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getDomainId()
+ * @method $this withDomainId($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class AddSSLCert extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -153,6 +315,8 @@ class AddServiceSource extends Rpc
  * @method $this withTargetNamespaceId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getIds()
  * @method $this withIds($value)
  * @method string getOriginNamespaceId()
@@ -179,6 +343,8 @@ class CloneNacosConfig extends Rpc
  * @method $this withInstanceId($value)
  * @method string getContactGroupIds()
  * @method $this withContactGroupIds($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getAlertWay()
  * @method $this withAlertWay($value)
  * @method string getAggregates()
@@ -199,6 +365,8 @@ class CreateAlarmRule extends Rpc
  * @method $this withExtraInfo($value)
  * @method string getAppName()
  * @method $this withAppName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -237,6 +405,8 @@ class CreateApplication extends Rpc
  * @method $this withNetType($value)
  * @method string getMseVersion()
  * @method $this withMseVersion($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -253,26 +423,12 @@ class CreateCluster extends Rpc
  * @method $this withServiceCount($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getDesc()
  * @method $this withDesc($value)
  */
 class CreateEngineNamespace extends Rpc
-{
-}
-
-/**
- * @method string getClusterName()
- * @method $this withClusterName($value)
- * @method string getNameSpaceInfos()
- * @method $this withNameSpaceInfos($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getK8sVersion()
- * @method $this withK8sVersion($value)
- * @method string getPilotStartTime()
- * @method $this withPilotStartTime($value)
- */
-class CreateGovernanceKubernetesCluster extends Rpc
 {
 }
 
@@ -293,6 +449,8 @@ class CreateGovernanceKubernetesCluster extends Rpc
  * @method $this withAppName($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getGroup()
  * @method $this withGroup($value)
  * @method string getDesc()
@@ -303,12 +461,78 @@ class CreateNacosConfig extends Rpc
 }
 
 /**
+ * @method string getMetadata()
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
+ * @method string getEphemeral()
+ * @method $this withEphemeral($value)
+ * @method string getEnabled()
+ * @method $this withEnabled($value)
+ * @method string getNamespaceId()
+ * @method $this withNamespaceId($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getWeight()
+ * @method $this withWeight($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class CreateNacosInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetadata($value)
+    {
+        $this->data['Metadata'] = $value;
+        $this->options['form_params']['Metadata'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEphemeral()
+ * @method $this withEphemeral($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNamespaceId()
+ * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getProtectThreshold()
+ * @method $this withProtectThreshold($value)
+ */
+class CreateNacosService extends Rpc
+{
+}
+
+/**
  * @method string getData()
  * @method $this withData($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getPath()
  * @method $this withPath($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class CreateZnode extends Rpc
 {
@@ -319,9 +543,26 @@ class CreateZnode extends Rpc
  * @method $this withAlarmRuleId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class DeleteAlarmRule extends Rpc
 {
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class DeleteAuthResource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -329,6 +570,8 @@ class DeleteAlarmRule extends Rpc
  * @method $this withClusterId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class DeleteCluster extends Rpc
 {
@@ -339,11 +582,74 @@ class DeleteCluster extends Rpc
  * @method $this withClusterId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getId()
  * @method $this withId($value)
  */
 class DeleteEngineNamespace extends Rpc
 {
+}
+
+/**
+ * @method string getDeleteSlb()
+ * @method $this withDeleteSlb($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class DeleteGateway extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class DeleteGatewayDomain extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getServiceVersion()
+ * @method $this withServiceVersion($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class DeleteGatewayServiceVersion extends Rpc
+{
+}
+
+/**
+ * @method string getDeleteSlb()
+ * @method $this withDeleteSlb($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class DeleteGatewaySlb extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -353,6 +659,8 @@ class DeleteEngineNamespace extends Rpc
  * @method $this withDataId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getBeta()
  * @method $this withBeta($value)
  * @method string getGroup()
@@ -367,6 +675,8 @@ class DeleteNacosConfig extends Rpc
  * @method $this withInstanceId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getIds()
  * @method $this withIds($value)
  */
@@ -381,11 +691,28 @@ class DeleteNacosConfigs extends Rpc
  * @method $this withInstanceId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
 class DeleteNacosService extends Rpc
 {
+}
+
+/**
+ * @method string getSourceId()
+ * @method $this withSourceId($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class DeleteServiceSource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -395,6 +722,8 @@ class DeleteNacosService extends Rpc
  * @method $this withPath($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class DeleteZnode extends Rpc
 {
@@ -409,6 +738,8 @@ class DeleteZnode extends Rpc
  * @method $this withAppName($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getIds()
  * @method $this withIds($value)
  * @method string getGroup()
@@ -419,10 +750,29 @@ class ExportNacosConfig extends Rpc
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class GetBlackWhiteList extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getId()
  * @method $this withId($value)
  */
@@ -433,6 +783,8 @@ class GetEngineNamepace extends Rpc
 /**
  * @method string getGatewayUniqueId()
  * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class GetGateway extends Rpc
 {
@@ -442,6 +794,25 @@ class GetGateway extends Rpc
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class GetGatewayDomainDetail extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getGatewayId()
  * @method $this withGatewayId($value)
  */
@@ -450,8 +821,25 @@ class GetGatewayOption extends Rpc
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class GetGatewayServiceDetail extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class GetGovernanceKubernetesCluster extends Rpc
 {
@@ -466,12 +854,16 @@ class GetGovernanceKubernetesCluster extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class GetGovernanceKubernetesClusterList extends Rpc
 {
 }
 
 /**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getVersionCode()
  * @method $this withVersionCode($value)
  */
@@ -486,13 +878,45 @@ class GetImage extends Rpc
  * @method $this withInstanceId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class GetImportFileUrl extends Rpc
 {
 }
 
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class GetKubernetesSource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class GetMseFeatureSwitch extends Rpc
 {
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class GetMseSource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -502,6 +926,8 @@ class GetMseFeatureSwitch extends Rpc
  * @method $this withDataId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getBeta()
  * @method $this withBeta($value)
  * @method string getGroup()
@@ -520,6 +946,8 @@ class GetNacosConfig extends Rpc
  * @method $this withDataId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getGroup()
  * @method $this withGroup($value)
  */
@@ -530,6 +958,8 @@ class GetNacosHistoryConfig extends Rpc
 /**
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -542,6 +972,8 @@ class GetOverview extends Rpc
  * @method $this withInstanceId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getFileUrl()
  * @method $this withFileUrl($value)
  * @method string getPolicy()
@@ -552,12 +984,30 @@ class ImportNacosConfig extends Rpc
 }
 
 /**
+ * @method string getSourceId()
+ * @method $this withSourceId($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getServiceList()
+ * @method $this withServiceList($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getSourceType()
+ * @method $this withSourceType($value)
+ */
+class ImportServices extends Rpc
+{
+}
+
+/**
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListAlarmContactGroups extends Rpc
 {
@@ -579,6 +1029,8 @@ class ListAlarmContactGroups extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getAlarmName()
  * @method $this withAlarmName($value)
  */
@@ -592,6 +1044,8 @@ class ListAlarmHistories extends Rpc
 /**
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListAlarmItems extends Rpc
 {
@@ -609,6 +1063,8 @@ class ListAlarmItems extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListAlarmRules extends Rpc
 {
@@ -626,12 +1082,16 @@ class ListAlarmRules extends Rpc
  * @method $this withPageNum($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
@@ -651,12 +1111,16 @@ class ListAnsInstances extends Rpc
  * @method $this withPageNum($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNamespaceId()
  * @method $this withNamespaceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
@@ -684,6 +1148,8 @@ class ListAnsServiceClusters extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
@@ -694,6 +1160,10 @@ class ListAnsServices extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class ListClusterConnectionTypes extends Rpc
 {
 }
@@ -707,6 +1177,8 @@ class ListClusterConnectionTypes extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListClusters extends Rpc
 {
@@ -715,6 +1187,10 @@ class ListClusters extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class ListClusterTypes extends Rpc
 {
 }
@@ -722,6 +1198,8 @@ class ListClusterTypes extends Rpc
 /**
  * @method string getClusterType()
  * @method $this withClusterType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListClusterVersions extends Rpc
 {
@@ -736,6 +1214,8 @@ class ListClusterVersions extends Rpc
  * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListEngineNamespaces extends Rpc
 {
@@ -753,6 +1233,8 @@ class ListEngineNamespaces extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getServiceName()
  * @method $this withServiceName($value)
  */
@@ -772,6 +1254,8 @@ class ListEurekaInstances extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListEurekaServices extends Rpc
 {
@@ -781,8 +1265,6 @@ class ListEurekaServices extends Rpc
 }
 
 /**
- * @method string getFilterParams()
- * @method $this withFilterParams($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getOrderItem()
@@ -791,9 +1273,57 @@ class ListEurekaServices extends Rpc
  * @method $this withPageSize($value)
  * @method string getDescSort()
  * @method $this withDescSort($value)
+ * @method string getFilterParams()
+ * @method $this withFilterParams($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListGateway extends Rpc
 {
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ListGatewayDomain extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getOrderItem()
+ * @method $this withOrderItem($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDescSort()
+ * @method $this withDescSort($value)
+ * @method string getFilterParams()
+ * @method $this withFilterParams($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ListGatewayService extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ListGatewaySlb extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -805,6 +1335,8 @@ class ListGateway extends Rpc
  * @method $this withNamespaceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getGroup()
  * @method $this withGroup($value)
  */
@@ -821,6 +1353,8 @@ class ListListenersByConfig extends Rpc
  * @method $this withNamespaceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListListenersByIp extends Rpc
 {
@@ -843,6 +1377,8 @@ class ListListenersByIp extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getGroup()
  * @method $this withGroup($value)
  */
@@ -863,6 +1399,8 @@ class ListNacosConfigs extends Rpc
  * @method $this withRequestPars($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getGroup()
  * @method $this withGroup($value)
  */
@@ -871,10 +1409,38 @@ class ListNacosHistoryConfigs extends Rpc
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ListServiceSource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ListSSLCert extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getPath()
  * @method $this withPath($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListZnodeChildren extends Rpc
 {
@@ -888,11 +1454,34 @@ class ListZnodeChildren extends Rpc
  * @method $this withNamespaceInfos($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ModifyGovernanceKubernetesCluster extends Rpc
 {
 }
 
+/**
+ * @method string getSourceId()
+ * @method $this withSourceId($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getSourceType()
+ * @method $this withSourceType($value)
+ */
+class PullServices extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class QueryBusinessLocations extends Rpc
 {
 
@@ -907,6 +1496,8 @@ class QueryBusinessLocations extends Rpc
  * @method $this withClusterId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class QueryClusterDetail extends Rpc
 {
@@ -915,11 +1506,17 @@ class QueryClusterDetail extends Rpc
 /**
  * @method string getClusterType()
  * @method $this withClusterType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class QueryClusterDiskSpecification extends Rpc
 {
 }
 
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class QueryClusterSpecification extends Rpc
 {
 }
@@ -933,6 +1530,8 @@ class QueryClusterSpecification extends Rpc
  * @method $this withInstanceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class QueryConfig extends Rpc
 {
@@ -941,6 +1540,10 @@ class QueryConfig extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class QueryGatewayRegion extends Rpc
 {
 
@@ -948,7 +1551,30 @@ class QueryGatewayRegion extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class QueryGatewayType extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class QueryGovernanceKubernetesCluster extends Rpc
 {
 
     /** @var string */
@@ -968,6 +1594,8 @@ class QueryGatewayType extends Rpc
  * @method $this withInstanceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getStep()
  * @method $this withStep($value)
  */
@@ -978,6 +1606,10 @@ class QueryMonitor extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class QuerySlbSpec extends Rpc
 {
 
@@ -992,6 +1624,8 @@ class QuerySlbSpec extends Rpc
  * @method $this withPath($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class QueryZnodeDetail extends Rpc
 {
@@ -1009,6 +1643,8 @@ class QueryZnodeDetail extends Rpc
  * @method $this withInstanceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class RestartCluster extends Rpc
 {
@@ -1021,6 +1657,8 @@ class RestartCluster extends Rpc
  * @method $this withInstanceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class RetryCluster extends Rpc
 {
@@ -1039,9 +1677,28 @@ class RetryCluster extends Rpc
  * @method $this withMemoryCapacity($value)
  * @method string getInstanceCount()
  * @method $this withInstanceCount($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ScalingCluster extends Rpc
 {
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class SelectGatewaySlb extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1051,8 +1708,30 @@ class ScalingCluster extends Rpc
  * @method $this withAclEntryList($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class UpdateAcl extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateBlackWhiteList extends Rpc
 {
 }
 
@@ -1065,6 +1744,8 @@ class UpdateAcl extends Rpc
  * @method $this withInstanceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class UpdateCluster extends Rpc
 {
@@ -1076,6 +1757,8 @@ class UpdateCluster extends Rpc
  * @method $this withConfigAuthEnabled($value)
  * @method string getPassWord()
  * @method $this withPassWord($value)
+ * @method string getMinSessionTimeout()
+ * @method $this withMinSessionTimeout($value)
  * @method string getMaxClientCnxns()
  * @method $this withMaxClientCnxns($value)
  * @method string getRequestPars()
@@ -1086,6 +1769,8 @@ class UpdateCluster extends Rpc
  * @method $this withConfigType($value)
  * @method string getAutopurgeSnapRetainCount()
  * @method $this withAutopurgeSnapRetainCount($value)
+ * @method string getMaxSessionTimeout()
+ * @method $this withMaxSessionTimeout($value)
  * @method string getConfigSecretEnabled()
  * @method $this withConfigSecretEnabled($value)
  * @method string getMCPEnabled()
@@ -1100,6 +1785,8 @@ class UpdateCluster extends Rpc
  * @method $this withInstanceId($value)
  * @method string getAutopurgePurgeInterval()
  * @method $this withAutopurgePurgeInterval($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getInitLimit()
  * @method $this withInitLimit($value)
  * @method string getUserName()
@@ -1131,6 +1818,8 @@ class UpdateConfig extends Rpc
  * @method $this withServiceCount($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getDesc()
@@ -1143,8 +1832,28 @@ class UpdateEngineNamespace extends Rpc
 /**
  * @method string getGatewayUniqueId()
  * @method $this withGatewayUniqueId($value)
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getMustHttps()
+ * @method $this withMustHttps($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class UpdateGatewayDomain extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class UpdateGatewayName extends Rpc
 {
@@ -1154,18 +1863,26 @@ class UpdateGatewayName extends Rpc
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
  * @method string getGatewayOption()
  * @method $this withGatewayOption($value)
  * @method string getGatewayId()
  * @method $this withGatewayId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class UpdateGatewayOption extends Rpc
 {
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
  * @method string getHttpRewriteJSON()
  * @method $this withHttpRewriteJSON($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getGatewayId()
@@ -1176,12 +1893,52 @@ class UpdateGatewayRouteHTTPRewrite extends Rpc
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getServiceVersion()
+ * @method $this withServiceVersion($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ */
+class UpdateGatewayServiceVersion extends Rpc
+{
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getVersionCode()
  * @method $this withVersionCode($value)
  */
 class UpdateImage extends Rpc
+{
+}
+
+/**
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
+ * @method string getCheckPort()
+ * @method $this withCheckPort($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNamespaceId()
+ * @method $this withNamespaceId($value)
+ * @method string getHealthChecker()
+ * @method $this withHealthChecker($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getUseInstancePortForCheck()
+ * @method $this withUseInstancePortForCheck($value)
+ */
+class UpdateNacosCluster extends Rpc
 {
 }
 
@@ -1206,6 +1963,8 @@ class UpdateImage extends Rpc
  * @method $this withInstanceId($value)
  * @method string getDataId()
  * @method $this withDataId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getDesc()
  * @method $this withDesc($value)
  * @method string getMd5()
@@ -1219,24 +1978,26 @@ class UpdateNacosConfig extends Rpc
  * @method string getMetadata()
  * @method string getClusterName()
  * @method $this withClusterName($value)
- * @method string getIp()
- * @method $this withIp($value)
  * @method string getEphemeral()
  * @method $this withEphemeral($value)
+ * @method string getEnabled()
+ * @method $this withEnabled($value)
+ * @method string getNamespaceId()
+ * @method $this withNamespaceId($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getIp()
+ * @method $this withIp($value)
  * @method string getWeight()
  * @method $this withWeight($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
- * @method string getEnabled()
- * @method $this withEnabled($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getNamespaceId()
- * @method $this withNamespaceId($value)
  * @method string getPort()
  * @method $this withPort($value)
- * @method string getServiceName()
- * @method $this withServiceName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class UpdateNacosInstance extends Rpc
 {
@@ -1256,6 +2017,43 @@ class UpdateNacosInstance extends Rpc
 }
 
 /**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNamespaceId()
+ * @method $this withNamespaceId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getProtectThreshold()
+ * @method $this withProtectThreshold($value)
+ */
+class UpdateNacosService extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getDomainId()
+ * @method $this withDomainId($value)
+ * @method string getCertIdentifier()
+ * @method $this withCertIdentifier($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class UpdateSSLCert extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getData()
  * @method $this withData($value)
  * @method string getClusterId()
@@ -1264,6 +2062,8 @@ class UpdateNacosInstance extends Rpc
  * @method $this withPath($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class UpdateZnode extends Rpc
 {
@@ -1276,6 +2076,8 @@ class UpdateZnode extends Rpc
  * @method $this withInstanceId($value)
  * @method string getRequestPars()
  * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class UpgradeCluster extends Rpc
 {
