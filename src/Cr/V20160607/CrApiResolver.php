@@ -21,7 +21,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetImageManifest getImageManifest(array $options = [])
  * @method GetNamespace getNamespace(array $options = [])
  * @method GetNamespaceList getNamespaceList(array $options = [])
- * @method GetRegion getRegion(array $options = [])
  * @method GetRegionList getRegionList(array $options = [])
  * @method GetRepo getRepo(array $options = [])
  * @method GetRepoBuildList getRepoBuildList(array $options = [])
@@ -301,28 +300,6 @@ class GetNamespaceList extends Roa
     {
         $this->data['Status'] = $value;
         $this->options['query']['Status'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDomain()
- */
-class GetRegion extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/regions';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomain($value)
-    {
-        $this->data['Domain'] = $value;
-        $this->options['query']['Domain'] = $value;
 
         return $this;
     }

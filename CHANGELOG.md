@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1235 - 2022-1-19
+- Release some feature APIs.
+
+
 ## 1.8.1234 - 2022-1-19
 - ReportOneAgentInfo.
 
