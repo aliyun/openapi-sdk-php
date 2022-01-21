@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1240 - 2022-1-21
+- Supported new features etc.
+
+
 ## 1.8.1239 - 2022-1-21
 - Add Event Rule sql filter.
 

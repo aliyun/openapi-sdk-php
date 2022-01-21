@@ -396,9 +396,25 @@ class EndDialogue extends Rpc
  * @method $this withInstanceId($value)
  * @method string getBeginTimeRightRange()
  * @method $this withBeginTimeRightRange($value)
+ * @method array getOptions()
  */
 class ExportConversationDetails extends Rpc
 {
+
+    /**
+     * @param array $options
+     *
+     * @return $this
+     */
+	public function withOptions(array $options)
+	{
+	    $this->data['Options'] = $options;
+		foreach ($options as $i => $iValue) {
+			$this->options['query']['Options.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
