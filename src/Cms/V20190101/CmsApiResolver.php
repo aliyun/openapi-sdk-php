@@ -165,7 +165,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'cms';
+    public $serviceCode = 'Cms';
 }
 
 /**
@@ -507,11 +507,11 @@ class CreateGroupMonitoringAgentProcess extends Rpc
 			if(isset($depth1Value['Times'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.Times'] = $depth1Value['Times'];
 			}
-			if(isset($depth1Value['NoEffectiveInterval'])){
-				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.NoEffectiveInterval'] = $depth1Value['NoEffectiveInterval'];
-			}
 			if(isset($depth1Value['Webhook'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.Webhook'] = $depth1Value['Webhook'];
+			}
+			if(isset($depth1Value['NoEffectiveInterval'])){
+				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.NoEffectiveInterval'] = $depth1Value['NoEffectiveInterval'];
 			}
 			if(isset($depth1Value['SilenceTime'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.SilenceTime'] = $depth1Value['SilenceTime'];
@@ -519,11 +519,11 @@ class CreateGroupMonitoringAgentProcess extends Rpc
 			if(isset($depth1Value['Threshold'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.Threshold'] = $depth1Value['Threshold'];
 			}
-			if(isset($depth1Value['EffectiveInterval'])){
-				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.EffectiveInterval'] = $depth1Value['EffectiveInterval'];
-			}
 			if(isset($depth1Value['ComparisonOperator'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.ComparisonOperator'] = $depth1Value['ComparisonOperator'];
+			}
+			if(isset($depth1Value['EffectiveInterval'])){
+				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.EffectiveInterval'] = $depth1Value['EffectiveInterval'];
 			}
 			if(isset($depth1Value['EscalationsLevel'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.EscalationsLevel'] = $depth1Value['EscalationsLevel'];
@@ -865,11 +865,11 @@ class CreateMetricRuleTemplate extends Rpc
 	{
 	    $this->data['AlertTemplates'] = $alertTemplates;
 		foreach ($alertTemplates as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Period'])){
-				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Period'] = $depth1Value['Period'];
-			}
 			if(isset($depth1Value['EscalationsWarnThreshold'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Threshold'] = $depth1Value['EscalationsWarnThreshold'];
+			}
+			if(isset($depth1Value['Period'])){
+				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Period'] = $depth1Value['Period'];
 			}
 			if(isset($depth1Value['Webhook'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Webhook'] = $depth1Value['Webhook'];
@@ -895,11 +895,11 @@ class CreateMetricRuleTemplate extends Rpc
 			if(isset($depth1Value['EscalationsInfoComparisonOperator'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Info.ComparisonOperator'] = $depth1Value['EscalationsInfoComparisonOperator'];
 			}
-			if(isset($depth1Value['EscalationsWarnStatistics'])){
-				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Statistics'] = $depth1Value['EscalationsWarnStatistics'];
-			}
 			if(isset($depth1Value['EscalationsInfoThreshold'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Info.Threshold'] = $depth1Value['EscalationsInfoThreshold'];
+			}
+			if(isset($depth1Value['EscalationsWarnStatistics'])){
+				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Statistics'] = $depth1Value['EscalationsWarnStatistics'];
 			}
 			if(isset($depth1Value['Namespace'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Namespace'] = $depth1Value['Namespace'];
@@ -910,14 +910,14 @@ class CreateMetricRuleTemplate extends Rpc
 			if(isset($depth1Value['MetricName'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
 			}
+			if(isset($depth1Value['EscalationsWarnTimes'])){
+				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Times'] = $depth1Value['EscalationsWarnTimes'];
+			}
 			if(isset($depth1Value['Category'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
 			}
 			if(isset($depth1Value['EscalationsCriticalComparisonOperator'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Critical.ComparisonOperator'] = $depth1Value['EscalationsCriticalComparisonOperator'];
-			}
-			if(isset($depth1Value['EscalationsWarnTimes'])){
-				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Times'] = $depth1Value['EscalationsWarnTimes'];
 			}
 			if(isset($depth1Value['EscalationsCriticalThreshold'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Critical.Threshold'] = $depth1Value['EscalationsCriticalThreshold'];
@@ -1005,11 +1005,11 @@ class CreateMonitorGroupInstances extends Rpc
 	{
 	    $this->data['Instances'] = $instances;
 		foreach ($instances as $depth1 => $depth1Value) {
-			if(isset($depth1Value['InstanceId'])){
-				$this->options['query']['Instances.' . ($depth1 + 1) . '.InstanceId'] = $depth1Value['InstanceId'];
-			}
 			if(isset($depth1Value['InstanceName'])){
 				$this->options['query']['Instances.' . ($depth1 + 1) . '.InstanceName'] = $depth1Value['InstanceName'];
+			}
+			if(isset($depth1Value['InstanceId'])){
+				$this->options['query']['Instances.' . ($depth1 + 1) . '.InstanceId'] = $depth1Value['InstanceId'];
 			}
 			if(isset($depth1Value['RegionId'])){
 				$this->options['query']['Instances.' . ($depth1 + 1) . '.RegionId'] = $depth1Value['RegionId'];
@@ -1506,6 +1506,8 @@ class DescribeAlertLogHistogram extends Rpc
  * @method $this withGroupBy($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
  */
 class DescribeAlertLogList extends Rpc
 {
@@ -1648,14 +1650,14 @@ class DescribeEventRuleAttribute extends Rpc
 }
 
 /**
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getNamePrefix()
  * @method $this withNamePrefix($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  */
 class DescribeEventRuleList extends Rpc
 {
@@ -2018,9 +2020,9 @@ class DescribeMonitorGroupNotifyPolicyList extends Rpc
  * @method $this withGroupFounderTagKey($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method array getTag()
  * @method string getGroupFounderTagValue()
  * @method $this withGroupFounderTagValue($value)
+ * @method array getTag()
  * @method string getKeyword()
  * @method $this withKeyword($value)
  * @method string getGroupId()
@@ -2586,11 +2588,11 @@ class ModifyGroupMonitoringAgentProcess extends Rpc
 			if(isset($depth1Value['Times'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.Times'] = $depth1Value['Times'];
 			}
-			if(isset($depth1Value['NoEffectiveInterval'])){
-				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.NoEffectiveInterval'] = $depth1Value['NoEffectiveInterval'];
-			}
 			if(isset($depth1Value['Webhook'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.Webhook'] = $depth1Value['Webhook'];
+			}
+			if(isset($depth1Value['NoEffectiveInterval'])){
+				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.NoEffectiveInterval'] = $depth1Value['NoEffectiveInterval'];
 			}
 			if(isset($depth1Value['SilenceTime'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.SilenceTime'] = $depth1Value['SilenceTime'];
@@ -2598,11 +2600,11 @@ class ModifyGroupMonitoringAgentProcess extends Rpc
 			if(isset($depth1Value['Threshold'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.Threshold'] = $depth1Value['Threshold'];
 			}
-			if(isset($depth1Value['EffectiveInterval'])){
-				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.EffectiveInterval'] = $depth1Value['EffectiveInterval'];
-			}
 			if(isset($depth1Value['ComparisonOperator'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.ComparisonOperator'] = $depth1Value['ComparisonOperator'];
+			}
+			if(isset($depth1Value['EffectiveInterval'])){
+				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.EffectiveInterval'] = $depth1Value['EffectiveInterval'];
 			}
 			if(isset($depth1Value['EscalationsLevel'])){
 				$this->options['query']['AlertConfig.' . ($depth1 + 1) . '.EscalationsLevel'] = $depth1Value['EscalationsLevel'];
@@ -2905,11 +2907,11 @@ class ModifyMetricRuleTemplate extends Rpc
 	{
 	    $this->data['AlertTemplates'] = $alertTemplates;
 		foreach ($alertTemplates as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Period'])){
-				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Period'] = $depth1Value['Period'];
-			}
 			if(isset($depth1Value['EscalationsWarnThreshold'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Threshold'] = $depth1Value['EscalationsWarnThreshold'];
+			}
+			if(isset($depth1Value['Period'])){
+				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Period'] = $depth1Value['Period'];
 			}
 			if(isset($depth1Value['Webhook'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Webhook'] = $depth1Value['Webhook'];
@@ -2935,11 +2937,11 @@ class ModifyMetricRuleTemplate extends Rpc
 			if(isset($depth1Value['EscalationsInfoComparisonOperator'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Info.ComparisonOperator'] = $depth1Value['EscalationsInfoComparisonOperator'];
 			}
-			if(isset($depth1Value['EscalationsWarnStatistics'])){
-				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Statistics'] = $depth1Value['EscalationsWarnStatistics'];
-			}
 			if(isset($depth1Value['EscalationsInfoThreshold'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Info.Threshold'] = $depth1Value['EscalationsInfoThreshold'];
+			}
+			if(isset($depth1Value['EscalationsWarnStatistics'])){
+				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Statistics'] = $depth1Value['EscalationsWarnStatistics'];
 			}
 			if(isset($depth1Value['Namespace'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Namespace'] = $depth1Value['Namespace'];
@@ -2950,14 +2952,14 @@ class ModifyMetricRuleTemplate extends Rpc
 			if(isset($depth1Value['MetricName'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
 			}
+			if(isset($depth1Value['EscalationsWarnTimes'])){
+				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Times'] = $depth1Value['EscalationsWarnTimes'];
+			}
 			if(isset($depth1Value['Category'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
 			}
 			if(isset($depth1Value['EscalationsCriticalComparisonOperator'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Critical.ComparisonOperator'] = $depth1Value['EscalationsCriticalComparisonOperator'];
-			}
-			if(isset($depth1Value['EscalationsWarnTimes'])){
-				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Warn.Times'] = $depth1Value['EscalationsWarnTimes'];
 			}
 			if(isset($depth1Value['EscalationsCriticalThreshold'])){
 				$this->options['query']['AlertTemplates.' . ($depth1 + 1) . '.Escalations.Critical.Threshold'] = $depth1Value['EscalationsCriticalThreshold'];
@@ -3001,11 +3003,11 @@ class ModifyMonitorGroupInstances extends Rpc
 	{
 	    $this->data['Instances'] = $instances;
 		foreach ($instances as $depth1 => $depth1Value) {
-			if(isset($depth1Value['InstanceId'])){
-				$this->options['query']['Instances.' . ($depth1 + 1) . '.InstanceId'] = $depth1Value['InstanceId'];
-			}
 			if(isset($depth1Value['InstanceName'])){
 				$this->options['query']['Instances.' . ($depth1 + 1) . '.InstanceName'] = $depth1Value['InstanceName'];
+			}
+			if(isset($depth1Value['InstanceId'])){
+				$this->options['query']['Instances.' . ($depth1 + 1) . '.InstanceId'] = $depth1Value['InstanceId'];
 			}
 			if(isset($depth1Value['RegionId'])){
 				$this->options['query']['Instances.' . ($depth1 + 1) . '.RegionId'] = $depth1Value['RegionId'];
@@ -3231,11 +3233,11 @@ class PutCustomMetric extends Rpc
 			if(isset($depth1Value['Time'])){
 				$this->options['query']['MetricList.' . ($depth1 + 1) . '.Time'] = $depth1Value['Time'];
 			}
-			if(isset($depth1Value['MetricName'])){
-				$this->options['query']['MetricList.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
-			}
 			if(isset($depth1Value['Type'])){
 				$this->options['query']['MetricList.' . ($depth1 + 1) . '.Type'] = $depth1Value['Type'];
+			}
+			if(isset($depth1Value['MetricName'])){
+				$this->options['query']['MetricList.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
 			}
 			if(isset($depth1Value['Dimensions'])){
 				$this->options['query']['MetricList.' . ($depth1 + 1) . '.Dimensions'] = $depth1Value['Dimensions'];
@@ -3285,19 +3287,19 @@ class PutCustomMetricRule extends Rpc
 }
 
 /**
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getRuleName()
  * @method $this withRuleName($value)
- * @method array getEventPattern()
- * @method string getEventType()
- * @method $this withEventType($value)
  * @method string getSilenceTime()
  * @method $this withSilenceTime($value)
  * @method string getState()
  * @method $this withState($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method array getEventPattern()
+ * @method string getEventType()
+ * @method $this withEventType($value)
  */
 class PutEventRule extends Rpc
 {
@@ -3326,8 +3328,14 @@ class PutEventRule extends Rpc
 			foreach ($depth1Value['NameList'] as $i => $iValue) {
 				$this->options['query']['EventPattern.' . ($depth1 + 1) . '.NameList.' . ($i + 1)] = $iValue;
 			}
+			if(isset($depth1Value['CustomFilters'])){
+				$this->options['query']['EventPattern.' . ($depth1 + 1) . '.CustomFilters'] = $depth1Value['CustomFilters'];
+			}
 			foreach ($depth1Value['EventTypeList'] as $i => $iValue) {
 				$this->options['query']['EventPattern.' . ($depth1 + 1) . '.EventTypeList.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['SQLFilter'])){
+				$this->options['query']['EventPattern.' . ($depth1 + 1) . '.SQLFilter'] = $depth1Value['SQLFilter'];
 			}
 		}
 
@@ -3338,10 +3346,10 @@ class PutEventRule extends Rpc
 /**
  * @method array getWebhookParameters()
  * @method array getContactParameters()
- * @method array getOpenApiParameters()
  * @method array getSlsParameters()
  * @method string getRuleName()
  * @method $this withRuleName($value)
+ * @method array getOpenApiParameters()
  * @method array getMnsParameters()
  * @method array getFcParameters()
  */
@@ -3398,6 +3406,32 @@ class PutEventRuleTargets extends Rpc
     }
 
     /**
+     * @param array $slsParameters
+     *
+     * @return $this
+     */
+	public function withSlsParameters(array $slsParameters)
+	{
+	    $this->data['SlsParameters'] = $slsParameters;
+		foreach ($slsParameters as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Project'])){
+				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.Project'] = $depth1Value['Project'];
+			}
+			if(isset($depth1Value['Id'])){
+				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
+			}
+			if(isset($depth1Value['Region'])){
+				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.Region'] = $depth1Value['Region'];
+			}
+			if(isset($depth1Value['LogStore'])){
+				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.LogStore'] = $depth1Value['LogStore'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
      * @param array $openApiParameters
      *
      * @return $this
@@ -3426,32 +3460,6 @@ class PutEventRuleTargets extends Rpc
 			}
 			if(isset($depth1Value['Version'])){
 				$this->options['query']['OpenApiParameters.' . ($depth1 + 1) . '.Version'] = $depth1Value['Version'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $slsParameters
-     *
-     * @return $this
-     */
-	public function withSlsParameters(array $slsParameters)
-	{
-	    $this->data['SlsParameters'] = $slsParameters;
-		foreach ($slsParameters as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Project'])){
-				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.Project'] = $depth1Value['Project'];
-			}
-			if(isset($depth1Value['Id'])){
-				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
-			}
-			if(isset($depth1Value['Region'])){
-				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.Region'] = $depth1Value['Region'];
-			}
-			if(isset($depth1Value['LogStore'])){
-				$this->options['query']['SlsParameters.' . ($depth1 + 1) . '.LogStore'] = $depth1Value['LogStore'];
 			}
 		}
 
@@ -3765,13 +3773,43 @@ class PutGroupMetricRule extends Rpc
 }
 
 /**
- * @method string getMetricList()
- * @method $this withMetricList($value)
+ * @method array getMetricList()
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
 class PutHybridMonitorMetricData extends Rpc
 {
+
+    /**
+     * @param array $metricList
+     *
+     * @return $this
+     */
+	public function withMetricList(array $metricList)
+	{
+	    $this->data['MetricList'] = $metricList;
+		foreach ($metricList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['MetricList.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['MetricList.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			foreach ($depth1Value['Labels'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Value'])){
+					$this->options['query']['MetricList.' . ($depth1 + 1) . '.Labels.' . ($depth2 + 1) . '.Value'] = $depth2Value['Value'];
+				}
+				if(isset($depth2Value['Key'])){
+					$this->options['query']['MetricList.' . ($depth1 + 1) . '.Labels.' . ($depth2 + 1) . '.Key'] = $depth2Value['Key'];
+				}
+			}
+			if(isset($depth1Value['TS'])){
+				$this->options['query']['MetricList.' . ($depth1 + 1) . '.TS'] = $depth1Value['TS'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -3982,8 +4020,7 @@ class PutMonitoringConfig extends Rpc
  * @method $this withGroupId($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
- * @method string getLabels()
- * @method $this withLabels($value)
+ * @method array getLabels()
  * @method string getInterval()
  * @method $this withInterval($value)
  * @method string getRuleId()
@@ -4062,6 +4099,26 @@ class PutResourceMetricRule extends Rpc
         $this->options['query']['Escalations.Critical.Statistics'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $labels
+     *
+     * @return $this
+     */
+	public function withLabels(array $labels)
+	{
+	    $this->data['Labels'] = $labels;
+		foreach ($labels as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Labels.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Labels.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
     }
 
     /**
