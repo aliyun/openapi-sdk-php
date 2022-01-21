@@ -104,8 +104,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListWorkFlowNodes listWorkFlowNodes(array $options = [])
  * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
  * @method ModifyDataCorrectExecSQL modifyDataCorrectExecSQL(array $options = [])
+ * @method PauseDataCorrectSQLJob pauseDataCorrectSQLJob(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  * @method RegisterUser registerUser(array $options = [])
+ * @method RestartDataCorrectSQLJob restartDataCorrectSQLJob(array $options = [])
  * @method RetryDataCorrectPreCheck retryDataCorrectPreCheck(array $options = [])
  * @method RevokeUserPermission revokeUserPermission(array $options = [])
  * @method SearchDatabase searchDatabase(array $options = [])
@@ -1505,6 +1507,20 @@ class ModifyDataCorrectExecSQL extends Rpc
 }
 
 /**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ */
+class PauseDataCorrectSQLJob extends Rpc
+{
+}
+
+/**
  * @method string getEcsRegion()
  * @method $this withEcsRegion($value)
  * @method string getDdlOnline()
@@ -1567,6 +1583,20 @@ class RegisterInstance extends Rpc
  * @method $this withUid($value)
  */
 class RegisterUser extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ */
+class RestartDataCorrectSQLJob extends Rpc
 {
 }
 
