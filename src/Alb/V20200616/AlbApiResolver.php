@@ -7,8 +7,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddEntriesToAcl addEntriesToAcl(array $options = [])
  * @method AddServersToServerGroup addServersToServerGroup(array $options = [])
+ * @method ApplyHealthCheckTemplateToServerGroup applyHealthCheckTemplateToServerGroup(array $options = [])
  * @method AssociateAclsWithListener associateAclsWithListener(array $options = [])
  * @method AssociateAdditionalCertificatesWithListener associateAdditionalCertificatesWithListener(array $options = [])
+ * @method AttachCommonBandwidthPackageToLoadBalancer attachCommonBandwidthPackageToLoadBalancer(array $options = [])
  * @method CreateAcl createAcl(array $options = [])
  * @method CreateHealthCheckTemplate createHealthCheckTemplate(array $options = [])
  * @method CreateListener createListener(array $options = [])
@@ -27,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteServerGroup deleteServerGroup(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
+ * @method DetachCommonBandwidthPackageFromLoadBalancer detachCommonBandwidthPackageFromLoadBalancer(array $options = [])
  * @method DisableDeletionProtection disableDeletionProtection(array $options = [])
  * @method DisableLoadBalancerAccessLog disableLoadBalancerAccessLog(array $options = [])
  * @method DissociateAclsFromListener dissociateAclsFromListener(array $options = [])
@@ -35,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableLoadBalancerAccessLog enableLoadBalancerAccessLog(array $options = [])
  * @method GetHealthCheckTemplateAttribute getHealthCheckTemplateAttribute(array $options = [])
  * @method GetListenerAttribute getListenerAttribute(array $options = [])
+ * @method GetListenerHealthStatus getListenerHealthStatus(array $options = [])
  * @method GetLoadBalancerAttribute getLoadBalancerAttribute(array $options = [])
  * @method ListAclEntries listAclEntries(array $options = [])
  * @method ListAclRelations listAclRelations(array $options = [])
@@ -65,8 +69,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateHealthCheckTemplateAttribute updateHealthCheckTemplateAttribute(array $options = [])
  * @method UpdateListenerAttribute updateListenerAttribute(array $options = [])
  * @method UpdateListenerLogConfig updateListenerLogConfig(array $options = [])
+ * @method UpdateLoadBalancerAddressTypeConfig updateLoadBalancerAddressTypeConfig(array $options = [])
  * @method UpdateLoadBalancerAttribute updateLoadBalancerAttribute(array $options = [])
  * @method UpdateLoadBalancerEdition updateLoadBalancerEdition(array $options = [])
+ * @method UpdateLoadBalancerZones updateLoadBalancerZones(array $options = [])
  * @method UpdateRuleAttribute updateRuleAttribute(array $options = [])
  * @method UpdateRulesAttribute updateRulesAttribute(array $options = [])
  * @method UpdateSecurityPolicyAttribute updateSecurityPolicyAttribute(array $options = [])
@@ -123,6 +129,20 @@ class AddServersToServerGroup extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getServerGroupId()
+ * @method $this withServerGroupId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getHealthCheckTemplateId()
+ * @method $this withHealthCheckTemplateId($value)
+ */
+class ApplyHealthCheckTemplateToServerGroup extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getAclIds()
  * @method $this withAclIds($value)
  * @method string getAclType()
@@ -147,6 +167,20 @@ class AssociateAclsWithListener extends Rpc
  * @method $this withCertificates($value)
  */
 class AssociateAdditionalCertificatesWithListener extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getBandwidthPackageId()
+ * @method $this withBandwidthPackageId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
+ */
+class AttachCommonBandwidthPackageToLoadBalancer extends Rpc
 {
 }
 
@@ -253,6 +287,8 @@ class CreateListener extends Rpc
  * @method $this withModificationProtectionConfig($value)
  * @method string getLoadBalancerBillingConfig()
  * @method $this withLoadBalancerBillingConfig($value)
+ * @method string getAddressIpVersion()
+ * @method $this withAddressIpVersion($value)
  * @method string getDeletionProtectionEnabled()
  * @method $this withDeletionProtectionEnabled($value)
  * @method string getResourceGroupId()
@@ -341,14 +377,22 @@ class CreateSecurityPolicy extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getProtocol()
  * @method $this withProtocol($value)
+ * @method string getUpstreamKeepaliveEnabled()
+ * @method $this withUpstreamKeepaliveEnabled($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
  * @method string getStickySessionConfig()
  * @method $this withStickySessionConfig($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
+ * @method string getIpv6Enabled()
+ * @method $this withIpv6Enabled($value)
  * @method string getServerGroupType()
  * @method $this withServerGroupType($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
+ * @method string getUchConfig()
+ * @method $this withUchConfig($value)
  */
 class CreateServerGroup extends Rpc
 {
@@ -479,6 +523,20 @@ class DescribeZones extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getBandwidthPackageId()
+ * @method $this withBandwidthPackageId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
+ */
+class DetachCommonBandwidthPackageFromLoadBalancer extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getDryRun()
@@ -569,6 +627,20 @@ class GetHealthCheckTemplateAttribute extends Rpc
  * @method $this withListenerId($value)
  */
 class GetListenerAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getIncludeRule()
+ * @method $this withIncludeRule($value)
+ * @method string getListenerId()
+ * @method $this withListenerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class GetListenerHealthStatus extends Rpc
 {
 }
 
@@ -691,6 +763,10 @@ class ListListeners extends Rpc
  * @method $this withLoadBalancerNames($value)
  * @method string getLoadBalancerIds()
  * @method $this withLoadBalancerIds($value)
+ * @method string getLoadBalancerEditions()
+ * @method $this withLoadBalancerEditions($value)
+ * @method string getAddressIpVersion()
+ * @method $this withAddressIpVersion($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getNextToken()
@@ -713,6 +789,8 @@ class ListListeners extends Rpc
  * @method $this withMaxResults($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getIpv6AddressType()
+ * @method $this withIpv6AddressType($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  */
@@ -1075,6 +1153,22 @@ class UpdateListenerLogConfig extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getAddressType()
+ * @method $this withAddressType($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getZoneMappings()
+ * @method $this withZoneMappings($value)
+ * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
+ */
+class UpdateLoadBalancerAddressTypeConfig extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getModificationProtectionConfig()
  * @method $this withModificationProtectionConfig($value)
  * @method string getLoadBalancerName()
@@ -1099,6 +1193,20 @@ class UpdateLoadBalancerAttribute extends Rpc
  * @method $this withLoadBalancerId($value)
  */
 class UpdateLoadBalancerEdition extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getZoneMappings()
+ * @method $this withZoneMappings($value)
+ * @method string getLoadBalancerId()
+ * @method $this withLoadBalancerId($value)
+ */
+class UpdateLoadBalancerZones extends Rpc
 {
 }
 
@@ -1163,10 +1271,16 @@ class UpdateSecurityPolicyAttribute extends Rpc
  * @method $this withScheduler($value)
  * @method string getServerGroupId()
  * @method $this withServerGroupId($value)
+ * @method string getUpstreamKeepaliveEnabled()
+ * @method $this withUpstreamKeepaliveEnabled($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
  * @method string getStickySessionConfig()
  * @method $this withStickySessionConfig($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
+ * @method string getUchConfig()
+ * @method $this withUchConfig($value)
  */
 class UpdateServerGroupAttribute extends Rpc
 {

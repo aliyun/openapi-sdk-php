@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1244 - 2022-1-25
+- Support Latest APIs.
+
+
 ## 1.8.1243 - 2022-1-25
 - Add APIs, include, ListSharedReports, ListFavoriteReports, ListRecentViewReports, CreateTicket, QueryTicketInfo, UpdateTicketNum, DelayTicketExpireTime, DelayTicketExpireTime.
 
