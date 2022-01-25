@@ -30,7 +30,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectFace detectFace(array $options = [])
  * @method DetectIPCPedestrian detectIPCPedestrian(array $options = [])
  * @method DetectLivingFace detectLivingFace(array $options = [])
- * @method DetectMask detectMask(array $options = [])
  * @method DetectPedestrian detectPedestrian(array $options = [])
  * @method DetectPedestrianIntrusion detectPedestrianIntrusion(array $options = [])
  * @method DetectVideoLivingFace detectVideoLivingFace(array $options = [])
@@ -1090,9 +1089,15 @@ class DetectChefCap extends Rpc
 
 /**
  * @method string getMaxFaceNumber()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getLandmark()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageType()
  * @method string getPose()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getQuality()
  * @method string getImageURL()
  */
@@ -1269,7 +1274,13 @@ class DetectIPCPedestrian extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method array getTasks()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class DetectLivingFace extends Rpc
 {
@@ -1292,26 +1303,6 @@ class DetectLivingFace extends Rpc
 		}
 
 		return $this;
-    }
-}
-
-/**
- * @method string getImageURL()
- */
-class DetectMask extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
     }
 }
 
@@ -1424,7 +1415,13 @@ class EnhanceFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageData()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class ExtractFingerPrint extends Rpc

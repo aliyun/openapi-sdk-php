@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1241 - 2022-1-25
+- Update DetectFace.
+
+
 ## 1.8.1240 - 2022-1-21
 - Supported new features etc.
 
