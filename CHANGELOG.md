@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1246 - 2022-1-25
+- Create Lindorm Open api.
+
+
 ## 1.8.1245 - 2022-1-25
 - Supported new features for outbound.
 
