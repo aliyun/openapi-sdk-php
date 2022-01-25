@@ -82,9 +82,9 @@ class BatchDeleteJobs extends Rpc
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method array getJobIdList()
  * @method string getNamespace()
  * @method $this withNamespace($value)
- * @method array getJobIdList()
  */
 class BatchDisableJobs extends Rpc
 {
@@ -113,9 +113,9 @@ class BatchDisableJobs extends Rpc
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method array getJobIdList()
  * @method string getNamespace()
  * @method $this withNamespace($value)
- * @method array getJobIdList()
  */
 class BatchEnableJobs extends Rpc
 {
@@ -183,6 +183,7 @@ class CreateAppGroup extends Rpc
  * @method string getGroupId()
  * @method string getTaskMaxAttempt()
  * @method string getMaxAttempt()
+ * @method string getMissWorkerEnable()
  * @method string getDispatcherSize()
  * @method string getJobType()
  * @method string getTaskAttemptInterval()
@@ -417,6 +418,19 @@ class CreateJob extends Rpc
      *
      * @return $this
      */
+    public function withMissWorkerEnable($value)
+    {
+        $this->data['MissWorkerEnable'] = $value;
+        $this->options['form_params']['MissWorkerEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withDispatcherSize($value)
     {
         $this->data['DispatcherSize'] = $value;
@@ -525,8 +539,14 @@ class CreateJob extends Rpc
 	{
 	    $this->data['ContactInfo'] = $contactInfo;
 		foreach ($contactInfo as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Ding'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.Ding'] = $depth1Value['Ding'];
+			}
 			if(isset($depth1Value['UserPhone'])){
 				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserPhone'] = $depth1Value['UserPhone'];
+			}
+			if(isset($depth1Value['UserMail'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserMail'] = $depth1Value['UserMail'];
 			}
 			if(isset($depth1Value['UserName'])){
 				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];
@@ -663,12 +683,12 @@ class DesignateWorkers extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
@@ -694,12 +714,12 @@ class DisableWorkflow extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
@@ -768,12 +788,12 @@ class ExecuteWorkflow extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
@@ -782,12 +802,12 @@ class GetJobInfo extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  * @method string getJobInstanceId()
@@ -801,12 +821,12 @@ class GetJobInstance extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
@@ -896,10 +916,10 @@ class ListNamespaces extends Rpc
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getNamespace()
- * @method $this withNamespace($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
  */
 class RevokePermission extends Rpc
 {
@@ -909,14 +929,14 @@ class RevokePermission extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
@@ -945,6 +965,7 @@ class StopInstance extends Rpc
  * @method string getGroupId()
  * @method string getTaskMaxAttempt()
  * @method string getMaxAttempt()
+ * @method string getMissWorkerEnable()
  * @method string getDispatcherSize()
  * @method string getTaskAttemptInterval()
  * @method string getExecuteMode()
@@ -1191,6 +1212,19 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
+    public function withMissWorkerEnable($value)
+    {
+        $this->data['MissWorkerEnable'] = $value;
+        $this->options['form_params']['MissWorkerEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withDispatcherSize($value)
     {
         $this->data['DispatcherSize'] = $value;
@@ -1286,8 +1320,14 @@ class UpdateJob extends Rpc
 	{
 	    $this->data['ContactInfo'] = $contactInfo;
 		foreach ($contactInfo as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Ding'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.Ding'] = $depth1Value['Ding'];
+			}
 			if(isset($depth1Value['UserPhone'])){
 				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserPhone'] = $depth1Value['UserPhone'];
+			}
+			if(isset($depth1Value['UserMail'])){
+				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserMail'] = $depth1Value['UserMail'];
 			}
 			if(isset($depth1Value['UserName'])){
 				$this->options['form_params']['ContactInfo.' . ($depth1 + 1) . '.UserName'] = $depth1Value['UserName'];

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1242 - 2022-1-25
+- Supported Get Worker List.
+- Execute Job Support Designate Machine.
+- Job Interface Add Config.
+
+
 ## 1.8.1241 - 2022-1-25
 - Update DetectFace.
 
