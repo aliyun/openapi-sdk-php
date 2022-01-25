@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1243 - 2022-1-25
+- Add APIs, include, ListSharedReports, ListFavoriteReports, ListRecentViewReports, CreateTicket, QueryTicketInfo, UpdateTicketNum, DelayTicketExpireTime, DelayTicketExpireTime.
+
+
 ## 1.8.1242 - 2022-1-25
 - Supported Get Worker List.
 - Execute Job Support Designate Machine.

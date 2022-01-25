@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelReportShare cancelReportShare(array $options = [])
  * @method QueryShareList queryShareList(array $options = [])
  * @method QuerySharesToUserList querySharesToUserList(array $options = [])
+ * @method ResultCallback resultCallback(array $options = [])
  */
 class QuickbiPublicApiResolver extends ApiResolver
 {
@@ -88,5 +89,21 @@ class QueryShareList extends Rpc
  * @method $this withUserId($value)
  */
 class QuerySharesToUserList extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getHandleReason()
+ * @method $this withHandleReason($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ResultCallback extends Rpc
 {
 }
