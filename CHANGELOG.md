@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1245 - 2022-1-25
+- Supported new features for outbound.
+
+
 ## 1.8.1244 - 2022-1-25
 - Support Latest APIs.
 
