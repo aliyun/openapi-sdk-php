@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1248 - 2022-1-26
+- CreateContact API Add ContactGroupName.
+
+
 ## 1.8.1247 - 2022-1-26
 - Supported new features for outbound.
 

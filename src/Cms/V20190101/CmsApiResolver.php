@@ -440,6 +440,9 @@ class CreateGroupMetricRules extends Rpc
 			if(isset($depth1Value['Period'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Period'] = $depth1Value['Period'];
 			}
+			if(isset($depth1Value['ContactGroups'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.ContactGroups'] = $depth1Value['ContactGroups'];
+			}
 			if(isset($depth1Value['EscalationsCriticalStatistics'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Critical.Statistics'] = $depth1Value['EscalationsCriticalStatistics'];
 			}
@@ -1858,6 +1861,8 @@ class DescribeMetricRuleCount extends Rpc
  * @method $this withMetricName($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getGroupBy()
+ * @method $this withGroupBy($value)
  * @method string getRuleIds()
  * @method $this withRuleIds($value)
  * @method string getNamespace()
