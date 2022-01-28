@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1249 - 2022-1-28
+- Support SIP phone management.
+
+
 ## 1.8.1248 - 2022-1-26
 - CreateContact API Add ContactGroupName.
 

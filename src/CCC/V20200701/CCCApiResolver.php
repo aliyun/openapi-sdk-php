@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSkillGroup deleteSkillGroup(array $options = [])
  * @method GetCallDetailRecord getCallDetailRecord(array $options = [])
  * @method GetCampaign getCampaign(array $options = [])
+ * @method GetCaseFileUploadUrl getCaseFileUploadUrl(array $options = [])
  * @method GetHistoricalCallerReport getHistoricalCallerReport(array $options = [])
  * @method GetHistoricalInstanceReport getHistoricalInstanceReport(array $options = [])
  * @method GetInstance getInstance(array $options = [])
@@ -93,6 +94,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PollUserStatus pollUserStatus(array $options = [])
  * @method ReadyForService readyForService(array $options = [])
  * @method RegisterDevice registerDevice(array $options = [])
+ * @method RegisterDevices registerDevices(array $options = [])
  * @method ReleaseCall releaseCall(array $options = [])
  * @method RemovePersonalNumbersFromUser removePersonalNumbersFromUser(array $options = [])
  * @method RemovePhoneNumberFromSkillGroups removePhoneNumberFromSkillGroups(array $options = [])
@@ -452,10 +454,10 @@ class DeleteSkillGroup extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getContactId()
  * @method $this withContactId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class GetCallDetailRecord extends Rpc
 {
@@ -468,6 +470,16 @@ class GetCallDetailRecord extends Rpc
  * @method $this withCampaignId($value)
  */
 class GetCampaign extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ */
+class GetCaseFileUploadUrl extends Rpc
 {
 }
 
@@ -1228,10 +1240,10 @@ class ListRoles extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getContactIdList()
  * @method $this withContactIdList($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListSipCallRecords extends Rpc
 {
@@ -1518,6 +1530,20 @@ class ReadyForService extends Rpc
  * @method $this withInstanceId($value)
  */
 class RegisterDevice extends Rpc
+{
+}
+
+/**
+ * @method string getUserIdListJson()
+ * @method $this withUserIdListJson($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class RegisterDevices extends Rpc
 {
 }
 
