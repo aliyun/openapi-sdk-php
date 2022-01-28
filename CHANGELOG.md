@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1251 - 2022-1-28
+- Support cloud disk.
+
+
 ## 1.8.1250 - 2022-1-28
 - Update by SDK platform.
 
