@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1250 - 2022-1-28
+- Update by SDK platform.
+
+
 ## 1.8.1249 - 2022-1-28
 - Support SIP phone management.
 

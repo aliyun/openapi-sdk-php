@@ -36,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBInstanceMonitor describeDBInstanceMonitor(array $options = [])
  * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
  * @method DescribeDBInstances describeDBInstances(array $options = [])
+ * @method DescribeDBInstancesOverview describeDBInstancesOverview(array $options = [])
  * @method DescribeDBInstanceSSL describeDBInstanceSSL(array $options = [])
  * @method DescribeDBInstanceTDEInfo describeDBInstanceTDEInfo(array $options = [])
  * @method DescribeDedicatedClusterInstanceList describeDedicatedClusterInstanceList(array $options = [])
@@ -450,6 +451,8 @@ class CreateServerlessDBInstance extends Rpc
  * @method array getReplicaSet()
  * @method string getStorageEngine()
  * @method $this withStorageEngine($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getEngine()
@@ -1054,6 +1057,44 @@ class DescribeDBInstances extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNetworkType()
+ * @method $this withNetworkType($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getInstanceStatus()
+ * @method $this withInstanceStatus($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
+ */
+class DescribeDBInstancesOverview extends Rpc
+{
 }
 
 /**
@@ -1774,6 +1815,8 @@ class ModifyAuditLogFilter extends Rpc
  * @method $this withStoragePeriod($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getAuditLogSwitchSource()
+ * @method $this withAuditLogSwitchSource($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getAuditStatus()
@@ -1784,6 +1827,8 @@ class ModifyAuditLogFilter extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getServiceType()
+ * @method $this withServiceType($value)
  */
 class ModifyAuditPolicy extends Rpc
 {
