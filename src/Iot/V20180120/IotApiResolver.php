@@ -78,6 +78,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateRuleAction createRuleAction(array $options = [])
  * @method CreateRulengDistributeJob createRulengDistributeJob(array $options = [])
  * @method CreateSceneRule createSceneRule(array $options = [])
+ * @method CreateSoundCode createSoundCode(array $options = [])
  * @method CreateSpeech createSpeech(array $options = [])
  * @method CreateStudioAppDomainOpen createStudioAppDomainOpen(array $options = [])
  * @method CreateSubscribeRelation createSubscribeRelation(array $options = [])
@@ -108,6 +109,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRule deleteRule(array $options = [])
  * @method DeleteRuleAction deleteRuleAction(array $options = [])
  * @method DeleteSceneRule deleteSceneRule(array $options = [])
+ * @method DeleteSoundCode deleteSoundCode(array $options = [])
  * @method DeleteSpeech deleteSpeech(array $options = [])
  * @method DeleteStudioAppDomainOpen deleteStudioAppDomainOpen(array $options = [])
  * @method DeleteSubscribeRelation deleteSubscribeRelation(array $options = [])
@@ -139,6 +141,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRule getRule(array $options = [])
  * @method GetRuleAction getRuleAction(array $options = [])
  * @method GetSceneRule getSceneRule(array $options = [])
+ * @method GetSoundCodeAudio getSoundCodeAudio(array $options = [])
  * @method GetSpeechDeviceDetail getSpeechDeviceDetail(array $options = [])
  * @method GetSpeechVoice getSpeechVoice(array $options = [])
  * @method GetStudioAppTokenOpen getStudioAppTokenOpen(array $options = [])
@@ -167,7 +170,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListProductTags listProductTags(array $options = [])
  * @method ListRule listRule(array $options = [])
  * @method ListRuleActions listRuleActions(array $options = [])
- * @method ListSourceReplica listSourceReplica(array $options = [])
  * @method ListTask listTask(array $options = [])
  * @method ListTaskByPage listTaskByPage(array $options = [])
  * @method ListThingModelVersion listThingModelVersion(array $options = [])
@@ -180,7 +182,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PublishStudioApp publishStudioApp(array $options = [])
  * @method PublishThingModel publishThingModel(array $options = [])
  * @method PushSpeech pushSpeech(array $options = [])
- * @method QueryAppDeviceList queryAppDeviceList(array $options = [])
  * @method QueryBatchRegisterDeviceStatus queryBatchRegisterDeviceStatus(array $options = [])
  * @method QueryCertUrlByApplyId queryCertUrlByApplyId(array $options = [])
  * @method QueryClientIds queryClientIds(array $options = [])
@@ -244,6 +245,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryProductTopic queryProductTopic(array $options = [])
  * @method QuerySceneRule querySceneRule(array $options = [])
  * @method QuerySolutionDeviceGroupPage querySolutionDeviceGroupPage(array $options = [])
+ * @method QuerySoundCodeList querySoundCodeList(array $options = [])
  * @method QuerySpeech querySpeech(array $options = [])
  * @method QuerySpeechDevice querySpeechDevice(array $options = [])
  * @method QuerySpeechList querySpeechList(array $options = [])
@@ -285,6 +287,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetStudioProjectCooperation setStudioProjectCooperation(array $options = [])
  * @method SetupStudioAppAuthModeOpen setupStudioAppAuthModeOpen(array $options = [])
  * @method SpeechByCombination speechByCombination(array $options = [])
+ * @method SpeechBySynthesis speechBySynthesis(array $options = [])
+ * @method StartAIBoxForceSync startAIBoxForceSync(array $options = [])
  * @method StartRule startRule(array $options = [])
  * @method StopRule stopRule(array $options = [])
  * @method SubscribeTopic subscribeTopic(array $options = [])
@@ -332,9 +336,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'iot';
 }
 
 /**
@@ -3745,6 +3746,8 @@ class CreateLoRaNodesTask extends Rpc
 /**
  * @method string getDynamicMode()
  * @method $this withDynamicMode($value)
+ * @method string getMultiModuleMode()
+ * @method $this withMultiModuleMode($value)
  * @method string getRetryCount()
  * @method $this withRetryCount($value)
  * @method string getTimeoutInMinutes()
@@ -3978,6 +3981,8 @@ class CreateOTAModule extends Rpc
 }
 
 /**
+ * @method string getMultiModuleMode()
+ * @method $this withMultiModuleMode($value)
  * @method string getRetryCount()
  * @method $this withRetryCount($value)
  * @method string getTimeoutInMinutes()
@@ -4109,6 +4114,8 @@ class CreateOTAStaticUpgradeJob extends Rpc
  * @method $this withNeedPush($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method string getDownloadProtocol()
+ * @method $this withDownloadProtocol($value)
  * @method array getTag()
  * @method string getFirmwareId()
  * @method $this withFirmwareId($value)
@@ -4593,12 +4600,90 @@ class CreateSceneRule extends Rpc
 }
 
 /**
+ * @method string getDuration()
+ * @method string getIotInstanceId()
+ * @method string getSoundCodeContent()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class CreateSoundCode extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDuration($value)
+    {
+        $this->data['Duration'] = $value;
+        $this->options['form_params']['Duration'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSoundCodeContent($value)
+    {
+        $this->data['SoundCodeContent'] = $value;
+        $this->options['form_params']['SoundCodeContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getVoice()
  * @method string getProjectCode()
  * @method string getAudioFormat()
  * @method string getIotInstanceId()
  * @method string getText()
+ * @method string getSoundCodeConfig()
  * @method string getSpeechType()
+ * @method string getEnableSoundCode()
  * @method string getVolume()
  * @method string getBizCode()
  * @method string getApiProduct()
@@ -4678,10 +4763,36 @@ class CreateSpeech extends Rpc
      *
      * @return $this
      */
+    public function withSoundCodeConfig($value)
+    {
+        $this->data['SoundCodeConfig'] = $value;
+        $this->options['form_params']['SoundCodeConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withSpeechType($value)
     {
         $this->data['SpeechType'] = $value;
         $this->options['form_params']['SpeechType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableSoundCode($value)
+    {
+        $this->data['EnableSoundCode'] = $value;
+        $this->options['form_params']['EnableSoundCode'] = $value;
 
         return $this;
     }
@@ -6077,6 +6188,68 @@ class DeleteRuleAction extends Rpc
  */
 class DeleteSceneRule extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSoundCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteSoundCode extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSoundCode($value)
+    {
+        $this->data['SoundCode'] = $value;
+        $this->options['form_params']['SoundCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -7514,6 +7687,70 @@ class GetSceneRule extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method array getSoundCodeList()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class GetSoundCodeAudio extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $soundCodeList
+     *
+     * @return $this
+     */
+	public function withSoundCodeList(array $soundCodeList)
+	{
+	    $this->data['SoundCodeList'] = $soundCodeList;
+		foreach ($soundCodeList as $i => $iValue) {
+			$this->options['form_params']['SoundCodeList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotId()
  * @method string getIotInstanceId()
  * @method string getApiProduct()
@@ -8247,6 +8484,10 @@ class ListAnalyticsData extends Rpc
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getJobType()
+ * @method $this withJobType($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
  * @method string getTargetUid()
@@ -8946,76 +9187,6 @@ class ListRuleActions extends Rpc
 }
 
 /**
- * @method string getIotInstanceId()
- * @method string getContext()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getSourceType()
- * @method $this withSourceType($value)
- * @method string getPageNo()
- * @method $this withPageNo($value)
- * @method string getLpInstanceId()
- * @method $this withLpInstanceId($value)
- * @method string getApiProduct()
- * @method string getApiRevision()
- */
-class ListSourceReplica extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIotInstanceId($value)
-    {
-        $this->data['IotInstanceId'] = $value;
-        $this->options['form_params']['IotInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withContext($value)
-    {
-        $this->data['Context'] = $value;
-        $this->options['form_params']['Context'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiProduct($value)
-    {
-        $this->data['ApiProduct'] = $value;
-        $this->options['form_params']['ApiProduct'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiRevision($value)
-    {
-        $this->data['ApiRevision'] = $value;
-        $this->options['form_params']['ApiRevision'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getNextToken()
@@ -9242,10 +9413,10 @@ class OpenIotService extends Rpc
 }
 
 /**
- * @method string getProjectCode()
  * @method string getTemplateBizCode()
  * @method string getIotId()
  * @method string getIotInstanceId()
+ * @method string getHistoryPrintTopic()
  * @method string getProductKey()
  * @method string getParamsJsonString()
  * @method string getApiProduct()
@@ -9254,19 +9425,6 @@ class OpenIotService extends Rpc
  */
 class PrintByTemplate extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectCode($value)
-    {
-        $this->data['ProjectCode'] = $value;
-        $this->options['form_params']['ProjectCode'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -9303,6 +9461,19 @@ class PrintByTemplate extends Rpc
     {
         $this->data['IotInstanceId'] = $value;
         $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHistoryPrintTopic($value)
+    {
+        $this->data['HistoryPrintTopic'] = $value;
+        $this->options['form_params']['HistoryPrintTopic'] = $value;
 
         return $this;
     }
@@ -9753,101 +9924,6 @@ class PushSpeech extends Rpc
     {
         $this->data['DeviceName'] = $value;
         $this->options['form_params']['DeviceName'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method array getTagList()
- * @method array getProductKeyList()
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method array getCategoryKeyList()
- * @method string getApiProduct()
- * @method string getApiRevision()
- * @method string getAppKey()
- * @method $this withAppKey($value)
- */
-class QueryAppDeviceList extends Rpc
-{
-
-    /**
-     * @param array $tagList
-     *
-     * @return $this
-     */
-	public function withTagList(array $tagList)
-	{
-	    $this->data['TagList'] = $tagList;
-		foreach ($tagList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['TagName'])){
-				$this->options['query']['TagList.' . ($depth1 + 1) . '.TagName'] = $depth1Value['TagName'];
-			}
-			if(isset($depth1Value['TagValue'])){
-				$this->options['query']['TagList.' . ($depth1 + 1) . '.TagValue'] = $depth1Value['TagValue'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $productKeyList
-     *
-     * @return $this
-     */
-	public function withProductKeyList(array $productKeyList)
-	{
-	    $this->data['ProductKeyList'] = $productKeyList;
-		foreach ($productKeyList as $i => $iValue) {
-			$this->options['query']['ProductKeyList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $categoryKeyList
-     *
-     * @return $this
-     */
-	public function withCategoryKeyList(array $categoryKeyList)
-	{
-	    $this->data['CategoryKeyList'] = $categoryKeyList;
-		foreach ($categoryKeyList as $i => $iValue) {
-			$this->options['query']['CategoryKeyList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiProduct($value)
-    {
-        $this->data['ApiProduct'] = $value;
-        $this->options['form_params']['ApiProduct'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiRevision($value)
-    {
-        $this->data['ApiRevision'] = $value;
-        $this->options['form_params']['ApiRevision'] = $value;
 
         return $this;
     }
@@ -12779,6 +12855,82 @@ class QuerySolutionDeviceGroupPage extends Rpc
 }
 
 /**
+ * @method string getPageId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QuerySoundCodeList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method string getApiProduct()
  * @method string getApiRevision()
@@ -15383,6 +15535,216 @@ class SpeechByCombination extends Rpc
 }
 
 /**
+ * @method string getVoice()
+ * @method string getSpeechId()
+ * @method string getAudioFormat()
+ * @method string getIotId()
+ * @method string getIotInstanceId()
+ * @method string getText()
+ * @method string getProductKey()
+ * @method string getVolume()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method string getSpeechRate()
+ */
+class SpeechBySynthesis extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVoice($value)
+    {
+        $this->data['Voice'] = $value;
+        $this->options['form_params']['Voice'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpeechId($value)
+    {
+        $this->data['SpeechId'] = $value;
+        $this->options['form_params']['SpeechId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAudioFormat($value)
+    {
+        $this->data['AudioFormat'] = $value;
+        $this->options['form_params']['AudioFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVolume($value)
+    {
+        $this->data['Volume'] = $value;
+        $this->options['form_params']['Volume'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpeechRate($value)
+    {
+        $this->data['SpeechRate'] = $value;
+        $this->options['form_params']['SpeechRate'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class StartAIBoxForceSync extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getApiProduct()
@@ -15654,7 +16016,9 @@ class SyncSpeechByCombination extends Rpc
  * @method string getAudioFormat()
  * @method string getIotInstanceId()
  * @method string getText()
+ * @method string getSoundCodeConfig()
  * @method string getSpeechType()
+ * @method string getEnableSoundCode()
  * @method string getVolume()
  * @method string getApiProduct()
  * @method string getApiRevision()
@@ -15733,10 +16097,36 @@ class TestSpeech extends Rpc
      *
      * @return $this
      */
+    public function withSoundCodeConfig($value)
+    {
+        $this->data['SoundCodeConfig'] = $value;
+        $this->options['form_params']['SoundCodeConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withSpeechType($value)
     {
         $this->data['SpeechType'] = $value;
         $this->options['form_params']['SpeechType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableSoundCode($value)
+    {
+        $this->data['EnableSoundCode'] = $value;
+        $this->options['form_params']['EnableSoundCode'] = $value;
 
         return $this;
     }
@@ -16805,6 +17195,8 @@ class UpdateSceneRule extends Rpc
  * @method string getVoice()
  * @method string getProjectCode()
  * @method string getIotInstanceId()
+ * @method string getSoundCodeConfig()
+ * @method string getEnableSoundCode()
  * @method string getVolume()
  * @method string getApiProduct()
  * @method string getApiRevision()
@@ -16849,6 +17241,32 @@ class UpdateSpeech extends Rpc
     {
         $this->data['IotInstanceId'] = $value;
         $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSoundCodeConfig($value)
+    {
+        $this->data['SoundCodeConfig'] = $value;
+        $this->options['form_params']['SoundCodeConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableSoundCode($value)
+    {
+        $this->data['EnableSoundCode'] = $value;
+        $this->options['form_params']['EnableSoundCode'] = $value;
 
         return $this;
     }
