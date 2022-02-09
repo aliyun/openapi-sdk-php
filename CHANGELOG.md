@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1254 - 2022-2-9
+- Added api QueryWorksBloodRelationship.
+
+
 ## 1.8.1253 - 2022-2-8
 - Supported New Features.
 

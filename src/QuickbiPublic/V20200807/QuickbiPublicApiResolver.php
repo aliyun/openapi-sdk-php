@@ -10,6 +10,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryEmbeddedStaus queryEmbeddedStaus(array $options = [])
  * @method QueryReadableResourcesListByUserId queryReadableResourcesListByUserId(array $options = [])
  * @method QueryWorks queryWorks(array $options = [])
+ * @method QueryWorksBloodRelationship queryWorksBloodRelationship(array $options = [])
  * @method QueryWorksByOrganization queryWorksByOrganization(array $options = [])
  * @method QueryWorksByWorkspace queryWorksByWorkspace(array $options = [])
  * @method UpdateEmbeddedStatus updateEmbeddedStatus(array $options = [])
@@ -92,6 +93,20 @@ class QueryReadableResourcesListByUserId extends Rpc
  * @method $this withSignType($value)
  */
 class QueryWorks extends Rpc
+{
+}
+
+/**
+ * @method string getApiLevel()
+ * @method $this withApiLevel($value)
+ * @method string getWorksId()
+ * @method $this withWorksId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class QueryWorksBloodRelationship extends Rpc
 {
 }
 
