@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1255 - 2022-2-10
+- Add deleteNacosInstance.
+
+
 ## 1.8.1254 - 2022-2-9
 - Added api QueryWorksBloodRelationship.
 
