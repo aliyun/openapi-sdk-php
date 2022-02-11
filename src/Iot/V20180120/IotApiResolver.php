@@ -276,6 +276,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RerunJob rerunJob(array $options = [])
  * @method ResetConsumerGroupPosition resetConsumerGroupPosition(array $options = [])
  * @method ResetThing resetThing(array $options = [])
+ * @method ReupgradeOTATask reupgradeOTATask(array $options = [])
  * @method RRpc rRpc(array $options = [])
  * @method SaveDeviceProp saveDeviceProp(array $options = [])
  * @method SetDeviceDesiredProperty setDeviceDesiredProperty(array $options = [])
@@ -336,6 +337,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'iot';
 }
 
 /**
@@ -14834,6 +14838,60 @@ class ResetConsumerGroupPosition extends Rpc
  */
 class ResetThing extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method array getTaskId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class ReupgradeOTATask extends Rpc
+{
+
+    /**
+     * @param array $taskId
+     *
+     * @return $this
+     */
+	public function withTaskId(array $taskId)
+	{
+	    $this->data['TaskId'] = $taskId;
+		foreach ($taskId as $i => $iValue) {
+			$this->options['query']['TaskId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param string $value

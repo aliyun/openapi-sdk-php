@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1256 - 2022-2-11
+- Add OTA API, including ReupgradeOTATask.
+
+
 ## 1.8.1255 - 2022-2-10
 - Add deleteNacosInstance.
 
