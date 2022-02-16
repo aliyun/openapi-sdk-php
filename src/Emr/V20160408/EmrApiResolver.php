@@ -49,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeFlowNodeInstanceLauncherLog describeFlowNodeInstanceLauncherLog(array $options = [])
  * @method DescribeFlowProject describeFlowProject(array $options = [])
  * @method DescribeFlowProjectClusterSetting describeFlowProjectClusterSetting(array $options = [])
+ * @method DescribeFlowVariableCollection describeFlowVariableCollection(array $options = [])
  * @method DescribeScalingCommonConfig describeScalingCommonConfig(array $options = [])
  * @method DescribeScalingConfigItemV2 describeScalingConfigItemV2(array $options = [])
  * @method DescribeScalingGroupInstanceV2 describeScalingGroupInstanceV2(array $options = [])
@@ -136,9 +137,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'emr';
 }
 
 /**
@@ -1634,6 +1632,16 @@ class DescribeFlowProject extends Rpc
  * @method $this withProjectId($value)
  */
 class DescribeFlowProjectClusterSetting extends Rpc
+{
+}
+
+/**
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ */
+class DescribeFlowVariableCollection extends Rpc
 {
 }
 
