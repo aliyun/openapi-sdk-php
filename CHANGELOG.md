@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1257 - 2022-2-16
+- Fix normandy query api.
+
+
 ## 1.8.1256 - 2022-2-11
 - Add OTA API, including ReupgradeOTATask.
 

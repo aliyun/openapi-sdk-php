@@ -753,6 +753,8 @@ class ExportNacosConfig extends Rpc
  * @method $this withType($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
+ * @method string getIsWhite()
+ * @method $this withIsWhite($value)
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
@@ -1185,6 +1187,8 @@ class ListClusters extends Rpc
 }
 
 /**
+ * @method string getConnectType()
+ * @method $this withConnectType($value)
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
@@ -1511,6 +1515,8 @@ class QueryClusterDiskSpecification extends Rpc
 }
 
 /**
+ * @method string getConnectType()
+ * @method $this withConnectType($value)
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
@@ -1719,6 +1725,8 @@ class UpdateAcl extends Rpc
  * @method $this withType($value)
  * @method string getContent()
  * @method $this withContent($value)
+ * @method string getIsWhite()
+ * @method $this withIsWhite($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getResourceType()
