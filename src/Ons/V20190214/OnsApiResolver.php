@@ -28,16 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OnsMessageGetByMsgId onsMessageGetByMsgId(array $options = [])
  * @method OnsMessagePageQueryByTopic onsMessagePageQueryByTopic(array $options = [])
  * @method OnsMessagePush onsMessagePush(array $options = [])
- * @method OnsMessageSend onsMessageSend(array $options = [])
  * @method OnsMessageTrace onsMessageTrace(array $options = [])
- * @method OnsMqttGroupIdCreate onsMqttGroupIdCreate(array $options = [])
- * @method OnsMqttGroupIdDelete onsMqttGroupIdDelete(array $options = [])
- * @method OnsMqttGroupIdList onsMqttGroupIdList(array $options = [])
- * @method OnsMqttQueryClientByClientId onsMqttQueryClientByClientId(array $options = [])
- * @method OnsMqttQueryClientByGroupId onsMqttQueryClientByGroupId(array $options = [])
- * @method OnsMqttQueryClientByTopic onsMqttQueryClientByTopic(array $options = [])
- * @method OnsMqttQueryHistoryOnline onsMqttQueryHistoryOnline(array $options = [])
- * @method OnsMqttQueryMsgTransTrend onsMqttQueryMsgTransTrend(array $options = [])
  * @method OnsRegionList onsRegionList(array $options = [])
  * @method OnsTopicCreate onsTopicCreate(array $options = [])
  * @method OnsTopicDelete onsTopicDelete(array $options = [])
@@ -437,22 +428,6 @@ class OnsMessagePush extends Rpc
 }
 
 /**
- * @method string getMessage()
- * @method $this withMessage($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getTag()
- * @method $this withTag($value)
- * @method string getKey()
- * @method $this withKey($value)
- */
-class OnsMessageSend extends Rpc
-{
-}
-
-/**
  * @method string getMsgId()
  * @method $this withMsgId($value)
  * @method string getInstanceId()
@@ -461,106 +436,6 @@ class OnsMessageSend extends Rpc
  * @method $this withTopic($value)
  */
 class OnsMessageTrace extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsMqttGroupIdCreate extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class OnsMqttGroupIdDelete extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class OnsMqttGroupIdList extends Rpc
-{
-}
-
-/**
- * @method string getClientId()
- * @method $this withClientId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class OnsMqttQueryClientByClientId extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class OnsMqttQueryClientByGroupId extends Rpc
-{
-}
-
-/**
- * @method string getParentTopic()
- * @method $this withParentTopic($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getSubTopic()
- * @method $this withSubTopic($value)
- */
-class OnsMqttQueryClientByTopic extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class OnsMqttQueryHistoryOnline extends Rpc
-{
-}
-
-/**
- * @method string getTransType()
- * @method $this withTransType($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getBeginTime()
- * @method $this withBeginTime($value)
- * @method string getTpsType()
- * @method $this withTpsType($value)
- * @method string getParentTopic()
- * @method $this withParentTopic($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getQos()
- * @method $this withQos($value)
- * @method string getMsgType()
- * @method $this withMsgType($value)
- * @method string getSubTopic()
- * @method $this withSubTopic($value)
- */
-class OnsMqttQueryMsgTransTrend extends Rpc
 {
 }
 

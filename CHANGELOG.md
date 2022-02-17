@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1260 - 2022-2-17
+- Adjusted the call frequency limit of some APIs.
+
+
 ## 1.8.1259 - 2022-2-16
 - Generated 2016-04-08 for `Emr`.
 
