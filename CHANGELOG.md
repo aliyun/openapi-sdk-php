@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1261 - 2022-2-18
+- Add Gis open service add data api.
+
+
 ## 1.8.1260 - 2022-2-17
 - Adjusted the call frequency limit of some APIs.
 

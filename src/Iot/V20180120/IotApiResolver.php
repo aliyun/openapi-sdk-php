@@ -76,7 +76,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateProductTopic createProductTopic(array $options = [])
  * @method CreateRule createRule(array $options = [])
  * @method CreateRuleAction createRuleAction(array $options = [])
- * @method CreateRulengDistributeJob createRulengDistributeJob(array $options = [])
  * @method CreateSceneRule createSceneRule(array $options = [])
  * @method CreateSoundCode createSoundCode(array $options = [])
  * @method CreateSpeech createSpeech(array $options = [])
@@ -150,6 +149,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetThingScript getThingScript(array $options = [])
  * @method GetThingTemplate getThingTemplate(array $options = [])
  * @method GetThingTopo getThingTopo(array $options = [])
+ * @method GisQueryDeviceLocation gisQueryDeviceLocation(array $options = [])
+ * @method GisSearchDeviceTrace gisSearchDeviceTrace(array $options = [])
  * @method ImportThingModelTsl importThingModelTsl(array $options = [])
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
@@ -171,7 +172,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRule listRule(array $options = [])
  * @method ListRuleActions listRuleActions(array $options = [])
  * @method ListTask listTask(array $options = [])
- * @method ListTaskByPage listTaskByPage(array $options = [])
  * @method ListThingModelVersion listThingModelVersion(array $options = [])
  * @method ListThingTemplates listThingTemplates(array $options = [])
  * @method NotifyAddThingTopo notifyAddThingTopo(array $options = [])
@@ -289,7 +289,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetupStudioAppAuthModeOpen setupStudioAppAuthModeOpen(array $options = [])
  * @method SpeechByCombination speechByCombination(array $options = [])
  * @method SpeechBySynthesis speechBySynthesis(array $options = [])
- * @method StartAIBoxForceSync startAIBoxForceSync(array $options = [])
  * @method StartRule startRule(array $options = [])
  * @method StopRule stopRule(array $options = [])
  * @method SubscribeTopic subscribeTopic(array $options = [])
@@ -4522,46 +4521,6 @@ class CreateRuleAction extends Rpc
 }
 
 /**
- * @method string getSourceInstanceId()
- * @method $this withSourceInstanceId($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- * @method string getTargetInstanceId()
- * @method $this withTargetInstanceId($value)
- * @method string getApiProduct()
- * @method string getApiRevision()
- */
-class CreateRulengDistributeJob extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiProduct($value)
-    {
-        $this->data['ApiProduct'] = $value;
-        $this->options['form_params']['ApiProduct'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiRevision($value)
-    {
-        $this->data['ApiRevision'] = $value;
-        $this->options['form_params']['ApiRevision'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getRuleName()
  * @method $this withRuleName($value)
  * @method string getIotInstanceId()
@@ -8155,6 +8114,109 @@ class GetThingTopo extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method array getThingList()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class GisQueryDeviceLocation extends Rpc
+{
+
+    /**
+     * @param array $thingList
+     *
+     * @return $this
+     */
+	public function withThingList(array $thingList)
+	{
+	    $this->data['ThingList'] = $thingList;
+		foreach ($thingList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ProductKey'])){
+				$this->options['query']['ThingList.' . ($depth1 + 1) . '.ProductKey'] = $depth1Value['ProductKey'];
+			}
+			if(isset($depth1Value['DeviceName'])){
+				$this->options['query']['ThingList.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMapMatch()
+ * @method $this withMapMatch($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class GisSearchDeviceTrace extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRealTenantId()
  * @method $this withRealTenantId($value)
  * @method string getRealTripartiteKey()
@@ -9207,56 +9269,6 @@ class ListRuleActions extends Rpc
  * @method $this withStatus($value)
  */
 class ListTask extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiProduct($value)
-    {
-        $this->data['ApiProduct'] = $value;
-        $this->options['form_params']['ApiProduct'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiRevision($value)
-    {
-        $this->data['ApiRevision'] = $value;
-        $this->options['form_params']['ApiRevision'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getJobName()
- * @method $this withJobName($value)
- * @method string getPageNo()
- * @method $this withPageNo($value)
- * @method string getApiProduct()
- * @method string getApiRevision()
- * @method string getDeviceName()
- * @method $this withDeviceName($value)
- * @method string getDevice()
- * @method $this withDevice($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class ListTaskByPage extends Rpc
 {
 
     /**
@@ -15761,42 +15773,6 @@ class SpeechBySynthesis extends Rpc
     {
         $this->data['SpeechRate'] = $value;
         $this->options['form_params']['SpeechRate'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getIotId()
- * @method $this withIotId($value)
- * @method string getApiProduct()
- * @method string getApiRevision()
- */
-class StartAIBoxForceSync extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiProduct($value)
-    {
-        $this->data['ApiProduct'] = $value;
-        $this->options['form_params']['ApiProduct'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiRevision($value)
-    {
-        $this->data['ApiRevision'] = $value;
-        $this->options['form_params']['ApiRevision'] = $value;
 
         return $this;
     }
