@@ -136,7 +136,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEdgeInstanceMessageRouting getEdgeInstanceMessageRouting(array $options = [])
  * @method GetGatewayBySubDevice getGatewayBySubDevice(array $options = [])
  * @method GetLoraNodesTask getLoraNodesTask(array $options = [])
- * @method GetNodesAddingTask getNodesAddingTask(array $options = [])
  * @method GetRule getRule(array $options = [])
  * @method GetRuleAction getRuleAction(array $options = [])
  * @method GetSceneRule getSceneRule(array $options = [])
@@ -336,9 +335,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'iot';
 }
 
 /**
@@ -7468,44 +7464,6 @@ class GetGatewayBySubDevice extends Rpc
  * @method string getApiRevision()
  */
 class GetLoraNodesTask extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiProduct($value)
-    {
-        $this->data['ApiProduct'] = $value;
-        $this->options['form_params']['ApiProduct'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiRevision($value)
-    {
-        $this->data['ApiRevision'] = $value;
-        $this->options['form_params']['ApiRevision'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getApiProduct()
- * @method string getApiRevision()
- */
-class GetNodesAddingTask extends Rpc
 {
 
     /**

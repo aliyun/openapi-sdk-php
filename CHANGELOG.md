@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1262 - 2022-2-18
+- Iot_20180120 build sdk.
+
+
 ## 1.8.1261 - 2022-2-18
 - Add Gis open service add data api.
 
