@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1263 - 2022-2-21
+- Add DleteNacosInstance.
+- Change CreateCluster parameter.
+- Change UpdateNacosInstance errorCode.
+
+
 ## 1.8.1262 - 2022-2-18
 - Iot_20180120 build sdk.
 

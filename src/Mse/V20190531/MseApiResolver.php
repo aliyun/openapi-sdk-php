@@ -9,11 +9,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddBlackWhiteList addBlackWhiteList(array $options = [])
  * @method AddGateway addGateway(array $options = [])
  * @method AddGatewayDomain addGatewayDomain(array $options = [])
+ * @method AddGatewayRoute addGatewayRoute(array $options = [])
  * @method AddGatewayServiceVersion addGatewayServiceVersion(array $options = [])
  * @method AddGatewaySlb addGatewaySlb(array $options = [])
  * @method AddMockRule addMockRule(array $options = [])
  * @method AddServiceSource addServiceSource(array $options = [])
  * @method AddSSLCert addSSLCert(array $options = [])
+ * @method ApplyGatewayRoute applyGatewayRoute(array $options = [])
+ * @method ApplyTagPolicies applyTagPolicies(array $options = [])
  * @method CloneNacosConfig cloneNacosConfig(array $options = [])
  * @method CreateAlarmRule createAlarmRule(array $options = [])
  * @method CreateApplication createApplication(array $options = [])
@@ -22,6 +25,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateNacosConfig createNacosConfig(array $options = [])
  * @method CreateNacosInstance createNacosInstance(array $options = [])
  * @method CreateNacosService createNacosService(array $options = [])
+ * @method CreateOrUpdateSwimmingLane createOrUpdateSwimmingLane(array $options = [])
+ * @method CreateOrUpdateSwimmingLaneGroup createOrUpdateSwimmingLaneGroup(array $options = [])
  * @method CreateZnode createZnode(array $options = [])
  * @method DeleteAlarmRule deleteAlarmRule(array $options = [])
  * @method DeleteAuthResource deleteAuthResource(array $options = [])
@@ -29,12 +34,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteEngineNamespace deleteEngineNamespace(array $options = [])
  * @method DeleteGateway deleteGateway(array $options = [])
  * @method DeleteGatewayDomain deleteGatewayDomain(array $options = [])
+ * @method DeleteGatewayRoute deleteGatewayRoute(array $options = [])
  * @method DeleteGatewayServiceVersion deleteGatewayServiceVersion(array $options = [])
  * @method DeleteGatewaySlb deleteGatewaySlb(array $options = [])
  * @method DeleteNacosConfig deleteNacosConfig(array $options = [])
  * @method DeleteNacosConfigs deleteNacosConfigs(array $options = [])
+ * @method DeleteNacosInstance deleteNacosInstance(array $options = [])
  * @method DeleteNacosService deleteNacosService(array $options = [])
  * @method DeleteServiceSource deleteServiceSource(array $options = [])
+ * @method DeleteSwimmingLane deleteSwimmingLane(array $options = [])
+ * @method DeleteSwimmingLaneGroup deleteSwimmingLaneGroup(array $options = [])
  * @method DeleteZnode deleteZnode(array $options = [])
  * @method ExportNacosConfig exportNacosConfig(array $options = [])
  * @method GetBlackWhiteList getBlackWhiteList(array $options = [])
@@ -42,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetGateway getGateway(array $options = [])
  * @method GetGatewayDomainDetail getGatewayDomainDetail(array $options = [])
  * @method GetGatewayOption getGatewayOption(array $options = [])
+ * @method GetGatewayRouteDetail getGatewayRouteDetail(array $options = [])
  * @method GetGatewayServiceDetail getGatewayServiceDetail(array $options = [])
  * @method GetGovernanceKubernetesCluster getGovernanceKubernetesCluster(array $options = [])
  * @method GetGovernanceKubernetesClusterList getGovernanceKubernetesClusterList(array $options = [])
@@ -53,6 +63,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetNacosConfig getNacosConfig(array $options = [])
  * @method GetNacosHistoryConfig getNacosHistoryConfig(array $options = [])
  * @method GetOverview getOverview(array $options = [])
+ * @method GetServiceList getServiceList(array $options = [])
+ * @method GetTagsBySwimmingLaneGroupId getTagsBySwimmingLaneGroupId(array $options = [])
  * @method ImportNacosConfig importNacosConfig(array $options = [])
  * @method ImportServices importServices(array $options = [])
  * @method ListAlarmContactGroups listAlarmContactGroups(array $options = [])
@@ -62,6 +74,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAnsInstances listAnsInstances(array $options = [])
  * @method ListAnsServiceClusters listAnsServiceClusters(array $options = [])
  * @method ListAnsServices listAnsServices(array $options = [])
+ * @method ListAppBySwimmingLaneGroupTag listAppBySwimmingLaneGroupTag(array $options = [])
+ * @method ListApplicationsWithTagRules listApplicationsWithTagRules(array $options = [])
  * @method ListClusterConnectionTypes listClusterConnectionTypes(array $options = [])
  * @method ListClusters listClusters(array $options = [])
  * @method ListClusterTypes listClusterTypes(array $options = [])
@@ -71,6 +85,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListEurekaServices listEurekaServices(array $options = [])
  * @method ListGateway listGateway(array $options = [])
  * @method ListGatewayDomain listGatewayDomain(array $options = [])
+ * @method ListGatewayRoute listGatewayRoute(array $options = [])
  * @method ListGatewayService listGatewayService(array $options = [])
  * @method ListGatewaySlb listGatewaySlb(array $options = [])
  * @method ListListenersByConfig listListenersByConfig(array $options = [])
@@ -81,7 +96,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSSLCert listSSLCert(array $options = [])
  * @method ListZnodeChildren listZnodeChildren(array $options = [])
  * @method ModifyGovernanceKubernetesCluster modifyGovernanceKubernetesCluster(array $options = [])
+ * @method OfflineGatewayRoute offlineGatewayRoute(array $options = [])
  * @method PullServices pullServices(array $options = [])
+ * @method QueryAllSwimmingLane queryAllSwimmingLane(array $options = [])
+ * @method QueryAllSwimmingLaneGroup queryAllSwimmingLaneGroup(array $options = [])
  * @method QueryBusinessLocations queryBusinessLocations(array $options = [])
  * @method QueryClusterDetail queryClusterDetail(array $options = [])
  * @method QueryClusterDiskSpecification queryClusterDiskSpecification(array $options = [])
@@ -92,6 +110,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryGovernanceKubernetesCluster queryGovernanceKubernetesCluster(array $options = [])
  * @method QueryMonitor queryMonitor(array $options = [])
  * @method QuerySlbSpec querySlbSpec(array $options = [])
+ * @method QuerySwimmingLaneById querySwimmingLaneById(array $options = [])
  * @method QueryZnodeDetail queryZnodeDetail(array $options = [])
  * @method RestartCluster restartCluster(array $options = [])
  * @method RetryCluster retryCluster(array $options = [])
@@ -105,7 +124,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateGatewayDomain updateGatewayDomain(array $options = [])
  * @method UpdateGatewayName updateGatewayName(array $options = [])
  * @method UpdateGatewayOption updateGatewayOption(array $options = [])
+ * @method UpdateGatewayRoute updateGatewayRoute(array $options = [])
+ * @method UpdateGatewayRouteCORS updateGatewayRouteCORS(array $options = [])
+ * @method UpdateGatewayRouteHeaderOp updateGatewayRouteHeaderOp(array $options = [])
  * @method UpdateGatewayRouteHTTPRewrite updateGatewayRouteHTTPRewrite(array $options = [])
+ * @method UpdateGatewayRouteRetry updateGatewayRouteRetry(array $options = [])
+ * @method UpdateGatewayRouteTimeout updateGatewayRouteTimeout(array $options = [])
  * @method UpdateGatewayServiceVersion updateGatewayServiceVersion(array $options = [])
  * @method UpdateImage updateImage(array $options = [])
  * @method UpdateNacosCluster updateNacosCluster(array $options = [])
@@ -217,6 +241,36 @@ class AddGatewayDomain extends Rpc
 /**
  * @method string getGatewayUniqueId()
  * @method $this withGatewayUniqueId($value)
+ * @method string getDestinationType()
+ * @method $this withDestinationType($value)
+ * @method string getDomainIdListJSON()
+ * @method $this withDomainIdListJSON($value)
+ * @method string getDomainId()
+ * @method $this withDomainId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ * @method string getRouteOrder()
+ * @method $this withRouteOrder($value)
+ * @method string getServices()
+ * @method $this withServices($value)
+ * @method string getPredicates()
+ * @method $this withPredicates($value)
+ * @method string getRedirectJSON()
+ * @method $this withRedirectJSON($value)
+ * @method string getDirectResponseJSON()
+ * @method $this withDirectResponseJSON($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class AddGatewayRoute extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
  * @method string getServiceVersion()
  * @method $this withServiceVersion($value)
  * @method string getAcceptLanguage()
@@ -305,6 +359,41 @@ class AddSSLCert extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getRouteId()
+ * @method $this withRouteId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ApplyGatewayRoute extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getRules()
+ * @method $this withRules($value)
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getNamespaceId()
+ * @method $this withNamespaceId($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class ApplyTagPolicies extends Rpc
+{
 }
 
 /**
@@ -522,6 +611,131 @@ class CreateNacosService extends Rpc
 }
 
 /**
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getGmtModified()
+ * @method $this withGmtModified($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getLicenseKey()
+ * @method $this withLicenseKey($value)
+ * @method string getEntryRule()
+ * @method $this withEntryRule($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method array getEntryRules()
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getGmtCreate()
+ * @method $this withGmtCreate($value)
+ * @method string getEnableRules()
+ * @method $this withEnableRules($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class CreateOrUpdateSwimmingLane extends Rpc
+{
+
+    /**
+     * @param array $entryRules
+     *
+     * @return $this
+     */
+	public function withEntryRules(array $entryRules)
+	{
+	    $this->data['EntryRules'] = $entryRules;
+		foreach ($entryRules as $depth1 => $depth1Value) {
+			foreach ($depth1Value['RestItems'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Datum'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Datum'] = $depth2Value['Datum'];
+				}
+				if(isset($depth2Value['Divisor'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Divisor'] = $depth2Value['Divisor'];
+				}
+				if(isset($depth2Value['Rate'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Rate'] = $depth2Value['Rate'];
+				}
+				foreach ($depth2Value['NameList'] as $i => $iValue) {
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.NameList.' . ($i + 1)] = $iValue;
+				}
+				if(isset($depth2Value['Name'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Name'] = $depth2Value['Name'];
+				}
+				if(isset($depth2Value['Type'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Type'] = $depth2Value['Type'];
+				}
+				if(isset($depth2Value['Cond'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Cond'] = $depth2Value['Cond'];
+				}
+				if(isset($depth2Value['Remainder'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Remainder'] = $depth2Value['Remainder'];
+				}
+				if(isset($depth2Value['Value'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Value'] = $depth2Value['Value'];
+				}
+				if(isset($depth2Value['Operator'])){
+					$this->options['query']['EntryRules.' . ($depth1 + 1) . '.RestItems.' . ($depth2 + 1) . '.Operator'] = $depth2Value['Operator'];
+				}
+			}
+			if(isset($depth1Value['Path'])){
+				$this->options['query']['EntryRules.' . ($depth1 + 1) . '.Path'] = $depth1Value['Path'];
+			}
+			if(isset($depth1Value['Condition'])){
+				$this->options['query']['EntryRules.' . ($depth1 + 1) . '.Condition'] = $depth1Value['Condition'];
+			}
+			if(isset($depth1Value['Enable'])){
+				$this->options['query']['EntryRules.' . ($depth1 + 1) . '.Enable'] = $depth1Value['Enable'];
+			}
+			if(isset($depth1Value['Priority'])){
+				$this->options['query']['EntryRules.' . ($depth1 + 1) . '.Priority'] = $depth1Value['Priority'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getGmtModified()
+ * @method $this withGmtModified($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getLicenseKey()
+ * @method $this withLicenseKey($value)
+ * @method string getAppIds()
+ * @method $this withAppIds($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ * @method string getEntryApp()
+ * @method $this withEntryApp($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getGmtCreate()
+ * @method $this withGmtCreate($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class CreateOrUpdateSwimmingLaneGroup extends Rpc
+{
+}
+
+/**
  * @method string getData()
  * @method $this withData($value)
  * @method string getClusterId()
@@ -621,6 +835,21 @@ class DeleteGatewayDomain extends Rpc
 /**
  * @method string getGatewayUniqueId()
  * @method $this withGatewayUniqueId($value)
+ * @method string getRouteId()
+ * @method $this withRouteId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class DeleteGatewayRoute extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
  * @method string getServiceVersion()
  * @method $this withServiceVersion($value)
  * @method string getAcceptLanguage()
@@ -682,6 +911,30 @@ class DeleteNacosConfigs extends Rpc
 }
 
 /**
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getEphemeral()
+ * @method $this withEphemeral($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNamespaceId()
+ * @method $this withNamespaceId($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ */
+class DeleteNacosInstance extends Rpc
+{
+}
+
+/**
  * @method string getGroupName()
  * @method $this withGroupName($value)
  * @method string getInstanceId()
@@ -710,6 +963,26 @@ class DeleteServiceSource extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getLaneId()
+ * @method $this withLaneId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class DeleteSwimmingLane extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class DeleteSwimmingLaneGroup extends Rpc
+{
 }
 
 /**
@@ -817,6 +1090,21 @@ class GetGatewayDomainDetail extends Rpc
  */
 class GetGatewayOption extends Rpc
 {
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getRouteId()
+ * @method $this withRouteId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class GetGatewayRouteDetail extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -963,6 +1251,34 @@ class GetNacosHistoryConfig extends Rpc
  * @method $this withRegion($value)
  */
 class GetOverview extends Rpc
+{
+}
+
+/**
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getServiceType()
+ * @method $this withServiceType($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class GetServiceList extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class GetTagsBySwimmingLaneGroupId extends Rpc
 {
 }
 
@@ -1160,6 +1476,41 @@ class ListAnsServices extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ */
+class ListAppBySwimmingLaneGroupTag extends Rpc
+{
+}
+
+/**
+ * @method string getSource()
+ * @method $this withSource($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class ListApplicationsWithTagRules extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
@@ -1294,6 +1645,24 @@ class ListGatewayDomain extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getOrderItem()
+ * @method $this withOrderItem($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDescSort()
+ * @method $this withDescSort($value)
+ * @method string getFilterParams()
+ * @method $this withFilterParams($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ListGatewayRoute extends Rpc
+{
 }
 
 /**
@@ -1463,6 +1832,21 @@ class ModifyGovernanceKubernetesCluster extends Rpc
 }
 
 /**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getRouteId()
+ * @method $this withRouteId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class OfflineGatewayRoute extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getSourceId()
  * @method $this withSourceId($value)
  * @method string getGatewayUniqueId()
@@ -1477,6 +1861,24 @@ class PullServices extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class QueryAllSwimmingLane extends Rpc
+{
+}
+
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class QueryAllSwimmingLaneGroup extends Rpc
+{
 }
 
 /**
@@ -1618,6 +2020,16 @@ class QuerySlbSpec extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getLaneId()
+ * @method $this withLaneId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class QuerySwimmingLaneById extends Rpc
+{
 }
 
 /**
@@ -1884,6 +2296,68 @@ class UpdateGatewayOption extends Rpc
 /**
  * @method string getGatewayUniqueId()
  * @method $this withGatewayUniqueId($value)
+ * @method string getDestinationType()
+ * @method $this withDestinationType($value)
+ * @method string getDomainIdListJSON()
+ * @method $this withDomainIdListJSON($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ * @method string getRouteOrder()
+ * @method $this withRouteOrder($value)
+ * @method string getServices()
+ * @method $this withServices($value)
+ * @method string getPredicates()
+ * @method $this withPredicates($value)
+ * @method string getRedirectJSON()
+ * @method $this withRedirectJSON($value)
+ * @method string getDirectResponseJSON()
+ * @method $this withDirectResponseJSON($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class UpdateGatewayRoute extends Rpc
+{
+}
+
+/**
+ * @method string getCorsJSON()
+ * @method $this withCorsJSON($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class UpdateGatewayRouteCORS extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getHeaderOpJSON()
+ * @method $this withHeaderOpJSON($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class UpdateGatewayRouteHeaderOp extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
  * @method string getHttpRewriteJSON()
  * @method $this withHttpRewriteJSON($value)
  * @method string getAcceptLanguage()
@@ -1894,6 +2368,38 @@ class UpdateGatewayOption extends Rpc
  * @method $this withGatewayId($value)
  */
 class UpdateGatewayRouteHTTPRewrite extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getRetryJSON()
+ * @method $this withRetryJSON($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class UpdateGatewayRouteRetry extends Rpc
+{
+}
+
+/**
+ * @method string getTimeoutJSON()
+ * @method $this withTimeoutJSON($value)
+ * @method string getGatewayUniqueId()
+ * @method $this withGatewayUniqueId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class UpdateGatewayRouteTimeout extends Rpc
 {
 }
 
