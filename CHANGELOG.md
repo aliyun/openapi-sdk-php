@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1264 - 2022-2-21
+- Bugfix QueryMoniter.
+
+
 ## 1.8.1263 - 2022-2-21
 - Add DleteNacosInstance.
 - Change CreateCluster parameter.
