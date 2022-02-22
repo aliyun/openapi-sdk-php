@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1265 - 2022-2-22
+- Support RefreshProxyLevel.
+
+
 ## 1.8.1264 - 2022-2-21
 - Bugfix QueryMoniter.
 
