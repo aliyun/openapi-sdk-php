@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1266 - 2022-2-22
+- Deprecated the OnsTopicUpdate api, and will be offline soon.
+
+
 ## 1.8.1265 - 2022-2-22
 - Support RefreshProxyLevel.
 
