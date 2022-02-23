@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1268 - 2022-2-23
+- Add AuthId.
+
+
 ## 1.8.1267 - 2022-2-23
 - Support remediation.
 
