@@ -10,15 +10,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AttachConfigRuleToCompliancePack attachConfigRuleToCompliancePack(array $options = [])
  * @method CreateAggregateCompliancePack createAggregateCompliancePack(array $options = [])
  * @method CreateAggregateConfigRule createAggregateConfigRule(array $options = [])
+ * @method CreateAggregateRemediation createAggregateRemediation(array $options = [])
  * @method CreateAggregator createAggregator(array $options = [])
  * @method CreateCompliancePack createCompliancePack(array $options = [])
  * @method CreateConfigRule createConfigRule(array $options = [])
+ * @method CreateRemediation createRemediation(array $options = [])
  * @method DeactiveAggregateConfigRules deactiveAggregateConfigRules(array $options = [])
  * @method DeactiveConfigRules deactiveConfigRules(array $options = [])
  * @method DeleteAggregateCompliancePacks deleteAggregateCompliancePacks(array $options = [])
  * @method DeleteAggregateConfigRules deleteAggregateConfigRules(array $options = [])
+ * @method DeleteAggregateRemediations deleteAggregateRemediations(array $options = [])
  * @method DeleteAggregators deleteAggregators(array $options = [])
  * @method DeleteCompliancePacks deleteCompliancePacks(array $options = [])
+ * @method DeleteRemediations deleteRemediations(array $options = [])
  * @method DetachAggregateConfigRuleToCompliancePack detachAggregateConfigRuleToCompliancePack(array $options = [])
  * @method DetachConfigRuleToCompliancePack detachConfigRuleToCompliancePack(array $options = [])
  * @method GenerateAggregateCompliancePackReport generateAggregateCompliancePackReport(array $options = [])
@@ -32,6 +36,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAggregateConfigRuleComplianceByPack getAggregateConfigRuleComplianceByPack(array $options = [])
  * @method GetAggregateConfigRulesReport getAggregateConfigRulesReport(array $options = [])
  * @method GetAggregateConfigRuleSummaryByRiskLevel getAggregateConfigRuleSummaryByRiskLevel(array $options = [])
+ * @method GetAggregateDiscoveredResource getAggregateDiscoveredResource(array $options = [])
  * @method GetAggregateResourceComplianceByConfigRule getAggregateResourceComplianceByConfigRule(array $options = [])
  * @method GetAggregateResourceComplianceByPack getAggregateResourceComplianceByPack(array $options = [])
  * @method GetAggregateResourceComplianceGroupByRegion getAggregateResourceComplianceGroupByRegion(array $options = [])
@@ -47,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetConfigRuleComplianceByPack getConfigRuleComplianceByPack(array $options = [])
  * @method GetConfigRulesReport getConfigRulesReport(array $options = [])
  * @method GetConfigRuleSummaryByRiskLevel getConfigRuleSummaryByRiskLevel(array $options = [])
+ * @method GetDiscoveredResource getDiscoveredResource(array $options = [])
  * @method GetDiscoveredResourceCountsGroupByRegion getDiscoveredResourceCountsGroupByRegion(array $options = [])
  * @method GetDiscoveredResourceCountsGroupByResourceType getDiscoveredResourceCountsGroupByResourceType(array $options = [])
  * @method GetManagedRule getManagedRule(array $options = [])
@@ -61,18 +67,26 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAggregateCompliancePacks listAggregateCompliancePacks(array $options = [])
  * @method ListAggregateConfigRuleEvaluationResults listAggregateConfigRuleEvaluationResults(array $options = [])
  * @method ListAggregateConfigRules listAggregateConfigRules(array $options = [])
+ * @method ListAggregateDiscoveredResources listAggregateDiscoveredResources(array $options = [])
+ * @method ListAggregateRemediations listAggregateRemediations(array $options = [])
  * @method ListAggregateResourceEvaluationResults listAggregateResourceEvaluationResults(array $options = [])
  * @method ListAggregators listAggregators(array $options = [])
  * @method ListCompliancePacks listCompliancePacks(array $options = [])
  * @method ListCompliancePackTemplates listCompliancePackTemplates(array $options = [])
  * @method ListConfigRuleEvaluationResults listConfigRuleEvaluationResults(array $options = [])
+ * @method ListDiscoveredResources listDiscoveredResources(array $options = [])
  * @method ListManagedRules listManagedRules(array $options = [])
+ * @method ListRemediations listRemediations(array $options = [])
+ * @method ListRemediationTemplates listRemediationTemplates(array $options = [])
  * @method ListResourceEvaluationResults listResourceEvaluationResults(array $options = [])
  * @method RevertAggregateEvaluationResults revertAggregateEvaluationResults(array $options = [])
  * @method RevertEvaluationResults revertEvaluationResults(array $options = [])
  * @method StartAggregateConfigRuleEvaluation startAggregateConfigRuleEvaluation(array $options = [])
+ * @method StartAggregateRemediation startAggregateRemediation(array $options = [])
+ * @method StartRemediation startRemediation(array $options = [])
  * @method UpdateAggregateCompliancePack updateAggregateCompliancePack(array $options = [])
  * @method UpdateAggregateConfigRule updateAggregateConfigRule(array $options = [])
+ * @method UpdateAggregateRemediation updateAggregateRemediation(array $options = [])
  * @method UpdateAggregator updateAggregator(array $options = [])
  * @method UpdateCompliancePack updateCompliancePack(array $options = [])
  * @method UpdateConfigRule updateConfigRule(array $options = [])
@@ -516,6 +530,124 @@ class CreateAggregateConfigRule extends Rpc
 }
 
 /**
+ * @method string getConfigRuleId()
+ * @method string getRemediationType()
+ * @method string getClientToken()
+ * @method string getAggregatorId()
+ * @method string getSourceType()
+ * @method string getRemediationTemplateId()
+ * @method string getParams()
+ * @method string getInvokeType()
+ */
+class CreateAggregateRemediation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigRuleId($value)
+    {
+        $this->data['ConfigRuleId'] = $value;
+        $this->options['form_params']['ConfigRuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationType($value)
+    {
+        $this->data['RemediationType'] = $value;
+        $this->options['form_params']['RemediationType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAggregatorId($value)
+    {
+        $this->data['AggregatorId'] = $value;
+        $this->options['form_params']['AggregatorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceType($value)
+    {
+        $this->data['SourceType'] = $value;
+        $this->options['form_params']['SourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationTemplateId($value)
+    {
+        $this->data['RemediationTemplateId'] = $value;
+        $this->options['form_params']['RemediationTemplateId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInvokeType($value)
+    {
+        $this->data['InvokeType'] = $value;
+        $this->options['form_params']['InvokeType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAggregatorType()
  * @method string getClientToken()
  * @method string getAggregatorName()
@@ -912,6 +1044,110 @@ class CreateConfigRule extends Rpc
 }
 
 /**
+ * @method string getConfigRuleId()
+ * @method string getRemediationType()
+ * @method string getClientToken()
+ * @method string getSourceType()
+ * @method string getRemediationTemplateId()
+ * @method string getParams()
+ * @method string getInvokeType()
+ */
+class CreateRemediation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigRuleId($value)
+    {
+        $this->data['ConfigRuleId'] = $value;
+        $this->options['form_params']['ConfigRuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationType($value)
+    {
+        $this->data['RemediationType'] = $value;
+        $this->options['form_params']['RemediationType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceType($value)
+    {
+        $this->data['SourceType'] = $value;
+        $this->options['form_params']['SourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationTemplateId($value)
+    {
+        $this->data['RemediationTemplateId'] = $value;
+        $this->options['form_params']['RemediationTemplateId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInvokeType($value)
+    {
+        $this->data['InvokeType'] = $value;
+        $this->options['form_params']['InvokeType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getConfigRuleIds()
  * @method $this withConfigRuleIds($value)
  * @method string getAggregatorId()
@@ -1002,6 +1238,40 @@ class DeleteAggregateConfigRules extends Rpc
 }
 
 /**
+ * @method string getRemediationIds()
+ * @method string getAggregatorId()
+ */
+class DeleteAggregateRemediations extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationIds($value)
+    {
+        $this->data['RemediationIds'] = $value;
+        $this->options['form_params']['RemediationIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAggregatorId($value)
+    {
+        $this->data['AggregatorId'] = $value;
+        $this->options['form_params']['AggregatorId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method string getAggregatorIds()
  */
@@ -1078,6 +1348,26 @@ class DeleteCompliancePacks extends Rpc
     {
         $this->data['DeleteRule'] = $value;
         $this->options['form_params']['DeleteRule'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRemediationIds()
+ */
+class DeleteRemediations extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationIds($value)
+    {
+        $this->data['RemediationIds'] = $value;
+        $this->options['form_params']['RemediationIds'] = $value;
 
         return $this;
     }
@@ -1353,8 +1643,29 @@ class GetAggregateConfigRuleSummaryByRiskLevel extends Rpc
 }
 
 /**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class GetAggregateDiscoveredResource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getConfigRuleId()
  * @method $this withConfigRuleId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getAggregatorId()
  * @method $this withAggregatorId($value)
  * @method string getComplianceType()
@@ -1546,6 +1857,21 @@ class GetConfigRulesReport extends Rpc
 }
 
 class GetConfigRuleSummaryByRiskLevel extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class GetDiscoveredResource extends Rpc
 {
 
     /** @var string */
@@ -1850,6 +2176,40 @@ class ListAggregateConfigRules extends Rpc
 }
 
 /**
+ * @method string getResourceDeleted()
+ * @method $this withResourceDeleted($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRegions()
+ * @method $this withRegions($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getFolderId()
+ * @method $this withFolderId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceTypes()
+ * @method $this withResourceTypes($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListAggregateDiscoveredResources extends Rpc
+{
+}
+
+/**
+ * @method string getConfigRuleIds()
+ * @method $this withConfigRuleIds($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ */
+class ListAggregateRemediations extends Rpc
+{
+}
+
+/**
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getAggregatorId()
@@ -1932,6 +2292,24 @@ class ListConfigRuleEvaluationResults extends Rpc
 }
 
 /**
+ * @method string getResourceDeleted()
+ * @method $this withResourceDeleted($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getRegions()
+ * @method $this withRegions($value)
+ * @method string getResourceTypes()
+ * @method $this withResourceTypes($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListDiscoveredResources extends Rpc
+{
+}
+
+/**
  * @method string getRiskLevel()
  * @method $this withRiskLevel($value)
  * @method string getPageNumber()
@@ -1942,6 +2320,24 @@ class ListConfigRuleEvaluationResults extends Rpc
  * @method $this withKeyword($value)
  */
 class ListManagedRules extends Rpc
+{
+}
+
+/**
+ * @method string getConfigRuleIds()
+ * @method $this withConfigRuleIds($value)
+ */
+class ListRemediations extends Rpc
+{
+}
+
+/**
+ * @method string getManagedRuleIdentifier()
+ * @method $this withManagedRuleIdentifier($value)
+ * @method string getRemediationType()
+ * @method $this withRemediationType($value)
+ */
+class ListRemediationTemplates extends Rpc
 {
 }
 
@@ -2056,6 +2452,24 @@ class RevertEvaluationResults extends Rpc
  * @method $this withRevertEvaluation($value)
  */
 class StartAggregateConfigRuleEvaluation extends Rpc
+{
+}
+
+/**
+ * @method string getConfigRuleId()
+ * @method $this withConfigRuleId($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ */
+class StartAggregateRemediation extends Rpc
+{
+}
+
+/**
+ * @method string getConfigRuleId()
+ * @method $this withConfigRuleId($value)
+ */
+class StartRemediation extends Rpc
 {
 }
 
@@ -2430,6 +2844,110 @@ class UpdateAggregateConfigRule extends Rpc
     {
         $this->data['ExcludeResourceIdsScope'] = $value;
         $this->options['form_params']['ExcludeResourceIdsScope'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRemediationType()
+ * @method string getRemediationId()
+ * @method string getAggregatorId()
+ * @method string getSourceType()
+ * @method string getRemediationTemplateId()
+ * @method string getParams()
+ * @method string getInvokeType()
+ */
+class UpdateAggregateRemediation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationType($value)
+    {
+        $this->data['RemediationType'] = $value;
+        $this->options['form_params']['RemediationType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationId($value)
+    {
+        $this->data['RemediationId'] = $value;
+        $this->options['form_params']['RemediationId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAggregatorId($value)
+    {
+        $this->data['AggregatorId'] = $value;
+        $this->options['form_params']['AggregatorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceType($value)
+    {
+        $this->data['SourceType'] = $value;
+        $this->options['form_params']['SourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRemediationTemplateId($value)
+    {
+        $this->data['RemediationTemplateId'] = $value;
+        $this->options['form_params']['RemediationTemplateId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInvokeType($value)
+    {
+        $this->data['InvokeType'] = $value;
+        $this->options['form_params']['InvokeType'] = $value;
 
         return $this;
     }

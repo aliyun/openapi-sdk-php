@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1267 - 2022-2-23
+- Support remediation.
+
+
 ## 1.8.1266 - 2022-2-22
 - Deprecated the OnsTopicUpdate api, and will be offline soon.
 
