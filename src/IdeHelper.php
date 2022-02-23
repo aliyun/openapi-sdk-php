@@ -48,6 +48,7 @@ namespace AlibabaCloud;
  * @method static CloudAPI\CloudAPI cloudAPI()
  * @method static CloudPhoto\CloudPhoto cloudPhoto()
  * @method static Cloudauth\Cloudauth cloudauth()
+ * @method static CloudauthConsole\CloudauthConsole cloudauthConsole()
  * @method static Cloudesl\Cloudesl cloudesl()
  * @method static Cloudgame\Cloudgame cloudgame()
  * @method static Cloudmarketing\Cloudmarketing cloudmarketing()
