@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1270 - 2022-2-24
+- Add UpdateAnycastEipAddressAssociations Interface.
+
+
 ## 1.8.1269 - 2022-2-23
 - SDK.
 
