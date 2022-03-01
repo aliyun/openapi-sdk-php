@@ -36,6 +36,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StartBackToBackCall startBackToBackCall(array $options = [])
  * @method SubmitIntentionNote submitIntentionNote(array $options = [])
  * @method SubmitSolution submitSolution(array $options = [])
+ * @method TransferIntentionOwner transferIntentionOwner(array $options = [])
+ * @method TransferProduceOwner transferProduceOwner(array $options = [])
  */
 class CompanyregApiResolver extends ApiResolver
 {
@@ -291,6 +293,8 @@ class ListUserProduceOperateLogs extends Rpc
 /**
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getExistStatus()
+ * @method $this withExistStatus($value)
  * @method string getIntentionBizId()
  * @method $this withIntentionBizId($value)
  * @method string getPageNum()
@@ -589,5 +593,33 @@ class SubmitIntentionNote extends Rpc
  * @method $this withUserId($value)
  */
 class SubmitSolution extends Rpc
+{
+}
+
+/**
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPersonId()
+ * @method $this withPersonId($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ */
+class TransferIntentionOwner extends Rpc
+{
+}
+
+/**
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPersonId()
+ * @method $this withPersonId($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ */
+class TransferProduceOwner extends Rpc
 {
 }
