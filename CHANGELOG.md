@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1274 - 2022-3-3
+- Supported partner for ESP.
+
+
 ## 1.8.1273 - 2022-3-2
 - Supported partner for ESP.
 
