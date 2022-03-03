@@ -30,6 +30,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeTrainTicket recognizeTrainTicket(array $options = [])
  * @method RecognizeVATInvoice recognizeVATInvoice(array $options = [])
  * @method RecognizeVerificationcode recognizeVerificationcode(array $options = [])
+ * @method RecognizeVideoCastCrewList recognizeVideoCastCrewList(array $options = [])
  * @method RecognizeVideoCharacter recognizeVideoCharacter(array $options = [])
  * @method RecognizeVINCode recognizeVINCode(array $options = [])
  * @method TrimDocument trimDocument(array $options = [])
@@ -570,7 +571,13 @@ class RecognizePoiName extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method array getTasks()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class RecognizeQrCode extends Rpc
 {
@@ -914,12 +921,68 @@ class RecognizeVerificationcode extends Rpc
 }
 
 /**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
+ * @method string getParams()
+ * @method string getAsync()
+ * @method string getRegisterUrl()
+ * @method string getVideoUrl()
+ */
+class RecognizeVideoCastCrewList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegisterUrl($value)
+    {
+        $this->data['RegisterUrl'] = $value;
+        $this->options['form_params']['RegisterUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAsync()
  * @method string getVideoURL()
  */
