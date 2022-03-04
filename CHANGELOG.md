@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1276 - 2022-3-4
+- Supported partner for ESP.
+
+
 ## 1.8.1275 - 2022-3-3
 - Release RecognizeVideoCastCrewList.
 
