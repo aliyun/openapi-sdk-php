@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AssociateChatbotInstance associateChatbotInstance(array $options = [])
  * @method AuditTTSVoice auditTTSVoice(array $options = [])
+ * @method BatchCreateSandBoxWhileList batchCreateSandBoxWhileList(array $options = [])
  * @method BeginDialogue beginDialogue(array $options = [])
  * @method CollectedNumber collectedNumber(array $options = [])
  * @method CreateDownloadUrl createDownloadUrl(array $options = [])
@@ -15,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DebugCollectedNumber debugCollectedNumber(array $options = [])
  * @method DebugDialogue debugDialogue(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DeleteSandBoxWhileList deleteSandBoxWhileList(array $options = [])
  * @method DescribeAsrVadConfig describeAsrVadConfig(array $options = [])
  * @method DescribeConversation describeConversation(array $options = [])
  * @method DescribeConversationContext describeConversationContext(array $options = [])
@@ -27,7 +29,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVoiceConfig describeVoiceConfig(array $options = [])
  * @method Dialogue dialogue(array $options = [])
  * @method DisableInstance disableInstance(array $options = [])
+ * @method DisableSandBoxWhileList disableSandBoxWhileList(array $options = [])
  * @method EnableInstance enableInstance(array $options = [])
+ * @method EnableSandBoxWhileList enableSandBoxWhileList(array $options = [])
  * @method EndDialogue endDialogue(array $options = [])
  * @method ExportConversationDetails exportConversationDetails(array $options = [])
  * @method ExportStatisticalData exportStatisticalData(array $options = [])
@@ -38,9 +42,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListConversations listConversations(array $options = [])
  * @method ListDownloadTasks listDownloadTasks(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ListSandBoxWhileList listSandBoxWhileList(array $options = [])
  * @method ModifyAsrVadConfig modifyAsrVadConfig(array $options = [])
  * @method ModifyGreetingConfig modifyGreetingConfig(array $options = [])
  * @method ModifyInstance modifyInstance(array $options = [])
+ * @method ModifySandBoxWhileList modifySandBoxWhileList(array $options = [])
  * @method ModifySilenceTimeoutConfig modifySilenceTimeoutConfig(array $options = [])
  * @method ModifyTTSConfig modifyTTSConfig(array $options = [])
  * @method ModifyUnrecognizingConfig modifyUnrecognizingConfig(array $options = [])
@@ -93,6 +99,14 @@ class AssociateChatbotInstance extends Rpc
  * @method $this withSpeechRate($value)
  */
 class AuditTTSVoice extends Rpc
+{
+}
+
+/**
+ * @method string getWhiteListJson()
+ * @method $this withWhiteListJson($value)
+ */
+class BatchCreateSandBoxWhileList extends Rpc
 {
 }
 
@@ -206,6 +220,16 @@ class DebugDialogue extends Rpc
  * @method $this withInstanceId($value)
  */
 class DeleteInstance extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteSandBoxWhileList extends Rpc
 {
 }
 
@@ -366,10 +390,30 @@ class DisableInstance extends Rpc
 }
 
 /**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DisableSandBoxWhileList extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class EnableInstance extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class EnableSandBoxWhileList extends Rpc
 {
 }
 
@@ -492,6 +536,8 @@ class ListConversationDetails extends Rpc
  * @method $this withInstanceId($value)
  * @method string getBeginTimeRightRange()
  * @method $this withBeginTimeRightRange($value)
+ * @method string getIsSandBox()
+ * @method $this withIsSandBox($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
@@ -526,6 +572,22 @@ class ListInstances extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListSandBoxWhileList extends Rpc
+{
 }
 
 /**
@@ -566,6 +628,22 @@ class ModifyGreetingConfig extends Rpc
  * @method $this withChatbotInstanceId($value)
  */
 class ModifyInstance extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class ModifySandBoxWhileList extends Rpc
 {
 }
 
