@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1277 - 2022-3-7
+- Supported new features for outbound.
+
+
 ## 1.8.1276 - 2022-3-4
 - Supported partner for ESP.
 
