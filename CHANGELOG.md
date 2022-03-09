@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1279 - 2022-3-9
+- Update RecognizeVideoCastCrewList.
+
+
 ## 1.8.1278 - 2022-3-7
 - Supported new features etc.
 
