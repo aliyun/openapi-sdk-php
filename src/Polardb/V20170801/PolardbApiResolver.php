@@ -56,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBInitializeVariable describeDBInitializeVariable(array $options = [])
  * @method DescribeDBLinks describeDBLinks(array $options = [])
  * @method DescribeDBNodePerformance describeDBNodePerformance(array $options = [])
+ * @method DescribeDBNodesParameters describeDBNodesParameters(array $options = [])
  * @method DescribeDBProxyPerformance describeDBProxyPerformance(array $options = [])
  * @method DescribeDetachedBackups describeDetachedBackups(array $options = [])
  * @method DescribeGlobalDatabaseNetwork describeGlobalDatabaseNetwork(array $options = [])
@@ -83,6 +84,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
  * @method ModifyDBClusterAccessWhitelist modifyDBClusterAccessWhitelist(array $options = [])
+ * @method ModifyDBClusterAndNodesParameters modifyDBClusterAndNodesParameters(array $options = [])
  * @method ModifyDBClusterAuditLogCollector modifyDBClusterAuditLogCollector(array $options = [])
  * @method ModifyDBClusterDescription modifyDBClusterDescription(array $options = [])
  * @method ModifyDBClusterEndpoint modifyDBClusterEndpoint(array $options = [])
@@ -97,6 +99,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBEndpointAddress modifyDBEndpointAddress(array $options = [])
  * @method ModifyDBNodeClass modifyDBNodeClass(array $options = [])
  * @method ModifyDBNodeHotReplicaMode modifyDBNodeHotReplicaMode(array $options = [])
+ * @method ModifyDBNodesParameters modifyDBNodesParameters(array $options = [])
  * @method ModifyGlobalDatabaseNetwork modifyGlobalDatabaseNetwork(array $options = [])
  * @method ModifyLogBackupPolicy modifyLogBackupPolicy(array $options = [])
  * @method ModifyMaskingRules modifyMaskingRules(array $options = [])
@@ -128,6 +131,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'polardb';
 }
 
 /**
@@ -1283,6 +1289,24 @@ class DescribeDBNodePerformance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDBNodeIds()
+ * @method $this withDBNodeIds($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBNodesParameters extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getKey()
@@ -1897,6 +1921,28 @@ class ModifyDBClusterAccessWhitelist extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDBNodeIds()
+ * @method $this withDBNodeIds($value)
+ * @method string getParameterGroupId()
+ * @method $this withParameterGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class ModifyDBClusterAndNodesParameters extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -2205,6 +2251,28 @@ class ModifyDBNodeClass extends Rpc
  * @method $this withHotReplicaMode($value)
  */
 class ModifyDBNodeHotReplicaMode extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBNodeIds()
+ * @method $this withDBNodeIds($value)
+ * @method string getParameterGroupId()
+ * @method $this withParameterGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ */
+class ModifyDBNodesParameters extends Rpc
 {
 }
 

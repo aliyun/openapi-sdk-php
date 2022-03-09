@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1280 - 2022-3-9
+- Support modify params.
+
+
 ## 1.8.1279 - 2022-3-9
 - Update RecognizeVideoCastCrewList.
 
