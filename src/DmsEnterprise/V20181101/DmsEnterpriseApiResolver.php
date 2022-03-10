@@ -11,6 +11,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CloseOrder closeOrder(array $options = [])
  * @method CreateDataCorrectOrder createDataCorrectOrder(array $options = [])
  * @method CreateDataCronClearOrder createDataCronClearOrder(array $options = [])
+ * @method CreateDataExportOrder createDataExportOrder(array $options = [])
  * @method CreateDataImportOrder createDataImportOrder(array $options = [])
  * @method CreateFreeLockCorrectOrder createFreeLockCorrectOrder(array $options = [])
  * @method CreateLogicDatabase createLogicDatabase(array $options = [])
@@ -56,10 +57,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
  * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
  * @method GetProxy getProxy(array $options = [])
- * @method GetSparkJobDetail getSparkJobDetail(array $options = [])
- * @method GetSparkJobDriverLog getSparkJobDriverLog(array $options = [])
- * @method GetSparkJobExecutorLogs getSparkJobExecutorLogs(array $options = [])
- * @method GetSparkJobLog getSparkJobLog(array $options = [])
  * @method GetSQLReviewCheckResultStatus getSQLReviewCheckResultStatus(array $options = [])
  * @method GetSQLReviewOptimizeDetail getSQLReviewOptimizeDetail(array $options = [])
  * @method GetStructSyncExecSqlDetail getStructSyncExecSqlDetail(array $options = [])
@@ -73,7 +70,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetUserUploadFileJob getUserUploadFileJob(array $options = [])
  * @method GrantUserPermission grantUserPermission(array $options = [])
  * @method InspectProxyAccessSecret inspectProxyAccessSecret(array $options = [])
- * @method KillSparkJob killSparkJob(array $options = [])
  * @method ListColumns listColumns(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
  * @method ListDatabaseUserPermssions listDatabaseUserPermssions(array $options = [])
@@ -97,6 +93,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
  * @method ListSQLExecAuditLog listSQLExecAuditLog(array $options = [])
  * @method ListSQLReviewOriginSQL listSQLReviewOriginSQL(array $options = [])
+ * @method ListStandardGroups listStandardGroups(array $options = [])
  * @method ListTables listTables(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
@@ -114,7 +111,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchTable searchTable(array $options = [])
  * @method SetOwners setOwners(array $options = [])
  * @method SubmitOrderApproval submitOrderApproval(array $options = [])
- * @method SubmitSparkJob submitSparkJob(array $options = [])
  * @method SubmitStructSyncOrderApproval submitStructSyncOrderApproval(array $options = [])
  * @method SyncDatabaseMeta syncDatabaseMeta(array $options = [])
  * @method SyncInstanceMeta syncInstanceMeta(array $options = [])
@@ -229,6 +225,22 @@ class CreateDataCorrectOrder extends Rpc
  * @method $this withRelatedUserList($value)
  */
 class CreateDataCronClearOrder extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
+ */
+class CreateDataExportOrder extends Rpc
 {
 }
 
@@ -823,46 +835,6 @@ class GetProxy extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getTid()
- * @method $this withTid($value)
- */
-class GetSparkJobDetail extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getTid()
- * @method $this withTid($value)
- */
-class GetSparkJobDriverLog extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getTid()
- * @method $this withTid($value)
- */
-class GetSparkJobExecutorLogs extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getTid()
- * @method $this withTid($value)
- */
-class GetSparkJobLog extends Rpc
-{
-}
-
-/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getTid()
@@ -1017,16 +989,6 @@ class GrantUserPermission extends Rpc
  * @method $this withTid($value)
  */
 class InspectProxyAccessSecret extends Rpc
-{
-}
-
-/**
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getTid()
- * @method $this withTid($value)
- */
-class KillSparkJob extends Rpc
 {
 }
 
@@ -1405,6 +1367,14 @@ class ListSQLReviewOriginSQL extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListStandardGroups extends Rpc
+{
+}
+
+/**
  * @method string getSearchName()
  * @method $this withSearchName($value)
  * @method string getReturnGuid()
@@ -1704,126 +1674,6 @@ class SetOwners extends Rpc
  */
 class SubmitOrderApproval extends Rpc
 {
-}
-
-/**
- * @method string getMainClass()
- * @method string getConfiguration()
- * @method string getOssInfo()
- * @method string getTid()
- * @method $this withTid($value)
- * @method string getMainFile()
- * @method string getName()
- * @method string getFiles()
- * @method string getAppCode()
- * @method string getArguments()
- */
-class SubmitSparkJob extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMainClass($value)
-    {
-        $this->data['MainClass'] = $value;
-        $this->options['form_params']['MainClass'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withConfiguration($value)
-    {
-        $this->data['Configuration'] = $value;
-        $this->options['form_params']['Configuration'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssInfo($value)
-    {
-        $this->data['OssInfo'] = $value;
-        $this->options['form_params']['OssInfo'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMainFile($value)
-    {
-        $this->data['MainFile'] = $value;
-        $this->options['form_params']['MainFile'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFiles($value)
-    {
-        $this->data['Files'] = $value;
-        $this->options['form_params']['Files'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppCode($value)
-    {
-        $this->data['AppCode'] = $value;
-        $this->options['form_params']['AppCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withArguments($value)
-    {
-        $this->data['Arguments'] = $value;
-        $this->options['form_params']['Arguments'] = $value;
-
-        return $this;
-    }
 }
 
 /**
