@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1282 - 2022-3-11
+- DTS SDK.
+
+
 ## 1.8.1281 - 2022-3-10
 - Disabled Spark Job API.
 
