@@ -318,7 +318,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateSpeech updateSpeech(array $options = [])
  * @method UpdateSubscribeRelation updateSubscribeRelation(array $options = [])
  * @method UpdateThingModel updateThingModel(array $options = [])
- * @method UpdateThingModelValidationConfig updateThingModelValidationConfig(array $options = [])
  * @method UpdateThingScript updateThingScript(array $options = [])
  */
 class IotApiResolver extends ApiResolver
@@ -17428,46 +17427,6 @@ class UpdateSubscribeRelation extends Rpc
  * @method $this withFunctionBlockId($value)
  */
 class UpdateThingModel extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiProduct($value)
-    {
-        $this->data['ApiProduct'] = $value;
-        $this->options['form_params']['ApiProduct'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withApiRevision($value)
-    {
-        $this->data['ApiRevision'] = $value;
-        $this->options['form_params']['ApiRevision'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getValidateType()
- * @method $this withValidateType($value)
- * @method string getIotInstanceId()
- * @method $this withIotInstanceId($value)
- * @method string getProductKey()
- * @method $this withProductKey($value)
- * @method string getApiProduct()
- * @method string getApiRevision()
- */
-class UpdateThingModelValidationConfig extends Rpc
 {
 
     /**
