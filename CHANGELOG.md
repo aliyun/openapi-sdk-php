@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1285 - 2022-3-15
+- Set multiple apis to private.
+
+
 ## 1.8.1284 - 2022-3-14
 - DTS SDK.
 
