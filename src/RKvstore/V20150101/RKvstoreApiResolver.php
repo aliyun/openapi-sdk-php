@@ -571,6 +571,8 @@ class DeleteInstance extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
+ * @method string getShardCount()
+ * @method $this withShardCount($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -2479,6 +2481,8 @@ class RenewAdditionalBandwidth extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
  * @method string getInstanceClass()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1287 - 2022-3-15
+- Update by sdk platform.
+
+
 ## 1.8.1286 - 2022-3-15
 - DTS SDK.
 
