@@ -354,6 +354,7 @@ class ConfirmPipelineBatch extends Roa
  * @method string getMountHost()
  * @method string getAutoConfig()
  * @method string getEnvs()
+ * @method string getKafkaInstanceId()
  * @method string getPhpPECLExtensions()
  * @method string getPhpArmsConfigLocation()
  * @method string getCustomHostAlias()
@@ -363,6 +364,7 @@ class ConfirmPipelineBatch extends Roa
  * @method string getNamespaceId()
  * @method string getConfigMapMountDesc()
  * @method string getOssMountDescs()
+ * @method string getKafkaEndpoint()
  * @method string getPreStop()
  * @method string getCpu()
  * @method string getVSwitchId()
@@ -373,6 +375,7 @@ class ConfirmPipelineBatch extends Roa
  * @method string getWebContainer()
  * @method string getMemory()
  * @method string getSlsConfigs()
+ * @method string getOpenCollectToKafka()
  * @method string getCommandArgs()
  * @method string getAcrAssumeRoleArn()
  * @method string getReadiness()
@@ -392,6 +395,7 @@ class ConfirmPipelineBatch extends Roa
  * @method string getMountDesc()
  * @method string getJdk()
  * @method string getAppDescription()
+ * @method string getKafkaLogfileConfig()
  * @method string getAcrInstanceId()
  * @method string getVpcId()
  * @method string getImageUrl()
@@ -480,6 +484,19 @@ class CreateApplication extends Roa
     {
         $this->data['Envs'] = $value;
         $this->options['query']['Envs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKafkaInstanceId($value)
+    {
+        $this->data['KafkaInstanceId'] = $value;
+        $this->options['query']['KafkaInstanceId'] = $value;
 
         return $this;
     }
@@ -597,6 +614,19 @@ class CreateApplication extends Roa
     {
         $this->data['OssMountDescs'] = $value;
         $this->options['form_params']['OssMountDescs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKafkaEndpoint($value)
+    {
+        $this->data['KafkaEndpoint'] = $value;
+        $this->options['query']['KafkaEndpoint'] = $value;
 
         return $this;
     }
@@ -727,6 +757,19 @@ class CreateApplication extends Roa
     {
         $this->data['SlsConfigs'] = $value;
         $this->options['query']['SlsConfigs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOpenCollectToKafka($value)
+    {
+        $this->data['OpenCollectToKafka'] = $value;
+        $this->options['query']['OpenCollectToKafka'] = $value;
 
         return $this;
     }
@@ -974,6 +1017,19 @@ class CreateApplication extends Roa
     {
         $this->data['AppDescription'] = $value;
         $this->options['query']['AppDescription'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKafkaLogfileConfig($value)
+    {
+        $this->data['KafkaLogfileConfig'] = $value;
+        $this->options['query']['KafkaLogfileConfig'] = $value;
 
         return $this;
     }
@@ -1643,51 +1699,55 @@ class DeleteNamespace extends Roa
 
 /**
  * @method string getNasId()
- * @method string getWebContainer()
  * @method string getJarStartArgs()
+ * @method string getOssAkSecret()
+ * @method string getMountHost()
+ * @method string getBatchWaitTime()
+ * @method string getEnvs()
+ * @method string getKafkaInstanceId()
+ * @method string getPhpPECLExtensions()
+ * @method string getPhpArmsConfigLocation()
+ * @method string getCustomHostAlias()
+ * @method string getJarStartOptions()
+ * @method string getConfigMapMountDesc()
+ * @method string getOssMountDescs()
+ * @method string getKafkaEndpoint()
+ * @method string getPreStop()
+ * @method string getUpdateStrategy()
+ * @method string getChangeOrderDesc()
+ * @method string getMinReadyInstanceRatio()
+ * @method string getAutoEnableApplicationScalingRule()
+ * @method string getPostStart()
+ * @method string getPhpExtensions()
+ * @method string getAssociateEip()
+ * @method string getWebContainer()
  * @method string getEnableAhas()
  * @method string getSlsConfigs()
- * @method string getOssAkSecret()
+ * @method string getOpenCollectToKafka()
  * @method string getCommandArgs()
  * @method string getAcrAssumeRoleArn()
  * @method string getReadiness()
  * @method string getTimezone()
- * @method string getMountHost()
- * @method string getBatchWaitTime()
  * @method string getOssAkId()
  * @method string getLiveness()
- * @method string getEnvs()
- * @method string getPhpPECLExtensions()
- * @method string getPhpArmsConfigLocation()
  * @method string getPackageVersion()
  * @method string getTomcatConfig()
- * @method string getCustomHostAlias()
  * @method string getWarStartOptions()
- * @method string getJarStartOptions()
  * @method string getEdasContainerVersion()
  * @method string getPackageUrl()
  * @method string getTerminationGracePeriodSeconds()
- * @method string getConfigMapMountDesc()
- * @method string getOssMountDescs()
  * @method string getPhpConfig()
- * @method string getPreStop()
  * @method string getEnableGreyTagRoute()
  * @method string getCommand()
- * @method string getUpdateStrategy()
  * @method string getMountDesc()
  * @method string getJdk()
  * @method string getMinReadyInstances()
- * @method string getChangeOrderDesc()
+ * @method string getKafkaLogfileConfig()
  * @method string getAcrInstanceId()
  * @method string getAppId()
  * @method string getImageUrl()
- * @method string getMinReadyInstanceRatio()
  * @method string getPhp()
- * @method string getAutoEnableApplicationScalingRule()
  * @method string getPhpConfigLocation()
- * @method string getPostStart()
- * @method string getPhpExtensions()
- * @method string getAssociateEip()
  */
 class DeployApplication extends Roa
 {
@@ -1715,10 +1775,10 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withWebContainer($value)
+    public function withJarStartArgs($value)
     {
-        $this->data['WebContainer'] = $value;
-        $this->options['query']['WebContainer'] = $value;
+        $this->data['JarStartArgs'] = $value;
+        $this->options['query']['JarStartArgs'] = $value;
 
         return $this;
     }
@@ -1728,10 +1788,270 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withJarStartArgs($value)
+    public function withOssAkSecret($value)
     {
-        $this->data['JarStartArgs'] = $value;
-        $this->options['query']['JarStartArgs'] = $value;
+        $this->data['OssAkSecret'] = $value;
+        $this->options['form_params']['OssAkSecret'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMountHost($value)
+    {
+        $this->data['MountHost'] = $value;
+        $this->options['query']['MountHost'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchWaitTime($value)
+    {
+        $this->data['BatchWaitTime'] = $value;
+        $this->options['query']['BatchWaitTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnvs($value)
+    {
+        $this->data['Envs'] = $value;
+        $this->options['query']['Envs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKafkaInstanceId($value)
+    {
+        $this->data['KafkaInstanceId'] = $value;
+        $this->options['query']['KafkaInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhpPECLExtensions($value)
+    {
+        $this->data['PhpPECLExtensions'] = $value;
+        $this->options['form_params']['PhpPECLExtensions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhpArmsConfigLocation($value)
+    {
+        $this->data['PhpArmsConfigLocation'] = $value;
+        $this->options['query']['PhpArmsConfigLocation'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustomHostAlias($value)
+    {
+        $this->data['CustomHostAlias'] = $value;
+        $this->options['query']['CustomHostAlias'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJarStartOptions($value)
+    {
+        $this->data['JarStartOptions'] = $value;
+        $this->options['query']['JarStartOptions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigMapMountDesc($value)
+    {
+        $this->data['ConfigMapMountDesc'] = $value;
+        $this->options['form_params']['ConfigMapMountDesc'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssMountDescs($value)
+    {
+        $this->data['OssMountDescs'] = $value;
+        $this->options['form_params']['OssMountDescs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKafkaEndpoint($value)
+    {
+        $this->data['KafkaEndpoint'] = $value;
+        $this->options['query']['KafkaEndpoint'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPreStop($value)
+    {
+        $this->data['PreStop'] = $value;
+        $this->options['query']['PreStop'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUpdateStrategy($value)
+    {
+        $this->data['UpdateStrategy'] = $value;
+        $this->options['query']['UpdateStrategy'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChangeOrderDesc($value)
+    {
+        $this->data['ChangeOrderDesc'] = $value;
+        $this->options['query']['ChangeOrderDesc'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinReadyInstanceRatio($value)
+    {
+        $this->data['MinReadyInstanceRatio'] = $value;
+        $this->options['query']['MinReadyInstanceRatio'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAutoEnableApplicationScalingRule($value)
+    {
+        $this->data['AutoEnableApplicationScalingRule'] = $value;
+        $this->options['query']['AutoEnableApplicationScalingRule'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPostStart($value)
+    {
+        $this->data['PostStart'] = $value;
+        $this->options['query']['PostStart'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhpExtensions($value)
+    {
+        $this->data['PhpExtensions'] = $value;
+        $this->options['form_params']['PhpExtensions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAssociateEip($value)
+    {
+        $this->data['AssociateEip'] = $value;
+        $this->options['form_params']['AssociateEip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWebContainer($value)
+    {
+        $this->data['WebContainer'] = $value;
+        $this->options['query']['WebContainer'] = $value;
 
         return $this;
     }
@@ -1767,10 +2087,10 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withOssAkSecret($value)
+    public function withOpenCollectToKafka($value)
     {
-        $this->data['OssAkSecret'] = $value;
-        $this->options['form_params']['OssAkSecret'] = $value;
+        $this->data['OpenCollectToKafka'] = $value;
+        $this->options['query']['OpenCollectToKafka'] = $value;
 
         return $this;
     }
@@ -1832,32 +2152,6 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withMountHost($value)
-    {
-        $this->data['MountHost'] = $value;
-        $this->options['query']['MountHost'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBatchWaitTime($value)
-    {
-        $this->data['BatchWaitTime'] = $value;
-        $this->options['query']['BatchWaitTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withOssAkId($value)
     {
         $this->data['OssAkId'] = $value;
@@ -1875,45 +2169,6 @@ class DeployApplication extends Roa
     {
         $this->data['Liveness'] = $value;
         $this->options['query']['Liveness'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEnvs($value)
-    {
-        $this->data['Envs'] = $value;
-        $this->options['query']['Envs'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPhpPECLExtensions($value)
-    {
-        $this->data['PhpPECLExtensions'] = $value;
-        $this->options['form_params']['PhpPECLExtensions'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPhpArmsConfigLocation($value)
-    {
-        $this->data['PhpArmsConfigLocation'] = $value;
-        $this->options['query']['PhpArmsConfigLocation'] = $value;
 
         return $this;
     }
@@ -1949,36 +2204,10 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withCustomHostAlias($value)
-    {
-        $this->data['CustomHostAlias'] = $value;
-        $this->options['query']['CustomHostAlias'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withWarStartOptions($value)
     {
         $this->data['WarStartOptions'] = $value;
         $this->options['query']['WarStartOptions'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withJarStartOptions($value)
-    {
-        $this->data['JarStartOptions'] = $value;
-        $this->options['query']['JarStartOptions'] = $value;
 
         return $this;
     }
@@ -2027,49 +2256,10 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withConfigMapMountDesc($value)
-    {
-        $this->data['ConfigMapMountDesc'] = $value;
-        $this->options['form_params']['ConfigMapMountDesc'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOssMountDescs($value)
-    {
-        $this->data['OssMountDescs'] = $value;
-        $this->options['form_params']['OssMountDescs'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withPhpConfig($value)
     {
         $this->data['PhpConfig'] = $value;
         $this->options['form_params']['PhpConfig'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPreStop($value)
-    {
-        $this->data['PreStop'] = $value;
-        $this->options['query']['PreStop'] = $value;
 
         return $this;
     }
@@ -2096,19 +2286,6 @@ class DeployApplication extends Roa
     {
         $this->data['Command'] = $value;
         $this->options['query']['Command'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUpdateStrategy($value)
-    {
-        $this->data['UpdateStrategy'] = $value;
-        $this->options['query']['UpdateStrategy'] = $value;
 
         return $this;
     }
@@ -2157,10 +2334,10 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withChangeOrderDesc($value)
+    public function withKafkaLogfileConfig($value)
     {
-        $this->data['ChangeOrderDesc'] = $value;
-        $this->options['query']['ChangeOrderDesc'] = $value;
+        $this->data['KafkaLogfileConfig'] = $value;
+        $this->options['query']['KafkaLogfileConfig'] = $value;
 
         return $this;
     }
@@ -2209,19 +2386,6 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withMinReadyInstanceRatio($value)
-    {
-        $this->data['MinReadyInstanceRatio'] = $value;
-        $this->options['query']['MinReadyInstanceRatio'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withPhp($value)
     {
         $this->data['Php'] = $value;
@@ -2235,62 +2399,10 @@ class DeployApplication extends Roa
      *
      * @return $this
      */
-    public function withAutoEnableApplicationScalingRule($value)
-    {
-        $this->data['AutoEnableApplicationScalingRule'] = $value;
-        $this->options['query']['AutoEnableApplicationScalingRule'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withPhpConfigLocation($value)
     {
         $this->data['PhpConfigLocation'] = $value;
         $this->options['query']['PhpConfigLocation'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPostStart($value)
-    {
-        $this->data['PostStart'] = $value;
-        $this->options['query']['PostStart'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPhpExtensions($value)
-    {
-        $this->data['PhpExtensions'] = $value;
-        $this->options['form_params']['PhpExtensions'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAssociateEip($value)
-    {
-        $this->data['AssociateEip'] = $value;
-        $this->options['form_params']['AssociateEip'] = $value;
 
         return $this;
     }

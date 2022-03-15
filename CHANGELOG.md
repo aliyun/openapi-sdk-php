@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1288 - 2022-3-15
+- Support collect logs to kafka.
+
+
 ## 1.8.1287 - 2022-3-15
 - Update by sdk platform.
 
