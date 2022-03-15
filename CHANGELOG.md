@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1289 - 2022-3-15
+- Add tcpInternetEndpoint field for the api OnsInstanceBaseInfo.
+
+
 ## 1.8.1288 - 2022-3-15
 - Support collect logs to kafka.
 
