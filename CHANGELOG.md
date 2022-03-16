@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1290 - 2022-3-16
+- Support Latest APIs.
+
+
 ## 1.8.1289 - 2022-3-15
 - Add tcpInternetEndpoint field for the api OnsInstanceBaseInfo.
 
