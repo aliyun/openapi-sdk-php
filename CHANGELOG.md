@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1292 - 2022-3-16
+- Union Task API.
+
+
 ## 1.8.1291 - 2022-3-16
 - Test Push Git.
 

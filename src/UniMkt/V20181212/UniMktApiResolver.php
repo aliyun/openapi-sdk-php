@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckDevice checkDevice(array $options = [])
  * @method CheckReceivingDetail checkReceivingDetail(array $options = [])
  * @method CheckTenantBiz checkTenantBiz(array $options = [])
+ * @method CheckUserFinishAd checkUserFinishAd(array $options = [])
  * @method CountUser countUser(array $options = [])
  * @method CreateCalculation createCalculation(array $options = [])
  * @method CreateFlow createFlow(array $options = [])
@@ -26,9 +27,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateUnionTask createUnionTask(array $options = [])
  * @method CreateUser createUser(array $options = [])
  * @method DeleteRule deleteRule(array $options = [])
+ * @method DeviceApiAddDevice deviceApiAddDevice(array $options = [])
  * @method EndUnionTask endUnionTask(array $options = [])
  * @method GetMainPartList getMainPartList(array $options = [])
  * @method GetUnionTaskStatus getUnionTaskStatus(array $options = [])
+ * @method InnerCallService innerCallService(array $options = [])
  * @method KeepAlive keepAlive(array $options = [])
  * @method ListFlow listFlow(array $options = [])
  * @method ListMedia listMedia(array $options = [])
@@ -36,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRule listRule(array $options = [])
  * @method ListRuleArea listRuleArea(array $options = [])
  * @method ListSlot listSlot(array $options = [])
+ * @method ListTasks listTasks(array $options = [])
  * @method ListTenant listTenant(array $options = [])
  * @method ListTenantName listTenantName(array $options = [])
  * @method ListUser listUser(array $options = [])
@@ -81,6 +85,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RegistDevice registDevice(array $options = [])
  * @method SaveCpmTrade saveCpmTrade(array $options = [])
  * @method ScanCodeNotification scanCodeNotification(array $options = [])
+ * @method SearchAdvertising searchAdvertising(array $options = [])
  * @method SendTaokeInfo sendTaokeInfo(array $options = [])
  * @method SyncUnionOrder syncUnionOrder(array $options = [])
  * @method UpdateFlow updateFlow(array $options = [])
@@ -100,9 +105,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = '1.0.0';
 }
 
 /**
@@ -532,6 +534,24 @@ class CheckReceivingDetail extends Rpc
  * @method $this withUserSite($value)
  */
 class CheckTenantBiz extends Rpc
+{
+}
+
+/**
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getAdid()
+ * @method $this withAdid($value)
+ * @method string getTagid()
+ * @method $this withTagid($value)
+ * @method string getClicklink()
+ * @method $this withClicklink($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getMediaid()
+ * @method $this withMediaid($value)
+ */
+class CheckUserFinishAd extends Rpc
 {
 }
 
@@ -978,6 +998,26 @@ class DeleteRule extends Rpc
 }
 
 /**
+ * @method string getBody()
+ */
+class DeviceApiAddDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
  * @method string getChannelId()
@@ -1023,6 +1063,26 @@ class GetMainPartList extends Rpc
  */
 class GetUnionTaskStatus extends Rpc
 {
+}
+
+/**
+ * @method string getBody()
+ */
+class InnerCallService extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1380,6 +1440,166 @@ class ListRuleArea extends Rpc
  */
 class ListSlot extends Rpc
 {
+}
+
+/**
+ * @method string getMarketingType()
+ * @method string getTaskType()
+ * @method string getPageSize()
+ * @method string getTaskName()
+ * @method string getEndTime()
+ * @method string getPageIndex()
+ * @method string getBrandUserNick()
+ * @method string getProxyUserNick()
+ * @method string getStartTime()
+ * @method string getTaskId()
+ * @method string getStatus()
+ */
+class ListTasks extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMarketingType($value)
+    {
+        $this->data['MarketingType'] = $value;
+        $this->options['form_params']['MarketingType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskType($value)
+    {
+        $this->data['TaskType'] = $value;
+        $this->options['form_params']['TaskType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskName($value)
+    {
+        $this->data['TaskName'] = $value;
+        $this->options['form_params']['TaskName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageIndex($value)
+    {
+        $this->data['PageIndex'] = $value;
+        $this->options['form_params']['PageIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBrandUserNick($value)
+    {
+        $this->data['BrandUserNick'] = $value;
+        $this->options['form_params']['BrandUserNick'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyUserNick($value)
+    {
+        $this->data['ProxyUserNick'] = $value;
+        $this->options['form_params']['ProxyUserNick'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2237,6 +2457,8 @@ class QueryContentInfo extends Rpc
  * @method $this withTaskBizType($value)
  * @method string getBrandUserId()
  * @method $this withBrandUserId($value)
+ * @method string getBrandUserNick()
+ * @method $this withBrandUserNick($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
  * @method string getChannelId()
@@ -2716,6 +2938,8 @@ class QueryUnionTaskInfo extends Rpc
  * @method $this withBrandUserId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getBrandUserNick()
+ * @method $this withBrandUserNick($value)
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
  * @method string getProxyUserId()
@@ -3020,6 +3244,8 @@ class SaveCpmTrade extends Rpc
  * @method $this withSalePrice($value)
  * @method string getCommodityId()
  * @method $this withCommodityId($value)
+ * @method string getTradeTimeStr()
+ * @method $this withTradeTimeStr($value)
  * @method string getHolderId()
  * @method $this withHolderId($value)
  * @method string getDeviceType()
@@ -3070,6 +3296,22 @@ class ScanCodeNotification extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+}
+
+/**
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getTest()
+ * @method $this withTest($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getImp()
+ * @method $this withImp($value)
+ * @method string getUser()
+ * @method $this withUser($value)
+ */
+class SearchAdvertising extends Rpc
+{
 }
 
 /**
