@@ -5,6 +5,7 @@ namespace AlibabaCloud\DmsEnterprise\V20181101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddLhMembers addLhMembers(array $options = [])
  * @method AddLogicTableRouteConfig addLogicTableRouteConfig(array $options = [])
  * @method ApproveOrder approveOrder(array $options = [])
  * @method ChangeColumnSecLevel changeColumnSecLevel(array $options = [])
@@ -14,16 +15,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDataExportOrder createDataExportOrder(array $options = [])
  * @method CreateDataImportOrder createDataImportOrder(array $options = [])
  * @method CreateFreeLockCorrectOrder createFreeLockCorrectOrder(array $options = [])
+ * @method CreateLakeHouseSpace createLakeHouseSpace(array $options = [])
  * @method CreateLogicDatabase createLogicDatabase(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
  * @method CreateProxy createProxy(array $options = [])
  * @method CreateProxyAccess createProxyAccess(array $options = [])
  * @method CreatePublishGroupTask createPublishGroupTask(array $options = [])
  * @method CreateSQLReviewOrder createSQLReviewOrder(array $options = [])
+ * @method CreateStandardGroup createStandardGroup(array $options = [])
  * @method CreateStructSyncOrder createStructSyncOrder(array $options = [])
  * @method CreateUploadFileJob createUploadFileJob(array $options = [])
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DeleteLhMembers deleteLhMembers(array $options = [])
  * @method DeleteLogicDatabase deleteLogicDatabase(array $options = [])
  * @method DeleteLogicTableRouteConfig deleteLogicTableRouteConfig(array $options = [])
  * @method DeleteProxy deleteProxy(array $options = [])
@@ -82,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstanceLoginAuditLog listInstanceLoginAuditLog(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListInstanceUserPermissions listInstanceUserPermissions(array $options = [])
+ * @method ListLhTaskFlowAndScenario listLhTaskFlowAndScenario(array $options = [])
  * @method ListLogicDatabases listLogicDatabases(array $options = [])
  * @method ListLogicTableRouteConfig listLogicTableRouteConfig(array $options = [])
  * @method ListLogicTables listLogicTables(array $options = [])
@@ -134,6 +139,20 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'dms-enterprise';
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getMembers()
+ * @method $this withMembers($value)
+ * @method string getObjectType()
+ * @method $this withObjectType($value)
+ * @method string getObjectId()
+ * @method $this withObjectId($value)
+ */
+class AddLhMembers extends Rpc
+{
 }
 
 /**
@@ -277,6 +296,30 @@ class CreateFreeLockCorrectOrder extends Rpc
 }
 
 /**
+ * @method string getSpaceName()
+ * @method $this withSpaceName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getDwDbType()
+ * @method $this withDwDbType($value)
+ * @method string getProdDbId()
+ * @method $this withProdDbId($value)
+ * @method string getDevDbId()
+ * @method $this withDevDbId($value)
+ * @method string getSpaceConfig()
+ * @method $this withSpaceConfig($value)
+ */
+class CreateLakeHouseSpace extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getDatabaseIds()
@@ -381,6 +424,20 @@ class CreateSQLReviewOrder extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbType()
+ * @method $this withDbType($value)
+ */
+class CreateStandardGroup extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getAttachmentKey()
@@ -439,6 +496,20 @@ class CreateUploadOSSFileJob extends Rpc
  * @method $this withHost($value)
  */
 class DeleteInstance extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getObjectType()
+ * @method $this withObjectType($value)
+ * @method string getObjectId()
+ * @method $this withObjectId($value)
+ * @method string getMemberIds()
+ * @method $this withMemberIds($value)
+ */
+class DeleteLhMembers extends Rpc
 {
 }
 
@@ -1175,6 +1246,18 @@ class ListInstances extends Rpc
  * @method $this withUserName($value)
  */
 class ListInstanceUserPermissions extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getSpaceId()
+ * @method $this withSpaceId($value)
+ */
+class ListLhTaskFlowAndScenario extends Rpc
 {
 }
 

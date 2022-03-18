@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1293 - 2022-3-18
+- Supported CreateStandardGroup, ListStandardGroups API.
+
+
 ## 1.8.1292 - 2022-3-16
 - Union Task API.
 
