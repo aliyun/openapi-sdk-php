@@ -401,6 +401,9 @@ class CreateGroupMetricRules extends Rpc
 			if(isset($depth1Value['EscalationsWarnComparisonOperator'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Warn.ComparisonOperator'] = $depth1Value['EscalationsWarnComparisonOperator'];
 			}
+			if(isset($depth1Value['DynamicAlertSensitivity'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.DynamicAlertSensitivity'] = $depth1Value['DynamicAlertSensitivity'];
+			}
 			if(isset($depth1Value['RuleName'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.RuleName'] = $depth1Value['RuleName'];
 			}
@@ -409,6 +412,9 @@ class CreateGroupMetricRules extends Rpc
 			}
 			if(isset($depth1Value['EffectiveInterval'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.EffectiveInterval'] = $depth1Value['EffectiveInterval'];
+			}
+			if(isset($depth1Value['DynamicAlertHistoryDataRange'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.DynamicAlertHistoryDataRange'] = $depth1Value['DynamicAlertHistoryDataRange'];
 			}
 			if(isset($depth1Value['EscalationsInfoComparisonOperator'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Info.ComparisonOperator'] = $depth1Value['EscalationsInfoComparisonOperator'];
@@ -446,8 +452,14 @@ class CreateGroupMetricRules extends Rpc
 			if(isset($depth1Value['EscalationsCriticalStatistics'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Critical.Statistics'] = $depth1Value['EscalationsCriticalStatistics'];
 			}
+			if(isset($depth1Value['RuleType'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.RuleType'] = $depth1Value['RuleType'];
+			}
 			if(isset($depth1Value['EscalationsInfoTimes'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Info.Times'] = $depth1Value['EscalationsInfoTimes'];
+			}
+			if(isset($depth1Value['ExtraDimensionJson'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.ExtraDimensionJson'] = $depth1Value['ExtraDimensionJson'];
 			}
 			if(isset($depth1Value['EscalationsCriticalTimes'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Critical.Times'] = $depth1Value['EscalationsCriticalTimes'];
@@ -944,18 +956,18 @@ class CreateMonitorAgentProcess extends Rpc
 }
 
 /**
- * @method string getContactGroups()
- * @method $this withContactGroups($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
  * @method string getOptions()
  * @method $this withOptions($value)
- * @method string getServiceId()
- * @method $this withServiceId($value)
  * @method string getBindUrl()
  * @method $this withBindUrl($value)
+ * @method string getContactGroups()
+ * @method $this withContactGroups($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
  */
 class CreateMonitorGroup extends Rpc
 {
@@ -3466,6 +3478,9 @@ class PutEventRuleTargets extends Rpc
 			if(isset($depth1Value['Version'])){
 				$this->options['query']['OpenApiParameters.' . ($depth1 + 1) . '.Version'] = $depth1Value['Version'];
 			}
+			if(isset($depth1Value['JsonParams'])){
+				$this->options['query']['OpenApiParameters.' . ($depth1 + 1) . '.JsonParams'] = $depth1Value['JsonParams'];
+			}
 		}
 
 		return $this;
@@ -3571,49 +3586,55 @@ class PutExporterRule extends Rpc
  * @method string getWebhook()
  * @method $this withWebhook($value)
  * @method string getEscalationsWarnComparisonOperator()
+ * @method string getDynamicAlertSensitivity()
+ * @method $this withDynamicAlertSensitivity($value)
  * @method string getRuleName()
  * @method $this withRuleName($value)
- * @method string getEscalationsInfoStatistics()
  * @method string getEffectiveInterval()
  * @method $this withEffectiveInterval($value)
- * @method string getEscalationsInfoComparisonOperator()
  * @method string getNoDataPolicy()
  * @method $this withNoDataPolicy($value)
  * @method string getNoEffectiveInterval()
  * @method $this withNoEffectiveInterval($value)
  * @method string getEmailSubject()
  * @method $this withEmailSubject($value)
- * @method string getSilenceTime()
- * @method $this withSilenceTime($value)
  * @method string getMetricName()
  * @method $this withMetricName($value)
  * @method string getEscalationsWarnTimes()
- * @method string getCompositeExpression()
- * @method $this withCompositeExpression($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getEscalationsWarnThreshold()
  * @method string getContactGroups()
  * @method $this withContactGroups($value)
  * @method string getEscalationsCriticalStatistics()
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getEscalationsInfoTimes()
  * @method string getExtraDimensionJson()
  * @method $this withExtraDimensionJson($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ * @method string getEscalationsCriticalThreshold()
+ * @method string getEscalationsInfoStatistics()
+ * @method string getDynamicAlertHistoryDataRange()
+ * @method $this withDynamicAlertHistoryDataRange($value)
+ * @method string getEscalationsInfoComparisonOperator()
+ * @method string getSilenceTime()
+ * @method $this withSilenceTime($value)
+ * @method string getCompositeExpression()
+ * @method $this withCompositeExpression($value)
+ * @method string getEscalationsInfoTimes()
  * @method string getEscalationsCriticalTimes()
  * @method string getEscalationsWarnStatistics()
  * @method string getEscalationsInfoThreshold()
  * @method string getNamespace()
  * @method $this withNamespace($value)
- * @method string getInterval()
- * @method $this withInterval($value)
- * @method string getRuleId()
- * @method $this withRuleId($value)
  * @method string getCategory()
  * @method $this withCategory($value)
  * @method string getEscalationsCriticalComparisonOperator()
- * @method string getEscalationsCriticalThreshold()
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
@@ -3629,32 +3650,6 @@ class PutGroupMetricRule extends Rpc
     {
         $this->data['EscalationsWarnComparisonOperator'] = $value;
         $this->options['query']['Escalations.Warn.ComparisonOperator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEscalationsInfoStatistics($value)
-    {
-        $this->data['EscalationsInfoStatistics'] = $value;
-        $this->options['query']['Escalations.Info.Statistics'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEscalationsInfoComparisonOperator($value)
-    {
-        $this->data['EscalationsInfoComparisonOperator'] = $value;
-        $this->options['query']['Escalations.Info.ComparisonOperator'] = $value;
 
         return $this;
     }
@@ -3694,6 +3689,45 @@ class PutGroupMetricRule extends Rpc
     {
         $this->data['EscalationsCriticalStatistics'] = $value;
         $this->options['query']['Escalations.Critical.Statistics'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsCriticalThreshold($value)
+    {
+        $this->data['EscalationsCriticalThreshold'] = $value;
+        $this->options['query']['Escalations.Critical.Threshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsInfoStatistics($value)
+    {
+        $this->data['EscalationsInfoStatistics'] = $value;
+        $this->options['query']['Escalations.Info.Statistics'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsInfoComparisonOperator($value)
+    {
+        $this->data['EscalationsInfoComparisonOperator'] = $value;
+        $this->options['query']['Escalations.Info.ComparisonOperator'] = $value;
 
         return $this;
     }
@@ -3759,19 +3793,6 @@ class PutGroupMetricRule extends Rpc
     {
         $this->data['EscalationsCriticalComparisonOperator'] = $value;
         $this->options['query']['Escalations.Critical.ComparisonOperator'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEscalationsCriticalThreshold($value)
-    {
-        $this->data['EscalationsCriticalThreshold'] = $value;
-        $this->options['query']['Escalations.Critical.Threshold'] = $value;
 
         return $this;
     }
@@ -3939,6 +3960,9 @@ class PutMetricRuleTargets extends Rpc
 			}
 			if(isset($depth1Value['Arn'])){
 				$this->options['query']['Targets.' . ($depth1 + 1) . '.Arn'] = $depth1Value['Arn'];
+			}
+			if(isset($depth1Value['JsonParams'])){
+				$this->options['query']['Targets.' . ($depth1 + 1) . '.JsonParams'] = $depth1Value['JsonParams'];
 			}
 		}
 
@@ -4252,6 +4276,9 @@ class PutResourceMetricRules extends Rpc
 			if(isset($depth1Value['EscalationsWarnComparisonOperator'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Warn.ComparisonOperator'] = $depth1Value['EscalationsWarnComparisonOperator'];
 			}
+			if(isset($depth1Value['DynamicAlertSensitivity'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.DynamicAlertSensitivity'] = $depth1Value['DynamicAlertSensitivity'];
+			}
 			if(isset($depth1Value['RuleName'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.RuleName'] = $depth1Value['RuleName'];
 			}
@@ -4260,6 +4287,9 @@ class PutResourceMetricRules extends Rpc
 			}
 			if(isset($depth1Value['EffectiveInterval'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.EffectiveInterval'] = $depth1Value['EffectiveInterval'];
+			}
+			if(isset($depth1Value['DynamicAlertHistoryDataRange'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.DynamicAlertHistoryDataRange'] = $depth1Value['DynamicAlertHistoryDataRange'];
 			}
 			if(isset($depth1Value['EscalationsInfoComparisonOperator'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Info.ComparisonOperator'] = $depth1Value['EscalationsInfoComparisonOperator'];
@@ -4273,8 +4303,14 @@ class PutResourceMetricRules extends Rpc
 			if(isset($depth1Value['EmailSubject'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.EmailSubject'] = $depth1Value['EmailSubject'];
 			}
+			if(isset($depth1Value['Options'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.Options'] = $depth1Value['Options'];
+			}
 			if(isset($depth1Value['SilenceTime'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.SilenceTime'] = $depth1Value['SilenceTime'];
+			}
+			if(isset($depth1Value['Prometheus'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.Prometheus'] = $depth1Value['Prometheus'];
 			}
 			if(isset($depth1Value['MetricName'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
@@ -4296,6 +4332,9 @@ class PutResourceMetricRules extends Rpc
 			}
 			if(isset($depth1Value['EscalationsCriticalStatistics'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Critical.Statistics'] = $depth1Value['EscalationsCriticalStatistics'];
+			}
+			if(isset($depth1Value['RuleType'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.RuleType'] = $depth1Value['RuleType'];
 			}
 			if(isset($depth1Value['GroupId'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.GroupId'] = $depth1Value['GroupId'];

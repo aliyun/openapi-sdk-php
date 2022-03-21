@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1294 - 2022-3-21
+- The alarm target callback adds parameter writing.
+
+
 ## 1.8.1293 - 2022-3-18
 - Supported CreateStandardGroup, ListStandardGroups API.
 
