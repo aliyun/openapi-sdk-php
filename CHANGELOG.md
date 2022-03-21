@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1295 - 2022-3-21
+- Get Job Support Query By Job Name.
+- Add Api Create Namespace.
+- Create App Support Set User Defined App Key.
+
+
 ## 1.8.1294 - 2022-3-21
 - The alarm target callback adds parameter writing.
 

@@ -10,6 +10,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchEnableJobs batchEnableJobs(array $options = [])
  * @method CreateAppGroup createAppGroup(array $options = [])
  * @method CreateJob createJob(array $options = [])
+ * @method CreateNamespace createNamespace(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteWorkflow deleteWorkflow(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
@@ -152,12 +153,18 @@ class BatchEnableJobs extends Rpc
  * @method $this withGroupId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getMonitorConfigJson()
+ * @method $this withMonitorConfigJson($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  * @method string getAlarmJson()
  * @method $this withAlarmJson($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getMonitorContactsJson()
+ * @method $this withMonitorContactsJson($value)
  */
 class CreateAppGroup extends Rpc
 {
@@ -623,6 +630,21 @@ class CreateJob extends Rpc
 }
 
 /**
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ */
+class CreateNamespace extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
@@ -796,6 +818,8 @@ class ExecuteWorkflow extends Rpc
  * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
+ * @method string getJobName()
+ * @method $this withJobName($value)
  */
 class GetJobInfo extends Rpc
 {
