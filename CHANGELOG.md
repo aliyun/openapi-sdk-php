@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1296 - 2022-3-23
+- Update by sdk platform.
+
+
 ## 1.8.1295 - 2022-3-21
 - Get Job Support Query By Job Name.
 - Add Api Create Namespace.
