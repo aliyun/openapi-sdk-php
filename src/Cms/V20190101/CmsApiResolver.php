@@ -1659,6 +1659,8 @@ class DescribeDynamicTagRuleList extends Rpc
 /**
  * @method string getRuleName()
  * @method $this withRuleName($value)
+ * @method string getSilenceTime()
+ * @method $this withSilenceTime($value)
  */
 class DescribeEventRuleAttribute extends Rpc
 {
@@ -1909,6 +1911,8 @@ class DescribeMetricRuleTemplateAttribute extends Rpc
 }
 
 /**
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method string getHistory()
  * @method $this withHistory($value)
  * @method string getTemplateId()
@@ -1921,6 +1925,8 @@ class DescribeMetricRuleTemplateAttribute extends Rpc
  * @method $this withPageSize($value)
  * @method string getKeyword()
  * @method $this withKeyword($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
  */
 class DescribeMetricRuleTemplateList extends Rpc
 {

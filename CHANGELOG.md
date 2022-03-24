@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1297 - 2022-3-24
+- Add multi indicator monitoring.
+
+
 ## 1.8.1296 - 2022-3-23
 - Update by sdk platform.
 
