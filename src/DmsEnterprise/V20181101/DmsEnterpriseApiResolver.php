@@ -9,10 +9,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddLogicTableRouteConfig addLogicTableRouteConfig(array $options = [])
  * @method ApproveOrder approveOrder(array $options = [])
  * @method ChangeColumnSecLevel changeColumnSecLevel(array $options = [])
+ * @method ChangeLhDagOwner changeLhDagOwner(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
  * @method CreateDataCorrectOrder createDataCorrectOrder(array $options = [])
  * @method CreateDataCronClearOrder createDataCronClearOrder(array $options = [])
- * @method CreateDataExportOrder createDataExportOrder(array $options = [])
  * @method CreateDataImportOrder createDataImportOrder(array $options = [])
  * @method CreateFreeLockCorrectOrder createFreeLockCorrectOrder(array $options = [])
  * @method CreateLakeHouseSpace createLakeHouseSpace(array $options = [])
@@ -107,6 +107,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
  * @method ModifyDataCorrectExecSQL modifyDataCorrectExecSQL(array $options = [])
  * @method PauseDataCorrectSQLJob pauseDataCorrectSQLJob(array $options = [])
+ * @method ReDeployLhDagVersion reDeployLhDagVersion(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  * @method RegisterUser registerUser(array $options = [])
  * @method RestartDataCorrectSQLJob restartDataCorrectSQLJob(array $options = [])
@@ -204,6 +205,18 @@ class ChangeColumnSecLevel extends Rpc
 }
 
 /**
+ * @method string getOwnerUserId()
+ * @method $this withOwnerUserId($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ChangeLhDagOwner extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getCloseReason()
@@ -244,22 +257,6 @@ class CreateDataCorrectOrder extends Rpc
  * @method $this withRelatedUserList($value)
  */
 class CreateDataCronClearOrder extends Rpc
-{
-}
-
-/**
- * @method string getTid()
- * @method $this withTid($value)
- * @method string getAttachmentKey()
- * @method $this withAttachmentKey($value)
- * @method string getParam()
- * @method $this withParam($value)
- * @method string getComment()
- * @method $this withComment($value)
- * @method string getRelatedUserList()
- * @method $this withRelatedUserList($value)
- */
-class CreateDataExportOrder extends Rpc
 {
 }
 
@@ -1570,6 +1567,18 @@ class ModifyDataCorrectExecSQL extends Rpc
  * @method $this withJobId($value)
  */
 class PauseDataCorrectSQLJob extends Rpc
+{
+}
+
+/**
+ * @method string getDagVersion()
+ * @method $this withDagVersion($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ReDeployLhDagVersion extends Rpc
 {
 }
 

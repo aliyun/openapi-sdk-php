@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1298 - 2022-3-24
+- Supported CreateLakeHouseSpace,AddLhMembers,DeleteLhMembers,ListLhTaskFlowAndScenario,ChangeLhDagOwner,ReDeployLhDagVersion API.
+
+
 ## 1.8.1297 - 2022-3-24
 - Add multi indicator monitoring.
 
