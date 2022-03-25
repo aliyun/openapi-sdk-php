@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\VersionResolver;
  * @method static V20200809\QuickbiPublicApiResolver v20200809()
  * @method static V20201111\QuickbiPublicApiResolver v20201111()
  * @method static V20210325\QuickbiPublicApiResolver v20210325()
+ * @method static V20220101\QuickbiPublicApiResolver v20220101()
  */
 class QuickbiPublic extends VersionResolver
 {

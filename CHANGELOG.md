@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1300 - 2022-3-25
+- Initialize APIs.
+
+
 ## 1.8.1299 - 2022-3-25
 - Iot_20180120 old version sdk.
 
