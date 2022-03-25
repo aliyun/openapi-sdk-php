@@ -265,6 +265,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryThingModelPublished queryThingModelPublished(array $options = [])
  * @method QueryTopicReverseRouteTable queryTopicReverseRouteTable(array $options = [])
  * @method QueryTopicRouteTable queryTopicRouteTable(array $options = [])
+ * @method RecognizeCarNum recognizeCarNum(array $options = [])
+ * @method RecognizePictureGeneral recognizePictureGeneral(array $options = [])
  * @method RefreshDeviceTunnelSharePassword refreshDeviceTunnelSharePassword(array $options = [])
  * @method RefreshStudioAppTokenOpen refreshStudioAppTokenOpen(array $options = [])
  * @method RegisterDevice registerDevice(array $options = [])
@@ -14342,6 +14344,78 @@ class QueryTopicReverseRouteTable extends Rpc
  * @method string getApiRevision()
  */
 class QueryTopicRouteTable extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class RecognizeCarNum extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class RecognizePictureGeneral extends Rpc
 {
 
     /**
