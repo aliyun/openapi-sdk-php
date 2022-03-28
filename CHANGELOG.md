@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1301 - 2022-3-28
+- Support more params in text, clockWidget.
+
+
 ## 1.8.1300 - 2022-3-25
 - Initialize APIs.
 

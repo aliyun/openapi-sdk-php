@@ -882,6 +882,24 @@ class StartMPUTask extends Rpc
 				if(isset($depth2Value['FontSize'])){
 					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontSize'] = $depth2Value['FontSize'];
 				}
+				if(isset($depth2Value['BorderWidth'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BorderWidth'] = $depth2Value['BorderWidth'];
+				}
+				if(isset($depth2Value['BorderColor'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BorderColor'] = $depth2Value['BorderColor'];
+				}
+				if(isset($depth2Value['Box'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Box'] = $depth2Value['Box'];
+				}
+				if(isset($depth2Value['BoxColor'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BoxColor'] = $depth2Value['BoxColor'];
+				}
+				if(isset($depth2Value['BoxBorderWidth'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BoxBorderWidth'] = $depth2Value['BoxBorderWidth'];
+				}
+				if(isset($depth2Value['Alpha'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Alpha'] = $depth2Value['Alpha'];
+				}
 			}
 			if(isset($depth1Value['SourceType'])){
 				$this->options['query']['UserPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
@@ -920,6 +938,24 @@ class StartMPUTask extends Rpc
 			}
 			if(isset($depth1Value['FontSize'])){
 				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontSize'] = $depth1Value['FontSize'];
+			}
+			if(isset($depth1Value['BorderWidth'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BorderWidth'] = $depth1Value['BorderWidth'];
+			}
+			if(isset($depth1Value['BorderColor'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BorderColor'] = $depth1Value['BorderColor'];
+			}
+			if(isset($depth1Value['Box'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.Box'] = $depth1Value['Box'];
+			}
+			if(isset($depth1Value['BoxColor'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BoxColor'] = $depth1Value['BoxColor'];
+			}
+			if(isset($depth1Value['BoxBorderWidth'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BoxBorderWidth'] = $depth1Value['BoxBorderWidth'];
+			}
+			if(isset($depth1Value['Alpha'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.Alpha'] = $depth1Value['Alpha'];
 			}
 		}
 
@@ -1560,6 +1596,24 @@ class UpdateMPUTask extends Rpc
 				if(isset($depth2Value['FontSize'])){
 					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.FontSize'] = $depth2Value['FontSize'];
 				}
+				if(isset($depth2Value['BorderWidth'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BorderWidth'] = $depth2Value['BorderWidth'];
+				}
+				if(isset($depth2Value['BorderColor'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BorderColor'] = $depth2Value['BorderColor'];
+				}
+				if(isset($depth2Value['Box'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Box'] = $depth2Value['Box'];
+				}
+				if(isset($depth2Value['BoxColor'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BoxColor'] = $depth2Value['BoxColor'];
+				}
+				if(isset($depth2Value['BoxBorderWidth'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.BoxBorderWidth'] = $depth2Value['BoxBorderWidth'];
+				}
+				if(isset($depth2Value['Alpha'])){
+					$this->options['query']['UserPanes.' . ($depth1 + 1) . '.Texts.' . ($depth2 + 1) . '.Alpha'] = $depth2Value['Alpha'];
+				}
 			}
 			if(isset($depth1Value['SourceType'])){
 				$this->options['query']['UserPanes.' . ($depth1 + 1) . '.SourceType'] = $depth1Value['SourceType'];
@@ -1598,6 +1652,24 @@ class UpdateMPUTask extends Rpc
 			}
 			if(isset($depth1Value['FontSize'])){
 				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.FontSize'] = $depth1Value['FontSize'];
+			}
+			if(isset($depth1Value['BorderWidth'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BorderWidth'] = $depth1Value['BorderWidth'];
+			}
+			if(isset($depth1Value['BorderColor'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BorderColor'] = $depth1Value['BorderColor'];
+			}
+			if(isset($depth1Value['Box'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.Box'] = $depth1Value['Box'];
+			}
+			if(isset($depth1Value['BoxColor'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BoxColor'] = $depth1Value['BoxColor'];
+			}
+			if(isset($depth1Value['BoxBorderWidth'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.BoxBorderWidth'] = $depth1Value['BoxBorderWidth'];
+			}
+			if(isset($depth1Value['Alpha'])){
+				$this->options['query']['ClockWidgets.' . ($depth1 + 1) . '.Alpha'] = $depth1Value['Alpha'];
 			}
 		}
 
