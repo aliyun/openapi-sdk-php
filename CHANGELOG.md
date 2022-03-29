@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1302 - 2022-3-29
+- Supported Trim, AndroidVivoPushMode, iOSInterruptionLevel, iOSRelevanceScore for Push and MassPush.
+
+
 ## 1.8.1301 - 2022-3-28
 - Support more params in text, clockWidget.
 

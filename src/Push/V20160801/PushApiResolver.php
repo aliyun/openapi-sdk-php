@@ -207,6 +207,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSRemindBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemindBody'] = $depth1Value['IOSRemindBody'];
 			}
+			if(isset($depth1Value['Trim'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Trim'] = $depth1Value['Trim'];
+			}
 			if(isset($depth1Value['AndroidNotifyType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotifyType'] = $depth1Value['AndroidNotifyType'];
 			}
@@ -246,6 +249,12 @@ class MassPush extends Rpc
 			if(isset($depth1Value['StoreOffline'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.StoreOffline'] = $depth1Value['StoreOffline'];
 			}
+			if(isset($depth1Value['IOSRelevanceScore'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRelevanceScore'] = $depth1Value['IOSRelevanceScore'];
+			}
+			if(isset($depth1Value['AndroidVivoPushMode'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidVivoPushMode'] = $depth1Value['AndroidVivoPushMode'];
+			}
 			if(isset($depth1Value['AndroidInboxBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidInboxBody'] = $depth1Value['AndroidInboxBody'];
 			}
@@ -281,6 +290,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['PushType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.PushType'] = $depth1Value['PushType'];
+			}
+			if(isset($depth1Value['IOSInterruptionLevel'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSInterruptionLevel'] = $depth1Value['IOSInterruptionLevel'];
 			}
 			if(isset($depth1Value['AndroidExtParameters'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidExtParameters'] = $depth1Value['AndroidExtParameters'];
@@ -372,6 +384,8 @@ class MassPush extends Rpc
  * @method string getAndroidPopupActivity()
  * @method $this withAndroidPopupActivity($value)
  * @method string getIOSRemindBody()
+ * @method string getTrim()
+ * @method $this withTrim($value)
  * @method string getAndroidNotifyType()
  * @method $this withAndroidNotifyType($value)
  * @method string getAndroidPopupTitle()
@@ -396,6 +410,9 @@ class MassPush extends Rpc
  * @method $this withStoreOffline($value)
  * @method string getSmsParams()
  * @method $this withSmsParams($value)
+ * @method string getIOSRelevanceScore()
+ * @method string getAndroidVivoPushMode()
+ * @method $this withAndroidVivoPushMode($value)
  * @method string getAndroidInboxBody()
  * @method $this withAndroidInboxBody($value)
  * @method string getJobKey()
@@ -416,6 +433,7 @@ class MassPush extends Rpc
  * @method $this withAndroidMessageHuaweiUrgency($value)
  * @method string getPushType()
  * @method $this withPushType($value)
+ * @method string getIOSInterruptionLevel()
  * @method string getAndroidExtParameters()
  * @method $this withAndroidExtParameters($value)
  * @method string getIOSBadge()
@@ -538,6 +556,19 @@ class Push extends Rpc
      *
      * @return $this
      */
+    public function withIOSRelevanceScore($value)
+    {
+        $this->data['IOSRelevanceScore'] = $value;
+        $this->options['query']['iOSRelevanceScore'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withIOSSubtitle($value)
     {
         $this->data['IOSSubtitle'] = $value;
@@ -581,6 +612,19 @@ class Push extends Rpc
     {
         $this->data['IOSNotificationCollapseId'] = $value;
         $this->options['query']['iOSNotificationCollapseId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSInterruptionLevel($value)
+    {
+        $this->data['IOSInterruptionLevel'] = $value;
+        $this->options['query']['iOSInterruptionLevel'] = $value;
 
         return $this;
     }
