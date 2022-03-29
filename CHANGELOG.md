@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1303 - 2022-3-29
+- Supported latest Vpc apis.
+
+
 ## 1.8.1302 - 2022-3-29
 - Supported Trim, AndroidVivoPushMode, iOSInterruptionLevel, iOSRelevanceScore for Push and MassPush.
 
