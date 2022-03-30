@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1304 - 2022-3-30
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.1303 - 2022-3-29
 - Supported latest Vpc apis.
 
