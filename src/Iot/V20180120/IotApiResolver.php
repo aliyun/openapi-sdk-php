@@ -52,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
  * @method CreateConsumerGroupSubscribeRelation createConsumerGroupSubscribeRelation(array $options = [])
  * @method CreateDataAPIService createDataAPIService(array $options = [])
+ * @method CreateDataSourceItem createDataSourceItem(array $options = [])
  * @method CreateDeviceDistributeJob createDeviceDistributeJob(array $options = [])
  * @method CreateDeviceDynamicGroup createDeviceDynamicGroup(array $options = [])
  * @method CreateDeviceGroup createDeviceGroup(array $options = [])
@@ -155,6 +156,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InvokeThingService invokeThingService(array $options = [])
  * @method InvokeThingsService invokeThingsService(array $options = [])
  * @method ListAnalyticsData listAnalyticsData(array $options = [])
+ * @method ListDataSourceItem listDataSourceItem(array $options = [])
  * @method ListDeviceDistributeJob listDeviceDistributeJob(array $options = [])
  * @method ListDistributedDevice listDistributedDevice(array $options = [])
  * @method ListDistributedProduct listDistributedProduct(array $options = [])
@@ -2991,6 +2993,46 @@ class CreateDataAPIService extends Rpc
     {
         $this->data['Desc'] = $value;
         $this->options['form_params']['Desc'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getDataSourceId()
+ * @method $this withDataSourceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getApiRevision()
+ */
+class CreateDataSourceItem extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
 
         return $this;
     }
@@ -8473,6 +8515,50 @@ class ListAnalyticsData extends Rpc
 
 		return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSearchName()
+ * @method $this withSearchName($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getApiProduct()
+ * @method string getDataSourceId()
+ * @method $this withDataSourceId($value)
+ * @method string getApiRevision()
+ * @method string getPage()
+ * @method $this withPage($value)
+ */
+class ListDataSourceItem extends Rpc
+{
 
     /**
      * @param string $value
