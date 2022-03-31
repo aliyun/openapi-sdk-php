@@ -27,11 +27,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateUploadFileJob createUploadFileJob(array $options = [])
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
+ * @method DeleteLakeHouseSpace deleteLakeHouseSpace(array $options = [])
  * @method DeleteLhMembers deleteLhMembers(array $options = [])
  * @method DeleteLogicDatabase deleteLogicDatabase(array $options = [])
  * @method DeleteLogicTableRouteConfig deleteLogicTableRouteConfig(array $options = [])
  * @method DeleteProxy deleteProxy(array $options = [])
  * @method DeleteProxyAccess deleteProxyAccess(array $options = [])
+ * @method DeleteTaskFlow deleteTaskFlow(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
  * @method EditLogicDatabase editLogicDatabase(array $options = [])
@@ -52,6 +54,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDBTaskSQLJobLog getDBTaskSQLJobLog(array $options = [])
  * @method GetDBTopology getDBTopology(array $options = [])
  * @method GetInstance getInstance(array $options = [])
+ * @method GetLhSpaceByName getLhSpaceByName(array $options = [])
  * @method GetLogicDatabase getLogicDatabase(array $options = [])
  * @method GetMetaTableColumn getMetaTableColumn(array $options = [])
  * @method GetMetaTableDetailInfo getMetaTableDetailInfo(array $options = [])
@@ -69,6 +72,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetStructSyncOrderDetail getStructSyncOrderDetail(array $options = [])
  * @method GetTableDBTopology getTableDBTopology(array $options = [])
  * @method GetTableTopology getTableTopology(array $options = [])
+ * @method GetTaskInstanceRelation getTaskInstanceRelation(array $options = [])
  * @method GetUser getUser(array $options = [])
  * @method GetUserActiveTenant getUserActiveTenant(array $options = [])
  * @method GetUserUploadFileJob getUserUploadFileJob(array $options = [])
@@ -100,6 +104,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSQLReviewOriginSQL listSQLReviewOriginSQL(array $options = [])
  * @method ListStandardGroups listStandardGroups(array $options = [])
  * @method ListTables listTables(array $options = [])
+ * @method ListTaskFlow listTaskFlow(array $options = [])
+ * @method ListTaskFlowInstance listTaskFlowInstance(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method ListUserTenants listUserTenants(array $options = [])
@@ -297,8 +303,6 @@ class CreateFreeLockCorrectOrder extends Rpc
  * @method $this withSpaceName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getUserId()
- * @method $this withUserId($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getMode()
@@ -497,6 +501,16 @@ class DeleteInstance extends Rpc
 }
 
 /**
+ * @method string getSpaceId()
+ * @method $this withSpaceId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class DeleteLakeHouseSpace extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getObjectType()
@@ -549,6 +563,16 @@ class DeleteProxy extends Rpc
  * @method $this withTid($value)
  */
 class DeleteProxyAccess extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class DeleteTaskFlow extends Rpc
 {
 }
 
@@ -803,6 +827,16 @@ class GetInstance extends Rpc
 }
 
 /**
+ * @method string getSpaceName()
+ * @method $this withSpaceName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetLhSpaceByName extends Rpc
+{
+}
+
+/**
  * @method string getDbId()
  * @method $this withDbId($value)
  * @method string getTid()
@@ -991,6 +1025,18 @@ class GetTableDBTopology extends Rpc
  * @method $this withTid($value)
  */
 class GetTableTopology extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagInstanceId()
+ * @method $this withDagInstanceId($value)
+ */
+class GetTaskInstanceRelation extends Rpc
 {
 }
 
@@ -1469,6 +1515,38 @@ class ListStandardGroups extends Rpc
  * @method $this withDatabaseId($value)
  */
 class ListTables extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagInstanceId()
+ * @method $this withDagInstanceId($value)
+ */
+class ListTaskFlow extends Rpc
+{
+}
+
+/**
+ * @method string getTriggerType()
+ * @method $this withTriggerType($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ * @method string getStartTimeBegin()
+ * @method $this withStartTimeBegin($value)
+ * @method string getStartTimeEnd()
+ * @method $this withStartTimeEnd($value)
+ */
+class ListTaskFlowInstance extends Rpc
 {
 }
 

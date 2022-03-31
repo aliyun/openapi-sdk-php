@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1306 - 2022-3-31
+- Supported ListTaskFlow, ListTaskFlowInstance, GetTaskInstanceRelation, GetLhSpaceByName, DeleteLakeHouseSpace, DeleteTaskFlow API.
+
+
 ## 1.8.1305 - 2022-3-31
 - CreateDataSourceItem.
 - ListDataSourceItem.
