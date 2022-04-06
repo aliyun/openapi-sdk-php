@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1308 - 2022-4-6
+- Create App Group Support Schedule Busy Workers.
+
+
 ## 1.8.1307 - 2022-4-6
 - Support output dagName, dagOwnerId for api listTaskFlowAndScenario.
 - Change output DbType to DwDbType for api GetLhSpaceByName.

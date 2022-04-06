@@ -147,6 +147,8 @@ class BatchEnableJobs extends Rpc
  * @method $this withNamespaceName($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
+ * @method string getScheduleBusyWorkers()
+ * @method $this withScheduleBusyWorkers($value)
  * @method string getMetricsThresholdJson()
  * @method $this withMetricsThresholdJson($value)
  * @method string getGroupId()
@@ -630,12 +632,14 @@ class CreateJob extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSource()
+ * @method $this withSource($value)
  * @method string getUid()
  * @method $this withUid($value)
  * @method string getName()
  * @method $this withName($value)
- * @method string getDescription()
- * @method $this withDescription($value)
  */
 class CreateNamespace extends Rpc
 {
