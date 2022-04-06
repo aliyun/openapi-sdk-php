@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1309 - 2022-4-6
+- Release FeedbackSession.
+
+
 ## 1.8.1308 - 2022-4-6
 - Create App Group Support Schedule Busy Workers.
 

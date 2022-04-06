@@ -137,11 +137,11 @@ class AnalyzeChestVessel extends Rpc
 
 /**
  * @method string getDataSourceType()
+ * @method string getOrgName()
  * @method string getDataFormat()
  * @method array getURLList()
  * @method string getOrgId()
  * @method string getAsync()
- * @method string getOrgName()
  */
 class CalcCACS extends Rpc
 {
@@ -164,6 +164,19 @@ class CalcCACS extends Rpc
      *
      * @return $this
      */
+    public function withOrgName($value)
+    {
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withDataFormat($value)
     {
         $this->data['DataFormat'] = $value;
@@ -214,27 +227,14 @@ class CalcCACS extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrgName($value)
-    {
-        $this->data['OrgName'] = $value;
-        $this->options['form_params']['OrgName'] = $value;
-
-        return $this;
-    }
 }
 
 /**
+ * @method string getOrgName()
+ * @method string getTracerId()
  * @method string getDataFormat()
  * @method string getOrgId()
- * @method string getOrgName()
  * @method string getImageUrl()
- * @method string getTracerId()
  */
 class ClassifyFNF extends Rpc
 {
@@ -244,49 +244,10 @@ class ClassifyFNF extends Rpc
      *
      * @return $this
      */
-    public function withDataFormat($value)
-    {
-        $this->data['DataFormat'] = $value;
-        $this->options['form_params']['DataFormat'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrgId($value)
-    {
-        $this->data['OrgId'] = $value;
-        $this->options['form_params']['OrgId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withOrgName($value)
     {
         $this->data['OrgName'] = $value;
         $this->options['form_params']['OrgName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageUrl($value)
-    {
-        $this->data['ImageUrl'] = $value;
-        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }
@@ -303,17 +264,69 @@ class ClassifyFNF extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataFormat($value)
+    {
+        $this->data['DataFormat'] = $value;
+        $this->options['form_params']['DataFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getOrgName()
  * @method string getDataFormat()
  * @method array getURLList()
  * @method string getOrgId()
  * @method string getAsync()
- * @method string getOrgName()
  */
 class DetectCovid19Cad extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgName($value)
+    {
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -367,19 +380,6 @@ class DetectCovid19Cad extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['form_params']['Async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrgName($value)
-    {
-        $this->data['OrgName'] = $value;
-        $this->options['form_params']['OrgName'] = $value;
 
         return $this;
     }
@@ -462,14 +462,40 @@ class DetectHipKeypointXRay extends Rpc
 }
 
 /**
+ * @method string getOrgName()
+ * @method string getTracerId()
  * @method string getDataFormat()
  * @method string getOrgId()
- * @method string getOrgName()
  * @method string getImageUrl()
- * @method string getTracerId()
  */
 class DetectKneeKeypointXRay extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgName($value)
+    {
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTracerId($value)
+    {
+        $this->data['TracerId'] = $value;
+        $this->options['form_params']['TracerId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -502,19 +528,6 @@ class DetectKneeKeypointXRay extends Rpc
      *
      * @return $this
      */
-    public function withOrgName($value)
-    {
-        $this->data['OrgName'] = $value;
-        $this->options['form_params']['OrgName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withImageUrl($value)
     {
         $this->data['ImageUrl'] = $value;
@@ -522,29 +535,29 @@ class DetectKneeKeypointXRay extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getOrgName()
+ * @method string getDataFormat()
+ * @method string getUrl()
+ * @method string getOrgId()
+ */
+class DetectKneeXRay extends Rpc
+{
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withTracerId($value)
+    public function withOrgName($value)
     {
-        $this->data['TracerId'] = $value;
-        $this->options['form_params']['TracerId'] = $value;
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
 
         return $this;
     }
-}
-
-/**
- * @method string getDataFormat()
- * @method string getUrl()
- * @method string getOrgId()
- * @method string getOrgName()
- */
-class DetectKneeXRay extends Rpc
-{
 
     /**
      * @param string $value
@@ -581,19 +594,6 @@ class DetectKneeXRay extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrgName($value)
-    {
-        $this->data['OrgName'] = $value;
-        $this->options['form_params']['OrgName'] = $value;
 
         return $this;
     }
@@ -788,12 +788,25 @@ class DetectRibFracture extends Rpc
 }
 
 /**
+ * @method string getOrgName()
  * @method string getUrl()
  * @method string getOrgId()
- * @method string getOrgName()
  */
 class DetectSkinDisease extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgName($value)
+    {
+        $this->data['OrgName'] = $value;
+        $this->options['form_params']['OrgName'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -820,6 +833,16 @@ class DetectSkinDisease extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getOrgName()
+ * @method string getDataFormat()
+ * @method array getURLList()
+ * @method string getOrgId()
+ */
+class DetectSpineMRI extends Rpc
+{
 
     /**
      * @param string $value
@@ -833,16 +856,6 @@ class DetectSkinDisease extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getDataFormat()
- * @method array getURLList()
- * @method string getOrgId()
- * @method string getOrgName()
- */
-class DetectSpineMRI extends Rpc
-{
 
     /**
      * @param string $value
@@ -886,40 +899,14 @@ class DetectSpineMRI extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOrgName($value)
-    {
-        $this->data['OrgName'] = $value;
-        $this->options['form_params']['OrgName'] = $value;
-
-        return $this;
-    }
 }
 
 /**
- * @method string getAsync()
  * @method string getJobId()
+ * @method string getAsync()
  */
 class GetAsyncJobResult extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['form_params']['Async'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -930,6 +917,19 @@ class GetAsyncJobResult extends Rpc
     {
         $this->data['JobId'] = $value;
         $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
 
         return $this;
     }
@@ -1272,25 +1272,12 @@ class ScreenChestCT extends Rpc
 }
 
 /**
- * @method string getFromLanguage()
  * @method string getToLanguage()
  * @method string getText()
+ * @method string getFromLanguage()
  */
 class TranslateMed extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFromLanguage($value)
-    {
-        $this->data['FromLanguage'] = $value;
-        $this->options['form_params']['FromLanguage'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -1314,6 +1301,19 @@ class TranslateMed extends Rpc
     {
         $this->data['Text'] = $value;
         $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFromLanguage($value)
+    {
+        $this->data['FromLanguage'] = $value;
+        $this->options['form_params']['FromLanguage'] = $value;
 
         return $this;
     }
