@@ -13,7 +13,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDBInstance createDBInstance(array $options = [])
  * @method CreateNode createNode(array $options = [])
  * @method CreateNodeBatch createNodeBatch(array $options = [])
- * @method CreateRecommendationTask createRecommendationTask(array $options = [])
  * @method CreateServerlessDBInstance createServerlessDBInstance(array $options = [])
  * @method CreateShardingDBInstance createShardingDBInstance(array $options = [])
  * @method DeleteDBInstance deleteDBInstance(array $options = [])
@@ -21,13 +20,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method DescribeActiveOperationTaskCount describeActiveOperationTaskCount(array $options = [])
  * @method DescribeActiveOperationTaskType describeActiveOperationTaskType(array $options = [])
- * @method DescribeAuditFiles describeAuditFiles(array $options = [])
  * @method DescribeAuditLogFilter describeAuditLogFilter(array $options = [])
  * @method DescribeAuditPolicy describeAuditPolicy(array $options = [])
  * @method DescribeAuditRecords describeAuditRecords(array $options = [])
  * @method DescribeAvailableEngineVersion describeAvailableEngineVersion(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
- * @method DescribeAvailableTimeRange describeAvailableTimeRange(array $options = [])
  * @method DescribeBackupDBs describeBackupDBs(array $options = [])
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
  * @method DescribeBackups describeBackups(array $options = [])
@@ -364,30 +361,6 @@ class CreateNodeBatch extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getNodeId()
- * @method $this withNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class CreateRecommendationTask extends Rpc
-{
-}
-
-/**
  * @method string getCapacityUnit()
  * @method $this withCapacityUnit($value)
  * @method string getResourceOwnerId()
@@ -657,30 +630,6 @@ class DescribeActiveOperationTaskType extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getNodeId()
- * @method $this withNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeAuditFiles extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
@@ -795,26 +744,6 @@ class DescribeAvailableEngineVersion extends Rpc
  * @method $this withZoneId($value)
  */
 class DescribeAvailableResource extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getNodeId()
- * @method $this withNodeId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class DescribeAvailableTimeRange extends Rpc
 {
 }
 
