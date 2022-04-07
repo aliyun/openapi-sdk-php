@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1310 - 2022-4-7
+- Update by sdk platform.
+
+
 ## 1.8.1309 - 2022-4-6
 - Release FeedbackSession.
 
