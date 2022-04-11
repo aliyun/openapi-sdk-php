@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1312 - 2022-4-11
+- Set multiple apis to public.
+
+
 ## 1.8.1311 - 2022-4-7
 - Update by SDK platform.
 

@@ -77,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMediaAuditResultDetail getMediaAuditResultDetail(array $options = [])
  * @method GetMediaAuditResultTimeline getMediaAuditResultTimeline(array $options = [])
  * @method GetMediaDNAResult getMediaDNAResult(array $options = [])
+ * @method GetMediaRefreshJobs getMediaRefreshJobs(array $options = [])
  * @method GetMessageCallback getMessageCallback(array $options = [])
  * @method GetMezzanineInfo getMezzanineInfo(array $options = [])
  * @method GetPlayInfo getPlayInfo(array $options = [])
@@ -107,6 +108,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method MoveAppResource moveAppResource(array $options = [])
  * @method PreloadVodObjectCaches preloadVodObjectCaches(array $options = [])
  * @method ProduceEditingProjectVideo produceEditingProjectVideo(array $options = [])
+ * @method RefreshMediaPlayUrls refreshMediaPlayUrls(array $options = [])
  * @method RefreshUploadVideo refreshUploadVideo(array $options = [])
  * @method RefreshVodObjectCaches refreshVodObjectCaches(array $options = [])
  * @method RegisterMedia registerMedia(array $options = [])
@@ -1225,6 +1227,19 @@ class GetMediaDNAResult extends Rpc
 }
 
 /**
+ * @method string getMediaRefreshJobId()
+ * @method $this withMediaRefreshJobId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class GetMediaRefreshJobs extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getResourceRealOwnerId()
@@ -1623,6 +1638,30 @@ class PreloadVodObjectCaches extends Rpc
  * @method $this withTimeline($value)
  */
 class ProduceEditingProjectVideo extends Rpc
+{
+}
+
+/**
+ * @method string getFormats()
+ * @method $this withFormats($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getMediaIds()
+ * @method $this withMediaIds($value)
+ * @method string getDefinitions()
+ * @method $this withDefinitions($value)
+ * @method string getStreamType()
+ * @method $this withStreamType($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getSliceFlag()
+ * @method $this withSliceFlag($value)
+ * @method string getResultType()
+ * @method $this withResultType($value)
+ * @method string getSliceCount()
+ * @method $this withSliceCount($value)
+ */
+class RefreshMediaPlayUrls extends Rpc
 {
 }
 
