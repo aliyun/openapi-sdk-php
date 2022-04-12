@@ -79,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GrantUserPermission grantUserPermission(array $options = [])
  * @method InspectProxyAccessSecret inspectProxyAccessSecret(array $options = [])
  * @method ListColumns listColumns(array $options = [])
+ * @method ListDAGVersions listDAGVersions(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
  * @method ListDatabaseUserPermssions listDatabaseUserPermssions(array $options = [])
  * @method ListDataCorrectPreCheckDB listDataCorrectPreCheckDB(array $options = [])
@@ -1119,6 +1120,20 @@ class ListColumns extends Rpc
 }
 
 /**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ */
+class ListDAGVersions extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageNumber()
@@ -1519,12 +1534,8 @@ class ListTables extends Rpc
 }
 
 /**
- * @method string getDagId()
- * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getDagInstanceId()
- * @method $this withDagInstanceId($value)
  */
 class ListTaskFlow extends Rpc
 {

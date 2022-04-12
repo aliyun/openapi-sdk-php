@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1313 - 2022-4-12
+- Remove redundant input for API ListTaskFlow.
+
+
 ## 1.8.1312 - 2022-4-11
 - Set multiple apis to public.
 
