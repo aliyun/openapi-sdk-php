@@ -1238,6 +1238,7 @@ class CreateActivation extends Rpc
  * @method $this withAutoProvisioningGroupType($value)
  * @method string getLaunchConfigurationSystemDiskPerformanceLevel()
  * @method array getLaunchConfigurationHostNames()
+ * @method array getLaunchConfigurationSecurityGroupIds()
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getLaunchConfigurationImageId()
@@ -1395,6 +1396,21 @@ class CreateAutoProvisioningGroup extends Rpc
 	    $this->data['LaunchConfigurationHostNames'] = $launchConfigurationHostNames;
 		foreach ($launchConfigurationHostNames as $i => $iValue) {
 			$this->options['query']['LaunchConfiguration.HostNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $launchConfigurationSecurityGroupIds
+     *
+     * @return $this
+     */
+	public function withLaunchConfigurationSecurityGroupIds(array $launchConfigurationSecurityGroupIds)
+	{
+	    $this->data['LaunchConfigurationSecurityGroupIds'] = $launchConfigurationSecurityGroupIds;
+		foreach ($launchConfigurationSecurityGroupIds as $i => $iValue) {
+			$this->options['query']['LaunchConfiguration.SecurityGroupIds.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -2173,6 +2189,10 @@ class CreateDeploymentSet extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getBurstingEnabled()
+ * @method $this withBurstingEnabled($value)
+ * @method string getProvisionedIops()
+ * @method $this withProvisionedIops($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getStorageSetId()
@@ -11027,6 +11047,8 @@ class ModifyDeploymentSetAttribute extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getBurstingEnabled()
+ * @method $this withBurstingEnabled($value)
  */
 class ModifyDiskAttribute extends Rpc
 {
@@ -11088,6 +11110,8 @@ class ModifyDiskChargeType extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getProvisionedIops()
+ * @method $this withProvisionedIops($value)
  */
 class ModifyDiskSpec extends Rpc
 {
@@ -11425,6 +11449,8 @@ class ModifyInstanceAttachmentAttributes extends Rpc
  * @method $this withInstanceId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
+ * @method string getRemoteConnectionOptions()
+ * @method $this withRemoteConnectionOptions($value)
  */
 class ModifyInstanceAttribute extends Rpc
 {
@@ -12772,6 +12798,8 @@ class RedeployInstance extends Rpc
  * @method $this withKeyPairName($value)
  * @method string getPassword()
  * @method $this withPassword($value)
+ * @method string getLoginAsNonRoot()
+ * @method $this withLoginAsNonRoot($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
  * @method string getResourceOwnerAccount()
@@ -12997,6 +13025,8 @@ class RenewInstance extends Rpc
  * @method $this withPlatform($value)
  * @method string getPassword()
  * @method $this withPassword($value)
+ * @method string getLoginAsNonRoot()
+ * @method $this withLoginAsNonRoot($value)
  * @method string getPasswordInherit()
  * @method $this withPasswordInherit($value)
  * @method string getDiskId()
@@ -13357,6 +13387,8 @@ class RunCommand extends Rpc
  * @method $this withPassword($value)
  * @method string getSystemDisk()
  * @method $this withSystemDisk($value)
+ * @method string getImageOptions()
+ * @method $this withImageOptions($value)
  * @method string getDeploymentSetGroupNo()
  * @method $this withDeploymentSetGroupNo($value)
  * @method string getSystemDiskAutoSnapshotPolicyId()
@@ -13871,6 +13903,12 @@ class RunInstances extends Rpc
 			}
 			if(isset($depth1Value['StorageClusterId'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.StorageClusterId'] = $depth1Value['StorageClusterId'];
+			}
+			if(isset($depth1Value['ProvisionedIops'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.ProvisionedIops'] = $depth1Value['ProvisionedIops'];
+			}
+			if(isset($depth1Value['BurstingEnabled'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.BurstingEnabled'] = $depth1Value['BurstingEnabled'];
 			}
 		}
 

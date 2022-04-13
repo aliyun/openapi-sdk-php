@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1314 - 2022-4-13
+- Support throughput for API DescribeDisks.
+
+
+
 ## 1.8.1313 - 2022-4-12
 - Remove redundant input for API ListTaskFlow.
 
