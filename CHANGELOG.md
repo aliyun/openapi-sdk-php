@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1315 - 2022-4-15
+- Rename the return of ListTaskFlow API.
+
+
 ## 1.8.1314 - 2022-4-13
 - Support throughput for API DescribeDisks.
 
