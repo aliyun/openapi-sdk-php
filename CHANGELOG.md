@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1317 - 2022-4-18
+- Change DescribeEventDetail Data.
+
+
 ## 1.8.1316 - 2022-4-15
 - Generated 2016-11-01 for `live`.
 
