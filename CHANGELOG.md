@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1319 - 2022-4-19
+- Add alert label.
+
+
 ## 1.8.1318 - 2022-4-19
 - Add multi indicator monitoring.
 
