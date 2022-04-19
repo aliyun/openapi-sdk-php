@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddTags addTags(array $options = [])
  * @method ApplyMetricRuleTemplate applyMetricRuleTemplate(array $options = [])
+ * @method BatchCreateOnceSiteMonitor batchCreateOnceSiteMonitor(array $options = [])
  * @method CreateCmsCallNumOrder createCmsCallNumOrder(array $options = [])
  * @method CreateCmsOrder createCmsOrder(array $options = [])
  * @method CreateCmsSmspackageOrder createCmsSmspackageOrder(array $options = [])
@@ -234,6 +235,42 @@ class ApplyMetricRuleTemplate extends Rpc
 }
 
 /**
+ * @method array getTaskList()
+ */
+class BatchCreateOnceSiteMonitor extends Rpc
+{
+
+    /**
+     * @param array $taskList
+     *
+     * @return $this
+     */
+	public function withTaskList(array $taskList)
+	{
+	    $this->data['TaskList'] = $taskList;
+		foreach ($taskList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['OptionsJson'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.OptionsJson'] = $depth1Value['OptionsJson'];
+			}
+			if(isset($depth1Value['Address'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.Address'] = $depth1Value['Address'];
+			}
+			if(isset($depth1Value['TaskType'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.TaskType'] = $depth1Value['TaskType'];
+			}
+			if(isset($depth1Value['TaskName'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.TaskName'] = $depth1Value['TaskName'];
+			}
+			if(isset($depth1Value['IspCities'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.IspCities'] = $depth1Value['IspCities'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getAutoRenewPeriod()
  * @method $this withAutoRenewPeriod($value)
  * @method string getPeriod()
@@ -416,6 +453,9 @@ class CreateGroupMetricRules extends Rpc
 			if(isset($depth1Value['DynamicAlertHistoryDataRange'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.DynamicAlertHistoryDataRange'] = $depth1Value['DynamicAlertHistoryDataRange'];
 			}
+			if(isset($depth1Value['EscalationsWarnPreCondition'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Warn.PreCondition'] = $depth1Value['EscalationsWarnPreCondition'];
+			}
 			if(isset($depth1Value['EscalationsInfoComparisonOperator'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Info.ComparisonOperator'] = $depth1Value['EscalationsInfoComparisonOperator'];
 			}
@@ -430,6 +470,9 @@ class CreateGroupMetricRules extends Rpc
 			}
 			if(isset($depth1Value['SilenceTime'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.SilenceTime'] = $depth1Value['SilenceTime'];
+			}
+			if(isset($depth1Value['EscalationsInfoPreCondition'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Info.PreCondition'] = $depth1Value['EscalationsInfoPreCondition'];
 			}
 			if(isset($depth1Value['MetricName'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
@@ -461,6 +504,14 @@ class CreateGroupMetricRules extends Rpc
 			if(isset($depth1Value['ExtraDimensionJson'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.ExtraDimensionJson'] = $depth1Value['ExtraDimensionJson'];
 			}
+			foreach ($depth1Value['Labels'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Value'])){
+					$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Labels.' . ($depth2 + 1) . '.Value'] = $depth2Value['Value'];
+				}
+				if(isset($depth2Value['Key'])){
+					$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Labels.' . ($depth2 + 1) . '.Key'] = $depth2Value['Key'];
+				}
+			}
 			if(isset($depth1Value['EscalationsCriticalTimes'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Critical.Times'] = $depth1Value['EscalationsCriticalTimes'];
 			}
@@ -484,6 +535,9 @@ class CreateGroupMetricRules extends Rpc
 			}
 			if(isset($depth1Value['EscalationsCriticalComparisonOperator'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Critical.ComparisonOperator'] = $depth1Value['EscalationsCriticalComparisonOperator'];
+			}
+			if(isset($depth1Value['EscalationsCriticalPreCondition'])){
+				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Critical.PreCondition'] = $depth1Value['EscalationsCriticalPreCondition'];
 			}
 			if(isset($depth1Value['EscalationsCriticalThreshold'])){
 				$this->options['query']['GroupMetricRules.' . ($depth1 + 1) . '.Escalations.Critical.Threshold'] = $depth1Value['EscalationsCriticalThreshold'];
@@ -1362,9 +1416,6 @@ class DeleteSiteMonitors extends Rpc
  */
 class DescribeActiveMetricRuleList extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -3501,6 +3552,9 @@ class PutEventRuleTargets extends Rpc
 	{
 	    $this->data['MnsParameters'] = $mnsParameters;
 		foreach ($mnsParameters as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Topic'])){
+				$this->options['query']['MnsParameters.' . ($depth1 + 1) . '.Topic'] = $depth1Value['Topic'];
+			}
 			if(isset($depth1Value['Id'])){
 				$this->options['query']['MnsParameters.' . ($depth1 + 1) . '.Id'] = $depth1Value['Id'];
 			}
@@ -3604,6 +3658,7 @@ class PutExporterRule extends Rpc
  * @method $this withNoEffectiveInterval($value)
  * @method string getEmailSubject()
  * @method $this withEmailSubject($value)
+ * @method string getEscalationsInfoPreCondition()
  * @method string getMetricName()
  * @method $this withMetricName($value)
  * @method string getEscalationsWarnTimes()
@@ -3619,6 +3674,7 @@ class PutExporterRule extends Rpc
  * @method $this withGroupId($value)
  * @method string getExtraDimensionJson()
  * @method $this withExtraDimensionJson($value)
+ * @method array getLabels()
  * @method string getInterval()
  * @method $this withInterval($value)
  * @method string getRuleId()
@@ -3627,6 +3683,7 @@ class PutExporterRule extends Rpc
  * @method string getEscalationsInfoStatistics()
  * @method string getDynamicAlertHistoryDataRange()
  * @method $this withDynamicAlertHistoryDataRange($value)
+ * @method string getEscalationsWarnPreCondition()
  * @method string getEscalationsInfoComparisonOperator()
  * @method string getSilenceTime()
  * @method $this withSilenceTime($value)
@@ -3641,6 +3698,7 @@ class PutExporterRule extends Rpc
  * @method string getCategory()
  * @method $this withCategory($value)
  * @method string getEscalationsCriticalComparisonOperator()
+ * @method string getEscalationsCriticalPreCondition()
  * @method string getDimensions()
  * @method $this withDimensions($value)
  */
@@ -3656,6 +3714,19 @@ class PutGroupMetricRule extends Rpc
     {
         $this->data['EscalationsWarnComparisonOperator'] = $value;
         $this->options['query']['Escalations.Warn.ComparisonOperator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsInfoPreCondition($value)
+    {
+        $this->data['EscalationsInfoPreCondition'] = $value;
+        $this->options['query']['Escalations.Info.PreCondition'] = $value;
 
         return $this;
     }
@@ -3700,6 +3771,26 @@ class PutGroupMetricRule extends Rpc
     }
 
     /**
+     * @param array $labels
+     *
+     * @return $this
+     */
+	public function withLabels(array $labels)
+	{
+	    $this->data['Labels'] = $labels;
+		foreach ($labels as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Labels.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Labels.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
      * @param string $value
      *
      * @return $this
@@ -3721,6 +3812,19 @@ class PutGroupMetricRule extends Rpc
     {
         $this->data['EscalationsInfoStatistics'] = $value;
         $this->options['query']['Escalations.Info.Statistics'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsWarnPreCondition($value)
+    {
+        $this->data['EscalationsWarnPreCondition'] = $value;
+        $this->options['query']['Escalations.Warn.PreCondition'] = $value;
 
         return $this;
     }
@@ -3799,6 +3903,19 @@ class PutGroupMetricRule extends Rpc
     {
         $this->data['EscalationsCriticalComparisonOperator'] = $value;
         $this->options['query']['Escalations.Critical.ComparisonOperator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsCriticalPreCondition($value)
+    {
+        $this->data['EscalationsCriticalPreCondition'] = $value;
+        $this->options['query']['Escalations.Critical.PreCondition'] = $value;
 
         return $this;
     }
@@ -3980,6 +4097,8 @@ class PutMetricRuleTargets extends Rpc
  * @method array getGroupRules()
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getIsAsync()
+ * @method $this withIsAsync($value)
  */
 class PutMonitorGroupDynamicRule extends Rpc
 {
@@ -4042,6 +4161,7 @@ class PutMonitoringConfig extends Rpc
  * @method $this withEmailSubject($value)
  * @method string getOptions()
  * @method $this withOptions($value)
+ * @method string getEscalationsInfoPreCondition()
  * @method string getMetricName()
  * @method $this withMetricName($value)
  * @method string getEscalationsWarnTimes()
@@ -4062,6 +4182,7 @@ class PutMonitoringConfig extends Rpc
  * @method $this withRuleId($value)
  * @method string getEscalationsCriticalThreshold()
  * @method string getEscalationsInfoStatistics()
+ * @method string getEscalationsWarnPreCondition()
  * @method string getEscalationsInfoComparisonOperator()
  * @method string getSilenceTime()
  * @method $this withSilenceTime($value)
@@ -4080,6 +4201,7 @@ class PutMonitoringConfig extends Rpc
  * @method string getNamespace()
  * @method $this withNamespace($value)
  * @method string getEscalationsCriticalComparisonOperator()
+ * @method string getEscalationsCriticalPreCondition()
  */
 class PutResourceMetricRule extends Rpc
 {
@@ -4093,6 +4215,19 @@ class PutResourceMetricRule extends Rpc
     {
         $this->data['EscalationsWarnComparisonOperator'] = $value;
         $this->options['query']['Escalations.Warn.ComparisonOperator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsInfoPreCondition($value)
+    {
+        $this->data['EscalationsInfoPreCondition'] = $value;
+        $this->options['query']['Escalations.Info.PreCondition'] = $value;
 
         return $this;
     }
@@ -4187,6 +4322,19 @@ class PutResourceMetricRule extends Rpc
      *
      * @return $this
      */
+    public function withEscalationsWarnPreCondition($value)
+    {
+        $this->data['EscalationsWarnPreCondition'] = $value;
+        $this->options['query']['Escalations.Warn.PreCondition'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withEscalationsInfoComparisonOperator($value)
     {
         $this->data['EscalationsInfoComparisonOperator'] = $value;
@@ -4259,6 +4407,19 @@ class PutResourceMetricRule extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEscalationsCriticalPreCondition($value)
+    {
+        $this->data['EscalationsCriticalPreCondition'] = $value;
+        $this->options['query']['Escalations.Critical.PreCondition'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4297,6 +4458,9 @@ class PutResourceMetricRules extends Rpc
 			if(isset($depth1Value['DynamicAlertHistoryDataRange'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.DynamicAlertHistoryDataRange'] = $depth1Value['DynamicAlertHistoryDataRange'];
 			}
+			if(isset($depth1Value['EscalationsWarnPreCondition'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Warn.PreCondition'] = $depth1Value['EscalationsWarnPreCondition'];
+			}
 			if(isset($depth1Value['EscalationsInfoComparisonOperator'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Info.ComparisonOperator'] = $depth1Value['EscalationsInfoComparisonOperator'];
 			}
@@ -4317,6 +4481,9 @@ class PutResourceMetricRules extends Rpc
 			}
 			if(isset($depth1Value['Prometheus'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Prometheus'] = $depth1Value['Prometheus'];
+			}
+			if(isset($depth1Value['EscalationsInfoPreCondition'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Info.PreCondition'] = $depth1Value['EscalationsInfoPreCondition'];
 			}
 			if(isset($depth1Value['MetricName'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.MetricName'] = $depth1Value['MetricName'];
@@ -4351,6 +4518,14 @@ class PutResourceMetricRules extends Rpc
 			if(isset($depth1Value['Resources'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Resources'] = $depth1Value['Resources'];
 			}
+			foreach ($depth1Value['Labels'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['Value'])){
+					$this->options['query']['Rules.' . ($depth1 + 1) . '.Labels.' . ($depth2 + 1) . '.Value'] = $depth2Value['Value'];
+				}
+				if(isset($depth2Value['Key'])){
+					$this->options['query']['Rules.' . ($depth1 + 1) . '.Labels.' . ($depth2 + 1) . '.Key'] = $depth2Value['Key'];
+				}
+			}
 			if(isset($depth1Value['EscalationsCriticalTimes'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Critical.Times'] = $depth1Value['EscalationsCriticalTimes'];
 			}
@@ -4371,6 +4546,9 @@ class PutResourceMetricRules extends Rpc
 			}
 			if(isset($depth1Value['EscalationsCriticalComparisonOperator'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Critical.ComparisonOperator'] = $depth1Value['EscalationsCriticalComparisonOperator'];
+			}
+			if(isset($depth1Value['EscalationsCriticalPreCondition'])){
+				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Critical.PreCondition'] = $depth1Value['EscalationsCriticalPreCondition'];
 			}
 			if(isset($depth1Value['EscalationsCriticalThreshold'])){
 				$this->options['query']['Rules.' . ($depth1 + 1) . '.Escalations.Critical.Threshold'] = $depth1Value['EscalationsCriticalThreshold'];

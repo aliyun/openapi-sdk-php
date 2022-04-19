@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1318 - 2022-4-19
+- Add multi indicator monitoring.
+
+
 ## 1.8.1317 - 2022-4-18
 - Change DescribeEventDetail Data.
 
