@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1321 - 2022-4-21
+- Add API OfflineTaskFlow.
+
+
 ## 1.8.1320 - 2022-4-19
 - Add alert label.
 

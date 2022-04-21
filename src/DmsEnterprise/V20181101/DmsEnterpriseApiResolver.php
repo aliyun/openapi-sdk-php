@@ -113,6 +113,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListWorkFlowNodes listWorkFlowNodes(array $options = [])
  * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
  * @method ModifyDataCorrectExecSQL modifyDataCorrectExecSQL(array $options = [])
+ * @method OfflineTaskFlow offlineTaskFlow(array $options = [])
  * @method PauseDataCorrectSQLJob pauseDataCorrectSQLJob(array $options = [])
  * @method ReDeployLhDagVersion reDeployLhDagVersion(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
@@ -1642,6 +1643,16 @@ class ListWorkFlowTemplates extends Rpc
  * @method $this withTid($value)
  */
 class ModifyDataCorrectExecSQL extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class OfflineTaskFlow extends Rpc
 {
 }
 
