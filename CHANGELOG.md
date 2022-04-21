@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1325 - 2022-4-21
+- Fix endpoint bug.
+
+
 ## 1.8.1324 - 2022-4-21
 - Supported new features etc.
 

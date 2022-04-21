@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddTags addTags(array $options = [])
  * @method ApplyMetricRuleTemplate applyMetricRuleTemplate(array $options = [])
+ * @method BatchCreateIntantSiteMonitor batchCreateIntantSiteMonitor(array $options = [])
  * @method BatchCreateOnceSiteMonitor batchCreateOnceSiteMonitor(array $options = [])
  * @method CreateCmsCallNumOrder createCmsCallNumOrder(array $options = [])
  * @method CreateCmsOrder createCmsOrder(array $options = [])
@@ -166,7 +167,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'Cms';
+    public $serviceCode = 'cms';
 }
 
 /**
@@ -232,6 +233,42 @@ class AddTags extends Rpc
  */
 class ApplyMetricRuleTemplate extends Rpc
 {
+}
+
+/**
+ * @method array getTaskList()
+ */
+class BatchCreateIntantSiteMonitor extends Rpc
+{
+
+    /**
+     * @param array $taskList
+     *
+     * @return $this
+     */
+	public function withTaskList(array $taskList)
+	{
+	    $this->data['TaskList'] = $taskList;
+		foreach ($taskList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['OptionsJson'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.OptionsJson'] = $depth1Value['OptionsJson'];
+			}
+			if(isset($depth1Value['Address'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.Address'] = $depth1Value['Address'];
+			}
+			if(isset($depth1Value['TaskType'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.TaskType'] = $depth1Value['TaskType'];
+			}
+			if(isset($depth1Value['TaskName'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.TaskName'] = $depth1Value['TaskName'];
+			}
+			if(isset($depth1Value['IspCities'])){
+				$this->options['query']['TaskList.' . ($depth1 + 1) . '.IspCities'] = $depth1Value['IspCities'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
