@@ -61,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DownloadRecording downloadRecording(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
+ * @method GenerateUploadUrl generateUploadUrl(array $options = [])
  * @method GetAfterAnswerDelayPlayback getAfterAnswerDelayPlayback(array $options = [])
  * @method GetAsrServerInfo getAsrServerInfo(array $options = [])
  * @method GetBaseStrategyPeriod getBaseStrategyPeriod(array $options = [])
@@ -920,6 +921,8 @@ class DescribeIntentStatistics extends Rpc
  * @method $this withJobId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getWithScript()
+ * @method $this withWithScript($value)
  */
 class DescribeJob extends Rpc
 {
@@ -1108,6 +1111,16 @@ class DuplicateScript extends Rpc
  * @method $this withInstanceId($value)
  */
 class ExportScript extends Rpc
+{
+}
+
+/**
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class GenerateUploadUrl extends Rpc
 {
 }
 
@@ -1595,9 +1608,9 @@ class ListTags extends Rpc
  * @method $this withDescription($value)
  * @method string getJobFilePath()
  * @method $this withJobFilePath($value)
- * @method array getCallingNumber()
  * @method string getScriptId()
  * @method $this withScriptId($value)
+ * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getSubmitted()
@@ -2282,9 +2295,9 @@ class SearchTask extends Rpc
 /**
  * @method string getJobJson()
  * @method $this withJobJson($value)
- * @method array getCallingNumber()
  * @method string getScriptId()
  * @method $this withScriptId($value)
+ * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getJobGroupId()
