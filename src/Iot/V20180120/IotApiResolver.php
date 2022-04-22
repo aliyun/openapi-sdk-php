@@ -14,6 +14,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchBindProductsIntoProject batchBindProductsIntoProject(array $options = [])
  * @method BatchCheckDeviceNames batchCheckDeviceNames(array $options = [])
  * @method BatchClearEdgeInstanceDeviceConfig batchClearEdgeInstanceDeviceConfig(array $options = [])
+ * @method BatchCreateSoundCodeLabel batchCreateSoundCodeLabel(array $options = [])
+ * @method BatchCreateSoundCodeLabelWithLabels batchCreateSoundCodeLabelWithLabels(array $options = [])
  * @method BatchDeleteDeviceGroupRelations batchDeleteDeviceGroupRelations(array $options = [])
  * @method BatchDeleteEdgeInstanceChannel batchDeleteEdgeInstanceChannel(array $options = [])
  * @method BatchGetDeviceBindStatus batchGetDeviceBindStatus(array $options = [])
@@ -78,7 +80,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateRule createRule(array $options = [])
  * @method CreateRuleAction createRuleAction(array $options = [])
  * @method CreateSceneRule createSceneRule(array $options = [])
+ * @method CreateSchedulePeriod createSchedulePeriod(array $options = [])
  * @method CreateSoundCode createSoundCode(array $options = [])
+ * @method CreateSoundCodeLabel createSoundCodeLabel(array $options = [])
+ * @method CreateSoundCodeSchedule createSoundCodeSchedule(array $options = [])
  * @method CreateSpeech createSpeech(array $options = [])
  * @method CreateStudioAppDomainOpen createStudioAppDomainOpen(array $options = [])
  * @method CreateSubscribeRelation createSubscribeRelation(array $options = [])
@@ -109,7 +114,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRule deleteRule(array $options = [])
  * @method DeleteRuleAction deleteRuleAction(array $options = [])
  * @method DeleteSceneRule deleteSceneRule(array $options = [])
+ * @method DeleteSchedulePeriod deleteSchedulePeriod(array $options = [])
  * @method DeleteSoundCode deleteSoundCode(array $options = [])
+ * @method DeleteSoundCodeLabel deleteSoundCodeLabel(array $options = [])
+ * @method DeleteSoundCodeSchedule deleteSoundCodeSchedule(array $options = [])
  * @method DeleteSpeech deleteSpeech(array $options = [])
  * @method DeleteStudioAppDomainOpen deleteStudioAppDomainOpen(array $options = [])
  * @method DeleteSubscribeRelation deleteSubscribeRelation(array $options = [])
@@ -141,6 +149,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRuleAction getRuleAction(array $options = [])
  * @method GetSceneRule getSceneRule(array $options = [])
  * @method GetSoundCodeAudio getSoundCodeAudio(array $options = [])
+ * @method GetSoundCodeSchedule getSoundCodeSchedule(array $options = [])
  * @method GetSpeechDeviceDetail getSpeechDeviceDetail(array $options = [])
  * @method GetSpeechVoice getSpeechVoice(array $options = [])
  * @method GetStudioAppTokenOpen getStudioAppTokenOpen(array $options = [])
@@ -177,6 +186,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListThingTemplates listThingTemplates(array $options = [])
  * @method NotifyAddThingTopo notifyAddThingTopo(array $options = [])
  * @method OpenIotService openIotService(array $options = [])
+ * @method PackageSoundCodeLabelBatchAudio packageSoundCodeLabelBatchAudio(array $options = [])
  * @method PrintByTemplate printByTemplate(array $options = [])
  * @method Pub pub(array $options = [])
  * @method PubBroadcast pubBroadcast(array $options = [])
@@ -245,8 +255,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryProductList queryProductList(array $options = [])
  * @method QueryProductTopic queryProductTopic(array $options = [])
  * @method QuerySceneRule querySceneRule(array $options = [])
+ * @method QuerySchedulePeriodList querySchedulePeriodList(array $options = [])
  * @method QuerySolutionDeviceGroupPage querySolutionDeviceGroupPage(array $options = [])
+ * @method QuerySoundCodeLabelBatchFailedResult querySoundCodeLabelBatchFailedResult(array $options = [])
+ * @method QuerySoundCodeLabelBatchList querySoundCodeLabelBatchList(array $options = [])
+ * @method QuerySoundCodeLabelList querySoundCodeLabelList(array $options = [])
  * @method QuerySoundCodeList querySoundCodeList(array $options = [])
+ * @method QuerySoundCodeScheduleList querySoundCodeScheduleList(array $options = [])
  * @method QuerySpeech querySpeech(array $options = [])
  * @method QuerySpeechDevice querySpeechDevice(array $options = [])
  * @method QuerySpeechList querySpeechList(array $options = [])
@@ -279,6 +294,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RerunJob rerunJob(array $options = [])
  * @method ResetConsumerGroupPosition resetConsumerGroupPosition(array $options = [])
  * @method ResetThing resetThing(array $options = [])
+ * @method RetrySoundCodeLabelBatch retrySoundCodeLabelBatch(array $options = [])
  * @method ReupgradeOTATask reupgradeOTATask(array $options = [])
  * @method RRpc rRpc(array $options = [])
  * @method SaveDeviceProp saveDeviceProp(array $options = [])
@@ -319,6 +335,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateRule updateRule(array $options = [])
  * @method UpdateRuleAction updateRuleAction(array $options = [])
  * @method UpdateSceneRule updateSceneRule(array $options = [])
+ * @method UpdateSchedulePeriod updateSchedulePeriod(array $options = [])
+ * @method UpdateSoundCodeLabel updateSoundCodeLabel(array $options = [])
+ * @method UpdateSoundCodeSchedule updateSoundCodeSchedule(array $options = [])
  * @method UpdateSpeech updateSpeech(array $options = [])
  * @method UpdateSubscribeRelation updateSubscribeRelation(array $options = [])
  * @method UpdateThingModel updateThingModel(array $options = [])
@@ -876,6 +895,188 @@ class BatchClearEdgeInstanceDeviceConfig extends Rpc
 	    $this->data['IotIds'] = $iotIds;
 		foreach ($iotIds as $i => $iValue) {
 			$this->options['query']['IotIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getDescription()
+ * @method string getTotal()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class BatchCreateSoundCodeLabel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTotal($value)
+    {
+        $this->data['Total'] = $value;
+        $this->options['form_params']['Total'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getDescription()
+ * @method string getIotInstanceId()
+ * @method array getLabels()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class BatchCreateSoundCodeLabelWithLabels extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $labels
+     *
+     * @return $this
+     */
+	public function withLabels(array $labels)
+	{
+	    $this->data['Labels'] = $labels;
+		foreach ($labels as $i => $iValue) {
+			$this->options['form_params']['Labels.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -4602,6 +4803,124 @@ class CreateSceneRule extends Rpc
 }
 
 /**
+ * @method string getScheduleCode()
+ * @method string getDescription()
+ * @method string getStartTime()
+ * @method string getIotInstanceId()
+ * @method string getEndTime()
+ * @method string getSoundCodeContent()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class CreateSchedulePeriod extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSoundCodeContent($value)
+    {
+        $this->data['SoundCodeContent'] = $value;
+        $this->options['form_params']['SoundCodeContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDuration()
  * @method string getIotInstanceId()
  * @method string getSoundCodeContent()
@@ -4659,6 +4978,186 @@ class CreateSoundCode extends Rpc
     {
         $this->data['ApiProduct'] = $value;
         $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getIotInstanceId()
+ * @method string getLabel()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class CreateSoundCodeLabel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabel($value)
+    {
+        $this->data['Label'] = $value;
+        $this->options['form_params']['Label'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDescription()
+ * @method string getStartDate()
+ * @method string getIotInstanceId()
+ * @method string getEndDate()
+ * @method string getApiProduct()
+ * @method string getName()
+ * @method string getApiRevision()
+ */
+class CreateSoundCodeSchedule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartDate($value)
+    {
+        $this->data['StartDate'] = $value;
+        $this->options['form_params']['StartDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndDate($value)
+    {
+        $this->data['EndDate'] = $value;
+        $this->options['form_params']['EndDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
 
         return $this;
     }
@@ -6219,6 +6718,68 @@ class DeleteSceneRule extends Rpc
 }
 
 /**
+ * @method string getPeriodCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteSchedulePeriod extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPeriodCode($value)
+    {
+        $this->data['PeriodCode'] = $value;
+        $this->options['form_params']['PeriodCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSoundCode()
  * @method string getIotInstanceId()
  * @method string getApiProduct()
@@ -6236,6 +6797,130 @@ class DeleteSoundCode extends Rpc
     {
         $this->data['SoundCode'] = $value;
         $this->options['form_params']['SoundCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSoundCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteSoundCodeLabel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSoundCode($value)
+    {
+        $this->data['SoundCode'] = $value;
+        $this->options['form_params']['SoundCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteSoundCodeSchedule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
 
         return $this;
     }
@@ -7685,6 +8370,68 @@ class GetSoundCodeAudio extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class GetSoundCodeSchedule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
     }
 
     /**
@@ -9471,6 +10218,68 @@ class NotifyAddThingTopo extends Rpc
  */
 class OpenIotService extends Rpc
 {
+}
+
+/**
+ * @method string getBatchCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class PackageSoundCodeLabelBatchAudio extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchCode($value)
+    {
+        $this->data['BatchCode'] = $value;
+        $this->options['form_params']['BatchCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -12872,6 +13681,96 @@ class QuerySceneRule extends Rpc
 }
 
 /**
+ * @method string getScheduleCode()
+ * @method string getPageId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QuerySchedulePeriodList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getFuzzyGroupName()
  * @method $this withFuzzyGroupName($value)
  * @method string getProjectCode()
@@ -12916,6 +13815,248 @@ class QuerySolutionDeviceGroupPage extends Rpc
 }
 
 /**
+ * @method string getBatchCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QuerySoundCodeLabelBatchFailedResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchCode($value)
+    {
+        $this->data['BatchCode'] = $value;
+        $this->options['form_params']['BatchCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getPageId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QuerySoundCodeLabelBatchList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getPageId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QuerySoundCodeLabelList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageId()
  * @method string getIotInstanceId()
  * @method string getPageSize()
@@ -12923,6 +14064,82 @@ class QuerySolutionDeviceGroupPage extends Rpc
  * @method string getApiRevision()
  */
 class QuerySoundCodeList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QuerySoundCodeScheduleList extends Rpc
 {
 
     /**
@@ -14996,6 +16213,68 @@ class ResetThing extends Rpc
 }
 
 /**
+ * @method string getBatchCode()
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class RetrySoundCodeLabelBatch extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBatchCode($value)
+    {
+        $this->data['BatchCode'] = $value;
+        $this->options['form_params']['BatchCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getIotInstanceId()
@@ -15096,6 +16375,10 @@ class RRpc extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
@@ -17337,6 +18620,360 @@ class UpdateSceneRule extends Rpc
     {
         $this->data['ApiRevision'] = $value;
         $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPeriodCode()
+ * @method string getDescription()
+ * @method string getStartTime()
+ * @method string getIotInstanceId()
+ * @method string getEndTime()
+ * @method string getSoundCodeContent()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class UpdateSchedulePeriod extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPeriodCode($value)
+    {
+        $this->data['PeriodCode'] = $value;
+        $this->options['form_params']['PeriodCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSoundCodeContent($value)
+    {
+        $this->data['SoundCodeContent'] = $value;
+        $this->options['form_params']['SoundCodeContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSoundCode()
+ * @method string getIotInstanceId()
+ * @method string getLabel()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class UpdateSoundCodeLabel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSoundCode($value)
+    {
+        $this->data['SoundCode'] = $value;
+        $this->options['form_params']['SoundCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabel($value)
+    {
+        $this->data['Label'] = $value;
+        $this->options['form_params']['Label'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScheduleCode()
+ * @method string getDescription()
+ * @method string getStartTime()
+ * @method string getStartDate()
+ * @method string getIotInstanceId()
+ * @method string getEndTime()
+ * @method string getEndDate()
+ * @method string getApiProduct()
+ * @method string getName()
+ * @method string getApiRevision()
+ * @method string getStatus()
+ */
+class UpdateSoundCodeSchedule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleCode($value)
+    {
+        $this->data['ScheduleCode'] = $value;
+        $this->options['form_params']['ScheduleCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartDate($value)
+    {
+        $this->data['StartDate'] = $value;
+        $this->options['form_params']['StartDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndDate($value)
+    {
+        $this->data['EndDate'] = $value;
+        $this->options['form_params']['EndDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
 
         return $this;
     }

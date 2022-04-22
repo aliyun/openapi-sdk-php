@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1326 - 2022-4-22
+- Iot_20180120 old version sdk.
+
+
 ## 1.8.1325 - 2022-4-21
 - Fix endpoint bug.
 
