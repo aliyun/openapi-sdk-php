@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1328 - 2022-4-24
+- Bill api add query conditions and return data field.
+
+
 ## 1.8.1327 - 2022-4-24
 - Support new feature.
 

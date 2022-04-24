@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateResellerUserQuota createResellerUserQuota(array $options = [])
  * @method CreateResourcePackage createResourcePackage(array $options = [])
+ * @method CreateSavingsPlansInstance createSavingsPlansInstance(array $options = [])
  * @method DeleteCostUnit deleteCostUnit(array $options = [])
  * @method DescribeInstanceBill describeInstanceBill(array $options = [])
  * @method DescribePricingModule describePricingModule(array $options = [])
@@ -31,12 +32,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSavingsPlansUsageTotal describeSavingsPlansUsageTotal(array $options = [])
  * @method DescribeSplitItemBill describeSplitItemBill(array $options = [])
  * @method EnableBillGeneration enableBillGeneration(array $options = [])
+ * @method GetAccountRelation getAccountRelation(array $options = [])
  * @method GetCustomerAccountInfo getCustomerAccountInfo(array $options = [])
  * @method GetCustomerList getCustomerList(array $options = [])
  * @method GetOrderDetail getOrderDetail(array $options = [])
  * @method GetPayAsYouGoPrice getPayAsYouGoPrice(array $options = [])
  * @method GetResourcePackagePrice getResourcePackagePrice(array $options = [])
  * @method GetSubscriptionPrice getSubscriptionPrice(array $options = [])
+ * @method InquiryPriceRefundInstance inquiryPriceRefundInstance(array $options = [])
  * @method ModifyAccountRelation modifyAccountRelation(array $options = [])
  * @method ModifyCostUnit modifyCostUnit(array $options = [])
  * @method ModifyInstance modifyInstance(array $options = [])
@@ -76,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySettlementBill querySettlementBill(array $options = [])
  * @method QuerySplitItemBill querySplitItemBill(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
+ * @method RefundInstance refundInstance(array $options = [])
  * @method RelieveAccountRelation relieveAccountRelation(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewResourcePackage renewResourcePackage(array $options = [])
@@ -281,6 +285,8 @@ class ChangeResellerConsumeAmount extends Rpc
  * @method string getRequestId()
  * @method $this withRequestId($value)
  * @method array getPermissionCodes()
+ * @method string getRelationId()
+ * @method $this withRelationId($value)
  */
 class ConfirmRelation extends Rpc
 {
@@ -393,9 +399,9 @@ class CreateCostUnit extends Rpc
  * @method $this withProductType($value)
  * @method string getRenewPeriod()
  * @method $this withRenewPeriod($value)
- * @method array getParameter()
  * @method string getRenewalStatus()
  * @method $this withRenewalStatus($value)
+ * @method array getParameter()
  */
 class CreateInstance extends Rpc
 {
@@ -452,6 +458,32 @@ class CreateResellerUserQuota extends Rpc
  * @method $this withPricingCycle($value)
  */
 class CreateResourcePackage extends Rpc
+{
+}
+
+/**
+ * @method string getSpecification()
+ * @method $this withSpecification($value)
+ * @method string getPoolValue()
+ * @method $this withPoolValue($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getEffectiveDate()
+ * @method $this withEffectiveDate($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getSpecType()
+ * @method $this withSpecType($value)
+ * @method string getPayMode()
+ * @method $this withPayMode($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
+ */
+class CreateSavingsPlansInstance extends Rpc
 {
 }
 
@@ -717,6 +749,19 @@ class EnableBillGeneration extends Rpc
 }
 
 /**
+ * @method string getRequestId()
+ * @method $this withRequestId($value)
+ * @method string getRelationId()
+ * @method $this withRelationId($value)
+ */
+class GetAccountRelation extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -856,38 +901,39 @@ class GetSubscriptionPrice extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class InquiryPriceRefundInstance extends Rpc
+{
+}
+
+/**
  * @method string getChildNick()
  * @method $this withChildNick($value)
+ * @method string getParentUserId()
+ * @method $this withParentUserId($value)
+ * @method string getRelationId()
+ * @method $this withRelationId($value)
+ * @method array getRoleCodes()
  * @method string getRelationOperation()
  * @method $this withRelationOperation($value)
  * @method string getRelationType()
  * @method $this withRelationType($value)
- * @method string getParentUserId()
- * @method $this withParentUserId($value)
  * @method string getChildUserId()
  * @method $this withChildUserId($value)
  * @method string getRequestId()
  * @method $this withRequestId($value)
  * @method array getPermissionCodes()
- * @method array getRoleCodes()
  */
 class ModifyAccountRelation extends Rpc
 {
-
-    /**
-     * @param array $permissionCodes
-     *
-     * @return $this
-     */
-	public function withPermissionCodes(array $permissionCodes)
-	{
-	    $this->data['PermissionCodes'] = $permissionCodes;
-		foreach ($permissionCodes as $i => $iValue) {
-			$this->options['query']['PermissionCodes.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 
     /**
      * @param array $roleCodes
@@ -899,6 +945,21 @@ class ModifyAccountRelation extends Rpc
 	    $this->data['RoleCodes'] = $roleCodes;
 		foreach ($roleCodes as $i => $iValue) {
 			$this->options['query']['RoleCodes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $permissionCodes
+     *
+     * @return $this
+     */
+	public function withPermissionCodes(array $permissionCodes)
+	{
+	    $this->data['PermissionCodes'] = $permissionCodes;
+		foreach ($permissionCodes as $i => $iValue) {
+			$this->options['query']['PermissionCodes.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -1031,18 +1092,24 @@ class QueryAccountTransactionDetails extends Rpc
 /**
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getTransactionType()
+ * @method $this withTransactionType($value)
  * @method string getCreateTimeEnd()
  * @method $this withCreateTimeEnd($value)
  * @method string getRecordID()
  * @method $this withRecordID($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getTransactionChannel()
+ * @method $this withTransactionChannel($value)
  * @method string getTransactionChannelSN()
  * @method $this withTransactionChannelSN($value)
  * @method string getCreateTimeStart()
  * @method $this withCreateTimeStart($value)
  * @method string getTransactionNumber()
  * @method $this withTransactionNumber($value)
+ * @method string getTransactionFlow()
+ * @method $this withTransactionFlow($value)
  */
 class QueryAccountTransactions extends Rpc
 {
@@ -1513,6 +1580,8 @@ class QueryResellerAvailableQuota extends Rpc
  * @method $this withExpiryTimeStart($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getIncludePartner()
+ * @method $this withIncludePartner($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
@@ -1702,6 +1771,22 @@ class QueryUserOmsData extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getImmediatelyRelease()
+ * @method $this withImmediatelyRelease($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class RefundInstance extends Rpc
+{
+}
+
+/**
  * @method string getRelationType()
  * @method $this withRelationType($value)
  * @method string getParentUserId()
@@ -1710,6 +1795,8 @@ class QueryUserOmsData extends Rpc
  * @method $this withChildUserId($value)
  * @method string getRequestId()
  * @method $this withRequestId($value)
+ * @method string getRelationId()
+ * @method $this withRelationId($value)
  */
 class RelieveAccountRelation extends Rpc
 {
