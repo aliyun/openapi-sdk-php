@@ -73,12 +73,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeScheduleTasks describeScheduleTasks(array $options = [])
  * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
+ * @method DescribeSlowLogs describeSlowLogs(array $options = [])
  * @method DescribeStoragePlan describeStoragePlan(array $options = [])
  * @method DescribeTasks describeTasks(array $options = [])
  * @method FailoverDBCluster failoverDBCluster(array $options = [])
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
- * @method ListTagResourcesForRegion listTagResourcesForRegion(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyAccountPassword modifyAccountPassword(array $options = [])
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
@@ -98,13 +98,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBDescription modifyDBDescription(array $options = [])
  * @method ModifyDBEndpointAddress modifyDBEndpointAddress(array $options = [])
  * @method ModifyDBNodeClass modifyDBNodeClass(array $options = [])
- * @method ModifyDBNodeHotReplicaMode modifyDBNodeHotReplicaMode(array $options = [])
+ * @method ModifyDBNodesClass modifyDBNodesClass(array $options = [])
  * @method ModifyDBNodesParameters modifyDBNodesParameters(array $options = [])
  * @method ModifyGlobalDatabaseNetwork modifyGlobalDatabaseNetwork(array $options = [])
  * @method ModifyLogBackupPolicy modifyLogBackupPolicy(array $options = [])
  * @method ModifyMaskingRules modifyMaskingRules(array $options = [])
  * @method ModifyPendingMaintenanceAction modifyPendingMaintenanceAction(array $options = [])
- * @method RefreshProxyLevel refreshProxyLevel(array $options = [])
  * @method RemoveDBClusterFromGDN removeDBClusterFromGDN(array $options = [])
  * @method ResetAccount resetAccount(array $options = [])
  * @method RestartDBNode restartDBNode(array $options = [])
@@ -131,9 +130,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'polardb';
 }
 
 /**
@@ -1640,6 +1636,32 @@ class DescribeSlowLogRecords extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ */
+class DescribeSlowLogs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1783,22 +1805,6 @@ class ListTagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getNextToken()
- * @method $this withNextToken($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ListTagResourcesForRegion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getAccountDescription()
  * @method $this withAccountDescription($value)
  * @method string getAccountName()
@@ -1865,6 +1871,10 @@ class ModifyAutoRenewAttribute extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDataLevel2BackupRetentionPeriod()
  * @method $this withDataLevel2BackupRetentionPeriod($value)
+ * @method string getDataLevel1BackupPeriod()
+ * @method $this withDataLevel1BackupPeriod($value)
+ * @method string getDataLevel2BackupPeriod()
+ * @method $this withDataLevel2BackupPeriod($value)
  * @method string getPreferredBackupPeriod()
  * @method $this withPreferredBackupPeriod($value)
  * @method string getDataLevel1BackupRetentionPeriod()
@@ -1885,6 +1895,10 @@ class ModifyAutoRenewAttribute extends Rpc
  * @method $this withBackupRetentionPeriod($value)
  * @method string getBackupFrequency()
  * @method $this withBackupFrequency($value)
+ * @method string getDataLevel1BackupFrequency()
+ * @method $this withDataLevel1BackupFrequency($value)
+ * @method string getDataLevel1BackupTime()
+ * @method $this withDataLevel1BackupTime($value)
  */
 class ModifyBackupPolicy extends Rpc
 {
@@ -2237,8 +2251,10 @@ class ModifyDBNodeClass extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getDBNodeId()
- * @method $this withDBNodeId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPlannedEndTime()
+ * @method $this withPlannedEndTime($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -2247,11 +2263,36 @@ class ModifyDBNodeClass extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getHotReplicaMode()
- * @method $this withHotReplicaMode($value)
+ * @method string getPlannedStartTime()
+ * @method $this withPlannedStartTime($value)
+ * @method string getModifyType()
+ * @method $this withModifyType($value)
+ * @method string getSubCategory()
+ * @method $this withSubCategory($value)
+ * @method array getDBNode()
  */
-class ModifyDBNodeHotReplicaMode extends Rpc
+class ModifyDBNodesClass extends Rpc
 {
+
+    /**
+     * @param array $dBNode
+     *
+     * @return $this
+     */
+	public function withDBNode(array $dBNode)
+	{
+	    $this->data['DBNode'] = $dBNode;
+		foreach ($dBNode as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DBNodeId'])){
+				$this->options['query']['DBNode.' . ($depth1 + 1) . '.DBNodeId'] = $depth1Value['DBNodeId'];
+			}
+			if(isset($depth1Value['TargetClass'])){
+				$this->options['query']['DBNode.' . ($depth1 + 1) . '.TargetClass'] = $depth1Value['TargetClass'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2347,30 +2388,6 @@ class ModifyMaskingRules extends Rpc
  * @method $this withIds($value)
  */
 class ModifyPendingMaintenanceAction extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPlannedEndTime()
- * @method $this withPlannedEndTime($value)
- * @method string getProxyTargetClass()
- * @method $this withProxyTargetClass($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPlannedStartTime()
- * @method $this withPlannedStartTime($value)
- * @method string getFromTimeService()
- * @method $this withFromTimeService($value)
- */
-class RefreshProxyLevel extends Rpc
 {
 }
 

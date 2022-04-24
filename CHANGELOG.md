@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1327 - 2022-4-24
+- Support new feature.
+
+
 ## 1.8.1326 - 2022-4-22
 - Iot_20180120 old version sdk.
 
