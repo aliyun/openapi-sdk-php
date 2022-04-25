@@ -9,12 +9,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddProjectMemberToRole addProjectMemberToRole(array $options = [])
  * @method AddToMetaCategory addToMetaCategory(array $options = [])
  * @method ApprovePermissionApplyOrder approvePermissionApplyOrder(array $options = [])
- * @method CheckEngineMetaPartition checkEngineMetaPartition(array $options = [])
- * @method CheckEngineMetaTable checkEngineMetaTable(array $options = [])
  * @method CheckFileDeployment checkFileDeployment(array $options = [])
  * @method CheckMetaPartition checkMetaPartition(array $options = [])
  * @method CheckMetaTable checkMetaTable(array $options = [])
- * @method CheckMetaTableTask checkMetaTableTask(array $options = [])
  * @method CreateBusiness createBusiness(array $options = [])
  * @method CreateConnection createConnection(array $options = [])
  * @method CreateDagComplement createDagComplement(array $options = [])
@@ -42,7 +39,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateTableLevel createTableLevel(array $options = [])
  * @method CreateTableTheme createTableTheme(array $options = [])
  * @method CreateUdfFile createUdfFile(array $options = [])
- * @method CreateView createView(array $options = [])
  * @method DeleteBusiness deleteBusiness(array $options = [])
  * @method DeleteConnection deleteConnection(array $options = [])
  * @method DeleteDataServiceApi deleteDataServiceApi(array $options = [])
@@ -62,21 +58,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTable deleteTable(array $options = [])
  * @method DeleteTableLevel deleteTableLevel(array $options = [])
  * @method DeleteTableTheme deleteTableTheme(array $options = [])
- * @method DeleteView deleteView(array $options = [])
  * @method DeployDISyncTask deployDISyncTask(array $options = [])
  * @method DeployFile deployFile(array $options = [])
  * @method DesensitizeData desensitizeData(array $options = [])
  * @method EstablishRelationTableToBusiness establishRelationTableToBusiness(array $options = [])
- * @method ExportConnections exportConnections(array $options = [])
  * @method ExportDataSources exportDataSources(array $options = [])
- * @method ExportDISyncTasks exportDISyncTasks(array $options = [])
  * @method GenerateDISyncTaskConfigForCreating generateDISyncTaskConfigForCreating(array $options = [])
  * @method GenerateDISyncTaskConfigForUpdating generateDISyncTaskConfigForUpdating(array $options = [])
  * @method GetBaselineConfig getBaselineConfig(array $options = [])
  * @method GetBaselineKeyPath getBaselineKeyPath(array $options = [])
  * @method GetBaselineStatus getBaselineStatus(array $options = [])
  * @method GetBusiness getBusiness(array $options = [])
- * @method GetConnectionMeta getConnectionMeta(array $options = [])
  * @method GetDag getDag(array $options = [])
  * @method GetDataServiceApi getDataServiceApi(array $options = [])
  * @method GetDataServiceApplication getDataServiceApplication(array $options = [])
@@ -137,9 +129,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetSuccessInstanceTrend getSuccessInstanceTrend(array $options = [])
  * @method GetTopic getTopic(array $options = [])
  * @method GetTopicInfluence getTopicInfluence(array $options = [])
- * @method ImportConnections importConnections(array $options = [])
  * @method ImportDataSources importDataSources(array $options = [])
- * @method ImportDISyncTasks importDISyncTasks(array $options = [])
  * @method ListAlertMessages listAlertMessages(array $options = [])
  * @method ListBaselineConfigs listBaselineConfigs(array $options = [])
  * @method ListBaselineStatuses listBaselineStatuses(array $options = [])
@@ -157,7 +147,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDataSources listDataSources(array $options = [])
  * @method ListDeployments listDeployments(array $options = [])
  * @method ListDIProjectConfig listDIProjectConfig(array $options = [])
- * @method ListDISyncTasks listDISyncTasks(array $options = [])
  * @method ListFiles listFiles(array $options = [])
  * @method ListFileType listFileType(array $options = [])
  * @method ListFileVersions listFileVersions(array $options = [])
@@ -202,7 +191,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ScanSensitiveData scanSensitiveData(array $options = [])
  * @method SearchMetaTables searchMetaTables(array $options = [])
  * @method SearchNodesByOutput searchNodesByOutput(array $options = [])
- * @method SetConnectionShare setConnectionShare(array $options = [])
  * @method SetDataSourceShare setDataSourceShare(array $options = [])
  * @method SetSuccessInstance setSuccessInstance(array $options = [])
  * @method StartDISyncInstance startDISyncInstance(array $options = [])
@@ -238,6 +226,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateTableModelInfo updateTableModelInfo(array $options = [])
  * @method UpdateTableTheme updateTableTheme(array $options = [])
  * @method UpdateUdfFile updateUdfFile(array $options = [])
+ * @method UpdateWorkbenchEventResult updateWorkbenchEventResult(array $options = [])
  */
 class DataworksPublicApiResolver extends ApiResolver
 {
@@ -340,28 +329,6 @@ class ApprovePermissionApplyOrder extends Rpc
 }
 
 /**
- * @method string getDataSourceType()
- * @method $this withDataSourceType($value)
- * @method string getPartition()
- * @method $this withPartition($value)
- * @method string getTableGuid()
- * @method $this withTableGuid($value)
- */
-class CheckEngineMetaPartition extends Rpc
-{
-}
-
-/**
- * @method string getDataSourceType()
- * @method $this withDataSourceType($value)
- * @method string getTableGuid()
- * @method $this withTableGuid($value)
- */
-class CheckEngineMetaTable extends Rpc
-{
-}
-
-/**
  * @method string getCheckDetailUrl()
  * @method string getCheckerInstanceId()
  * @method string getStatus()
@@ -440,10 +407,6 @@ class CheckMetaPartition extends Rpc
  * @method $this withTableName($value)
  */
 class CheckMetaTable extends Rpc
-{
-}
-
-class CheckMetaTableTask extends Rpc
 {
 }
 
@@ -1385,7 +1348,9 @@ class CreateExportMigration extends Rpc
  * @method string getContent()
  * @method string getProjectIdentifier()
  * @method string getResourceGroupId()
+ * @method string getStartImmediately()
  * @method string getProjectId()
+ * @method string getAdvancedSettings()
  * @method string getStartEffectDate()
  * @method string getCycleType()
  * @method string getOwner()
@@ -1393,12 +1358,14 @@ class CreateExportMigration extends Rpc
  * @method string getInputList()
  * @method string getRerunMode()
  * @method string getConnectionName()
+ * @method string getOutputParameters()
  * @method string getParaValue()
  * @method string getResourceGroupIdentifier()
  * @method string getAutoRerunTimes()
  * @method string getCronExpress()
  * @method string getEndEffectDate()
  * @method string getFileName()
+ * @method string getInputParameters()
  * @method string getStop()
  * @method string getDependentType()
  * @method string getFileFolderPath()
@@ -1479,10 +1446,36 @@ class CreateFile extends Rpc
      *
      * @return $this
      */
+    public function withStartImmediately($value)
+    {
+        $this->data['StartImmediately'] = $value;
+        $this->options['form_params']['StartImmediately'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withProjectId($value)
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAdvancedSettings($value)
+    {
+        $this->data['AdvancedSettings'] = $value;
+        $this->options['form_params']['AdvancedSettings'] = $value;
 
         return $this;
     }
@@ -1583,6 +1576,19 @@ class CreateFile extends Rpc
      *
      * @return $this
      */
+    public function withOutputParameters($value)
+    {
+        $this->data['OutputParameters'] = $value;
+        $this->options['form_params']['OutputParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withParaValue($value)
     {
         $this->data['ParaValue'] = $value;
@@ -1652,6 +1658,19 @@ class CreateFile extends Rpc
     {
         $this->data['FileName'] = $value;
         $this->options['form_params']['FileName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInputParameters($value)
+    {
+        $this->data['InputParameters'] = $value;
+        $this->options['form_params']['InputParameters'] = $value;
 
         return $this;
     }
@@ -3195,145 +3214,6 @@ class CreateUdfFile extends Rpc
 }
 
 /**
- * @method string getViewName()
- * @method string getClientToken()
- * @method string getSelectSQL()
- * @method string getSelectWhere()
- * @method string getSelectTableName()
- * @method string getComment()
- * @method string getSelectColumn()
- * @method string getAppGuid()
- * @method array getViewColumn()
- */
-class CreateView extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withViewName($value)
-    {
-        $this->data['ViewName'] = $value;
-        $this->options['form_params']['ViewName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSelectSQL($value)
-    {
-        $this->data['SelectSQL'] = $value;
-        $this->options['form_params']['SelectSQL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSelectWhere($value)
-    {
-        $this->data['SelectWhere'] = $value;
-        $this->options['form_params']['SelectWhere'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSelectTableName($value)
-    {
-        $this->data['SelectTableName'] = $value;
-        $this->options['form_params']['SelectTableName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withComment($value)
-    {
-        $this->data['Comment'] = $value;
-        $this->options['form_params']['Comment'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSelectColumn($value)
-    {
-        $this->data['SelectColumn'] = $value;
-        $this->options['form_params']['SelectColumn'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppGuid($value)
-    {
-        $this->data['AppGuid'] = $value;
-        $this->options['form_params']['AppGuid'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $viewColumn
-     *
-     * @return $this
-     */
-	public function withViewColumn(array $viewColumn)
-	{
-	    $this->data['ViewColumn'] = $viewColumn;
-		foreach ($viewColumn as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Comment'])){
-				$this->options['form_params']['ViewColumn.' . ($depth1 + 1) . '.Comment'] = $depth1Value['Comment'];
-			}
-			if(isset($depth1Value['ColumnName'])){
-				$this->options['form_params']['ViewColumn.' . ($depth1 + 1) . '.ColumnName'] = $depth1Value['ColumnName'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
  * @method string getBusinessId()
  * @method string getProjectId()
  * @method string getProjectIdentifier()
@@ -3935,16 +3815,6 @@ class DeleteTableTheme extends Rpc
 }
 
 /**
- * @method string getViewName()
- * @method $this withViewName($value)
- * @method string getAppGuid()
- * @method $this withAppGuid($value)
- */
-class DeleteView extends Rpc
-{
-}
-
-/**
  * @method string getTaskType()
  * @method $this withTaskType($value)
  * @method string getProjectId()
@@ -4161,46 +4031,11 @@ class EstablishRelationTableToBusiness extends Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class ExportConnections extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getDataSourceType()
- * @method $this withDataSourceType($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getSubType()
- * @method $this withSubType($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- */
 class ExportDataSources extends Rpc
 {
 
     /** @var string */
     public $method = 'GET';
-}
-
-/**
- * @method string getTaskType()
- * @method $this withTaskType($value)
- * @method string getTaskParam()
- * @method $this withTaskParam($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- */
-class ExportDISyncTasks extends Rpc
-{
 }
 
 /**
@@ -4395,22 +4230,6 @@ class GetBusiness extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getDatasourceName()
- * @method $this withDatasourceName($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- */
-class GetConnectionMeta extends Rpc
-{
 }
 
 /**
@@ -6339,16 +6158,6 @@ class GetTopicInfluence extends Rpc
 }
 
 /**
- * @method string getProjectId()
- * @method $this withProjectId($value)
- * @method string getConnections()
- * @method $this withConnections($value)
- */
-class ImportConnections extends Rpc
-{
-}
-
-/**
  * @method string getDataSources()
  * @method $this withDataSources($value)
  * @method string getProjectId()
@@ -6356,32 +6165,6 @@ class ImportConnections extends Rpc
  */
 class ImportDataSources extends Rpc
 {
-}
-
-/**
- * @method string getTaskType()
- * @method $this withTaskType($value)
- * @method string getTaskParam()
- * @method $this withTaskParam($value)
- * @method string getBody()
- * @method string getProjectId()
- * @method $this withProjectId($value)
- */
-class ImportDISyncTasks extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBody($value)
-    {
-        $this->data['Body'] = $value;
-        $this->options['form_params']['body'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -7643,20 +7426,6 @@ class ListDIProjectConfig extends Rpc
 }
 
 /**
- * @method string getTaskType()
- * @method $this withTaskType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- */
-class ListDISyncTasks extends Rpc
-{
-}
-
-/**
  * @method string getOwner()
  * @method string getFileTypes()
  * @method string getProjectIdentifier()
@@ -8333,6 +8102,8 @@ class ListManualDagInstances extends Rpc
  * @method $this withDataSourceType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getProjectId()
@@ -10006,22 +9777,6 @@ class SearchNodesByOutput extends Rpc
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
-class SetConnectionShare extends Rpc
-{
-}
-
-/**
- * @method string getProjectPermissions()
- * @method $this withProjectPermissions($value)
- * @method string getDatasourceName()
- * @method $this withDatasourceName($value)
- * @method string getUserPermissions()
- * @method $this withUserPermissions($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
- */
 class SetDataSourceShare extends Rpc
 {
 }
@@ -10667,7 +10422,9 @@ class UpdateDISyncTask extends Rpc
  * @method string getDependentNodeIdList()
  * @method string getContent()
  * @method string getProjectIdentifier()
+ * @method string getStartImmediately()
  * @method string getProjectId()
+ * @method string getAdvancedSettings()
  * @method string getStartEffectDate()
  * @method string getCycleType()
  * @method string getFileId()
@@ -10676,12 +10433,14 @@ class UpdateDISyncTask extends Rpc
  * @method string getInputList()
  * @method string getRerunMode()
  * @method string getConnectionName()
+ * @method string getOutputParameters()
  * @method string getParaValue()
  * @method string getResourceGroupIdentifier()
  * @method string getAutoRerunTimes()
  * @method string getCronExpress()
  * @method string getEndEffectDate()
  * @method string getFileName()
+ * @method string getInputParameters()
  * @method string getStop()
  * @method string getDependentType()
  * @method string getFileFolderPath()
@@ -10749,10 +10508,36 @@ class UpdateFile extends Rpc
      *
      * @return $this
      */
+    public function withStartImmediately($value)
+    {
+        $this->data['StartImmediately'] = $value;
+        $this->options['form_params']['StartImmediately'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withProjectId($value)
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAdvancedSettings($value)
+    {
+        $this->data['AdvancedSettings'] = $value;
+        $this->options['form_params']['AdvancedSettings'] = $value;
 
         return $this;
     }
@@ -10866,6 +10651,19 @@ class UpdateFile extends Rpc
      *
      * @return $this
      */
+    public function withOutputParameters($value)
+    {
+        $this->data['OutputParameters'] = $value;
+        $this->options['form_params']['OutputParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withParaValue($value)
     {
         $this->data['ParaValue'] = $value;
@@ -10935,6 +10733,19 @@ class UpdateFile extends Rpc
     {
         $this->data['FileName'] = $value;
         $this->options['form_params']['FileName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInputParameters($value)
+    {
+        $this->data['InputParameters'] = $value;
+        $this->options['form_params']['InputParameters'] = $value;
 
         return $this;
     }
@@ -11438,6 +11249,7 @@ class UpdateQualityFollower extends Rpc
  * @method string getExpectValue()
  * @method string getWhereCondition()
  * @method string getCriticalThreshold()
+ * @method string getOpenSwitch()
  * @method string getComment()
  * @method string getPredictType()
  */
@@ -11661,6 +11473,19 @@ class UpdateQualityRule extends Rpc
     {
         $this->data['CriticalThreshold'] = $value;
         $this->options['form_params']['CriticalThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOpenSwitch($value)
+    {
+        $this->data['OpenSwitch'] = $value;
+        $this->options['form_params']['OpenSwitch'] = $value;
 
         return $this;
     }
@@ -12308,4 +12133,18 @@ class UpdateUdfFile extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getCheckResultTip()
+ * @method $this withCheckResultTip($value)
+ * @method string getCheckResult()
+ * @method $this withCheckResult($value)
+ * @method string getMessageId()
+ * @method $this withMessageId($value)
+ * @method string getExtensionCode()
+ * @method $this withExtensionCode($value)
+ */
+class UpdateWorkbenchEventResult extends Rpc
+{
 }

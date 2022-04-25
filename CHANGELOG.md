@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1329 - 2022-4-25
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1328 - 2022-4-24
 - Bill api add query conditions and return data field.
 
