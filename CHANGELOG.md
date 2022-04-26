@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1330 - 2022-4-26
+- Support to pass variables to authentication IVR.
+
+
 ## 1.8.1329 - 2022-4-25
 - Generated 2020-05-18 for `dataworks-public`.
 
