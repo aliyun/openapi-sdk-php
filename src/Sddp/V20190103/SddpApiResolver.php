@@ -95,6 +95,8 @@ class CreateConfig extends Rpc
  * @method $this withBatchCreate($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
  * @method string getDataLimitList()
  * @method $this withDataLimitList($value)
  * @method string getLang()
