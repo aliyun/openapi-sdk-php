@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1332 - 2022-4-29
+- Supported CPFS Protocol.
+
+
 ## 1.8.1331 - 2022-4-27
 - CreateDataLimit add enable filed.
 

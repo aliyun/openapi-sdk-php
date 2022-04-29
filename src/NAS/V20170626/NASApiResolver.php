@@ -26,6 +26,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLifecyclePolicy createLifecyclePolicy(array $options = [])
  * @method CreateLifecycleRetrieveJob createLifecycleRetrieveJob(array $options = [])
  * @method CreateMountTarget createMountTarget(array $options = [])
+ * @method CreateProtocolMountTarget createProtocolMountTarget(array $options = [])
+ * @method CreateProtocolService createProtocolService(array $options = [])
  * @method CreateRecycleBinDeleteJob createRecycleBinDeleteJob(array $options = [])
  * @method CreateRecycleBinRestoreJob createRecycleBinRestoreJob(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
@@ -38,6 +40,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLDAPConfig deleteLDAPConfig(array $options = [])
  * @method DeleteLifecyclePolicy deleteLifecyclePolicy(array $options = [])
  * @method DeleteMountTarget deleteMountTarget(array $options = [])
+ * @method DeleteProtocolMountTarget deleteProtocolMountTarget(array $options = [])
+ * @method DeleteProtocolService deleteProtocolService(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
  * @method DescribeAccessGroups describeAccessGroups(array $options = [])
  * @method DescribeAccessRules describeAccessRules(array $options = [])
@@ -55,6 +59,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLogAnalysis describeLogAnalysis(array $options = [])
  * @method DescribeMountedClients describeMountedClients(array $options = [])
  * @method DescribeMountTargets describeMountTargets(array $options = [])
+ * @method DescribeProtocolMountTarget describeProtocolMountTarget(array $options = [])
+ * @method DescribeProtocolService describeProtocolService(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSmbAcl describeSmbAcl(array $options = [])
  * @method DescribeSnapshots describeSnapshots(array $options = [])
@@ -83,6 +89,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyLDAPConfig modifyLDAPConfig(array $options = [])
  * @method ModifyLifecyclePolicy modifyLifecyclePolicy(array $options = [])
  * @method ModifyMountTarget modifyMountTarget(array $options = [])
+ * @method ModifyProtocolMountTarget modifyProtocolMountTarget(array $options = [])
+ * @method ModifyProtocolService modifyProtocolService(array $options = [])
  * @method ModifySmbAcl modifySmbAcl(array $options = [])
  * @method OpenNASService openNASService(array $options = [])
  * @method RemoveClientFromBlackList removeClientFromBlackList(array $options = [])
@@ -541,6 +549,68 @@ class CreateMountTarget extends Rpc
 }
 
 /**
+ * @method string getProtocolServiceId()
+ * @method $this withProtocolServiceId($value)
+ * @method string getFsetId()
+ * @method $this withFsetId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getAccessGroupName()
+ * @method $this withAccessGroupName($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class CreateProtocolMountTarget extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getMountTargetDescription()
+ * @method $this withMountTargetDescription($value)
+ * @method string getMountTargetAccessGroupName()
+ * @method $this withMountTargetAccessGroupName($value)
+ * @method string getMountTargetVSwitchId()
+ * @method $this withMountTargetVSwitchId($value)
+ * @method string getThroughput()
+ * @method $this withThroughput($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getMountTargetFsetId()
+ * @method $this withMountTargetFsetId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getMountTargetVpcId()
+ * @method $this withMountTargetVpcId($value)
+ * @method string getMountTargetPath()
+ * @method $this withMountTargetPath($value)
+ * @method string getProtocolSpec()
+ * @method $this withProtocolSpec($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getProtocolType()
+ * @method $this withProtocolType($value)
+ */
+class CreateProtocolService extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getFileSystemId()
@@ -677,6 +747,36 @@ class DeleteLifecyclePolicy extends Rpc
  * @method $this withMountTargetDomain($value)
  */
 class DeleteMountTarget extends Rpc
+{
+}
+
+/**
+ * @method string getProtocolServiceId()
+ * @method $this withProtocolServiceId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getExportId()
+ * @method $this withExportId($value)
+ */
+class DeleteProtocolMountTarget extends Rpc
+{
+}
+
+/**
+ * @method string getProtocolServiceId()
+ * @method $this withProtocolServiceId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ */
+class DeleteProtocolService extends Rpc
 {
 }
 
@@ -1002,6 +1102,61 @@ class DescribeMountedClients extends Rpc
  * @method $this withDualStackMountTargetDomain($value)
  */
 class DescribeMountTargets extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method array getFilters()
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeProtocolMountTarget extends Rpc
+{
+
+    /**
+     * @param array $filters
+     *
+     * @return $this
+     */
+	public function withFilters(array $filters)
+	{
+	    $this->data['Filters'] = $filters;
+		foreach ($filters as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Filters.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Filters.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getProtocolServiceIds()
+ * @method $this withProtocolServiceIds($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeProtocolService extends Rpc
 {
 }
 
@@ -1447,6 +1602,46 @@ class ModifyLifecyclePolicy extends Rpc
  * @method $this withStatus($value)
  */
 class ModifyMountTarget extends Rpc
+{
+}
+
+/**
+ * @method string getProtocolServiceId()
+ * @method $this withProtocolServiceId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getAccessGroupName()
+ * @method $this withAccessGroupName($value)
+ * @method string getExportId()
+ * @method $this withExportId($value)
+ */
+class ModifyProtocolMountTarget extends Rpc
+{
+}
+
+/**
+ * @method string getProtocolServiceId()
+ * @method $this withProtocolServiceId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getThroughput()
+ * @method $this withThroughput($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getProtocolSpec()
+ * @method $this withProtocolSpec($value)
+ */
+class ModifyProtocolService extends Rpc
 {
 }
 
