@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1333 - 2022-4-30
+- Add GrtApplicationList.
+
+
 ## 1.8.1332 - 2022-4-29
 - Supported CPFS Protocol.
 
