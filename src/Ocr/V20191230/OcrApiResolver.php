@@ -18,7 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeIdentityCard recognizeIdentityCard(array $options = [])
  * @method RecognizeLicensePlate recognizeLicensePlate(array $options = [])
  * @method RecognizePassportMRZ recognizePassportMRZ(array $options = [])
- * @method RecognizePDF recognizePDF(array $options = [])
+ * @method RecognizePdf recognizePdf(array $options = [])
  * @method RecognizePoiName recognizePoiName(array $options = [])
  * @method RecognizeQrCode recognizeQrCode(array $options = [])
  * @method RecognizeQuotaInvoice recognizeQuotaInvoice(array $options = [])
@@ -28,6 +28,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeTaxiInvoice recognizeTaxiInvoice(array $options = [])
  * @method RecognizeTicketInvoice recognizeTicketInvoice(array $options = [])
  * @method RecognizeTrainTicket recognizeTrainTicket(array $options = [])
+ * @method RecognizeUkraineIdentityCard recognizeUkraineIdentityCard(array $options = [])
  * @method RecognizeVATInvoice recognizeVATInvoice(array $options = [])
  * @method RecognizeVerificationcode recognizeVerificationcode(array $options = [])
  * @method RecognizeVideoCastCrewList recognizeVideoCastCrewList(array $options = [])
@@ -75,24 +76,11 @@ class DetectCardScreenshot extends Rpc
 }
 
 /**
- * @method string getAsync()
  * @method string getJobId()
+ * @method string getAsync()
  */
 class GetAsyncJobResult extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['form_params']['Async'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -103,6 +91,19 @@ class GetAsyncJobResult extends Rpc
     {
         $this->data['JobId'] = $value;
         $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
 
         return $this;
     }
@@ -245,14 +246,8 @@ class RecognizeBusinessLicense extends Rpc
 }
 
 /**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
  * @method string getMinHeight()
- * @method string getOssFile()
- * @method $this withOssFile($value)
  * @method string getImageType()
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
  * @method string getOutputProbability()
  * @method string getImageURL()
  */
@@ -533,7 +528,7 @@ class RecognizePassportMRZ extends Rpc
 /**
  * @method string getFileURL()
  */
-class RecognizePDF extends Rpc
+class RecognizePdf extends Rpc
 {
 
     /**
@@ -571,13 +566,7 @@ class RecognizePoiName extends Rpc
 }
 
 /**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
  * @method array getTasks()
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
  */
 class RecognizeQrCode extends Rpc
 {
@@ -655,29 +644,16 @@ class RecognizeStamp extends Rpc
 }
 
 /**
- * @method string getImageType()
  * @method string getUseFinanceModel()
  * @method string getSkipDetection()
- * @method string getImageURL()
  * @method string getOutputFormat()
  * @method string getAssureDirection()
  * @method string getHasLine()
+ * @method string getImageType()
+ * @method string getImageURL()
  */
 class RecognizeTable extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageType($value)
-    {
-        $this->data['ImageType'] = $value;
-        $this->options['form_params']['ImageType'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -701,19 +677,6 @@ class RecognizeTable extends Rpc
     {
         $this->data['SkipDetection'] = $value;
         $this->options['form_params']['SkipDetection'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
@@ -753,6 +716,32 @@ class RecognizeTable extends Rpc
     {
         $this->data['HasLine'] = $value;
         $this->options['form_params']['HasLine'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageType($value)
+    {
+        $this->data['ImageType'] = $value;
+        $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURL($value)
+    {
+        $this->data['ImageURL'] = $value;
+        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
@@ -861,6 +850,26 @@ class RecognizeTrainTicket extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageUrl()
+ */
+class RecognizeUkraineIdentityCard extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }
@@ -1028,9 +1037,9 @@ class RecognizeVINCode extends Rpc
 
 /**
  * @method string getFileType()
+ * @method string getOutputType()
  * @method string getAsync()
  * @method string getFileURL()
- * @method string getOutputType()
  */
 class TrimDocument extends Rpc
 {
@@ -1044,6 +1053,19 @@ class TrimDocument extends Rpc
     {
         $this->data['FileType'] = $value;
         $this->options['form_params']['FileType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputType($value)
+    {
+        $this->data['OutputType'] = $value;
+        $this->options['form_params']['OutputType'] = $value;
 
         return $this;
     }
@@ -1070,19 +1092,6 @@ class TrimDocument extends Rpc
     {
         $this->data['FileURL'] = $value;
         $this->options['form_params']['FileURL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOutputType($value)
-    {
-        $this->data['OutputType'] = $value;
-        $this->options['form_params']['OutputType'] = $value;
 
         return $this;
     }

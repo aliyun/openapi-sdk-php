@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1334 - 2022-5-5
+- Release RecognizeUkraineIdentityCard.
+
+
 ## 1.8.1333 - 2022-4-30
 - Add GrtApplicationList.
 
