@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1336 - 2022-5-6
+- Add DescribeAppKey interface.
+
+
 ## 1.8.1335 - 2022-5-6
 - EduCloud API： DescribeLabToken修改
 

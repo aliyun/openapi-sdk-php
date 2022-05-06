@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteEventSubscribe deleteEventSubscribe(array $options = [])
  * @method DeleteMPULayout deleteMPULayout(array $options = [])
  * @method DeleteRecordTemplate deleteRecordTemplate(array $options = [])
+ * @method DescribeAppKey describeAppKey(array $options = [])
  * @method DescribeApps describeApps(array $options = [])
  * @method DescribeAutoLiveStreamRule describeAutoLiveStreamRule(array $options = [])
  * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
@@ -450,6 +451,20 @@ class DeleteMPULayout extends Rpc
  * @method $this withAppId($value)
  */
 class DeleteRecordTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getShowLog()
+ * @method $this withShowLog($value)
+ * @method string getQueryAppId()
+ * @method $this withQueryAppId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeAppKey extends Rpc
 {
 }
 
