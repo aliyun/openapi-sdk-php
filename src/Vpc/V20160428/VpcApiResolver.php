@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddCommonBandwidthPackageIps addCommonBandwidthPackageIps(array $options = [])
  * @method AddGlobalAccelerationInstanceIp addGlobalAccelerationInstanceIp(array $options = [])
  * @method AddIPv6TranslatorAclListEntry addIPv6TranslatorAclListEntry(array $options = [])
+ * @method AddPublicIpAddressPoolCidrBlock addPublicIpAddressPoolCidrBlock(array $options = [])
  * @method AddSourcesToTrafficMirrorSession addSourcesToTrafficMirrorSession(array $options = [])
  * @method AllocateEipAddress allocateEipAddress(array $options = [])
  * @method AllocateEipAddressPro allocateEipAddressPro(array $options = [])
@@ -63,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreatePhysicalConnection createPhysicalConnection(array $options = [])
  * @method CreatePhysicalConnectionOccupancyOrder createPhysicalConnectionOccupancyOrder(array $options = [])
  * @method CreatePhysicalConnectionSetupOrder createPhysicalConnectionSetupOrder(array $options = [])
+ * @method CreatePublicIpAddressPool createPublicIpAddressPool(array $options = [])
  * @method CreateRouteEntry createRouteEntry(array $options = [])
  * @method CreateRouterInterface createRouterInterface(array $options = [])
  * @method CreateRouteTable createRouteTable(array $options = [])
@@ -109,6 +111,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteNatIpCidr deleteNatIpCidr(array $options = [])
  * @method DeleteNetworkAcl deleteNetworkAcl(array $options = [])
  * @method DeletePhysicalConnection deletePhysicalConnection(array $options = [])
+ * @method DeletePublicIpAddressPool deletePublicIpAddressPool(array $options = [])
+ * @method DeletePublicIpAddressPoolCidrBlock deletePublicIpAddressPoolCidrBlock(array $options = [])
  * @method DeleteRouteEntry deleteRouteEntry(array $options = [])
  * @method DeleteRouterInterface deleteRouterInterface(array $options = [])
  * @method DeleteRouteTable deleteRouteTable(array $options = [])
@@ -214,6 +218,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListNatIpCidrs listNatIpCidrs(array $options = [])
  * @method ListNatIps listNatIps(array $options = [])
  * @method ListPrefixLists listPrefixLists(array $options = [])
+ * @method ListPublicIpAddressPoolCidrBlocks listPublicIpAddressPoolCidrBlocks(array $options = [])
+ * @method ListPublicIpAddressPools listPublicIpAddressPools(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTrafficMirrorFilters listTrafficMirrorFilters(array $options = [])
  * @method ListTrafficMirrorSessions listTrafficMirrorSessions(array $options = [])
@@ -299,6 +305,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateIpv4GatewayAttribute updateIpv4GatewayAttribute(array $options = [])
  * @method UpdateNatGatewayNatType updateNatGatewayNatType(array $options = [])
  * @method UpdateNetworkAclEntries updateNetworkAclEntries(array $options = [])
+ * @method UpdatePublicIpAddressPoolAttribute updatePublicIpAddressPoolAttribute(array $options = [])
  * @method UpdateTrafficMirrorFilterAttribute updateTrafficMirrorFilterAttribute(array $options = [])
  * @method UpdateTrafficMirrorFilterRuleAttribute updateTrafficMirrorFilterRuleAttribute(array $options = [])
  * @method UpdateTrafficMirrorSessionAttribute updateTrafficMirrorSessionAttribute(array $options = [])
@@ -476,6 +483,28 @@ class AddIPv6TranslatorAclListEntry extends Rpc
 }
 
 /**
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
+ */
+class AddPublicIpAddressPoolCidrBlock extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
@@ -514,6 +543,8 @@ class AddSourcesToTrafficMirrorSession extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getISP()
@@ -572,6 +603,8 @@ class AllocateEipAddress extends Rpc
  * @method $this withIpAddress($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getISP()
@@ -1215,8 +1248,12 @@ class CopyNetworkAclEntries extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getRouteQuota()
+ * @method $this withRouteQuota($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRouteUsageAlarmThreshold()
+ * @method $this withRouteUsageAlarmThreshold($value)
  * @method string getRouterId()
  * @method $this withRouterId($value)
  * @method string getName()
@@ -2005,6 +2042,30 @@ class CreatePhysicalConnectionSetupOrder extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getIsp()
+ * @method $this withIsp($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreatePublicIpAddressPool extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getRouteEntryName()
  * @method $this withRouteEntryName($value)
  * @method string getClientToken()
@@ -2083,6 +2144,8 @@ class CreateRouteEntry extends Rpc
  * @method $this withPeriod($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
+ * @method string getAvailableZoneId()
+ * @method $this withAvailableZoneId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOppositeRegionId()
@@ -3287,6 +3350,48 @@ class DeletePhysicalConnection extends Rpc
 }
 
 /**
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeletePublicIpAddressPool extends Rpc
+{
+}
+
+/**
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
+ */
+class DeletePublicIpAddressPoolCidrBlock extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getNextHopId()
@@ -3898,6 +4003,8 @@ class DescribeCustomerGateways extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
  * @method string getFilter2Value()
  * @method string getSecurityProtectionEnabled()
  * @method $this withSecurityProtectionEnabled($value)
@@ -5884,6 +5991,8 @@ class ListDhcpOptionsSets extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  */
 class ListEnhanhcedNatGatewayAvailableZones extends Rpc
 {
@@ -6191,6 +6300,72 @@ class ListPrefixLists extends Rpc
 	    $this->data['PrefixListIds'] = $prefixListIds;
 		foreach ($prefixListIds as $i => $iValue) {
 			$this->options['query']['PrefixListIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListPublicIpAddressPoolCidrBlocks extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getIsp()
+ * @method $this withIsp($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method array getPublicIpAddressPoolIds()
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListPublicIpAddressPools extends Rpc
+{
+
+    /**
+     * @param array $publicIpAddressPoolIds
+     *
+     * @return $this
+     */
+	public function withPublicIpAddressPoolIds(array $publicIpAddressPoolIds)
+	{
+	    $this->data['PublicIpAddressPoolIds'] = $publicIpAddressPoolIds;
+		foreach ($publicIpAddressPoolIds as $i => $iValue) {
+			$this->options['query']['PublicIpAddressPoolIds.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -6541,8 +6716,12 @@ class ListVpnCertificateAssociations extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getRouteQuota()
+ * @method $this withRouteQuota($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getRouteUsageAlarmThreshold()
+ * @method $this withRouteUsageAlarmThreshold($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getLocalAsn()
@@ -8577,6 +8756,30 @@ class UpdateNetworkAclEntries extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getPublicIpAddressPoolId()
+ * @method $this withPublicIpAddressPoolId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdatePublicIpAddressPoolAttribute extends Rpc
+{
 }
 
 /**

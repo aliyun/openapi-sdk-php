@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1337 - 2022-5-7
+- Supported API for PublicIpAddressPool.
+
+
 ## 1.8.1336 - 2022-5-6
 - Add DescribeAppKey interface.
 
