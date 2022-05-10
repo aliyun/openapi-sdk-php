@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1338 - 2022-5-10
+- Supported partner for ESP.
+
+
 ## 1.8.1337 - 2022-5-7
 - Supported API for PublicIpAddressPool.
 

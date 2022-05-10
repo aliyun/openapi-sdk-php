@@ -53,6 +53,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'companyreg';
 }
 
 /**
@@ -557,12 +560,14 @@ class ReleaseProduceAuthorization extends Rpc
 }
 
 /**
+ * @method string getCallCenterNumber()
+ * @method $this withCallCenterNumber($value)
+ * @method string getMobileKey()
+ * @method $this withMobileKey($value)
  * @method string getBizType()
  * @method $this withBizType($value)
  * @method string getCaller()
  * @method $this withCaller($value)
- * @method string getCallCenterNumber()
- * @method $this withCallCenterNumber($value)
  * @method string getSkillType()
  * @method $this withSkillType($value)
  * @method string getBizId()
