@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1339 - 2022-5-11
+- Update by sdk platform.
+
+
 ## 1.8.1338 - 2022-5-10
 - Supported partner for ESP.
 
