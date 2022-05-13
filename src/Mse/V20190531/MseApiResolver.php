@@ -13,9 +13,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddGatewayServiceVersion addGatewayServiceVersion(array $options = [])
  * @method AddGatewaySlb addGatewaySlb(array $options = [])
  * @method AddMockRule addMockRule(array $options = [])
+ * @method AddSeataServer addSeataServer(array $options = [])
  * @method AddSecurityGroupRule addSecurityGroupRule(array $options = [])
  * @method AddServiceSource addServiceSource(array $options = [])
  * @method AddSSLCert addSSLCert(array $options = [])
+ * @method AddTest addTest(array $options = [])
  * @method ApplyGatewayRoute applyGatewayRoute(array $options = [])
  * @method ApplyTagPolicies applyTagPolicies(array $options = [])
  * @method CloneNacosConfig cloneNacosConfig(array $options = [])
@@ -27,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateNacosService createNacosService(array $options = [])
  * @method CreateOrUpdateSwimmingLane createOrUpdateSwimmingLane(array $options = [])
  * @method CreateOrUpdateSwimmingLaneGroup createOrUpdateSwimmingLaneGroup(array $options = [])
+ * @method CreateVGroup createVGroup(array $options = [])
  * @method CreateZnode createZnode(array $options = [])
  * @method DeleteAuthResource deleteAuthResource(array $options = [])
  * @method DeleteCluster deleteCluster(array $options = [])
@@ -41,15 +44,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteNacosConfigs deleteNacosConfigs(array $options = [])
  * @method DeleteNacosInstance deleteNacosInstance(array $options = [])
  * @method DeleteNacosService deleteNacosService(array $options = [])
+ * @method DeleteSeataServer deleteSeataServer(array $options = [])
  * @method DeleteSecurityGroupRule deleteSecurityGroupRule(array $options = [])
  * @method DeleteServiceSource deleteServiceSource(array $options = [])
  * @method DeleteSwimmingLane deleteSwimmingLane(array $options = [])
  * @method DeleteSwimmingLaneGroup deleteSwimmingLaneGroup(array $options = [])
+ * @method DeleteVGroup deleteVGroup(array $options = [])
  * @method DeleteZnode deleteZnode(array $options = [])
  * @method ExportNacosConfig exportNacosConfig(array $options = [])
  * @method GetApplicationList getApplicationList(array $options = [])
  * @method GetAppMessageQueueRoute getAppMessageQueueRoute(array $options = [])
  * @method GetBlackWhiteList getBlackWhiteList(array $options = [])
+ * @method GetDashBoardUrl getDashBoardUrl(array $options = [])
  * @method GetEngineNamepace getEngineNamepace(array $options = [])
  * @method GetGateway getGateway(array $options = [])
  * @method GetGatewayDomainDetail getGatewayDomainDetail(array $options = [])
@@ -76,6 +82,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAppBySwimmingLaneGroupTag listAppBySwimmingLaneGroupTag(array $options = [])
  * @method ListApplicationsWithTagRules listApplicationsWithTagRules(array $options = [])
  * @method ListClusterConnectionTypes listClusterConnectionTypes(array $options = [])
+ * @method ListClusterDetailFeature listClusterDetailFeature(array $options = [])
  * @method ListClusters listClusters(array $options = [])
  * @method ListClusterTypes listClusterTypes(array $options = [])
  * @method ListClusterVersions listClusterVersions(array $options = [])
@@ -87,6 +94,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListGatewayRoute listGatewayRoute(array $options = [])
  * @method ListGatewayService listGatewayService(array $options = [])
  * @method ListGatewaySlb listGatewaySlb(array $options = [])
+ * @method ListInstances listInstances(array $options = [])
  * @method ListListenersByConfig listListenersByConfig(array $options = [])
  * @method ListListenersByIp listListenersByIp(array $options = [])
  * @method ListNacosConfigs listNacosConfigs(array $options = [])
@@ -112,8 +120,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryMonitor queryMonitor(array $options = [])
  * @method QuerySlbSpec querySlbSpec(array $options = [])
  * @method QuerySwimmingLaneById querySwimmingLaneById(array $options = [])
+ * @method QueryUserVpc queryUserVpc(array $options = [])
  * @method QueryZnodeDetail queryZnodeDetail(array $options = [])
  * @method RestartCluster restartCluster(array $options = [])
+ * @method RestartSeataServer restartSeataServer(array $options = [])
  * @method RetryCluster retryCluster(array $options = [])
  * @method SelectGatewaySlb selectGatewaySlb(array $options = [])
  * @method UpdateAcl updateAcl(array $options = [])
@@ -335,6 +345,28 @@ class AddMockRule extends Rpc
 }
 
 /**
+ * @method string getReplica()
+ * @method $this withReplica($value)
+ * @method string getPrimaryUser()
+ * @method $this withPrimaryUser($value)
+ * @method string getVpc()
+ * @method $this withVpc($value)
+ * @method string getVswitch()
+ * @method $this withVswitch($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class AddSeataServer extends Rpc
+{
+}
+
+/**
  * @method string getPortRange()
  * @method $this withPortRange($value)
  * @method string getGatewayUniqueId()
@@ -381,6 +413,22 @@ class AddServiceSource extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class AddSSLCert extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getOrderItem()
+ * @method $this withOrderItem($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getDescSort()
+ * @method $this withDescSort($value)
+ */
+class AddTest extends Rpc
 {
 }
 
@@ -734,6 +782,22 @@ class CreateOrUpdateSwimmingLaneGroup extends Rpc
 }
 
 /**
+ * @method string getPrimaryUser()
+ * @method $this withPrimaryUser($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getSeataServerUniqueId()
+ * @method $this withSeataServerUniqueId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class CreateVGroup extends Rpc
+{
+}
+
+/**
  * @method string getData()
  * @method $this withData($value)
  * @method string getClusterId()
@@ -936,6 +1000,16 @@ class DeleteNacosService extends Rpc
 }
 
 /**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getSeataServerUniqueId()
+ * @method $this withSeataServerUniqueId($value)
+ */
+class DeleteSeataServer extends Rpc
+{
+}
+
+/**
  * @method string getGatewayUniqueId()
  * @method $this withGatewayUniqueId($value)
  * @method string getAcceptLanguage()
@@ -976,6 +1050,16 @@ class DeleteSwimmingLane extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class DeleteSwimmingLaneGroup extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class DeleteVGroup extends Rpc
 {
 }
 
@@ -1064,6 +1148,18 @@ class GetAppMessageQueueRoute extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class GetBlackWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRequestPars()
+ * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class GetDashBoardUrl extends Rpc
 {
 }
 
@@ -1459,6 +1555,18 @@ class ListClusterConnectionTypes extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRequestPars()
+ * @method $this withRequestPars($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
+class ListClusterDetailFeature extends Rpc
+{
+}
+
+/**
  * @method string getClusterAliasName()
  * @method $this withClusterAliasName($value)
  * @method string getPageNum()
@@ -1630,6 +1738,21 @@ class ListGatewayService extends Rpc
  */
 class ListGatewaySlb extends Rpc
 {
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class ListInstances extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1838,6 +1961,8 @@ class QueryBusinessLocations extends Rpc
 }
 
 /**
+ * @method string getAclSwitch()
+ * @method $this withAclSwitch($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getClusterId()
@@ -1972,6 +2097,21 @@ class QuerySwimmingLaneById extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class QueryUserVpc extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getPath()
@@ -2003,6 +2143,16 @@ class QueryZnodeDetail extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class RestartCluster extends Rpc
+{
+}
+
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getSeataServerUniqueId()
+ * @method $this withSeataServerUniqueId($value)
+ */
+class RestartSeataServer extends Rpc
 {
 }
 

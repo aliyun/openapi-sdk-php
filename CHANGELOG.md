@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1340 - 2022-5-13
+- Add ListDashboardUrl api.
+
+
 ## 1.8.1339 - 2022-5-11
 - Update by sdk platform.
 
