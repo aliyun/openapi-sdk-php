@@ -3673,6 +3673,8 @@ class GetMultiRateConfigList extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCallBackUrl()
+ * @method $this withCallBackUrl($value)
  * @method string getResourceIds()
  * @method $this withResourceIds($value)
  */

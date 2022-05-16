@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1341 - 2022-5-16
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.1340 - 2022-5-13
 - Add ListDashboardUrl api.
 
