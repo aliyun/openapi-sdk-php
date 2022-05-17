@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1343 - 2022-5-17
+- EduCloud API DescribeLabToken 修改.
+
+
 ## 1.8.1342 - 2022-5-16
 - Add Api ListQualityCheckScheme.
 
