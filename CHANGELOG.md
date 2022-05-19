@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1344 - 2022-5-19
+- Support all language.
+
+
 ## 1.8.1343 - 2022-5-17
 - EduCloud API DescribeLabToken 修改.
 

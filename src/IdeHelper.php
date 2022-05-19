@@ -114,6 +114,7 @@ namespace AlibabaCloud;
  * @method static Httpdns\Httpdns httpdns()
  * @method static IDST\IDST iDST()
  * @method static ITaaS\ITaaS iTaaS()
+ * @method static IdaasDoraemon\IdaasDoraemon idaasDoraemon()
  * @method static Idrsservice\Idrsservice idrsservice()
  * @method static ImageSearch\ImageSearch imageSearch()
  * @method static Imageaudit\Imageaudit imageaudit()
