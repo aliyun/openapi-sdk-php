@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1346 - 2022-5-19
+- Update SubscribeBillToOSS and QueryBillToOSSSubscription to support BucketPath.
+
+
 ## 1.8.1345 - 2022-5-19
 - Support php language.
 

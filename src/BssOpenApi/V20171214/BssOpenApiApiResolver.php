@@ -80,6 +80,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySplitItemBill querySplitItemBill(array $options = [])
  * @method QueryUserOmsData queryUserOmsData(array $options = [])
  * @method RefundInstance refundInstance(array $options = [])
+ * @method ReleaseInstance releaseInstance(array $options = [])
  * @method RelieveAccountRelation relieveAccountRelation(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewResourcePackage renewResourcePackage(array $options = [])
@@ -1787,6 +1788,26 @@ class RefundInstance extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getSubscriptionType()
+ * @method $this withSubscriptionType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getProductType()
+ * @method $this withProductType($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getRenewStatus()
+ * @method $this withRenewStatus($value)
+ */
+class ReleaseInstance extends Rpc
+{
+}
+
+/**
  * @method string getRelationType()
  * @method $this withRelationType($value)
  * @method string getParentUserId()
@@ -1981,6 +2002,8 @@ class SetResellerUserStatus extends Rpc
  * @method $this withSubscribeType($value)
  * @method string getSubscribeBucket()
  * @method $this withSubscribeBucket($value)
+ * @method string getBucketPath()
+ * @method $this withBucketPath($value)
  * @method string getBeginBillingCycle()
  * @method $this withBeginBillingCycle($value)
  * @method string getMultAccountRelSubscribe()
