@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1347 - 2022-5-23
+- Support systemdisk encrypt and arns.
+- Update tag parameters.
+
+
 ## 1.8.1346 - 2022-5-19
 - Update SubscribeBillToOSS and QueryBillToOSSSubscription to support BucketPath.
 
