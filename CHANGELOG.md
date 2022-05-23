@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1348 - 2022-5-23
+- Api init.
+
+
 ## 1.8.1347 - 2022-5-23
 - Support systemdisk encrypt and arns.
 - Update tag parameters.
