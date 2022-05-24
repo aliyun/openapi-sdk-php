@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1350 - 2022-5-24
+- StartDBInstance parameter change.
+
+
 ## 1.8.1349 - 2022-5-24
 - Fix endpoint for new regionId.
 
