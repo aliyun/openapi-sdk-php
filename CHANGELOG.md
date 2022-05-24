@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1349 - 2022-5-24
+- Fix endpoint for new regionId.
+
+
 ## 1.8.1348 - 2022-5-23
 - Api init.
 

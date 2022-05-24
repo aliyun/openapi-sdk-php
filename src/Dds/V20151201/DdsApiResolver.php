@@ -237,6 +237,8 @@ class CreateBackup extends Rpc
  * @method $this withEngineVersion($value)
  * @method string getNetworkType()
  * @method $this withNetworkType($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
@@ -1305,6 +1307,8 @@ class DescribePrice extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
  */
