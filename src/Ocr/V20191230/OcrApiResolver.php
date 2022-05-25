@@ -16,23 +16,28 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizeDriverLicense recognizeDriverLicense(array $options = [])
  * @method RecognizeDrivingLicense recognizeDrivingLicense(array $options = [])
  * @method RecognizeIdentityCard recognizeIdentityCard(array $options = [])
+ * @method RecognizeIndonesiaIdentityCard recognizeIndonesiaIdentityCard(array $options = [])
  * @method RecognizeLicensePlate recognizeLicensePlate(array $options = [])
+ * @method RecognizeMalaysiaIdentityCard recognizeMalaysiaIdentityCard(array $options = [])
  * @method RecognizePassportMRZ recognizePassportMRZ(array $options = [])
  * @method RecognizePdf recognizePdf(array $options = [])
  * @method RecognizePoiName recognizePoiName(array $options = [])
  * @method RecognizeQrCode recognizeQrCode(array $options = [])
  * @method RecognizeQuotaInvoice recognizeQuotaInvoice(array $options = [])
+ * @method RecognizeRussiaIdentityCard recognizeRussiaIdentityCard(array $options = [])
  * @method RecognizeStamp recognizeStamp(array $options = [])
  * @method RecognizeTable recognizeTable(array $options = [])
  * @method RecognizeTakeoutOrder recognizeTakeoutOrder(array $options = [])
  * @method RecognizeTaxiInvoice recognizeTaxiInvoice(array $options = [])
  * @method RecognizeTicketInvoice recognizeTicketInvoice(array $options = [])
  * @method RecognizeTrainTicket recognizeTrainTicket(array $options = [])
+ * @method RecognizeTurkeyIdentityCard recognizeTurkeyIdentityCard(array $options = [])
  * @method RecognizeUkraineIdentityCard recognizeUkraineIdentityCard(array $options = [])
  * @method RecognizeVATInvoice recognizeVATInvoice(array $options = [])
  * @method RecognizeVerificationcode recognizeVerificationcode(array $options = [])
  * @method RecognizeVideoCastCrewList recognizeVideoCastCrewList(array $options = [])
  * @method RecognizeVideoCharacter recognizeVideoCharacter(array $options = [])
+ * @method RecognizeVietnamIdentityCard recognizeVietnamIdentityCard(array $options = [])
  * @method RecognizeVINCode recognizeVINCode(array $options = [])
  * @method TrimDocument trimDocument(array $options = [])
  */
@@ -472,6 +477,26 @@ class RecognizeIdentityCard extends Rpc
 }
 
 /**
+ * @method string getImageUrl()
+ */
+class RecognizeIndonesiaIdentityCard extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getImageType()
  * @method string getImageURL()
  */
@@ -500,6 +525,26 @@ class RecognizeLicensePlate extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageUrl()
+ */
+class RecognizeMalaysiaIdentityCard extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }
@@ -604,6 +649,26 @@ class RecognizeQuotaInvoice extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageUrl()
+ */
+class RecognizeRussiaIdentityCard extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }
@@ -858,6 +923,26 @@ class RecognizeTrainTicket extends Rpc
 /**
  * @method string getImageUrl()
  */
+class RecognizeTurkeyIdentityCard extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageUrl()
+ */
 class RecognizeUkraineIdentityCard extends Rpc
 {
 
@@ -1020,6 +1105,26 @@ class RecognizeVideoCharacter extends Rpc
     {
         $this->data['VideoURL'] = $value;
         $this->options['form_params']['VideoURL'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageUrl()
+ */
+class RecognizeVietnamIdentityCard extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1352 - 2022-5-25
+- Release RecognizeTurkeyIdentityCard RecognizeMalaysiaIdentityCard RecognizeRussiaIdentityCard RecognizeIndonesiaIdentityCard RecognizeIndonesiaIdentityCard.
+
+
 ## 1.8.1351 - 2022-5-25
 - Add Hybrid Monitor API.
 
