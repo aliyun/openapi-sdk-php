@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1351 - 2022-5-25
+- Add Hybrid Monitor API.
+
+
 ## 1.8.1350 - 2022-5-24
 - StartDBInstance parameter change.
 

@@ -8,7 +8,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddTags addTags(array $options = [])
  * @method ApplyMetricRuleTemplate applyMetricRuleTemplate(array $options = [])
  * @method BatchCreateIntantSiteMonitor batchCreateIntantSiteMonitor(array $options = [])
- * @method BatchCreateOnceSiteMonitor batchCreateOnceSiteMonitor(array $options = [])
  * @method CreateCmsCallNumOrder createCmsCallNumOrder(array $options = [])
  * @method CreateCmsOrder createCmsOrder(array $options = [])
  * @method CreateCmsSmspackageOrder createCmsSmspackageOrder(array $options = [])
@@ -16,6 +15,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateGroupMetricRules createGroupMetricRules(array $options = [])
  * @method CreateGroupMonitoringAgentProcess createGroupMonitoringAgentProcess(array $options = [])
  * @method CreateHostAvailability createHostAvailability(array $options = [])
+ * @method CreateHybridMonitorNamespace createHybridMonitorNamespace(array $options = [])
+ * @method CreateHybridMonitorSLSGroup createHybridMonitorSLSGroup(array $options = [])
+ * @method CreateHybridMonitorTask createHybridMonitorTask(array $options = [])
  * @method CreateInstantSiteMonitor createInstantSiteMonitor(array $options = [])
  * @method CreateMetricRuleResources createMetricRuleResources(array $options = [])
  * @method CreateMetricRuleTemplate createMetricRuleTemplate(array $options = [])
@@ -36,6 +38,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteExporterRule deleteExporterRule(array $options = [])
  * @method DeleteGroupMonitoringAgentProcess deleteGroupMonitoringAgentProcess(array $options = [])
  * @method DeleteHostAvailability deleteHostAvailability(array $options = [])
+ * @method DeleteHybridMonitorNamespace deleteHybridMonitorNamespace(array $options = [])
+ * @method DeleteHybridMonitorSLSGroup deleteHybridMonitorSLSGroup(array $options = [])
+ * @method DeleteHybridMonitorTask deleteHybridMonitorTask(array $options = [])
  * @method DeleteLogMonitor deleteLogMonitor(array $options = [])
  * @method DeleteMetricRuleResources deleteMetricRuleResources(array $options = [])
  * @method DeleteMetricRules deleteMetricRules(array $options = [])
@@ -68,6 +73,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeExporterRuleList describeExporterRuleList(array $options = [])
  * @method DescribeGroupMonitoringAgentProcess describeGroupMonitoringAgentProcess(array $options = [])
  * @method DescribeHostAvailabilityList describeHostAvailabilityList(array $options = [])
+ * @method DescribeHybridMonitorDataList describeHybridMonitorDataList(array $options = [])
+ * @method DescribeHybridMonitorNamespaceList describeHybridMonitorNamespaceList(array $options = [])
+ * @method DescribeHybridMonitorSLSGroup describeHybridMonitorSLSGroup(array $options = [])
+ * @method DescribeHybridMonitorTaskList describeHybridMonitorTaskList(array $options = [])
  * @method DescribeLogMonitorAttribute describeLogMonitorAttribute(array $options = [])
  * @method DescribeLogMonitorList describeLogMonitorList(array $options = [])
  * @method DescribeMetricData describeMetricData(array $options = [])
@@ -124,6 +133,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyGroupMonitoringAgentProcess modifyGroupMonitoringAgentProcess(array $options = [])
  * @method ModifyHostAvailability modifyHostAvailability(array $options = [])
  * @method ModifyHostInfo modifyHostInfo(array $options = [])
+ * @method ModifyHybridMonitorNamespace modifyHybridMonitorNamespace(array $options = [])
+ * @method ModifyHybridMonitorSLSGroup modifyHybridMonitorSLSGroup(array $options = [])
+ * @method ModifyHybridMonitorTask modifyHybridMonitorTask(array $options = [])
  * @method ModifyMetricRuleTemplate modifyMetricRuleTemplate(array $options = [])
  * @method ModifyMonitorGroup modifyMonitorGroup(array $options = [])
  * @method ModifyMonitorGroupInstances modifyMonitorGroupInstances(array $options = [])
@@ -239,42 +251,6 @@ class ApplyMetricRuleTemplate extends Rpc
  * @method array getTaskList()
  */
 class BatchCreateIntantSiteMonitor extends Rpc
-{
-
-    /**
-     * @param array $taskList
-     *
-     * @return $this
-     */
-	public function withTaskList(array $taskList)
-	{
-	    $this->data['TaskList'] = $taskList;
-		foreach ($taskList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['OptionsJson'])){
-				$this->options['query']['TaskList.' . ($depth1 + 1) . '.OptionsJson'] = $depth1Value['OptionsJson'];
-			}
-			if(isset($depth1Value['Address'])){
-				$this->options['query']['TaskList.' . ($depth1 + 1) . '.Address'] = $depth1Value['Address'];
-			}
-			if(isset($depth1Value['TaskType'])){
-				$this->options['query']['TaskList.' . ($depth1 + 1) . '.TaskType'] = $depth1Value['TaskType'];
-			}
-			if(isset($depth1Value['TaskName'])){
-				$this->options['query']['TaskList.' . ($depth1 + 1) . '.TaskName'] = $depth1Value['TaskName'];
-			}
-			if(isset($depth1Value['IspCities'])){
-				$this->options['query']['TaskList.' . ($depth1 + 1) . '.IspCities'] = $depth1Value['IspCities'];
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method array getTaskList()
- */
-class BatchCreateOnceSiteMonitor extends Rpc
 {
 
     /**
@@ -923,6 +899,168 @@ class CreateHostAvailability extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class CreateHybridMonitorNamespace extends Rpc
+{
+}
+
+/**
+ * @method string getSLSGroupDescription()
+ * @method $this withSLSGroupDescription($value)
+ * @method array getSLSGroupConfig()
+ * @method string getSLSGroupName()
+ * @method $this withSLSGroupName($value)
+ */
+class CreateHybridMonitorSLSGroup extends Rpc
+{
+
+    /**
+     * @param array $sLSGroupConfig
+     *
+     * @return $this
+     */
+	public function withSLSGroupConfig(array $sLSGroupConfig)
+	{
+	    $this->data['SLSGroupConfig'] = $sLSGroupConfig;
+		foreach ($sLSGroupConfig as $depth1 => $depth1Value) {
+			if(isset($depth1Value['SLSLogstore'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSLogstore'] = $depth1Value['SLSLogstore'];
+			}
+			if(isset($depth1Value['SLSUserId'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSUserId'] = $depth1Value['SLSUserId'];
+			}
+			if(isset($depth1Value['SLSProject'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSProject'] = $depth1Value['SLSProject'];
+			}
+			if(isset($depth1Value['SLSRegion'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSRegion'] = $depth1Value['SLSRegion'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getLogSample()
+ * @method $this withLogSample($value)
+ * @method string getCollectTargetPath()
+ * @method $this withCollectTargetPath($value)
+ * @method array getInstances()
+ * @method string getLogSplit()
+ * @method $this withLogSplit($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getNetworkType()
+ * @method $this withNetworkType($value)
+ * @method string getExtraInfo()
+ * @method $this withExtraInfo($value)
+ * @method string getCollectInterval()
+ * @method $this withCollectInterval($value)
+ * @method string getTargetUserId()
+ * @method $this withTargetUserId($value)
+ * @method string getCollectTargetType()
+ * @method $this withCollectTargetType($value)
+ * @method array getAttachLabels()
+ * @method string getUploadRegion()
+ * @method $this withUploadRegion($value)
+ * @method string getCollectTimout()
+ * @method $this withCollectTimout($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getMatchExpressRelation()
+ * @method $this withMatchExpressRelation($value)
+ * @method string getLogProcess()
+ * @method $this withLogProcess($value)
+ * @method string getSLSProcess()
+ * @method $this withSLSProcess($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getTargetUserIdList()
+ * @method $this withTargetUserIdList($value)
+ * @method string getCollectTargetEndpoint()
+ * @method $this withCollectTargetEndpoint($value)
+ * @method string getYARMConfig()
+ * @method $this withYARMConfig($value)
+ * @method string getLogFilePath()
+ * @method $this withLogFilePath($value)
+ * @method array getMatchExpress()
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getSLSProcessConfig()
+ * @method $this withSLSProcessConfig($value)
+ */
+class CreateHybridMonitorTask extends Rpc
+{
+
+    /**
+     * @param array $instances
+     *
+     * @return $this
+     */
+	public function withInstances(array $instances)
+	{
+	    $this->data['Instances'] = $instances;
+		foreach ($instances as $i => $iValue) {
+			$this->options['query']['Instances.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $attachLabels
+     *
+     * @return $this
+     */
+	public function withAttachLabels(array $attachLabels)
+	{
+	    $this->data['AttachLabels'] = $attachLabels;
+		foreach ($attachLabels as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['AttachLabels.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['AttachLabels.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $matchExpress
+     *
+     * @return $this
+     */
+	public function withMatchExpress(array $matchExpress)
+	{
+	    $this->data['MatchExpress'] = $matchExpress;
+		foreach ($matchExpress as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Function'])){
+				$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.Function'] = $depth1Value['Function'];
+			}
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getRandomIspCity()
  * @method $this withRandomIspCity($value)
  * @method string getAddress()
@@ -1314,6 +1452,36 @@ class DeleteHostAvailability extends Rpc
 }
 
 /**
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getClearFlag()
+ * @method $this withClearFlag($value)
+ */
+class DeleteHybridMonitorNamespace extends Rpc
+{
+}
+
+/**
+ * @method string getSLSGroupName()
+ * @method $this withSLSGroupName($value)
+ */
+class DeleteHybridMonitorSLSGroup extends Rpc
+{
+}
+
+/**
+ * @method string getTargetUserId()
+ * @method $this withTargetUserId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DeleteHybridMonitorTask extends Rpc
+{
+}
+
+/**
  * @method string getLogId()
  * @method $this withLogId($value)
  */
@@ -1453,6 +1621,9 @@ class DeleteSiteMonitors extends Rpc
  */
 class DescribeActiveMetricRuleList extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1825,6 +1996,82 @@ class DescribeGroupMonitoringAgentProcess extends Rpc
  * @method $this withId($value)
  */
 class DescribeHostAvailabilityList extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getStart()
+ * @method $this withStart($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getEnd()
+ * @method $this withEnd($value)
+ * @method string getPromSQL()
+ * @method $this withPromSQL($value)
+ */
+class DescribeHybridMonitorDataList extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getShowTaskStatistic()
+ * @method $this withShowTaskStatistic($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getIsDelete()
+ * @method $this withIsDelete($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class DescribeHybridMonitorNamespaceList extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getSLSGroupName()
+ * @method $this withSLSGroupName($value)
+ */
+class DescribeHybridMonitorSLSGroup extends Rpc
+{
+}
+
+/**
+ * @method string getIncludeInstance()
+ * @method $this withIncludeInstance($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getExtraInfo()
+ * @method $this withExtraInfo($value)
+ * @method string getCollectTargetType()
+ * @method $this withCollectTargetType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getIncludeAliyunTask()
+ * @method $this withIncludeAliyunTask($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class DescribeHybridMonitorTaskList extends Rpc
 {
 }
 
@@ -2996,6 +3243,158 @@ class ModifyHostInfo extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class ModifyHybridMonitorNamespace extends Rpc
+{
+}
+
+/**
+ * @method string getSLSGroupDescription()
+ * @method $this withSLSGroupDescription($value)
+ * @method array getSLSGroupConfig()
+ * @method string getSLSGroupName()
+ * @method $this withSLSGroupName($value)
+ */
+class ModifyHybridMonitorSLSGroup extends Rpc
+{
+
+    /**
+     * @param array $sLSGroupConfig
+     *
+     * @return $this
+     */
+	public function withSLSGroupConfig(array $sLSGroupConfig)
+	{
+	    $this->data['SLSGroupConfig'] = $sLSGroupConfig;
+		foreach ($sLSGroupConfig as $depth1 => $depth1Value) {
+			if(isset($depth1Value['SLSLogstore'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSLogstore'] = $depth1Value['SLSLogstore'];
+			}
+			if(isset($depth1Value['SLSUserId'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSUserId'] = $depth1Value['SLSUserId'];
+			}
+			if(isset($depth1Value['SLSProject'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSProject'] = $depth1Value['SLSProject'];
+			}
+			if(isset($depth1Value['SLSRegion'])){
+				$this->options['query']['SLSGroupConfig.' . ($depth1 + 1) . '.SLSRegion'] = $depth1Value['SLSRegion'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getLogSample()
+ * @method $this withLogSample($value)
+ * @method string getCollectTargetPath()
+ * @method $this withCollectTargetPath($value)
+ * @method array getInstances()
+ * @method string getLogSplit()
+ * @method $this withLogSplit($value)
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNetworkType()
+ * @method $this withNetworkType($value)
+ * @method string getExtraInfo()
+ * @method $this withExtraInfo($value)
+ * @method string getCollectInterval()
+ * @method $this withCollectInterval($value)
+ * @method array getAttachLabels()
+ * @method string getUploadRegion()
+ * @method $this withUploadRegion($value)
+ * @method string getCollectTimout()
+ * @method $this withCollectTimout($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getMatchExpressRelation()
+ * @method $this withMatchExpressRelation($value)
+ * @method string getLogProcess()
+ * @method $this withLogProcess($value)
+ * @method string getSLSProcess()
+ * @method $this withSLSProcess($value)
+ * @method string getCollectTargetEndpoint()
+ * @method $this withCollectTargetEndpoint($value)
+ * @method string getYARMConfig()
+ * @method $this withYARMConfig($value)
+ * @method string getLogFilePath()
+ * @method $this withLogFilePath($value)
+ * @method array getMatchExpress()
+ * @method string getSLSProcessConfig()
+ * @method $this withSLSProcessConfig($value)
+ */
+class ModifyHybridMonitorTask extends Rpc
+{
+
+    /**
+     * @param array $instances
+     *
+     * @return $this
+     */
+	public function withInstances(array $instances)
+	{
+	    $this->data['Instances'] = $instances;
+		foreach ($instances as $i => $iValue) {
+			$this->options['query']['Instances.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $attachLabels
+     *
+     * @return $this
+     */
+	public function withAttachLabels(array $attachLabels)
+	{
+	    $this->data['AttachLabels'] = $attachLabels;
+		foreach ($attachLabels as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['AttachLabels.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['AttachLabels.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $matchExpress
+     *
+     * @return $this
+     */
+	public function withMatchExpress(array $matchExpress)
+	{
+	    $this->data['MatchExpress'] = $matchExpress;
+		foreach ($matchExpress as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Function'])){
+				$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.Function'] = $depth1Value['Function'];
+			}
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['MatchExpress.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getRestVersion()
  * @method $this withRestVersion($value)
  * @method string getDescription()
@@ -3133,22 +3532,22 @@ class ModifyMonitorGroupInstances extends Rpc
 }
 
 /**
- * @method string getAddress()
- * @method $this withAddress($value)
  * @method string getTaskName()
  * @method $this withTaskName($value)
+ * @method string getAlertIds()
+ * @method $this withAlertIds($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getAddress()
+ * @method $this withAddress($value)
  * @method string getIspCities()
  * @method $this withIspCities($value)
  * @method string getOptionsJson()
  * @method $this withOptionsJson($value)
- * @method string getAlertIds()
- * @method $this withAlertIds($value)
  * @method string getIntervalUnit()
  * @method $this withIntervalUnit($value)
  * @method string getInterval()
  * @method $this withInterval($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
  */
 class ModifySiteMonitor extends Rpc
 {
