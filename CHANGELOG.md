@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1353 - 2022-5-27
+- Release DetectLymph DetectPanc.
+
+
 ## 1.8.1352 - 2022-5-25
 - Release RecognizeTurkeyIdentityCard RecognizeMalaysiaIdentityCard RecognizeRussiaIdentityCard RecognizeIndonesiaIdentityCard RecognizeIndonesiaIdentityCard.
 

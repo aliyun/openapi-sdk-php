@@ -13,9 +13,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectKneeKeypointXRay detectKneeKeypointXRay(array $options = [])
  * @method DetectKneeXRay detectKneeXRay(array $options = [])
  * @method DetectLungNodule detectLungNodule(array $options = [])
+ * @method DetectLymph detectLymph(array $options = [])
+ * @method DetectPanc detectPanc(array $options = [])
  * @method DetectRibFracture detectRibFracture(array $options = [])
  * @method DetectSkinDisease detectSkinDisease(array $options = [])
  * @method DetectSpineMRI detectSpineMRI(array $options = [])
+ * @method FeedbackSession feedbackSession(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method RunCTRegistration runCTRegistration(array $options = [])
  * @method RunMedQA runMedQA(array $options = [])
@@ -694,6 +697,110 @@ class DetectLungNodule extends Rpc
 }
 
 /**
+ * @method string getDataSourceType()
+ * @method array getURLList()
+ * @method string getAsync()
+ */
+class DetectLymph extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceType($value)
+    {
+        $this->data['DataSourceType'] = $value;
+        $this->options['form_params']['DataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDataSourceType()
+ * @method array getURLList()
+ * @method string getAsync()
+ */
+class DetectPanc extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceType($value)
+    {
+        $this->data['DataSourceType'] = $value;
+        $this->options['form_params']['DataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getOrgName()
  * @method string getSourceType()
  * @method string getDataFormat()
@@ -896,6 +1003,40 @@ class DetectSpineMRI extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSessionId()
+ * @method string getFeedback()
+ */
+class FeedbackSession extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionId($value)
+    {
+        $this->data['SessionId'] = $value;
+        $this->options['form_params']['SessionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFeedback($value)
+    {
+        $this->data['Feedback'] = $value;
+        $this->options['form_params']['Feedback'] = $value;
 
         return $this;
     }
