@@ -49,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InsertSubScoreForApi insertSubScoreForApi(array $options = [])
  * @method InvalidRule invalidRule(array $options = [])
  * @method ListAsrVocab listAsrVocab(array $options = [])
+ * @method ListBusinessSpaces listBusinessSpaces(array $options = [])
  * @method ListHotWordsTasks listHotWordsTasks(array $options = [])
  * @method ListPrecisionTask listPrecisionTask(array $options = [])
  * @method ListQualityCheckScheme listQualityCheckScheme(array $options = [])
@@ -66,6 +67,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitReviewInfo submitReviewInfo(array $options = [])
  * @method SyncQualityCheck syncQualityCheck(array $options = [])
  * @method UpdateAsrVocab updateAsrVocab(array $options = [])
+ * @method UpdateQualityCheckData updateQualityCheckData(array $options = [])
  * @method UpdateRule updateRule(array $options = [])
  * @method UpdateScoreForApi updateScoreForApi(array $options = [])
  * @method UpdateSkillGroupConfig updateSkillGroupConfig(array $options = [])
@@ -542,6 +544,16 @@ class ListAsrVocab extends Rpc
  * @method string getJsonStr()
  * @method $this withJsonStr($value)
  */
+class ListBusinessSpaces extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
 class ListHotWordsTasks extends Rpc
 {
 }
@@ -703,6 +715,16 @@ class SyncQualityCheck extends Rpc
  * @method $this withJsonStr($value)
  */
 class UpdateAsrVocab extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getJsonStr()
+ * @method $this withJsonStr($value)
+ */
+class UpdateQualityCheckData extends Rpc
 {
 }
 
