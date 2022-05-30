@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1354 - 2022-5-30
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1353 - 2022-5-27
 - Release DetectLymph DetectPanc.
 
