@@ -7,44 +7,58 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method ActivateApDevice activateApDevice(array $options = [])
  * @method AddApDevice addApDevice(array $options = [])
- * @method AddPlanogramShelf addPlanogramShelf(array $options = [])
- * @method AddRoleActions addRoleActions(array $options = [])
+ * @method AddCompanyTemplate addCompanyTemplate(array $options = [])
+ * @method AddMaterial addMaterial(array $options = [])
  * @method AddUser addUser(array $options = [])
+ * @method ApplyCompanyTemplateVersionToStores applyCompanyTemplateVersionToStores(array $options = [])
+ * @method ApplyImageDithering applyImageDithering(array $options = [])
  * @method AssignUser assignUser(array $options = [])
- * @method AssociatePlanogramRail associatePlanogramRail(array $options = [])
  * @method BatchInsertItems batchInsertItems(array $options = [])
+ * @method BatchUpdateEvent batchUpdateEvent(array $options = [])
  * @method BindEslDevice bindEslDevice(array $options = [])
- * @method ComposePlanogramPositions composePlanogramPositions(array $options = [])
+ * @method CheckServiceLinkedRoleForDeleting checkServiceLinkedRoleForDeleting(array $options = [])
  * @method CreateStore createStore(array $options = [])
  * @method DeleteApDevice deleteApDevice(array $options = [])
- * @method DeletePlanogramShelf deletePlanogramShelf(array $options = [])
- * @method DeleteRoleActions deleteRoleActions(array $options = [])
+ * @method DeleteCompanyTemplate deleteCompanyTemplate(array $options = [])
+ * @method DeleteItem deleteItem(array $options = [])
+ * @method DeleteMaterial deleteMaterial(array $options = [])
  * @method DeleteStore deleteStore(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
- * @method DescribeAlarms describeAlarms(array $options = [])
  * @method DescribeApDevices describeApDevices(array $options = [])
+ * @method DescribeAvailableEslModels describeAvailableEslModels(array $options = [])
  * @method DescribeBinders describeBinders(array $options = [])
- * @method DescribeClientPackage describeClientPackage(array $options = [])
+ * @method DescribeCompanyTemplateAttribute describeCompanyTemplateAttribute(array $options = [])
+ * @method DescribeCompanyTemplateVersions describeCompanyTemplateVersions(array $options = [])
+ * @method DescribeCompanyTemplateView describeCompanyTemplateView(array $options = [])
  * @method DescribeEslDevices describeEslDevices(array $options = [])
+ * @method DescribeEslModelByTemplateVersion describeEslModelByTemplateVersion(array $options = [])
+ * @method DescribeEventReason describeEventReason(array $options = [])
+ * @method DescribeEvents describeEvents(array $options = [])
+ * @method DescribeItemMaterials describeItemMaterials(array $options = [])
  * @method DescribeItems describeItems(array $options = [])
- * @method DescribePlanogramEslDevices describePlanogramEslDevices(array $options = [])
- * @method DescribePlanogramPositions describePlanogramPositions(array $options = [])
- * @method DescribePlanogramRails describePlanogramRails(array $options = [])
- * @method DescribePlanogramShelves describePlanogramShelves(array $options = [])
- * @method DescribeRoleActions describeRoleActions(array $options = [])
+ * @method DescribeMaterials describeMaterials(array $options = [])
+ * @method DescribeNotificationConfig describeNotificationConfig(array $options = [])
+ * @method DescribeStoreByTemplateVersion describeStoreByTemplateVersion(array $options = [])
  * @method DescribeStoreConfig describeStoreConfig(array $options = [])
  * @method DescribeStores describeStores(array $options = [])
- * @method DescribeStoreStatistics describeStoreStatistics(array $options = [])
+ * @method DescribeTemplateByModel describeTemplateByModel(array $options = [])
  * @method DescribeUserLog describeUserLog(array $options = [])
  * @method DescribeUsers describeUsers(array $options = [])
- * @method DissociatePlanogramRail dissociatePlanogramRail(array $options = [])
+ * @method ExportEslDevices exportEslDevices(array $options = [])
+ * @method GetCompanyTemplatePicture getCompanyTemplatePicture(array $options = [])
+ * @method GetCompanyTemplatePictureByJob getCompanyTemplatePictureByJob(array $options = [])
+ * @method GetCompanyTemplatePictureNew getCompanyTemplatePictureNew(array $options = [])
+ * @method GetItemMaterial getItemMaterial(array $options = [])
  * @method GetUser getUser(array $options = [])
+ * @method SyncAddMaterial syncAddMaterial(array $options = [])
  * @method UnassignUser unassignUser(array $options = [])
  * @method UnbindEslDevice unbindEslDevice(array $options = [])
  * @method UpdateEslDeviceLight updateEslDeviceLight(array $options = [])
+ * @method UpdateItemMaterial updateItemMaterial(array $options = [])
+ * @method UpdateNotificationConfig updateNotificationConfig(array $options = [])
  * @method UpdateStore updateStore(array $options = [])
  * @method UpdateStoreConfig updateStoreConfig(array $options = [])
- * @method UpdateUser updateUser(array $options = [])
+ * @method VerifyNotificationConfig verifyNotificationConfig(array $options = [])
  */
 class CloudeslApiResolver extends ApiResolver
 {
@@ -60,9 +74,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'cloudesl';
 }
 
 /**
@@ -205,14 +216,21 @@ class AddApDevice extends Rpc
 
 /**
  * @method string getExtraParams()
- * @method string getClientToken()
- * @method string getShelfType()
- * @method string getStoreId()
- * @method string getZone()
- * @method string getShelf()
- * @method string getCategory()
+ * @method string getEslSize()
+ * @method string getIfPromotion()
+ * @method string getDeviceType()
+ * @method string getScene()
+ * @method string getTemplateVersion()
+ * @method string getTemplateType()
+ * @method string getVendor()
+ * @method string getIfDefault()
+ * @method string getTemplateName()
+ * @method string getIfSourceCode()
+ * @method string getIfMember()
+ * @method string getLayout()
+ * @method string getIfOutOfInventory()
  */
-class AddPlanogramShelf extends Rpc
+class AddCompanyTemplate extends Rpc
 {
 
     /**
@@ -233,10 +251,10 @@ class AddPlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withClientToken($value)
+    public function withEslSize($value)
     {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
+        $this->data['EslSize'] = $value;
+        $this->options['form_params']['EslSize'] = $value;
 
         return $this;
     }
@@ -246,10 +264,10 @@ class AddPlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withShelfType($value)
+    public function withIfPromotion($value)
     {
-        $this->data['ShelfType'] = $value;
-        $this->options['form_params']['ShelfType'] = $value;
+        $this->data['IfPromotion'] = $value;
+        $this->options['form_params']['IfPromotion'] = $value;
 
         return $this;
     }
@@ -259,10 +277,10 @@ class AddPlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withStoreId($value)
+    public function withDeviceType($value)
     {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
+        $this->data['DeviceType'] = $value;
+        $this->options['form_params']['DeviceType'] = $value;
 
         return $this;
     }
@@ -272,10 +290,10 @@ class AddPlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withZone($value)
+    public function withScene($value)
     {
-        $this->data['Zone'] = $value;
-        $this->options['form_params']['Zone'] = $value;
+        $this->data['Scene'] = $value;
+        $this->options['form_params']['Scene'] = $value;
 
         return $this;
     }
@@ -285,10 +303,10 @@ class AddPlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withShelf($value)
+    public function withTemplateVersion($value)
     {
-        $this->data['Shelf'] = $value;
-        $this->options['form_params']['Shelf'] = $value;
+        $this->data['TemplateVersion'] = $value;
+        $this->options['form_params']['TemplateVersion'] = $value;
 
         return $this;
     }
@@ -298,22 +316,111 @@ class AddPlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withCategory($value)
+    public function withTemplateType($value)
     {
-        $this->data['Category'] = $value;
-        $this->options['form_params']['Category'] = $value;
+        $this->data['TemplateType'] = $value;
+        $this->options['form_params']['TemplateType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVendor($value)
+    {
+        $this->data['Vendor'] = $value;
+        $this->options['form_params']['Vendor'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIfDefault($value)
+    {
+        $this->data['IfDefault'] = $value;
+        $this->options['form_params']['IfDefault'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateName($value)
+    {
+        $this->data['TemplateName'] = $value;
+        $this->options['form_params']['TemplateName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIfSourceCode($value)
+    {
+        $this->data['IfSourceCode'] = $value;
+        $this->options['form_params']['IfSourceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIfMember($value)
+    {
+        $this->data['IfMember'] = $value;
+        $this->options['form_params']['IfMember'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLayout($value)
+    {
+        $this->data['Layout'] = $value;
+        $this->options['form_params']['Layout'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIfOutOfInventory($value)
+    {
+        $this->data['IfOutOfInventory'] = $value;
+        $this->options['form_params']['IfOutOfInventory'] = $value;
 
         return $this;
     }
 }
 
 /**
- * @method string getRoleCode()
- * @method string getExtraParams()
- * @method string getClientToken()
- * @method string getAccessControlLists()
+ * @method string getContent()
+ * @method string getName()
  */
-class AddRoleActions extends Rpc
+class AddMaterial extends Rpc
 {
 
     /**
@@ -321,10 +428,10 @@ class AddRoleActions extends Rpc
      *
      * @return $this
      */
-    public function withRoleCode($value)
+    public function withContent($value)
     {
-        $this->data['RoleCode'] = $value;
-        $this->options['form_params']['RoleCode'] = $value;
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
 
         return $this;
     }
@@ -334,36 +441,10 @@ class AddRoleActions extends Rpc
      *
      * @return $this
      */
-    public function withExtraParams($value)
+    public function withName($value)
     {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientToken($value)
-    {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAccessControlLists($value)
-    {
-        $this->data['AccessControlLists'] = $value;
-        $this->options['form_params']['AccessControlLists'] = $value;
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
 
         return $this;
     }
@@ -412,6 +493,116 @@ class AddUser extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStores()
+ * @method string getTemplateVersion()
+ */
+class ApplyCompanyTemplateVersionToStores extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStores($value)
+    {
+        $this->data['Stores'] = $value;
+        $this->options['form_params']['Stores'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateVersion($value)
+    {
+        $this->data['TemplateVersion'] = $value;
+        $this->options['form_params']['TemplateVersion'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExtraParams()
+ * @method string getContent()
+ * @method string getDeviceType()
+ * @method string getHeight()
+ * @method string getWidth()
+ */
+class ApplyImageDithering extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraParams($value)
+    {
+        $this->data['ExtraParams'] = $value;
+        $this->options['form_params']['ExtraParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceType($value)
+    {
+        $this->data['DeviceType'] = $value;
+        $this->options['form_params']['DeviceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHeight($value)
+    {
+        $this->data['Height'] = $value;
+        $this->options['form_params']['Height'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWidth($value)
+    {
+        $this->data['Width'] = $value;
+        $this->options['form_params']['Width'] = $value;
 
         return $this;
     }
@@ -474,82 +665,6 @@ class AssignUser extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getLayer()
- * @method string getShelf()
- * @method string getRailCode()
- */
-class AssociatePlanogramRail extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraParams($value)
-    {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStoreId($value)
-    {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLayer($value)
-    {
-        $this->data['Layer'] = $value;
-        $this->options['form_params']['Layer'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withShelf($value)
-    {
-        $this->data['Shelf'] = $value;
-        $this->options['form_params']['Shelf'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRailCode($value)
-    {
-        $this->data['RailCode'] = $value;
-        $this->options['form_params']['RailCode'] = $value;
 
         return $this;
     }
@@ -648,20 +763,29 @@ class BatchInsertItems extends Rpc
 			if(isset($depth1Value['CustomizeFeatureM'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureM'] = $depth1Value['CustomizeFeatureM'];
 			}
-			if(isset($depth1Value['BePromotion'])){
-				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.BePromotion'] = $depth1Value['BePromotion'];
-			}
 			if(isset($depth1Value['CustomizeFeatureN'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureN'] = $depth1Value['CustomizeFeatureN'];
 			}
+			if(isset($depth1Value['BePromotion'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.BePromotion'] = $depth1Value['BePromotion'];
+			}
 			if(isset($depth1Value['CustomizeFeatureO'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureO'] = $depth1Value['CustomizeFeatureO'];
+			}
+			if(isset($depth1Value['CustomizeFeatureP'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureP'] = $depth1Value['CustomizeFeatureP'];
 			}
 			if(isset($depth1Value['PromotionEnd'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.PromotionEnd'] = $depth1Value['PromotionEnd'];
 			}
 			if(isset($depth1Value['ItemTitle'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ItemTitle'] = $depth1Value['ItemTitle'];
+			}
+			if(isset($depth1Value['CustomizeFeatureQ'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureQ'] = $depth1Value['CustomizeFeatureQ'];
+			}
+			if(isset($depth1Value['CustomizeFeatureR'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureR'] = $depth1Value['CustomizeFeatureR'];
 			}
 			if(isset($depth1Value['CustomizeFeatureC'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureC'] = $depth1Value['CustomizeFeatureC'];
@@ -675,11 +799,11 @@ class BatchInsertItems extends Rpc
 			if(isset($depth1Value['CustomizeFeatureE'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureE'] = $depth1Value['CustomizeFeatureE'];
 			}
-			if(isset($depth1Value['InventoryStatus'])){
-				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.InventoryStatus'] = $depth1Value['InventoryStatus'];
-			}
 			if(isset($depth1Value['PromotionReason'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.PromotionReason'] = $depth1Value['PromotionReason'];
+			}
+			if(isset($depth1Value['InventoryStatus'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.InventoryStatus'] = $depth1Value['InventoryStatus'];
 			}
 			if(isset($depth1Value['CustomizeFeatureF'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureF'] = $depth1Value['CustomizeFeatureF'];
@@ -711,11 +835,11 @@ class BatchInsertItems extends Rpc
 			if(isset($depth1Value['ProductionPlace'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ProductionPlace'] = $depth1Value['ProductionPlace'];
 			}
-			if(isset($depth1Value['Manufacturer'])){
-				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.Manufacturer'] = $depth1Value['Manufacturer'];
-			}
 			if(isset($depth1Value['SourceCode'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.SourceCode'] = $depth1Value['SourceCode'];
+			}
+			if(isset($depth1Value['Manufacturer'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.Manufacturer'] = $depth1Value['Manufacturer'];
 			}
 			if(isset($depth1Value['ItemId'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ItemId'] = $depth1Value['ItemId'];
@@ -723,8 +847,32 @@ class BatchInsertItems extends Rpc
 			if(isset($depth1Value['BeMember'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.BeMember'] = $depth1Value['BeMember'];
 			}
+			if(isset($depth1Value['CustomizeFeatureS'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureS'] = $depth1Value['CustomizeFeatureS'];
+			}
+			if(isset($depth1Value['CustomizeFeatureT'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureT'] = $depth1Value['CustomizeFeatureT'];
+			}
+			if(isset($depth1Value['CustomizeFeatureU'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureU'] = $depth1Value['CustomizeFeatureU'];
+			}
 			if(isset($depth1Value['TemplateSceneId'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.TemplateSceneId'] = $depth1Value['TemplateSceneId'];
+			}
+			if(isset($depth1Value['CustomizeFeatureV'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureV'] = $depth1Value['CustomizeFeatureV'];
+			}
+			if(isset($depth1Value['CustomizeFeatureW'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureW'] = $depth1Value['CustomizeFeatureW'];
+			}
+			if(isset($depth1Value['CustomizeFeatureX'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureX'] = $depth1Value['CustomizeFeatureX'];
+			}
+			if(isset($depth1Value['CustomizeFeatureY'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureY'] = $depth1Value['CustomizeFeatureY'];
+			}
+			if(isset($depth1Value['CustomizeFeatureZ'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.CustomizeFeatureZ'] = $depth1Value['CustomizeFeatureZ'];
 			}
 			if(isset($depth1Value['SalesPrice'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.SalesPrice'] = $depth1Value['SalesPrice'];
@@ -735,11 +883,11 @@ class BatchInsertItems extends Rpc
 			if(isset($depth1Value['ItemShortTitle'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ItemShortTitle'] = $depth1Value['ItemShortTitle'];
 			}
-			if(isset($depth1Value['ForestSecondId'])){
-				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ForestSecondId'] = $depth1Value['ForestSecondId'];
-			}
 			if(isset($depth1Value['ItemPicUrl'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ItemPicUrl'] = $depth1Value['ItemPicUrl'];
+			}
+			if(isset($depth1Value['ForestSecondId'])){
+				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.ForestSecondId'] = $depth1Value['ForestSecondId'];
 			}
 			if(isset($depth1Value['SupplierName'])){
 				$this->options['form_params']['ItemInfo.' . ($depth1 + 1) . '.SupplierName'] = $depth1Value['SupplierName'];
@@ -771,6 +919,26 @@ class BatchInsertItems extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getEvents()
+ */
+class BatchUpdateEvent extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEvents($value)
+    {
+        $this->data['Events'] = $value;
+        $this->options['form_params']['Events'] = $value;
+
+        return $this;
     }
 }
 
@@ -879,30 +1047,20 @@ class BindEslDevice extends Rpc
 }
 
 /**
- * @method string getActionType()
  * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getLayer()
- * @method string getLayerOrigin()
- * @method string getBeAutoRefresh()
- * @method string getShelf()
- * @method array getShelfPositionInfo()
+ * @method string getDeletionTaskId()
+ * @method $this withDeletionTaskId($value)
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSPIRegionId()
+ * @method $this withSPIRegionId($value)
+ * @method string getRoleArn()
+ * @method $this withRoleArn($value)
  */
-class ComposePlanogramPositions extends Rpc
+class CheckServiceLinkedRoleForDeleting extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withActionType($value)
-    {
-        $this->data['ActionType'] = $value;
-        $this->options['form_params']['ActionType'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -916,108 +1074,12 @@ class ComposePlanogramPositions extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStoreId($value)
-    {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLayer($value)
-    {
-        $this->data['Layer'] = $value;
-        $this->options['form_params']['Layer'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLayerOrigin($value)
-    {
-        $this->data['LayerOrigin'] = $value;
-        $this->options['form_params']['LayerOrigin'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBeAutoRefresh($value)
-    {
-        $this->data['BeAutoRefresh'] = $value;
-        $this->options['form_params']['BeAutoRefresh'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withShelf($value)
-    {
-        $this->data['Shelf'] = $value;
-        $this->options['form_params']['Shelf'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $shelfPositionInfo
-     *
-     * @return $this
-     */
-	public function withShelfPositionInfo(array $shelfPositionInfo)
-	{
-	    $this->data['ShelfPositionInfo'] = $shelfPositionInfo;
-		foreach ($shelfPositionInfo as $depth1 => $depth1Value) {
-			if(isset($depth1Value['OffsetFrom'])){
-				$this->options['form_params']['ShelfPositionInfo.' . ($depth1 + 1) . '.OffsetFrom'] = $depth1Value['OffsetFrom'];
-			}
-			if(isset($depth1Value['Depth'])){
-				$this->options['form_params']['ShelfPositionInfo.' . ($depth1 + 1) . '.Depth'] = $depth1Value['Depth'];
-			}
-			if(isset($depth1Value['Column'])){
-				$this->options['form_params']['ShelfPositionInfo.' . ($depth1 + 1) . '.Column'] = $depth1Value['Column'];
-			}
-			if(isset($depth1Value['Facing'])){
-				$this->options['form_params']['ShelfPositionInfo.' . ($depth1 + 1) . '.Facing'] = $depth1Value['Facing'];
-			}
-			if(isset($depth1Value['OffsetTo'])){
-				$this->options['form_params']['ShelfPositionInfo.' . ($depth1 + 1) . '.OffsetTo'] = $depth1Value['OffsetTo'];
-			}
-			if(isset($depth1Value['ItemBarCode'])){
-				$this->options['form_params']['ShelfPositionInfo.' . ($depth1 + 1) . '.ItemBarCode'] = $depth1Value['ItemBarCode'];
-			}
-		}
-
-		return $this;
-    }
 }
 
 /**
  * @method string getExtraParams()
  * @method string getClientToken()
+ * @method string getTimeZone()
  * @method string getStoreName()
  * @method string getParentId()
  * @method string getUserStoreCode()
@@ -1048,6 +1110,19 @@ class CreateStore extends Rpc
     {
         $this->data['ClientToken'] = $value;
         $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimeZone($value)
+    {
+        $this->data['TimeZone'] = $value;
+        $this->options['form_params']['TimeZone'] = $value;
 
         return $this;
     }
@@ -1155,11 +1230,9 @@ class DeleteApDevice extends Rpc
 
 /**
  * @method string getExtraParams()
- * @method string getBeAutoRefresh()
- * @method string getStoreId()
- * @method string getShelf()
+ * @method string getTemplateId()
  */
-class DeletePlanogramShelf extends Rpc
+class DeleteCompanyTemplate extends Rpc
 {
 
     /**
@@ -1180,13 +1253,22 @@ class DeletePlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withBeAutoRefresh($value)
+    public function withTemplateId($value)
     {
-        $this->data['BeAutoRefresh'] = $value;
-        $this->options['form_params']['BeAutoRefresh'] = $value;
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
 
         return $this;
     }
+}
+
+/**
+ * @method string getStoreId()
+ * @method string getItemBarCode()
+ * @method string getUnbindEslDevice()
+ */
+class DeleteItem extends Rpc
+{
 
     /**
      * @param string $value
@@ -1206,21 +1288,32 @@ class DeletePlanogramShelf extends Rpc
      *
      * @return $this
      */
-    public function withShelf($value)
+    public function withItemBarCode($value)
     {
-        $this->data['Shelf'] = $value;
-        $this->options['form_params']['Shelf'] = $value;
+        $this->data['ItemBarCode'] = $value;
+        $this->options['form_params']['ItemBarCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUnbindEslDevice($value)
+    {
+        $this->data['UnbindEslDevice'] = $value;
+        $this->options['form_params']['UnbindEslDevice'] = $value;
 
         return $this;
     }
 }
 
 /**
- * @method string getRoleCode()
- * @method string getExtraParams()
- * @method string getAccessControlLists()
+ * @method string getMaterialId()
  */
-class DeleteRoleActions extends Rpc
+class DeleteMaterial extends Rpc
 {
 
     /**
@@ -1228,36 +1321,10 @@ class DeleteRoleActions extends Rpc
      *
      * @return $this
      */
-    public function withRoleCode($value)
+    public function withMaterialId($value)
     {
-        $this->data['RoleCode'] = $value;
-        $this->options['form_params']['RoleCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraParams($value)
-    {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAccessControlLists($value)
-    {
-        $this->data['AccessControlLists'] = $value;
-        $this->options['form_params']['AccessControlLists'] = $value;
+        $this->data['MaterialId'] = $value;
+        $this->options['form_params']['MaterialId'] = $value;
 
         return $this;
     }
@@ -1326,138 +1393,6 @@ class DeleteUser extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getAlarmType()
- * @method string getAlarmStatus()
- * @method string getErrorType()
- * @method string getAlarmId()
- * @method string getDeviceMac()
- */
-class DescribeAlarms extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraParams($value)
-    {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStoreId($value)
-    {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAlarmType($value)
-    {
-        $this->data['AlarmType'] = $value;
-        $this->options['form_params']['AlarmType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAlarmStatus($value)
-    {
-        $this->data['AlarmStatus'] = $value;
-        $this->options['form_params']['AlarmStatus'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withErrorType($value)
-    {
-        $this->data['ErrorType'] = $value;
-        $this->options['form_params']['ErrorType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAlarmId($value)
-    {
-        $this->data['AlarmId'] = $value;
-        $this->options['form_params']['AlarmId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeviceMac($value)
-    {
-        $this->data['DeviceMac'] = $value;
-        $this->options['form_params']['DeviceMac'] = $value;
 
         return $this;
     }
@@ -1582,6 +1517,68 @@ class DescribeApDevices extends Rpc
 }
 
 /**
+ * @method string getModelId()
+ * @method string getPageNumber()
+ * @method string getName()
+ * @method string getPageSize()
+ */
+class DescribeAvailableEslModels extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelId($value)
+    {
+        $this->data['ModelId'] = $value;
+        $this->options['form_params']['ModelId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getExtraParams()
  * @method string getStoreId()
  * @method string getPageNumber()
@@ -1686,24 +1683,10 @@ class DescribeBinders extends Rpc
 }
 
 /**
- * @method string getClientType()
  * @method string getExtraParams()
  */
-class DescribeClientPackage extends Rpc
+class DescribeCompanyTemplateAttribute extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClientType($value)
-    {
-        $this->data['ClientType'] = $value;
-        $this->options['form_params']['ClientType'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -1720,12 +1703,81 @@ class DescribeClientPackage extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ */
+class DescribeCompanyTemplateVersions extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExtraParams()
+ * @method string getTemplateId()
+ */
+class DescribeCompanyTemplateView extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraParams($value)
+    {
+        $this->data['ExtraParams'] = $value;
+        $this->options['form_params']['ExtraParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateId($value)
+    {
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getExtraParams()
  * @method string getType()
  * @method string getStoreId()
  * @method string getPageNumber()
  * @method string getEslBarCode()
  * @method string getPageSize()
+ * @method string getTypeEncode()
  * @method string getEslStatus()
  * @method string getToBatteryLevel()
  * @method string getFromBatteryLevel()
@@ -1816,6 +1868,19 @@ class DescribeEslDevices extends Rpc
      *
      * @return $this
      */
+    public function withTypeEncode($value)
+    {
+        $this->data['TypeEncode'] = $value;
+        $this->options['form_params']['TypeEncode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withEslStatus($value)
     {
         $this->data['EslStatus'] = $value;
@@ -1846,6 +1911,268 @@ class DescribeEslDevices extends Rpc
     {
         $this->data['FromBatteryLevel'] = $value;
         $this->options['form_params']['FromBatteryLevel'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageNumber()
+ * @method string getTemplateVersion()
+ * @method string getPageSize()
+ */
+class DescribeEslModelByTemplateVersion extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateVersion($value)
+    {
+        $this->data['TemplateVersion'] = $value;
+        $this->options['form_params']['TemplateVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExtraParams()
+ */
+class DescribeEventReason extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraParams($value)
+    {
+        $this->data['ExtraParams'] = $value;
+        $this->options['form_params']['ExtraParams'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getApMac()
+ * @method string getStoreId()
+ * @method string getType()
+ * @method string getPageNumber()
+ * @method string getEslBarCode()
+ * @method string getPageSize()
+ * @method string getStatus()
+ */
+class DescribeEvents extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApMac($value)
+    {
+        $this->data['ApMac'] = $value;
+        $this->options['form_params']['ApMac'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStoreId($value)
+    {
+        $this->data['StoreId'] = $value;
+        $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEslBarCode($value)
+    {
+        $this->data['EslBarCode'] = $value;
+        $this->options['form_params']['EslBarCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMaterialName()
+ * @method string getMaterialId()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getBarCode()
+ * @method string getItemName()
+ */
+class DescribeItemMaterials extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialName($value)
+    {
+        $this->data['MaterialName'] = $value;
+        $this->options['form_params']['MaterialName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialId($value)
+    {
+        $this->data['MaterialId'] = $value;
+        $this->options['form_params']['MaterialId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBarCode($value)
+    {
+        $this->data['BarCode'] = $value;
+        $this->options['form_params']['BarCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withItemName($value)
+    {
+        $this->data['ItemName'] = $value;
+        $this->options['form_params']['ItemName'] = $value;
 
         return $this;
     }
@@ -1984,153 +2311,15 @@ class DescribeItems extends Rpc
 }
 
 /**
- * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getLayer()
- * @method string getEslBarCode()
- * @method string getShelf()
- */
-class DescribePlanogramEslDevices extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraParams($value)
-    {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStoreId($value)
-    {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLayer($value)
-    {
-        $this->data['Layer'] = $value;
-        $this->options['form_params']['Layer'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEslBarCode($value)
-    {
-        $this->data['EslBarCode'] = $value;
-        $this->options['form_params']['EslBarCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withShelf($value)
-    {
-        $this->data['Shelf'] = $value;
-        $this->options['form_params']['Shelf'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getLayer()
- * @method string getShelf()
- */
-class DescribePlanogramPositions extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraParams($value)
-    {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStoreId($value)
-    {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLayer($value)
-    {
-        $this->data['Layer'] = $value;
-        $this->options['form_params']['Layer'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withShelf($value)
-    {
-        $this->data['Shelf'] = $value;
-        $this->options['form_params']['Shelf'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getLayer()
+ * @method string getSource()
+ * @method string getType()
+ * @method string getMaterialId()
  * @method string getPageNumber()
  * @method string getPageSize()
- * @method string getShelf()
- * @method string getRailCode()
+ * @method string getSize()
+ * @method string getName()
  */
-class DescribePlanogramRails extends Rpc
+class DescribeMaterials extends Rpc
 {
 
     /**
@@ -2138,10 +2327,10 @@ class DescribePlanogramRails extends Rpc
      *
      * @return $this
      */
-    public function withExtraParams($value)
+    public function withSource($value)
     {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
+        $this->data['Source'] = $value;
+        $this->options['form_params']['Source'] = $value;
 
         return $this;
     }
@@ -2151,10 +2340,10 @@ class DescribePlanogramRails extends Rpc
      *
      * @return $this
      */
-    public function withStoreId($value)
+    public function withType($value)
     {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
 
         return $this;
     }
@@ -2164,10 +2353,10 @@ class DescribePlanogramRails extends Rpc
      *
      * @return $this
      */
-    public function withLayer($value)
+    public function withMaterialId($value)
     {
-        $this->data['Layer'] = $value;
-        $this->options['form_params']['Layer'] = $value;
+        $this->data['MaterialId'] = $value;
+        $this->options['form_params']['MaterialId'] = $value;
 
         return $this;
     }
@@ -2203,10 +2392,10 @@ class DescribePlanogramRails extends Rpc
      *
      * @return $this
      */
-    public function withShelf($value)
+    public function withSize($value)
     {
-        $this->data['Shelf'] = $value;
-        $this->options['form_params']['Shelf'] = $value;
+        $this->data['Size'] = $value;
+        $this->options['form_params']['Size'] = $value;
 
         return $this;
     }
@@ -2216,22 +2405,23 @@ class DescribePlanogramRails extends Rpc
      *
      * @return $this
      */
-    public function withRailCode($value)
+    public function withName($value)
     {
-        $this->data['RailCode'] = $value;
-        $this->options['form_params']['RailCode'] = $value;
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
 
         return $this;
     }
 }
 
+class DescribeNotificationConfig extends Rpc
+{
+}
+
 /**
- * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getPageNumber()
- * @method string getPageSize()
+ * @method string getTemplateVersion()
  */
-class DescribePlanogramShelves extends Rpc
+class DescribeStoreByTemplateVersion extends Rpc
 {
 
     /**
@@ -2239,83 +2429,10 @@ class DescribePlanogramShelves extends Rpc
      *
      * @return $this
      */
-    public function withExtraParams($value)
+    public function withTemplateVersion($value)
     {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStoreId($value)
-    {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getRoleCode()
- * @method string getExtraParams()
- */
-class DescribeRoleActions extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRoleCode($value)
-    {
-        $this->data['RoleCode'] = $value;
-        $this->options['form_params']['RoleCode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraParams($value)
-    {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
+        $this->data['TemplateVersion'] = $value;
+        $this->options['form_params']['TemplateVersion'] = $value;
 
         return $this;
     }
@@ -2488,12 +2605,13 @@ class DescribeStores extends Rpc
 }
 
 /**
- * @method string getExtraParams()
- * @method string getStoreId()
- * @method string getFromDate()
- * @method string getToDate()
+ * @method string getEslSize()
+ * @method string getDeviceType()
+ * @method string getPageNumber()
+ * @method string getTemplateVersion()
+ * @method string getPageSize()
  */
-class DescribeStoreStatistics extends Rpc
+class DescribeTemplateByModel extends Rpc
 {
 
     /**
@@ -2501,10 +2619,10 @@ class DescribeStoreStatistics extends Rpc
      *
      * @return $this
      */
-    public function withExtraParams($value)
+    public function withEslSize($value)
     {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
+        $this->data['EslSize'] = $value;
+        $this->options['form_params']['EslSize'] = $value;
 
         return $this;
     }
@@ -2514,10 +2632,10 @@ class DescribeStoreStatistics extends Rpc
      *
      * @return $this
      */
-    public function withStoreId($value)
+    public function withDeviceType($value)
     {
-        $this->data['StoreId'] = $value;
-        $this->options['form_params']['StoreId'] = $value;
+        $this->data['DeviceType'] = $value;
+        $this->options['form_params']['DeviceType'] = $value;
 
         return $this;
     }
@@ -2527,10 +2645,10 @@ class DescribeStoreStatistics extends Rpc
      *
      * @return $this
      */
-    public function withFromDate($value)
+    public function withPageNumber($value)
     {
-        $this->data['FromDate'] = $value;
-        $this->options['form_params']['FromDate'] = $value;
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
 
         return $this;
     }
@@ -2540,10 +2658,23 @@ class DescribeStoreStatistics extends Rpc
      *
      * @return $this
      */
-    public function withToDate($value)
+    public function withTemplateVersion($value)
     {
-        $this->data['ToDate'] = $value;
-        $this->options['form_params']['ToDate'] = $value;
+        $this->data['TemplateVersion'] = $value;
+        $this->options['form_params']['TemplateVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -2829,10 +2960,18 @@ class DescribeUsers extends Rpc
 
 /**
  * @method string getExtraParams()
+ * @method string getLanguage()
+ * @method string getType()
  * @method string getStoreId()
- * @method string getRailCode()
+ * @method string getEslBarCode()
+ * @method string getTypeEncode()
+ * @method string getEslStatus()
+ * @method string getToBatteryLevel()
+ * @method string getLevelLower()
+ * @method string getFromBatteryLevel()
+ * @method string getLevelOrder()
  */
-class DissociatePlanogramRail extends Rpc
+class ExportEslDevices extends Rpc
 {
 
     /**
@@ -2844,6 +2983,32 @@ class DissociatePlanogramRail extends Rpc
     {
         $this->data['ExtraParams'] = $value;
         $this->options['form_params']['ExtraParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLanguage($value)
+    {
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
 
         return $this;
     }
@@ -2866,10 +3031,182 @@ class DissociatePlanogramRail extends Rpc
      *
      * @return $this
      */
-    public function withRailCode($value)
+    public function withEslBarCode($value)
     {
-        $this->data['RailCode'] = $value;
-        $this->options['form_params']['RailCode'] = $value;
+        $this->data['EslBarCode'] = $value;
+        $this->options['form_params']['EslBarCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTypeEncode($value)
+    {
+        $this->data['TypeEncode'] = $value;
+        $this->options['form_params']['TypeEncode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEslStatus($value)
+    {
+        $this->data['EslStatus'] = $value;
+        $this->options['form_params']['EslStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withToBatteryLevel($value)
+    {
+        $this->data['ToBatteryLevel'] = $value;
+        $this->options['form_params']['ToBatteryLevel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLevelLower($value)
+    {
+        $this->data['LevelLower'] = $value;
+        $this->options['form_params']['LevelLower'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFromBatteryLevel($value)
+    {
+        $this->data['FromBatteryLevel'] = $value;
+        $this->options['form_params']['FromBatteryLevel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLevelOrder($value)
+    {
+        $this->data['LevelOrder'] = $value;
+        $this->options['form_params']['LevelOrder'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExtraParams()
+ * @method string getData()
+ */
+class GetCompanyTemplatePicture extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtraParams($value)
+    {
+        $this->data['ExtraParams'] = $value;
+        $this->options['form_params']['ExtraParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ */
+class GetCompanyTemplatePictureByJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getData()
+ */
+class GetCompanyTemplatePictureNew extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBarCode()
+ */
+class GetItemMaterial extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBarCode($value)
+    {
+        $this->data['BarCode'] = $value;
+        $this->options['form_params']['BarCode'] = $value;
 
         return $this;
     }
@@ -2904,6 +3241,40 @@ class GetUser extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getContent()
+ * @method string getName()
+ */
+class SyncAddMaterial extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
 
         return $this;
     }
@@ -3152,7 +3523,188 @@ class UpdateEslDeviceLight extends Rpc
 }
 
 /**
+ * @method string getMaterialId()
+ * @method string getBarCode()
+ * @method string getItemName()
+ * @method string getMaterialFeatureA()
+ * @method string getMaterialFeatureB()
+ * @method string getMaterialFeatureC()
+ * @method string getMaterialFeatureD()
+ */
+class UpdateItemMaterial extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialId($value)
+    {
+        $this->data['MaterialId'] = $value;
+        $this->options['form_params']['MaterialId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBarCode($value)
+    {
+        $this->data['BarCode'] = $value;
+        $this->options['form_params']['BarCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withItemName($value)
+    {
+        $this->data['ItemName'] = $value;
+        $this->options['form_params']['ItemName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialFeatureA($value)
+    {
+        $this->data['MaterialFeatureA'] = $value;
+        $this->options['form_params']['MaterialFeatureA'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialFeatureB($value)
+    {
+        $this->data['MaterialFeatureB'] = $value;
+        $this->options['form_params']['MaterialFeatureB'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialFeatureC($value)
+    {
+        $this->data['MaterialFeatureC'] = $value;
+        $this->options['form_params']['MaterialFeatureC'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaterialFeatureD($value)
+    {
+        $this->data['MaterialFeatureD'] = $value;
+        $this->options['form_params']['MaterialFeatureD'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEndpoint()
+ * @method string getEnable()
+ * @method string getTag()
+ * @method string getGroupId()
+ * @method string getTopic()
+ */
+class UpdateNotificationConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndpoint($value)
+    {
+        $this->data['Endpoint'] = $value;
+        $this->options['form_params']['Endpoint'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnable($value)
+    {
+        $this->data['Enable'] = $value;
+        $this->options['form_params']['Enable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag($value)
+    {
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTopic($value)
+    {
+        $this->data['Topic'] = $value;
+        $this->options['form_params']['Topic'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getExtraParams()
+ * @method string getTimezone()
  * @method string getStoreName()
  * @method string getStoreId()
  * @method string getTemplateVersion()
@@ -3171,6 +3723,19 @@ class UpdateStore extends Rpc
     {
         $this->data['ExtraParams'] = $value;
         $this->options['form_params']['ExtraParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimezone($value)
+    {
+        $this->data['Timezone'] = $value;
+        $this->options['form_params']['Timezone'] = $value;
 
         return $this;
     }
@@ -3244,6 +3809,7 @@ class UpdateStore extends Rpc
 /**
  * @method string getExtraParams()
  * @method string getStoreId()
+ * @method string getSubscribeContents()
  * @method string getEnableNotification()
  * @method string getNotificationWebHook()
  * @method string getNotificationSilentTimes()
@@ -3273,6 +3839,19 @@ class UpdateStoreConfig extends Rpc
     {
         $this->data['StoreId'] = $value;
         $this->options['form_params']['StoreId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubscribeContents($value)
+    {
+        $this->data['SubscribeContents'] = $value;
+        $this->options['form_params']['SubscribeContents'] = $value;
 
         return $this;
     }
@@ -3318,12 +3897,12 @@ class UpdateStoreConfig extends Rpc
 }
 
 /**
- * @method string getExtraParams()
- * @method string getDingTalkUserId()
- * @method string getUserId()
- * @method string getDingTalkCompanyId()
+ * @method string getGroupId()
+ * @method string getEndpoint()
+ * @method string getTopic()
+ * @method string getTag()
  */
-class UpdateUser extends Rpc
+class VerifyNotificationConfig extends Rpc
 {
 
     /**
@@ -3331,10 +3910,10 @@ class UpdateUser extends Rpc
      *
      * @return $this
      */
-    public function withExtraParams($value)
+    public function withGroupId($value)
     {
-        $this->data['ExtraParams'] = $value;
-        $this->options['form_params']['ExtraParams'] = $value;
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
 
         return $this;
     }
@@ -3344,10 +3923,10 @@ class UpdateUser extends Rpc
      *
      * @return $this
      */
-    public function withDingTalkUserId($value)
+    public function withEndpoint($value)
     {
-        $this->data['DingTalkUserId'] = $value;
-        $this->options['form_params']['DingTalkUserId'] = $value;
+        $this->data['Endpoint'] = $value;
+        $this->options['form_params']['Endpoint'] = $value;
 
         return $this;
     }
@@ -3357,10 +3936,10 @@ class UpdateUser extends Rpc
      *
      * @return $this
      */
-    public function withUserId($value)
+    public function withTopic($value)
     {
-        $this->data['UserId'] = $value;
-        $this->options['form_params']['UserId'] = $value;
+        $this->data['Topic'] = $value;
+        $this->options['form_params']['Topic'] = $value;
 
         return $this;
     }
@@ -3370,10 +3949,10 @@ class UpdateUser extends Rpc
      *
      * @return $this
      */
-    public function withDingTalkCompanyId($value)
+    public function withTag($value)
     {
-        $this->data['DingTalkCompanyId'] = $value;
-        $this->options['form_params']['DingTalkCompanyId'] = $value;
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['Tag'] = $value;
 
         return $this;
     }
