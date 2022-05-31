@@ -9,10 +9,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AttachAggregateConfigRuleToCompliancePack attachAggregateConfigRuleToCompliancePack(array $options = [])
  * @method AttachConfigRuleToCompliancePack attachConfigRuleToCompliancePack(array $options = [])
  * @method CreateAggregateCompliancePack createAggregateCompliancePack(array $options = [])
+ * @method CreateAggregateConfigDeliveryChannel createAggregateConfigDeliveryChannel(array $options = [])
  * @method CreateAggregateConfigRule createAggregateConfigRule(array $options = [])
  * @method CreateAggregateRemediation createAggregateRemediation(array $options = [])
  * @method CreateAggregator createAggregator(array $options = [])
  * @method CreateCompliancePack createCompliancePack(array $options = [])
+ * @method CreateConfigDeliveryChannel createConfigDeliveryChannel(array $options = [])
  * @method CreateConfigRule createConfigRule(array $options = [])
  * @method CreateRemediation createRemediation(array $options = [])
  * @method DeactiveAggregateConfigRules deactiveAggregateConfigRules(array $options = [])
@@ -32,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAggregateAccountComplianceByPack getAggregateAccountComplianceByPack(array $options = [])
  * @method GetAggregateCompliancePack getAggregateCompliancePack(array $options = [])
  * @method GetAggregateCompliancePackReport getAggregateCompliancePackReport(array $options = [])
+ * @method GetAggregateConfigDeliveryChannel getAggregateConfigDeliveryChannel(array $options = [])
  * @method GetAggregateConfigRule getAggregateConfigRule(array $options = [])
  * @method GetAggregateConfigRuleComplianceByPack getAggregateConfigRuleComplianceByPack(array $options = [])
  * @method GetAggregateConfigRulesReport getAggregateConfigRulesReport(array $options = [])
@@ -48,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAggregator getAggregator(array $options = [])
  * @method GetCompliancePack getCompliancePack(array $options = [])
  * @method GetCompliancePackReport getCompliancePackReport(array $options = [])
+ * @method GetConfigDeliveryChannel getConfigDeliveryChannel(array $options = [])
  * @method GetConfigRule getConfigRule(array $options = [])
  * @method GetConfigRuleComplianceByPack getConfigRuleComplianceByPack(array $options = [])
  * @method GetConfigRulesReport getConfigRulesReport(array $options = [])
@@ -65,6 +69,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method IgnoreAggregateEvaluationResults ignoreAggregateEvaluationResults(array $options = [])
  * @method IgnoreEvaluationResults ignoreEvaluationResults(array $options = [])
  * @method ListAggregateCompliancePacks listAggregateCompliancePacks(array $options = [])
+ * @method ListAggregateConfigDeliveryChannels listAggregateConfigDeliveryChannels(array $options = [])
  * @method ListAggregateConfigRuleEvaluationResults listAggregateConfigRuleEvaluationResults(array $options = [])
  * @method ListAggregateConfigRules listAggregateConfigRules(array $options = [])
  * @method ListAggregateDiscoveredResources listAggregateDiscoveredResources(array $options = [])
@@ -73,22 +78,28 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAggregators listAggregators(array $options = [])
  * @method ListCompliancePacks listCompliancePacks(array $options = [])
  * @method ListCompliancePackTemplates listCompliancePackTemplates(array $options = [])
+ * @method ListConfigDeliveryChannels listConfigDeliveryChannels(array $options = [])
  * @method ListConfigRuleEvaluationResults listConfigRuleEvaluationResults(array $options = [])
  * @method ListDiscoveredResources listDiscoveredResources(array $options = [])
  * @method ListManagedRules listManagedRules(array $options = [])
  * @method ListRemediations listRemediations(array $options = [])
  * @method ListRemediationTemplates listRemediationTemplates(array $options = [])
  * @method ListResourceEvaluationResults listResourceEvaluationResults(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method RevertAggregateEvaluationResults revertAggregateEvaluationResults(array $options = [])
  * @method RevertEvaluationResults revertEvaluationResults(array $options = [])
  * @method StartAggregateConfigRuleEvaluation startAggregateConfigRuleEvaluation(array $options = [])
  * @method StartAggregateRemediation startAggregateRemediation(array $options = [])
  * @method StartRemediation startRemediation(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method UpdateAggregateCompliancePack updateAggregateCompliancePack(array $options = [])
+ * @method UpdateAggregateConfigDeliveryChannel updateAggregateConfigDeliveryChannel(array $options = [])
  * @method UpdateAggregateConfigRule updateAggregateConfigRule(array $options = [])
  * @method UpdateAggregateRemediation updateAggregateRemediation(array $options = [])
  * @method UpdateAggregator updateAggregator(array $options = [])
  * @method UpdateCompliancePack updateCompliancePack(array $options = [])
+ * @method UpdateConfigDeliveryChannel updateConfigDeliveryChannel(array $options = [])
  * @method UpdateConfigRule updateConfigRule(array $options = [])
  */
 class ConfigApiResolver extends ApiResolver
@@ -241,6 +252,34 @@ class CreateAggregateCompliancePack extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getNonCompliantNotification()
+ * @method $this withNonCompliantNotification($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getConfigurationSnapshot()
+ * @method $this withConfigurationSnapshot($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getDeliveryChannelTargetArn()
+ * @method $this withDeliveryChannelTargetArn($value)
+ * @method string getDeliveryChannelCondition()
+ * @method $this withDeliveryChannelCondition($value)
+ * @method string getConfigurationItemChangeNotification()
+ * @method $this withConfigurationItemChangeNotification($value)
+ * @method string getDeliveryChannelName()
+ * @method $this withDeliveryChannelName($value)
+ * @method string getOversizedDataOSSTargetArn()
+ * @method $this withOversizedDataOSSTargetArn($value)
+ * @method string getDeliveryChannelType()
+ * @method $this withDeliveryChannelType($value)
+ */
+class CreateAggregateConfigDeliveryChannel extends Rpc
+{
 }
 
 /**
@@ -811,6 +850,32 @@ class CreateCompliancePack extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getNonCompliantNotification()
+ * @method $this withNonCompliantNotification($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getConfigurationSnapshot()
+ * @method $this withConfigurationSnapshot($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDeliveryChannelTargetArn()
+ * @method $this withDeliveryChannelTargetArn($value)
+ * @method string getDeliveryChannelCondition()
+ * @method $this withDeliveryChannelCondition($value)
+ * @method string getConfigurationItemChangeNotification()
+ * @method $this withConfigurationItemChangeNotification($value)
+ * @method string getDeliveryChannelName()
+ * @method $this withDeliveryChannelName($value)
+ * @method string getOversizedDataOSSTargetArn()
+ * @method $this withOversizedDataOSSTargetArn($value)
+ * @method string getDeliveryChannelType()
+ * @method $this withDeliveryChannelType($value)
+ */
+class CreateConfigDeliveryChannel extends Rpc
+{
 }
 
 /**
@@ -1599,6 +1664,16 @@ class GetAggregateCompliancePackReport extends Rpc
 }
 
 /**
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getDeliveryChannelId()
+ * @method $this withDeliveryChannelId($value)
+ */
+class GetAggregateConfigDeliveryChannel extends Rpc
+{
+}
+
+/**
  * @method string getConfigRuleId()
  * @method $this withConfigRuleId($value)
  * @method string getAggregatorId()
@@ -1830,6 +1905,14 @@ class GetCompliancePackReport extends Rpc
 }
 
 /**
+ * @method string getDeliveryChannelId()
+ * @method $this withDeliveryChannelId($value)
+ */
+class GetConfigDeliveryChannel extends Rpc
+{
+}
+
+/**
  * @method string getConfigRuleId()
  * @method $this withConfigRuleId($value)
  */
@@ -1997,6 +2080,7 @@ class GetResourceConfigurationTimeline extends Rpc
 /**
  * @method string getConfigRuleId()
  * @method string getReason()
+ * @method string getIgnoreDate()
  * @method string getResources()
  * @method string getAggregatorId()
  */
@@ -2034,6 +2118,19 @@ class IgnoreAggregateEvaluationResults extends Rpc
      *
      * @return $this
      */
+    public function withIgnoreDate($value)
+    {
+        $this->data['IgnoreDate'] = $value;
+        $this->options['form_params']['IgnoreDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withResources($value)
     {
         $this->data['Resources'] = $value;
@@ -2059,6 +2156,7 @@ class IgnoreAggregateEvaluationResults extends Rpc
 /**
  * @method string getConfigRuleId()
  * @method string getReason()
+ * @method string getIgnoreDate()
  * @method string getResources()
  */
 class IgnoreEvaluationResults extends Rpc
@@ -2095,6 +2193,19 @@ class IgnoreEvaluationResults extends Rpc
      *
      * @return $this
      */
+    public function withIgnoreDate($value)
+    {
+        $this->data['IgnoreDate'] = $value;
+        $this->options['form_params']['IgnoreDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withResources($value)
     {
         $this->data['Resources'] = $value;
@@ -2119,6 +2230,16 @@ class ListAggregateCompliancePacks extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getDeliveryChannelIds()
+ * @method $this withDeliveryChannelIds($value)
+ */
+class ListAggregateConfigDeliveryChannels extends Rpc
+{
 }
 
 /**
@@ -2273,6 +2394,14 @@ class ListCompliancePackTemplates extends Rpc
 }
 
 /**
+ * @method string getDeliveryChannelIds()
+ * @method $this withDeliveryChannelIds($value)
+ */
+class ListConfigDeliveryChannels extends Rpc
+{
+}
+
+/**
  * @method string getConfigRuleId()
  * @method $this withConfigRuleId($value)
  * @method string getNextToken()
@@ -2356,6 +2485,10 @@ class ListRemediationTemplates extends Rpc
  * @method $this withComplianceType($value)
  */
 class ListResourceEvaluationResults extends Rpc
+{
+}
+
+class ListTagResources extends Rpc
 {
 }
 
@@ -2473,6 +2606,14 @@ class StartRemediation extends Rpc
 {
 }
 
+class TagResources extends Rpc
+{
+}
+
+class UntagResources extends Rpc
+{
+}
+
 /**
  * @method string getCompliancePackName()
  * @method string getClientToken()
@@ -2575,6 +2716,36 @@ class UpdateAggregateCompliancePack extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getNonCompliantNotification()
+ * @method $this withNonCompliantNotification($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getConfigurationSnapshot()
+ * @method $this withConfigurationSnapshot($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAggregatorId()
+ * @method $this withAggregatorId($value)
+ * @method string getDeliveryChannelTargetArn()
+ * @method $this withDeliveryChannelTargetArn($value)
+ * @method string getDeliveryChannelCondition()
+ * @method $this withDeliveryChannelCondition($value)
+ * @method string getConfigurationItemChangeNotification()
+ * @method $this withConfigurationItemChangeNotification($value)
+ * @method string getDeliveryChannelName()
+ * @method $this withDeliveryChannelName($value)
+ * @method string getDeliveryChannelId()
+ * @method $this withDeliveryChannelId($value)
+ * @method string getOversizedDataOSSTargetArn()
+ * @method $this withOversizedDataOSSTargetArn($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateAggregateConfigDeliveryChannel extends Rpc
+{
 }
 
 /**
@@ -3117,6 +3288,34 @@ class UpdateCompliancePack extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getNonCompliantNotification()
+ * @method $this withNonCompliantNotification($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getConfigurationSnapshot()
+ * @method $this withConfigurationSnapshot($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDeliveryChannelTargetArn()
+ * @method $this withDeliveryChannelTargetArn($value)
+ * @method string getDeliveryChannelCondition()
+ * @method $this withDeliveryChannelCondition($value)
+ * @method string getConfigurationItemChangeNotification()
+ * @method $this withConfigurationItemChangeNotification($value)
+ * @method string getDeliveryChannelName()
+ * @method $this withDeliveryChannelName($value)
+ * @method string getDeliveryChannelId()
+ * @method $this withDeliveryChannelId($value)
+ * @method string getOversizedDataOSSTargetArn()
+ * @method $this withOversizedDataOSSTargetArn($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateConfigDeliveryChannel extends Rpc
+{
 }
 
 /**

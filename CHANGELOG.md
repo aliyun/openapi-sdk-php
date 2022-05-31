@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1357 - 2022-5-31
+- Support aggregator delivery.
+
+
 ## 1.8.1356 - 2022-5-31
 - Add Template API Support.
 
