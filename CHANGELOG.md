@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1358 - 2022-6-7
+- Support ModifyDBClusterPayType.
+
+
 ## 1.8.1357 - 2022-5-31
 - Support aggregator delivery.
 
