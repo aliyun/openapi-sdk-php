@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1359 - 2022-6-8
+- Supported API for PublicIpAddressPool.
+
+
 ## 1.8.1358 - 2022-6-7
 - Support ModifyDBClusterPayType.
 

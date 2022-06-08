@@ -143,7 +143,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEipGatewayInfo describeEipGatewayInfo(array $options = [])
  * @method DescribeEipMonitorData describeEipMonitorData(array $options = [])
  * @method DescribeEipSegment describeEipSegment(array $options = [])
- * @method DescribeExpressCloudConnections describeExpressCloudConnections(array $options = [])
  * @method DescribeFlowLogs describeFlowLogs(array $options = [])
  * @method DescribeForwardTableEntries describeForwardTableEntries(array $options = [])
  * @method DescribeGlobalAccelerationInstances describeGlobalAccelerationInstances(array $options = [])
@@ -298,7 +297,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnassociateRouteTable unassociateRouteTable(array $options = [])
  * @method UnassociateVpcCidrBlock unassociateVpcCidrBlock(array $options = [])
  * @method UnTagResources unTagResources(array $options = [])
- * @method UpdateCrossBoarderStatus updateCrossBoarderStatus(array $options = [])
  * @method UpdateDhcpOptionsSetAttribute updateDhcpOptionsSetAttribute(array $options = [])
  * @method UpdateGatewayRouteTableEntryAttribute updateGatewayRouteTableEntryAttribute(array $options = [])
  * @method UpdateIpsecServer updateIpsecServer(array $options = [])
@@ -1374,6 +1372,8 @@ class CreateCustomerGateway extends Rpc
  * @method $this withClientToken($value)
  * @method string getTFTPServerName()
  * @method $this withTFTPServerName($value)
+ * @method string getLeaseTime()
+ * @method $this withLeaseTime($value)
  * @method string getDomainNameServers()
  * @method $this withDomainNameServers($value)
  * @method string getDhcpOptionsSetDescription()
@@ -1390,6 +1390,8 @@ class CreateCustomerGateway extends Rpc
  * @method $this withOwnerId($value)
  * @method string getDhcpOptionsSetName()
  * @method $this withDhcpOptionsSetName($value)
+ * @method string getIpv6LeaseTime()
+ * @method $this withIpv6LeaseTime($value)
  */
 class CreateDhcpOptionsSet extends Rpc
 {
@@ -4183,45 +4185,6 @@ class DescribeEipMonitorData extends Rpc
  */
 class DescribeEipSegment extends Rpc
 {
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method array getFilter()
- */
-class DescribeExpressCloudConnections extends Rpc
-{
-
-    /**
-     * @param array $filter
-     *
-     * @return $this
-     */
-	public function withFilter(array $filter)
-	{
-	    $this->data['Filter'] = $filter;
-		foreach ($filter as $depth1 => $depth1Value) {
-			foreach ($depth1Value['Value'] as $i => $iValue) {
-				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
-			}
-			if(isset($depth1Value['Key'])){
-				$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-			}
-		}
-
-		return $this;
-    }
 }
 
 /**
@@ -8485,24 +8448,6 @@ class UnTagResources extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEnable()
- * @method $this withEnable($value)
- * @method string getResourceUid()
- * @method $this withResourceUid($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class UpdateCrossBoarderStatus extends Rpc
-{
-}
-
-/**
  * @method string getBootFileName()
  * @method $this withBootFileName($value)
  * @method string getResourceOwnerId()
@@ -8511,6 +8456,8 @@ class UpdateCrossBoarderStatus extends Rpc
  * @method $this withClientToken($value)
  * @method string getTFTPServerName()
  * @method $this withTFTPServerName($value)
+ * @method string getLeaseTime()
+ * @method $this withLeaseTime($value)
  * @method string getDomainNameServers()
  * @method $this withDomainNameServers($value)
  * @method string getDhcpOptionsSetDescription()
@@ -8529,6 +8476,8 @@ class UpdateCrossBoarderStatus extends Rpc
  * @method $this withOwnerId($value)
  * @method string getDhcpOptionsSetName()
  * @method $this withDhcpOptionsSetName($value)
+ * @method string getIpv6LeaseTime()
+ * @method $this withIpv6LeaseTime($value)
  */
 class UpdateDhcpOptionsSetAttribute extends Rpc
 {
