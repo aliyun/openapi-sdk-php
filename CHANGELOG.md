@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1360 - 2022-6-8
+- Support GetDataCorrectOrderDetail API to return execMode type.
+- Support CreateDataCorrectOrder, CreateFreeLockCorrectOrder API submit with execMode type.
+
+
+
 ## 1.8.1359 - 2022-6-8
 - Supported API for PublicIpAddressPool.
 

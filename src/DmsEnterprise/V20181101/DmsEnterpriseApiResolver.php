@@ -5,6 +5,7 @@ namespace AlibabaCloud\DmsEnterprise\V20181101;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddDesensitizationRule addDesensitizationRule(array $options = [])
  * @method AddLhMembers addLhMembers(array $options = [])
  * @method AddLogicTableRouteConfig addLogicTableRouteConfig(array $options = [])
  * @method ApproveOrder approveOrder(array $options = [])
@@ -87,6 +88,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDBTaskSQLJob listDBTaskSQLJob(array $options = [])
  * @method ListDBTaskSQLJobDetail listDBTaskSQLJobDetail(array $options = [])
  * @method ListDDLPublishRecords listDDLPublishRecords(array $options = [])
+ * @method ListDesensitizationRule listDesensitizationRule(array $options = [])
  * @method ListIndexes listIndexes(array $options = [])
  * @method ListInstanceLoginAuditLog listInstanceLoginAuditLog(array $options = [])
  * @method ListInstances listInstances(array $options = [])
@@ -113,6 +115,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListWorkFlowNodes listWorkFlowNodes(array $options = [])
  * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
  * @method ModifyDataCorrectExecSQL modifyDataCorrectExecSQL(array $options = [])
+ * @method ModifyDesensitizationStrategy modifyDesensitizationStrategy(array $options = [])
  * @method OfflineTaskFlow offlineTaskFlow(array $options = [])
  * @method PauseDataCorrectSQLJob pauseDataCorrectSQLJob(array $options = [])
  * @method ReDeployLhDagVersion reDeployLhDagVersion(array $options = [])
@@ -148,6 +151,36 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'dms-enterprise';
+}
+
+/**
+ * @method string getRuleDescription()
+ * @method $this withRuleDescription($value)
+ * @method string getFunctionParams()
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getFunctionType()
+ * @method $this withFunctionType($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class AddDesensitizationRule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFunctionParams($value)
+    {
+        $this->data['FunctionParams'] = $value;
+        $this->options['form_params']['FunctionParams'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1237,6 +1270,26 @@ class ListDDLPublishRecords extends Rpc
 }
 
 /**
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getFuncType()
+ * @method $this withFuncType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class ListDesensitizationRule extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getTableId()
@@ -1643,6 +1696,28 @@ class ListWorkFlowTemplates extends Rpc
  * @method $this withTid($value)
  */
 class ModifyDataCorrectExecSQL extends Rpc
+{
+}
+
+/**
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getIsReset()
+ * @method $this withIsReset($value)
+ * @method string getIsLogic()
+ * @method $this withIsLogic($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class ModifyDesensitizationStrategy extends Rpc
 {
 }
 
