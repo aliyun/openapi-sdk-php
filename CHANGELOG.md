@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1361 - 2022-6-9
+- Update ScreenChestCT.
+
+
 ## 1.8.1360 - 2022-6-8
 - Support GetDataCorrectOrderDetail API to return execMode type.
 - Support CreateDataCorrectOrder, CreateFreeLockCorrectOrder API submit with execMode type.

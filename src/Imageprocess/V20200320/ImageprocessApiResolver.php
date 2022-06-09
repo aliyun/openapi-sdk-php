@@ -1324,6 +1324,7 @@ class RunMedQA extends Rpc
  * @method string getDataFormat()
  * @method array getURLList()
  * @method string getOrgId()
+ * @method string getVerbose()
  * @method string getAsync()
  */
 class ScreenChestCT extends Rpc
@@ -1394,6 +1395,19 @@ class ScreenChestCT extends Rpc
     {
         $this->data['OrgId'] = $value;
         $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerbose($value)
+    {
+        $this->data['Verbose'] = $value;
+        $this->options['form_params']['Verbose'] = $value;
 
         return $this;
     }
