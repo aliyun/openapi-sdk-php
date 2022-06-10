@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1362 - 2022-6-10
+- Support removing a instance from a deployment set
+
+
 ## 1.8.1361 - 2022-6-9
 - Update ScreenChestCT.
 
