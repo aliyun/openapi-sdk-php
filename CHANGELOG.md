@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1364 - 2022-6-13
+- Update ScreenChestCT.
+
+
 ## 1.8.1363 - 2022-6-13
 - Create Job Support Setting Status.
 
