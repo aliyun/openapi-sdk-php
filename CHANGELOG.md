@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1363 - 2022-6-13
+- Create Job Support Setting Status.
+
+
 ## 1.8.1362 - 2022-6-10
 - Support removing a instance from a deployment set
 
