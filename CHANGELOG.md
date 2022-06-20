@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1366 - 2022-6-20
+- Support Easy Connect New API.
+
+
 ## 1.8.1365 - 2022-6-20
 - Add EventId when listQuery EventInfo.
 
