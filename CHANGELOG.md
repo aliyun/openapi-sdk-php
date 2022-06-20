@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1367 - 2022-6-20
+- Update MakeSuperResolutionImage.
+
+
 ## 1.8.1366 - 2022-6-20
 - Support Easy Connect New API.
 
