@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1365 - 2022-6-20
+- Add EventId when listQuery EventInfo.
+
+
 ## 1.8.1364 - 2022-6-13
 - Update ScreenChestCT.
 
