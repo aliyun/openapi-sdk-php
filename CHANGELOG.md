@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1368 - 2022-6-20
+- Update ScreenChestCT CalcCACS.
+
+
 ## 1.8.1367 - 2022-6-20
 - Update MakeSuperResolutionImage.
 
