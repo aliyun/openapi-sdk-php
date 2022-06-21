@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1371 - 2022-6-21
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1370 - 2022-6-21
 - Generated 2016-11-01 for `live`.
 
