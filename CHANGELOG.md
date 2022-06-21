@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1370 - 2022-6-21
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.1369 - 2022-6-21
 - Release RecognizeTurkeyIdentityCard RecognizeMalaysiaIdentityCard RecognizeRussiaIdentityCard RecognizeIndonesiaIdentityCard RecognizeUkraineIdentityCard RecognizeVietnamIdentityCard.
 

@@ -73,6 +73,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveSnapshotDetectPornConfig deleteLiveSnapshotDetectPornConfig(array $options = [])
  * @method DeleteLiveSpecificStagingConfig deleteLiveSpecificStagingConfig(array $options = [])
  * @method DeleteLiveStreamMonitor deleteLiveStreamMonitor(array $options = [])
+ * @method DeleteLiveStreamRecordIndexFiles deleteLiveStreamRecordIndexFiles(array $options = [])
  * @method DeleteLiveStreamsNotifyUrlConfig deleteLiveStreamsNotifyUrlConfig(array $options = [])
  * @method DeleteLiveStreamTranscode deleteLiveStreamTranscode(array $options = [])
  * @method DeleteLiveStreamWatermark deleteLiveStreamWatermark(array $options = [])
@@ -83,6 +84,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeletePlaylistItems deletePlaylistItems(array $options = [])
  * @method DeleteRoom deleteRoom(array $options = [])
  * @method DeleteSnapshotCallbackAuth deleteSnapshotCallbackAuth(array $options = [])
+ * @method DeleteSnapshotFiles deleteSnapshotFiles(array $options = [])
  * @method DeleteStudioLayout deleteStudioLayout(array $options = [])
  * @method DescribeAutoShowListTasks describeAutoShowListTasks(array $options = [])
  * @method DescribeCasterChannels describeCasterChannels(array $options = [])
@@ -127,9 +129,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainRecordData describeLiveDomainRecordData(array $options = [])
  * @method DescribeLiveDomainRecordUsageData describeLiveDomainRecordUsageData(array $options = [])
  * @method DescribeLiveDomainSnapshotData describeLiveDomainSnapshotData(array $options = [])
+ * @method DescribeLiveDomainSpecialConfig describeLiveDomainSpecialConfig(array $options = [])
  * @method DescribeLiveDomainStagingConfig describeLiveDomainStagingConfig(array $options = [])
  * @method DescribeLiveDomainStreamTranscodeData describeLiveDomainStreamTranscodeData(array $options = [])
- * @method DescribeLiveDomainStreamWaterLevel describeLiveDomainStreamWaterLevel(array $options = [])
  * @method DescribeLiveDomainTimeShiftData describeLiveDomainTimeShiftData(array $options = [])
  * @method DescribeLiveDomainTrafficData describeLiveDomainTrafficData(array $options = [])
  * @method DescribeLiveDomainTranscodeData describeLiveDomainTranscodeData(array $options = [])
@@ -169,6 +171,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveTopDomainsByFlow describeLiveTopDomainsByFlow(array $options = [])
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
+ * @method DescribeLiveUserQuota describeLiveUserQuota(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRoomKickoutUserList describeRoomKickoutUserList(array $options = [])
@@ -195,6 +198,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEditingJobInfo getEditingJobInfo(array $options = [])
  * @method GetMultiRateConfig getMultiRateConfig(array $options = [])
  * @method GetMultiRateConfigList getMultiRateConfigList(array $options = [])
+ * @method HotLiveRtcStream hotLiveRtcStream(array $options = [])
  * @method InitializeAutoShowListTask initializeAutoShowListTask(array $options = [])
  * @method ListLiveRealtimeLogDelivery listLiveRealtimeLogDelivery(array $options = [])
  * @method ListLiveRealtimeLogDeliveryDomains listLiveRealtimeLogDeliveryDomains(array $options = [])
@@ -226,6 +230,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetCasterSceneConfig setCasterSceneConfig(array $options = [])
  * @method SetCasterSyncGroup setCasterSyncGroup(array $options = [])
  * @method SetLiveDomainCertificate setLiveDomainCertificate(array $options = [])
+ * @method SetLiveDomainSpecialConfig setLiveDomainSpecialConfig(array $options = [])
  * @method SetLiveDomainStagingConfig setLiveDomainStagingConfig(array $options = [])
  * @method SetLiveEdgeTransfer setLiveEdgeTransfer(array $options = [])
  * @method SetLiveLazyPullStreamInfoConfig setLiveLazyPullStreamInfoConfig(array $options = [])
@@ -441,11 +446,11 @@ class AddCasterLayout extends Rpc
 			if(isset($depth1Value['VolumeRate'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.VolumeRate'] = $depth1Value['VolumeRate'];
 			}
-			if(isset($depth1Value['FixedDelayDuration'])){
-				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
-			}
 			if(isset($depth1Value['ValidChannel'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
+			}
+			if(isset($depth1Value['FixedDelayDuration'])){
+				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
 			}
 		}
 
@@ -461,14 +466,14 @@ class AddCasterLayout extends Rpc
 	{
 	    $this->data['VideoLayer'] = $videoLayer;
 		foreach ($videoLayer as $depth1 => $depth1Value) {
-			if(isset($depth1Value['FixedDelayDuration'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
-			}
 			if(isset($depth1Value['FillMode'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FillMode'] = $depth1Value['FillMode'];
 			}
 			if(isset($depth1Value['HeightNormalized'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.HeightNormalized'] = $depth1Value['HeightNormalized'];
+			}
+			if(isset($depth1Value['WidthNormalized'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
 			}
 			if(isset($depth1Value['PositionRefer'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionRefer'] = $depth1Value['PositionRefer'];
@@ -476,8 +481,8 @@ class AddCasterLayout extends Rpc
 			foreach ($depth1Value['PositionNormalized'] as $i => $iValue) {
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionNormalized.' . ($i + 1)] = $iValue;
 			}
-			if(isset($depth1Value['WidthNormalized'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
+			if(isset($depth1Value['FixedDelayDuration'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
 			}
 		}
 
@@ -519,23 +524,23 @@ class AddCasterProgram extends Rpc
 	{
 	    $this->data['Episode'] = $episode;
 		foreach ($episode as $depth1 => $depth1Value) {
-			if(isset($depth1Value['EndTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
-			}
-			if(isset($depth1Value['StartTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
+			if(isset($depth1Value['EpisodeType'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeType'] = $depth1Value['EpisodeType'];
 			}
 			if(isset($depth1Value['EpisodeName'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeName'] = $depth1Value['EpisodeName'];
-			}
-			if(isset($depth1Value['EpisodeType'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeType'] = $depth1Value['EpisodeType'];
 			}
 			if(isset($depth1Value['ResourceId'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
 			}
 			foreach ($depth1Value['ComponentId'] as $i => $iValue) {
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ComponentId.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['StartTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
+			}
+			if(isset($depth1Value['EndTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
 			}
 			if(isset($depth1Value['SwitchType'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.SwitchType'] = $depth1Value['SwitchType'];
@@ -688,11 +693,11 @@ class AddLiveAppRecordConfig extends Rpc
 			if(isset($depth1Value['SliceDuration'])){
 				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.SliceDuration'] = $depth1Value['SliceDuration'];
 			}
-			if(isset($depth1Value['OssObjectPrefix'])){
-				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.OssObjectPrefix'] = $depth1Value['OssObjectPrefix'];
-			}
 			if(isset($depth1Value['Format'])){
 				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.Format'] = $depth1Value['Format'];
+			}
+			if(isset($depth1Value['OssObjectPrefix'])){
+				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.OssObjectPrefix'] = $depth1Value['OssObjectPrefix'];
 			}
 			if(isset($depth1Value['CycleDuration'])){
 				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.CycleDuration'] = $depth1Value['CycleDuration'];
@@ -717,11 +722,11 @@ class AddLiveAppRecordConfig extends Rpc
 			if(isset($depth1Value['SliceDuration'])){
 				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.SliceDuration'] = $depth1Value['SliceDuration'];
 			}
-			if(isset($depth1Value['OssObjectPrefix'])){
-				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.OssObjectPrefix'] = $depth1Value['OssObjectPrefix'];
-			}
 			if(isset($depth1Value['Format'])){
 				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.Format'] = $depth1Value['Format'];
+			}
+			if(isset($depth1Value['OssObjectPrefix'])){
+				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.OssObjectPrefix'] = $depth1Value['OssObjectPrefix'];
 			}
 			if(isset($depth1Value['CycleDuration'])){
 				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.CycleDuration'] = $depth1Value['CycleDuration'];
@@ -1740,6 +1745,38 @@ class DeleteLiveStreamMonitor extends Rpc
 }
 
 /**
+ * @method string getRemoveFile()
+ * @method $this withRemoveFile($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getRecordId()
+ */
+class DeleteLiveStreamRecordIndexFiles extends Rpc
+{
+
+    /**
+     * @param array $recordId
+     *
+     * @return $this
+     */
+	public function withRecordId(array $recordId)
+	{
+	    $this->data['RecordId'] = $recordId;
+		foreach ($recordId as $i => $iValue) {
+			$this->options['query']['RecordId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -1867,6 +1904,38 @@ class DeleteRoom extends Rpc
  */
 class DeleteSnapshotCallbackAuth extends Rpc
 {
+}
+
+/**
+ * @method string getRemoveFile()
+ * @method $this withRemoveFile($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getCreateTimestampList()
+ */
+class DeleteSnapshotFiles extends Rpc
+{
+
+    /**
+     * @param array $createTimestampList
+     *
+     * @return $this
+     */
+	public function withCreateTimestampList(array $createTimestampList)
+	{
+	    $this->data['CreateTimestampList'] = $createTimestampList;
+		foreach ($createTimestampList as $i => $iValue) {
+			$this->options['query']['CreateTimestampList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2527,6 +2596,18 @@ class DescribeLiveDomainSnapshotData extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeLiveDomainSpecialConfig extends Rpc
+{
+}
+
+/**
  * @method string getFunctionNames()
  * @method $this withFunctionNames($value)
  * @method string getDomainName()
@@ -2553,16 +2634,6 @@ class DescribeLiveDomainStagingConfig extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeLiveDomainStreamTranscodeData extends Rpc
-{
-}
-
-/**
- * @method string getLiveRegion()
- * @method $this withLiveRegion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveDomainStreamWaterLevel extends Rpc
 {
 }
 
@@ -3273,6 +3344,16 @@ class DescribeLiveUserDomains extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeLiveUserQuota extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeLiveUserTags extends Rpc
 {
@@ -3663,6 +3744,30 @@ class GetMultiRateConfigList extends Rpc
 }
 
 /**
+ * @method string getVideoMsid()
+ * @method $this withVideoMsid($value)
+ * @method string getRegionCode()
+ * @method $this withRegionCode($value)
+ * @method string getConnectionTimeout()
+ * @method $this withConnectionTimeout($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getAudioMsid()
+ * @method $this withAudioMsid($value)
+ * @method string getMediaTimeout()
+ * @method $this withMediaTimeout($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class HotLiveRtcStream extends Rpc
+{
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getCasterConfig()
@@ -3857,11 +3962,11 @@ class ModifyCasterLayout extends Rpc
 			if(isset($depth1Value['VolumeRate'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.VolumeRate'] = $depth1Value['VolumeRate'];
 			}
-			if(isset($depth1Value['FixedDelayDuration'])){
-				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
-			}
 			if(isset($depth1Value['ValidChannel'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
+			}
+			if(isset($depth1Value['FixedDelayDuration'])){
+				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
 			}
 		}
 
@@ -3877,14 +3982,14 @@ class ModifyCasterLayout extends Rpc
 	{
 	    $this->data['VideoLayer'] = $videoLayer;
 		foreach ($videoLayer as $depth1 => $depth1Value) {
-			if(isset($depth1Value['FixedDelayDuration'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
-			}
 			if(isset($depth1Value['FillMode'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FillMode'] = $depth1Value['FillMode'];
 			}
 			if(isset($depth1Value['HeightNormalized'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.HeightNormalized'] = $depth1Value['HeightNormalized'];
+			}
+			if(isset($depth1Value['WidthNormalized'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
 			}
 			if(isset($depth1Value['PositionRefer'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionRefer'] = $depth1Value['PositionRefer'];
@@ -3892,8 +3997,8 @@ class ModifyCasterLayout extends Rpc
 			foreach ($depth1Value['PositionNormalized'] as $i => $iValue) {
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionNormalized.' . ($i + 1)] = $iValue;
 			}
-			if(isset($depth1Value['WidthNormalized'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
+			if(isset($depth1Value['FixedDelayDuration'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
 			}
 		}
 
@@ -3935,26 +4040,26 @@ class ModifyCasterProgram extends Rpc
 	{
 	    $this->data['Episode'] = $episode;
 		foreach ($episode as $depth1 => $depth1Value) {
-			if(isset($depth1Value['EndTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
-			}
-			if(isset($depth1Value['StartTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
-			}
-			if(isset($depth1Value['EpisodeName'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeName'] = $depth1Value['EpisodeName'];
+			if(isset($depth1Value['EpisodeId'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeId'] = $depth1Value['EpisodeId'];
 			}
 			if(isset($depth1Value['EpisodeType'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeType'] = $depth1Value['EpisodeType'];
 			}
-			if(isset($depth1Value['EpisodeId'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeId'] = $depth1Value['EpisodeId'];
+			if(isset($depth1Value['EpisodeName'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeName'] = $depth1Value['EpisodeName'];
 			}
 			if(isset($depth1Value['ResourceId'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
 			}
 			foreach ($depth1Value['ComponentId'] as $i => $iValue) {
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ComponentId.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['StartTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
+			}
+			if(isset($depth1Value['EndTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
 			}
 			if(isset($depth1Value['SwitchType'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.SwitchType'] = $depth1Value['SwitchType'];
@@ -4345,6 +4450,12 @@ class SetCasterSyncGroup extends Rpc
 	{
 	    $this->data['SyncGroup'] = $syncGroup;
 		foreach ($syncGroup as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Mode'])){
+				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
+			}
+			if(isset($depth1Value['SyncDelayThreshold'])){
+				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncDelayThreshold'] = $depth1Value['SyncDelayThreshold'];
+			}
 			if(isset($depth1Value['HostResourceId'])){
 				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.HostResourceId'] = $depth1Value['HostResourceId'];
 			}
@@ -4353,12 +4464,6 @@ class SetCasterSyncGroup extends Rpc
 			}
 			foreach ($depth1Value['SyncOffsets'] as $i => $iValue) {
 				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncOffsets.' . ($i + 1)] = $iValue;
-			}
-			if(isset($depth1Value['SyncDelayThreshold'])){
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncDelayThreshold'] = $depth1Value['SyncDelayThreshold'];
-			}
-			if(isset($depth1Value['Mode'])){
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
 			}
 		}
 
@@ -4387,6 +4492,20 @@ class SetCasterSyncGroup extends Rpc
  * @method $this withSSLPub($value)
  */
 class SetLiveDomainCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getValue()
+ * @method $this withValue($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class SetLiveDomainSpecialConfig extends Rpc
 {
 }
 
@@ -4756,11 +4875,11 @@ class UpdateCasterSceneAudio extends Rpc
 			if(isset($depth1Value['VolumeRate'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.VolumeRate'] = $depth1Value['VolumeRate'];
 			}
-			if(isset($depth1Value['FixedDelayDuration'])){
-				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
-			}
 			if(isset($depth1Value['ValidChannel'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
+			}
+			if(isset($depth1Value['FixedDelayDuration'])){
+				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
 			}
 		}
 
