@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1372 - 2022-6-22
+- Fix bugs.
+
+
 ## 1.8.1371 - 2022-6-21
 - Automatically generate sdk tasks.
 

@@ -85,14 +85,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRemediations listRemediations(array $options = [])
  * @method ListRemediationTemplates listRemediationTemplates(array $options = [])
  * @method ListResourceEvaluationResults listResourceEvaluationResults(array $options = [])
- * @method ListTagResources listTagResources(array $options = [])
  * @method RevertAggregateEvaluationResults revertAggregateEvaluationResults(array $options = [])
  * @method RevertEvaluationResults revertEvaluationResults(array $options = [])
  * @method StartAggregateConfigRuleEvaluation startAggregateConfigRuleEvaluation(array $options = [])
  * @method StartAggregateRemediation startAggregateRemediation(array $options = [])
  * @method StartRemediation startRemediation(array $options = [])
- * @method TagResources tagResources(array $options = [])
- * @method UntagResources untagResources(array $options = [])
  * @method UpdateAggregateCompliancePack updateAggregateCompliancePack(array $options = [])
  * @method UpdateAggregateConfigDeliveryChannel updateAggregateConfigDeliveryChannel(array $options = [])
  * @method UpdateAggregateConfigRule updateAggregateConfigRule(array $options = [])
@@ -2227,9 +2224,6 @@ class IgnoreEvaluationResults extends Rpc
  */
 class ListAggregateCompliancePacks extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2291,9 +2285,6 @@ class ListAggregateConfigRuleEvaluationResults extends Rpc
  */
 class ListAggregateConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2358,9 +2349,6 @@ class ListAggregateResourceEvaluationResults extends Rpc
  */
 class ListAggregators extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2373,9 +2361,6 @@ class ListAggregators extends Rpc
  */
 class ListCompliancePacks extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2485,10 +2470,6 @@ class ListRemediationTemplates extends Rpc
  * @method $this withComplianceType($value)
  */
 class ListResourceEvaluationResults extends Rpc
-{
-}
-
-class ListTagResources extends Rpc
 {
 }
 
@@ -2603,14 +2584,6 @@ class StartAggregateRemediation extends Rpc
  * @method $this withConfigRuleId($value)
  */
 class StartRemediation extends Rpc
-{
-}
-
-class TagResources extends Rpc
-{
-}
-
-class UntagResources extends Rpc
 {
 }
 
