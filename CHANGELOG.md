@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1375 - 2022-6-24
+- Update ScreenChestCT.
+
+
 ## 1.8.1374 - 2022-6-24
 - Supported new features etc.
 
