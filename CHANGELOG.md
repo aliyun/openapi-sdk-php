@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1373 - 2022-6-24
+- Supported new features for outbound.
+
+
 ## 1.8.1372 - 2022-6-22
 - Fix bugs.
 

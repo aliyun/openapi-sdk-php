@@ -71,7 +71,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetCurrentConcurrency getCurrentConcurrency(array $options = [])
  * @method GetEffectiveDays getEffectiveDays(array $options = [])
  * @method GetEmptyNumberNoMoreCallsInfo getEmptyNumberNoMoreCallsInfo(array $options = [])
- * @method GetInstanceConfig getInstanceConfig(array $options = [])
  * @method GetMaxAttemptsPerDay getMaxAttemptsPerDay(array $options = [])
  * @method GetNumberDistrictInfoTemplateDownloadUrl getNumberDistrictInfoTemplateDownloadUrl(array $options = [])
  * @method GetSummaryInfo getSummaryInfo(array $options = [])
@@ -599,6 +598,8 @@ class CreateOutboundCallNumber extends Rpc
  * @method $this withInstanceId($value)
  * @method string getScriptDescription()
  * @method $this withScriptDescription($value)
+ * @method string getLongWaitEnable()
+ * @method $this withLongWaitEnable($value)
  * @method array getScriptContent()
  */
 class CreateScript extends Rpc
@@ -1041,6 +1042,8 @@ class DescribeTTSConfig extends Rpc
  * @method $this withText($value)
  * @method string getSpeechRate()
  * @method $this withSpeechRate($value)
+ * @method string getPitchRate()
+ * @method $this withPitchRate($value)
  */
 class DescribeTTSDemo extends Rpc
 {
@@ -1049,6 +1052,8 @@ class DescribeTTSDemo extends Rpc
 /**
  * @method string getCallId()
  * @method $this withCallId($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
  * @method string getInstanceOwnerId()
  * @method $this withInstanceOwnerId($value)
  * @method string getCalledNumber()
@@ -1211,14 +1216,6 @@ class GetEffectiveDays extends Rpc
  * @method $this withEntryId($value)
  */
 class GetEmptyNumberNoMoreCallsInfo extends Rpc
-{
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- */
-class GetInstanceConfig extends Rpc
 {
 }
 
@@ -1829,14 +1826,18 @@ class ModifyOutboundCallNumber extends Rpc
  * @method $this withAsrConfig($value)
  * @method string getNlsConfig()
  * @method $this withNlsConfig($value)
- * @method string getMiniPlaybackEnabled()
- * @method $this withMiniPlaybackEnabled($value)
+ * @method string getNewBargeInEnable()
+ * @method $this withNewBargeInEnable($value)
+ * @method string getMiniPlaybackEnable()
+ * @method $this withMiniPlaybackEnable($value)
  * @method string getChatbotId()
  * @method $this withChatbotId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getScriptDescription()
  * @method $this withScriptDescription($value)
+ * @method string getLongWaitEnable()
+ * @method $this withLongWaitEnable($value)
  * @method array getScriptContent()
  */
 class ModifyScript extends Rpc
