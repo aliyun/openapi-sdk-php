@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1377 - 2022-6-28
+- Update RecognizeVideoCastCrewList.
+
+
 ## 1.8.1376 - 2022-6-28
 - Support Service of number analysis.
 

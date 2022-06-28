@@ -8,6 +8,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectVideoShot detectVideoShot(array $options = [])
  * @method GenerateVideoCover generateVideoCover(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
+ * @method RecognizeVideoCastCrewList recognizeVideoCastCrewList(array $options = [])
+ * @method SplitVideoParts splitVideoParts(array $options = [])
  * @method UnderstandVideoContent understandVideoContent(array $options = [])
  */
 class VideorecogApiResolver extends ApiResolver
@@ -140,6 +142,102 @@ class GetAsyncJobResult extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getParams()
+ * @method string getAsync()
+ * @method string getRegisterUrl()
+ * @method string getVideoUrl()
+ */
+class RecognizeVideoCastCrewList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegisterUrl($value)
+    {
+        $this->data['RegisterUrl'] = $value;
+        $this->options['form_params']['RegisterUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getVideoUrl()
+ */
+class SplitVideoParts extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
 
         return $this;
     }
