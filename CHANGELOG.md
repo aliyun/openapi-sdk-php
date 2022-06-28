@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1378 - 2022-6-28
+- Update QuerySavingsPlansDeductLog add field OwnerId.
+
+
 ## 1.8.1377 - 2022-6-28
 - Update RecognizeVideoCastCrewList.
 
