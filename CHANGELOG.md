@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1376 - 2022-6-28
+- Support Service of number analysis.
+
+
 ## 1.8.1375 - 2022-6-24
 - Update ScreenChestCT.
 

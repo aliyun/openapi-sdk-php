@@ -6,9 +6,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeEmptyNumberDetect describeEmptyNumberDetect(array $options = [])
+ * @method DescribePhoneNumberAnalysis describePhoneNumberAnalysis(array $options = [])
  * @method DescribePhoneNumberAttribute describePhoneNumberAttribute(array $options = [])
+ * @method DescribePhoneNumberOnlineTime describePhoneNumberOnlineTime(array $options = [])
+ * @method DescribePhoneNumberOperatorAttribute describePhoneNumberOperatorAttribute(array $options = [])
  * @method DescribePhoneNumberResale describePhoneNumberResale(array $options = [])
  * @method DescribePhoneNumberStatus describePhoneNumberStatus(array $options = [])
+ * @method InvalidPhoneNumberFilter invalidPhoneNumberFilter(array $options = [])
+ * @method PhoneNumberEncrypt phoneNumberEncrypt(array $options = [])
+ * @method ThreeElementsVerification threeElementsVerification(array $options = [])
+ * @method TwoElementsVerification twoElementsVerification(array $options = [])
  */
 class DytnsapiApiResolver extends ApiResolver
 {
@@ -31,6 +38,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getEncryptType()
  * @method $this withEncryptType($value)
+ * @method string getOfferType()
+ * @method $this withOfferType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
@@ -45,6 +54,30 @@ class DescribeEmptyNumberDetect extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRate()
+ * @method $this withRate($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getOfferType()
+ * @method $this withOfferType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getNumberType()
+ * @method $this withNumberType($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ */
+class DescribePhoneNumberAnalysis extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getPhoneNumber()
@@ -53,6 +86,50 @@ class DescribeEmptyNumberDetect extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribePhoneNumberAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getOfferType()
+ * @method $this withOfferType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ * @method string getCarrier()
+ * @method $this withCarrier($value)
+ */
+class DescribePhoneNumberOnlineTime extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getResultCount()
+ * @method $this withResultCount($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ * @method string getFlowName()
+ * @method $this withFlowName($value)
+ */
+class DescribePhoneNumberOperatorAttribute extends Rpc
 {
 }
 
@@ -83,5 +160,93 @@ class DescribePhoneNumberResale extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribePhoneNumberStatus extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ */
+class InvalidPhoneNumberFilter extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ */
+class PhoneNumberEncrypt extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getCertCode()
+ * @method $this withCertCode($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getResultCount()
+ * @method $this withResultCount($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getFlowName()
+ * @method $this withFlowName($value)
+ */
+class ThreeElementsVerification extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getResultCount()
+ * @method $this withResultCount($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getNumberType()
+ * @method $this withNumberType($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getFlowName()
+ * @method $this withFlowName($value)
+ */
+class TwoElementsVerification extends Rpc
 {
 }
