@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1379 - 2022-6-30
+- Update ListFaceDbs.
+
+
 ## 1.8.1378 - 2022-6-28
 - Update QuerySavingsPlansDeductLog add field OwnerId.
 

@@ -90,9 +90,15 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getExtraData()
  * @method string getPersonId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImages()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbId()
  */
 class AddBodyTrace extends Rpc
@@ -153,10 +159,16 @@ class AddBodyTrace extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getQualityScoreThreshold()
  * @method string getSimilarityScoreThresholdBetweenEntity()
  * @method string getExtraData()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getSimilarityScoreThresholdInEntity()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbName()
  * @method string getImageUrl()
  */
@@ -257,6 +269,12 @@ class AddFace extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getLabels()
  * @method string getDbName()
  */
@@ -345,9 +363,15 @@ class AddFaceImageTemplate extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getQualityScoreThreshold()
  * @method string getSimilarityScoreThresholdBetweenEntity()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getSimilarityScoreThresholdInEntity()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbName()
  * @method string getFaces()
  */
@@ -437,11 +461,17 @@ class BatchAddFaces extends Rpc
  * @method string getBodyBoxes()
  * @method string getLengthenDegree()
  * @method string getMaleLiquifyDegree()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getOriginalWidth()
  * @method string getIsPregnant()
  * @method string getFaceList()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getAgeRange()
  * @method string getCustom()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getOriginalHeight()
  * @method string getImageURL()
  * @method string getFemaleLiquifyDegree()
@@ -608,6 +638,12 @@ class BeautifyBody extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class BlurFace extends Rpc
@@ -628,6 +664,12 @@ class BlurFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class BodyPosture extends Rpc
@@ -650,10 +692,16 @@ class BodyPosture extends Rpc
 /**
  * @method string getImageDataA()
  * @method string getImageDataB()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getQualityScoreThreshold()
  * @method string getImageURLB()
  * @method string getImageURLA()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class CompareFace extends Rpc
 {
@@ -738,7 +786,13 @@ class CompareFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getIsShow()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class CountCrowd extends Rpc
@@ -772,6 +826,12 @@ class CountCrowd extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getName()
  */
 class CreateBodyDb extends Rpc
@@ -792,6 +852,12 @@ class CreateBodyDb extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbId()
  * @method string getName()
  */
@@ -826,6 +892,12 @@ class CreateBodyPerson extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getName()
  */
 class CreateFaceDb extends Rpc
@@ -846,7 +918,13 @@ class CreateFaceDb extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class DeleteBodyDb extends Rpc
 {
@@ -866,7 +944,13 @@ class DeleteBodyDb extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getPersonId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbId()
  */
 class DeleteBodyPerson extends Rpc
@@ -900,7 +984,13 @@ class DeleteBodyPerson extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getFaceId()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbName()
  */
 class DeleteFace extends Rpc
@@ -934,6 +1024,12 @@ class DeleteFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getName()
  */
 class DeleteFaceDb extends Rpc
@@ -955,6 +1051,12 @@ class DeleteFaceDb extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbName()
  */
 class DeleteFaceEntity extends Rpc
@@ -1028,6 +1130,12 @@ class DeleteFaceImageTemplate extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectBodyCount extends Rpc
@@ -1048,6 +1156,12 @@ class DetectBodyCount extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectCelebrity extends Rpc
@@ -1068,6 +1182,12 @@ class DetectCelebrity extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectChefCap extends Rpc
@@ -1184,9 +1304,15 @@ class DetectFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getContinueOnError()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getHeight()
  * @method string getImageData()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDataId()
  * @method string getImageURL()
  * @method string getWidth()
@@ -1307,6 +1433,12 @@ class DetectLivingFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectPedestrian extends Rpc
@@ -1329,6 +1461,12 @@ class DetectPedestrian extends Rpc
 /**
  * @method string getDetectRegion()
  * @method string getRegionType()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectPedestrianIntrusion extends Rpc
@@ -1375,6 +1513,12 @@ class DetectPedestrianIntrusion extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getVideoUrl()
  */
 class DetectVideoLivingFace extends Rpc
@@ -1395,6 +1539,12 @@ class DetectVideoLivingFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class EnhanceFace extends Rpc
@@ -1455,7 +1605,13 @@ class ExtractFingerPrint extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getMode()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method string getServiceVersion()
  */
@@ -1503,12 +1659,31 @@ class ExtractPedestrianFeatureAttr extends Rpc
 }
 
 /**
- * @method array getUrlList()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getMode()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method array getUrlList()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class ExtractPedestrianFeatureAttribute extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $urlList
@@ -1532,19 +1707,6 @@ class ExtractPedestrianFeatureAttribute extends Rpc
      *
      * @return $this
      */
-    public function withMode($value)
-    {
-        $this->data['Mode'] = $value;
-        $this->options['form_params']['Mode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withImageURL($value)
     {
         $this->data['ImageURL'] = $value;
@@ -1555,8 +1717,14 @@ class ExtractPedestrianFeatureAttribute extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getWhite()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getSmooth()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getSharp()
  * @method string getImageURL()
  */
@@ -1618,7 +1786,13 @@ class FaceBeauty extends Rpc
 
 /**
  * @method string getStrength()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getResourceType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class FaceFilter extends Rpc
@@ -1666,8 +1840,14 @@ class FaceFilter extends Rpc
 
 /**
  * @method string getStrength()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getMakeupType()
  * @method string getResourceType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class FaceMakeup extends Rpc
@@ -1729,6 +1909,12 @@ class FaceMakeup extends Rpc
 /**
  * @method string getShapeType()
  * @method string getStrength()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class FaceTidyup extends Rpc
@@ -1777,6 +1963,12 @@ class FaceTidyup extends Rpc
 /**
  * @method string getAlgoType()
  * @method $this withAlgoType($value)
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
@@ -1785,7 +1977,13 @@ class GenerateHumanAnimeStyle extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getReturnType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class GenerateHumanSketchStyle extends Rpc
@@ -1819,7 +2017,13 @@ class GenerateHumanSketchStyle extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getMetaInfo()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getCertificateNumber()
  * @method string getCertificateName()
  */
@@ -1867,8 +2071,14 @@ class GenRealPersonVerificationToken extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getPersonId()
  * @method $this withPersonId($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbId()
  * @method $this withDbId($value)
  */
@@ -1881,6 +2091,12 @@ class GetBodyPerson extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbName()
  */
 class GetFaceEntity extends Rpc
@@ -1914,8 +2130,14 @@ class GetFaceEntity extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getMaterialHash()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getVerificationToken()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class GetRealPersonVerificationResult extends Rpc
 {
@@ -1948,6 +2170,12 @@ class GetRealPersonVerificationResult extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class HandPosture extends Rpc
@@ -1968,7 +2196,13 @@ class HandPosture extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getSlimDegree()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class LiquifyFace extends Rpc
@@ -2002,10 +2236,16 @@ class LiquifyFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getLimit()
  * @method $this withLimit($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getOffset()
  * @method $this withOffset($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class ListBodyDbs extends Rpc
 {
@@ -2015,10 +2255,16 @@ class ListBodyDbs extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getLimit()
  * @method $this withLimit($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getOffset()
  * @method $this withOffset($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbId()
  * @method $this withDbId($value)
  */
@@ -2029,15 +2275,57 @@ class ListBodyPerson extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getLimit()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getOffset()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
+ */
 class ListFaceDbs extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOffset($value)
+    {
+        $this->data['Offset'] = $value;
+        $this->options['form_params']['Offset'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getEntityIdPrefix()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getLimit()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getOrder()
  * @method string getOffset()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getToken()
  * @method string getLabels()
  * @method string getDbName()
@@ -2192,7 +2480,13 @@ class MergeImageFace extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getType()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class MonitorExamination extends Rpc
@@ -2226,6 +2520,12 @@ class MonitorExamination extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class PedestrianDetectAttribute extends Rpc
@@ -2265,9 +2565,15 @@ class QueryFaceImageTemplate extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getType()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getVideoData()
  * @method array getURLList()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getVideoUrl()
  */
 class RecognizeAction extends Rpc
@@ -2334,6 +2640,12 @@ class RecognizeAction extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RecognizeExpression extends Rpc
@@ -2357,11 +2669,17 @@ class RecognizeExpression extends Rpc
  * @method string getGender()
  * @method string getBeauty()
  * @method string getMaxFaceNumber()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getHat()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getMask()
  * @method string getImageType()
  * @method string getGlass()
  * @method string getExpression()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getQuality()
  * @method string getImageURL()
  * @method string getAge()
@@ -2515,6 +2833,12 @@ class RecognizeFace extends Rpc
 
 /**
  * @method string getGestureType()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getAppId()
  * @method string getImageURL()
  */
@@ -2596,7 +2920,13 @@ class RecognizePublicFace extends Rpc
 
 /**
  * @method string getLengthenDegree()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getSlimDegree()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RetouchBody extends Rpc
@@ -2643,8 +2973,14 @@ class RetouchBody extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getRetouchDegree()
  * @method string getWhiteningDegree()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RetouchSkin extends Rpc
@@ -2692,8 +3028,14 @@ class RetouchSkin extends Rpc
 
 /**
  * @method string getMinScore()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getLimit()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImages()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbId()
  */
 class SearchBodyTrace extends Rpc
@@ -2754,8 +3096,14 @@ class SearchBodyTrace extends Rpc
 
 /**
  * @method string getMaxFaceNum()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getQualityScoreThreshold()
  * @method string getLimit()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getDbNames()
  * @method string getDbName()
  * @method string getImageUrl()
@@ -2844,9 +3192,15 @@ class SearchFace extends Rpc
 
 /**
  * @method string getTargetImageURL()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getSourceImageData()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getSourceImageURL()
  * @method string getTargetImageData()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getEditPart()
  */
 class SwapFacialFeatures extends Rpc
@@ -2920,6 +3274,12 @@ class SwapFacialFeatures extends Rpc
 
 /**
  * @method string getEntityId()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getLabels()
  * @method string getDbName()
  */
@@ -2967,8 +3327,14 @@ class UpdateFaceEntity extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getRefData()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageData()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method string getRefUrl()
  */
