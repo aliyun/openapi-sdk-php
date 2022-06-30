@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1380 - 2022-6-30
+- CreateMigrationJob SDK.
+
+
 ## 1.8.1379 - 2022-6-30
 - Update ListFaceDbs.
 

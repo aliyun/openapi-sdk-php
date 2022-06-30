@@ -28,6 +28,7 @@ namespace AlibabaCloud;
  * @method static Aliyuncvc\Aliyuncvc aliyuncvc()
  * @method static AmpTest\AmpTest ampTest()
  * @method static AmqpOpen\AmqpOpen amqpOpen()
+ * @method static Apds\Apds apds()
  * @method static AppMallsService\AppMallsService appMallsService()
  * @method static Baas\Baas baas()
  * @method static BatchCompute\BatchCompute batchCompute()
