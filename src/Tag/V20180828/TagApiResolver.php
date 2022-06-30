@@ -5,13 +5,28 @@ namespace AlibabaCloud\Tag\V20180828;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AttachPolicy attachPolicy(array $options = [])
+ * @method CreatePolicy createPolicy(array $options = [])
  * @method CreateTags createTags(array $options = [])
+ * @method DeletePolicy deletePolicy(array $options = [])
  * @method DeleteTag deleteTag(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DetachPolicy detachPolicy(array $options = [])
+ * @method GenerateConfigRuleReport generateConfigRuleReport(array $options = [])
+ * @method GetConfigRuleReport getConfigRuleReport(array $options = [])
+ * @method GetEffectivePolicy getEffectivePolicy(array $options = [])
+ * @method GetPolicy getPolicy(array $options = [])
+ * @method GetPolicyEnableStatus getPolicyEnableStatus(array $options = [])
+ * @method ListConfigRulesForTarget listConfigRulesForTarget(array $options = [])
+ * @method ListPolicies listPolicies(array $options = [])
+ * @method ListPoliciesForTarget listPoliciesForTarget(array $options = [])
  * @method ListResourcesByTag listResourcesByTag(array $options = [])
+ * @method ListSupportResourceTypes listSupportResourceTypes(array $options = [])
  * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTagValues listTagValues(array $options = [])
+ * @method ListTargetsForPolicy listTargetsForPolicy(array $options = [])
+ * @method ModifyPolicy modifyPolicy(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  */
@@ -32,6 +47,46 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'tag';
+}
+
+/**
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AttachPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getPolicyDesc()
+ * @method $this withPolicyDesc($value)
+ * @method string getPolicyContent()
+ * @method $this withPolicyContent($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ */
+class CreatePolicy extends Rpc
+{
 }
 
 /**
@@ -76,6 +131,20 @@ class CreateTags extends Rpc
 }
 
 /**
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeletePolicy extends Rpc
+{
+}
+
+/**
  * @method string getValue()
  * @method $this withValue($value)
  * @method string getKey()
@@ -104,6 +173,202 @@ class DeleteTag extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class DescribeRegions extends Rpc
+{
+}
+
+/**
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DetachPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GenerateConfigRuleReport extends Rpc
+{
+}
+
+/**
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetConfigRuleReport extends Rpc
+{
+}
+
+/**
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetEffectivePolicy extends Rpc
+{
+}
+
+/**
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GetPolicyEnableStatus extends Rpc
+{
+}
+
+/**
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPolicyType()
+ * @method $this withPolicyType($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResult()
+ * @method $this withMaxResult($value)
+ * @method string getTagKey()
+ * @method $this withTagKey($value)
+ */
+class ListConfigRulesForTarget extends Rpc
+{
+}
+
+/**
+ * @method array getPolicyNames()
+ * @method array getPolicyIds()
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResult()
+ * @method $this withMaxResult($value)
+ */
+class ListPolicies extends Rpc
+{
+
+    /**
+     * @param array $policyNames
+     *
+     * @return $this
+     */
+	public function withPolicyNames(array $policyNames)
+	{
+	    $this->data['PolicyNames'] = $policyNames;
+		foreach ($policyNames as $i => $iValue) {
+			$this->options['query']['PolicyNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $policyIds
+     *
+     * @return $this
+     */
+	public function withPolicyIds(array $policyIds)
+	{
+	    $this->data['PolicyIds'] = $policyIds;
+		foreach ($policyIds as $i => $iValue) {
+			$this->options['query']['PolicyIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getTargetId()
+ * @method $this withTargetId($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResult()
+ * @method $this withMaxResult($value)
+ */
+class ListPoliciesForTarget extends Rpc
 {
 }
 
@@ -155,6 +420,30 @@ class ListResourcesByTag extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getSupportCode()
+ * @method $this withSupportCode($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getResourceTye()
+ * @method $this withResourceTye($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResult()
+ * @method $this withMaxResult($value)
+ * @method string getShowItems()
+ * @method $this withShowItems($value)
+ */
+class ListSupportResourceTypes extends Rpc
+{
 }
 
 /**
@@ -271,6 +560,46 @@ class ListTagValues extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaxResult()
+ * @method $this withMaxResult($value)
+ */
+class ListTargetsForPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getPolicyDesc()
+ * @method $this withPolicyDesc($value)
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getPolicyContent()
+ * @method $this withPolicyContent($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ */
+class ModifyPolicy extends Rpc
+{
 }
 
 /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1381 - 2022-6-30
+- Add Policy APIs.
+
+
 ## 1.8.1380 - 2022-6-30
 - CreateMigrationJob SDK.
 
