@@ -1884,9 +1884,9 @@ class DescribePortAutoCcStatus extends Rpc
  * @method $this withSourceIp($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method array getInstanceIds()
  * @method string getPort()
  * @method $this withPort($value)
+ * @method array getInstanceIds()
  */
 class DescribePortConnsCount extends Rpc
 {
@@ -1916,9 +1916,9 @@ class DescribePortConnsCount extends Rpc
  * @method $this withSourceIp($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method array getInstanceIds()
  * @method string getPort()
  * @method $this withPort($value)
+ * @method array getInstanceIds()
  * @method string getInterval()
  * @method $this withInterval($value)
  */
@@ -2535,6 +2535,8 @@ class DescribeWebPreciseAccessRule extends Rpc
 }
 
 /**
+ * @method string getCname()
+ * @method $this withCname($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()

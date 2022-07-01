@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1382 - 2022-7-1
+- Update sdk.
+
+
 ## 1.8.1381 - 2022-6-30
 - Add Policy APIs.
 
