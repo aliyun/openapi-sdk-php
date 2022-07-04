@@ -49,7 +49,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDatasetList queryDatasetList(array $options = [])
  * @method QueryDatasetSwitchInfo queryDatasetSwitchInfo(array $options = [])
  * @method QueryEmbeddedInfo queryEmbeddedInfo(array $options = [])
- * @method QueryEmbeddedStaus queryEmbeddedStaus(array $options = [])
  * @method QueryOrganizationWorkspaceList queryOrganizationWorkspaceList(array $options = [])
  * @method QueryReadableResourcesListByUserId queryReadableResourcesListByUserId(array $options = [])
  * @method QueryShareList queryShareList(array $options = [])
@@ -790,18 +789,6 @@ class QueryDatasetSwitchInfo extends Rpc
  * @method $this withSignType($value)
  */
 class QueryEmbeddedInfo extends Rpc
-{
-}
-
-/**
- * @method string getWorksId()
- * @method $this withWorksId($value)
- * @method string getAccessPoint()
- * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
- */
-class QueryEmbeddedStaus extends Rpc
 {
 }
 
