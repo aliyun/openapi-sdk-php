@@ -49,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDatasetList queryDatasetList(array $options = [])
  * @method QueryDatasetSwitchInfo queryDatasetSwitchInfo(array $options = [])
  * @method QueryEmbeddedInfo queryEmbeddedInfo(array $options = [])
+ * @method QueryEmbeddedStatus queryEmbeddedStatus(array $options = [])
  * @method QueryOrganizationWorkspaceList queryOrganizationWorkspaceList(array $options = [])
  * @method QueryReadableResourcesListByUserId queryReadableResourcesListByUserId(array $options = [])
  * @method QueryShareList queryShareList(array $options = [])
@@ -99,7 +100,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'quick';
+    public $serviceCode = 'quickbi';
 }
 
 /**
@@ -789,6 +790,18 @@ class QueryDatasetSwitchInfo extends Rpc
  * @method $this withSignType($value)
  */
 class QueryEmbeddedInfo extends Rpc
+{
+}
+
+/**
+ * @method string getWorksId()
+ * @method $this withWorksId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class QueryEmbeddedStatus extends Rpc
 {
 }
 

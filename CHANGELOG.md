@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1384 - 2022-7-4
+- Add API QueryEmbeddedStaus.
+
+
 ## 1.8.1383 - 2022-7-4
 - Update API error codes.
 - Adjust parameters verification rules for some APIs.
