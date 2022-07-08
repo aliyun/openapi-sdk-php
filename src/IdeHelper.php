@@ -235,6 +235,7 @@ namespace AlibabaCloud;
  * @method static Vs\Vs vs()
  * @method static WafOpenapi\WafOpenapi wafOpenapi()
  * @method static WelfareInner\WelfareInner welfareInner()
+ * @method static Wfts\Wfts wfts()
  * @method static Workorder\Workorder workorder()
  * @method static Xspace\Xspace xspace()
  * @method static Xtrace\Xtrace xtrace()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1386 - 2022-7-8
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1385 - 2022-7-8
 - Support AK Audit API.
 
