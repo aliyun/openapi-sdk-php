@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1385 - 2022-7-8
+- Support AK Audit API.
+
+
 ## 1.8.1384 - 2022-7-4
 - Add API QueryEmbeddedStaus.
 
