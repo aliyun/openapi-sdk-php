@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1390 - 2022-7-11
+- Support Storage And Network Features For LaunchTemplate.
+
+
 ## 1.8.1389 - 2022-7-11
 - Add new api for rule.
 

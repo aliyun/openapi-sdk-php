@@ -485,6 +485,7 @@ class AddTags extends Rpc
  * @method $this withAutoReleaseTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSchedulerOptionsFenceId()
  * @method string getPeriodUnit()
  * @method $this withPeriodUnit($value)
  * @method string getAutoRenew()
@@ -519,6 +520,19 @@ class AllocateDedicatedHosts extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchedulerOptionsFenceId($value)
+    {
+        $this->data['SchedulerOptionsFenceId'] = $value;
+        $this->options['query']['SchedulerOptions.FenceId'] = $value;
+
+        return $this;
     }
 
     /**
@@ -2034,6 +2048,8 @@ class CreateCapacityReservation extends Rpc
  * @method $this withCommandContent($value)
  * @method string getTimeout()
  * @method $this withTimeout($value)
+ * @method string getContentEncoding()
+ * @method $this withContentEncoding($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -3095,6 +3111,7 @@ class CreateKeyPair extends Rpc
  * @method string getSystemDiskIops()
  * @method array getTemplateTag()
  * @method array getTag()
+ * @method string getSystemDiskAutoSnapshotPolicyId()
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getIpv6AddressCount()
@@ -3109,6 +3126,7 @@ class CreateKeyPair extends Rpc
  * @method $this withSpotStrategy($value)
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
+ * @method string getSystemDiskBurstingEnabled()
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getInternetChargeType()
@@ -3158,6 +3176,7 @@ class CreateKeyPair extends Rpc
  * @method $this withSpotDuration($value)
  * @method array getSecurityGroupIds()
  * @method array getDataDisk()
+ * @method string getSystemDiskProvisionedIops()
  * @method string getSystemDiskSize()
  * @method string getVpcId()
  * @method $this withVpcId($value)
@@ -3224,6 +3243,32 @@ class CreateLaunchTemplate extends Rpc
      *
      * @return $this
      */
+    public function withSystemDiskAutoSnapshotPolicyId($value)
+    {
+        $this->data['SystemDiskAutoSnapshotPolicyId'] = $value;
+        $this->options['query']['SystemDisk.AutoSnapshotPolicyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskBurstingEnabled($value)
+    {
+        $this->data['SystemDiskBurstingEnabled'] = $value;
+        $this->options['query']['SystemDisk.BurstingEnabled'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withSystemDiskDeleteWithInstance($value)
     {
         $this->data['SystemDiskDeleteWithInstance'] = $value;
@@ -3284,6 +3329,12 @@ class CreateLaunchTemplate extends Rpc
 			}
 			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['InstanceType'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+			}
+			if(isset($depth1Value['NetworkInterfaceTrafficMode'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.NetworkInterfaceTrafficMode'] = $depth1Value['NetworkInterfaceTrafficMode'];
 			}
 		}
 
@@ -3354,9 +3405,31 @@ class CreateLaunchTemplate extends Rpc
 			if(isset($depth1Value['Encrypted'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
 			}
+			if(isset($depth1Value['AutoSnapshotPolicyId'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.AutoSnapshotPolicyId'] = $depth1Value['AutoSnapshotPolicyId'];
+			}
+			if(isset($depth1Value['ProvisionedIops'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.ProvisionedIops'] = $depth1Value['ProvisionedIops'];
+			}
+			if(isset($depth1Value['BurstingEnabled'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.BurstingEnabled'] = $depth1Value['BurstingEnabled'];
+			}
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskProvisionedIops($value)
+    {
+        $this->data['SystemDiskProvisionedIops'] = $value;
+        $this->options['query']['SystemDisk.ProvisionedIops'] = $value;
+
+        return $this;
     }
 
     /**
@@ -3407,6 +3480,7 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withHostName($value)
  * @method string getSystemDiskIops()
  * @method array getTag()
+ * @method string getSystemDiskAutoSnapshotPolicyId()
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getLaunchTemplateId()
@@ -3421,6 +3495,7 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withSpotStrategy($value)
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
+ * @method string getSystemDiskBurstingEnabled()
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getInternetChargeType()
@@ -3470,6 +3545,7 @@ class CreateLaunchTemplate extends Rpc
  * @method $this withSpotDuration($value)
  * @method array getSecurityGroupIds()
  * @method array getDataDisk()
+ * @method string getSystemDiskProvisionedIops()
  * @method string getSystemDiskSize()
  * @method string getVpcId()
  * @method $this withVpcId($value)
@@ -3509,6 +3585,32 @@ class CreateLaunchTemplateVersion extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskAutoSnapshotPolicyId($value)
+    {
+        $this->data['SystemDiskAutoSnapshotPolicyId'] = $value;
+        $this->options['query']['SystemDisk.AutoSnapshotPolicyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskBurstingEnabled($value)
+    {
+        $this->data['SystemDiskBurstingEnabled'] = $value;
+        $this->options['query']['SystemDisk.BurstingEnabled'] = $value;
+
+        return $this;
     }
 
     /**
@@ -3576,6 +3678,12 @@ class CreateLaunchTemplateVersion extends Rpc
 			}
 			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['InstanceType'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+			}
+			if(isset($depth1Value['NetworkInterfaceTrafficMode'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.NetworkInterfaceTrafficMode'] = $depth1Value['NetworkInterfaceTrafficMode'];
 			}
 		}
 
@@ -3646,9 +3754,31 @@ class CreateLaunchTemplateVersion extends Rpc
 			if(isset($depth1Value['Encrypted'])){
 				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Encrypted'] = $depth1Value['Encrypted'];
 			}
+			if(isset($depth1Value['ProvisionedIops'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.ProvisionedIops'] = $depth1Value['ProvisionedIops'];
+			}
+			if(isset($depth1Value['BurstingEnabled'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.BurstingEnabled'] = $depth1Value['BurstingEnabled'];
+			}
+			if(isset($depth1Value['AutoSnapshotPolicyId'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.AutoSnapshotPolicyId'] = $depth1Value['AutoSnapshotPolicyId'];
+			}
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemDiskProvisionedIops($value)
+    {
+        $this->data['SystemDiskProvisionedIops'] = $value;
+        $this->options['query']['SystemDisk.ProvisionedIops'] = $value;
+
+        return $this;
     }
 
     /**
@@ -5613,6 +5743,8 @@ class DescribeClusters extends Rpc
  * @method $this withContentEncoding($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getLatest()
+ * @method $this withLatest($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -10243,6 +10375,8 @@ class GetInstanceScreenshot extends Rpc
  * @method $this withArchitecture($value)
  * @method string getLicenseType()
  * @method $this withLicenseType($value)
+ * @method string getDetectionStrategy()
+ * @method $this withDetectionStrategy($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getRoleName()
@@ -11298,6 +11432,8 @@ class ModifyHpcClusterAttribute extends Rpc
  * @method $this withImageId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getFeatures()
+ * @method $this withFeatures($value)
  * @method string getBootMode()
  * @method $this withBootMode($value)
  * @method string getImageName()
