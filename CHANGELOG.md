@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1388 - 2022-7-11
+- Add open file detect api.
+
+
 ## 1.8.1387 - 2022-7-8
 - Automatically generate sdk tasks.
 

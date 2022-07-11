@@ -10,6 +10,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckSecurityEventId checkSecurityEventId(array $options = [])
  * @method CreateAntiBruteForceRule createAntiBruteForceRule(array $options = [])
  * @method CreateBackupPolicy createBackupPolicy(array $options = [])
+ * @method CreateFileDetect createFileDetect(array $options = [])
+ * @method CreateFileDetectUploadUrl createFileDetectUploadUrl(array $options = [])
  * @method CreateOrUpdateAssetGroup createOrUpdateAssetGroup(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method CreateSimilarSecurityEventsQueryTask createSimilarSecurityEventsQueryTask(array $options = [])
@@ -137,6 +139,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVulExportInfo describeVulExportInfo(array $options = [])
  * @method DescribeVulList describeVulList(array $options = [])
  * @method DescribeVulWhitelist describeVulWhitelist(array $options = [])
+ * @method DescribeWarningExportInfo describeWarningExportInfo(array $options = [])
  * @method DescribeWarningMachines describeWarningMachines(array $options = [])
  * @method DescribeWebLockBindList describeWebLockBindList(array $options = [])
  * @method DescribeWebLockConfigList describeWebLockConfigList(array $options = [])
@@ -145,6 +148,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExportWarning exportWarning(array $options = [])
  * @method FixCheckWarnings fixCheckWarnings(array $options = [])
  * @method GetBackupStorageCount getBackupStorageCount(array $options = [])
+ * @method GetFileDetectResult getFileDetectResult(array $options = [])
  * @method GetSuspiciousStatistics getSuspiciousStatistics(array $options = [])
  * @method GetVulStatistics getVulStatistics(array $options = [])
  * @method HandleSecurityEvents handleSecurityEvents(array $options = [])
@@ -346,6 +350,44 @@ class CreateBackupPolicy extends Rpc
 	    $this->data['UuidList'] = $uuidList;
 		foreach ($uuidList as $i => $iValue) {
 			$this->options['query']['UuidList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getHashKey()
+ * @method $this withHashKey($value)
+ * @method string getOssKey()
+ * @method $this withOssKey($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class CreateFileDetect extends Rpc
+{
+}
+
+/**
+ * @method array getHashKeyList()
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class CreateFileDetectUploadUrl extends Rpc
+{
+
+    /**
+     * @param array $hashKeyList
+     *
+     * @return $this
+     */
+	public function withHashKeyList(array $hashKeyList)
+	{
+	    $this->data['HashKeyList'] = $hashKeyList;
+		foreach ($hashKeyList as $i => $iValue) {
+			$this->options['query']['HashKeyList.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -630,6 +672,8 @@ class DescribeAlarmEventDetail extends Rpc
 }
 
 /**
+ * @method string getTimeEnd()
+ * @method $this withTimeEnd($value)
  * @method string getTargetType()
  * @method $this withTargetType($value)
  * @method string getAlarmEventType()
@@ -664,9 +708,17 @@ class DescribeAlarmEventDetail extends Rpc
  * @method $this withCurrentPage($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getOperateTimeEnd()
+ * @method $this withOperateTimeEnd($value)
  * @method array getOperateErrorCodeList()
+ * @method string getOperateTimeStart()
+ * @method $this withOperateTimeStart($value)
+ * @method string getTimeStart()
+ * @method $this withTimeStart($value)
  * @method string getLevels()
  * @method $this withLevels($value)
+ * @method string getUuids()
+ * @method $this withUuids($value)
  */
 class DescribeAlarmEventList extends Rpc
 {
@@ -2402,35 +2454,45 @@ class DescribeSuspEventQuaraFiles extends Rpc
 }
 
 /**
- * @method string getTargetType()
- * @method $this withTargetType($value)
- * @method string getRemark()
- * @method $this withRemark($value)
  * @method string getSource()
  * @method $this withSource($value)
  * @method string getContainerFieldName()
  * @method $this withContainerFieldName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getContainerFieldValue()
- * @method $this withContainerFieldValue($value)
  * @method string getEventNames()
  * @method $this withEventNames($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getFrom()
  * @method $this withFrom($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getTacticId()
- * @method string getLang()
- * @method $this withLang($value)
  * @method string getAlarmUniqueInfo()
  * @method $this withAlarmUniqueInfo($value)
  * @method string getUniqueInfo()
  * @method $this withUniqueInfo($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getOperateTimeEnd()
+ * @method $this withOperateTimeEnd($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ * @method string getUuids()
+ * @method $this withUuids($value)
+ * @method string getTimeEnd()
+ * @method $this withTimeEnd($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getContainerFieldValue()
+ * @method $this withContainerFieldValue($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getDealed()
  * @method $this withDealed($value)
  * @method string getCurrentPage()
@@ -2438,16 +2500,14 @@ class DescribeSuspEventQuaraFiles extends Rpc
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method array getOperateErrorCodeList()
- * @method string getName()
- * @method $this withName($value)
+ * @method string getOperateTimeStart()
+ * @method $this withOperateTimeStart($value)
+ * @method string getTimeStart()
+ * @method $this withTimeStart($value)
  * @method string getLevels()
  * @method $this withLevels($value)
  * @method string getParentEventTypes()
  * @method $this withParentEventTypes($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- * @method string getUuids()
- * @method $this withUuids($value)
  */
 class DescribeSuspEvents extends Rpc
 {
@@ -2730,6 +2790,16 @@ class DescribeVulWhitelist extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getExportId()
+ * @method $this withExportId($value)
+ */
+class DescribeWarningExportInfo extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getMachineName()
@@ -2903,6 +2973,32 @@ class FixCheckWarnings extends Rpc
  */
 class GetBackupStorageCount extends Rpc
 {
+}
+
+/**
+ * @method array getHashKeyList()
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class GetFileDetectResult extends Rpc
+{
+
+    /**
+     * @param array $hashKeyList
+     *
+     * @return $this
+     */
+	public function withHashKeyList(array $hashKeyList)
+	{
+	    $this->data['HashKeyList'] = $hashKeyList;
+		foreach ($hashKeyList as $i => $iValue) {
+			$this->options['query']['HashKeyList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -3272,13 +3368,46 @@ class ModifyLoginSwitchConfig extends Rpc
 }
 
 /**
+ * @method array getLogMetaList()
+ * @method string getTtl()
+ * @method $this withTtl($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getHotTtl()
+ * @method $this withHotTtl($value)
  * @method string getFrom()
  * @method $this withFrom($value)
+ * @method string getTargetRegionId()
+ * @method $this withTargetRegionId($value)
  */
 class ModifyOpenLogShipper extends Rpc
 {
+
+    /**
+     * @param array $logMetaList
+     *
+     * @return $this
+     */
+	public function withLogMetaList(array $logMetaList)
+	{
+	    $this->data['LogMetaList'] = $logMetaList;
+		foreach ($logMetaList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['HotTtl'])){
+				$this->options['query']['LogMetaList.' . ($depth1 + 1) . '.HotTtl'] = $depth1Value['HotTtl'];
+			}
+			if(isset($depth1Value['Ttl'])){
+				$this->options['query']['LogMetaList.' . ($depth1 + 1) . '.Ttl'] = $depth1Value['Ttl'];
+			}
+			if(isset($depth1Value['ConfigLogStore'])){
+				$this->options['query']['LogMetaList.' . ($depth1 + 1) . '.ConfigLogStore'] = $depth1Value['ConfigLogStore'];
+			}
+			if(isset($depth1Value['Status'])){
+				$this->options['query']['LogMetaList.' . ($depth1 + 1) . '.Status'] = $depth1Value['Status'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
