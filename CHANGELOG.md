@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1389 - 2022-7-11
+- Add new api for rule.
+
+
 ## 1.8.1388 - 2022-7-11
 - Add open file detect api.
 
