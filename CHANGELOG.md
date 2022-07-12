@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1391 - 2022-7-12
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1390 - 2022-7-11
 - Support Storage And Network Features For LaunchTemplate.
 
