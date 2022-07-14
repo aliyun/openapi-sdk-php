@@ -126,6 +126,7 @@ namespace AlibabaCloud;
  * @method static Imageprocess\Imageprocess imageprocess()
  * @method static Imagerecog\Imagerecog imagerecog()
  * @method static Imageseg\Imageseg imageseg()
+ * @method static Imarketing\Imarketing imarketing()
  * @method static Imgsearch\Imgsearch imgsearch()
  * @method static Imm\Imm imm()
  * @method static IndustryBrain\IndustryBrain industryBrain()

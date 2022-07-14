@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1392 - 2022-7-14
+- Supported version 5.
+
+
 ## 1.8.1391 - 2022-7-12
 - Automatically generate sdk tasks.
 
