@@ -82,6 +82,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstallCaptcha describeInstallCaptcha(array $options = [])
  * @method DescribeInstallCodes describeInstallCodes(array $options = [])
  * @method DescribeInstanceAntiBruteForceRules describeInstanceAntiBruteForceRules(array $options = [])
+ * @method DescribeInstanceRebootStatus describeInstanceRebootStatus(array $options = [])
  * @method DescribeInstanceStatistics describeInstanceStatistics(array $options = [])
  * @method DescribeLoginBaseConfigs describeLoginBaseConfigs(array $options = [])
  * @method DescribeLogstoreStorage describeLogstoreStorage(array $options = [])
@@ -196,6 +197,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PublicSyncAndCreateImageScanTask publicSyncAndCreateImageScanTask(array $options = [])
  * @method QueryGroupedSecurityEventMarkMissList queryGroupedSecurityEventMarkMissList(array $options = [])
  * @method QueryGroupIdByGroupName queryGroupIdByGroupName(array $options = [])
+ * @method RebootMachine rebootMachine(array $options = [])
  * @method RefreshAssets refreshAssets(array $options = [])
  * @method RefreshContainerAssets refreshContainerAssets(array $options = [])
  * @method RollbackSuspEventQuaraFile rollbackSuspEventQuaraFile(array $options = [])
@@ -944,6 +946,8 @@ class DescribeCheckWarningDetail extends Rpc
 /**
  * @method string getUuid()
  * @method $this withUuid($value)
+ * @method string getCheckType()
+ * @method $this withCheckType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
@@ -1699,6 +1703,16 @@ class DescribeInstanceAntiBruteForceRules extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getUuids()
+ * @method $this withUuids($value)
+ */
+class DescribeInstanceRebootStatus extends Rpc
+{
 }
 
 /**
@@ -4031,6 +4045,16 @@ class QueryGroupedSecurityEventMarkMissList extends Rpc
  * @method $this withSourceIp($value)
  */
 class QueryGroupIdByGroupName extends Rpc
+{
+}
+
+/**
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class RebootMachine extends Rpc
 {
 }
 
