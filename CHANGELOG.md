@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1395 - 2022-7-15
+- Add cspm ListCheckResult api.
+
+
 ## 1.8.1394 - 2022-7-15
 - Add open file detect api.
 

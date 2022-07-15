@@ -157,6 +157,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method IgnoreHcCheckWarnings ignoreHcCheckWarnings(array $options = [])
  * @method InstallBackupClient installBackupClient(array $options = [])
  * @method InstallCloudMonitor installCloudMonitor(array $options = [])
+ * @method ListCheckResult listCheckResult(array $options = [])
  * @method ListVulAutoRepairConfig listVulAutoRepairConfig(array $options = [])
  * @method ModifyAntiBruteForceRule modifyAntiBruteForceRule(array $options = [])
  * @method ModifyAssetGroup modifyAssetGroup(array $options = [])
@@ -3177,6 +3178,166 @@ class InstallCloudMonitor extends Rpc
 	    $this->data['InstanceIdList'] = $instanceIdList;
 		foreach ($instanceIdList as $i => $iValue) {
 			$this->options['query']['InstanceIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getInstanceSubTypes()
+ * @method array getStandardIds()
+ * @method array getRiskLevels()
+ * @method array getInstanceTypes()
+ * @method string getCheckKey()
+ * @method $this withCheckKey($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method array getVendors()
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method array getRequirementIds()
+ * @method array getSortTypes()
+ * @method array getInstanceIds()
+ * @method array getStatuses()
+ */
+class ListCheckResult extends Rpc
+{
+
+    /**
+     * @param array $instanceSubTypes
+     *
+     * @return $this
+     */
+	public function withInstanceSubTypes(array $instanceSubTypes)
+	{
+	    $this->data['InstanceSubTypes'] = $instanceSubTypes;
+		foreach ($instanceSubTypes as $i => $iValue) {
+			$this->options['query']['InstanceSubTypes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $standardIds
+     *
+     * @return $this
+     */
+	public function withStandardIds(array $standardIds)
+	{
+	    $this->data['StandardIds'] = $standardIds;
+		foreach ($standardIds as $i => $iValue) {
+			$this->options['query']['StandardIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $riskLevels
+     *
+     * @return $this
+     */
+	public function withRiskLevels(array $riskLevels)
+	{
+	    $this->data['RiskLevels'] = $riskLevels;
+		foreach ($riskLevels as $i => $iValue) {
+			$this->options['query']['RiskLevels.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $instanceTypes
+     *
+     * @return $this
+     */
+	public function withInstanceTypes(array $instanceTypes)
+	{
+	    $this->data['InstanceTypes'] = $instanceTypes;
+		foreach ($instanceTypes as $i => $iValue) {
+			$this->options['query']['InstanceTypes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $vendors
+     *
+     * @return $this
+     */
+	public function withVendors(array $vendors)
+	{
+	    $this->data['Vendors'] = $vendors;
+		foreach ($vendors as $i => $iValue) {
+			$this->options['query']['Vendors.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $requirementIds
+     *
+     * @return $this
+     */
+	public function withRequirementIds(array $requirementIds)
+	{
+	    $this->data['RequirementIds'] = $requirementIds;
+		foreach ($requirementIds as $i => $iValue) {
+			$this->options['query']['RequirementIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $sortTypes
+     *
+     * @return $this
+     */
+	public function withSortTypes(array $sortTypes)
+	{
+	    $this->data['SortTypes'] = $sortTypes;
+		foreach ($sortTypes as $i => $iValue) {
+			$this->options['query']['SortTypes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $statuses
+     *
+     * @return $this
+     */
+	public function withStatuses(array $statuses)
+	{
+	    $this->data['Statuses'] = $statuses;
+		foreach ($statuses as $i => $iValue) {
+			$this->options['query']['Statuses.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
