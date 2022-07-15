@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1393 - 2022-7-15
+- Support Security Group Batch Manager Rules.
+
+
 ## 1.8.1392 - 2022-7-14
 - Supported version 5.
 
