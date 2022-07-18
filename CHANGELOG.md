@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1397 - 2022-7-18
+- Support Elastic Desktop Service.
+
+
 ## 1.8.1396 - 2022-7-18
 - Test.
 

@@ -20,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateAutoSnapshotPolicy createAutoSnapshotPolicy(array $options = [])
  * @method CreateDataFlow createDataFlow(array $options = [])
  * @method CreateDataFlowTask createDataFlowTask(array $options = [])
+ * @method CreateFile createFile(array $options = [])
  * @method CreateFileset createFileset(array $options = [])
  * @method CreateFileSystem createFileSystem(array $options = [])
  * @method CreateLDAPConfig createLDAPConfig(array $options = [])
@@ -121,7 +122,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'nas';
+    public $serviceCode = 'NAS';
 }
 
 /**
@@ -399,6 +400,22 @@ class CreateDataFlow extends Rpc
  * @method $this withTaskAction($value)
  */
 class CreateDataFlowTask extends Rpc
+{
+}
+
+/**
+ * @method string getOwnerAccessInheritable()
+ * @method $this withOwnerAccessInheritable($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getOwner()
+ * @method $this withOwner($value)
+ */
+class CreateFile extends Rpc
 {
 }
 
@@ -1291,6 +1308,10 @@ class EnableRecycleBin extends Rpc
  * @method $this withKeytabMd5($value)
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
+ * @method string getAuthCenter()
+ * @method $this withAuthCenter($value)
+ * @method string getAuthMethod()
+ * @method $this withAuthMethod($value)
  */
 class EnableSmbAcl extends Rpc
 {
@@ -1658,10 +1679,14 @@ class ModifyProtocolService extends Rpc
  * @method $this withRejectUnencryptedAccess($value)
  * @method string getFileSystemId()
  * @method $this withFileSystemId($value)
+ * @method string getAuthCenter()
+ * @method $this withAuthCenter($value)
  * @method string getHomeDirPath()
  * @method $this withHomeDirPath($value)
  * @method string getEnableAnonymousAccess()
  * @method $this withEnableAnonymousAccess($value)
+ * @method string getAuthMethod()
+ * @method $this withAuthMethod($value)
  */
 class ModifySmbAcl extends Rpc
 {
