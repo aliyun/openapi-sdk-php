@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1396 - 2022-7-18
+- Test.
+
+
 ## 1.8.1395 - 2022-7-15
 - Add cspm ListCheckResult api.
 
