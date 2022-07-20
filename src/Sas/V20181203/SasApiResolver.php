@@ -163,6 +163,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyAssetGroup modifyAssetGroup(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
  * @method ModifyBackupPolicyStatus modifyBackupPolicyStatus(array $options = [])
+ * @method ModifyClearLogstoreStorage modifyClearLogstoreStorage(array $options = [])
  * @method ModifyCreateVulWhitelist modifyCreateVulWhitelist(array $options = [])
  * @method ModifyEmgVulSubmit modifyEmgVulSubmit(array $options = [])
  * @method ModifyGroupProperty modifyGroupProperty(array $options = [])
@@ -3461,6 +3462,22 @@ class ModifyBackupPolicy extends Rpc
  * @method $this withStatus($value)
  */
 class ModifyBackupPolicyStatus extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getFrom()
+ * @method $this withFrom($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getUserLogStore()
+ * @method $this withUserLogStore($value)
+ * @method string getUserProject()
+ * @method $this withUserProject($value)
+ */
+class ModifyClearLogstoreStorage extends Rpc
 {
 }
 

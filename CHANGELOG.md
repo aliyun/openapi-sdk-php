@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1402 - 2022-7-20
+- Change getFileDetectResult.
+
+
 ## 1.8.1401 - 2022-7-20
 - Support AK Audit API.
 
