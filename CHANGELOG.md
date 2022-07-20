@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1399 - 2022-7-20
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1398 - 2022-7-18
 - Change cspm ListCheckResult api.
 

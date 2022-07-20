@@ -82,7 +82,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDISyncInstanceInfo getDISyncInstanceInfo(array $options = [])
  * @method GetDISyncTask getDISyncTask(array $options = [])
  * @method GetDISyncTaskMetricInfo getDISyncTaskMetricInfo(array $options = [])
- * @method GetDutyRoster getDutyRoster(array $options = [])
  * @method GetExtension getExtension(array $options = [])
  * @method GetFile getFile(array $options = [])
  * @method GetFileTypeStatistic getFileTypeStatistic(array $options = [])
@@ -154,7 +153,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDataSources listDataSources(array $options = [])
  * @method ListDeployments listDeployments(array $options = [])
  * @method ListDIProjectConfig listDIProjectConfig(array $options = [])
- * @method ListDutyRosters listDutyRosters(array $options = [])
  * @method ListExtensions listExtensions(array $options = [])
  * @method ListFiles listFiles(array $options = [])
  * @method ListFileType listFileType(array $options = [])
@@ -183,6 +181,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRefDISyncTasks listRefDISyncTasks(array $options = [])
  * @method ListReminds listReminds(array $options = [])
  * @method ListResourceGroups listResourceGroups(array $options = [])
+ * @method ListShiftPersonnels listShiftPersonnels(array $options = [])
+ * @method ListShiftSchedules listShiftSchedules(array $options = [])
  * @method ListSuccessInstanceAmount listSuccessInstanceAmount(array $options = [])
  * @method ListTableLevel listTableLevel(array $options = [])
  * @method ListTableTheme listTableTheme(array $options = [])
@@ -1236,12 +1236,12 @@ class CreateDataServiceGroup extends Rpc
  * @method $this withContent($value)
  * @method string getSubType()
  * @method $this withSubType($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getEnvType()
  * @method $this withEnvType($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class CreateDataSource extends Rpc
 {
@@ -2904,6 +2904,8 @@ class CreateRemind extends Rpc
 }
 
 /**
+ * @method string getSchema()
+ * @method $this withSchema($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method array getColumns()
@@ -3794,6 +3796,8 @@ class DeleteRemind extends Rpc
 }
 
 /**
+ * @method string getSchema()
+ * @method $this withSchema($value)
  * @method string getEnvType()
  * @method $this withEnvType($value)
  * @method string getTableName()
@@ -4644,82 +4648,6 @@ class GetDISyncTaskMetricInfo extends Rpc
 
     /** @var string */
     public $method = 'GET';
-}
-
-/**
- * @method string getDutyRosterIdentifier()
- * @method string getWatchkeeper()
- * @method string getUserType()
- * @method string getEndTime()
- * @method string getBeginTime()
- */
-class GetDutyRoster extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDutyRosterIdentifier($value)
-    {
-        $this->data['DutyRosterIdentifier'] = $value;
-        $this->options['form_params']['DutyRosterIdentifier'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWatchkeeper($value)
-    {
-        $this->data['Watchkeeper'] = $value;
-        $this->options['form_params']['Watchkeeper'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserType($value)
-    {
-        $this->data['UserType'] = $value;
-        $this->options['form_params']['UserType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBeginTime($value)
-    {
-        $this->data['BeginTime'] = $value;
-        $this->options['form_params']['BeginTime'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -7691,68 +7619,6 @@ class ListDIProjectConfig extends Rpc
 }
 
 /**
- * @method string getDutyRosterOwner()
- * @method string getDutyRosterName()
- * @method string getPageSize()
- * @method string getPageNumber()
- */
-class ListDutyRosters extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDutyRosterOwner($value)
-    {
-        $this->data['DutyRosterOwner'] = $value;
-        $this->options['form_params']['DutyRosterOwner'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDutyRosterName($value)
-    {
-        $this->data['DutyRosterName'] = $value;
-        $this->options['form_params']['DutyRosterName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()
@@ -9381,6 +9247,144 @@ class ListResourceGroups extends Rpc
 }
 
 /**
+ * @method string getShiftPersonUID()
+ * @method string getUserType()
+ * @method string getEndTime()
+ * @method string getBeginTime()
+ * @method string getShiftScheduleIdentifier()
+ */
+class ListShiftPersonnels extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShiftPersonUID($value)
+    {
+        $this->data['ShiftPersonUID'] = $value;
+        $this->options['form_params']['ShiftPersonUID'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserType($value)
+    {
+        $this->data['UserType'] = $value;
+        $this->options['form_params']['UserType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBeginTime($value)
+    {
+        $this->data['BeginTime'] = $value;
+        $this->options['form_params']['BeginTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShiftScheduleIdentifier($value)
+    {
+        $this->data['ShiftScheduleIdentifier'] = $value;
+        $this->options['form_params']['ShiftScheduleIdentifier'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOwner()
+ * @method string getPageSize()
+ * @method string getShiftScheduleName()
+ * @method string getPageNumber()
+ */
+class ListShiftSchedules extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOwner($value)
+    {
+        $this->data['Owner'] = $value;
+        $this->options['form_params']['Owner'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShiftScheduleName($value)
+    {
+        $this->data['ShiftScheduleName'] = $value;
+        $this->options['form_params']['ShiftScheduleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getProjectId()
  */
 class ListSuccessInstanceAmount extends Rpc
@@ -10280,6 +10284,8 @@ class ScanSensitiveData extends Rpc
 }
 
 /**
+ * @method string getSchema()
+ * @method $this withSchema($value)
  * @method string getDataSourceType()
  * @method $this withDataSourceType($value)
  * @method string getClusterId()
@@ -10478,6 +10484,7 @@ class StopInstance extends Rpc
 }
 
 /**
+ * @method string getSkipAllDeployFileExtensions()
  * @method string getComment()
  * @method string getProjectId()
  * @method string getProjectIdentifier()
@@ -10485,6 +10492,19 @@ class StopInstance extends Rpc
  */
 class SubmitFile extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSkipAllDeployFileExtensions($value)
+    {
+        $this->data['SkipAllDeployFileExtensions'] = $value;
+        $this->options['form_params']['SkipAllDeployFileExtensions'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -11676,6 +11696,8 @@ class UpdateMetaCategory extends Rpc
 }
 
 /**
+ * @method string getSchema()
+ * @method $this withSchema($value)
  * @method string getVisibility()
  * @method $this withVisibility($value)
  * @method string getCaption()
@@ -12436,6 +12458,8 @@ class UpdateRemind extends Rpc
 }
 
 /**
+ * @method string getSchema()
+ * @method $this withSchema($value)
  * @method array getColumns()
  * @method string getLifeCycle()
  * @method $this withLifeCycle($value)
