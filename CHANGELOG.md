@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1400 - 2022-7-20
+- Add Body Detection and Image Splicing API.
+
+
 ## 1.8.1399 - 2022-7-20
 - Generated 2020-05-18 for `dataworks-public`.
 
