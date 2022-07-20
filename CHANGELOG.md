@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1401 - 2022-7-20
+- Support AK Audit API.
+
+
 ## 1.8.1400 - 2022-7-20
 - Add Body Detection and Image Splicing API.
 
