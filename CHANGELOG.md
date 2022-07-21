@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1403 - 2022-7-21
+- Add Body Detection and Image Splicing API.
+
+
 ## 1.8.1402 - 2022-7-20
 - Change getFileDetectResult.
 

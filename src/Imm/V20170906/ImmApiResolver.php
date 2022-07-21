@@ -9,24 +9,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ConvertOfficeFormat convertOfficeFormat(array $options = [])
  * @method CreateGrabFrameTask createGrabFrameTask(array $options = [])
  * @method CreateGroupFacesJob createGroupFacesJob(array $options = [])
- * @method CreateImageProcessTask createImageProcessTask(array $options = [])
- * @method CreateMediaComplexTask createMediaComplexTask(array $options = [])
  * @method CreateMergeFaceGroupsJob createMergeFaceGroupsJob(array $options = [])
  * @method CreateOfficeConversionTask createOfficeConversionTask(array $options = [])
  * @method CreateSet createSet(array $options = [])
- * @method CreateVideoAbstractTask createVideoAbstractTask(array $options = [])
- * @method CreateVideoAnalyseTask createVideoAnalyseTask(array $options = [])
  * @method CreateVideoCompressTask createVideoCompressTask(array $options = [])
- * @method CreateVideoProduceTask createVideoProduceTask(array $options = [])
  * @method DecodeBlindWatermark decodeBlindWatermark(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
- * @method DeleteImageJob deleteImageJob(array $options = [])
  * @method DeleteOfficeConversionTask deleteOfficeConversionTask(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSet deleteSet(array $options = [])
  * @method DeleteVideo deleteVideo(array $options = [])
  * @method DeleteVideoTask deleteVideoTask(array $options = [])
- * @method DescribeRegions describeRegions(array $options = [])
  * @method DetectImageBodies detectImageBodies(array $options = [])
  * @method DetectImageFaces detectImageFaces(array $options = [])
  * @method DetectImageQRCodes detectImageQRCodes(array $options = [])
@@ -35,14 +28,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EncodeBlindWatermark encodeBlindWatermark(array $options = [])
  * @method FindImages findImages(array $options = [])
  * @method FindSimilarFaces findSimilarFaces(array $options = [])
- * @method GetContentKey getContentKey(array $options = [])
- * @method GetDRMLicense getDRMLicense(array $options = [])
  * @method GetImage getImage(array $options = [])
  * @method GetImageCroppingSuggestions getImageCroppingSuggestions(array $options = [])
  * @method GetImageQuality getImageQuality(array $options = [])
  * @method GetMediaMeta getMediaMeta(array $options = [])
  * @method GetOfficeConversionTask getOfficeConversionTask(array $options = [])
- * @method GetOfficeEditURL getOfficeEditURL(array $options = [])
  * @method GetOfficePreviewURL getOfficePreviewURL(array $options = [])
  * @method GetProject getProject(array $options = [])
  * @method GetSet getSet(array $options = [])
@@ -54,7 +44,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListFaceGroups listFaceGroups(array $options = [])
  * @method ListImages listImages(array $options = [])
  * @method ListOfficeConversionTask listOfficeConversionTask(array $options = [])
- * @method ListProjectAPIs listProjectAPIs(array $options = [])
  * @method ListProjects listProjects(array $options = [])
  * @method ListSets listSets(array $options = [])
  * @method ListSetTags listSetTags(array $options = [])
@@ -64,7 +53,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVideoTasks listVideoTasks(array $options = [])
  * @method OpenImmService openImmService(array $options = [])
  * @method PutProject putProject(array $options = [])
- * @method RefreshOfficeEditToken refreshOfficeEditToken(array $options = [])
  * @method RefreshOfficePreviewToken refreshOfficePreviewToken(array $options = [])
  * @method RefreshWebofficeToken refreshWebofficeToken(array $options = [])
  * @method UpdateFaceGroup updateFaceGroup(array $options = [])
@@ -192,36 +180,6 @@ class CreateGroupFacesJob extends Rpc
  * @method $this withProject($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getTargetList()
- * @method $this withTargetList($value)
- * @method string getImageUri()
- * @method $this withImageUri($value)
- */
-class CreateImageProcessTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getParameters()
- * @method $this withParameters($value)
- */
-class CreateMediaComplexTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
  * @method string getCustomMessage()
  * @method $this withCustomMessage($value)
  * @method string getGroupIdFrom()
@@ -306,52 +264,6 @@ class CreateSet extends Rpc
 }
 
 /**
- * @method string getTargetVideoUri()
- * @method $this withTargetVideoUri($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getVideoUri()
- * @method $this withVideoUri($value)
- * @method string getAbstractLength()
- * @method $this withAbstractLength($value)
- * @method string getTargetClipsUri()
- * @method $this withTargetClipsUri($value)
- */
-class CreateVideoAbstractTask extends Rpc
-{
-}
-
-/**
- * @method string getGrabType()
- * @method $this withGrabType($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getVideoUri()
- * @method $this withVideoUri($value)
- * @method string getSaveType()
- * @method $this withSaveType($value)
- * @method string getInterval()
- * @method $this withInterval($value)
- * @method string getTgtUri()
- * @method $this withTgtUri($value)
- */
-class CreateVideoAnalyseTask extends Rpc
-{
-}
-
-/**
  * @method string getTargetSubtitle()
  * @method $this withTargetSubtitle($value)
  * @method string getProject()
@@ -372,32 +284,6 @@ class CreateVideoAnalyseTask extends Rpc
  * @method $this withTargetSegment($value)
  */
 class CreateVideoCompressTask extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getMusic()
- * @method $this withMusic($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getTargetUri()
- * @method $this withTargetUri($value)
- * @method string getTemplateName()
- * @method $this withTemplateName($value)
- * @method string getHeight()
- * @method $this withHeight($value)
- * @method string getCustomMessage()
- * @method $this withCustomMessage($value)
- * @method string getImages()
- * @method $this withImages($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getWidth()
- * @method $this withWidth($value)
- */
-class CreateVideoProduceTask extends Rpc
 {
 }
 
@@ -430,18 +316,6 @@ class DecodeBlindWatermark extends Rpc
  * @method $this withSetId($value)
  */
 class DeleteImage extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getJobType()
- * @method $this withJobType($value)
- */
-class DeleteImageJob extends Rpc
 {
 }
 
@@ -496,10 +370,6 @@ class DeleteVideo extends Rpc
  * @method $this withTaskType($value)
  */
 class DeleteVideoTask extends Rpc
-{
-}
-
-class DescribeRegions extends Rpc
 {
 }
 
@@ -668,32 +538,6 @@ class FindSimilarFaces extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
- * @method string getVersionId()
- * @method $this withVersionId($value)
- * @method string getDRMServerId()
- * @method $this withDRMServerId($value)
- * @method string getKeyIds()
- * @method $this withKeyIds($value)
- */
-class GetContentKey extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getDRMType()
- * @method $this withDRMType($value)
- * @method string getDRMLicense()
- * @method $this withDRMLicense($value)
- */
-class GetDRMLicense extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
  * @method string getImageUri()
  * @method $this withImageUri($value)
  * @method string getSetId()
@@ -742,32 +586,6 @@ class GetMediaMeta extends Rpc
  * @method $this withTaskId($value)
  */
 class GetOfficeConversionTask extends Rpc
-{
-}
-
-/**
- * @method string getSrcType()
- * @method $this withSrcType($value)
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getUserID()
- * @method $this withUserID($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getFileID()
- * @method $this withFileID($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getFileName()
- * @method $this withFileName($value)
- * @method string getSrcUri()
- * @method $this withSrcUri($value)
- * @method string getTgtUri()
- * @method $this withTgtUri($value)
- * @method string getUserName()
- * @method $this withUserName($value)
- */
-class GetOfficeEditURL extends Rpc
 {
 }
 
@@ -1002,14 +820,6 @@ class ListOfficeConversionTask extends Rpc
 }
 
 /**
- * @method string getProject()
- * @method $this withProject($value)
- */
-class ListProjectAPIs extends Rpc
-{
-}
-
-/**
  * @method string getMaxKeys()
  * @method $this withMaxKeys($value)
  * @method string getMarker()
@@ -1112,18 +922,6 @@ class OpenImmService extends Rpc
  * @method $this withServiceRole($value)
  */
 class PutProject extends Rpc
-{
-}
-
-/**
- * @method string getProject()
- * @method $this withProject($value)
- * @method string getAccessToken()
- * @method $this withAccessToken($value)
- * @method string getRefreshToken()
- * @method $this withRefreshToken($value)
- */
-class RefreshOfficeEditToken extends Rpc
 {
 }
 
