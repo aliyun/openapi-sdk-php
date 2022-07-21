@@ -85,11 +85,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRemediations listRemediations(array $options = [])
  * @method ListRemediationTemplates listRemediationTemplates(array $options = [])
  * @method ListResourceEvaluationResults listResourceEvaluationResults(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method RevertAggregateEvaluationResults revertAggregateEvaluationResults(array $options = [])
  * @method RevertEvaluationResults revertEvaluationResults(array $options = [])
  * @method StartAggregateConfigRuleEvaluation startAggregateConfigRuleEvaluation(array $options = [])
  * @method StartAggregateRemediation startAggregateRemediation(array $options = [])
  * @method StartRemediation startRemediation(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method UpdateAggregateCompliancePack updateAggregateCompliancePack(array $options = [])
  * @method UpdateAggregateConfigDeliveryChannel updateAggregateConfigDeliveryChannel(array $options = [])
  * @method UpdateAggregateConfigRule updateAggregateConfigRule(array $options = [])
@@ -2276,6 +2279,8 @@ class ListAggregateConfigRuleEvaluationResults extends Rpc
  * @method $this withPageSize($value)
  * @method string getCompliancePackId()
  * @method $this withCompliancePackId($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  * @method string getComplianceType()
  * @method $this withComplianceType($value)
  * @method string getRiskLevel()
@@ -2474,6 +2479,70 @@ class ListResourceEvaluationResults extends Rpc
 }
 
 /**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method string getNextToken()
+ * @method string getTag()
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['form_params']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['form_params']['ResourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNextToken($value)
+    {
+        $this->data['NextToken'] = $value;
+        $this->options['form_params']['NextToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag($value)
+    {
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getConfigRuleId()
  * @method string getResources()
  * @method string getAggregatorId()
@@ -2585,6 +2654,122 @@ class StartAggregateRemediation extends Rpc
  */
 class StartRemediation extends Rpc
 {
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method string getTag()
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['form_params']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['form_params']['ResourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag($value)
+    {
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAll()
+ * @method array getResourceId()
+ * @method string getResourceType()
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAll($value)
+    {
+        $this->data['All'] = $value;
+        $this->options['form_params']['All'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['form_params']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['form_params']['ResourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['form_params']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

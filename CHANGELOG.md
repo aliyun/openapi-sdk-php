@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1406 - 2022-7-21
+- Support PreConfigRule.
+
+
 ## 1.8.1405 - 2022-7-21
 - Add kms apis.
 
