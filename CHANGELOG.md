@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1404 - 2022-7-21
+- Ram action config.
+
+
 ## 1.8.1403 - 2022-7-21
 - Add Body Detection and Image Splicing API.
 

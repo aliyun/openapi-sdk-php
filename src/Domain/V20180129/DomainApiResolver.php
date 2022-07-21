@@ -1183,11 +1183,11 @@ class SaveBatchTaskForCreatingOrderActivate extends Rpc
 			if(isset($depth1Value['DomainName'])){
 				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.DomainName'] = $depth1Value['DomainName'];
 			}
-			if(isset($depth1Value['ZhAddress'])){
-				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.ZhAddress'] = $depth1Value['ZhAddress'];
-			}
 			if(isset($depth1Value['RegistrantType'])){
 				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.RegistrantType'] = $depth1Value['RegistrantType'];
+			}
+			if(isset($depth1Value['ZhAddress'])){
+				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.ZhAddress'] = $depth1Value['ZhAddress'];
 			}
 			if(isset($depth1Value['Telephone'])){
 				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.Telephone'] = $depth1Value['Telephone'];
@@ -1327,11 +1327,11 @@ class SaveBatchTaskForCreatingOrderTransfer extends Rpc
 			if(isset($depth1Value['AuthorizationCode'])){
 				$this->options['query']['OrderTransferParam.' . ($depth1 + 1) . '.AuthorizationCode'] = $depth1Value['AuthorizationCode'];
 			}
-			if(isset($depth1Value['DomainName'])){
-				$this->options['query']['OrderTransferParam.' . ($depth1 + 1) . '.DomainName'] = $depth1Value['DomainName'];
-			}
 			if(isset($depth1Value['RegistrantProfileId'])){
 				$this->options['query']['OrderTransferParam.' . ($depth1 + 1) . '.RegistrantProfileId'] = $depth1Value['RegistrantProfileId'];
+			}
+			if(isset($depth1Value['DomainName'])){
+				$this->options['query']['OrderTransferParam.' . ($depth1 + 1) . '.DomainName'] = $depth1Value['DomainName'];
 			}
 		}
 
@@ -2507,9 +2507,9 @@ class TransferInResendMailToken extends Rpc
 
 /**
  * @method string getFileToUpload()
- * @method array getDomainName()
  * @method string getReplace()
  * @method $this withReplace($value)
+ * @method array getDomainName()
  * @method string getDomainGroupId()
  * @method $this withDomainGroupId($value)
  * @method string getDataSource()
