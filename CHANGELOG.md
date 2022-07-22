@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1408 - 2022-7-22
+- Update ScreenChestCT  Release SegmentOAR.
+
+
 ## 1.8.1407 - 2022-7-22
 - Update ScreenChestCT - Release SegmentOAR.
 
