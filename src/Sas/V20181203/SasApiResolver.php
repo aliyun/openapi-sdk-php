@@ -149,6 +149,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExportWarning exportWarning(array $options = [])
  * @method FixCheckWarnings fixCheckWarnings(array $options = [])
  * @method GetBackupStorageCount getBackupStorageCount(array $options = [])
+ * @method GetCheckDetail getCheckDetail(array $options = [])
  * @method GetFileDetectResult getFileDetectResult(array $options = [])
  * @method GetSuspiciousStatistics getSuspiciousStatistics(array $options = [])
  * @method GetVulStatistics getVulStatistics(array $options = [])
@@ -157,6 +158,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method IgnoreHcCheckWarnings ignoreHcCheckWarnings(array $options = [])
  * @method InstallBackupClient installBackupClient(array $options = [])
  * @method InstallCloudMonitor installCloudMonitor(array $options = [])
+ * @method ListCheckInstanceResult listCheckInstanceResult(array $options = [])
  * @method ListCheckResult listCheckResult(array $options = [])
  * @method ListVulAutoRepairConfig listVulAutoRepairConfig(array $options = [])
  * @method ModifyAntiBruteForceRule modifyAntiBruteForceRule(array $options = [])
@@ -2992,6 +2994,18 @@ class GetBackupStorageCount extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getCheckId()
+ * @method $this withCheckId($value)
+ */
+class GetCheckDetail extends Rpc
+{
+}
+
+/**
  * @method array getHashKeyList()
  * @method string getType()
  * @method $this withType($value)
@@ -3179,6 +3193,76 @@ class InstallCloudMonitor extends Rpc
 	    $this->data['InstanceIdList'] = $instanceIdList;
 		foreach ($instanceIdList as $i => $iValue) {
 			$this->options['query']['InstanceIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getRegionIdKey()
+ * @method $this withRegionIdKey($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getCheckId()
+ * @method $this withCheckId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method array getSortTypes()
+ * @method string getInstanceIdKey()
+ * @method $this withInstanceIdKey($value)
+ * @method string getInstanceNameKey()
+ * @method $this withInstanceNameKey($value)
+ * @method array getInstanceIds()
+ * @method array getStatuses()
+ */
+class ListCheckInstanceResult extends Rpc
+{
+
+    /**
+     * @param array $sortTypes
+     *
+     * @return $this
+     */
+	public function withSortTypes(array $sortTypes)
+	{
+	    $this->data['SortTypes'] = $sortTypes;
+		foreach ($sortTypes as $i => $iValue) {
+			$this->options['query']['SortTypes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $statuses
+     *
+     * @return $this
+     */
+	public function withStatuses(array $statuses)
+	{
+	    $this->data['Statuses'] = $statuses;
+		foreach ($statuses as $i => $iValue) {
+			$this->options['query']['Statuses.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
