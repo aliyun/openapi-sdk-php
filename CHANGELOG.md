@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1410 - 2022-7-25
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+
 ## 1.8.1409 - 2022-7-22
 - Change ListCheckInstanceResult GetCheckDetail Public.
 
