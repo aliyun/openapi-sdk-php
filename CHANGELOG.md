@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1413 - 2022-7-25
+- Change ListCheckInstanceResult GetCheckDetail Public.
+
+
 ## 1.8.1412 - 2022-7-25
 - Update MonitorExamination.
 
