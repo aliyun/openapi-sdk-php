@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1411 - 2022-7-25
+- Update SegmentOAR.
+
+
 ## 1.8.1410 - 2022-7-25
 - Change ListCheckInstanceResult GetCheckDetail Public.
 
