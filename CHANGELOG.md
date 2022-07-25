@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1412 - 2022-7-25
+- Update MonitorExamination.
+
+
 ## 1.8.1411 - 2022-7-25
 - Update SegmentOAR.
 
