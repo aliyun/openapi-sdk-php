@@ -2816,8 +2816,14 @@ class DescribeWarningExportInfo extends Rpc
 }
 
 /**
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getContainerFieldName()
+ * @method $this withContainerFieldName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getContainerFieldValue()
+ * @method $this withContainerFieldValue($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getMachineName()
@@ -2826,6 +2832,8 @@ class DescribeWarningExportInfo extends Rpc
  * @method $this withLang($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getRiskId()
  * @method $this withRiskId($value)
  * @method string getStrategyId()
