@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1417 - 2022-7-26
+- Support Service of number analysis.
+
+
 ## 1.8.1416 - 2022-7-26
 - Change ListCheckInstanceResult Public.
 
