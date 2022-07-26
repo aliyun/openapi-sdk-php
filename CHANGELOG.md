@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1415 - 2022-7-26
+- Support API ARMInstance.
+- Support Control ARM API.
+
+
 ## 1.8.1414 - 2022-7-26
 - Change ListCheckInstanceResult Public.
 
