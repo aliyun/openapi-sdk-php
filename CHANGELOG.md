@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1419 - 2022-7-27
+- Support ListProxies API to return protocolType, protocolPort and remove mysqlPort.
+- Support GetProxy API to return protocolType, protocolPort and remove mysqlPort.
+
+
 ## 1.8.1418 - 2022-7-27
  - Update.
 
