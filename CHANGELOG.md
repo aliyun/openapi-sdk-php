@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1418 - 2022-7-27
+ - Update.
+
+
 ## 1.8.1417 - 2022-7-26
 - Support Service of number analysis.
 
