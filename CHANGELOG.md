@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1420 - 2022-7-28
+- Add GetImageInfos api.
+
+
 ## 1.8.1419 - 2022-7-27
 - Support ListProxies API to return protocolType, protocolPort and remove mysqlPort.
 - Support GetProxy API to return protocolType, protocolPort and remove mysqlPort.

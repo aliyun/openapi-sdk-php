@@ -74,6 +74,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEditingProject getEditingProject(array $options = [])
  * @method GetEditingProjectMaterials getEditingProjectMaterials(array $options = [])
  * @method GetImageInfo getImageInfo(array $options = [])
+ * @method GetImageInfos getImageInfos(array $options = [])
  * @method GetMediaAuditAudioResultDetail getMediaAuditAudioResultDetail(array $options = [])
  * @method GetMediaAuditResult getMediaAuditResult(array $options = [])
  * @method GetMediaAuditResultDetail getMediaAuditResultDetail(array $options = [])
@@ -1203,6 +1204,18 @@ class GetEditingProjectMaterials extends Rpc
  * @method $this withAuthTimeout($value)
  */
 class GetImageInfo extends Rpc
+{
+}
+
+/**
+ * @method string getOutputType()
+ * @method $this withOutputType($value)
+ * @method string getAuthTimeout()
+ * @method $this withAuthTimeout($value)
+ * @method string getImageIds()
+ * @method $this withImageIds($value)
+ */
+class GetImageInfos extends Rpc
 {
 }
 
