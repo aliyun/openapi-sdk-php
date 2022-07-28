@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1421 - 2022-7-28
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1420 - 2022-7-28
 - Add GetImageInfos api.
 

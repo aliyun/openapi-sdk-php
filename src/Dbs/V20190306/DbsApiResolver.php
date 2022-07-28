@@ -5,11 +5,9 @@ namespace AlibabaCloud\Dbs\V20190306;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CloseDLAService closeDLAService(array $options = [])
  * @method ConfigureBackupPlan configureBackupPlan(array $options = [])
  * @method CreateAndStartBackupPlan createAndStartBackupPlan(array $options = [])
  * @method CreateBackupPlan createBackupPlan(array $options = [])
- * @method CreateDLAService createDLAService(array $options = [])
  * @method CreateFullBackupSetDownload createFullBackupSetDownload(array $options = [])
  * @method CreateGetDBListFromAgentTask createGetDBListFromAgentTask(array $options = [])
  * @method CreateIncrementBackupSetDownload createIncrementBackupSetDownload(array $options = [])
@@ -27,7 +25,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRestoreRangeInfo describeRestoreRangeInfo(array $options = [])
  * @method DescribeRestoreTaskList describeRestoreTaskList(array $options = [])
- * @method DescribeSandboxFromRDS describeSandboxFromRDS(array $options = [])
  * @method DisableBackupLog disableBackupLog(array $options = [])
  * @method EnableBackupLog enableBackupLog(array $options = [])
  * @method GetDBListFromAgent getDBListFromAgent(array $options = [])
@@ -59,21 +56,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'cbs';
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getBackupPlanId()
- * @method $this withBackupPlanId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CloseDLAService extends Rpc
-{
 }
 
 /**
@@ -93,6 +75,8 @@ class CloseDLAService extends Rpc
  * @method $this withSourceEndpointDatabaseName($value)
  * @method string getDuplicationInfrequentAccessPeriod()
  * @method $this withDuplicationInfrequentAccessPeriod($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getBackupStartTime()
  * @method $this withBackupStartTime($value)
  * @method string getSourceEndpointIP()
@@ -153,6 +137,8 @@ class ConfigureBackupPlan extends Rpc
  * @method $this withStorageType($value)
  * @method string getDatabaseRegion()
  * @method $this withDatabaseRegion($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getBackupStartTime()
  * @method $this withBackupStartTime($value)
  * @method string getSourceEndpointIP()
@@ -241,6 +227,8 @@ class CreateAndStartBackupPlan extends Rpc
  * @method $this withStorageType($value)
  * @method string getDatabaseRegion()
  * @method $this withDatabaseRegion($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getPeriod()
@@ -261,22 +249,6 @@ class CreateAndStartBackupPlan extends Rpc
  * @method $this withPayType($value)
  */
 class CreateBackupPlan extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getAutoAdd()
- * @method $this withAutoAdd($value)
- * @method string getBackupSetIds()
- * @method $this withBackupSetIds($value)
- * @method string getBackupPlanId()
- * @method $this withBackupPlanId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateDLAService extends Rpc
 {
 }
 
@@ -421,6 +393,8 @@ class DescribeBackupPlanBilling extends Rpc
  * @method $this withPageNum($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getBackupPlanStatus()
  * @method $this withBackupPlanStatus($value)
  * @method string getBackupPlanName()
@@ -597,18 +571,6 @@ class DescribeRestoreRangeInfo extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeRestoreTaskList extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getRdsInstanceID()
- * @method $this withRdsInstanceID($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSandboxFromRDS extends Rpc
 {
 }
 
