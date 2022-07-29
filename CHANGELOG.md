@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1426 - 2022-7-29
+- AMP version.
+
+
 ## 1.8.1425 - 2022-7-29
 - Change ListCheckInstanceResult Public.
 
