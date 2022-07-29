@@ -5,6 +5,7 @@ namespace AlibabaCloud\Sas\V20181203;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddInstallCode addInstallCode(array $options = [])
  * @method AddVpcHoneyPot addVpcHoneyPot(array $options = [])
  * @method CheckQuaraFileId checkQuaraFileId(array $options = [])
  * @method CheckSecurityEventId checkSecurityEventId(array $options = [])
@@ -49,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCheckWarningSummary describeCheckWarningSummary(array $options = [])
  * @method DescribeCloudCenterInstances describeCloudCenterInstances(array $options = [])
  * @method DescribeCloudProductFieldStatistics describeCloudProductFieldStatistics(array $options = [])
+ * @method DescribeCommonOverallConfig describeCommonOverallConfig(array $options = [])
  * @method DescribeConcernNecessity describeConcernNecessity(array $options = [])
  * @method DescribeContainerStatistics describeContainerStatistics(array $options = [])
  * @method DescribeCriteria describeCriteria(array $options = [])
@@ -127,11 +129,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSuspEventDetail describeSuspEventDetail(array $options = [])
  * @method DescribeSuspEventQuaraFiles describeSuspEventQuaraFiles(array $options = [])
  * @method DescribeSuspEvents describeSuspEvents(array $options = [])
+ * @method DescribeSuspiciousOverallConfig describeSuspiciousOverallConfig(array $options = [])
  * @method DescribeSuspiciousUUIDConfig describeSuspiciousUUIDConfig(array $options = [])
  * @method DescribeUserBackupMachines describeUserBackupMachines(array $options = [])
  * @method DescribeUserBaselineAuthorization describeUserBaselineAuthorization(array $options = [])
  * @method DescribeUserLayoutAuthorization describeUserLayoutAuthorization(array $options = [])
  * @method DescribeUuidsByVulNames describeUuidsByVulNames(array $options = [])
+ * @method DescribeVendorList describeVendorList(array $options = [])
  * @method DescribeVersionConfig describeVersionConfig(array $options = [])
  * @method DescribeVpcHoneyPotCriteria describeVpcHoneyPotCriteria(array $options = [])
  * @method DescribeVpcHoneyPotList describeVpcHoneyPotList(array $options = [])
@@ -191,6 +195,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyWebLockStatus modifyWebLockStatus(array $options = [])
  * @method ModifyWebLockUpdateConfig modifyWebLockUpdateConfig(array $options = [])
  * @method OperateAgentClientInstall operateAgentClientInstall(array $options = [])
+ * @method OperateCommonOverallConfig operateCommonOverallConfig(array $options = [])
+ * @method OperateSuspiciousOverallConfig operateSuspiciousOverallConfig(array $options = [])
  * @method OperateSuspiciousTargetConfig operateSuspiciousTargetConfig(array $options = [])
  * @method OperateVuls operateVuls(array $options = [])
  * @method OperationCancelIgnoreSuspEvent operationCancelIgnoreSuspEvent(array $options = [])
@@ -226,6 +232,24 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getExpiredDate()
+ * @method $this withExpiredDate($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOs()
+ * @method $this withOs($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOnlyImage()
+ * @method $this withOnlyImage($value)
+ * @method string getVendorName()
+ * @method $this withVendorName($value)
+ */
+class AddInstallCode extends Rpc
+{
 }
 
 /**
@@ -1034,6 +1058,18 @@ class DescribeCloudCenterInstances extends Rpc
  * @method $this withSourceIp($value)
  */
 class DescribeCloudProductFieldStatistics extends Rpc
+{
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getResourceDirectoryAccountId()
+ * @method $this withResourceDirectoryAccountId($value)
+ */
+class DescribeCommonOverallConfig extends Rpc
 {
 }
 
@@ -2564,6 +2600,18 @@ class DescribeSuspEvents extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getResourceDirectoryAccountId()
+ * @method $this withResourceDirectoryAccountId($value)
+ */
+class DescribeSuspiciousOverallConfig extends Rpc
+{
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getResourceDirectoryAccountId()
@@ -2657,6 +2705,14 @@ class DescribeUuidsByVulNames extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeVendorList extends Rpc
+{
 }
 
 /**
@@ -4021,6 +4077,38 @@ class ModifyWebLockUpdateConfig extends Rpc
  * @method $this withUuids($value)
  */
 class OperateAgentClientInstall extends Rpc
+{
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getResourceDirectoryAccountId()
+ * @method $this withResourceDirectoryAccountId($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ */
+class OperateCommonOverallConfig extends Rpc
+{
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getResourceDirectoryAccountId()
+ * @method $this withResourceDirectoryAccountId($value)
+ * @method string getNoTargetAsOn()
+ * @method $this withNoTargetAsOn($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ */
+class OperateSuspiciousOverallConfig extends Rpc
 {
 }
 
