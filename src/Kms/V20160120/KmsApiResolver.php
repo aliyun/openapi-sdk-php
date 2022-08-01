@@ -30,11 +30,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeKeyVersion describeKeyVersion(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSecret describeSecret(array $options = [])
- * @method DescribeService describeService(array $options = [])
  * @method DisableKey disableKey(array $options = [])
  * @method EnableKey enableKey(array $options = [])
  * @method Encrypt encrypt(array $options = [])
- * @method ExportCertificate exportCertificate(array $options = [])
  * @method ExportDataKey exportDataKey(array $options = [])
  * @method GenerateAndExportDataKey generateAndExportDataKey(array $options = [])
  * @method GenerateDataKey generateDataKey(array $options = [])
@@ -44,12 +42,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPublicKey getPublicKey(array $options = [])
  * @method GetRandomPassword getRandomPassword(array $options = [])
  * @method GetSecretValue getSecretValue(array $options = [])
- * @method ImportCertificate importCertificate(array $options = [])
- * @method ImportEncryptionCertificate importEncryptionCertificate(array $options = [])
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
  * @method ListAliases listAliases(array $options = [])
  * @method ListAliasesByKeyId listAliasesByKeyId(array $options = [])
- * @method ListCertificates listCertificates(array $options = [])
  * @method ListKeys listKeys(array $options = [])
  * @method ListKeyVersions listKeyVersions(array $options = [])
  * @method ListResourceTags listResourceTags(array $options = [])
@@ -250,6 +245,8 @@ class CreateCertificate extends Rpc
  * @method $this withKeyUsage($value)
  * @method string getOrigin()
  * @method $this withOrigin($value)
+ * @method string getDKMSInstanceId()
+ * @method $this withDKMSInstanceId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getKeySpec()
@@ -276,6 +273,8 @@ class CreateKeyVersion extends Rpc
  * @method $this withSecretType($value)
  * @method string getVersionId()
  * @method $this withVersionId($value)
+ * @method string getDKMSInstanceId()
+ * @method $this withDKMSInstanceId($value)
  * @method string getSecretData()
  * @method $this withSecretData($value)
  * @method string getDescription()
@@ -389,10 +388,6 @@ class DescribeSecret extends Rpc
 {
 }
 
-class DescribeService extends Rpc
-{
-}
-
 /**
  * @method string getKeyId()
  * @method $this withKeyId($value)
@@ -418,18 +413,6 @@ class EnableKey extends Rpc
  * @method $this withPlaintext($value)
  */
 class Encrypt extends Rpc
-{
-}
-
-/**
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getPassphrase()
- * @method $this withPassphrase($value)
- * @method string getExportFormat()
- * @method $this withExportFormat($value)
- */
-class ExportCertificate extends Rpc
 {
 }
 
@@ -562,36 +545,6 @@ class GetSecretValue extends Rpc
 }
 
 /**
- * @method string getPKCS12Blob()
- * @method $this withPKCS12Blob($value)
- * @method string getPassphrase()
- * @method $this withPassphrase($value)
- */
-class ImportCertificate extends Rpc
-{
-}
-
-/**
- * @method string getAsymmetricAlgorithm()
- * @method $this withAsymmetricAlgorithm($value)
- * @method string getSymmetricAlgorithm()
- * @method $this withSymmetricAlgorithm($value)
- * @method string getEncryptedPrivateKey()
- * @method $this withEncryptedPrivateKey($value)
- * @method string getEncryptedSymmetricKey()
- * @method $this withEncryptedSymmetricKey($value)
- * @method string getCertificateId()
- * @method $this withCertificateId($value)
- * @method string getCertificate()
- * @method $this withCertificate($value)
- * @method string getCertificateChain()
- * @method $this withCertificateChain($value)
- */
-class ImportEncryptionCertificate extends Rpc
-{
-}
-
-/**
  * @method string getImportToken()
  * @method $this withImportToken($value)
  * @method string getEncryptedKeyMaterial()
@@ -624,22 +577,6 @@ class ListAliases extends Rpc
  * @method $this withPageNumber($value)
  */
 class ListAliasesByKeyId extends Rpc
-{
-}
-
-/**
- * @method string getSubject()
- * @method $this withSubject($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getIssuer()
- * @method $this withIssuer($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getStatus()
- * @method $this withStatus($value)
- */
-class ListCertificates extends Rpc
 {
 }
 

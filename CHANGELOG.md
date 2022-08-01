@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1427 - 2022-8-1
+- Update CreateKey and CreateSecret.
+
+
 ## 1.8.1426 - 2022-7-29
 - AMP version.
 
