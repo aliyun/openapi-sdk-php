@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1428 - 2022-8-3
+- Supported more query conditions when searching resource group.
+
+
 ## 1.8.1427 - 2022-8-1
 - Update CreateKey and CreateSecret.
 
