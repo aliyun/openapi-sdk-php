@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1429 - 2022-8-5
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1428 - 2022-8-3
 - Supported more query conditions when searching resource group.
 
