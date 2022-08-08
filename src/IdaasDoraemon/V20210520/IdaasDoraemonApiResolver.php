@@ -13,6 +13,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAuthenticationLogs listAuthenticationLogs(array $options = [])
  * @method ListAuthenticatorOpsLogs listAuthenticatorOpsLogs(array $options = [])
  * @method ListAuthenticators listAuthenticators(array $options = [])
+ * @method ListCostUnitOrders listCostUnitOrders(array $options = [])
+ * @method ListOrderConsumeStatisticRecords listOrderConsumeStatisticRecords(array $options = [])
  * @method ListPwnedPasswords listPwnedPasswords(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method RegisterAuthenticator registerAuthenticator(array $options = [])
@@ -191,6 +193,42 @@ class ListAuthenticatorOpsLogs extends Rpc
  */
 class ListAuthenticators extends Rpc
 {
+}
+
+/**
+ * @method string getBeginDate()
+ * @method $this withBeginDate($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFinalDate()
+ * @method $this withFinalDate($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListCostUnitOrders extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+}
+
+/**
+ * @method string getStatisticTimeMin()
+ * @method $this withStatisticTimeMin($value)
+ * @method string getAliOrderCode()
+ * @method $this withAliOrderCode($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStatisticTimeMax()
+ * @method $this withStatisticTimeMax($value)
+ */
+class ListOrderConsumeStatisticRecords extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
 }
 
 /**
