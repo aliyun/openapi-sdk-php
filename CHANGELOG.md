@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1431 - 2022-8-9
+- Support API ARMInstance.
+- Support Control ARM API.
+
+
 ## 1.8.1430 - 2022-8-8
 - ListOrderConsumeStatisticRecords add AliOrderCode.
 

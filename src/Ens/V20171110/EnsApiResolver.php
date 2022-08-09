@@ -121,6 +121,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExportImage exportImage(array $options = [])
  * @method ExportMeasurementData exportMeasurementData(array $options = [])
  * @method GetDeviceInternetPort getDeviceInternetPort(array $options = [])
+ * @method GetOssStorageAndAccByBuckets getOssStorageAndAccByBuckets(array $options = [])
  * @method ImportKeyPair importKeyPair(array $options = [])
  * @method JoinPublicIpsToEpnInstance joinPublicIpsToEpnInstance(array $options = [])
  * @method JoinSecurityGroup joinSecurityGroup(array $options = [])
@@ -145,6 +146,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RebootARMServerInstance rebootARMServerInstance(array $options = [])
  * @method RebootInstance rebootInstance(array $options = [])
  * @method ReInitDisk reInitDisk(array $options = [])
+ * @method ReinitInstance reinitInstance(array $options = [])
  * @method ReleaseARMServerInstance releaseARMServerInstance(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
  * @method ReleasePostPaidInstance releasePostPaidInstance(array $options = [])
@@ -794,6 +796,8 @@ class CreateLoadBalancerUDPListener extends Rpc
 /**
  * @method string getEnsRegionId()
  * @method $this withEnsRegionId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method string getName()
@@ -836,6 +840,8 @@ class CreateSecurityGroup extends Rpc
  * @method $this withSnatIp($value)
  * @method string getSourceVSwitchId()
  * @method $this withSourceVSwitchId($value)
+ * @method string getSourceNetworkId()
+ * @method $this withSourceNetworkId($value)
  * @method string getNatGatewayId()
  * @method $this withNatGatewayId($value)
  * @method string getSnatEntryName()
@@ -1994,6 +2000,17 @@ class GetDeviceInternetPort extends Rpc
 }
 
 /**
+ * @method string getBucketList()
+ * @method $this withBucketList($value)
+ */
+class GetOssStorageAndAccByBuckets extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
  * @method string getPublicKeyBody()
@@ -2315,6 +2332,54 @@ class RebootInstance extends Rpc
  */
 class ReInitDisk extends Rpc
 {
+}
+
+/**
+ * @method string getImageId()
+ * @method string getPassword()
+ * @method string getInstanceId()
+ */
+class ReinitInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageId($value)
+    {
+        $this->data['ImageId'] = $value;
+        $this->options['form_params']['ImageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPassword($value)
+    {
+        $this->data['Password'] = $value;
+        $this->options['form_params']['Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
