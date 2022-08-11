@@ -5560,6 +5560,8 @@ class GetMetaTableOutput extends Rpc
 }
 
 /**
+ * @method string getSortCriterion()
+ * @method $this withSortCriterion($value)
  * @method string getDataSourceType()
  * @method $this withDataSourceType($value)
  * @method string getClusterId()

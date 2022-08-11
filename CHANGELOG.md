@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1432 - 2022-8-11
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1431 - 2022-8-9
 - Support API ARMInstance.
 - Support Control ARM API.
