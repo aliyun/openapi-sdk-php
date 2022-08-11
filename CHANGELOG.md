@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1434 - 2022-8-11
+- AMP version.
+
+
 ## 1.8.1433 - 2022-8-11
 - Fix ListManagedRules bugs.
 
