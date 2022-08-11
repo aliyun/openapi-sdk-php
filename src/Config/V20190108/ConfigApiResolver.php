@@ -43,6 +43,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2019-01-08';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -51,9 +54,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class ActiveConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -62,9 +62,6 @@ class ActiveConfigRules extends Rpc
  */
 class DeleteConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -155,6 +152,9 @@ class DescribeDiscoveredResource extends Rpc
  */
 class DescribeEvaluationResults extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -171,6 +171,9 @@ class DescribeEvaluationResults extends Rpc
  */
 class GetAggregateDiscoveredResource extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -271,9 +274,6 @@ class GetSupportedResourceTypes extends Rpc
  */
 class ListAggregateDiscoveredResources extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -293,6 +293,8 @@ class ListAggregateDiscoveredResources extends Rpc
  * @method $this withPageSize($value)
  * @method string getCompliancePackId()
  * @method $this withCompliancePackId($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  * @method string getComplianceType()
  * @method $this withComplianceType($value)
  * @method string getConfigRuleSceneId()
@@ -330,9 +332,6 @@ class ListConfigRules extends Rpc
  */
 class ListDiscoveredResources extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -343,9 +342,6 @@ class ListDiscoveredResources extends Rpc
  */
 class ListRemediationTemplates extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -371,9 +367,6 @@ class ListRemediationTemplates extends Rpc
  */
 class PutConfigRule extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -577,9 +570,6 @@ class PutConfigRule extends Rpc
 class PutConfigurationRecorder extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -607,9 +597,6 @@ class PutConfigurationRecorder extends Rpc
  */
 class PutDeliveryChannel extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -737,9 +724,6 @@ class PutDeliveryChannel extends Rpc
 class PutEvaluations extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -794,9 +778,6 @@ class PutEvaluations extends Rpc
  */
 class StartConfigRuleEvaluation extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -804,9 +785,6 @@ class StartConfigRuleEvaluation extends Rpc
  */
 class StartConfigurationRecorder extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -828,7 +806,4 @@ class StartConfigurationRecorder extends Rpc
  */
 class StopConfigRules extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }

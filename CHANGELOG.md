@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1433 - 2022-8-11
+- Fix ListManagedRules bugs.
+
+
 ## 1.8.1432 - 2022-8-11
 - Generated 2020-05-18 for `dataworks-public`.
 
