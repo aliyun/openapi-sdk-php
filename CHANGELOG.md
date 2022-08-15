@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1435 - 2022-8-15
+- update Lindorm OpenAPI.
+
+
 ## 1.8.1434 - 2022-8-11
 - AMP version.
 
