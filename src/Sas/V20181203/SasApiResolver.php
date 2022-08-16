@@ -13,6 +13,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateBackupPolicy createBackupPolicy(array $options = [])
  * @method CreateFileDetect createFileDetect(array $options = [])
  * @method CreateFileDetectUploadUrl createFileDetectUploadUrl(array $options = [])
+ * @method CreateHoneypot createHoneypot(array $options = [])
+ * @method CreateHoneypotNode createHoneypotNode(array $options = [])
+ * @method CreateHoneypotProbe createHoneypotProbe(array $options = [])
  * @method CreateOrUpdateAssetGroup createOrUpdateAssetGroup(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method CreateSimilarSecurityEventsQueryTask createSimilarSecurityEventsQueryTask(array $options = [])
@@ -148,6 +151,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeWarningMachines describeWarningMachines(array $options = [])
  * @method DescribeWebLockBindList describeWebLockBindList(array $options = [])
  * @method DescribeWebLockConfigList describeWebLockConfigList(array $options = [])
+ * @method DescribeWebLockFileEvents describeWebLockFileEvents(array $options = [])
  * @method ExportRecord exportRecord(array $options = [])
  * @method ExportVul exportVul(array $options = [])
  * @method ExportWarning exportWarning(array $options = [])
@@ -164,6 +168,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InstallCloudMonitor installCloudMonitor(array $options = [])
  * @method ListCheckInstanceResult listCheckInstanceResult(array $options = [])
  * @method ListCheckResult listCheckResult(array $options = [])
+ * @method ListHoneypot listHoneypot(array $options = [])
+ * @method ListHoneypotAlarmEvents listHoneypotAlarmEvents(array $options = [])
+ * @method ListHoneypotNode listHoneypotNode(array $options = [])
  * @method ListVulAutoRepairConfig listVulAutoRepairConfig(array $options = [])
  * @method ModifyAntiBruteForceRule modifyAntiBruteForceRule(array $options = [])
  * @method ModifyAssetGroup modifyAssetGroup(array $options = [])
@@ -418,6 +425,141 @@ class CreateFileDetectUploadUrl extends Rpc
 	    $this->data['HashKeyList'] = $hashKeyList;
 		foreach ($hashKeyList as $i => $iValue) {
 			$this->options['query']['HashKeyList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getHoneypotName()
+ * @method $this withHoneypotName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getHoneypotImageId()
+ * @method $this withHoneypotImageId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getMeta()
+ * @method $this withMeta($value)
+ * @method string getHoneypotImageName()
+ * @method $this withHoneypotImageName($value)
+ */
+class CreateHoneypot extends Rpc
+{
+}
+
+/**
+ * @method string getAvailableProbeNum()
+ * @method $this withAvailableProbeNum($value)
+ * @method string getAllowHoneypotAccessInternet()
+ * @method $this withAllowHoneypotAccessInternet($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
+ * @method array getSecurityGroupProbeIpList()
+ * @method string getNodeVersion()
+ * @method $this withNodeVersion($value)
+ */
+class CreateHoneypotNode extends Rpc
+{
+
+    /**
+     * @param array $securityGroupProbeIpList
+     *
+     * @return $this
+     */
+	public function withSecurityGroupProbeIpList(array $securityGroupProbeIpList)
+	{
+	    $this->data['SecurityGroupProbeIpList'] = $securityGroupProbeIpList;
+		foreach ($securityGroupProbeIpList as $i => $iValue) {
+			$this->options['query']['SecurityGroupProbeIpList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getControlNodeId()
+ * @method $this withControlNodeId($value)
+ * @method string getProxyIp()
+ * @method $this withProxyIp($value)
+ * @method string getPing()
+ * @method $this withPing($value)
+ * @method string getProbeId()
+ * @method $this withProbeId($value)
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getProbeVersion()
+ * @method $this withProbeVersion($value)
+ * @method array getServiceIpList()
+ * @method array getHoneypotBindList()
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getArp()
+ * @method $this withArp($value)
+ * @method string getProbeType()
+ * @method $this withProbeType($value)
+ * @method string getProbeStatus()
+ * @method $this withProbeStatus($value)
+ * @method string getBusinessGroupId()
+ * @method $this withBusinessGroupId($value)
+ * @method string getDisplayName()
+ * @method $this withDisplayName($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class CreateHoneypotProbe extends Rpc
+{
+
+    /**
+     * @param array $serviceIpList
+     *
+     * @return $this
+     */
+	public function withServiceIpList(array $serviceIpList)
+	{
+	    $this->data['ServiceIpList'] = $serviceIpList;
+		foreach ($serviceIpList as $i => $iValue) {
+			$this->options['query']['ServiceIpList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $honeypotBindList
+     *
+     * @return $this
+     */
+	public function withHoneypotBindList(array $honeypotBindList)
+	{
+	    $this->data['HoneypotBindList'] = $honeypotBindList;
+		foreach ($honeypotBindList as $depth1 => $depth1Value) {
+			foreach ($depth1Value['BindPortList'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['StartPort'])){
+					$this->options['query']['HoneypotBindList.' . ($depth1 + 1) . '.BindPortList.' . ($depth2 + 1) . '.StartPort'] = $depth2Value['StartPort'];
+				}
+				if(isset($depth2Value['BindPort'])){
+					$this->options['query']['HoneypotBindList.' . ($depth1 + 1) . '.BindPortList.' . ($depth2 + 1) . '.BindPort'] = $depth2Value['BindPort'];
+				}
+				if(isset($depth2Value['Fixed'])){
+					$this->options['query']['HoneypotBindList.' . ($depth1 + 1) . '.BindPortList.' . ($depth2 + 1) . '.Fixed'] = $depth2Value['Fixed'];
+				}
+				if(isset($depth2Value['EndPort'])){
+					$this->options['query']['HoneypotBindList.' . ($depth1 + 1) . '.BindPortList.' . ($depth2 + 1) . '.EndPort'] = $depth2Value['EndPort'];
+				}
+				if(isset($depth2Value['TargetPort'])){
+					$this->options['query']['HoneypotBindList.' . ($depth1 + 1) . '.BindPortList.' . ($depth2 + 1) . '.TargetPort'] = $depth2Value['TargetPort'];
+				}
+			}
+			if(isset($depth1Value['HoneypotId'])){
+				$this->options['query']['HoneypotBindList.' . ($depth1 + 1) . '.HoneypotId'] = $depth1Value['HoneypotId'];
+			}
 		}
 
 		return $this;
@@ -988,6 +1130,8 @@ class DescribeCheckWarningDetail extends Rpc
  * @method $this withCurrentPage($value)
  * @method string getRiskId()
  * @method $this withRiskId($value)
+ * @method string getRiskStatus()
+ * @method $this withRiskStatus($value)
  */
 class DescribeCheckWarnings extends Rpc
 {
@@ -1816,6 +1960,9 @@ class DescribeNoticeConfig extends Rpc
 }
 
 /**
+ * @method array getStatusList()
+ * @method string getSource()
+ * @method $this withSource($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getRootTaskId()
@@ -1824,15 +1971,34 @@ class DescribeNoticeConfig extends Rpc
  * @method $this withEndTimeQuery($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getFinish()
+ * @method $this withFinish($value)
  * @method string getTaskType()
  * @method $this withTaskType($value)
  * @method string getStartTimeQuery()
  * @method $this withStartTimeQuery($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getTargetQuery()
+ * @method $this withTargetQuery($value)
  */
 class DescribeOnceTask extends Rpc
 {
+
+    /**
+     * @param array $statusList
+     *
+     * @return $this
+     */
+	public function withStatusList(array $statusList)
+	{
+	    $this->data['StatusList'] = $statusList;
+		foreach ($statusList as $i => $iValue) {
+			$this->options['query']['StatusList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2886,6 +3052,8 @@ class DescribeWarningExportInfo extends Rpc
  * @method $this withMachineName($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getHaveRisk()
+ * @method $this withHaveRisk($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getClusterId()
@@ -2928,6 +3096,28 @@ class DescribeWebLockBindList extends Rpc
  * @method $this withLang($value)
  */
 class DescribeWebLockConfigList extends Rpc
+{
+}
+
+/**
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTsEnd()
+ * @method $this withTsEnd($value)
+ * @method string getProcessName()
+ * @method $this withProcessName($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getDealed()
+ * @method $this withDealed($value)
+ * @method string getTsBegin()
+ * @method $this withTsBegin($value)
+ */
+class DescribeWebLockFileEvents extends Rpc
 {
 }
 
@@ -3491,6 +3681,165 @@ class ListCheckResult extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getHoneypotName()
+ * @method $this withHoneypotName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
+ * @method array getHoneypotIds()
+ */
+class ListHoneypot extends Rpc
+{
+
+    /**
+     * @param array $honeypotIds
+     *
+     * @return $this
+     */
+	public function withHoneypotIds(array $honeypotIds)
+	{
+	    $this->data['HoneypotIds'] = $honeypotIds;
+		foreach ($honeypotIds as $i => $iValue) {
+			$this->options['query']['HoneypotIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getSrcIp()
+ * @method array getRiskLevelList()
+ * @method string getPageSize()
+ * @method string getDstIp()
+ * @method string getDealed()
+ * @method string getCurrentPage()
+ * @method string getRequestId()
+ */
+class ListHoneypotAlarmEvents extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSrcIp($value)
+    {
+        $this->data['SrcIp'] = $value;
+        $this->options['form_params']['SrcIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $riskLevelList
+     *
+     * @return $this
+     */
+	public function withRiskLevelList(array $riskLevelList)
+	{
+	    $this->data['RiskLevelList'] = $riskLevelList;
+		foreach ($riskLevelList as $i => $iValue) {
+			$this->options['form_params']['RiskLevelList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDstIp($value)
+    {
+        $this->data['DstIp'] = $value;
+        $this->options['form_params']['DstIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDealed($value)
+    {
+        $this->data['Dealed'] = $value;
+        $this->options['form_params']['Dealed'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestId($value)
+    {
+        $this->data['RequestId'] = $value;
+        $this->options['form_params']['RequestId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
+ */
+class ListHoneypotNode extends Rpc
+{
 }
 
 /**
