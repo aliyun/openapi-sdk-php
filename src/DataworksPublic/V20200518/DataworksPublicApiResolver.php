@@ -159,7 +159,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListFileVersions listFileVersions(array $options = [])
  * @method ListFolders listFolders(array $options = [])
  * @method ListHistoryTasksForResourceGroup listHistoryTasksForResourceGroup(array $options = [])
+ * @method ListInnerNodes listInnerNodes(array $options = [])
  * @method ListInstanceAmount listInstanceAmount(array $options = [])
+ * @method ListInstanceHistory listInstanceHistory(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListManualDagInstances listManualDagInstances(array $options = [])
  * @method ListMetaDB listMetaDB(array $options = [])
@@ -5051,6 +5053,7 @@ class GetInstanceErrorRank extends Rpc
 /**
  * @method string getProjectEnv()
  * @method string getInstanceId()
+ * @method string getInstanceHistoryId()
  */
 class GetInstanceLog extends Rpc
 {
@@ -5077,6 +5080,19 @@ class GetInstanceLog extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceHistoryId($value)
+    {
+        $this->data['InstanceHistoryId'] = $value;
+        $this->options['form_params']['InstanceHistoryId'] = $value;
 
         return $this;
     }
@@ -8112,6 +8128,110 @@ class ListHistoryTasksForResourceGroup extends Rpc
 }
 
 /**
+ * @method string getProjectEnv()
+ * @method string getOuterNodeId()
+ * @method string getPageNumber()
+ * @method string getNodeName()
+ * @method string getProgramType()
+ * @method string getPageSize()
+ * @method string getProjectId()
+ */
+class ListInnerNodes extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOuterNodeId($value)
+    {
+        $this->data['OuterNodeId'] = $value;
+        $this->options['form_params']['OuterNodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeName($value)
+    {
+        $this->data['NodeName'] = $value;
+        $this->options['form_params']['NodeName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProgramType($value)
+    {
+        $this->data['ProgramType'] = $value;
+        $this->options['form_params']['ProgramType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getBeginDate()
  * @method string getEndDate()
  * @method string getProjectId()
@@ -8154,6 +8274,40 @@ class ListInstanceAmount extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProjectEnv()
+ * @method string getInstanceId()
+ */
+class ListInstanceHistory extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectEnv($value)
+    {
+        $this->data['ProjectEnv'] = $value;
+        $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -9851,6 +10005,7 @@ class RevokeTablePermission extends Rpc
  * @method string getRootNodeId()
  * @method string getBizBeginTime()
  * @method string getEndBizDate()
+ * @method string getStartFutureInstanceImmediately()
  * @method string getIncludeNodeIds()
  * @method string getBizEndTime()
  * @method string getName()
@@ -9934,6 +10089,19 @@ class RunCycleDagNodes extends Rpc
     {
         $this->data['EndBizDate'] = $value;
         $this->options['form_params']['EndBizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartFutureInstanceImmediately($value)
+    {
+        $this->data['StartFutureInstanceImmediately'] = $value;
+        $this->options['form_params']['StartFutureInstanceImmediately'] = $value;
 
         return $this;
     }

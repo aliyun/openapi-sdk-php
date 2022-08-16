@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1437 - 2022-8-16
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1436 - 2022-8-16
 - Update Lindorm OpenAPI.
 
