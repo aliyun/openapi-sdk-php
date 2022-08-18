@@ -268,6 +268,8 @@ class DescribeNavigationConfig extends Rpc
 }
 
 /**
+ * @method string getNeedVoiceSliceRecording()
+ * @method $this withNeedVoiceSliceRecording($value)
  * @method string getConversationId()
  * @method $this withConversationId($value)
  * @method string getInstanceId()
@@ -965,6 +967,8 @@ class QueryConversations extends Rpc
 }
 
 /**
+ * @method string getVoiceSliceRecordingList()
+ * @method $this withVoiceSliceRecordingList($value)
  * @method string getConversationId()
  * @method $this withConversationId($value)
  * @method string getStartTime()

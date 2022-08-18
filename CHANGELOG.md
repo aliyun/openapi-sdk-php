@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1441 - 2022-8-18
+- Supported new features etc.
+
+
 ## 1.8.1440 - 2022-8-18
 - Supported new features for outbound.
 
