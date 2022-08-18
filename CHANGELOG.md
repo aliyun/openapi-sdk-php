@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1439 - 2022-8-18
+- Bump version.
+
+
 ## 1.8.1438 - 2022-8-16
 - Change GetFileDetectResult Public.
 
