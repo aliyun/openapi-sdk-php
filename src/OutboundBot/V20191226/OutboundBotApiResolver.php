@@ -588,6 +588,8 @@ class CreateOutboundCallNumber extends Rpc
  * @method array getScriptWaveform()
  * @method string getAsrConfig()
  * @method $this withAsrConfig($value)
+ * @method string getMiniPlaybackConfigListJsonString()
+ * @method $this withMiniPlaybackConfigListJsonString($value)
  * @method string getNewBargeInEnable()
  * @method $this withNewBargeInEnable($value)
  * @method string getMiniPlaybackEnable()
@@ -1088,6 +1090,8 @@ class DismissNumberDistrictInfoParsingResult extends Rpc
 }
 
 /**
+ * @method string getNeedVoiceSliceRecording()
+ * @method $this withNeedVoiceSliceRecording($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getTaskId()
@@ -1824,6 +1828,8 @@ class ModifyOutboundCallNumber extends Rpc
  * @method array getScriptWaveform()
  * @method string getAsrConfig()
  * @method $this withAsrConfig($value)
+ * @method string getMiniPlaybackConfigListJsonString()
+ * @method $this withMiniPlaybackConfigListJsonString($value)
  * @method string getNlsConfig()
  * @method $this withNlsConfig($value)
  * @method string getNewBargeInEnable()

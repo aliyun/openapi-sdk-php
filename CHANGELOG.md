@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1440 - 2022-8-18
+- Supported new features for outbound.
+
+
 ## 1.8.1439 - 2022-8-18
 - Bump version.
 
