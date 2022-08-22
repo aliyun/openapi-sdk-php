@@ -221,8 +221,12 @@ class ListDbfs extends Rpc
 }
 
 /**
+ * @method string getFilterKey()
+ * @method $this withFilterKey($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getFilterValue()
+ * @method $this withFilterValue($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  */
