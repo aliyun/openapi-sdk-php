@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1442 - 2022-8-22
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1441 - 2022-8-18
 - Supported new features etc.
 
