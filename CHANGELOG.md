@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1444 - 2022-8-22
+- Change GetFileDetectResult Public.
+
+
 ## 1.8.1443 - 2022-8-22
 - Automatically generate sdk tasks.
 

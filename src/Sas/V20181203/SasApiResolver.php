@@ -411,6 +411,7 @@ class CreateFileDetect extends Rpc
  * @method array getHashKeyList()
  * @method string getType()
  * @method $this withType($value)
+ * @method array getHashKeyContextList()
  */
 class CreateFileDetectUploadUrl extends Rpc
 {
@@ -425,6 +426,26 @@ class CreateFileDetectUploadUrl extends Rpc
 	    $this->data['HashKeyList'] = $hashKeyList;
 		foreach ($hashKeyList as $i => $iValue) {
 			$this->options['query']['HashKeyList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $hashKeyContextList
+     *
+     * @return $this
+     */
+	public function withHashKeyContextList(array $hashKeyContextList)
+	{
+	    $this->data['HashKeyContextList'] = $hashKeyContextList;
+		foreach ($hashKeyContextList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['HashKey'])){
+				$this->options['query']['HashKeyContextList.' . ($depth1 + 1) . '.HashKey'] = $depth1Value['HashKey'];
+			}
+			if(isset($depth1Value['FileSize'])){
+				$this->options['query']['HashKeyContextList.' . ($depth1 + 1) . '.FileSize'] = $depth1Value['FileSize'];
+			}
 		}
 
 		return $this;
