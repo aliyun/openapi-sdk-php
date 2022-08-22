@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1445 - 2022-8-22
+- Fix CreateSyntheticTask api.
+
+
 ## 1.8.1444 - 2022-8-22
 - Change GetFileDetectResult Public.
 
