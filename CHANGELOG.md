@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1446 - 2022-8-24
+- Update ScreenChestCT.
+
+
 ## 1.8.1445 - 2022-8-22
 - Fix CreateSyntheticTask api.
 
