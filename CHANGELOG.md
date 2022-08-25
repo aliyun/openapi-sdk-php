@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1447 - 2022-8-25
+- Add kms apis.
+
+
 ## 1.8.1446 - 2022-8-24
 - Update ScreenChestCT.
 
