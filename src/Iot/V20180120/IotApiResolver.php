@@ -67,6 +67,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDeviceDynamicGroup createDeviceDynamicGroup(array $options = [])
  * @method CreateDeviceGroup createDeviceGroup(array $options = [])
  * @method CreateDeviceTunnel createDeviceTunnel(array $options = [])
+ * @method CreateDownloadDataJob createDownloadDataJob(array $options = [])
  * @method CreateEdgeDriver createEdgeDriver(array $options = [])
  * @method CreateEdgeDriverVersion createEdgeDriverVersion(array $options = [])
  * @method CreateEdgeInstance createEdgeInstance(array $options = [])
@@ -156,6 +157,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDeviceStatus getDeviceStatus(array $options = [])
  * @method GetDeviceTunnelShareStatus getDeviceTunnelShareStatus(array $options = [])
  * @method GetDeviceTunnelStatus getDeviceTunnelStatus(array $options = [])
+ * @method GetDownloadFile getDownloadFile(array $options = [])
  * @method GetEdgeDriverVersion getEdgeDriverVersion(array $options = [])
  * @method GetEdgeInstance getEdgeInstance(array $options = [])
  * @method GetEdgeInstanceDeployment getEdgeInstanceDeployment(array $options = [])
@@ -255,6 +257,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDeviceServiceData queryDeviceServiceData(array $options = [])
  * @method QueryDeviceSpeech queryDeviceSpeech(array $options = [])
  * @method QueryDeviceStatistics queryDeviceStatistics(array $options = [])
+ * @method QueryDeviceSubTopic queryDeviceSubTopic(array $options = [])
  * @method QueryDeviceTunnel queryDeviceTunnel(array $options = [])
  * @method QueryDynamicGroupDevices queryDynamicGroupDevices(array $options = [])
  * @method QueryEdgeDriver queryEdgeDriver(array $options = [])
@@ -3926,6 +3929,78 @@ class CreateDeviceGroup extends Rpc
  */
 class CreateDeviceTunnel extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getFileConfig()
+ * @method $this withFileConfig($value)
+ * @method string getIotInstanceId()
+ * @method string getContext()
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDownloadDataType()
+ * @method $this withDownloadDataType($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class CreateDownloadDataJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContext($value)
+    {
+        $this->data['Context'] = $value;
+        $this->options['form_params']['Context'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -8776,6 +8851,70 @@ class GetDeviceTunnelShareStatus extends Rpc
  */
 class GetDeviceTunnelStatus extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method string getContext()
+ * @method string getLongJobId()
+ * @method $this withLongJobId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class GetDownloadFile extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContext($value)
+    {
+        $this->data['Context'] = $value;
+        $this->options['form_params']['Context'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -13779,6 +13918,46 @@ class QueryDeviceSpeech extends Rpc
  * @method string getApiRevision()
  */
 class QueryDeviceStatistics extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryDeviceSubTopic extends Rpc
 {
 
     /**
