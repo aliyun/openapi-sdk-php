@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1454 - 2022-8-31
+- Change GetFileDetectResult Public.
+
+
 ## 1.8.1453 - 2022-8-31
 - Update ListFpShotFiles and ImAudit.
 

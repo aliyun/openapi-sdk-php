@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddVpcHoneyPot addVpcHoneyPot(array $options = [])
  * @method CheckQuaraFileId checkQuaraFileId(array $options = [])
  * @method CheckSecurityEventId checkSecurityEventId(array $options = [])
+ * @method CheckUserHasEcs checkUserHasEcs(array $options = [])
  * @method CreateAntiBruteForceRule createAntiBruteForceRule(array $options = [])
  * @method CreateBackupPolicy createBackupPolicy(array $options = [])
  * @method CreateFileDetect createFileDetect(array $options = [])
@@ -319,6 +320,18 @@ class CheckSecurityEventId extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ */
+class CheckUserHasEcs extends Rpc
+{
 }
 
 /**
