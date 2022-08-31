@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1457 - 2022-8-31
+- Support STS.
+
+
 ## 1.8.1456 - 2022-8-31
 - Support More Open Api.
 
