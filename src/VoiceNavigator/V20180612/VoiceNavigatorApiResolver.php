@@ -31,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExportStatisticalData exportStatisticalData(array $options = [])
  * @method GenerateUploadUrl generateUploadUrl(array $options = [])
  * @method GetAsrConfig getAsrConfig(array $options = [])
+ * @method GetRealTimeConcurrency getRealTimeConcurrency(array $options = [])
  * @method ListChatbotInstances listChatbotInstances(array $options = [])
  * @method ListConversationDetails listConversationDetails(array $options = [])
  * @method ListConversations listConversations(array $options = [])
@@ -758,6 +759,17 @@ class GenerateUploadUrl extends Rpc
  */
 class GetAsrConfig extends Rpc
 {
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetRealTimeConcurrency extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**

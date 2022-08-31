@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1450 - 2022-8-31
+- Supported new features etc.
+
+
 ## 1.8.1449 - 2022-8-25
 - Iot_20180120 Old sdk.
 
