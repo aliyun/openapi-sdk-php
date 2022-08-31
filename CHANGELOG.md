@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1459 - 2022-8-31
+- Support STS.
+
+
 ## 1.8.1458 - 2022-8-31
 - Generated 2020-05-18 for `dataworks-public`.
 
