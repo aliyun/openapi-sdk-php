@@ -6261,6 +6261,7 @@ class ImportDataSources extends Rpc
  * @method string getBeginTime()
  * @method string getAlertMethods()
  * @method string getPageNumber()
+ * @method string getBaselineId()
  * @method string getRemindId()
  * @method string getPageSize()
  * @method string getAlertRuleTypes()
@@ -6329,6 +6330,19 @@ class ListAlertMessages extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBaselineId($value)
+    {
+        $this->data['BaselineId'] = $value;
+        $this->options['form_params']['BaselineId'] = $value;
 
         return $this;
     }
@@ -8327,6 +8341,7 @@ class ListInstanceHistory extends Rpc
  * @method string getPageSize()
  * @method string getNodeId()
  * @method string getProjectId()
+ * @method string getStatus()
  */
 class ListInstances extends Rpc
 {
@@ -8496,6 +8511,19 @@ class ListInstances extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
 
         return $this;
     }
