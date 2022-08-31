@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1453 - 2022-8-31
+- Update ListFpShotFiles and ImAudit.
+
+
 ## 1.8.1452 - 2022-8-31
 - Support create image with boot mode.
 - Provide image boot mode info in DescribeImages.
