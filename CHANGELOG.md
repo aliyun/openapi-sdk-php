@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1452 - 2022-8-31
+- Support create image with boot mode.
+- Provide image boot mode info in DescribeImages.
+
+
 ## 1.8.1451 - 2022-8-31
 - Add API.
 
