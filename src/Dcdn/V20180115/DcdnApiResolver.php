@@ -102,6 +102,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnIpaService describeDcdnIpaService(array $options = [])
  * @method DescribeDcdnIpaUserDomains describeDcdnIpaUserDomains(array $options = [])
  * @method DescribeDcdnIpInfo describeDcdnIpInfo(array $options = [])
+ * @method DescribeDcdnL2Vips describeDcdnL2Vips(array $options = [])
  * @method DescribeDcdnL2VipsByDomain describeDcdnL2VipsByDomain(array $options = [])
  * @method DescribeDcdnRealTimeDeliveryField describeDcdnRealTimeDeliveryField(array $options = [])
  * @method DescribeDcdnRefreshQuota describeDcdnRefreshQuota(array $options = [])
@@ -2358,6 +2359,14 @@ class DescribeDcdnIpaUserDomains extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeDcdnIpInfo extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ */
+class DescribeDcdnL2Vips extends Rpc
 {
 }
 

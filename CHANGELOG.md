@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1460 - 2022-9-1
+- Add DescribeDcdnL2Vips.
+
+
 ## 1.8.1459 - 2022-8-31
 - Support STS.
 
