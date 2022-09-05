@@ -53,6 +53,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteScenario deleteScenario(array $options = [])
  * @method DeleteSilencePolicy deleteSilencePolicy(array $options = [])
  * @method DeleteSourceMap deleteSourceMap(array $options = [])
+ * @method DeleteSyntheticTask deleteSyntheticTask(array $options = [])
  * @method DeleteTraceApp deleteTraceApp(array $options = [])
  * @method DeleteWebhookContact deleteWebhookContact(array $options = [])
  * @method DescribeContactGroups describeContactGroups(array $options = [])
@@ -69,6 +70,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetClusterAllUrl getClusterAllUrl(array $options = [])
  * @method GetExploreUrl getExploreUrl(array $options = [])
  * @method GetIntegrationState getIntegrationState(array $options = [])
+ * @method GetManagedPrometheusStatus getManagedPrometheusStatus(array $options = [])
  * @method GetMultipleTrace getMultipleTrace(array $options = [])
  * @method GetOnCallSchedulesDetail getOnCallSchedulesDetail(array $options = [])
  * @method GetPrometheusApiToken getPrometheusApiToken(array $options = [])
@@ -77,6 +79,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRetcodeShareUrl getRetcodeShareUrl(array $options = [])
  * @method GetSourceMapInfo getSourceMapInfo(array $options = [])
  * @method GetStack getStack(array $options = [])
+ * @method GetSyntheticTaskDetail getSyntheticTaskDetail(array $options = [])
+ * @method GetSyntheticTaskList getSyntheticTaskList(array $options = [])
  * @method GetSyntheticTaskMonitors getSyntheticTaskMonitors(array $options = [])
  * @method GetTrace getTrace(array $options = [])
  * @method GetTraceApp getTraceApp(array $options = [])
@@ -84,6 +88,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InstallCmsExporter installCmsExporter(array $options = [])
  * @method InstallManagedPrometheus installManagedPrometheus(array $options = [])
  * @method ListActivatedAlerts listActivatedAlerts(array $options = [])
+ * @method ListAlertEvents listAlertEvents(array $options = [])
  * @method ListAlerts listAlerts(array $options = [])
  * @method ListClusterFromGrafana listClusterFromGrafana(array $options = [])
  * @method ListCmsInstances listCmsInstances(array $options = [])
@@ -130,6 +135,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetRetcodeShareStatus setRetcodeShareStatus(array $options = [])
  * @method StartAlert startAlert(array $options = [])
  * @method StopAlert stopAlert(array $options = [])
+ * @method SwitchSyntheticTaskStatus switchSyntheticTaskStatus(array $options = [])
+ * @method SyncRecordingRules syncRecordingRules(array $options = [])
  * @method TurnOnSecondSwitch turnOnSecondSwitch(array $options = [])
  * @method UninstallManagedPrometheus uninstallManagedPrometheus(array $options = [])
  * @method UninstallPromCluster uninstallPromCluster(array $options = [])
@@ -1536,6 +1543,8 @@ class CreateRetcodeApp extends Rpc
  * @method $this withTaskType($value)
  * @method string getIntervalType()
  * @method $this withIntervalType($value)
+ * @method string getUpdateTask()
+ * @method $this withUpdateTask($value)
  * @method string getTaskName()
  * @method $this withTaskName($value)
  * @method string getMonitorList()
@@ -1807,6 +1816,28 @@ class DeleteSourceMap extends Rpc
 }
 
 /**
+ * @method array getTaskIds()
+ */
+class DeleteSyntheticTask extends Rpc
+{
+
+    /**
+     * @param array $taskIds
+     *
+     * @return $this
+     */
+	public function withTaskIds(array $taskIds)
+	{
+	    $this->data['TaskIds'] = $taskIds;
+		foreach ($taskIds as $i => $iValue) {
+			$this->options['query']['TaskIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getPid()
@@ -1915,6 +1946,8 @@ class GetAgentDownloadUrl extends Rpc
 /**
  * @method string getAlertStatus()
  * @method $this withAlertStatus($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getAlertNames()
  * @method $this withAlertNames($value)
  * @method string getAlertType()
@@ -1983,6 +2016,16 @@ class GetExploreUrl extends Rpc
  * @method $this withClusterId($value)
  */
 class GetIntegrationState extends Rpc
+{
+}
+
+/**
+ * @method string getClusterType()
+ * @method $this withClusterType($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class GetManagedPrometheusStatus extends Rpc
 {
 }
 
@@ -2085,6 +2128,36 @@ class GetStack extends Rpc
 {
 }
 
+/**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetSyntheticTaskDetail extends Rpc
+{
+}
+
+/**
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getTaskName()
+ * @method $this withTaskName($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getTaskStatus()
+ * @method $this withTaskStatus($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ */
+class GetSyntheticTaskList extends Rpc
+{
+}
+
 class GetSyntheticTaskMonitors extends Rpc
 {
 }
@@ -2174,6 +2247,26 @@ class ListActivatedAlerts extends Rpc
 }
 
 /**
+ * @method string getAlertName()
+ * @method $this withAlertName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSize()
+ * @method $this withSize($value)
+ * @method string getMatchingConditions()
+ * @method $this withMatchingConditions($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListAlertEvents extends Rpc
+{
+}
+
+/**
  * @method string getSeverity()
  * @method $this withSeverity($value)
  * @method string getIntegrationType()
@@ -2206,6 +2299,8 @@ class ListClusterFromGrafana extends Rpc
 }
 
 /**
+ * @method string getTypeFilter()
+ * @method $this withTypeFilter($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -3006,6 +3101,40 @@ class StartAlert extends Rpc
  * @method $this withProxyUserId($value)
  */
 class StopAlert extends Rpc
+{
+}
+
+/**
+ * @method array getTaskIds()
+ * @method string getSwitchStatus()
+ * @method $this withSwitchStatus($value)
+ */
+class SwitchSyntheticTaskStatus extends Rpc
+{
+
+    /**
+     * @param array $taskIds
+     *
+     * @return $this
+     */
+	public function withTaskIds(array $taskIds)
+	{
+	    $this->data['TaskIds'] = $taskIds;
+		foreach ($taskIds as $i => $iValue) {
+			$this->options['query']['TaskIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getTargetClusters()
+ * @method $this withTargetClusters($value)
+ */
+class SyncRecordingRules extends Rpc
 {
 }
 
