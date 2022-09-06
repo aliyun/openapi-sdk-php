@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddDataForApiSource addDataForApiSource(array $options = [])
+ * @method AddShareTaskDevice addShareTaskDevice(array $options = [])
  * @method AttachDestination attachDestination(array $options = [])
  * @method AttachParserDataSource attachParserDataSource(array $options = [])
  * @method BatchAddDataForApiSource batchAddDataForApiSource(array $options = [])
@@ -130,6 +131,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRuleAction deleteRuleAction(array $options = [])
  * @method DeleteSceneRule deleteSceneRule(array $options = [])
  * @method DeleteSchedulePeriod deleteSchedulePeriod(array $options = [])
+ * @method DeleteShareTaskDevice deleteShareTaskDevice(array $options = [])
  * @method DeleteSoundCode deleteSoundCode(array $options = [])
  * @method DeleteSoundCodeLabel deleteSoundCodeLabel(array $options = [])
  * @method DeleteSoundCodeSchedule deleteSoundCodeSchedule(array $options = [])
@@ -169,9 +171,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRule getRule(array $options = [])
  * @method GetRuleAction getRuleAction(array $options = [])
  * @method GetSceneRule getSceneRule(array $options = [])
+ * @method GetShareTaskByDeviceOpen getShareTaskByDeviceOpen(array $options = [])
  * @method GetSoundCodeAudio getSoundCodeAudio(array $options = [])
  * @method GetSoundCodeSchedule getSoundCodeSchedule(array $options = [])
  * @method GetSpeechDeviceDetail getSpeechDeviceDetail(array $options = [])
+ * @method GetSpeechLicenseDeviceStatistics getSpeechLicenseDeviceStatistics(array $options = [])
  * @method GetSpeechVoice getSpeechVoice(array $options = [])
  * @method GetStudioAppTokenOpen getStudioAppTokenOpen(array $options = [])
  * @method GetThingModelTsl getThingModelTsl(array $options = [])
@@ -213,6 +217,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method NotifyAddThingTopo notifyAddThingTopo(array $options = [])
  * @method OpenIotService openIotService(array $options = [])
  * @method PackageSoundCodeLabelBatchAudio packageSoundCodeLabelBatchAudio(array $options = [])
+ * @method PageQuerySharedSpeechOpen pageQuerySharedSpeechOpen(array $options = [])
  * @method PrintByTemplate printByTemplate(array $options = [])
  * @method Pub pub(array $options = [])
  * @method PubBroadcast pubBroadcast(array $options = [])
@@ -284,8 +289,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryProductCertInfo queryProductCertInfo(array $options = [])
  * @method QueryProductList queryProductList(array $options = [])
  * @method QueryProductTopic queryProductTopic(array $options = [])
+ * @method QueryProjectShareDeviceList queryProjectShareDeviceList(array $options = [])
  * @method QuerySceneRule querySceneRule(array $options = [])
  * @method QuerySchedulePeriodList querySchedulePeriodList(array $options = [])
+ * @method QueryShareTaskDeviceList queryShareTaskDeviceList(array $options = [])
  * @method QuerySolutionDeviceGroupPage querySolutionDeviceGroupPage(array $options = [])
  * @method QuerySoundCodeLabelBatchFailedResult querySoundCodeLabelBatchFailedResult(array $options = [])
  * @method QuerySoundCodeLabelBatchList querySoundCodeLabelBatchList(array $options = [])
@@ -294,6 +301,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySoundCodeScheduleList querySoundCodeScheduleList(array $options = [])
  * @method QuerySpeech querySpeech(array $options = [])
  * @method QuerySpeechDevice querySpeechDevice(array $options = [])
+ * @method QuerySpeechLicenseDeviceList querySpeechLicenseDeviceList(array $options = [])
  * @method QuerySpeechList querySpeechList(array $options = [])
  * @method QuerySpeechPushJob querySpeechPushJob(array $options = [])
  * @method QuerySpeechPushJobDevice querySpeechPushJobDevice(array $options = [])
@@ -312,6 +320,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryThingModelPublished queryThingModelPublished(array $options = [])
  * @method QueryTopicReverseRouteTable queryTopicReverseRouteTable(array $options = [])
  * @method QueryTopicRouteTable queryTopicRouteTable(array $options = [])
+ * @method ReBindLicenseDevice reBindLicenseDevice(array $options = [])
  * @method RecognizeCarNum recognizeCarNum(array $options = [])
  * @method RecognizePictureGeneral recognizePictureGeneral(array $options = [])
  * @method RefreshDeviceTunnelSharePassword refreshDeviceTunnelSharePassword(array $options = [])
@@ -337,6 +346,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetProductCertInfo setProductCertInfo(array $options = [])
  * @method SetStudioProjectCooperation setStudioProjectCooperation(array $options = [])
  * @method SetupStudioAppAuthModeOpen setupStudioAppAuthModeOpen(array $options = [])
+ * @method ShareSpeechByCombination shareSpeechByCombination(array $options = [])
  * @method SpeechByCombination speechByCombination(array $options = [])
  * @method SpeechBySynthesis speechBySynthesis(array $options = [])
  * @method StartParser startParser(array $options = [])
@@ -409,6 +419,98 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class AddDataForApiSource extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method array getIotIdList()
+ * @method string getShareTaskId()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class AddShareTaskDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $iotIdList
+     *
+     * @return $this
+     */
+	public function withIotIdList(array $iotIdList)
+	{
+	    $this->data['IotIdList'] = $iotIdList;
+		foreach ($iotIdList as $i => $iValue) {
+			$this->options['form_params']['IotIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskId($value)
+    {
+        $this->data['ShareTaskId'] = $value;
+        $this->options['form_params']['ShareTaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2660,6 +2762,7 @@ class BindGatewayToEdgeInstance extends Rpc
 }
 
 /**
+ * @method array getDeviceNameList()
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method array getIotIdList()
@@ -2674,6 +2777,21 @@ class BindLicenseDevice extends Rpc
 {
 
     /**
+     * @param array $deviceNameList
+     *
+     * @return $this
+     */
+	public function withDeviceNameList(array $deviceNameList)
+	{
+	    $this->data['DeviceNameList'] = $deviceNameList;
+		foreach ($deviceNameList as $i => $iValue) {
+			$this->options['form_params']['DeviceNameList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
      * @param array $iotIdList
      *
      * @return $this
@@ -2682,7 +2800,7 @@ class BindLicenseDevice extends Rpc
 	{
 	    $this->data['IotIdList'] = $iotIdList;
 		foreach ($iotIdList as $i => $iValue) {
-			$this->options['query']['IotIdList.' . ($i + 1)] = $iValue;
+			$this->options['form_params']['IotIdList.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -7562,6 +7680,84 @@ class DeleteSchedulePeriod extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method array getIotIdList()
+ * @method string getShareTaskId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class DeleteShareTaskDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $iotIdList
+     *
+     * @return $this
+     */
+	public function withIotIdList(array $iotIdList)
+	{
+	    $this->data['IotIdList'] = $iotIdList;
+		foreach ($iotIdList as $i => $iValue) {
+			$this->options['form_params']['IotIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskId($value)
+    {
+        $this->data['ShareTaskId'] = $value;
+        $this->options['form_params']['ShareTaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSoundCode()
  * @method string getIotInstanceId()
  * @method string getApiProduct()
@@ -9376,6 +9572,96 @@ class GetSceneRule extends Rpc
 }
 
 /**
+ * @method string getIotId()
+ * @method string getIotInstanceId()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ */
+class GetShareTaskByDeviceOpen extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIotInstanceId()
  * @method array getSoundCodeList()
  * @method string getApiProduct()
@@ -9522,6 +9808,54 @@ class GetSpeechDeviceDetail extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class GetSpeechLicenseDeviceStatistics extends Rpc
+{
 
     /**
      * @param string $value
@@ -11545,6 +11879,152 @@ class PackageSoundCodeLabelBatchAudio extends Rpc
     {
         $this->data['ApiRevision'] = $value;
         $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageId()
+ * @method string getIotId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getShareTaskCode()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method string getStatus()
+ */
+class PageQuerySharedSpeechOpen extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskCode($value)
+    {
+        $this->data['ShareTaskCode'] = $value;
+        $this->options['form_params']['ShareTaskCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
 
         return $this;
     }
@@ -15091,6 +15571,110 @@ class QueryProductTopic extends Rpc
 }
 
 /**
+ * @method string getPageId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ */
+class QueryProjectShareDeviceList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRuleName()
  * @method $this withRuleName($value)
  * @method string getIotInstanceId()
@@ -15217,6 +15801,110 @@ class QuerySchedulePeriodList extends Rpc
     {
         $this->data['ApiRevision'] = $value;
         $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageId()
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getShareTaskId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ */
+class QueryShareTaskDeviceList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageId($value)
+    {
+        $this->data['PageId'] = $value;
+        $this->options['form_params']['PageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskId($value)
+    {
+        $this->data['ShareTaskId'] = $value;
+        $this->options['form_params']['ShareTaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
 
         return $this;
     }
@@ -15810,6 +16498,104 @@ class QuerySpeechDevice extends Rpc
     {
         $this->data['AvailableSpace'] = $value;
         $this->options['form_params']['AvailableSpace'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageId()
+ * @method $this withPageId($value)
+ * @method array getLicenseStatusList()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getProductKey()
+ * @method string getCheckGroupId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ */
+class QuerySpeechLicenseDeviceList extends Rpc
+{
+
+    /**
+     * @param array $licenseStatusList
+     *
+     * @return $this
+     */
+	public function withLicenseStatusList(array $licenseStatusList)
+	{
+	    $this->data['LicenseStatusList'] = $licenseStatusList;
+		foreach ($licenseStatusList as $i => $iValue) {
+			$this->options['form_params']['LicenseStatusList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCheckGroupId($value)
+    {
+        $this->data['CheckGroupId'] = $value;
+        $this->options['form_params']['CheckGroupId'] = $value;
 
         return $this;
     }
@@ -17129,6 +17915,62 @@ class QueryTopicRouteTable extends Rpc
 }
 
 /**
+ * @method array getDeviceNameList()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getLicenseCode()
+ * @method $this withLicenseCode($value)
+ */
+class ReBindLicenseDevice extends Rpc
+{
+
+    /**
+     * @param array $deviceNameList
+     *
+     * @return $this
+     */
+	public function withDeviceNameList(array $deviceNameList)
+	{
+	    $this->data['DeviceNameList'] = $deviceNameList;
+		foreach ($deviceNameList as $i => $iValue) {
+			$this->options['form_params']['DeviceNameList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getUrl()
  * @method $this withUrl($value)
  * @method string getApiProduct()
@@ -18377,6 +19219,141 @@ class SetupStudioAppAuthModeOpen extends Rpc
  * @method string getApiRevision()
  * @method string getDeviceName()
  */
+class ShareSpeechByCombination extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpeechId($value)
+    {
+        $this->data['SpeechId'] = $value;
+        $this->options['form_params']['SpeechId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAudioFormat($value)
+    {
+        $this->data['AudioFormat'] = $value;
+        $this->options['form_params']['AudioFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotId($value)
+    {
+        $this->data['IotId'] = $value;
+        $this->options['form_params']['IotId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $combinationList
+     *
+     * @return $this
+     */
+	public function withCombinationList(array $combinationList)
+	{
+	    $this->data['CombinationList'] = $combinationList;
+		foreach ($combinationList as $i => $iValue) {
+			$this->options['form_params']['CombinationList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceName($value)
+    {
+        $this->data['DeviceName'] = $value;
+        $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSpeechId()
+ * @method string getAudioFormat()
+ * @method string getIotId()
+ * @method array getCombinationList()
+ * @method string getIotInstanceId()
+ * @method string getEnforceFlag()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ */
 class SpeechByCombination extends Rpc
 {
 
@@ -18443,6 +19420,19 @@ class SpeechByCombination extends Rpc
     {
         $this->data['IotInstanceId'] = $value;
         $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnforceFlag($value)
+    {
+        $this->data['EnforceFlag'] = $value;
+        $this->options['form_params']['EnforceFlag'] = $value;
 
         return $this;
     }
@@ -18888,6 +19878,7 @@ class SubscribeTopic extends Rpc
  * @method string getIotId()
  * @method array getCombinationList()
  * @method string getIotInstanceId()
+ * @method string getEnforceFlag()
  * @method string getProductKey()
  * @method string getApiProduct()
  * @method string getApiRevision()
@@ -18959,6 +19950,19 @@ class SyncSpeechByCombination extends Rpc
     {
         $this->data['IotInstanceId'] = $value;
         $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnforceFlag($value)
+    {
+        $this->data['EnforceFlag'] = $value;
+        $this->options['form_params']['EnforceFlag'] = $value;
 
         return $this;
     }
