@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1467 - 2022-9-7
+- SmartSales-OpenAPI.
+
+
 ## 1.8.1466 - 2022-9-7
 - Support attribute filtering for DescribeInstanceTypes.
 - Provide cpuArchitecture and insatnceCategory attribute in DescribeInstanceTypes.
