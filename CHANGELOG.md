@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1470 - 2022-9-8
+- Update API Error Code And Some Parameters Checks.
+- Update API CreateTicket QPS.
+
+
 ## 1.8.1469 - 2022-9-8
 - Change RefreshAssets Public.
 
