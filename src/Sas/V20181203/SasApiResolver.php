@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddInstallCode addInstallCode(array $options = [])
  * @method AddVpcHoneyPot addVpcHoneyPot(array $options = [])
+ * @method BindAuthToMachine bindAuthToMachine(array $options = [])
  * @method CheckQuaraFileId checkQuaraFileId(array $options = [])
  * @method CheckSecurityEventId checkSecurityEventId(array $options = [])
  * @method CheckUserHasEcs checkUserHasEcs(array $options = [])
@@ -268,6 +269,56 @@ class AddInstallCode extends Rpc
  */
 class AddVpcHoneyPot extends Rpc
 {
+}
+
+/**
+ * @method string getCriteria()
+ * @method $this withCriteria($value)
+ * @method string getBindAll()
+ * @method $this withBindAll($value)
+ * @method array getBind()
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getAuthVersion()
+ * @method $this withAuthVersion($value)
+ * @method string getLogicalExp()
+ * @method $this withLogicalExp($value)
+ * @method string getAutoBind()
+ * @method $this withAutoBind($value)
+ * @method array getUnBind()
+ */
+class BindAuthToMachine extends Rpc
+{
+
+    /**
+     * @param array $bind
+     *
+     * @return $this
+     */
+	public function withBind(array $bind)
+	{
+	    $this->data['Bind'] = $bind;
+		foreach ($bind as $i => $iValue) {
+			$this->options['query']['Bind.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $unBind
+     *
+     * @return $this
+     */
+	public function withUnBind(array $unBind)
+	{
+	    $this->data['UnBind'] = $unBind;
+		foreach ($unBind as $i => $iValue) {
+			$this->options['query']['UnBind.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1006,6 +1057,8 @@ class DescribeAssetDetailByUuid extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getUuids()
  * @method $this withUuids($value)
  */
@@ -1218,6 +1271,8 @@ class DescribeCheckWarningSummary extends Rpc
  * @method $this withPageSize($value)
  * @method string getLogicalExp()
  * @method $this withLogicalExp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
  * @method string getCurrentPage()
@@ -1460,6 +1515,8 @@ class DescribeFieldStatistics extends Rpc
  * @method $this withSourceIp($value)
  * @method string getOperateType()
  * @method $this withOperateType($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getInfo()
  * @method $this withInfo($value)
  */
@@ -1900,8 +1957,12 @@ class DescribeInstallCodes extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method array getUuidList()
  */
 class DescribeInstanceAntiBruteForceRules extends Rpc
