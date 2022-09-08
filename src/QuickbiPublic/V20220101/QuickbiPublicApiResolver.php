@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddUserToWorkspace addUserToWorkspace(array $options = [])
  * @method AddWorkspaceUsers addWorkspaceUsers(array $options = [])
  * @method AuthorizeMenu authorizeMenu(array $options = [])
+ * @method BatchAddFeishuUsers batchAddFeishuUsers(array $options = [])
  * @method CancelAuthorizationMenu cancelAuthorizationMenu(array $options = [])
  * @method CancelCollection cancelCollection(array $options = [])
  * @method CancelReportShare cancelReportShare(array $options = [])
@@ -288,6 +289,26 @@ class AddWorkspaceUsers extends Rpc
  * @method $this withMenuIds($value)
  */
 class AuthorizeMenu extends Rpc
+{
+}
+
+/**
+ * @method string getIsAdmin()
+ * @method $this withIsAdmin($value)
+ * @method string getFeishuUsers()
+ * @method $this withFeishuUsers($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserGroupIds()
+ * @method $this withUserGroupIds($value)
+ * @method string getIsAuthAdmin()
+ * @method $this withIsAuthAdmin($value)
+ */
+class BatchAddFeishuUsers extends Rpc
 {
 }
 

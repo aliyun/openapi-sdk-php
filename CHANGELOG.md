@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1471 - 2022-9-8
+- Add API BatchAddFeishuUsers.
+
+
 ## 1.8.1470 - 2022-9-8
 - Update API Error Code And Some Parameters Checks.
 - Update API CreateTicket QPS.
