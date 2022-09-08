@@ -4802,8 +4802,12 @@ class RebootMachine extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getCloudAssetSubType()
+ * @method $this withCloudAssetSubType($value)
  * @method string getAssetType()
  * @method $this withAssetType($value)
+ * @method string getCloudAssetType()
+ * @method $this withCloudAssetType($value)
  */
 class RefreshAssets extends Rpc
 {

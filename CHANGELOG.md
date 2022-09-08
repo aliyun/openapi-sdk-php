@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1468 - 2022-9-8
+- Change RefreshAssets Public.
+
+
 ## 1.8.1467 - 2022-9-7
 - SmartSales-OpenAPI.
 
