@@ -48,7 +48,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnCertificateDetail describeDcdnCertificateDetail(array $options = [])
  * @method DescribeDcdnCertificateList describeDcdnCertificateList(array $options = [])
  * @method DescribeDcdnDdosService describeDcdnDdosService(array $options = [])
- * @method DescribeDcdnDdosSpecInfo describeDcdnDdosSpecInfo(array $options = [])
  * @method DescribeDcdnDeletedDomains describeDcdnDeletedDomains(array $options = [])
  * @method DescribeDcdnDeliverList describeDcdnDeliverList(array $options = [])
  * @method DescribeDcdnDomainBpsData describeDcdnDomainBpsData(array $options = [])
@@ -103,7 +102,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnIpaUserDomains describeDcdnIpaUserDomains(array $options = [])
  * @method DescribeDcdnIpInfo describeDcdnIpInfo(array $options = [])
  * @method DescribeDcdnL2Vips describeDcdnL2Vips(array $options = [])
- * @method DescribeDcdnL2VipsByDomain describeDcdnL2VipsByDomain(array $options = [])
  * @method DescribeDcdnRealTimeDeliveryField describeDcdnRealTimeDeliveryField(array $options = [])
  * @method DescribeDcdnRefreshQuota describeDcdnRefreshQuota(array $options = [])
  * @method DescribeDcdnRefreshTaskById describeDcdnRefreshTaskById(array $options = [])
@@ -1446,14 +1444,6 @@ class DescribeDcdnDdosService extends Rpc
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDcdnDdosSpecInfo extends Rpc
-{
-}
-
-/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -2367,16 +2357,6 @@ class DescribeDcdnIpInfo extends Rpc
  * @method $this withDomainName($value)
  */
 class DescribeDcdnL2Vips extends Rpc
-{
-}
-
-/**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDcdnL2VipsByDomain extends Rpc
 {
 }
 

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1472 - 2022-9-13
+- Update DescribeDcdnL2Vips.
+
+
 ## 1.8.1471 - 2022-9-8
 - Add API BatchAddFeishuUsers.
 
