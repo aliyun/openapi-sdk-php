@@ -41,8 +41,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OnsTraceQueryByMsgKey onsTraceQueryByMsgKey(array $options = [])
  * @method OnsTrendGroupOutputTps onsTrendGroupOutputTps(array $options = [])
  * @method OnsTrendTopicInputTps onsTrendTopicInputTps(array $options = [])
- * @method OnsWarnCreate onsWarnCreate(array $options = [])
- * @method OnsWarnDelete onsWarnDelete(array $options = [])
  * @method OpenOnsService openOnsService(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
@@ -262,6 +260,8 @@ class OnsGroupDelete extends Rpc
 /**
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getGroupType()
@@ -329,6 +329,8 @@ class OnsInstanceDelete extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method array getTag()
  */
 class OnsInstanceInServiceList extends Rpc
@@ -468,6 +470,8 @@ class OnsTopicDelete extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getTopic()
@@ -605,42 +609,6 @@ class OnsTrendGroupOutputTps extends Rpc
  * @method $this withTopic($value)
  */
 class OnsTrendTopicInputTps extends Rpc
-{
-}
-
-/**
- * @method string getLevel()
- * @method $this withLevel($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getDelayTime()
- * @method $this withDelayTime($value)
- * @method string getThreshold()
- * @method $this withThreshold($value)
- * @method string getAlertTime()
- * @method $this withAlertTime($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getBlockTime()
- * @method $this withBlockTime($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- * @method string getContacts()
- * @method $this withContacts($value)
- */
-class OnsWarnCreate extends Rpc
-{
-}
-
-/**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getTopic()
- * @method $this withTopic($value)
- */
-class OnsWarnDelete extends Rpc
 {
 }
 

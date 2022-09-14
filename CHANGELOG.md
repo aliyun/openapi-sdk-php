@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1474 - 2022-9-14
+- Add spInstanceId and spInstanceType for api OnsInstanceBaseInfo.
+
+
 ## 1.8.1473 - 2022-9-14
 - Generated 2017-07-14 for `EHPC`.
 
