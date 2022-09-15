@@ -1140,8 +1140,10 @@ class AddRtsLiveStreamTranscode extends Rpc
 }
 
 /**
+ * @method array getShowList()
  * @method string getLiveInputType()
  * @method $this withLiveInputType($value)
+ * @method string getIsBatchMode()
  * @method string getDuration()
  * @method $this withDuration($value)
  * @method string getRepeatTimes()
@@ -1163,6 +1165,54 @@ class AddRtsLiveStreamTranscode extends Rpc
  */
 class AddShowIntoShowList extends Rpc
 {
+
+    /**
+     * @param array $showList
+     *
+     * @return $this
+     */
+	public function withShowList(array $showList)
+	{
+	    $this->data['ShowList'] = $showList;
+		foreach ($showList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ShowName'])){
+				$this->options['query']['showList.' . ($depth1 + 1) . '.showName'] = $depth1Value['ShowName'];
+			}
+			if(isset($depth1Value['RepeatTimes'])){
+				$this->options['query']['showList.' . ($depth1 + 1) . '.repeatTimes'] = $depth1Value['RepeatTimes'];
+			}
+			if(isset($depth1Value['ResourceType'])){
+				$this->options['query']['showList.' . ($depth1 + 1) . '.resourceType'] = $depth1Value['ResourceType'];
+			}
+			if(isset($depth1Value['ResourceUrl'])){
+				$this->options['query']['showList.' . ($depth1 + 1) . '.resourceUrl'] = $depth1Value['ResourceUrl'];
+			}
+			if(isset($depth1Value['LiveInputType'])){
+				$this->options['query']['showList.' . ($depth1 + 1) . '.liveInputType'] = $depth1Value['LiveInputType'];
+			}
+			if(isset($depth1Value['Duration'])){
+				$this->options['query']['showList.' . ($depth1 + 1) . '.duration'] = $depth1Value['Duration'];
+			}
+			if(isset($depth1Value['ResourceId'])){
+				$this->options['query']['showList.' . ($depth1 + 1) . '.resourceId'] = $depth1Value['ResourceId'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsBatchMode($value)
+    {
+        $this->data['IsBatchMode'] = $value;
+        $this->options['query']['isBatchMode'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4968,6 +5018,8 @@ class RealTimeSnapshotCommand extends Rpc
 }
 
 /**
+ * @method string getIsBatchMode()
+ * @method array getShowIdList()
  * @method string getCasterId()
  * @method $this withCasterId($value)
  * @method string getOwnerId()
@@ -4977,6 +5029,34 @@ class RealTimeSnapshotCommand extends Rpc
  */
 class RemoveShowFromShowList extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsBatchMode($value)
+    {
+        $this->data['IsBatchMode'] = $value;
+        $this->options['query']['isBatchMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $showIdList
+     *
+     * @return $this
+     */
+	public function withShowIdList(array $showIdList)
+	{
+	    $this->data['ShowIdList'] = $showIdList;
+		foreach ($showIdList as $i => $iValue) {
+			$this->options['query']['showIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
