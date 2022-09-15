@@ -38,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchDeleteLiveDomainConfigs batchDeleteLiveDomainConfigs(array $options = [])
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
  * @method CloseLiveShift closeLiveShift(array $options = [])
+ * @method CloseMessageGroup closeMessageGroup(array $options = [])
  * @method CopyCaster copyCaster(array $options = [])
  * @method CopyCasterSceneConfig copyCasterSceneConfig(array $options = [])
  * @method CreateCaster createCaster(array $options = [])
@@ -45,6 +46,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLiveRealTimeLogDelivery createLiveRealTimeLogDelivery(array $options = [])
  * @method CreateLiveStreamMonitor createLiveStreamMonitor(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
+ * @method CreateLiveTranscodeTemplate createLiveTranscodeTemplate(array $options = [])
+ * @method CreateMessageApp createMessageApp(array $options = [])
+ * @method CreateMessageGroup createMessageGroup(array $options = [])
  * @method CreateMixStream createMixStream(array $options = [])
  * @method DeleteCaster deleteCaster(array $options = [])
  * @method DeleteCasterComponent deleteCasterComponent(array $options = [])
@@ -78,6 +82,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveStreamTranscode deleteLiveStreamTranscode(array $options = [])
  * @method DeleteLiveStreamWatermark deleteLiveStreamWatermark(array $options = [])
  * @method DeleteLiveStreamWatermarkRule deleteLiveStreamWatermarkRule(array $options = [])
+ * @method DeleteMessageApp deleteMessageApp(array $options = [])
  * @method DeleteMixStream deleteMixStream(array $options = [])
  * @method DeleteMultiRateConfig deleteMultiRateConfig(array $options = [])
  * @method DeletePlaylist deletePlaylist(array $options = [])
@@ -129,7 +134,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainRecordData describeLiveDomainRecordData(array $options = [])
  * @method DescribeLiveDomainRecordUsageData describeLiveDomainRecordUsageData(array $options = [])
  * @method DescribeLiveDomainSnapshotData describeLiveDomainSnapshotData(array $options = [])
- * @method DescribeLiveDomainSpecialConfig describeLiveDomainSpecialConfig(array $options = [])
  * @method DescribeLiveDomainStagingConfig describeLiveDomainStagingConfig(array $options = [])
  * @method DescribeLiveDomainStreamTranscodeData describeLiveDomainStreamTranscodeData(array $options = [])
  * @method DescribeLiveDomainTimeShiftData describeLiveDomainTimeShiftData(array $options = [])
@@ -138,6 +142,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDrmUsageData describeLiveDrmUsageData(array $options = [])
  * @method DescribeLiveEdgeTransfer describeLiveEdgeTransfer(array $options = [])
  * @method DescribeLiveLazyPullStreamConfig describeLiveLazyPullStreamConfig(array $options = [])
+ * @method DescribeLiveProducerUsageData describeLiveProducerUsageData(array $options = [])
  * @method DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
  * @method DescribeLiveRealtimeDeliveryAcc describeLiveRealtimeDeliveryAcc(array $options = [])
  * @method DescribeLiveRealtimeLogAuthorized describeLiveRealtimeLogAuthorized(array $options = [])
@@ -171,8 +176,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveTopDomainsByFlow describeLiveTopDomainsByFlow(array $options = [])
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
- * @method DescribeLiveUserQuota describeLiveUserQuota(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
+ * @method DescribeMeterLiveRtcDuration describeMeterLiveRtcDuration(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRoomKickoutUserList describeRoomKickoutUserList(array $options = [])
  * @method DescribeRoomList describeRoomList(array $options = [])
@@ -196,13 +201,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAllCustomTemplates getAllCustomTemplates(array $options = [])
  * @method GetCustomTemplate getCustomTemplate(array $options = [])
  * @method GetEditingJobInfo getEditingJobInfo(array $options = [])
+ * @method GetMessageApp getMessageApp(array $options = [])
+ * @method GetMessageGroup getMessageGroup(array $options = [])
+ * @method GetMessageToken getMessageToken(array $options = [])
  * @method GetMultiRateConfig getMultiRateConfig(array $options = [])
  * @method GetMultiRateConfigList getMultiRateConfigList(array $options = [])
  * @method HotLiveRtcStream hotLiveRtcStream(array $options = [])
  * @method InitializeAutoShowListTask initializeAutoShowListTask(array $options = [])
+ * @method JoinMessageGroup joinMessageGroup(array $options = [])
+ * @method LeaveMessageGroup leaveMessageGroup(array $options = [])
  * @method ListLiveRealtimeLogDelivery listLiveRealtimeLogDelivery(array $options = [])
  * @method ListLiveRealtimeLogDeliveryDomains listLiveRealtimeLogDeliveryDomains(array $options = [])
  * @method ListLiveRealtimeLogDeliveryInfos listLiveRealtimeLogDeliveryInfos(array $options = [])
+ * @method ListMessage listMessage(array $options = [])
+ * @method ListMessageApp listMessageApp(array $options = [])
+ * @method ListMessageGroup listMessageGroup(array $options = [])
+ * @method ListMessageGroupUser listMessageGroupUser(array $options = [])
  * @method ListPlaylist listPlaylist(array $options = [])
  * @method ListPlaylistItems listPlaylistItems(array $options = [])
  * @method ModifyCasterComponent modifyCasterComponent(array $options = [])
@@ -223,14 +237,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveShowFromShowList removeShowFromShowList(array $options = [])
  * @method ResumeLiveStream resumeLiveStream(array $options = [])
  * @method RollbackLiveStagingConfig rollbackLiveStagingConfig(array $options = [])
+ * @method SendMessageToGroup sendMessageToGroup(array $options = [])
+ * @method SendMessageToGroupUsers sendMessageToGroupUsers(array $options = [])
  * @method SendRoomNotification sendRoomNotification(array $options = [])
  * @method SendRoomUserNotification sendRoomUserNotification(array $options = [])
  * @method SetCasterChannel setCasterChannel(array $options = [])
  * @method SetCasterConfig setCasterConfig(array $options = [])
  * @method SetCasterSceneConfig setCasterSceneConfig(array $options = [])
  * @method SetCasterSyncGroup setCasterSyncGroup(array $options = [])
+ * @method SetCasterTimedEvent setCasterTimedEvent(array $options = [])
  * @method SetLiveDomainCertificate setLiveDomainCertificate(array $options = [])
- * @method SetLiveDomainSpecialConfig setLiveDomainSpecialConfig(array $options = [])
  * @method SetLiveDomainStagingConfig setLiveDomainStagingConfig(array $options = [])
  * @method SetLiveEdgeTransfer setLiveEdgeTransfer(array $options = [])
  * @method SetLiveLazyPullStreamInfoConfig setLiveLazyPullStreamInfoConfig(array $options = [])
@@ -446,11 +462,11 @@ class AddCasterLayout extends Rpc
 			if(isset($depth1Value['VolumeRate'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.VolumeRate'] = $depth1Value['VolumeRate'];
 			}
-			if(isset($depth1Value['ValidChannel'])){
-				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
-			}
 			if(isset($depth1Value['FixedDelayDuration'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
+			}
+			if(isset($depth1Value['ValidChannel'])){
+				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
 			}
 		}
 
@@ -466,14 +482,14 @@ class AddCasterLayout extends Rpc
 	{
 	    $this->data['VideoLayer'] = $videoLayer;
 		foreach ($videoLayer as $depth1 => $depth1Value) {
+			if(isset($depth1Value['FixedDelayDuration'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
+			}
 			if(isset($depth1Value['FillMode'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FillMode'] = $depth1Value['FillMode'];
 			}
 			if(isset($depth1Value['HeightNormalized'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.HeightNormalized'] = $depth1Value['HeightNormalized'];
-			}
-			if(isset($depth1Value['WidthNormalized'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
 			}
 			if(isset($depth1Value['PositionRefer'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionRefer'] = $depth1Value['PositionRefer'];
@@ -481,8 +497,8 @@ class AddCasterLayout extends Rpc
 			foreach ($depth1Value['PositionNormalized'] as $i => $iValue) {
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionNormalized.' . ($i + 1)] = $iValue;
 			}
-			if(isset($depth1Value['FixedDelayDuration'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
+			if(isset($depth1Value['WidthNormalized'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
 			}
 		}
 
@@ -524,23 +540,23 @@ class AddCasterProgram extends Rpc
 	{
 	    $this->data['Episode'] = $episode;
 		foreach ($episode as $depth1 => $depth1Value) {
-			if(isset($depth1Value['EpisodeType'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeType'] = $depth1Value['EpisodeType'];
+			if(isset($depth1Value['EndTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
+			}
+			if(isset($depth1Value['StartTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
 			}
 			if(isset($depth1Value['EpisodeName'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeName'] = $depth1Value['EpisodeName'];
+			}
+			if(isset($depth1Value['EpisodeType'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeType'] = $depth1Value['EpisodeType'];
 			}
 			if(isset($depth1Value['ResourceId'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
 			}
 			foreach ($depth1Value['ComponentId'] as $i => $iValue) {
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ComponentId.' . ($i + 1)] = $iValue;
-			}
-			if(isset($depth1Value['StartTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
-			}
-			if(isset($depth1Value['EndTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
 			}
 			if(isset($depth1Value['SwitchType'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.SwitchType'] = $depth1Value['SwitchType'];
@@ -693,11 +709,11 @@ class AddLiveAppRecordConfig extends Rpc
 			if(isset($depth1Value['SliceDuration'])){
 				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.SliceDuration'] = $depth1Value['SliceDuration'];
 			}
-			if(isset($depth1Value['Format'])){
-				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.Format'] = $depth1Value['Format'];
-			}
 			if(isset($depth1Value['OssObjectPrefix'])){
 				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.OssObjectPrefix'] = $depth1Value['OssObjectPrefix'];
+			}
+			if(isset($depth1Value['Format'])){
+				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.Format'] = $depth1Value['Format'];
 			}
 			if(isset($depth1Value['CycleDuration'])){
 				$this->options['query']['TranscodeRecordFormat.' . ($depth1 + 1) . '.CycleDuration'] = $depth1Value['CycleDuration'];
@@ -722,11 +738,11 @@ class AddLiveAppRecordConfig extends Rpc
 			if(isset($depth1Value['SliceDuration'])){
 				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.SliceDuration'] = $depth1Value['SliceDuration'];
 			}
-			if(isset($depth1Value['Format'])){
-				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.Format'] = $depth1Value['Format'];
-			}
 			if(isset($depth1Value['OssObjectPrefix'])){
 				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.OssObjectPrefix'] = $depth1Value['OssObjectPrefix'];
+			}
+			if(isset($depth1Value['Format'])){
+				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.Format'] = $depth1Value['Format'];
 			}
 			if(isset($depth1Value['CycleDuration'])){
 				$this->options['query']['RecordFormat.' . ($depth1 + 1) . '.CycleDuration'] = $depth1Value['CycleDuration'];
@@ -1254,6 +1270,40 @@ class CloseLiveShift extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method string getAppId()
+ */
+class CloseMessageGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getCasterName()
@@ -1380,6 +1430,102 @@ class CreateLiveStreamMonitor extends Rpc
  */
 class CreateLiveStreamRecordIndexFiles extends Rpc
 {
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getTemplateConfig()
+ * @method $this withTemplateConfig($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateLiveTranscodeTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getExtension()
+ * @method string getAppConfig()
+ */
+class CreateMessageApp extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtension($value)
+    {
+        $this->data['Extension'] = $value;
+        $this->options['form_params']['Extension'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppConfig($value)
+    {
+        $this->data['AppConfig'] = $value;
+        $this->options['form_params']['AppConfig'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExtension()
+ * @method string getCreatorId()
+ * @method string getAppId()
+ */
+class CreateMessageGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtension($value)
+    {
+        $this->data['Extension'] = $value;
+        $this->options['form_params']['Extension'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCreatorId($value)
+    {
+        $this->data['CreatorId'] = $value;
+        $this->options['form_params']['CreatorId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1829,6 +1975,26 @@ class DeleteLiveStreamWatermarkRule extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ */
+class DeleteMessageApp extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getStreamName()
@@ -2037,6 +2203,8 @@ class DescribeCasterProgram extends Rpc
  * @method $this withCasterName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getNormType()
+ * @method $this withNormType($value)
  * @method string getCasterId()
  * @method $this withCasterId($value)
  * @method string getEndTime()
@@ -2596,18 +2764,6 @@ class DescribeLiveDomainSnapshotData extends Rpc
 }
 
 /**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- * @method $this withName($value)
- */
-class DescribeLiveDomainSpecialConfig extends Rpc
-{
-}
-
-/**
  * @method string getFunctionNames()
  * @method $this withFunctionNames($value)
  * @method string getDomainName()
@@ -2727,6 +2883,44 @@ class DescribeLiveEdgeTransfer extends Rpc
  */
 class DescribeLiveLazyPullStreamConfig extends Rpc
 {
+}
+
+/**
+ * @method string getInstance()
+ * @method $this withInstance($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getApp()
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeLiveProducerUsageData extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApp($value)
+    {
+        $this->data['App'] = $value;
+        $this->options['query']['app'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -3104,6 +3298,8 @@ class DescribeLiveStreamsNotifyUrlConfig extends Rpc
 }
 
 /**
+ * @method string getOnlyStream()
+ * @method $this withOnlyStream($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNum()
@@ -3344,19 +3540,37 @@ class DescribeLiveUserDomains extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
-class DescribeLiveUserQuota extends Rpc
+class DescribeLiveUserTags extends Rpc
 {
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getServiceArea()
+ * @method $this withServiceArea($value)
+ * @method string getAppId()
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
-class DescribeLiveUserTags extends Rpc
+class DescribeMeterLiveRtcDuration extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['query']['appId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -3720,6 +3934,122 @@ class GetEditingJobInfo extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ */
+class GetMessageApp extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGroupId()
+ * @method string getAppId()
+ */
+class GetMessageGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDeviceId()
+ * @method string getUserId()
+ * @method string getDeviceType()
+ * @method string getAppId()
+ */
+class GetMessageToken extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceId($value)
+    {
+        $this->data['DeviceId'] = $value;
+        $this->options['form_params']['DeviceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceType($value)
+    {
+        $this->data['DeviceType'] = $value;
+        $this->options['form_params']['DeviceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getApp()
  * @method $this withApp($value)
  * @method string getGroupId()
@@ -3788,6 +4118,102 @@ class InitializeAutoShowListTask extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method string getUserId()
+ * @method string getAppId()
+ */
+class JoinMessageGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGroupId()
+ * @method string getUserId()
+ * @method string getAppId()
+ */
+class LeaveMessageGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getLiveOpenapiReserve()
@@ -3828,6 +4254,282 @@ class ListLiveRealtimeLogDeliveryInfos extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getSortType()
+ * @method string getGroupId()
+ * @method string getType()
+ * @method string getPageNum()
+ * @method string getPageSize()
+ */
+class ListMessage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortType($value)
+    {
+        $this->data['SortType'] = $value;
+        $this->options['form_params']['SortType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['form_params']['PageNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSortType()
+ * @method string getPageNum()
+ * @method string getPageSize()
+ */
+class ListMessageApp extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortType($value)
+    {
+        $this->data['SortType'] = $value;
+        $this->options['form_params']['SortType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['form_params']['PageNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSortType()
+ * @method string getPageNum()
+ * @method string getUserId()
+ * @method string getPageSize()
+ */
+class ListMessageGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortType($value)
+    {
+        $this->data['SortType'] = $value;
+        $this->options['form_params']['SortType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['form_params']['PageNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSortType()
+ * @method string getGroupId()
+ * @method string getType()
+ * @method string getPageNum()
+ * @method string getAppId()
+ * @method string getPageSize()
+ */
+class ListMessageGroupUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortType($value)
+    {
+        $this->data['SortType'] = $value;
+        $this->options['form_params']['SortType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['form_params']['PageNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -3962,11 +4664,11 @@ class ModifyCasterLayout extends Rpc
 			if(isset($depth1Value['VolumeRate'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.VolumeRate'] = $depth1Value['VolumeRate'];
 			}
-			if(isset($depth1Value['ValidChannel'])){
-				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
-			}
 			if(isset($depth1Value['FixedDelayDuration'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
+			}
+			if(isset($depth1Value['ValidChannel'])){
+				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
 			}
 		}
 
@@ -3982,14 +4684,14 @@ class ModifyCasterLayout extends Rpc
 	{
 	    $this->data['VideoLayer'] = $videoLayer;
 		foreach ($videoLayer as $depth1 => $depth1Value) {
+			if(isset($depth1Value['FixedDelayDuration'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
+			}
 			if(isset($depth1Value['FillMode'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FillMode'] = $depth1Value['FillMode'];
 			}
 			if(isset($depth1Value['HeightNormalized'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.HeightNormalized'] = $depth1Value['HeightNormalized'];
-			}
-			if(isset($depth1Value['WidthNormalized'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
 			}
 			if(isset($depth1Value['PositionRefer'])){
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionRefer'] = $depth1Value['PositionRefer'];
@@ -3997,8 +4699,8 @@ class ModifyCasterLayout extends Rpc
 			foreach ($depth1Value['PositionNormalized'] as $i => $iValue) {
 				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.PositionNormalized.' . ($i + 1)] = $iValue;
 			}
-			if(isset($depth1Value['FixedDelayDuration'])){
-				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
+			if(isset($depth1Value['WidthNormalized'])){
+				$this->options['query']['VideoLayer.' . ($depth1 + 1) . '.WidthNormalized'] = $depth1Value['WidthNormalized'];
 			}
 		}
 
@@ -4040,26 +4742,26 @@ class ModifyCasterProgram extends Rpc
 	{
 	    $this->data['Episode'] = $episode;
 		foreach ($episode as $depth1 => $depth1Value) {
-			if(isset($depth1Value['EpisodeId'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeId'] = $depth1Value['EpisodeId'];
+			if(isset($depth1Value['EndTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
+			}
+			if(isset($depth1Value['StartTime'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
+			}
+			if(isset($depth1Value['EpisodeName'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeName'] = $depth1Value['EpisodeName'];
 			}
 			if(isset($depth1Value['EpisodeType'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeType'] = $depth1Value['EpisodeType'];
 			}
-			if(isset($depth1Value['EpisodeName'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeName'] = $depth1Value['EpisodeName'];
+			if(isset($depth1Value['EpisodeId'])){
+				$this->options['query']['Episode.' . ($depth1 + 1) . '.EpisodeId'] = $depth1Value['EpisodeId'];
 			}
 			if(isset($depth1Value['ResourceId'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ResourceId'] = $depth1Value['ResourceId'];
 			}
 			foreach ($depth1Value['ComponentId'] as $i => $iValue) {
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.ComponentId.' . ($i + 1)] = $iValue;
-			}
-			if(isset($depth1Value['StartTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.StartTime'] = $depth1Value['StartTime'];
-			}
-			if(isset($depth1Value['EndTime'])){
-				$this->options['query']['Episode.' . ($depth1 + 1) . '.EndTime'] = $depth1Value['EndTime'];
 			}
 			if(isset($depth1Value['SwitchType'])){
 				$this->options['query']['Episode.' . ($depth1 + 1) . '.SwitchType'] = $depth1Value['SwitchType'];
@@ -4244,6 +4946,8 @@ class RealTimeRecordCommand extends Rpc
 }
 
 /**
+ * @method string getSource()
+ * @method $this withSource($value)
  * @method string getMode()
  * @method $this withMode($value)
  * @method string getAppName()
@@ -4303,6 +5007,130 @@ class ResumeLiveStream extends Rpc
  */
 class RollbackLiveStagingConfig extends Rpc
 {
+}
+
+/**
+ * @method string getData()
+ * @method string getGroupId()
+ * @method string getType()
+ * @method string getAppId()
+ */
+class SendMessageToGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getReceiverIdList()
+ * @method string getGroupIdcopy()
+ * @method string getGroupId()
+ * @method string getType()
+ */
+class SendMessageToGroupUsers extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReceiverIdList($value)
+    {
+        $this->data['ReceiverIdList'] = $value;
+        $this->options['form_params']['ReceiverIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupIdcopy($value)
+    {
+        $this->data['GroupIdcopy'] = $value;
+        $this->options['form_params']['GroupId-copy'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4380,6 +5208,8 @@ class SetCasterChannel extends Rpc
  * @method $this withTranscodeConfig($value)
  * @method string getCasterName()
  * @method $this withCasterName($value)
+ * @method string getUrgentLiveStreamUrl()
+ * @method $this withUrgentLiveStreamUrl($value)
  * @method string getSideOutputUrl()
  * @method $this withSideOutputUrl($value)
  * @method string getSyncGroupsConfig()
@@ -4450,12 +5280,6 @@ class SetCasterSyncGroup extends Rpc
 	{
 	    $this->data['SyncGroup'] = $syncGroup;
 		foreach ($syncGroup as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Mode'])){
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
-			}
-			if(isset($depth1Value['SyncDelayThreshold'])){
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncDelayThreshold'] = $depth1Value['SyncDelayThreshold'];
-			}
 			if(isset($depth1Value['HostResourceId'])){
 				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.HostResourceId'] = $depth1Value['HostResourceId'];
 			}
@@ -4465,10 +5289,30 @@ class SetCasterSyncGroup extends Rpc
 			foreach ($depth1Value['SyncOffsets'] as $i => $iValue) {
 				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncOffsets.' . ($i + 1)] = $iValue;
 			}
+			if(isset($depth1Value['SyncDelayThreshold'])){
+				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncDelayThreshold'] = $depth1Value['SyncDelayThreshold'];
+			}
+			if(isset($depth1Value['Mode'])){
+				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
+			}
 		}
 
 		return $this;
     }
+}
+
+/**
+ * @method string getEventName()
+ * @method $this withEventName($value)
+ * @method string getStartTimeUTC()
+ * @method $this withStartTimeUTC($value)
+ * @method string getCasterId()
+ * @method $this withCasterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SetCasterTimedEvent extends Rpc
+{
 }
 
 /**
@@ -4492,20 +5336,6 @@ class SetCasterSyncGroup extends Rpc
  * @method $this withSSLPub($value)
  */
 class SetLiveDomainCertificate extends Rpc
-{
-}
-
-/**
- * @method string getValue()
- * @method $this withValue($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- * @method $this withName($value)
- */
-class SetLiveDomainSpecialConfig extends Rpc
 {
 }
 
@@ -4875,11 +5705,11 @@ class UpdateCasterSceneAudio extends Rpc
 			if(isset($depth1Value['VolumeRate'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.VolumeRate'] = $depth1Value['VolumeRate'];
 			}
-			if(isset($depth1Value['ValidChannel'])){
-				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
-			}
 			if(isset($depth1Value['FixedDelayDuration'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.FixedDelayDuration'] = $depth1Value['FixedDelayDuration'];
+			}
+			if(isset($depth1Value['ValidChannel'])){
+				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
 			}
 		}
 
