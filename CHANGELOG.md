@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1483 - 2022-9-16
+- Add location endpoint.
+
+
 ## 1.8.1482 - 2022-9-16
 - Init amp.
 
