@@ -59,6 +59,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CloseEdgeInstanceDeployment closeEdgeInstanceDeployment(array $options = [])
  * @method ConfirmOTATask confirmOTATask(array $options = [])
  * @method CopyThingModel copyThingModel(array $options = [])
+ * @method CountSpeechBroadcastHour countSpeechBroadcastHour(array $options = [])
  * @method CreateConsumerGroup createConsumerGroup(array $options = [])
  * @method CreateConsumerGroupSubscribeRelation createConsumerGroupSubscribeRelation(array $options = [])
  * @method CreateDataAPIService createDataAPIService(array $options = [])
@@ -218,6 +219,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OpenIotService openIotService(array $options = [])
  * @method PackageSoundCodeLabelBatchAudio packageSoundCodeLabelBatchAudio(array $options = [])
  * @method PageQuerySharedSpeechOpen pageQuerySharedSpeechOpen(array $options = [])
+ * @method PageQuerySpeechBroadcastHour pageQuerySpeechBroadcastHour(array $options = [])
  * @method PrintByTemplate printByTemplate(array $options = [])
  * @method Pub pub(array $options = [])
  * @method PubBroadcast pubBroadcast(array $options = [])
@@ -3411,6 +3413,70 @@ class ConfirmOTATask extends Rpc
  */
 class CopyThingModel extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getQueryDateTimeHour()
+ * @method $this withQueryDateTimeHour($value)
+ * @method string getIotInstanceId()
+ * @method string getShareTaskCode()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class CountSpeechBroadcastHour extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskCode($value)
+    {
+        $this->data['ShareTaskCode'] = $value;
+        $this->options['form_params']['ShareTaskCode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -12025,6 +12091,98 @@ class PageQuerySharedSpeechOpen extends Rpc
     {
         $this->data['Status'] = $value;
         $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getQueryDateTimeHour()
+ * @method $this withQueryDateTimeHour($value)
+ * @method string getIotInstanceId()
+ * @method string getPageSize()
+ * @method string getPageToken()
+ * @method string getShareTaskCode()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class PageQuerySpeechBroadcastHour extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageToken($value)
+    {
+        $this->data['PageToken'] = $value;
+        $this->options['form_params']['PageToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskCode($value)
+    {
+        $this->data['ShareTaskCode'] = $value;
+        $this->options['form_params']['ShareTaskCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
 
         return $this;
     }

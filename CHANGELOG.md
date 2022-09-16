@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1477 - 2022-9-16
+- Iot_20180120 old version sdk.
+
+
 ## 1.8.1476 - 2022-9-15
 - Generated 2016-11-01 for `live`.
 
