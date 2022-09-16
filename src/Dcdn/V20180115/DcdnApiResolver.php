@@ -1510,6 +1510,8 @@ class DescribeDcdnDomainBpsDataByLayer extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSSLStatus()
+ * @method $this withSSLStatus($value)
  * @method string getSSLPub()
  * @method $this withSSLPub($value)
  */

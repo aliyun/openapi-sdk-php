@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1479 - 2022-9-16
+- Update DescribeDcdnReport.
+
+
 ## 1.8.1478 - 2022-9-16
 - Update DescribeCdnReport.
 
