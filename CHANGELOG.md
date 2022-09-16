@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1478 - 2022-9-16
+- Update DescribeCdnReport.
+
+
 ## 1.8.1477 - 2022-9-16
 - Iot_20180120 old version sdk.
 
