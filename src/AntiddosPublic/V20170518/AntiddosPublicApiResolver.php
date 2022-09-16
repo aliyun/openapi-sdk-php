@@ -18,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method ModifyDdosStatus modifyDdosStatus(array $options = [])
  * @method ModifyDefenseThreshold modifyDefenseThreshold(array $options = [])
+ * @method ModifyIpDefenseThreshold modifyIpDefenseThreshold(array $options = [])
  */
 class AntiddosPublicApiResolver extends ApiResolver
 {
@@ -408,5 +409,29 @@ class ModifyDdosStatus extends Rpc
  * @method $this withIsAuto($value)
  */
 class ModifyDefenseThreshold extends Rpc
+{
+}
+
+/**
+ * @method string getInternetIp()
+ * @method $this withInternetIp($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDdosRegionId()
+ * @method $this withDdosRegionId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getBps()
+ * @method $this withBps($value)
+ * @method string getPps()
+ * @method $this withPps($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIsAuto()
+ * @method $this withIsAuto($value)
+ */
+class ModifyIpDefenseThreshold extends Rpc
 {
 }

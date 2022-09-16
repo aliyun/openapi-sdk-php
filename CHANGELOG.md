@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1480 - 2022-9-16
+- Init amp.
+
+
 ## 1.8.1479 - 2022-9-16
 - Update DescribeDcdnReport.
 
