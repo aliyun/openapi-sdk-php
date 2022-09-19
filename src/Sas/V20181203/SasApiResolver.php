@@ -147,6 +147,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVpcList describeVpcList(array $options = [])
  * @method DescribeVulDetails describeVulDetails(array $options = [])
  * @method DescribeVulExportInfo describeVulExportInfo(array $options = [])
+ * @method DescribeVulFixStatistics describeVulFixStatistics(array $options = [])
  * @method DescribeVulList describeVulList(array $options = [])
  * @method DescribeVulWhitelist describeVulWhitelist(array $options = [])
  * @method DescribeWarningExportInfo describeWarningExportInfo(array $options = [])
@@ -168,6 +169,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method IgnoreHcCheckWarnings ignoreHcCheckWarnings(array $options = [])
  * @method InstallBackupClient installBackupClient(array $options = [])
  * @method InstallCloudMonitor installCloudMonitor(array $options = [])
+ * @method ListAvailableHoneypot listAvailableHoneypot(array $options = [])
  * @method ListCheckInstanceResult listCheckInstanceResult(array $options = [])
  * @method ListCheckResult listCheckResult(array $options = [])
  * @method ListHoneypot listHoneypot(array $options = [])
@@ -867,18 +869,25 @@ class DescribeAccesskeyLeakList extends Rpc
 /**
  * @method string getRepoId()
  * @method $this withRepoId($value)
+ * @method string getPod()
+ * @method $this withPod($value)
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
  * @method string getRepoNamespace()
  * @method $this withRepoNamespace($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getImageDigest()
  * @method $this withImageDigest($value)
+ * @method array getScanRange()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getImageTag()
  * @method $this withImageTag($value)
+ * @method string getImage()
+ * @method $this withImage($value)
  * @method string getMaliciousMd5()
  * @method $this withMaliciousMd5($value)
  * @method string getCurrentPage()
@@ -887,16 +896,37 @@ class DescribeAccesskeyLeakList extends Rpc
  * @method $this withClusterId($value)
  * @method string getRepoName()
  * @method $this withRepoName($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
  * @method string getRepoInstanceId()
  * @method $this withRepoInstanceId($value)
  * @method string getImageLayer()
  * @method $this withImageLayer($value)
+ * @method string getContainerId()
+ * @method $this withContainerId($value)
+ * @method string getLevels()
+ * @method $this withLevels($value)
  * @method string getRepoRegionId()
  * @method $this withRepoRegionId($value)
  * @method array getUuids()
  */
 class DescribeAffectedMaliciousFileImages extends Rpc
 {
+
+    /**
+     * @param array $scanRange
+     *
+     * @return $this
+     */
+	public function withScanRange(array $scanRange)
+	{
+	    $this->data['ScanRange'] = $scanRange;
+		foreach ($scanRange as $i => $iValue) {
+			$this->options['query']['ScanRange.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $uuids
@@ -1579,6 +1609,7 @@ class DescribeGroupedInstances extends Rpc
  * @method $this withSourceIp($value)
  * @method string getImageDigest()
  * @method $this withImageDigest($value)
+ * @method array getScanRange()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
@@ -1603,6 +1634,21 @@ class DescribeGroupedInstances extends Rpc
  */
 class DescribeGroupedMaliciousFiles extends Rpc
 {
+
+    /**
+     * @param array $scanRange
+     *
+     * @return $this
+     */
+	public function withScanRange(array $scanRange)
+	{
+	    $this->data['ScanRange'] = $scanRange;
+		foreach ($scanRange as $i => $iValue) {
+			$this->options['query']['ScanRange.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $uuids
@@ -1699,6 +1745,7 @@ class DescribeHoneyPotSuspStatistics extends Rpc
  * @method $this withCriteria($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method array getScanRange()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCriteriaType()
@@ -1714,6 +1761,21 @@ class DescribeHoneyPotSuspStatistics extends Rpc
  */
 class DescribeImageBaselineCheckSummary extends Rpc
 {
+
+    /**
+     * @param array $scanRange
+     *
+     * @return $this
+     */
+	public function withScanRange(array $scanRange)
+	{
+	    $this->data['ScanRange'] = $scanRange;
+		foreach ($scanRange as $i => $iValue) {
+			$this->options['query']['ScanRange.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1777,6 +1839,7 @@ class DescribeImageFixTask extends Rpc
  * @method $this withRepoNamespace($value)
  * @method string getImageDigest()
  * @method $this withImageDigest($value)
+ * @method array getScanRange()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
@@ -1804,9 +1867,28 @@ class DescribeImageFixTask extends Rpc
  */
 class DescribeImageGroupedVulList extends Rpc
 {
+
+    /**
+     * @param array $scanRange
+     *
+     * @return $this
+     */
+	public function withScanRange(array $scanRange)
+	{
+	    $this->data['ScanRange'] = $scanRange;
+		foreach ($scanRange as $i => $iValue) {
+			$this->options['query']['ScanRange.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
+ * @method string getPod()
+ * @method $this withPod($value)
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
  * @method string getCriteria()
  * @method $this withCriteria($value)
  * @method string getRepoNamespace()
@@ -1815,25 +1897,47 @@ class DescribeImageGroupedVulList extends Rpc
  * @method $this withSourceIp($value)
  * @method string getImageDigest()
  * @method $this withImageDigest($value)
+ * @method array getScanRange()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCriteriaType()
  * @method $this withCriteriaType($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getImage()
+ * @method $this withImage($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getRepoName()
  * @method $this withRepoName($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
  * @method string getBaselineNameKey()
  * @method $this withBaselineNameKey($value)
  * @method string getRepoInstanceId()
  * @method $this withRepoInstanceId($value)
+ * @method string getContainerId()
+ * @method $this withContainerId($value)
  */
 class DescribeImageListWithBaselineName extends Rpc
 {
+
+    /**
+     * @param array $scanRange
+     *
+     * @return $this
+     */
+	public function withScanRange(array $scanRange)
+	{
+	    $this->data['ScanRange'] = $scanRange;
+		foreach ($scanRange as $i => $iValue) {
+			$this->options['query']['ScanRange.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1853,6 +1957,8 @@ class DescribeImageStatistics extends Rpc
 }
 
 /**
+ * @method string getClusterName()
+ * @method $this withClusterName($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getCreateTsStart()
@@ -1865,6 +1971,8 @@ class DescribeImageStatistics extends Rpc
  * @method $this withTag($value)
  * @method string getModifyTsEnd()
  * @method $this withModifyTsEnd($value)
+ * @method string getImage()
+ * @method $this withImage($value)
  * @method string getLevel()
  * @method $this withLevel($value)
  * @method string getResource()
@@ -1881,6 +1989,8 @@ class DescribeImageStatistics extends Rpc
  * @method $this withIds($value)
  * @method string getCreateTsEnd()
  * @method $this withCreateTsEnd($value)
+ * @method string getContainerId()
+ * @method $this withContainerId($value)
  * @method string getNecessity()
  * @method $this withNecessity($value)
  * @method string getUuids()
@@ -1891,6 +2001,8 @@ class DescribeImageStatistics extends Rpc
  * @method $this withStatusList($value)
  * @method string getTargetType()
  * @method $this withTargetType($value)
+ * @method string getPod()
+ * @method $this withPod($value)
  * @method string getCveId()
  * @method $this withCveId($value)
  * @method string getRemark()
@@ -1899,6 +2011,7 @@ class DescribeImageStatistics extends Rpc
  * @method $this withRepoNamespace($value)
  * @method string getContainerFieldValue()
  * @method $this withContainerFieldValue($value)
+ * @method array getScanRange()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDigest()
@@ -1917,6 +2030,8 @@ class DescribeImageStatistics extends Rpc
  * @method $this withBatchName($value)
  * @method string getRepoName()
  * @method $this withRepoName($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
  * @method string getRepoInstanceId()
  * @method $this withRepoInstanceId($value)
  * @method string getRepoRegionId()
@@ -1924,6 +2039,21 @@ class DescribeImageStatistics extends Rpc
  */
 class DescribeImageVulList extends Rpc
 {
+
+    /**
+     * @param array $scanRange
+     *
+     * @return $this
+     */
+	public function withScanRange(array $scanRange)
+	{
+	    $this->data['ScanRange'] = $scanRange;
+		foreach ($scanRange as $i => $iValue) {
+			$this->options['query']['ScanRange.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -3049,6 +3179,14 @@ class DescribeVulExportInfo extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeVulFixStatistics extends Rpc
+{
+}
+
+/**
  * @method string getMinScore()
  * @method $this withMinScore($value)
  * @method string getAttachTypes()
@@ -3546,6 +3684,20 @@ class InstallCloudMonitor extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ */
+class ListAvailableHoneypot extends Rpc
+{
 }
 
 /**

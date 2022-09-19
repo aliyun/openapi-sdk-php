@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1484 - 2022-9-19
+- Change RefreshAssets Public.
+
+
 ## 1.8.1483 - 2022-9-16
 - Add location endpoint.
 
