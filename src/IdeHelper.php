@@ -222,6 +222,7 @@ namespace AlibabaCloud;
  * @method static TeslaDam\TeslaDam teslaDam()
  * @method static TeslaMaxCompute\TeslaMaxCompute teslaMaxCompute()
  * @method static TeslaStream\TeslaStream teslaStream()
+ * @method static Threedvision\Threedvision threedvision()
  * @method static Ubsms\Ubsms ubsms()
  * @method static UbsmsInner\UbsmsInner ubsmsInner()
  * @method static Uis\Uis uis()

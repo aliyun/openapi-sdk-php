@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1485 - 2022-9-19
+- Release EstimateMonocularVideoDepth.
+
+
 ## 1.8.1484 - 2022-9-19
 - Change RefreshAssets Public.
 
