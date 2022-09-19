@@ -229,6 +229,7 @@ namespace AlibabaCloud;
  * @method static UniMkt\UniMkt uniMkt()
  * @method static Vcs\Vcs vcs()
  * @method static Ververica\Ververica ververica()
+ * @method static ViapiRegen\ViapiRegen viapiRegen()
  * @method static Videoenhan\Videoenhan videoenhan()
  * @method static Videorecog\Videorecog videorecog()
  * @method static Videosearch\Videosearch videosearch()
