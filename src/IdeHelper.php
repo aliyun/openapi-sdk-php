@@ -150,6 +150,7 @@ namespace AlibabaCloud;
  * @method static MPServerless\MPServerless mPServerless()
  * @method static MPaaS\MPaaS mPaaS()
  * @method static Market\Market market()
+ * @method static MnsOpen\MnsOpen mnsOpen()
  * @method static MoPen\MoPen moPen()
  * @method static MoguanSdk\MoguanSdk moguanSdk()
  * @method static Mse\Mse mse()

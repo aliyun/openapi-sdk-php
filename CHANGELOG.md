@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1487 - 2022-9-20
+- Remove useless Agent parameters.
+
+
 ## 1.8.1486 - 2022-9-19
 - Release CustomizeClassifyImage.
 
