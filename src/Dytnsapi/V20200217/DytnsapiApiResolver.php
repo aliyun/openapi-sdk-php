@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePhoneNumberOperatorAttribute describePhoneNumberOperatorAttribute(array $options = [])
  * @method DescribePhoneNumberResale describePhoneNumberResale(array $options = [])
  * @method DescribePhoneNumberStatus describePhoneNumberStatus(array $options = [])
+ * @method DescribePhoneTwiceTelVerify describePhoneTwiceTelVerify(array $options = [])
  * @method InvalidPhoneNumberFilter invalidPhoneNumberFilter(array $options = [])
  * @method PhoneNumberEncrypt phoneNumberEncrypt(array $options = [])
  * @method PhoneNumberStatusForAccount phoneNumberStatusForAccount(array $options = [])
@@ -165,6 +166,32 @@ class DescribePhoneNumberResale extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribePhoneNumberStatus extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getOfferType()
+ * @method $this withOfferType($value)
+ * @method string getResultCount()
+ * @method $this withResultCount($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ * @method string getFlowName()
+ * @method $this withFlowName($value)
+ */
+class DescribePhoneTwiceTelVerify extends Rpc
 {
 }
 

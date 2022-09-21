@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1489 - 2022-9-21
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1488 - 2022-9-21
 - Release ScreenEC.
 
