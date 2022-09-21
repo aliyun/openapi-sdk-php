@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunCTRegistration runCTRegistration(array $options = [])
  * @method RunMedQA runMedQA(array $options = [])
  * @method ScreenChestCT screenChestCT(array $options = [])
+ * @method ScreenEC screenEC(array $options = [])
  * @method SegmentOAR segmentOAR(array $options = [])
  * @method TranslateMed translateMed(array $options = [])
  */
@@ -1411,6 +1412,58 @@ class ScreenChestCT extends Rpc
         $this->options['form_params']['Verbose'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDataSourceType()
+ * @method array getURLList()
+ * @method string getAsync()
+ */
+class ScreenEC extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataSourceType($value)
+    {
+        $this->data['DataSourceType'] = $value;
+        $this->options['form_params']['DataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $uRLList
+     *
+     * @return $this
+     */
+	public function withURLList(array $uRLList)
+	{
+	    $this->data['URLList'] = $uRLList;
+		foreach ($uRLList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['URL'])){
+				$this->options['form_params']['URLList.' . ($depth1 + 1) . '.URL'] = $depth1Value['URL'];
+			}
+		}
+
+		return $this;
     }
 
     /**
