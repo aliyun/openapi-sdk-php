@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1491 - 2022-9-22
+- Release CustomizeClassifyImage.
+
+
 ## 1.8.1490 - 2022-9-21
 - Generated 2016-11-01 for `live`.
 
