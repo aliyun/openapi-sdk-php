@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1493 - 2022-9-23
+- Support ipv4-network.
+
+
 ## 1.8.1492 - 2022-9-22
 - Release EstimateMonocularVideoDepth.
 

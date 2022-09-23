@@ -5,6 +5,7 @@ namespace AlibabaCloud\Ens\V20171110;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AccosicateNetworkAcl accosicateNetworkAcl(array $options = [])
  * @method AddBackendServers addBackendServers(array $options = [])
  * @method AddDeviceInternetPort addDeviceInternetPort(array $options = [])
  * @method AddNetworkInterfaceToInstance addNetworkInterfaceToInstance(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEnsRouteEntry createEnsRouteEntry(array $options = [])
  * @method CreateEnsService createEnsService(array $options = [])
  * @method CreateEpnInstance createEpnInstance(array $options = [])
+ * @method CreateFileSystem createFileSystem(array $options = [])
  * @method CreateForwardEntry createForwardEntry(array $options = [])
  * @method CreateImage createImage(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
@@ -31,8 +33,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLoadBalancerHTTPSListener createLoadBalancerHTTPSListener(array $options = [])
  * @method CreateLoadBalancerTCPListener createLoadBalancerTCPListener(array $options = [])
  * @method CreateLoadBalancerUDPListener createLoadBalancerUDPListener(array $options = [])
+ * @method CreateMountTarget createMountTarget(array $options = [])
  * @method CreateNatGateway createNatGateway(array $options = [])
  * @method CreateNetwork createNetwork(array $options = [])
+ * @method CreateNetworkAcl createNetworkAcl(array $options = [])
+ * @method CreateNetworkAclEntry createNetworkAclEntry(array $options = [])
  * @method CreateSecurityGroup createSecurityGroup(array $options = [])
  * @method CreateSnatEntry createSnatEntry(array $options = [])
  * @method CreateVSwitch createVSwitch(array $options = [])
@@ -40,12 +45,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDeviceInternetPort deleteDeviceInternetPort(array $options = [])
  * @method DeleteEnsRouteEntry deleteEnsRouteEntry(array $options = [])
  * @method DeleteEpnInstance deleteEpnInstance(array $options = [])
+ * @method DeleteFileSystem deleteFileSystem(array $options = [])
  * @method DeleteForwardEntry deleteForwardEntry(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
  * @method DeleteKeyPairs deleteKeyPairs(array $options = [])
  * @method DeleteLoadBalancerListener deleteLoadBalancerListener(array $options = [])
+ * @method DeleteMountTarget deleteMountTarget(array $options = [])
  * @method DeleteNatGateway deleteNatGateway(array $options = [])
  * @method DeleteNetwork deleteNetwork(array $options = [])
+ * @method DeleteNetworkAcl deleteNetworkAcl(array $options = [])
+ * @method DeleteNetworkAclEntry deleteNetworkAclEntry(array $options = [])
  * @method DeleteSecurityGroup deleteSecurityGroup(array $options = [])
  * @method DeleteSnatEntry deleteSnatEntry(array $options = [])
  * @method DeleteVSwitch deleteVSwitch(array $options = [])
@@ -101,7 +110,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLoadBalancerTCPListenerAttribute describeLoadBalancerTCPListenerAttribute(array $options = [])
  * @method DescribeLoadBalancerUDPListenerAttribute describeLoadBalancerUDPListenerAttribute(array $options = [])
  * @method DescribeMeasurementData describeMeasurementData(array $options = [])
+ * @method DescribeMountTargets describeMountTargets(array $options = [])
  * @method DescribeNatGateways describeNatGateways(array $options = [])
+ * @method DescribeNetworkAcls describeNetworkAcls(array $options = [])
  * @method DescribeNetworkAttribute describeNetworkAttribute(array $options = [])
  * @method DescribeNetworkInterfaces describeNetworkInterfaces(array $options = [])
  * @method DescribeNetworks describeNetworks(array $options = [])
@@ -111,6 +122,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeReservedResource describeReservedResource(array $options = [])
  * @method DescribeSecurityGroupAttribute describeSecurityGroupAttribute(array $options = [])
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
+ * @method DescribeSelfImages describeSelfImages(array $options = [])
  * @method DescribeServcieSchedule describeServcieSchedule(array $options = [])
  * @method DescribeSnatTableEntries describeSnatTableEntries(array $options = [])
  * @method DescribeUserBandWidthData describeUserBandWidthData(array $options = [])
@@ -130,6 +142,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListApplications listApplications(array $options = [])
  * @method ModifyEnsEipAddressAttribute modifyEnsEipAddressAttribute(array $options = [])
  * @method ModifyEpnInstance modifyEpnInstance(array $options = [])
+ * @method ModifyFileSystem modifyFileSystem(array $options = [])
  * @method ModifyForwardEntry modifyForwardEntry(array $options = [])
  * @method ModifyImageAttribute modifyImageAttribute(array $options = [])
  * @method ModifyImageSharePermission modifyImageSharePermission(array $options = [])
@@ -160,6 +173,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RescaleDeviceService rescaleDeviceService(array $options = [])
  * @method ResetAICInstance resetAICInstance(array $options = [])
  * @method ResetDeviceInstance resetDeviceInstance(array $options = [])
+ * @method ResizeDisk resizeDisk(array $options = [])
  * @method RestartDeviceInstance restartDeviceInstance(array $options = [])
  * @method RevokeSecurityGroup revokeSecurityGroup(array $options = [])
  * @method RevokeSecurityGroupEgress revokeSecurityGroupEgress(array $options = [])
@@ -180,6 +194,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopLoadBalancerListener stopLoadBalancerListener(array $options = [])
  * @method UnassignPrivateIpAddresses unassignPrivateIpAddresses(array $options = [])
  * @method UnAssociateEnsEipAddress unAssociateEnsEipAddress(array $options = [])
+ * @method UnassociateNetworkAcl unassociateNetworkAcl(array $options = [])
  * @method UpgradeAICInstanceImage upgradeAICInstanceImage(array $options = [])
  * @method UpgradeApplication upgradeApplication(array $options = [])
  */
@@ -200,6 +215,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'ens';
+}
+
+/**
+ * @method string getNetworkAclId()
+ * @method $this withNetworkAclId($value)
+ * @method string getResource()
+ * @method $this withResource($value)
+ */
+class AccosicateNetworkAcl extends Rpc
+{
 }
 
 /**
@@ -457,6 +482,17 @@ class CreateEnsService extends Rpc
  */
 class CreateEpnInstance extends Rpc
 {
+}
+
+/**
+ * @method string getOrderDetails()
+ * @method $this withOrderDetails($value)
+ */
+class CreateFileSystem extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -794,6 +830,20 @@ class CreateLoadBalancerUDPListener extends Rpc
 }
 
 /**
+ * @method string getMountTargetName()
+ * @method $this withMountTargetName($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ * @method string getNetWorkId()
+ * @method $this withNetWorkId($value)
+ */
+class CreateMountTarget extends Rpc
+{
+}
+
+/**
  * @method string getEnsRegionId()
  * @method $this withEnsRegionId($value)
  * @method string getInstanceType()
@@ -820,6 +870,40 @@ class CreateNatGateway extends Rpc
  * @method $this withCidrBlock($value)
  */
 class CreateNetwork extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNetworkAclName()
+ * @method $this withNetworkAclName($value)
+ */
+class CreateNetworkAcl extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkAclEntryName()
+ * @method $this withNetworkAclEntryName($value)
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getPortRange()
+ * @method $this withPortRange($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNetworkAclId()
+ * @method $this withNetworkAclId($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
+ * @method string getCidrBlock()
+ * @method $this withCidrBlock($value)
+ */
+class CreateNetworkAclEntry extends Rpc
 {
 }
 
@@ -909,6 +993,19 @@ class DeleteEpnInstance extends Rpc
 }
 
 /**
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ */
+class DeleteFileSystem extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getForwardEntryId()
  * @method $this withForwardEntryId($value)
  */
@@ -945,6 +1042,18 @@ class DeleteLoadBalancerListener extends Rpc
 }
 
 /**
+ * @method string getMountTargetName()
+ * @method $this withMountTargetName($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ */
+class DeleteMountTarget extends Rpc
+{
+}
+
+/**
  * @method string getNatGatewayId()
  * @method $this withNatGatewayId($value)
  */
@@ -957,6 +1066,22 @@ class DeleteNatGateway extends Rpc
  * @method $this withNetworkId($value)
  */
 class DeleteNetwork extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkAclId()
+ * @method $this withNetworkAclId($value)
+ */
+class DeleteNetworkAcl extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkAclEntryId()
+ * @method $this withNetworkAclEntryId($value)
+ */
+class DeleteNetworkAclEntry extends Rpc
 {
 }
 
@@ -1538,6 +1663,8 @@ class DescribeInstanceMonitorData extends Rpc
  * @method $this withNetworkId($value)
  * @method string getStatus()
  * @method $this withStatus($value)
+ * @method string getIntranetIp()
+ * @method $this withIntranetIp($value)
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getSecurityGroupId()
@@ -1690,6 +1817,22 @@ class DescribeMeasurementData extends Rpc
 }
 
 /**
+ * @method string getMountTargetName()
+ * @method $this withMountTargetName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ */
+class DescribeMountTargets extends Rpc
+{
+}
+
+/**
  * @method string getEnsRegionId()
  * @method $this withEnsRegionId($value)
  * @method string getVSwitchId()
@@ -1706,6 +1849,25 @@ class DescribeMeasurementData extends Rpc
  * @method $this withNatGatewayId($value)
  */
 class DescribeNatGateways extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getNetworkAclId()
+ * @method $this withNetworkAclId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getNetworkAclName()
+ * @method $this withNetworkAclName($value)
+ */
+class DescribeNetworkAcls extends Rpc
 {
 
     /** @var string */
@@ -1850,6 +2012,20 @@ class DescribeSecurityGroupAttribute extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeSecurityGroups extends Rpc
+{
+}
+
+/**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getImageName()
+ * @method $this withImageName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeSelfImages extends Rpc
 {
 }
 
@@ -2107,6 +2283,18 @@ class ModifyEnsEipAddressAttribute extends Rpc
  * @method $this withEPNInstanceName($value)
  */
 class ModifyEpnInstance extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ */
+class ModifyFileSystem extends Rpc
 {
 }
 
@@ -2566,6 +2754,16 @@ class ResetDeviceInstance extends Rpc
 }
 
 /**
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ * @method string getNewSize()
+ * @method $this withNewSize($value)
+ */
+class ResizeDisk extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getAppId()
@@ -2981,6 +3179,16 @@ class UnassignPrivateIpAddresses extends Rpc
  * @method $this withAllocationId($value)
  */
 class UnAssociateEnsEipAddress extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkAclId()
+ * @method $this withNetworkAclId($value)
+ * @method string getResource()
+ * @method $this withResource($value)
+ */
+class UnassociateNetworkAcl extends Rpc
 {
 }
 
