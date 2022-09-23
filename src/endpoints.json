@@ -1,1 +1,1 @@
-{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"threedvision.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
+{"endpoint_map":{"cn-hangzhou":"cloudcode.cn-hangzhou.aliyuncs.com","cn-shanghai":"cloudcode.cn-shanghai.aliyuncs.com"},"endpoint_regional":"regional","standard":[],"regions":["cn-hangzhou","cn-shanghai"],"endpoint_health":[]}

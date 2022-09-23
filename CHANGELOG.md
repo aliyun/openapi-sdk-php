@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1494 - 2022-9-23
+- Supprt for CreateUnionTask.
+
+
 ## 1.8.1493 - 2022-9-23
 - Support ipv4-network.
 

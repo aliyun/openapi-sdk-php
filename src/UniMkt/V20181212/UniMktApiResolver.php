@@ -29,7 +29,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRule deleteRule(array $options = [])
  * @method DeviceApiAddDevice deviceApiAddDevice(array $options = [])
  * @method EndUnionTask endUnionTask(array $options = [])
+ * @method GetBizTypeConfig getBizTypeConfig(array $options = [])
+ * @method GetBizTypeConfigList getBizTypeConfigList(array $options = [])
+ * @method GetDeliveryTypeConfig getDeliveryTypeConfig(array $options = [])
+ * @method GetDeliveryTypeConfigList getDeliveryTypeConfigList(array $options = [])
  * @method GetMainPartList getMainPartList(array $options = [])
+ * @method GetPublishPriceTask getPublishPriceTask(array $options = [])
  * @method GetUnionTaskStatus getUnionTaskStatus(array $options = [])
  * @method InnerCallService innerCallService(array $options = [])
  * @method KeepAlive keepAlive(array $options = [])
@@ -42,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTasks listTasks(array $options = [])
  * @method ListTenant listTenant(array $options = [])
  * @method ListTenantName listTenantName(array $options = [])
+ * @method ListUnionMediaIndustry listUnionMediaIndustry(array $options = [])
  * @method ListUser listUser(array $options = [])
  * @method ModifyMedia modifyMedia(array $options = [])
  * @method ModifyRule modifyRule(array $options = [])
@@ -878,36 +884,42 @@ class CreateTenantUser extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getChannel()
+ * @method $this withChannel($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getContentUrl()
+ * @method $this withContentUrl($value)
+ * @method string getMediaIndustry()
+ * @method $this withMediaIndustry($value)
+ * @method string getQuota()
+ * @method $this withQuota($value)
+ * @method string getIndustryLabelBagId()
+ * @method $this withIndustryLabelBagId($value)
  * @method string getTaskType()
  * @method $this withTaskType($value)
  * @method string getCustomCreativeType()
  * @method $this withCustomCreativeType($value)
  * @method string getTaskBizType()
  * @method $this withTaskBizType($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
  * @method string getBrandUserId()
  * @method $this withBrandUserId($value)
  * @method string getContentId()
  * @method $this withContentId($value)
- * @method string getChannel()
- * @method $this withChannel($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getBrandUserNick()
  * @method $this withBrandUserNick($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
- * @method string getContentUrl()
- * @method $this withContentUrl($value)
+ * @method string getMediaIdWhiteList()
+ * @method $this withMediaIdWhiteList($value)
+ * @method string getMediaIdBlackList()
+ * @method $this withMediaIdBlackList($value)
  * @method string getTaskRuleType()
  * @method $this withTaskRuleType($value)
- * @method string getQuota()
- * @method $this withQuota($value)
- * @method string getIndustryLabelBagId()
- * @method $this withIndustryLabelBagId($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getQuotaDay()
@@ -1030,6 +1042,86 @@ class EndUnionTask extends Rpc
 }
 
 /**
+ * @method string getBizType()
+ */
+class GetBizTypeConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizType($value)
+    {
+        $this->data['BizType'] = $value;
+        $this->options['form_params']['BizType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccountType()
+ */
+class GetBizTypeConfigList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountType($value)
+    {
+        $this->data['AccountType'] = $value;
+        $this->options['form_params']['AccountType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDeliveryType()
+ */
+class GetDeliveryTypeConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeliveryType($value)
+    {
+        $this->data['DeliveryType'] = $value;
+        $this->options['form_params']['DeliveryType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAccountType()
+ */
+class GetDeliveryTypeConfigList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountType($value)
+    {
+        $this->data['AccountType'] = $value;
+        $this->options['form_params']['AccountType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAccountType()
  * @method $this withAccountType($value)
  * @method string getPageSize()
@@ -1045,6 +1137,54 @@ class EndUnionTask extends Rpc
  */
 class GetMainPartList extends Rpc
 {
+}
+
+/**
+ * @method string getCode()
+ * @method string getType()
+ * @method string getStatus()
+ */
+class GetPublishPriceTask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCode($value)
+    {
+        $this->data['Code'] = $value;
+        $this->options['form_params']['Code'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1443,15 +1583,16 @@ class ListSlot extends Rpc
 }
 
 /**
- * @method string getMarketingType()
  * @method string getTaskType()
- * @method string getPageSize()
  * @method string getTaskName()
  * @method string getEndTime()
- * @method string getPageIndex()
  * @method string getBrandUserNick()
- * @method string getProxyUserNick()
  * @method string getStartTime()
+ * @method string getMarketingType()
+ * @method string getCurrencyType()
+ * @method string getPageSize()
+ * @method string getPageIndex()
+ * @method string getProxyUserNick()
  * @method string getTaskId()
  * @method string getStatus()
  */
@@ -1463,36 +1604,10 @@ class ListTasks extends Rpc
      *
      * @return $this
      */
-    public function withMarketingType($value)
-    {
-        $this->data['MarketingType'] = $value;
-        $this->options['form_params']['MarketingType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withTaskType($value)
     {
         $this->data['TaskType'] = $value;
         $this->options['form_params']['TaskType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -1528,19 +1643,6 @@ class ListTasks extends Rpc
      *
      * @return $this
      */
-    public function withPageIndex($value)
-    {
-        $this->data['PageIndex'] = $value;
-        $this->options['form_params']['PageIndex'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withBrandUserNick($value)
     {
         $this->data['BrandUserNick'] = $value;
@@ -1554,10 +1656,10 @@ class ListTasks extends Rpc
      *
      * @return $this
      */
-    public function withProxyUserNick($value)
+    public function withStartTime($value)
     {
-        $this->data['ProxyUserNick'] = $value;
-        $this->options['form_params']['ProxyUserNick'] = $value;
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
 
         return $this;
     }
@@ -1567,10 +1669,62 @@ class ListTasks extends Rpc
      *
      * @return $this
      */
-    public function withStartTime($value)
+    public function withMarketingType($value)
     {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
+        $this->data['MarketingType'] = $value;
+        $this->options['form_params']['MarketingType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrencyType($value)
+    {
+        $this->data['CurrencyType'] = $value;
+        $this->options['form_params']['CurrencyType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageIndex($value)
+    {
+        $this->data['PageIndex'] = $value;
+        $this->options['form_params']['PageIndex'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProxyUserNick($value)
+    {
+        $this->data['ProxyUserNick'] = $value;
+        $this->options['form_params']['ProxyUserNick'] = $value;
 
         return $this;
     }
@@ -1663,6 +1817,16 @@ class ListTenant extends Rpc
  * @method $this withStatus($value)
  */
 class ListTenantName extends Rpc
+{
+}
+
+/**
+ * @method string getProxyUserId()
+ * @method $this withProxyUserId($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class ListUnionMediaIndustry extends Rpc
 {
 }
 
@@ -2936,14 +3100,14 @@ class QueryUnionTaskInfo extends Rpc
 /**
  * @method string getBrandUserId()
  * @method $this withBrandUserId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getBrandUserNick()
  * @method $this withBrandUserNick($value)
- * @method string getPageIndex()
- * @method $this withPageIndex($value)
  * @method string getProxyUserId()
  * @method $this withProxyUserId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
  * @method string getChannelId()
  * @method $this withChannelId($value)
  */
@@ -3301,14 +3465,18 @@ class ScanCodeNotification extends Rpc
 /**
  * @method string getApp()
  * @method $this withApp($value)
+ * @method string getExt()
+ * @method $this withExt($value)
  * @method string getTest()
  * @method $this withTest($value)
- * @method string getId()
- * @method $this withId($value)
  * @method string getImp()
  * @method $this withImp($value)
+ * @method string getId()
+ * @method $this withId($value)
  * @method string getUser()
  * @method $this withUser($value)
+ * @method string getDevice()
+ * @method $this withDevice($value)
  */
 class SearchAdvertising extends Rpc
 {
