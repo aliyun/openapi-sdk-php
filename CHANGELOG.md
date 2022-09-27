@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1496 - 2022-9-27
+- Create Job Support XAttrs.
+
+
 ## 1.8.1495 - 2022-9-27
 - Update by SDK platform.
 
