@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1495 - 2022-9-27
+- Update by SDK platform.
+
+
 ## 1.8.1494 - 2022-9-23
 - Supprt for CreateUnionTask.
 

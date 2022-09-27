@@ -13,7 +13,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDBInstance createDBInstance(array $options = [])
  * @method CreateNode createNode(array $options = [])
  * @method CreateNodeBatch createNodeBatch(array $options = [])
- * @method CreateServerlessDBInstance createServerlessDBInstance(array $options = [])
  * @method CreateShardingDBInstance createShardingDBInstance(array $options = [])
  * @method DeleteDBInstance deleteDBInstance(array $options = [])
  * @method DeleteNode deleteNode(array $options = [])
@@ -231,6 +230,8 @@ class CreateBackup extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceStorage()
  * @method $this withDBInstanceStorage($value)
+ * @method string getSecondaryZoneId()
+ * @method $this withSecondaryZoneId($value)
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
  * @method string getEngineVersion()
@@ -245,6 +246,7 @@ class CreateBackup extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceDescription()
  * @method $this withDBInstanceDescription($value)
+ * @method array getTag()
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  * @method string getPeriod()
@@ -275,6 +277,8 @@ class CreateBackup extends Rpc
  * @method $this withDatabaseNames($value)
  * @method string getEngine()
  * @method $this withEngine($value)
+ * @method string getHiddenZoneId()
+ * @method $this withHiddenZoneId($value)
  * @method string getRestoreTime()
  * @method $this withRestoreTime($value)
  * @method string getResourceOwnerAccount()
@@ -294,6 +298,26 @@ class CreateBackup extends Rpc
  */
 class CreateDBInstance extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -309,6 +333,10 @@ class CreateDBInstance extends Rpc
  * @method $this withCouponNo($value)
  * @method string getNodeClass()
  * @method $this withNodeClass($value)
+ * @method string getShardDirect()
+ * @method $this withShardDirect($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
@@ -327,6 +355,8 @@ class CreateDBInstance extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
  */
 class CreateNode extends Rpc
 {
@@ -341,6 +371,10 @@ class CreateNode extends Rpc
  * @method $this withNodesInfo($value)
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
+ * @method string getShardDirect()
+ * @method $this withShardDirect($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
@@ -357,93 +391,31 @@ class CreateNode extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
  */
 class CreateNodeBatch extends Rpc
 {
 }
 
 /**
- * @method string getCapacityUnit()
- * @method $this withCapacityUnit($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceStorage()
- * @method $this withDBInstanceStorage($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getPeriodPriceType()
- * @method $this withPeriodPriceType($value)
- * @method string getEngineVersion()
- * @method $this withEngineVersion($value)
- * @method string getNetworkType()
- * @method $this withNetworkType($value)
- * @method string getStorageEngine()
- * @method $this withStorageEngine($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getEngine()
- * @method $this withEngine($value)
- * @method string getDBInstanceDescription()
- * @method $this withDBInstanceDescription($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityIPList()
- * @method $this withSecurityIPList($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getAccountPassword()
- * @method $this withAccountPassword($value)
- * @method string getAutoRenew()
- * @method $this withAutoRenew($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getChargeType()
- * @method $this withChargeType($value)
- */
-class CreateServerlessDBInstance extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
+ * @method string getSecondaryZoneId()
+ * @method $this withSecondaryZoneId($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
  * @method string getNetworkType()
  * @method $this withNetworkType($value)
  * @method array getReplicaSet()
- * @method string getStorageEngine()
- * @method $this withStorageEngine($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
- * @method string getEngine()
- * @method $this withEngine($value)
  * @method string getDBInstanceDescription()
  * @method $this withDBInstanceDescription($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
- * @method string getRestoreTime()
- * @method $this withRestoreTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getSrcDBInstanceId()
- * @method $this withSrcDBInstanceId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
  * @method array getConfigServer()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
@@ -452,14 +424,30 @@ class CreateServerlessDBInstance extends Rpc
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method array getMongos()
- * @method string getAccountPassword()
- * @method $this withAccountPassword($value)
  * @method string getAutoRenew()
  * @method $this withAutoRenew($value)
- * @method string getVpcId()
- * @method $this withVpcId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getStorageEngine()
+ * @method $this withStorageEngine($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getHiddenZoneId()
+ * @method $this withHiddenZoneId($value)
+ * @method string getRestoreTime()
+ * @method $this withRestoreTime($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getSrcDBInstanceId()
+ * @method $this withSrcDBInstanceId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getProtocolType()
  * @method $this withProtocolType($value)
  * @method string getChargeType()
@@ -842,6 +830,8 @@ class DescribeBackups extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getChargeType()
+ * @method $this withChargeType($value)
  */
 class DescribeDBInstanceAttribute extends Rpc
 {
@@ -1770,6 +1760,8 @@ class ModifyAuditPolicy extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getBackupInterval()
+ * @method $this withBackupInterval($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
@@ -1784,6 +1776,8 @@ class ModifyAuditPolicy extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getSnapshotBackupType()
+ * @method $this withSnapshotBackupType($value)
  * @method string getPreferredBackupTime()
  * @method $this withPreferredBackupTime($value)
  * @method string getBackupRetentionPeriod()
