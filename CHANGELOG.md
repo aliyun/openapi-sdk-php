@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1497 - 2022-9-28
+- Change RefreshAssets Public.
+
+
 ## 1.8.1496 - 2022-9-27
 - Create Job Support XAttrs.
 
