@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1504 - 2022-9-29
+- Update MakeSuperResolutionImage.
+
+
 ## 1.8.1503 - 2022-9-29
 - Release MergeVideoModelFace.
 
