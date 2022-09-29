@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1498 - 2022-9-29
+- Update Job Support Incremental Updating.
+
+
 ## 1.8.1497 - 2022-9-28
 - Change RefreshAssets Public.
 
