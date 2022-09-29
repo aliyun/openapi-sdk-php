@@ -39,12 +39,15 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'objectdet';
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class ClassifyVehicleInsurance extends Rpc
@@ -65,6 +68,8 @@ class ClassifyVehicleInsurance extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getOssFile()
  * @method $this withOssFile($value)
  * @method string getRequestProxyBy()
@@ -129,6 +134,12 @@ class DetectKitchenAnimals extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
@@ -137,6 +148,12 @@ class DetectMainBody extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectObject extends Rpc
@@ -157,6 +174,12 @@ class DetectObject extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectTransparentImage extends Rpc
@@ -177,7 +200,13 @@ class DetectTransparentImage extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectVehicle extends Rpc
@@ -313,11 +342,17 @@ class DetectVehicleIllegalParking extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getFeatures()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getHeight()
  * @method string getCreateTime()
  * @method string getFeatureConfig()
  * @method string getOwnerId()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getStreamArn()
  * @method string getImageURL()
  * @method string getWidth()
@@ -431,6 +466,8 @@ class DetectVideoFrame extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getStartTimestamp()
  * @method string getOssFile()
  * @method $this withOssFile($value)
@@ -497,6 +534,12 @@ class DetectVideoIPCObject extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectWhiteBaseImage extends Rpc
@@ -573,7 +616,13 @@ class DetectWorkwear extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method array getDamageImageList()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class GenerateVehicleRepairPlan extends Rpc
 {
@@ -600,7 +649,13 @@ class GenerateVehicleRepairPlan extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getJobId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getAsync()
  */
 class GetAsyncJobResult extends Rpc
@@ -635,8 +690,14 @@ class GetAsyncJobResult extends Rpc
 
 /**
  * @method string getVinCodeImage()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getCarNumberImage()
  * @method string getTaskId()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class GetVehicleRepairPlan extends Rpc
 {
@@ -682,6 +743,12 @@ class GetVehicleRepairPlan extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RecognizeVehicleDamage extends Rpc
@@ -702,6 +769,12 @@ class RecognizeVehicleDamage extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RecognizeVehicleDashboard extends Rpc
@@ -722,6 +795,12 @@ class RecognizeVehicleDashboard extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RecognizeVehicleParts extends Rpc
