@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1499 - 2022-9-29
+- Update RecognizeVideoCastCrewList.
+
+
 ## 1.8.1498 - 2022-9-29
 - Update Job Support Incremental Updating.
 
