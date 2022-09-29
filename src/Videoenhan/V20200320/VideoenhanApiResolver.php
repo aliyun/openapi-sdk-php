@@ -45,10 +45,10 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
 /**
  * @method string getDuration()
+ * @method string getHeight()
  * @method string getAsync()
  * @method string getVideoUrl()
  * @method string getWidth()
- * @method string getHeight()
  */
 class AbstractEcommerceVideo extends Rpc
 {
@@ -62,6 +62,19 @@ class AbstractEcommerceVideo extends Rpc
     {
         $this->data['Duration'] = $value;
         $this->options['form_params']['Duration'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHeight($value)
+    {
+        $this->data['Height'] = $value;
+        $this->options['form_params']['Height'] = $value;
 
         return $this;
     }
@@ -101,19 +114,6 @@ class AbstractEcommerceVideo extends Rpc
     {
         $this->data['Width'] = $value;
         $this->options['form_params']['Width'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHeight($value)
-    {
-        $this->data['Height'] = $value;
-        $this->options['form_params']['Height'] = $value;
 
         return $this;
     }
@@ -742,11 +742,11 @@ class EraseVideoLogo extends Rpc
 
 /**
  * @method string getBH()
- * @method string getAsync()
- * @method string getVideoUrl()
  * @method string getBW()
  * @method string getBX()
  * @method string getBY()
+ * @method string getAsync()
+ * @method string getVideoUrl()
  */
 class EraseVideoSubtitles extends Rpc
 {
@@ -760,32 +760,6 @@ class EraseVideoSubtitles extends Rpc
     {
         $this->data['BH'] = $value;
         $this->options['form_params']['BH'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAsync($value)
-    {
-        $this->data['Async'] = $value;
-        $this->options['form_params']['Async'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVideoUrl($value)
-    {
-        $this->data['VideoUrl'] = $value;
-        $this->options['form_params']['VideoUrl'] = $value;
 
         return $this;
     }
@@ -825,6 +799,32 @@ class EraseVideoSubtitles extends Rpc
     {
         $this->data['BY'] = $value;
         $this->options['form_params']['BY'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
 
         return $this;
     }
@@ -1111,8 +1111,8 @@ class InterpolateVideoFrame extends Rpc
 }
 
 /**
- * @method string getPostURL()
  * @method string getReferenceURL()
+ * @method string getPostURL()
  * @method string getAsync()
  * @method string getVideoURL()
  */
@@ -1124,10 +1124,10 @@ class MergeVideoFace extends Rpc
      *
      * @return $this
      */
-    public function withPostURL($value)
+    public function withReferenceURL($value)
     {
-        $this->data['PostURL'] = $value;
-        $this->options['form_params']['PostURL'] = $value;
+        $this->data['ReferenceURL'] = $value;
+        $this->options['form_params']['ReferenceURL'] = $value;
 
         return $this;
     }
@@ -1137,10 +1137,10 @@ class MergeVideoFace extends Rpc
      *
      * @return $this
      */
-    public function withReferenceURL($value)
+    public function withPostURL($value)
     {
-        $this->data['ReferenceURL'] = $value;
-        $this->options['form_params']['ReferenceURL'] = $value;
+        $this->data['PostURL'] = $value;
+        $this->options['form_params']['PostURL'] = $value;
 
         return $this;
     }
@@ -1293,8 +1293,8 @@ class SuperResolveVideo extends Rpc
 }
 
 /**
- * @method string getRecolorModel()
  * @method string getBitrate()
+ * @method string getRecolorModel()
  * @method string getAsync()
  * @method string getVideoURL()
  */
@@ -1306,10 +1306,10 @@ class ToneSdrVideo extends Rpc
      *
      * @return $this
      */
-    public function withRecolorModel($value)
+    public function withBitrate($value)
     {
-        $this->data['RecolorModel'] = $value;
-        $this->options['form_params']['RecolorModel'] = $value;
+        $this->data['Bitrate'] = $value;
+        $this->options['form_params']['Bitrate'] = $value;
 
         return $this;
     }
@@ -1319,10 +1319,10 @@ class ToneSdrVideo extends Rpc
      *
      * @return $this
      */
-    public function withBitrate($value)
+    public function withRecolorModel($value)
     {
-        $this->data['Bitrate'] = $value;
-        $this->options['form_params']['Bitrate'] = $value;
+        $this->data['RecolorModel'] = $value;
+        $this->options['form_params']['RecolorModel'] = $value;
 
         return $this;
     }

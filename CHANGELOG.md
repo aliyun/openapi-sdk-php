@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1503 - 2022-9-29
+- Release MergeVideoModelFace.
+
+
 ## 1.8.1502 - 2022-9-29
 - Update RefineMask.
 
