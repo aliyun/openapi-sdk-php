@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1501 - 2022-9-29
+- Update CompareFace.
+
+
 ## 1.8.1500 - 2022-9-29
 - Update DetectVehicleICongestion DetectVehicleIllegalParking.
 
