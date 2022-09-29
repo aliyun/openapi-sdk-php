@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1502 - 2022-9-29
+- Update RefineMask.
+
+
 ## 1.8.1501 - 2022-9-29
 - Update CompareFace.
 
