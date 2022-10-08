@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1505 - 2022-10-8
+- Update by SDK platform.
+
+
 ## 1.8.1504 - 2022-9-29
 - Update MakeSuperResolutionImage.
 
