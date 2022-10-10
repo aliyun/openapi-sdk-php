@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1506 - 2022-10-10
+- Add OpenAPI CreateEaiJupyter.
+- Fixd bugs for OpenAPI  DeleteEaiAll.
+
+
 ## 1.8.1505 - 2022-10-8
 - Update by SDK platform.
 

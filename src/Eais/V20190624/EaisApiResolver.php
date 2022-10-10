@@ -8,12 +8,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AttachEai attachEai(array $options = [])
  * @method CreateEai createEai(array $options = [])
  * @method CreateEaiAll createEaiAll(array $options = [])
+ * @method CreateEaiJupyter createEaiJupyter(array $options = [])
  * @method DeleteEai deleteEai(array $options = [])
  * @method DeleteEaiAll deleteEaiAll(array $options = [])
  * @method DescribeEais describeEais(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DetachEai detachEai(array $options = [])
- * @method GetPrivateIp getPrivateIp(array $options = [])
  */
 class EaisApiResolver extends ApiResolver
 {
@@ -95,6 +95,20 @@ class CreateEaiAll extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getEaisType()
+ * @method $this withEaisType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ */
+class CreateEaiJupyter extends Rpc
+{
+}
+
+/**
  * @method string getElasticAcceleratedInstanceId()
  * @method $this withElasticAcceleratedInstanceId($value)
  * @method string getForce()
@@ -117,8 +131,12 @@ class DeleteEaiAll extends Rpc
 /**
  * @method string getElasticAcceleratedInstanceIds()
  * @method $this withElasticAcceleratedInstanceIds($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getStatus()
@@ -137,13 +155,5 @@ class DescribeRegions extends Rpc
  * @method $this withElasticAcceleratedInstanceId($value)
  */
 class DetachEai extends Rpc
-{
-}
-
-/**
- * @method string getClientInstanceId()
- * @method $this withClientInstanceId($value)
- */
-class GetPrivateIp extends Rpc
 {
 }
