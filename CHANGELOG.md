@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1508 - 2022-10-13
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1507 - 2022-10-13
 - Supported AnchorId for CreateUnionTask.
 

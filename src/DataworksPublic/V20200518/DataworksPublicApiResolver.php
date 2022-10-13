@@ -190,6 +190,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTableTheme listTableTheme(array $options = [])
  * @method ListTopics listTopics(array $options = [])
  * @method ListUsageForResourceGroup listUsageForResourceGroup(array $options = [])
+ * @method OfflineNode offlineNode(array $options = [])
  * @method PublishDataServiceApi publishDataServiceApi(array $options = [])
  * @method QueryDISyncTaskConfigProcessResult queryDISyncTaskConfigProcessResult(array $options = [])
  * @method QueryPublicModelEngine queryPublicModelEngine(array $options = [])
@@ -312,10 +313,10 @@ class AbolishDataServiceApi extends Rpc
  * @method $this withRoleCode($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
  */
 class AddProjectMemberToRole extends Rpc
 {
@@ -2166,10 +2167,10 @@ class CreatePermissionApplyOrder extends Rpc
  * @method $this withRoleCode($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
  */
 class CreateProjectMember extends Rpc
 {
@@ -3534,10 +3535,10 @@ class DeleteMetaCategory extends Rpc
 }
 
 /**
- * @method string getProjectId()
- * @method $this withProjectId($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
  */
 class DeleteProjectMember extends Rpc
 {
@@ -8955,28 +8956,28 @@ class ListNodesByOutput extends Rpc
 }
 
 /**
- * @method string getMaxComputeProjectName()
- * @method $this withMaxComputeProjectName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
- * @method string getFlowStatus()
- * @method $this withFlowStatus($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getTableName()
  * @method $this withTableName($value)
  * @method string getQueryType()
  * @method $this withQueryType($value)
+ * @method string getEngineType()
+ * @method $this withEngineType($value)
+ * @method string getMaxComputeProjectName()
+ * @method $this withMaxComputeProjectName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getFlowStatus()
+ * @method $this withFlowStatus($value)
  * @method string getWorkspaceId()
  * @method $this withWorkspaceId($value)
  * @method string getOrderType()
  * @method $this withOrderType($value)
- * @method string getEngineType()
- * @method $this withEngineType($value)
  */
 class ListPermissionApplyOrders extends Rpc
 {
@@ -9025,12 +9026,12 @@ class ListProjectIds extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  */
 class ListProjectMembers extends Rpc
 {
@@ -9045,10 +9046,10 @@ class ListProjectRoles extends Rpc
 }
 
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  */
 class ListProjects extends Rpc
 {
@@ -9817,6 +9818,40 @@ class ListUsageForResourceGroup extends Rpc
 }
 
 /**
+ * @method string getNodeId()
+ * @method string getProjectId()
+ */
+class OfflineNode extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTenantId()
  * @method string getProjectId()
  * @method string getApiId()
@@ -9913,10 +9948,10 @@ class QueryPublicModelEngine extends Rpc
 /**
  * @method string getRoleCode()
  * @method $this withRoleCode($value)
- * @method string getProjectId()
- * @method $this withProjectId($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
  */
 class RemoveProjectMemberFromRole extends Rpc
 {
@@ -10912,10 +10947,10 @@ class TestDataServiceApi extends Rpc
 /**
  * @method string getResourceGroup()
  * @method $this withResourceGroup($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
  * @method string getDatasourceName()
  * @method $this withDatasourceName($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
@@ -11261,14 +11296,14 @@ class UpdateDataServiceApi extends Rpc
 }
 
 /**
- * @method string getEnvType()
- * @method $this withEnvType($value)
- * @method string getDataSourceId()
- * @method $this withDataSourceId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getContent()
  * @method $this withContent($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getDataSourceId()
+ * @method $this withDataSourceId($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
