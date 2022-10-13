@@ -34,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDeliveryTypeConfig getDeliveryTypeConfig(array $options = [])
  * @method GetDeliveryTypeConfigList getDeliveryTypeConfigList(array $options = [])
  * @method GetMainPartList getMainPartList(array $options = [])
+ * @method GetProductConfig getProductConfig(array $options = [])
  * @method GetPublishPriceTask getPublishPriceTask(array $options = [])
  * @method GetUnionTaskStatus getUnionTaskStatus(array $options = [])
  * @method InnerCallService innerCallService(array $options = [])
@@ -890,6 +891,8 @@ class CreateTenantUser extends Rpc
  * @method $this withChannel($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getAnchorId()
+ * @method $this withAnchorId($value)
  * @method string getContentUrl()
  * @method $this withContentUrl($value)
  * @method string getMediaIndustry()
@@ -1137,6 +1140,26 @@ class GetDeliveryTypeConfigList extends Rpc
  */
 class GetMainPartList extends Rpc
 {
+}
+
+/**
+ * @method string getAccountType()
+ */
+class GetProductConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAccountType($value)
+    {
+        $this->data['AccountType'] = $value;
+        $this->options['form_params']['AccountType'] = $value;
+
+        return $this;
+    }
 }
 
 /**

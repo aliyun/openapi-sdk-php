@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1507 - 2022-10-13
+- Supported AnchorId for CreateUnionTask.
+
+
 ## 1.8.1506 - 2022-10-10
 - Add OpenAPI CreateEaiJupyter.
 - Fixd bugs for OpenAPI  DeleteEaiAll.
