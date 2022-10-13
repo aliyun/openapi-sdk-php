@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1509 - 2022-10-13
+- Supported AndroidNotificationGroup for Push and MassPush.
+- Add Honor channel support.
+
+
 ## 1.8.1508 - 2022-10-13
 - Generated 2020-05-18 for `dataworks-public`.
 

@@ -23,7 +23,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PushNoticeToAndroid pushNoticeToAndroid(array $options = [])
  * @method PushNoticeToiOS pushNoticeToiOS(array $options = [])
  * @method QueryAliases queryAliases(array $options = [])
- * @method QueryDeviceCount queryDeviceCount(array $options = [])
  * @method QueryDeviceInfo queryDeviceInfo(array $options = [])
  * @method QueryDevicesByAccount queryDevicesByAccount(array $options = [])
  * @method QueryDevicesByAlias queryDevicesByAlias(array $options = [])
@@ -318,6 +317,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSExtParameters'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSExtParameters'] = $depth1Value['IOSExtParameters'];
 			}
+			if(isset($depth1Value['AndroidNotificationHonorChannel'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationHonorChannel'] = $depth1Value['AndroidNotificationHonorChannel'];
+			}
 			if(isset($depth1Value['AndroidXiaomiImageUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaomiImageUrl'] = $depth1Value['AndroidXiaomiImageUrl'];
 			}
@@ -329,6 +331,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['IOSSilentNotification'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSSilentNotification'] = $depth1Value['IOSSilentNotification'];
+			}
+			if(isset($depth1Value['AndroidNotificationGroup'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationGroup'] = $depth1Value['AndroidNotificationGroup'];
 			}
 			if(isset($depth1Value['SendChannels'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.SendChannels'] = $depth1Value['SendChannels'];
@@ -408,9 +413,9 @@ class MassPush extends Rpc
  * @method $this withAndroidNotificationXiaomiChannel($value)
  * @method string getStoreOffline()
  * @method $this withStoreOffline($value)
+ * @method string getIOSRelevanceScore()
  * @method string getSmsParams()
  * @method $this withSmsParams($value)
- * @method string getIOSRelevanceScore()
  * @method string getAndroidVivoPushMode()
  * @method $this withAndroidVivoPushMode($value)
  * @method string getAndroidInboxBody()
@@ -449,6 +454,8 @@ class MassPush extends Rpc
  * @method string getAndroidRenderStyle()
  * @method $this withAndroidRenderStyle($value)
  * @method string getIOSExtParameters()
+ * @method string getAndroidNotificationHonorChannel()
+ * @method $this withAndroidNotificationHonorChannel($value)
  * @method string getAndroidXiaomiImageUrl()
  * @method $this withAndroidXiaomiImageUrl($value)
  * @method string getSmsTemplateName()
@@ -458,6 +465,8 @@ class MassPush extends Rpc
  * @method string getAndroidBigPictureUrl()
  * @method $this withAndroidBigPictureUrl($value)
  * @method string getIOSSilentNotification()
+ * @method string getAndroidNotificationGroup()
+ * @method $this withAndroidNotificationGroup($value)
  * @method string getSendChannels()
  * @method $this withSendChannels($value)
  * @method string getTarget()
@@ -478,10 +487,10 @@ class MassPush extends Rpc
  * @method $this withAppKey($value)
  * @method string getTargetValue()
  * @method $this withTargetValue($value)
- * @method string getAndroidXiaoMiActivity()
- * @method $this withAndroidXiaoMiActivity($value)
  * @method string getAndroidXiaoMiNotifyTitle()
  * @method $this withAndroidXiaoMiNotifyTitle($value)
+ * @method string getAndroidXiaoMiActivity()
+ * @method $this withAndroidXiaoMiActivity($value)
  */
 class Push extends Rpc
 {
@@ -767,18 +776,6 @@ class PushNoticeToiOS extends Rpc
  * @method $this withAppKey($value)
  */
 class QueryAliases extends Rpc
-{
-}
-
-/**
- * @method string getTarget()
- * @method $this withTarget($value)
- * @method string getAppKey()
- * @method $this withAppKey($value)
- * @method string getTargetValue()
- * @method $this withTargetValue($value)
- */
-class QueryDeviceCount extends Rpc
 {
 }
 
