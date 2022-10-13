@@ -58,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSecurityGroup deleteSecurityGroup(array $options = [])
  * @method DeleteSnatEntry deleteSnatEntry(array $options = [])
  * @method DeleteVSwitch deleteVSwitch(array $options = [])
+ * @method DescribeAICImages describeAICImages(array $options = [])
  * @method DescribeApplication describeApplication(array $options = [])
  * @method DescribeApplicationResourceSummary describeApplicationResourceSummary(array $options = [])
  * @method DescribeARMServerInstances describeARMServerInstances(array $options = [])
@@ -91,6 +92,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEpnMeasurementData describeEpnMeasurementData(array $options = [])
  * @method DescribeExportImageInfo describeExportImageInfo(array $options = [])
  * @method DescribeExportImageStatus describeExportImageStatus(array $options = [])
+ * @method DescribeFileSystems describeFileSystems(array $options = [])
  * @method DescribeForwardTableEntries describeForwardTableEntries(array $options = [])
  * @method DescribeImageInfos describeImageInfos(array $options = [])
  * @method DescribeImages describeImages(array $options = [])
@@ -1110,6 +1112,20 @@ class DeleteVSwitch extends Rpc
 }
 
 /**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getImageUrl()
+ * @method $this withImageUrl($value)
+ */
+class DescribeAICImages extends Rpc
+{
+}
+
+/**
  * @method string getAppVersions()
  * @method $this withAppVersions($value)
  * @method string getOutDetailStatParams()
@@ -1540,6 +1556,25 @@ class DescribeExportImageInfo extends Rpc
  */
 class DescribeExportImageStatus extends Rpc
 {
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFileSystemName()
+ * @method $this withFileSystemName($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getFileSystemId()
+ * @method $this withFileSystemId($value)
+ */
+class DescribeFileSystems extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2073,10 +2108,10 @@ class DescribeSnatTableEntries extends Rpc
  * @method $this withEnsRegionId($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class DescribeUserBandWidthData extends Rpc
 {

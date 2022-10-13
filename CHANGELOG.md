@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1510 - 2022-10-13
+- Support DescribeAICImages.
+
+
 ## 1.8.1509 - 2022-10-13
 - Supported AndroidNotificationGroup for Push and MassPush.
 - Add Honor channel support.
