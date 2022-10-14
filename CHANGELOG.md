@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1511 - 2022-10-14
+- Release RecognizeVATInvoice.
+
+
 ## 1.8.1510 - 2022-10-13
 - Support DescribeAICImages.
 
