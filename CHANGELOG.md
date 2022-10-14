@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1512 - 2022-10-14
+- Add GPUMemorySize to DescribeInstanceTypes api.
+
+
 ## 1.8.1511 - 2022-10-14
 - Release RecognizeVATInvoice.
 

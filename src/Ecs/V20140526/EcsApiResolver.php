@@ -244,6 +244,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method JoinResourceGroup joinResourceGroup(array $options = [])
  * @method JoinSecurityGroup joinSecurityGroup(array $options = [])
  * @method LeaveSecurityGroup leaveSecurityGroup(array $options = [])
+ * @method ListPluginStatus listPluginStatus(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyAutoProvisioningGroup modifyAutoProvisioningGroup(array $options = [])
  * @method ModifyAutoSnapshotPolicy modifyAutoSnapshotPolicy(array $options = [])
@@ -1333,6 +1334,8 @@ class CreateActivation extends Rpc
  * @method string getLaunchConfigurationIoOptimized()
  * @method string getPayAsYouGoTargetCapacity()
  * @method $this withPayAsYouGoTargetCapacity($value)
+ * @method string getHibernationOptionsConfigured()
+ * @method $this withHibernationOptionsConfigured($value)
  * @method string getTotalTargetCapacity()
  * @method $this withTotalTargetCapacity($value)
  * @method string getSpotTargetCapacity()
@@ -8870,6 +8873,7 @@ class DescribePrefixLists extends Rpc
  * @method $this withSpotDuration($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
+ * @method array getDataDisk()
  * @method string getDataDisk1Category()
  * @method string getDataDisk2PerformanceLevel()
  * @method string getSystemDiskSize()
@@ -9048,6 +9052,29 @@ class DescribePrice extends Rpc
         $this->options['query']['DataDisk.2.Size'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $dataDisk
+     *
+     * @return $this
+     */
+	public function withDataDisk(array $dataDisk)
+	{
+	    $this->data['DataDisk'] = $dataDisk;
+		foreach ($dataDisk as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Size'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Size'] = $depth1Value['Size'];
+			}
+			if(isset($depth1Value['PerformanceLevel'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			}
+			if(isset($depth1Value['Category'])){
+				$this->options['query']['DataDisk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
+			}
+		}
+
+		return $this;
     }
 
     /**
@@ -9341,6 +9368,8 @@ class DescribeResourceByTags extends Rpc
  * @method $this withOwnerId($value)
  * @method string getDestinationResource()
  * @method $this withDestinationResource($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
  */
 class DescribeResourcesModification extends Rpc
 {
@@ -10826,6 +10855,8 @@ class InstallCloudAssistant extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getContainerName()
+ * @method $this withContainerName($value)
  * @method string getCommandId()
  * @method $this withCommandId($value)
  * @method string getFrequency()
@@ -10927,6 +10958,42 @@ class JoinSecurityGroup extends Rpc
  */
 class LeaveSecurityGroup extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getInstanceId()
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class ListPluginStatus extends Rpc
+{
+
+    /**
+     * @param array $instanceId
+     *
+     * @return $this
+     */
+	public function withInstanceId(array $instanceId)
+	{
+	    $this->data['InstanceId'] = $instanceId;
+		foreach ($instanceId as $i => $iValue) {
+			$this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -13854,6 +13921,8 @@ class RevokeSecurityGroupEgress extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getContainerName()
+ * @method $this withContainerName($value)
  * @method string getWorkingDir()
  * @method $this withWorkingDir($value)
  * @method string getDescription()
