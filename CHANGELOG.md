@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1519 - 2022-10-17
+- Release MergeVideoModelFace.
+
+
 ## 1.8.1518 - 2022-10-17
 - Release EstimateMonocularVideoDepth.
 
