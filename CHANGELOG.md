@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1516 - 2022-10-17
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+
 ## 1.8.1515 - 2022-10-17
 - Update videoseg.
 
