@@ -1,17 +1,1 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"videorecog.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
-=======
-{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"imageprocess.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
->>>>>>> Stashed changes
-=======
-{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"videoseg.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
->>>>>>> Stashed changes
-=======
-<<<<<<< Updated upstream
-{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"objectdet.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
-=======
-{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"ocr.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"threedvision.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
