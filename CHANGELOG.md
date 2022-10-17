@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1521 - 2022-10-17
+- Update RefineMask.
+
+
 ## 1.8.1520 - 2022-10-17
 - Update TaggingAdImage.
 
