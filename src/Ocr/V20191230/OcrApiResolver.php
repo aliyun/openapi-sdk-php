@@ -251,8 +251,14 @@ class RecognizeBusinessLicense extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getMinHeight()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getOutputProbability()
  * @method string getImageURL()
  */
@@ -611,7 +617,13 @@ class RecognizePoiName extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method array getTasks()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class RecognizeQrCode extends Rpc
 {
