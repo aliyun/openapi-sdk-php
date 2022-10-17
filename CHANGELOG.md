@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1515 - 2022-10-17
+- Update videoseg.
+
+
 ## 1.8.1514 - 2022-10-17
 - Release ScreenEC.
 
