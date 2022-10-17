@@ -33,12 +33,15 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'imagerecog';
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class ClassifyingRubbish extends Rpc
@@ -59,6 +62,12 @@ class ClassifyingRubbish extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class DetectFruits extends Rpc
@@ -79,6 +88,12 @@ class DetectFruits extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getUrl()
  */
 class DetectImageElements extends Rpc
@@ -99,7 +114,13 @@ class DetectImageElements extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getType()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class EvaluateCertificateQuality extends Rpc
@@ -133,8 +154,14 @@ class EvaluateCertificateQuality extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getAsync()
  * @method $this withAsync($value)
  */
@@ -146,6 +173,12 @@ class GetAsyncJobResult extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RecognizeFood extends Rpc
@@ -166,24 +199,17 @@ class RecognizeFood extends Rpc
 }
 
 /**
- * @method string getUrl()
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getColorCount()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
+ * @method string getUrl()
  */
 class RecognizeImageColor extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUrl($value)
-    {
-        $this->data['Url'] = $value;
-        $this->options['form_params']['Url'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -194,6 +220,19 @@ class RecognizeImageColor extends Rpc
     {
         $this->data['ColorCount'] = $value;
         $this->options['form_params']['ColorCount'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUrl($value)
+    {
+        $this->data['Url'] = $value;
+        $this->options['form_params']['Url'] = $value;
 
         return $this;
     }
@@ -220,7 +259,13 @@ class RecognizeImageStyle extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method array getTasks()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  */
 class RecognizeLogo extends Rpc
 {
@@ -278,6 +323,12 @@ class RecognizeScene extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class RecognizeVehicleType extends Rpc
@@ -298,7 +349,13 @@ class RecognizeVehicleType extends Rpc
 }
 
 /**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
  * @method string getImageType()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getAsync()
  * @method string getImageURL()
  */
