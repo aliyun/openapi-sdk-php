@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1513 - 2022-10-17
+- Update RecognizeVideoCastCrewList.
+
+
 ## 1.8.1512 - 2022-10-14
 - Add GPUMemorySize to DescribeInstanceTypes api.
 
