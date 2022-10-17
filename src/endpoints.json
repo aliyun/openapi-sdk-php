@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 {"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"videorecog.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
+=======
+{"endpoint_map":{},"endpoint_regional":"regional","standard":{"cn-shanghai":"imageprocess.cn-shanghai.aliyuncs.com"},"regions":["cn-shanghai"],"endpoint_health":[]}
+>>>>>>> Stashed changes

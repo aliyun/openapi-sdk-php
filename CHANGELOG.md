@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1514 - 2022-10-17
+- Release ScreenEC.
+
+
 ## 1.8.1513 - 2022-10-17
 - Update RecognizeVideoCastCrewList.
 
