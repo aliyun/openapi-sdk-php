@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1522 - 2022-10-18
+- Update MakeSuperResolutionImage.
+
+
 ## 1.8.1521 - 2022-10-17
 - Update RefineMask.
 
