@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelCreateCloudAccount cancelCreateCloudAccount(array $options = [])
  * @method CancelHandshake cancelHandshake(array $options = [])
  * @method CancelPromoteResourceAccount cancelPromoteResourceAccount(array $options = [])
+ * @method CheckAccountDelete checkAccountDelete(array $options = [])
  * @method CreateCloudAccount createCloudAccount(array $options = [])
  * @method CreateControlPolicy createControlPolicy(array $options = [])
  * @method CreateFolder createFolder(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateRole createRole(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method DeclineHandshake declineHandshake(array $options = [])
+ * @method DeleteAccount deleteAccount(array $options = [])
  * @method DeleteControlPolicy deleteControlPolicy(array $options = [])
  * @method DeleteFolder deleteFolder(array $options = [])
  * @method DeletePolicy deletePolicy(array $options = [])
@@ -37,6 +39,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableControlPolicy enableControlPolicy(array $options = [])
  * @method EnableResourceDirectory enableResourceDirectory(array $options = [])
  * @method GetAccount getAccount(array $options = [])
+ * @method GetAccountDeletionCheckResult getAccountDeletionCheckResult(array $options = [])
+ * @method GetAccountDeletionStatus getAccountDeletionStatus(array $options = [])
  * @method GetControlPolicy getControlPolicy(array $options = [])
  * @method GetControlPolicyEnablementStatus getControlPolicyEnablementStatus(array $options = [])
  * @method GetFolder getFolder(array $options = [])
@@ -181,6 +185,14 @@ class CancelPromoteResourceAccount extends Rpc
 }
 
 /**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class CheckAccountDelete extends Rpc
+{
+}
+
+/**
  * @method string getParentFolderId()
  * @method $this withParentFolderId($value)
  * @method string getDisplayName()
@@ -299,6 +311,16 @@ class CreateServiceLinkedRole extends Rpc
  * @method $this withHandshakeId($value)
  */
 class DeclineHandshake extends Rpc
+{
+}
+
+/**
+ * @method string getAbandonableCheckId()
+ * @method $this withAbandonableCheckId($value)
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class DeleteAccount extends Rpc
 {
 }
 
@@ -435,6 +457,22 @@ class EnableResourceDirectory extends Rpc
  * @method $this withIncludeTags($value)
  */
 class GetAccount extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class GetAccountDeletionCheckResult extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class GetAccountDeletionStatus extends Rpc
 {
 }
 

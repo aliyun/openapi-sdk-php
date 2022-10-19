@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1524 - 2022-10-19
+- Supported more language for resourcemanager.
+
+
 ## 1.8.1523 - 2022-10-19
 - Update Lindorm OpenAPI.
 
