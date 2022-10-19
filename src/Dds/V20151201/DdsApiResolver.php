@@ -408,6 +408,8 @@ class CreateNodeBatch extends Rpc
  * @method string getNetworkType()
  * @method $this withNetworkType($value)
  * @method array getReplicaSet()
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
