@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1523 - 2022-10-19
+- Update Lindorm OpenAPI.
+
+
 ## 1.8.1522 - 2022-10-18
 - Update MakeSuperResolutionImage.
 
