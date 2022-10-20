@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1526 - 2022-10-20
+- Support Service of number analysis.
+
+
 ## 1.8.1525 - 2022-10-19
 - Update by SDK platform.
 

@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InvalidPhoneNumberFilter invalidPhoneNumberFilter(array $options = [])
  * @method PhoneNumberEncrypt phoneNumberEncrypt(array $options = [])
  * @method PhoneNumberStatusForAccount phoneNumberStatusForAccount(array $options = [])
+ * @method PhoneNumberStatusForPublic phoneNumberStatusForPublic(array $options = [])
  * @method PhoneNumberStatusForReal phoneNumberStatusForReal(array $options = [])
  * @method PhoneNumberStatusForSms phoneNumberStatusForSms(array $options = [])
  * @method PhoneNumberStatusForVirtual phoneNumberStatusForVirtual(array $options = [])
@@ -98,10 +99,14 @@ class DescribePhoneNumberAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getOfferType()
  * @method $this withOfferType($value)
+ * @method string getResultCount()
+ * @method $this withResultCount($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
@@ -200,6 +205,8 @@ class DescribePhoneTwiceTelVerify extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getMask()
  * @method $this withMask($value)
+ * @method string getOfferType()
+ * @method $this withOfferType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
@@ -218,6 +225,8 @@ class InvalidPhoneNumberFilter extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getMask()
  * @method $this withMask($value)
+ * @method string getOfferType()
+ * @method $this withOfferType($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
@@ -252,6 +261,26 @@ class PhoneNumberEncrypt extends Rpc
  * @method $this withPhoneStatusSceneCode($value)
  */
 class PhoneNumberStatusForAccount extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ */
+class PhoneNumberStatusForPublic extends Rpc
 {
 }
 
