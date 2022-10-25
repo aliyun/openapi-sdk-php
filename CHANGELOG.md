@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1527 - 2022-10-25
+- OpenAPI CreateEaiJupyter add optional parameter `EnvironmentVar`.
+
+
 ## 1.8.1526 - 2022-10-20
 - Support Service of number analysis.
 

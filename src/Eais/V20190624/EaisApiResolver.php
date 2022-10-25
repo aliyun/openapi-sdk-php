@@ -103,6 +103,8 @@ class CreateEaiAll extends Rpc
  * @method $this withEaisType($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method string getEnvironmentVar()
+ * @method $this withEnvironmentVar($value)
  */
 class CreateEaiJupyter extends Rpc
 {
