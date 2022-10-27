@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1529 - 2022-10-27
+- ListNodesByQueue and ListJobsWithFilters add Async.
+
+
 ## 1.8.1528 - 2022-10-27
 - Modify DescribeVodUserDomains api.
 - Modify CreateUploadImage api.
