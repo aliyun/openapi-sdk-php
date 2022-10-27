@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1532 - 2022-10-27
+- Update BatchAddDcdnDomain,add error code.
+
+
 ## 1.8.1531 - 2022-10-27
 - Iot_20180120 Old sdk.
 
