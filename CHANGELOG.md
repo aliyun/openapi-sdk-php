@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1533 - 2022-10-27
+- Add BatchDescribeCdnIpInfo.
+
+
 ## 1.8.1532 - 2022-10-27
 - Update BatchAddDcdnDomain,add error code.
 
