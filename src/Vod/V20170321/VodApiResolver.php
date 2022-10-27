@@ -1511,10 +1511,12 @@ class ListAITemplate extends Rpc
 /**
  * @method string getResourceRealOwnerId()
  * @method $this withResourceRealOwnerId($value)
- * @method string getPageNo()
- * @method $this withPageNo($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */

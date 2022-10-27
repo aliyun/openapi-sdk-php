@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1528 - 2022-10-27
+- Modify DescribeVodUserDomains api.
+- Modify CreateUploadImage api.
+
+
 ## 1.8.1527 - 2022-10-25
 - OpenAPI CreateEaiJupyter add optional parameter `EnvironmentVar`.
 
