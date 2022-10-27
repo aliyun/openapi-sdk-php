@@ -187,6 +187,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GisQueryDeviceLocation gisQueryDeviceLocation(array $options = [])
  * @method GisSearchDeviceTrace gisSearchDeviceTrace(array $options = [])
  * @method ImportDevice importDevice(array $options = [])
+ * @method ImportDTData importDTData(array $options = [])
  * @method ImportThingModelTsl importThingModelTsl(array $options = [])
  * @method InvokeDataAPIService invokeDataAPIService(array $options = [])
  * @method InvokeThingService invokeThingService(array $options = [])
@@ -10447,6 +10448,105 @@ class ImportDevice extends Rpc
         $this->options['form_params']['ApiRevision'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getRealTenantId()
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
+ * @method string getIotInstanceId()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method array getItems()
+ */
+class ImportDTData extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealTenantId($value)
+    {
+        $this->data['RealTenantId'] = $value;
+        $this->options['form_params']['RealTenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $items
+     *
+     * @return $this
+     */
+	public function withItems(array $items)
+	{
+	    $this->data['Items'] = $items;
+		foreach ($items as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DeviceName'])){
+				$this->options['form_params']['Items.' . ($depth1 + 1) . '.DeviceName'] = $depth1Value['DeviceName'];
+			}
+			if(isset($depth1Value['Params'])){
+				$this->options['form_params']['Items.' . ($depth1 + 1) . '.Params'] = $depth1Value['Params'];
+			}
+		}
+
+		return $this;
     }
 }
 

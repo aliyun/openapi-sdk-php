@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1531 - 2022-10-27
+- Iot_20180120 Old sdk.
+
+
 ## 1.8.1530 - 2022-10-27
 - Add DescribeWildcardDomainDetailData.
 
