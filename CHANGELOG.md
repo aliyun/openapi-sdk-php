@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1530 - 2022-10-27
+- Add DescribeWildcardDomainDetailData.
+
+
 ## 1.8.1529 - 2022-10-27
 - ListNodesByQueue and ListJobsWithFilters add Async.
 
