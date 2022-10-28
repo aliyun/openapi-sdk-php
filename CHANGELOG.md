@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1534 - 2022-10-28
+- Support Latest APIs.
+
+
 ## 1.8.1533 - 2022-10-27
 - Add BatchDescribeCdnIpInfo.
 

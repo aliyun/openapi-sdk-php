@@ -753,6 +753,8 @@ class ListListenerCertificates extends Rpc
  * @method $this withListenerIds($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class ListListeners extends Rpc
 {
@@ -1033,6 +1035,8 @@ class TagResources extends Rpc
 /**
  * @method string getTag()
  * @method $this withTag($value)
+ * @method string getAll()
+ * @method $this withAll($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getResourceType()
