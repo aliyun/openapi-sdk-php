@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1535 - 2022-10-28
+- Support BuyPayAsYouGoOrder, RefundPayAsYouGoOrder, ListEffectiveOrders, ListClassificationTemplates.
+- Modify RegisterInstance, UpdateInstance, ListInstances, GetInstance, GetApprovalDetail.
+
+
 ## 1.8.1534 - 2022-10-28
 - Support Latest APIs.
 

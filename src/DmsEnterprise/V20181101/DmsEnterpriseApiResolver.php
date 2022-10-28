@@ -8,7 +8,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddDesensitizationRule addDesensitizationRule(array $options = [])
  * @method AddLhMembers addLhMembers(array $options = [])
  * @method AddLogicTableRouteConfig addLogicTableRouteConfig(array $options = [])
+ * @method AddTaskFlowEdges addTaskFlowEdges(array $options = [])
  * @method ApproveOrder approveOrder(array $options = [])
+ * @method BackFill backFill(array $options = [])
+ * @method BuyPayAsYouGoOrder buyPayAsYouGoOrder(array $options = [])
  * @method ChangeColumnSecLevel changeColumnSecLevel(array $options = [])
  * @method ChangeLhDagOwner changeLhDagOwner(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
@@ -22,9 +25,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateProxy createProxy(array $options = [])
  * @method CreateProxyAccess createProxyAccess(array $options = [])
  * @method CreatePublishGroupTask createPublishGroupTask(array $options = [])
+ * @method CreateScenario createScenario(array $options = [])
  * @method CreateSQLReviewOrder createSQLReviewOrder(array $options = [])
  * @method CreateStandardGroup createStandardGroup(array $options = [])
  * @method CreateStructSyncOrder createStructSyncOrder(array $options = [])
+ * @method CreateTask createTask(array $options = [])
+ * @method CreateTaskFlow createTaskFlow(array $options = [])
  * @method CreateUploadFileJob createUploadFileJob(array $options = [])
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
@@ -34,7 +40,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLogicTableRouteConfig deleteLogicTableRouteConfig(array $options = [])
  * @method DeleteProxy deleteProxy(array $options = [])
  * @method DeleteProxyAccess deleteProxyAccess(array $options = [])
+ * @method DeleteScenario deleteScenario(array $options = [])
+ * @method DeleteTask deleteTask(array $options = [])
  * @method DeleteTaskFlow deleteTaskFlow(array $options = [])
+ * @method DeleteTaskFlowEdgesByCondition deleteTaskFlowEdgesByCondition(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
  * @method EditLogicDatabase editLogicDatabase(array $options = [])
@@ -55,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDBTaskSQLJobLog getDBTaskSQLJobLog(array $options = [])
  * @method GetDBTopology getDBTopology(array $options = [])
  * @method GetInstance getInstance(array $options = [])
+ * @method GetIntervalLimitOfSLA getIntervalLimitOfSLA(array $options = [])
  * @method GetLhSpaceByName getLhSpaceByName(array $options = [])
  * @method GetLogicDatabase getLogicDatabase(array $options = [])
  * @method GetMetaTableColumn getMetaTableColumn(array $options = [])
@@ -65,6 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
  * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
  * @method GetProxy getProxy(array $options = [])
+ * @method GetRuleNumLimitOfSLA getRuleNumLimitOfSLA(array $options = [])
  * @method GetSQLReviewCheckResultStatus getSQLReviewCheckResultStatus(array $options = [])
  * @method GetSQLReviewOptimizeDetail getSQLReviewOptimizeDetail(array $options = [])
  * @method GetStructSyncExecSqlDetail getStructSyncExecSqlDetail(array $options = [])
@@ -73,12 +84,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetStructSyncOrderDetail getStructSyncOrderDetail(array $options = [])
  * @method GetTableDBTopology getTableDBTopology(array $options = [])
  * @method GetTableTopology getTableTopology(array $options = [])
+ * @method GetTask getTask(array $options = [])
+ * @method GetTaskFlowGraph getTaskFlowGraph(array $options = [])
+ * @method GetTaskFlowNotification getTaskFlowNotification(array $options = [])
  * @method GetTaskInstanceRelation getTaskInstanceRelation(array $options = [])
  * @method GetUser getUser(array $options = [])
  * @method GetUserActiveTenant getUserActiveTenant(array $options = [])
  * @method GetUserUploadFileJob getUserUploadFileJob(array $options = [])
  * @method GrantUserPermission grantUserPermission(array $options = [])
  * @method InspectProxyAccessSecret inspectProxyAccessSecret(array $options = [])
+ * @method ListClassificationTemplates listClassificationTemplates(array $options = [])
  * @method ListColumns listColumns(array $options = [])
  * @method ListDAGVersions listDAGVersions(array $options = [])
  * @method ListDatabases listDatabases(array $options = [])
@@ -88,7 +103,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDBTaskSQLJob listDBTaskSQLJob(array $options = [])
  * @method ListDBTaskSQLJobDetail listDBTaskSQLJobDetail(array $options = [])
  * @method ListDDLPublishRecords listDDLPublishRecords(array $options = [])
+ * @method ListDefaultSLARules listDefaultSLARules(array $options = [])
  * @method ListDesensitizationRule listDesensitizationRule(array $options = [])
+ * @method ListEffectiveOrders listEffectiveOrders(array $options = [])
  * @method ListIndexes listIndexes(array $options = [])
  * @method ListInstanceLoginAuditLog listInstanceLoginAuditLog(array $options = [])
  * @method ListInstances listInstances(array $options = [])
@@ -101,37 +118,70 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListProxies listProxies(array $options = [])
  * @method ListProxyAccesses listProxyAccesses(array $options = [])
  * @method ListProxySQLExecAuditLog listProxySQLExecAuditLog(array $options = [])
+ * @method ListScenarios listScenarios(array $options = [])
  * @method ListSensitiveColumns listSensitiveColumns(array $options = [])
  * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
+ * @method ListSensitiveDataAuditLog listSensitiveDataAuditLog(array $options = [])
+ * @method ListSLARules listSLARules(array $options = [])
  * @method ListSQLExecAuditLog listSQLExecAuditLog(array $options = [])
  * @method ListSQLReviewOriginSQL listSQLReviewOriginSQL(array $options = [])
  * @method ListStandardGroups listStandardGroups(array $options = [])
  * @method ListTables listTables(array $options = [])
  * @method ListTaskFlow listTaskFlow(array $options = [])
+ * @method ListTaskFlowConstants listTaskFlowConstants(array $options = [])
+ * @method ListTaskFlowCooperators listTaskFlowCooperators(array $options = [])
+ * @method ListTaskFlowEdgesByCondition listTaskFlowEdgesByCondition(array $options = [])
  * @method ListTaskFlowInstance listTaskFlowInstance(array $options = [])
+ * @method ListTaskFlowsByPage listTaskFlowsByPage(array $options = [])
+ * @method ListTaskFlowTimeVariables listTaskFlowTimeVariables(array $options = [])
+ * @method ListTasksInTaskFlow listTasksInTaskFlow(array $options = [])
  * @method ListUserPermissions listUserPermissions(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method ListUserTenants listUserTenants(array $options = [])
  * @method ListWorkFlowNodes listWorkFlowNodes(array $options = [])
  * @method ListWorkFlowTemplates listWorkFlowTemplates(array $options = [])
+ * @method MakeTaskFlowInstanceSuccess makeTaskFlowInstanceSuccess(array $options = [])
  * @method ModifyDataCorrectExecSQL modifyDataCorrectExecSQL(array $options = [])
  * @method ModifyDesensitizationStrategy modifyDesensitizationStrategy(array $options = [])
+ * @method MoveTaskFlowToScenario moveTaskFlowToScenario(array $options = [])
  * @method OfflineTaskFlow offlineTaskFlow(array $options = [])
  * @method PauseDataCorrectSQLJob pauseDataCorrectSQLJob(array $options = [])
+ * @method PublishAndDeployTaskFlow publishAndDeployTaskFlow(array $options = [])
  * @method ReDeployLhDagVersion reDeployLhDagVersion(array $options = [])
+ * @method RefundPayAsYouGoOrder refundPayAsYouGoOrder(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
  * @method RegisterUser registerUser(array $options = [])
+ * @method ReRunTaskFlowInstance reRunTaskFlowInstance(array $options = [])
  * @method RestartDataCorrectSQLJob restartDataCorrectSQLJob(array $options = [])
+ * @method ResumeTaskFlowInstance resumeTaskFlowInstance(array $options = [])
  * @method RetryDataCorrectPreCheck retryDataCorrectPreCheck(array $options = [])
  * @method RevokeUserPermission revokeUserPermission(array $options = [])
  * @method SearchDatabase searchDatabase(array $options = [])
  * @method SearchTable searchTable(array $options = [])
  * @method SetOwners setOwners(array $options = [])
+ * @method StopTaskFlowInstance stopTaskFlowInstance(array $options = [])
  * @method SubmitOrderApproval submitOrderApproval(array $options = [])
  * @method SubmitStructSyncOrderApproval submitStructSyncOrderApproval(array $options = [])
+ * @method SuspendTaskFlowInstance suspendTaskFlowInstance(array $options = [])
  * @method SyncDatabaseMeta syncDatabaseMeta(array $options = [])
  * @method SyncInstanceMeta syncInstanceMeta(array $options = [])
  * @method UpdateInstance updateInstance(array $options = [])
+ * @method UpdateScenario updateScenario(array $options = [])
+ * @method UpdateSLARules updateSLARules(array $options = [])
+ * @method UpdateTaskConfig updateTaskConfig(array $options = [])
+ * @method UpdateTaskContent updateTaskContent(array $options = [])
+ * @method UpdateTaskFlowConstants updateTaskFlowConstants(array $options = [])
+ * @method UpdateTaskFlowCooperators updateTaskFlowCooperators(array $options = [])
+ * @method UpdateTaskFlowEdges updateTaskFlowEdges(array $options = [])
+ * @method UpdateTaskFlowNameAndDesc updateTaskFlowNameAndDesc(array $options = [])
+ * @method UpdateTaskFlowNotification updateTaskFlowNotification(array $options = [])
+ * @method UpdateTaskFlowOwner updateTaskFlowOwner(array $options = [])
+ * @method UpdateTaskFlowRelations updateTaskFlowRelations(array $options = [])
+ * @method UpdateTaskFlowSchedule updateTaskFlowSchedule(array $options = [])
+ * @method UpdateTaskFlowTimeVariables updateTaskFlowTimeVariables(array $options = [])
+ * @method UpdateTaskName updateTaskName(array $options = [])
+ * @method UpdateTaskOutput updateTaskOutput(array $options = [])
+ * @method UpdateTaskTimeVariables updateTaskTimeVariables(array $options = [])
  * @method UpdateUser updateUser(array $options = [])
  */
 class DmsEnterpriseApiResolver extends ApiResolver
@@ -212,6 +262,18 @@ class AddLogicTableRouteConfig extends Rpc
 }
 
 /**
+ * @method string getEdges()
+ * @method $this withEdges($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class AddTaskFlowEdges extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getWorkflowInstanceId()
@@ -222,6 +284,46 @@ class AddLogicTableRouteConfig extends Rpc
  * @method $this withComment($value)
  */
 class ApproveOrder extends Rpc
+{
+}
+
+/**
+ * @method string getBackFillDateBegin()
+ * @method $this withBackFillDateBegin($value)
+ * @method string getBackFillDate()
+ * @method $this withBackFillDate($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getIsTriggerSubTree()
+ * @method $this withIsTriggerSubTree($value)
+ * @method string getAsc()
+ * @method $this withAsc($value)
+ * @method string getBackFillDateEnd()
+ * @method $this withBackFillDateEnd($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method string getHistoryDagId()
+ * @method $this withHistoryDagId($value)
+ * @method string getStartNodeIds()
+ * @method $this withStartNodeIds($value)
+ */
+class BackFill extends Rpc
+{
+}
+
+/**
+ * @method string getInsNum()
+ * @method $this withInsNum($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getVersionType()
+ * @method $this withVersionType($value)
+ * @method string getCommodityType()
+ * @method $this withCommodityType($value)
+ */
+class BuyPayAsYouGoOrder extends Rpc
 {
 }
 
@@ -446,6 +548,18 @@ class CreatePublishGroupTask extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getScenarioName()
+ * @method $this withScenarioName($value)
+ */
+class CreateScenario extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getParam()
@@ -486,6 +600,42 @@ class CreateStandardGroup extends Rpc
  * @method $this withRelatedUserList($value)
  */
 class CreateStructSyncOrder extends Rpc
+{
+}
+
+/**
+ * @method string getTimeVariables()
+ * @method $this withTimeVariables($value)
+ * @method string getNodeType()
+ * @method $this withNodeType($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
+ * @method string getNodeContent()
+ * @method $this withNodeContent($value)
+ * @method string getNodeOutput()
+ * @method $this withNodeOutput($value)
+ * @method string getGraphParam()
+ * @method $this withGraphParam($value)
+ */
+class CreateTask extends Rpc
+{
+}
+
+/**
+ * @method string getDagName()
+ * @method $this withDagName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ */
+class CreateTaskFlow extends Rpc
 {
 }
 
@@ -536,10 +686,10 @@ class DeleteInstance extends Rpc
 }
 
 /**
- * @method string getSpaceId()
- * @method $this withSpaceId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getSpaceId()
+ * @method $this withSpaceId($value)
  */
 class DeleteLakeHouseSpace extends Rpc
 {
@@ -602,6 +752,26 @@ class DeleteProxyAccess extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ */
+class DeleteScenario extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class DeleteTask extends Rpc
+{
+}
+
+/**
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
@@ -612,20 +782,36 @@ class DeleteTaskFlow extends Rpc
 }
 
 /**
- * @method string getUid()
- * @method $this withUid($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getNodeEnd()
+ * @method $this withNodeEnd($value)
+ * @method string getNodeFrom()
+ * @method $this withNodeFrom($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class DeleteTaskFlowEdgesByCondition extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getUid()
+ * @method $this withUid($value)
  */
 class DeleteUser extends Rpc
 {
 }
 
 /**
- * @method string getUid()
- * @method $this withUid($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getUid()
+ * @method $this withUid($value)
  */
 class DisableUser extends Rpc
 {
@@ -646,10 +832,10 @@ class EditLogicDatabase extends Rpc
 }
 
 /**
- * @method string getUid()
- * @method $this withUid($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getUid()
+ * @method $this withUid($value)
  */
 class EnableUser extends Rpc
 {
@@ -828,10 +1014,10 @@ class GetDataExportOrderDetail extends Rpc
 }
 
 /**
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  */
 class GetDBTaskSQLJobLog extends Rpc
 {
@@ -862,6 +1048,16 @@ class GetInstance extends Rpc
 }
 
 /**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetIntervalLimitOfSLA extends Rpc
+{
+}
+
+/**
  * @method string getSpaceName()
  * @method $this withSpaceName($value)
  * @method string getTid()
@@ -872,30 +1068,30 @@ class GetLhSpaceByName extends Rpc
 }
 
 /**
- * @method string getDbId()
- * @method $this withDbId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
  */
 class GetLogicDatabase extends Rpc
 {
 }
 
 /**
- * @method string getTableGuid()
- * @method $this withTableGuid($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
  */
 class GetMetaTableColumn extends Rpc
 {
 }
 
 /**
- * @method string getTableGuid()
- * @method $this withTableGuid($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
  */
 class GetMetaTableDetailInfo extends Rpc
 {
@@ -950,10 +1146,10 @@ class GetPermApplyOrderDetail extends Rpc
 }
 
 /**
- * @method string getDbId()
- * @method $this withDbId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
  */
 class GetPhysicalDatabase extends Rpc
 {
@@ -972,6 +1168,16 @@ class GetProxy extends Rpc
 }
 
 /**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetRuleNumLimitOfSLA extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getTid()
@@ -984,10 +1190,10 @@ class GetSQLReviewCheckResultStatus extends Rpc
 }
 
 /**
- * @method string getSQLReviewQueryKey()
- * @method $this withSQLReviewQueryKey($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getSQLReviewQueryKey()
+ * @method $this withSQLReviewQueryKey($value)
  */
 class GetSQLReviewOptimizeDetail extends Rpc
 {
@@ -1044,22 +1250,52 @@ class GetStructSyncOrderDetail extends Rpc
 }
 
 /**
- * @method string getTableGuid()
- * @method $this withTableGuid($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
  */
 class GetTableDBTopology extends Rpc
 {
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getTableGuid()
  * @method $this withTableGuid($value)
+ */
+class GetTableTopology extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class GetTask extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
  */
-class GetTableTopology extends Rpc
+class GetTaskFlowGraph extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetTaskFlowNotification extends Rpc
 {
 }
 
@@ -1138,6 +1374,14 @@ class GrantUserPermission extends Rpc
  * @method $this withTid($value)
  */
 class InspectProxyAccessSecret extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListClassificationTemplates extends Rpc
 {
 }
 
@@ -1270,6 +1514,16 @@ class ListDDLPublishRecords extends Rpc
 }
 
 /**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListDefaultSLARules extends Rpc
+{
+}
+
+/**
  * @method string getRuleType()
  * @method $this withRuleType($value)
  * @method string getRuleName()
@@ -1286,6 +1540,14 @@ class ListDDLPublishRecords extends Rpc
  * @method $this withRuleId($value)
  */
 class ListDesensitizationRule extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListEffectiveOrders extends Rpc
 {
 }
 
@@ -1386,10 +1648,10 @@ class ListLogicDatabases extends Rpc
 }
 
 /**
- * @method string getTableId()
- * @method $this withTableId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
  */
 class ListLogicTableRouteConfig extends Rpc
 {
@@ -1482,6 +1744,14 @@ class ListProxySQLExecAuditLog extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListScenarios extends Rpc
+{
+}
+
+/**
  * @method string getSchemaName()
  * @method $this withSchemaName($value)
  * @method string getColumnName()
@@ -1520,6 +1790,42 @@ class ListSensitiveColumns extends Rpc
  * @method $this withTableName($value)
  */
 class ListSensitiveColumnsDetail extends Rpc
+{
+}
+
+/**
+ * @method string getOpUserName()
+ * @method $this withOpUserName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getModuleName()
+ * @method $this withModuleName($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ */
+class ListSensitiveDataAuditLog extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListSLARules extends Rpc
 {
 }
 
@@ -1596,6 +1902,42 @@ class ListTaskFlow extends Rpc
 }
 
 /**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListTaskFlowConstants extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListTaskFlowCooperators extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeEnd()
+ * @method $this withNodeEnd($value)
+ * @method string getNodeFrom()
+ * @method $this withNodeFrom($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class ListTaskFlowEdgesByCondition extends Rpc
+{
+}
+
+/**
  * @method string getTriggerType()
  * @method $this withTriggerType($value)
  * @method string getDagId()
@@ -1612,6 +1954,42 @@ class ListTaskFlow extends Rpc
  * @method $this withStartTimeEnd($value)
  */
 class ListTaskFlowInstance extends Rpc
+{
+}
+
+/**
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNeedLastDagInstance()
+ * @method $this withNeedLastDagInstance($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ */
+class ListTaskFlowsByPage extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListTaskFlowTimeVariables extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class ListTasksInTaskFlow extends Rpc
 {
 }
 
@@ -1688,6 +2066,18 @@ class ListWorkFlowTemplates extends Rpc
 }
 
 /**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagInstanceId()
+ * @method $this withDagInstanceId($value)
+ */
+class MakeTaskFlowInstanceSuccess extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getExecSQL()
@@ -1726,6 +2116,18 @@ class ModifyDesensitizationStrategy extends Rpc
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ */
+class MoveTaskFlowToScenario extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
  */
 class OfflineTaskFlow extends Rpc
 {
@@ -1746,6 +2148,18 @@ class PauseDataCorrectSQLJob extends Rpc
 }
 
 /**
+ * @method string getVersionComments()
+ * @method $this withVersionComments($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class PublishAndDeployTaskFlow extends Rpc
+{
+}
+
+/**
  * @method string getDagVersion()
  * @method $this withDagVersion($value)
  * @method string getDagId()
@@ -1754,6 +2168,16 @@ class PauseDataCorrectSQLJob extends Rpc
  * @method $this withTid($value)
  */
 class ReDeployLhDagVersion extends Rpc
+{
+}
+
+/**
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class RefundPayAsYouGoOrder extends Rpc
 {
 }
 
@@ -1770,8 +2194,12 @@ class ReDeployLhDagVersion extends Rpc
  * @method $this withTid($value)
  * @method string getSid()
  * @method $this withSid($value)
+ * @method string getEnableSellSitd()
+ * @method $this withEnableSellSitd($value)
  * @method string getDataLinkName()
  * @method $this withDataLinkName($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
  * @method string getInstanceSource()
  * @method $this withInstanceSource($value)
  * @method string getEnvType()
@@ -1790,6 +2218,8 @@ class ReDeployLhDagVersion extends Rpc
  * @method $this withDatabasePassword($value)
  * @method string getInstanceAlias()
  * @method $this withInstanceAlias($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getDatabaseUser()
  * @method $this withDatabaseUser($value)
  * @method string getPort()
@@ -1824,6 +2254,20 @@ class RegisterUser extends Rpc
 }
 
 /**
+ * @method string getDagVersion()
+ * @method $this withDagVersion($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagInstanceId()
+ * @method $this withDagInstanceId($value)
+ */
+class ReRunTaskFlowInstance extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getType()
@@ -1834,6 +2278,20 @@ class RegisterUser extends Rpc
  * @method $this withJobId($value)
  */
 class RestartDataCorrectSQLJob extends Rpc
+{
+}
+
+/**
+ * @method string getDagVersion()
+ * @method $this withDagVersion($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagInstanceId()
+ * @method $this withDagInstanceId($value)
+ */
+class ResumeTaskFlowInstance extends Rpc
 {
 }
 
@@ -1934,6 +2392,18 @@ class SetOwners extends Rpc
 }
 
 /**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagInstanceId()
+ * @method $this withDagInstanceId($value)
+ */
+class StopTaskFlowInstance extends Rpc
+{
+}
+
+/**
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getTid()
@@ -1950,6 +2420,18 @@ class SubmitOrderApproval extends Rpc
  * @method $this withTid($value)
  */
 class SubmitStructSyncOrderApproval extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagInstanceId()
+ * @method $this withDagInstanceId($value)
+ */
+class SuspendTaskFlowInstance extends Rpc
 {
 }
 
@@ -1990,10 +2472,14 @@ class SyncInstanceMeta extends Rpc
  * @method $this withTid($value)
  * @method string getSid()
  * @method $this withSid($value)
+ * @method string getEnableSellSitd()
+ * @method $this withEnableSellSitd($value)
  * @method string getDbaId()
  * @method $this withDbaId($value)
  * @method string getDataLinkName()
  * @method $this withDataLinkName($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
  * @method string getInstanceSource()
  * @method $this withInstanceSource($value)
  * @method string getEnvType()
@@ -2012,6 +2498,8 @@ class SyncInstanceMeta extends Rpc
  * @method $this withDatabasePassword($value)
  * @method string getInstanceAlias()
  * @method $this withInstanceAlias($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getDatabaseUser()
  * @method $this withDatabaseUser($value)
  * @method string getInstanceId()
@@ -2024,6 +2512,220 @@ class SyncInstanceMeta extends Rpc
  * @method $this withSkipTest($value)
  */
 class UpdateInstance extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getScenarioName()
+ * @method $this withScenarioName($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
+ */
+class UpdateScenario extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getSlaRuleList()
+ * @method $this withSlaRuleList($value)
+ */
+class UpdateSLARules extends Rpc
+{
+}
+
+/**
+ * @method string getNodeConfig()
+ * @method $this withNodeConfig($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class UpdateTaskConfig extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeContent()
+ * @method $this withNodeContent($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class UpdateTaskContent extends Rpc
+{
+}
+
+/**
+ * @method string getDagConstants()
+ * @method $this withDagConstants($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class UpdateTaskFlowConstants extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getCooperatorIds()
+ * @method $this withCooperatorIds($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class UpdateTaskFlowCooperators extends Rpc
+{
+}
+
+/**
+ * @method string getEdges()
+ * @method $this withEdges($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class UpdateTaskFlowEdges extends Rpc
+{
+}
+
+/**
+ * @method string getDagName()
+ * @method $this withDagName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class UpdateTaskFlowNameAndDesc extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDagNotificationFail()
+ * @method $this withDagNotificationFail($value)
+ * @method string getDagNotificationSuccess()
+ * @method $this withDagNotificationSuccess($value)
+ * @method string getDagNotificationSla()
+ * @method $this withDagNotificationSla($value)
+ */
+class UpdateTaskFlowNotification extends Rpc
+{
+}
+
+/**
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNewOwnerId()
+ * @method $this withNewOwnerId($value)
+ */
+class UpdateTaskFlowOwner extends Rpc
+{
+}
+
+/**
+ * @method string getEdges()
+ * @method $this withEdges($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class UpdateTaskFlowRelations extends Rpc
+{
+}
+
+/**
+ * @method string getCronType()
+ * @method $this withCronType($value)
+ * @method string getCronStr()
+ * @method $this withCronStr($value)
+ * @method string getTriggerType()
+ * @method $this withTriggerType($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getScheduleSwitch()
+ * @method $this withScheduleSwitch($value)
+ * @method string getCronEndDate()
+ * @method $this withCronEndDate($value)
+ * @method string getTimeZoneId()
+ * @method $this withTimeZoneId($value)
+ * @method string getCronBeginDate()
+ * @method $this withCronBeginDate($value)
+ * @method string getScheduleParam()
+ * @method $this withScheduleParam($value)
+ */
+class UpdateTaskFlowSchedule extends Rpc
+{
+}
+
+/**
+ * @method string getTimeVariables()
+ * @method $this withTimeVariables($value)
+ * @method string getDagId()
+ * @method $this withDagId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class UpdateTaskFlowTimeVariables extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class UpdateTaskName extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeOutput()
+ * @method $this withNodeOutput($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class UpdateTaskOutput extends Rpc
+{
+}
+
+/**
+ * @method string getTimeVariables()
+ * @method $this withTimeVariables($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ */
+class UpdateTaskTimeVariables extends Rpc
 {
 }
 
