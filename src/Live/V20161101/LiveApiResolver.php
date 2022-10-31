@@ -37,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AllowPushStream allowPushStream(array $options = [])
  * @method BatchDeleteLiveDomainConfigs batchDeleteLiveDomainConfigs(array $options = [])
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
+ * @method CancelMuteAllGroupUser cancelMuteAllGroupUser(array $options = [])
  * @method CloseLiveShift closeLiveShift(array $options = [])
  * @method CloseMessageGroup closeMessageGroup(array $options = [])
  * @method CopyCaster copyCaster(array $options = [])
@@ -47,7 +48,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLiveStreamMonitor createLiveStreamMonitor(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
  * @method CreateLiveTranscodeTemplate createLiveTranscodeTemplate(array $options = [])
- * @method CreateMessageApp createMessageApp(array $options = [])
  * @method CreateMessageGroup createMessageGroup(array $options = [])
  * @method CreateMixStream createMixStream(array $options = [])
  * @method DeleteCaster deleteCaster(array $options = [])
@@ -156,6 +156,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamCount describeLiveStreamCount(array $options = [])
  * @method DescribeLiveStreamDelayConfig describeLiveStreamDelayConfig(array $options = [])
  * @method DescribeLiveStreamHistoryUserNum describeLiveStreamHistoryUserNum(array $options = [])
+ * @method DescribeLiveStreamMetricDetailData describeLiveStreamMetricDetailData(array $options = [])
  * @method DescribeLiveStreamMonitorList describeLiveStreamMonitorList(array $options = [])
  * @method DescribeLiveStreamOptimizedFeatureConfig describeLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method DescribeLiveStreamRecordContent describeLiveStreamRecordContent(array $options = [])
@@ -182,6 +183,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRoomKickoutUserList describeRoomKickoutUserList(array $options = [])
  * @method DescribeRoomList describeRoomList(array $options = [])
  * @method DescribeRoomStatus describeRoomStatus(array $options = [])
+ * @method DescribeRTSNativeSDKFirstFrameCost describeRTSNativeSDKFirstFrameCost(array $options = [])
+ * @method DescribeRTSNativeSDKFirstFrameDelay describeRTSNativeSDKFirstFrameDelay(array $options = [])
+ * @method DescribeRTSNativeSDKPlayFailStatus describeRTSNativeSDKPlayFailStatus(array $options = [])
+ * @method DescribeRTSNativeSDKPlayTime describeRTSNativeSDKPlayTime(array $options = [])
+ * @method DescribeRTSNativeSDKVvData describeRTSNativeSDKVvData(array $options = [])
  * @method DescribeShowList describeShowList(array $options = [])
  * @method DescribeStudioLayouts describeStudioLayouts(array $options = [])
  * @method DescribeToutiaoLivePlay describeToutiaoLivePlay(array $options = [])
@@ -201,9 +207,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAllCustomTemplates getAllCustomTemplates(array $options = [])
  * @method GetCustomTemplate getCustomTemplate(array $options = [])
  * @method GetEditingJobInfo getEditingJobInfo(array $options = [])
- * @method GetMessageApp getMessageApp(array $options = [])
  * @method GetMessageGroup getMessageGroup(array $options = [])
  * @method GetMessageToken getMessageToken(array $options = [])
+ * @method GetMessageUserInfo getMessageUserInfo(array $options = [])
  * @method GetMultiRateConfig getMultiRateConfig(array $options = [])
  * @method GetMultiRateConfigList getMultiRateConfigList(array $options = [])
  * @method HotLiveRtcStream hotLiveRtcStream(array $options = [])
@@ -214,7 +220,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListLiveRealtimeLogDeliveryDomains listLiveRealtimeLogDeliveryDomains(array $options = [])
  * @method ListLiveRealtimeLogDeliveryInfos listLiveRealtimeLogDeliveryInfos(array $options = [])
  * @method ListMessage listMessage(array $options = [])
- * @method ListMessageApp listMessageApp(array $options = [])
  * @method ListMessageGroup listMessageGroup(array $options = [])
  * @method ListMessageGroupUser listMessageGroupUser(array $options = [])
  * @method ListPlaylist listPlaylist(array $options = [])
@@ -237,8 +242,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveShowFromShowList removeShowFromShowList(array $options = [])
  * @method ResumeLiveStream resumeLiveStream(array $options = [])
  * @method RollbackLiveStagingConfig rollbackLiveStagingConfig(array $options = [])
- * @method SendMessageToGroup sendMessageToGroup(array $options = [])
- * @method SendMessageToGroupUsers sendMessageToGroupUsers(array $options = [])
  * @method SendRoomNotification sendRoomNotification(array $options = [])
  * @method SendRoomUserNotification sendRoomUserNotification(array $options = [])
  * @method SetCasterChannel setCasterChannel(array $options = [])
@@ -1306,6 +1309,54 @@ class BatchSetLiveDomainConfigs extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method string getAppId()
+ * @method string getOperatorUserId()
+ */
+class CancelMuteAllGroupUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorUserId($value)
+    {
+        $this->data['OperatorUserId'] = $value;
+        $this->options['form_params']['OperatorUserId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getStreamName()
@@ -1494,40 +1545,6 @@ class CreateLiveStreamRecordIndexFiles extends Rpc
  */
 class CreateLiveTranscodeTemplate extends Rpc
 {
-}
-
-/**
- * @method string getExtension()
- * @method string getAppConfig()
- */
-class CreateMessageApp extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtension($value)
-    {
-        $this->data['Extension'] = $value;
-        $this->options['form_params']['Extension'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppConfig($value)
-    {
-        $this->data['AppConfig'] = $value;
-        $this->options['form_params']['AppConfig'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -3184,6 +3201,28 @@ class DescribeLiveStreamHistoryUserNum extends Rpc
 }
 
 /**
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStreamMetricDetailData extends Rpc
+{
+}
+
+/**
  * @method string getMonitorId()
  * @method $this withMonitorId($value)
  * @method string getPageNum()
@@ -3704,6 +3743,76 @@ class DescribeRoomStatus extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDomainNameList()
+ * @method $this withDomainNameList($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDataInterval()
+ * @method $this withDataInterval($value)
+ */
+class DescribeRTSNativeSDKFirstFrameCost extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDomainNameList()
+ * @method $this withDomainNameList($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDataInterval()
+ * @method $this withDataInterval($value)
+ */
+class DescribeRTSNativeSDKFirstFrameDelay extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDomainNameList()
+ * @method $this withDomainNameList($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDataInterval()
+ * @method $this withDataInterval($value)
+ */
+class DescribeRTSNativeSDKPlayFailStatus extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDomainNameList()
+ * @method $this withDomainNameList($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDataInterval()
+ * @method $this withDataInterval($value)
+ */
+class DescribeRTSNativeSDKPlayTime extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDomainNameList()
+ * @method $this withDomainNameList($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDataInterval()
+ * @method $this withDataInterval($value)
+ */
+class DescribeRTSNativeSDKVvData extends Rpc
+{
+}
+
+/**
  * @method string getCasterId()
  * @method $this withCasterId($value)
  * @method string getOwnerId()
@@ -3984,26 +4093,6 @@ class GetEditingJobInfo extends Rpc
 }
 
 /**
- * @method string getAppId()
- */
-class GetMessageApp extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['form_params']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getGroupId()
  * @method string getAppId()
  */
@@ -4100,6 +4189,26 @@ class GetMessageToken extends Rpc
 }
 
 /**
+ * @method string getCloudUid()
+ */
+class GetMessageUserInfo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCloudUid($value)
+    {
+        $this->data['CloudUid'] = $value;
+        $this->options['form_params']['CloudUid'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getApp()
  * @method $this withApp($value)
  * @method string getGroupId()
@@ -4168,9 +4277,11 @@ class InitializeAutoShowListTask extends Rpc
 }
 
 /**
+ * @method string getBroadCastStatistics()
  * @method string getGroupId()
  * @method string getUserId()
  * @method string getAppId()
+ * @method string getBroadCastType()
  */
 class JoinMessageGroup extends Rpc
 {
@@ -4180,6 +4291,19 @@ class JoinMessageGroup extends Rpc
      *
      * @return $this
      */
+    public function withBroadCastStatistics($value)
+    {
+        $this->data['BroadCastStatistics'] = $value;
+        $this->options['form_params']['BroadCastStatistics'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withGroupId($value)
     {
         $this->data['GroupId'] = $value;
@@ -4213,12 +4337,27 @@ class JoinMessageGroup extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBroadCastType($value)
+    {
+        $this->data['BroadCastType'] = $value;
+        $this->options['form_params']['BroadCastType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getBroadCastStatistics()
  * @method string getGroupId()
  * @method string getUserId()
  * @method string getAppId()
+ * @method string getBroadCastType()
  */
 class LeaveMessageGroup extends Rpc
 {
@@ -4228,6 +4367,19 @@ class LeaveMessageGroup extends Rpc
      *
      * @return $this
      */
+    public function withBroadCastStatistics($value)
+    {
+        $this->data['BroadCastStatistics'] = $value;
+        $this->options['form_params']['BroadCastStatistics'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withGroupId($value)
     {
         $this->data['GroupId'] = $value;
@@ -4258,6 +4410,19 @@ class LeaveMessageGroup extends Rpc
     {
         $this->data['AppId'] = $value;
         $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBroadCastType($value)
+    {
+        $this->data['BroadCastType'] = $value;
+        $this->options['form_params']['BroadCastType'] = $value;
 
         return $this;
     }
@@ -4351,54 +4516,6 @@ class ListMessage extends Rpc
     {
         $this->data['Type'] = $value;
         $this->options['form_params']['Type'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNum($value)
-    {
-        $this->data['PageNum'] = $value;
-        $this->options['form_params']['PageNum'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getSortType()
- * @method string getPageNum()
- * @method string getPageSize()
- */
-class ListMessageApp extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSortType($value)
-    {
-        $this->data['SortType'] = $value;
-        $this->options['form_params']['SortType'] = $value;
 
         return $this;
     }
@@ -5087,130 +5204,6 @@ class ResumeLiveStream extends Rpc
  */
 class RollbackLiveStagingConfig extends Rpc
 {
-}
-
-/**
- * @method string getData()
- * @method string getGroupId()
- * @method string getType()
- * @method string getAppId()
- */
-class SendMessageToGroup extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withData($value)
-    {
-        $this->data['Data'] = $value;
-        $this->options['form_params']['Data'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['form_params']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['form_params']['Type'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['form_params']['AppId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getReceiverIdList()
- * @method string getGroupIdcopy()
- * @method string getGroupId()
- * @method string getType()
- */
-class SendMessageToGroupUsers extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withReceiverIdList($value)
-    {
-        $this->data['ReceiverIdList'] = $value;
-        $this->options['form_params']['ReceiverIdList'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupIdcopy($value)
-    {
-        $this->data['GroupIdcopy'] = $value;
-        $this->options['form_params']['GroupId-copy'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['form_params']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withType($value)
-    {
-        $this->data['Type'] = $value;
-        $this->options['form_params']['Type'] = $value;
-
-        return $this;
-    }
 }
 
 /**

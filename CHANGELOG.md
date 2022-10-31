@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1536 - 2022-10-31
+- Live pre sdk test.
+
+
 ## 1.8.1535 - 2022-10-28
 - Support BuyPayAsYouGoOrder, RefundPayAsYouGoOrder, ListEffectiveOrders, ListClassificationTemplates.
 - Modify RegisterInstance, UpdateInstance, ListInstances, GetInstance, GetApprovalDetail.
