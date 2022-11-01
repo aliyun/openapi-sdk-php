@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1537 - 2022-11-1
+- Update RefineMask.
+
+
 ## 1.8.1536 - 2022-10-31
 - Live pre sdk test.
 

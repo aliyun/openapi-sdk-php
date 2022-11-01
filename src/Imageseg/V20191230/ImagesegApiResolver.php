@@ -163,6 +163,10 @@ class SegmentAnimal extends Rpc
 /**
  * @method string getReturnForm()
  * @method $this withReturnForm($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getAsync()
  * @method string getImageURL()
  * @method $this withImageURL($value)
@@ -199,6 +203,10 @@ class SegmentCloth extends Rpc
 /**
  * @method string getReturnForm()
  * @method $this withReturnForm($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
@@ -209,6 +217,10 @@ class SegmentCommodity extends Rpc
 /**
  * @method string getReturnForm()
  * @method $this withReturnForm($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
@@ -279,6 +291,10 @@ class SegmentHair extends Rpc
 }
 
 /**
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
@@ -325,6 +341,10 @@ class SegmentHDCommonImage extends Rpc
 }
 
 /**
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  */
 class SegmentHDSky extends Rpc
@@ -347,6 +367,10 @@ class SegmentHDSky extends Rpc
 /**
  * @method string getReturnForm()
  * @method $this withReturnForm($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
