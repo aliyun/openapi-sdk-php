@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1538 - 2022-11-2
+- ListJobs return JobType and XAttrs.
+- GetJobInfo return JobType and XAttrs.
+
+
 ## 1.8.1537 - 2022-11-1
 - Update RefineMask.
 
