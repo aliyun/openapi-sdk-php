@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1539 - 2022-11-3
+- Support encrypt and decrypt.
+
+
 ## 1.8.1538 - 2022-11-2
 - ListJobs return JobType and XAttrs.
 - GetJobInfo return JobType and XAttrs.
