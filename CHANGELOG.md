@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1540 - 2022-11-4
+- Release ScreenEC.
+
+
 ## 1.8.1539 - 2022-11-3
 - Support encrypt and decrypt.
 
