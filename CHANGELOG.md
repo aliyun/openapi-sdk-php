@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1542 - 2022-11-7
+- Update StartExecution add Parameter TemplateURL.
+   Update StartExecution Parameter TemplateName to optional.
+   Update ValidateTemplateContent add Parameter TemplateURL.
+   Update ValidateTemplateContent Parameter TemplateConten to optional.
+
+
 ## 1.8.1541 - 2022-11-7
 - Cc5g.
 
