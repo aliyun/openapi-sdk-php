@@ -36,6 +36,7 @@ namespace AlibabaCloud;
  * @method static Bss\Bss bss()
  * @method static BssOpenApi\BssOpenApi bssOpenApi()
  * @method static BtripOpen\BtripOpen btripOpen()
+ * @method static CC5G\CC5G cC5G()
  * @method static CCC\CCC cCC()
  * @method static CDRS\CDRS cDRS()
  * @method static CF\CF cF()

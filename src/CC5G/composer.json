@@ -1,0 +1,43 @@
+{
+    "name": "alibabacloud/cc5g",
+    "homepage": "https://www.alibabacloud.com/",
+    "description": "Alibaba Cloud CC5G SDK for PHP",
+    "keywords": [
+        "cc5g",
+        "sdk",
+        "cloud",
+        "aliyun",
+        "alibaba",
+        "library",
+        "alibabacloud"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "support": {
+        "source": "https://github.com/alibabacloud-sdk-php/cc5g",
+        "issues": "https://github.com/alibabacloud-sdk-php/cc5g/issues"
+    },
+    "authors": [
+        {
+            "name": "Alibaba Cloud SDK",
+            "email": "sdk-team@alibabacloud.com",
+            "homepage": "http://www.alibabacloud.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "alibabacloud/client": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlibabaCloud\\CC5G\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
