@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1543 - 2022-11-7
+- Support encrypt and decrypt.
+
+
 ## 1.8.1542 - 2022-11-7
 - Update StartExecution add Parameter TemplateURL.
    Update StartExecution Parameter TemplateName to optional.
