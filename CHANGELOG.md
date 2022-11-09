@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1545 - 2022-11-9
+- Release EstimateMonocularVideoDepth.
+
+
 ## 1.8.1544 - 2022-11-9
 - Release CustomizeClassifyImage.
 
