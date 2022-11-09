@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1544 - 2022-11-9
+- Release CustomizeClassifyImage.
+
+
 ## 1.8.1543 - 2022-11-7
 - Support encrypt and decrypt.
 

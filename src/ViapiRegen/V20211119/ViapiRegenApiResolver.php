@@ -368,11 +368,13 @@ class CreateTagTask extends Rpc
 /**
  * @method string getDescription()
  * @method string getTrainMode()
+ * @method string getDatasetIds()
  * @method string getPreTrainTaskId()
  * @method string getAdvancedParameters()
  * @method string getLabelId()
  * @method string getName()
  * @method string getDatasetId()
+ * @method string getLabelIds()
  * @method string getWorkspaceId()
  */
 class CreateTrainTask extends Rpc
@@ -400,6 +402,19 @@ class CreateTrainTask extends Rpc
     {
         $this->data['TrainMode'] = $value;
         $this->options['form_params']['TrainMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDatasetIds($value)
+    {
+        $this->data['DatasetIds'] = $value;
+        $this->options['form_params']['DatasetIds'] = $value;
 
         return $this;
     }
@@ -465,6 +480,19 @@ class CreateTrainTask extends Rpc
     {
         $this->data['DatasetId'] = $value;
         $this->options['form_params']['DatasetId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabelIds($value)
+    {
+        $this->data['LabelIds'] = $value;
+        $this->options['form_params']['LabelIds'] = $value;
 
         return $this;
     }
@@ -1493,6 +1521,7 @@ class ListDatasets extends Rpc
  * @method string getPageSize()
  * @method string getValue()
  * @method string getCurrentPage()
+ * @method string getIsAbandon()
  * @method string getLabelId()
  * @method string getName()
  * @method string getOperation()
@@ -1535,6 +1564,19 @@ class ListLabelsetDatas extends Rpc
     {
         $this->data['CurrentPage'] = $value;
         $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsAbandon($value)
+    {
+        $this->data['IsAbandon'] = $value;
+        $this->options['form_params']['IsAbandon'] = $value;
 
         return $this;
     }
@@ -2187,12 +2229,14 @@ class UpdateService extends Rpc
  * @method string getDescription()
  * @method string getTrainMode()
  * @method string getId()
+ * @method string getDatasetIds()
  * @method string getPreTrainTaskId()
  * @method string getPreTrainTaskFlag()
  * @method string getAdvancedParameters()
  * @method string getLabelId()
  * @method string getName()
  * @method string getDatasetId()
+ * @method string getLabelIds()
  */
 class UpdateTrainTask extends Rpc
 {
@@ -2232,6 +2276,19 @@ class UpdateTrainTask extends Rpc
     {
         $this->data['Id'] = $value;
         $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDatasetIds($value)
+    {
+        $this->data['DatasetIds'] = $value;
+        $this->options['form_params']['DatasetIds'] = $value;
 
         return $this;
     }
@@ -2310,6 +2367,19 @@ class UpdateTrainTask extends Rpc
     {
         $this->data['DatasetId'] = $value;
         $this->options['form_params']['DatasetId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabelIds($value)
+    {
+        $this->data['LabelIds'] = $value;
+        $this->options['form_params']['LabelIds'] = $value;
 
         return $this;
     }
