@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1548 - 2022-11-10
+- Update TaggingAdImage.
+
+
 ## 1.8.1547 - 2022-11-10
 - Publish Swift.
 
