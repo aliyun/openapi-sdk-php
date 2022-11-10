@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1547 - 2022-11-10
+- Publish Swift.
+
+
 ## 1.8.1546 - 2022-11-10
 - Release RecognizeVATInvoice.
 
