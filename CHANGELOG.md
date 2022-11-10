@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1546 - 2022-11-10
+- Release RecognizeVATInvoice.
+
+
 ## 1.8.1545 - 2022-11-9
 - Release EstimateMonocularVideoDepth.
 
