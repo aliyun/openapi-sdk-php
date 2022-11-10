@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1550 - 2022-11-10
+- Update imageaudit.
+
+
 ## 1.8.1549 - 2022-11-10
 - Release MergeVideoModelFace.
 
