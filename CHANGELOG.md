@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1549 - 2022-11-10
+- Release MergeVideoModelFace.
+
+
 ## 1.8.1548 - 2022-11-10
 - Update TaggingAdImage.
 
