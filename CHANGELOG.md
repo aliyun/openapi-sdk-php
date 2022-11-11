@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1553 - 2022-11-11
+- Update sdk version.
+
+
 ## 1.8.1552 - 2022-11-11
 - Release EstimateMonocularVideoDepth.
 
