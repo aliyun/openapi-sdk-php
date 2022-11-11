@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTrainTask deleteTrainTask(array $options = [])
  * @method DeleteWorkspace deleteWorkspace(array $options = [])
  * @method DisableDataReflow disableDataReflow(array $options = [])
+ * @method DownloadDataset downloadDataset(array $options = [])
  * @method DownloadFileNameList downloadFileNameList(array $options = [])
  * @method DownloadLabelFile downloadLabelFile(array $options = [])
  * @method EnableDataReflow enableDataReflow(array $options = [])
@@ -32,6 +33,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetLabelDetail getLabelDetail(array $options = [])
  * @method GetLabelset getLabelset(array $options = [])
  * @method GetService getService(array $options = [])
+ * @method GetServiceInvoke getServiceInvoke(array $options = [])
+ * @method GetServiceQps getServiceQps(array $options = [])
  * @method GetTrainModel getTrainModel(array $options = [])
  * @method GetTrainTask getTrainTask(array $options = [])
  * @method GetTrainTaskEstimatedTime getTrainTaskEstimatedTime(array $options = [])
@@ -884,6 +887,26 @@ class DisableDataReflow extends Rpc
 }
 
 /**
+ * @method string getDatasetId()
+ */
+class DownloadDataset extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDatasetId($value)
+    {
+        $this->data['DatasetId'] = $value;
+        $this->options['form_params']['DatasetId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getIdentity()
  * @method string getDatasetId()
  */
@@ -1170,6 +1193,130 @@ class GetService extends Rpc
     {
         $this->data['Id'] = $value;
         $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getId()
+ * @method string getEndTime()
+ * @method string getCallerParentIdList()
+ */
+class GetServiceInvoke extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallerParentIdList($value)
+    {
+        $this->data['CallerParentIdList'] = $value;
+        $this->options['form_params']['CallerParentIdList'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getId()
+ * @method string getEndTime()
+ * @method string getCallerParentIdList()
+ */
+class GetServiceQps extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallerParentIdList($value)
+    {
+        $this->data['CallerParentIdList'] = $value;
+        $this->options['form_params']['CallerParentIdList'] = $value;
 
         return $this;
     }

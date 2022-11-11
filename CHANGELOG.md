@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1551 - 2022-11-11
+- Release CustomizeClassifyImage.
+
+
 ## 1.8.1550 - 2022-11-10
 - Update imageaudit.
 
