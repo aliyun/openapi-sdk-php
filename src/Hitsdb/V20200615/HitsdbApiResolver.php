@@ -12,7 +12,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetLindormInstanceEngineList getLindormInstanceEngineList(array $options = [])
  * @method GetLindormInstanceList getLindormInstanceList(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method ModifyInstancePayType modifyInstancePayType(array $options = [])
  * @method ReleaseLindormInstance releaseLindormInstance(array $options = [])
+ * @method RenewLindormInstance renewLindormInstance(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateInstanceIpWhiteList updateInstanceIpWhiteList(array $options = [])
@@ -50,6 +52,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withSecurityToken($value)
  * @method string getTsdbNum()
  * @method $this withTsdbNum($value)
+ * @method string getPrimaryVSwitchId()
+ * @method $this withPrimaryVSwitchId($value)
  * @method string getSolrNum()
  * @method $this withSolrNum($value)
  * @method string getInstanceStorage()
@@ -74,6 +78,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withMultiZoneCombination($value)
  * @method string getTsdbSpec()
  * @method $this withTsdbSpec($value)
+ * @method string getPrimaryZoneId()
+ * @method $this withPrimaryZoneId($value)
  * @method string getFilestoreSpec()
  * @method $this withFilestoreSpec($value)
  * @method string getDuration()
@@ -300,6 +306,30 @@ class ListTagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class ModifyInstancePayType extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
@@ -312,6 +342,28 @@ class ListTagResources extends Rpc
  * @method $this withInstanceId($value)
  */
 class ReleaseLindormInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
+ */
+class RenewLindormInstance extends Rpc
 {
 }
 

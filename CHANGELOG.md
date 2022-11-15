@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1554 - 2022-11-15
+- Add renew and modify instance pay type api.
+
+
 ## 1.8.1553 - 2022-11-11
 - Update sdk version.
 
