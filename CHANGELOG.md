@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1556 - 2022-11-16
+- Add ImportOAS.
+
+
 ## 1.8.1555 - 2022-11-16
 - RunasUserPassword is not required in CreateJobFile.
 - RunasUserPassword not required in SubmitJob.
