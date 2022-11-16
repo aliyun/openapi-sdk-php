@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1555 - 2022-11-16
+- RunasUserPassword is not required in CreateJobFile.
+- RunasUserPassword not required in SubmitJob.
+- Add new api GetJobLog.
+
+
 ## 1.8.1554 - 2022-11-15
 - Add renew and modify instance pay type api.
 
