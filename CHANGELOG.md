@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1557 - 2022-11-16
+- Publish Swift.
+
+
 ## 1.8.1556 - 2022-11-16
 - Add ImportOAS.
 

@@ -36,7 +36,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnhanceFace enhanceFace(array $options = [])
  * @method ExtractFingerPrint extractFingerPrint(array $options = [])
  * @method ExtractPedestrianFeatureAttr extractPedestrianFeatureAttr(array $options = [])
- * @method ExtractPedestrianFeatureAttribute extractPedestrianFeatureAttribute(array $options = [])
  * @method FaceBeauty faceBeauty(array $options = [])
  * @method FaceFilter faceFilter(array $options = [])
  * @method FaceMakeup faceMakeup(array $options = [])
@@ -1653,64 +1652,6 @@ class ExtractPedestrianFeatureAttr extends Rpc
     {
         $this->data['ServiceVersion'] = $value;
         $this->options['form_params']['ServiceVersion'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getMode()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method array getUrlList()
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getImageURL()
- */
-class ExtractPedestrianFeatureAttribute extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMode($value)
-    {
-        $this->data['Mode'] = $value;
-        $this->options['form_params']['Mode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param array $urlList
-     *
-     * @return $this
-     */
-	public function withUrlList(array $urlList)
-	{
-	    $this->data['UrlList'] = $urlList;
-		foreach ($urlList as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Url'])){
-				$this->options['form_params']['UrlList.' . ($depth1 + 1) . '.Url'] = $depth1Value['Url'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
     }
