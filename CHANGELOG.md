@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1560 - 2022-11-17
+- Update BatchDescribeCdnIpInfo.
+
+
 ## 1.8.1559 - 2022-11-17
 - Add DescribeRDDomainConfig.
 

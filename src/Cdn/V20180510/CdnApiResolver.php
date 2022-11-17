@@ -143,7 +143,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyCdnDomain modifyCdnDomain(array $options = [])
  * @method ModifyCdnDomainSchdmByProperty modifyCdnDomainSchdmByProperty(array $options = [])
  * @method ModifyRealtimeLogDelivery modifyRealtimeLogDelivery(array $options = [])
- * @method OpenCdnService openCdnService(array $options = [])
  * @method PublishStagingConfigToProduction publishStagingConfigToProduction(array $options = [])
  * @method PushObjectCache pushObjectCache(array $options = [])
  * @method RefreshObjectCaches refreshObjectCaches(array $options = [])
@@ -2526,18 +2525,6 @@ class ModifyRealtimeLogDelivery extends Rpc
 
     /** @var string */
     public $method = 'GET';
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getInternetChargeType()
- * @method $this withInternetChargeType($value)
- */
-class OpenCdnService extends Rpc
-{
 }
 
 /**
