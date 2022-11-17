@@ -38,7 +38,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRoutineCodeRevision deleteRoutineCodeRevision(array $options = [])
  * @method DeleteRoutineConfEnvs deleteRoutineConfEnvs(array $options = [])
  * @method DeleteWasm deleteWasm(array $options = [])
- * @method DeleteWasmCodeRevision deleteWasmCodeRevision(array $options = [])
  * @method DescribeDcdnAclFields describeDcdnAclFields(array $options = [])
  * @method DescribeDcdnBgpBpsData describeDcdnBgpBpsData(array $options = [])
  * @method DescribeDcdnBgpTrafficData describeDcdnBgpTrafficData(array $options = [])
@@ -154,10 +153,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserDcdnStatus describeUserDcdnStatus(array $options = [])
  * @method DescribeUserErStatus describeUserErStatus(array $options = [])
  * @method DescribeUserLogserviceStatus describeUserLogserviceStatus(array $options = [])
- * @method DescribeWasm describeWasm(array $options = [])
- * @method DescribeWasmUserInfo describeWasmUserInfo(array $options = [])
  * @method EditRoutineConf editRoutineConf(array $options = [])
- * @method EditWasmConf editWasmConf(array $options = [])
  * @method ListDcdnRealTimeDeliveryProject listDcdnRealTimeDeliveryProject(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
  * @method ModifyDcdnWafPolicy modifyDcdnWafPolicy(array $options = [])
@@ -1290,42 +1286,6 @@ class DeleteRoutineConfEnvs extends Rpc
  */
 class DeleteWasm extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getSelectCodeRevision()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- */
-class DeleteWasmCodeRevision extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSelectCodeRevision($value)
-    {
-        $this->data['SelectCodeRevision'] = $value;
-        $this->options['form_params']['SelectCodeRevision'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -3080,8 +3040,6 @@ class DescribeUserDcdnIpaStatus extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeUserDcdnStatus extends Rpc
 {
@@ -3104,36 +3062,6 @@ class DescribeUserErStatus extends Rpc
  * @method $this withSecurityToken($value)
  */
 class DescribeUserLogserviceStatus extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- */
-class DescribeWasm extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeWasmUserInfo extends Rpc
 {
 }
 
@@ -3169,42 +3097,6 @@ class EditRoutineConf extends Rpc
     {
         $this->data['EnvConf'] = $value;
         $this->options['form_params']['EnvConf'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDescription()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- */
-class EditWasmConf extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['Description'] = $value;
 
         return $this;
     }

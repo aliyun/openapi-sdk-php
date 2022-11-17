@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1559 - 2022-11-17
+- Add DescribeRDDomainConfig.
+
+
 ## 1.8.1558 - 2022-11-17
 - Support GetCertWarehouseQuota.
 
