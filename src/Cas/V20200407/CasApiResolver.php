@@ -10,7 +10,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCertificateForPackageRequest createCertificateForPackageRequest(array $options = [])
  * @method CreateCertificateRequest createCertificateRequest(array $options = [])
  * @method CreateCertificateWithCsrRequest createCertificateWithCsrRequest(array $options = [])
- * @method CreateWHCertificateWithExtension createWHCertificateWithExtension(array $options = [])
  * @method CreateWHClientCertificate createWHClientCertificate(array $options = [])
  * @method Decrypt decrypt(array $options = [])
  * @method DeleteCertificateRequest deleteCertificateRequest(array $options = [])
@@ -18,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCertificateState describeCertificateState(array $options = [])
  * @method DescribePackageState describePackageState(array $options = [])
  * @method Encrypt encrypt(array $options = [])
+ * @method GetCertWarehouseQuota getCertWarehouseQuota(array $options = [])
  * @method ListCert listCert(array $options = [])
  * @method ListCertWarehouse listCertWarehouse(array $options = [])
  * @method ListUserCertificateOrder listUserCertificateOrder(array $options = [])
@@ -124,48 +124,6 @@ class CreateCertificateRequest extends Rpc
  * @method $this withValidateType($value)
  */
 class CreateCertificateWithCsrRequest extends Rpc
-{
-}
-
-/**
- * @method string getAppendCrl()
- * @method $this withAppendCrl($value)
- * @method string getCountryCode()
- * @method $this withCountryCode($value)
- * @method string getImmediately()
- * @method $this withImmediately($value)
- * @method string getCommonName()
- * @method $this withCommonName($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getCertType()
- * @method $this withCertType($value)
- * @method string getState()
- * @method $this withState($value)
- * @method string getCsrPemString()
- * @method $this withCsrPemString($value)
- * @method string getAlgorithmKeySize()
- * @method $this withAlgorithmKeySize($value)
- * @method string getAfterTime()
- * @method $this withAfterTime($value)
- * @method string getSans()
- * @method $this withSans($value)
- * @method string getLocality()
- * @method $this withLocality($value)
- * @method string getBasicConstraintsCritical()
- * @method $this withBasicConstraintsCritical($value)
- * @method string getAliasName()
- * @method $this withAliasName($value)
- * @method string getOrganization()
- * @method $this withOrganization($value)
- * @method string getBeforeTime()
- * @method $this withBeforeTime($value)
- * @method string getParentIdentifier()
- * @method $this withParentIdentifier($value)
- * @method string getOrganizationUnit()
- * @method $this withOrganizationUnit($value)
- */
-class CreateWHCertificateWithExtension extends Rpc
 {
 }
 
@@ -284,16 +242,26 @@ class Encrypt extends Rpc
 }
 
 /**
- * @method string getShowSize()
- * @method $this withShowSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class GetCertWarehouseQuota extends Rpc
+{
+}
+
+/**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getWarehouseId()
  * @method $this withWarehouseId($value)
+ * @method string getSourceType()
+ * @method $this withSourceType($value)
  * @method string getKeyWord()
  * @method $this withKeyWord($value)
+ * @method string getShowSize()
+ * @method $this withShowSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -320,14 +288,14 @@ class ListCertWarehouse extends Rpc
 }
 
 /**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
  * @method string getShowSize()
  * @method $this withShowSize($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  * @method string getOrderType()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1558 - 2022-11-17
+- Support GetCertWarehouseQuota.
+
+
 ## 1.8.1557 - 2022-11-16
 - Publish Swift.
 
