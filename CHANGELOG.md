@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1562 - 2022-11-17
+- Update DescribeRDDomainConfig.
+
+
 ## 1.8.1561 - 2022-11-17
 - Add DescribeRDDomainConfig.
 

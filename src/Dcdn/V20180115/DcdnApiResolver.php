@@ -144,6 +144,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnWafService describeDcdnWafService(array $options = [])
  * @method DescribeDcdnWafSpecInfo describeDcdnWafSpecInfo(array $options = [])
  * @method DescribeDcdnWafUsageData describeDcdnWafUsageData(array $options = [])
+ * @method DescribeRDDomainConfig describeRDDomainConfig(array $options = [])
  * @method DescribeRoutine describeRoutine(array $options = [])
  * @method DescribeRoutineCanaryEnvs describeRoutineCanaryEnvs(array $options = [])
  * @method DescribeRoutineCodeRevision describeRoutineCodeRevision(array $options = [])
@@ -2942,6 +2943,16 @@ class DescribeDcdnWafSpecInfo extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeDcdnWafUsageData extends Rpc
+{
+}
+
+/**
+ * @method string getFunctionName()
+ * @method $this withFunctionName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ */
+class DescribeRDDomainConfig extends Rpc
 {
 }
 
