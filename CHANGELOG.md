@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1563 - 2022-11-18
+- Update RefineMask.
+
+
 ## 1.8.1562 - 2022-11-17
 - Update DescribeRDDomainConfig.
 
