@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1564 - 2022-11-21
+- RunasUserPassword is not required in CreateJobFile.
+- RunasUserPassword not required in SubmitJob.
+- Add new api GetJobLog.
+
+
 ## 1.8.1563 - 2022-11-18
 - Update RefineMask.
 

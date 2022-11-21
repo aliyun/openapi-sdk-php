@@ -56,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetGWSConnectTicket getGWSConnectTicket(array $options = [])
  * @method GetHybridClusterConfig getHybridClusterConfig(array $options = [])
  * @method GetIfEcsTypeSupportHtConfig getIfEcsTypeSupportHtConfig(array $options = [])
+ * @method GetJobLog getJobLog(array $options = [])
  * @method GetPostScripts getPostScripts(array $options = [])
  * @method GetSchedulerInfo getSchedulerInfo(array $options = [])
  * @method GetUserImage getUserImage(array $options = [])
@@ -1643,6 +1644,22 @@ class GetHybridClusterConfig extends Rpc
  * @method $this withInstanceType($value)
  */
 class GetIfEcsTypeSupportHtConfig extends Rpc
+{
+}
+
+/**
+ * @method string getOffset()
+ * @method $this withOffset($value)
+ * @method string getExecHost()
+ * @method $this withExecHost($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getSize()
+ * @method $this withSize($value)
+ */
+class GetJobLog extends Rpc
 {
 }
 
