@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1565 - 2022-11-22
+- Support More Open Api.
+
+
 ## 1.8.1564 - 2022-11-21
 - RunasUserPassword is not required in CreateJobFile.
 - RunasUserPassword not required in SubmitJob.
