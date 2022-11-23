@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1567 - 2022-11-23
+- Supported GetDataCronClearConfig,GetDataCorrectRollbackFile,GetOrderAttachmentFile API.
+
+
 ## 1.8.1566 - 2022-11-22
 - Add OpenAPI GetInstanceMetrics.
 - OpenAPI DescribeEais Add return parameter StartTime.

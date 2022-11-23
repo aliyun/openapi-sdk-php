@@ -56,8 +56,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDatabase getDatabase(array $options = [])
  * @method GetDataCorrectBackupFiles getDataCorrectBackupFiles(array $options = [])
  * @method GetDataCorrectOrderDetail getDataCorrectOrderDetail(array $options = [])
+ * @method GetDataCorrectRollbackFile getDataCorrectRollbackFile(array $options = [])
  * @method GetDataCorrectSQLFile getDataCorrectSQLFile(array $options = [])
  * @method GetDataCorrectTaskDetail getDataCorrectTaskDetail(array $options = [])
+ * @method GetDataCronClearConfig getDataCronClearConfig(array $options = [])
  * @method GetDataCronClearTaskDetailList getDataCronClearTaskDetailList(array $options = [])
  * @method GetDataExportDownloadURL getDataExportDownloadURL(array $options = [])
  * @method GetDataExportOrderDetail getDataExportOrderDetail(array $options = [])
@@ -70,6 +72,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMetaTableColumn getMetaTableColumn(array $options = [])
  * @method GetMetaTableDetailInfo getMetaTableDetailInfo(array $options = [])
  * @method GetOpLog getOpLog(array $options = [])
+ * @method GetOrderAttachmentFile getOrderAttachmentFile(array $options = [])
  * @method GetOrderBaseInfo getOrderBaseInfo(array $options = [])
  * @method GetOwnerApplyOrderDetail getOwnerApplyOrderDetail(array $options = [])
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
@@ -204,17 +207,17 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
- * @method string getRuleDescription()
- * @method $this withRuleDescription($value)
  * @method string getFunctionParams()
- * @method string getRuleType()
- * @method $this withRuleType($value)
  * @method string getRuleName()
  * @method $this withRuleName($value)
- * @method string getFunctionType()
- * @method $this withFunctionType($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getRuleDescription()
+ * @method $this withRuleDescription($value)
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getFunctionType()
+ * @method $this withFunctionType($value)
  */
 class AddDesensitizationRule extends Rpc
 {
@@ -248,26 +251,26 @@ class AddLhMembers extends Rpc
 }
 
 /**
- * @method string getRouteKey()
- * @method $this withRouteKey($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getRouteExpr()
- * @method $this withRouteExpr($value)
  * @method string getTableId()
  * @method $this withTableId($value)
+ * @method string getRouteKey()
+ * @method $this withRouteKey($value)
+ * @method string getRouteExpr()
+ * @method $this withRouteExpr($value)
  */
 class AddLogicTableRouteConfig extends Rpc
 {
 }
 
 /**
- * @method string getEdges()
- * @method $this withEdges($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getEdges()
+ * @method $this withEdges($value)
  */
 class AddTaskFlowEdges extends Rpc
 {
@@ -288,46 +291,50 @@ class ApproveOrder extends Rpc
 }
 
 /**
- * @method string getBackFillDateBegin()
- * @method $this withBackFillDateBegin($value)
- * @method string getBackFillDate()
- * @method $this withBackFillDate($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getIsTriggerSubTree()
  * @method $this withIsTriggerSubTree($value)
- * @method string getAsc()
- * @method $this withAsc($value)
  * @method string getBackFillDateEnd()
  * @method $this withBackFillDateEnd($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  * @method string getHistoryDagId()
  * @method $this withHistoryDagId($value)
  * @method string getStartNodeIds()
  * @method $this withStartNodeIds($value)
+ * @method string getBackFillDateBegin()
+ * @method $this withBackFillDateBegin($value)
+ * @method string getBackFillDate()
+ * @method $this withBackFillDate($value)
+ * @method string getAsc()
+ * @method $this withAsc($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class BackFill extends Rpc
 {
 }
 
 /**
- * @method string getInsNum()
- * @method $this withInsNum($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getVersionType()
- * @method $this withVersionType($value)
  * @method string getCommodityType()
  * @method $this withCommodityType($value)
+ * @method string getInsNum()
+ * @method $this withInsNum($value)
+ * @method string getVersionType()
+ * @method $this withVersionType($value)
  */
 class BuyPayAsYouGoOrder extends Rpc
 {
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
  * @method string getSchemaName()
  * @method $this withSchemaName($value)
  * @method string getIsLogic()
@@ -336,36 +343,32 @@ class BuyPayAsYouGoOrder extends Rpc
  * @method $this withNewLevel($value)
  * @method string getColumnName()
  * @method $this withColumnName($value)
- * @method string getTid()
- * @method $this withTid($value)
  * @method string getDbId()
  * @method $this withDbId($value)
- * @method string getTableName()
- * @method $this withTableName($value)
  */
 class ChangeColumnSecLevel extends Rpc
 {
 }
 
 /**
- * @method string getOwnerUserId()
- * @method $this withOwnerUserId($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOwnerUserId()
+ * @method $this withOwnerUserId($value)
  */
 class ChangeLhDagOwner extends Rpc
 {
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getCloseReason()
  * @method $this withCloseReason($value)
- * @method string getTid()
- * @method $this withTid($value)
  */
 class CloseOrder extends Rpc
 {
@@ -374,14 +377,14 @@ class CloseOrder extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getAttachmentKey()
- * @method $this withAttachmentKey($value)
  * @method string getParam()
  * @method $this withParam($value)
- * @method string getComment()
- * @method $this withComment($value)
  * @method string getRelatedUserList()
  * @method $this withRelatedUserList($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  */
 class CreateDataCorrectOrder extends Rpc
 {
@@ -390,14 +393,14 @@ class CreateDataCorrectOrder extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getAttachmentKey()
- * @method $this withAttachmentKey($value)
  * @method string getParam()
  * @method $this withParam($value)
- * @method string getComment()
- * @method $this withComment($value)
  * @method string getRelatedUserList()
  * @method $this withRelatedUserList($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  */
 class CreateDataCronClearOrder extends Rpc
 {
@@ -406,14 +409,14 @@ class CreateDataCronClearOrder extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getAttachmentKey()
- * @method $this withAttachmentKey($value)
  * @method string getParam()
  * @method $this withParam($value)
- * @method string getComment()
- * @method $this withComment($value)
  * @method string getRelatedUserList()
  * @method $this withRelatedUserList($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  */
 class CreateDataImportOrder extends Rpc
 {
@@ -422,34 +425,34 @@ class CreateDataImportOrder extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getAttachmentKey()
- * @method $this withAttachmentKey($value)
  * @method string getParam()
  * @method $this withParam($value)
- * @method string getComment()
- * @method $this withComment($value)
  * @method string getRelatedUserList()
  * @method $this withRelatedUserList($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  */
 class CreateFreeLockCorrectOrder extends Rpc
 {
 }
 
 /**
- * @method string getSpaceName()
- * @method $this withSpaceName($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getMode()
  * @method $this withMode($value)
- * @method string getDwDbType()
- * @method $this withDwDbType($value)
  * @method string getProdDbId()
  * @method $this withProdDbId($value)
  * @method string getDevDbId()
  * @method $this withDevDbId($value)
+ * @method string getSpaceName()
+ * @method $this withSpaceName($value)
+ * @method string getDwDbType()
+ * @method $this withDwDbType($value)
  * @method string getSpaceConfig()
  * @method $this withSpaceConfig($value)
  */
@@ -460,10 +463,10 @@ class CreateLakeHouseSpace extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getDatabaseIds()
- * @method $this withDatabaseIds($value)
  * @method string getAlias()
  * @method $this withAlias($value)
+ * @method string getDatabaseIds()
+ * @method $this withDatabaseIds($value)
  */
 class CreateLogicDatabase extends Rpc
 {
@@ -474,13 +477,13 @@ class CreateLogicDatabase extends Rpc
  * @method $this withTid($value)
  * @method string getPluginType()
  * @method $this withPluginType($value)
+ * @method string getPluginParam()
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
  * @method string getAttachmentKey()
  * @method $this withAttachmentKey($value)
  * @method string getComment()
  * @method $this withComment($value)
- * @method string getPluginParam()
- * @method string getRelatedUserList()
- * @method $this withRelatedUserList($value)
  */
 class CreateOrder extends Rpc
 {
@@ -520,28 +523,28 @@ class CreateProxy extends Rpc
  * @method $this withUserId($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getIndepPassword()
- * @method $this withIndepPassword($value)
  * @method string getProxyId()
  * @method $this withProxyId($value)
+ * @method string getIndepPassword()
+ * @method $this withIndepPassword($value)
  */
 class CreateProxyAccess extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getDbId()
- * @method $this withDbId($value)
  * @method string getPlanTime()
  * @method $this withPlanTime($value)
- * @method string getLogic()
- * @method $this withLogic($value)
  * @method string getPublishStrategy()
  * @method $this withPublishStrategy($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ * @method string getLogic()
+ * @method $this withLogic($value)
  */
 class CreatePublishGroupTask extends Rpc
 {
@@ -564,10 +567,10 @@ class CreateScenario extends Rpc
  * @method $this withTid($value)
  * @method string getParam()
  * @method $this withParam($value)
- * @method string getComment()
- * @method $this withComment($value)
  * @method string getRelatedUserList()
  * @method $this withRelatedUserList($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  */
 class CreateSQLReviewOrder extends Rpc
 {
@@ -576,10 +579,10 @@ class CreateSQLReviewOrder extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
  * @method string getDbType()
  * @method $this withDbType($value)
  */
@@ -590,36 +593,36 @@ class CreateStandardGroup extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getAttachmentKey()
- * @method $this withAttachmentKey($value)
  * @method string getParam()
  * @method $this withParam($value)
- * @method string getComment()
- * @method $this withComment($value)
  * @method string getRelatedUserList()
  * @method $this withRelatedUserList($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
  */
 class CreateStructSyncOrder extends Rpc
 {
 }
 
 /**
- * @method string getTimeVariables()
- * @method $this withTimeVariables($value)
  * @method string getNodeType()
  * @method $this withNodeType($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getNodeName()
- * @method $this withNodeName($value)
  * @method string getNodeContent()
  * @method $this withNodeContent($value)
  * @method string getNodeOutput()
  * @method $this withNodeOutput($value)
  * @method string getGraphParam()
  * @method $this withGraphParam($value)
+ * @method string getTimeVariables()
+ * @method $this withTimeVariables($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
  */
 class CreateTask extends Rpc
 {
@@ -640,28 +643,28 @@ class CreateTaskFlow extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getUploadURL()
+ * @method $this withUploadURL($value)
  * @method string getUploadType()
  * @method $this withUploadType($value)
  * @method string getFileSource()
  * @method $this withFileSource($value)
- * @method string getTid()
- * @method $this withTid($value)
  * @method string getFileName()
  * @method $this withFileName($value)
- * @method string getUploadURL()
- * @method $this withUploadURL($value)
  */
 class CreateUploadFileJob extends Rpc
 {
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getUploadType()
  * @method $this withUploadType($value)
  * @method string getFileSource()
  * @method $this withFileSource($value)
- * @method string getTid()
- * @method $this withTid($value)
  * @method string getFileName()
  * @method $this withFileName($value)
  * @method string getUploadTarget()
@@ -676,10 +679,10 @@ class CreateUploadOSSFileJob extends Rpc
  * @method $this withTid($value)
  * @method string getSid()
  * @method $this withSid($value)
- * @method string getPort()
- * @method $this withPort($value)
  * @method string getHost()
  * @method $this withHost($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  */
 class DeleteInstance extends Rpc
 {
@@ -700,10 +703,10 @@ class DeleteLakeHouseSpace extends Rpc
  * @method $this withTid($value)
  * @method string getObjectType()
  * @method $this withObjectType($value)
- * @method string getObjectId()
- * @method $this withObjectId($value)
  * @method string getMemberIds()
  * @method $this withMemberIds($value)
+ * @method string getObjectId()
+ * @method $this withObjectId($value)
  */
 class DeleteLhMembers extends Rpc
 {
@@ -720,12 +723,12 @@ class DeleteLogicDatabase extends Rpc
 }
 
 /**
- * @method string getRouteKey()
- * @method $this withRouteKey($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getTableId()
  * @method $this withTableId($value)
+ * @method string getRouteKey()
+ * @method $this withRouteKey($value)
  */
 class DeleteLogicTableRouteConfig extends Rpc
 {
@@ -822,10 +825,10 @@ class DisableUser extends Rpc
  * @method $this withLogicDbId($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getDatabaseIds()
- * @method $this withDatabaseIds($value)
  * @method string getAlias()
  * @method $this withAlias($value)
+ * @method string getDatabaseIds()
+ * @method $this withDatabaseIds($value)
  */
 class EditLogicDatabase extends Rpc
 {
@@ -842,38 +845,38 @@ class EnableUser extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getActionName()
- * @method $this withActionName($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getActionDetail()
  * @method $this withActionDetail($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getActionName()
+ * @method $this withActionName($value)
  */
 class ExecuteDataCorrect extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getActionName()
- * @method $this withActionName($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getActionDetail()
  * @method $this withActionDetail($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getActionName()
+ * @method $this withActionName($value)
  */
 class ExecuteDataExport extends Rpc
 {
 }
 
 /**
- * @method string getScript()
- * @method $this withScript($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getScript()
+ * @method $this withScript($value)
  * @method string getDbId()
  * @method $this withDbId($value)
  * @method string getLogic()
@@ -884,10 +887,10 @@ class ExecuteScript extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class ExecuteStructSync extends Rpc
 {
@@ -904,50 +907,60 @@ class GetApprovalDetail extends Rpc
 }
 
 /**
- * @method string getSchemaName()
- * @method $this withSchemaName($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getSid()
  * @method $this withSid($value)
- * @method string getPort()
- * @method $this withPort($value)
  * @method string getHost()
  * @method $this withHost($value)
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  */
 class GetDatabase extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getActionName()
- * @method $this withActionName($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getActionDetail()
  * @method $this withActionDetail($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getActionName()
+ * @method $this withActionName($value)
  */
 class GetDataCorrectBackupFiles extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetDataCorrectOrderDetail extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetDataCorrectRollbackFile extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  * @method string getOrderActionName()
  * @method $this withOrderActionName($value)
  */
@@ -956,45 +969,55 @@ class GetDataCorrectSQLFile extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetDataCorrectTaskDetail extends Rpc
 {
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
+ */
+class GetDataCronClearConfig extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetDataCronClearTaskDetailList extends Rpc
 {
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getActionName()
  * @method $this withActionName($value)
- * @method string getTid()
- * @method $this withTid($value)
  */
 class GetDataExportDownloadURL extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
  */
 class GetDataExportOrderDetail extends Rpc
 {
@@ -1038,10 +1061,10 @@ class GetDBTopology extends Rpc
  * @method $this withTid($value)
  * @method string getSid()
  * @method $this withSid($value)
- * @method string getPort()
- * @method $this withPort($value)
  * @method string getHost()
  * @method $this withHost($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  */
 class GetInstance extends Rpc
 {
@@ -1058,10 +1081,10 @@ class GetIntervalLimitOfSLA extends Rpc
 }
 
 /**
- * @method string getSpaceName()
- * @method $this withSpaceName($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getSpaceName()
+ * @method $this withSpaceName($value)
  */
 class GetLhSpaceByName extends Rpc
 {
@@ -1098,10 +1121,6 @@ class GetMetaTableDetailInfo extends Rpc
 }
 
 /**
- * @method string getModule()
- * @method $this withModule($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getTid()
@@ -1110,36 +1129,50 @@ class GetMetaTableDetailInfo extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getModule()
+ * @method $this withModule($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  */
 class GetOpLog extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetOrderAttachmentFile extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetOrderBaseInfo extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetOwnerApplyOrderDetail extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetPermApplyOrderDetail extends Rpc
 {
@@ -1158,10 +1191,10 @@ class GetPhysicalDatabase extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getProxyId()
  * @method $this withProxyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class GetProxy extends Rpc
 {
@@ -1178,10 +1211,10 @@ class GetRuleNumLimitOfSLA extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  * @method string getOrderActionName()
  * @method $this withOrderActionName($value)
  */
@@ -1200,50 +1233,50 @@ class GetSQLReviewOptimizeDetail extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetStructSyncExecSqlDetail extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
- * @method string getCompareType()
- * @method $this withCompareType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getCompareType()
+ * @method $this withCompareType($value)
  */
 class GetStructSyncJobAnalyzeResult extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetStructSyncJobDetail extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class GetStructSyncOrderDetail extends Rpc
 {
@@ -1332,36 +1365,36 @@ class GetUserActiveTenant extends Rpc
 }
 
 /**
- * @method string getJobKey()
- * @method $this withJobKey($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getJobKey()
+ * @method $this withJobKey($value)
  */
 class GetUserUploadFileJob extends Rpc
 {
 }
 
 /**
- * @method string getPermTypes()
- * @method $this withPermTypes($value)
- * @method string getDsType()
- * @method $this withDsType($value)
  * @method string getExpireDate()
  * @method $this withExpireDate($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getPermTypes()
+ * @method $this withPermTypes($value)
+ * @method string getDsType()
+ * @method $this withDsType($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getDbId()
  * @method $this withDbId($value)
- * @method string getTableId()
- * @method $this withTableId($value)
  * @method string getLogic()
  * @method $this withLogic($value)
- * @method string getTableName()
- * @method $this withTableName($value)
  */
 class GrantUserPermission extends Rpc
 {
@@ -1416,10 +1449,10 @@ class ListDAGVersions extends Rpc
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListDatabases extends Rpc
 {
@@ -1430,12 +1463,12 @@ class ListDatabases extends Rpc
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPermType()
  * @method $this withPermType($value)
  * @method string getDbId()
  * @method $this withDbId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getLogic()
  * @method $this withLogic($value)
  * @method string getUserName()
@@ -1446,30 +1479,30 @@ class ListDatabaseUserPermssions extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class ListDataCorrectPreCheckDB extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getDbId()
- * @method $this withDbId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
  */
 class ListDataCorrectPreCheckSQL extends Rpc
 {
@@ -1504,10 +1537,10 @@ class ListDBTaskSQLJobDetail extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class ListDDLPublishRecords extends Rpc
 {
@@ -1524,18 +1557,18 @@ class ListDefaultSLARules extends Rpc
 }
 
 /**
- * @method string getRuleType()
- * @method $this withRuleType($value)
  * @method string getRuleName()
  * @method $this withRuleName($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getFuncType()
- * @method $this withFuncType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getFuncType()
+ * @method $this withFuncType($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
@@ -1568,8 +1601,6 @@ class ListIndexes extends Rpc
  * @method $this withSearchName($value)
  * @method string getOpUserName()
  * @method $this withOpUserName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -1578,6 +1609,8 @@ class ListIndexes extends Rpc
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  */
 class ListInstanceLoginAuditLog extends Rpc
 {
@@ -1588,20 +1621,20 @@ class ListInstanceLoginAuditLog extends Rpc
  * @method $this withSearchKey($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getInstanceState()
- * @method $this withInstanceState($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getNetType()
- * @method $this withNetType($value)
- * @method string getDbType()
- * @method $this withDbType($value)
  * @method string getEnvType()
  * @method $this withEnvType($value)
  * @method string getInstanceSource()
  * @method $this withInstanceSource($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getInstanceState()
+ * @method $this withInstanceState($value)
+ * @method string getNetType()
+ * @method $this withNetType($value)
+ * @method string getDbType()
+ * @method $this withDbType($value)
  */
 class ListInstances extends Rpc
 {
@@ -1612,10 +1645,10 @@ class ListInstances extends Rpc
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getUserName()
  * @method $this withUserName($value)
  */
@@ -1678,12 +1711,8 @@ class ListLogicTables extends Rpc
 /**
  * @method string getOrderStatus()
  * @method $this withOrderStatus($value)
- * @method string getSearchContent()
- * @method $this withSearchContent($value)
  * @method string getSearchDateType()
  * @method $this withSearchDateType($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getTid()
@@ -1696,6 +1725,10 @@ class ListLogicTables extends Rpc
  * @method $this withPageSize($value)
  * @method string getOrderResultType()
  * @method $this withOrderResultType($value)
+ * @method string getSearchContent()
+ * @method $this withSearchContent($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  */
 class ListOrders extends Rpc
 {
@@ -1720,14 +1753,10 @@ class ListProxyAccesses extends Rpc
 }
 
 /**
- * @method string getSQLType()
- * @method $this withSQLType($value)
  * @method string getSearchName()
  * @method $this withSearchName($value)
  * @method string getOpUserName()
  * @method $this withOpUserName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -1736,6 +1765,10 @@ class ListProxyAccesses extends Rpc
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getSQLType()
+ * @method $this withSQLType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getExecState()
  * @method $this withExecState($value)
  */
@@ -1752,42 +1785,42 @@ class ListScenarios extends Rpc
 }
 
 /**
- * @method string getSchemaName()
- * @method $this withSchemaName($value)
- * @method string getColumnName()
- * @method $this withColumnName($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
  * @method string getSecurityLevel()
  * @method $this withSecurityLevel($value)
  * @method string getDbId()
  * @method $this withDbId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getLogic()
  * @method $this withLogic($value)
- * @method string getTableName()
- * @method $this withTableName($value)
  */
 class ListSensitiveColumns extends Rpc
 {
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
  * @method string getSchemaName()
  * @method $this withSchemaName($value)
  * @method string getColumnName()
  * @method $this withColumnName($value)
- * @method string getTid()
- * @method $this withTid($value)
  * @method string getDbId()
  * @method $this withDbId($value)
  * @method string getLogic()
  * @method $this withLogic($value)
- * @method string getTableName()
- * @method $this withTableName($value)
  */
 class ListSensitiveColumnsDetail extends Rpc
 {
@@ -1796,24 +1829,24 @@ class ListSensitiveColumnsDetail extends Rpc
 /**
  * @method string getOpUserName()
  * @method $this withOpUserName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getColumnName()
- * @method $this withColumnName($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getDbName()
- * @method $this withDbName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getModuleName()
  * @method $this withModuleName($value)
  * @method string getTableName()
  * @method $this withTableName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
  */
 class ListSensitiveDataAuditLog extends Rpc
 {
@@ -1830,14 +1863,10 @@ class ListSLARules extends Rpc
 }
 
 /**
- * @method string getSqlType()
- * @method $this withSqlType($value)
  * @method string getSearchName()
  * @method $this withSearchName($value)
  * @method string getOpUserName()
  * @method $this withOpUserName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -1846,6 +1875,10 @@ class ListSLARules extends Rpc
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getSqlType()
+ * @method $this withSqlType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getExecState()
  * @method $this withExecState($value)
  */
@@ -1854,12 +1887,12 @@ class ListSQLExecAuditLog extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
  * @method string getOrderActionDetail()
  * @method $this withOrderActionDetail($value)
- * @method string getTid()
- * @method $this withTid($value)
  * @method string getOrderActionName()
  * @method $this withOrderActionName($value)
  */
@@ -1962,12 +1995,12 @@ class ListTaskFlowInstance extends Rpc
  * @method $this withSearchKey($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getNeedLastDagInstance()
- * @method $this withNeedLastDagInstance($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
+ * @method string getNeedLastDagInstance()
+ * @method $this withNeedLastDagInstance($value)
  */
 class ListTaskFlowsByPage extends Rpc
 {
@@ -2002,16 +2035,16 @@ class ListTasksInTaskFlow extends Rpc
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getEnvType()
+ * @method $this withEnvType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPermType()
  * @method $this withPermType($value)
  * @method string getDatabaseName()
  * @method $this withDatabaseName($value)
- * @method string getEnvType()
- * @method $this withEnvType($value)
  * @method string getDbType()
  * @method $this withDbType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getLogic()
  * @method $this withLogic($value)
  */
@@ -2028,10 +2061,10 @@ class ListUserPermissions extends Rpc
  * @method $this withTid($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getUserState()
- * @method $this withUserState($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getUserState()
+ * @method $this withUserState($value)
  */
 class ListUsers extends Rpc
 {
@@ -2078,32 +2111,32 @@ class MakeTaskFlowInstanceSuccess extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getExecSQL()
  * @method $this withExecSQL($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class ModifyDataCorrectExecSQL extends Rpc
 {
 }
 
 /**
- * @method string getSchemaName()
- * @method $this withSchemaName($value)
  * @method string getIsReset()
  * @method $this withIsReset($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
  * @method string getIsLogic()
  * @method $this withIsLogic($value)
  * @method string getColumnName()
  * @method $this withColumnName($value)
- * @method string getTid()
- * @method $this withTid($value)
  * @method string getDbId()
  * @method $this withDbId($value)
- * @method string getTableName()
- * @method $this withTableName($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
@@ -2134,48 +2167,48 @@ class OfflineTaskFlow extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class PauseDataCorrectSQLJob extends Rpc
 {
 }
 
 /**
- * @method string getVersionComments()
- * @method $this withVersionComments($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getVersionComments()
+ * @method $this withVersionComments($value)
  */
 class PublishAndDeployTaskFlow extends Rpc
 {
 }
 
 /**
- * @method string getDagVersion()
- * @method $this withDagVersion($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getDagVersion()
+ * @method $this withDagVersion($value)
  */
 class ReDeployLhDagVersion extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class RefundPayAsYouGoOrder extends Rpc
 {
@@ -2242,24 +2275,24 @@ class RegisterInstance extends Rpc
  * @method $this withRoleNames($value)
  * @method string getUserNick()
  * @method $this withUserNick($value)
- * @method string getMobile()
- * @method $this withMobile($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getUid()
  * @method $this withUid($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
  */
 class RegisterUser extends Rpc
 {
 }
 
 /**
- * @method string getDagVersion()
- * @method $this withDagVersion($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getDagVersion()
+ * @method $this withDagVersion($value)
  * @method string getDagInstanceId()
  * @method $this withDagInstanceId($value)
  */
@@ -2268,26 +2301,26 @@ class ReRunTaskFlowInstance extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class RestartDataCorrectSQLJob extends Rpc
 {
 }
 
 /**
- * @method string getDagVersion()
- * @method $this withDagVersion($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getDagVersion()
+ * @method $this withDagVersion($value)
  * @method string getDagInstanceId()
  * @method $this withDagInstanceId($value)
  */
@@ -2296,36 +2329,36 @@ class ResumeTaskFlowInstance extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class RetryDataCorrectPreCheck extends Rpc
 {
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
  * @method string getPermTypes()
  * @method $this withPermTypes($value)
  * @method string getUserAccessId()
  * @method $this withUserAccessId($value)
  * @method string getDsType()
  * @method $this withDsType($value)
- * @method string getUserId()
- * @method $this withUserId($value)
- * @method string getTid()
- * @method $this withTid($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getDbId()
  * @method $this withDbId($value)
- * @method string getTableId()
- * @method $this withTableId($value)
  * @method string getLogic()
  * @method $this withLogic($value)
- * @method string getTableName()
- * @method $this withTableName($value)
  */
 class RevokeUserPermission extends Rpc
 {
@@ -2378,12 +2411,12 @@ class SearchTable extends Rpc
 }
 
 /**
- * @method string getResourceId()
- * @method $this withResourceId($value)
  * @method string getOwnerIds()
  * @method $this withOwnerIds($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
  * @method string getOwnerType()
  * @method $this withOwnerType($value)
  */
@@ -2404,20 +2437,20 @@ class StopTaskFlowInstance extends Rpc
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class SubmitOrderApproval extends Rpc
 {
 }
 
 /**
- * @method string getOrderId()
- * @method $this withOrderId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
  */
 class SubmitStructSyncOrderApproval extends Rpc
 {
@@ -2448,10 +2481,10 @@ class SyncDatabaseMeta extends Rpc
 }
 
 /**
- * @method string getIgnoreTable()
- * @method $this withIgnoreTable($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getIgnoreTable()
+ * @method $this withIgnoreTable($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -2520,10 +2553,10 @@ class UpdateInstance extends Rpc
  * @method $this withDescription($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getScenarioName()
- * @method $this withScenarioName($value)
  * @method string getScenarioId()
  * @method $this withScenarioId($value)
+ * @method string getScenarioName()
+ * @method $this withScenarioName($value)
  */
 class UpdateScenario extends Rpc
 {
@@ -2566,12 +2599,12 @@ class UpdateTaskContent extends Rpc
 }
 
 /**
- * @method string getDagConstants()
- * @method $this withDagConstants($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getDagConstants()
+ * @method $this withDagConstants($value)
  */
 class UpdateTaskFlowConstants extends Rpc
 {
@@ -2580,22 +2613,22 @@ class UpdateTaskFlowConstants extends Rpc
 /**
  * @method string getDagId()
  * @method $this withDagId($value)
- * @method string getCooperatorIds()
- * @method $this withCooperatorIds($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getCooperatorIds()
+ * @method $this withCooperatorIds($value)
  */
 class UpdateTaskFlowCooperators extends Rpc
 {
 }
 
 /**
- * @method string getEdges()
- * @method $this withEdges($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getEdges()
+ * @method $this withEdges($value)
  */
 class UpdateTaskFlowEdges extends Rpc
 {
@@ -2622,10 +2655,10 @@ class UpdateTaskFlowNameAndDesc extends Rpc
  * @method $this withTid($value)
  * @method string getDagNotificationFail()
  * @method $this withDagNotificationFail($value)
- * @method string getDagNotificationSuccess()
- * @method $this withDagNotificationSuccess($value)
  * @method string getDagNotificationSla()
  * @method $this withDagNotificationSla($value)
+ * @method string getDagNotificationSuccess()
+ * @method $this withDagNotificationSuccess($value)
  */
 class UpdateTaskFlowNotification extends Rpc
 {
@@ -2644,12 +2677,12 @@ class UpdateTaskFlowOwner extends Rpc
 }
 
 /**
- * @method string getEdges()
- * @method $this withEdges($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getEdges()
+ * @method $this withEdges($value)
  */
 class UpdateTaskFlowRelations extends Rpc
 {
@@ -2666,14 +2699,14 @@ class UpdateTaskFlowRelations extends Rpc
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getScheduleSwitch()
- * @method $this withScheduleSwitch($value)
- * @method string getCronEndDate()
- * @method $this withCronEndDate($value)
  * @method string getTimeZoneId()
  * @method $this withTimeZoneId($value)
  * @method string getCronBeginDate()
  * @method $this withCronBeginDate($value)
+ * @method string getScheduleSwitch()
+ * @method $this withScheduleSwitch($value)
+ * @method string getCronEndDate()
+ * @method $this withCronEndDate($value)
  * @method string getScheduleParam()
  * @method $this withScheduleParam($value)
  */
@@ -2682,12 +2715,12 @@ class UpdateTaskFlowSchedule extends Rpc
 }
 
 /**
- * @method string getTimeVariables()
- * @method $this withTimeVariables($value)
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getTimeVariables()
+ * @method $this withTimeVariables($value)
  */
 class UpdateTaskFlowTimeVariables extends Rpc
 {
@@ -2696,10 +2729,10 @@ class UpdateTaskFlowTimeVariables extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getNodeName()
- * @method $this withNodeName($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
+ * @method string getNodeName()
+ * @method $this withNodeName($value)
  */
 class UpdateTaskName extends Rpc
 {
@@ -2718,12 +2751,12 @@ class UpdateTaskOutput extends Rpc
 }
 
 /**
- * @method string getTimeVariables()
- * @method $this withTimeVariables($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
+ * @method string getTimeVariables()
+ * @method $this withTimeVariables($value)
  */
 class UpdateTaskTimeVariables extends Rpc
 {
@@ -2732,18 +2765,18 @@ class UpdateTaskTimeVariables extends Rpc
 /**
  * @method string getRoleNames()
  * @method $this withRoleNames($value)
- * @method string getMaxResultCount()
- * @method $this withMaxResultCount($value)
  * @method string getMaxExecuteCount()
  * @method $this withMaxExecuteCount($value)
  * @method string getUserNick()
  * @method $this withUserNick($value)
- * @method string getMobile()
- * @method $this withMobile($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getUid()
  * @method $this withUid($value)
+ * @method string getMaxResultCount()
+ * @method $this withMaxResultCount($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
  */
 class UpdateUser extends Rpc
 {
