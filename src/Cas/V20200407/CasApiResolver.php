@@ -14,10 +14,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method Decrypt decrypt(array $options = [])
  * @method DeleteCertificateRequest deleteCertificateRequest(array $options = [])
  * @method DeletePCACert deletePCACert(array $options = [])
+ * @method DeleteUserCertificate deleteUserCertificate(array $options = [])
  * @method DescribeCertificateState describeCertificateState(array $options = [])
  * @method DescribePackageState describePackageState(array $options = [])
  * @method Encrypt encrypt(array $options = [])
  * @method GetCertWarehouseQuota getCertWarehouseQuota(array $options = [])
+ * @method GetUserCertificateDetail getUserCertificateDetail(array $options = [])
  * @method ListCert listCert(array $options = [])
  * @method ListCertWarehouse listCertWarehouse(array $options = [])
  * @method ListUserCertificateOrder listUserCertificateOrder(array $options = [])
@@ -25,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RevokeWHClientCertificate revokeWHClientCertificate(array $options = [])
  * @method Sign sign(array $options = [])
  * @method UploadPCACert uploadPCACert(array $options = [])
+ * @method UploadUserCertificate uploadUserCertificate(array $options = [])
  * @method Verify verify(array $options = [])
  */
 class CasApiResolver extends ApiResolver
@@ -206,6 +209,16 @@ class DeletePCACert extends Rpc
 }
 
 /**
+ * @method string getCertId()
+ * @method $this withCertId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DeleteUserCertificate extends Rpc
+{
+}
+
+/**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getOrderId()
@@ -246,6 +259,16 @@ class Encrypt extends Rpc
  * @method $this withSourceIp($value)
  */
 class GetCertWarehouseQuota extends Rpc
+{
+}
+
+/**
+ * @method string getCertId()
+ * @method $this withCertId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class GetUserCertificateDetail extends Rpc
 {
 }
 
@@ -356,6 +379,28 @@ class Sign extends Rpc
  * @method $this withName($value)
  */
 class UploadPCACert extends Rpc
+{
+}
+
+/**
+ * @method string getEncryptCert()
+ * @method $this withEncryptCert($value)
+ * @method string getCert()
+ * @method $this withCert($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ * @method string getEncryptPrivateKey()
+ * @method $this withEncryptPrivateKey($value)
+ * @method string getSignPrivateKey()
+ * @method $this withSignPrivateKey($value)
+ * @method string getSignCert()
+ * @method $this withSignCert($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UploadUserCertificate extends Rpc
 {
 }
 
