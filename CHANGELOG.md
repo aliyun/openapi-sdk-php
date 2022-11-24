@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1568 - 2022-11-24
+- Release CustomizeClassifyImage.
+
+
 ## 1.8.1567 - 2022-11-23
 - Supported GetDataCronClearConfig,GetDataCorrectRollbackFile,GetOrderAttachmentFile API.
 
