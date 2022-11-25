@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1571 - 2022-11-25
+- SubmitTextTo2DAvatarVideoTask add new params.
+
+
 ## 1.8.1570 - 2022-11-25
 - Release CustomizeClassifyImage.
 
