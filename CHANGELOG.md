@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1570 - 2022-11-25
+- Release CustomizeClassifyImage.
+
+
 ## 1.8.1569 - 2022-11-24
 - Support deleteCertificate.
 

@@ -5,6 +5,7 @@ namespace AlibabaCloud\ViapiRegen\V20211119;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CheckDatasetOssBucketCORS checkDatasetOssBucketCORS(array $options = [])
  * @method CreateDataset createDataset(array $options = [])
  * @method CreateLabelset createLabelset(array $options = [])
  * @method CreateService createService(array $options = [])
@@ -39,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTrainTask getTrainTask(array $options = [])
  * @method GetTrainTaskEstimatedTime getTrainTaskEstimatedTime(array $options = [])
  * @method GetUploadPolicy getUploadPolicy(array $options = [])
+ * @method GetUserInfo getUserInfo(array $options = [])
  * @method GetWorkspace getWorkspace(array $options = [])
  * @method ListDataReflowDatas listDataReflowDatas(array $options = [])
  * @method ListDatasetDatas listDatasetDatas(array $options = [])
@@ -76,6 +78,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'selflearning';
+}
+
+/**
+ * @method string getLabelsetId()
+ */
+class CheckDatasetOssBucketCORS extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabelsetId($value)
+    {
+        $this->data['LabelsetId'] = $value;
+        $this->options['form_params']['LabelsetId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1428,6 +1450,10 @@ class GetUploadPolicy extends Rpc
 
         return $this;
     }
+}
+
+class GetUserInfo extends Rpc
+{
 }
 
 /**
