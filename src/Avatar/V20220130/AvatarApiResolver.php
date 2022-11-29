@@ -162,6 +162,8 @@ class SubmitTextTo2DAvatarVideoTask extends Rpc
  * @method $this withApp($value)
  * @method string getVideoInfo()
  * @method $this withVideoInfo($value)
+ * @method string getAvatarInfo()
+ * @method $this withAvatarInfo($value)
  * @method string getTenantId()
  * @method $this withTenantId($value)
  * @method string getText()
