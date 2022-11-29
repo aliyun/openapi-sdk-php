@@ -98,6 +98,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLogConfig describeLogConfig(array $options = [])
  * @method DescribeMarketRemainsQuota describeMarketRemainsQuota(array $options = [])
  * @method DescribeModels describeModels(array $options = [])
+ * @method DescribePluginApis describePluginApis(array $options = [])
  * @method DescribePlugins describePlugins(array $options = [])
  * @method DescribePluginsByApi describePluginsByApi(array $options = [])
  * @method DescribePluginSchemas describePluginSchemas(array $options = [])
@@ -336,6 +337,8 @@ class BatchDeployApis extends Rpc
 /**
  * @method string getAclName()
  * @method $this withAclName($value)
+ * @method string getAddressIPVersion()
+ * @method $this withAddressIPVersion($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
@@ -469,6 +472,8 @@ class CreateApiStageVariable extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getAppOwnerUserId()
+ * @method $this withAppOwnerUserId($value)
  * @method string getSource()
  * @method $this withSource($value)
  * @method string getAppName()
@@ -833,6 +838,8 @@ class DeleteApiStageVariable extends Rpc
 }
 
 /**
+ * @method string getAppOwnerUserId()
+ * @method $this withAppOwnerUserId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getAppId()
@@ -1118,6 +1125,8 @@ class DescribeAccessControlListAttribute extends Rpc
 /**
  * @method string getAclName()
  * @method $this withAclName($value)
+ * @method string getAddressIPVersion()
+ * @method $this withAddressIPVersion($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSecurityToken()
@@ -1973,6 +1982,32 @@ class DescribeModels extends Rpc
 }
 
 /**
+ * @method string getMethod()
+ * @method $this withMethod($value)
+ * @method string getPluginId()
+ * @method $this withPluginId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getApiName()
+ * @method $this withApiName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
+ */
+class DescribePluginApis extends Rpc
+{
+}
+
+/**
  * @method string getPluginName()
  * @method $this withPluginName($value)
  * @method string getPluginId()
@@ -2252,6 +2287,8 @@ class DetachPlugin extends Rpc
 /**
  * @method string getAclId()
  * @method $this withAclId($value)
+ * @method string getAddressIPVersion()
+ * @method $this withAddressIPVersion($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getSecurityToken()
@@ -2294,6 +2331,8 @@ class DryRunSwagger extends Rpc
 /**
  * @method string getAclId()
  * @method $this withAclId($value)
+ * @method string getAddressIPVersion()
+ * @method $this withAddressIPVersion($value)
  * @method string getAclType()
  * @method $this withAclType($value)
  * @method string getInstanceId()

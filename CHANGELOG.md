@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1575 - 2022-11-29
+- Add DescribePluginApis.
+- Modify CreateApp.
+- Modify DeleteApp.
+
+
 ## 1.8.1574 - 2022-11-29
 - Update DescribeDcdnDeletedDomains.
 
