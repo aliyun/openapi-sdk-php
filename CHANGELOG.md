@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1574 - 2022-11-29
+- Update DescribeDcdnDeletedDomains.
+
+
 ## 1.8.1573 - 2022-11-29
 - SubmitTextTo2DAvatarVideoTask add new params.
 

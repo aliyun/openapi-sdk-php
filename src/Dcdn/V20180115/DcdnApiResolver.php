@@ -145,6 +145,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnWafSpecInfo describeDcdnWafSpecInfo(array $options = [])
  * @method DescribeDcdnWafUsageData describeDcdnWafUsageData(array $options = [])
  * @method DescribeRDDomainConfig describeRDDomainConfig(array $options = [])
+ * @method DescribeRDDomains describeRDDomains(array $options = [])
  * @method DescribeRoutine describeRoutine(array $options = [])
  * @method DescribeRoutineCanaryEnvs describeRoutineCanaryEnvs(array $options = [])
  * @method DescribeRoutineCodeRevision describeRoutineCodeRevision(array $options = [])
@@ -1315,18 +1316,16 @@ class DescribeDcdnAclFields extends Rpc
 /**
  * @method string getIsp()
  * @method $this withIsp($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDevicePort()
- * @method $this withDevicePort($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
  * @method string getDeviceName()
  * @method $this withDeviceName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDevicePort()
+ * @method $this withDevicePort($value)
  */
 class DescribeDcdnBgpBpsData extends Rpc
 {
@@ -1335,14 +1334,12 @@ class DescribeDcdnBgpBpsData extends Rpc
 /**
  * @method string getIsp()
  * @method $this withIsp($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnBgpTrafficData extends Rpc
 {
@@ -1386,12 +1383,10 @@ class DescribeDcdnCertificateList extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnDeletedDomains extends Rpc
 {
@@ -1619,16 +1614,14 @@ class DescribeDcdnDomainIpaBpsData extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getSplitBy()
- * @method $this withSplitBy($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
  */
 class DescribeDcdnDomainIpaConnData extends Rpc
 {
@@ -2154,18 +2147,16 @@ class DescribeDcdnDomainWebsocketTrafficData extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getSpec()
- * @method $this withSpec($value)
- * @method string getRoutineID()
- * @method $this withRoutineID($value)
- * @method string getSplitBy()
- * @method $this withSplitBy($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getRoutineID()
+ * @method $this withRoutineID($value)
+ * @method string getSpec()
+ * @method $this withSpec($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
  */
 class DescribeDcdnErUsageData extends Rpc
 {
@@ -2293,8 +2284,6 @@ class DescribeDcdnL2Vips extends Rpc
 /**
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnRealTimeDeliveryField extends Rpc
 {
@@ -2412,10 +2401,6 @@ class DescribeDcdnsecService extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeDcdnSecSpecInfo extends Rpc
 {
 }
@@ -2877,8 +2862,6 @@ class DescribeDcdnWafPolicyValidDomains extends Rpc
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
@@ -2953,6 +2936,18 @@ class DescribeDcdnWafUsageData extends Rpc
  * @method $this withDomainName($value)
  */
 class DescribeRDDomainConfig extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeRDDomains extends Rpc
 {
 }
 
@@ -3059,8 +3054,6 @@ class DescribeUserDcdnStatus extends Rpc
 /**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeUserErStatus extends Rpc
 {
@@ -3427,8 +3420,6 @@ class RefreshDcdnObjectCaches extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class RollbackDcdnStagingConfig extends Rpc
 {
@@ -4014,12 +4005,10 @@ class UpdateDcdnSubTask extends Rpc
 }
 
 /**
- * @method string getBusinessType()
- * @method $this withBusinessType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getFields()
  * @method $this withFields($value)
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
  */
 class UpdateDcdnUserRealTimeDeliveryField extends Rpc
 {
