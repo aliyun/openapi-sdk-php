@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1572 - 2022-11-29
+- Support DescribeARMServerInstances.
+- Support DeleteInstances.
+
+
 ## 1.8.1571 - 2022-11-25
 - SubmitTextTo2DAvatarVideoTask add new params.
 

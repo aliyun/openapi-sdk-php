@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateForwardEntry createForwardEntry(array $options = [])
  * @method CreateImage createImage(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
+ * @method CreateInstanceActiveOpsTask createInstanceActiveOpsTask(array $options = [])
  * @method CreateKeyPair createKeyPair(array $options = [])
  * @method CreateLoadBalancer createLoadBalancer(array $options = [])
  * @method CreateLoadBalancerHTTPListener createLoadBalancerHTTPListener(array $options = [])
@@ -619,6 +620,14 @@ class CreateInstance extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class CreateInstanceActiveOpsTask extends Rpc
+{
 }
 
 /**
