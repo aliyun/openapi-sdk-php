@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1578 - 2022-11-30
+- Release MergeVideoModelFace.
+
+
 ## 1.8.1577 - 2022-11-30
 - Release ScreenEC.
 
