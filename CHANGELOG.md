@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1579 - 2022-11-30
+- SubmitTextTo2DAvatarVideoTask add new params.
+
+
 ## 1.8.1578 - 2022-11-30
 - Release MergeVideoModelFace.
 
