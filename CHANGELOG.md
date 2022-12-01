@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1581 - 2022-12-1
+- Fixed bugs for GetScriptFileNames result.pathName
+- Fixed bugs for RenewAppGroup result
+
+
 ## 1.8.1580 - 2022-11-30
 - Support resourceGroup.
 
