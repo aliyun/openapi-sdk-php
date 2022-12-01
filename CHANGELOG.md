@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1583 - 2022-12-1
+- Release ScreenEC.
+
+
 ## 1.8.1582 - 2022-12-1
 - Supported more language for resourcemanager.
 
