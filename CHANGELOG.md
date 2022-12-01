@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1582 - 2022-12-1
+- Supported more language for resourcemanager.
+
+
 ## 1.8.1581 - 2022-12-1
 - Fixed bugs for GetScriptFileNames result.pathName
 - Fixed bugs for RenewAppGroup result
