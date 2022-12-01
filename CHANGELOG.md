@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1584 - 2022-12-1
+- Storage open Api.
+
+
 ## 1.8.1583 - 2022-12-1
 - Release ScreenEC.
 

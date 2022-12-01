@@ -263,6 +263,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDevicePropertyData queryDevicePropertyData(array $options = [])
  * @method QueryDevicePropertyStatus queryDevicePropertyStatus(array $options = [])
  * @method QueryDeviceServiceData queryDeviceServiceData(array $options = [])
+ * @method QueryDevicesHotStorageData queryDevicesHotStorageData(array $options = [])
+ * @method QueryDevicesHotStorageDataStatus queryDevicesHotStorageDataStatus(array $options = [])
  * @method QueryDeviceSpeech queryDeviceSpeech(array $options = [])
  * @method QueryDeviceStatistics queryDeviceStatistics(array $options = [])
  * @method QueryDeviceSubTopic queryDeviceSubTopic(array $options = [])
@@ -393,6 +395,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateSubscribeRelation updateSubscribeRelation(array $options = [])
  * @method UpdateThingModel updateThingModel(array $options = [])
  * @method UpdateThingScript updateThingScript(array $options = [])
+ * @method WriteDevicesHotStorageData writeDevicesHotStorageData(array $options = [])
  */
 class IotApiResolver extends ApiResolver
 {
@@ -14552,6 +14555,120 @@ class QueryDeviceServiceData extends Rpc
 }
 
 /**
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getIdentifier()
+ * @method $this withIdentifier($value)
+ * @method string getUserTopic()
+ * @method $this withUserTopic($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getAsc()
+ * @method $this withAsc($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryDevicesHotStorageData extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getUserTopic()
+ * @method $this withUserTopic($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getAsc()
+ * @method $this withAsc($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryDevicesHotStorageDataStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageId()
  * @method string getIotId()
  * @method string getIotInstanceId()
@@ -22374,6 +22491,56 @@ class UpdateThingModel extends Rpc
  * @method $this withScriptContent($value)
  */
 class UpdateThingScript extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getUserTopic()
+ * @method $this withUserTopic($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getItems()
+ * @method $this withItems($value)
+ */
+class WriteDevicesHotStorageData extends Rpc
 {
 
     /**
