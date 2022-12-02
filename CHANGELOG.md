@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1591 - 2022-12-2
+- Change DescribeLogstoreStorage Response.
+
+
 ## 1.8.1590 - 2022-12-2
 - Pub Support PayloadFormatIndicator and ContentType.
 
