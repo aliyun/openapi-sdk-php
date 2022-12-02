@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1590 - 2022-12-2
+- Pub Support PayloadFormatIndicator and ContentType.
+
+
 ## 1.8.1589 - 2022-12-2
 - Generated 2020-05-18 for `dataworks-public`.
 
