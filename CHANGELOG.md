@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1593 - 2022-12-2
+- Support live interaction and message.
+
+
 ## 1.8.1592 - 2022-12-2
 - Generated 2020-05-18 for `dataworks-public`.
 
