@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1589 - 2022-12-2
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1588 - 2022-12-2
 - Release MergeVideoModelFace.
 
