@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1588 - 2022-12-2
+- Release MergeVideoModelFace.
+
+
 ## 1.8.1587 - 2022-12-2
 - Update APIs.
 
