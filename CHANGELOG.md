@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1585 - 2022-12-2
+- Supported GetStructSyncOrderDetail OrderId param required.
+
+
 ## 1.8.1584 - 2022-12-1
 - Storage open Api.
 

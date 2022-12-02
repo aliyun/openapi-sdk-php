@@ -71,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetLogicDatabase getLogicDatabase(array $options = [])
  * @method GetMetaTableColumn getMetaTableColumn(array $options = [])
  * @method GetMetaTableDetailInfo getMetaTableDetailInfo(array $options = [])
+ * @method GetOnlineDDLProgress getOnlineDDLProgress(array $options = [])
  * @method GetOpLog getOpLog(array $options = [])
  * @method GetOrderAttachmentFile getOrderAttachmentFile(array $options = [])
  * @method GetOrderBaseInfo getOrderBaseInfo(array $options = [])
@@ -1117,6 +1118,16 @@ class GetMetaTableColumn extends Rpc
  * @method $this withTableGuid($value)
  */
 class GetMetaTableDetailInfo extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getJobDetailId()
+ * @method $this withJobDetailId($value)
+ */
+class GetOnlineDDLProgress extends Rpc
 {
 }
 
