@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1586 - 2022-12-2
+- First issue.
+
+
 ## 1.8.1585 - 2022-12-2
 - Supported GetStructSyncOrderDetail OrderId param required.
 

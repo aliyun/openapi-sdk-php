@@ -165,6 +165,7 @@ namespace AlibabaCloud;
  * @method static NlsCloudMeta\NlsCloudMeta nlsCloudMeta()
  * @method static NlsFiletrans\NlsFiletrans nlsFiletrans()
  * @method static Objectdet\Objectdet objectdet()
+ * @method static OceanBasePro\OceanBasePro oceanBasePro()
  * @method static Ocr\Ocr ocr()
  * @method static Ocs\Ocs ocs()
  * @method static Oms\Oms oms()
