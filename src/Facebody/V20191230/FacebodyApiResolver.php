@@ -5,7 +5,6 @@ namespace AlibabaCloud\Facebody\V20191230;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method AddBodyTrace addBodyTrace(array $options = [])
  * @method AddFace addFace(array $options = [])
  * @method AddFaceEntity addFaceEntity(array $options = [])
  * @method AddFaceImageTemplate addFaceImageTemplate(array $options = [])
@@ -15,11 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
  * @method CountCrowd countCrowd(array $options = [])
- * @method CreateBodyDb createBodyDb(array $options = [])
- * @method CreateBodyPerson createBodyPerson(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
- * @method DeleteBodyDb deleteBodyDb(array $options = [])
- * @method DeleteBodyPerson deleteBodyPerson(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
  * @method DeleteFaceEntity deleteFaceEntity(array $options = [])
@@ -43,13 +38,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateHumanAnimeStyle generateHumanAnimeStyle(array $options = [])
  * @method GenerateHumanSketchStyle generateHumanSketchStyle(array $options = [])
  * @method GenRealPersonVerificationToken genRealPersonVerificationToken(array $options = [])
- * @method GetBodyPerson getBodyPerson(array $options = [])
  * @method GetFaceEntity getFaceEntity(array $options = [])
  * @method GetRealPersonVerificationResult getRealPersonVerificationResult(array $options = [])
  * @method HandPosture handPosture(array $options = [])
  * @method LiquifyFace liquifyFace(array $options = [])
- * @method ListBodyDbs listBodyDbs(array $options = [])
- * @method ListBodyPerson listBodyPerson(array $options = [])
  * @method ListFaceDbs listFaceDbs(array $options = [])
  * @method ListFaceEntities listFaceEntities(array $options = [])
  * @method MergeImageFace mergeImageFace(array $options = [])
@@ -63,7 +55,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizePublicFace recognizePublicFace(array $options = [])
  * @method RetouchBody retouchBody(array $options = [])
  * @method RetouchSkin retouchSkin(array $options = [])
- * @method SearchBodyTrace searchBodyTrace(array $options = [])
  * @method SearchFace searchFace(array $options = [])
  * @method SwapFacialFeatures swapFacialFeatures(array $options = [])
  * @method UpdateFaceEntity updateFaceEntity(array $options = [])
@@ -86,74 +77,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'facebody';
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getExtraData()
- * @method string getPersonId()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getImages()
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getDbId()
- */
-class AddBodyTrace extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withExtraData($value)
-    {
-        $this->data['ExtraData'] = $value;
-        $this->options['form_params']['ExtraData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPersonId($value)
-    {
-        $this->data['PersonId'] = $value;
-        $this->options['form_params']['PersonId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImages($value)
-    {
-        $this->data['Images'] = $value;
-        $this->options['form_params']['Images'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDbId($value)
-    {
-        $this->data['DbId'] = $value;
-        $this->options['form_params']['DbId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -833,72 +756,6 @@ class CountCrowd extends Rpc
  * @method $this withRequestProxyBy($value)
  * @method string getName()
  */
-class CreateBodyDb extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getDbId()
- * @method string getName()
- */
-class CreateBodyPerson extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDbId($value)
-    {
-        $this->data['DbId'] = $value;
-        $this->options['form_params']['DbId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getName()
- */
 class CreateFaceDb extends Rpc
 {
 
@@ -911,72 +768,6 @@ class CreateFaceDb extends Rpc
     {
         $this->data['Name'] = $value;
         $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getId()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- */
-class DeleteBodyDb extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withId($value)
-    {
-        $this->data['Id'] = $value;
-        $this->options['form_params']['Id'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getPersonId()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getDbId()
- */
-class DeleteBodyPerson extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPersonId($value)
-    {
-        $this->data['PersonId'] = $value;
-        $this->options['form_params']['PersonId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDbId($value)
-    {
-        $this->data['DbId'] = $value;
-        $this->options['form_params']['DbId'] = $value;
 
         return $this;
     }
@@ -2012,25 +1803,6 @@ class GenRealPersonVerificationToken extends Rpc
 }
 
 /**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getPersonId()
- * @method $this withPersonId($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getDbId()
- * @method $this withDbId($value)
- */
-class GetBodyPerson extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
  * @method string getEntityId()
  * @method string getFormatResultToJson()
  * @method $this withFormatResultToJson($value)
@@ -2174,46 +1946,6 @@ class LiquifyFace extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getOffset()
- * @method $this withOffset($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- */
-class ListBodyDbs extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getLimit()
- * @method $this withLimit($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getOffset()
- * @method $this withOffset($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getDbId()
- * @method $this withDbId($value)
- */
-class ListBodyPerson extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2962,74 +2694,6 @@ class RetouchSkin extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getMinScore()
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getLimit()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getImages()
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getDbId()
- */
-class SearchBodyTrace extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMinScore($value)
-    {
-        $this->data['MinScore'] = $value;
-        $this->options['form_params']['MinScore'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLimit($value)
-    {
-        $this->data['Limit'] = $value;
-        $this->options['form_params']['Limit'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImages($value)
-    {
-        $this->data['Images'] = $value;
-        $this->options['form_params']['Images'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDbId($value)
-    {
-        $this->data['DbId'] = $value;
-        $this->options['form_params']['DbId'] = $value;
 
         return $this;
     }

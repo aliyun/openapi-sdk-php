@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1595 - 2022-12-5
+- Publish Swift.
+
+
 ## 1.8.1594 - 2022-12-5
 - Add list live message interface.
 
