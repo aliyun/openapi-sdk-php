@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1599 - 2022-12-5
+- Add API DescribeVodDomainSrcBpsData.
+- Add API DescribeVodDomainSrcTrafficData.
+
+
 ## 1.8.1598 - 2022-12-5
 - Add list live message interface.
 
