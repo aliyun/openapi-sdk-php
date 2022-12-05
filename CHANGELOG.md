@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1598 - 2022-12-5
+- Add list live message interface.
+
+
 ## 1.8.1597 - 2022-12-5
 - Modify QueryRequestLogs.
 
