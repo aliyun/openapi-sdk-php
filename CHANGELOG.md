@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1594 - 2022-12-5
+- Add list live message interface.
+
+
 ## 1.8.1593 - 2022-12-2
 - Support live interaction and message.
 

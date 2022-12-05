@@ -4717,6 +4717,7 @@ class ListMessageApp extends Rpc
  * @method string getPageNum()
  * @method string getUserId()
  * @method string getPageSize()
+ * @method string getAppId()
  */
 class ListMessageGroup extends Rpc
 {
@@ -4769,6 +4770,19 @@ class ListMessageGroup extends Rpc
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
 
         return $this;
     }
@@ -5643,8 +5657,94 @@ class SendMessageToGroup extends Rpc
     }
 }
 
+/**
+ * @method string getData()
+ * @method string getType()
+ * @method string getOperatorUserId()
+ * @method string getReceiverIdList()
+ * @method string getGroupId()
+ * @method string getAppId()
+ */
 class SendMessageToGroupUsers extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withData($value)
+    {
+        $this->data['Data'] = $value;
+        $this->options['form_params']['Data'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorUserId($value)
+    {
+        $this->data['OperatorUserId'] = $value;
+        $this->options['form_params']['OperatorUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReceiverIdList($value)
+    {
+        $this->data['ReceiverIdList'] = $value;
+        $this->options['form_params']['ReceiverIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
