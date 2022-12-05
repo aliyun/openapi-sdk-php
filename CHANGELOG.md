@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1596 - 2022-12-5
+- Add support for secret.
+
+
 ## 1.8.1595 - 2022-12-5
 - Publish Swift.
 
