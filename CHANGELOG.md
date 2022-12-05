@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1597 - 2022-12-5
+- Modify QueryRequestLogs.
+
+
 ## 1.8.1596 - 2022-12-5
 - Add support for secret.
 
