@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1601 - 2022-12-7
+- Update Endpoint.
+
+
 ## 1.8.1600 - 2022-12-7
 - Support async parameter in Job APIs.
 
