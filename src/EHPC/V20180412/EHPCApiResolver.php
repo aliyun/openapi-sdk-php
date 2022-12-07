@@ -1043,6 +1043,8 @@ class CreateHybridCluster extends Rpc
  * @method $this withClusterId($value)
  * @method string getContent()
  * @method $this withContent($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  */
 class CreateJobFile extends Rpc
 {
@@ -1163,6 +1165,8 @@ class DeleteImage extends Rpc
  * @method $this withJobs($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  */
 class DeleteJobs extends Rpc
 {
@@ -2472,6 +2476,8 @@ class RecoverCluster extends Rpc
  * @method $this withJobs($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  */
 class RerunJobs extends Rpc
 {
@@ -2934,6 +2940,8 @@ class StopGWSInstance extends Rpc
  * @method $this withJobs($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  */
 class StopJobs extends Rpc
 {
@@ -3006,6 +3014,8 @@ class StopVisualService extends Rpc
  * @method $this withPostCmdLine($value)
  * @method string getRunasUser()
  * @method $this withRunasUser($value)
+ * @method string getCpu()
+ * @method $this withCpu($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getReRunable()
@@ -3018,6 +3028,8 @@ class StopVisualService extends Rpc
  * @method $this withGpu($value)
  * @method string getNode()
  * @method $this withNode($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  * @method string getTask()
  * @method $this withTask($value)
  * @method string getInputFileUrl()

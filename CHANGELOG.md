@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1600 - 2022-12-7
+- Support async parameter in Job APIs.
+
+
 ## 1.8.1599 - 2022-12-5
 - Add API DescribeVodDomainSrcBpsData.
 - Add API DescribeVodDomainSrcTrafficData.
