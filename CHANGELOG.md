@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1603 - 2022-12-8
+- Publish Swift.
+
+
 ## 1.8.1602 - 2022-12-8
 - Release ScreenEC.
 
