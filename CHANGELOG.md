@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1602 - 2022-12-8
+- Release ScreenEC.
+
+
 ## 1.8.1601 - 2022-12-7
 - Update Endpoint.
 
