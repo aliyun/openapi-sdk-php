@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1605 - 2022-12-9
+- Update MakeSuperResolutionImage.
+
+
 ## 1.8.1604 - 2022-12-9
 - Delete DescribeLiveStreamRecordContent.
 
