@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeInstanceCreatableZone describeInstanceCreatableZone(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
+ * @method DescribeInstanceTags describeInstanceTags(array $options = [])
  * @method DescribeInstanceTenantModes describeInstanceTenantModes(array $options = [])
  * @method DescribeInstanceTopology describeInstanceTopology(array $options = [])
  * @method DescribeNodeMetrics describeNodeMetrics(array $options = [])
@@ -45,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTenant describeTenant(array $options = [])
  * @method DescribeTenantMetrics describeTenantMetrics(array $options = [])
  * @method DescribeTenants describeTenants(array $options = [])
+ * @method DescribeTenantTags describeTenantTags(array $options = [])
  * @method DescribeTenantUserRoles describeTenantUserRoles(array $options = [])
  * @method DescribeTenantUsers describeTenantUsers(array $options = [])
  * @method DescribeTenantZonesRead describeTenantZonesRead(array $options = [])
@@ -54,10 +56,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDatabaseDescription modifyDatabaseDescription(array $options = [])
  * @method ModifyDatabaseUserRoles modifyDatabaseUserRoles(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
+ * @method ModifyInstanceTags modifyInstanceTags(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method ModifyTenantPrimaryZone modifyTenantPrimaryZone(array $options = [])
  * @method ModifyTenantResource modifyTenantResource(array $options = [])
+ * @method ModifyTenantTags modifyTenantTags(array $options = [])
  * @method ModifyTenantUserDescription modifyTenantUserDescription(array $options = [])
  * @method ModifyTenantUserPassword modifyTenantUserPassword(array $options = [])
  * @method ModifyTenantUserRoles modifyTenantUserRoles(array $options = [])
@@ -1934,6 +1938,40 @@ class DescribeInstances extends Rpc
 }
 
 /**
+ * @method string getTags()
+ * @method string getInstanceIds()
+ */
+class DescribeInstanceTags extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['form_params']['Tags'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceIds($value)
+    {
+        $this->data['InstanceIds'] = $value;
+        $this->options['form_params']['InstanceIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  */
 class DescribeInstanceTenantModes extends Rpc
@@ -3273,6 +3311,54 @@ class DescribeTenants extends Rpc
     }
 }
 
+/**
+ * @method string getTags()
+ * @method string getInstanceId()
+ * @method string getTenantIds()
+ */
+class DescribeTenantTags extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['form_params']['Tags'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantIds($value)
+    {
+        $this->data['TenantIds'] = $value;
+        $this->options['form_params']['TenantIds'] = $value;
+
+        return $this;
+    }
+}
+
 class DescribeTenantUserRoles extends Rpc
 {
 }
@@ -3800,6 +3886,40 @@ class ModifyInstanceName extends Rpc
 }
 
 /**
+ * @method string getTags()
+ * @method string getInstanceId()
+ */
+class ModifyInstanceTags extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['form_params']['Tags'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDimensionValue()
  * @method string getInstanceId()
  * @method string getDimension()
@@ -4044,6 +4164,54 @@ class ModifyTenantResource extends Rpc
     {
         $this->data['Cpu'] = $value;
         $this->options['form_params']['Cpu'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTags()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class ModifyTenantTags extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['form_params']['Tags'] = $value;
 
         return $this;
     }
