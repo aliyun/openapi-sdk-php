@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1604 - 2022-12-9
+- Delete DescribeLiveStreamRecordContent.
+
+
 ## 1.8.1603 - 2022-12-8
 - Publish Swift.
 

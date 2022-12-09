@@ -31,7 +31,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSpecificStagingConfig deleteSpecificStagingConfig(array $options = [])
  * @method DeleteUsageDetailDataExportTask deleteUsageDetailDataExportTask(array $options = [])
  * @method DeleteUserUsageDataExportTask deleteUserUsageDataExportTask(array $options = [])
- * @method DescribeActiveVersionOfConfigGroup describeActiveVersionOfConfigGroup(array $options = [])
  * @method DescribeBlockedRegions describeBlockedRegions(array $options = [])
  * @method DescribeCdnCertificateDetail describeCdnCertificateDetail(array $options = [])
  * @method DescribeCdnCertificateList describeCdnCertificateList(array $options = [])
@@ -60,8 +59,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCdnUserResourcePackage describeCdnUserResourcePackage(array $options = [])
  * @method DescribeCdnWafDomain describeCdnWafDomain(array $options = [])
  * @method DescribeCertificateInfoByID describeCertificateInfoByID(array $options = [])
- * @method DescribeConfigGroupDetail describeConfigGroupDetail(array $options = [])
- * @method DescribeConfigOfVersion describeConfigOfVersion(array $options = [])
  * @method DescribeCustomLogConfig describeCustomLogConfig(array $options = [])
  * @method DescribeDomainAverageResponseTime describeDomainAverageResponseTime(array $options = [])
  * @method DescribeDomainBpsData describeDomainBpsData(array $options = [])
@@ -78,7 +75,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainISPData describeDomainISPData(array $options = [])
  * @method DescribeDomainMax95BpsData describeDomainMax95BpsData(array $options = [])
  * @method DescribeDomainMultiUsageData describeDomainMultiUsageData(array $options = [])
- * @method DescribeDomainNamesOfVersion describeDomainNamesOfVersion(array $options = [])
  * @method DescribeDomainPathData describeDomainPathData(array $options = [])
  * @method DescribeDomainPvData describeDomainPvData(array $options = [])
  * @method DescribeDomainQpsData describeDomainQpsData(array $options = [])
@@ -118,7 +114,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeL2VipsByDomain describeL2VipsByDomain(array $options = [])
  * @method DescribeRangeDataByLocateAndIspService describeRangeDataByLocateAndIspService(array $options = [])
  * @method DescribeRealtimeDeliveryAcc describeRealtimeDeliveryAcc(array $options = [])
- * @method DescribeRealtimeLogAuthorized describeRealtimeLogAuthorized(array $options = [])
  * @method DescribeRefreshQuota describeRefreshQuota(array $options = [])
  * @method DescribeRefreshTaskById describeRefreshTaskById(array $options = [])
  * @method DescribeRefreshTasks describeRefreshTasks(array $options = [])
@@ -143,6 +138,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyCdnDomain modifyCdnDomain(array $options = [])
  * @method ModifyCdnDomainSchdmByProperty modifyCdnDomainSchdmByProperty(array $options = [])
  * @method ModifyRealtimeLogDelivery modifyRealtimeLogDelivery(array $options = [])
+ * @method OpenCdnService openCdnService(array $options = [])
  * @method PublishStagingConfigToProduction publishStagingConfigToProduction(array $options = [])
  * @method PushObjectCache pushObjectCache(array $options = [])
  * @method RefreshObjectCaches refreshObjectCaches(array $options = [])
@@ -150,7 +146,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetCdnDomainCSRCertificate setCdnDomainCSRCertificate(array $options = [])
  * @method SetCdnDomainSMCertificate setCdnDomainSMCertificate(array $options = [])
  * @method SetCdnDomainStagingConfig setCdnDomainStagingConfig(array $options = [])
- * @method SetConfigOfVersion setConfigOfVersion(array $options = [])
  * @method SetDomainServerCertificate setDomainServerCertificate(array $options = [])
  * @method SetReqHeaderConfig setReqHeaderConfig(array $options = [])
  * @method SetWaitingRoomConfig setWaitingRoomConfig(array $options = [])
@@ -664,8 +659,6 @@ class DeleteCdnDeliverTask extends Rpc
 }
 
 /**
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDomainName()
@@ -776,18 +769,6 @@ class DeleteUsageDetailDataExportTask extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteUserUsageDataExportTask extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getEnv()
- * @method $this withEnv($value)
- * @method string getConfigGroupId()
- * @method $this withConfigGroupId($value)
- */
-class DescribeActiveVersionOfConfigGroup extends Rpc
 {
 }
 
@@ -1144,36 +1125,6 @@ class DescribeCertificateInfoByID extends Rpc
 }
 
 /**
- * @method string getConfigGroupName()
- * @method $this withConfigGroupName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getConfigGroupId()
- * @method $this withConfigGroupId($value)
- */
-class DescribeConfigGroupDetail extends Rpc
-{
-}
-
-/**
- * @method string getVersionId()
- * @method $this withVersionId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getFunctionName()
- * @method $this withFunctionName($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFunctionId()
- * @method $this withFunctionId($value)
- */
-class DescribeConfigOfVersion extends Rpc
-{
-}
-
-/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getConfigId()
@@ -1453,20 +1404,6 @@ class DescribeDomainMax95BpsData extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeDomainMultiUsageData extends Rpc
-{
-}
-
-/**
- * @method string getVersionId()
- * @method $this withVersionId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageIndex()
- * @method $this withPageIndex($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDomainNamesOfVersion extends Rpc
 {
 }
 
@@ -2047,10 +1984,6 @@ class DescribeIllegalUrlExportTask extends Rpc
 /**
  * @method string getIP()
  * @method $this withIP($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeIpInfo extends Rpc
 {
@@ -2115,17 +2048,6 @@ class DescribeRangeDataByLocateAndIspService extends Rpc
  */
 class DescribeRealtimeDeliveryAcc extends Rpc
 {
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeRealtimeLogAuthorized extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2528,6 +2450,18 @@ class ModifyRealtimeLogDelivery extends Rpc
 }
 
 /**
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getInternetChargeType()
+ * @method $this withInternetChargeType($value)
+ */
+class OpenCdnService extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -2614,28 +2548,6 @@ class SetCdnDomainSMCertificate extends Rpc
  * @method $this withOwnerId($value)
  */
 class SetCdnDomainStagingConfig extends Rpc
-{
-}
-
-/**
- * @method string getVersionId()
- * @method $this withVersionId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getFunctionName()
- * @method $this withFunctionName($value)
- * @method string getFunctionArgs()
- * @method $this withFunctionArgs($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getFunctionId()
- * @method $this withFunctionId($value)
- * @method string getConfigId()
- * @method $this withConfigId($value)
- */
-class SetConfigOfVersion extends Rpc
 {
 }
 
