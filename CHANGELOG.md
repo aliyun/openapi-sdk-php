@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1611 - 2022-12-14
+- Publish Swift.
+
+
 ## 1.8.1610 - 2022-12-14
 - Release MergeVideoModelFace.
 
