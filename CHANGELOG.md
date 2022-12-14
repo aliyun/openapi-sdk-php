@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1609 - 2022-12-14
+- Update MakeSuperResolutionImage.
+
+
 ## 1.8.1608 - 2022-12-14
 - Release EstimateMonocularVideoDepth.
 
