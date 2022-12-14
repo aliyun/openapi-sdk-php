@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1607 - 2022-12-14
+- Add GetMetaProductList api.
+
+
 ## 1.8.1606 - 2022-12-9
 - Update SDK.
 
