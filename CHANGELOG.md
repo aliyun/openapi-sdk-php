@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1608 - 2022-12-14
+- Release EstimateMonocularVideoDepth.
+
+
 ## 1.8.1607 - 2022-12-14
 - Add GetMetaProductList api.
 
