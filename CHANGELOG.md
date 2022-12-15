@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1613 - 2022-12-15
+- Supported delete snapshots.
+- Supported auto snapshot.
+- Fix docx.
+
+
 ## 1.8.1612 - 2022-12-15
 - Update DetectVehicleICongestion DetectVehicleIllegalParking.
 

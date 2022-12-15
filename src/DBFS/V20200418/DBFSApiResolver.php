@@ -7,6 +7,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddTagsBatch addTagsBatch(array $options = [])
  * @method AttachDbfs attachDbfs(array $options = [])
+ * @method CancelAutoSnapshotPolicy cancelAutoSnapshotPolicy(array $options = [])
+ * @method CreateAutoSnapshotPolicy createAutoSnapshotPolicy(array $options = [])
  * @method CreateDbfs createDbfs(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
@@ -73,6 +75,30 @@ class AddTagsBatch extends Rpc
  * @method $this withAttachMode($value)
  */
 class AttachDbfs extends Rpc
+{
+}
+
+/**
+ * @method string getDbfsIds()
+ * @method $this withDbfsIds($value)
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ */
+class CancelAutoSnapshotPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getTimePoints()
+ * @method $this withTimePoints($value)
+ * @method string getRepeatWeekdays()
+ * @method $this withRepeatWeekdays($value)
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ * @method string getRetentionDays()
+ * @method $this withRetentionDays($value)
+ */
+class CreateAutoSnapshotPolicy extends Rpc
 {
 }
 
