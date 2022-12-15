@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1612 - 2022-12-15
+- Update DetectVehicleICongestion DetectVehicleIllegalParking.
+
+
 ## 1.8.1611 - 2022-12-14
 - Publish Swift.
 
