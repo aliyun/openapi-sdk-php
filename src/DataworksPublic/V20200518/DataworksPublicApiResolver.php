@@ -5775,6 +5775,8 @@ class GetMetaTableListByCategory extends Rpc
  * @method $this withTableGuid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  */
 class GetMetaTableOutput extends Rpc
 {

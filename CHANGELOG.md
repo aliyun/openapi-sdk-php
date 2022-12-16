@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1614 - 2022-12-16
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1613 - 2022-12-15
 - Supported delete snapshots.
 - Supported auto snapshot.
