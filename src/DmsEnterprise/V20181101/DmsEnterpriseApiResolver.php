@@ -79,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
  * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
  * @method GetProxy getProxy(array $options = [])
+ * @method GetProxyAccess getProxyAccess(array $options = [])
  * @method GetRuleNumLimitOfSLA getRuleNumLimitOfSLA(array $options = [])
  * @method GetSQLReviewCheckResultStatus getSQLReviewCheckResultStatus(array $options = [])
  * @method GetSQLReviewOptimizeDetail getSQLReviewOptimizeDetail(array $options = [])
@@ -1208,6 +1209,16 @@ class GetPhysicalDatabase extends Rpc
  * @method $this withInstanceId($value)
  */
 class GetProxy extends Rpc
+{
+}
+
+/**
+ * @method string getProxyAccessId()
+ * @method $this withProxyAccessId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ */
+class GetProxyAccess extends Rpc
 {
 }
 

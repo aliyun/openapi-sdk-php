@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1617 - 2022-12-21
+- Supported GetProxyAccess API.
+
+
 ## 1.8.1616 - 2022-12-20
 - Update imageaudit.
 
