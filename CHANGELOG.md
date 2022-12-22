@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1620 - 2022-12-22
+- Publish Swift.
+
+
 ## 1.8.1619 - 2022-12-22
 - Generated 2020-05-18 for `dataworks-public`.
 
