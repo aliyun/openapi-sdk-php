@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AbolishDataServiceApi abolishDataServiceApi(array $options = [])
+ * @method AddMetaCollectionEntity addMetaCollectionEntity(array $options = [])
  * @method AddProjectMemberToRole addProjectMemberToRole(array $options = [])
  * @method AddToMetaCategory addToMetaCategory(array $options = [])
  * @method ApprovePermissionApplyOrder approvePermissionApplyOrder(array $options = [])
@@ -30,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateImportMigration createImportMigration(array $options = [])
  * @method CreateManualDag createManualDag(array $options = [])
  * @method CreateMetaCategory createMetaCategory(array $options = [])
+ * @method CreateMetaCollection createMetaCollection(array $options = [])
  * @method CreatePermissionApplyOrder createPermissionApplyOrder(array $options = [])
  * @method CreateProjectMember createProjectMember(array $options = [])
  * @method CreateQualityEntity createQualityEntity(array $options = [])
@@ -52,6 +54,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFolder deleteFolder(array $options = [])
  * @method DeleteFromMetaCategory deleteFromMetaCategory(array $options = [])
  * @method DeleteMetaCategory deleteMetaCategory(array $options = [])
+ * @method DeleteMetaCollection deleteMetaCollection(array $options = [])
+ * @method DeleteMetaCollectionEntity deleteMetaCollectionEntity(array $options = [])
  * @method DeleteProjectMember deleteProjectMember(array $options = [])
  * @method DeleteQualityEntity deleteQualityEntity(array $options = [])
  * @method DeleteQualityFollower deleteQualityFollower(array $options = [])
@@ -100,6 +104,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetInstanceStatusStatistic getInstanceStatusStatistic(array $options = [])
  * @method GetManualDagInstances getManualDagInstances(array $options = [])
  * @method GetMetaCategory getMetaCategory(array $options = [])
+ * @method GetMetaCollectionDetail getMetaCollectionDetail(array $options = [])
  * @method GetMetaColumnLineage getMetaColumnLineage(array $options = [])
  * @method GetMetaDBInfo getMetaDBInfo(array $options = [])
  * @method GetMetaDBTableList getMetaDBTableList(array $options = [])
@@ -112,6 +117,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMetaTableListByCategory getMetaTableListByCategory(array $options = [])
  * @method GetMetaTableOutput getMetaTableOutput(array $options = [])
  * @method GetMetaTablePartition getMetaTablePartition(array $options = [])
+ * @method GetMetaTableProducingTasks getMetaTableProducingTasks(array $options = [])
  * @method GetMetaTableThemeLevel getMetaTableThemeLevel(array $options = [])
  * @method GetMigrationProcess getMigrationProcess(array $options = [])
  * @method GetMigrationSummary getMigrationSummary(array $options = [])
@@ -166,6 +172,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstanceHistory listInstanceHistory(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListManualDagInstances listManualDagInstances(array $options = [])
+ * @method ListMetaCollectionEntities listMetaCollectionEntities(array $options = [])
+ * @method ListMetaCollections listMetaCollections(array $options = [])
  * @method ListMetaDB listMetaDB(array $options = [])
  * @method ListMigrations listMigrations(array $options = [])
  * @method ListNodeInputOrOutput listNodeInputOrOutput(array $options = [])
@@ -231,6 +239,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateFolder updateFolder(array $options = [])
  * @method UpdateIDEEventResult updateIDEEventResult(array $options = [])
  * @method UpdateMetaCategory updateMetaCategory(array $options = [])
+ * @method UpdateMetaCollection updateMetaCollection(array $options = [])
  * @method UpdateMetaTable updateMetaTable(array $options = [])
  * @method UpdateMetaTableIntroWiki updateMetaTableIntroWiki(array $options = [])
  * @method UpdateNodeOwner updateNodeOwner(array $options = [])
@@ -308,6 +317,16 @@ class AbolishDataServiceApi extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getEntityQualifiedName()
+ * @method $this withEntityQualifiedName($value)
+ * @method string getCollectionQualifiedName()
+ * @method $this withCollectionQualifiedName($value)
+ */
+class AddMetaCollectionEntity extends Rpc
+{
 }
 
 /**
@@ -2256,6 +2275,20 @@ class CreateMetaCategory extends Rpc
 }
 
 /**
+ * @method string getParentQualifiedName()
+ * @method $this withParentQualifiedName($value)
+ * @method string getCollectionType()
+ * @method $this withCollectionType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class CreateMetaCollection extends Rpc
+{
+}
+
+/**
  * @method string getApplyReason()
  * @method $this withApplyReason($value)
  * @method string getMaxComputeProjectName()
@@ -3719,6 +3752,24 @@ class DeleteMetaCategory extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getQualifiedName()
+ * @method $this withQualifiedName($value)
+ */
+class DeleteMetaCollection extends Rpc
+{
+}
+
+/**
+ * @method string getEntityQualifiedName()
+ * @method $this withEntityQualifiedName($value)
+ * @method string getCollectionQualifiedName()
+ * @method $this withCollectionQualifiedName($value)
+ */
+class DeleteMetaCollectionEntity extends Rpc
+{
 }
 
 /**
@@ -5488,6 +5539,14 @@ class GetMetaCategory extends Rpc
 }
 
 /**
+ * @method string getQualifiedName()
+ * @method $this withQualifiedName($value)
+ */
+class GetMetaCollectionDetail extends Rpc
+{
+}
+
+/**
  * @method string getDataSourceType()
  * @method $this withDataSourceType($value)
  * @method string getClusterId()
@@ -5801,6 +5860,24 @@ class GetMetaTableOutput extends Rpc
  * @method $this withTableName($value)
  */
 class GetMetaTablePartition extends Rpc
+{
+}
+
+/**
+ * @method string getDataSourceType()
+ * @method $this withDataSourceType($value)
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ * @method string getTableGuid()
+ * @method $this withTableGuid($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ */
+class GetMetaTableProducingTasks extends Rpc
 {
 }
 
@@ -8745,6 +8822,46 @@ class ListManualDagInstances extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getCollectionQualifiedName()
+ * @method $this withCollectionQualifiedName($value)
+ * @method string getEntityType()
+ * @method $this withEntityType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class ListMetaCollectionEntities extends Rpc
+{
+}
+
+/**
+ * @method string getCreator()
+ * @method $this withCreator($value)
+ * @method string getFollower()
+ * @method $this withFollower($value)
+ * @method string getParentQualifiedName()
+ * @method $this withParentQualifiedName($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ * @method string getCollectionType()
+ * @method $this withCollectionType($value)
+ * @method string getAdministrator()
+ * @method $this withAdministrator($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class ListMetaCollections extends Rpc
+{
 }
 
 /**
@@ -12231,6 +12348,18 @@ class UpdateMetaCategory extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getQualifiedName()
+ * @method $this withQualifiedName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class UpdateMetaCollection extends Rpc
+{
 }
 
 /**
