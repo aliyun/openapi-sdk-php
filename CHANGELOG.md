@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1621 - 2022-12-22
+- SubmitTextTo2DAvatarVideoTask add new params.
+
+
 ## 1.8.1620 - 2022-12-22
 - Publish Swift.
 
