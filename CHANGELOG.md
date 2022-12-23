@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1623 - 2022-12-23
+- Publish Swift.
+
+
 ## 1.8.1622 - 2022-12-23
 - Update api ExecuteServerSideVerification The base64 data format is changed from string byte to string.
 
