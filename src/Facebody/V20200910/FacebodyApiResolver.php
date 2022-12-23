@@ -28,14 +28,27 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 }
 
 /**
+ * @method string getHeight()
  * @method string getImageData()
  * @method string getWidth()
- * @method string getHeight()
  */
 class DetectIPCPedestrianOptimized extends Roa
 {
     /** @var string */
     public $pathPattern = '/viapi/k8s/facebody/detect-ipc-pedestrian-optimized';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHeight($value)
+    {
+        $this->data['Height'] = $value;
+        $this->options['form_params']['height'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -59,19 +72,6 @@ class DetectIPCPedestrianOptimized extends Roa
     {
         $this->data['Width'] = $value;
         $this->options['form_params']['width'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHeight($value)
-    {
-        $this->data['Height'] = $value;
-        $this->options['form_params']['height'] = $value;
 
         return $this;
     }
