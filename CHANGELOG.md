@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1625 - 2022-12-27
+- Support Snapshot API.
+
+
 ## 1.8.1624 - 2022-12-23
 - Generated 2020-05-18 for `dataworks-public`.
 

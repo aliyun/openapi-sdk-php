@@ -115,6 +115,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeMeasurementData describeMeasurementData(array $options = [])
  * @method DescribeMountTargets describeMountTargets(array $options = [])
  * @method DescribeNatGateways describeNatGateways(array $options = [])
+ * @method DescribeNCInformation describeNCInformation(array $options = [])
  * @method DescribeNetworkAcls describeNetworkAcls(array $options = [])
  * @method DescribeNetworkAttribute describeNetworkAttribute(array $options = [])
  * @method DescribeNetworkInterfaces describeNetworkInterfaces(array $options = [])
@@ -122,7 +123,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePrePaidInstanceStock describePrePaidInstanceStock(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
  * @method DescribeRegionIsps describeRegionIsps(array $options = [])
+ * @method DescribeRegionResource describeRegionResource(array $options = [])
  * @method DescribeReservedResource describeReservedResource(array $options = [])
+ * @method DescribeResourceTimeline describeResourceTimeline(array $options = [])
  * @method DescribeSecurityGroupAttribute describeSecurityGroupAttribute(array $options = [])
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
  * @method DescribeSelfImages describeSelfImages(array $options = [])
@@ -161,8 +164,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RebootAICInstance rebootAICInstance(array $options = [])
  * @method RebootARMServerInstance rebootARMServerInstance(array $options = [])
  * @method RebootInstance rebootInstance(array $options = [])
+ * @method RebootInstances rebootInstances(array $options = [])
  * @method ReInitDisk reInitDisk(array $options = [])
  * @method ReinitInstance reinitInstance(array $options = [])
+ * @method ReinitInstances reinitInstances(array $options = [])
  * @method ReleaseARMServerInstance releaseARMServerInstance(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
  * @method ReleasePostPaidInstance releasePostPaidInstance(array $options = [])
@@ -191,9 +196,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetLoadBalancerUDPListenerAttribute setLoadBalancerUDPListenerAttribute(array $options = [])
  * @method StartEpnInstance startEpnInstance(array $options = [])
  * @method StartInstance startInstance(array $options = [])
+ * @method StartInstances startInstances(array $options = [])
  * @method StartLoadBalancerListener startLoadBalancerListener(array $options = [])
  * @method StopEpnInstance stopEpnInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
+ * @method StopInstances stopInstances(array $options = [])
  * @method StopLoadBalancerListener stopLoadBalancerListener(array $options = [])
  * @method UnassignPrivateIpAddresses unassignPrivateIpAddresses(array $options = [])
  * @method UnAssociateEnsEipAddress unAssociateEnsEipAddress(array $options = [])
@@ -1900,6 +1907,21 @@ class DescribeNatGateways extends Rpc
 }
 
 /**
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getOpenapiCheck()
+ * @method $this withOpenapiCheck($value)
+ */
+class DescribeNCInformation extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -2033,8 +2055,40 @@ class DescribeRegionIsps extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getIspType()
+ * @method $this withIspType($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getOpenapiCheck()
+ * @method $this withOpenapiCheck($value)
+ */
+class DescribeRegionResource extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
 class DescribeReservedResource extends Rpc
 {
+}
+
+/**
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getOpenapiCheck()
+ * @method $this withOpenapiCheck($value)
+ */
+class DescribeResourceTimeline extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2391,8 +2445,12 @@ class ModifyImageSharePermission extends Rpc
 }
 
 /**
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getPassword()
  * @method $this withPassword($value)
+ * @method string getHostName()
+ * @method $this withHostName($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceName()
@@ -2557,6 +2615,14 @@ class RebootInstance extends Rpc
 }
 
 /**
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class RebootInstances extends Rpc
+{
+}
+
+/**
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getDiskId()
@@ -2612,6 +2678,18 @@ class ReinitInstance extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class ReinitInstances extends Rpc
+{
 }
 
 /**
@@ -3167,6 +3245,14 @@ class StartInstance extends Rpc
 }
 
 /**
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class StartInstances extends Rpc
+{
+}
+
+/**
  * @method string getListenerPort()
  * @method $this withListenerPort($value)
  * @method string getListenerProtocol()
@@ -3193,6 +3279,14 @@ class StopEpnInstance extends Rpc
  * @method $this withInstanceId($value)
  */
 class StopInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class StopInstances extends Rpc
 {
 }
 
