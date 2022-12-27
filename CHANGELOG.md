@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1626 - 2022-12-27
+- Add DescribeDcdnWafLogs.
+
+
 ## 1.8.1625 - 2022-12-27
 - Support Snapshot API.
 

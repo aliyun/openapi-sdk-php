@@ -37,7 +37,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRoutine deleteRoutine(array $options = [])
  * @method DeleteRoutineCodeRevision deleteRoutineCodeRevision(array $options = [])
  * @method DeleteRoutineConfEnvs deleteRoutineConfEnvs(array $options = [])
- * @method DeleteWasm deleteWasm(array $options = [])
  * @method DescribeDcdnAclFields describeDcdnAclFields(array $options = [])
  * @method DescribeDcdnBgpBpsData describeDcdnBgpBpsData(array $options = [])
  * @method DescribeDcdnBgpTrafficData describeDcdnBgpTrafficData(array $options = [])
@@ -109,7 +108,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnSecSpecInfo describeDcdnSecSpecInfo(array $options = [])
  * @method DescribeDcdnService describeDcdnService(array $options = [])
  * @method DescribeDcdnSLSRealtimeLogDelivery describeDcdnSLSRealtimeLogDelivery(array $options = [])
- * @method DescribeDcdnSLSRealTimeLogType describeDcdnSLSRealTimeLogType(array $options = [])
  * @method DescribeDcdnSMCertificateDetail describeDcdnSMCertificateDetail(array $options = [])
  * @method DescribeDcdnSMCertificateList describeDcdnSMCertificateList(array $options = [])
  * @method DescribeDcdnStagingIp describeDcdnStagingIp(array $options = [])
@@ -134,6 +132,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnWafDomains describeDcdnWafDomains(array $options = [])
  * @method DescribeDcdnWafFilterInfo describeDcdnWafFilterInfo(array $options = [])
  * @method DescribeDcdnWafGeoInfo describeDcdnWafGeoInfo(array $options = [])
+ * @method DescribeDcdnWafLogs describeDcdnWafLogs(array $options = [])
  * @method DescribeDcdnWafPolicies describeDcdnWafPolicies(array $options = [])
  * @method DescribeDcdnWafPolicy describeDcdnWafPolicy(array $options = [])
  * @method DescribeDcdnWafPolicyDomains describeDcdnWafPolicyDomains(array $options = [])
@@ -170,7 +169,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDcdnDomainCertificate setDcdnDomainCertificate(array $options = [])
  * @method SetDcdnDomainSMCertificate setDcdnDomainSMCertificate(array $options = [])
  * @method SetDcdnDomainStagingConfig setDcdnDomainStagingConfig(array $options = [])
- * @method SetDcdnFullDomainsBlockIP setDcdnFullDomainsBlockIP(array $options = [])
  * @method SetDcdnUserConfig setDcdnUserConfig(array $options = [])
  * @method SetRoutineSubdomain setRoutineSubdomain(array $options = [])
  * @method StartDcdnDomain startDcdnDomain(array $options = [])
@@ -302,8 +300,6 @@ class BatchAddDcdnDomain extends Rpc
 
 /**
  * @method string getPolicyId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getRuleConfigs()
  */
 class BatchCreateDcdnWafRules extends Rpc
@@ -353,8 +349,6 @@ class BatchDeleteDcdnDomainConfigs extends Rpc
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getRuleIds()
  */
 class BatchDeleteDcdnWafRules extends Rpc
@@ -467,8 +461,6 @@ class BatchSetDcdnIpaDomainConfigs extends Rpc
 /**
  * @method string getDomainNames()
  * @method string getClientIpTag()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getDefenseStatus()
  */
 class BatchSetDcdnWafDomainConfigs extends Rpc
@@ -517,8 +509,6 @@ class BatchSetDcdnWafDomainConfigs extends Rpc
 /**
  * @method string getProjectName()
  * @method $this withProjectName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class CheckDcdnProjectExist extends Rpc
 {
@@ -529,8 +519,6 @@ class CheckDcdnProjectExist extends Rpc
 
 /**
  * @method string getCodeDescription()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
  */
 class CommitStagingRoutineCode extends Rpc
@@ -565,12 +553,10 @@ class CommitStagingRoutineCode extends Rpc
 
 /**
  * @method string getReports()
- * @method string getDeliver()
- * @method string getDomainName()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSchedule()
  * @method string getName()
+ * @method string getDomainName()
+ * @method string getDeliver()
  */
 class CreateDcdnDeliverTask extends Rpc
 {
@@ -584,32 +570,6 @@ class CreateDcdnDeliverTask extends Rpc
     {
         $this->data['Reports'] = $value;
         $this->options['form_params']['Reports'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeliver($value)
-    {
-        $this->data['Deliver'] = $value;
-        $this->options['form_params']['Deliver'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomainName($value)
-    {
-        $this->data['DomainName'] = $value;
-        $this->options['form_params']['DomainName'] = $value;
 
         return $this;
     }
@@ -639,19 +599,43 @@ class CreateDcdnDeliverTask extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeliver($value)
+    {
+        $this->data['Deliver'] = $value;
+        $this->options['form_params']['Deliver'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getSLSLogStore()
- * @method string getSLSProject()
- * @method string getBusinessType()
- * @method string getSLSRegion()
  * @method string getProjectName()
  * @method string getDomainName()
  * @method string getSamplingRate()
  * @method string getDataCenter()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getSLSProject()
+ * @method string getSLSRegion()
+ * @method string getBusinessType()
  */
 class CreateDcdnSLSRealTimeLogDelivery extends Rpc
 {
@@ -665,45 +649,6 @@ class CreateDcdnSLSRealTimeLogDelivery extends Rpc
     {
         $this->data['SLSLogStore'] = $value;
         $this->options['form_params']['SLSLogStore'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSLSProject($value)
-    {
-        $this->data['SLSProject'] = $value;
-        $this->options['form_params']['SLSProject'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBusinessType($value)
-    {
-        $this->data['BusinessType'] = $value;
-        $this->options['form_params']['BusinessType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSLSRegion($value)
-    {
-        $this->data['SLSRegion'] = $value;
-        $this->options['form_params']['SLSRegion'] = $value;
 
         return $this;
     }
@@ -759,29 +704,53 @@ class CreateDcdnSLSRealTimeLogDelivery extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getDomainName()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getReportIds()
- */
-class CreateDcdnSubTask extends Rpc
-{
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withDomainName($value)
+    public function withSLSProject($value)
     {
-        $this->data['DomainName'] = $value;
-        $this->options['form_params']['DomainName'] = $value;
+        $this->data['SLSProject'] = $value;
+        $this->options['form_params']['SLSProject'] = $value;
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSRegion($value)
+    {
+        $this->data['SLSRegion'] = $value;
+        $this->options['form_params']['SLSRegion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBusinessType($value)
+    {
+        $this->data['BusinessType'] = $value;
+        $this->options['form_params']['BusinessType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getReportIds()
+ * @method string getDomainName()
+ */
+class CreateDcdnSubTask extends Rpc
+{
 
     /**
      * @param string $value
@@ -795,31 +764,29 @@ class CreateDcdnSubTask extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getPolicyStatus()
- * @method string getDefenseScene()
- * @method string getPolicyType()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPolicyName()
- */
-class CreateDcdnWafPolicy extends Rpc
-{
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withPolicyStatus($value)
+    public function withDomainName($value)
     {
-        $this->data['PolicyStatus'] = $value;
-        $this->options['form_params']['PolicyStatus'] = $value;
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
 
         return $this;
     }
+}
+
+/**
+ * @method string getDefenseScene()
+ * @method string getPolicyType()
+ * @method string getPolicyStatus()
+ * @method string getPolicyName()
+ */
+class CreateDcdnWafPolicy extends Rpc
+{
 
     /**
      * @param string $value
@@ -852,6 +819,19 @@ class CreateDcdnWafPolicy extends Rpc
      *
      * @return $this
      */
+    public function withPolicyStatus($value)
+    {
+        $this->data['PolicyStatus'] = $value;
+        $this->options['form_params']['PolicyStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPolicyName($value)
     {
         $this->data['PolicyName'] = $value;
@@ -862,27 +842,12 @@ class CreateDcdnWafPolicy extends Rpc
 }
 
 /**
- * @method string getDescription()
  * @method string getEnvConf()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
+ * @method string getDescription()
  */
 class CreateRoutine extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['Description'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -909,29 +874,27 @@ class CreateRoutine extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getBusinessType()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRegion()
- */
-class CreateSlrAndSlsProject extends Rpc
-{
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withBusinessType($value)
+    public function withDescription($value)
     {
-        $this->data['BusinessType'] = $value;
-        $this->options['form_params']['BusinessType'] = $value;
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
 
         return $this;
     }
+}
+
+/**
+ * @method string getRegion()
+ * @method string getBusinessType()
+ */
+class CreateSlrAndSlsProject extends Rpc
+{
 
     /**
      * @param string $value
@@ -945,22 +908,46 @@ class CreateSlrAndSlsProject extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBusinessType($value)
+    {
+        $this->data['BusinessType'] = $value;
+        $this->options['form_params']['BusinessType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
- * @method string getProxyIp()
- * @method string getScheme()
- * @method string getBody()
- * @method string getHost()
- * @method string getMethod()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getUri()
  * @method string getArgs()
+ * @method string getProxyIp()
+ * @method string getMethod()
+ * @method string getScheme()
+ * @method string getHost()
  * @method string getHeader()
+ * @method string getBody()
+ * @method string getUri()
  */
 class DcdnHttpRequestTestTool extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withArgs($value)
+    {
+        $this->data['Args'] = $value;
+        $this->options['form_params']['Args'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -971,45 +958,6 @@ class DcdnHttpRequestTestTool extends Rpc
     {
         $this->data['ProxyIp'] = $value;
         $this->options['form_params']['ProxyIp'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheme($value)
-    {
-        $this->data['Scheme'] = $value;
-        $this->options['form_params']['Scheme'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBody($value)
-    {
-        $this->data['Body'] = $value;
-        $this->options['form_params']['Body'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHost($value)
-    {
-        $this->data['Host'] = $value;
-        $this->options['form_params']['Host'] = $value;
 
         return $this;
     }
@@ -1032,10 +980,10 @@ class DcdnHttpRequestTestTool extends Rpc
      *
      * @return $this
      */
-    public function withUri($value)
+    public function withScheme($value)
     {
-        $this->data['Uri'] = $value;
-        $this->options['form_params']['Uri'] = $value;
+        $this->data['Scheme'] = $value;
+        $this->options['form_params']['Scheme'] = $value;
 
         return $this;
     }
@@ -1045,10 +993,10 @@ class DcdnHttpRequestTestTool extends Rpc
      *
      * @return $this
      */
-    public function withArgs($value)
+    public function withHost($value)
     {
-        $this->data['Args'] = $value;
-        $this->options['form_params']['Args'] = $value;
+        $this->data['Host'] = $value;
+        $this->options['form_params']['Host'] = $value;
 
         return $this;
     }
@@ -1065,13 +1013,37 @@ class DcdnHttpRequestTestTool extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['Body'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUri($value)
+    {
+        $this->data['Uri'] = $value;
+        $this->options['form_params']['Uri'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getDeliverId()
  * @method $this withDeliverId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DeleteDcdnDeliverTask extends Rpc
 {
@@ -1122,8 +1094,6 @@ class DeleteDcdnIpaSpecificConfig extends Rpc
 /**
  * @method string getProjectName()
  * @method $this withProjectName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DeleteDcdnRealTimeLogProject extends Rpc
 {
@@ -1157,18 +1127,12 @@ class DeleteDcdnSpecificStagingConfig extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DeleteDcdnSubTask extends Rpc
 {
 }
 
 /**
  * @method string getPolicyId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DeleteDcdnWafPolicy extends Rpc
 {
@@ -1188,8 +1152,6 @@ class DeleteDcdnWafPolicy extends Rpc
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
  */
 class DeleteRoutine extends Rpc
@@ -1210,13 +1172,24 @@ class DeleteRoutine extends Rpc
 }
 
 /**
- * @method string getSelectCodeRevision()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
+ * @method string getSelectCodeRevision()
  */
 class DeleteRoutineCodeRevision extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1230,6 +1203,14 @@ class DeleteRoutineCodeRevision extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getName()
+ * @method string getEnvs()
+ */
+class DeleteRoutineConfEnvs extends Rpc
+{
 
     /**
      * @param string $value
@@ -1243,16 +1224,6 @@ class DeleteRoutineCodeRevision extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getEnvs()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- */
-class DeleteRoutineConfEnvs extends Rpc
-{
 
     /**
      * @param string $value
@@ -1266,48 +1237,11 @@ class DeleteRoutineConfEnvs extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
- */
-class DeleteWasm extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
-
-        return $this;
-    }
 }
 
 /**
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnAclFields extends Rpc
 {
@@ -1348,8 +1282,6 @@ class DescribeDcdnBgpTrafficData extends Rpc
 /**
  * @method string getLanguage()
  * @method $this withLanguage($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnBlockedRegions extends Rpc
 {
@@ -1395,34 +1327,36 @@ class DescribeDcdnDeletedDomains extends Rpc
 /**
  * @method string getDeliverId()
  * @method $this withDeliverId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDeliverList extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainBpsData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
@@ -1431,50 +1365,38 @@ class DescribeDcdnDomainBpsData extends Rpc
  * @method $this withIspNameEn($value)
  * @method string getLayer()
  * @method $this withLayer($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainBpsDataByLayer extends Rpc
 {
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSSLStatus()
- * @method $this withSSLStatus($value)
  * @method string getSSLPub()
  * @method $this withSSLPub($value)
+ * @method string getSSLStatus()
+ * @method $this withSSLStatus($value)
  */
 class DescribeDcdnDomainByCertificate extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getRuleName()
  * @method $this withRuleName($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getTriggerObject()
  * @method $this withTriggerObject($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getValue()
  * @method $this withValue($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnDomainCcActivityLog extends Rpc
 {
@@ -1483,8 +1405,6 @@ class DescribeDcdnDomainCcActivityLog extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainCertificateInfo extends Rpc
 {
@@ -1493,8 +1413,6 @@ class DescribeDcdnDomainCertificateInfo extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainCname extends Rpc
 {
@@ -1532,42 +1450,44 @@ class DescribeDcdnDomainDetail extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainHitRateData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainHttpCodeData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
@@ -1576,26 +1496,12 @@ class DescribeDcdnDomainHttpCodeData extends Rpc
  * @method $this withIspNameEn($value)
  * @method string getLayer()
  * @method $this withLayer($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainHttpCodeDataByLayer extends Rpc
 {
 }
 
 /**
- * @method string getLocationNameEn()
- * @method $this withLocationNameEn($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getIspNameEn()
- * @method $this withIspNameEn($value)
  * @method string getFixTimeGap()
  * @method $this withFixTimeGap($value)
  * @method string getTimeMerge()
@@ -1604,10 +1510,14 @@ class DescribeDcdnDomainHttpCodeDataByLayer extends Rpc
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
  */
 class DescribeDcdnDomainIpaBpsData extends Rpc
 {
@@ -1628,12 +1538,6 @@ class DescribeDcdnDomainIpaConnData extends Rpc
 }
 
 /**
- * @method string getLocationNameEn()
- * @method $this withLocationNameEn($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getIspNameEn()
- * @method $this withIspNameEn($value)
  * @method string getFixTimeGap()
  * @method $this withFixTimeGap($value)
  * @method string getTimeMerge()
@@ -1642,88 +1546,82 @@ class DescribeDcdnDomainIpaConnData extends Rpc
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
  */
 class DescribeDcdnDomainIpaTrafficData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainIspData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainLog extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainMultiUsageData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainOriginBpsData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainOriginTrafficData extends Rpc
 {
@@ -1732,48 +1630,48 @@ class DescribeDcdnDomainOriginTrafficData extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainProperty extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainPvData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainQpsData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
@@ -1782,32 +1680,22 @@ class DescribeDcdnDomainQpsData extends Rpc
  * @method $this withIspNameEn($value)
  * @method string getLayer()
  * @method $this withLayer($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainQpsDataByLayer extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainRealTimeBpsData extends Rpc
 {
@@ -1817,14 +1705,12 @@ class DescribeDcdnDomainRealTimeBpsData extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainRealTimeByteHitRateData extends Rpc
 {
@@ -1834,12 +1720,8 @@ class DescribeDcdnDomainRealTimeByteHitRateData extends Rpc
 }
 
 /**
- * @method string getLocationNameEn()
- * @method $this withLocationNameEn($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getIspNameEn()
- * @method $this withIspNameEn($value)
+ * @method string getField()
+ * @method $this withField($value)
  * @method string getMerge()
  * @method $this withMerge($value)
  * @method string getDomainName()
@@ -1848,10 +1730,12 @@ class DescribeDcdnDomainRealTimeByteHitRateData extends Rpc
  * @method $this withEndTime($value)
  * @method string getMergeLocIsp()
  * @method $this withMergeLocIsp($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getField()
- * @method $this withField($value)
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
  */
 class DescribeDcdnDomainRealTimeDetailData extends Rpc
 {
@@ -1861,36 +1745,32 @@ class DescribeDcdnDomainRealTimeDetailData extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainRealTimeHttpCodeData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainRealTimeQpsData extends Rpc
 {
@@ -1900,14 +1780,12 @@ class DescribeDcdnDomainRealTimeQpsData extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainRealTimeReqHitRateData extends Rpc
 {
@@ -1917,74 +1795,64 @@ class DescribeDcdnDomainRealTimeReqHitRateData extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainRealTimeSrcBpsData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainRealTimeSrcHttpCodeData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainRealTimeSrcTrafficData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainRealTimeTrafficData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainRegionData extends Rpc
 {
@@ -1995,152 +1863,134 @@ class DescribeDcdnDomainRegionData extends Rpc
  * @method $this withFunctionNames($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnDomainStagingConfig extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSortBy()
  * @method $this withSortBy($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainTopReferVisit extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSortBy()
  * @method $this withSortBy($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainTopUrlVisit extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainTrafficData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDataProtocol()
- * @method $this withDataProtocol($value)
  * @method string getArea()
  * @method $this withArea($value)
+ * @method string getField()
+ * @method $this withField($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getField()
- * @method $this withField($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDataProtocol()
+ * @method $this withDataProtocol($value)
  */
 class DescribeDcdnDomainUsageData extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnDomainUvData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainWebsocketBpsData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainWebsocketHttpCodeData extends Rpc
 {
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getIspNameEn()
  * @method $this withIspNameEn($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
  */
 class DescribeDcdnDomainWebsocketTrafficData extends Rpc
 {
@@ -2163,14 +2013,12 @@ class DescribeDcdnErUsageData extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getKeyword()
  * @method $this withKeyword($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnHttpsDomainList extends Rpc
 {
@@ -2219,8 +2067,6 @@ class DescribeDcdnIpaService extends Rpc
  * @method $this withCheckDomainShow($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -2264,10 +2110,6 @@ class DescribeDcdnIpaUserDomains extends Rpc
 /**
  * @method string getIP()
  * @method $this withIP($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
  */
 class DescribeDcdnIpInfo extends Rpc
 {
@@ -2302,8 +2144,6 @@ class DescribeDcdnRefreshQuota extends Rpc
 /**
  * @method string getTaskId()
  * @method $this withTaskId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnRefreshTaskById extends Rpc
 {
@@ -2348,22 +2188,20 @@ class DescribeDcdnRegionAndIsp extends Rpc
 }
 
 /**
- * @method string getReportId()
- * @method $this withReportId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getArea()
  * @method $this withArea($value)
+ * @method string getReportId()
+ * @method $this withReportId($value)
+ * @method string getIsOverseas()
+ * @method $this withIsOverseas($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getHttpCode()
  * @method $this withHttpCode($value)
- * @method string getIsOverseas()
- * @method $this withIsOverseas($value)
  */
 class DescribeDcdnReport extends Rpc
 {
@@ -2372,20 +2210,16 @@ class DescribeDcdnReport extends Rpc
 /**
  * @method string getReportId()
  * @method $this withReportId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnReportList extends Rpc
 {
 }
 
 /**
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecFuncType()
  * @method $this withSecFuncType($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeDcdnSecFuncInfo extends Rpc
 {
@@ -2418,22 +2252,9 @@ class DescribeDcdnService extends Rpc
 /**
  * @method string getProjectName()
  * @method $this withProjectName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnSLSRealtimeLogDelivery extends Rpc
 {
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDcdnSLSRealTimeLogType extends Rpc
-{
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2460,34 +2281,39 @@ class DescribeDcdnSMCertificateList extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeDcdnStagingIp extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeDcdnSubList extends Rpc
 {
 }
 
 /**
+ * @method array getResourceId()
  * @method string getScope()
  * @method $this withScope($value)
  * @method array getTag()
- * @method array getResourceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
 class DescribeDcdnTagResources extends Rpc
 {
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $tag
@@ -2508,65 +2334,40 @@ class DescribeDcdnTagResources extends Rpc
 
 		return $this;
     }
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-	public function withResourceId(array $resourceId)
-	{
-	    $this->data['ResourceId'] = $resourceId;
-		foreach ($resourceId as $i => $iValue) {
-			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getLimit()
  * @method $this withLimit($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnTopDomainsByFlow extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnUserBillHistory extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  */
 class DescribeDcdnUserBillType extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeDcdnUserCertificateExpireCount extends Rpc
 {
 }
@@ -2574,8 +2375,6 @@ class DescribeDcdnUserCertificateExpireCount extends Rpc
 /**
  * @method string getFunctionName()
  * @method $this withFunctionName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnUserConfigs extends Rpc
 {
@@ -2637,20 +2436,18 @@ class DescribeDcdnUserDomains extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getFuncFilter()
  * @method $this withFuncFilter($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getFuncId()
  * @method $this withFuncId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnUserDomainsByFunc extends Rpc
 {
@@ -2669,8 +2466,6 @@ class DescribeDcdnUserQuota extends Rpc
 /**
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnUserRealTimeDeliveryField extends Rpc
 {
@@ -2694,8 +2489,6 @@ class DescribeDcdnUserResourcePackage extends Rpc
 /**
  * @method string getData()
  * @method $this withData($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getMetric()
  * @method $this withMetric($value)
  * @method string getSecFunc()
@@ -2706,24 +2499,22 @@ class DescribeDcdnUserSecDrop extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getRuleName()
  * @method $this withRuleName($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecFunc()
  * @method $this withSecFunc($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getObject()
  * @method $this withObject($value)
  */
@@ -2731,10 +2522,6 @@ class DescribeDcdnUserSecDropByMinute extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeDcdnUserTags extends Rpc
 {
 }
@@ -2742,8 +2529,6 @@ class DescribeDcdnUserTags extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnVerifyContent extends Rpc
 {
@@ -2754,8 +2539,6 @@ class DescribeDcdnVerifyContent extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnWafDomain extends Rpc
 {
@@ -2764,22 +2547,18 @@ class DescribeDcdnWafDomain extends Rpc
 /**
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnWafDomainDetail extends Rpc
 {
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getQueryArgs()
  * @method $this withQueryArgs($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnWafDomains extends Rpc
 {
@@ -2790,8 +2569,6 @@ class DescribeDcdnWafDomains extends Rpc
  * @method $this withDefenseScenes($value)
  * @method string getLanguage()
  * @method $this withLanguage($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnWafFilterInfo extends Rpc
 {
@@ -2800,22 +2577,36 @@ class DescribeDcdnWafFilterInfo extends Rpc
 /**
  * @method string getLanguage()
  * @method $this withLanguage($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnWafGeoInfo extends Rpc
 {
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class DescribeDcdnWafLogs extends Rpc
+{
+}
+
+/**
  * @method string getQueryArgs()
  * @method $this withQueryArgs($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnWafPolicies extends Rpc
 {
@@ -2824,38 +2615,32 @@ class DescribeDcdnWafPolicies extends Rpc
 /**
  * @method string getPolicyId()
  * @method $this withPolicyId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnWafPolicy extends Rpc
 {
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getPolicyId()
  * @method $this withPolicyId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnWafPolicyDomains extends Rpc
 {
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getDefenseScene()
  * @method $this withDefenseScene($value)
  * @method string getDomainNameLike()
  * @method $this withDomainNameLike($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnWafPolicyValidDomains extends Rpc
 {
@@ -2870,14 +2655,12 @@ class DescribeDcdnWafRule extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getQueryArgs()
  * @method $this withQueryArgs($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeDcdnWafRules extends Rpc
 {
@@ -2886,8 +2669,6 @@ class DescribeDcdnWafRules extends Rpc
 /**
  * @method string getDefenseScenes()
  * @method $this withDefenseScenes($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeDcdnWafScenes extends Rpc
 {
@@ -2903,27 +2684,21 @@ class DescribeDcdnWafService extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeDcdnWafSpecInfo extends Rpc
 {
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getSplitBy()
- * @method $this withSplitBy($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
  */
 class DescribeDcdnWafUsageData extends Rpc
 {
@@ -2940,20 +2715,16 @@ class DescribeRDDomainConfig extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  */
 class DescribeRDDomains extends Rpc
 {
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
  */
 class DescribeRoutine extends Rpc
@@ -2973,35 +2744,16 @@ class DescribeRoutine extends Rpc
     }
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeRoutineCanaryEnvs extends Rpc
 {
 }
 
 /**
- * @method string getSelectCodeRevision()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
+ * @method string getSelectCodeRevision()
  */
 class DescribeRoutineCodeRevision extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSelectCodeRevision($value)
-    {
-        $this->data['SelectCodeRevision'] = $value;
-        $this->options['form_params']['SelectCodeRevision'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -3015,20 +2767,25 @@ class DescribeRoutineCodeRevision extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSelectCodeRevision($value)
+    {
+        $this->data['SelectCodeRevision'] = $value;
+        $this->options['form_params']['SelectCodeRevision'] = $value;
+
+        return $this;
+    }
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeRoutineSpec extends Rpc
 {
 }
 
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
 class DescribeRoutineUserInfo extends Rpc
 {
 }
@@ -3070,27 +2827,12 @@ class DescribeUserLogserviceStatus extends Rpc
 }
 
 /**
- * @method string getDescription()
  * @method string getEnvConf()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
+ * @method string getDescription()
  */
 class EditRoutineConf extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['Description'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -3117,41 +2859,48 @@ class EditRoutineConf extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getBusinessType()
  * @method $this withBusinessType($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class ListDcdnRealTimeDeliveryProject extends Rpc
 {
 }
 
 /**
- * @method string getProperty()
- * @method $this withProperty($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getProperty()
+ * @method $this withProperty($value)
  */
 class ModifyDCdnDomainSchdmByProperty extends Rpc
 {
 }
 
 /**
- * @method string getPolicyStatus()
  * @method string getPolicyId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getPolicyStatus()
  * @method string getPolicyName()
  */
 class ModifyDcdnWafPolicy extends Rpc
@@ -3162,10 +2911,10 @@ class ModifyDcdnWafPolicy extends Rpc
      *
      * @return $this
      */
-    public function withPolicyStatus($value)
+    public function withPolicyId($value)
     {
-        $this->data['PolicyStatus'] = $value;
-        $this->options['form_params']['PolicyStatus'] = $value;
+        $this->data['PolicyId'] = $value;
+        $this->options['form_params']['PolicyId'] = $value;
 
         return $this;
     }
@@ -3175,10 +2924,10 @@ class ModifyDcdnWafPolicy extends Rpc
      *
      * @return $this
      */
-    public function withPolicyId($value)
+    public function withPolicyStatus($value)
     {
-        $this->data['PolicyId'] = $value;
-        $this->options['form_params']['PolicyId'] = $value;
+        $this->data['PolicyStatus'] = $value;
+        $this->options['form_params']['PolicyStatus'] = $value;
 
         return $this;
     }
@@ -3201,8 +2950,6 @@ class ModifyDcdnWafPolicy extends Rpc
  * @method string getPolicyId()
  * @method string getBindDomains()
  * @method string getUnbindDomains()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class ModifyDcdnWafPolicyDomains extends Rpc
 {
@@ -3248,28 +2995,13 @@ class ModifyDcdnWafPolicyDomains extends Rpc
 }
 
 /**
- * @method string getRuleName()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getRuleConfig()
  * @method string getRuleStatus()
+ * @method string getRuleName()
  * @method string getRuleId()
  */
 class ModifyDcdnWafRule extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRuleName($value)
-    {
-        $this->data['RuleName'] = $value;
-        $this->options['form_params']['RuleName'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -3293,6 +3025,19 @@ class ModifyDcdnWafRule extends Rpc
     {
         $this->data['RuleStatus'] = $value;
         $this->options['form_params']['RuleStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRuleName($value)
+    {
+        $this->data['RuleName'] = $value;
+        $this->options['form_params']['RuleName'] = $value;
 
         return $this;
     }
@@ -3346,22 +3091,31 @@ class PreloadDcdnObjectCaches extends Rpc
  * @method $this withFunctionName($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class PublishDcdnStagingConfigToProduction extends Rpc
 {
 }
 
 /**
+ * @method string getName()
  * @method string getSelectCodeRevision()
  * @method string getEnvs()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getName()
  */
 class PublishRoutineCodeRevision extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -3385,19 +3139,6 @@ class PublishRoutineCodeRevision extends Rpc
     {
         $this->data['Envs'] = $value;
         $this->options['form_params']['Envs'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withName($value)
-    {
-        $this->data['Name'] = $value;
-        $this->options['form_params']['Name'] = $value;
 
         return $this;
     }
@@ -3472,61 +3213,9 @@ class SetDcdnDomainSMCertificate extends Rpc
  * @method $this withFunctions($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class SetDcdnDomainStagingConfig extends Rpc
 {
-}
-
-/**
- * @method string getIPList()
- * @method string getBlockInterval()
- * @method string getOperationType()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SetDcdnFullDomainsBlockIP extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIPList($value)
-    {
-        $this->data['IPList'] = $value;
-        $this->options['form_params']['IPList'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBlockInterval($value)
-    {
-        $this->data['BlockInterval'] = $value;
-        $this->options['form_params']['BlockInterval'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withOperationType($value)
-    {
-        $this->data['OperationType'] = $value;
-        $this->options['form_params']['OperationType'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -3547,8 +3236,6 @@ class SetDcdnUserConfig extends Rpc
 
 /**
  * @method string getSubdomains()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class SetRoutineSubdomain extends Rpc
 {
@@ -3616,15 +3303,28 @@ class StopDcdnIpaDomain extends Rpc
 }
 
 /**
- * @method array getTag()
  * @method array getResourceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method array getTag()
  * @method string getResourceType()
  * @method $this withResourceType($value)
  */
 class TagDcdnResources extends Rpc
 {
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $tag
@@ -3645,32 +3345,15 @@ class TagDcdnResources extends Rpc
 
 		return $this;
     }
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-	public function withResourceId(array $resourceId)
-	{
-	    $this->data['ResourceId'] = $resourceId;
-		foreach ($resourceId as $i => $iValue) {
-			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 }
 
 /**
  * @method string getAll()
  * @method $this withAll($value)
  * @method array getResourceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method array getTagKey()
  * @method string getResourceType()
  * @method $this withResourceType($value)
- * @method array getTagKey()
  */
 class UntagDcdnResources extends Rpc
 {
@@ -3708,13 +3391,11 @@ class UntagDcdnResources extends Rpc
 
 /**
  * @method string getReports()
- * @method string getDeliver()
- * @method string getDeliverId()
- * @method string getDomainName()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSchedule()
  * @method string getName()
+ * @method string getDomainName()
+ * @method string getDeliver()
+ * @method string getDeliverId()
  */
 class UpdateDcdnDeliverTask extends Rpc
 {
@@ -3728,45 +3409,6 @@ class UpdateDcdnDeliverTask extends Rpc
     {
         $this->data['Reports'] = $value;
         $this->options['form_params']['Reports'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeliver($value)
-    {
-        $this->data['Deliver'] = $value;
-        $this->options['form_params']['Deliver'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeliverId($value)
-    {
-        $this->data['DeliverId'] = $value;
-        $this->options['form_params']['DeliverId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDomainName($value)
-    {
-        $this->data['DomainName'] = $value;
-        $this->options['form_params']['DomainName'] = $value;
 
         return $this;
     }
@@ -3793,6 +3435,45 @@ class UpdateDcdnDeliverTask extends Rpc
     {
         $this->data['Name'] = $value;
         $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeliver($value)
+    {
+        $this->data['Deliver'] = $value;
+        $this->options['form_params']['Deliver'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeliverId($value)
+    {
+        $this->data['DeliverId'] = $value;
+        $this->options['form_params']['DeliverId'] = $value;
 
         return $this;
     }
@@ -3836,14 +3517,12 @@ class UpdateDcdnIpaDomain extends Rpc
 
 /**
  * @method string getSLSLogStore()
- * @method string getSLSProject()
- * @method string getSLSRegion()
  * @method string getProjectName()
  * @method string getDomainName()
  * @method string getSamplingRate()
  * @method string getDataCenter()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getSLSProject()
+ * @method string getSLSRegion()
  */
 class UpdateDcdnSLSRealtimeLogDelivery extends Rpc
 {
@@ -3857,32 +3536,6 @@ class UpdateDcdnSLSRealtimeLogDelivery extends Rpc
     {
         $this->data['SLSLogStore'] = $value;
         $this->options['form_params']['SLSLogStore'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSLSProject($value)
-    {
-        $this->data['SLSProject'] = $value;
-        $this->options['form_params']['SLSProject'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSLSRegion($value)
-    {
-        $this->data['SLSRegion'] = $value;
-        $this->options['form_params']['SLSRegion'] = $value;
 
         return $this;
     }
@@ -3938,15 +3591,39 @@ class UpdateDcdnSLSRealtimeLogDelivery extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSProject($value)
+    {
+        $this->data['SLSProject'] = $value;
+        $this->options['form_params']['SLSProject'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSLSRegion($value)
+    {
+        $this->data['SLSRegion'] = $value;
+        $this->options['form_params']['SLSRegion'] = $value;
+
+        return $this;
+    }
 }
 
 /**
- * @method string getStartTime()
+ * @method string getReportIds()
  * @method string getDomainName()
  * @method string getEndTime()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getReportIds()
+ * @method string getStartTime()
  */
 class UpdateDcdnSubTask extends Rpc
 {
@@ -3956,10 +3633,10 @@ class UpdateDcdnSubTask extends Rpc
      *
      * @return $this
      */
-    public function withStartTime($value)
+    public function withReportIds($value)
     {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
+        $this->data['ReportIds'] = $value;
+        $this->options['form_params']['ReportIds'] = $value;
 
         return $this;
     }
@@ -3995,10 +3672,10 @@ class UpdateDcdnSubTask extends Rpc
      *
      * @return $this
      */
-    public function withReportIds($value)
+    public function withStartTime($value)
     {
-        $this->data['ReportIds'] = $value;
-        $this->options['form_params']['ReportIds'] = $value;
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
 
         return $this;
     }
@@ -4019,8 +3696,6 @@ class UpdateDcdnUserRealTimeDeliveryField extends Rpc
 
 /**
  * @method string getCodeDescription()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
  */
 class UploadRoutineCode extends Rpc
@@ -4055,8 +3730,6 @@ class UploadRoutineCode extends Rpc
 
 /**
  * @method string getCodeDescription()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getName()
  */
 class UploadStagingRoutineCode extends Rpc
@@ -4090,12 +3763,10 @@ class UploadStagingRoutineCode extends Rpc
 }
 
 /**
- * @method string getVerifyType()
- * @method $this withVerifyType($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getVerifyType()
+ * @method $this withVerifyType($value)
  */
 class VerifyDcdnDomainOwner extends Rpc
 {
