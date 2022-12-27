@@ -66,9 +66,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainBpsDataByTimeStamp describeDomainBpsDataByTimeStamp(array $options = [])
  * @method DescribeDomainCcActivityLog describeDomainCcActivityLog(array $options = [])
  * @method DescribeDomainCertificateInfo describeDomainCertificateInfo(array $options = [])
+ * @method DescribeDomainCname describeDomainCname(array $options = [])
  * @method DescribeDomainCustomLogConfig describeDomainCustomLogConfig(array $options = [])
  * @method DescribeDomainDetailDataByLayer describeDomainDetailDataByLayer(array $options = [])
- * @method DescribeDomainFileSizeProportionData describeDomainFileSizeProportionData(array $options = [])
  * @method DescribeDomainHitRateData describeDomainHitRateData(array $options = [])
  * @method DescribeDomainHttpCodeData describeDomainHttpCodeData(array $options = [])
  * @method DescribeDomainHttpCodeDataByLayer describeDomainHttpCodeDataByLayer(array $options = [])
@@ -1259,6 +1259,16 @@ class DescribeDomainCertificateInfo extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
+class DescribeDomainCname extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
 class DescribeDomainCustomLogConfig extends Rpc
 {
 
@@ -1289,22 +1299,6 @@ class DescribeDomainDetailDataByLayer extends Rpc
 
     /** @var string */
     public $method = 'GET';
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeDomainFileSizeProportionData extends Rpc
-{
 }
 
 /**

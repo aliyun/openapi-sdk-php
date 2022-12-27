@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1627 - 2022-12-27
+- Add ModifyCdnDomainOwner.
+
+
 ## 1.8.1626 - 2022-12-27
 - Add DescribeDcdnWafLogs.
 
