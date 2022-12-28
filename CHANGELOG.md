@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1628 - 2022-12-28
+- Live sdk update.
+
+
 ## 1.8.1627 - 2022-12-27
 - Add ModifyCdnDomainOwner.
 

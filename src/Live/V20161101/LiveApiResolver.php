@@ -39,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchDeleteLiveDomainConfigs batchDeleteLiveDomainConfigs(array $options = [])
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
  * @method CancelMuteAllGroupUser cancelMuteAllGroupUser(array $options = [])
+ * @method CancelMuteGroupUser cancelMuteGroupUser(array $options = [])
  * @method CloseLiveShift closeLiveShift(array $options = [])
  * @method CopyCaster copyCaster(array $options = [])
  * @method CopyCasterSceneConfig copyCasterSceneConfig(array $options = [])
@@ -64,6 +65,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveAppSnapshotConfig deleteLiveAppSnapshotConfig(array $options = [])
  * @method DeleteLiveAudioAuditConfig deleteLiveAudioAuditConfig(array $options = [])
  * @method DeleteLiveAudioAuditNotifyConfig deleteLiveAudioAuditNotifyConfig(array $options = [])
+ * @method DeleteLiveCenterTransfer deleteLiveCenterTransfer(array $options = [])
  * @method DeleteLiveDetectNotifyConfig deleteLiveDetectNotifyConfig(array $options = [])
  * @method DeleteLiveDomain deleteLiveDomain(array $options = [])
  * @method DeleteLiveDomainMapping deleteLiveDomainMapping(array $options = [])
@@ -111,6 +113,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeHlsLiveStreamRealTimeBpsData describeHlsLiveStreamRealTimeBpsData(array $options = [])
  * @method DescribeLiveAudioAuditConfig describeLiveAudioAuditConfig(array $options = [])
  * @method DescribeLiveAudioAuditNotifyConfig describeLiveAudioAuditNotifyConfig(array $options = [])
+ * @method DescribeLiveCenterTransfer describeLiveCenterTransfer(array $options = [])
  * @method DescribeLiveCertificateDetail describeLiveCertificateDetail(array $options = [])
  * @method DescribeLiveCertificateList describeLiveCertificateList(array $options = [])
  * @method DescribeLiveDetectNotifyConfig describeLiveDetectNotifyConfig(array $options = [])
@@ -183,6 +186,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
+ * @method DescribeMeterLiveInteractionDau describeMeterLiveInteractionDau(array $options = [])
  * @method DescribeMeterLiveRtcDuration describeMeterLiveRtcDuration(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRoomKickoutUserList describeRoomKickoutUserList(array $options = [])
@@ -240,6 +244,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyLiveRealtimeLogDelivery modifyLiveRealtimeLogDelivery(array $options = [])
  * @method ModifyShowList modifyShowList(array $options = [])
  * @method ModifyStudioLayout modifyStudioLayout(array $options = [])
+ * @method MuteAllGroupUser muteAllGroupUser(array $options = [])
+ * @method MuteGroupUser muteGroupUser(array $options = [])
  * @method OpenLiveShift openLiveShift(array $options = [])
  * @method PlayChoosenShow playChoosenShow(array $options = [])
  * @method PublishLiveStagingConfigToProduction publishLiveStagingConfigToProduction(array $options = [])
@@ -286,6 +292,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveAppSnapshotConfig updateLiveAppSnapshotConfig(array $options = [])
  * @method UpdateLiveAudioAuditConfig updateLiveAudioAuditConfig(array $options = [])
  * @method UpdateLiveAudioAuditNotifyConfig updateLiveAudioAuditNotifyConfig(array $options = [])
+ * @method UpdateLiveCenterTransfer updateLiveCenterTransfer(array $options = [])
  * @method UpdateLiveDetectNotifyConfig updateLiveDetectNotifyConfig(array $options = [])
  * @method UpdateLivePullStreamInfoConfig updateLivePullStreamInfoConfig(array $options = [])
  * @method UpdateLiveRecordNotifyConfig updateLiveRecordNotifyConfig(array $options = [])
@@ -1388,6 +1395,82 @@ class CancelMuteAllGroupUser extends Rpc
 }
 
 /**
+ * @method string getCancelMuteUserList()
+ * @method string getOperatorUserId()
+ * @method string getBroadCastType()
+ * @method string getGroupId()
+ * @method string getAppId()
+ */
+class CancelMuteGroupUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCancelMuteUserList($value)
+    {
+        $this->data['CancelMuteUserList'] = $value;
+        $this->options['form_params']['CancelMuteUserList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorUserId($value)
+    {
+        $this->data['OperatorUserId'] = $value;
+        $this->options['form_params']['OperatorUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBroadCastType($value)
+    {
+        $this->data['BroadCastType'] = $value;
+        $this->options['form_params']['BroadCastType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getStreamName()
@@ -1811,6 +1894,22 @@ class DeleteLiveAudioAuditConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteLiveAudioAuditNotifyConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDstUrl()
+ * @method $this withDstUrl($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteLiveCenterTransfer extends Rpc
 {
 }
 
@@ -2491,6 +2590,22 @@ class DescribeLiveAudioAuditConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveAudioAuditNotifyConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDstUrl()
+ * @method $this withDstUrl($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveCenterTransfer extends Rpc
 {
 }
 
@@ -3734,6 +3849,22 @@ class DescribeLiveUserDomains extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveUserTags extends Rpc
+{
+}
+
+/**
+ * @method string getStartTs()
+ * @method $this withStartTs($value)
+ * @method string getServiceArea()
+ * @method $this withServiceArea($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getEndTs()
+ * @method $this withEndTs($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeMeterLiveInteractionDau extends Rpc
 {
 }
 
@@ -5256,6 +5387,144 @@ class ModifyStudioLayout extends Rpc
 }
 
 /**
+ * @method string getOperatorUserId()
+ * @method string getGroupId()
+ * @method string getAppId()
+ */
+class MuteAllGroupUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorUserId($value)
+    {
+        $this->data['OperatorUserId'] = $value;
+        $this->options['form_params']['OperatorUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMuteUserList()
+ * @method string getOperatorUserId()
+ * @method string getBroadCastType()
+ * @method string getGroupId()
+ * @method string getMuteTime()
+ * @method string getAppId()
+ */
+class MuteGroupUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMuteUserList($value)
+    {
+        $this->data['MuteUserList'] = $value;
+        $this->options['form_params']['MuteUserList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorUserId($value)
+    {
+        $this->data['OperatorUserId'] = $value;
+        $this->options['form_params']['OperatorUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBroadCastType($value)
+    {
+        $this->data['BroadCastType'] = $value;
+        $this->options['form_params']['BroadCastType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMuteTime($value)
+    {
+        $this->data['MuteTime'] = $value;
+        $this->options['form_params']['MuteTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDuration()
  * @method $this withDuration($value)
  * @method string getAppName()
@@ -5796,6 +6065,8 @@ class SendRoomUserNotification extends Rpc
  * @method $this withResourceId($value)
  * @method string getCasterId()
  * @method $this withCasterId($value)
+ * @method string getEnableSeekResume()
+ * @method $this withEnableSeekResume($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getReloadFlag()
@@ -6435,6 +6706,28 @@ class UpdateLiveAudioAuditConfig extends Rpc
  * @method $this withCallback($value)
  */
 class UpdateLiveAudioAuditNotifyConfig extends Rpc
+{
+}
+
+/**
+ * @method string getTransferArgs()
+ * @method $this withTransferArgs($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDstUrl()
+ * @method $this withDstUrl($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class UpdateLiveCenterTransfer extends Rpc
 {
 }
 
