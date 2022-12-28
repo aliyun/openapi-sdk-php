@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1629 - 2022-12-28
+- Added ElasticSearch Serverless SDK.
+
+
 ## 1.8.1628 - 2022-12-28
 - Live sdk update.
 

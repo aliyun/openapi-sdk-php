@@ -102,6 +102,7 @@ namespace AlibabaCloud;
  * @method static EmasAppmonitor\EmasAppmonitor emasAppmonitor()
  * @method static Emr\Emr emr()
  * @method static Ens\Ens ens()
+ * @method static EsServerless\EsServerless esServerless()
  * @method static Ess\Ess ess()
  * @method static Facebody\Facebody facebody()
  * @method static Fnf\Fnf fnf()
