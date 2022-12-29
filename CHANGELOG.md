@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1631 - 2022-12-29
+- Update by SDK platform.
+
+
 ## 1.8.1630 - 2022-12-29
 - Live sdk update.
 
