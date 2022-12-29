@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddLiveAppSnapshotConfig addLiveAppSnapshotConfig(array $options = [])
  * @method AddLiveAudioAuditConfig addLiveAudioAuditConfig(array $options = [])
  * @method AddLiveAudioAuditNotifyConfig addLiveAudioAuditNotifyConfig(array $options = [])
+ * @method AddLiveCenterTransfer addLiveCenterTransfer(array $options = [])
  * @method AddLiveDetectNotifyConfig addLiveDetectNotifyConfig(array $options = [])
  * @method AddLiveDomain addLiveDomain(array $options = [])
  * @method AddLiveDomainMapping addLiveDomainMapping(array $options = [])
@@ -837,6 +838,28 @@ class AddLiveAudioAuditConfig extends Rpc
  * @method $this withCallback($value)
  */
 class AddLiveAudioAuditNotifyConfig extends Rpc
+{
+}
+
+/**
+ * @method string getTransferArgs()
+ * @method $this withTransferArgs($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDstUrl()
+ * @method $this withDstUrl($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AddLiveCenterTransfer extends Rpc
 {
 }
 
