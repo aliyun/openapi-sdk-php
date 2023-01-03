@@ -6,26 +6,34 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddTagsBatch addTagsBatch(array $options = [])
+ * @method ApplyAutoSnapshotPolicy applyAutoSnapshotPolicy(array $options = [])
  * @method AttachDbfs attachDbfs(array $options = [])
  * @method CancelAutoSnapshotPolicy cancelAutoSnapshotPolicy(array $options = [])
  * @method CreateAutoSnapshotPolicy createAutoSnapshotPolicy(array $options = [])
  * @method CreateDbfs createDbfs(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
+ * @method DeleteAutoSnapshotPolicy deleteAutoSnapshotPolicy(array $options = [])
  * @method DeleteDbfs deleteDbfs(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
  * @method DeleteTagsBatch deleteTagsBatch(array $options = [])
  * @method DescribeDbfsSpecifications describeDbfsSpecifications(array $options = [])
  * @method DescribeInstanceTypes describeInstanceTypes(array $options = [])
  * @method DetachDbfs detachDbfs(array $options = [])
+ * @method GetAutoSnapshotPolicy getAutoSnapshotPolicy(array $options = [])
  * @method GetDbfs getDbfs(array $options = [])
  * @method GetServiceLinkedRole getServiceLinkedRole(array $options = [])
+ * @method ListAutoSnapshotPolicies listAutoSnapshotPolicies(array $options = [])
+ * @method ListAutoSnapshotPolicyAppliedDbfs listAutoSnapshotPolicyAppliedDbfs(array $options = [])
+ * @method ListAutoSnapshotPolicyUnappliedDbfs listAutoSnapshotPolicyUnappliedDbfs(array $options = [])
  * @method ListDbfs listDbfs(array $options = [])
  * @method ListDbfsAttachableEcsInstances listDbfsAttachableEcsInstances(array $options = [])
  * @method ListDbfsAttachedEcsInstances listDbfsAttachedEcsInstances(array $options = [])
  * @method ListSnapshot listSnapshot(array $options = [])
  * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagValues listTagValues(array $options = [])
+ * @method ModifyAutoSnapshotPolicy modifyAutoSnapshotPolicy(array $options = [])
+ * @method ModifySnapshotAttribute modifySnapshotAttribute(array $options = [])
  * @method RenameDbfs renameDbfs(array $options = [])
  * @method ResizeDbfs resizeDbfs(array $options = [])
  * @method TagDbfs tagDbfs(array $options = [])
@@ -59,6 +67,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withTags($value)
  */
 class AddTagsBatch extends Rpc
+{
+}
+
+/**
+ * @method string getDbfsIds()
+ * @method $this withDbfsIds($value)
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ */
+class ApplyAutoSnapshotPolicy extends Rpc
 {
 }
 
@@ -163,6 +181,14 @@ class CreateSnapshot extends Rpc
 }
 
 /**
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ */
+class DeleteAutoSnapshotPolicy extends Rpc
+{
+}
+
+/**
  * @method string getFsId()
  * @method $this withFsId($value)
  */
@@ -215,6 +241,14 @@ class DetachDbfs extends Rpc
 }
 
 /**
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ */
+class GetAutoSnapshotPolicy extends Rpc
+{
+}
+
+/**
  * @method string getFsId()
  * @method $this withFsId($value)
  */
@@ -223,6 +257,50 @@ class GetDbfs extends Rpc
 }
 
 class GetServiceLinkedRole extends Rpc
+{
+}
+
+/**
+ * @method string getFilterValue()
+ * @method $this withFilterValue($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFilterKey()
+ * @method $this withFilterKey($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListAutoSnapshotPolicies extends Rpc
+{
+}
+
+/**
+ * @method string getFilterValue()
+ * @method $this withFilterValue($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFilterKey()
+ * @method $this withFilterKey($value)
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListAutoSnapshotPolicyAppliedDbfs extends Rpc
+{
+}
+
+/**
+ * @method string getFilterValue()
+ * @method $this withFilterValue($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFilterKey()
+ * @method $this withFilterKey($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListAutoSnapshotPolicyUnappliedDbfs extends Rpc
 {
 }
 
@@ -305,6 +383,34 @@ class ListTagKeys extends Rpc
  * @method $this withTagKey($value)
  */
 class ListTagValues extends Rpc
+{
+}
+
+/**
+ * @method string getTimePoints()
+ * @method $this withTimePoints($value)
+ * @method string getRepeatWeekdays()
+ * @method $this withRepeatWeekdays($value)
+ * @method string getPolicyId()
+ * @method $this withPolicyId($value)
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ * @method string getRetentionDays()
+ * @method $this withRetentionDays($value)
+ */
+class ModifyAutoSnapshotPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSnapshotName()
+ * @method $this withSnapshotName($value)
+ */
+class ModifySnapshotAttribute extends Rpc
 {
 }
 

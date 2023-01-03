@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1633 - 2023-1-3
+- Supported snapshot link for DBFS.
+- Supported showing snapshot info.
+- Support for showing snapshot info.
+
+
 ## 1.8.1632 - 2023-1-3
 - First publish.
 
