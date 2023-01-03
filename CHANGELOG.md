@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.1634 - 2023-1-3
+- Pub Support MessageExpiryInterval and Retained.
+- Rrpc Support ContentType.
+- BatchImportVehicleDevice batch create device by jt808 protocol.
+- BatchCheckVehicleDevice batch check device by jt808 protocol.
+- QueryVehicleDevice query jt808 device information.
+
+
 ## 1.8.1633 - 2023-1-3
 - Supported snapshot link for DBFS.
 - Supported showing snapshot info.

@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchBindProductsIntoProject batchBindProductsIntoProject(array $options = [])
  * @method BatchCheckDeviceNames batchCheckDeviceNames(array $options = [])
  * @method BatchCheckImportDevice batchCheckImportDevice(array $options = [])
+ * @method BatchCheckVehicleDevice batchCheckVehicleDevice(array $options = [])
  * @method BatchClearEdgeInstanceDeviceConfig batchClearEdgeInstanceDeviceConfig(array $options = [])
  * @method BatchCreateSoundCodeLabel batchCreateSoundCodeLabel(array $options = [])
  * @method BatchCreateSoundCodeLabelWithLabels batchCreateSoundCodeLabelWithLabels(array $options = [])
@@ -31,6 +32,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchGetEdgeInstanceDeviceDriver batchGetEdgeInstanceDeviceDriver(array $options = [])
  * @method BatchGetEdgeInstanceDriverConfigs batchGetEdgeInstanceDriverConfigs(array $options = [])
  * @method BatchImportDevice batchImportDevice(array $options = [])
+ * @method BatchImportVehicleDevice batchImportVehicleDevice(array $options = [])
  * @method BatchPub batchPub(array $options = [])
  * @method BatchQueryDeviceDetail batchQueryDeviceDetail(array $options = [])
  * @method BatchRegisterDevice batchRegisterDevice(array $options = [])
@@ -325,6 +327,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryThingModelPublished queryThingModelPublished(array $options = [])
  * @method QueryTopicReverseRouteTable queryTopicReverseRouteTable(array $options = [])
  * @method QueryTopicRouteTable queryTopicRouteTable(array $options = [])
+ * @method QueryVehicleDevice queryVehicleDevice(array $options = [])
  * @method ReBindLicenseDevice reBindLicenseDevice(array $options = [])
  * @method RecognizeCarNum recognizeCarNum(array $options = [])
  * @method RecognizePictureGeneral recognizePictureGeneral(array $options = [])
@@ -1130,6 +1133,68 @@ class BatchCheckImportDevice extends Rpc
 			}
 			if(isset($depth1Value['Sn'])){
 				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.Sn'] = $depth1Value['Sn'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method array getDeviceList()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class BatchCheckVehicleDevice extends Rpc
+{
+
+    /**
+     * @param array $deviceList
+     *
+     * @return $this
+     */
+	public function withDeviceList(array $deviceList)
+	{
+	    $this->data['DeviceList'] = $deviceList;
+		foreach ($deviceList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DeviceId'])){
+				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.DeviceId'] = $depth1Value['DeviceId'];
+			}
+			if(isset($depth1Value['Manufacturer'])){
+				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.Manufacturer'] = $depth1Value['Manufacturer'];
+			}
+			if(isset($depth1Value['DeviceModel'])){
+				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.DeviceModel'] = $depth1Value['DeviceModel'];
 			}
 		}
 
@@ -1999,6 +2064,68 @@ class BatchImportDevice extends Rpc
 			}
 			if(isset($depth1Value['Sn'])){
 				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.Sn'] = $depth1Value['Sn'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method array getDeviceList()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class BatchImportVehicleDevice extends Rpc
+{
+
+    /**
+     * @param array $deviceList
+     *
+     * @return $this
+     */
+	public function withDeviceList(array $deviceList)
+	{
+	    $this->data['DeviceList'] = $deviceList;
+		foreach ($deviceList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DeviceId'])){
+				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.DeviceId'] = $depth1Value['DeviceId'];
+			}
+			if(isset($depth1Value['Manufacturer'])){
+				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.Manufacturer'] = $depth1Value['Manufacturer'];
+			}
+			if(isset($depth1Value['DeviceModel'])){
+				$this->options['query']['DeviceList.' . ($depth1 + 1) . '.DeviceModel'] = $depth1Value['DeviceModel'];
 			}
 		}
 
@@ -12432,6 +12559,8 @@ class PrintByTemplate extends Rpc
  * @method $this withCorrelationData($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
+ * @method string getMessageExpiryInterval()
+ * @method $this withMessageExpiryInterval($value)
  * @method string getResponseTopic()
  * @method $this withResponseTopic($value)
  * @method string getTopicFullName()
@@ -12442,6 +12571,8 @@ class PrintByTemplate extends Rpc
  * @method $this withProductKey($value)
  * @method string getContentType()
  * @method $this withContentType($value)
+ * @method string getRetained()
+ * @method $this withRetained($value)
  * @method string getApiProduct()
  * @method string getApiRevision()
  * @method string getDeviceName()
@@ -18294,6 +18425,50 @@ class QueryTopicRouteTable extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryVehicleDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method array getDeviceNameList()
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
@@ -19014,6 +19189,8 @@ class ReupgradeOTATask extends Rpc
  * @method $this withRequestBase64Byte($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
+ * @method string getContentType()
+ * @method $this withContentType($value)
  * @method string getApiProduct()
  * @method string getTopic()
  * @method $this withTopic($value)
