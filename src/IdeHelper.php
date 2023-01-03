@@ -96,6 +96,7 @@ namespace AlibabaCloud;
  * @method static EcsInc\EcsInc ecsInc()
  * @method static Edas\Edas edas()
  * @method static EduCloud\EduCloud eduCloud()
+ * @method static Eflo\Eflo eflo()
  * @method static Eipanycast\Eipanycast eipanycast()
  * @method static Elasticsearch\Elasticsearch elasticsearch()
  * @method static Emap\Emap emap()
