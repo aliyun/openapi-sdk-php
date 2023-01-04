@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1636 - 2023-1-4
+- Support RamRoleName and RamNodeTypes parameter in ModifyClusterAttributes APIs.
+
+
 ## 1.8.1635 - 2023-1-4
 - Public ListServiceInstances and GetServiceInstance OpenApi.
 

@@ -238,6 +238,8 @@ class AddLocalNodes extends Rpc
  * @method $this withInstanceType($value)
  * @method string getHostNamePrefix()
  * @method $this withHostNamePrefix($value)
+ * @method string getComputeSpotInterruptionBehavior()
+ * @method $this withComputeSpotInterruptionBehavior($value)
  * @method string getComputeSpotPriceLimit()
  * @method $this withComputeSpotPriceLimit($value)
  * @method string getAutoRenewPeriod()
@@ -256,6 +258,8 @@ class AddLocalNodes extends Rpc
  * @method $this withSync($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method string getComputeSpotDuration()
+ * @method $this withComputeSpotDuration($value)
  * @method string getPeriodUnit()
  * @method $this withPeriodUnit($value)
  * @method string getComputeEnableHt()
@@ -2278,15 +2282,35 @@ class ListVolumes extends Rpc
  * @method $this withImageId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getRamRoleName()
+ * @method $this withRamRoleName($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getImageOwnerAlias()
  * @method $this withImageOwnerAlias($value)
+ * @method array getRamNodeTypes()
+ * @method string getPassword()
+ * @method $this withPassword($value)
  * @method string getName()
  * @method $this withName($value)
  */
 class ModifyClusterAttributes extends Rpc
 {
+
+    /**
+     * @param array $ramNodeTypes
+     *
+     * @return $this
+     */
+	public function withRamNodeTypes(array $ramNodeTypes)
+	{
+	    $this->data['RamNodeTypes'] = $ramNodeTypes;
+		foreach ($ramNodeTypes as $i => $iValue) {
+			$this->options['query']['RamNodeTypes.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2581,6 +2605,9 @@ class SetAutoScaleConfig extends Rpc
 				if(isset($depth2Value['SpotStrategy'])){
 					$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceTypes.' . ($depth2 + 1) . '.SpotStrategy'] = $depth2Value['SpotStrategy'];
 				}
+				if(isset($depth2Value['SpotInterruptionBehavior'])){
+					$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceTypes.' . ($depth2 + 1) . '.SpotInterruptionBehavior'] = $depth2Value['SpotInterruptionBehavior'];
+				}
 				if(isset($depth2Value['ZoneId'])){
 					$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceTypes.' . ($depth2 + 1) . '.ZoneId'] = $depth2Value['ZoneId'];
 				}
@@ -2589,6 +2616,9 @@ class SetAutoScaleConfig extends Rpc
 				}
 				if(isset($depth2Value['SpotPriceLimit'])){
 					$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceTypes.' . ($depth2 + 1) . '.SpotPriceLimit'] = $depth2Value['SpotPriceLimit'];
+				}
+				if(isset($depth2Value['SpotDuration'])){
+					$this->options['query']['Queues.' . ($depth1 + 1) . '.InstanceTypes.' . ($depth2 + 1) . '.SpotDuration'] = $depth2Value['SpotDuration'];
 				}
 			}
 			if(isset($depth1Value['EnableAutoGrow'])){
