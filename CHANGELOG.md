@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1635 - 2023-1-4
+- Public ListServiceInstances and GetServiceInstance OpenApi.
+
+
 ## 1.8.1634 - 2023-1-3
 - Pub Support MessageExpiryInterval and Retained.
 - Rrpc Support ContentType.
