@@ -6,11 +6,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CancelVideoTask cancelVideoTask(array $options = [])
+ * @method CloseTimedResetOperate closeTimedResetOperate(array $options = [])
  * @method DuplexDecision duplexDecision(array $options = [])
  * @method GetVideoTaskInfo getVideoTaskInfo(array $options = [])
  * @method QueryRunningInstance queryRunningInstance(array $options = [])
+ * @method QueryTimedResetOperateStatus queryTimedResetOperateStatus(array $options = [])
  * @method SendMessage sendMessage(array $options = [])
  * @method StartInstance startInstance(array $options = [])
+ * @method StartTimedResetOperate startTimedResetOperate(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method SubmitTextTo2DAvatarVideoTask submitTextTo2DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo3DAvatarVideoTask submitTextTo3DAvatarVideoTask(array $options = [])
@@ -41,6 +44,16 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withTaskUuid($value)
  */
 class CancelVideoTask extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class CloseTimedResetOperate extends Rpc
 {
 }
 
@@ -98,6 +111,16 @@ class QueryRunningInstance extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class QueryTimedResetOperateStatus extends Rpc
+{
+}
+
+/**
  * @method string getTextRequest()
  * @method $this withTextRequest($value)
  * @method string getTenantId()
@@ -124,6 +147,16 @@ class SendMessage extends Rpc
  * @method $this withUser($value)
  */
 class StartInstance extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class StartTimedResetOperate extends Rpc
 {
 }
 

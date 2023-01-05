@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1639 - 2023-1-5
+- add QueryTimedResetOperateStatus api.
+- add CloseTimedResetOperate api.
+- add StartTimedResetOperate api.
+
+
 ## 1.8.1638 - 2023-1-5
 - Live sdk update.
 
