@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1638 - 2023-1-5
+- Live sdk update.
+
+
 ## 1.8.1637 - 2023-1-5
 - Fix bug for name of TotalSize.
 - Fix bug for name of totalSize.

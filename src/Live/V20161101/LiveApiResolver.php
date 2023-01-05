@@ -1591,6 +1591,8 @@ class CreateLiveRealTimeLogDelivery extends Rpc
 }
 
 /**
+ * @method string getMonitorConfig()
+ * @method $this withMonitorConfig($value)
  * @method string getMonitorName()
  * @method $this withMonitorName($value)
  * @method string getStream()
@@ -6868,6 +6870,8 @@ class UpdateLiveSnapshotNotifyConfig extends Rpc
 /**
  * @method string getMonitorId()
  * @method $this withMonitorId($value)
+ * @method string getMonitorConfig()
+ * @method $this withMonitorConfig($value)
  * @method string getMonitorName()
  * @method $this withMonitorName($value)
  * @method string getStream()
