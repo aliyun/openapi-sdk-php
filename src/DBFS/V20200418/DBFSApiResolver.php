@@ -191,6 +191,8 @@ class DeleteAutoSnapshotPolicy extends Rpc
 /**
  * @method string getFsId()
  * @method $this withFsId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class DeleteDbfs extends Rpc
 {

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1637 - 2023-1-5
+- Fix bug for name of TotalSize.
+- Fix bug for name of totalSize.
+- Support force delete dbfs.
+
+
 ## 1.8.1636 - 2023-1-4
 - Support RamRoleName and RamNodeTypes parameter in ModifyClusterAttributes APIs.
 
