@@ -147,6 +147,7 @@ namespace AlibabaCloud;
  * @method static LinkFace\LinkFace linkFace()
  * @method static LinkWAN\LinkWAN linkWAN()
  * @method static Linkedmall\Linkedmall linkedmall()
+ * @method static Linkvisual\Linkvisual linkvisual()
  * @method static Live\Live live()
  * @method static Lubancloud\Lubancloud lubancloud()
  * @method static Lubanruler\Lubanruler lubanruler()

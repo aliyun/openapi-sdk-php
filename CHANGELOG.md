@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1640 - 2023-1-5
+- 增加IP协议版本配置接口.
+
+
 ## 1.8.1639 - 2023-1-5
 - add QueryTimedResetOperateStatus api.
 - add CloseTimedResetOperate api.
