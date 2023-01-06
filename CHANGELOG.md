@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.1641 - 2023-1-6
+- Add error code for ModifyInstanceNetworkSpec.
+- Add invalid account buying spot error code.
+- Support ip prefix for eni.
+- Update the StorageLocationArn to private.
+- Security Group Rule support rule id.
+
+
 ## 1.8.1640 - 2023-1-5
 - 增加IP协议版本配置接口.
 
