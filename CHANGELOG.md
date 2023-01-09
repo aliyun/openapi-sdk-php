@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1644 - 2023-1-9
+- Supported adjust PTS scene speed.
+- Supported open PTS product.
+
+
 ## 1.8.1643 - 2023-1-9
 - Delete numberType.
 
