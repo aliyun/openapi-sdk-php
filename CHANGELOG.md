@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1643 - 2023-1-9
+- Delete numberType.
+
+
 ## 1.8.1642 - 2023-1-6
 - Release DetectInfraredLivingFace and CompareFaceWithMask.
 
