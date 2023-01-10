@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1646 - 2023-1-10
+- Add DescribePreloadDetailById.
+
+
 ## 1.8.1645 - 2023-1-10
 - Support ResourceGroup.
 
