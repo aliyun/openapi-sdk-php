@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1645 - 2023-1-10
+- Support ResourceGroup.
+
+
 ## 1.8.1644 - 2023-1-9
 - Supported adjust PTS scene speed.
 - Supported open PTS product.

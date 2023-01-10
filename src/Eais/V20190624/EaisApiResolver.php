@@ -6,14 +6,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AttachEai attachEai(array $options = [])
+ * @method ChangeResourceGroup changeResourceGroup(array $options = [])
  * @method CreateEai createEai(array $options = [])
  * @method CreateEaiAll createEaiAll(array $options = [])
+ * @method CreateEaiEci createEaiEci(array $options = [])
+ * @method CreateEaiEcs createEaiEcs(array $options = [])
  * @method CreateEaiJupyter createEaiJupyter(array $options = [])
  * @method DeleteEai deleteEai(array $options = [])
  * @method DeleteEaiAll deleteEaiAll(array $options = [])
  * @method DescribeEais describeEais(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DetachEai detachEai(array $options = [])
+ * @method GetInstanceMetrics getInstanceMetrics(array $options = [])
  */
 class EaisApiResolver extends ApiResolver
 {
@@ -45,12 +49,30 @@ class AttachEai extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getResourceRegionId()
+ * @method $this withResourceRegionId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getService()
+ * @method $this withService($value)
+ */
+class ChangeResourceGroup extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getSecurityGroupId()
  * @method $this withSecurityGroupId($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getInstanceType()
@@ -69,6 +91,8 @@ class CreateEai extends Rpc
  * @method $this withClientInternetMaxBandwidthOut($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getClientInstanceName()
  * @method $this withClientInstanceName($value)
  * @method string getClientInternetMaxBandwidthIn()
@@ -99,10 +123,52 @@ class CreateEaiAll extends Rpc
  * @method $this withClientToken($value)
  * @method string getSecurityGroupId()
  * @method $this withSecurityGroupId($value)
+ * @method string getEci()
+ * @method $this withEci($value)
  * @method string getEaisType()
  * @method $this withEaisType($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getEaisName()
+ * @method $this withEaisName($value)
+ */
+class CreateEaiEci extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getEaisType()
+ * @method $this withEaisType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getEcs()
+ * @method $this withEcs($value)
+ * @method string getEaisName()
+ * @method $this withEaisName($value)
+ */
+class CreateEaiEcs extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getEaisType()
+ * @method $this withEaisType($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEnvironmentVar()
  * @method $this withEnvironmentVar($value)
  */
@@ -135,6 +201,8 @@ class DeleteEaiAll extends Rpc
  * @method $this withElasticAcceleratedInstanceIds($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getPageSize()
@@ -157,5 +225,21 @@ class DescribeRegions extends Rpc
  * @method $this withElasticAcceleratedInstanceId($value)
  */
 class DetachEai extends Rpc
+{
+}
+
+/**
+ * @method string getMetricType()
+ * @method $this withMetricType($value)
+ * @method string getTimeStep()
+ * @method $this withTimeStep($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetInstanceMetrics extends Rpc
 {
 }
