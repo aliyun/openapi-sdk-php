@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1647 - 2023-1-11
+- Add OnsMessageDetail for query message body.
+
+
 ## 1.8.1646 - 2023-1-10
 - Add DescribePreloadDetailById.
 

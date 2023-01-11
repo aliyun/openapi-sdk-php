@@ -24,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OnsInstanceDelete onsInstanceDelete(array $options = [])
  * @method OnsInstanceInServiceList onsInstanceInServiceList(array $options = [])
  * @method OnsInstanceUpdate onsInstanceUpdate(array $options = [])
+ * @method OnsMessageDetail onsMessageDetail(array $options = [])
  * @method OnsMessageGetByKey onsMessageGetByKey(array $options = [])
  * @method OnsMessageGetByMsgId onsMessageGetByMsgId(array $options = [])
  * @method OnsMessagePageQueryByTopic onsMessagePageQueryByTopic(array $options = [])
@@ -238,6 +239,8 @@ class OnsGroupConsumerUpdate extends Rpc
  * @method $this withGroupId($value)
  * @method string getRemark()
  * @method $this withRemark($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getGroupType()
@@ -303,6 +306,8 @@ class OnsGroupSubDetail extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -367,6 +372,21 @@ class OnsInstanceInServiceList extends Rpc
  */
 class OnsInstanceUpdate extends Rpc
 {
+}
+
+/**
+ * @method string getMsgId()
+ * @method $this withMsgId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class OnsMessageDetail extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -450,6 +470,8 @@ class OnsRegionList extends Rpc
  * @method $this withMessageType($value)
  * @method string getRemark()
  * @method $this withRemark($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getTopic()
