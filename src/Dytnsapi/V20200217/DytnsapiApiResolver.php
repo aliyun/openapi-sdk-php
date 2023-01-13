@@ -5,6 +5,7 @@ namespace AlibabaCloud\Dytnsapi\V20200217;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method DescribeEmptyNumber describeEmptyNumber(array $options = [])
  * @method DescribeEmptyNumberDetect describeEmptyNumberDetect(array $options = [])
  * @method DescribePhoneNumberAnalysis describePhoneNumberAnalysis(array $options = [])
  * @method DescribePhoneNumberAttribute describePhoneNumberAttribute(array $options = [])
@@ -38,6 +39,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
+ * @method string getMask()
+ * @method $this withMask($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAuthCode()
+ * @method $this withAuthCode($value)
+ * @method string getInputNumber()
+ * @method $this withInputNumber($value)
+ */
+class DescribeEmptyNumber extends Rpc
+{
 }
 
 /**

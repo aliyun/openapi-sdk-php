@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1649 - 2023-1-13
+- Support Service of empty number.
+
+
 ## 1.8.1648 - 2023-1-13
 - Supported GetProxy, ListProxies to return RegionId information.
 - Supported SearchDatabase to return CatalogName information.
