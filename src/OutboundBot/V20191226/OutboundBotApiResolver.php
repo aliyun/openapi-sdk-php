@@ -37,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteJobGroup deleteJobGroup(array $options = [])
  * @method DeleteOutboundCallNumber deleteOutboundCallNumber(array $options = [])
  * @method DeleteScript deleteScript(array $options = [])
+ * @method DeleteScriptRecording deleteScriptRecording(array $options = [])
  * @method DeleteScriptWaveform deleteScriptWaveform(array $options = [])
  * @method DescribeDialogueNodeStatistics describeDialogueNodeStatistics(array $options = [])
  * @method DescribeDsReports describeDsReports(array $options = [])
@@ -59,6 +60,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method Dialogue dialogue(array $options = [])
  * @method DismissNumberDistrictInfoParsingResult dismissNumberDistrictInfoParsingResult(array $options = [])
  * @method DownloadRecording downloadRecording(array $options = [])
+ * @method DownloadScriptRecording downloadScriptRecording(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
  * @method GenerateUploadUrl generateUploadUrl(array $options = [])
@@ -93,6 +95,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListResourceTags listResourceTags(array $options = [])
  * @method ListSchedulerInstances listSchedulerInstances(array $options = [])
  * @method ListScriptPublishHistories listScriptPublishHistories(array $options = [])
+ * @method ListScriptRecording listScriptRecording(array $options = [])
  * @method ListScripts listScripts(array $options = [])
  * @method ListScriptVoiceConfigs listScriptVoiceConfigs(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
@@ -136,6 +139,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method TaskPreparing taskPreparing(array $options = [])
  * @method TerminateCall terminateCall(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method UploadScriptRecording uploadScriptRecording(array $options = [])
  * @method WithdrawScriptReview withdrawScriptReview(array $options = [])
  */
 class OutboundBotApiResolver extends ApiResolver
@@ -152,9 +156,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'outboundbot';
 }
 
 /**
@@ -590,6 +591,8 @@ class CreateOutboundCallNumber extends Rpc
  * @method $this withAsrConfig($value)
  * @method string getMiniPlaybackConfigListJsonString()
  * @method $this withMiniPlaybackConfigListJsonString($value)
+ * @method string getEmotionEnable()
+ * @method $this withEmotionEnable($value)
  * @method string getNewBargeInEnable()
  * @method $this withNewBargeInEnable($value)
  * @method string getMiniPlaybackEnable()
@@ -828,6 +831,18 @@ class DeleteOutboundCallNumber extends Rpc
  * @method $this withInstanceId($value)
  */
 class DeleteScript extends Rpc
+{
+}
+
+/**
+ * @method string getUuidsJson()
+ * @method $this withUuidsJson($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteScriptRecording extends Rpc
 {
 }
 
@@ -1098,6 +1113,18 @@ class DismissNumberDistrictInfoParsingResult extends Rpc
  * @method $this withTaskId($value)
  */
 class DownloadRecording extends Rpc
+{
+}
+
+/**
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DownloadScriptRecording extends Rpc
 {
 }
 
@@ -1522,6 +1549,26 @@ class ListScriptPublishHistories extends Rpc
 }
 
 /**
+ * @method string getUuidsJson()
+ * @method $this withUuidsJson($value)
+ * @method string getStatesJson()
+ * @method $this withStatesJson($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getSearch()
+ * @method $this withSearch($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListScriptRecording extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
@@ -1830,6 +1877,8 @@ class ModifyOutboundCallNumber extends Rpc
  * @method $this withAsrConfig($value)
  * @method string getMiniPlaybackConfigListJsonString()
  * @method $this withMiniPlaybackConfigListJsonString($value)
+ * @method string getEmotionEnable()
+ * @method $this withEmotionEnable($value)
  * @method string getNlsConfig()
  * @method $this withNlsConfig($value)
  * @method string getNewBargeInEnable()
@@ -1985,6 +2034,8 @@ class QueryJobs extends Rpc
  * @method $this withHasReachedEndOfFlowFilter($value)
  * @method string getHasAnsweredFilter()
  * @method $this withHasAnsweredFilter($value)
+ * @method string getTaskStatusFilter()
+ * @method $this withTaskStatusFilter($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getQueryText()
@@ -2562,6 +2613,22 @@ class UntagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ * @method string getFileId()
+ * @method $this withFileId($value)
+ */
+class UploadScriptRecording extends Rpc
+{
 }
 
 /**

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1650 - 2023-1-13
+- Supported new features for outbound.
+
+
 ## 1.8.1649 - 2023-1-13
 - Support Service of empty number.
 
