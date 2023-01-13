@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1648 - 2023-1-13
+- Supported GetProxy, ListProxies to return RegionId information.
+- Supported SearchDatabase to return CatalogName information.
+
+
 ## 1.8.1647 - 2023-1-11
 - Add OnsMessageDetail for query message body.
 
