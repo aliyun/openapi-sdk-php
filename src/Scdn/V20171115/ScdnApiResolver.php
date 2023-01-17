@@ -64,7 +64,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetScdnDomainCertificate setScdnDomainCertificate(array $options = [])
  * @method StartScdnDomain startScdnDomain(array $options = [])
  * @method StopScdnDomain stopScdnDomain(array $options = [])
- * @method TestAmpDescribeScdnDomainIspData testAmpDescribeScdnDomainIspData(array $options = [])
  * @method UpdateScdnDomain updateScdnDomain(array $options = [])
  * @method VerifyScdnDomainOwner verifyScdnDomainOwner(array $options = [])
  */
@@ -823,6 +822,8 @@ class DescribeScdnVerifyContent extends Rpc
  * @method $this withL2Preload($value)
  * @method string getArea()
  * @method $this withArea($value)
+ * @method string getWithHeader()
+ * @method $this withWithHeader($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -928,18 +929,6 @@ class StartScdnDomain extends Rpc
  * @method $this withSecurityToken($value)
  */
 class StopScdnDomain extends Rpc
-{
-}
-
-/**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- */
-class TestAmpDescribeScdnDomainIspData extends Rpc
 {
 }
 
