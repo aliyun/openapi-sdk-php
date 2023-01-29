@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAutoSnapshotPolicy getAutoSnapshotPolicy(array $options = [])
  * @method GetDbfs getDbfs(array $options = [])
  * @method GetServiceLinkedRole getServiceLinkedRole(array $options = [])
+ * @method GetSnapshotLink getSnapshotLink(array $options = [])
  * @method ListAutoSnapshotPolicies listAutoSnapshotPolicies(array $options = [])
  * @method ListAutoSnapshotPolicyAppliedDbfs listAutoSnapshotPolicyAppliedDbfs(array $options = [])
  * @method ListAutoSnapshotPolicyUnappliedDbfs listAutoSnapshotPolicyUnappliedDbfs(array $options = [])
@@ -30,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDbfsAttachableEcsInstances listDbfsAttachableEcsInstances(array $options = [])
  * @method ListDbfsAttachedEcsInstances listDbfsAttachedEcsInstances(array $options = [])
  * @method ListSnapshot listSnapshot(array $options = [])
+ * @method ListSnapshotLinks listSnapshotLinks(array $options = [])
  * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagValues listTagValues(array $options = [])
  * @method ModifyAutoSnapshotPolicy modifyAutoSnapshotPolicy(array $options = [])
@@ -53,9 +55,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'dbfs';
 }
 
 /**
@@ -263,6 +262,17 @@ class GetServiceLinkedRole extends Rpc
 }
 
 /**
+ * @method string getLinkId()
+ * @method $this withLinkId($value)
+ */
+class GetSnapshotLink extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getFilterValue()
  * @method $this withFilterValue($value)
  * @method string getPageNumber()
@@ -373,6 +383,20 @@ class ListDbfsAttachedEcsInstances extends Rpc
  * @method $this withStatus($value)
  */
 class ListSnapshot extends Rpc
+{
+}
+
+/**
+ * @method string getFilterValue()
+ * @method $this withFilterValue($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getFilterKey()
+ * @method $this withFilterKey($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListSnapshotLinks extends Rpc
 {
 }
 

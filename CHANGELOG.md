@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1655 - 2023-1-29
+- Update autoSnapshotPolicy.
+
+
 ## 1.8.1654 - 2023-1-19
 - Change DescribeLogstoreStorage Response.
 
