@@ -92,6 +92,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDeployedApis describeDeployedApis(array $options = [])
  * @method DescribeDomain describeDomain(array $options = [])
  * @method DescribeHistoryApis describeHistoryApis(array $options = [])
+ * @method DescribeImportOASTask describeImportOASTask(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeIpControlPolicyItems describeIpControlPolicyItems(array $options = [])
  * @method DescribeIpControls describeIpControls(array $options = [])
@@ -575,16 +576,17 @@ class CreateDatasetItem extends Rpc
 }
 
 /**
- * @method string getAutoPay()
- * @method $this withAutoPay($value)
  * @method string getInstanceSpec()
  * @method $this withInstanceSpec($value)
  * @method string getHttpsPolicy()
  * @method $this withHttpsPolicy($value)
- * @method string getToken()
- * @method $this withToken($value)
  * @method string getDuration()
  * @method $this withDuration($value)
+ * @method array getTag()
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getToken()
+ * @method $this withToken($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getZoneId()
@@ -596,6 +598,26 @@ class CreateDatasetItem extends Rpc
  */
 class CreateInstance extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1359,6 +1381,8 @@ class DescribeApiQpsData extends Rpc
 }
 
 /**
+ * @method string getStageName()
+ * @method $this withStageName($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSecurityToken()
@@ -1871,6 +1895,16 @@ class DescribeDomain extends Rpc
  * @method $this withApiId($value)
  */
 class DescribeHistoryApis extends Rpc
+{
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getOperationId()
+ * @method $this withOperationId($value)
+ */
+class DescribeImportOASTask extends Rpc
 {
 }
 
