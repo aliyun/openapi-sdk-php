@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1658 - 2023-1-31
+- Supported new features for outbound.
+
+
 ## 1.8.1657 - 2023-1-31
 - Update PushObjectCache.
 
