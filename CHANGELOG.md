@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1659 - 2023-1-31
+- Supported set high definition monitor log status for eip.
+- Supported batch associate eip to cloud products.
+- Supported VpcDescribeVpcNatGatewayNetworkInterfaceQuota.
+
+
 ## 1.8.1658 - 2023-1-31
 - Supported new features for outbound.
 
