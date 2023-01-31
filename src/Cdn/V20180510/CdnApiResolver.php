@@ -1982,8 +1982,6 @@ class DescribeRefreshQuota extends Rpc
 /**
  * @method string getTaskId()
  * @method $this withTaskId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
 class DescribeRefreshTaskById extends Rpc
 {
