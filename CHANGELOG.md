@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1661 - 2023-2-1
+- SubmitTextTo2DAvatarVideoTask add new params code.
+
+
 ## 1.8.1660 - 2023-1-31
 - Supported parameter nepochs and lr for CreateModel Api.
 
