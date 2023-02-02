@@ -338,6 +338,8 @@ class AddSecurityGroup extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  * @method array getUser()
  */
 class AddUsers extends Rpc
@@ -1249,6 +1251,8 @@ class DeleteSecurityGroup extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  * @method array getUser()
  */
 class DeleteUsers extends Rpc
@@ -1406,6 +1410,8 @@ class DescribeImagePrice extends Rpc
  * @method $this withClusterId($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  */
 class DescribeJob extends Rpc
 {
@@ -2372,6 +2378,8 @@ class ModifyImageGatewayConfig extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  * @method array getUser()
  */
 class ModifyUserGroups extends Rpc
@@ -2401,6 +2409,8 @@ class ModifyUserGroups extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getAsync()
+ * @method $this withAsync($value)
  * @method array getUser()
  */
 class ModifyUserPasswords extends Rpc

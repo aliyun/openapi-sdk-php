@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1662 - 2023-2-2
+- Support Async parameter in DescribeJob API.
+
+
 ## 1.8.1661 - 2023-2-1
 - SubmitTextTo2DAvatarVideoTask add new params code.
 
