@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1669 - 2023-2-3
+- Insert ahas into mse.
+- Supported gray.
+
+
 ## 1.8.1668 - 2023-2-3
 - Suport mse nologin.
 - Support mse nologin.
