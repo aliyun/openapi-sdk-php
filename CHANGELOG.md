@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 1.8.1668 - 2023-2-3
+- Suport mse nologin.
+- Support mse nologin.
+- Fixed bugs timeout for ListEngineNamespaces.
+- Fixed api description.
+- Support change mseVersion.
+- Support listNamespace source type.
+- Support for checking Lua.
+
+
 ## 1.8.1667 - 2023-2-3
 - Release GenerateImageWithText GenerateImageWithTextAndImage.
 
