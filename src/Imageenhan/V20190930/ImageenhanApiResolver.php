@@ -14,6 +14,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ErasePerson erasePerson(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
  * @method GenerateDynamicImage generateDynamicImage(array $options = [])
+ * @method GenerateImageWithText generateImageWithText(array $options = [])
+ * @method GenerateImageWithTextAndImage generateImageWithTextAndImage(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method ImageBlindCharacterWatermark imageBlindCharacterWatermark(array $options = [])
  * @method ImageBlindPicWatermark imageBlindPicWatermark(array $options = [])
@@ -317,6 +319,172 @@ class GenerateDynamicImage extends Rpc
     {
         $this->data['Operation'] = $value;
         $this->options['form_params']['Operation'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResolution()
+ * @method string getNumber()
+ * @method string getText()
+ * @method string getAsync()
+ */
+class GenerateImageWithText extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResolution($value)
+    {
+        $this->data['Resolution'] = $value;
+        $this->options['form_params']['Resolution'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNumber($value)
+    {
+        $this->data['Number'] = $value;
+        $this->options['form_params']['Number'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResolution()
+ * @method string getNumber()
+ * @method string getSimilarity()
+ * @method string getAspectRatioMode()
+ * @method string getText()
+ * @method string getRefImageUrl()
+ * @method string getAsync()
+ */
+class GenerateImageWithTextAndImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResolution($value)
+    {
+        $this->data['Resolution'] = $value;
+        $this->options['form_params']['Resolution'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNumber($value)
+    {
+        $this->data['Number'] = $value;
+        $this->options['form_params']['Number'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSimilarity($value)
+    {
+        $this->data['Similarity'] = $value;
+        $this->options['form_params']['Similarity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAspectRatioMode($value)
+    {
+        $this->data['AspectRatioMode'] = $value;
+        $this->options['form_params']['AspectRatioMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRefImageUrl($value)
+    {
+        $this->data['RefImageUrl'] = $value;
+        $this->options['form_params']['RefImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1667 - 2023-2-3
+- Release GenerateImageWithText GenerateImageWithTextAndImage.
+
+
 ## 1.8.1666 - 2023-2-3
 - Release CompareFaceWithMask DetectInfraredLivingFace.
 
