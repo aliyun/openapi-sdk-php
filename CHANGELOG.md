@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1666 - 2023-2-3
+- Release CompareFaceWithMask DetectInfraredLivingFace.
+
+
 ## 1.8.1665 - 2023-2-3
 - Fix docs error.
 - Fix error code.

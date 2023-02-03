@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BlurFace blurFace(array $options = [])
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
+ * @method CompareFaceWithMask compareFaceWithMask(array $options = [])
  * @method CountCrowd countCrowd(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
@@ -23,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectCelebrity detectCelebrity(array $options = [])
  * @method DetectChefCap detectChefCap(array $options = [])
  * @method DetectFace detectFace(array $options = [])
+ * @method DetectInfraredLivingFace detectInfraredLivingFace(array $options = [])
  * @method DetectIPCPedestrian detectIPCPedestrian(array $options = [])
  * @method DetectLivingFace detectLivingFace(array $options = [])
  * @method DetectPedestrian detectPedestrian(array $options = [])
@@ -710,6 +712,60 @@ class CompareFace extends Rpc
 /**
  * @method string getFormatResultToJson()
  * @method $this withFormatResultToJson($value)
+ * @method string getQualityScoreThreshold()
+ * @method string getImageURLB()
+ * @method string getImageURLA()
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
+ */
+class CompareFaceWithMask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQualityScoreThreshold($value)
+    {
+        $this->data['QualityScoreThreshold'] = $value;
+        $this->options['form_params']['QualityScoreThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURLB($value)
+    {
+        $this->data['ImageURLB'] = $value;
+        $this->options['form_params']['ImageURLB'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageURLA($value)
+    {
+        $this->data['ImageURLA'] = $value;
+        $this->options['form_params']['ImageURLA'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
  * @method string getIsShow()
  * @method string getOssFile()
  * @method $this withOssFile($value)
@@ -1090,6 +1146,36 @@ class DetectFace extends Rpc
         $this->options['form_params']['ImageURL'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method array getTasks()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
+ */
+class DetectInfraredLivingFace extends Rpc
+{
+
+    /**
+     * @param array $tasks
+     *
+     * @return $this
+     */
+	public function withTasks(array $tasks)
+	{
+	    $this->data['Tasks'] = $tasks;
+		foreach ($tasks as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
+		}
+
+		return $this;
     }
 }
 
