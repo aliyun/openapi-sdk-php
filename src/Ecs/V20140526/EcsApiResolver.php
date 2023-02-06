@@ -364,6 +364,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'ecs';
 }
 
 /**
@@ -1302,6 +1305,7 @@ class CopySnapshot extends Rpc
  * @method $this withDescription($value)
  * @method string getInstanceCount()
  * @method $this withInstanceCount($value)
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1317,6 +1321,26 @@ class CopySnapshot extends Rpc
  */
 class CreateActivation extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1798,6 +1822,27 @@ class CreateAutoProvisioningGroup extends Rpc
 			}
 			if(isset($depth1Value['WeightedCapacity'])){
 				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.WeightedCapacity'] = $depth1Value['WeightedCapacity'];
+			}
+			if(isset($depth1Value['MaxQuantity'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.MaxQuantity'] = $depth1Value['MaxQuantity'];
+			}
+			foreach ($depth1Value['Cores'] as $i => $iValue) {
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Cores.' . ($i + 1)] = $iValue;
+			}
+			foreach ($depth1Value['Memories'] as $i => $iValue) {
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Memories.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['InstanceFamilyLevel'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.InstanceFamilyLevel'] = $depth1Value['InstanceFamilyLevel'];
+			}
+			foreach ($depth1Value['ExcludedInstanceTypes'] as $i => $iValue) {
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.ExcludedInstanceTypes.' . ($i + 1)] = $iValue;
+			}
+			foreach ($depth1Value['Architectures'] as $i => $iValue) {
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.Architectures.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['BurstablePerformance'])){
+				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.BurstablePerformance'] = $depth1Value['BurstablePerformance'];
 			}
 		}
 
@@ -5590,6 +5635,7 @@ class DescribeAccountAttributes extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -5603,6 +5649,26 @@ class DescribeAccountAttributes extends Rpc
  */
 class DescribeActivations extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -8604,6 +8670,7 @@ class DescribeLimitation extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -8622,6 +8689,26 @@ class DescribeLimitation extends Rpc
  */
 class DescribeManagedInstances extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $instanceId
@@ -14372,6 +14459,7 @@ class RunCommand extends Rpc
  * @method $this withSpotInterruptionBehavior($value)
  * @method string getNetworkInterfaceQueueNumber()
  * @method $this withNetworkInterfaceQueueNumber($value)
+ * @method array getSystemTag()
  * @method string getIoOptimized()
  * @method $this withIoOptimized($value)
  * @method string getSecurityGroupId()
@@ -14525,6 +14613,29 @@ class RunInstances extends Rpc
         $this->options['query']['CpuOptions.Numa'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $systemTag
+     *
+     * @return $this
+     */
+	public function withSystemTag(array $systemTag)
+	{
+	    $this->data['SystemTag'] = $systemTag;
+		foreach ($systemTag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['SystemTag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['SystemTag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Scope'])){
+				$this->options['query']['SystemTag.' . ($depth1 + 1) . '.Scope'] = $depth1Value['Scope'];
+			}
+		}
+
+		return $this;
     }
 
     /**
