@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListArtifacts listArtifacts(array $options = [])
  * @method ListArtifactVersions listArtifactVersions(array $options = [])
  * @method ListServiceInstances listServiceInstances(array $options = [])
+ * @method ListServiceUsages listServiceUsages(array $options = [])
  * @method ReleaseArtifact releaseArtifact(array $options = [])
  * @method UpdateArtifact updateArtifact(array $options = [])
  */
@@ -177,6 +178,37 @@ class ListServiceInstances extends Rpc
 
 		return $this;
     }
+
+    /**
+     * @param array $filter
+     *
+     * @return $this
+     */
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getFilter()
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListServiceUsages extends Rpc
+{
 
     /**
      * @param array $filter

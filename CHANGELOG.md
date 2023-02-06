@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1671 - 2023-2-6
+- Public ListServiceUsages  OpenApi.
+
+
 ## 1.8.1670 - 2023-2-6
 - Support system tag.
 
