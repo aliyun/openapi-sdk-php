@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnhanceImageColor enhanceImageColor(array $options = [])
  * @method ErasePerson erasePerson(array $options = [])
  * @method ExtendImageStyle extendImageStyle(array $options = [])
+ * @method GenerateCartoonizedImage generateCartoonizedImage(array $options = [])
  * @method GenerateDynamicImage generateDynamicImage(array $options = [])
  * @method GenerateImageWithText generateImageWithText(array $options = [])
  * @method GenerateImageWithTextAndImage generateImageWithTextAndImage(array $options = [])
@@ -285,6 +286,68 @@ class ExtendImageStyle extends Rpc
     {
         $this->data['StyleUrl'] = $value;
         $this->options['form_params']['StyleUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImageType()
+ * @method string getIndex()
+ * @method string getAsync()
+ * @method string getImageUrl()
+ */
+class GenerateCartoonizedImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageType($value)
+    {
+        $this->data['ImageType'] = $value;
+        $this->options['form_params']['ImageType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIndex($value)
+    {
+        $this->data['Index'] = $value;
+        $this->options['form_params']['Index'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
 
         return $this;
     }

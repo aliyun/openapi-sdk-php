@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1674 - 2023-2-9
+- Release GenerateSuperResolutionImage.
+
+
 ## 1.8.1673 - 2023-2-7
 - add all language sdk.
 
