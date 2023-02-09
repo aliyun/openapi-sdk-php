@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1675 - 2023-2-9
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1674 - 2023-2-9
 - Release GenerateSuperResolutionImage.
 
