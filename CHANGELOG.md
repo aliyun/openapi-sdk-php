@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1679 - 2023-2-10
+- Change DescribeLogstoreStorage Response.
+
+
 ## 1.8.1678 - 2023-2-10
 - Add service label api.
 
