@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1681 - 2023-2-10
+- Support broadcast for FengTian.
+
+
 ## 1.8.1680 - 2023-2-10
 - Add DescribeCdnIpCidr.
 
