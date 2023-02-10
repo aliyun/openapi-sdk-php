@@ -117,6 +117,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveCenterTransfer describeLiveCenterTransfer(array $options = [])
  * @method DescribeLiveCertificateDetail describeLiveCertificateDetail(array $options = [])
  * @method DescribeLiveCertificateList describeLiveCertificateList(array $options = [])
+ * @method DescribeLiveDelayedStreamingUsage describeLiveDelayedStreamingUsage(array $options = [])
  * @method DescribeLiveDetectNotifyConfig describeLiveDetectNotifyConfig(array $options = [])
  * @method DescribeLiveDetectPornData describeLiveDetectPornData(array $options = [])
  * @method DescribeLiveDomainBpsData describeLiveDomainBpsData(array $options = [])
@@ -272,6 +273,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetLiveDomainStagingConfig setLiveDomainStagingConfig(array $options = [])
  * @method SetLiveEdgeTransfer setLiveEdgeTransfer(array $options = [])
  * @method SetLiveLazyPullStreamInfoConfig setLiveLazyPullStreamInfoConfig(array $options = [])
+ * @method SetLiveMpuTaskSei setLiveMpuTaskSei(array $options = [])
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
  * @method SetLiveStreamOptimizedFeatureConfig setLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method SetLiveStreamsNotifyUrlConfig setLiveStreamsNotifyUrlConfig(array $options = [])
@@ -1090,6 +1092,8 @@ class AddLiveStreamTranscode extends Rpc
  * @method $this withRefWidth($value)
  * @method string getTransparency()
  * @method $this withTransparency($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getOffsetCorner()
@@ -1623,6 +1627,8 @@ class CreateLiveStreamMonitor extends Rpc
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getEndTimeIncluded()
+ * @method $this withEndTimeIncluded($value)
  * @method string getStreamName()
  * @method $this withStreamName($value)
  * @method string getOssBucket()
@@ -2659,6 +2665,26 @@ class DescribeLiveCertificateList extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeLiveDelayedStreamingUsage extends Rpc
+{
+}
+
+/**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDomainName()
@@ -3008,6 +3034,8 @@ class DescribeLiveDomainRecordData extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeLiveDomainRecordUsageData extends Rpc
 {
@@ -3728,6 +3756,8 @@ class DescribeLiveStreamTranscodeStreamNum extends Rpc
  * @method $this withPageSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
  */
 class DescribeLiveStreamWatermarkRules extends Rpc
 {
@@ -3738,8 +3768,12 @@ class DescribeLiveStreamWatermarkRules extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getKeyWord()
+ * @method $this withKeyWord($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
  */
 class DescribeLiveStreamWatermarks extends Rpc
 {
@@ -3811,10 +3845,6 @@ class DescribeLiveTopDomainsByFlow extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getDimension()
- * @method $this withDimension($value)
- * @method string getArea()
- * @method $this withArea($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getOwnerId()
@@ -6304,6 +6334,18 @@ class SetLiveEdgeTransfer extends Rpc
  * @method $this withPullProtocol($value)
  */
 class SetLiveLazyPullStreamInfoConfig extends Rpc
+{
+}
+
+/**
+ * @method string getCustomSei()
+ * @method $this withCustomSei($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class SetLiveMpuTaskSei extends Rpc
 {
 }
 
