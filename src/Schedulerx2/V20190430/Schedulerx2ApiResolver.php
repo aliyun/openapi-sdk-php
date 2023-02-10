@@ -11,6 +11,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateAppGroup createAppGroup(array $options = [])
  * @method CreateJob createJob(array $options = [])
  * @method CreateNamespace createNamespace(array $options = [])
+ * @method CreateWorkflow createWorkflow(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
  * @method DeleteWorkflow deleteWorkflow(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
@@ -24,15 +25,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobInfo getJobInfo(array $options = [])
  * @method GetJobInstance getJobInstance(array $options = [])
  * @method GetJobInstanceList getJobInstanceList(array $options = [])
+ * @method GetLog getLog(array $options = [])
  * @method GetWorkerList getWorkerList(array $options = [])
  * @method GetWorkFlow getWorkFlow(array $options = [])
+ * @method GetWorkflowInstance getWorkflowInstance(array $options = [])
  * @method GrantPermission grantPermission(array $options = [])
  * @method ListGroups listGroups(array $options = [])
  * @method ListJobs listJobs(array $options = [])
  * @method ListNamespaces listNamespaces(array $options = [])
+ * @method ListWorkflowInstance listWorkflowInstance(array $options = [])
+ * @method RerunJob rerunJob(array $options = [])
+ * @method RetryJobInstance retryJobInstance(array $options = [])
  * @method RevokePermission revokePermission(array $options = [])
+ * @method SetJobInstanceSuccess setJobInstanceSuccess(array $options = [])
+ * @method SetWfInstanceSuccess setWfInstanceSuccess(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
+ * @method UpdateWorkflow updateWorkflow(array $options = [])
+ * @method UpdateWorkflowDag updateWorkflowDag(array $options = [])
  */
 class Schedulerx2ApiResolver extends ApiResolver
 {
@@ -161,8 +171,6 @@ class BatchEnableJobs extends Rpc
  * @method $this withMetricsThresholdJson($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getAppType()
- * @method $this withAppType($value)
  * @method string getMonitorConfigJson()
  * @method $this withMonitorConfigJson($value)
  * @method string getNamespace()
@@ -179,10 +187,11 @@ class CreateAppGroup extends Rpc
 
 /**
  * @method string getAttemptInterval()
+ * @method string getFailTimes()
  * @method string getConsumerSize()
  * @method string getJarUrl()
- * @method string getDataOffset()
  * @method string getGroupId()
+ * @method string getDataOffset()
  * @method string getTaskMaxAttempt()
  * @method string getDispatcherSize()
  * @method string getJobType()
@@ -206,6 +215,7 @@ class CreateAppGroup extends Rpc
  * @method string getSendChannel()
  * @method string getMaxAttempt()
  * @method string getMissWorkerEnable()
+ * @method string getSuccessNoticeEnable()
  * @method string getQueueSize()
  * @method string getClassName()
  * @method string getNamespace()
@@ -227,6 +237,19 @@ class CreateJob extends Rpc
     {
         $this->data['AttemptInterval'] = $value;
         $this->options['form_params']['AttemptInterval'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFailTimes($value)
+    {
+        $this->data['FailTimes'] = $value;
+        $this->options['form_params']['FailTimes'] = $value;
 
         return $this;
     }
@@ -262,10 +285,10 @@ class CreateJob extends Rpc
      *
      * @return $this
      */
-    public function withDataOffset($value)
+    public function withGroupId($value)
     {
-        $this->data['DataOffset'] = $value;
-        $this->options['form_params']['DataOffset'] = $value;
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
 
         return $this;
     }
@@ -275,10 +298,10 @@ class CreateJob extends Rpc
      *
      * @return $this
      */
-    public function withGroupId($value)
+    public function withDataOffset($value)
     {
-        $this->data['GroupId'] = $value;
-        $this->options['form_params']['GroupId'] = $value;
+        $this->data['DataOffset'] = $value;
+        $this->options['form_params']['DataOffset'] = $value;
 
         return $this;
     }
@@ -600,6 +623,19 @@ class CreateJob extends Rpc
      *
      * @return $this
      */
+    public function withSuccessNoticeEnable($value)
+    {
+        $this->data['SuccessNoticeEnable'] = $value;
+        $this->options['form_params']['SuccessNoticeEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withQueueSize($value)
     {
         $this->data['QueueSize'] = $value;
@@ -676,6 +712,141 @@ class CreateNamespace extends Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method string getTimezone()
+ * @method string getDescription()
+ * @method string getGroupId()
+ * @method string getTimeExpression()
+ * @method string getNamespace()
+ * @method string getName()
+ * @method string getMaxConcurrency()
+ * @method string getTimeType()
+ */
+class CreateWorkflow extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespaceSource($value)
+    {
+        $this->data['NamespaceSource'] = $value;
+        $this->options['form_params']['NamespaceSource'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimezone($value)
+    {
+        $this->data['Timezone'] = $value;
+        $this->options['form_params']['Timezone'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimeExpression($value)
+    {
+        $this->data['TimeExpression'] = $value;
+        $this->options['form_params']['TimeExpression'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespace($value)
+    {
+        $this->data['Namespace'] = $value;
+        $this->options['form_params']['Namespace'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxConcurrency($value)
+    {
+        $this->data['MaxConcurrency'] = $value;
+        $this->options['form_params']['MaxConcurrency'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimeType($value)
+    {
+        $this->data['TimeType'] = $value;
+        $this->options['form_params']['TimeType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -883,12 +1054,46 @@ class GetJobInstance extends Rpc
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getStartTimestamp()
+ * @method $this withStartTimestamp($value)
+ * @method string getEndTimestamp()
+ * @method $this withEndTimestamp($value)
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class GetJobInstanceList extends Rpc
+{
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getLine()
+ * @method $this withLine($value)
+ * @method string getStartTimestamp()
+ * @method $this withStartTimestamp($value)
+ * @method string getEndTimestamp()
+ * @method $this withEndTimestamp($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getOffset()
+ * @method $this withOffset($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getReverse()
+ * @method $this withReverse($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getJobInstanceId()
+ * @method $this withJobInstanceId($value)
+ */
+class GetLog extends Rpc
 {
 }
 
@@ -915,6 +1120,22 @@ class GetWorkerList extends Rpc
  * @method $this withWorkflowId($value)
  */
 class GetWorkFlow extends Rpc
+{
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getWfInstanceId()
+ * @method $this withWfInstanceId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getWorkflowId()
+ * @method $this withWorkflowId($value)
+ */
+class GetWorkflowInstance extends Rpc
 {
 }
 
@@ -974,12 +1195,190 @@ class ListNamespaces extends Rpc
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getWorkflowId()
+ * @method $this withWorkflowId($value)
+ */
+class ListWorkflowInstance extends Rpc
+{
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method string getDataTime()
+ * @method string getGroupId()
+ * @method string getStartDate()
+ * @method string getJobId()
+ * @method string getEndDate()
+ * @method string getNamespace()
+ */
+class RerunJob extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespaceSource($value)
+    {
+        $this->data['NamespaceSource'] = $value;
+        $this->options['form_params']['NamespaceSource'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDataTime($value)
+    {
+        $this->data['DataTime'] = $value;
+        $this->options['form_params']['DataTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartDate($value)
+    {
+        $this->data['StartDate'] = $value;
+        $this->options['form_params']['StartDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobId($value)
+    {
+        $this->data['JobId'] = $value;
+        $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndDate($value)
+    {
+        $this->data['EndDate'] = $value;
+        $this->options['form_params']['EndDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespace($value)
+    {
+        $this->data['Namespace'] = $value;
+        $this->options['form_params']['Namespace'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getJobInstanceId()
+ * @method $this withJobInstanceId($value)
+ */
+class RetryJobInstance extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
 class RevokePermission extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getJobInstanceId()
+ * @method $this withJobInstanceId($value)
+ */
+class SetJobInstanceSuccess extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getWfInstanceId()
+ * @method $this withWfInstanceId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getWorkflowId()
+ * @method $this withWorkflowId($value)
+ */
+class SetWfInstanceSuccess extends Rpc
 {
 
     /** @var string */
@@ -1006,69 +1405,45 @@ class StopInstance extends Rpc
 }
 
 /**
- * @method string getNamespaceSource()
- * @method string getDescription()
  * @method string getAttemptInterval()
- * @method string getContent()
- * @method string getTimeout()
- * @method string getTimeoutKillEnable()
+ * @method string getFailTimes()
  * @method string getJobId()
- * @method string getPageSize()
  * @method string getConsumerSize()
  * @method string getJarUrl()
- * @method string getCalendar()
- * @method string getFailEnable()
- * @method string getSendChannel()
- * @method string getDataOffset()
  * @method string getGroupId()
  * @method string getTaskMaxAttempt()
- * @method string getMaxAttempt()
- * @method string getMissWorkerEnable()
+ * @method string getDataOffset()
  * @method string getDispatcherSize()
  * @method string getTaskAttemptInterval()
  * @method string getExecuteMode()
- * @method string getQueueSize()
  * @method string getTimeExpression()
- * @method string getClassName()
  * @method string getTimeoutEnable()
  * @method array getContactInfo()
  * @method string getName()
- * @method string getNamespace()
- * @method string getMaxConcurrency()
  * @method string getTimeType()
  * @method string getParameters()
+ * @method string getNamespaceSource()
+ * @method string getDescription()
+ * @method string getContent()
+ * @method string getTimeout()
+ * @method string getTimeoutKillEnable()
+ * @method string getPageSize()
+ * @method string getCalendar()
+ * @method string getFailEnable()
+ * @method string getSendChannel()
+ * @method string getMaxAttempt()
+ * @method string getMissWorkerEnable()
+ * @method string getSuccessNoticeEnable()
+ * @method string getQueueSize()
+ * @method string getClassName()
+ * @method string getNamespace()
+ * @method string getMaxConcurrency()
  */
 class UpdateJob extends Rpc
 {
 
     /** @var string */
     public $method = 'POST';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNamespaceSource($value)
-    {
-        $this->data['NamespaceSource'] = $value;
-        $this->options['form_params']['NamespaceSource'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDescription($value)
-    {
-        $this->data['Description'] = $value;
-        $this->options['form_params']['Description'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -1088,36 +1463,10 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
-    public function withContent($value)
+    public function withFailTimes($value)
     {
-        $this->data['Content'] = $value;
-        $this->options['form_params']['Content'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTimeout($value)
-    {
-        $this->data['Timeout'] = $value;
-        $this->options['form_params']['Timeout'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTimeoutKillEnable($value)
-    {
-        $this->data['TimeoutKillEnable'] = $value;
-        $this->options['form_params']['TimeoutKillEnable'] = $value;
+        $this->data['FailTimes'] = $value;
+        $this->options['form_params']['FailTimes'] = $value;
 
         return $this;
     }
@@ -1131,19 +1480,6 @@ class UpdateJob extends Rpc
     {
         $this->data['JobId'] = $value;
         $this->options['form_params']['JobId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -1179,58 +1515,6 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
-    public function withCalendar($value)
-    {
-        $this->data['Calendar'] = $value;
-        $this->options['form_params']['Calendar'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withFailEnable($value)
-    {
-        $this->data['FailEnable'] = $value;
-        $this->options['form_params']['FailEnable'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSendChannel($value)
-    {
-        $this->data['SendChannel'] = $value;
-        $this->options['form_params']['SendChannel'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDataOffset($value)
-    {
-        $this->data['DataOffset'] = $value;
-        $this->options['form_params']['DataOffset'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withGroupId($value)
     {
         $this->data['GroupId'] = $value;
@@ -1257,23 +1541,10 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
-    public function withMaxAttempt($value)
+    public function withDataOffset($value)
     {
-        $this->data['MaxAttempt'] = $value;
-        $this->options['form_params']['MaxAttempt'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMissWorkerEnable($value)
-    {
-        $this->data['MissWorkerEnable'] = $value;
-        $this->options['form_params']['MissWorkerEnable'] = $value;
+        $this->data['DataOffset'] = $value;
+        $this->options['form_params']['DataOffset'] = $value;
 
         return $this;
     }
@@ -1322,36 +1593,10 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
-    public function withQueueSize($value)
-    {
-        $this->data['QueueSize'] = $value;
-        $this->options['form_params']['QueueSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withTimeExpression($value)
     {
         $this->data['TimeExpression'] = $value;
         $this->options['form_params']['TimeExpression'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withClassName($value)
-    {
-        $this->data['ClassName'] = $value;
-        $this->options['form_params']['ClassName'] = $value;
 
         return $this;
     }
@@ -1413,6 +1658,214 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
+    public function withTimeType($value)
+    {
+        $this->data['TimeType'] = $value;
+        $this->options['form_params']['TimeType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParameters($value)
+    {
+        $this->data['Parameters'] = $value;
+        $this->options['form_params']['Parameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespaceSource($value)
+    {
+        $this->data['NamespaceSource'] = $value;
+        $this->options['form_params']['NamespaceSource'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimeout($value)
+    {
+        $this->data['Timeout'] = $value;
+        $this->options['form_params']['Timeout'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimeoutKillEnable($value)
+    {
+        $this->data['TimeoutKillEnable'] = $value;
+        $this->options['form_params']['TimeoutKillEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCalendar($value)
+    {
+        $this->data['Calendar'] = $value;
+        $this->options['form_params']['Calendar'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFailEnable($value)
+    {
+        $this->data['FailEnable'] = $value;
+        $this->options['form_params']['FailEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSendChannel($value)
+    {
+        $this->data['SendChannel'] = $value;
+        $this->options['form_params']['SendChannel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxAttempt($value)
+    {
+        $this->data['MaxAttempt'] = $value;
+        $this->options['form_params']['MaxAttempt'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMissWorkerEnable($value)
+    {
+        $this->data['MissWorkerEnable'] = $value;
+        $this->options['form_params']['MissWorkerEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSuccessNoticeEnable($value)
+    {
+        $this->data['SuccessNoticeEnable'] = $value;
+        $this->options['form_params']['SuccessNoticeEnable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQueueSize($value)
+    {
+        $this->data['QueueSize'] = $value;
+        $this->options['form_params']['QueueSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClassName($value)
+    {
+        $this->data['ClassName'] = $value;
+        $this->options['form_params']['ClassName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withNamespace($value)
     {
         $this->data['Namespace'] = $value;
@@ -1433,6 +1886,114 @@ class UpdateJob extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method string getDescription()
+ * @method string getWorkflowId()
+ * @method string getGroupId()
+ * @method string getTimeExpression()
+ * @method string getNamespace()
+ * @method string getName()
+ * @method string getTimeType()
+ */
+class UpdateWorkflow extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespaceSource($value)
+    {
+        $this->data['NamespaceSource'] = $value;
+        $this->options['form_params']['NamespaceSource'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkflowId($value)
+    {
+        $this->data['WorkflowId'] = $value;
+        $this->options['form_params']['WorkflowId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimeExpression($value)
+    {
+        $this->data['TimeExpression'] = $value;
+        $this->options['form_params']['TimeExpression'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespace($value)
+    {
+        $this->data['Namespace'] = $value;
+        $this->options['form_params']['Namespace'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -1446,16 +2007,82 @@ class UpdateJob extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getDagJson()
+ * @method string getNamespaceSource()
+ * @method string getGroupId()
+ * @method string getNamespace()
+ * @method string getWorkflowId()
+ */
+class UpdateWorkflowDag extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withParameters($value)
+    public function withDagJson($value)
     {
-        $this->data['Parameters'] = $value;
-        $this->options['form_params']['Parameters'] = $value;
+        $this->data['DagJson'] = $value;
+        $this->options['form_params']['DagJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespaceSource($value)
+    {
+        $this->data['NamespaceSource'] = $value;
+        $this->options['form_params']['NamespaceSource'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNamespace($value)
+    {
+        $this->data['Namespace'] = $value;
+        $this->options['form_params']['Namespace'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkflowId($value)
+    {
+        $this->data['WorkflowId'] = $value;
+        $this->options['form_params']['WorkflowId'] = $value;
 
         return $this;
     }

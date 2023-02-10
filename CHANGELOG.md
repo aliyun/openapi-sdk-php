@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.8.1677 - 2023-2-10
+- Support Create Workflow.
+- Support Update Workflow DAG.
+- Support Get Workflow Instance and DAG.
+- Support Retry Job Instance.
+- Support Get Log.
+- Create Job Add FailTimes and SuccessNoticeEnable.
+
+
 ## 1.8.1676 - 2023-2-10
 - Live sdk update.
 
