@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1680 - 2023-2-10
+- Add DescribeCdnIpCidr.
+
+
 ## 1.8.1679 - 2023-2-10
 - Change DescribeLogstoreStorage Response.
 
