@@ -5,6 +5,7 @@ namespace AlibabaCloud\Eas\V20210701;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CommitService commitService(array $options = [])
  * @method CreateBenchmarkTask createBenchmarkTask(array $options = [])
  * @method CreateResource createResource(array $options = [])
  * @method CreateResourceInstances createResourceInstances(array $options = [])
@@ -22,24 +23,30 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteServiceAutoScaler deleteServiceAutoScaler(array $options = [])
  * @method DeleteServiceCronScaler deleteServiceCronScaler(array $options = [])
  * @method DeleteServiceInstances deleteServiceInstances(array $options = [])
+ * @method DeleteServiceLabel deleteServiceLabel(array $options = [])
  * @method DeleteServiceMirror deleteServiceMirror(array $options = [])
  * @method DescribeBenchmarkTask describeBenchmarkTask(array $options = [])
  * @method DescribeBenchmarkTaskReport describeBenchmarkTaskReport(array $options = [])
+ * @method DescribeGroup describeGroup(array $options = [])
  * @method DescribeResource describeResource(array $options = [])
  * @method DescribeResourceDLink describeResourceDLink(array $options = [])
  * @method DescribeResourceLog describeResourceLog(array $options = [])
  * @method DescribeService describeService(array $options = [])
  * @method DescribeServiceAutoScaler describeServiceAutoScaler(array $options = [])
  * @method DescribeServiceCronScaler describeServiceCronScaler(array $options = [])
+ * @method DescribeServiceEvent describeServiceEvent(array $options = [])
  * @method DescribeServiceLog describeServiceLog(array $options = [])
  * @method DescribeServiceMirror describeServiceMirror(array $options = [])
+ * @method DevelopService developService(array $options = [])
  * @method ListBenchmarkTask listBenchmarkTask(array $options = [])
+ * @method ListGroups listGroups(array $options = [])
  * @method ListResourceInstances listResourceInstances(array $options = [])
  * @method ListResourceInstanceWorker listResourceInstanceWorker(array $options = [])
  * @method ListResources listResources(array $options = [])
  * @method ListResourceServices listResourceServices(array $options = [])
  * @method ListServiceInstances listServiceInstances(array $options = [])
  * @method ListServices listServices(array $options = [])
+ * @method ListServiceVersions listServiceVersions(array $options = [])
  * @method ReleaseService releaseService(array $options = [])
  * @method StartBenchmarkTask startBenchmarkTask(array $options = [])
  * @method StartService startService(array $options = [])
@@ -48,10 +55,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateBenchmarkTask updateBenchmarkTask(array $options = [])
  * @method UpdateResource updateResource(array $options = [])
  * @method UpdateResourceDLink updateResourceDLink(array $options = [])
+ * @method UpdateResourceInstance updateResourceInstance(array $options = [])
  * @method UpdateService updateService(array $options = [])
  * @method UpdateServiceAutoScaler updateServiceAutoScaler(array $options = [])
  * @method UpdateServiceCronScaler updateServiceCronScaler(array $options = [])
+ * @method UpdateServiceLabel updateServiceLabel(array $options = [])
  * @method UpdateServiceMirror updateServiceMirror(array $options = [])
+ * @method UpdateServiceSafetyLock updateServiceSafetyLock(array $options = [])
  * @method UpdateServiceVersion updateServiceVersion(array $options = [])
  */
 class EasApiResolver extends ApiResolver
@@ -68,6 +78,21 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
 
     /** @var string */
     public $serviceCode = 'eas';
+}
+
+/**
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class CommitService extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/commit';
+
+    /** @var string */
+    public $method = 'PUT';
 }
 
 /**
@@ -179,7 +204,9 @@ class CreateResourceLog extends Roa
 }
 
 /**
+ * @method string getDevelop()
  * @method string getBody()
+ * @method string getLabels()
  */
 class CreateService extends Roa
 {
@@ -194,10 +221,36 @@ class CreateService extends Roa
      *
      * @return $this
      */
+    public function withDevelop($value)
+    {
+        $this->data['Develop'] = $value;
+        $this->options['query']['Develop'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withBody($value)
     {
         $this->data['Body'] = $value;
         $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabels($value)
+    {
+        $this->data['Labels'] = $value;
+        $this->options['query']['Labels'] = $value;
 
         return $this;
     }
@@ -473,6 +526,21 @@ class DeleteServiceInstances extends Roa
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
+class DeleteServiceLabel extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/label';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+/**
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
 class DeleteServiceMirror extends Roa
 {
     /** @var string */
@@ -495,6 +563,7 @@ class DescribeBenchmarkTask extends Roa
 }
 
 /**
+ * @method string getReportType()
  * @method string getTaskName()
  * @method $this withTaskName($value)
  * @method string getClusterId()
@@ -504,6 +573,31 @@ class DescribeBenchmarkTaskReport extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/benchmark-tasks/[ClusterId]/[TaskName]/report';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReportType($value)
+    {
+        $this->data['ReportType'] = $value;
+        $this->options['query']['ReportType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ */
+class DescribeGroup extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/groups/[ClusterId]/[GroupName]';
 }
 
 /**
@@ -576,6 +670,74 @@ class DescribeServiceCronScaler extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/cronscaler';
+}
+
+/**
+ * @method string getPageSize()
+ * @method string getEndTime()
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getStartTime()
+ * @method string getPageNum()
+ */
+class DescribeServiceEvent extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/events';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['query']['PageNum'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -686,15 +848,154 @@ class DescribeServiceMirror extends Roa
     public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/mirror';
 }
 
+/**
+ * @method string getExit()
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DevelopService extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/develop';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExit($value)
+    {
+        $this->data['Exit'] = $value;
+        $this->options['query']['Exit'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFilter()
+ * @method string getPageSize()
+ * @method string getServiceName()
+ * @method string getPageNumber()
+ */
 class ListBenchmarkTask extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/benchmark-tasks';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilter($value)
+    {
+        $this->data['Filter'] = $value;
+        $this->options['query']['Filter'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceName($value)
+    {
+        $this->data['ServiceName'] = $value;
+        $this->options['query']['ServiceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['PageNumber'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFilter()
+ * @method string getPageSize()
+ * @method string getPageNumber()
+ */
+class ListGroups extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/groups';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilter($value)
+    {
+        $this->data['Filter'] = $value;
+        $this->options['query']['Filter'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['PageNumber'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getResourceId()
  * @method $this withResourceId($value)
+ * @method string getInstanceName()
+ * @method string getInstanceId()
  * @method string getPageSize()
  * @method string getClusterId()
  * @method $this withClusterId($value)
@@ -705,6 +1006,32 @@ class ListResourceInstances extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/resources/[ClusterId]/[ResourceId]/instances';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceName($value)
+    {
+        $this->data['InstanceName'] = $value;
+        $this->options['query']['InstanceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['InstanceId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -789,7 +1116,9 @@ class ListResourceInstanceWorker extends Roa
 }
 
 /**
+ * @method string getResourceId()
  * @method string getPageSize()
+ * @method string getResourceName()
  * @method string getPageNumber()
  */
 class ListResources extends Roa
@@ -802,10 +1131,36 @@ class ListResources extends Roa
      *
      * @return $this
      */
+    public function withResourceId($value)
+    {
+        $this->data['ResourceId'] = $value;
+        $this->options['query']['ResourceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPageSize($value)
     {
         $this->data['PageSize'] = $value;
         $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceName($value)
+    {
+        $this->data['ResourceName'] = $value;
+        $this->options['query']['ResourceName'] = $value;
 
         return $this;
     }
@@ -906,8 +1261,12 @@ class ListServiceInstances extends Roa
 
 /**
  * @method string getFilter()
+ * @method string getServiceType()
+ * @method string getParentServiceUid()
  * @method string getPageSize()
  * @method string getSort()
+ * @method string getLabel()
+ * @method string getGroupName()
  * @method string getPageNumber()
  * @method string getOrder()
  */
@@ -925,6 +1284,32 @@ class ListServices extends Roa
     {
         $this->data['Filter'] = $value;
         $this->options['query']['Filter'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceType($value)
+    {
+        $this->data['ServiceType'] = $value;
+        $this->options['query']['ServiceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParentServiceUid($value)
+    {
+        $this->data['ParentServiceUid'] = $value;
+        $this->options['query']['ParentServiceUid'] = $value;
 
         return $this;
     }
@@ -960,6 +1345,32 @@ class ListServices extends Roa
      *
      * @return $this
      */
+    public function withLabel($value)
+    {
+        $this->data['Label'] = $value;
+        $this->options['query']['Label'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupName($value)
+    {
+        $this->data['GroupName'] = $value;
+        $this->options['query']['GroupName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPageNumber($value)
     {
         $this->data['PageNumber'] = $value;
@@ -977,6 +1388,46 @@ class ListServices extends Roa
     {
         $this->data['Order'] = $value;
         $this->options['query']['Order'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageSize()
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getPageNumber()
+ */
+class ListServiceVersions extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/versions';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['PageNumber'] = $value;
 
         return $this;
     }
@@ -1159,6 +1610,37 @@ class UpdateResourceDLink extends Roa
 }
 
 /**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getBody()
+ */
+class UpdateResourceInstance extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/resources/[ClusterId]/[ResourceId]/instances/[InstanceId]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getServiceName()
  * @method $this withServiceName($value)
  * @method string getClusterId()
@@ -1252,10 +1734,68 @@ class UpdateServiceCronScaler extends Roa
  * @method $this withClusterId($value)
  * @method string getBody()
  */
+class UpdateServiceLabel extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/label';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getBody()
+ */
 class UpdateServiceMirror extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/mirror';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getBody()
+ */
+class UpdateServiceSafetyLock extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v2/services/[ClusterId]/[ServiceName]/lock';
 
     /** @var string */
     public $method = 'PUT';

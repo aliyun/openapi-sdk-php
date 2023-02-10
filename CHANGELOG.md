@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1678 - 2023-2-10
+- Add service label api.
+
+
 ## 1.8.1677 - 2023-2-10
 - Support Create Workflow.
 - Support Update Workflow DAG.
