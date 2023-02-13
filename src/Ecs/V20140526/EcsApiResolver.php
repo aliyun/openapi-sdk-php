@@ -190,6 +190,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRecommendInstanceType describeRecommendInstanceType(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRenewalPrice describeRenewalPrice(array $options = [])
+ * @method DescribeReservedInstanceAutoRenewAttribute describeReservedInstanceAutoRenewAttribute(array $options = [])
  * @method DescribeReservedInstances describeReservedInstances(array $options = [])
  * @method DescribeResourceByTags describeResourceByTags(array $options = [])
  * @method DescribeResourcesModification describeResourcesModification(array $options = [])
@@ -289,6 +290,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyPrefixList modifyPrefixList(array $options = [])
  * @method ModifyPrepayInstanceSpec modifyPrepayInstanceSpec(array $options = [])
  * @method ModifyReservedInstanceAttribute modifyReservedInstanceAttribute(array $options = [])
+ * @method ModifyReservedInstanceAutoRenewAttribute modifyReservedInstanceAutoRenewAttribute(array $options = [])
  * @method ModifyReservedInstances modifyReservedInstances(array $options = [])
  * @method ModifyRouterInterfaceAttribute modifyRouterInterfaceAttribute(array $options = [])
  * @method ModifyRouterInterfaceSpec modifyRouterInterfaceSpec(array $options = [])
@@ -6198,6 +6200,8 @@ class DescribeDedicatedHostClusters extends Rpc
  * @method $this withDedicatedHostIds($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSocketDetails()
+ * @method $this withSocketDetails($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
@@ -9120,6 +9124,7 @@ class DescribePrefixLists extends Rpc
  * @method string getDataDisk4PerformanceLevel()
  * @method string getScope()
  * @method $this withScope($value)
+ * @method string getSchedulerOptionsDedicatedHostId()
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getDedicatedHostType()
@@ -9275,6 +9280,19 @@ class DescribePrice extends Rpc
     {
         $this->data['DataDisk4PerformanceLevel'] = $value;
         $this->options['query']['DataDisk.4.PerformanceLevel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchedulerOptionsDedicatedHostId($value)
+    {
+        $this->data['SchedulerOptionsDedicatedHostId'] = $value;
+        $this->options['query']['SchedulerOptions.DedicatedHostId'] = $value;
 
         return $this;
     }
@@ -9481,6 +9499,36 @@ class DescribeRegions extends Rpc
  */
 class DescribeRenewalPrice extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method array getReservedInstanceId()
+ */
+class DescribeReservedInstanceAutoRenewAttribute extends Rpc
+{
+
+    /**
+     * @param array $reservedInstanceId
+     *
+     * @return $this
+     */
+	public function withReservedInstanceId(array $reservedInstanceId)
+	{
+	    $this->data['ReservedInstanceId'] = $reservedInstanceId;
+		foreach ($reservedInstanceId as $i => $iValue) {
+			$this->options['query']['ReservedInstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -9826,6 +9874,7 @@ class DescribeSecurityGroups extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getInvokeId()
  * @method $this withInvokeId($value)
  * @method string getResourceOwnerAccount()
@@ -9841,6 +9890,26 @@ class DescribeSecurityGroups extends Rpc
  */
 class DescribeSendFileResults extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -12984,6 +13053,42 @@ class ModifyReservedInstanceAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRenewalStatus()
+ * @method $this withRenewalStatus($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ * @method array getReservedInstanceId()
+ */
+class ModifyReservedInstanceAutoRenewAttribute extends Rpc
+{
+
+    /**
+     * @param array $reservedInstanceId
+     *
+     * @return $this
+     */
+	public function withReservedInstanceId(array $reservedInstanceId)
+	{
+	    $this->data['ReservedInstanceId'] = $reservedInstanceId;
+		foreach ($reservedInstanceId as $i => $iValue) {
+			$this->options['query']['ReservedInstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method array getConfiguration()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
@@ -15008,6 +15113,7 @@ class RunInstances extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getFileOwner()
  * @method $this withFileOwner($value)
+ * @method array getTag()
  * @method string getOverwrite()
  * @method $this withOverwrite($value)
  * @method string getResourceOwnerAccount()
@@ -15030,6 +15136,26 @@ class RunInstances extends Rpc
  */
 class SendFile extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $instanceId

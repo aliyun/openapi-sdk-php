@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1682 - 2023-2-13
+- Support TagPolicy Verify NoTag.
+- Fixed bugs for DescribeDemands error code.
+- Add encrypted disk ErrorCode.
+- DescribeDedicatedHosts supports SocketDetails param to check socket capacities of specified dedicated hosts.
+
+
 ## 1.8.1681 - 2023-2-10
 - Support broadcast for FengTian.
 
