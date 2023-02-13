@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1683 - 2023-2-13
+- SubscribeBillToOSS add param: RowLimitPerFile. 
+
+
 ## 1.8.1682 - 2023-2-13
 - Support TagPolicy Verify NoTag.
 - Fixed bugs for DescribeDemands error code.

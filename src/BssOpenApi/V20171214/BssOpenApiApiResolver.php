@@ -2687,6 +2687,8 @@ class SetResellerUserStatus extends Rpc
  * @method $this withBucketPath($value)
  * @method string getBeginBillingCycle()
  * @method $this withBeginBillingCycle($value)
+ * @method string getRowLimitPerFile()
+ * @method $this withRowLimitPerFile($value)
  * @method string getMultAccountRelSubscribe()
  * @method $this withMultAccountRelSubscribe($value)
  */
