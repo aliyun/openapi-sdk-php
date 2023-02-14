@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1684 - 2023-2-14
+- Update ScreenChestCT and DetectLungNodule.
+
+
 ## 1.8.1683 - 2023-2-13
 - SubscribeBillToOSS add param: RowLimitPerFile. 
 
