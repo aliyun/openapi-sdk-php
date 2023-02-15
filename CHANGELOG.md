@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1685 - 2023-2-15
+- Update RecognizeVideoCharacter.
+
+
 ## 1.8.1684 - 2023-2-14
 - Update ScreenChestCT and DetectLungNodule.
 
