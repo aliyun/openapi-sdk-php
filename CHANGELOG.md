@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1686 - 2023-2-16
+- Update by SDK platform.
+
+
 ## 1.8.1685 - 2023-2-15
 - Update RecognizeVideoCharacter.
 

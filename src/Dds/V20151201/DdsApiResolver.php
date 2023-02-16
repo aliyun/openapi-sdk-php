@@ -840,6 +840,8 @@ class DescribeBackups extends Rpc
  * @method $this withOwnerId($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
+ * @method string getIsDelete()
+ * @method $this withIsDelete($value)
  */
 class DescribeDBInstanceAttribute extends Rpc
 {
