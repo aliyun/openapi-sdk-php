@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1688 - 2023-2-17
+- Remove some useless response parameters.
+
+
 ## 1.8.1687 - 2023-2-17
 - Update by SDK platform.
 
