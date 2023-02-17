@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1690 - 2023-2-17
+- Release GenerateSuperResolutionImage.
+
+
 ## 1.8.1689 - 2023-2-17
 - Add CODE128 and EAN13 Support.
 

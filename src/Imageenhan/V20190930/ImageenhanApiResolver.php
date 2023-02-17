@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateDynamicImage generateDynamicImage(array $options = [])
  * @method GenerateImageWithText generateImageWithText(array $options = [])
  * @method GenerateImageWithTextAndImage generateImageWithTextAndImage(array $options = [])
+ * @method GenerateSuperResolutionImage generateSuperResolutionImage(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method ImageBlindCharacterWatermark imageBlindCharacterWatermark(array $options = [])
  * @method ImageBlindPicWatermark imageBlindPicWatermark(array $options = [])
@@ -548,6 +549,96 @@ class GenerateImageWithTextAndImage extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScale()
+ * @method string getUserData()
+ * @method string getOutputFormat()
+ * @method string getAsync()
+ * @method string getImageUrl()
+ * @method string getOutputQuality()
+ */
+class GenerateSuperResolutionImage extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScale($value)
+    {
+        $this->data['Scale'] = $value;
+        $this->options['form_params']['Scale'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserData($value)
+    {
+        $this->data['UserData'] = $value;
+        $this->options['form_params']['UserData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputFormat($value)
+    {
+        $this->data['OutputFormat'] = $value;
+        $this->options['form_params']['OutputFormat'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOutputQuality($value)
+    {
+        $this->data['OutputQuality'] = $value;
+        $this->options['form_params']['OutputQuality'] = $value;
 
         return $this;
     }
