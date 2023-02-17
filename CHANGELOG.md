@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1687 - 2023-2-17
+- Update by SDK platform.
+
+
 ## 1.8.1686 - 2023-2-16
 - Update by SDK platform.
 
