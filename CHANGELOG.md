@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1689 - 2023-2-17
+- Add CODE128 and EAN13 Support.
+
+
 ## 1.8.1688 - 2023-2-17
 - Remove some useless response parameters.
 
