@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1693 - 2023-2-21
+- Update AppGroup Hide xattrs.
+- Get AppGroup Hide xattrs.
+- Create AppGroup HIde xattrs.
+- Get AppGroup Hide appGroupId.
+
+
 ## 1.8.1692 - 2023-2-21
 - Cc5g.
 

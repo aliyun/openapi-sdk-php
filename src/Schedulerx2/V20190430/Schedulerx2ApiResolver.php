@@ -6,13 +6,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method BatchDeleteJobs batchDeleteJobs(array $options = [])
+ * @method BatchDeleteRouteStrategy batchDeleteRouteStrategy(array $options = [])
  * @method BatchDisableJobs batchDisableJobs(array $options = [])
  * @method BatchEnableJobs batchEnableJobs(array $options = [])
  * @method CreateAppGroup createAppGroup(array $options = [])
  * @method CreateJob createJob(array $options = [])
  * @method CreateNamespace createNamespace(array $options = [])
+ * @method CreateRouteStrategy createRouteStrategy(array $options = [])
  * @method CreateWorkflow createWorkflow(array $options = [])
+ * @method DeleteAppGroup deleteAppGroup(array $options = [])
  * @method DeleteJob deleteJob(array $options = [])
+ * @method DeleteRouteStrategy deleteRouteStrategy(array $options = [])
  * @method DeleteWorkflow deleteWorkflow(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DesignateWorkers designateWorkers(array $options = [])
@@ -22,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableWorkflow enableWorkflow(array $options = [])
  * @method ExecuteJob executeJob(array $options = [])
  * @method ExecuteWorkflow executeWorkflow(array $options = [])
+ * @method GetAppGroup getAppGroup(array $options = [])
  * @method GetJobInfo getJobInfo(array $options = [])
  * @method GetJobInstance getJobInstance(array $options = [])
  * @method GetJobInstanceList getJobInstanceList(array $options = [])
@@ -40,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetJobInstanceSuccess setJobInstanceSuccess(array $options = [])
  * @method SetWfInstanceSuccess setWfInstanceSuccess(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
+ * @method UpdateAppGroup updateAppGroup(array $options = [])
  * @method UpdateJob updateJob(array $options = [])
  * @method UpdateWorkflow updateWorkflow(array $options = [])
  * @method UpdateWorkflowDag updateWorkflowDag(array $options = [])
@@ -55,6 +61,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2019-04-30';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -68,9 +77,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class BatchDeleteJobs extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $jobIdList
@@ -89,6 +95,48 @@ class BatchDeleteJobs extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method array getJobIdList()
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method array getStrategyIdList()
+ */
+class BatchDeleteRouteStrategy extends Rpc
+{
+
+    /**
+     * @param array $jobIdList
+     *
+     * @return $this
+     */
+	public function withJobIdList(array $jobIdList)
+	{
+	    $this->data['JobIdList'] = $jobIdList;
+		foreach ($jobIdList as $i => $iValue) {
+			$this->options['form_params']['JobIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $strategyIdList
+     *
+     * @return $this
+     */
+	public function withStrategyIdList(array $strategyIdList)
+	{
+	    $this->data['StrategyIdList'] = $strategyIdList;
+		foreach ($strategyIdList as $i => $iValue) {
+			$this->options['form_params']['StrategyIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
@@ -99,9 +147,6 @@ class BatchDeleteJobs extends Rpc
  */
 class BatchDisableJobs extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $jobIdList
@@ -130,9 +175,6 @@ class BatchDisableJobs extends Rpc
  */
 class BatchEnableJobs extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param array $jobIdList
@@ -171,10 +213,16 @@ class BatchEnableJobs extends Rpc
  * @method $this withMetricsThresholdJson($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getAppType()
+ * @method $this withAppType($value)
  * @method string getMonitorConfigJson()
  * @method $this withMonitorConfigJson($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
+ * @method string getXattrs()
+ * @method $this withXattrs($value)
+ * @method string getEnableLog()
+ * @method $this withEnableLog($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
@@ -183,6 +231,9 @@ class CreateAppGroup extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -224,9 +275,6 @@ class CreateAppGroup extends Rpc
  */
 class CreateJob extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -709,9 +757,26 @@ class CreateJob extends Rpc
  */
 class CreateNamespace extends Rpc
 {
+}
 
-    /** @var string */
-    public $method = 'POST';
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getStrategyContent()
+ * @method $this withStrategyContent($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class CreateRouteStrategy extends Rpc
+{
 }
 
 /**
@@ -727,9 +792,6 @@ class CreateNamespace extends Rpc
  */
 class CreateWorkflow extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -850,6 +912,18 @@ class CreateWorkflow extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDeleteJobs()
+ * @method $this withDeleteJobs($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class DeleteAppGroup extends Rpc
+{
+}
+
+/**
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
@@ -860,6 +934,23 @@ class CreateWorkflow extends Rpc
  * @method $this withNamespace($value)
  */
 class DeleteJob extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getStrategyId()
+ * @method $this withStrategyId($value)
+ */
+class DeleteRouteStrategy extends Rpc
 {
 }
 
@@ -878,13 +969,13 @@ class DeleteWorkflow extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 class DescribeRegions extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -907,6 +998,9 @@ class DescribeRegions extends Rpc
  */
 class DesignateWorkers extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -921,6 +1015,9 @@ class DesignateWorkers extends Rpc
  */
 class DisableJob extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -938,6 +1035,9 @@ class DisableWorkflow extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -952,6 +1052,9 @@ class DisableWorkflow extends Rpc
  */
 class EnableJob extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -969,6 +1072,9 @@ class EnableWorkflow extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -993,6 +1099,9 @@ class EnableWorkflow extends Rpc
  */
 class ExecuteJob extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1012,6 +1121,19 @@ class ExecuteWorkflow extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class GetAppGroup extends Rpc
+{
 }
 
 /**
@@ -1028,6 +1150,9 @@ class ExecuteWorkflow extends Rpc
  */
 class GetJobInfo extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1047,6 +1172,9 @@ class GetJobInstance extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1067,6 +1195,9 @@ class GetJobInstance extends Rpc
  */
 class GetJobInstanceList extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1095,6 +1226,9 @@ class GetJobInstanceList extends Rpc
  */
 class GetLog extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1107,6 +1241,9 @@ class GetLog extends Rpc
  */
 class GetWorkerList extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1121,6 +1258,9 @@ class GetWorkerList extends Rpc
  */
 class GetWorkFlow extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1137,6 +1277,9 @@ class GetWorkFlow extends Rpc
  */
 class GetWorkflowInstance extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1155,9 +1298,6 @@ class GetWorkflowInstance extends Rpc
  */
 class GrantPermission extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1168,6 +1308,9 @@ class GrantPermission extends Rpc
  */
 class ListGroups extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1184,10 +1327,16 @@ class ListGroups extends Rpc
  */
 class ListJobs extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 class ListNamespaces extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1202,6 +1351,9 @@ class ListNamespaces extends Rpc
  */
 class ListWorkflowInstance extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1215,9 +1367,6 @@ class ListWorkflowInstance extends Rpc
  */
 class RerunJob extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1325,9 +1474,6 @@ class RerunJob extends Rpc
  */
 class RetryJobInstance extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1342,9 +1488,6 @@ class RetryJobInstance extends Rpc
  */
 class RevokePermission extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1361,9 +1504,6 @@ class RevokePermission extends Rpc
  */
 class SetJobInstanceSuccess extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1380,9 +1520,6 @@ class SetJobInstanceSuccess extends Rpc
  */
 class SetWfInstanceSuccess extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1402,6 +1539,33 @@ class StopInstance extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAlarmJson()
+ * @method $this withAlarmJson($value)
+ * @method string getAppGroupId()
+ * @method $this withAppGroupId($value)
+ * @method string getMaxJobs()
+ * @method $this withMaxJobs($value)
+ * @method string getMetricsThresholdJson()
+ * @method $this withMetricsThresholdJson($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getXattrs()
+ * @method $this withXattrs($value)
+ * @method string getMaxConcurrency()
+ * @method $this withMaxConcurrency($value)
+ */
+class UpdateAppGroup extends Rpc
+{
 }
 
 /**
@@ -1428,6 +1592,7 @@ class StopInstance extends Rpc
  * @method string getTimeout()
  * @method string getTimeoutKillEnable()
  * @method string getPageSize()
+ * @method string getTaskDispatchMode()
  * @method string getCalendar()
  * @method string getFailEnable()
  * @method string getSendChannel()
@@ -1441,9 +1606,6 @@ class StopInstance extends Rpc
  */
 class UpdateJob extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1762,6 +1924,19 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
+    public function withTaskDispatchMode($value)
+    {
+        $this->data['TaskDispatchMode'] = $value;
+        $this->options['form_params']['TaskDispatchMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withCalendar($value)
     {
         $this->data['Calendar'] = $value;
@@ -1901,9 +2076,6 @@ class UpdateJob extends Rpc
 class UpdateWorkflow extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -2018,9 +2190,6 @@ class UpdateWorkflow extends Rpc
  */
 class UpdateWorkflowDag extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
