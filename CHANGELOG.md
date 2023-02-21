@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1691 - 2023-2-21
+- Lingjun Controller Initial Version Released.
+
+
 ## 1.8.1690 - 2023-2-17
 - Release GenerateSuperResolutionImage.
 

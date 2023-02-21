@@ -98,6 +98,7 @@ namespace AlibabaCloud;
  * @method static Edas\Edas edas()
  * @method static EduCloud\EduCloud eduCloud()
  * @method static Eflo\Eflo eflo()
+ * @method static EfloController\EfloController efloController()
  * @method static Eipanycast\Eipanycast eipanycast()
  * @method static Elasticsearch\Elasticsearch elasticsearch()
  * @method static Emap\Emap emap()
