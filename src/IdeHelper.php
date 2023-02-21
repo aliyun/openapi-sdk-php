@@ -82,6 +82,7 @@ namespace AlibabaCloud;
  * @method static DomainIntl\DomainIntl domainIntl()
  * @method static Drcloud\Drcloud drcloud()
  * @method static Drds\Drds drds()
+ * @method static DtOcInfo\DtOcInfo dtOcInfo()
  * @method static Dts\Dts dts()
  * @method static Dybaseapi\Dybaseapi dybaseapi()
  * @method static Dyplsapi\Dyplsapi dyplsapi()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1694 - 2023-2-21
+- Supported GetQccSearchCertification and GetQccCertificationDetailById Api For Zhimaxinyong.
+
+
 ## 1.8.1693 - 2023-2-21
 - Update AppGroup Hide xattrs.
 - Get AppGroup Hide xattrs.
