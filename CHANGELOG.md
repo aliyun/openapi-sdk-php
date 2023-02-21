@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1692 - 2023-2-21
+- Cc5g.
+
+
 ## 1.8.1691 - 2023-2-21
 - Lingjun Controller Initial Version Released.
 
