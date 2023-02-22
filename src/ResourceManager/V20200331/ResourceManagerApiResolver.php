@@ -9,9 +9,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AttachControlPolicy attachControlPolicy(array $options = [])
  * @method AttachPolicy attachPolicy(array $options = [])
  * @method BindSecureMobilePhone bindSecureMobilePhone(array $options = [])
+ * @method CancelChangeAccountEmail cancelChangeAccountEmail(array $options = [])
  * @method CancelCreateCloudAccount cancelCreateCloudAccount(array $options = [])
  * @method CancelHandshake cancelHandshake(array $options = [])
  * @method CancelPromoteResourceAccount cancelPromoteResourceAccount(array $options = [])
+ * @method ChangeAccountEmail changeAccountEmail(array $options = [])
  * @method CheckAccountDelete checkAccountDelete(array $options = [])
  * @method CreateCloudAccount createCloudAccount(array $options = [])
  * @method CreateControlPolicy createControlPolicy(array $options = [])
@@ -83,6 +85,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveCloudAccount removeCloudAccount(array $options = [])
  * @method ResendCreateCloudAccountEmail resendCreateCloudAccountEmail(array $options = [])
  * @method ResendPromoteResourceAccountEmail resendPromoteResourceAccountEmail(array $options = [])
+ * @method RetryChangeAccountEmail retryChangeAccountEmail(array $options = [])
  * @method SendVerificationCodeForBindSecureMobilePhone sendVerificationCodeForBindSecureMobilePhone(array $options = [])
  * @method SendVerificationCodeForEnableRD sendVerificationCodeForEnableRD(array $options = [])
  * @method SetDefaultPolicyVersion setDefaultPolicyVersion(array $options = [])
@@ -149,6 +152,8 @@ class AttachPolicy extends Rpc
 }
 
 /**
+ * @method string getInheritSecureMobilePhoneFrom()
+ * @method $this withInheritSecureMobilePhoneFrom($value)
  * @method string getSecureMobilePhone()
  * @method $this withSecureMobilePhone($value)
  * @method string getAccountId()
@@ -157,6 +162,14 @@ class AttachPolicy extends Rpc
  * @method $this withVerificationCode($value)
  */
 class BindSecureMobilePhone extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class CancelChangeAccountEmail extends Rpc
 {
 }
 
@@ -181,6 +194,16 @@ class CancelHandshake extends Rpc
  * @method $this withRecordId($value)
  */
 class CancelPromoteResourceAccount extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ */
+class ChangeAccountEmail extends Rpc
 {
 }
 
@@ -255,14 +278,22 @@ class CreatePolicyVersion extends Rpc
 }
 
 /**
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method string getVerificationCode()
+ * @method $this withVerificationCode($value)
  * @method string getAccountNamePrefix()
  * @method $this withAccountNamePrefix($value)
+ * @method string getInheritSecureMobilePhoneFrom()
+ * @method $this withInheritSecureMobilePhoneFrom($value)
+ * @method string getSecureMobilePhone()
+ * @method $this withSecureMobilePhone($value)
+ * @method string getResellAccountType()
+ * @method $this withResellAccountType($value)
  * @method string getParentFolderId()
  * @method $this withParentFolderId($value)
  * @method string getDisplayName()
  * @method $this withDisplayName($value)
- * @method string getTag()
- * @method $this withTag($value)
  * @method string getPayerAccountId()
  * @method $this withPayerAccountId($value)
  */
@@ -966,6 +997,14 @@ class ResendCreateCloudAccountEmail extends Rpc
  * @method $this withRecordId($value)
  */
 class ResendPromoteResourceAccountEmail extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ */
+class RetryChangeAccountEmail extends Rpc
 {
 }
 

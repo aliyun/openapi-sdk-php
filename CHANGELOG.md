@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1695 - 2023-2-22
+- Supported more language for resourcemanager.
+
+
 ## 1.8.1694 - 2023-2-21
 - Supported GetQccSearchCertification and GetQccCertificationDetailById Api For Zhimaxinyong.
 
