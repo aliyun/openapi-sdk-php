@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1696 - 2023-2-22
+- Update EvaluateVideoQuality.
+
+
 ## 1.8.1695 - 2023-2-22
 - Supported more language for resourcemanager.
 

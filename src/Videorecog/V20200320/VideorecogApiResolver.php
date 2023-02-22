@@ -210,11 +210,25 @@ class RecognizeVideoCastCrewList extends Rpc
 }
 
 /**
+ * @method string getTemplate()
  * @method string getAsync()
  * @method string getVideoUrl()
  */
 class SplitVideoParts extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplate($value)
+    {
+        $this->data['Template'] = $value;
+        $this->options['form_params']['Template'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
