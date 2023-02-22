@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1697 - 2023-2-22
+- Change DescribeLogstoreStorage Response.
+
+
 ## 1.8.1696 - 2023-2-22
 - Update EvaluateVideoQuality.
 

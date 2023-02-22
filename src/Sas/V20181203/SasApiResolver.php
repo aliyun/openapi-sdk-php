@@ -18,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BindAuthToMachine bindAuthToMachine(array $options = [])
  * @method CancelOnceTask cancelOnceTask(array $options = [])
  * @method ChangeCheckConfig changeCheckConfig(array $options = [])
+ * @method ChangeCheckCustomConfig changeCheckCustomConfig(array $options = [])
  * @method CheckQuaraFileId checkQuaraFileId(array $options = [])
  * @method CheckSecurityEventId checkSecurityEventId(array $options = [])
  * @method CheckUserHasEcs checkUserHasEcs(array $options = [])
@@ -73,7 +74,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAffectedMaliciousFileImages describeAffectedMaliciousFileImages(array $options = [])
  * @method DescribeAgentInstallStatus describeAgentInstallStatus(array $options = [])
  * @method DescribeAlarmEventDetail describeAlarmEventDetail(array $options = [])
- * @method DescribeAlarmEventList describeAlarmEventList(array $options = [])
  * @method DescribeAlarmEventStackInfo describeAlarmEventStackInfo(array $options = [])
  * @method DescribeAllEntity describeAllEntity(array $options = [])
  * @method DescribeAllGroups describeAllGroups(array $options = [])
@@ -364,7 +364,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListImageRisk listImageRisk(array $options = [])
  * @method ListInstanceCatalog listInstanceCatalog(array $options = [])
  * @method ListInterceptionHistory listInterceptionHistory(array $options = [])
- * @method ListInterceptionImage listInterceptionImage(array $options = [])
  * @method ListInterceptionRulePage listInterceptionRulePage(array $options = [])
  * @method ListInterceptionTargetPage listInterceptionTargetPage(array $options = [])
  * @method ListPluginForUuid listPluginForUuid(array $options = [])
@@ -823,6 +822,40 @@ class ChangeCheckConfig extends Rpc
 	    $this->data['CycleDays'] = $cycleDays;
 		foreach ($cycleDays as $i => $iValue) {
 			$this->options['query']['CycleDays.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method array getCustomConfigs()
+ * @method string getCheckId()
+ * @method $this withCheckId($value)
+ */
+class ChangeCheckCustomConfig extends Rpc
+{
+
+    /**
+     * @param array $customConfigs
+     *
+     * @return $this
+     */
+	public function withCustomConfigs(array $customConfigs)
+	{
+	    $this->data['CustomConfigs'] = $customConfigs;
+		foreach ($customConfigs as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['CustomConfigs.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['CustomConfigs.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Operation'])){
+				$this->options['query']['CustomConfigs.' . ($depth1 + 1) . '.Operation'] = $depth1Value['Operation'];
+			}
 		}
 
 		return $this;
@@ -2171,78 +2204,6 @@ class DescribeAlarmEventDetail extends Rpc
 }
 
 /**
- * @method string getTimeEnd()
- * @method $this withTimeEnd($value)
- * @method string getTargetType()
- * @method $this withTargetType($value)
- * @method string getSortType()
- * @method $this withSortType($value)
- * @method string getAlarmEventType()
- * @method $this withAlarmEventType($value)
- * @method string getRemark()
- * @method $this withRemark($value)
- * @method string getContainerFieldName()
- * @method $this withContainerFieldName($value)
- * @method string getAlarmEventName()
- * @method $this withAlarmEventName($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getContainerFieldValue()
- * @method $this withContainerFieldValue($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getFrom()
- * @method $this withFrom($value)
- * @method string getId()
- * @method $this withId($value)
- * @method string getTacticId()
- * @method $this withTacticId($value)
- * @method string getLang()
- * @method $this withLang($value)
- * @method string getUniqueInfo()
- * @method $this withUniqueInfo($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getDealed()
- * @method $this withDealed($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getOperateTimeEnd()
- * @method $this withOperateTimeEnd($value)
- * @method array getOperateErrorCodeList()
- * @method string getSortColumn()
- * @method $this withSortColumn($value)
- * @method string getOperateTimeStart()
- * @method $this withOperateTimeStart($value)
- * @method string getTimeStart()
- * @method $this withTimeStart($value)
- * @method string getLevels()
- * @method $this withLevels($value)
- * @method string getUuids()
- * @method $this withUuids($value)
- */
-class DescribeAlarmEventList extends Rpc
-{
-
-    /**
-     * @param array $operateErrorCodeList
-     *
-     * @return $this
-     */
-	public function withOperateErrorCodeList(array $operateErrorCodeList)
-	{
-	    $this->data['OperateErrorCodeList'] = $operateErrorCodeList;
-		foreach ($operateErrorCodeList as $i => $iValue) {
-			$this->options['query']['OperateErrorCodeList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
  * @method string getUniqueInfo()
  * @method $this withUniqueInfo($value)
  * @method string getUuid()
@@ -2509,14 +2470,14 @@ class DescribeBackupRestoreCount extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -2919,14 +2880,14 @@ class DescribeCriteria extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -6457,10 +6418,10 @@ class GetAlarmMachineCount extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -6809,6 +6770,8 @@ class GetInterceptionRuleDetail extends Rpc
 }
 
 /**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
@@ -7321,6 +7284,7 @@ class ListCheckItemWarningSummary extends Rpc
  * @method string getLang()
  * @method $this withLang($value)
  * @method array getVendors()
+ * @method array getTypes()
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method array getRequirementIds()
@@ -7401,6 +7365,21 @@ class ListCheckResult extends Rpc
 	    $this->data['Vendors'] = $vendors;
 		foreach ($vendors as $i => $iValue) {
 			$this->options['query']['Vendors.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $types
+     *
+     * @return $this
+     */
+	public function withTypes(array $types)
+	{
+	    $this->data['Types'] = $types;
+		foreach ($types as $i => $iValue) {
+			$this->options['query']['Types.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -7882,6 +7861,9 @@ class ListImageRisk extends Rpc
 }
 
 /**
+ * @method array getTypes()
+ * @method array getStandardIds()
+ * @method array getRequirementIds()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
@@ -7889,6 +7871,51 @@ class ListImageRisk extends Rpc
  */
 class ListInstanceCatalog extends Rpc
 {
+
+    /**
+     * @param array $types
+     *
+     * @return $this
+     */
+	public function withTypes(array $types)
+	{
+	    $this->data['Types'] = $types;
+		foreach ($types as $i => $iValue) {
+			$this->options['query']['Types.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $standardIds
+     *
+     * @return $this
+     */
+	public function withStandardIds(array $standardIds)
+	{
+	    $this->data['StandardIds'] = $standardIds;
+		foreach ($standardIds as $i => $iValue) {
+			$this->options['query']['StandardIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $requirementIds
+     *
+     * @return $this
+     */
+	public function withRequirementIds(array $requirementIds)
+	{
+	    $this->data['RequirementIds'] = $requirementIds;
+		foreach ($requirementIds as $i => $iValue) {
+			$this->options['query']['RequirementIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -7900,6 +7927,8 @@ class ListInstanceCatalog extends Rpc
  * @method $this withPageSize($value)
  * @method string getHistoryName()
  * @method $this withHistoryName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method array getInterceptionTypes()
  * @method string getEndTime()
  * @method $this withEndTime($value)
@@ -7925,14 +7954,6 @@ class ListInterceptionHistory extends Rpc
 
 		return $this;
     }
-}
-
-/**
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- */
-class ListInterceptionImage extends Rpc
-{
 }
 
 /**
@@ -8216,12 +8237,12 @@ class ListUninstallAegisMachines extends Rpc
 /**
  * @method string getWebPath()
  * @method $this withWebPath($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  */
 class ListUuidsByWebPath extends Rpc
 {
