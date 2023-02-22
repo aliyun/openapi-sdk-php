@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1698 - 2023-2-22
+- Release GenerateHumanAnimeStyleVideo.
+
+
 ## 1.8.1697 - 2023-2-22
 - Change DescribeLogstoreStorage Response.
 

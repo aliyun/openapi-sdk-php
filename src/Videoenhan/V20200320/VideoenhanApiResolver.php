@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnhanceVideoQuality enhanceVideoQuality(array $options = [])
  * @method EraseVideoLogo eraseVideoLogo(array $options = [])
  * @method EraseVideoSubtitles eraseVideoSubtitles(array $options = [])
+ * @method GenerateHumanAnimeStyleVideo generateHumanAnimeStyleVideo(array $options = [])
  * @method GenerateVideo generateVideo(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method InterpolateVideoFrame interpolateVideoFrame(array $options = [])
@@ -799,6 +800,54 @@ class EraseVideoSubtitles extends Rpc
     {
         $this->data['BY'] = $value;
         $this->options['form_params']['BY'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCartoonStyle()
+ * @method string getAsync()
+ * @method string getVideoUrl()
+ */
+class GenerateHumanAnimeStyleVideo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCartoonStyle($value)
+    {
+        $this->data['CartoonStyle'] = $value;
+        $this->options['form_params']['CartoonStyle'] = $value;
 
         return $this;
     }
