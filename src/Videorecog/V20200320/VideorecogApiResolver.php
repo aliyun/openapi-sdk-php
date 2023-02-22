@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DetectVideoShot detectVideoShot(array $options = [])
+ * @method EvaluateVideoQuality evaluateVideoQuality(array $options = [])
  * @method GenerateVideoCover generateVideoCover(array $options = [])
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method RecognizeVideoCastCrewList recognizeVideoCastCrewList(array $options = [])
@@ -37,6 +38,54 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class DetectVideoShot extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMode()
+ * @method string getAsync()
+ * @method string getVideoUrl()
+ */
+class EvaluateVideoQuality extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['form_params']['Mode'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

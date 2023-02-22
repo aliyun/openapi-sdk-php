@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1699 - 2023-2-22
+- Update EvaluateVideoQuality.
+
+
 ## 1.8.1698 - 2023-2-22
 - Release GenerateHumanAnimeStyleVideo.
 
