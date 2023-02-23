@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1700 - 2023-2-23
+- Get Job Instance Add RegionId.
+
+
 ## 1.8.1699 - 2023-2-22
 - Update EvaluateVideoQuality.
 
