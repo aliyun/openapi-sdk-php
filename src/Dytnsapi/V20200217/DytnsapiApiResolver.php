@@ -408,6 +408,8 @@ class PhoneNumberStatusForVoice extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getCertCode()
  * @method $this withCertCode($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()
@@ -432,6 +434,8 @@ class ThreeElementsVerification extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()
