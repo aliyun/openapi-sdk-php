@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1703 - 2023-2-25
+- Add SetCdnDomainSSLCertificate.
+
+
 ## 1.8.1702 - 2023-2-25
 - Update DescribeDcdnDomainUsageData.
 
