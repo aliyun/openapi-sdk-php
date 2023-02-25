@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1702 - 2023-2-25
+- Update DescribeDcdnDomainUsageData.
+
+
 ## 1.8.1701 - 2023-2-24
 - Change backend api.
 - Change to new api.

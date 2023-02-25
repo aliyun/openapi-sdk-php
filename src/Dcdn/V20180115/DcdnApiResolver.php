@@ -24,11 +24,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDcdnWafPolicy createDcdnWafPolicy(array $options = [])
  * @method CreateRoutine createRoutine(array $options = [])
  * @method CreateSlrAndSlsProject createSlrAndSlsProject(array $options = [])
- * @method DcdnHttpRequestTestTool dcdnHttpRequestTestTool(array $options = [])
  * @method DeleteDcdnDeliverTask deleteDcdnDeliverTask(array $options = [])
  * @method DeleteDcdnDomain deleteDcdnDomain(array $options = [])
  * @method DeleteDcdnIpaDomain deleteDcdnIpaDomain(array $options = [])
  * @method DeleteDcdnIpaSpecificConfig deleteDcdnIpaSpecificConfig(array $options = [])
+ * @method DeleteDcdnKv deleteDcdnKv(array $options = [])
  * @method DeleteDcdnRealTimeLogProject deleteDcdnRealTimeLogProject(array $options = [])
  * @method DeleteDcdnSpecificConfig deleteDcdnSpecificConfig(array $options = [])
  * @method DeleteDcdnSpecificStagingConfig deleteDcdnSpecificStagingConfig(array $options = [])
@@ -924,124 +924,6 @@ class CreateSlrAndSlsProject extends Rpc
 }
 
 /**
- * @method string getArgs()
- * @method string getProxyIp()
- * @method string getMethod()
- * @method string getScheme()
- * @method string getHost()
- * @method string getHeader()
- * @method string getBody()
- * @method string getUri()
- */
-class DcdnHttpRequestTestTool extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withArgs($value)
-    {
-        $this->data['Args'] = $value;
-        $this->options['form_params']['Args'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProxyIp($value)
-    {
-        $this->data['ProxyIp'] = $value;
-        $this->options['form_params']['ProxyIp'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMethod($value)
-    {
-        $this->data['Method'] = $value;
-        $this->options['form_params']['Method'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withScheme($value)
-    {
-        $this->data['Scheme'] = $value;
-        $this->options['form_params']['Scheme'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHost($value)
-    {
-        $this->data['Host'] = $value;
-        $this->options['form_params']['Host'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHeader($value)
-    {
-        $this->data['Header'] = $value;
-        $this->options['form_params']['Header'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBody($value)
-    {
-        $this->data['Body'] = $value;
-        $this->options['form_params']['Body'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUri($value)
-    {
-        $this->data['Uri'] = $value;
-        $this->options['form_params']['Uri'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getDeliverId()
  * @method $this withDeliverId($value)
  */
@@ -1088,6 +970,16 @@ class DeleteDcdnIpaDomain extends Rpc
  * @method $this withConfigId($value)
  */
 class DeleteDcdnIpaSpecificConfig extends Rpc
+{
+}
+
+/**
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class DeleteDcdnKv extends Rpc
 {
 }
 
@@ -1923,6 +1815,8 @@ class DescribeDcdnDomainTrafficData extends Rpc
  * @method $this withInterval($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getDataProtocol()
  * @method $this withDataProtocol($value)
  */
@@ -2948,6 +2842,7 @@ class ModifyDcdnWafPolicy extends Rpc
 
 /**
  * @method string getPolicyId()
+ * @method string getMethod()
  * @method string getBindDomains()
  * @method string getUnbindDomains()
  */
@@ -2963,6 +2858,19 @@ class ModifyDcdnWafPolicyDomains extends Rpc
     {
         $this->data['PolicyId'] = $value;
         $this->options['form_params']['PolicyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethod($value)
+    {
+        $this->data['Method'] = $value;
+        $this->options['form_params']['Method'] = $value;
 
         return $this;
     }
@@ -3079,6 +2987,8 @@ class OpenDcdnService extends Rpc
  * @method $this withL2Preload($value)
  * @method string getArea()
  * @method $this withArea($value)
+ * @method string getWithHeader()
+ * @method $this withWithHeader($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
