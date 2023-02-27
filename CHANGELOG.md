@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1704 - 2023-2-27
+- Update imgsearch.
+
+
 ## 1.8.1703 - 2023-2-25
 - Add SetCdnDomainSSLCertificate.
 
