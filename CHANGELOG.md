@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1705 - 2023-2-27
+- QuerySavingsPlansInstance api add status query param. 
+
+
+
 ## 1.8.1704 - 2023-2-27
 - Update imgsearch.
 

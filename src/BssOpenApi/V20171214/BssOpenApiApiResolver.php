@@ -2334,6 +2334,8 @@ class QuerySavingsPlansDiscount extends Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class QuerySavingsPlansInstance extends Rpc
 {
