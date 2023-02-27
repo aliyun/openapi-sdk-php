@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1707 - 2023-2-27
+- Support for deploy.
+
+
 ## 1.8.1706 - 2023-2-27
 - Sync new APIs.
 
