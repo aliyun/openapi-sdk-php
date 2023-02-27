@@ -256,6 +256,7 @@ class CreateAppGroup extends Rpc
  * @method string getParameters()
  * @method string getStatus()
  * @method string getNamespaceSource()
+ * @method string getTimezone()
  * @method string getDescription()
  * @method string getContent()
  * @method string getTimeout()
@@ -532,6 +533,19 @@ class CreateJob extends Rpc
     {
         $this->data['NamespaceSource'] = $value;
         $this->options['form_params']['NamespaceSource'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimezone($value)
+    {
+        $this->data['Timezone'] = $value;
+        $this->options['form_params']['Timezone'] = $value;
 
         return $this;
     }
@@ -1587,6 +1601,7 @@ class UpdateAppGroup extends Rpc
  * @method string getTimeType()
  * @method string getParameters()
  * @method string getNamespaceSource()
+ * @method string getTimezone()
  * @method string getDescription()
  * @method string getContent()
  * @method string getTimeout()
@@ -1850,6 +1865,19 @@ class UpdateJob extends Rpc
     {
         $this->data['NamespaceSource'] = $value;
         $this->options['form_params']['NamespaceSource'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTimezone($value)
+    {
+        $this->data['Timezone'] = $value;
+        $this->options['form_params']['Timezone'] = $value;
 
         return $this;
     }
