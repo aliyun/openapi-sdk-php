@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1706 - 2023-2-27
+- Sync new APIs.
+
+
 ## 1.8.1705 - 2023-2-27
 - QuerySavingsPlansInstance api add status query param. 
 

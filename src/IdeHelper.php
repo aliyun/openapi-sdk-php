@@ -123,6 +123,7 @@ namespace AlibabaCloud;
  * @method static Hitsdb\Hitsdb hitsdb()
  * @method static Hsm\Hsm hsm()
  * @method static Httpdns\Httpdns httpdns()
+ * @method static ICE\ICE iCE()
  * @method static IDST\IDST iDST()
  * @method static ITaaS\ITaaS iTaaS()
  * @method static IdaasDoraemon\IdaasDoraemon idaasDoraemon()
