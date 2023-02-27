@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1708 - 2023-2-27
+- Supported SDK AD for version-3.
+
+
 ## 1.8.1707 - 2023-2-27
 - Support for deploy.
 

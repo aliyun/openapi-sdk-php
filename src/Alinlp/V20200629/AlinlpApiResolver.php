@@ -5,6 +5,12 @@ namespace AlibabaCloud\Alinlp\V20200629;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method ADClock aDClock(array $options = [])
+ * @method ADMiniCog aDMiniCog(array $options = [])
+ * @method ADMiniCogResult aDMiniCogResult(array $options = [])
+ * @method ADMMU aDMMU(array $options = [])
+ * @method GetBrandChEcom getBrandChEcom(array $options = [])
+ * @method GetCateChEcom getCateChEcom(array $options = [])
  * @method GetCheckDuplicationChMedical getCheckDuplicationChMedical(array $options = [])
  * @method GetDiagnosisChMedical getDiagnosisChMedical(array $options = [])
  * @method GetDpChEcom getDpChEcom(array $options = [])
@@ -12,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDpChGeneralStanford getDpChGeneralStanford(array $options = [])
  * @method GetEcChGeneral getEcChGeneral(array $options = [])
  * @method GetEcEnGeneral getEcEnGeneral(array $options = [])
+ * @method GetItemPubChEcom getItemPubChEcom(array $options = [])
  * @method GetKeywordChEcom getKeywordChEcom(array $options = [])
  * @method GetKeywordEnEcom getKeywordEnEcom(array $options = [])
  * @method GetMedicineChMedical getMedicineChMedical(array $options = [])
@@ -22,10 +29,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetOperationChMedical getOperationChMedical(array $options = [])
  * @method GetPosChEcom getPosChEcom(array $options = [])
  * @method GetPosChGeneral getPosChGeneral(array $options = [])
+ * @method GetPriceChEcom getPriceChEcom(array $options = [])
  * @method GetSaChGeneral getSaChGeneral(array $options = [])
  * @method GetSaSeaEcom getSaSeaEcom(array $options = [])
  * @method GetSimilarityChMedical getSimilarityChMedical(array $options = [])
  * @method GetSummaryChEcom getSummaryChEcom(array $options = [])
+ * @method GetTableQAServiceInfoById getTableQAServiceInfoById(array $options = [])
  * @method GetTcChEcom getTcChEcom(array $options = [])
  * @method GetTcChGeneral getTcChGeneral(array $options = [])
  * @method GetTsChEcom getTsChEcom(array $options = [])
@@ -44,6 +53,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetWsCustomizedSeaEcom getWsCustomizedSeaEcom(array $options = [])
  * @method GetWsCustomizedSeaGeneral getWsCustomizedSeaGeneral(array $options = [])
  * @method OpenAlinlpService openAlinlpService(array $options = [])
+ * @method RequestTableQA requestTableQA(array $options = [])
+ * @method RequestTableQAOnline requestTableQAOnline(array $options = [])
  */
 class AlinlpApiResolver extends ApiResolver
 {
@@ -59,9 +70,240 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
 
-    /** @var string */
-    public $serviceCode = 'alinlp';
+/**
+ * @method string getParams()
+ * @method string getServiceCode()
+ */
+class ADClock extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getParams()
+ * @method string getServiceCode()
+ */
+class ADMiniCog extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getParams()
+ * @method string getServiceCode()
+ */
+class ADMiniCogResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getParams()
+ * @method string getServiceCode()
+ */
+class ADMMU extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getServiceCode()
+ * @method string getImageUrl()
+ * @method string getText()
+ */
+class GetBrandChEcom extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBusiness()
+ * @method $this withBusiness($value)
+ * @method string getServiceCode()
+ * @method string getImageUrl()
+ * @method string getText()
+ */
+class GetCateChEcom extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -318,10 +560,72 @@ class GetEcEnGeneral extends Rpc
 
 /**
  * @method string getServiceCode()
+ * @method string getImageUrl()
+ * @method string getText()
+ */
+class GetItemPubChEcom extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrl($value)
+    {
+        $this->data['ImageUrl'] = $value;
+        $this->options['form_params']['ImageUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getApiVersion()
+ * @method string getServiceCode()
  * @method string getText()
  */
 class GetKeywordChEcom extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiVersion($value)
+    {
+        $this->data['ApiVersion'] = $value;
+        $this->options['form_params']['ApiVersion'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -800,6 +1104,40 @@ class GetPosChGeneral extends Rpc
  * @method string getServiceCode()
  * @method string getText()
  */
+class GetPriceChEcom extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getServiceCode()
+ * @method string getText()
+ */
 class GetSaChGeneral extends Rpc
 {
 
@@ -955,6 +1293,40 @@ class GetSummaryChEcom extends Rpc
     {
         $this->data['Text'] = $value;
         $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getServiceCode()
+ * @method string getServiceId()
+ */
+class GetTableQAServiceInfoById extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceId($value)
+    {
+        $this->data['ServiceId'] = $value;
+        $this->options['form_params']['ServiceId'] = $value;
 
         return $this;
     }
@@ -2058,4 +2430,100 @@ class GetWsCustomizedSeaGeneral extends Rpc
 
 class OpenAlinlpService extends Rpc
 {
+}
+
+/**
+ * @method string getParams()
+ * @method string getServiceCode()
+ */
+class RequestTableQA extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getQuestion()
+ * @method string getParams()
+ * @method string getServiceCode()
+ * @method string getBotId()
+ */
+class RequestTableQAOnline extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withQuestion($value)
+    {
+        $this->data['Question'] = $value;
+        $this->options['form_params']['Question'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParams($value)
+    {
+        $this->data['Params'] = $value;
+        $this->options['form_params']['Params'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBotId($value)
+    {
+        $this->data['BotId'] = $value;
+        $this->options['form_params']['BotId'] = $value;
+
+        return $this;
+    }
 }
