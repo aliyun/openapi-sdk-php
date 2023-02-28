@@ -2677,6 +2677,8 @@ class DescribeLiveCertificateList extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -5339,6 +5341,8 @@ class ModifyCasterProgram extends Rpc
 }
 
 /**
+ * @method string getInputType()
+ * @method $this withInputType($value)
  * @method string getEndOffset()
  * @method $this withEndOffset($value)
  * @method string getMaterialId()
@@ -5907,6 +5911,8 @@ class SendLike extends Rpc
 
 /**
  * @method string getData()
+ * @method string getSkipAudit()
+ * @method $this withSkipAudit($value)
  * @method string getType()
  * @method string getOperatorUserId()
  * @method string getGroupId()
@@ -5983,6 +5989,8 @@ class SendMessageToGroup extends Rpc
 
 /**
  * @method string getData()
+ * @method string getSkipAudit()
+ * @method $this withSkipAudit($value)
  * @method string getType()
  * @method string getOperatorUserId()
  * @method string getReceiverIdList()
