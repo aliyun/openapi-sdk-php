@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1712 - 2023-3-1
+- Add jobResults params in GetSmartHandleJob API.
+
+
 ## 1.8.1711 - 2023-3-1
 - Change param invisible.
 

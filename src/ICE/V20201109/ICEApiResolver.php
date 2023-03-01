@@ -2081,10 +2081,10 @@ class QueryMediaCensorJobList extends Rpc
 }
 
 /**
- * @method string getParams()
- * @method $this withParams($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getParams()
+ * @method $this withParams($value)
  */
 class QuerySmarttagJob extends Rpc
 {
