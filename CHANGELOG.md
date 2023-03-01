@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1711 - 2023-3-1
+- Change param invisible.
+
+
 ## 1.8.1710 - 2023-2-28
 - Live sdk update.
 
