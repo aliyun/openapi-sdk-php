@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1719 - 2023-3-2
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1718 - 2023-3-2
 - Publish AssumeRole API With ExternalId Parameter.
 

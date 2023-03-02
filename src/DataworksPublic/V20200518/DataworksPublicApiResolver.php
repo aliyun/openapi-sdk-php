@@ -938,6 +938,8 @@ class CreateDagTest extends Rpc
  * @method string getApiDescription()
  * @method string getTimeout()
  * @method string getFolderId()
+ * @method string getResourceGroupId()
+ * @method string getSqlMode()
  * @method string getTenantId()
  * @method string getProtocols()
  * @method string getProjectId()
@@ -1014,6 +1016,32 @@ class CreateDataServiceApi extends Rpc
     {
         $this->data['FolderId'] = $value;
         $this->options['form_params']['FolderId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlMode($value)
+    {
+        $this->data['SqlMode'] = $value;
+        $this->options['form_params']['SqlMode'] = $value;
 
         return $this;
     }
@@ -11630,17 +11658,18 @@ class UpdateConnection extends Rpc
 /**
  * @method string getScriptDetails()
  * @method string getRequestMethod()
- * @method string getApiPath()
- * @method string getWizardDetails()
- * @method string getVisibleRange()
  * @method string getApiDescription()
  * @method string getTimeout()
- * @method string getRegistrationDetails()
+ * @method string getResourceGroupId()
  * @method string getTenantId()
  * @method string getProtocols()
  * @method string getProjectId()
- * @method string getApiId()
  * @method string getResponseContentType()
+ * @method string getApiPath()
+ * @method string getWizardDetails()
+ * @method string getVisibleRange()
+ * @method string getRegistrationDetails()
+ * @method string getApiId()
  */
 class UpdateDataServiceApi extends Rpc
 {
@@ -11676,45 +11705,6 @@ class UpdateDataServiceApi extends Rpc
      *
      * @return $this
      */
-    public function withApiPath($value)
-    {
-        $this->data['ApiPath'] = $value;
-        $this->options['form_params']['ApiPath'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWizardDetails($value)
-    {
-        $this->data['WizardDetails'] = $value;
-        $this->options['form_params']['WizardDetails'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVisibleRange($value)
-    {
-        $this->data['VisibleRange'] = $value;
-        $this->options['form_params']['VisibleRange'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withApiDescription($value)
     {
         $this->data['ApiDescription'] = $value;
@@ -11741,10 +11731,10 @@ class UpdateDataServiceApi extends Rpc
      *
      * @return $this
      */
-    public function withRegistrationDetails($value)
+    public function withResourceGroupId($value)
     {
-        $this->data['RegistrationDetails'] = $value;
-        $this->options['form_params']['RegistrationDetails'] = $value;
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -11793,10 +11783,10 @@ class UpdateDataServiceApi extends Rpc
      *
      * @return $this
      */
-    public function withApiId($value)
+    public function withResponseContentType($value)
     {
-        $this->data['ApiId'] = $value;
-        $this->options['form_params']['ApiId'] = $value;
+        $this->data['ResponseContentType'] = $value;
+        $this->options['form_params']['ResponseContentType'] = $value;
 
         return $this;
     }
@@ -11806,10 +11796,62 @@ class UpdateDataServiceApi extends Rpc
      *
      * @return $this
      */
-    public function withResponseContentType($value)
+    public function withApiPath($value)
     {
-        $this->data['ResponseContentType'] = $value;
-        $this->options['form_params']['ResponseContentType'] = $value;
+        $this->data['ApiPath'] = $value;
+        $this->options['form_params']['ApiPath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWizardDetails($value)
+    {
+        $this->data['WizardDetails'] = $value;
+        $this->options['form_params']['WizardDetails'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVisibleRange($value)
+    {
+        $this->data['VisibleRange'] = $value;
+        $this->options['form_params']['VisibleRange'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegistrationDetails($value)
+    {
+        $this->data['RegistrationDetails'] = $value;
+        $this->options['form_params']['RegistrationDetails'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiId($value)
+    {
+        $this->data['ApiId'] = $value;
+        $this->options['form_params']['ApiId'] = $value;
 
         return $this;
     }
