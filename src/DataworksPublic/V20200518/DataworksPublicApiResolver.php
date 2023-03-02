@@ -10056,6 +10056,7 @@ class ListTopics extends Rpc
 /**
  * @method string getTargetType()
  * @method string getTargetId()
+ * @method string getTargetUserId()
  */
 class MountDirectory extends Rpc
 {
@@ -10082,6 +10083,19 @@ class MountDirectory extends Rpc
     {
         $this->data['TargetId'] = $value;
         $this->options['form_params']['TargetId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUserId($value)
+    {
+        $this->data['TargetUserId'] = $value;
+        $this->options['form_params']['TargetUserId'] = $value;
 
         return $this;
     }
@@ -11271,6 +11285,7 @@ class TopTenErrorTimesInstance extends Rpc
 /**
  * @method string getTargetType()
  * @method string getTargetId()
+ * @method string getTargetUserId()
  */
 class UmountDirectory extends Rpc
 {
@@ -11297,6 +11312,19 @@ class UmountDirectory extends Rpc
     {
         $this->data['TargetId'] = $value;
         $this->options['form_params']['TargetId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetUserId($value)
+    {
+        $this->data['TargetUserId'] = $value;
+        $this->options['form_params']['TargetUserId'] = $value;
 
         return $this;
     }
