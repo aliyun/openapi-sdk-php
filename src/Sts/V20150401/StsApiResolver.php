@@ -30,6 +30,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getExternalId()
+ * @method $this withExternalId($value)
  * @method string getRoleSessionName()
  * @method $this withRoleSessionName($value)
  * @method string getPolicy()

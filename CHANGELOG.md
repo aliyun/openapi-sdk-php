@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1718 - 2023-3-2
+- Publish AssumeRole API With ExternalId Parameter.
+
+
 ## 1.8.1717 - 2023-3-2
 - Release.
 
