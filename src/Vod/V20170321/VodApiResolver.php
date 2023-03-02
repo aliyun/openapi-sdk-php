@@ -907,6 +907,8 @@ class DescribeVodDomainTrafficData extends Rpc
  * @method $this withOwnerId($value)
  * @method string getField()
  * @method $this withField($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeVodDomainUsageData extends Rpc
 {

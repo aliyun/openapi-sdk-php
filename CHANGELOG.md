@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1714 - 2023-3-2
+- Api DescribeVodDomainUsageData add parameter Interval.
+
+
 ## 1.8.1713 - 2023-3-2
 - Add new apis.
 - DescribeDatabaseInstances.
