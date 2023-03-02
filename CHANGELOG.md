@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 1.8.1713 - 2023-3-2
+- Add new apis.
+- DescribeDatabaseInstances.
+- StartDatabaseInstance.
+- StopDatabaseInstance.
+- RetartDatabaseInstance.
+- ResetDatabaseAccountPassword.
+- AllocatePublicConnection.
+- ReleasePublicConnection.
+- DescribeDatabaseInstanceMetricData.
+- DescribeDatabaseSlowLogRecords.
+- DescribeDatabaseErrorLogs.
+- DescribeDatabaseInstanceParameters.
+- ModifyDatabaseInstanceParameter.
+
+
 ## 1.8.1712 - 2023-3-1
 - Add jobResults params in GetSmartHandleJob API.
 

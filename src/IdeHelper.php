@@ -203,6 +203,7 @@ namespace AlibabaCloud;
  * @method static RetailadvqaPublic\RetailadvqaPublic retailadvqaPublic()
  * @method static Retailcloud\Retailcloud retailcloud()
  * @method static Rtc\Rtc rtc()
+ * @method static SWASOPEN\SWASOPEN sWASOPEN()
  * @method static Sae\Sae sae()
  * @method static Saf\Saf saf()
  * @method static Safconsole\Safconsole safconsole()
