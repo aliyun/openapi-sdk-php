@@ -265,6 +265,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDevicePropertiesData queryDevicePropertiesData(array $options = [])
  * @method QueryDevicePropertyData queryDevicePropertyData(array $options = [])
  * @method QueryDevicePropertyStatus queryDevicePropertyStatus(array $options = [])
+ * @method QueryDeviceProvisioning queryDeviceProvisioning(array $options = [])
  * @method QueryDeviceServiceData queryDeviceServiceData(array $options = [])
  * @method QueryDevicesHotStorageData queryDevicesHotStorageData(array $options = [])
  * @method QueryDevicesHotStorageDataStatus queryDevicesHotStorageDataStatus(array $options = [])
@@ -416,6 +417,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'iot';
 }
 
 /**
@@ -4342,7 +4346,6 @@ class CreateDeviceTunnel extends Rpc
  * @method string getFileConfig()
  * @method $this withFileConfig($value)
  * @method string getIotInstanceId()
- * @method string getContext()
  * @method string getTableName()
  * @method $this withTableName($value)
  * @method string getEndTime()
@@ -4364,19 +4367,6 @@ class CreateDownloadDataJob extends Rpc
     {
         $this->data['IotInstanceId'] = $value;
         $this->options['form_params']['IotInstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withContext($value)
-    {
-        $this->data['Context'] = $value;
-        $this->options['form_params']['Context'] = $value;
 
         return $this;
     }
@@ -14679,6 +14669,56 @@ class QueryDevicePropertyData extends Rpc
  */
 class QueryDevicePropertyStatus extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryDeviceProvisioning extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
