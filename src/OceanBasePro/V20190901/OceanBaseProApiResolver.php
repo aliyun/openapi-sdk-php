@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeInstanceCreatableZone describeInstanceCreatableZone(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
+ * @method DescribeInstanceSecurityConfigs describeInstanceSecurityConfigs(array $options = [])
  * @method DescribeInstanceTags describeInstanceTags(array $options = [])
  * @method DescribeInstanceTenantModes describeInstanceTenantModes(array $options = [])
  * @method DescribeInstanceTopology describeInstanceTopology(array $options = [])
@@ -46,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTenant describeTenant(array $options = [])
  * @method DescribeTenantMetrics describeTenantMetrics(array $options = [])
  * @method DescribeTenants describeTenants(array $options = [])
+ * @method DescribeTenantSecurityConfigs describeTenantSecurityConfigs(array $options = [])
  * @method DescribeTenantTags describeTenantTags(array $options = [])
  * @method DescribeTenantUserRoles describeTenantUserRoles(array $options = [])
  * @method DescribeTenantUsers describeTenantUsers(array $options = [])
@@ -1938,6 +1940,26 @@ class DescribeInstances extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ */
+class DescribeInstanceSecurityConfigs extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTags()
  * @method string getInstanceIds()
  */
@@ -3306,6 +3328,40 @@ class DescribeTenants extends Rpc
     {
         $this->data['TenantName'] = $value;
         $this->options['form_params']['TenantName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class DescribeTenantSecurityConfigs extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
 
         return $this;
     }

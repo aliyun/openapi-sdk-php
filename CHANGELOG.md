@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1723 - 2023-3-3
+- Update SDK.
+
+
 ## 1.8.1722 - 2023-3-3
 - Update EvaluateVideoQuality.
 
