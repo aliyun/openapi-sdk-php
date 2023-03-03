@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1721 - 2023-3-3
+- Release GenerateHumanAnimeStyleVideo.
+
+
 ## 1.8.1720 - 2023-3-2
 - Add a API QueryDeviceProvisioning to support query provisioning info for device.
 
