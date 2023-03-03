@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1724 - 2023-3-3
+- Update DescribeDcdnUserTags.
+
+
 ## 1.8.1723 - 2023-3-3
 - Update SDK.
 
