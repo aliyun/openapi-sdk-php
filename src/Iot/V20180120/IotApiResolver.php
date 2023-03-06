@@ -175,6 +175,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRule getRule(array $options = [])
  * @method GetRuleAction getRuleAction(array $options = [])
  * @method GetSceneRule getSceneRule(array $options = [])
+ * @method GetShareSpeechModelAudio getShareSpeechModelAudio(array $options = [])
  * @method GetShareTaskByDeviceOpen getShareTaskByDeviceOpen(array $options = [])
  * @method GetSoundCodeAudio getSoundCodeAudio(array $options = [])
  * @method GetSoundCodeSchedule getSoundCodeSchedule(array $options = [])
@@ -310,6 +311,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySoundCodeScheduleList querySoundCodeScheduleList(array $options = [])
  * @method QuerySpeech querySpeech(array $options = [])
  * @method QuerySpeechDevice querySpeechDevice(array $options = [])
+ * @method QuerySpeechLicenseAvailableQuota querySpeechLicenseAvailableQuota(array $options = [])
  * @method QuerySpeechLicenseDeviceList querySpeechLicenseDeviceList(array $options = [])
  * @method QuerySpeechList querySpeechList(array $options = [])
  * @method QuerySpeechPushJob querySpeechPushJob(array $options = [])
@@ -417,9 +419,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'iot';
 }
 
 /**
@@ -9829,6 +9828,84 @@ class GetSceneRule extends Rpc
 }
 
 /**
+ * @method string getIotInstanceId()
+ * @method string getShareTaskId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method array getSpeechModelCodeList()
+ */
+class GetShareSpeechModelAudio extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskId($value)
+    {
+        $this->data['ShareTaskId'] = $value;
+        $this->options['form_params']['ShareTaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $speechModelCodeList
+     *
+     * @return $this
+     */
+	public function withSpeechModelCodeList(array $speechModelCodeList)
+	{
+	    $this->data['SpeechModelCodeList'] = $speechModelCodeList;
+		foreach ($speechModelCodeList as $i => $iValue) {
+			$this->options['form_params']['SpeechModelCodeList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getIotId()
  * @method string getIotInstanceId()
  * @method string getProductKey()
@@ -17161,6 +17238,54 @@ class QuerySpeechDevice extends Rpc
     {
         $this->data['DeviceName'] = $value;
         $this->options['form_params']['DeviceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QuerySpeechLicenseAvailableQuota extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIotInstanceId($value)
+    {
+        $this->data['IotInstanceId'] = $value;
+        $this->options['form_params']['IotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
 
         return $this;
     }
