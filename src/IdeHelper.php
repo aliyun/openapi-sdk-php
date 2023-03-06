@@ -52,6 +52,7 @@ namespace AlibabaCloud;
  * @method static Chatbot\Chatbot chatbot()
  * @method static CloudAPI\CloudAPI cloudAPI()
  * @method static CloudPhoto\CloudPhoto cloudPhoto()
+ * @method static CloudSiem\CloudSiem cloudSiem()
  * @method static Cloudauth\Cloudauth cloudauth()
  * @method static CloudauthConsole\CloudauthConsole cloudauthConsole()
  * @method static Cloudesl\Cloudesl cloudesl()

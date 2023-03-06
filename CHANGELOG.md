@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1725 - 2023-3-6
+- Get the capicity which cloud siem user used until yesterday.
+
+
 ## 1.8.1724 - 2023-3-3
 - Update DescribeDcdnUserTags.
 
