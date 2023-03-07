@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1729 - 2023-3-7
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1728 - 2023-3-7
 - Support JobRetry parameters in SubmitJob API.
 

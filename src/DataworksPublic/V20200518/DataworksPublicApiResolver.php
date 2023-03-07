@@ -213,6 +213,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunManualDagNodes runManualDagNodes(array $options = [])
  * @method RunSmokeTest runSmokeTest(array $options = [])
  * @method RunTriggerNode runTriggerNode(array $options = [])
+ * @method SaveDataServiceApiTestResult saveDataServiceApiTestResult(array $options = [])
  * @method ScanSensitiveData scanSensitiveData(array $options = [])
  * @method SearchMetaTables searchMetaTables(array $options = [])
  * @method SearchNodesByOutput searchNodesByOutput(array $options = [])
@@ -10813,6 +10814,82 @@ class RunTriggerNode extends Rpc
     {
         $this->data['NodeId'] = $value;
         $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFailResultSample()
+ * @method string getResultSample()
+ * @method string getAutoGenerate()
+ * @method string getProjectId()
+ * @method string getApiId()
+ */
+class SaveDataServiceApiTestResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFailResultSample($value)
+    {
+        $this->data['FailResultSample'] = $value;
+        $this->options['form_params']['FailResultSample'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResultSample($value)
+    {
+        $this->data['ResultSample'] = $value;
+        $this->options['form_params']['ResultSample'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAutoGenerate($value)
+    {
+        $this->data['AutoGenerate'] = $value;
+        $this->options['form_params']['AutoGenerate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiId($value)
+    {
+        $this->data['ApiId'] = $value;
+        $this->options['form_params']['ApiId'] = $value;
 
         return $this;
     }
