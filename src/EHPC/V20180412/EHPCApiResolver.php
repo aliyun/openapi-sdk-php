@@ -256,6 +256,8 @@ class AddLocalNodes extends Rpc
  * @method $this withHostNameSuffix($value)
  * @method string getSync()
  * @method $this withSync($value)
+ * @method string getNetworkInterfaceTrafficMode()
+ * @method $this withNetworkInterfaceTrafficMode($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method string getComputeSpotDuration()
@@ -579,6 +581,8 @@ class ApplyNodes extends Rpc
  * @method $this withIsComputeEss($value)
  * @method string getRamRoleName()
  * @method $this withRamRoleName($value)
+ * @method string getNetworkInterfaceTrafficMode()
+ * @method $this withNetworkInterfaceTrafficMode($value)
  * @method string getPlugin()
  * @method $this withPlugin($value)
  * @method array getApplication()
@@ -3034,6 +3038,7 @@ class StopVisualService extends Rpc
  * @method $this withRunasUserPassword($value)
  * @method string getClockTime()
  * @method $this withClockTime($value)
+ * @method string getJobRetryPriority()
  * @method string getCommandLine()
  * @method $this withCommandLine($value)
  * @method string getJobQueue()
@@ -3046,6 +3051,7 @@ class StopVisualService extends Rpc
  * @method $this withPackagePath($value)
  * @method string getMem()
  * @method $this withMem($value)
+ * @method string getJobRetryCount()
  * @method string getStdoutRedirectPath()
  * @method $this withStdoutRedirectPath($value)
  * @method string getVariables()
@@ -3066,6 +3072,7 @@ class StopVisualService extends Rpc
  * @method $this withPriority($value)
  * @method string getGpu()
  * @method $this withGpu($value)
+ * @method string getJobRetryOnExitCode()
  * @method string getNode()
  * @method $this withNode($value)
  * @method string getAsync()
@@ -3081,6 +3088,45 @@ class StopVisualService extends Rpc
  */
 class SubmitJob extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobRetryPriority($value)
+    {
+        $this->data['JobRetryPriority'] = $value;
+        $this->options['query']['JobRetry.Priority'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobRetryCount($value)
+    {
+        $this->data['JobRetryCount'] = $value;
+        $this->options['query']['JobRetry.Count'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobRetryOnExitCode($value)
+    {
+        $this->data['JobRetryOnExitCode'] = $value;
+        $this->options['query']['JobRetry.OnExitCode'] = $value;
+
+        return $this;
+    }
 }
 
 /**
