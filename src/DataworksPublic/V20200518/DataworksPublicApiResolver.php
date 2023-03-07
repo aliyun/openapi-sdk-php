@@ -222,6 +222,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StartMigration startMigration(array $options = [])
  * @method StopDISyncInstance stopDISyncInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
+ * @method SubmitDataServiceApi submitDataServiceApi(array $options = [])
  * @method SubmitFile submitFile(array $options = [])
  * @method SuspendInstance suspendInstance(array $options = [])
  * @method TerminateDISyncInstance terminateDISyncInstance(array $options = [])
@@ -11023,6 +11024,54 @@ class StopInstance extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTenantId()
+ * @method string getProjectId()
+ * @method string getApiId()
+ */
+class SubmitDataServiceApi extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiId($value)
+    {
+        $this->data['ApiId'] = $value;
+        $this->options['form_params']['ApiId'] = $value;
 
         return $this;
     }

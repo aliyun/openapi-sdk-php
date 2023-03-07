@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1727 - 2023-3-7
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1726 - 2023-3-6
 - Iot_20180120 TeaDSL SDK.
 
