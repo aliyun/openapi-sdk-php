@@ -76,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRedeem queryRedeem(array $options = [])
  * @method QueryRelationList queryRelationList(array $options = [])
  * @method QueryResellerAvailableQuota queryResellerAvailableQuota(array $options = [])
+ * @method QueryResellerUserAlarmThreshold queryResellerUserAlarmThreshold(array $options = [])
  * @method QueryResourcePackageInstances queryResourcePackageInstances(array $options = [])
  * @method QueryRIUtilizationDetail queryRIUtilizationDetail(array $options = [])
  * @method QuerySavingsPlansDeductLog querySavingsPlansDeductLog(array $options = [])
@@ -2226,6 +2227,16 @@ class QueryRelationList extends Rpc
  * @method $this withOwnerId($value)
  */
 class QueryResellerAvailableQuota extends Rpc
+{
+}
+
+/**
+ * @method string getAlarmType()
+ * @method $this withAlarmType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryResellerUserAlarmThreshold extends Rpc
 {
 }
 

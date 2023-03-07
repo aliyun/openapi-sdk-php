@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1731 - 2023-3-7
+- QuerySavingsPlansInstance api add status query param. 
+
+
+
 ## 1.8.1730 - 2023-3-7
 - Supported java
 
