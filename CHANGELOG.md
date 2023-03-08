@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1733 - 2023-3-8
+- Supported java
+
+
 ## 1.8.1732 - 2023-3-8
 - offline Add word subtitle
 
