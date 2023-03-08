@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1732 - 2023-3-8
+- offline Add word subtitle
+
+
 ## 1.8.1731 - 2023-3-7
 - QuerySavingsPlansInstance api add status query param. 
 
