@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1735 - 2023-3-9
+- add FindUserReport4Alinlp Api.
+
+
 ## 1.8.1734 - 2023-3-8
 - Modify Output Field.
 

@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateAsyncPredict createAsyncPredict(array $options = [])
+ * @method FindUserReport4Alinlp findUserReport4Alinlp(array $options = [])
  * @method GetAsyncPredict getAsyncPredict(array $options = [])
  * @method GetPredictResult getPredictResult(array $options = [])
  * @method RunPreTrainService runPreTrainService(array $options = [])
@@ -195,6 +196,82 @@ class CreateAsyncPredict extends Rpc
     {
         $this->data['ModelVersion'] = $value;
         $this->options['form_params']['ModelVersion'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCustomerUserParentId()
+ * @method string getEndTime()
+ * @method string getBeginTime()
+ * @method string getType()
+ * @method string getModelType()
+ */
+class FindUserReport4Alinlp extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustomerUserParentId($value)
+    {
+        $this->data['CustomerUserParentId'] = $value;
+        $this->options['form_params']['CustomerUserParentId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBeginTime($value)
+    {
+        $this->data['BeginTime'] = $value;
+        $this->options['form_params']['BeginTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelType($value)
+    {
+        $this->data['ModelType'] = $value;
+        $this->options['form_params']['ModelType'] = $value;
 
         return $this;
     }
