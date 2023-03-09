@@ -6,6 +6,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AllocateClusterPublicConnection allocateClusterPublicConnection(array $options = [])
+ * @method ApplyAdviceById applyAdviceById(array $options = [])
+ * @method AttachUserENI attachUserENI(array $options = [])
+ * @method BatchApplyAdviceByIdList batchApplyAdviceByIdList(array $options = [])
  * @method BindDBResourceGroupWithUser bindDBResourceGroupWithUser(array $options = [])
  * @method BindDBResourcePoolWithUser bindDBResourcePoolWithUser(array $options = [])
  * @method CreateAccount createAccount(array $options = [])
@@ -19,29 +22,37 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDBResourcePool deleteDBResourcePool(array $options = [])
  * @method DeleteElasticPlan deleteElasticPlan(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
+ * @method DescribeAdviceServiceEnabled describeAdviceServiceEnabled(array $options = [])
  * @method DescribeAllAccounts describeAllAccounts(array $options = [])
  * @method DescribeAllDataSource describeAllDataSource(array $options = [])
+ * @method DescribeAppliedAdvices describeAppliedAdvices(array $options = [])
  * @method DescribeAuditLogConfig describeAuditLogConfig(array $options = [])
  * @method DescribeAuditLogRecords describeAuditLogRecords(array $options = [])
  * @method DescribeAutoRenewAttribute describeAutoRenewAttribute(array $options = [])
+ * @method DescribeAvailableAdvices describeAvailableAdvices(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
  * @method DescribeBackups describeBackups(array $options = [])
  * @method DescribeColumns describeColumns(array $options = [])
+ * @method DescribeComputeResource describeComputeResource(array $options = [])
  * @method DescribeConnectionCountRecords describeConnectionCountRecords(array $options = [])
  * @method DescribeDBClusterAccessWhiteList describeDBClusterAccessWhiteList(array $options = [])
  * @method DescribeDBClusterAttribute describeDBClusterAttribute(array $options = [])
- * @method DescribeDBClusterForecast describeDBClusterForecast(array $options = [])
- * @method DescribeDBClusterHealthReport describeDBClusterHealthReport(array $options = [])
+ * @method DescribeDBClusterHealthStatus describeDBClusterHealthStatus(array $options = [])
  * @method DescribeDBClusterNetInfo describeDBClusterNetInfo(array $options = [])
  * @method DescribeDBClusterPerformance describeDBClusterPerformance(array $options = [])
  * @method DescribeDBClusterResourcePoolPerformance describeDBClusterResourcePoolPerformance(array $options = [])
  * @method DescribeDBClusters describeDBClusters(array $options = [])
+ * @method DescribeDBClusterStatus describeDBClusterStatus(array $options = [])
  * @method DescribeDBResourceGroup describeDBResourceGroup(array $options = [])
  * @method DescribeDBResourcePool describeDBResourcePool(array $options = [])
  * @method DescribeDiagnosisDimensions describeDiagnosisDimensions(array $options = [])
+ * @method DescribeDiagnosisMonitorPerformance describeDiagnosisMonitorPerformance(array $options = [])
  * @method DescribeDiagnosisRecords describeDiagnosisRecords(array $options = [])
+ * @method DescribeDiagnosisSQLInfo describeDiagnosisSQLInfo(array $options = [])
+ * @method DescribeDiagnosisTasks describeDiagnosisTasks(array $options = [])
  * @method DescribeDownloadRecords describeDownloadRecords(array $options = [])
+ * @method DescribeEIURange describeEIURange(array $options = [])
  * @method DescribeElasticDailyPlan describeElasticDailyPlan(array $options = [])
  * @method DescribeElasticPlan describeElasticPlan(array $options = [])
  * @method DescribeInclinedTables describeInclinedTables(array $options = [])
@@ -65,7 +76,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTables describeTables(array $options = [])
  * @method DescribeTableStatistics describeTableStatistics(array $options = [])
  * @method DescribeTaskInfo describeTaskInfo(array $options = [])
+ * @method DetachUserENI detachUserENI(array $options = [])
+ * @method DisableAdviceService disableAdviceService(array $options = [])
  * @method DownloadDiagnosisRecords downloadDiagnosisRecords(array $options = [])
+ * @method EnableAdviceService enableAdviceService(array $options = [])
  * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
  * @method KillProcess killProcess(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
@@ -127,6 +141,46 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withOwnerId($value)
  */
 class AllocateClusterPublicConnection extends Rpc
+{
+}
+
+/**
+ * @method string getAdviceId()
+ * @method $this withAdviceId($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getAdviceDate()
+ * @method $this withAdviceDate($value)
+ */
+class ApplyAdviceById extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class AttachUserENI extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getAdviceIdList()
+ * @method $this withAdviceIdList($value)
+ * @method string getAdviceDate()
+ * @method $this withAdviceDate($value)
+ */
+class BatchApplyAdviceByIdList extends Rpc
 {
 }
 
@@ -305,12 +359,16 @@ class CreateDBResourcePool extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getElasticPlanType()
+ * @method $this withElasticPlanType($value)
  * @method string getElasticPlanTimeStart()
  * @method $this withElasticPlanTimeStart($value)
  * @method string getElasticPlanEndDay()
  * @method $this withElasticPlanEndDay($value)
  * @method string getElasticPlanWeeklyRepeat()
  * @method $this withElasticPlanWeeklyRepeat($value)
+ * @method string getElasticPlanWorkerSpec()
+ * @method $this withElasticPlanWorkerSpec($value)
  * @method string getElasticPlanEnable()
  * @method $this withElasticPlanEnable($value)
  * @method string getElasticPlanTimeEnd()
@@ -447,6 +505,14 @@ class DescribeAccounts extends Rpc
 }
 
 /**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class DescribeAdviceServiceEnabled extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -479,6 +545,24 @@ class DescribeAllAccounts extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeAllDataSource extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeAppliedAdvices extends Rpc
 {
 }
 
@@ -561,12 +645,30 @@ class DescribeAutoRenewAttribute extends Rpc
 }
 
 /**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAdviceDate()
+ * @method $this withAdviceDate($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeAvailableAdvices extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getDBClusterVersion()
+ * @method $this withDBClusterVersion($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getAcceptLanguage()
@@ -647,6 +749,24 @@ class DescribeColumns extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBClusterVersion()
+ * @method $this withDBClusterVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class DescribeComputeResource extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
@@ -691,24 +811,10 @@ class DescribeDBClusterAttribute extends Rpc
 }
 
 /**
- * @method string getMetricType()
- * @method $this withMetricType($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  */
-class DescribeDBClusterForecast extends Rpc
-{
-}
-
-/**
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- */
-class DescribeDBClusterHealthReport extends Rpc
+class DescribeDBClusterHealthStatus extends Rpc
 {
 }
 
@@ -794,6 +900,8 @@ class DescribeDBClusterResourcePoolPerformance extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getDBVersion()
+ * @method $this withDBVersion($value)
  * @method string getDBClusterIds()
  * @method $this withDBClusterIds($value)
  */
@@ -819,6 +927,20 @@ class DescribeDBClusters extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBClusterStatus extends Rpc
+{
 }
 
 /**
@@ -874,6 +996,22 @@ class DescribeDiagnosisDimensions extends Rpc
 }
 
 /**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getQueryCondition()
+ * @method $this withQueryCondition($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDiagnosisMonitorPerformance extends Rpc
+{
+}
+
+/**
  * @method string getQueryCondition()
  * @method $this withQueryCondition($value)
  * @method string getStartTime()
@@ -922,10 +1060,80 @@ class DescribeDiagnosisRecords extends Rpc
 /**
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
+ * @method string getProcessState()
+ * @method $this withProcessState($value)
+ * @method string getProcessStartTime()
+ * @method $this withProcessStartTime($value)
+ * @method string getProcessId()
+ * @method $this withProcessId($value)
+ * @method string getProcessRcHost()
+ * @method $this withProcessRcHost($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDiagnosisSQLInfo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getProcessId()
+ * @method $this withProcessId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getHost()
+ * @method $this withHost($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getStageId()
+ * @method $this withStageId($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ */
+class DescribeDiagnosisTasks extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
  * @method string getLang()
  * @method $this withLang($value)
  */
 class DescribeDownloadRecords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getDBClusterVersion()
+ * @method $this withDBClusterVersion($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getComputeResource()
+ * @method $this withComputeResource($value)
+ * @method string getOperation()
+ * @method $this withOperation($value)
+ */
+class DescribeEIURange extends Rpc
 {
 }
 
@@ -1416,40 +1624,72 @@ class DescribeTaskInfo extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DetachUserENI extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class DisableAdviceService extends Rpc
+{
+}
+
+/**
+ * @method string getQueryCondition()
+ * @method $this withQueryCondition($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getRawStartTime()
+ * @method $this withRawStartTime($value)
+ * @method string getRawEndTime()
+ * @method $this withRawEndTime($value)
+ * @method string getDatabase()
+ * @method $this withDatabase($value)
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getMaxScanSize()
  * @method $this withMaxScanSize($value)
  * @method string getResourceGroup()
  * @method $this withResourceGroup($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
- * @method string getQueryCondition()
- * @method $this withQueryCondition($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getRawStartTime()
- * @method $this withRawStartTime($value)
  * @method string getMinPeakMemory()
  * @method $this withMinPeakMemory($value)
- * @method string getRawEndTime()
- * @method $this withRawEndTime($value)
  * @method string getMinScanSize()
  * @method $this withMinScanSize($value)
- * @method string getDatabase()
- * @method $this withDatabase($value)
- * @method string getClientIp()
- * @method $this withClientIp($value)
  * @method string getMaxPeakMemory()
  * @method $this withMaxPeakMemory($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
- * @method string getLang()
- * @method $this withLang($value)
  * @method string getUserName()
  * @method $this withUserName($value)
  */
 class DownloadDiagnosisRecords extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class EnableAdviceService extends Rpc
 {
 }
 
@@ -1655,6 +1895,8 @@ class ModifyClusterConnectionString extends Rpc
 }
 
 /**
+ * @method string getElasticIOResourceSize()
+ * @method $this withElasticIOResourceSize($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getMode()
@@ -1665,6 +1907,8 @@ class ModifyClusterConnectionString extends Rpc
  * @method $this withDBNodeClass($value)
  * @method string getDBClusterCategory()
  * @method $this withDBClusterCategory($value)
+ * @method string getDiskPerformanceLevel()
+ * @method $this withDiskPerformanceLevel($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -1829,12 +2073,16 @@ class ModifyDBResourcePool extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getElasticPlanType()
+ * @method $this withElasticPlanType($value)
  * @method string getElasticPlanTimeStart()
  * @method $this withElasticPlanTimeStart($value)
  * @method string getElasticPlanEndDay()
  * @method $this withElasticPlanEndDay($value)
  * @method string getElasticPlanWeeklyRepeat()
  * @method $this withElasticPlanWeeklyRepeat($value)
+ * @method string getElasticPlanWorkerSpec()
+ * @method $this withElasticPlanWorkerSpec($value)
  * @method string getElasticPlanEnable()
  * @method $this withElasticPlanEnable($value)
  * @method string getElasticPlanTimeEnd()

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1736 - 2023-3-9
+- Support DryRunCLuster.
+- Support DescribeAvailableResource DescribeComputeResource DescribeEIURange For LakeVersion.
+
+
 ## 1.8.1735 - 2023-3-9
 - add FindUserReport4Alinlp Api.
 
