@@ -47,6 +47,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateBgpPeer createBgpPeer(array $options = [])
  * @method CreateCommonBandwidthPackage createCommonBandwidthPackage(array $options = [])
  * @method CreateCustomerGateway createCustomerGateway(array $options = [])
+ * @method CreateDefaultVpc createDefaultVpc(array $options = [])
+ * @method CreateDefaultVSwitch createDefaultVSwitch(array $options = [])
  * @method CreateDhcpOptionsSet createDhcpOptionsSet(array $options = [])
  * @method CreateExpressCloudConnection createExpressCloudConnection(array $options = [])
  * @method CreateFlowLog createFlowLog(array $options = [])
@@ -1518,6 +1520,66 @@ class CreateCustomerGateway extends Rpc
 }
 
 /**
+ * @method string getEnableDefaultVSwitch()
+ * @method $this withEnableDefaultVSwitch($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getEnableIpv6()
+ * @method $this withEnableIpv6($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIpv6CidrBlock()
+ * @method $this withIpv6CidrBlock($value)
+ * @method array getZoneId()
+ */
+class CreateDefaultVpc extends Rpc
+{
+
+    /**
+     * @param array $zoneId
+     *
+     * @return $this
+     */
+	public function withZoneId(array $zoneId)
+	{
+	    $this->data['ZoneId'] = $zoneId;
+		foreach ($zoneId as $i => $iValue) {
+			$this->options['query']['ZoneId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIpv6CidrBlock()
+ * @method $this withIpv6CidrBlock($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class CreateDefaultVSwitch extends Rpc
+{
+}
+
+/**
  * @method string getBootFileName()
  * @method $this withBootFileName($value)
  * @method string getResourceOwnerId()
@@ -1592,6 +1654,8 @@ class CreateExpressCloudConnection extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getProjectName()
@@ -1736,6 +1800,8 @@ class CreateGlobalAccelerationInstance extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1808,6 +1874,8 @@ class CreateIpsecServer extends Rpc
  * @method $this withClientToken($value)
  * @method string getIpv4GatewayName()
  * @method $this withIpv4GatewayName($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
@@ -1858,6 +1926,8 @@ class CreateIpv6EgressOnlyRule extends Rpc
  * @method $this withDescription($value)
  * @method string getSpec()
  * @method $this withSpec($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -2546,6 +2616,8 @@ class CreateSslVpnServer extends Rpc
  * @method array getIngressRules()
  * @method string getTrafficMirrorFilterName()
  * @method $this withTrafficMirrorFilterName($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method array getEgressRules()
  * @method string getDryRun()
  * @method $this withDryRun($value)
@@ -2733,6 +2805,8 @@ class CreateTrafficMirrorFilterRules extends Rpc
  * @method $this withClientToken($value)
  * @method string getEnabled()
  * @method $this withEnabled($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTrafficMirrorSessionName()
  * @method $this withTrafficMirrorSessionName($value)
  * @method string getTrafficMirrorSessionDescription()
@@ -4182,6 +4256,10 @@ class DeleteVirtualBorderRouter extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getForceDelete()
+ * @method $this withForceDelete($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -4650,6 +4728,8 @@ class DescribeEcGrantRelation extends Rpc
  * @method $this withSegmentInstanceId($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
+ * @method string getBandwidthPackageId()
+ * @method $this withBandwidthPackageId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -4808,6 +4888,8 @@ class DescribeEipSegment extends Rpc
  * @method $this withDescription($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceId()
@@ -4824,6 +4906,7 @@ class DescribeEipSegment extends Rpc
  * @method $this withOwnerId($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
+ * @method array getTags()
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getTrafficType()
@@ -4837,6 +4920,26 @@ class DescribeEipSegment extends Rpc
  */
 class DescribeFlowLogs extends Rpc
 {
+
+    /**
+     * @param array $tags
+     *
+     * @return $this
+     */
+	public function withTags(array $tags)
+	{
+	    $this->data['Tags'] = $tags;
+		foreach ($tags as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -4940,6 +5043,8 @@ class DescribeGrantRulesToCen extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
@@ -4948,10 +5053,31 @@ class DescribeGrantRulesToCen extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getTags()
  * @method array getFilter()
  */
 class DescribeHaVips extends Rpc
 {
+
+    /**
+     * @param array $tags
+     *
+     * @return $this
+     */
+	public function withTags(array $tags)
+	{
+	    $this->data['Tags'] = $tags;
+		foreach ($tags as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $filter
@@ -5077,6 +5203,8 @@ class DescribeIpv6GatewayAttribute extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
@@ -5085,6 +5213,7 @@ class DescribeIpv6GatewayAttribute extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getTags()
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getIpv6GatewayId()
@@ -5094,6 +5223,26 @@ class DescribeIpv6GatewayAttribute extends Rpc
  */
 class DescribeIpv6Gateways extends Rpc
 {
+
+    /**
+     * @param array $tags
+     *
+     * @return $this
+     */
+	public function withTags(array $tags)
+	{
+	    $this->data['Tags'] = $tags;
+		foreach ($tags as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -5332,11 +5481,32 @@ class DescribeNetworkAclAttributes extends Rpc
  * @method $this withOwnerId($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
+ * @method array getTags()
  * @method string getVpcId()
  * @method $this withVpcId($value)
  */
 class DescribeNetworkAcls extends Rpc
 {
+
+    /**
+     * @param array $tags
+     *
+     * @return $this
+     */
+	public function withTags(array $tags)
+	{
+	    $this->data['Tags'] = $tags;
+		foreach ($tags as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -7218,6 +7388,8 @@ class ListIpsecServers extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getIpv4GatewayName()
  * @method $this withIpv4GatewayName($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getIpv4GatewayId()
@@ -7228,6 +7400,7 @@ class ListIpsecServers extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getTags()
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getMaxResults()
@@ -7235,6 +7408,26 @@ class ListIpsecServers extends Rpc
  */
 class ListIpv4Gateways extends Rpc
 {
+
+    /**
+     * @param array $tags
+     *
+     * @return $this
+     */
+	public function withTags(array $tags)
+	{
+	    $this->data['Tags'] = $tags;
+		foreach ($tags as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -7537,11 +7730,11 @@ class ListTagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
 			}
 		}
 
@@ -7627,6 +7820,8 @@ class ListTagResourcesForExpressConnect extends Rpc
  * @method array getTrafficMirrorFilterIds()
  * @method string getTrafficMirrorFilterName()
  * @method $this withTrafficMirrorFilterName($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getResourceOwnerAccount()
@@ -7635,6 +7830,7 @@ class ListTagResourcesForExpressConnect extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getTags()
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
  */
@@ -7655,6 +7851,26 @@ class ListTrafficMirrorFilters extends Rpc
 
 		return $this;
     }
+
+    /**
+     * @param array $tags
+     *
+     * @return $this
+     */
+	public function withTags(array $tags)
+	{
+	    $this->data['Tags'] = $tags;
+		foreach ($tags as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -7664,6 +7880,8 @@ class ListTrafficMirrorFilters extends Rpc
  * @method $this withTrafficMirrorSourceId($value)
  * @method string getEnabled()
  * @method $this withEnabled($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTrafficMirrorSessionName()
  * @method $this withTrafficMirrorSessionName($value)
  * @method string getNextToken()
@@ -7681,6 +7899,7 @@ class ListTrafficMirrorFilters extends Rpc
  * @method $this withTrafficMirrorTargetId($value)
  * @method string getTrafficMirrorFilterId()
  * @method $this withTrafficMirrorFilterId($value)
+ * @method array getTags()
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
  * @method string getVirtualNetworkId()
@@ -7699,6 +7918,26 @@ class ListTrafficMirrorSessions extends Rpc
 	    $this->data['TrafficMirrorSessionIds'] = $trafficMirrorSessionIds;
 		foreach ($trafficMirrorSessionIds as $i => $iValue) {
 			$this->options['query']['TrafficMirrorSessionIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tags
+     *
+     * @return $this
+     */
+	public function withTags(array $tags)
+	{
+	    $this->data['Tags'] = $tags;
+		foreach ($tags as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tags.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -9662,11 +9901,11 @@ class TagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
 			}
 		}
 
@@ -9972,11 +10211,11 @@ class UnTagResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
 			}
 		}
 

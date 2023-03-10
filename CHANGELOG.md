@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1737 - 2023-3-10
+- Support create default VPC and create default vSwitch .
+
+
 ## 1.8.1736 - 2023-3-9
 - Support DryRunCLuster.
 - Support DescribeAvailableResource DescribeComputeResource DescribeEIURange For LakeVersion.
