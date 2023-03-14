@@ -88,6 +88,7 @@ namespace AlibabaCloud;
  * @method static Dybaseapi\Dybaseapi dybaseapi()
  * @method static Dyplsapi\Dyplsapi dyplsapi()
  * @method static Dypnsapi\Dypnsapi dypnsapi()
+ * @method static DypnsapiIntl\DypnsapiIntl dypnsapiIntl()
  * @method static Dysmsapi\Dysmsapi dysmsapi()
  * @method static Dytnsapi\Dytnsapi dytnsapi()
  * @method static Dyvmsapi\Dyvmsapi dyvmsapi()

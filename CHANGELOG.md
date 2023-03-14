@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1739 - 2023-3-14
+- Deploy for Dypnsapi-intl.
+
+
 ## 1.8.1738 - 2023-3-14
 - Update SplitVideoParts.
 
