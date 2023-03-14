@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1738 - 2023-3-14
+- Update SplitVideoParts.
+
+
 ## 1.8.1737 - 2023-3-10
 - Support create default VPC and create default vSwitch .
 

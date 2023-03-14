@@ -260,6 +260,8 @@ class RecognizeVideoCastCrewList extends Rpc
 
 /**
  * @method string getTemplate()
+ * @method string getMinTime()
+ * @method string getMaxTime()
  * @method string getAsync()
  * @method string getVideoUrl()
  */
@@ -275,6 +277,32 @@ class SplitVideoParts extends Rpc
     {
         $this->data['Template'] = $value;
         $this->options['form_params']['Template'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMinTime($value)
+    {
+        $this->data['MinTime'] = $value;
+        $this->options['form_params']['MinTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxTime($value)
+    {
+        $this->data['MaxTime'] = $value;
+        $this->options['form_params']['MaxTime'] = $value;
 
         return $this;
     }
