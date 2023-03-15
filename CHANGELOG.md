@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1740 - 2023-3-15
+- Update sdk.
+
+
 ## 1.8.1739 - 2023-3-14
 - Deploy for Dypnsapi-intl.
 
