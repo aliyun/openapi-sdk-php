@@ -209,6 +209,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['Trim'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Trim'] = $depth1Value['Trim'];
 			}
+			if(isset($depth1Value['AndroidMessageVivoCategory'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidMessageVivoCategory'] = $depth1Value['AndroidMessageVivoCategory'];
+			}
 			if(isset($depth1Value['AndroidNotifyType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotifyType'] = $depth1Value['AndroidNotifyType'];
 			}
@@ -278,6 +281,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSNotificationThreadId'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationThreadId'] = $depth1Value['IOSNotificationThreadId'];
 			}
+			if(isset($depth1Value['AndroidHuaweiTargetUserType'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidHuaweiTargetUserType'] = $depth1Value['AndroidHuaweiTargetUserType'];
+			}
 			if(isset($depth1Value['AndroidMusic'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidMusic'] = $depth1Value['AndroidMusic'];
 			}
@@ -316,6 +322,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['IOSExtParameters'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSExtParameters'] = $depth1Value['IOSExtParameters'];
+			}
+			if(isset($depth1Value['AndroidHuaweiReceiptId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidHuaweiReceiptId'] = $depth1Value['AndroidHuaweiReceiptId'];
 			}
 			if(isset($depth1Value['AndroidNotificationHonorChannel'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationHonorChannel'] = $depth1Value['AndroidNotificationHonorChannel'];
@@ -391,6 +400,8 @@ class MassPush extends Rpc
  * @method string getIOSRemindBody()
  * @method string getTrim()
  * @method $this withTrim($value)
+ * @method string getAndroidMessageVivoCategory()
+ * @method $this withAndroidMessageVivoCategory($value)
  * @method string getAndroidNotifyType()
  * @method $this withAndroidNotifyType($value)
  * @method string getAndroidPopupTitle()
@@ -431,6 +442,8 @@ class MassPush extends Rpc
  * @method $this withAndroidXiaomiBigPictureUrl($value)
  * @method string getIOSRemind()
  * @method string getIOSNotificationThreadId()
+ * @method string getAndroidHuaweiTargetUserType()
+ * @method $this withAndroidHuaweiTargetUserType($value)
  * @method string getAndroidMusic()
  * @method $this withAndroidMusic($value)
  * @method string getIOSNotificationCollapseId()
@@ -454,6 +467,8 @@ class MassPush extends Rpc
  * @method string getAndroidRenderStyle()
  * @method $this withAndroidRenderStyle($value)
  * @method string getIOSExtParameters()
+ * @method string getAndroidHuaweiReceiptId()
+ * @method $this withAndroidHuaweiReceiptId($value)
  * @method string getAndroidNotificationHonorChannel()
  * @method $this withAndroidNotificationHonorChannel($value)
  * @method string getAndroidXiaomiImageUrl()

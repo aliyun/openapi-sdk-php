@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1741 - 2023-3-15
+- Supported AndroidMessageVivoCategory for Push and MassPush.
+- Supported AndroidHuaweiTargetUserType, AndroidHuaweiReceiptId for Push and MassPush.
+
+
 ## 1.8.1740 - 2023-3-15
 - Update sdk.
 
