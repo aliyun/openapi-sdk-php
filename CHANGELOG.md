@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1742 - 2023-3-16
+- Increase flow control value for ListDbfs.
+- Fix errorcode.
+- Add ImageId for ListDbfsAttachableEcsInstances.
+- Support list snapshot links in batch.
+
+
 ## 1.8.1741 - 2023-3-15
 - Supported AndroidMessageVivoCategory for Push and MassPush.
 - Supported AndroidHuaweiTargetUserType, AndroidHuaweiReceiptId for Push and MassPush.

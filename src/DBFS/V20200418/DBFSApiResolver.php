@@ -55,6 +55,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'dbfs';
 }
 
 /**
@@ -393,8 +396,12 @@ class ListSnapshot extends Rpc
  * @method $this withPageNumber($value)
  * @method string getFilterKey()
  * @method $this withFilterKey($value)
+ * @method string getLinkIds()
+ * @method $this withLinkIds($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getFsIds()
+ * @method $this withFsIds($value)
  */
 class ListSnapshotLinks extends Rpc
 {
