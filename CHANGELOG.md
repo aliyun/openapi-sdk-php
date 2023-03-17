@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1743 - 2023-3-17
+- Support SnapShot API.
+
+
 ## 1.8.1742 - 2023-3-16
 - Increase flow control value for ListDbfs.
 - Fix errorcode.

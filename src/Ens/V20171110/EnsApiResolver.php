@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AttachEnsInstances attachEnsInstances(array $options = [])
  * @method AuthorizeSecurityGroup authorizeSecurityGroup(array $options = [])
  * @method AuthorizeSecurityGroupEgress authorizeSecurityGroupEgress(array $options = [])
+ * @method CleanDistData cleanDistData(array $options = [])
  * @method CreateApplication createApplication(array $options = [])
  * @method CreateARMServerInstances createARMServerInstances(array $options = [])
  * @method CreateClassicNetwork createClassicNetwork(array $options = [])
@@ -44,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateVSwitch createVSwitch(array $options = [])
  * @method DeleteApplication deleteApplication(array $options = [])
  * @method DeleteDeviceInternetPort deleteDeviceInternetPort(array $options = [])
+ * @method DeleteDisk deleteDisk(array $options = [])
  * @method DeleteEnsRouteEntry deleteEnsRouteEntry(array $options = [])
  * @method DeleteEpnInstance deleteEpnInstance(array $options = [])
  * @method DeleteFileSystem deleteFileSystem(array $options = [])
@@ -140,6 +142,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExportMeasurementData exportMeasurementData(array $options = [])
  * @method GetDeviceInternetPort getDeviceInternetPort(array $options = [])
  * @method GetOssStorageAndAccByBuckets getOssStorageAndAccByBuckets(array $options = [])
+ * @method GetOssUsageData getOssUsageData(array $options = [])
  * @method ImportKeyPair importKeyPair(array $options = [])
  * @method JoinPublicIpsToEpnInstance joinPublicIpsToEpnInstance(array $options = [])
  * @method JoinSecurityGroup joinSecurityGroup(array $options = [])
@@ -159,15 +162,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyPrepayInstanceSpec modifyPrepayInstanceSpec(array $options = [])
  * @method ModifySecurityGroupAttribute modifySecurityGroupAttribute(array $options = [])
  * @method ModifyVSwitchAttribute modifyVSwitchAttribute(array $options = [])
- * @method PreCreateEnsService preCreateEnsService(array $options = [])
  * @method PushApplicationData pushApplicationData(array $options = [])
  * @method RebootAICInstance rebootAICInstance(array $options = [])
  * @method RebootARMServerInstance rebootARMServerInstance(array $options = [])
  * @method RebootInstance rebootInstance(array $options = [])
  * @method RebootInstances rebootInstances(array $options = [])
+ * @method RecoverAICInstance recoverAICInstance(array $options = [])
  * @method ReInitDisk reInitDisk(array $options = [])
  * @method ReinitInstance reinitInstance(array $options = [])
  * @method ReinitInstances reinitInstances(array $options = [])
+ * @method ReleaseAICInstance releaseAICInstance(array $options = [])
  * @method ReleaseARMServerInstance releaseARMServerInstance(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
  * @method ReleasePostPaidInstance releasePostPaidInstance(array $options = [])
@@ -181,6 +185,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RescaleDeviceService rescaleDeviceService(array $options = [])
  * @method ResetAICInstance resetAICInstance(array $options = [])
  * @method ResetDeviceInstance resetDeviceInstance(array $options = [])
+ * @method ResetDisk resetDisk(array $options = [])
  * @method ResizeDisk resizeDisk(array $options = [])
  * @method RestartDeviceInstance restartDeviceInstance(array $options = [])
  * @method RevokeSecurityGroup revokeSecurityGroup(array $options = [])
@@ -363,6 +368,20 @@ class AuthorizeSecurityGroupEgress extends Rpc
 }
 
 /**
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getDataName()
+ * @method $this withDataName($value)
+ * @method string getDataVersion()
+ * @method $this withDataVersion($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class CleanDistData extends Rpc
+{
+}
+
+/**
  * @method string getTemplate()
  * @method $this withTemplate($value)
  * @method string getTimeout()
@@ -419,6 +438,8 @@ class CreateClassicNetwork extends Rpc
 }
 
 /**
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getEnsRegionId()
  * @method $this withEnsRegionId($value)
  * @method string getInstanceChargeType()
@@ -528,29 +549,17 @@ class CreateForwardEntry extends Rpc
 }
 
 /**
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getDeleteAfterImageUpload()
  * @method $this withDeleteAfterImageUpload($value)
  * @method string getImageName()
  * @method $this withImageName($value)
- * @method string getProduct()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class CreateImage extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProduct($value)
-    {
-        $this->data['Product'] = $value;
-        $this->options['query']['product'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -995,6 +1004,14 @@ class DeleteDeviceInternetPort extends Rpc
 }
 
 /**
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ */
+class DeleteDisk extends Rpc
+{
+}
+
+/**
  * @method string getRouteEntryId()
  * @method $this withRouteEntryId($value)
  */
@@ -1245,6 +1262,8 @@ class DescribeCreatePrePaidInstanceResult extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getEnsRegionIds()
+ * @method $this withEnsRegionIds($value)
  * @method string getMinDate()
  * @method $this withMinDate($value)
  * @method string getAppId()
@@ -1327,8 +1346,12 @@ class DescribeDeviceService extends Rpc
  * @method $this withDiskChargeType($value)
  * @method string getEnsRegionId()
  * @method $this withEnsRegionId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getStatus()
  * @method $this withStatus($value)
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1366,6 +1389,8 @@ class DescribeElbAvailableResourceInfo extends Rpc
 }
 
 /**
+ * @method string getEipName()
+ * @method $this withEipName($value)
  * @method string getEipAddress()
  * @method $this withEipAddress($value)
  * @method string getEnsRegionId()
@@ -1630,29 +1655,17 @@ class DescribeImageInfos extends Rpc
  * @method $this withStatus($value)
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getImageName()
  * @method $this withImageName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getProduct()
  */
 class DescribeImages extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProduct($value)
-    {
-        $this->data['Product'] = $value;
-        $this->options['query']['product'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -2116,6 +2129,8 @@ class DescribeSecurityGroups extends Rpc
 /**
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getImageName()
@@ -2278,6 +2293,23 @@ class GetDeviceInternetPort extends Rpc
  * @method $this withBucketList($value)
  */
 class GetOssStorageAndAccByBuckets extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBucket()
+ * @method $this withBucket($value)
+ */
+class GetOssUsageData extends Rpc
 {
 
     /** @var string */
@@ -2533,40 +2565,6 @@ class ModifyVSwitchAttribute extends Rpc
 }
 
 /**
- * @method string getBandwidthType()
- * @method $this withBandwidthType($value)
- * @method string getKeyPairName()
- * @method $this withKeyPairName($value)
- * @method string getPassword()
- * @method $this withPassword($value)
- * @method string getBuyResourcesDetail()
- * @method $this withBuyResourcesDetail($value)
- * @method string getSystemDiskSize()
- * @method $this withSystemDiskSize($value)
- * @method string getInstanceBandwithdLimit()
- * @method $this withInstanceBandwithdLimit($value)
- * @method string getEnsServiceName()
- * @method $this withEnsServiceName($value)
- * @method string getNetLevel()
- * @method $this withNetLevel($value)
- * @method string getDataDiskSize()
- * @method $this withDataDiskSize($value)
- * @method string getSchedulingPriceStrategy()
- * @method $this withSchedulingPriceStrategy($value)
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getInstanceSpec()
- * @method $this withInstanceSpec($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getSchedulingStrategy()
- * @method $this withSchedulingStrategy($value)
- */
-class PreCreateEnsService extends Rpc
-{
-}
-
-/**
  * @method string getData()
  * @method $this withData($value)
  * @method string getTimeout()
@@ -2620,6 +2618,17 @@ class RebootInstance extends Rpc
  */
 class RebootInstances extends Rpc
 {
+}
+
+/**
+ * @method string getServerId()
+ * @method $this withServerId($value)
+ */
+class RecoverAICInstance extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2689,6 +2698,14 @@ class ReinitInstance extends Rpc
  * @method $this withInstanceIds($value)
  */
 class ReinitInstances extends Rpc
+{
+}
+
+/**
+ * @method string getServerId()
+ * @method $this withServerId($value)
+ */
+class ReleaseAICInstance extends Rpc
 {
 }
 
@@ -2876,6 +2893,16 @@ class ResetDeviceInstance extends Rpc
 }
 
 /**
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ */
+class ResetDisk extends Rpc
+{
+}
+
+/**
  * @method string getDiskId()
  * @method $this withDiskId($value)
  * @method string getNewSize()
@@ -2997,6 +3024,8 @@ class RollbackApplication extends Rpc
  * @method $this withInternetMaxBandwidthOut($value)
  * @method string getUserData()
  * @method $this withUserData($value)
+ * @method string getPasswordInherit()
+ * @method $this withPasswordInherit($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getInstanceChargeType()
