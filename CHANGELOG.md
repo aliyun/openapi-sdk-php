@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1744 - 2023-3-17
+- Update by SDK platform.
+
+
 ## 1.8.1743 - 2023-3-17
 - Support SnapShot API.
 

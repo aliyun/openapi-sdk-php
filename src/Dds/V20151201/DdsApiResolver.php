@@ -1189,6 +1189,8 @@ class DescribeParameterModificationHistory extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtraParam()
+ * @method $this withExtraParam($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceId()
