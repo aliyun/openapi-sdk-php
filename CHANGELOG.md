@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1745 - 2023-3-20
+- Support DryRunCluster For LakeVersion.
+
+
 ## 1.8.1744 - 2023-3-17
 - Update by SDK platform.
 
