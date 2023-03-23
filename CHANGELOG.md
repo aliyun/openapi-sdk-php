@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1748 - 2023-3-23
+- Add FindUserReport4Alinlp Api.
+
+
 ## 1.8.1747 - 2023-3-22
 - Add ListAppInstances Open API.
 
