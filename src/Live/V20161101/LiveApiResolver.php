@@ -38,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddTrancodeSEI addTrancodeSEI(array $options = [])
  * @method AllowPushStream allowPushStream(array $options = [])
  * @method BatchDeleteLiveDomainConfigs batchDeleteLiveDomainConfigs(array $options = [])
+ * @method BatchGetOnlineUsers batchGetOnlineUsers(array $options = [])
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
  * @method CancelMuteAllGroupUser cancelMuteAllGroupUser(array $options = [])
  * @method CancelMuteGroupUser cancelMuteGroupUser(array $options = [])
@@ -46,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CopyCasterSceneConfig copyCasterSceneConfig(array $options = [])
  * @method CreateCaster createCaster(array $options = [])
  * @method CreateCustomTemplate createCustomTemplate(array $options = [])
+ * @method CreateLiveDelayConfig createLiveDelayConfig(array $options = [])
  * @method CreateLiveRealTimeLogDelivery createLiveRealTimeLogDelivery(array $options = [])
  * @method CreateLiveStreamMonitor createLiveStreamMonitor(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
@@ -67,6 +69,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveAudioAuditConfig deleteLiveAudioAuditConfig(array $options = [])
  * @method DeleteLiveAudioAuditNotifyConfig deleteLiveAudioAuditNotifyConfig(array $options = [])
  * @method DeleteLiveCenterTransfer deleteLiveCenterTransfer(array $options = [])
+ * @method DeleteLiveDelayConfig deleteLiveDelayConfig(array $options = [])
  * @method DeleteLiveDetectNotifyConfig deleteLiveDetectNotifyConfig(array $options = [])
  * @method DeleteLiveDomain deleteLiveDomain(array $options = [])
  * @method DeleteLiveDomainMapping deleteLiveDomainMapping(array $options = [])
@@ -117,6 +120,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveCenterTransfer describeLiveCenterTransfer(array $options = [])
  * @method DescribeLiveCertificateDetail describeLiveCertificateDetail(array $options = [])
  * @method DescribeLiveCertificateList describeLiveCertificateList(array $options = [])
+ * @method DescribeLiveDelayConfig describeLiveDelayConfig(array $options = [])
  * @method DescribeLiveDelayedStreamingUsage describeLiveDelayedStreamingUsage(array $options = [])
  * @method DescribeLiveDetectNotifyConfig describeLiveDetectNotifyConfig(array $options = [])
  * @method DescribeLiveDetectPornData describeLiveDetectPornData(array $options = [])
@@ -155,6 +159,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveRealtimeLogAuthorized describeLiveRealtimeLogAuthorized(array $options = [])
  * @method DescribeLiveRecordConfig describeLiveRecordConfig(array $options = [])
  * @method DescribeLiveRecordNotifyConfig describeLiveRecordNotifyConfig(array $options = [])
+ * @method DescribeLiveRecordNotifyRecords describeLiveRecordNotifyRecords(array $options = [])
  * @method DescribeLiveRecordVodConfigs describeLiveRecordVodConfigs(array $options = [])
  * @method DescribeLiveShiftConfigs describeLiveShiftConfigs(array $options = [])
  * @method DescribeLiveSnapshotConfig describeLiveSnapshotConfig(array $options = [])
@@ -227,6 +232,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InitializeAutoShowListTask initializeAutoShowListTask(array $options = [])
  * @method JoinMessageGroup joinMessageGroup(array $options = [])
  * @method LeaveMessageGroup leaveMessageGroup(array $options = [])
+ * @method ListLiveDelayConfig listLiveDelayConfig(array $options = [])
  * @method ListLiveRealtimeLogDelivery listLiveRealtimeLogDelivery(array $options = [])
  * @method ListLiveRealtimeLogDeliveryDomains listLiveRealtimeLogDeliveryDomains(array $options = [])
  * @method ListLiveRealtimeLogDeliveryInfos listLiveRealtimeLogDeliveryInfos(array $options = [])
@@ -296,6 +302,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveAudioAuditConfig updateLiveAudioAuditConfig(array $options = [])
  * @method UpdateLiveAudioAuditNotifyConfig updateLiveAudioAuditNotifyConfig(array $options = [])
  * @method UpdateLiveCenterTransfer updateLiveCenterTransfer(array $options = [])
+ * @method UpdateLiveDelayConfig updateLiveDelayConfig(array $options = [])
  * @method UpdateLiveDetectNotifyConfig updateLiveDetectNotifyConfig(array $options = [])
  * @method UpdateLivePullStreamInfoConfig updateLivePullStreamInfoConfig(array $options = [])
  * @method UpdateLiveRecordNotifyConfig updateLiveRecordNotifyConfig(array $options = [])
@@ -1358,6 +1365,54 @@ class BatchDeleteLiveDomainConfigs extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method string getUserIds()
+ * @method string getAppId()
+ */
+class BatchGetOnlineUsers extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserIds($value)
+    {
+        $this->data['UserIds'] = $value;
+        $this->options['form_params']['UserIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getFunctions()
  * @method $this withFunctions($value)
  * @method string getDomainNames()
@@ -1572,6 +1627,24 @@ class CreateCaster extends Rpc
  * @method $this withOwnerId($value)
  */
 class CreateCustomTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getDelayTime()
+ * @method $this withDelayTime($value)
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskTriggerMode()
+ * @method $this withTaskTriggerMode($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class CreateLiveDelayConfig extends Rpc
 {
 }
 
@@ -1941,6 +2014,20 @@ class DeleteLiveAudioAuditNotifyConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteLiveCenterTransfer extends Rpc
+{
+}
+
+/**
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DeleteLiveDelayConfig extends Rpc
 {
 }
 
@@ -2665,6 +2752,20 @@ class DescribeLiveCertificateList extends Rpc
 }
 
 /**
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeLiveDelayConfig extends Rpc
+{
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getStreamName()
@@ -3038,6 +3139,8 @@ class DescribeLiveDomainRecordData extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
  */
 class DescribeLiveDomainRecordUsageData extends Rpc
 {
@@ -3293,6 +3396,30 @@ class DescribeLiveRecordConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveRecordNotifyConfig extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeLiveRecordNotifyRecords extends Rpc
 {
 }
 
@@ -4717,6 +4844,20 @@ class LeaveMessageGroup extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class ListLiveDelayConfig extends Rpc
+{
 }
 
 /**
@@ -6671,6 +6812,9 @@ class UpdateCasterSceneAudio extends Rpc
 			if(isset($depth1Value['ValidChannel'])){
 				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.ValidChannel'] = $depth1Value['ValidChannel'];
 			}
+			if(isset($depth1Value['Filter'])){
+				$this->options['query']['AudioLayer.' . ($depth1 + 1) . '.Filter'] = $depth1Value['Filter'];
+			}
 		}
 
 		return $this;
@@ -6803,6 +6947,24 @@ class UpdateLiveAudioAuditNotifyConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class UpdateLiveCenterTransfer extends Rpc
+{
+}
+
+/**
+ * @method string getDelayTime()
+ * @method $this withDelayTime($value)
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskTriggerMode()
+ * @method $this withTaskTriggerMode($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class UpdateLiveDelayConfig extends Rpc
 {
 }
 
