@@ -155,6 +155,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserErStatus describeUserErStatus(array $options = [])
  * @method DescribeUserLogserviceStatus describeUserLogserviceStatus(array $options = [])
  * @method EditRoutineConf editRoutineConf(array $options = [])
+ * @method GetDcdnKv getDcdnKv(array $options = [])
  * @method ListDcdnRealTimeDeliveryProject listDcdnRealTimeDeliveryProject(array $options = [])
  * @method ModifyDCdnDomainSchdmByProperty modifyDCdnDomainSchdmByProperty(array $options = [])
  * @method ModifyDcdnWafPolicy modifyDcdnWafPolicy(array $options = [])
@@ -164,6 +165,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PreloadDcdnObjectCaches preloadDcdnObjectCaches(array $options = [])
  * @method PublishDcdnStagingConfigToProduction publishDcdnStagingConfigToProduction(array $options = [])
  * @method PublishRoutineCodeRevision publishRoutineCodeRevision(array $options = [])
+ * @method PutDcdnKv putDcdnKv(array $options = [])
  * @method RefreshDcdnObjectCaches refreshDcdnObjectCaches(array $options = [])
  * @method RollbackDcdnStagingConfig rollbackDcdnStagingConfig(array $options = [])
  * @method SetDcdnDomainCertificate setDcdnDomainCertificate(array $options = [])
@@ -2769,6 +2771,19 @@ class EditRoutineConf extends Rpc
 }
 
 /**
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class GetDcdnKv extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getPageSize()
@@ -3049,6 +3064,30 @@ class PublishRoutineCodeRevision extends Rpc
     {
         $this->data['Envs'] = $value;
         $this->options['form_params']['Envs'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ * @method string getValue()
+ * @method string getKey()
+ * @method $this withKey($value)
+ */
+class PutDcdnKv extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValue($value)
+    {
+        $this->data['Value'] = $value;
+        $this->options['form_params']['Value'] = $value;
 
         return $this;
     }

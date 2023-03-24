@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1750 - 2023-3-24
+- Add GetDcdnKv.
+
+
 ## 1.8.1749 - 2023-3-23
 - Live sdk update.
 
