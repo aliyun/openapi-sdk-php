@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1751 - 2023-3-27
+- Add dedicated block stroage cluster ModifyDiskSpec.
+- Support jumbo frame.
+
+
 ## 1.8.1750 - 2023-3-24
 - Add GetDcdnKv.
 

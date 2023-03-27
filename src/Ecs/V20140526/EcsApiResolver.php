@@ -660,6 +660,8 @@ class ApplyAutoSnapshotPolicy extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method array getIpv6Prefix()
  * @method string getIpv6PrefixCount()
  * @method $this withIpv6PrefixCount($value)
@@ -1360,6 +1362,7 @@ class CreateActivation extends Rpc
  * @method string getLaunchConfigurationImageId()
  * @method string getLaunchConfigurationResourceGroupId()
  * @method string getLaunchConfigurationPassword()
+ * @method string getLaunchConfigurationAutoReleaseTime()
  * @method string getPayAsYouGoAllocationStrategy()
  * @method $this withPayAsYouGoAllocationStrategy($value)
  * @method string getDefaultTargetCapacityType()
@@ -1571,6 +1574,19 @@ class CreateAutoProvisioningGroup extends Rpc
     {
         $this->data['LaunchConfigurationPassword'] = $value;
         $this->options['query']['LaunchConfiguration.Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLaunchConfigurationAutoReleaseTime($value)
+    {
+        $this->data['LaunchConfigurationAutoReleaseTime'] = $value;
+        $this->options['query']['LaunchConfiguration.AutoReleaseTime'] = $value;
 
         return $this;
     }
@@ -12403,6 +12419,8 @@ class ModifyInstanceAttachmentAttributes extends Rpc
  * @method $this withPassword($value)
  * @method string getHostName()
  * @method $this withHostName($value)
+ * @method string getEnableJumboFrame()
+ * @method $this withEnableJumboFrame($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -14585,6 +14603,8 @@ class RunCommand extends Rpc
  * @method string getSpotDuration()
  * @method $this withSpotDuration($value)
  * @method array getSecurityGroupIds()
+ * @method string getNetworkOptions()
+ * @method $this withNetworkOptions($value)
  * @method string getSystemDiskSize()
  * @method string getImageFamily()
  * @method $this withImageFamily($value)
@@ -15243,8 +15263,6 @@ class StartImagePipelineExecution extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getSourceRegionId()
- * @method $this withSourceRegionId($value)
  * @method string getInitLocalDisk()
  * @method $this withInitLocalDisk($value)
  * @method string getDryRun()
