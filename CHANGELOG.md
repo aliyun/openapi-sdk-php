@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1754 - 2023-3-28
+- Supported getUserUploadSign for user.
+
+
 ## 1.8.1753 - 2023-3-28
 - Release ReduceVideoNoise and EnhancePortraitVideo. 
 

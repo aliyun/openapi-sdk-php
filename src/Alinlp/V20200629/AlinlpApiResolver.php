@@ -38,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTcChEcom getTcChEcom(array $options = [])
  * @method GetTcChGeneral getTcChGeneral(array $options = [])
  * @method GetTsChEcom getTsChEcom(array $options = [])
+ * @method GetUserUploadSign getUserUploadSign(array $options = [])
  * @method GetWeChComment getWeChComment(array $options = [])
  * @method GetWeChEcom getWeChEcom(array $options = [])
  * @method GetWeChEntertainment getWeChEntertainment(array $options = [])
@@ -52,6 +53,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetWsCustomizedChO2O getWsCustomizedChO2O(array $options = [])
  * @method GetWsCustomizedSeaEcom getWsCustomizedSeaEcom(array $options = [])
  * @method GetWsCustomizedSeaGeneral getWsCustomizedSeaGeneral(array $options = [])
+ * @method InsertCustom insertCustom(array $options = [])
  * @method OpenAlinlpService openAlinlpService(array $options = [])
  * @method RequestTableQA requestTableQA(array $options = [])
  * @method RequestTableQAOnline requestTableQAOnline(array $options = [])
@@ -70,6 +72,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'alinlp';
 }
 
 /**
@@ -1463,6 +1468,26 @@ class GetTsChEcom extends Rpc
 }
 
 /**
+ * @method string getServiceCode()
+ */
+class GetUserUploadSign extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getType()
  * @method string getServiceCode()
  * @method string getSize()
@@ -2423,6 +2448,96 @@ class GetWsCustomizedSeaGeneral extends Rpc
     {
         $this->data['Text'] = $value;
         $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCustomUrl()
+ * @method string getRegUrl()
+ * @method string getServiceCode()
+ * @method string getRegFileName()
+ * @method string getCustomFileName()
+ * @method string getApiId()
+ */
+class InsertCustom extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustomUrl($value)
+    {
+        $this->data['CustomUrl'] = $value;
+        $this->options['form_params']['CustomUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegUrl($value)
+    {
+        $this->data['RegUrl'] = $value;
+        $this->options['form_params']['RegUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceCode($value)
+    {
+        $this->data['ServiceCode'] = $value;
+        $this->options['form_params']['ServiceCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegFileName($value)
+    {
+        $this->data['RegFileName'] = $value;
+        $this->options['form_params']['RegFileName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustomFileName($value)
+    {
+        $this->data['CustomFileName'] = $value;
+        $this->options['form_params']['CustomFileName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiId($value)
+    {
+        $this->data['ApiId'] = $value;
+        $this->options['form_params']['ApiId'] = $value;
 
         return $this;
     }
