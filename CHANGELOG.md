@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1753 - 2023-3-28
+- Release ReduceVideoNoise and EnhancePortraitVideo. 
+
+
 ## 1.8.1752 - 2023-3-28
 - Add new API for querying the sample logs of PTS debug plan.
 - Add new return field for global header to PTS scene.

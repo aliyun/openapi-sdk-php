@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeVideoSize changeVideoSize(array $options = [])
  * @method ConvertHdrVideo convertHdrVideo(array $options = [])
  * @method DeleteFaceVideoTemplate deleteFaceVideoTemplate(array $options = [])
+ * @method EnhancePortraitVideo enhancePortraitVideo(array $options = [])
  * @method EnhanceVideoQuality enhanceVideoQuality(array $options = [])
  * @method EraseVideoLogo eraseVideoLogo(array $options = [])
  * @method EraseVideoSubtitles eraseVideoSubtitles(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method MergeVideoFace mergeVideoFace(array $options = [])
  * @method MergeVideoModelFace mergeVideoModelFace(array $options = [])
  * @method QueryFaceVideoTemplate queryFaceVideoTemplate(array $options = [])
+ * @method ReduceVideoNoise reduceVideoNoise(array $options = [])
  * @method SuperResolveVideo superResolveVideo(array $options = [])
  * @method ToneSdrVideo toneSdrVideo(array $options = [])
  */
@@ -557,6 +559,40 @@ class DeleteFaceVideoTemplate extends Rpc
     {
         $this->data['TemplateId'] = $value;
         $this->options['form_params']['TemplateId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAsync()
+ * @method string getVideoUrl()
+ */
+class EnhancePortraitVideo extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
 
         return $this;
     }
@@ -1291,6 +1327,40 @@ class MergeVideoModelFace extends Rpc
  */
 class QueryFaceVideoTemplate extends Rpc
 {
+}
+
+/**
+ * @method string getAsync()
+ * @method string getVideoUrl()
+ */
+class ReduceVideoNoise extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAsync($value)
+    {
+        $this->data['Async'] = $value;
+        $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoUrl($value)
+    {
+        $this->data['VideoUrl'] = $value;
+        $this->options['form_params']['VideoUrl'] = $value;
+
+        return $this;
+    }
 }
 
 /**
