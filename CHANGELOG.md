@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1752 - 2023-3-28
+- Add new API for querying the sample logs of PTS debug plan.
+- Add new return field for global header to PTS scene.
+
+
 ## 1.8.1751 - 2023-3-27
 - Add dedicated block stroage cluster ModifyDiskSpec.
 - Support jumbo frame.
