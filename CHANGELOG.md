@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1756 - 2023-3-29
+- Change visibility of param ActionType in DescribeImageSupportInstanceTypes.
+
+
 ## 1.8.1755 - 2023-3-29
 - Delete SetConfigOfVersion.
 
