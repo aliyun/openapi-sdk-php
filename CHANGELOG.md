@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1755 - 2023-3-29
+- Delete SetConfigOfVersion.
+
+
 ## 1.8.1754 - 2023-3-28
 - Supported getUserUploadSign for user.
 
