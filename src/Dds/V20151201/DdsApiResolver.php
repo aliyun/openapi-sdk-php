@@ -11,10 +11,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckRecoveryCondition checkRecoveryCondition(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
  * @method CreateDBInstance createDBInstance(array $options = [])
+ * @method CreateGlobalSecurityIPGroup createGlobalSecurityIPGroup(array $options = [])
  * @method CreateNode createNode(array $options = [])
  * @method CreateNodeBatch createNodeBatch(array $options = [])
  * @method CreateShardingDBInstance createShardingDBInstance(array $options = [])
  * @method DeleteDBInstance deleteDBInstance(array $options = [])
+ * @method DeleteGlobalSecurityIPGroup deleteGlobalSecurityIPGroup(array $options = [])
  * @method DeleteNode deleteNode(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method DescribeActiveOperationTaskCount describeActiveOperationTaskCount(array $options = [])
@@ -36,6 +38,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBInstanceSSL describeDBInstanceSSL(array $options = [])
  * @method DescribeDBInstanceTDEInfo describeDBInstanceTDEInfo(array $options = [])
  * @method DescribeErrorLogRecords describeErrorLogRecords(array $options = [])
+ * @method DescribeGlobalSecurityIPGroup describeGlobalSecurityIPGroup(array $options = [])
+ * @method DescribeGlobalSecurityIPGroupRelation describeGlobalSecurityIPGroupRelation(array $options = [])
  * @method DescribeInstanceAutoRenewalAttribute describeInstanceAutoRenewalAttribute(array $options = [])
  * @method DescribeKernelReleaseNotes describeKernelReleaseNotes(array $options = [])
  * @method DescribeMongoDBLogConfig describeMongoDBLogConfig(array $options = [])
@@ -72,6 +76,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBInstanceSpec modifyDBInstanceSpec(array $options = [])
  * @method ModifyDBInstanceSSL modifyDBInstanceSSL(array $options = [])
  * @method ModifyDBInstanceTDE modifyDBInstanceTDE(array $options = [])
+ * @method ModifyGlobalSecurityIPGroup modifyGlobalSecurityIPGroup(array $options = [])
+ * @method ModifyGlobalSecurityIPGroupName modifyGlobalSecurityIPGroupName(array $options = [])
+ * @method ModifyGlobalSecurityIPGroupRelation modifyGlobalSecurityIPGroupRelation(array $options = [])
  * @method ModifyInstanceAutoRenewalAttribute modifyInstanceAutoRenewalAttribute(array $options = [])
  * @method ModifyInstanceVpcAuthMode modifyInstanceVpcAuthMode(array $options = [])
  * @method ModifyNodeSpec modifyNodeSpec(array $options = [])
@@ -247,6 +254,8 @@ class CreateBackup extends Rpc
  * @method string getDBInstanceDescription()
  * @method $this withDBInstanceDescription($value)
  * @method array getTag()
+ * @method string getGlobalSecurityGroupIds()
+ * @method $this withGlobalSecurityGroupIds($value)
  * @method string getBusinessInfo()
  * @method $this withBusinessInfo($value)
  * @method string getPeriod()
@@ -318,6 +327,32 @@ class CreateDBInstance extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getGIpList()
+ * @method $this withGIpList($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSecurityIPType()
+ * @method $this withSecurityIPType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getWhitelistNetType()
+ * @method $this withWhitelistNetType($value)
+ * @method string getGlobalIgName()
+ * @method $this withGlobalIgName($value)
+ */
+class CreateGlobalSecurityIPGroup extends Rpc
+{
 }
 
 /**
@@ -416,6 +451,8 @@ class CreateNodeBatch extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceDescription()
  * @method $this withDBInstanceDescription($value)
+ * @method string getGlobalSecurityGroupIds()
+ * @method $this withGlobalSecurityGroupIds($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method array getConfigServer()
@@ -536,6 +573,28 @@ class CreateShardingDBInstance extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteDBInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getGlobalSecurityGroupId()
+ * @method $this withGlobalSecurityGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getGlobalIgName()
+ * @method $this withGlobalIgName($value)
+ */
+class DeleteGlobalSecurityIPGroup extends Rpc
 {
 }
 
@@ -1098,6 +1157,52 @@ class DescribeDBInstanceTDEInfo extends Rpc
  */
 class DescribeErrorLogRecords extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getGlobalSecurityGroupId()
+ * @method $this withGlobalSecurityGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeGlobalSecurityIPGroup extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeGlobalSecurityIPGroupRelation extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1780,6 +1885,8 @@ class ModifyBackupPolicy extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getNewPort()
+ * @method $this withNewPort($value)
  * @method string getNewConnectionString()
  * @method $this withNewConnectionString($value)
  * @method string getOwnerId()
@@ -1988,6 +2095,78 @@ class ModifyDBInstanceSSL extends Rpc
  * @method $this withTDEStatus($value)
  */
 class ModifyDBInstanceTDE extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getGIpList()
+ * @method $this withGIpList($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getGlobalSecurityGroupId()
+ * @method $this withGlobalSecurityGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSecurityIPType()
+ * @method $this withSecurityIPType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getWhitelistNetType()
+ * @method $this withWhitelistNetType($value)
+ * @method string getGlobalIgName()
+ * @method $this withGlobalIgName($value)
+ */
+class ModifyGlobalSecurityIPGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getGlobalSecurityGroupId()
+ * @method $this withGlobalSecurityGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getGlobalIgName()
+ * @method $this withGlobalIgName($value)
+ */
+class ModifyGlobalSecurityIPGroupName extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getGlobalSecurityGroupId()
+ * @method $this withGlobalSecurityGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyGlobalSecurityIPGroupRelation extends Rpc
 {
 }
 
@@ -2288,6 +2467,8 @@ class RenewDBInstance extends Rpc
  * @method $this withOwnerId($value)
  * @method string getAccountPassword()
  * @method $this withAccountPassword($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
  */
 class ResetAccountPassword extends Rpc
 {

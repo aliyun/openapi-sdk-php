@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1760 - 2023-3-31
+- Update by SDK platform.
+
+
 ## 1.8.1759 - 2023-3-31
 - Generated 2020-05-18 for `dataworks-public`.
 
