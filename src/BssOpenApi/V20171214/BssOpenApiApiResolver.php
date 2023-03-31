@@ -487,6 +487,8 @@ class CreateResourcePackage extends Rpc
  * @method $this withDuration($value)
  * @method string getSpecType()
  * @method $this withSpecType($value)
+ * @method string getExtendMap()
+ * @method $this withExtendMap($value)
  * @method string getPayMode()
  * @method $this withPayMode($value)
  * @method string getRegion()

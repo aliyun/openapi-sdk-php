@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1758 - 2023-3-31
+- QuerySavingsPlansInstance api add rest pool value query param. 
+
+
 ## 1.8.1757 - 2023-3-29
 - Delete DescribeConfigOfVersion.
 
