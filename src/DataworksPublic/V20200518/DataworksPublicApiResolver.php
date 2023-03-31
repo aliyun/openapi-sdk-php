@@ -943,6 +943,7 @@ class CreateDagTest extends Rpc
  * @method string getResourceGroupId()
  * @method string getSqlMode()
  * @method string getTenantId()
+ * @method string getRequestContentType()
  * @method string getProtocols()
  * @method string getProjectId()
  * @method string getResponseContentType()
@@ -1057,6 +1058,19 @@ class CreateDataServiceApi extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestContentType($value)
+    {
+        $this->data['RequestContentType'] = $value;
+        $this->options['form_params']['RequestContentType'] = $value;
 
         return $this;
     }
@@ -2386,6 +2400,7 @@ class CreateProjectMember extends Rpc
  * @method string getMatchExpression()
  * @method string getEnvType()
  * @method string getTableName()
+ * @method string getProjectId()
  */
 class CreateQualityEntity extends Rpc
 {
@@ -2454,6 +2469,19 @@ class CreateQualityEntity extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2461,6 +2489,7 @@ class CreateQualityEntity extends Rpc
  * @method string getFollower()
  * @method string getEntityId()
  * @method string getAlarmMode()
+ * @method string getProjectId()
  */
 class CreateQualityFollower extends Rpc
 {
@@ -2513,6 +2542,19 @@ class CreateQualityFollower extends Rpc
     {
         $this->data['AlarmMode'] = $value;
         $this->options['form_params']['AlarmMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -2646,6 +2688,7 @@ class CreateQualityRelativeNode extends Rpc
  * @method string getOperator()
  * @method string getProperty()
  * @method string getWarningThreshold()
+ * @method string getProjectId()
  * @method string getMethodName()
  * @method string getProjectName()
  * @method string getRuleType()
@@ -2772,6 +2815,19 @@ class CreateQualityRule extends Rpc
     {
         $this->data['WarningThreshold'] = $value;
         $this->options['form_params']['WarningThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -3816,8 +3872,9 @@ class DeleteProjectMember extends Rpc
 
 /**
  * @method string getProjectName()
- * @method string getEnvType()
  * @method string getEntityId()
+ * @method string getEnvType()
+ * @method string getProjectId()
  */
 class DeleteQualityEntity extends Rpc
 {
@@ -3840,6 +3897,19 @@ class DeleteQualityEntity extends Rpc
      *
      * @return $this
      */
+    public function withEntityId($value)
+    {
+        $this->data['EntityId'] = $value;
+        $this->options['form_params']['EntityId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withEnvType($value)
     {
         $this->data['EnvType'] = $value;
@@ -3853,10 +3923,10 @@ class DeleteQualityEntity extends Rpc
      *
      * @return $this
      */
-    public function withEntityId($value)
+    public function withProjectId($value)
     {
-        $this->data['EntityId'] = $value;
-        $this->options['form_params']['EntityId'] = $value;
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -3865,6 +3935,7 @@ class DeleteQualityEntity extends Rpc
 /**
  * @method string getProjectName()
  * @method string getFollowerId()
+ * @method string getProjectId()
  */
 class DeleteQualityFollower extends Rpc
 {
@@ -3891,6 +3962,19 @@ class DeleteQualityFollower extends Rpc
     {
         $this->data['FollowerId'] = $value;
         $this->options['form_params']['FollowerId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -4017,6 +4101,7 @@ class DeleteQualityRelativeNode extends Rpc
 /**
  * @method string getProjectName()
  * @method string getRuleId()
+ * @method string getProjectId()
  */
 class DeleteQualityRule extends Rpc
 {
@@ -4043,6 +4128,19 @@ class DeleteQualityRule extends Rpc
     {
         $this->data['RuleId'] = $value;
         $this->options['form_params']['RuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -6341,6 +6439,7 @@ class GetProjectDetail extends Rpc
  * @method string getMatchExpression()
  * @method string getEnvType()
  * @method string getTableName()
+ * @method string getProjectId()
  */
 class GetQualityEntity extends Rpc
 {
@@ -6396,11 +6495,25 @@ class GetQualityEntity extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getProjectName()
  * @method string getEntityId()
+ * @method string getProjectId()
  */
 class GetQualityFollower extends Rpc
 {
@@ -6430,11 +6543,25 @@ class GetQualityFollower extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getProjectName()
  * @method string getRuleId()
+ * @method string getProjectId()
  */
 class GetQualityRule extends Rpc
 {
@@ -6461,6 +6588,19 @@ class GetQualityRule extends Rpc
     {
         $this->data['RuleId'] = $value;
         $this->options['form_params']['RuleId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -9384,6 +9524,7 @@ class ListProjects extends Rpc
  * @method string getPageNumber()
  * @method string getEndDate()
  * @method string getPageSize()
+ * @method string getProjectId()
  */
 class ListQualityResultsByEntity extends Rpc
 {
@@ -9465,6 +9606,19 @@ class ListQualityResultsByEntity extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -9474,6 +9628,7 @@ class ListQualityResultsByEntity extends Rpc
  * @method string getEndDate()
  * @method string getPageSize()
  * @method string getRuleId()
+ * @method string getProjectId()
  */
 class ListQualityResultsByRule extends Rpc
 {
@@ -9555,6 +9710,19 @@ class ListQualityResultsByRule extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -9562,6 +9730,7 @@ class ListQualityResultsByRule extends Rpc
  * @method string getEntityId()
  * @method string getPageNumber()
  * @method string getPageSize()
+ * @method string getProjectId()
  */
 class ListQualityRules extends Rpc
 {
@@ -9614,6 +9783,19 @@ class ListQualityRules extends Rpc
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -12799,26 +12981,14 @@ class UpdateNodeRunMode extends Rpc
 }
 
 /**
- * @method string getAlarmMode()
  * @method string getProjectName()
  * @method string getFollower()
  * @method string getFollowerId()
+ * @method string getAlarmMode()
+ * @method string getProjectId()
  */
 class UpdateQualityFollower extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAlarmMode($value)
-    {
-        $this->data['AlarmMode'] = $value;
-        $this->options['form_params']['AlarmMode'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -12858,6 +13028,32 @@ class UpdateQualityFollower extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAlarmMode($value)
+    {
+        $this->data['AlarmMode'] = $value;
+        $this->options['form_params']['AlarmMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -12871,6 +13067,7 @@ class UpdateQualityFollower extends Rpc
  * @method string getProperty()
  * @method string getId()
  * @method string getWarningThreshold()
+ * @method string getProjectId()
  * @method string getMethodName()
  * @method string getProjectName()
  * @method string getRuleType()
@@ -13011,6 +13208,19 @@ class UpdateQualityRule extends Rpc
     {
         $this->data['WarningThreshold'] = $value;
         $this->options['form_params']['WarningThreshold'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }

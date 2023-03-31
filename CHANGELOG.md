@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1759 - 2023-3-31
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1758 - 2023-3-31
 - QuerySavingsPlansInstance api add rest pool value query param. 
 
