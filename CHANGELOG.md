@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1761 - 2023-4-3
+- Release CalcBMD.
+
+
 ## 1.8.1760 - 2023-3-31
 - Update by SDK platform.
 
