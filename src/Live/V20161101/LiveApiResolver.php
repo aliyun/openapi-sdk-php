@@ -603,6 +603,8 @@ class AddCasterProgram extends Rpc
 }
 
 /**
+ * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getInputType()
  * @method $this withInputType($value)
  * @method string getEndOffset()
@@ -627,6 +629,8 @@ class AddCasterProgram extends Rpc
  * @method $this withLiveStreamUrl($value)
  * @method string getLocationId()
  * @method $this withLocationId($value)
+ * @method string getImageUrl()
+ * @method $this withImageUrl($value)
  * @method string getPtsCallbackInterval()
  * @method $this withPtsCallbackInterval($value)
  * @method string getResourceName()
@@ -1430,6 +1434,7 @@ class BatchSetLiveDomainConfigs extends Rpc
 
 /**
  * @method string getOperatorUserId()
+ * @method string getBroadCastType()
  * @method string getGroupId()
  * @method string getAppId()
  */
@@ -1445,6 +1450,19 @@ class CancelMuteAllGroupUser extends Rpc
     {
         $this->data['OperatorUserId'] = $value;
         $this->options['form_params']['OperatorUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBroadCastType($value)
+    {
+        $this->data['BroadCastType'] = $value;
+        $this->options['form_params']['BroadCastType'] = $value;
 
         return $this;
     }
@@ -5482,6 +5500,8 @@ class ModifyCasterProgram extends Rpc
 }
 
 /**
+ * @method string getImageId()
+ * @method $this withImageId($value)
  * @method string getInputType()
  * @method $this withInputType($value)
  * @method string getEndOffset()
@@ -5500,6 +5520,8 @@ class ModifyCasterProgram extends Rpc
  * @method $this withBeginOffset($value)
  * @method string getLiveStreamUrl()
  * @method $this withLiveStreamUrl($value)
+ * @method string getImageUrl()
+ * @method $this withImageUrl($value)
  * @method string getPtsCallbackInterval()
  * @method $this withPtsCallbackInterval($value)
  * @method string getResourceName()
@@ -5588,6 +5610,7 @@ class ModifyStudioLayout extends Rpc
 
 /**
  * @method string getOperatorUserId()
+ * @method string getBroadCastType()
  * @method string getGroupId()
  * @method string getAppId()
  */
@@ -5603,6 +5626,19 @@ class MuteAllGroupUser extends Rpc
     {
         $this->data['OperatorUserId'] = $value;
         $this->options['form_params']['OperatorUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBroadCastType($value)
+    {
+        $this->data['BroadCastType'] = $value;
+        $this->options['form_params']['BroadCastType'] = $value;
 
         return $this;
     }
@@ -6289,6 +6325,8 @@ class SetCasterChannel extends Rpc
  * @method $this withProgramEffect($value)
  * @method string getProgramName()
  * @method $this withProgramName($value)
+ * @method string getUrgentImageUrl()
+ * @method $this withUrgentImageUrl($value)
  * @method string getRecordConfig()
  * @method $this withRecordConfig($value)
  * @method string getUrgentMaterialId()
@@ -6313,6 +6351,8 @@ class SetCasterChannel extends Rpc
  * @method $this withOwnerId($value)
  * @method string getDelay()
  * @method $this withDelay($value)
+ * @method string getUrgentImageId()
+ * @method $this withUrgentImageId($value)
  * @method string getCallbackUrl()
  * @method $this withCallbackUrl($value)
  */
