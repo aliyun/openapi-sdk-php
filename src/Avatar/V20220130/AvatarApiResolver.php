@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CloseTimedResetOperate closeTimedResetOperate(array $options = [])
  * @method DuplexDecision duplexDecision(array $options = [])
  * @method GetVideoTaskInfo getVideoTaskInfo(array $options = [])
+ * @method LicenseAuth licenseAuth(array $options = [])
  * @method QueryRunningInstance queryRunningInstance(array $options = [])
  * @method QueryTimedResetOperateStatus queryTimedResetOperateStatus(array $options = [])
  * @method SendMessage sendMessage(array $options = [])
@@ -96,6 +97,18 @@ class GetVideoTaskInfo extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getLicense()
+ * @method $this withLicense($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class LicenseAuth extends Rpc
+{
 }
 
 /**

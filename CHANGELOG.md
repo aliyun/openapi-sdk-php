@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1765 - 2023-4-4
+- test
+
+
 ## 1.8.1764 - 2023-4-4
 - Update GenerateVideoPlaylist.
 - Support car detection, text extraction APIs.
