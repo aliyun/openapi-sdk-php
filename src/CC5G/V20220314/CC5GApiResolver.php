@@ -46,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method LockCards lockCards(array $options = [])
  * @method ModifyWirelessCloudConnectorFeature modifyWirelessCloudConnectorFeature(array $options = [])
  * @method OpenCc5gService openCc5gService(array $options = [])
+ * @method RebindCards rebindCards(array $options = [])
  * @method RemoveWirelessCloudConnectorFromGroup removeWirelessCloudConnectorFromGroup(array $options = [])
  * @method ResumeCards resumeCards(array $options = [])
  * @method RevokeNetLink revokeNetLink(array $options = [])
@@ -820,6 +821,32 @@ class ModifyWirelessCloudConnectorFeature extends Rpc
 
 class OpenCc5gService extends Rpc
 {
+}
+
+/**
+ * @method array getIccids()
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ */
+class RebindCards extends Rpc
+{
+
+    /**
+     * @param array $iccids
+     *
+     * @return $this
+     */
+	public function withIccids(array $iccids)
+	{
+	    $this->data['Iccids'] = $iccids;
+		foreach ($iccids as $i => $iValue) {
+			$this->options['query']['Iccids.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
