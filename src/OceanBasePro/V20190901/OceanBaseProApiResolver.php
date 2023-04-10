@@ -58,6 +58,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDatabaseDescription modifyDatabaseDescription(array $options = [])
  * @method ModifyDatabaseUserRoles modifyDatabaseUserRoles(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
+ * @method ModifyInstanceNodeNum modifyInstanceNodeNum(array $options = [])
+ * @method ModifyInstanceSpec modifyInstanceSpec(array $options = [])
  * @method ModifyInstanceTags modifyInstanceTags(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
@@ -974,6 +976,7 @@ class CreateTenantReadOnlyConnection extends Rpc
  * @method string getUserPassword()
  * @method string getInstanceId()
  * @method string getTenantId()
+ * @method string getEncryptionType()
  * @method string getUserName()
  */
 class CreateTenantUser extends Rpc
@@ -1053,6 +1056,19 @@ class CreateTenantUser extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEncryptionType($value)
+    {
+        $this->data['EncryptionType'] = $value;
+        $this->options['form_params']['EncryptionType'] = $value;
 
         return $this;
     }
@@ -3936,6 +3952,116 @@ class ModifyInstanceName extends Rpc
     {
         $this->data['InstanceName'] = $value;
         $this->options['form_params']['InstanceName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNodeNum()
+ * @method string getInstanceId()
+ */
+class ModifyInstanceNodeNum extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeNum($value)
+    {
+        $this->data['NodeNum'] = $value;
+        $this->options['form_params']['NodeNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDiskSize()
+ * @method string getAutoUseCoupon()
+ * @method string getInstanceClass()
+ * @method string getInstanceId()
+ * @method string getLogDiskSize()
+ */
+class ModifyInstanceSpec extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDiskSize($value)
+    {
+        $this->data['DiskSize'] = $value;
+        $this->options['form_params']['DiskSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAutoUseCoupon($value)
+    {
+        $this->data['AutoUseCoupon'] = $value;
+        $this->options['form_params']['AutoUseCoupon'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceClass($value)
+    {
+        $this->data['InstanceClass'] = $value;
+        $this->options['form_params']['InstanceClass'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogDiskSize($value)
+    {
+        $this->data['LogDiskSize'] = $value;
+        $this->options['form_params']['LogDiskSize'] = $value;
 
         return $this;
     }
