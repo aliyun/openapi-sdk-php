@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1767 - 2023-4-10
+- DocumentInit.
+
+
 ## 1.8.1766 - 2023-4-10
 - Update SDK.
 
