@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1769 - 2023-4-11
+- Add image batch translate API.
+
+
 ## 1.8.1768 - 2023-4-11
 - Supported ListDataImportSQLPreCheckDetail,GetDataImportSQL,ListDataImportSQLType API.
 

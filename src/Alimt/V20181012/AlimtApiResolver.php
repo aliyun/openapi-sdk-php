@@ -16,14 +16,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTitleDiagnose getTitleDiagnose(array $options = [])
  * @method GetTitleGenerate getTitleGenerate(array $options = [])
  * @method GetTitleIntelligence getTitleIntelligence(array $options = [])
+ * @method GetTranslateImageBatchResult getTranslateImageBatchResult(array $options = [])
  * @method GetTranslateReport getTranslateReport(array $options = [])
- * @method GetUser getUser(array $options = [])
  * @method OpenAlimtService openAlimtService(array $options = [])
  * @method Translate translate(array $options = [])
  * @method TranslateCertificate translateCertificate(array $options = [])
  * @method TranslateECommerce translateECommerce(array $options = [])
  * @method TranslateGeneral translateGeneral(array $options = [])
  * @method TranslateImage translateImage(array $options = [])
+ * @method TranslateImageBatch translateImageBatch(array $options = [])
  */
 class AlimtApiResolver extends ApiResolver
 {
@@ -701,6 +702,26 @@ class GetTitleIntelligence extends Rpc
 }
 
 /**
+ * @method string getTaskId()
+ */
+class GetTranslateImageBatchResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getBeginTime()
@@ -711,10 +732,6 @@ class GetTitleIntelligence extends Rpc
  * @method $this withGroup($value)
  */
 class GetTranslateReport extends Rpc
-{
-}
-
-class GetUser extends Rpc
 {
 }
 
@@ -733,6 +750,8 @@ class OpenAlimtService extends Rpc
  * @method string getSourceText()
  * @method string getFormatType()
  * @method string getScene()
+ * @method string getContext()
+ * @method $this withContext($value)
  * @method string getTargetLanguage()
  */
 class Translate extends Rpc
@@ -899,6 +918,8 @@ class TranslateCertificate extends Rpc
  * @method string getSourceText()
  * @method string getFormatType()
  * @method string getScene()
+ * @method string getContext()
+ * @method $this withContext($value)
  * @method string getTargetLanguage()
  */
 class TranslateECommerce extends Rpc
@@ -975,6 +996,8 @@ class TranslateECommerce extends Rpc
  * @method string getSourceText()
  * @method string getFormatType()
  * @method string getScene()
+ * @method string getContext()
+ * @method $this withContext($value)
  * @method string getTargetLanguage()
  */
 class TranslateGeneral extends Rpc
@@ -1131,6 +1154,96 @@ class TranslateImage extends Rpc
     {
         $this->data['ImageBase64'] = $value;
         $this->options['form_params']['ImageBase64'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExt()
+ * @method string getSourceLanguage()
+ * @method string getImageUrls()
+ * @method string getCustomTaskId()
+ * @method string getField()
+ * @method string getTargetLanguage()
+ */
+class TranslateImageBatch extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExt($value)
+    {
+        $this->data['Ext'] = $value;
+        $this->options['form_params']['Ext'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['SourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageUrls($value)
+    {
+        $this->data['ImageUrls'] = $value;
+        $this->options['form_params']['ImageUrls'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustomTaskId($value)
+    {
+        $this->data['CustomTaskId'] = $value;
+        $this->options['form_params']['CustomTaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withField($value)
+    {
+        $this->data['Field'] = $value;
+        $this->options['form_params']['Field'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['TargetLanguage'] = $value;
 
         return $this;
     }
