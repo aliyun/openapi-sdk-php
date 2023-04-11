@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeColumnSecLevel changeColumnSecLevel(array $options = [])
  * @method ChangeLhDagOwner changeLhDagOwner(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
+ * @method CreateAuthorityTemplate createAuthorityTemplate(array $options = [])
  * @method CreateDataCorrectOrder createDataCorrectOrder(array $options = [])
  * @method CreateDataCronClearOrder createDataCronClearOrder(array $options = [])
  * @method CreateDataImportOrder createDataImportOrder(array $options = [])
@@ -53,6 +54,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ExecuteScript executeScript(array $options = [])
  * @method ExecuteStructSync executeStructSync(array $options = [])
  * @method GetApprovalDetail getApprovalDetail(array $options = [])
+ * @method GetAuthorityTemplate getAuthorityTemplate(array $options = [])
+ * @method GetAuthorityTemplateItem getAuthorityTemplateItem(array $options = [])
  * @method GetDatabase getDatabase(array $options = [])
  * @method GetDataCorrectBackupFiles getDataCorrectBackupFiles(array $options = [])
  * @method GetDataCorrectOrderDetail getDataCorrectOrderDetail(array $options = [])
@@ -63,6 +66,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataCronClearTaskDetailList getDataCronClearTaskDetailList(array $options = [])
  * @method GetDataExportDownloadURL getDataExportDownloadURL(array $options = [])
  * @method GetDataExportOrderDetail getDataExportOrderDetail(array $options = [])
+ * @method GetDataImportSQL getDataImportSQL(array $options = [])
  * @method GetDBTaskSQLJobLog getDBTaskSQLJobLog(array $options = [])
  * @method GetDBTopology getDBTopology(array $options = [])
  * @method GetInstance getInstance(array $options = [])
@@ -96,6 +100,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetUser getUser(array $options = [])
  * @method GetUserActiveTenant getUserActiveTenant(array $options = [])
  * @method GetUserUploadFileJob getUserUploadFileJob(array $options = [])
+ * @method GrantTemplateAuthority grantTemplateAuthority(array $options = [])
  * @method GrantUserPermission grantUserPermission(array $options = [])
  * @method InspectProxyAccessSecret inspectProxyAccessSecret(array $options = [])
  * @method ListClassificationTemplates listClassificationTemplates(array $options = [])
@@ -105,6 +110,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDatabaseUserPermssions listDatabaseUserPermssions(array $options = [])
  * @method ListDataCorrectPreCheckDB listDataCorrectPreCheckDB(array $options = [])
  * @method ListDataCorrectPreCheckSQL listDataCorrectPreCheckSQL(array $options = [])
+ * @method ListDataImportSQLPreCheckDetail listDataImportSQLPreCheckDetail(array $options = [])
+ * @method ListDataImportSQLType listDataImportSQLType(array $options = [])
  * @method ListDBTaskSQLJob listDBTaskSQLJob(array $options = [])
  * @method ListDBTaskSQLJobDetail listDBTaskSQLJobDetail(array $options = [])
  * @method ListDDLPublishRecords listDDLPublishRecords(array $options = [])
@@ -160,6 +167,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RestartDataCorrectSQLJob restartDataCorrectSQLJob(array $options = [])
  * @method ResumeTaskFlowInstance resumeTaskFlowInstance(array $options = [])
  * @method RetryDataCorrectPreCheck retryDataCorrectPreCheck(array $options = [])
+ * @method RevokeTemplateAuthority revokeTemplateAuthority(array $options = [])
  * @method RevokeUserPermission revokeUserPermission(array $options = [])
  * @method SearchDatabase searchDatabase(array $options = [])
  * @method SearchTable searchTable(array $options = [])
@@ -170,6 +178,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SuspendTaskFlowInstance suspendTaskFlowInstance(array $options = [])
  * @method SyncDatabaseMeta syncDatabaseMeta(array $options = [])
  * @method SyncInstanceMeta syncInstanceMeta(array $options = [])
+ * @method UpdateAuthorityTemplate updateAuthorityTemplate(array $options = [])
  * @method UpdateInstance updateInstance(array $options = [])
  * @method UpdateScenario updateScenario(array $options = [])
  * @method UpdateSLARules updateSLARules(array $options = [])
@@ -373,6 +382,18 @@ class ChangeLhDagOwner extends Rpc
  * @method $this withCloseReason($value)
  */
 class CloseOrder extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateAuthorityTemplate extends Rpc
 {
 }
 
@@ -911,6 +932,26 @@ class GetApprovalDetail extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class GetAuthorityTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class GetAuthorityTemplateItem extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getSid()
  * @method $this withSid($value)
  * @method string getHost()
@@ -1036,6 +1077,18 @@ class GetDataExportOrderDetail extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getSqlId()
+ * @method $this withSqlId($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetDataImportSQL extends Rpc
+{
 }
 
 /**
@@ -1205,8 +1258,6 @@ class GetPhysicalDatabase extends Rpc
  * @method $this withTid($value)
  * @method string getProxyId()
  * @method $this withProxyId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  */
 class GetProxy extends Rpc
 {
@@ -1399,6 +1450,22 @@ class GetUserUploadFileJob extends Rpc
 /**
  * @method string getExpireDate()
  * @method $this withExpireDate($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getUserIds()
+ * @method $this withUserIds($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class GrantTemplateAuthority extends Rpc
+{
+}
+
+/**
+ * @method string getExpireDate()
+ * @method $this withExpireDate($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getTid()
@@ -1527,6 +1594,34 @@ class ListDataCorrectPreCheckDB extends Rpc
  * @method $this withDbId($value)
  */
 class ListDataCorrectPreCheckSQL extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumer()
+ * @method $this withPageNumer($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getStatusCode()
+ * @method $this withStatusCode($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSqlType()
+ * @method $this withSqlType($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class ListDataImportSQLPreCheckDetail extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class ListDataImportSQLType extends Rpc
 {
 }
 
@@ -2361,6 +2456,18 @@ class RetryDataCorrectPreCheck extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getUserIds()
+ * @method $this withUserIds($value)
+ */
+class RevokeTemplateAuthority extends Rpc
+{
+}
+
+/**
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getTid()
@@ -2511,6 +2618,20 @@ class SyncDatabaseMeta extends Rpc
  * @method $this withInstanceId($value)
  */
 class SyncInstanceMeta extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdateAuthorityTemplate extends Rpc
 {
 }
 

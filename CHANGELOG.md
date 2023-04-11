@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1768 - 2023-4-11
+- Supported ListDataImportSQLPreCheckDetail,GetDataImportSQL,ListDataImportSQLType API.
+
+
 ## 1.8.1767 - 2023-4-10
 - DocumentInit.
 
