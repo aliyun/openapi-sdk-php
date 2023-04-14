@@ -5,8 +5,36 @@ namespace AlibabaCloud\Cams\V20200606;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method CheckContacts checkContacts(array $options = [])
- * @method SendMessage sendMessage(array $options = [])
+ * @method BeeBotAssociate beeBotAssociate(array $options = [])
+ * @method BeeBotChat beeBotChat(array $options = [])
+ * @method ChatappBindWaba chatappBindWaba(array $options = [])
+ * @method ChatappEmbedSignUp chatappEmbedSignUp(array $options = [])
+ * @method ChatappMigrationRegister chatappMigrationRegister(array $options = [])
+ * @method ChatappMigrationVerified chatappMigrationVerified(array $options = [])
+ * @method ChatappPhoneNumberRegister chatappPhoneNumberRegister(array $options = [])
+ * @method ChatappSyncPhoneNumber chatappSyncPhoneNumber(array $options = [])
+ * @method ChatappVerifyAndRegister chatappVerifyAndRegister(array $options = [])
+ * @method CreateChatappMigrationInitiate createChatappMigrationInitiate(array $options = [])
+ * @method CreateChatappTemplate createChatappTemplate(array $options = [])
+ * @method DeleteChatappTemplate deleteChatappTemplate(array $options = [])
+ * @method GetChatappTemplateDetail getChatappTemplateDetail(array $options = [])
+ * @method GetChatappUploadAuthorization getChatappUploadAuthorization(array $options = [])
+ * @method GetChatappVerifyCode getChatappVerifyCode(array $options = [])
+ * @method GetMigrationVerifyCode getMigrationVerifyCode(array $options = [])
+ * @method GetPhoneNumberVerificationStatus getPhoneNumberVerificationStatus(array $options = [])
+ * @method IsvGetAppId isvGetAppId(array $options = [])
+ * @method ListChatappTemplate listChatappTemplate(array $options = [])
+ * @method ModifyChatappTemplate modifyChatappTemplate(array $options = [])
+ * @method ModifyPhoneBusinessProfile modifyPhoneBusinessProfile(array $options = [])
+ * @method QueryChatappBindWaba queryChatappBindWaba(array $options = [])
+ * @method QueryChatappPhoneNumbers queryChatappPhoneNumbers(array $options = [])
+ * @method QueryPhoneBusinessProfile queryPhoneBusinessProfile(array $options = [])
+ * @method QueryWabaBusinessInfo queryWabaBusinessInfo(array $options = [])
+ * @method SendChatappMassMessage sendChatappMassMessage(array $options = [])
+ * @method SendChatappMessage sendChatappMessage(array $options = [])
+ * @method SubmitIsvCustomerTerms submitIsvCustomerTerms(array $options = [])
+ * @method UpdateAccountWebhook updateAccountWebhook(array $options = [])
+ * @method UpdatePhoneWebhook updatePhoneWebhook(array $options = [])
  */
 class CamsApiResolver extends ApiResolver
 {
@@ -22,24 +50,1143 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'cams';
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getSessionId()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getPerspective()
+ * @method string getUtterance()
+ * @method string getIsvCode()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getRecommendNum()
+ * @method string getChatBotInstanceId()
+ * @method string getCustSpaceId()
+ */
+class BeeBotAssociate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionId($value)
+    {
+        $this->data['SessionId'] = $value;
+        $this->options['form_params']['SessionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPerspective($value)
+    {
+        $this->data['Perspective'] = $value;
+        $this->options['form_params']['Perspective'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUtterance($value)
+    {
+        $this->data['Utterance'] = $value;
+        $this->options['form_params']['Utterance'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvCode($value)
+    {
+        $this->data['IsvCode'] = $value;
+        $this->options['form_params']['IsvCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRecommendNum($value)
+    {
+        $this->data['RecommendNum'] = $value;
+        $this->options['form_params']['RecommendNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChatBotInstanceId($value)
+    {
+        $this->data['ChatBotInstanceId'] = $value;
+        $this->options['form_params']['ChatBotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSessionId()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getIntentName()
+ * @method string getSenderNick()
+ * @method string getPerspective()
+ * @method string getUtterance()
+ * @method string getIsvCode()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getKnowledgeId()
+ * @method string getVendorParam()
+ * @method string getSenderId()
+ * @method string getChatBotInstanceId()
+ * @method string getCustSpaceId()
+ */
+class BeeBotChat extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionId($value)
+    {
+        $this->data['SessionId'] = $value;
+        $this->options['form_params']['SessionId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIntentName($value)
+    {
+        $this->data['IntentName'] = $value;
+        $this->options['form_params']['IntentName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSenderNick($value)
+    {
+        $this->data['SenderNick'] = $value;
+        $this->options['form_params']['SenderNick'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPerspective($value)
+    {
+        $this->data['Perspective'] = $value;
+        $this->options['form_params']['Perspective'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUtterance($value)
+    {
+        $this->data['Utterance'] = $value;
+        $this->options['form_params']['Utterance'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvCode($value)
+    {
+        $this->data['IsvCode'] = $value;
+        $this->options['form_params']['IsvCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKnowledgeId($value)
+    {
+        $this->data['KnowledgeId'] = $value;
+        $this->options['form_params']['KnowledgeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVendorParam($value)
+    {
+        $this->data['VendorParam'] = $value;
+        $this->options['form_params']['VendorParam'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSenderId($value)
+    {
+        $this->data['SenderId'] = $value;
+        $this->options['form_params']['SenderId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withChatBotInstanceId($value)
+    {
+        $this->data['ChatBotInstanceId'] = $value;
+        $this->options['form_params']['ChatBotInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getWabaId()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ */
+class ChatappBindWaba extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWabaId($value)
+    {
+        $this->data['WabaId'] = $value;
+        $this->options['form_params']['WabaId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInputToken()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ */
+class ChatappEmbedSignUp extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInputToken($value)
+    {
+        $this->data['InputToken'] = $value;
+        $this->options['form_params']['InputToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class ChatappMigrationRegister extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getVerifyCode()
+ * @method $this withVerifyCode($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class ChatappMigrationVerified extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ */
+class ChatappPhoneNumberRegister extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNumber($value)
+    {
+        $this->data['PhoneNumber'] = $value;
+        $this->options['form_params']['PhoneNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class ChatappSyncPhoneNumber extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method string getVerifyCode()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ */
+class ChatappVerifyAndRegister extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNumber($value)
+    {
+        $this->data['PhoneNumber'] = $value;
+        $this->options['form_params']['PhoneNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerifyCode($value)
+    {
+        $this->data['VerifyCode'] = $value;
+        $this->options['form_params']['VerifyCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMobileNumber()
+ * @method $this withMobileNumber($value)
+ * @method string getCountryCode()
+ * @method $this withCountryCode($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class CreateChatappMigrationInitiate extends Rpc
+{
+}
+
+/**
+ * @method string getComponents()
+ * @method string getLanguage()
+ * @method string getCustWabaId()
+ * @method string getExample()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getTemplateType()
+ * @method string getIsvCode()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method string getName()
+ * @method string getAllowCategoryChange()
+ * @method string getCategory()
+ */
+class CreateChatappTemplate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withComponents($value)
+    {
+        $this->data['Components'] = $value;
+        $this->options['form_params']['Components'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLanguage($value)
+    {
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustWabaId($value)
+    {
+        $this->data['CustWabaId'] = $value;
+        $this->options['form_params']['CustWabaId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExample($value)
+    {
+        $this->data['Example'] = $value;
+        $this->options['form_params']['Example'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateType($value)
+    {
+        $this->data['TemplateType'] = $value;
+        $this->options['form_params']['TemplateType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvCode($value)
+    {
+        $this->data['IsvCode'] = $value;
+        $this->options['form_params']['IsvCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAllowCategoryChange($value)
+    {
+        $this->data['AllowCategoryChange'] = $value;
+        $this->options['form_params']['AllowCategoryChange'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCategory($value)
+    {
+        $this->data['Category'] = $value;
+        $this->options['form_params']['Category'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCustWabaId()
+ * @method $this withCustWabaId($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getTemplateCode()
+ * @method $this withTemplateCode($value)
+ */
+class DeleteChatappTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getCustWabaId()
+ * @method $this withCustWabaId($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getTemplateCode()
+ * @method $this withTemplateCode($value)
+ */
+class GetChatappTemplateDetail extends Rpc
+{
+}
+
+/**
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class GetChatappUploadAuthorization extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method string getLocale()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getMethod()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ */
+class GetChatappVerifyCode extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNumber($value)
+    {
+        $this->data['PhoneNumber'] = $value;
+        $this->options['form_params']['PhoneNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLocale($value)
+    {
+        $this->data['Locale'] = $value;
+        $this->options['form_params']['Locale'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethod($value)
+    {
+        $this->data['Method'] = $value;
+        $this->options['form_params']['Method'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getLocale()
+ * @method $this withLocale($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getMethod()
+ * @method $this withMethod($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class GetMigrationVerifyCode extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ */
+class GetPhoneNumberVerificationStatus extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNumber($value)
+    {
+        $this->data['PhoneNumber'] = $value;
+        $this->options['form_params']['PhoneNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getType()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ */
+class IsvGetAppId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getCustWabaId()
+ * @method $this withCustWabaId($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getAuditStatus()
+ * @method $this withAuditStatus($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ */
+class ListChatappTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getComponents()
+ * @method string getLanguage()
+ * @method string getCustWabaId()
+ * @method string getExample()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getTemplateType()
+ * @method string getIsvCode()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method string getCategory()
+ * @method string getTemplateCode()
+ */
+class ModifyChatappTemplate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withComponents($value)
+    {
+        $this->data['Components'] = $value;
+        $this->options['form_params']['Components'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLanguage($value)
+    {
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustWabaId($value)
+    {
+        $this->data['CustWabaId'] = $value;
+        $this->options['form_params']['CustWabaId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExample($value)
+    {
+        $this->data['Example'] = $value;
+        $this->options['form_params']['Example'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateType($value)
+    {
+        $this->data['TemplateType'] = $value;
+        $this->options['form_params']['TemplateType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvCode($value)
+    {
+        $this->data['IsvCode'] = $value;
+        $this->options['form_params']['IsvCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCategory($value)
+    {
+        $this->data['Category'] = $value;
+        $this->options['form_params']['Category'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateCode($value)
+    {
+        $this->data['TemplateCode'] = $value;
+        $this->options['form_params']['TemplateCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getVertical()
+ * @method $this withVertical($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ * @method string getAddress()
+ * @method $this withAddress($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getProfilePictureUrl()
+ * @method $this withProfilePictureUrl($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getWebsites()
+ * @method $this withWebsites($value)
+ */
+class ModifyPhoneBusinessProfile extends Rpc
+{
+}
+
+/**
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class QueryChatappBindWaba extends Rpc
+{
+}
+
+/**
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class QueryChatappPhoneNumbers extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class QueryPhoneBusinessProfile extends Rpc
+{
+}
+
+/**
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getWabaId()
+ * @method $this withWabaId($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class QueryWabaBusinessInfo extends Rpc
+{
+}
+
+/**
+ * @method string getLanguage()
+ * @method string getCustWabaId()
+ * @method string getFallBackContent()
+ * @method string getSenderList()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
  * @method string getChannelType()
  * @method string getFrom()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getContacts()
+ * @method string getTag()
+ * @method string getTaskId()
+ * @method string getIsvCode()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getLabel()
+ * @method string getFallBackId()
+ * @method string getTtl()
+ * @method string getFallBackDuration()
+ * @method string getCustSpaceId()
+ * @method string getTemplateCode()
  */
-class CheckContacts extends Rpc
+class SendChatappMassMessage extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLanguage($value)
+    {
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustWabaId($value)
+    {
+        $this->data['CustWabaId'] = $value;
+        $this->options['form_params']['CustWabaId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFallBackContent($value)
+    {
+        $this->data['FallBackContent'] = $value;
+        $this->options['form_params']['FallBackContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSenderList($value)
+    {
+        $this->data['SenderList'] = $value;
+        $this->options['form_params']['SenderList'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -72,34 +1219,150 @@ class CheckContacts extends Rpc
      *
      * @return $this
      */
-    public function withContacts($value)
+    public function withTag($value)
     {
-        $this->data['Contacts'] = $value;
-        $this->options['form_params']['Contacts'] = $value;
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvCode($value)
+    {
+        $this->data['IsvCode'] = $value;
+        $this->options['form_params']['IsvCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabel($value)
+    {
+        $this->data['Label'] = $value;
+        $this->options['form_params']['Label'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFallBackId($value)
+    {
+        $this->data['FallBackId'] = $value;
+        $this->options['form_params']['FallBackId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTtl($value)
+    {
+        $this->data['Ttl'] = $value;
+        $this->options['form_params']['Ttl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFallBackDuration($value)
+    {
+        $this->data['FallBackDuration'] = $value;
+        $this->options['form_params']['FallBackDuration'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateCode($value)
+    {
+        $this->data['TemplateCode'] = $value;
+        $this->options['form_params']['TemplateCode'] = $value;
 
         return $this;
     }
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getMessageType()
- * @method string getTemplateBodyParams()
- * @method string getLink()
- * @method string getCaption()
+ * @method string getLanguage()
+ * @method string getCustWabaId()
  * @method string getType()
+ * @method string getFallBackContent()
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getTemplateParams()
+ * @method string getPayload()
+ * @method $this withPayload($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
  * @method string getChannelType()
  * @method string getFrom()
- * @method string getText()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getTag()
+ * @method string getTrackingData()
+ * @method string getTaskId()
+ * @method string getIsvCode()
+ * @method string getContextMessageId()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getLabel()
+ * @method string getFallBackId()
+ * @method string getTtl()
+ * @method string getFallBackDuration()
+ * @method string getCustSpaceId()
  * @method string getTo()
  * @method string getTemplateCode()
  */
-class SendMessage extends Rpc
+class SendChatappMessage extends Rpc
 {
 
     /**
@@ -120,10 +1383,10 @@ class SendMessage extends Rpc
      *
      * @return $this
      */
-    public function withTemplateBodyParams($value)
+    public function withLanguage($value)
     {
-        $this->data['TemplateBodyParams'] = $value;
-        $this->options['form_params']['TemplateBodyParams'] = $value;
+        $this->data['Language'] = $value;
+        $this->options['form_params']['Language'] = $value;
 
         return $this;
     }
@@ -133,23 +1396,10 @@ class SendMessage extends Rpc
      *
      * @return $this
      */
-    public function withLink($value)
+    public function withCustWabaId($value)
     {
-        $this->data['Link'] = $value;
-        $this->options['form_params']['Link'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCaption($value)
-    {
-        $this->data['Caption'] = $value;
-        $this->options['form_params']['Caption'] = $value;
+        $this->data['CustWabaId'] = $value;
+        $this->options['form_params']['CustWabaId'] = $value;
 
         return $this;
     }
@@ -172,6 +1422,32 @@ class SendMessage extends Rpc
      *
      * @return $this
      */
+    public function withFallBackContent($value)
+    {
+        $this->data['FallBackContent'] = $value;
+        $this->options['form_params']['FallBackContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateParams($value)
+    {
+        $this->data['TemplateParams'] = $value;
+        $this->options['form_params']['TemplateParams'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withChannelType($value)
     {
         $this->data['ChannelType'] = $value;
@@ -198,10 +1474,127 @@ class SendMessage extends Rpc
      *
      * @return $this
      */
-    public function withText($value)
+    public function withTag($value)
     {
-        $this->data['Text'] = $value;
-        $this->options['form_params']['Text'] = $value;
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTrackingData($value)
+    {
+        $this->data['TrackingData'] = $value;
+        $this->options['form_params']['TrackingData'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskId($value)
+    {
+        $this->data['TaskId'] = $value;
+        $this->options['form_params']['TaskId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsvCode($value)
+    {
+        $this->data['IsvCode'] = $value;
+        $this->options['form_params']['IsvCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContextMessageId($value)
+    {
+        $this->data['ContextMessageId'] = $value;
+        $this->options['form_params']['ContextMessageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabel($value)
+    {
+        $this->data['Label'] = $value;
+        $this->options['form_params']['Label'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFallBackId($value)
+    {
+        $this->data['FallBackId'] = $value;
+        $this->options['form_params']['FallBackId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTtl($value)
+    {
+        $this->data['Ttl'] = $value;
+        $this->options['form_params']['Ttl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFallBackDuration($value)
+    {
+        $this->data['FallBackDuration'] = $value;
+        $this->options['form_params']['FallBackDuration'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
 
         return $this;
     }
@@ -231,4 +1624,68 @@ class SendMessage extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getOfficeAddress()
+ * @method $this withOfficeAddress($value)
+ * @method string getIsvTerms()
+ * @method $this withIsvTerms($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getContactMail()
+ * @method $this withContactMail($value)
+ * @method string getCountryId()
+ * @method $this withCountryId($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getBusinessDesc()
+ * @method $this withBusinessDesc($value)
+ * @method string getCustName()
+ * @method $this withCustName($value)
+ */
+class SubmitIsvCustomerTerms extends Rpc
+{
+}
+
+/**
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getQueueFlag()
+ * @method $this withQueueFlag($value)
+ * @method string getHttpFlag()
+ * @method $this withHttpFlag($value)
+ * @method string getStatusCallbackUrl()
+ * @method $this withStatusCallbackUrl($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class UpdateAccountWebhook extends Rpc
+{
+}
+
+/**
+ * @method string getUpCallbackUrl()
+ * @method $this withUpCallbackUrl($value)
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getQueueFlag()
+ * @method $this withQueueFlag($value)
+ * @method string getHttpFlag()
+ * @method $this withHttpFlag($value)
+ * @method string getStatusCallbackUrl()
+ * @method $this withStatusCallbackUrl($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class UpdatePhoneWebhook extends Rpc
+{
 }

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1770 - 2023-4-14
+- whatsapp 目录修改
+- 回落短信允许指定回执超时回落时间
+- 增加Whatsapp 模板中location消息类型
+
+
 ## 1.8.1769 - 2023-4-11
 - Add image batch translate API.
 
