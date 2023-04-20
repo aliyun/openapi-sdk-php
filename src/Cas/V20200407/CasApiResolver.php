@@ -267,6 +267,8 @@ class GetCertWarehouseQuota extends Rpc
  * @method $this withCertId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getCertFilter()
+ * @method $this withCertFilter($value)
  */
 class GetUserCertificateDetail extends Rpc
 {

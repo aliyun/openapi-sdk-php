@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1772 - 2023-4-20
+- Support certFilter for getUserCertificateDetail API.
+
+
 ## 1.8.1771 - 2023-4-20
 - Add response Permission.
 
