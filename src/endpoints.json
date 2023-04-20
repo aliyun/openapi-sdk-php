@@ -1,1 +1,1 @@
-{"endpoint_map":{},"endpoint_regional":"regional","standard":{"ap-southeast-1":"cams.ap-southeast-1.aliyuncs.com"},"regions":["ap-southeast-1"],"endpoint_health":[]}
+{"endpoint_map":{},"endpoint_regional":"regional","standard":{"ap-southeast-1":"computenestsupplier.ap-southeast-1.aliyuncs.com","cn-hangzhou":"computenestsupplier.cn-hangzhou.aliyuncs.com"},"regions":["ap-southeast-1","cn-hangzhou"],"endpoint_health":[]}

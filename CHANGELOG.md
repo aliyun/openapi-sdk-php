@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1771 - 2023-4-20
+- Add response Permission.
+
+
 ## 1.8.1770 - 2023-4-14
 - whatsapp 目录修改
 - 回落短信允许指定回执超时回落时间

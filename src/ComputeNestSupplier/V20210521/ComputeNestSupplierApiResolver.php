@@ -152,6 +152,8 @@ class ListArtifactVersions extends Rpc
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method array getTag()
+ * @method string getShowDeleted()
+ * @method $this withShowDeleted($value)
  * @method array getFilter()
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
