@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1773 - 2023-4-21
+- Release MergeImageFace.
+
+
 ## 1.8.1772 - 2023-4-20
 - Support certFilter for getUserCertificateDetail API.
 

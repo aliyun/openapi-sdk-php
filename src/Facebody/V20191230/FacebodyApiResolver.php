@@ -2187,6 +2187,7 @@ class ListFaceEntities extends Rpc
 /**
  * @method string getFormatResultToJson()
  * @method $this withFormatResultToJson($value)
+ * @method array getMergeInfos()
  * @method string getUserId()
  * @method string getOssFile()
  * @method $this withOssFile($value)
@@ -2194,9 +2195,31 @@ class ListFaceEntities extends Rpc
  * @method string getRequestProxyBy()
  * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
+ * @method string getAddWatermark()
+ * @method string getModelVersion()
  */
 class MergeImageFace extends Rpc
 {
+
+    /**
+     * @param array $mergeInfos
+     *
+     * @return $this
+     */
+	public function withMergeInfos(array $mergeInfos)
+	{
+	    $this->data['MergeInfos'] = $mergeInfos;
+		foreach ($mergeInfos as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['MergeInfos.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
+			if(isset($depth1Value['TemplateFaceID'])){
+				$this->options['form_params']['MergeInfos.' . ($depth1 + 1) . '.TemplateFaceID'] = $depth1Value['TemplateFaceID'];
+			}
+		}
+
+		return $this;
+    }
 
     /**
      * @param string $value
@@ -2233,6 +2256,32 @@ class MergeImageFace extends Rpc
     {
         $this->data['ImageURL'] = $value;
         $this->options['form_params']['ImageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAddWatermark($value)
+    {
+        $this->data['AddWatermark'] = $value;
+        $this->options['form_params']['AddWatermark'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelVersion($value)
+    {
+        $this->data['ModelVersion'] = $value;
+        $this->options['form_params']['ModelVersion'] = $value;
 
         return $this;
     }
