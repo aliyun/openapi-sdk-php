@@ -65,6 +65,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePlayQosList describePlayQosList(array $options = [])
  * @method DescribeQueryConfigs describeQueryConfigs(array $options = [])
  * @method GetCategories getCategories(array $options = [])
+ * @method GetContentAnalyzeConfig getContentAnalyzeConfig(array $options = [])
  * @method GetCustomTemplate getCustomTemplate(array $options = [])
  * @method GetDefaultStorageLocation getDefaultStorageLocation(array $options = [])
  * @method GetDynamicImageJob getDynamicImageJob(array $options = [])
@@ -117,6 +118,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPipelines listPipelines(array $options = [])
  * @method ListPublicMediaBasicInfos listPublicMediaBasicInfos(array $options = [])
  * @method ListSmartJobs listSmartJobs(array $options = [])
+ * @method ListSmartSysAvatarModels listSmartSysAvatarModels(array $options = [])
  * @method ListSnapshotJobs listSnapshotJobs(array $options = [])
  * @method ListSystemTemplates listSystemTemplates(array $options = [])
  * @method ListTemplates listTemplates(array $options = [])
@@ -131,15 +133,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RegisterMediaStream registerMediaStream(array $options = [])
  * @method SearchEditingProject searchEditingProject(array $options = [])
  * @method SearchMedia searchMedia(array $options = [])
+ * @method SearchMediaByFace searchMediaByFace(array $options = [])
+ * @method SearchMediaClipByFace searchMediaClipByFace(array $options = [])
  * @method SearchPublicMediaInfo searchPublicMediaInfo(array $options = [])
  * @method SendLiveSnapshotJobCommand sendLiveSnapshotJobCommand(array $options = [])
  * @method SendLiveTranscodeJobCommand sendLiveTranscodeJobCommand(array $options = [])
+ * @method SetContentAnalyzeConfig setContentAnalyzeConfig(array $options = [])
  * @method SetDefaultCustomTemplate setDefaultCustomTemplate(array $options = [])
  * @method SetDefaultStorageLocation setDefaultStorageLocation(array $options = [])
  * @method SetEventCallback setEventCallback(array $options = [])
  * @method StartWorkflow startWorkflow(array $options = [])
  * @method SubmitASRJob submitASRJob(array $options = [])
  * @method SubmitAudioProduceJob submitAudioProduceJob(array $options = [])
+ * @method SubmitAvatarVideoJob submitAvatarVideoJob(array $options = [])
  * @method SubmitDNAJob submitDNAJob(array $options = [])
  * @method SubmitDynamicChartJob submitDynamicChartJob(array $options = [])
  * @method SubmitDynamicImageJob submitDynamicImageJob(array $options = [])
@@ -1122,6 +1128,10 @@ class GetCategories extends Rpc
 {
 }
 
+class GetContentAnalyzeConfig extends Rpc
+{
+}
+
 /**
  * @method string getResourceRealOwnerId()
  * @method $this withResourceRealOwnerId($value)
@@ -1907,6 +1917,19 @@ class ListSmartJobs extends Rpc
 }
 
 /**
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListSmartSysAvatarModels extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
  * @method string getResourceRealOwnerId()
@@ -2217,6 +2240,46 @@ class SearchMedia extends Rpc
 /**
  * @method string getEntityId()
  * @method $this withEntityId($value)
+ * @method string getBiz()
+ * @method $this withBiz($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPersonImageUrl()
+ * @method $this withPersonImageUrl($value)
+ * @method string getFaceSearchToken()
+ * @method $this withFaceSearchToken($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class SearchMediaByFace extends Rpc
+{
+}
+
+/**
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
+ * @method string getBiz()
+ * @method $this withBiz($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getFaceSearchToken()
+ * @method $this withFaceSearchToken($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class SearchMediaClipByFace extends Rpc
+{
+}
+
+/**
+ * @method string getEntityId()
+ * @method $this withEntityId($value)
  * @method string getAuthorized()
  * @method $this withAuthorized($value)
  * @method string getPageSize()
@@ -2277,6 +2340,18 @@ class SendLiveSnapshotJobCommand extends Rpc
  * @method $this withJobId($value)
  */
 class SendLiveTranscodeJobCommand extends Rpc
+{
+}
+
+/**
+ * @method string getAuto()
+ * @method $this withAuto($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getSaveType()
+ * @method $this withSaveType($value)
+ */
+class SetContentAnalyzeConfig extends Rpc
 {
 }
 
@@ -2369,6 +2444,24 @@ class SubmitASRJob extends Rpc
  * @method $this withIsAsync($value)
  */
 class SubmitAudioProduceJob extends Rpc
+{
+}
+
+/**
+ * @method string getOutputConfig()
+ * @method $this withOutputConfig($value)
+ * @method string getInputConfig()
+ * @method $this withInputConfig($value)
+ * @method string getEditingConfig()
+ * @method $this withEditingConfig($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ */
+class SubmitAvatarVideoJob extends Rpc
 {
 }
 

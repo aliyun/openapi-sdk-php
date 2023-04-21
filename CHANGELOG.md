@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1774 - 2023-4-21
+- Add api called SubmitAvatarVideoJob, which render virtual human videos.
+
+
 ## 1.8.1773 - 2023-4-21
 - Release MergeImageFace.
 
