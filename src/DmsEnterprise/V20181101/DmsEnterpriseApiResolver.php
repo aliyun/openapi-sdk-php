@@ -16,9 +16,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeLhDagOwner changeLhDagOwner(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
  * @method CreateAuthorityTemplate createAuthorityTemplate(array $options = [])
+ * @method CreateDatabaseExportOrder createDatabaseExportOrder(array $options = [])
  * @method CreateDataCorrectOrder createDataCorrectOrder(array $options = [])
  * @method CreateDataCronClearOrder createDataCronClearOrder(array $options = [])
+ * @method CreateDataExportOrder createDataExportOrder(array $options = [])
  * @method CreateDataImportOrder createDataImportOrder(array $options = [])
+ * @method CreateDataTrackOrder createDataTrackOrder(array $options = [])
  * @method CreateFreeLockCorrectOrder createFreeLockCorrectOrder(array $options = [])
  * @method CreateLakeHouseSpace createLakeHouseSpace(array $options = [])
  * @method CreateLogicDatabase createLogicDatabase(array $options = [])
@@ -47,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTaskFlowEdgesByCondition deleteTaskFlowEdgesByCondition(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableUser disableUser(array $options = [])
+ * @method DownloadDataTrackResult downloadDataTrackResult(array $options = [])
  * @method EditLogicDatabase editLogicDatabase(array $options = [])
  * @method EnableUser enableUser(array $options = [])
  * @method ExecuteDataCorrect executeDataCorrect(array $options = [])
@@ -57,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAuthorityTemplate getAuthorityTemplate(array $options = [])
  * @method GetAuthorityTemplateItem getAuthorityTemplateItem(array $options = [])
  * @method GetDatabase getDatabase(array $options = [])
+ * @method GetDatabaseExportOrderDetail getDatabaseExportOrderDetail(array $options = [])
  * @method GetDataCorrectBackupFiles getDataCorrectBackupFiles(array $options = [])
  * @method GetDataCorrectOrderDetail getDataCorrectOrderDetail(array $options = [])
  * @method GetDataCorrectRollbackFile getDataCorrectRollbackFile(array $options = [])
@@ -67,6 +72,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataExportDownloadURL getDataExportDownloadURL(array $options = [])
  * @method GetDataExportOrderDetail getDataExportOrderDetail(array $options = [])
  * @method GetDataImportSQL getDataImportSQL(array $options = [])
+ * @method GetDataTrackJobDegree getDataTrackJobDegree(array $options = [])
+ * @method GetDataTrackJobTableMeta getDataTrackJobTableMeta(array $options = [])
+ * @method GetDataTrackOrderDetail getDataTrackOrderDetail(array $options = [])
  * @method GetDBTaskSQLJobLog getDBTaskSQLJobLog(array $options = [])
  * @method GetDBTopology getDBTopology(array $options = [])
  * @method GetInstance getInstance(array $options = [])
@@ -159,6 +167,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OfflineTaskFlow offlineTaskFlow(array $options = [])
  * @method PauseDataCorrectSQLJob pauseDataCorrectSQLJob(array $options = [])
  * @method PublishAndDeployTaskFlow publishAndDeployTaskFlow(array $options = [])
+ * @method QueryDataTrackResultDownloadStatus queryDataTrackResultDownloadStatus(array $options = [])
  * @method ReDeployLhDagVersion reDeployLhDagVersion(array $options = [])
  * @method RefundPayAsYouGoOrder refundPayAsYouGoOrder(array $options = [])
  * @method RegisterInstance registerInstance(array $options = [])
@@ -170,6 +179,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RevokeTemplateAuthority revokeTemplateAuthority(array $options = [])
  * @method RevokeUserPermission revokeUserPermission(array $options = [])
  * @method SearchDatabase searchDatabase(array $options = [])
+ * @method SearchDataTrackResult searchDataTrackResult(array $options = [])
  * @method SearchTable searchTable(array $options = [])
  * @method SetOwners setOwners(array $options = [])
  * @method StopTaskFlowInstance stopTaskFlowInstance(array $options = [])
@@ -398,6 +408,24 @@ class CreateAuthorityTemplate extends Rpc
 }
 
 /**
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
+ * @method string getPluginParam()
+ * @method $this withPluginParam($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class CreateDatabaseExportOrder extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getParam()
@@ -430,6 +458,24 @@ class CreateDataCronClearOrder extends Rpc
 }
 
 /**
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
+ * @method string getPluginParam()
+ * @method $this withPluginParam($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class CreateDataExportOrder extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getParam()
@@ -442,6 +488,20 @@ class CreateDataCronClearOrder extends Rpc
  * @method $this withComment($value)
  */
 class CreateDataImportOrder extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class CreateDataTrackOrder extends Rpc
 {
 }
 
@@ -844,6 +904,30 @@ class DisableUser extends Rpc
 }
 
 /**
+ * @method string getFilterStartTime()
+ * @method $this withFilterStartTime($value)
+ * @method string getFilterTypeList()
+ * @method $this withFilterTypeList($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getRollbackSQLType()
+ * @method $this withRollbackSQLType($value)
+ * @method string getEventIdList()
+ * @method $this withEventIdList($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getFilterTableList()
+ * @method $this withFilterTableList($value)
+ * @method string getFilterEndTime()
+ * @method $this withFilterEndTime($value)
+ * @method string getColumnFilter()
+ * @method $this withColumnFilter($value)
+ */
+class DownloadDataTrackResult extends Rpc
+{
+}
+
+/**
  * @method string getLogicDbId()
  * @method $this withLogicDbId($value)
  * @method string getTid()
@@ -963,6 +1047,28 @@ class GetAuthorityTemplateItem extends Rpc
  */
 class GetDatabase extends Rpc
 {
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ */
+class GetDatabaseExportOrderDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrderId($value)
+    {
+        $this->data['OrderId'] = $value;
+        $this->options['form_params']['OrderId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1088,6 +1194,36 @@ class GetDataExportOrderDetail extends Rpc
  * @method $this withOrderId($value)
  */
 class GetDataImportSQL extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetDataTrackJobDegree extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetDataTrackJobTableMeta extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetDataTrackOrderDetail extends Rpc
 {
 }
 
@@ -2310,6 +2446,18 @@ class PublishAndDeployTaskFlow extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getDownloadKeyId()
+ * @method $this withDownloadKeyId($value)
+ */
+class QueryDataTrackResultDownloadStatus extends Rpc
+{
+}
+
+/**
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
@@ -2512,6 +2660,26 @@ class RevokeUserPermission extends Rpc
  * @method $this withDbType($value)
  */
 class SearchDatabase extends Rpc
+{
+}
+
+/**
+ * @method string getFilterStartTime()
+ * @method $this withFilterStartTime($value)
+ * @method string getFilterTypeList()
+ * @method $this withFilterTypeList($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getFilterTableList()
+ * @method $this withFilterTableList($value)
+ * @method string getFilterEndTime()
+ * @method $this withFilterEndTime($value)
+ * @method string getColumnFilter()
+ * @method $this withColumnFilter($value)
+ */
+class SearchDataTrackResult extends Rpc
 {
 }
 

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1777 - 2023-4-24
+- Supported GetDatabaseExportOrderDetail,CreateDatabaseExportOrder,CreateDataExportOrder API.
+- Supported CreateDataTrackOrder,GetDataTrackJobDegree,GetDataTrackJobTableMeta,GetDataTrackOrderDetail,SearchDataTrackResult,DownloadDataTrackResult,QueryDataTrackResultDownloadStatus API.
+
+
 ## 1.8.1776 - 2023-4-24
 - ModifyDiskSpec add PerformanceControlOptions.
 
