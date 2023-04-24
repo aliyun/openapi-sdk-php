@@ -262,6 +262,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDiagnosticMetricSet modifyDiagnosticMetricSet(array $options = [])
  * @method ModifyDiskAttribute modifyDiskAttribute(array $options = [])
  * @method ModifyDiskChargeType modifyDiskChargeType(array $options = [])
+ * @method ModifyDiskDeployment modifyDiskDeployment(array $options = [])
  * @method ModifyDiskSpec modifyDiskSpec(array $options = [])
  * @method ModifyEipAddressAttribute modifyEipAddressAttribute(array $options = [])
  * @method ModifyElasticityAssurance modifyElasticityAssurance(array $options = [])
@@ -9698,9 +9699,25 @@ class DescribeResourceByTags extends Rpc
  * @method $this withDestinationResource($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method array getConditions()
  */
 class DescribeResourcesModification extends Rpc
 {
+
+    /**
+     * @param array $conditions
+     *
+     * @return $this
+     */
+	public function withConditions(array $conditions)
+	{
+	    $this->data['Conditions'] = $conditions;
+		foreach ($conditions as $i => $iValue) {
+			$this->options['query']['Conditions.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -12091,6 +12108,32 @@ class ModifyDiskChargeType extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getStorageClusterId()
+ * @method $this withStorageClusterId($value)
+ */
+class ModifyDiskDeployment extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDiskCategory()
+ * @method $this withDiskCategory($value)
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ * @method string getDryRun()
+ * @method $this withDryRun($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPerformanceLevel()
+ * @method $this withPerformanceLevel($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getPerformanceControlOptions()
+ * @method $this withPerformanceControlOptions($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getProvisionedIops()
  * @method $this withProvisionedIops($value)
  */
@@ -12690,6 +12733,8 @@ class ModifyInstanceNetworkSpec extends Rpc
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method string getTemporaryEndTime()
+ * @method string getModifyMode()
+ * @method $this withModifyMode($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -12700,6 +12745,7 @@ class ModifyInstanceNetworkSpec extends Rpc
  * @method string getTemporaryStartTime()
  * @method string getAsync()
  * @method $this withAsync($value)
+ * @method array getDisk()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInternetMaxBandwidthIn()
@@ -12758,6 +12804,29 @@ class ModifyInstanceSpec extends Rpc
         $this->options['query']['Temporary.StartTime'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $disk
+     *
+     * @return $this
+     */
+	public function withDisk(array $disk)
+	{
+	    $this->data['Disk'] = $disk;
+		foreach ($disk as $depth1 => $depth1Value) {
+			if(isset($depth1Value['PerformanceLevel'])){
+				$this->options['query']['Disk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			}
+			if(isset($depth1Value['DiskId'])){
+				$this->options['query']['Disk.' . ($depth1 + 1) . '.DiskId'] = $depth1Value['DiskId'];
+			}
+			if(isset($depth1Value['Category'])){
+				$this->options['query']['Disk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
+			}
+		}
+
+		return $this;
     }
 }
 
@@ -13016,6 +13085,8 @@ class ModifyPrefixList extends Rpc
  * @method $this withMigrateAcrossZone($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getModifyMode()
+ * @method $this withModifyMode($value)
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
  * @method string getRebootWhenFinished()
@@ -13028,6 +13099,7 @@ class ModifyPrefixList extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method array getDisk()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -13045,6 +13117,29 @@ class ModifyPrepayInstanceSpec extends Rpc
         $this->options['query']['SystemDisk.Category'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $disk
+     *
+     * @return $this
+     */
+	public function withDisk(array $disk)
+	{
+	    $this->data['Disk'] = $disk;
+		foreach ($disk as $depth1 => $depth1Value) {
+			if(isset($depth1Value['PerformanceLevel'])){
+				$this->options['query']['Disk.' . ($depth1 + 1) . '.PerformanceLevel'] = $depth1Value['PerformanceLevel'];
+			}
+			if(isset($depth1Value['DiskId'])){
+				$this->options['query']['Disk.' . ($depth1 + 1) . '.DiskId'] = $depth1Value['DiskId'];
+			}
+			if(isset($depth1Value['Category'])){
+				$this->options['query']['Disk.' . ($depth1 + 1) . '.Category'] = $depth1Value['Category'];
+			}
+		}
+
+		return $this;
     }
 }
 

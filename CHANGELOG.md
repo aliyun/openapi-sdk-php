@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1776 - 2023-4-24
+- ModifyDiskSpec add PerformanceControlOptions.
+
+
 ## 1.8.1775 - 2023-4-23
 - Change parameter name to InputFile.
 
