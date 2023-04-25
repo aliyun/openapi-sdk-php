@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1781 - 2023-4-25
+- Add UpdateConsumerOffset api.
+
+
 ## 1.8.1780 - 2023-4-25
 - Iteration v2-10-0.
 

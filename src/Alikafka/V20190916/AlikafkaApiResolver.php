@@ -37,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateAllowedIp updateAllowedIp(array $options = [])
+ * @method UpdateConsumerOffset updateConsumerOffset(array $options = [])
  * @method UpdateInstanceConfig updateInstanceConfig(array $options = [])
  * @method UpgradeInstanceVersion upgradeInstanceVersion(array $options = [])
  * @method UpgradePostPayOrder upgradePostPayOrder(array $options = [])
@@ -56,9 +57,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'alikafka';
 }
 
 /**
@@ -725,6 +723,24 @@ class UntagResources extends Rpc
  * @method $this withInstanceId($value)
  */
 class UpdateAllowedIp extends Rpc
+{
+}
+
+/**
+ * @method string getConsumerId()
+ * @method $this withConsumerId($value)
+ * @method string getResetType()
+ * @method $this withResetType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getOffsets()
+ * @method $this withOffsets($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getTime()
+ * @method $this withTime($value)
+ */
+class UpdateConsumerOffset extends Rpc
 {
 }
 
