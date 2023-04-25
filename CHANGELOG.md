@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1779 - 2023-4-25
+- Add CheckDcdnDomainExist.
+
+
 ## 1.8.1778 - 2023-4-25
 - Add CheckCdnDomainExist.
 
