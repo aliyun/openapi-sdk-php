@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1778 - 2023-4-25
+- Add CheckCdnDomainExist.
+
+
 ## 1.8.1777 - 2023-4-24
 - Supported GetDatabaseExportOrderDetail,CreateDatabaseExportOrder,CreateDataExportOrder API.
 - Supported CreateDataTrackOrder,GetDataTrackJobDegree,GetDataTrackJobTableMeta,GetDataTrackOrderDetail,SearchDataTrackResult,DownloadDataTrackResult,QueryDataTrackResultDownloadStatus API.
