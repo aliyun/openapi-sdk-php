@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1782 - 2023-4-26
+- Package buy.
+
+
 ## 1.8.1781 - 2023-4-25
 - Add UpdateConsumerOffset api.
 
