@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1784 - 2023-4-26
+- Api add media storage class.
+
+
 ## 1.8.1783 - 2023-4-26
 - Api add media storage class.
 

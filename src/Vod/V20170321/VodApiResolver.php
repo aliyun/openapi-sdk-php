@@ -117,6 +117,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefreshUploadVideo refreshUploadVideo(array $options = [])
  * @method RefreshVodObjectCaches refreshVodObjectCaches(array $options = [])
  * @method RegisterMedia registerMedia(array $options = [])
+ * @method RestoreMedia restoreMedia(array $options = [])
  * @method SearchEditingProject searchEditingProject(array $options = [])
  * @method SearchMedia searchMedia(array $options = [])
  * @method SetAuditSecurityIp setAuditSecurityIp(array $options = [])
@@ -143,6 +144,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateCategory updateCategory(array $options = [])
  * @method UpdateEditingProject updateEditingProject(array $options = [])
  * @method UpdateImageInfos updateImageInfos(array $options = [])
+ * @method UpdateMediaStorageClass updateMediaStorageClass(array $options = [])
  * @method UpdateTranscodeTemplateGroup updateTranscodeTemplateGroup(array $options = [])
  * @method UpdateVideoInfo updateVideoInfo(array $options = [])
  * @method UpdateVideoInfos updateVideoInfos(array $options = [])
@@ -1799,6 +1801,20 @@ class RegisterMedia extends Rpc
 }
 
 /**
+ * @method string getRestoreTier()
+ * @method $this withRestoreTier($value)
+ * @method string getRestoreDays()
+ * @method $this withRestoreDays($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method string getMediaIds()
+ * @method $this withMediaIds($value)
+ */
+class RestoreMedia extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
@@ -2239,6 +2255,20 @@ class UpdateEditingProject extends Rpc
  * @method $this withResourceRealOwnerId($value)
  */
 class UpdateImageInfos extends Rpc
+{
+}
+
+/**
+ * @method string getRestoreTier()
+ * @method $this withRestoreTier($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method string getMediaIds()
+ * @method $this withMediaIds($value)
+ * @method string getStorageClass()
+ * @method $this withStorageClass($value)
+ */
+class UpdateMediaStorageClass extends Rpc
 {
 }
 
