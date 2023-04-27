@@ -71,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataCronClearTaskDetailList getDataCronClearTaskDetailList(array $options = [])
  * @method GetDataExportDownloadURL getDataExportDownloadURL(array $options = [])
  * @method GetDataExportOrderDetail getDataExportOrderDetail(array $options = [])
+ * @method GetDataExportPreCheckDetail getDataExportPreCheckDetail(array $options = [])
  * @method GetDataImportSQL getDataImportSQL(array $options = [])
  * @method GetDataTrackJobDegree getDataTrackJobDegree(array $options = [])
  * @method GetDataTrackJobTableMeta getDataTrackJobTableMeta(array $options = [])
@@ -1188,6 +1189,16 @@ class GetDataExportOrderDetail extends Rpc
 /**
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetDataExportPreCheckDetail extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
  * @method string getSqlId()
  * @method $this withSqlId($value)
  * @method string getOrderId()
@@ -1322,6 +1333,8 @@ class GetOnlineDDLProgress extends Rpc
 }
 
 /**
+ * @method string getUserNick()
+ * @method $this withUserNick($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getTid()
@@ -1334,6 +1347,8 @@ class GetOnlineDDLProgress extends Rpc
  * @method $this withModule($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getDatabaseName()
+ * @method $this withDatabaseName($value)
  */
 class GetOpLog extends Rpc
 {

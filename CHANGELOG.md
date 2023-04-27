@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1785 - 2023-4-27
+- Support GetDataExportPreCheckDetail API.
+- Modify GetOpLog API.
+
+
 ## 1.8.1784 - 2023-4-26
 - Api add media storage class.
 
