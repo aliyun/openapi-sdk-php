@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1788 - 2023-4-27
+- Support return TotalCount for QueryFigureClusters.
+
+
 ## 1.8.1787 - 2023-4-27
 - Release ChestCT.
 

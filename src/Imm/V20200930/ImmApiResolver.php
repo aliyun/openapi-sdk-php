@@ -2051,6 +2051,8 @@ class LiveTranscoding extends Rpc
  * @method $this withCreateTimeRange($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
+ * @method string getWithTotalCount()
+ * @method $this withWithTotalCount($value)
  * @method string getUpdateTimeRange()
  * @method $this withUpdateTimeRange($value)
  */
