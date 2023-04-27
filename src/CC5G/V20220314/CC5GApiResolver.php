@@ -32,6 +32,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAPNs listAPNs(array $options = [])
  * @method ListAuthorizationRules listAuthorizationRules(array $options = [])
  * @method ListBatchOperateCardsTasks listBatchOperateCardsTasks(array $options = [])
+ * @method ListCardDayUsages listCardDayUsages(array $options = [])
  * @method ListCards listCards(array $options = [])
  * @method ListCardUsages listCardUsages(array $options = [])
  * @method ListDataPackages listDataPackages(array $options = [])
@@ -553,6 +554,21 @@ class ListAuthorizationRules extends Rpc
  * @method $this withStatuses($value)
  */
 class ListBatchOperateCardsTasks extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getLatestMonthNum()
+ * @method $this withLatestMonthNum($value)
+ * @method string getIccids()
+ * @method $this withIccids($value)
+ * @method string getWirelessCloudConnectorId()
+ * @method $this withWirelessCloudConnectorId($value)
+ */
+class ListCardDayUsages extends Rpc
 {
 
     /** @var string */
