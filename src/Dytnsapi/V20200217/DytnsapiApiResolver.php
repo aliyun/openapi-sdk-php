@@ -6,13 +6,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method DescribeEmptyNumber describeEmptyNumber(array $options = [])
- * @method DescribeEmptyNumberDetect describeEmptyNumberDetect(array $options = [])
  * @method DescribePhoneNumberAnalysis describePhoneNumberAnalysis(array $options = [])
- * @method DescribePhoneNumberAttribute describePhoneNumberAttribute(array $options = [])
  * @method DescribePhoneNumberOnlineTime describePhoneNumberOnlineTime(array $options = [])
  * @method DescribePhoneNumberOperatorAttribute describePhoneNumberOperatorAttribute(array $options = [])
- * @method DescribePhoneNumberResale describePhoneNumberResale(array $options = [])
- * @method DescribePhoneNumberStatus describePhoneNumberStatus(array $options = [])
  * @method DescribePhoneTwiceTelVerify describePhoneTwiceTelVerify(array $options = [])
  * @method InvalidPhoneNumberFilter invalidPhoneNumberFilter(array $options = [])
  * @method PhoneNumberEncrypt phoneNumberEncrypt(array $options = [])
@@ -44,6 +40,8 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
  * @method string getRouteName()
  * @method $this withRouteName($value)
  * @method string getMask()
@@ -58,24 +56,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withInputNumber($value)
  */
 class DescribeEmptyNumber extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEncryptType()
- * @method $this withEncryptType($value)
- * @method string getOfferType()
- * @method $this withOfferType($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPhone()
- * @method $this withPhone($value)
- */
-class DescribeEmptyNumberDetect extends Rpc
 {
 }
 
@@ -106,20 +86,8 @@ class DescribePhoneNumberAnalysis extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribePhoneNumberAttribute extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
  * @method string getRouteName()
  * @method $this withRouteName($value)
  * @method string getMask()
@@ -168,38 +136,10 @@ class DescribePhoneNumberOperatorAttribute extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSince()
- * @method $this withSince($value)
- */
-class DescribePhoneNumberResale extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getPhoneNumber()
- * @method $this withPhoneNumber($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribePhoneNumberStatus extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
  * @method string getRouteName()
  * @method $this withRouteName($value)
  * @method string getMask()
@@ -266,6 +206,10 @@ class PhoneNumberEncrypt extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()
@@ -310,6 +254,10 @@ class PhoneNumberStatusForPublic extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()
@@ -334,6 +282,10 @@ class PhoneNumberStatusForReal extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()
@@ -358,6 +310,10 @@ class PhoneNumberStatusForSms extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()
@@ -382,6 +338,10 @@ class PhoneNumberStatusForVirtual extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()
@@ -406,6 +366,8 @@ class PhoneNumberStatusForVoice extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
  * @method string getCertCode()
  * @method $this withCertCode($value)
  * @method string getRouteName()
@@ -434,6 +396,8 @@ class ThreeElementsVerification extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
  * @method string getRouteName()
  * @method $this withRouteName($value)
  * @method string getMask()

@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 1.8.1789 - 2023-4-28
+- Change api backend.
+- Modify error code.
+- Delete headers module in response.
+- Add return param .
+- Fixed bug.
+- Change to brick.
+- Supported for hiding old api.
+- Access bill.
+- Improve error code.
+- Add credit verify.
+
+
 ## 1.8.1788 - 2023-4-27
 - Support return TotalCount for QueryFigureClusters.
 
