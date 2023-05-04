@@ -146,6 +146,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RollbackStagingConfig rollbackStagingConfig(array $options = [])
  * @method SetCdnDomainCSRCertificate setCdnDomainCSRCertificate(array $options = [])
  * @method SetCdnDomainSMCertificate setCdnDomainSMCertificate(array $options = [])
+ * @method SetCdnDomainSSLCertificate setCdnDomainSSLCertificate(array $options = [])
  * @method SetCdnDomainStagingConfig setCdnDomainStagingConfig(array $options = [])
  * @method SetDomainServerCertificate setDomainServerCertificate(array $options = [])
  * @method SetReqHeaderConfig setReqHeaderConfig(array $options = [])
@@ -2319,6 +2320,32 @@ class SetCdnDomainCSRCertificate extends Rpc
  * @method $this withCertIdentifier($value)
  */
 class SetCdnDomainSMCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getSSLProtocol()
+ * @method $this withSSLProtocol($value)
+ * @method string getCertId()
+ * @method $this withCertId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertType()
+ * @method $this withCertType($value)
+ * @method string getSSLPri()
+ * @method $this withSSLPri($value)
+ * @method string getCertRegion()
+ * @method $this withCertRegion($value)
+ * @method string getCertName()
+ * @method $this withCertName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSSLPub()
+ * @method $this withSSLPub($value)
+ */
+class SetCdnDomainSSLCertificate extends Rpc
 {
 }
 

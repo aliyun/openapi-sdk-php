@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1790 - 2023-5-4
+- Add SetCdnDomainSSLCertificate.
+
+
 ## 1.8.1789 - 2023-4-28
 - Change api backend.
 - Modify error code.
