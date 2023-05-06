@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1791 - 2023-5-6
+- Supported more api for user.
+
+
 ## 1.8.1790 - 2023-5-4
 - Add SetCdnDomainSSLCertificate.
 
