@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1792 - 2023-5-6
+- Add The billingCount return value to the RunPreTrainService Api.
+
+
 ## 1.8.1791 - 2023-5-6
 - Supported more api for user.
 
