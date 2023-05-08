@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1794 - 2023-5-8
+- whatsapp 修改Authentication类型的模板
+
+
 ## 1.8.1793 - 2023-5-8
 - Supported GetVideo Api.
 
