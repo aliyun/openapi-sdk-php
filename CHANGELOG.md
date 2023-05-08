@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1793 - 2023-5-8
+- Supported GetVideo Api.
+
+
 ## 1.8.1792 - 2023-5-6
 - Add The billingCount return value to the RunPreTrainService Api.
 
