@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1796 - 2023-5-9
+- Supported GetVideo Api.
+
+
 ## 1.8.1795 - 2023-5-9
 - Remove PresetReference struct.
 

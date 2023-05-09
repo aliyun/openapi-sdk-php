@@ -68,6 +68,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetTurnServerList getTurnServerList(array $options = [])
  * @method GetUploadAudioDataParams getUploadAudioDataParams(array $options = [])
  * @method GetUser getUser(array $options = [])
+ * @method GetVideo getVideo(array $options = [])
  * @method GetVoicemailRecording getVoicemailRecording(array $options = [])
  * @method HoldCall holdCall(array $options = [])
  * @method ImportAdmins importAdmins(array $options = [])
@@ -1018,6 +1019,19 @@ class GetUploadAudioDataParams extends Rpc
  */
 class GetUser extends Rpc
 {
+}
+
+/**
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetVideo extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
