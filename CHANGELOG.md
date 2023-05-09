@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1795 - 2023-5-9
+- Remove PresetReference struct.
+
+
 ## 1.8.1794 - 2023-5-8
 - whatsapp 修改Authentication类型的模板
 

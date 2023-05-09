@@ -851,6 +851,8 @@ class CreateLocationDateClusteringTask extends Rpc
  * @method $this withNotification($value)
  * @method string getNotifyEndpoint()
  * @method $this withNotifyEndpoint($value)
+ * @method string getAlignmentIndex()
+ * @method $this withAlignmentIndex($value)
  * @method string getProjectName()
  * @method $this withProjectName($value)
  * @method string getNotifyTopicName()
@@ -2025,8 +2027,6 @@ class ListTriggers extends Rpc
  * @method $this withProjectName($value)
  * @method string getCredentialConfig()
  * @method $this withCredentialConfig($value)
- * @method string getToken()
- * @method $this withToken($value)
  * @method string getSourceURI()
  * @method $this withSourceURI($value)
  */
