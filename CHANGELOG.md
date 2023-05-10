@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1797 - 2023-5-10
+- SendMessage add Feedback param
+
+
 ## 1.8.1796 - 2023-5-9
 - Supported GetVideo Api.
 

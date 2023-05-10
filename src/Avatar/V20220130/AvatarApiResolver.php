@@ -134,6 +134,8 @@ class QueryTimedResetOperateStatus extends Rpc
 }
 
 /**
+ * @method string getFeedback()
+ * @method $this withFeedback($value)
  * @method string getTextRequest()
  * @method $this withTextRequest($value)
  * @method string getTenantId()
