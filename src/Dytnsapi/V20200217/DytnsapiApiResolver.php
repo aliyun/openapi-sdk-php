@@ -114,6 +114,10 @@ class DescribePhoneNumberOnlineTime extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
  * @method string getMask()
  * @method $this withMask($value)
  * @method string getResultCount()

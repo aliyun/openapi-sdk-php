@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1798 - 2023-5-10
+- Supported insufficient balance check.
+- Other improvements.
+
+
 ## 1.8.1797 - 2023-5-10
 - SendMessage add Feedback param
 
