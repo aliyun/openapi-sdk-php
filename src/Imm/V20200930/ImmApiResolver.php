@@ -1851,6 +1851,8 @@ class GetStory extends Rpc
  * @method $this withProjectName($value)
  * @method string getTaskType()
  * @method $this withTaskType($value)
+ * @method string getRequestDefinition()
+ * @method $this withRequestDefinition($value)
  */
 class GetTask extends Rpc
 {
@@ -1991,6 +1993,8 @@ class ListRegions extends Rpc
  * @method $this withEndTimeRange($value)
  * @method string getSort()
  * @method $this withSort($value)
+ * @method string getRequestDefinition()
+ * @method $this withRequestDefinition($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
  * @method string getTagSelector()

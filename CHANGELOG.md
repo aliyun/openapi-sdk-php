@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1804 - 2023-5-11
+- Add RequestDefinition.
+- Hide  endpoint.
+- Fix width and height.
+
+
 ## 1.8.1803 - 2023-5-11
 - Supported sorting for DescribeDnsProduceInstances.
 
