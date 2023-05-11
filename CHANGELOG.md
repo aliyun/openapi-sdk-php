@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1802 - 2023-5-11
+- Pub Support MessageExpiryInterval and Retained.
+
+
 ## 1.8.1801 - 2023-5-11
 - Support Live Streaming and VOD P2P.
 
