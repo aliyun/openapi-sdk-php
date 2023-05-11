@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddUserTagMeta addUserTagMeta(array $options = [])
  * @method AddUserToWorkspace addUserToWorkspace(array $options = [])
  * @method AddWorkspaceUsers addWorkspaceUsers(array $options = [])
+ * @method AllotDatasetAccelerationTask allotDatasetAccelerationTask(array $options = [])
  * @method AuthorizeMenu authorizeMenu(array $options = [])
  * @method BatchAddFeishuUsers batchAddFeishuUsers(array $options = [])
  * @method CancelAuthorizationMenu cancelAuthorizationMenu(array $options = [])
@@ -34,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteUserGroupMembers deleteUserGroupMembers(array $options = [])
  * @method DeleteUserTagMeta deleteUserTagMeta(array $options = [])
  * @method GetUserGroupInfo getUserGroupInfo(array $options = [])
+ * @method ListApiDatasource listApiDatasource(array $options = [])
  * @method ListByUserGroupId listByUserGroupId(array $options = [])
  * @method ListCollections listCollections(array $options = [])
  * @method ListCubeDataLevelPermissionConfig listCubeDataLevelPermissionConfig(array $options = [])
@@ -44,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRecentViewReports listRecentViewReports(array $options = [])
  * @method ListSharedReports listSharedReports(array $options = [])
  * @method ListUserGroupsByUserId listUserGroupsByUserId(array $options = [])
+ * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
  * @method QueryDataService queryDataService(array $options = [])
  * @method QueryDatasetDetailInfo queryDatasetDetailInfo(array $options = [])
  * @method QueryDatasetInfo queryDatasetInfo(array $options = [])
@@ -101,7 +104,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = 'quickbi';
+    public $serviceCode = '2.2.0';
 }
 
 /**
@@ -269,6 +272,18 @@ class AddUserToWorkspace extends Rpc
  * @method $this withWorkspaceId($value)
  */
 class AddWorkspaceUsers extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ */
+class AllotDatasetAccelerationTask extends Rpc
 {
 }
 
@@ -585,6 +600,24 @@ class GetUserGroupInfo extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getKeyWord()
+ * @method $this withKeyWord($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class ListApiDatasource extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getUserGroupIds()
@@ -727,6 +760,22 @@ class ListSharedReports extends Rpc
  * @method $this withUserId($value)
  */
 class ListUserGroupsByUserId extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class ModifyApiDatasourceParameters extends Rpc
 {
 }
 

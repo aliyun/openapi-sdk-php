@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1799 - 2023-5-11
+- Add AllotDatasetAccelerationTask API.
+- Update error code description.
+
+
 ## 1.8.1798 - 2023-5-10
 - Supported insufficient balance check.
 - Other improvements.
