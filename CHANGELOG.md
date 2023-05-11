@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1801 - 2023-5-11
+- Support Live Streaming and VOD P2P.
+
+
 ## 1.8.1800 - 2023-5-11
 - Supported more api for user.
 
