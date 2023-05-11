@@ -572,6 +572,7 @@ class GetEcEnGeneral extends Rpc
  * @method $this withBusiness($value)
  * @method string getServiceCode()
  * @method string getText()
+ * @method string getTextType()
  */
 class GetEmbedding extends Rpc
 {
@@ -598,6 +599,19 @@ class GetEmbedding extends Rpc
     {
         $this->data['Text'] = $value;
         $this->options['form_params']['Text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTextType($value)
+    {
+        $this->data['TextType'] = $value;
+        $this->options['form_params']['TextType'] = $value;
 
         return $this;
     }

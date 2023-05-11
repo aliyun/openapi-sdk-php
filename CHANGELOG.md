@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1800 - 2023-5-11
+- Supported more api for user.
+
+
 ## 1.8.1799 - 2023-5-11
 - Add AllotDatasetAccelerationTask API.
 - Update error code description.
