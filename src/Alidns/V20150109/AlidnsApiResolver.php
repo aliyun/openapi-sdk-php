@@ -71,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainNs describeDomainNs(array $options = [])
  * @method DescribeDomainRecordInfo describeDomainRecordInfo(array $options = [])
  * @method DescribeDomainRecords describeDomainRecords(array $options = [])
+ * @method DescribeDomainResolveStatisticsSummary describeDomainResolveStatisticsSummary(array $options = [])
  * @method DescribeDomains describeDomains(array $options = [])
  * @method DescribeDomainStatistics describeDomainStatistics(array $options = [])
  * @method DescribeDomainStatisticsSummary describeDomainStatisticsSummary(array $options = [])
@@ -107,6 +108,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePdnsUdpIpSegments describePdnsUdpIpSegments(array $options = [])
  * @method DescribePdnsUserInfo describePdnsUserInfo(array $options = [])
  * @method DescribeRecordLogs describeRecordLogs(array $options = [])
+ * @method DescribeRecordResolveStatisticsSummary describeRecordResolveStatisticsSummary(array $options = [])
  * @method DescribeRecordStatistics describeRecordStatistics(array $options = [])
  * @method DescribeRecordStatisticsSummary describeRecordStatisticsSummary(array $options = [])
  * @method DescribeSubDomainRecords describeSubDomainRecords(array $options = [])
@@ -1199,6 +1201,8 @@ class DescribeDnsProductInstance extends Rpc
 }
 
 /**
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getDomainType()
@@ -1211,6 +1215,8 @@ class DescribeDnsProductInstance extends Rpc
  * @method $this withLang($value)
  * @method string getVersionCode()
  * @method $this withVersionCode($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
  */
 class DescribeDnsProductInstances extends Rpc
 {
@@ -1471,6 +1477,32 @@ class DescribeDomainRecordInfo extends Rpc
  * @method $this withStatus($value)
  */
 class DescribeDomainRecords extends Rpc
+{
+}
+
+/**
+ * @method string getThreshold()
+ * @method $this withThreshold($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getSearchMode()
+ * @method $this withSearchMode($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ */
+class DescribeDomainResolveStatisticsSummary extends Rpc
 {
 }
 
@@ -2093,6 +2125,36 @@ class DescribeRecordLogs extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getThreshold()
+ * @method $this withThreshold($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getDomainType()
+ * @method $this withDomainType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getSearchMode()
+ * @method $this withSearchMode($value)
+ */
+class DescribeRecordResolveStatisticsSummary extends Rpc
+{
 }
 
 /**

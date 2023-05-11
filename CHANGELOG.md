@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1803 - 2023-5-11
+- Supported sorting for DescribeDnsProduceInstances.
+
+
 ## 1.8.1802 - 2023-5-11
 - Pub Support MessageExpiryInterval and Retained.
 
