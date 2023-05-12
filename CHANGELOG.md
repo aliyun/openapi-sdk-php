@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1805 - 2023-5-12
+- Remove password in CreateFileCompressionTask.
+
+
 ## 1.8.1804 - 2023-5-11
 - Add RequestDefinition.
 - Hide  endpoint.
