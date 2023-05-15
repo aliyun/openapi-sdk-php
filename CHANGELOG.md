@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1806 - 2023-5-15
+- Support SkipDataCorrectRowCheck API.
+
+
 ## 1.8.1805 - 2023-5-12
 - Remove password in CreateFileCompressionTask.
 

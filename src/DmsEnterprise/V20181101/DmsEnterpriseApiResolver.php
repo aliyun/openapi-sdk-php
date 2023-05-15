@@ -183,6 +183,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchDataTrackResult searchDataTrackResult(array $options = [])
  * @method SearchTable searchTable(array $options = [])
  * @method SetOwners setOwners(array $options = [])
+ * @method SkipDataCorrectRowCheck skipDataCorrectRowCheck(array $options = [])
  * @method StopTaskFlowInstance stopTaskFlowInstance(array $options = [])
  * @method SubmitOrderApproval submitOrderApproval(array $options = [])
  * @method SubmitStructSyncOrderApproval submitStructSyncOrderApproval(array $options = [])
@@ -2733,6 +2734,18 @@ class SearchTable extends Rpc
  * @method $this withOwnerType($value)
  */
 class SetOwners extends Rpc
+{
+}
+
+/**
+ * @method string getReason()
+ * @method $this withReason($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class SkipDataCorrectRowCheck extends Rpc
 {
 }
 
