@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1808 - 2023-5-16
+- Add response Permission.
+
+
 ## 1.8.1807 - 2023-5-16
 - Live sdk update.
 

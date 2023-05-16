@@ -6,13 +6,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CreateArtifact createArtifact(array $options = [])
+ * @method CreateService createService(array $options = [])
  * @method DeleteArtifact deleteArtifact(array $options = [])
  * @method GetArtifact getArtifact(array $options = [])
  * @method GetArtifactRepositoryCredentials getArtifactRepositoryCredentials(array $options = [])
+ * @method GetServiceEstimateCost getServiceEstimateCost(array $options = [])
  * @method GetServiceInstance getServiceInstance(array $options = [])
  * @method ListArtifacts listArtifacts(array $options = [])
  * @method ListArtifactVersions listArtifactVersions(array $options = [])
  * @method ListServiceInstances listServiceInstances(array $options = [])
+ * @method ListServices listServices(array $options = [])
  * @method ListServiceUsages listServiceUsages(array $options = [])
  * @method ReleaseArtifact releaseArtifact(array $options = [])
  * @method UpdateArtifact updateArtifact(array $options = [])
@@ -68,6 +71,96 @@ class CreateArtifact extends Rpc
 }
 
 /**
+ * @method string getAlarmMetadata()
+ * @method $this withAlarmMetadata($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPolicyNames()
+ * @method $this withPolicyNames($value)
+ * @method string getLicenseMetadata()
+ * @method $this withLicenseMetadata($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getApprovalType()
+ * @method $this withApprovalType($value)
+ * @method string getTrialDuration()
+ * @method $this withTrialDuration($value)
+ * @method string getShareType()
+ * @method $this withShareType($value)
+ * @method array getTag()
+ * @method string getUpgradeMetadata()
+ * @method $this withUpgradeMetadata($value)
+ * @method string getDeployMetadata()
+ * @method $this withDeployMetadata($value)
+ * @method string getServiceType()
+ * @method $this withServiceType($value)
+ * @method string getIsSupportOperated()
+ * @method $this withIsSupportOperated($value)
+ * @method string getTenantType()
+ * @method $this withTenantType($value)
+ * @method array getServiceInfo()
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ * @method string getVersionName()
+ * @method $this withVersionName($value)
+ * @method string getOperationMetadata()
+ * @method $this withOperationMetadata($value)
+ * @method string getDeployType()
+ * @method $this withDeployType($value)
+ */
+class CreateService extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $serviceInfo
+     *
+     * @return $this
+     */
+	public function withServiceInfo(array $serviceInfo)
+	{
+	    $this->data['ServiceInfo'] = $serviceInfo;
+		foreach ($serviceInfo as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ShortDescription'])){
+				$this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.ShortDescription'] = $depth1Value['ShortDescription'];
+			}
+			if(isset($depth1Value['Image'])){
+				$this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.Image'] = $depth1Value['Image'];
+			}
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['Locale'])){
+				$this->options['query']['ServiceInfo.' . ($depth1 + 1) . '.Locale'] = $depth1Value['Locale'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getArtifactVersion()
  * @method $this withArtifactVersion($value)
  * @method string getArtifactId()
@@ -94,6 +187,24 @@ class GetArtifact extends Rpc
  * @method $this withArtifactType($value)
  */
 class GetArtifactRepositoryCredentials extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getServiceVersion()
+ * @method $this withServiceVersion($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ * @method string getServiceInstanceId()
+ * @method $this withServiceInstanceId($value)
+ */
+class GetServiceEstimateCost extends Rpc
 {
 }
 
@@ -159,6 +270,62 @@ class ListArtifactVersions extends Rpc
  * @method $this withMaxResults($value)
  */
 class ListServiceInstances extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $filter
+     *
+     * @return $this
+     */
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getAllVersions()
+ * @method $this withAllVersions($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ * @method array getFilter()
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListServices extends Rpc
 {
 
     /**
