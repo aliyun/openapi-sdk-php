@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1810 - 2023-5-16
+- Live sdk update.
+
+
 ## 1.8.1809 - 2023-5-16
 - Generate SDK for service instance APIs.
 

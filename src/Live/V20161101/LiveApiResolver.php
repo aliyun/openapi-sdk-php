@@ -47,6 +47,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CopyCasterSceneConfig copyCasterSceneConfig(array $options = [])
  * @method CreateCaster createCaster(array $options = [])
  * @method CreateCustomTemplate createCustomTemplate(array $options = [])
+ * @method CreateEventSub createEventSub(array $options = [])
  * @method CreateLiveDelayConfig createLiveDelayConfig(array $options = [])
  * @method CreateLiveRealTimeLogDelivery createLiveRealTimeLogDelivery(array $options = [])
  * @method CreateLiveStreamMonitor createLiveStreamMonitor(array $options = [])
@@ -64,6 +65,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCasterSceneConfig deleteCasterSceneConfig(array $options = [])
  * @method DeleteCasterVideoResource deleteCasterVideoResource(array $options = [])
  * @method DeleteCustomTemplate deleteCustomTemplate(array $options = [])
+ * @method DeleteEventSub deleteEventSub(array $options = [])
  * @method DeleteLiveAppRecordConfig deleteLiveAppRecordConfig(array $options = [])
  * @method DeleteLiveAppSnapshotConfig deleteLiveAppSnapshotConfig(array $options = [])
  * @method DeleteLiveAudioAuditConfig deleteLiveAudioAuditConfig(array $options = [])
@@ -111,6 +113,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCasterStreamUrl describeCasterStreamUrl(array $options = [])
  * @method DescribeCasterSyncGroup describeCasterSyncGroup(array $options = [])
  * @method DescribeCasterVideoResources describeCasterVideoResources(array $options = [])
+ * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
  * @method DescribeDomainUsageData describeDomainUsageData(array $options = [])
  * @method DescribeDomainWithIntegrity describeDomainWithIntegrity(array $options = [])
  * @method DescribeForbidPushStreamRoomList describeForbidPushStreamRoomList(array $options = [])
@@ -262,6 +265,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RealTimeRecordCommand realTimeRecordCommand(array $options = [])
  * @method RealTimeSnapshotCommand realTimeSnapshotCommand(array $options = [])
  * @method RemoveShowFromShowList removeShowFromShowList(array $options = [])
+ * @method RemoveTerminals removeTerminals(array $options = [])
  * @method RestartCaster restartCaster(array $options = [])
  * @method ResumeLiveStream resumeLiveStream(array $options = [])
  * @method RollbackLiveStagingConfig rollbackLiveStagingConfig(array $options = [])
@@ -1649,6 +1653,54 @@ class CreateCustomTemplate extends Rpc
 }
 
 /**
+ * @method string getRole()
+ * @method $this withRole($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method array getUsers()
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getCallbackUrl()
+ * @method $this withCallbackUrl($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method array getEvents()
+ */
+class CreateEventSub extends Rpc
+{
+
+    /**
+     * @param array $users
+     *
+     * @return $this
+     */
+	public function withUsers(array $users)
+	{
+	    $this->data['Users'] = $users;
+		foreach ($users as $i => $iValue) {
+			$this->options['query']['Users.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $events
+     *
+     * @return $this
+     */
+	public function withEvents(array $events)
+	{
+	    $this->data['Events'] = $events;
+		foreach ($events as $i => $iValue) {
+			$this->options['query']['Events.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getDelayTime()
  * @method $this withDelayTime($value)
  * @method string getStream()
@@ -1962,6 +2014,16 @@ class DeleteCasterVideoResource extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteCustomTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getSubscribeId()
+ * @method $this withSubscribeId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DeleteEventSub extends Rpc
 {
 }
 
@@ -2630,6 +2692,22 @@ class DescribeCasterSyncGroup extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeCasterVideoResources extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getOrder()
+ * @method $this withOrder($value)
+ */
+class DescribeChannelParticipants extends Rpc
 {
 }
 
@@ -5964,6 +6042,32 @@ class RemoveShowFromShowList extends Rpc
 	    $this->data['ShowIdList'] = $showIdList;
 		foreach ($showIdList as $i => $iValue) {
 			$this->options['query']['showIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method array getTerminalIds()
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class RemoveTerminals extends Rpc
+{
+
+    /**
+     * @param array $terminalIds
+     *
+     * @return $this
+     */
+	public function withTerminalIds(array $terminalIds)
+	{
+	    $this->data['TerminalIds'] = $terminalIds;
+		foreach ($terminalIds as $i => $iValue) {
+			$this->options['query']['TerminalIds.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
