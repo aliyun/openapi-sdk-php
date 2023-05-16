@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1811 - 2023-5-16
+- Add UpdateService GetService DeleteService.
+
+
 ## 1.8.1810 - 2023-5-16
 - Live sdk update.
 
