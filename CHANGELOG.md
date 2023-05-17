@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1812 - 2023-5-17
+- Account Halt Check by Default.
+
+
 ## 1.8.1811 - 2023-5-16
 - Add UpdateService GetService DeleteService.
 
