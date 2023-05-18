@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1813 - 2023-5-18
+- Support GetDatabase, GetPhysicalDatabase to return InstanceAlias information.
+
+
 ## 1.8.1812 - 2023-5-17
 - Account Halt Check by Default.
 
