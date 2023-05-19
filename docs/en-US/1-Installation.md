@@ -55,7 +55,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 We strongly recommend that you install with Composer, but also provide a ZIP file with all classes and dependencies for users who cannot use Composer.
 
-Download the [.zip file](http://aliyunsdk-pages.alicdn.com/php-sdk/sdk.zip), and then extract it into your project at a location you choose. Finally, include the autoloader in your scripts, as follows:
+Download the source code from [releases](https://github.com/aliyun/openapi-sdk-php/releases), and then extract it into your project at a location you choose. Finally, include the autoloader in your scripts, as follows:
 
 ```php
 <?php
