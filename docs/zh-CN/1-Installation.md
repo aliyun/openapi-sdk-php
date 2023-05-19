@@ -40,7 +40,7 @@ php -d memory_limit=-1 composer.phar require alibabacloud/sdk
 
 我们强烈建议您使用 Composer 进行安装，但同时也为不能使用 Composer 的用户提供了包含所有类和依赖项的 ZIP 文件。
 
-请[下载 .zip 文件](http://aliyunsdk-pages.alicdn.com/php-sdk/sdk.zip)，然后在项目中的选定位置解压。
+请至[Releases 页面](https://github.com/aliyun/openapi-sdk-php/releases)下载最新版本的源码文件（zip 文件或者 tar.gz 文件），然后在项目中的选定位置解压。
 
 ## 将自动加载工具添加到 PHP 脚本
 
