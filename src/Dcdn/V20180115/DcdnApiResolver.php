@@ -89,6 +89,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDcdnDomainWebsocketHttpCodeData describeDcdnDomainWebsocketHttpCodeData(array $options = [])
  * @method DescribeDcdnDomainWebsocketTrafficData describeDcdnDomainWebsocketTrafficData(array $options = [])
  * @method DescribeDcdnErUsageData describeDcdnErUsageData(array $options = [])
+ * @method DescribeDcdnFullDomainsBlockIPConfig describeDcdnFullDomainsBlockIPConfig(array $options = [])
+ * @method DescribeDcdnFullDomainsBlockIPHistory describeDcdnFullDomainsBlockIPHistory(array $options = [])
  * @method DescribeDcdnHttpsDomainList describeDcdnHttpsDomainList(array $options = [])
  * @method DescribeDcdnIpaDomainConfigs describeDcdnIpaDomainConfigs(array $options = [])
  * @method DescribeDcdnIpaDomainDetail describeDcdnIpaDomainDetail(array $options = [])
@@ -1906,6 +1908,65 @@ class DescribeDcdnDomainWebsocketTrafficData extends Rpc
  */
 class DescribeDcdnErUsageData extends Rpc
 {
+}
+
+/**
+ * @method string getIPList()
+ * @method $this withIPList($value)
+ */
+class DescribeDcdnFullDomainsBlockIPConfig extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getIPList()
+ */
+class DescribeDcdnFullDomainsBlockIPHistory extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIPList($value)
+    {
+        $this->data['IPList'] = $value;
+        $this->options['form_params']['IPList'] = $value;
+
+        return $this;
+    }
 }
 
 /**

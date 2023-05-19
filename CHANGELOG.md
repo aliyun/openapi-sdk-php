@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1816 - 2023-5-19
+- Add DescribeDcdnDomainMd5Info.
+
+
 ## 1.8.1815 - 2023-5-19
 - Add DescribeDomainMd5Info.
 
