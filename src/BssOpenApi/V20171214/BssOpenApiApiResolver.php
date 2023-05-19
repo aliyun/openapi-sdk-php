@@ -21,6 +21,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCostUnit deleteCostUnit(array $options = [])
  * @method DescribeCostBudgetsSummary describeCostBudgetsSummary(array $options = [])
  * @method DescribeInstanceAmortizedCostByAmortizationPeriod describeInstanceAmortizedCostByAmortizationPeriod(array $options = [])
+ * @method DescribeInstanceAmortizedCostByAmortizationPeriodDate describeInstanceAmortizedCostByAmortizationPeriodDate(array $options = [])
  * @method DescribeInstanceAmortizedCostByConsumePeriod describeInstanceAmortizedCostByConsumePeriod(array $options = [])
  * @method DescribeInstanceBill describeInstanceBill(array $options = [])
  * @method DescribePricingModule describePricingModule(array $options = [])
@@ -663,6 +664,186 @@ class DescribeInstanceAmortizedCostByAmortizationPeriod extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param array $instanceIdList
+     *
+     * @return $this
+     */
+	public function withInstanceIdList(array $instanceIdList)
+	{
+	    $this->data['InstanceIdList'] = $instanceIdList;
+		foreach ($instanceIdList as $i => $iValue) {
+			$this->options['form_params']['InstanceIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxResults($value)
+    {
+        $this->data['MaxResults'] = $value;
+        $this->options['form_params']['MaxResults'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProductCode()
+ * @method string getAmortizationDateStart()
+ * @method string getSubscriptionType()
+ * @method string getCostUnitCode()
+ * @method string getNextToken()
+ * @method array getBillUserIdList()
+ * @method string getProductDetail()
+ * @method array getBillOwnerIdList()
+ * @method string getBillingCycle()
+ * @method string getAmortizationDateEnd()
+ * @method array getInstanceIdList()
+ * @method string getMaxResults()
+ */
+class DescribeInstanceAmortizedCostByAmortizationPeriodDate extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['form_params']['ProductCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAmortizationDateStart($value)
+    {
+        $this->data['AmortizationDateStart'] = $value;
+        $this->options['form_params']['AmortizationDateStart'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSubscriptionType($value)
+    {
+        $this->data['SubscriptionType'] = $value;
+        $this->options['form_params']['SubscriptionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCostUnitCode($value)
+    {
+        $this->data['CostUnitCode'] = $value;
+        $this->options['form_params']['CostUnitCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNextToken($value)
+    {
+        $this->data['NextToken'] = $value;
+        $this->options['form_params']['NextToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $billUserIdList
+     *
+     * @return $this
+     */
+	public function withBillUserIdList(array $billUserIdList)
+	{
+	    $this->data['BillUserIdList'] = $billUserIdList;
+		foreach ($billUserIdList as $i => $iValue) {
+			$this->options['form_params']['BillUserIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductDetail($value)
+    {
+        $this->data['ProductDetail'] = $value;
+        $this->options['form_params']['ProductDetail'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $billOwnerIdList
+     *
+     * @return $this
+     */
+	public function withBillOwnerIdList(array $billOwnerIdList)
+	{
+	    $this->data['BillOwnerIdList'] = $billOwnerIdList;
+		foreach ($billOwnerIdList as $i => $iValue) {
+			$this->options['form_params']['BillOwnerIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBillingCycle($value)
+    {
+        $this->data['BillingCycle'] = $value;
+        $this->options['form_params']['BillingCycle'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAmortizationDateEnd($value)
+    {
+        $this->data['AmortizationDateEnd'] = $value;
+        $this->options['form_params']['AmortizationDateEnd'] = $value;
+
+        return $this;
     }
 
     /**

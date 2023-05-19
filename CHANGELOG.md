@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1814 - 2023-5-19
+- DescribeInstanceAmortizedCostByAmortizationPeriodDate
+
+
 ## 1.8.1813 - 2023-5-18
 - Support GetDatabase, GetPhysicalDatabase to return InstanceAlias information.
 
