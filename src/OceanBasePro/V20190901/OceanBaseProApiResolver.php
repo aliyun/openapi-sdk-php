@@ -55,6 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTimeZones describeTimeZones(array $options = [])
  * @method DescribeTopSQLList describeTopSQLList(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
+ * @method KillProcessList killProcessList(array $options = [])
  * @method ModifyDatabaseDescription modifyDatabaseDescription(array $options = [])
  * @method ModifyDatabaseUserRoles modifyDatabaseUserRoles(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
@@ -1689,6 +1690,7 @@ class DescribeAvailableMemResource extends Rpc
 
 /**
  * @method string getTenantMode()
+ * @method string getSeries()
  */
 class DescribeCharset extends Rpc
 {
@@ -1702,6 +1704,19 @@ class DescribeCharset extends Rpc
     {
         $this->data['TenantMode'] = $value;
         $this->options['form_params']['TenantMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSeries($value)
+    {
+        $this->data['Series'] = $value;
+        $this->options['form_params']['Series'] = $value;
 
         return $this;
     }
@@ -3800,6 +3815,54 @@ class DescribeZones extends Rpc
 }
 
 /**
+ * @method string getSessionList()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class KillProcessList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionList($value)
+    {
+        $this->data['SessionList'] = $value;
+        $this->options['form_params']['SessionList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDescription()
  * @method string getInstanceId()
  * @method string getDatabaseName()
@@ -3992,27 +4055,14 @@ class ModifyInstanceNodeNum extends Rpc
 }
 
 /**
- * @method string getDiskSize()
  * @method string getAutoUseCoupon()
  * @method string getInstanceClass()
+ * @method string getDiskSize()
  * @method string getInstanceId()
  * @method string getLogDiskSize()
  */
 class ModifyInstanceSpec extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDiskSize($value)
-    {
-        $this->data['DiskSize'] = $value;
-        $this->options['form_params']['DiskSize'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -4036,6 +4086,19 @@ class ModifyInstanceSpec extends Rpc
     {
         $this->data['InstanceClass'] = $value;
         $this->options['form_params']['InstanceClass'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDiskSize($value)
+    {
+        $this->data['DiskSize'] = $value;
+        $this->options['form_params']['DiskSize'] = $value;
 
         return $this;
     }
@@ -4491,6 +4554,7 @@ class ModifyTenantUserDescription extends Rpc
  * @method string getUserPassword()
  * @method string getInstanceId()
  * @method string getTenantId()
+ * @method string getEncryptionType()
  * @method string getUserName()
  */
 class ModifyTenantUserPassword extends Rpc
@@ -4531,6 +4595,19 @@ class ModifyTenantUserPassword extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEncryptionType($value)
+    {
+        $this->data['EncryptionType'] = $value;
+        $this->options['form_params']['EncryptionType'] = $value;
 
         return $this;
     }
