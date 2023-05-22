@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1818 - 2023-5-22
+- Add DescribeDcdnFullDomainsBlockIPHistory.
+
+
 ## 1.8.1817 - 2023-5-19
 - Update SDK.
 
