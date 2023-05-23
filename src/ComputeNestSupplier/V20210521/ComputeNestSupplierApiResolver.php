@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetService getService(array $options = [])
  * @method GetServiceEstimateCost getServiceEstimateCost(array $options = [])
  * @method GetServiceInstance getServiceInstance(array $options = [])
+ * @method GetUploadCredentials getUploadCredentials(array $options = [])
  * @method ListArtifacts listArtifacts(array $options = [])
  * @method ListArtifactVersions listArtifactVersions(array $options = [])
  * @method ListServiceInstances listServiceInstances(array $options = [])
@@ -188,6 +189,8 @@ class DeleteService extends Rpc
 /**
  * @method string getArtifactVersion()
  * @method $this withArtifactVersion($value)
+ * @method string getArtifactName()
+ * @method $this withArtifactName($value)
  * @method string getArtifactId()
  * @method $this withArtifactId($value)
  */
@@ -238,6 +241,14 @@ class GetServiceEstimateCost extends Rpc
  * @method $this withServiceInstanceId($value)
  */
 class GetServiceInstance extends Rpc
+{
+}
+
+/**
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ */
+class GetUploadCredentials extends Rpc
 {
 }
 
