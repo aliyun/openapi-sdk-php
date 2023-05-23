@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1820 - 2023-5-23
+- Supported BreakCodeDetails,FirstCheckInTime, LastCheckoutTime .
+
+
 ## 1.8.1819 - 2023-5-23
 - Add UpdateService GetService DeleteService.
 
