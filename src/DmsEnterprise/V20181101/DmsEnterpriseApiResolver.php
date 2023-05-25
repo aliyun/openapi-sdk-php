@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddLhMembers addLhMembers(array $options = [])
  * @method AddLogicTableRouteConfig addLogicTableRouteConfig(array $options = [])
  * @method AddTaskFlowEdges addTaskFlowEdges(array $options = [])
+ * @method AnalyzeSQLLineage analyzeSQLLineage(array $options = [])
  * @method ApproveOrder approveOrder(array $options = [])
  * @method BackFill backFill(array $options = [])
  * @method BuyPayAsYouGoOrder buyPayAsYouGoOrder(array $options = [])
@@ -60,6 +61,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetApprovalDetail getApprovalDetail(array $options = [])
  * @method GetAuthorityTemplate getAuthorityTemplate(array $options = [])
  * @method GetAuthorityTemplateItem getAuthorityTemplateItem(array $options = [])
+ * @method GetDataArchiveOrderDetail getDataArchiveOrderDetail(array $options = [])
  * @method GetDatabase getDatabase(array $options = [])
  * @method GetDatabaseExportOrderDetail getDatabaseExportOrderDetail(array $options = [])
  * @method GetDataCorrectBackupFiles getDataCorrectBackupFiles(array $options = [])
@@ -300,6 +302,18 @@ class AddTaskFlowEdges extends Rpc
 }
 
 /**
+ * @method string getSqlContent()
+ * @method $this withSqlContent($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ */
+class AnalyzeSQLLineage extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getWorkflowInstanceId()
@@ -326,6 +340,8 @@ class ApproveOrder extends Rpc
  * @method $this withHistoryDagId($value)
  * @method string getStartNodeIds()
  * @method $this withStartNodeIds($value)
+ * @method string getFilterNodeIds()
+ * @method $this withFilterNodeIds($value)
  * @method string getBackFillDateBegin()
  * @method $this withBackFillDateBegin($value)
  * @method string getBackFillDate()
@@ -1032,6 +1048,16 @@ class GetAuthorityTemplate extends Rpc
  * @method $this withTemplateId($value)
  */
 class GetAuthorityTemplateItem extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class GetDataArchiveOrderDetail extends Rpc
 {
 }
 
@@ -2240,6 +2266,8 @@ class ListTaskFlowEdgesByCondition extends Rpc
 }
 
 /**
+ * @method string getUseBizDate()
+ * @method $this withUseBizDate($value)
  * @method string getTriggerType()
  * @method $this withTriggerType($value)
  * @method string getDagId()
@@ -2254,6 +2282,8 @@ class ListTaskFlowEdgesByCondition extends Rpc
  * @method $this withStartTimeBegin($value)
  * @method string getStartTimeEnd()
  * @method $this withStartTimeEnd($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class ListTaskFlowInstance extends Rpc
 {
@@ -2262,12 +2292,16 @@ class ListTaskFlowInstance extends Rpc
 /**
  * @method string getSearchKey()
  * @method $this withSearchKey($value)
+ * @method string getDagIdList()
+ * @method $this withDagIdList($value)
  * @method string getTid()
  * @method $this withTid($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageIndex()
  * @method $this withPageIndex($value)
+ * @method string getScenarioId()
+ * @method $this withScenarioId($value)
  * @method string getNeedLastDagInstance()
  * @method $this withNeedLastDagInstance($value)
  */

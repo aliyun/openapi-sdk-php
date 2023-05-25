@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1822 - 2023-5-25
+- Support AnalyzeLineage API.
+- Modify ListTaskFlowsByPage API. Add input parameters: DagIdList. Add output parameters: CronSwitch, CronStr, CronParam, TriggerType, CronType, TimeZoneId
+- Modify BackFill API. Add output parameters DagInstanceId (same as the existed parameter NodeId).
+- Modify ListTaskFlowInstance API. Add Input parameters: StartBizTime、EndBizTime.
+
+
 ## 1.8.1821 - 2023-5-25
 - DescribeDemands add PrivatePoolId.
 
