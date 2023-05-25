@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1821 - 2023-5-25
+- DescribeDemands add PrivatePoolId.
+
+
 ## 1.8.1820 - 2023-5-23
 - Supported BreakCodeDetails,FirstCheckInTime, LastCheckoutTime .
 
