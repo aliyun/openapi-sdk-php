@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1824 - 2023-5-26
+- Modify ListTaskFlowsByPage API. Add output parameters: CronBeginDate, CronEndDate. Modified input parameter CronParam as ScheduleParam.
+
+
 ## 1.8.1823 - 2023-5-26
 - Add DescribeDcdnFullDomainsBlockIPConfig.
 
