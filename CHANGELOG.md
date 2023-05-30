@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1826 - 2023-5-30
+- Add Tag Open API.
+
+
 ## 1.8.1825 - 2023-5-29
 - Add DistributionProducts API.
 
