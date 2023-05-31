@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.1827 - 2023-5-31
+- Release ScreenGC.
+- Release ScreenLC.
+- Release PredictCVD.
+- Release ScreenCRC.
+- Update  ScreenChestCT.
+
+
 ## 1.8.1826 - 2023-5-30
 - Add Tag Open API.
 
