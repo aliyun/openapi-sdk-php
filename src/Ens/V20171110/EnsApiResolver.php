@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddBackendServers addBackendServers(array $options = [])
  * @method AddDeviceInternetPort addDeviceInternetPort(array $options = [])
  * @method AddNetworkInterfaceToInstance addNetworkInterfaceToInstance(array $options = [])
+ * @method AddSnatIpForSnatEntry addSnatIpForSnatEntry(array $options = [])
  * @method AssignPrivateIpAddresses assignPrivateIpAddresses(array $options = [])
  * @method AssociateEnsEipAddress associateEnsEipAddress(array $options = [])
  * @method AttachDisk attachDisk(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDisk createDisk(array $options = [])
  * @method CreateEipInstance createEipInstance(array $options = [])
  * @method CreateEnsRouteEntry createEnsRouteEntry(array $options = [])
+ * @method CreateEnsSaleControl createEnsSaleControl(array $options = [])
  * @method CreateEnsService createEnsService(array $options = [])
  * @method CreateEpnInstance createEpnInstance(array $options = [])
  * @method CreateFileSystem createFileSystem(array $options = [])
@@ -47,6 +49,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDeviceInternetPort deleteDeviceInternetPort(array $options = [])
  * @method DeleteDisk deleteDisk(array $options = [])
  * @method DeleteEnsRouteEntry deleteEnsRouteEntry(array $options = [])
+ * @method DeleteEnsSaleConditionControl deleteEnsSaleConditionControl(array $options = [])
+ * @method DeleteEnsSaleControl deleteEnsSaleControl(array $options = [])
  * @method DeleteEpnInstance deleteEpnInstance(array $options = [])
  * @method DeleteFileSystem deleteFileSystem(array $options = [])
  * @method DeleteForwardEntry deleteForwardEntry(array $options = [])
@@ -60,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteNetworkAclEntry deleteNetworkAclEntry(array $options = [])
  * @method DeleteSecurityGroup deleteSecurityGroup(array $options = [])
  * @method DeleteSnatEntry deleteSnatEntry(array $options = [])
+ * @method DeleteSnatIpForSnatEntry deleteSnatIpForSnatEntry(array $options = [])
  * @method DeleteVSwitch deleteVSwitch(array $options = [])
  * @method DescribeAICImages describeAICImages(array $options = [])
  * @method DescribeApplication describeApplication(array $options = [])
@@ -79,6 +84,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDisks describeDisks(array $options = [])
  * @method DescribeEipAddresses describeEipAddresses(array $options = [])
  * @method DescribeElbAvailableResourceInfo describeElbAvailableResourceInfo(array $options = [])
+ * @method DescribeEnsCommodityCode describeEnsCommodityCode(array $options = [])
+ * @method DescribeEnsCommodityModuleCode describeEnsCommodityModuleCode(array $options = [])
  * @method DescribeEnsEipAddresses describeEnsEipAddresses(array $options = [])
  * @method DescribeEnsNetDistrict describeEnsNetDistrict(array $options = [])
  * @method DescribeEnsNetLevel describeEnsNetLevel(array $options = [])
@@ -88,6 +95,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEnsRegions describeEnsRegions(array $options = [])
  * @method DescribeEnsResourceUsage describeEnsResourceUsage(array $options = [])
  * @method DescribeEnsRouteEntryList describeEnsRouteEntryList(array $options = [])
+ * @method DescribeEnsSaleControl describeEnsSaleControl(array $options = [])
+ * @method DescribeEnsSaleControlAvailableResource describeEnsSaleControlAvailableResource(array $options = [])
+ * @method DescribeEnsSaleControlStock describeEnsSaleControlStock(array $options = [])
  * @method DescribeEpnBandWidthData describeEpnBandWidthData(array $options = [])
  * @method DescribeEpnBandwitdhByInternetChargeType describeEpnBandwitdhByInternetChargeType(array $options = [])
  * @method DescribeEpnInstanceAttribute describeEpnInstanceAttribute(array $options = [])
@@ -124,6 +134,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeNetworks describeNetworks(array $options = [])
  * @method DescribePrePaidInstanceStock describePrePaidInstanceStock(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
+ * @method DescribeRegionBandwidthQuota describeRegionBandwidthQuota(array $options = [])
  * @method DescribeRegionIsps describeRegionIsps(array $options = [])
  * @method DescribeRegionResource describeRegionResource(array $options = [])
  * @method DescribeReservedResource describeReservedResource(array $options = [])
@@ -132,6 +143,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSecurityGroups describeSecurityGroups(array $options = [])
  * @method DescribeSelfImages describeSelfImages(array $options = [])
  * @method DescribeServcieSchedule describeServcieSchedule(array $options = [])
+ * @method DescribeSnatAttribute describeSnatAttribute(array $options = [])
  * @method DescribeSnatTableEntries describeSnatTableEntries(array $options = [])
  * @method DescribeUserBandWidthData describeUserBandWidthData(array $options = [])
  * @method DescribeVSwitches describeVSwitches(array $options = [])
@@ -203,13 +215,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StartInstance startInstance(array $options = [])
  * @method StartInstances startInstances(array $options = [])
  * @method StartLoadBalancerListener startLoadBalancerListener(array $options = [])
+ * @method StartSnatIpForSnatEntry startSnatIpForSnatEntry(array $options = [])
  * @method StopEpnInstance stopEpnInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method StopInstances stopInstances(array $options = [])
  * @method StopLoadBalancerListener stopLoadBalancerListener(array $options = [])
+ * @method StopSnatIpForSnatEntry stopSnatIpForSnatEntry(array $options = [])
  * @method UnassignPrivateIpAddresses unassignPrivateIpAddresses(array $options = [])
  * @method UnAssociateEnsEipAddress unAssociateEnsEipAddress(array $options = [])
  * @method UnassociateNetworkAcl unassociateNetworkAcl(array $options = [])
+ * @method UpdateEnsSaleControl updateEnsSaleControl(array $options = [])
  * @method UpgradeAICInstanceImage upgradeAICInstanceImage(array $options = [])
  * @method UpgradeApplication upgradeApplication(array $options = [])
  */
@@ -280,6 +295,16 @@ class AddDeviceInternetPort extends Rpc
  * @method $this withInstanceId($value)
  */
 class AddNetworkInterfaceToInstance extends Rpc
+{
+}
+
+/**
+ * @method string getSnatIp()
+ * @method $this withSnatIp($value)
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
+ */
+class AddSnatIpForSnatEntry extends Rpc
 {
 }
 
@@ -414,6 +439,8 @@ class CreateApplication extends Rpc
  * @method $this withInstanceType($value)
  * @method string getAmount()
  * @method $this withAmount($value)
+ * @method string getNameSpace()
+ * @method $this withNameSpace($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  */
@@ -486,6 +513,18 @@ class CreateEipInstance extends Rpc
  * @method $this withDestinationCidrBlock($value)
  */
 class CreateEnsRouteEntry extends Rpc
+{
+}
+
+/**
+ * @method string getSaleControls()
+ * @method $this withSaleControls($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getAliUidAccount()
+ * @method $this withAliUidAccount($value)
+ */
+class CreateEnsSaleControl extends Rpc
 {
 }
 
@@ -1020,6 +1059,30 @@ class DeleteEnsRouteEntry extends Rpc
 }
 
 /**
+ * @method string getSaleControls()
+ * @method $this withSaleControls($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getAliUidAccount()
+ * @method $this withAliUidAccount($value)
+ */
+class DeleteEnsSaleConditionControl extends Rpc
+{
+}
+
+/**
+ * @method string getSaleControls()
+ * @method $this withSaleControls($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getAliUidAccount()
+ * @method $this withAliUidAccount($value)
+ */
+class DeleteEnsSaleControl extends Rpc
+{
+}
+
+/**
  * @method string getEPNInstanceId()
  * @method $this withEPNInstanceId($value)
  */
@@ -1137,6 +1200,16 @@ class DeleteSnatEntry extends Rpc
 }
 
 /**
+ * @method string getSnatIp()
+ * @method $this withSnatIp($value)
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
+ */
+class DeleteSnatIpForSnatEntry extends Rpc
+{
+}
+
+/**
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  */
@@ -1145,12 +1218,22 @@ class DeleteVSwitch extends Rpc
 }
 
 /**
+ * @method string getImageType()
+ * @method $this withImageType($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getMaxDate()
+ * @method $this withMaxDate($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getMinDate()
+ * @method $this withMinDate($value)
  * @method string getImageUrl()
  * @method $this withImageUrl($value)
  */
@@ -1183,14 +1266,34 @@ class DescribeApplicationResourceSummary extends Rpc
 }
 
 /**
+ * @method string getAICSpecs()
+ * @method $this withAICSpecs($value)
+ * @method string getOrderByParams()
+ * @method $this withOrderByParams($value)
+ * @method string getDescribeAICInstances()
+ * @method $this withDescribeAICInstances($value)
+ * @method string getServerIds()
+ * @method $this withServerIds($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getMaxDate()
+ * @method $this withMaxDate($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getStates()
+ * @method $this withStates($value)
+ * @method string getServerSpecs()
+ * @method $this withServerSpecs($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getEnsRegionIds()
  * @method $this withEnsRegionIds($value)
- * @method string getServerIds()
- * @method $this withServerIds($value)
+ * @method string getMinDate()
+ * @method $this withMinDate($value)
+ * @method string getLatestAction()
+ * @method $this withLatestAction($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
  */
 class DescribeARMServerInstances extends Rpc
 {
@@ -1389,6 +1492,24 @@ class DescribeElbAvailableResourceInfo extends Rpc
 }
 
 /**
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ */
+class DescribeEnsCommodityCode extends Rpc
+{
+}
+
+/**
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getModuleCode()
+ * @method $this withModuleCode($value)
+ */
+class DescribeEnsCommodityModuleCode extends Rpc
+{
+}
+
+/**
  * @method string getEipName()
  * @method $this withEipName($value)
  * @method string getEipAddress()
@@ -1504,6 +1625,44 @@ class DescribeEnsResourceUsage extends Rpc
  * @method $this withRouteEntryId($value)
  */
 class DescribeEnsRouteEntryList extends Rpc
+{
+}
+
+/**
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getModuleCode()
+ * @method $this withModuleCode($value)
+ * @method string getAliUidAccount()
+ * @method $this withAliUidAccount($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeEnsSaleControl extends Rpc
+{
+}
+
+/**
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeEnsSaleControlAvailableResource extends Rpc
+{
+}
+
+/**
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getModuleCode()
+ * @method $this withModuleCode($value)
+ * @method string getAliUidAccount()
+ * @method $this withAliUidAccount($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeEnsSaleControlStock extends Rpc
 {
 }
 
@@ -2057,6 +2216,13 @@ class DescribePrice extends Rpc
     }
 }
 
+class DescribeRegionBandwidthQuota extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
 /**
  * @method string getEnsRegionId()
  * @method $this withEnsRegionId($value)
@@ -2152,6 +2318,17 @@ class DescribeSelfImages extends Rpc
  */
 class DescribeServcieSchedule extends Rpc
 {
+}
+
+/**
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
+ */
+class DescribeSnatAttribute extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2583,6 +2760,8 @@ class PushApplicationData extends Rpc
  * @method $this withServerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
  */
 class RebootAICInstance extends Rpc
 {
@@ -2594,6 +2773,8 @@ class RebootAICInstance extends Rpc
 /**
  * @method string getServerId()
  * @method $this withServerId($value)
+ * @method string getServerIds()
+ * @method $this withServerIds($value)
  */
 class RebootARMServerInstance extends Rpc
 {
@@ -2869,6 +3050,8 @@ class RescaleDeviceService extends Rpc
  * @method $this withServerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
  */
 class ResetAICInstance extends Rpc
 {
@@ -2984,6 +3167,8 @@ class RollbackApplication extends Rpc
  * @method $this withScheduleAreaLevel($value)
  * @method string getUniqueSuffix()
  * @method $this withUniqueSuffix($value)
+ * @method string getInstanceChargeStrategy()
+ * @method $this withInstanceChargeStrategy($value)
  * @method string getSecurityId()
  * @method $this withSecurityId($value)
  * @method string getKeyPairName()
@@ -3294,6 +3479,16 @@ class StartLoadBalancerListener extends Rpc
 }
 
 /**
+ * @method string getSnatIp()
+ * @method $this withSnatIp($value)
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
+ */
+class StartSnatIpForSnatEntry extends Rpc
+{
+}
+
+/**
  * @method string getEPNInstanceId()
  * @method $this withEPNInstanceId($value)
  */
@@ -3332,6 +3527,16 @@ class StopLoadBalancerListener extends Rpc
 }
 
 /**
+ * @method string getSnatIp()
+ * @method $this withSnatIp($value)
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
+ */
+class StopSnatIpForSnatEntry extends Rpc
+{
+}
+
+/**
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
  * @method string getNetworkInterfaceId()
@@ -3356,6 +3561,18 @@ class UnAssociateEnsEipAddress extends Rpc
  * @method $this withResource($value)
  */
 class UnassociateNetworkAcl extends Rpc
+{
+}
+
+/**
+ * @method string getSaleControls()
+ * @method $this withSaleControls($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getAliUidAccount()
+ * @method $this withAliUidAccount($value)
+ */
+class UpdateEnsSaleControl extends Rpc
 {
 }
 

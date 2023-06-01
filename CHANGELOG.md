@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1828 - 2023-6-1
+- Support SNAT API.
+
+
 ## 1.8.1827 - 2023-5-31
 - Release ScreenGC.
 - Release ScreenLC.
