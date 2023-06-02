@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1829 - 2023-6-2
+- Supported GetResourceCounts for Resourcecenter.
+
+
 ## 1.8.1828 - 2023-6-1
 - Support SNAT API.
 

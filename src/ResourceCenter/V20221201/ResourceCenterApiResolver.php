@@ -13,6 +13,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMultiAccountResourceConfiguration getMultiAccountResourceConfiguration(array $options = [])
  * @method GetResourceCenterServiceStatus getResourceCenterServiceStatus(array $options = [])
  * @method GetResourceConfiguration getResourceConfiguration(array $options = [])
+ * @method GetResourceCounts getResourceCounts(array $options = [])
  * @method ListMultiAccountResourceGroups listMultiAccountResourceGroups(array $options = [])
  * @method ListMultiAccountTagKeys listMultiAccountTagKeys(array $options = [])
  * @method ListMultiAccountTagValues listMultiAccountTagValues(array $options = [])
@@ -97,6 +98,38 @@ class GetResourceConfiguration extends Rpc
 }
 
 /**
+ * @method array getFilter()
+ * @method string getGroupByKey()
+ * @method $this withGroupByKey($value)
+ */
+class GetResourceCounts extends Rpc
+{
+
+    /**
+     * @param array $filter
+     *
+     * @return $this
+     */
+	public function withFilter(array $filter)
+	{
+	    $this->data['Filter'] = $filter;
+		foreach ($filter as $depth1 => $depth1Value) {
+			if(isset($depth1Value['MatchType'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.MatchType'] = $depth1Value['MatchType'];
+			}
+			foreach ($depth1Value['Value'] as $i => $iValue) {
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Value.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Filter.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getAccountId()
  * @method $this withAccountId($value)
  * @method array getResourceGroupIds()
@@ -162,6 +195,8 @@ class ListMultiAccountTagValues extends Rpc
  * @method array getQuery()
  * @method string getResourceType()
  * @method $this withResourceType($value)
+ * @method string getScene()
+ * @method $this withScene($value)
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
