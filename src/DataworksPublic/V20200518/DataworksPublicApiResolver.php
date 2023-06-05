@@ -1583,6 +1583,7 @@ class CreateExportMigration extends Rpc
  * @method string getResourceGroupIdentifier()
  * @method string getAutoRerunTimes()
  * @method string getCronExpress()
+ * @method string getIgnoreParentSkipRunningProperty()
  * @method string getEndEffectDate()
  * @method string getFileName()
  * @method string getInputParameters()
@@ -1852,6 +1853,19 @@ class CreateFile extends Rpc
     {
         $this->data['CronExpress'] = $value;
         $this->options['form_params']['CronExpress'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIgnoreParentSkipRunningProperty($value)
+    {
+        $this->data['IgnoreParentSkipRunningProperty'] = $value;
+        $this->options['form_params']['IgnoreParentSkipRunningProperty'] = $value;
 
         return $this;
     }
@@ -10734,6 +10748,8 @@ class RunCycleDagNodes extends Rpc
 /**
  * @method string getProjectEnv()
  * @method string getProjectName()
+ * @method string getStartBizDate()
+ * @method string getEndBizDate()
  * @method string getDagParameters()
  * @method string getIncludeNodeIds()
  * @method string getBizDate()
@@ -10767,6 +10783,32 @@ class RunManualDagNodes extends Rpc
     {
         $this->data['ProjectName'] = $value;
         $this->options['form_params']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartBizDate($value)
+    {
+        $this->data['StartBizDate'] = $value;
+        $this->options['form_params']['StartBizDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndBizDate($value)
+    {
+        $this->data['EndBizDate'] = $value;
+        $this->options['form_params']['EndBizDate'] = $value;
 
         return $this;
     }
@@ -12235,6 +12277,7 @@ class UpdateDISyncTask extends Rpc
  * @method string getResourceGroupIdentifier()
  * @method string getAutoRerunTimes()
  * @method string getCronExpress()
+ * @method string getIgnoreParentSkipRunningProperty()
  * @method string getEndEffectDate()
  * @method string getFileName()
  * @method string getInputParameters()
@@ -12504,6 +12547,19 @@ class UpdateFile extends Rpc
     {
         $this->data['CronExpress'] = $value;
         $this->options['form_params']['CronExpress'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIgnoreParentSkipRunningProperty($value)
+    {
+        $this->data['IgnoreParentSkipRunningProperty'] = $value;
+        $this->options['form_params']['IgnoreParentSkipRunningProperty'] = $value;
 
         return $this;
     }
