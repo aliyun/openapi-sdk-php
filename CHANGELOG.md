@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1830 - 2023-6-5
+- Support More Open Api.
+
+
 ## 1.8.1829 - 2023-6-2
 - Supported GetResourceCounts for Resourcecenter.
 
