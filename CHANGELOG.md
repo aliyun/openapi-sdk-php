@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1832 - 2023-6-6
+- Change ListAssetSelectionTarget Request.
+
+
 ## 1.8.1831 - 2023-6-5
 - Generated 2020-05-18 for `dataworks-public`.
 

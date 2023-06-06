@@ -5,6 +5,7 @@ namespace AlibabaCloud\Sas\V20181203;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddAssetSelectionCriteria addAssetSelectionCriteria(array $options = [])
  * @method AddCheckInstanceResultWhiteList addCheckInstanceResultWhiteList(array $options = [])
  * @method AddCheckResultWhiteList addCheckResultWhiteList(array $options = [])
  * @method AddClientUserDefineRule addClientUserDefineRule(array $options = [])
@@ -24,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckUserHasEcs checkUserHasEcs(array $options = [])
  * @method ConfirmVirusEvents confirmVirusEvents(array $options = [])
  * @method CreateAntiBruteForceRule createAntiBruteForceRule(array $options = [])
+ * @method CreateAssetSelectionConfig createAssetSelectionConfig(array $options = [])
  * @method CreateBackupPolicy createBackupPolicy(array $options = [])
  * @method CreateContainerScanTask createContainerScanTask(array $options = [])
  * @method CreateCustomBlockRecord createCustomBlockRecord(array $options = [])
@@ -38,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateInterceptionTarget createInterceptionTarget(array $options = [])
  * @method CreateJenkinsImageRegistry createJenkinsImageRegistry(array $options = [])
  * @method CreateOrUpdateAssetGroup createOrUpdateAssetGroup(array $options = [])
+ * @method CreateOrUpdateDingTalk createOrUpdateDingTalk(array $options = [])
  * @method CreateRestoreJob createRestoreJob(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method CreateSimilarSecurityEventsQueryTask createSimilarSecurityEventsQueryTask(array $options = [])
@@ -303,6 +306,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateOnceTask generateOnceTask(array $options = [])
  * @method GetAlarmMachineCount getAlarmMachineCount(array $options = [])
  * @method GetAppNetwork getAppNetwork(array $options = [])
+ * @method GetAssetDetailByUuid getAssetDetailByUuid(array $options = [])
+ * @method GetAssetSelectionConfig getAssetSelectionConfig(array $options = [])
  * @method GetAssetsPropertyDetail getAssetsPropertyDetail(array $options = [])
  * @method GetAssetsPropertyItem getAssetsPropertyItem(array $options = [])
  * @method GetBackupStorageCount getBackupStorageCount(array $options = [])
@@ -344,6 +349,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InstallPmAgent installPmAgent(array $options = [])
  * @method InstallUniBackupAgent installUniBackupAgent(array $options = [])
  * @method JoinWebLockProcessWhiteList joinWebLockProcessWhiteList(array $options = [])
+ * @method ListAssetSelectionSelectedTarget listAssetSelectionSelectedTarget(array $options = [])
+ * @method ListAssetSelectionTarget listAssetSelectionTarget(array $options = [])
  * @method ListAvailableHoneypot listAvailableHoneypot(array $options = [])
  * @method ListCheckInstanceResult listCheckInstanceResult(array $options = [])
  * @method ListCheckItemWarningMachine listCheckItemWarningMachine(array $options = [])
@@ -370,6 +377,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPodRisk listPodRisk(array $options = [])
  * @method ListPrivateRegistryList listPrivateRegistryList(array $options = [])
  * @method ListPrivateRegistryType listPrivateRegistryType(array $options = [])
+ * @method ListQueryRaspAppInfo listQueryRaspAppInfo(array $options = [])
  * @method ListRuleTargetAll listRuleTargetAll(array $options = [])
  * @method ListSystemAggregationRules listSystemAggregationRules(array $options = [])
  * @method ListSystemClientRules listSystemClientRules(array $options = [])
@@ -409,6 +417,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyOperateVul modifyOperateVul(array $options = [])
  * @method ModifyPropertyScheduleConfig modifyPropertyScheduleConfig(array $options = [])
  * @method ModifyPushAllTask modifyPushAllTask(array $options = [])
+ * @method ModifyRefreshProcessInfo modifyRefreshProcessInfo(array $options = [])
  * @method ModifyRiskCheckStatus modifyRiskCheckStatus(array $options = [])
  * @method ModifyRiskSingleResultStatus modifyRiskSingleResultStatus(array $options = [])
  * @method ModifySecurityCheckScheduleConfig modifySecurityCheckScheduleConfig(array $options = [])
@@ -501,13 +510,48 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getCriteriaOperation()
+ * @method $this withCriteriaOperation($value)
+ * @method string getCriteria()
+ * @method $this withCriteria($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method array getTargetOperationList()
+ * @method string getSelectionKey()
+ * @method $this withSelectionKey($value)
+ */
+class AddAssetSelectionCriteria extends Rpc
+{
+
+    /**
+     * @param array $targetOperationList
+     *
+     * @return $this
+     */
+	public function withTargetOperationList(array $targetOperationList)
+	{
+	    $this->data['TargetOperationList'] = $targetOperationList;
+		foreach ($targetOperationList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Operation'])){
+				$this->options['query']['TargetOperationList.' . ($depth1 + 1) . '.Operation'] = $depth1Value['Operation'];
+			}
+			if(isset($depth1Value['Target'])){
+				$this->options['query']['TargetOperationList.' . ($depth1 + 1) . '.Target'] = $depth1Value['Target'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getCheckId()
+ * @method $this withCheckId($value)
  * @method string getCheckGroupId()
  * @method $this withCheckGroupId($value)
  * @method array getInstanceIds()
- * @method string getCheckId()
- * @method $this withCheckId($value)
  */
 class AddCheckInstanceResultWhiteList extends Rpc
 {
@@ -786,13 +830,13 @@ class CancelOnceTask extends Rpc
 
 /**
  * @method array getStandardIds()
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method array getCycleDays()
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  */
 class ChangeCheckConfig extends Rpc
 {
@@ -831,9 +875,9 @@ class ChangeCheckConfig extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method array getCustomConfigs()
  * @method string getCheckId()
  * @method $this withCheckId($value)
+ * @method array getCustomConfigs()
  */
 class ChangeCheckCustomConfig extends Rpc
 {
@@ -927,14 +971,14 @@ class CheckUserHasEcs extends Rpc
 }
 
 /**
- * @method string getOperationRange()
- * @method $this withOperationRange($value)
- * @method string getOperationAll()
- * @method $this withOperationAll($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getOperationCode()
  * @method $this withOperationCode($value)
+ * @method string getOperationRange()
+ * @method $this withOperationRange($value)
+ * @method string getOperationAll()
+ * @method $this withOperationAll($value)
  */
 class ConfirmVirusEvents extends Rpc
 {
@@ -979,6 +1023,18 @@ class CreateAntiBruteForceRule extends Rpc
 }
 
 /**
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class CreateAssetSelectionConfig extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getServerType()
@@ -1015,28 +1071,28 @@ class CreateBackupPolicy extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getContainerIds()
  * @method $this withContainerIds($value)
- * @method string getLang()
- * @method $this withLang($value)
  */
 class CreateContainerScanTask extends Rpc
 {
 }
 
 /**
- * @method string getExpireTime()
- * @method $this withExpireTime($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getBound()
- * @method $this withBound($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getExpireTime()
+ * @method $this withExpireTime($value)
+ * @method string getBound()
+ * @method $this withBound($value)
  * @method string getUuids()
  * @method $this withUuids($value)
  */
@@ -1083,6 +1139,8 @@ class CreateCycleTask extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getDownloadUrl()
+ * @method $this withDownloadUrl($value)
  */
 class CreateFileDetect extends Rpc
 {
@@ -1186,6 +1244,8 @@ class CreateHoneypotNode extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
  * @method string getPresetName()
@@ -1565,16 +1625,38 @@ class CreateJenkinsImageRegistry extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getGroupName()
  * @method $this withGroupName($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getUuids()
  * @method $this withUuids($value)
  */
 class CreateOrUpdateAssetGroup extends Rpc
+{
+}
+
+/**
+ * @method string getRuleActionName()
+ * @method $this withRuleActionName($value)
+ * @method string getGroupIdList()
+ * @method $this withGroupIdList($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getSendUrl()
+ * @method $this withSendUrl($value)
+ * @method string getIntervalTime()
+ * @method $this withIntervalTime($value)
+ * @method string getDingTalkLang()
+ * @method $this withDingTalkLang($value)
+ * @method string getConfigList()
+ * @method $this withConfigList($value)
+ */
+class CreateOrUpdateDingTalk extends Rpc
 {
 }
 
@@ -1758,12 +1840,12 @@ class DeleteAntiBruteForceRule extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPolicyVersion()
- * @method $this withPolicyVersion($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getId()
  * @method $this withId($value)
+ * @method string getPolicyVersion()
+ * @method $this withPolicyVersion($value)
  */
 class DeleteBackupPolicy extends Rpc
 {
@@ -1772,8 +1854,6 @@ class DeleteBackupPolicy extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPolicyVersion()
- * @method $this withPolicyVersion($value)
  * @method string getUuid()
  * @method $this withUuid($value)
  * @method string getSourceIp()
@@ -1781,6 +1861,8 @@ class DeleteBackupPolicy extends Rpc
  * @method string getPolicyId()
  * @method $this withPolicyId($value)
  * @method array getUuidList()
+ * @method string getPolicyVersion()
+ * @method $this withPolicyVersion($value)
  */
 class DeleteBackupPolicyMachine extends Rpc
 {
@@ -1860,6 +1942,8 @@ class DeleteGroup extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getHoneypotId()
  * @method $this withHoneypotId($value)
  */
@@ -1868,6 +1952,8 @@ class DeleteHoneypot extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
@@ -1876,6 +1962,8 @@ class DeleteHoneypotNode extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getHoneypotPresetId()
  * @method $this withHoneypotPresetId($value)
  */
@@ -1886,6 +1974,8 @@ class DeleteHoneypotPreset extends Rpc
 /**
  * @method string getProbeId()
  * @method $this withProbeId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  */
 class DeleteHoneypotProbe extends Rpc
 {
@@ -1940,10 +2030,10 @@ class DeleteInterceptionTarget extends Rpc
 /**
  * @method string getType()
  * @method $this withType($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
  * @method string getConfig()
  * @method $this withConfig($value)
  */
@@ -2068,16 +2158,16 @@ class DescribeAccessKeyLeakDetail extends Rpc
 }
 
 /**
- * @method string getQuery()
- * @method $this withQuery($value)
  * @method string getStartTs()
  * @method $this withStartTs($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getQuery()
+ * @method $this withQuery($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -2190,22 +2280,20 @@ class DescribeAgentInstallStatus extends Rpc
 }
 
 /**
- * @method string getAlarmUniqueInfo()
- * @method $this withAlarmUniqueInfo($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getFrom()
  * @method $this withFrom($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getAlarmUniqueInfo()
+ * @method $this withAlarmUniqueInfo($value)
  */
 class DescribeAlarmEventDetail extends Rpc
 {
 }
 
 /**
- * @method string getUniqueInfo()
- * @method $this withUniqueInfo($value)
  * @method string getUuid()
  * @method $this withUuid($value)
  * @method string getEventName()
@@ -2214,6 +2302,8 @@ class DescribeAlarmEventDetail extends Rpc
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getUniqueInfo()
+ * @method $this withUniqueInfo($value)
  */
 class DescribeAlarmEventStackInfo extends Rpc
 {
@@ -2252,14 +2342,16 @@ class DescribeAllImageBaseline extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getId()
  * @method $this withId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeAntiBruteForceRules extends Rpc
 {
@@ -2302,14 +2394,14 @@ class DescribeAssetDetailByUuids extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
  * @method string getContainerFieldName()
  * @method $this withContainerFieldName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getContainerFieldValue()
  * @method $this withContainerFieldValue($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class DescribeAssetsSecurityEventSummary extends Rpc
 {
@@ -2370,16 +2462,16 @@ class DescribeBackupClients extends Rpc
 }
 
 /**
- * @method string getExportType()
- * @method $this withExportType($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getExportType()
+ * @method $this withExportType($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeBackUpExportInfo extends Rpc
 {
@@ -2412,14 +2504,14 @@ class DescribeBackupFiles extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPolicyVersion()
- * @method $this withPolicyVersion($value)
  * @method string getUuid()
  * @method $this withUuid($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPolicyId()
  * @method $this withPolicyId($value)
+ * @method string getPolicyVersion()
+ * @method $this withPolicyVersion($value)
  */
 class DescribeBackupMachineStatus extends Rpc
 {
@@ -2470,14 +2562,14 @@ class DescribeBackupRestoreCount extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -2504,12 +2596,12 @@ class DescribeCheckEcsWarnings extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getCheckIds()
  * @method $this withCheckIds($value)
  * @method string getRiskId()
  * @method $this withRiskId($value)
- * @method string getLang()
- * @method $this withLang($value)
  */
 class DescribeCheckFixDetails extends Rpc
 {
@@ -2528,12 +2620,12 @@ class DescribeCheckWarningDetail extends Rpc
 }
 
 /**
- * @method string getRiskId()
- * @method $this withRiskId($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getCheckId()
  * @method $this withCheckId($value)
+ * @method string getRiskId()
+ * @method $this withRiskId($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -2542,6 +2634,8 @@ class DescribeCheckWarningMachines extends Rpc
 }
 
 /**
+ * @method string getContainerName()
+ * @method $this withContainerName($value)
  * @method string getUuid()
  * @method $this withUuid($value)
  * @method string getCheckType()
@@ -2604,28 +2698,28 @@ class DescribeCheckWarningSummary extends Rpc
 }
 
 /**
- * @method string getStrategyTagValue()
- * @method $this withStrategyTagValue($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getStrategyTag()
  * @method $this withStrategyTag($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getStrategyTagValue()
+ * @method $this withStrategyTagValue($value)
  */
 class DescribeClientConfSetup extends Rpc
 {
 }
 
 /**
- * @method string getTagValue()
- * @method $this withTagValue($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getTag()
  * @method $this withTag($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getTagValue()
+ * @method $this withTagValue($value)
  */
 class DescribeClientConfStrategy extends Rpc
 {
@@ -2670,12 +2764,12 @@ class DescribeCloudProductFieldStatistics extends Rpc
 /**
  * @method string getTargetType()
  * @method $this withTargetType($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class DescribeClusterBasicInfo extends Rpc
 {
@@ -2686,10 +2780,10 @@ class DescribeClusterBasicInfo extends Rpc
  * @method $this withTargetType($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
  */
 class DescribeClusterInfoList extends Rpc
 {
@@ -2708,12 +2802,12 @@ class DescribeClusterNetwork extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getTypes()
  * @method $this withTypes($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  */
 class DescribeClusterVulStatistics extends Rpc
 {
@@ -2806,14 +2900,14 @@ class DescribeContainerCriteria extends Rpc
 /**
  * @method string getCriteria()
  * @method $this withCriteria($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLogicalExp()
  * @method $this withLogicalExp($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeContainerInstances extends Rpc
 {
@@ -2866,12 +2960,12 @@ class DescribeCountScannedImage extends Rpc
 /**
  * @method string getSupportAutoTag()
  * @method $this withSupportAutoTag($value)
- * @method string getMachineTypes()
- * @method $this withMachineTypes($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getValue()
  * @method $this withValue($value)
+ * @method string getMachineTypes()
+ * @method $this withMachineTypes($value)
  */
 class DescribeCriteria extends Rpc
 {
@@ -2880,14 +2974,14 @@ class DescribeCriteria extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -2916,12 +3010,12 @@ class DescribeCycleTaskList extends Rpc
 /**
  * @method string getRuleActionName()
  * @method $this withRuleActionName($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeDingTalk extends Rpc
 {
@@ -2946,16 +3040,16 @@ class DescribeDomainDetail extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getFuzzyDomain()
- * @method $this withFuzzyDomain($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getDomainType()
  * @method $this withDomainType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getFuzzyDomain()
+ * @method $this withFuzzyDomain($value)
  */
 class DescribeDomainList extends Rpc
 {
@@ -3030,12 +3124,12 @@ class DescribeEventOnStage extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeExcludeSystemPath extends Rpc
 {
@@ -3120,18 +3214,18 @@ class DescribeExposedStatistics extends Rpc
 }
 
 /**
- * @method string getStatisticsType()
- * @method $this withStatisticsType($value)
  * @method string getStatisticsTypeGatewayType()
  * @method $this withStatisticsTypeGatewayType($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getStatisticsTypeInstanceValue()
  * @method $this withStatisticsTypeInstanceValue($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getStatisticsType()
+ * @method $this withStatisticsType($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeExposedStatisticsDetail extends Rpc
 {
@@ -3152,12 +3246,12 @@ class DescribeFieldStatistics extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getOperateType()
- * @method $this withOperateType($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getInfo()
  * @method $this withInfo($value)
+ * @method string getOperateType()
+ * @method $this withOperateType($value)
  */
 class DescribeFrontVulPatchList extends Rpc
 {
@@ -3206,6 +3300,8 @@ class DescribeGroupedContainerInstances extends Rpc
  * @method $this withCurrentPage($value)
  * @method string getMachineTypes()
  * @method $this withMachineTypes($value)
+ * @method string getSaleVersionCheckCode()
+ * @method $this withSaleVersionCheckCode($value)
  */
 class DescribeGroupedInstances extends Rpc
 {
@@ -3292,14 +3388,8 @@ class DescribeGroupedTags extends Rpc
 }
 
 /**
- * @method string getStatusList()
- * @method $this withStatusList($value)
- * @method string getTargetType()
- * @method $this withTargetType($value)
  * @method string getMinScore()
  * @method $this withMinScore($value)
- * @method string getCveId()
- * @method $this withCveId($value)
  * @method string getAttachTypes()
  * @method $this withAttachTypes($value)
  * @method string getType()
@@ -3314,6 +3404,30 @@ class DescribeGroupedTags extends Rpc
  * @method $this withContainerFieldName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ * @method string getPatchId()
+ * @method $this withPatchId($value)
+ * @method string getAliasName()
+ * @method $this withAliasName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getCreateTsEnd()
+ * @method $this withCreateTsEnd($value)
+ * @method string getNecessity()
+ * @method $this withNecessity($value)
+ * @method string getUuids()
+ * @method $this withUuids($value)
+ * @method string getStatusList()
+ * @method $this withStatusList($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getCveId()
+ * @method $this withCveId($value)
  * @method string getContainerFieldValue()
  * @method $this withContainerFieldValue($value)
  * @method string getPageSize()
@@ -3326,32 +3440,14 @@ class DescribeGroupedTags extends Rpc
  * @method $this withAssetType($value)
  * @method string getDirection()
  * @method $this withDirection($value)
- * @method string getLevel()
- * @method $this withLevel($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getOrderBy()
- * @method $this withOrderBy($value)
  * @method string getDealed()
  * @method $this withDealed($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
- * @method string getPatchId()
- * @method $this withPatchId($value)
- * @method string getAliasName()
- * @method $this withAliasName($value)
  * @method string getSearchTags()
  * @method $this withSearchTags($value)
- * @method string getName()
- * @method $this withName($value)
- * @method string getCreateTsEnd()
- * @method $this withCreateTsEnd($value)
- * @method string getNecessity()
- * @method $this withNecessity($value)
- * @method string getUuids()
- * @method $this withUuids($value)
  */
 class DescribeGroupedVul extends Rpc
 {
@@ -3378,6 +3474,8 @@ class DescribeHcExportInfo extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeHoneyPotAuth extends Rpc
 {
@@ -3386,12 +3484,14 @@ class DescribeHoneyPotAuth extends Rpc
 /**
  * @method string getStatisticsDays()
  * @method $this withStatisticsDays($value)
- * @method string getStatisticsKeyType()
- * @method $this withStatisticsKeyType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getFrom()
  * @method $this withFrom($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getStatisticsKeyType()
+ * @method $this withStatisticsKeyType($value)
  */
 class DescribeHoneyPotSuspStatistics extends Rpc
 {
@@ -3490,14 +3590,14 @@ class DescribeImageBaselineCheckSummary extends Rpc
 }
 
 /**
- * @method string getImageUuid()
- * @method $this withImageUuid($value)
- * @method string getBaselineItemKey()
- * @method $this withBaselineItemKey($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getImageUuid()
+ * @method $this withImageUuid($value)
+ * @method string getBaselineItemKey()
+ * @method $this withBaselineItemKey($value)
  */
 class DescribeImageBaselineDetail extends Rpc
 {
@@ -3580,16 +3680,16 @@ class DescribeImageCriteria extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -4046,12 +4146,12 @@ class DescribeInstallCode extends Rpc
 /**
  * @method string getSubAccountName()
  * @method $this withSubAccountName($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -4062,13 +4162,13 @@ class DescribeInstallCodes extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getUuidList()
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeInstanceAntiBruteForceRules extends Rpc
 {
@@ -4134,16 +4234,16 @@ class DescribeLatestScanTask extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
  */
 class DescribeLoginBaseConfigs extends Rpc
 {
@@ -4182,14 +4282,14 @@ class DescribeLogShipperStatus extends Rpc
 }
 
 /**
- * @method string getLogVersion()
- * @method $this withLogVersion($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getFrom()
  * @method $this withFrom($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getLogVersion()
+ * @method $this withLogVersion($value)
  */
 class DescribeLogstoreStorage extends Rpc
 {
@@ -4392,8 +4492,6 @@ class DescribePropertyCronDetail extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSource()
  * @method $this withSource($value)
  * @method string getSourceIp()
@@ -4402,6 +4500,8 @@ class DescribePropertyCronDetail extends Rpc
  * @method $this withPageSize($value)
  * @method string getForceFlush()
  * @method $this withForceFlush($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribePropertyCronItem extends Rpc
 {
@@ -4432,16 +4532,16 @@ class DescribePropertyPortDetail extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getPort()
- * @method $this withPort($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getForceFlush()
  * @method $this withForceFlush($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  */
 class DescribePropertyPortItem extends Rpc
 {
@@ -4476,16 +4576,16 @@ class DescribePropertyProcDetail extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getForceFlush()
  * @method $this withForceFlush($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribePropertyProcItem extends Rpc
 {
@@ -4604,30 +4704,30 @@ class DescribePropertySoftwareDetail extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getForceFlush()
  * @method $this withForceFlush($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribePropertySoftwareItem extends Rpc
 {
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribePropertyTypeScaItem extends Rpc
 {
@@ -4670,16 +4770,16 @@ class DescribePropertyUserDetail extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getUser()
- * @method $this withUser($value)
  * @method string getForceFlush()
  * @method $this withForceFlush($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getUser()
+ * @method $this withUser($value)
  */
 class DescribePropertyUserItem extends Rpc
 {
@@ -4700,14 +4800,14 @@ class DescribeQuaraFileDownloadInfo extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getMachineRemark()
  * @method $this withMachineRemark($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -4718,14 +4818,14 @@ class DescribeRestoreJobs extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getInstanceName()
- * @method $this withInstanceName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -4828,15 +4928,15 @@ class DescribeRiskItemType extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method array getInstanceIds()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method array getInstanceIds()
  */
 class DescribeRiskListCheckResult extends Rpc
 {
@@ -4858,14 +4958,14 @@ class DescribeRiskListCheckResult extends Rpc
 }
 
 /**
- * @method string getRiskId()
- * @method $this withRiskId($value)
  * @method string getRiskName()
  * @method $this withRiskName($value)
  * @method string getLimit()
  * @method $this withLimit($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getRiskId()
+ * @method $this withRiskId($value)
  */
 class DescribeRisks extends Rpc
 {
@@ -5032,8 +5132,6 @@ class DescribeSimilarEventScenarios extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
@@ -5042,6 +5140,8 @@ class DescribeSimilarEventScenarios extends Rpc
  * @method $this withLang($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class DescribeSimilarSecurityEvents extends Rpc
 {
@@ -5076,16 +5176,16 @@ class DescribeSnapshots extends Rpc
 }
 
 /**
- * @method string getCustomType()
- * @method $this withCustomType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getStrategyIds()
- * @method $this withStrategyIds($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getCustomType()
+ * @method $this withCustomType($value)
+ * @method string getStrategyIds()
+ * @method $this withStrategyIds($value)
  */
 class DescribeStrategy extends Rpc
 {
@@ -5106,12 +5206,12 @@ class DescribeStrategyDetail extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStrategyId()
  * @method $this withStrategyId($value)
  */
@@ -5124,10 +5224,10 @@ class DescribeStrategyExecDetail extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getConfig()
- * @method $this withConfig($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
  */
 class DescribeStrategyTarget extends Rpc
 {
@@ -5156,14 +5256,14 @@ class DescribeSupportRegion extends Rpc
 }
 
 /**
- * @method string getSuspiciousEventId()
- * @method $this withSuspiciousEventId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getFrom()
  * @method $this withFrom($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getSuspiciousEventId()
+ * @method $this withSuspiciousEventId($value)
  */
 class DescribeSuspEventDetail extends Rpc
 {
@@ -5354,10 +5454,10 @@ class DescribeSuspiciousUUIDConfig extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getConfig()
- * @method $this withConfig($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
  */
 class DescribeTarget extends Rpc
 {
@@ -5614,6 +5714,8 @@ class DescribeVersionConfig extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  */
 class DescribeVpcHoneyPotCriteria extends Rpc
 {
@@ -5648,30 +5750,15 @@ class DescribeVpcList extends Rpc
 }
 
 /**
- * @method array getTypes()
  * @method array getTaskIds()
  * @method string getUuid()
  * @method $this withUuid($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method array getTypes()
  */
 class DescribeVulCheckTaskStatusDetail extends Rpc
 {
-
-    /**
-     * @param array $types
-     *
-     * @return $this
-     */
-	public function withTypes(array $types)
-	{
-	    $this->data['Types'] = $types;
-		foreach ($types as $i => $iValue) {
-			$this->options['query']['Types.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 
     /**
      * @param array $taskIds
@@ -5683,6 +5770,21 @@ class DescribeVulCheckTaskStatusDetail extends Rpc
 	    $this->data['TaskIds'] = $taskIds;
 		foreach ($taskIds as $i => $iValue) {
 			$this->options['query']['TaskIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $types
+     *
+     * @return $this
+     */
+	public function withTypes(array $types)
+	{
+	    $this->data['Types'] = $types;
+		foreach ($types as $i => $iValue) {
+			$this->options['query']['Types.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -5704,14 +5806,14 @@ class DescribeVulConfig extends Rpc
 /**
  * @method string getType()
  * @method $this withType($value)
- * @method string getAliasName()
- * @method $this withAliasName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getAliasName()
+ * @method $this withAliasName($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeVulDetails extends Rpc
 {
@@ -5810,14 +5912,14 @@ class DescribeVulList extends Rpc
 /**
  * @method string getCveId()
  * @method $this withCveId($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getVulNameLike()
- * @method $this withVulNameLike($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getVulNameLike()
+ * @method $this withVulNameLike($value)
  */
 class DescribeVulListPage extends Rpc
 {
@@ -5952,14 +6054,14 @@ class DescribeWarningMachines extends Rpc
 /**
  * @method string getRemark()
  * @method $this withRemark($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -5988,16 +6090,16 @@ class DescribeWebLockExclusiveFileType extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getTsEnd()
  * @method $this withTsEnd($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getTsBegin()
  * @method $this withTsBegin($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  */
 class DescribeWebLockFileChangeStatistics extends Rpc
 {
@@ -6046,30 +6148,30 @@ class DescribeWebLockInclusiveFileType extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getTsEnd()
  * @method $this withTsEnd($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getTsBegin()
  * @method $this withTsBegin($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  */
 class DescribeWebLockProcessBlockStatistics extends Rpc
 {
 }
 
 /**
- * @method string getProcessName()
- * @method $this withProcessName($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getProcessName()
+ * @method $this withProcessName($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -6102,16 +6204,16 @@ class DescribeWebLockTotalFileChangeCount extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
  */
 class DescribeWebPath extends Rpc
 {
@@ -6140,12 +6242,12 @@ class DisableBruteForceRecord extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getBound()
- * @method $this withBound($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getBound()
+ * @method $this withBound($value)
  */
 class DisableCustomBlockRecord extends Rpc
 {
@@ -6174,12 +6276,12 @@ class EnableBruteForceRecord extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getBound()
- * @method $this withBound($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getBound()
+ * @method $this withBound($value)
  */
 class EnableCustomBlockRecord extends Rpc
 {
@@ -6196,14 +6298,14 @@ class ExecStrategy extends Rpc
 }
 
 /**
- * @method string getExportType()
- * @method $this withExportType($value)
- * @method string getParams()
- * @method $this withParams($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getExportType()
+ * @method $this withExportType($value)
+ * @method string getParams()
+ * @method $this withParams($value)
  */
 class ExportRecord extends Rpc
 {
@@ -6266,14 +6368,8 @@ class ExportSuspEvents extends Rpc
 }
 
 /**
- * @method string getStatusList()
- * @method $this withStatusList($value)
- * @method string getTargetType()
- * @method $this withTargetType($value)
  * @method string getMinScore()
  * @method $this withMinScore($value)
- * @method string getRemark()
- * @method $this withRemark($value)
  * @method string getAttachTypes()
  * @method $this withAttachTypes($value)
  * @method string getType()
@@ -6286,12 +6382,6 @@ class ExportSuspEvents extends Rpc
  * @method $this withCheckType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getContainerFieldValue()
- * @method $this withContainerFieldValue($value)
- * @method string getModifyTsStart()
- * @method $this withModifyTsStart($value)
- * @method string getLang()
- * @method $this withLang($value)
  * @method string getModifyTsEnd()
  * @method $this withModifyTsEnd($value)
  * @method string getLevel()
@@ -6300,22 +6390,34 @@ class ExportSuspEvents extends Rpc
  * @method $this withResource($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
- * @method string getDealed()
- * @method $this withDealed($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
- * @method string getBatchName()
- * @method $this withBatchName($value)
  * @method string getAliasName()
  * @method $this withAliasName($value)
- * @method string getSearchTags()
- * @method $this withSearchTags($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getNecessity()
  * @method $this withNecessity($value)
  * @method string getUuids()
  * @method $this withUuids($value)
+ * @method string getStatusList()
+ * @method $this withStatusList($value)
+ * @method string getTargetType()
+ * @method $this withTargetType($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getContainerFieldValue()
+ * @method $this withContainerFieldValue($value)
+ * @method string getModifyTsStart()
+ * @method $this withModifyTsStart($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getDealed()
+ * @method $this withDealed($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getBatchName()
+ * @method $this withBatchName($value)
+ * @method string getSearchTags()
+ * @method $this withSearchTags($value)
  */
 class ExportVul extends Rpc
 {
@@ -6378,14 +6480,14 @@ class FindContainerNetworkConnect extends Rpc
 }
 
 /**
- * @method string getRiskId()
- * @method $this withRiskId($value)
  * @method string getCheckParams()
  * @method $this withCheckParams($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getRiskId()
+ * @method $this withRiskId($value)
  * @method string getUuids()
  * @method $this withUuids($value)
  */
@@ -6418,10 +6520,10 @@ class GetAlarmMachineCount extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  */
@@ -6430,6 +6532,28 @@ class GetAppNetwork extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class GetAssetDetailByUuid extends Rpc
+{
+}
+
+/**
+ * @method string getBusinessType()
+ * @method $this withBusinessType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class GetAssetSelectionConfig extends Rpc
+{
 }
 
 /**
@@ -6510,18 +6634,18 @@ class GetBackupStorageCount extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getCheckGroupId()
- * @method $this withCheckGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getFrom()
  * @method $this withFrom($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getCheckGroupId()
+ * @method $this withCheckGroupId($value)
  */
 class GetCheckConfig extends Rpc
 {
@@ -6550,12 +6674,12 @@ class GetCheckProcess extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class GetCheckRiskStatistics extends Rpc
 {
@@ -6615,7 +6739,6 @@ class GetCloudAssetCriteria extends Rpc
 }
 
 /**
- * @method array getCloudAssetInstances()
  * @method string getAssetSubType()
  * @method $this withAssetSubType($value)
  * @method string getSourceIp()
@@ -6624,6 +6747,7 @@ class GetCloudAssetCriteria extends Rpc
  * @method $this withVendor($value)
  * @method string getAssetType()
  * @method $this withAssetType($value)
+ * @method array getCloudAssetInstances()
  */
 class GetCloudAssetDetail extends Rpc
 {
@@ -6722,6 +6846,8 @@ class GetFileDetectResult extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
@@ -6742,6 +6868,8 @@ class GetHoneypotPreset extends Rpc
 /**
  * @method string getProbeId()
  * @method $this withProbeId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  */
 class GetHoneypotProbe extends Rpc
 {
@@ -6804,14 +6932,14 @@ class GetLastOnceTaskInfo extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class GetModuleConfig extends Rpc
 {
@@ -6940,15 +7068,30 @@ class HandleSimilarSecurityEvents extends Rpc
 /**
  * @method string getReason()
  * @method $this withReason($value)
- * @method array getCheckAndRiskTypeList()
  * @method string getType()
  * @method $this withType($value)
  * @method array getUuidList()
  * @method string getLang()
  * @method $this withLang($value)
+ * @method array getCheckAndRiskTypeList()
  */
 class IgnoreCheckItems extends Rpc
 {
+
+    /**
+     * @param array $uuidList
+     *
+     * @return $this
+     */
+	public function withUuidList(array $uuidList)
+	{
+	    $this->data['UuidList'] = $uuidList;
+		foreach ($uuidList as $i => $iValue) {
+			$this->options['query']['UuidList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $checkAndRiskTypeList
@@ -6969,34 +7112,19 @@ class IgnoreCheckItems extends Rpc
 
 		return $this;
     }
-
-    /**
-     * @param array $uuidList
-     *
-     * @return $this
-     */
-	public function withUuidList(array $uuidList)
-	{
-	    $this->data['UuidList'] = $uuidList;
-		foreach ($uuidList as $i => $iValue) {
-			$this->options['query']['UuidList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 }
 
 /**
  * @method string getReason()
  * @method $this withReason($value)
- * @method string getCheckIds()
- * @method $this withCheckIds($value)
- * @method string getRiskId()
- * @method $this withRiskId($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getCheckIds()
+ * @method $this withCheckIds($value)
+ * @method string getRiskId()
+ * @method $this withRiskId($value)
  * @method string getCheckWarningIds()
  * @method $this withCheckWarningIds($value)
  */
@@ -7007,13 +7135,13 @@ class IgnoreHcCheckWarnings extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPolicyVersion()
- * @method $this withPolicyVersion($value)
  * @method string getUuid()
  * @method $this withUuid($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method array getUuidList()
+ * @method string getPolicyVersion()
+ * @method $this withPolicyVersion($value)
  */
 class InstallBackupClient extends Rpc
 {
@@ -7039,30 +7167,15 @@ class InstallBackupClient extends Rpc
  * @method $this withAgentAccessKey($value)
  * @method string getAgentSecretKey()
  * @method $this withAgentSecretKey($value)
- * @method string getArgusVersion()
- * @method $this withArgusVersion($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method array getInstanceIdList()
  * @method array getUuidList()
+ * @method string getArgusVersion()
+ * @method $this withArgusVersion($value)
+ * @method array getInstanceIdList()
  */
 class InstallCloudMonitor extends Rpc
 {
-
-    /**
-     * @param array $instanceIdList
-     *
-     * @return $this
-     */
-	public function withInstanceIdList(array $instanceIdList)
-	{
-	    $this->data['InstanceIdList'] = $instanceIdList;
-		foreach ($instanceIdList as $i => $iValue) {
-			$this->options['query']['InstanceIdList.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 
     /**
      * @param array $uuidList
@@ -7074,6 +7187,21 @@ class InstallCloudMonitor extends Rpc
 	    $this->data['UuidList'] = $uuidList;
 		foreach ($uuidList as $i => $iValue) {
 			$this->options['query']['UuidList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $instanceIdList
+     *
+     * @return $this
+     */
+	public function withInstanceIdList(array $instanceIdList)
+	{
+	    $this->data['InstanceIdList'] = $instanceIdList;
+		foreach ($instanceIdList as $i => $iValue) {
+			$this->options['query']['InstanceIdList.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -7130,6 +7258,46 @@ class JoinWebLockProcessWhiteList extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method array getTargetList()
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getSelectionKey()
+ * @method $this withSelectionKey($value)
+ */
+class ListAssetSelectionSelectedTarget extends Rpc
+{
+
+    /**
+     * @param array $targetList
+     *
+     * @return $this
+     */
+	public function withTargetList(array $targetList)
+	{
+	    $this->data['TargetList'] = $targetList;
+		foreach ($targetList as $i => $iValue) {
+			$this->options['query']['TargetList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getSelectionKey()
+ * @method $this withSelectionKey($value)
+ */
+class ListAssetSelectionTarget extends Rpc
+{
 }
 
 /**
@@ -7451,10 +7619,10 @@ class ListCheckResult extends Rpc
  * @method array getInstanceTypes()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method array getInstanceIds()
  * @method string getLang()
  * @method $this withLang($value)
  * @method array getVendors()
+ * @method array getInstanceIds()
  */
 class ListCheckStandard extends Rpc
 {
@@ -7490,21 +7658,6 @@ class ListCheckStandard extends Rpc
     }
 
     /**
-     * @param array $instanceIds
-     *
-     * @return $this
-     */
-	public function withInstanceIds(array $instanceIds)
-	{
-	    $this->data['InstanceIds'] = $instanceIds;
-		foreach ($instanceIds as $i => $iValue) {
-			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
      * @param array $vendors
      *
      * @return $this
@@ -7514,6 +7667,21 @@ class ListCheckStandard extends Rpc
 	    $this->data['Vendors'] = $vendors;
 		foreach ($vendors as $i => $iValue) {
 			$this->options['query']['Vendors.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -7678,7 +7846,6 @@ class ListHoneypot extends Rpc
  * @method string getDstIp()
  * @method string getDealed()
  * @method string getCurrentPage()
- * @method string getRequestId()
  */
 class ListHoneypotAlarmEvents extends Rpc
 {
@@ -7765,19 +7932,6 @@ class ListHoneypotAlarmEvents extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRequestId($value)
-    {
-        $this->data['RequestId'] = $value;
-        $this->options['form_params']['RequestId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -7861,31 +8015,16 @@ class ListImageRisk extends Rpc
 }
 
 /**
- * @method array getTypes()
  * @method array getStandardIds()
- * @method array getRequirementIds()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method array getTypes()
+ * @method array getRequirementIds()
  */
 class ListInstanceCatalog extends Rpc
 {
-
-    /**
-     * @param array $types
-     *
-     * @return $this
-     */
-	public function withTypes(array $types)
-	{
-	    $this->data['Types'] = $types;
-		foreach ($types as $i => $iValue) {
-			$this->options['query']['Types.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 
     /**
      * @param array $standardIds
@@ -7897,6 +8036,21 @@ class ListInstanceCatalog extends Rpc
 	    $this->data['StandardIds'] = $standardIds;
 		foreach ($standardIds as $i => $iValue) {
 			$this->options['query']['StandardIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $types
+     *
+     * @return $this
+     */
+	public function withTypes(array $types)
+	{
+	    $this->data['Types'] = $types;
+		foreach ($types as $i => $iValue) {
+			$this->options['query']['Types.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -7959,16 +8113,16 @@ class ListInterceptionHistory extends Rpc
 /**
  * @method string getCriteria()
  * @method $this withCriteria($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCriteriaType()
  * @method $this withCriteriaType($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  */
 class ListInterceptionRulePage extends Rpc
 {
@@ -8069,8 +8223,20 @@ class ListPrivateRegistryList extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  */
 class ListPrivateRegistryType extends Rpc
+{
+}
+
+/**
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getUuids()
+ * @method $this withUuids($value)
+ */
+class ListQueryRaspAppInfo extends Rpc
 {
 }
 
@@ -8237,28 +8403,28 @@ class ListUninstallAegisMachines extends Rpc
 /**
  * @method string getWebPath()
  * @method $this withWebPath($value)
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
  */
 class ListUuidsByWebPath extends Rpc
 {
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getAliasName()
- * @method $this withAliasName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getAliasName()
+ * @method $this withAliasName($value)
  */
 class ListVulAutoRepairConfig extends Rpc
 {
@@ -8423,12 +8589,12 @@ class ModifyBackupPolicy extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPolicyVersion()
- * @method $this withPolicyVersion($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getId()
  * @method $this withId($value)
+ * @method string getPolicyVersion()
+ * @method $this withPolicyVersion($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -8437,16 +8603,16 @@ class ModifyBackupPolicyStatus extends Rpc
 }
 
 /**
- * @method string getUserLogStore()
- * @method $this withUserLogStore($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getUserProject()
- * @method $this withUserProject($value)
  * @method string getFrom()
  * @method $this withFrom($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getUserLogStore()
+ * @method $this withUserLogStore($value)
+ * @method string getUserProject()
+ * @method $this withUserProject($value)
  */
 class ModifyClearLogstoreStorage extends Rpc
 {
@@ -8455,14 +8621,14 @@ class ModifyClearLogstoreStorage extends Rpc
 /**
  * @method string getStrategyConfig()
  * @method $this withStrategyConfig($value)
- * @method string getStrategyTagValue()
- * @method $this withStrategyTagValue($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getStrategyTag()
  * @method $this withStrategyTag($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getStrategyTagValue()
+ * @method $this withStrategyTagValue($value)
  */
 class ModifyClientConfSetup extends Rpc
 {
@@ -8585,10 +8751,10 @@ class ModifyConcernNecessity extends Rpc
 /**
  * @method string getReason()
  * @method $this withReason($value)
- * @method string getWhitelist()
- * @method $this withWhitelist($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getWhitelist()
+ * @method $this withWhitelist($value)
  * @method string getTargetInfo()
  * @method $this withTargetInfo($value)
  */
@@ -8597,16 +8763,16 @@ class ModifyCreateVulWhitelist extends Rpc
 }
 
 /**
- * @method string getExpireTime()
- * @method $this withExpireTime($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getBound()
- * @method $this withBound($value)
  * @method string getBlockIp()
  * @method $this withBlockIp($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getExpireTime()
+ * @method $this withExpireTime($value)
+ * @method string getBound()
+ * @method $this withBound($value)
  * @method string getUuids()
  * @method $this withUuids($value)
  */
@@ -8647,12 +8813,12 @@ class ModifyCycleTask extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getUserAgreement()
  * @method $this withUserAgreement($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class ModifyEmgVulSubmit extends Rpc
 {
@@ -8707,12 +8873,12 @@ class ModifyInterceptionRule extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
  * @method string getRuleIds()
  * @method $this withRuleIds($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getRuleSwitch()
  * @method $this withRuleSwitch($value)
  */
@@ -8775,10 +8941,10 @@ class ModifyInterceptionTarget extends Rpc
  * @method $this withConfigs($value)
  * @method string getType()
  * @method $this withType($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
  * @method string getConfig()
  * @method $this withConfig($value)
  */
@@ -8819,12 +8985,12 @@ class ModifyLogMetaStatus extends Rpc
 /**
  * @method string getProject()
  * @method $this withProject($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getTimeLimit()
  * @method $this withTimeLimit($value)
  * @method string getRoute()
  * @method $this withRoute($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getFocusLevel()
  * @method $this withFocusLevel($value)
  * @method string getCustomThreshold()
@@ -8835,15 +9001,15 @@ class ModifyNoticeConfig extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getFrom()
+ * @method $this withFrom($value)
  * @method array getLogMetaList()
  * @method string getTtl()
  * @method $this withTtl($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getHotTtl()
  * @method $this withHotTtl($value)
- * @method string getFrom()
- * @method $this withFrom($value)
  * @method string getTargetRegionId()
  * @method $this withTargetRegionId($value)
  */
@@ -8884,10 +9050,10 @@ class ModifyOpenLogShipper extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getOperateType()
- * @method $this withOperateType($value)
  * @method string getInfo()
  * @method $this withInfo($value)
+ * @method string getOperateType()
+ * @method $this withOperateType($value)
  */
 class ModifyOperateVul extends Rpc
 {
@@ -8918,6 +9084,16 @@ class ModifyPushAllTask extends Rpc
 }
 
 /**
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class ModifyRefreshProcessInfo extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getItemId()
@@ -8940,11 +9116,11 @@ class ModifyRiskCheckStatus extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method array getIds()
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method array getIds()
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -8970,8 +9146,6 @@ class ModifyRiskSingleResultStatus extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getSourceIp()
@@ -8980,6 +9154,8 @@ class ModifyRiskSingleResultStatus extends Rpc
  * @method $this withDaysOfWeek($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  */
 class ModifySecurityCheckScheduleConfig extends Rpc
 {
@@ -8989,9 +9165,9 @@ class ModifySecurityCheckScheduleConfig extends Rpc
  * @method string getInsertMarkMissParam()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getDeleteMarkMissParam()
  * @method string getFrom()
  * @method string getLang()
+ * @method string getDeleteMarkMissParam()
  */
 class ModifySecurityEventMarkMissIndividually extends Rpc
 {
@@ -9005,19 +9181,6 @@ class ModifySecurityEventMarkMissIndividually extends Rpc
     {
         $this->data['InsertMarkMissParam'] = $value;
         $this->options['form_params']['InsertMarkMissParam'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDeleteMarkMissParam($value)
-    {
-        $this->data['DeleteMarkMissParam'] = $value;
-        $this->options['form_params']['DeleteMarkMissParam'] = $value;
 
         return $this;
     }
@@ -9044,6 +9207,19 @@ class ModifySecurityEventMarkMissIndividually extends Rpc
     {
         $this->data['Lang'] = $value;
         $this->options['form_params']['Lang'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeleteMarkMissParam($value)
+    {
+        $this->data['DeleteMarkMissParam'] = $value;
+        $this->options['form_params']['DeleteMarkMissParam'] = $value;
 
         return $this;
     }
@@ -9094,30 +9270,30 @@ class ModifyStrategy extends Rpc
 /**
  * @method string getType()
  * @method $this withType($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getConfig()
- * @method $this withConfig($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
  */
 class ModifyStrategyTarget extends Rpc
 {
 }
 
 /**
- * @method string getTagId()
- * @method $this withTagId($value)
- * @method string getMachineTypes()
- * @method $this withMachineTypes($value)
  * @method string getTagList()
  * @method $this withTagList($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getUuidList()
  * @method $this withUuidList($value)
+ * @method string getTagId()
+ * @method $this withTagId($value)
+ * @method string getMachineTypes()
+ * @method $this withMachineTypes($value)
  */
 class ModifyTagWithUuid extends Rpc
 {
@@ -9168,24 +9344,24 @@ class ModifyVpcHoneyPot extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getConfig()
- * @method $this withConfig($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
  */
 class ModifyVulConfig extends Rpc
 {
 }
 
 /**
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getConfig()
- * @method $this withConfig($value)
  * @method string getResourceDirectoryAccountId()
  * @method $this withResourceDirectoryAccountId($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
  */
 class ModifyVulTarget extends Rpc
 {
@@ -9210,10 +9386,10 @@ class ModifyVulTargetConfig extends Rpc
  * @method $this withReason($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getTargetInfo()
- * @method $this withTargetInfo($value)
  * @method string getId()
  * @method $this withId($value)
+ * @method string getTargetInfo()
+ * @method $this withTargetInfo($value)
  */
 class ModifyVulWhitelistTarget extends Rpc
 {
@@ -9264,15 +9440,15 @@ class ModifyWebLockDeleteConfig extends Rpc
 }
 
 /**
- * @method string getDealAll()
- * @method $this withDealAll($value)
  * @method array getProcessPath()
  * @method string getUuid()
  * @method $this withUuid($value)
- * @method string getOperateInfo()
- * @method $this withOperateInfo($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getDealAll()
+ * @method $this withDealAll($value)
+ * @method string getOperateInfo()
+ * @method $this withOperateInfo($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -9380,10 +9556,10 @@ class ModifyWebLockUpdateConfig extends Rpc
 /**
  * @method string getType()
  * @method $this withType($value)
- * @method string getTarget()
- * @method $this withTarget($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
  * @method string getConfig()
  * @method $this withConfig($value)
  */
@@ -9392,14 +9568,14 @@ class ModifyWebPath extends Rpc
 }
 
 /**
- * @method string getCurrentPage()
- * @method $this withCurrentPage($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
- * @method string getSwitchOn()
- * @method $this withSwitchOn($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getSwitchOn()
+ * @method $this withSwitchOn($value)
  */
 class OpenSensitiveFileScan extends Rpc
 {
@@ -9408,10 +9584,14 @@ class OpenSensitiveFileScan extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getInstanceIds()
- * @method $this withInstanceIds($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getOs()
+ * @method $this withOs($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
  * @method string getUuids()
  * @method $this withUuids($value)
  */
@@ -9452,8 +9632,6 @@ class OperateCommonTargetConfig extends Rpc
 }
 
 /**
- * @method string getImageUuid()
- * @method $this withImageUuid($value)
  * @method string getBaselineItemKeyList()
  * @method $this withBaselineItemKeyList($value)
  * @method string getSourceIp()
@@ -9461,6 +9639,8 @@ class OperateCommonTargetConfig extends Rpc
  * @method array getScanRange()
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getImageUuid()
+ * @method $this withImageUuid($value)
  * @method string getOperation()
  * @method $this withOperation($value)
  */
@@ -9488,10 +9668,10 @@ class OperateImageBaselineWhitelist extends Rpc
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getOperateType()
- * @method $this withOperateType($value)
  * @method string getInfo()
  * @method $this withInfo($value)
+ * @method string getOperateType()
+ * @method $this withOperateType($value)
  */
 class OperateImageVul extends Rpc
 {
@@ -9534,14 +9714,14 @@ class OperateSuspiciousTargetConfig extends Rpc
 }
 
 /**
- * @method string getOperationRange()
- * @method $this withOperationRange($value)
- * @method string getOperationAll()
- * @method $this withOperationAll($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getOperationCode()
  * @method $this withOperationCode($value)
+ * @method string getOperationRange()
+ * @method $this withOperationRange($value)
+ * @method string getOperationAll()
+ * @method $this withOperationAll($value)
  */
 class OperateVirusEvents extends Rpc
 {
@@ -9592,13 +9772,13 @@ class OperateVuls extends Rpc
 }
 
 /**
- * @method string getDealAll()
- * @method $this withDealAll($value)
  * @method array getEventIds()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getOperationCode()
  * @method $this withOperationCode($value)
+ * @method string getDealAll()
+ * @method $this withDealAll($value)
  */
 class OperateWebLockFileEvents extends Rpc
 {
@@ -9644,14 +9824,14 @@ class OperationCancelIgnoreSuspEvent extends Rpc
 /**
  * @method string getSuspiciousEventIds()
  * @method $this withSuspiciousEventIds($value)
- * @method string getSubOperation()
- * @method $this withSubOperation($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
- * @method string getWarnType()
- * @method $this withWarnType($value)
  * @method string getFrom()
  * @method $this withFrom($value)
+ * @method string getSubOperation()
+ * @method $this withSubOperation($value)
+ * @method string getWarnType()
+ * @method $this withWarnType($value)
  * @method string getOperation()
  * @method $this withOperation($value)
  */
@@ -9660,12 +9840,12 @@ class OperationSuspEvents extends Rpc
 }
 
 /**
- * @method string getRegistryNameLike()
- * @method string getCurrentPage()
  * @method array getRegistryTypeNotInList()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
+ * @method string getRegistryNameLike()
+ * @method string getCurrentPage()
  * @method array getRegistryTypeInList()
  */
 class PageImageRegistry extends Rpc
@@ -9673,32 +9853,6 @@ class PageImageRegistry extends Rpc
 
     /** @var string */
     public $scheme = 'https';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRegistryNameLike($value)
-    {
-        $this->data['RegistryNameLike'] = $value;
-        $this->options['form_params']['RegistryNameLike'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withCurrentPage($value)
-    {
-        $this->data['CurrentPage'] = $value;
-        $this->options['form_params']['CurrentPage'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param array $registryTypeNotInList
@@ -9724,6 +9878,32 @@ class PageImageRegistry extends Rpc
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegistryNameLike($value)
+    {
+        $this->data['RegistryNameLike'] = $value;
+        $this->options['form_params']['RegistryNameLike'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrentPage($value)
+    {
+        $this->data['CurrentPage'] = $value;
+        $this->options['form_params']['CurrentPage'] = $value;
 
         return $this;
     }
@@ -9821,10 +10001,10 @@ class PublicSyncAndCreateImageScanTask extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getCreateMark()
- * @method $this withCreateMark($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getCreateMark()
+ * @method $this withCreateMark($value)
  */
 class QueryDiscoverDatabase extends Rpc
 {
@@ -9983,14 +10163,14 @@ class RebootMachine extends Rpc
 }
 
 /**
- * @method string getCloudAssetType()
- * @method $this withCloudAssetType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getCloudAssetSubType()
  * @method $this withCloudAssetSubType($value)
  * @method string getAssetType()
  * @method $this withAssetType($value)
+ * @method string getCloudAssetType()
+ * @method $this withCloudAssetType($value)
  */
 class RefreshAssets extends Rpc
 {
@@ -10035,11 +10215,11 @@ class RemoveCheckInstanceResultWhiteList extends Rpc
 }
 
 /**
- * @method array getCheckIds()
  * @method string getType()
  * @method $this withType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method array getCheckIds()
  * @method string getCheckGroupId()
  * @method $this withCheckGroupId($value)
  */
@@ -10083,16 +10263,16 @@ class SasInstallCode extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getBaselineItemList()
  * @method $this withBaselineItemList($value)
  * @method string getStrategyName()
  * @method $this withStrategyName($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
  * @method string getStrategyId()
  * @method $this withStrategyId($value)
- * @method string getLang()
- * @method $this withLang($value)
  */
 class SaveImageBaselineStrategy extends Rpc
 {
@@ -10109,10 +10289,10 @@ class SaveSuspEventUserSetting extends Rpc
 }
 
 /**
- * @method string getClusterIds()
- * @method $this withClusterIds($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getClusterIds()
+ * @method $this withClusterIds($value)
  * @method string getSwitchType()
  * @method $this withSwitchType($value)
  * @method string getSwitchOn()
@@ -10135,7 +10315,6 @@ class SetRegistryScanDayNum extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method array getItemIds()
  * @method string getType()
  * @method $this withType($value)
  * @method array getAssets()
@@ -10143,24 +10322,10 @@ class SetRegistryScanDayNum extends Rpc
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method array getItemIds()
  */
 class StartBaselineSecurityCheck extends Rpc
 {
-
-    /**
-     * @param array $itemIds
-     *
-     * @return $this
-     */
-	public function withItemIds(array $itemIds)
-	{
-	    $this->data['ItemIds'] = $itemIds;
-		foreach ($itemIds as $i => $iValue) {
-			$this->options['query']['ItemIds.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
 
     /**
      * @param array $assets
@@ -10172,6 +10337,21 @@ class StartBaselineSecurityCheck extends Rpc
 	    $this->data['Assets'] = $assets;
 		foreach ($assets as $i => $iValue) {
 			$this->options['query']['Assets.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $itemIds
+     *
+     * @return $this
+     */
+	public function withItemIds(array $itemIds)
+	{
+	    $this->data['ItemIds'] = $itemIds;
+		foreach ($itemIds as $i => $iValue) {
+			$this->options['query']['ItemIds.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -10277,6 +10457,8 @@ class UninstallUniBackupAgent extends Rpc
 /**
  * @method string getHoneypotName()
  * @method $this withHoneypotName($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getHoneypotId()
  * @method $this withHoneypotId($value)
  * @method string getMeta()
@@ -10315,6 +10497,8 @@ class UpdateHoneypotNode extends Rpc
 }
 
 /**
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getHoneypotPresetId()
  * @method $this withHoneypotPresetId($value)
  * @method string getPresetName()
@@ -10334,6 +10518,8 @@ class UpdateHoneypotPreset extends Rpc
  * @method string getProbeId()
  * @method $this withProbeId($value)
  * @method array getServiceIpList()
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getArp()
  * @method $this withArp($value)
  * @method string getDisplayName()
@@ -10446,10 +10632,12 @@ class UpgradeBackupPolicyVersion extends Rpc
 }
 
 /**
- * @method string getRiskIds()
- * @method $this withRiskIds($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getCheckIds()
+ * @method $this withCheckIds($value)
+ * @method string getRiskIds()
+ * @method $this withRiskIds($value)
  * @method string getUuids()
  * @method $this withUuids($value)
  */
