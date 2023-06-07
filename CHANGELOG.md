@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1833 - 2023-6-7
+- Add Overview Query API.
+- Support Update Job With XAttrs.
+
+
 ## 1.8.1832 - 2023-6-6
 - Change ListAssetSelectionTarget Request.
 

@@ -31,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetJobInstance getJobInstance(array $options = [])
  * @method GetJobInstanceList getJobInstanceList(array $options = [])
  * @method GetLog getLog(array $options = [])
+ * @method GetOverview getOverview(array $options = [])
  * @method GetWorkerList getWorkerList(array $options = [])
  * @method GetWorkFlow getWorkFlow(array $options = [])
  * @method GetWorkflowInstance getWorkflowInstance(array $options = [])
@@ -1246,6 +1247,26 @@ class GetLog extends Rpc
 }
 
 /**
+ * @method string getMetricType()
+ * @method $this withMetricType($value)
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOperate()
+ * @method $this withOperate($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class GetOverview extends Rpc
+{
+}
+
+/**
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
  * @method string getGroupId()
@@ -1317,14 +1338,13 @@ class GrantPermission extends Rpc
 /**
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
+ * @method string getAppGroupName()
+ * @method $this withAppGroupName($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  */
 class ListGroups extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -1346,11 +1366,14 @@ class ListJobs extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getNamespaceName()
+ * @method $this withNamespaceName($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
 class ListNamespaces extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -1600,6 +1623,7 @@ class UpdateAppGroup extends Rpc
  * @method string getName()
  * @method string getTimeType()
  * @method string getParameters()
+ * @method string getTemplate()
  * @method string getNamespaceSource()
  * @method string getTimezone()
  * @method string getDescription()
@@ -1617,6 +1641,7 @@ class UpdateAppGroup extends Rpc
  * @method string getQueueSize()
  * @method string getClassName()
  * @method string getNamespace()
+ * @method string getXAttrs()
  * @method string getMaxConcurrency()
  */
 class UpdateJob extends Rpc
@@ -1861,6 +1886,19 @@ class UpdateJob extends Rpc
      *
      * @return $this
      */
+    public function withTemplate($value)
+    {
+        $this->data['Template'] = $value;
+        $this->options['form_params']['Template'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withNamespaceSource($value)
     {
         $this->data['NamespaceSource'] = $value;
@@ -2073,6 +2111,19 @@ class UpdateJob extends Rpc
     {
         $this->data['Namespace'] = $value;
         $this->options['form_params']['Namespace'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withXAttrs($value)
+    {
+        $this->data['XAttrs'] = $value;
+        $this->options['form_params']['XAttrs'] = $value;
 
         return $this;
     }
