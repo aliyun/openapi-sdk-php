@@ -8,25 +8,40 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AllocatePublicConnection allocatePublicConnection(array $options = [])
  * @method CreateCustomImage createCustomImage(array $options = [])
  * @method CreateFirewallRule createFirewallRule(array $options = [])
+ * @method CreateFirewallRules createFirewallRules(array $options = [])
+ * @method CreateInstanceKeyPair createInstanceKeyPair(array $options = [])
  * @method CreateInstances createInstances(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
  * @method DeleteCustomImage deleteCustomImage(array $options = [])
  * @method DeleteFirewallRule deleteFirewallRule(array $options = [])
+ * @method DeleteInstanceKeyPair deleteInstanceKeyPair(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
+ * @method DeleteSnapshots deleteSnapshots(array $options = [])
  * @method DescribeCloudAssistantStatus describeCloudAssistantStatus(array $options = [])
+ * @method DescribeCloudMonitorAgentStatuses describeCloudMonitorAgentStatuses(array $options = [])
  * @method DescribeDatabaseErrorLogs describeDatabaseErrorLogs(array $options = [])
  * @method DescribeDatabaseInstanceMetricData describeDatabaseInstanceMetricData(array $options = [])
  * @method DescribeDatabaseInstanceParameters describeDatabaseInstanceParameters(array $options = [])
  * @method DescribeDatabaseInstances describeDatabaseInstances(array $options = [])
  * @method DescribeDatabaseSlowLogRecords describeDatabaseSlowLogRecords(array $options = [])
+ * @method DescribeInstanceKeyPair describeInstanceKeyPair(array $options = [])
+ * @method DescribeInstancePasswordsSetting describeInstancePasswordsSetting(array $options = [])
+ * @method DescribeInstanceVncUrl describeInstanceVncUrl(array $options = [])
  * @method DescribeInvocationResult describeInvocationResult(array $options = [])
  * @method DescribeInvocations describeInvocations(array $options = [])
+ * @method DescribeMonitorData describeMonitorData(array $options = [])
+ * @method DescribeSecurityAgentStatus describeSecurityAgentStatus(array $options = [])
+ * @method DisableFirewallRule disableFirewallRule(array $options = [])
+ * @method EnableFirewallRule enableFirewallRule(array $options = [])
  * @method InstallCloudAssistant installCloudAssistant(array $options = [])
+ * @method InstallCloudMonitorAgent installCloudMonitorAgent(array $options = [])
+ * @method ListCustomImages listCustomImages(array $options = [])
  * @method ListDisks listDisks(array $options = [])
  * @method ListFirewallRules listFirewallRules(array $options = [])
  * @method ListImages listImages(array $options = [])
  * @method ListInstancePlansModification listInstancePlansModification(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ListInstanceStatus listInstanceStatus(array $options = [])
  * @method ListInstancesTrafficPackages listInstancesTrafficPackages(array $options = [])
  * @method ListPlans listPlans(array $options = [])
  * @method ListRegions listRegions(array $options = [])
@@ -34,8 +49,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method LoginInstance loginInstance(array $options = [])
  * @method ModifyDatabaseInstanceDescription modifyDatabaseInstanceDescription(array $options = [])
  * @method ModifyDatabaseInstanceParameter modifyDatabaseInstanceParameter(array $options = [])
+ * @method ModifyFirewallRule modifyFirewallRule(array $options = [])
  * @method ModifyImageShareStatus modifyImageShareStatus(array $options = [])
+ * @method ModifyInstanceVncPassword modifyInstanceVncPassword(array $options = [])
  * @method RebootInstance rebootInstance(array $options = [])
+ * @method RebootInstances rebootInstances(array $options = [])
  * @method ReleasePublicConnection releasePublicConnection(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method ResetDatabaseAccountPassword resetDatabaseAccountPassword(array $options = [])
@@ -45,10 +63,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunCommand runCommand(array $options = [])
  * @method StartDatabaseInstance startDatabaseInstance(array $options = [])
  * @method StartInstance startInstance(array $options = [])
+ * @method StartInstances startInstances(array $options = [])
  * @method StopDatabaseInstance stopDatabaseInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
+ * @method StopInstances stopInstances(array $options = [])
+ * @method UpdateDiskAttribute updateDiskAttribute(array $options = [])
  * @method UpdateInstanceAttribute updateInstanceAttribute(array $options = [])
+ * @method UpdateSnapshotAttribute updateSnapshotAttribute(array $options = [])
  * @method UpgradeInstance upgradeInstance(array $options = [])
+ * @method UploadInstanceKeyPair uploadInstanceKeyPair(array $options = [])
  */
 class SWASOPENApiResolver extends ApiResolver
 {
@@ -114,6 +137,30 @@ class CreateFirewallRule extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFirewallRules()
+ * @method $this withFirewallRules($value)
+ */
+class CreateFirewallRules extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateInstanceKeyPair extends Rpc
+{
+}
+
+/**
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getClientToken()
@@ -172,12 +219,32 @@ class DeleteFirewallRule extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteInstanceKeyPair extends Rpc
+{
+}
+
+/**
  * @method string getSnapshotId()
  * @method $this withSnapshotId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  */
 class DeleteSnapshot extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSnapshotIds()
+ * @method $this withSnapshotIds($value)
+ */
+class DeleteSnapshots extends Rpc
 {
 }
 
@@ -190,6 +257,16 @@ class DeleteSnapshot extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeCloudAssistantStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class DescribeCloudMonitorAgentStatuses extends Rpc
 {
 }
 
@@ -260,6 +337,36 @@ class DescribeDatabaseSlowLogRecords extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeInstanceKeyPair extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeInstancePasswordsSetting extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeInstanceVncUrl extends Rpc
+{
+}
+
+/**
  * @method string getInvokeId()
  * @method $this withInvokeId($value)
  * @method string getInstanceId()
@@ -284,6 +391,68 @@ class DescribeInvocations extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getMetricName()
+ * @method $this withMetricName($value)
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getLength()
+ * @method $this withLength($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeMonitorData extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeSecurityAgentStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DisableFirewallRule extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSourceCidrIp()
+ * @method $this withSourceCidrIp($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class EnableFirewallRule extends Rpc
+{
+}
+
+/**
  * @method string getSite()
  * @method $this withSite($value)
  * @method string getInstanceIds()
@@ -294,6 +463,40 @@ class InstallCloudAssistant extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
+ */
+class InstallCloudMonitorAgent extends Rpc
+{
+}
+
+/**
+ * @method string getSystemSnapshotId()
+ * @method $this withSystemSnapshotId($value)
+ * @method string getDataSnapshotId()
+ * @method $this withDataSnapshotId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getImageNames()
+ * @method $this withImageNames($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getImageIds()
+ * @method $this withImageIds($value)
+ */
+class ListCustomImages extends Rpc
+{
+}
+
+/**
+ * @method string getDiskType()
+ * @method $this withDiskType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
@@ -354,6 +557,18 @@ class ListInstances extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListInstanceStatus extends Rpc
+{
+}
+
+/**
  * @method string getInstanceIds()
  * @method $this withInstanceIds($value)
  */
@@ -372,6 +587,8 @@ class ListRegions extends Rpc
 /**
  * @method string getSnapshotIds()
  * @method $this withSnapshotIds($value)
+ * @method string getSourceDiskType()
+ * @method $this withSourceDiskType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getInstanceId()
@@ -424,6 +641,26 @@ class ModifyDatabaseInstanceParameter extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSourceCidrIp()
+ * @method $this withSourceCidrIp($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getRuleProtocol()
+ * @method $this withRuleProtocol($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class ModifyFirewallRule extends Rpc
+{
+}
+
+/**
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getClientToken()
@@ -440,8 +677,32 @@ class ModifyImageShareStatus extends Rpc
  * @method $this withClientToken($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getVncPassword()
+ * @method $this withVncPassword($value)
+ */
+class ModifyInstanceVncPassword extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class RebootInstance extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getForceReboot()
+ * @method $this withForceReboot($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class RebootInstances extends Rpc
 {
 }
 
@@ -562,6 +823,16 @@ class StartInstance extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class StartInstances extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getDatabaseInstanceId()
  * @method $this withDatabaseInstanceId($value)
  */
@@ -582,6 +853,30 @@ class StopInstance extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getForceStop()
+ * @method $this withForceStop($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class StopInstances extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ * @method string getDiskId()
+ * @method $this withDiskId($value)
+ */
+class UpdateDiskAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getPassword()
  * @method $this withPassword($value)
  * @method string getInstanceId()
@@ -594,6 +889,18 @@ class UpdateInstanceAttribute extends Rpc
 }
 
 /**
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
+ */
+class UpdateSnapshotAttribute extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getInstanceId()
@@ -602,5 +909,19 @@ class UpdateInstanceAttribute extends Rpc
  * @method $this withPlanId($value)
  */
 class UpgradeInstance extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPublicKey()
+ * @method $this withPublicKey($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UploadInstanceKeyPair extends Rpc
 {
 }

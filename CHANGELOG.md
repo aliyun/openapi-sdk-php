@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1834 - 2023-6-7
+- Add new apis.
+
+
 ## 1.8.1833 - 2023-6-7
 - Add Overview Query API.
 - Support Update Job With XAttrs.
