@@ -52,7 +52,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetPolicyVersion getPolicyVersion(array $options = [])
  * @method GetResourceDirectory getResourceDirectory(array $options = [])
  * @method GetResourceGroup getResourceGroup(array $options = [])
- * @method GetResourceGroupListAclMode getResourceGroupListAclMode(array $options = [])
  * @method GetRole getRole(array $options = [])
  * @method GetServiceLinkedRoleDeletionStatus getServiceLinkedRoleDeletionStatus(array $options = [])
  * @method InitResourceDirectory initResourceDirectory(array $options = [])
@@ -115,6 +114,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     protected $scheme = 'https';
+
+    /** @var string */
+    public $serviceCode = 'resourcemanager';
 }
 
 /**
@@ -152,8 +154,6 @@ class AttachPolicy extends Rpc
 }
 
 /**
- * @method string getInheritSecureMobilePhoneFrom()
- * @method $this withInheritSecureMobilePhoneFrom($value)
  * @method string getSecureMobilePhone()
  * @method $this withSecureMobilePhone($value)
  * @method string getAccountId()
@@ -280,14 +280,8 @@ class CreatePolicyVersion extends Rpc
 /**
  * @method string getTag()
  * @method $this withTag($value)
- * @method string getVerificationCode()
- * @method $this withVerificationCode($value)
  * @method string getAccountNamePrefix()
  * @method $this withAccountNamePrefix($value)
- * @method string getInheritSecureMobilePhoneFrom()
- * @method $this withInheritSecureMobilePhoneFrom($value)
- * @method string getSecureMobilePhone()
- * @method $this withSecureMobilePhone($value)
  * @method string getResellAccountType()
  * @method $this withResellAccountType($value)
  * @method string getParentFolderId()
@@ -581,16 +575,6 @@ class GetResourceDirectory extends Rpc
  */
 class GetResourceGroup extends Rpc
 {
-}
-
-class GetResourceGroupListAclMode extends Rpc
-{
-
-    /** @var string */
-    public $scheme = 'http';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**

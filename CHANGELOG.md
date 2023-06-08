@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1836 - 2023-6-8
+- Modify endpoint for resourcemanager.
+
+
 ## 1.8.1835 - 2023-6-8
 - Update SDK.
 
