@@ -12,12 +12,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateSecurityIpGroup createSecurityIpGroup(array $options = [])
  * @method CreateTenant createTenant(array $options = [])
  * @method CreateTenantReadOnlyConnection createTenantReadOnlyConnection(array $options = [])
+ * @method CreateTenantSecurityIpGroup createTenantSecurityIpGroup(array $options = [])
  * @method CreateTenantUser createTenantUser(array $options = [])
  * @method DeleteDatabases deleteDatabases(array $options = [])
  * @method DeleteInstances deleteInstances(array $options = [])
  * @method DeleteOmsOpenAPIProject deleteOmsOpenAPIProject(array $options = [])
  * @method DeleteSecurityIpGroup deleteSecurityIpGroup(array $options = [])
  * @method DeleteTenants deleteTenants(array $options = [])
+ * @method DeleteTenantSecurityIpGroup deleteTenantSecurityIpGroup(array $options = [])
  * @method DeleteTenantUsers deleteTenantUsers(array $options = [])
  * @method DescribeAnomalySQLList describeAnomalySQLList(array $options = [])
  * @method DescribeAvailableCpuResource describeAvailableCpuResource(array $options = [])
@@ -32,6 +34,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceTenantModes describeInstanceTenantModes(array $options = [])
  * @method DescribeInstanceTopology describeInstanceTopology(array $options = [])
  * @method DescribeNodeMetrics describeNodeMetrics(array $options = [])
+ * @method DescribeOasAnomalySQLList describeOasAnomalySQLList(array $options = [])
+ * @method DescribeOasSlowSQLList describeOasSlowSQLList(array $options = [])
+ * @method DescribeOasSQLDetails describeOasSQLDetails(array $options = [])
+ * @method DescribeOasSQLHistoryList describeOasSQLHistoryList(array $options = [])
+ * @method DescribeOasSQLPlans describeOasSQLPlans(array $options = [])
+ * @method DescribeOasTopSQLList describeOasTopSQLList(array $options = [])
  * @method DescribeOmsOpenAPIProject describeOmsOpenAPIProject(array $options = [])
  * @method DescribeOmsOpenAPIProjectSteps describeOmsOpenAPIProjectSteps(array $options = [])
  * @method DescribeOutlineBinding describeOutlineBinding(array $options = [])
@@ -44,10 +52,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSQLDetails describeSQLDetails(array $options = [])
  * @method DescribeSQLHistoryList describeSQLHistoryList(array $options = [])
  * @method DescribeSQLPlans describeSQLPlans(array $options = [])
+ * @method DescribeSQLSamples describeSQLSamples(array $options = [])
  * @method DescribeTenant describeTenant(array $options = [])
  * @method DescribeTenantMetrics describeTenantMetrics(array $options = [])
  * @method DescribeTenants describeTenants(array $options = [])
  * @method DescribeTenantSecurityConfigs describeTenantSecurityConfigs(array $options = [])
+ * @method DescribeTenantSecurityIpGroups describeTenantSecurityIpGroups(array $options = [])
  * @method DescribeTenantTags describeTenantTags(array $options = [])
  * @method DescribeTenantUserRoles describeTenantUserRoles(array $options = [])
  * @method DescribeTenantUsers describeTenantUsers(array $options = [])
@@ -66,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method ModifyTenantPrimaryZone modifyTenantPrimaryZone(array $options = [])
  * @method ModifyTenantResource modifyTenantResource(array $options = [])
+ * @method ModifyTenantSecurityIpGroup modifyTenantSecurityIpGroup(array $options = [])
  * @method ModifyTenantTags modifyTenantTags(array $options = [])
  * @method ModifyTenantUserDescription modifyTenantUserDescription(array $options = [])
  * @method ModifyTenantUserPassword modifyTenantUserPassword(array $options = [])
@@ -78,6 +89,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchOmsOpenAPIProjects searchOmsOpenAPIProjects(array $options = [])
  * @method StartOmsOpenAPIProject startOmsOpenAPIProject(array $options = [])
  * @method StopOmsOpenAPIProject stopOmsOpenAPIProject(array $options = [])
+ * @method SwitchoverInstance switchoverInstance(array $options = [])
  */
 class OceanBaseProApiResolver extends ApiResolver
 {
@@ -971,6 +983,68 @@ class CreateTenantReadOnlyConnection extends Rpc
 }
 
 /**
+ * @method string getSecurityIps()
+ * @method string getSecurityIpGroupName()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class CreateTenantSecurityIpGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSecurityIps($value)
+    {
+        $this->data['SecurityIps'] = $value;
+        $this->options['form_params']['SecurityIps'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSecurityIpGroupName($value)
+    {
+        $this->data['SecurityIpGroupName'] = $value;
+        $this->options['form_params']['SecurityIpGroupName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRoles()
  * @method string getUserType()
  * @method string getDescription()
@@ -1295,6 +1369,54 @@ class DeleteTenants extends Rpc
     {
         $this->data['TenantIds'] = $value;
         $this->options['form_params']['TenantIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSecurityIpGroupName()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class DeleteTenantSecurityIpGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSecurityIpGroupName($value)
+    {
+        $this->data['SecurityIpGroupName'] = $value;
+        $this->options['form_params']['SecurityIpGroupName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
 
         return $this;
     }
@@ -2211,6 +2333,952 @@ class DescribeNodeMetrics extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method string getSearchRule()
+ * @method string getCurrent()
+ * @method string getSqlTextLength()
+ * @method string getTenantId()
+ * @method string getPageSize()
+ * @method string getSearchValue()
+ * @method string getSqlId()
+ * @method string getFilterCondition()
+ * @method string getSearchParam()
+ * @method string getEndTime()
+ * @method string getNodeIp()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getSearchKeyWord()
+ * @method string getAcceptLanguage()
+ */
+class DescribeOasAnomalySQLList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchRule($value)
+    {
+        $this->data['SearchRule'] = $value;
+        $this->options['form_params']['SearchRule'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCurrent($value)
+    {
+        $this->data['Current'] = $value;
+        $this->options['form_params']['Current'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlTextLength($value)
+    {
+        $this->data['SqlTextLength'] = $value;
+        $this->options['form_params']['SqlTextLength'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchValue($value)
+    {
+        $this->data['SearchValue'] = $value;
+        $this->options['form_params']['SearchValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilterCondition($value)
+    {
+        $this->data['FilterCondition'] = $value;
+        $this->options['form_params']['FilterCondition'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchParam($value)
+    {
+        $this->data['SearchParam'] = $value;
+        $this->options['form_params']['SearchParam'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeIp($value)
+    {
+        $this->data['NodeIp'] = $value;
+        $this->options['form_params']['NodeIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchKeyWord($value)
+    {
+        $this->data['SearchKeyWord'] = $value;
+        $this->options['form_params']['SearchKeyWord'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcceptLanguage($value)
+    {
+        $this->data['AcceptLanguage'] = $value;
+        $this->options['form_params']['AcceptLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getSearchRule()
+ * @method string getSqlTextLength()
+ * @method string getTenantId()
+ * @method string getSearchValue()
+ * @method string getSqlId()
+ * @method string getFilterCondition()
+ * @method string getSearchParam()
+ * @method string getEndTime()
+ * @method string getNodeIp()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getSearchKeyWord()
+ * @method string getAcceptLanguage()
+ */
+class DescribeOasSlowSQLList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchRule($value)
+    {
+        $this->data['SearchRule'] = $value;
+        $this->options['form_params']['SearchRule'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlTextLength($value)
+    {
+        $this->data['SqlTextLength'] = $value;
+        $this->options['form_params']['SqlTextLength'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchValue($value)
+    {
+        $this->data['SearchValue'] = $value;
+        $this->options['form_params']['SearchValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilterCondition($value)
+    {
+        $this->data['FilterCondition'] = $value;
+        $this->options['form_params']['FilterCondition'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchParam($value)
+    {
+        $this->data['SearchParam'] = $value;
+        $this->options['form_params']['SearchParam'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeIp($value)
+    {
+        $this->data['NodeIp'] = $value;
+        $this->options['form_params']['NodeIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchKeyWord($value)
+    {
+        $this->data['SearchKeyWord'] = $value;
+        $this->options['form_params']['SearchKeyWord'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcceptLanguage($value)
+    {
+        $this->data['AcceptLanguage'] = $value;
+        $this->options['form_params']['AcceptLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSqlId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getTenantId()
+ */
+class DescribeOasSQLDetails extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getTenantId()
+ * @method string getSqlId()
+ * @method string getEndTime()
+ * @method string getNodeIp()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getAcceptLanguage()
+ */
+class DescribeOasSQLHistoryList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeIp($value)
+    {
+        $this->data['NodeIp'] = $value;
+        $this->options['form_params']['NodeIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcceptLanguage($value)
+    {
+        $this->data['AcceptLanguage'] = $value;
+        $this->options['form_params']['AcceptLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getTenantId()
+ * @method string getSqlId()
+ * @method string getEndTime()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getAcceptLanguage()
+ */
+class DescribeOasSQLPlans extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcceptLanguage($value)
+    {
+        $this->data['AcceptLanguage'] = $value;
+        $this->options['form_params']['AcceptLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getSearchRule()
+ * @method string getSqlTextLength()
+ * @method string getTenantId()
+ * @method string getSearchValue()
+ * @method string getSqlId()
+ * @method string getFilterCondition()
+ * @method string getSearchParam()
+ * @method string getEndTime()
+ * @method string getNodeIp()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getSearchKeyWord()
+ * @method string getAcceptLanguage()
+ */
+class DescribeOasTopSQLList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchRule($value)
+    {
+        $this->data['SearchRule'] = $value;
+        $this->options['form_params']['SearchRule'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlTextLength($value)
+    {
+        $this->data['SqlTextLength'] = $value;
+        $this->options['form_params']['SqlTextLength'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchValue($value)
+    {
+        $this->data['SearchValue'] = $value;
+        $this->options['form_params']['SearchValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilterCondition($value)
+    {
+        $this->data['FilterCondition'] = $value;
+        $this->options['form_params']['FilterCondition'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchParam($value)
+    {
+        $this->data['SearchParam'] = $value;
+        $this->options['form_params']['SearchParam'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeIp($value)
+    {
+        $this->data['NodeIp'] = $value;
+        $this->options['form_params']['NodeIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchKeyWord($value)
+    {
+        $this->data['SearchKeyWord'] = $value;
+        $this->options['form_params']['SearchKeyWord'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcceptLanguage($value)
+    {
+        $this->data['AcceptLanguage'] = $value;
+        $this->options['form_params']['AcceptLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageNumber()
  * @method string getPageSize()
  * @method string getWorkerGradeId()
@@ -3109,6 +4177,96 @@ class DescribeSQLPlans extends Rpc
 }
 
 /**
+ * @method string getSqlId()
+ * @method string getEndTime()
+ * @method string getStartTime()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getTenantId()
+ */
+class DescribeSQLSamples extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getInstanceId()
  * @method string getTenantId()
  */
@@ -3369,6 +4527,40 @@ class DescribeTenants extends Rpc
  * @method string getTenantId()
  */
 class DescribeTenantSecurityConfigs extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class DescribeTenantSecurityIpGroups extends Rpc
 {
 
     /**
@@ -4441,6 +5633,68 @@ class ModifyTenantResource extends Rpc
 }
 
 /**
+ * @method string getSecurityIps()
+ * @method string getSecurityIpGroupName()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class ModifyTenantSecurityIpGroup extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSecurityIps($value)
+    {
+        $this->data['SecurityIps'] = $value;
+        $this->options['form_params']['SecurityIps'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSecurityIpGroupName($value)
+    {
+        $this->data['SecurityIpGroupName'] = $value;
+        $this->options['form_params']['SecurityIpGroupName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTags()
  * @method string getInstanceId()
  * @method string getTenantId()
@@ -5305,6 +6559,54 @@ class StopOmsOpenAPIProject extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getForced()
+ * @method string getInstanceId()
+ * @method string getTargetInstanceId()
+ */
+class SwitchoverInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withForced($value)
+    {
+        $this->data['Forced'] = $value;
+        $this->options['form_params']['Forced'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetInstanceId($value)
+    {
+        $this->data['TargetInstanceId'] = $value;
+        $this->options['form_params']['TargetInstanceId'] = $value;
 
         return $this;
     }
