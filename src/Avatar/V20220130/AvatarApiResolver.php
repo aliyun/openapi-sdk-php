@@ -10,15 +10,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DuplexDecision duplexDecision(array $options = [])
  * @method GetVideoTaskInfo getVideoTaskInfo(array $options = [])
  * @method LicenseAuth licenseAuth(array $options = [])
+ * @method QueryAvatar queryAvatar(array $options = [])
+ * @method QueryAvatarList queryAvatarList(array $options = [])
  * @method QueryRunningInstance queryRunningInstance(array $options = [])
  * @method QueryTimedResetOperateStatus queryTimedResetOperateStatus(array $options = [])
  * @method SendMessage sendMessage(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartTimedResetOperate startTimedResetOperate(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
+ * @method SubmitAudioTo2DAvatarVideoTask submitAudioTo2DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo2DAvatarVideoTask submitTextTo2DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo3DAvatarVideoTask submitTextTo3DAvatarVideoTask(array $options = [])
- * @method SubmitTextToSignVideoTask submitTextToSignVideoTask(array $options = [])
  */
 class AvatarApiResolver extends ApiResolver
 {
@@ -112,6 +114,33 @@ class LicenseAuth extends Rpc
 }
 
 /**
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class QueryAvatar extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getModelType()
+ * @method $this withModelType($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class QueryAvatarList extends Rpc
+{
+}
+
+/**
  * @method string getApp()
  * @method $this withApp($value)
  * @method string getTenantId()
@@ -190,6 +219,24 @@ class StopInstance extends Rpc
  * @method $this withApp($value)
  * @method string getVideoInfo()
  * @method $this withVideoInfo($value)
+ * @method string getAvatarInfo()
+ * @method $this withAvatarInfo($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ */
+class SubmitAudioTo2DAvatarVideoTask extends Rpc
+{
+}
+
+/**
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getVideoInfo()
+ * @method $this withVideoInfo($value)
  * @method string getAudioInfo()
  * @method $this withAudioInfo($value)
  * @method string getAvatarInfo()
@@ -220,21 +267,5 @@ class SubmitTextTo2DAvatarVideoTask extends Rpc
  * @method $this withTitle($value)
  */
 class SubmitTextTo3DAvatarVideoTask extends Rpc
-{
-}
-
-/**
- * @method string getApp()
- * @method $this withApp($value)
- * @method string getVideoInfo()
- * @method $this withVideoInfo($value)
- * @method string getTenantId()
- * @method $this withTenantId($value)
- * @method string getText()
- * @method $this withText($value)
- * @method string getTitle()
- * @method $this withTitle($value)
- */
-class SubmitTextToSignVideoTask extends Rpc
 {
 }
