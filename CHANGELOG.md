@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1839 - 2023-6-9
+- Supported GetResourceCounts API.
+
+
 ## 1.8.1838 - 2023-6-9
 - SubmitAudioTo3DAvatarVideoTask
 
