@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1838 - 2023-6-9
+- SubmitAudioTo3DAvatarVideoTask
+
+
 ## 1.8.1837 - 2023-6-9
 - SubmitAudioTo3DAvatarVideoTask
 

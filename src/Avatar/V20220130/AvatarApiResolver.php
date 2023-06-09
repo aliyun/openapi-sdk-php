@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StartTimedResetOperate startTimedResetOperate(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method SubmitAudioTo2DAvatarVideoTask submitAudioTo2DAvatarVideoTask(array $options = [])
+ * @method SubmitAudioTo3DAvatarVideoTask submitAudioTo3DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo2DAvatarVideoTask submitTextTo2DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo3DAvatarVideoTask submitTextTo3DAvatarVideoTask(array $options = [])
  */
@@ -229,6 +230,24 @@ class StopInstance extends Rpc
  * @method $this withUrl($value)
  */
 class SubmitAudioTo2DAvatarVideoTask extends Rpc
+{
+}
+
+/**
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getVideoInfo()
+ * @method $this withVideoInfo($value)
+ * @method string getAvatarInfo()
+ * @method $this withAvatarInfo($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ */
+class SubmitAudioTo3DAvatarVideoTask extends Rpc
 {
 }
 
