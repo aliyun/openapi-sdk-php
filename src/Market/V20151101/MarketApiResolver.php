@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AutoRenewInstance autoRenewInstance(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
  * @method CrossAccountVerifyToken crossAccountVerifyToken(array $options = [])
+ * @method DescribeApiMetering describeApiMetering(array $options = [])
  * @method DescribeCurrentNodeInfo describeCurrentNodeInfo(array $options = [])
  * @method DescribeDistributionProducts describeDistributionProducts(array $options = [])
  * @method DescribeDistributionProductsLink describeDistributionProductsLink(array $options = [])
@@ -168,6 +169,57 @@ class CrossAccountVerifyToken extends Rpc
     {
         $this->data['Token'] = $value;
         $this->options['form_params']['Token'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProductCode()
+ * @method string getType()
+ * @method string getPageNum()
+ */
+class DescribeApiMetering extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductCode($value)
+    {
+        $this->data['ProductCode'] = $value;
+        $this->options['query']['productCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['query']['pageNum'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1840 - 2023-6-10
+- Add DistributionProducts API.
+
+
 ## 1.8.1839 - 2023-6-9
 - Supported GetResourceCounts API.
 
