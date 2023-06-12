@@ -53,6 +53,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFile deleteFile(array $options = [])
  * @method DeleteFolder deleteFolder(array $options = [])
  * @method DeleteFromMetaCategory deleteFromMetaCategory(array $options = [])
+ * @method DeleteLineageRelation deleteLineageRelation(array $options = [])
  * @method DeleteMetaCategory deleteMetaCategory(array $options = [])
  * @method DeleteMetaCollection deleteMetaCollection(array $options = [])
  * @method DeleteMetaCollectionEntity deleteMetaCollectionEntity(array $options = [])
@@ -171,6 +172,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstanceAmount listInstanceAmount(array $options = [])
  * @method ListInstanceHistory listInstanceHistory(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ListLineage listLineage(array $options = [])
  * @method ListManualDagInstances listManualDagInstances(array $options = [])
  * @method ListMetaCollectionEntities listMetaCollectionEntities(array $options = [])
  * @method ListMetaCollections listMetaCollections(array $options = [])
@@ -204,6 +206,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PublishDataServiceApi publishDataServiceApi(array $options = [])
  * @method QueryDISyncTaskConfigProcessResult queryDISyncTaskConfigProcessResult(array $options = [])
  * @method QueryPublicModelEngine queryPublicModelEngine(array $options = [])
+ * @method RegisterLineageRelation registerLineageRelation(array $options = [])
  * @method RemoveProjectMemberFromRole removeProjectMemberFromRole(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method ResumeInstance resumeInstance(array $options = [])
@@ -3842,6 +3845,18 @@ class DeleteFolder extends Rpc
  * @method $this withCategoryId($value)
  */
 class DeleteFromMetaCategory extends Rpc
+{
+}
+
+/**
+ * @method string getSrcEntityQualifiedName()
+ * @method $this withSrcEntityQualifiedName($value)
+ * @method string getDestEntityQualifiedName()
+ * @method $this withDestEntityQualifiedName($value)
+ * @method string getRelationshipGuid()
+ * @method $this withRelationshipGuid($value)
+ */
+class DeleteLineageRelation extends Rpc
 {
 }
 
@@ -8963,6 +8978,22 @@ class ListInstances extends Rpc
 }
 
 /**
+ * @method string getEntityQualifiedName()
+ * @method $this withEntityQualifiedName($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getDirection()
+ * @method $this withDirection($value)
+ */
+class ListLineage extends Rpc
+{
+}
+
+/**
  * @method string getProjectEnv()
  * @method string getProjectName()
  * @method string getDagId()
@@ -10450,6 +10481,26 @@ class QueryPublicModelEngine extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLineageRelationRegisterVO()
+ */
+class RegisterLineageRelation extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLineageRelationRegisterVO($value)
+    {
+        $this->data['LineageRelationRegisterVO'] = $value;
+        $this->options['form_params']['LineageRelationRegisterVO'] = $value;
 
         return $this;
     }

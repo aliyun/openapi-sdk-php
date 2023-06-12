@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1841 - 2023-6-12
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.1840 - 2023-6-10
 - Add DistributionProducts API.
 
