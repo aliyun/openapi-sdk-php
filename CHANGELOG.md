@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1842 - 2023-6-12
+- Update AddFaceVideoTemplate and MergeVideoModelFace.
+
+
 ## 1.8.1841 - 2023-6-12
 - Generated 2020-05-18 for `dataworks-public`.
 

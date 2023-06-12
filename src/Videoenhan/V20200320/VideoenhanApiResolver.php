@@ -172,6 +172,7 @@ class AbstractFilmVideo extends Rpc
 
 /**
  * @method string getUserId()
+ * @method string getVideoScene()
  * @method string getAsync()
  * @method string getVideoURL()
  */
@@ -187,6 +188,19 @@ class AddFaceVideoTemplate extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoScene($value)
+    {
+        $this->data['VideoScene'] = $value;
+        $this->options['form_params']['VideoScene'] = $value;
 
         return $this;
     }
@@ -1259,6 +1273,7 @@ class MergeVideoFace extends Rpc
 
 /**
  * @method string getFaceImageURL()
+ * @method array getMergeInfos()
  * @method string getUserId()
  * @method string getTemplateId()
  * @method string getAsync()
@@ -1277,6 +1292,29 @@ class MergeVideoModelFace extends Rpc
         $this->options['form_params']['FaceImageURL'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $mergeInfos
+     *
+     * @return $this
+     */
+	public function withMergeInfos(array $mergeInfos)
+	{
+	    $this->data['MergeInfos'] = $mergeInfos;
+		foreach ($mergeInfos as $depth1 => $depth1Value) {
+			if(isset($depth1Value['TemplateFaceURL'])){
+				$this->options['form_params']['MergeInfos.' . ($depth1 + 1) . '.TemplateFaceURL'] = $depth1Value['TemplateFaceURL'];
+			}
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['MergeInfos.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
+			if(isset($depth1Value['TemplateFaceID'])){
+				$this->options['form_params']['MergeInfos.' . ($depth1 + 1) . '.TemplateFaceID'] = $depth1Value['TemplateFaceID'];
+			}
+		}
+
+		return $this;
     }
 
     /**
