@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1844 - 2023-6-13
+- Update by SDK platform.
+
+
 ## 1.8.1843 - 2023-6-13
 -stream text
 
