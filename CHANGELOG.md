@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1846 - 2023-6-13
+- CreateAutoProvisioningGroup support NetworkInterface.
+
+
 ## 1.8.1845 - 2023-6-13
 - Support More Open Api.
 

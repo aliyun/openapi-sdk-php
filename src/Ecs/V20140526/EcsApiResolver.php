@@ -1362,6 +1362,8 @@ class CreateActivation extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getLaunchConfigurationImageId()
  * @method string getLaunchConfigurationResourceGroupId()
+ * @method string getResourcePlanningOnly()
+ * @method $this withResourcePlanningOnly($value)
  * @method string getLaunchConfigurationPassword()
  * @method string getLaunchConfigurationAutoReleaseTime()
  * @method string getPayAsYouGoAllocationStrategy()
@@ -1432,6 +1434,7 @@ class CreateActivation extends Rpc
  * @method $this withTotalTargetCapacity($value)
  * @method string getSpotTargetCapacity()
  * @method $this withSpotTargetCapacity($value)
+ * @method array getLaunchConfigurationNetworkInterface()
  * @method string getValidFrom()
  * @method $this withValidFrom($value)
  * @method string getAutoProvisioningGroupName()
@@ -1863,6 +1866,11 @@ class CreateAutoProvisioningGroup extends Rpc
 			if(isset($depth1Value['BurstablePerformance'])){
 				$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.BurstablePerformance'] = $depth1Value['BurstablePerformance'];
 			}
+			foreach ($depth1Value['SecondaryNetworkInterface'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['VSwitchId'])){
+					$this->options['query']['LaunchTemplateConfig.' . ($depth1 + 1) . '.SecondaryNetworkInterface.' . ($depth2 + 1) . '.VSwitchId'] = $depth2Value['VSwitchId'];
+				}
+			}
 		}
 
 		return $this;
@@ -1964,6 +1972,29 @@ class CreateAutoProvisioningGroup extends Rpc
         $this->options['query']['LaunchConfiguration.IoOptimized'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $launchConfigurationNetworkInterface
+     *
+     * @return $this
+     */
+	public function withLaunchConfigurationNetworkInterface(array $launchConfigurationNetworkInterface)
+	{
+	    $this->data['LaunchConfigurationNetworkInterface'] = $launchConfigurationNetworkInterface;
+		foreach ($launchConfigurationNetworkInterface as $depth1 => $depth1Value) {
+			if(isset($depth1Value['SecurityGroupId'])){
+				$this->options['query']['LaunchConfiguration.NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupId'] = $depth1Value['SecurityGroupId'];
+			}
+			foreach ($depth1Value['SecurityGroupIds'] as $i => $iValue) {
+				$this->options['query']['LaunchConfiguration.NetworkInterface.' . ($depth1 + 1) . '.SecurityGroupIds.' . ($i + 1)] = $iValue;
+			}
+			if(isset($depth1Value['InstanceType'])){
+				$this->options['query']['LaunchConfiguration.NetworkInterface.' . ($depth1 + 1) . '.InstanceType'] = $depth1Value['InstanceType'];
+			}
+		}
+
+		return $this;
     }
 }
 
