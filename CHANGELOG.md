@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1843 - 2023-6-13
+-stream text
+
+
 ## 1.8.1842 - 2023-6-12
 - Update AddFaceVideoTemplate and MergeVideoModelFace.
 
