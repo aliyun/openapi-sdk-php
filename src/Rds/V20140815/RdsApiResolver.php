@@ -5811,6 +5811,8 @@ class ModifyDBInstanceProxyConfiguration extends Rpc
  * @method $this withOwnerId($value)
  * @method string getUsedTime()
  * @method $this withUsedTime($value)
+ * @method string getBurstingEnabled()
+ * @method $this withBurstingEnabled($value)
  * @method string getDBInstanceClass()
  * @method $this withDBInstanceClass($value)
  * @method string getZoneId()
