@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1847 - 2023-6-14
+- Add EnablePolicy APIs.
+
+
 ## 1.8.1846 - 2023-6-13
 - CreateAutoProvisioningGroup support NetworkInterface.
 

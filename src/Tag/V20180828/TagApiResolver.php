@@ -6,12 +6,16 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AttachPolicy attachPolicy(array $options = [])
+ * @method CheckCreatedByEnabled checkCreatedByEnabled(array $options = [])
+ * @method CloseCreatedBy closeCreatedBy(array $options = [])
  * @method CreatePolicy createPolicy(array $options = [])
  * @method CreateTags createTags(array $options = [])
  * @method DeletePolicy deletePolicy(array $options = [])
  * @method DeleteTag deleteTag(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DetachPolicy detachPolicy(array $options = [])
+ * @method DisablePolicyType disablePolicyType(array $options = [])
+ * @method EnablePolicyType enablePolicyType(array $options = [])
  * @method GenerateConfigRuleReport generateConfigRuleReport(array $options = [])
  * @method GetConfigRuleReport getConfigRuleReport(array $options = [])
  * @method GetEffectivePolicy getEffectivePolicy(array $options = [])
@@ -27,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListTagValues listTagValues(array $options = [])
  * @method ListTargetsForPolicy listTargetsForPolicy(array $options = [])
  * @method ModifyPolicy modifyPolicy(array $options = [])
+ * @method OpenCreatedBy openCreatedBy(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  */
@@ -64,6 +69,34 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withOwnerId($value)
  */
 class AttachPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CheckCreatedByEnabled extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CloseCreatedBy extends Rpc
 {
 }
 
@@ -191,6 +224,38 @@ class DescribeRegions extends Rpc
  * @method $this withOwnerId($value)
  */
 class DetachPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DisablePolicyType extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getUserType()
+ * @method $this withUserType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class EnablePolicyType extends Rpc
 {
 }
 
@@ -599,6 +664,20 @@ class ListTargetsForPolicy extends Rpc
  * @method $this withPolicyName($value)
  */
 class ModifyPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class OpenCreatedBy extends Rpc
 {
 }
 
