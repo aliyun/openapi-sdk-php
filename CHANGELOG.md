@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1850 - 2023-6-20
+- Add DistributionProducts API.
+
+
 ## 1.8.1849 - 2023-6-19
 - Cc5g.
 
