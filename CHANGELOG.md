@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1851 - 2023-6-20
+- Add QueryCubePerformance, QueryComponentPerformance, QueryCubeOptimization, and QueryReportPerformance APIs.
+- Update error code description.
+
+
 ## 1.8.1850 - 2023-6-20
 - Add DistributionProducts API.
 

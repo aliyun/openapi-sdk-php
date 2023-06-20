@@ -47,6 +47,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSharedReports listSharedReports(array $options = [])
  * @method ListUserGroupsByUserId listUserGroupsByUserId(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
+ * @method QueryComponentPerformance queryComponentPerformance(array $options = [])
+ * @method QueryCubeOptimization queryCubeOptimization(array $options = [])
+ * @method QueryCubePerformance queryCubePerformance(array $options = [])
  * @method QueryDataService queryDataService(array $options = [])
  * @method QueryDatasetDetailInfo queryDatasetDetailInfo(array $options = [])
  * @method QueryDatasetInfo queryDatasetInfo(array $options = [])
@@ -56,6 +59,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryEmbeddedStatus queryEmbeddedStatus(array $options = [])
  * @method QueryOrganizationWorkspaceList queryOrganizationWorkspaceList(array $options = [])
  * @method QueryReadableResourcesListByUserId queryReadableResourcesListByUserId(array $options = [])
+ * @method QueryReportPerformance queryReportPerformance(array $options = [])
  * @method QueryShareList queryShareList(array $options = [])
  * @method QuerySharesToUserList querySharesToUserList(array $options = [])
  * @method QueryTicketInfo queryTicketInfo(array $options = [])
@@ -780,6 +784,64 @@ class ModifyApiDatasourceParameters extends Rpc
 }
 
 /**
+ * @method string getReportId()
+ * @method $this withReportId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCostTimeAvgMin()
+ * @method $this withCostTimeAvgMin($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class QueryComponentPerformance extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class QueryCubeOptimization extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCostTimeAvgMin()
+ * @method $this withCostTimeAvgMin($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class QueryCubePerformance extends Rpc
+{
+}
+
+/**
  * @method string getReturnFields()
  * @method $this withReturnFields($value)
  * @method string getAccessPoint()
@@ -902,6 +964,30 @@ class QueryOrganizationWorkspaceList extends Rpc
  * @method $this withUserId($value)
  */
 class QueryReadableResourcesListByUserId extends Rpc
+{
+}
+
+/**
+ * @method string getReportId()
+ * @method $this withReportId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCostTimeAvgMin()
+ * @method $this withCostTimeAvgMin($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class QueryReportPerformance extends Rpc
 {
 }
 
