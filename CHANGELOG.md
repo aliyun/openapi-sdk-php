@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 1.8.1852 - 2023-6-25
+- Support better trace logging for error locating.
+- Improve API definition.
+- Better logging.
+- Log response data.
+- Blacklist certain user.
+- Publish document.
+- Optimize RAM authentication.
+- Fix billing pop service.
+- Regular RAM error message.
+- Improve RAM authentication.
+
+
 ## 1.8.1851 - 2023-6-20
 - Add QueryCubePerformance, QueryComponentPerformance, QueryCubeOptimization, and QueryReportPerformance APIs.
 - Update error code description.
