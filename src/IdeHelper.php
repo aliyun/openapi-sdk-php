@@ -74,6 +74,7 @@ namespace AlibabaCloud;
  * @method static DataworksPublic\DataworksPublic dataworksPublic()
  * @method static Dbs\Dbs dbs()
  * @method static Dcdn\Dcdn dcdn()
+ * @method static Ddosbgp\Ddosbgp ddosbgp()
  * @method static Ddoscoo\Ddoscoo ddoscoo()
  * @method static Dds\Dds dds()
  * @method static DemoCenter\DemoCenter demoCenter()
