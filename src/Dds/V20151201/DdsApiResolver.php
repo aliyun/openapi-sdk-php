@@ -455,6 +455,7 @@ class CreateNodeBatch extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getDBInstanceDescription()
  * @method $this withDBInstanceDescription($value)
+ * @method array getTag()
  * @method string getGlobalSecurityGroupIds()
  * @method $this withGlobalSecurityGroupIds($value)
  * @method string getPeriod()
@@ -520,6 +521,26 @@ class CreateShardingDBInstance extends Rpc
 			}
 			if(isset($depth1Value['Class'])){
 				$this->options['query']['ReplicaSet.' . ($depth1 + 1) . '.Class'] = $depth1Value['Class'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
 			}
 		}
 
@@ -2015,6 +2036,8 @@ class ModifyDBInstanceNetExpireTime extends Rpc
  * @method $this withRetainClassic($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
  */
 class ModifyDBInstanceNetworkType extends Rpc
 {
