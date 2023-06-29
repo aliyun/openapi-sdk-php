@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1858 - 2023-6-29
+- Support More Open Api.
+
+
 ## 1.8.1857 - 2023-6-28
 - Update by SDK platform.
 
