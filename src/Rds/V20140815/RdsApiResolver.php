@@ -5325,6 +5325,8 @@ class ModifyADInfo extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getLocalLogRetentionHours()
  * @method $this withLocalLogRetentionHours($value)
+ * @method string getBackupPriority()
+ * @method $this withBackupPriority($value)
  * @method string getLogBackupFrequency()
  * @method $this withLogBackupFrequency($value)
  * @method string getArchiveBackupKeepCount()

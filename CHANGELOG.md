@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1859 - 2023-6-30
+- ModifyBackupPolicy API support parameter BackupPriority.
+- DescribeBackupPolicy API add return parameters: BackupPriority and SupportModifyBackupPriority.
+
+
 ## 1.8.1858 - 2023-6-29
 - Support More Open Api.
 
