@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1860 - 2023-6-30
+- Modify ListTaskFlowsByPage API. Add output parameter: DagOwnerId.
+- Modify ReRunTaskFlowInstance, ReSumeTaskFlowInstance: input parameter DagVersion is not required.
+
+
 ## 1.8.1859 - 2023-6-30
 - ModifyBackupPolicy API support parameter BackupPriority.
 - DescribeBackupPolicy API add return parameters: BackupPriority and SupportModifyBackupPriority.
