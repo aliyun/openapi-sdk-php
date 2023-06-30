@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1861 - 2023-6-30
+- Fixed bugs for lack of regionId.
+- Fix error code.
+
+
 ## 1.8.1860 - 2023-6-30
 - Modify ListTaskFlowsByPage API. Add output parameter: DagOwnerId.
 - Modify ReRunTaskFlowInstance, ReSumeTaskFlowInstance: input parameter DagVersion is not required.

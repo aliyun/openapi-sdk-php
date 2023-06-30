@@ -186,6 +186,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDasInstanceConfig modifyDasInstanceConfig(array $options = [])
  * @method ModifyDBDescription modifyDBDescription(array $options = [])
  * @method ModifyDBInstanceAutoUpgradeMinorVersion modifyDBInstanceAutoUpgradeMinorVersion(array $options = [])
+ * @method ModifyDBInstanceConfig modifyDBInstanceConfig(array $options = [])
  * @method ModifyDBInstanceConnectionMode modifyDBInstanceConnectionMode(array $options = [])
  * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
  * @method ModifyDBInstanceDelayedReplicationTime modifyDBInstanceDelayedReplicationTime(array $options = [])
@@ -273,9 +274,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-
-    /** @var string */
-    public $serviceCode = 'rds';
 }
 
 /**
@@ -5461,6 +5459,30 @@ class ModifyDBDescription extends Rpc
  * @method $this withDBInstanceId($value)
  */
 class ModifyDBInstanceAutoUpgradeMinorVersion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getConfigValue()
+ * @method $this withConfigValue($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBInstanceConfig extends Rpc
 {
 }
 
