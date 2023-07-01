@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1862 - 2023-7-1
+- Fixed bugs for lack of regionId.
+- Fix error code.
+
+
 ## 1.8.1861 - 2023-6-30
 - Fixed bugs for lack of regionId.
 - Fix error code.
