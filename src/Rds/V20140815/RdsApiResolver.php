@@ -4188,6 +4188,8 @@ class DescribePGHbaConfig extends Rpc
  * @method $this withDBInstanceStorageType($value)
  * @method string getQuantity()
  * @method $this withQuantity($value)
+ * @method string getServerlessConfig()
+ * @method $this withServerlessConfig($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1866 - 2023-7-3
+- Fix bugs for  DescribeDedicatedHosts.
+- Fixed bugs add ERRORCODE.
+- Added serverless config to support serverless price query.
+
+
 ## 1.8.1865 - 2023-7-3
 - Update TrimDocument.
 - Update RecognizeTakeoutOrder.
