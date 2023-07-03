@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1864 - 2023-7-3
+- Add The billingCount return value to the RunPreTrainService Api.
+
+
 ## 1.8.1863 - 2023-7-2
 - Fixed bugs for lack of regionId.
 - Fix error code.
