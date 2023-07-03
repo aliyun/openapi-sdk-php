@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 1.8.1865 - 2023-7-3
+- Update TrimDocument.
+- Update RecognizeTakeoutOrder.
+- Update RecognizePassportMRZ.
+- Update RecognizeChinapassport.
+- Update DetectCardScreenshot.
+- Update RecognizeVerificationcode.
+- Update RecognizePoiName.
+- Update RecognizeAccountPage.
+
+
 ## 1.8.1864 - 2023-7-3
 - Add The billingCount return value to the RunPreTrainService Api.
 
