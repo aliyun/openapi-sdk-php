@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1869 - 2023-7-4
+- Fix bugs for  DescribeDedicatedHosts.
+- Fixed bugs add ERRORCODE.
+- Added serverless config to support serverless price query.
+
+
 ## 1.8.1868 - 2023-7-4
 - ModifyBackupPolicy API support parameter BackupPriority.
 - DescribeBackupPolicy API add return parameters: BackupPriority and SupportModifyBackupPriority.
