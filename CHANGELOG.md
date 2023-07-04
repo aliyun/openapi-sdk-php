@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1868 - 2023-7-4
+- ModifyBackupPolicy API support parameter BackupPriority.
+- DescribeBackupPolicy API add return parameters: BackupPriority and SupportModifyBackupPriority.
+
+
 ## 1.8.1867 - 2023-7-4
 - 新增模型预测高性能版本
 
