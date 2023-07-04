@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1867 - 2023-7-4
+- 新增模型预测高性能版本
+
+
 ## 1.8.1866 - 2023-7-3
 - Fix bugs for  DescribeDedicatedHosts.
 - Fixed bugs add ERRORCODE.

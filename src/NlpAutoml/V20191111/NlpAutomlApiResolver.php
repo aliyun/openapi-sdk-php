@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method FindUserReport4Alinlp findUserReport4Alinlp(array $options = [])
  * @method GetAsyncPredict getAsyncPredict(array $options = [])
  * @method GetPredictResult getPredictResult(array $options = [])
+ * @method GetPredictResultHigh getPredictResultHigh(array $options = [])
  * @method RunPreTrainService runPreTrainService(array $options = [])
  * @method RunPreTrainServiceNew runPreTrainServiceNew(array $options = [])
  */
@@ -300,6 +301,96 @@ class GetAsyncPredict extends Rpc
  * @method string getModelVersion()
  */
 class GetPredictResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTopK($value)
+    {
+        $this->data['TopK'] = $value;
+        $this->options['form_params']['TopK'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProduct($value)
+    {
+        $this->data['Product'] = $value;
+        $this->options['form_params']['Product'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelId($value)
+    {
+        $this->data['ModelId'] = $value;
+        $this->options['form_params']['ModelId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDetailTag($value)
+    {
+        $this->data['DetailTag'] = $value;
+        $this->options['form_params']['DetailTag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelVersion($value)
+    {
+        $this->data['ModelVersion'] = $value;
+        $this->options['form_params']['ModelVersion'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTopK()
+ * @method string getProduct()
+ * @method string getModelId()
+ * @method string getDetailTag()
+ * @method string getContent()
+ * @method string getModelVersion()
+ */
+class GetPredictResultHigh extends Rpc
 {
 
     /**
