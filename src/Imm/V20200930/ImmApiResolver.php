@@ -57,13 +57,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectTextAnomaly detectTextAnomaly(array $options = [])
  * @method ExtractDocumentText extractDocumentText(array $options = [])
  * @method FuzzyQuery fuzzyQuery(array $options = [])
- * @method GenerateDRMLicense generateDRMLicense(array $options = [])
  * @method GenerateVideoPlaylist generateVideoPlaylist(array $options = [])
  * @method GenerateWebofficeToken generateWebofficeToken(array $options = [])
  * @method GetBatch getBatch(array $options = [])
  * @method GetBinding getBinding(array $options = [])
  * @method GetDataset getDataset(array $options = [])
- * @method GetDRMLicense getDRMLicense(array $options = [])
  * @method GetFigureCluster getFigureCluster(array $options = [])
  * @method GetFileMeta getFileMeta(array $options = [])
  * @method GetImageModerationResult getImageModerationResult(array $options = [])
@@ -90,12 +88,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RefreshWebofficeToken refreshWebofficeToken(array $options = [])
  * @method RemoveStoryFiles removeStoryFiles(array $options = [])
  * @method ResumeBatch resumeBatch(array $options = [])
- * @method ResumeBinding resumeBinding(array $options = [])
  * @method ResumeTrigger resumeTrigger(array $options = [])
  * @method SearchImageFigureCluster searchImageFigureCluster(array $options = [])
  * @method SemanticQuery semanticQuery(array $options = [])
  * @method SimpleQuery simpleQuery(array $options = [])
- * @method StopBinding stopBinding(array $options = [])
  * @method SuspendBatch suspendBatch(array $options = [])
  * @method SuspendTrigger suspendTrigger(array $options = [])
  * @method UpdateBatch updateBatch(array $options = [])
@@ -1647,22 +1643,6 @@ class FuzzyQuery extends Rpc
 }
 
 /**
- * @method string getProtectionSystem()
- * @method $this withProtectionSystem($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getProjectName()
- * @method $this withProjectName($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getKeyId()
- * @method $this withKeyId($value)
- */
-class GenerateDRMLicense extends Rpc
-{
-}
-
-/**
  * @method string getSourceDuration()
  * @method $this withSourceDuration($value)
  * @method string getTargets()
@@ -1759,22 +1739,6 @@ class GetBinding extends Rpc
  * @method $this withWithStatistics($value)
  */
 class GetDataset extends Rpc
-{
-}
-
-/**
- * @method string getProtectionSystem()
- * @method $this withProtectionSystem($value)
- * @method string getNotifyEndpoint()
- * @method $this withNotifyEndpoint($value)
- * @method string getProjectName()
- * @method $this withProjectName($value)
- * @method string getNotifyTopicName()
- * @method $this withNotifyTopicName($value)
- * @method string getKeyId()
- * @method $this withKeyId($value)
- */
-class GetDRMLicense extends Rpc
 {
 }
 
@@ -2269,18 +2233,6 @@ class ResumeBatch extends Rpc
 }
 
 /**
- * @method string getDatasetName()
- * @method $this withDatasetName($value)
- * @method string getProjectName()
- * @method $this withProjectName($value)
- * @method string getURI()
- * @method $this withURI($value)
- */
-class ResumeBinding extends Rpc
-{
-}
-
-/**
  * @method string getId()
  * @method string getProjectName()
  */
@@ -2365,20 +2317,6 @@ class SemanticQuery extends Rpc
  * @method $this withAggregations($value)
  */
 class SimpleQuery extends Rpc
-{
-}
-
-/**
- * @method string getReason()
- * @method $this withReason($value)
- * @method string getDatasetName()
- * @method $this withDatasetName($value)
- * @method string getProjectName()
- * @method $this withProjectName($value)
- * @method string getURI()
- * @method $this withURI($value)
- */
-class StopBinding extends Rpc
 {
 }
 

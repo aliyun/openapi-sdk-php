@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.1871 - 2023-7-5
+- Hidden ResumeBinding and StopBinding API.
+- Hide DRM api.
+- Support DocumentText.
+- Support ListAttachment.
+- Modify CreateTrigger and CreateBatch request Notification params.
+
+
 ## 1.8.1870 - 2023-7-5
 -offline add voice and industrycode
 
