@@ -5823,6 +5823,8 @@ class ModifyDBInstanceProxyConfiguration extends Rpc
  * @method $this withClientToken($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
+ * @method string getAutoUseCoupon()
+ * @method $this withAutoUseCoupon($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getServerlessConfiguration()

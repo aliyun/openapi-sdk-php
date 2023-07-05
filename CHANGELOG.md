@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1872 - 2023-7-5
+- Add AutoUseCoupon field.
+- Api Offline.
+
+
 ## 1.8.1871 - 2023-7-5
 - Hidden ResumeBinding and StopBinding API.
 - Hide DRM api.
