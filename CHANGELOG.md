@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1870 - 2023-7-5
+-offline add voice and industrycode
+
+
 ## 1.8.1869 - 2023-7-4
 - Fix bugs for  DescribeDedicatedHosts.
 - Fixed bugs add ERRORCODE.

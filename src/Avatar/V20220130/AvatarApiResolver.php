@@ -220,73 +220,211 @@ class StopInstance extends Rpc
 /**
  * @method string getApp()
  * @method $this withApp($value)
- * @method string getVideoInfo()
- * @method $this withVideoInfo($value)
  * @method string getAvatarInfo()
  * @method $this withAvatarInfo($value)
- * @method string getTenantId()
- * @method $this withTenantId($value)
  * @method string getTitle()
  * @method $this withTitle($value)
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
  * @method string getUrl()
  * @method $this withUrl($value)
+ * @method string getVideoInfo()
+ * @method $this withVideoInfo($value)
+ * @method string getCallbackParams()
+ * @method $this withCallbackParams($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getCallback()
+ * @method $this withCallback($value)
+ * @method string getExtParamsCLS()
+ * @method string getCallbackParamsCLS()
  */
 class SubmitAudioTo2DAvatarVideoTask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackParamsCLS($value)
+    {
+        $this->data['CallbackParamsCLS'] = $value;
+        $this->options['query']['CallbackParams_CLS'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getApp()
  * @method $this withApp($value)
- * @method string getVideoInfo()
- * @method $this withVideoInfo($value)
  * @method string getAvatarInfo()
  * @method $this withAvatarInfo($value)
- * @method string getTenantId()
- * @method $this withTenantId($value)
  * @method string getTitle()
  * @method $this withTitle($value)
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
  * @method string getUrl()
  * @method $this withUrl($value)
+ * @method string getVideoInfo()
+ * @method $this withVideoInfo($value)
+ * @method string getCallbackParams()
+ * @method $this withCallbackParams($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getCallback()
+ * @method $this withCallback($value)
+ * @method string getExtParamsCLS()
+ * @method string getCallbackParamsCLS()
  */
 class SubmitAudioTo3DAvatarVideoTask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackParamsCLS($value)
+    {
+        $this->data['CallbackParamsCLS'] = $value;
+        $this->options['query']['CallbackParams_CLS'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getApp()
  * @method $this withApp($value)
- * @method string getVideoInfo()
- * @method $this withVideoInfo($value)
  * @method string getAudioInfo()
  * @method $this withAudioInfo($value)
  * @method string getAvatarInfo()
  * @method $this withAvatarInfo($value)
- * @method string getTenantId()
- * @method $this withTenantId($value)
- * @method string getText()
- * @method $this withText($value)
  * @method string getTitle()
  * @method $this withTitle($value)
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
+ * @method string getVideoInfo()
+ * @method $this withVideoInfo($value)
+ * @method string getCallbackParams()
+ * @method $this withCallbackParams($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getCallback()
+ * @method $this withCallback($value)
+ * @method string getExtParamsCLS()
+ * @method string getText()
+ * @method $this withText($value)
+ * @method string getCallbackParamsCLS()
  */
 class SubmitTextTo2DAvatarVideoTask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackParamsCLS($value)
+    {
+        $this->data['CallbackParamsCLS'] = $value;
+        $this->options['query']['CallbackParams_CLS'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getApp()
  * @method $this withApp($value)
- * @method string getVideoInfo()
- * @method $this withVideoInfo($value)
+ * @method string getAudioInfo()
+ * @method $this withAudioInfo($value)
  * @method string getAvatarInfo()
  * @method $this withAvatarInfo($value)
- * @method string getTenantId()
- * @method $this withTenantId($value)
- * @method string getText()
- * @method $this withText($value)
  * @method string getTitle()
  * @method $this withTitle($value)
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
+ * @method string getVideoInfo()
+ * @method $this withVideoInfo($value)
+ * @method string getCallbackParams()
+ * @method $this withCallbackParams($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getCallback()
+ * @method $this withCallback($value)
+ * @method string getExtParamsCLS()
+ * @method string getText()
+ * @method $this withText($value)
+ * @method string getCallbackParamsCLS()
  */
 class SubmitTextTo3DAvatarVideoTask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackParamsCLS($value)
+    {
+        $this->data['CallbackParamsCLS'] = $value;
+        $this->options['query']['CallbackParams_CLS'] = $value;
+
+        return $this;
+    }
 }
