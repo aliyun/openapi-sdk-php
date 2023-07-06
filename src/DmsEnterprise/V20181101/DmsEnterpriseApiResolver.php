@@ -320,8 +320,16 @@ class AnalyzeSQLLineage extends Rpc
  * @method $this withWorkflowInstanceId($value)
  * @method string getApprovalType()
  * @method $this withApprovalType($value)
+ * @method string getNewApprover()
+ * @method $this withNewApprover($value)
+ * @method string getApprovalNodeId()
+ * @method $this withApprovalNodeId($value)
+ * @method string getOldApprover()
+ * @method $this withOldApprover($value)
  * @method string getComment()
  * @method $this withComment($value)
+ * @method string getApprovalNodePos()
+ * @method $this withApprovalNodePos($value)
  */
 class ApproveOrder extends Rpc
 {
