@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1874 - 2023-7-6
+- Add AutoUseCoupon field.
+- Api Offline.
+
+
 ## 1.8.1873 - 2023-7-6
 - Modify GetDataArchiveOrderDetail API. Add output parameter: TempTableNameMap.
 
