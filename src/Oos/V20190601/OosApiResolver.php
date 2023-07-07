@@ -234,6 +234,10 @@ class CreateParameter extends Rpc
  * @method $this withDescription($value)
  * @method string getOperationSystem()
  * @method $this withOperationSystem($value)
+ * @method string getRejectedPatches()
+ * @method $this withRejectedPatches($value)
+ * @method string getRejectedPatchesAction()
+ * @method $this withRejectedPatchesAction($value)
  * @method string getName()
  * @method $this withName($value)
  */
@@ -414,6 +418,8 @@ class DescribeRegions extends Rpc
 /**
  * @method string getTemplateVersion()
  * @method $this withTemplateVersion($value)
+ * @method string getRamRole()
+ * @method $this withRamRole($value)
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
  */
@@ -582,8 +588,6 @@ class ListActions extends Rpc
  * @method $this withNextToken($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
- * @method string getProduct()
- * @method $this withProduct($value)
  * @method string getDeployRegionId()
  * @method $this withDeployRegionId($value)
  * @method string getResourceType()
@@ -608,6 +612,8 @@ class ListApplicationGroups extends Rpc
  * @method $this withName($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
+ * @method string getApplicationType()
+ * @method $this withApplicationType($value)
  */
 class ListApplications extends Rpc
 {
@@ -642,6 +648,8 @@ class ListExecutionRiskyTasks extends Rpc
  * @method $this withExecutedBy($value)
  * @method string getIncludeChildExecution()
  * @method $this withIncludeChildExecution($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getMode()
  * @method $this withMode($value)
  * @method string getExecutionId()
@@ -658,6 +666,8 @@ class ListExecutionRiskyTasks extends Rpc
  * @method $this withEndDateBefore($value)
  * @method string getSortOrder()
  * @method $this withSortOrder($value)
+ * @method string getCategories()
+ * @method $this withCategories($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
  * @method string getStartDateAfter()
@@ -668,6 +678,8 @@ class ListExecutionRiskyTasks extends Rpc
  * @method $this withTags($value)
  * @method string getParentExecutionId()
  * @method $this withParentExecutionId($value)
+ * @method string getDepth()
+ * @method $this withDepth($value)
  * @method string getEndDateAfter()
  * @method $this withEndDateAfter($value)
  * @method string getMaxResults()
@@ -800,6 +812,8 @@ class ListOpsItems extends Rpc
  * @method $this withNextToken($value)
  * @method string getSortOrder()
  * @method $this withSortOrder($value)
+ * @method string getShareType()
+ * @method $this withShareType($value)
  * @method string getTags()
  * @method $this withTags($value)
  * @method string getName()
@@ -1240,6 +1254,8 @@ class UpdateApplicationGroup extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
  * @method string getExecutionId()
  * @method $this withExecutionId($value)
  * @method string getParameters()
@@ -1306,6 +1322,10 @@ class UpdateParameter extends Rpc
  * @method $this withApprovalRules($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getRejectedPatches()
+ * @method $this withRejectedPatches($value)
+ * @method string getRejectedPatchesAction()
+ * @method $this withRejectedPatchesAction($value)
  * @method string getName()
  * @method $this withName($value)
  */
