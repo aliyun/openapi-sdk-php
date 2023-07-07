@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1876 - 2023-7-7
+- Add AutoUseCoupon field.
+- Api Offline.
+
+
 ## 1.8.1875 - 2023-7-7
 - ListApplicationGroups rename parameter Product to ResourceProduct
 
