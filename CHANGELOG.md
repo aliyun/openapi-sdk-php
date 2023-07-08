@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1877 - 2023-7-8
+- Add AutoUseCoupon field.
+- Api Offline.
+
+
 ## 1.8.1876 - 2023-7-7
 - Add AutoUseCoupon field.
 - Api Offline.
