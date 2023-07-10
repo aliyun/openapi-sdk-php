@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1881 - 2023-7-10
+- Fixed 500 for interface.
+
+
 ## 1.8.1880 - 2023-7-10
 - Generated 2019-03-06 for `Dbs`.
 
