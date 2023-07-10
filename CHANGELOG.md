@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1879 - 2023-7-10
+- Add DescribeClassDetails Api.
+
+
 ## 1.8.1878 - 2023-7-9
 - Add AutoUseCoupon field.
 - Api Offline.

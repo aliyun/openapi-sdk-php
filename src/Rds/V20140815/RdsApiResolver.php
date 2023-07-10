@@ -76,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBackupTasks describeBackupTasks(array $options = [])
  * @method DescribeBinlogFiles describeBinlogFiles(array $options = [])
  * @method DescribeCharacterSetName describeCharacterSetName(array $options = [])
+ * @method DescribeClassDetails describeClassDetails(array $options = [])
  * @method DescribeCloudMigrationPrecheckResult describeCloudMigrationPrecheckResult(array $options = [])
  * @method DescribeCloudMigrationResult describeCloudMigrationResult(array $options = [])
  * @method DescribeCollationTimeZones describeCollationTimeZones(array $options = [])
@@ -274,6 +275,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'rds';
 }
 
 /**
@@ -2438,6 +2442,28 @@ class DescribeBinlogFiles extends Rpc
  * @method $this withEngine($value)
  */
 class DescribeCharacterSetName extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getClassCode()
+ * @method $this withClassCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCommodityCode()
+ * @method $this withCommodityCode($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeClassDetails extends Rpc
 {
 }
 
