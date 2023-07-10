@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1880 - 2023-7-10
+- Generated 2019-03-06 for `Dbs`.
+
+
 ## 1.8.1879 - 2023-7-10
 - Add DescribeClassDetails Api.
 
