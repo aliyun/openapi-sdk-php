@@ -14,7 +14,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryAvatarList queryAvatarList(array $options = [])
  * @method QueryRunningInstance queryRunningInstance(array $options = [])
  * @method QueryTimedResetOperateStatus queryTimedResetOperateStatus(array $options = [])
+ * @method SendCommand sendCommand(array $options = [])
  * @method SendMessage sendMessage(array $options = [])
+ * @method SendText sendText(array $options = [])
+ * @method SendVaml sendVaml(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartTimedResetOperate startTimedResetOperate(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
@@ -166,6 +169,24 @@ class QueryTimedResetOperateStatus extends Rpc
 /**
  * @method string getFeedback()
  * @method $this withFeedback($value)
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getUniqueCode()
+ * @method $this withUniqueCode($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getSessionId()
+ * @method $this withSessionId($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ */
+class SendCommand extends Rpc
+{
+}
+
+/**
+ * @method string getFeedback()
+ * @method $this withFeedback($value)
  * @method string getStreamExtension()
  * @method $this withStreamExtension($value)
  * @method string getTextRequest()
@@ -178,6 +199,38 @@ class QueryTimedResetOperateStatus extends Rpc
  * @method $this withSessionId($value)
  */
 class SendMessage extends Rpc
+{
+}
+
+/**
+ * @method string getFeedback()
+ * @method $this withFeedback($value)
+ * @method string getUniqueCode()
+ * @method $this withUniqueCode($value)
+ * @method string getStreamExtension()
+ * @method $this withStreamExtension($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getInterrupt()
+ * @method $this withInterrupt($value)
+ * @method string getSessionId()
+ * @method $this withSessionId($value)
+ * @method string getText()
+ * @method $this withText($value)
+ */
+class SendText extends Rpc
+{
+}
+
+/**
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getSessionId()
+ * @method $this withSessionId($value)
+ * @method string getVaml()
+ * @method $this withVaml($value)
+ */
+class SendVaml extends Rpc
 {
 }
 

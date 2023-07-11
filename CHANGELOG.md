@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1882 - 2023-7-11
+-offline add voice and industrycode
+
+
 ## 1.8.1881 - 2023-7-10
 - Fixed 500 for interface.
 
