@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1884 - 2023-7-12
+- Change API CreateDataArchiveOrder and GetDataArchiveCount to public.
+
+
 ## 1.8.1883 - 2023-7-11
 - Fixed 500 for interface.
 

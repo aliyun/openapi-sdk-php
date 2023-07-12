@@ -17,6 +17,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeLhDagOwner changeLhDagOwner(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
  * @method CreateAuthorityTemplate createAuthorityTemplate(array $options = [])
+ * @method CreateDataArchiveOrder createDataArchiveOrder(array $options = [])
  * @method CreateDatabaseExportOrder createDatabaseExportOrder(array $options = [])
  * @method CreateDataCorrectOrder createDataCorrectOrder(array $options = [])
  * @method CreateDataCronClearOrder createDataCronClearOrder(array $options = [])
@@ -61,6 +62,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetApprovalDetail getApprovalDetail(array $options = [])
  * @method GetAuthorityTemplate getAuthorityTemplate(array $options = [])
  * @method GetAuthorityTemplateItem getAuthorityTemplateItem(array $options = [])
+ * @method GetDataArchiveCount getDataArchiveCount(array $options = [])
  * @method GetDataArchiveOrderDetail getDataArchiveOrderDetail(array $options = [])
  * @method GetDatabase getDatabase(array $options = [])
  * @method GetDatabaseExportOrderDetail getDatabaseExportOrderDetail(array $options = [])
@@ -430,6 +432,24 @@ class CloseOrder extends Rpc
  * @method $this withName($value)
  */
 class CreateAuthorityTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getParentId()
+ * @method $this withParentId($value)
+ * @method string getPluginType()
+ * @method $this withPluginType($value)
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class CreateDataArchiveOrder extends Rpc
 {
 }
 
@@ -1056,6 +1076,20 @@ class GetAuthorityTemplate extends Rpc
  * @method $this withTemplateId($value)
  */
 class GetAuthorityTemplateItem extends Rpc
+{
+}
+
+/**
+ * @method string getSearchDateType()
+ * @method $this withSearchDateType($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPluginType()
+ * @method $this withPluginType($value)
+ * @method string getOrderResultType()
+ * @method $this withOrderResultType($value)
+ */
+class GetDataArchiveCount extends Rpc
 {
 }
 
