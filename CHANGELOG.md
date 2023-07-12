@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 1.8.1885 - 2023-7-12
+- Add openapi CreateEaisEi.
+- Add openapi AttachEaisEi.
+- Add openapi StartEaisEi.
+- Add openapi StopEaisEi.
+- Add openapi DetachEaisEi.
+- Add openapi DeleteEaisEi.
+
+
 ## 1.8.1884 - 2023-7-12
 - Change API CreateDataArchiveOrder and GetDataArchiveCount to public.
 

@@ -6,18 +6,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AttachEai attachEai(array $options = [])
+ * @method AttachEaisEi attachEaisEi(array $options = [])
  * @method ChangeResourceGroup changeResourceGroup(array $options = [])
  * @method CreateEai createEai(array $options = [])
  * @method CreateEaiAll createEaiAll(array $options = [])
  * @method CreateEaiEci createEaiEci(array $options = [])
  * @method CreateEaiEcs createEaiEcs(array $options = [])
  * @method CreateEaiJupyter createEaiJupyter(array $options = [])
+ * @method CreateEaisEi createEaisEi(array $options = [])
  * @method DeleteEai deleteEai(array $options = [])
  * @method DeleteEaiAll deleteEaiAll(array $options = [])
+ * @method DeleteEaisEi deleteEaisEi(array $options = [])
  * @method DescribeEais describeEais(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DetachEai detachEai(array $options = [])
+ * @method DetachEaisEi detachEaisEi(array $options = [])
  * @method GetInstanceMetrics getInstanceMetrics(array $options = [])
+ * @method StartEaisEi startEaisEi(array $options = [])
+ * @method StopEaisEi stopEaisEi(array $options = [])
  */
 class EaisApiResolver extends ApiResolver
 {
@@ -49,6 +55,18 @@ class AttachEai extends Rpc
 }
 
 /**
+ * @method string getEiInstanceType()
+ * @method $this withEiInstanceType($value)
+ * @method string getClientInstanceId()
+ * @method $this withClientInstanceId($value)
+ * @method string getEiInstanceId()
+ * @method $this withEiInstanceId($value)
+ */
+class AttachEaisEi extends Rpc
+{
+}
+
+/**
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getResourceRegionId()
@@ -65,6 +83,8 @@ class ChangeResourceGroup extends Rpc
 }
 
 /**
+ * @method string getImage()
+ * @method $this withImage($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getSecurityGroupId()
@@ -171,8 +191,28 @@ class CreateEaiEcs extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getEnvironmentVar()
  * @method $this withEnvironmentVar($value)
+ * @method string getEaisName()
+ * @method $this withEaisName($value)
  */
 class CreateEaiJupyter extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSecurityGroupId()
+ * @method $this withSecurityGroupId($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ */
+class CreateEaisEi extends Rpc
 {
 }
 
@@ -193,6 +233,16 @@ class DeleteEai extends Rpc
  * @method $this withElasticAcceleratedInstanceId($value)
  */
 class DeleteEaiAll extends Rpc
+{
+}
+
+/**
+ * @method string getEiInstanceId()
+ * @method $this withEiInstanceId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
+ */
+class DeleteEaisEi extends Rpc
 {
 }
 
@@ -229,6 +279,14 @@ class DetachEai extends Rpc
 }
 
 /**
+ * @method string getEiInstanceId()
+ * @method $this withEiInstanceId($value)
+ */
+class DetachEaisEi extends Rpc
+{
+}
+
+/**
  * @method string getMetricType()
  * @method $this withMetricType($value)
  * @method string getTimeStep()
@@ -241,5 +299,21 @@ class DetachEai extends Rpc
  * @method $this withInstanceId($value)
  */
 class GetInstanceMetrics extends Rpc
+{
+}
+
+/**
+ * @method string getEiInstanceId()
+ * @method $this withEiInstanceId($value)
+ */
+class StartEaisEi extends Rpc
+{
+}
+
+/**
+ * @method string getEiInstanceId()
+ * @method $this withEiInstanceId($value)
+ */
+class StopEaisEi extends Rpc
 {
 }
