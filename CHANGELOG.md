@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 1.8.1888 - 2023-7-13
+- Public API ListAppBySwimmingLaneGroupTags.
+- Update APIs.
+- Support Pod distributed flag.
+- Support expected zone list.
+- Optimize UpdateXXXRulesStatus.
+- Fix QueryAppRPCMacMetrics result.
+- Add dataids param for config export.
+- Support get current client ip.
+- Change GetGateway timeout to 20s.
+- Update APIs for 2023-07-10.
+- Supported VPC and SecurityGroup params for service test.
+- API Type Tag.
+- Add API Type Tag.
+- Open Response Log.
+- Fixed url.
+
+
 ## 1.8.1887 - 2023-7-12
 - Add error coede.
 - Fix bugs for 500.
