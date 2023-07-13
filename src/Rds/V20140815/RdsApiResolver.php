@@ -6957,6 +6957,8 @@ class ResetAccountPassword extends Rpc
  * @method $this withDBInstanceId($value)
  * @method string getSwitchTime()
  * @method $this withSwitchTime($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()

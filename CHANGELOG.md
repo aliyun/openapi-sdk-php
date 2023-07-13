@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1890 - 2023-7-13
+- Support change instance config event for rds.
+- Add NodeId param for restart slave.
+
+
 ## 1.8.1889 - 2023-7-13
 - Iot_20180120 old version sdk.
 
