@@ -46,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeJob describeJob(array $options = [])
  * @method DescribeNFSClientStatus describeNFSClientStatus(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
+ * @method DescribeServerlessJobs describeServerlessJobs(array $options = [])
  * @method EditJobTemplate editJobTemplate(array $options = [])
  * @method GetAccountingReport getAccountingReport(array $options = [])
  * @method GetAutoScaleConfig getAutoScaleConfig(array $options = [])
@@ -92,6 +93,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListQueues listQueues(array $options = [])
  * @method ListRegions listRegions(array $options = [])
  * @method ListSecurityGroups listSecurityGroups(array $options = [])
+ * @method ListServerlessJobs listServerlessJobs(array $options = [])
  * @method ListSoftwares listSoftwares(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTasks listTasks(array $options = [])
@@ -127,8 +129,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopGWSInstance stopGWSInstance(array $options = [])
  * @method StopJobs stopJobs(array $options = [])
  * @method StopNodes stopNodes(array $options = [])
+ * @method StopServerlessJobs stopServerlessJobs(array $options = [])
  * @method StopVisualService stopVisualService(array $options = [])
  * @method SubmitJob submitJob(array $options = [])
+ * @method SubmitServerlessJob submitServerlessJob(array $options = [])
  * @method SummaryImages summaryImages(array $options = [])
  * @method SummaryImagesInfo summaryImagesInfo(array $options = [])
  * @method SyncUsers syncUsers(array $options = [])
@@ -213,29 +217,13 @@ class AddLocalNodes extends Rpc
 }
 
 /**
- * @method string getImageId()
- * @method $this withImageId($value)
- * @method string getSystemDiskLevel()
- * @method $this withSystemDiskLevel($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getAllocatePublicAddress()
- * @method $this withAllocatePublicAddress($value)
- * @method string getInternetMaxBandWidthOut()
- * @method $this withInternetMaxBandWidthOut($value)
- * @method string getJobQueue()
- * @method $this withJobQueue($value)
+ * @method string getDnsConfig()
+ * @method $this withDnsConfig($value)
  * @method string getImageOwnerAlias()
  * @method $this withImageOwnerAlias($value)
- * @method string getSystemDiskType()
- * @method $this withSystemDiskType($value)
  * @method array getDataDisks()
- * @method string getMinCount()
- * @method $this withMinCount($value)
  * @method string getSystemDiskSize()
  * @method $this withSystemDiskSize($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
  * @method string getHostNamePrefix()
  * @method $this withHostNamePrefix($value)
  * @method string getComputeSpotInterruptionBehavior()
@@ -248,28 +236,20 @@ class AddLocalNodes extends Rpc
  * @method $this withPeriod($value)
  * @method string getCount()
  * @method $this withCount($value)
- * @method string getClusterId()
- * @method $this withClusterId($value)
  * @method string getComputeSpotStrategy()
  * @method $this withComputeSpotStrategy($value)
  * @method string getHostNameSuffix()
  * @method $this withHostNameSuffix($value)
  * @method string getSync()
  * @method $this withSync($value)
- * @method string getNetworkInterfaceTrafficMode()
- * @method $this withNetworkInterfaceTrafficMode($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
- * @method string getComputeSpotDuration()
- * @method $this withComputeSpotDuration($value)
  * @method string getPeriodUnit()
  * @method $this withPeriodUnit($value)
  * @method string getComputeEnableHt()
  * @method $this withComputeEnableHt($value)
  * @method string getAutoRenew()
  * @method $this withAutoRenew($value)
- * @method string getEcsChargeType()
- * @method $this withEcsChargeType($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
  * @method string getCreateMode()
@@ -278,6 +258,32 @@ class AddLocalNodes extends Rpc
  * @method $this withZoneId($value)
  * @method string getInternetMaxBandWidthIn()
  * @method $this withInternetMaxBandWidthIn($value)
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getSystemDiskLevel()
+ * @method $this withSystemDiskLevel($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getAllocatePublicAddress()
+ * @method $this withAllocatePublicAddress($value)
+ * @method string getInternetMaxBandWidthOut()
+ * @method $this withInternetMaxBandWidthOut($value)
+ * @method string getJobQueue()
+ * @method $this withJobQueue($value)
+ * @method string getSystemDiskType()
+ * @method $this withSystemDiskType($value)
+ * @method string getMinCount()
+ * @method $this withMinCount($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getNetworkInterfaceTrafficMode()
+ * @method $this withNetworkInterfaceTrafficMode($value)
+ * @method string getComputeSpotDuration()
+ * @method $this withComputeSpotDuration($value)
+ * @method string getEcsChargeType()
+ * @method $this withEcsChargeType($value)
  */
 class AddNodes extends Rpc
 {
@@ -316,10 +322,14 @@ class AddNodes extends Rpc
 }
 
 /**
+ * @method string getDeploymentSetId()
+ * @method $this withDeploymentSetId($value)
  * @method string getQueueName()
  * @method $this withQueueName($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getNetworkInterfaceTrafficMode()
+ * @method $this withNetworkInterfaceTrafficMode($value)
  */
 class AddQueue extends Rpc
 {
@@ -493,11 +503,14 @@ class ApplyNodes extends Rpc
 
 /**
  * @method array getAdditionalVolumes()
+ * @method array getAddOns()
  * @method string getEcsOrderManagerInstanceType()
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
  * @method string getSecurityGroupName()
  * @method $this withSecurityGroupName($value)
+ * @method string getWithoutNas()
+ * @method $this withWithoutNas($value)
  * @method string getImageOwnerAlias()
  * @method $this withImageOwnerAlias($value)
  * @method string getDeployMode()
@@ -569,6 +582,8 @@ class ApplyNodes extends Rpc
  * @method $this withVolumeType($value)
  * @method string getSystemDiskType()
  * @method $this withSystemDiskType($value)
+ * @method string getDeploymentSetId()
+ * @method $this withDeploymentSetId($value)
  * @method string getVolumeProtocol()
  * @method $this withVolumeProtocol($value)
  * @method string getClientVersion()
@@ -645,6 +660,41 @@ class CreateCluster extends Rpc
 			}
 			if(isset($depth1Value['JobQueue'])){
 				$this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.JobQueue'] = $depth1Value['JobQueue'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $addOns
+     *
+     * @return $this
+     */
+	public function withAddOns(array $addOns)
+	{
+	    $this->data['AddOns'] = $addOns;
+		foreach ($addOns as $depth1 => $depth1Value) {
+			if(isset($depth1Value['DeployMode'])){
+				$this->options['query']['AddOns.' . ($depth1 + 1) . '.DeployMode'] = $depth1Value['DeployMode'];
+			}
+			if(isset($depth1Value['Port'])){
+				$this->options['query']['AddOns.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['ConfigFile'])){
+				$this->options['query']['AddOns.' . ($depth1 + 1) . '.ConfigFile'] = $depth1Value['ConfigFile'];
+			}
+			if(isset($depth1Value['DefaultStart'])){
+				$this->options['query']['AddOns.' . ($depth1 + 1) . '.DefaultStart'] = $depth1Value['DefaultStart'];
+			}
+			if(isset($depth1Value['Name'])){
+				$this->options['query']['AddOns.' . ($depth1 + 1) . '.Name'] = $depth1Value['Name'];
+			}
+			if(isset($depth1Value['DBType'])){
+				$this->options['query']['AddOns.' . ($depth1 + 1) . '.DBType'] = $depth1Value['DBType'];
+			}
+			if(isset($depth1Value['Version'])){
+				$this->options['query']['AddOns.' . ($depth1 + 1) . '.Version'] = $depth1Value['Version'];
 			}
 		}
 
@@ -882,6 +932,8 @@ class CreateGWSInstance extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getPassword()
  * @method $this withPassword($value)
+ * @method string getHybridClusterOpMode()
+ * @method $this withHybridClusterOpMode($value)
  * @method string getWinAdPar()
  * @method $this withWinAdPar($value)
  * @method string getComputeSpotPriceLimit()
@@ -1501,6 +1553,19 @@ class DescribePrice extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ */
+class DescribeServerlessJobs extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -2168,6 +2233,39 @@ class ListSecurityGroups extends Rpc
 }
 
 /**
+ * @method string getSubmitTimeStart()
+ * @method $this withSubmitTimeStart($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getState()
+ * @method $this withState($value)
+ * @method string getSubmitOrder()
+ * @method $this withSubmitOrder($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getJobNames()
+ * @method $this withJobNames($value)
+ * @method string getUsers()
+ * @method $this withUsers($value)
+ * @method string getStartOrder()
+ * @method $this withStartOrder($value)
+ * @method string getSubmitTimeEnd()
+ * @method $this withSubmitTimeEnd($value)
+ * @method string getQueues()
+ * @method $this withQueues($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ */
+class ListServerlessJobs extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
  * @method string getOsTag()
  * @method $this withOsTag($value)
  * @method string getEhpcVersion()
@@ -2301,6 +2399,8 @@ class ListVolumes extends Rpc
  * @method array getRamNodeTypes()
  * @method string getPassword()
  * @method $this withPassword($value)
+ * @method string getWinAdPar()
+ * @method $this withWinAdPar($value)
  * @method string getName()
  * @method $this withName($value)
  */
@@ -2566,6 +2666,8 @@ class RunCloudMetricProfiling extends Rpc
 /**
  * @method string getImageId()
  * @method $this withImageId($value)
+ * @method string getDnsConfig()
+ * @method $this withDnsConfig($value)
  * @method string getSpotPriceLimit()
  * @method $this withSpotPriceLimit($value)
  * @method string getExcludeNodes()
@@ -2586,6 +2688,8 @@ class RunCloudMetricProfiling extends Rpc
  * @method $this withSpotStrategy($value)
  * @method string getMaxNodesInCluster()
  * @method $this withMaxNodesInCluster($value)
+ * @method string getComputeEnableHt()
+ * @method $this withComputeEnableHt($value)
  * @method string getShrinkIntervalInMinutes()
  * @method $this withShrinkIntervalInMinutes($value)
  * @method array getQueues()
@@ -2611,6 +2715,9 @@ class SetAutoScaleConfig extends Rpc
 			}
 			if(isset($depth1Value['SystemDiskLevel'])){
 				$this->options['query']['Queues.' . ($depth1 + 1) . '.SystemDiskLevel'] = $depth1Value['SystemDiskLevel'];
+			}
+			if(isset($depth1Value['SortedByInventory'])){
+				$this->options['query']['Queues.' . ($depth1 + 1) . '.SortedByInventory'] = $depth1Value['SortedByInventory'];
 			}
 			foreach ($depth1Value['InstanceTypes'] as $depth2 => $depth2Value) {
 				if(isset($depth2Value['VSwitchId'])){
@@ -3022,6 +3129,19 @@ class StopNodes extends Rpc
 /**
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
+ */
+class StopServerlessJobs extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
  * @method string getPort()
  * @method $this withPort($value)
  * @method string getCidrIp()
@@ -3127,6 +3247,55 @@ class SubmitJob extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getContainer()
+ * @method $this withContainer($value)
+ * @method string getMemory()
+ * @method $this withMemory($value)
+ * @method string getDependsOn()
+ * @method $this withDependsOn($value)
+ * @method string getSpotPriceLimit()
+ * @method $this withSpotPriceLimit($value)
+ * @method string getJobQueue()
+ * @method $this withJobQueue($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getJobUser()
+ * @method $this withJobUser($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getJobName()
+ * @method $this withJobName($value)
+ * @method string getJobPriority()
+ * @method $this withJobPriority($value)
+ * @method string getCpu()
+ * @method $this withCpu($value)
+ * @method string getRamRoleName()
+ * @method $this withRamRoleName($value)
+ * @method string getAcrRegistryInfo()
+ * @method $this withAcrRegistryInfo($value)
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getVolume()
+ * @method $this withVolume($value)
+ * @method string getRetryStrategy()
+ * @method $this withRetryStrategy($value)
+ * @method string getEphemeralStorage()
+ * @method $this withEphemeralStorage($value)
+ * @method string getArrayProperties()
+ * @method $this withArrayProperties($value)
+ */
+class SubmitServerlessJob extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -3285,6 +3454,9 @@ class UpdateClusterVolumes extends Rpc
 			if(isset($depth1Value['VolumeProtocol'])){
 				$this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeProtocol'] = $depth1Value['VolumeProtocol'];
 			}
+			if(isset($depth1Value['VolumeMountOption'])){
+				$this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.VolumeMountOption'] = $depth1Value['VolumeMountOption'];
+			}
 			if(isset($depth1Value['LocalDirectory'])){
 				$this->options['query']['AdditionalVolumes.' . ($depth1 + 1) . '.LocalDirectory'] = $depth1Value['LocalDirectory'];
 			}
@@ -3315,6 +3487,8 @@ class UpdateClusterVolumes extends Rpc
 }
 
 /**
+ * @method string getDeploymentSetId()
+ * @method $this withDeploymentSetId($value)
  * @method string getQueueName()
  * @method $this withQueueName($value)
  * @method string getClusterId()

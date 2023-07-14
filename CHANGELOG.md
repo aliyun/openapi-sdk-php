@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1891 - 2023-7-14
+- Support Serverless Job API.
+
+
 ## 1.8.1890 - 2023-7-13
 - Support change instance config event for rds.
 - Add NodeId param for restart slave.
