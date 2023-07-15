@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1892 - 2023-7-15
+- Add error code.
+
+
 ## 1.8.1891 - 2023-7-14
 - Support Serverless Job API.
 
