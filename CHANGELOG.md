@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1893 - 2023-7-16
+- Add error code.
+
+
 ## 1.8.1892 - 2023-7-15
 - Add error code.
 
