@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1894 - 2023-7-17
+- Get Job Instance API add Field.
+- Get Workflow Instance Add Node Field.
+
+
 ## 1.8.1893 - 2023-7-16
 - Add error code.
 
