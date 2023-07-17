@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1896 - 2023-7-17
+- Add TimeOut.
+
+
 ## 1.8.1895 - 2023-7-17
 - Get Workflow Instance Add Node Field.
 
