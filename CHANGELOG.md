@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1895 - 2023-7-17
+- Get Workflow Instance Add Node Field.
+
+
 ## 1.8.1894 - 2023-7-17
 - Get Job Instance API add Field.
 - Get Workflow Instance Add Node Field.
