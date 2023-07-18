@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1897 - 2023-7-18
+- Supported RDS PostgreSQL manage extensions.
+
+
 ## 1.8.1896 - 2023-7-17
 - Add TimeOut.
 

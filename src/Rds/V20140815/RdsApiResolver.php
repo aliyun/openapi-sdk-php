@@ -40,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateMigrateTask createMigrateTask(array $options = [])
  * @method CreateOnlineDatabaseTask createOnlineDatabaseTask(array $options = [])
  * @method CreateParameterGroup createParameterGroup(array $options = [])
+ * @method CreatePostgresExtensions createPostgresExtensions(array $options = [])
  * @method CreateReadOnlyDBInstance createReadOnlyDBInstance(array $options = [])
  * @method CreateSecret createSecret(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
@@ -56,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDBProxyEndpointAddress deleteDBProxyEndpointAddress(array $options = [])
  * @method DeleteGadInstance deleteGadInstance(array $options = [])
  * @method DeleteParameterGroup deleteParameterGroup(array $options = [])
+ * @method DeletePostgresExtensions deletePostgresExtensions(array $options = [])
  * @method DeleteSecret deleteSecret(array $options = [])
  * @method DeleteSlot deleteSlot(array $options = [])
  * @method DeleteUserBackupFile deleteUserBackupFile(array $options = [])
@@ -139,6 +141,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeParameters describeParameters(array $options = [])
  * @method DescribeParameterTemplates describeParameterTemplates(array $options = [])
  * @method DescribePGHbaConfig describePGHbaConfig(array $options = [])
+ * @method DescribePostgresExtensions describePostgresExtensions(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
  * @method DescribeRdsResourceSettings describeRdsResourceSettings(array $options = [])
  * @method DescribeReadDBInstanceDelay describeReadDBInstanceDelay(array $options = [])
@@ -254,6 +257,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method TransformDBInstancePayType transformDBInstancePayType(array $options = [])
  * @method UnlockAccount unlockAccount(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method UpdatePostgresExtensions updatePostgresExtensions(array $options = [])
  * @method UpdateUserBackupFile updateUserBackupFile(array $options = [])
  * @method UpgradeDBInstanceEngineVersion upgradeDBInstanceEngineVersion(array $options = [])
  * @method UpgradeDBInstanceKernelVersion upgradeDBInstanceKernelVersion(array $options = [])
@@ -1633,6 +1637,34 @@ class CreateParameterGroup extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getSourceDatabase()
+ * @method $this withSourceDatabase($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBNames()
+ * @method $this withDBNames($value)
+ * @method string getExtensions()
+ * @method $this withExtensions($value)
+ */
+class CreatePostgresExtensions extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceStorage()
  * @method $this withDBInstanceStorage($value)
  * @method string getEngineVersion()
@@ -1983,6 +2015,30 @@ class DeleteGadInstance extends Rpc
  * @method $this withParameterGroupId($value)
  */
 class DeleteParameterGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBNames()
+ * @method $this withDBNames($value)
+ * @method string getExtensions()
+ * @method $this withExtensions($value)
+ */
+class DeletePostgresExtensions extends Rpc
 {
 }
 
@@ -4191,6 +4247,28 @@ class DescribeParameterTemplates extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribePGHbaConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
+ */
+class DescribePostgresExtensions extends Rpc
 {
 }
 
@@ -7369,6 +7447,30 @@ class UntagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBNames()
+ * @method $this withDBNames($value)
+ * @method string getExtensions()
+ * @method $this withExtensions($value)
+ */
+class UpdatePostgresExtensions extends Rpc
+{
 }
 
 /**
