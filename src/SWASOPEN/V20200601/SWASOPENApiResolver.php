@@ -64,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StartDatabaseInstance startDatabaseInstance(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartInstances startInstances(array $options = [])
+ * @method StartTerminalSession startTerminalSession(array $options = [])
  * @method StopDatabaseInstance stopDatabaseInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method StopInstances stopInstances(array $options = [])
@@ -551,6 +552,8 @@ class ListInstancePlansModification extends Rpc
  * @method $this withPublicIpAddresses($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class ListInstances extends Rpc
 {
@@ -827,6 +830,14 @@ class StartInstance extends Rpc
  * @method $this withInstanceIds($value)
  */
 class StartInstances extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class StartTerminalSession extends Rpc
 {
 }
 
