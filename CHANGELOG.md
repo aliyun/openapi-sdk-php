@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1901 - 2023-7-19
+- Add openapis for whitelist template.
+
+
 ## 1.8.1900 - 2023-7-19
 - Add new apis.
 

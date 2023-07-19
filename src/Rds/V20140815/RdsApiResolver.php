@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddTagsToResource addTagsToResource(array $options = [])
  * @method AllocateInstancePublicConnection allocateInstancePublicConnection(array $options = [])
  * @method AllocateReadWriteSplittingConnection allocateReadWriteSplittingConnection(array $options = [])
+ * @method AttachWhitelistTemplateToInstance attachWhitelistTemplateToInstance(array $options = [])
  * @method CalculateDBInstanceWeight calculateDBInstanceWeight(array $options = [])
  * @method CancelImport cancelImport(array $options = [])
  * @method CheckAccountNameAvailable checkAccountNameAvailable(array $options = [])
@@ -66,6 +67,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeActionEventPolicy describeActionEventPolicy(array $options = [])
  * @method DescribeActiveOperationTasks describeActiveOperationTasks(array $options = [])
  * @method DescribeADInfo describeADInfo(array $options = [])
+ * @method DescribeAllWhitelistTemplate describeAllWhitelistTemplate(array $options = [])
  * @method DescribeAnalyticdbByPrimaryDBInstance describeAnalyticdbByPrimaryDBInstance(array $options = [])
  * @method DescribeAvailableClasses describeAvailableClasses(array $options = [])
  * @method DescribeAvailableCrossRegion describeAvailableCrossRegion(array $options = [])
@@ -128,6 +130,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceAutoRenewalAttribute describeInstanceAutoRenewalAttribute(array $options = [])
  * @method DescribeInstanceCrossBackupPolicy describeInstanceCrossBackupPolicy(array $options = [])
  * @method DescribeInstanceKeywords describeInstanceKeywords(array $options = [])
+ * @method DescribeInstanceLinkedWhitelistTemplate describeInstanceLinkedWhitelistTemplate(array $options = [])
  * @method DescribeLocalAvailableRecoveryTime describeLocalAvailableRecoveryTime(array $options = [])
  * @method DescribeLogBackupFiles describeLogBackupFiles(array $options = [])
  * @method DescribeMetaList describeMetaList(array $options = [])
@@ -165,8 +168,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUpgradeMajorVersionPrecheckTask describeUpgradeMajorVersionPrecheckTask(array $options = [])
  * @method DescribeUpgradeMajorVersionTasks describeUpgradeMajorVersionTasks(array $options = [])
  * @method DescribeVSwitches describeVSwitches(array $options = [])
+ * @method DescribeWhitelistTemplate describeWhitelistTemplate(array $options = [])
+ * @method DescribeWhitelistTemplateLinkedInstance describeWhitelistTemplateLinkedInstance(array $options = [])
  * @method DestroyDBInstance destroyDBInstance(array $options = [])
  * @method DetachGadInstanceMember detachGadInstanceMember(array $options = [])
+ * @method DetachWhitelistTemplateToInstance detachWhitelistTemplateToInstance(array $options = [])
  * @method GetDBInstanceTopology getDBInstanceTopology(array $options = [])
  * @method GetDbProxyInstanceSsl getDbProxyInstanceSsl(array $options = [])
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
@@ -229,6 +235,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method ModifySQLCollectorPolicy modifySQLCollectorPolicy(array $options = [])
  * @method ModifySQLCollectorRetention modifySQLCollectorRetention(array $options = [])
+ * @method ModifyWhitelistTemplate modifyWhitelistTemplate(array $options = [])
  * @method PurgeDBInstanceLog purgeDBInstanceLog(array $options = [])
  * @method QueryNotify queryNotify(array $options = [])
  * @method RebuildDBInstance rebuildDBInstance(array $options = [])
@@ -526,6 +533,20 @@ class AllocateInstancePublicConnection extends Rpc
  * @method $this withMaxDelayTime($value)
  */
 class AllocateReadWriteSplittingConnection extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getInsName()
+ * @method $this withInsName($value)
+ */
+class AttachWhitelistTemplateToInstance extends Rpc
 {
 }
 
@@ -2221,6 +2242,24 @@ class DescribeActiveOperationTasks extends Rpc
  * @method $this withDBInstanceId($value)
  */
 class DescribeADInfo extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumbers()
+ * @method $this withPageNumbers($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getFuzzySearch()
+ * @method $this withFuzzySearch($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getMaxRecordsPerPage()
+ * @method $this withMaxRecordsPerPage($value)
+ */
+class DescribeAllWhitelistTemplate extends Rpc
 {
 }
 
@@ -3983,6 +4022,18 @@ class DescribeInstanceKeywords extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getInsName()
+ * @method $this withInsName($value)
+ */
+class DescribeInstanceLinkedWhitelistTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getResourceGroupId()
@@ -4847,6 +4898,42 @@ class DescribeVSwitches extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class DescribeWhitelistTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getTemplateId()
+ */
+class DescribeWhitelistTemplateLinkedInstance extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTemplateId($value)
+    {
+        $this->data['TemplateId'] = $value;
+        $this->options['form_params']['TemplateId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getOwnerAccount()
@@ -4867,6 +4954,20 @@ class DestroyDBInstance extends Rpc
  * @method $this withGadInstanceName($value)
  */
 class DetachGadInstanceMember extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getInsName()
+ * @method $this withInsName($value)
+ */
+class DetachWhitelistTemplateToInstance extends Rpc
 {
 }
 
@@ -6545,6 +6646,22 @@ class ModifySQLCollectorPolicy extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifySQLCollectorRetention extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getTemplateName()
+ * @method $this withTemplateName($value)
+ * @method string getIpWhitelist()
+ * @method $this withIpWhitelist($value)
+ */
+class ModifyWhitelistTemplate extends Rpc
 {
 }
 
