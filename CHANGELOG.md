@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1898 - 2023-7-19
+- Update SDK version.
+
+
 ## 1.8.1897 - 2023-7-18
 - Supported RDS PostgreSQL manage extensions.
 
