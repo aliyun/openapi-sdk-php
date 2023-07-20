@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1905 - 2023-7-20
+- Support rd sdk.
+
+
 ## 1.8.1904 - 2023-7-20
 - Support new api about model training.
 - Change GenerateVideoPlaylist and LiveTranscoding to private.
