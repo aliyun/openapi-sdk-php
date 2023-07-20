@@ -57,7 +57,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectTextAnomaly detectTextAnomaly(array $options = [])
  * @method ExtractDocumentText extractDocumentText(array $options = [])
  * @method FuzzyQuery fuzzyQuery(array $options = [])
- * @method GenerateVideoPlaylist generateVideoPlaylist(array $options = [])
  * @method GenerateWebofficeToken generateWebofficeToken(array $options = [])
  * @method GetBatch getBatch(array $options = [])
  * @method GetBinding getBinding(array $options = [])
@@ -80,7 +79,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRegions listRegions(array $options = [])
  * @method ListTasks listTasks(array $options = [])
  * @method ListTriggers listTriggers(array $options = [])
- * @method LiveTranscoding liveTranscoding(array $options = [])
  * @method QueryFigureClusters queryFigureClusters(array $options = [])
  * @method QueryLocationDateClusters queryLocationDateClusters(array $options = [])
  * @method QuerySimilarImageClusters querySimilarImageClusters(array $options = [])
@@ -1643,30 +1641,6 @@ class FuzzyQuery extends Rpc
 }
 
 /**
- * @method string getSourceDuration()
- * @method $this withSourceDuration($value)
- * @method string getTargets()
- * @method $this withTargets($value)
- * @method string getMasterURI()
- * @method $this withMasterURI($value)
- * @method string getProjectName()
- * @method $this withProjectName($value)
- * @method string getCredentialConfig()
- * @method $this withCredentialConfig($value)
- * @method string getTags()
- * @method $this withTags($value)
- * @method string getSourceStartTime()
- * @method $this withSourceStartTime($value)
- * @method string getSourceURI()
- * @method $this withSourceURI($value)
- * @method string getSourceSubtitles()
- * @method $this withSourceSubtitles($value)
- */
-class GenerateVideoPlaylist extends Rpc
-{
-}
-
-/**
  * @method string getReferer()
  * @method $this withReferer($value)
  * @method string getNotification()
@@ -1987,18 +1961,6 @@ class ListTasks extends Rpc
  * @method $this withTagSelector($value)
  */
 class ListTriggers extends Rpc
-{
-}
-
-/**
- * @method string getProjectName()
- * @method $this withProjectName($value)
- * @method string getCredentialConfig()
- * @method $this withCredentialConfig($value)
- * @method string getSourceURI()
- * @method $this withSourceURI($value)
- */
-class LiveTranscoding extends Rpc
 {
 }
 
