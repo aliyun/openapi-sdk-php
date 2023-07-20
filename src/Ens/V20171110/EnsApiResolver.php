@@ -147,6 +147,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSnatTableEntries describeSnatTableEntries(array $options = [])
  * @method DescribeUserBandWidthData describeUserBandWidthData(array $options = [])
  * @method DescribeVSwitches describeVSwitches(array $options = [])
+ * @method DescribeWorkflow describeWorkflow(array $options = [])
+ * @method DescribeWorkflowActivity describeWorkflowActivity(array $options = [])
  * @method DetachDisk detachDisk(array $options = [])
  * @method DistApplicationData distApplicationData(array $options = [])
  * @method ExportBillDetailData exportBillDetailData(array $options = [])
@@ -200,9 +202,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResetDisk resetDisk(array $options = [])
  * @method ResizeDisk resizeDisk(array $options = [])
  * @method RestartDeviceInstance restartDeviceInstance(array $options = [])
+ * @method RestartWorkflow restartWorkflow(array $options = [])
+ * @method RetryWorkflow retryWorkflow(array $options = [])
  * @method RevokeSecurityGroup revokeSecurityGroup(array $options = [])
  * @method RevokeSecurityGroupEgress revokeSecurityGroupEgress(array $options = [])
  * @method RollbackApplication rollbackApplication(array $options = [])
+ * @method RollbackWorkflow rollbackWorkflow(array $options = [])
  * @method RunInstances runInstances(array $options = [])
  * @method RunServiceSchedule runServiceSchedule(array $options = [])
  * @method SetBackendServers setBackendServers(array $options = [])
@@ -221,6 +226,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopInstances stopInstances(array $options = [])
  * @method StopLoadBalancerListener stopLoadBalancerListener(array $options = [])
  * @method StopSnatIpForSnatEntry stopSnatIpForSnatEntry(array $options = [])
+ * @method TerminateWorkflow terminateWorkflow(array $options = [])
  * @method UnassignPrivateIpAddresses unassignPrivateIpAddresses(array $options = [])
  * @method UnAssociateEnsEipAddress unAssociateEnsEipAddress(array $options = [])
  * @method UnassociateNetworkAcl unassociateNetworkAcl(array $options = [])
@@ -319,6 +325,8 @@ class AssignPrivateIpAddresses extends Rpc
 }
 
 /**
+ * @method string getStandby()
+ * @method $this withStandby($value)
  * @method string getAllocationId()
  * @method $this withAllocationId($value)
  * @method string getInstanceType()
@@ -441,6 +449,8 @@ class CreateApplication extends Rpc
  * @method $this withAmount($value)
  * @method string getNameSpace()
  * @method $this withNameSpace($value)
+ * @method string getServerName()
+ * @method $this withServerName($value)
  * @method string getPayType()
  * @method $this withPayType($value)
  */
@@ -576,6 +586,8 @@ class CreateFileSystem extends Rpc
  * @method $this withHealthCheckPort($value)
  * @method string getExternalPort()
  * @method $this withExternalPort($value)
+ * @method string getStandbyExternalIp()
+ * @method $this withStandbyExternalIp($value)
  * @method string getNatGatewayId()
  * @method $this withNatGatewayId($value)
  * @method string getForwardEntryName()
@@ -984,14 +996,16 @@ class CreateSecurityGroup extends Rpc
 }
 
 /**
- * @method string getSourceCIDR()
- * @method $this withSourceCIDR($value)
  * @method string getSnatIp()
  * @method $this withSnatIp($value)
  * @method string getSourceVSwitchId()
  * @method $this withSourceVSwitchId($value)
  * @method string getSourceNetworkId()
  * @method $this withSourceNetworkId($value)
+ * @method string getStandbySnatIp()
+ * @method $this withStandbySnatIp($value)
+ * @method string getSourceCIDR()
+ * @method $this withSourceCIDR($value)
  * @method string getNatGatewayId()
  * @method $this withNatGatewayId($value)
  * @method string getSnatEntryName()
@@ -1518,6 +1532,8 @@ class DescribeEnsCommodityModuleCode extends Rpc
  * @method $this withEnsRegionId($value)
  * @method string getStatus()
  * @method $this withStatus($value)
+ * @method string getStandby()
+ * @method $this withStandby($value)
  * @method string getAllocationId()
  * @method $this withAllocationId($value)
  * @method string getPageNumber()
@@ -1629,6 +1645,8 @@ class DescribeEnsRouteEntryList extends Rpc
 }
 
 /**
+ * @method string getCustomAccount()
+ * @method $this withCustomAccount($value)
  * @method string getCommodityCode()
  * @method $this withCommodityCode($value)
  * @method string getModuleCode()
@@ -1643,6 +1661,8 @@ class DescribeEnsSaleControl extends Rpc
 }
 
 /**
+ * @method string getCustomAccount()
+ * @method $this withCustomAccount($value)
  * @method string getCommodityCode()
  * @method $this withCommodityCode($value)
  * @method string getOrderType()
@@ -1653,6 +1673,8 @@ class DescribeEnsSaleControlAvailableResource extends Rpc
 }
 
 /**
+ * @method string getCustomAccount()
+ * @method $this withCustomAccount($value)
  * @method string getCommodityCode()
  * @method $this withCommodityCode($value)
  * @method string getModuleCode()
@@ -1786,6 +1808,8 @@ class DescribeFileSystems extends Rpc
  * @method $this withIpProtocol($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getShowDetail()
+ * @method $this withShowDetail($value)
  * @method string getForwardEntryId()
  * @method $this withForwardEntryId($value)
  * @method string getPageSize()
@@ -2326,9 +2350,6 @@ class DescribeServcieSchedule extends Rpc
  */
 class DescribeSnatAttribute extends Rpc
 {
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2340,6 +2361,8 @@ class DescribeSnatAttribute extends Rpc
  * @method $this withSourceCIDR($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getShowDetail()
+ * @method $this withShowDetail($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getNatGatewayId()
@@ -2389,6 +2412,44 @@ class DescribeUserBandWidthData extends Rpc
  * @method $this withVSwitchName($value)
  */
 class DescribeVSwitches extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getWorkFlowId()
+ * @method $this withWorkFlowId($value)
+ * @method string getBusinessId()
+ * @method $this withBusinessId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ * @method string getWorkFlowName()
+ * @method $this withWorkFlowName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAliUid()
+ * @method $this withAliUid($value)
+ */
+class DescribeWorkflow extends Rpc
+{
+}
+
+/**
+ * @method string getWorkFlowId()
+ * @method $this withWorkFlowId($value)
+ */
+class DescribeWorkflowActivity extends Rpc
 {
 }
 
@@ -3109,6 +3170,22 @@ class RestartDeviceInstance extends Rpc
 }
 
 /**
+ * @method string getWorkflowIds()
+ * @method $this withWorkflowIds($value)
+ */
+class RestartWorkflow extends Rpc
+{
+}
+
+/**
+ * @method string getWorkflowIds()
+ * @method $this withWorkflowIds($value)
+ */
+class RetryWorkflow extends Rpc
+{
+}
+
+/**
  * @method string getSourcePortRange()
  * @method $this withSourcePortRange($value)
  * @method string getPortRange()
@@ -3159,6 +3236,14 @@ class RevokeSecurityGroupEgress extends Rpc
  * @method $this withToAppVersion($value)
  */
 class RollbackApplication extends Rpc
+{
+}
+
+/**
+ * @method string getWorkflowIds()
+ * @method $this withWorkflowIds($value)
+ */
+class RollbackWorkflow extends Rpc
 {
 }
 
@@ -3533,6 +3618,14 @@ class StopLoadBalancerListener extends Rpc
  * @method $this withSnatEntryId($value)
  */
 class StopSnatIpForSnatEntry extends Rpc
+{
+}
+
+/**
+ * @method string getWorkflowIds()
+ * @method $this withWorkflowIds($value)
+ */
+class TerminateWorkflow extends Rpc
 {
 }
 

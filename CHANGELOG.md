@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1903 - 2023-7-20
+- Support clouddisk API.
+
+
 ## 1.8.1902 - 2023-7-20
 - Parameter changes in ListServerlessJobs and DescribeServerlessJobs.
 
