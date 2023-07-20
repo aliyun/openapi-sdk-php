@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1906 - 2023-7-20
+- Fix bug of lack fill resourceOwnerId in DescribeHostWebshell.
+
+
 ## 1.8.1905 - 2023-7-20
 - Support rd sdk.
 
