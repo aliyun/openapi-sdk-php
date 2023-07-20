@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1902 - 2023-7-20
+- Parameter changes in ListServerlessJobs and DescribeServerlessJobs.
+
+
 ## 1.8.1901 - 2023-7-19
 - Add openapis for whitelist template.
 
