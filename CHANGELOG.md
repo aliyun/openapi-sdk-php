@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1908 - 2023-7-22
+- Fix 500 for CreateOrder.
+- Support sts.
+
+
 ## 1.8.1907 - 2023-7-21
 - Fix 500 for CreateOrder.
 - Support sts.
