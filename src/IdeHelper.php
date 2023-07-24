@@ -219,6 +219,7 @@ namespace AlibabaCloud;
  * @method static Safconsole\Safconsole safconsole()
  * @method static Sas\Sas sas()
  * @method static SasApi\SasApi sasApi()
+ * @method static Sasti\Sasti sasti()
  * @method static Scdn\Scdn scdn()
  * @method static Schedulerx2\Schedulerx2 schedulerx2()
  * @method static Scsp\Scsp scsp()

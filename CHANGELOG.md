@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1910 - 2023-7-24
+- Add GetGraphQueryTemplates.
+- Add Api GetGraphQueryResult.
+- Support http.
+
+
 ## 1.8.1909 - 2023-7-23
 - Fix 500 for CreateOrder.
 - Support sts.
