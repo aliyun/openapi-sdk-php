@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1911 - 2023-7-24
+- Add error code.
+- Add error code for CreateDBNodes.
+
+
 ## 1.8.1910 - 2023-7-24
 - Add GetGraphQueryTemplates.
 - Add Api GetGraphQueryResult.
