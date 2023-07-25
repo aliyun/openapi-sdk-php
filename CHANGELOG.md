@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1912 - 2023-7-25
+- PatchBaseline Support Tags.
+
+
 ## 1.8.1911 - 2023-7-24
 - Add error code.
 - Add error code for CreateDBNodes.

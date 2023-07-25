@@ -226,20 +226,28 @@ class CreateParameter extends Rpc
 }
 
 /**
+ * @method string getSources()
+ * @method $this withSources($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getApprovalRules()
  * @method $this withApprovalRules($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getRejectedPatchesAction()
+ * @method $this withRejectedPatchesAction($value)
+ * @method string getApprovedPatchesEnableNonSecurity()
+ * @method $this withApprovedPatchesEnableNonSecurity($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getOperationSystem()
  * @method $this withOperationSystem($value)
  * @method string getRejectedPatches()
  * @method $this withRejectedPatches($value)
- * @method string getRejectedPatchesAction()
- * @method $this withRejectedPatchesAction($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getApprovedPatches()
+ * @method $this withApprovedPatches($value)
  */
 class CreatePatchBaseline extends Rpc
 {
@@ -842,16 +850,24 @@ class ListParameterVersions extends Rpc
 }
 
 /**
- * @method string getOperationSystem()
- * @method $this withOperationSystem($value)
+ * @method string getSources()
+ * @method $this withSources($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getShareType()
+ * @method $this withShareType($value)
+ * @method string getApprovedPatchesEnableNonSecurity()
+ * @method $this withApprovedPatchesEnableNonSecurity($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getOperationSystem()
+ * @method $this withOperationSystem($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
- * @method string getShareType()
- * @method $this withShareType($value)
+ * @method string getApprovedPatches()
+ * @method $this withApprovedPatches($value)
  */
 class ListPatchBaselines extends Rpc
 {
@@ -1316,18 +1332,26 @@ class UpdateParameter extends Rpc
 }
 
 /**
+ * @method string getSources()
+ * @method $this withSources($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getApprovalRules()
  * @method $this withApprovalRules($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getRejectedPatches()
- * @method $this withRejectedPatches($value)
  * @method string getRejectedPatchesAction()
  * @method $this withRejectedPatchesAction($value)
+ * @method string getApprovedPatchesEnableNonSecurity()
+ * @method $this withApprovedPatchesEnableNonSecurity($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getRejectedPatches()
+ * @method $this withRejectedPatches($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getApprovedPatches()
+ * @method $this withApprovedPatches($value)
  */
 class UpdatePatchBaseline extends Rpc
 {
