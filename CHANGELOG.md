@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1913 - 2023-7-25
+- Parameter changes in SubmitServerlessJob.
+
+
 ## 1.8.1912 - 2023-7-25
 - PatchBaseline Support Tags.
 
