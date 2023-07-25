@@ -641,6 +641,8 @@ class CheckCloudResourceAuthorized extends Rpc
  * @method $this withEngineVersion($value)
  * @method string getUserBakSetURL()
  * @method $this withUserBakSetURL($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getBackupSetRegion()
@@ -799,6 +801,8 @@ class CloneDBInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getParameterGroupId()
  * @method $this withParameterGroupId($value)
  * @method string getResourceOwnerAccount()
@@ -1640,6 +1644,8 @@ class CreateOnlineDatabaseTask extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getResourceOwnerAccount()
@@ -2022,6 +2028,8 @@ class DeleteDBProxyEndpointAddress extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getGadInstanceName()
  * @method $this withGadInstanceName($value)
  */
@@ -2032,12 +2040,14 @@ class DeleteGadInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getParameterGroupId()
+ * @method $this withParameterGroupId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getParameterGroupId()
- * @method $this withParameterGroupId($value)
  */
 class DeleteParameterGroup extends Rpc
 {
@@ -2074,6 +2084,8 @@ class DeletePostgresExtensions extends Rpc
  * @method $this withClientToken($value)
  * @method string getSecretArn()
  * @method $this withSecretArn($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getDbInstanceId()
@@ -2116,6 +2128,10 @@ class DeleteSlot extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getBackupId()
@@ -2124,8 +2140,6 @@ class DeleteSlot extends Rpc
  * @method $this withOwnerId($value)
  * @method string getOpsServiceVersion()
  * @method $this withOpsServiceVersion($value)
- * @method string getEngine()
- * @method $this withEngine($value)
  */
 class DeleteUserBackupFile extends Rpc
 {
@@ -2140,6 +2154,8 @@ class DeleteUserBackupFile extends Rpc
  * @method $this withStartTime($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getImportId()
  * @method $this withImportId($value)
  * @method string getEngine()
@@ -2186,6 +2202,8 @@ class DescribeAccounts extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
@@ -2550,6 +2568,8 @@ class DescribeCharacterSetName extends Rpc
  * @method $this withClientToken($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getClassCode()
@@ -3032,14 +3052,14 @@ class DescribeDBInstancePerformance extends Rpc
  * @method $this withDbInstanceName($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getAliUid()
  * @method $this withAliUid($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class DescribeDBInstancePromoteActivity extends Rpc
 {
@@ -3308,6 +3328,8 @@ class DescribeDBInstancesAsCsv extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getExpired()
  * @method $this withExpired($value)
  * @method string getPageSize()
@@ -4956,6 +4978,8 @@ class DestroyDBInstance extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getMemberInstanceName()
  * @method $this withMemberInstanceName($value)
  * @method string getGadInstanceName()
@@ -5064,6 +5088,8 @@ class ImportDatabaseBetweenInstances extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getRetention()
  * @method $this withRetention($value)
  * @method string getResourceOwnerAccount()
@@ -5165,6 +5191,8 @@ class ListTagResources extends Rpc
  * @method string getTag2key()
  * @method string getTag3key()
  * @method string getTag1value()
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getTag3value()
@@ -6421,6 +6449,8 @@ class ModifyParameter extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getParameterGroupId()
  * @method $this withParameterGroupId($value)
  * @method string getModifyMode()
@@ -6502,14 +6532,16 @@ class ModifyPGHbaConfig extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getReadSQLReplicationTime()
  * @method $this withReadSQLReplicationTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
  */
 class ModifyReadonlyInstanceDelayReplicationTime extends Rpc
 {
@@ -6918,6 +6950,8 @@ class ReleaseReadWriteSplittingConnection extends Rpc
  * @method $this withClientToken($value)
  * @method string getTag3key()
  * @method string getTag1value()
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getTag3value()
@@ -7400,14 +7434,16 @@ class SwitchDBInstanceVpc extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
  */
 class SwitchGuardToMasterInstance extends Rpc
 {
@@ -7601,6 +7637,8 @@ class UpdatePostgresExtensions extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getRetention()
  * @method $this withRetention($value)
  * @method string getResourceOwnerAccount()
