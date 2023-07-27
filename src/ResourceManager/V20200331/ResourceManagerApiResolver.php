@@ -114,9 +114,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     protected $scheme = 'https';
-
-    /** @var string */
-    public $serviceCode = 'resourcemanager';
 }
 
 /**
@@ -819,6 +816,8 @@ class ListResourceGroups extends Rpc
  * @method $this withPageSize($value)
  * @method string getResourceId()
  * @method $this withResourceId($value)
+ * @method string getResourceTypes()
+ * @method $this withResourceTypes($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
  * @method string getService()

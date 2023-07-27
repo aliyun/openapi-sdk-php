@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1915 - 2023-7-27
+- Generated 2020-03-31 for `ResourceManager`.
+
+
 ## 1.8.1914 - 2023-7-25
 - Add error code.
 - Support System param.
