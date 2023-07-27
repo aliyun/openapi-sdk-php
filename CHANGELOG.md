@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1916 - 2023-7-27
+- Fix bug ram.
+- Add minor version error.
+- Support to select the minor version of the kernel when the modify instance error reports that the kernel version does not support it.
+
+
 ## 1.8.1915 - 2023-7-27
 - Generated 2020-03-31 for `ResourceManager`.
 
