@@ -5,37 +5,37 @@ namespace AlibabaCloud\Dts\V20160801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method DescribeMigrationJobs describeMigrationJobs(array $options = [])
  * @method ConfigurationSynchronizationJob configurationSynchronizationJob(array $options = [])
- * @method ConfigureSubscriptionInstance configureSubscriptionInstance(array $options = [])
  * @method ConfigureMigrationJob configureMigrationJob(array $options = [])
- * @method StartSubscriptionInstance startSubscriptionInstance(array $options = [])
- * @method ModifySubscriptionObject modifySubscriptionObject(array $options = [])
- * @method ModifyConsumptionTimestamp modifyConsumptionTimestamp(array $options = [])
- * @method DescribeSubscriptionObjectModifyStatus describeSubscriptionObjectModifyStatus(array $options = [])
- * @method DescribeSubscriptionInstances describeSubscriptionInstances(array $options = [])
- * @method DeleteSubscriptionInstance deleteSubscriptionInstance(array $options = [])
- * @method CreateSubscriptionInstance createSubscriptionInstance(array $options = [])
- * @method SuspendMigrationJob suspendMigrationJob(array $options = [])
- * @method StopMigrationJob stopMigrationJob(array $options = [])
- * @method StartMigrationJob startMigrationJob(array $options = [])
- * @method ModifyMigrationObject modifyMigrationObject(array $options = [])
- * @method DescribeMigrationJobStatus describeMigrationJobStatus(array $options = [])
- * @method DescribeMigrationJobDetail describeMigrationJobDetail(array $options = [])
- * @method DescirbeMigrationJobs descirbeMigrationJobs(array $options = [])
- * @method DeleteMigrationJob deleteMigrationJob(array $options = [])
- * @method CreateMigrationJob createMigrationJob(array $options = [])
- * @method SuspendSynchronizationJob suspendSynchronizationJob(array $options = [])
- * @method ModifySynchronizationObject modifySynchronizationObject(array $options = [])
- * @method DescribeSynchronizationObjectModifyStatus describeSynchronizationObjectModifyStatus(array $options = [])
- * @method DescribeSynchronizationJobs describeSynchronizationJobs(array $options = [])
- * @method DescribeSubscriptionInstanceStatus describeSubscriptionInstanceStatus(array $options = [])
- * @method DescribeInitializationStatus describeInitializationStatus(array $options = [])
- * @method StartSynchronizationJob startSynchronizationJob(array $options = [])
- * @method DescribeSynchronizationJobStatus describeSynchronizationJobStatus(array $options = [])
- * @method DeleteSynchronizationJob deleteSynchronizationJob(array $options = [])
- * @method CreateSynchronizationJob createSynchronizationJob(array $options = [])
+ * @method ConfigureSubscriptionInstance configureSubscriptionInstance(array $options = [])
  * @method ConfigureSynchronizationJob configureSynchronizationJob(array $options = [])
+ * @method CreateMigrationJob createMigrationJob(array $options = [])
+ * @method CreateSubscriptionInstance createSubscriptionInstance(array $options = [])
+ * @method CreateSynchronizationJob createSynchronizationJob(array $options = [])
+ * @method DeleteMigrationJob deleteMigrationJob(array $options = [])
+ * @method DeleteSubscriptionInstance deleteSubscriptionInstance(array $options = [])
+ * @method DeleteSynchronizationJob deleteSynchronizationJob(array $options = [])
+ * @method DescirbeMigrationJobs descirbeMigrationJobs(array $options = [])
+ * @method DescribeInitializationStatus describeInitializationStatus(array $options = [])
+ * @method DescribeMigrationJobDetail describeMigrationJobDetail(array $options = [])
+ * @method DescribeMigrationJobs describeMigrationJobs(array $options = [])
+ * @method DescribeMigrationJobStatus describeMigrationJobStatus(array $options = [])
+ * @method DescribeSubscriptionInstances describeSubscriptionInstances(array $options = [])
+ * @method DescribeSubscriptionInstanceStatus describeSubscriptionInstanceStatus(array $options = [])
+ * @method DescribeSubscriptionObjectModifyStatus describeSubscriptionObjectModifyStatus(array $options = [])
+ * @method DescribeSynchronizationJobs describeSynchronizationJobs(array $options = [])
+ * @method DescribeSynchronizationJobStatus describeSynchronizationJobStatus(array $options = [])
+ * @method DescribeSynchronizationObjectModifyStatus describeSynchronizationObjectModifyStatus(array $options = [])
+ * @method ModifyConsumptionTimestamp modifyConsumptionTimestamp(array $options = [])
+ * @method ModifyMigrationObject modifyMigrationObject(array $options = [])
+ * @method ModifySubscriptionObject modifySubscriptionObject(array $options = [])
+ * @method ModifySynchronizationObject modifySynchronizationObject(array $options = [])
+ * @method StartMigrationJob startMigrationJob(array $options = [])
+ * @method StartSubscriptionInstance startSubscriptionInstance(array $options = [])
+ * @method StartSynchronizationJob startSynchronizationJob(array $options = [])
+ * @method StopMigrationJob stopMigrationJob(array $options = [])
+ * @method SuspendMigrationJob suspendMigrationJob(array $options = [])
+ * @method SuspendSynchronizationJob suspendSynchronizationJob(array $options = [])
  */
 class DtsApiResolver extends ApiResolver
 {
@@ -51,36 +51,25 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'dts';
 }
 
 /**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getMigrationJobName()
- * @method $this withMigrationJobName($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeMigrationJobs extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobId()
- * @method $this withSynchronizationJobId($value)
  * @method string getSourceEndpointInstanceID()
- * @method string getSynchronizationJobName()
- * @method $this withSynchronizationJobName($value)
  * @method string getDestinationEndpointInstanceID()
  * @method string getInitializationStructureLoad()
- * @method string getInitializationDataLoad()
  * @method string getSynchronizationObject()
  * @method $this withSynchronizationObject($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSourceEndpointInstanceType()
+ * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
+ * @method string getSynchronizationJobName()
+ * @method $this withSynchronizationJobName($value)
+ * @method string getInitializationDataLoad()
  * @method string getDestinationEndpointInstanceType()
  */
 class ConfigurationSynchronizationJob extends Rpc
@@ -130,6 +119,19 @@ class ConfigurationSynchronizationJob extends Rpc
      *
      * @return $this
      */
+    public function withSourceEndpointInstanceType($value)
+    {
+        $this->data['SourceEndpointInstanceType'] = $value;
+        $this->options['query']['SourceEndpoint.InstanceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withInitializationDataLoad($value)
     {
         $this->data['InitializationDataLoad'] = $value;
@@ -143,121 +145,10 @@ class ConfigurationSynchronizationJob extends Rpc
      *
      * @return $this
      */
-    public function withSourceEndpointInstanceType($value)
-    {
-        $this->data['SourceEndpointInstanceType'] = $value;
-        $this->options['query']['SourceEndpoint.InstanceType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withDestinationEndpointInstanceType($value)
     {
         $this->data['DestinationEndpointInstanceType'] = $value;
         $this->options['query']['DestinationEndpoint.InstanceType'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getSourceEndpointInstanceID()
- * @method string getSourceEndpointOwnerID()
- * @method string getSubscriptionDataTypeDML()
- * @method string getSubscriptionObject()
- * @method $this withSubscriptionObject($value)
- * @method string getSubscriptionInstanceName()
- * @method $this withSubscriptionInstanceName($value)
- * @method string getSubscriptionInstanceId()
- * @method $this withSubscriptionInstanceId($value)
- * @method string getSourceEndpointRole()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSourceEndpointInstanceType()
- * @method string getSubscriptionDataTypeDDL()
- */
-class ConfigureSubscriptionInstance extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceEndpointInstanceID($value)
-    {
-        $this->data['SourceEndpointInstanceID'] = $value;
-        $this->options['query']['SourceEndpoint.InstanceID'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceEndpointOwnerID($value)
-    {
-        $this->data['SourceEndpointOwnerID'] = $value;
-        $this->options['query']['SourceEndpoint.OwnerID'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSubscriptionDataTypeDML($value)
-    {
-        $this->data['SubscriptionDataTypeDML'] = $value;
-        $this->options['query']['SubscriptionDataType.DML'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceEndpointRole($value)
-    {
-        $this->data['SourceEndpointRole'] = $value;
-        $this->options['query']['SourceEndpoint.Role'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceEndpointInstanceType($value)
-    {
-        $this->data['SourceEndpointInstanceType'] = $value;
-        $this->options['query']['SourceEndpoint.InstanceType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSubscriptionDataTypeDDL($value)
-    {
-        $this->data['SubscriptionDataTypeDDL'] = $value;
-        $this->options['query']['SubscriptionDataType.DDL'] = $value;
 
         return $this;
     }
@@ -618,171 +509,22 @@ class ConfigureMigrationJob extends Rpc
 }
 
 /**
+ * @method string getSourceEndpointInstanceID()
+ * @method string getSourceEndpointOwnerID()
+ * @method string getSubscriptionDataTypeDML()
  * @method string getSubscriptionInstanceId()
  * @method $this withSubscriptionInstanceId($value)
+ * @method string getSourceEndpointRole()
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- */
-class StartSubscriptionInstance extends Rpc
-{
-}
-
-/**
+ * @method string getSourceEndpointInstanceType()
+ * @method string getSubscriptionDataTypeDDL()
  * @method string getSubscriptionObject()
  * @method $this withSubscriptionObject($value)
- * @method string getSubscriptionInstanceId()
- * @method $this withSubscriptionInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifySubscriptionObject extends Rpc
-{
-}
-
-/**
- * @method string getSubscriptionInstanceId()
- * @method $this withSubscriptionInstanceId($value)
- * @method string getConsumptionTimestamp()
- * @method $this withConsumptionTimestamp($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyConsumptionTimestamp extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getSubscriptionInstanceId()
- * @method $this withSubscriptionInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSubscriptionObjectModifyStatus extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getSubscriptionInstanceName()
  * @method $this withSubscriptionInstanceName($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  */
-class DescribeSubscriptionInstances extends Rpc
-{
-}
-
-/**
- * @method string getSubscriptionInstanceId()
- * @method $this withSubscriptionInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteSubscriptionInstance extends Rpc
-{
-}
-
-/**
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getUsedTime()
- * @method $this withUsedTime($value)
- */
-class CreateSubscriptionInstance extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SuspendMigrationJob extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class StopMigrationJob extends Rpc
-{
-}
-
-/**
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class StartMigrationJob extends Rpc
-{
-}
-
-/**
- * @method string getMigrationObject()
- * @method $this withMigrationObject($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyMigrationObject extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeMigrationJobStatus extends Rpc
-{
-}
-
-/**
- * @method string getMigrationModeDataSynchronization()
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getMigrationModeDataInitialization()
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getMigrationModeStructureInitialization()
- */
-class DescribeMigrationJobDetail extends Rpc
+class ConfigureSubscriptionInstance extends Rpc
 {
 
     /**
@@ -790,10 +532,10 @@ class DescribeMigrationJobDetail extends Rpc
      *
      * @return $this
      */
-    public function withMigrationModeDataSynchronization($value)
+    public function withSourceEndpointInstanceID($value)
     {
-        $this->data['MigrationModeDataSynchronization'] = $value;
-        $this->options['query']['MigrationMode.DataSynchronization'] = $value;
+        $this->data['SourceEndpointInstanceID'] = $value;
+        $this->options['query']['SourceEndpoint.InstanceID'] = $value;
 
         return $this;
     }
@@ -803,10 +545,10 @@ class DescribeMigrationJobDetail extends Rpc
      *
      * @return $this
      */
-    public function withMigrationModeDataInitialization($value)
+    public function withSourceEndpointOwnerID($value)
     {
-        $this->data['MigrationModeDataInitialization'] = $value;
-        $this->options['query']['MigrationMode.DataInitialization'] = $value;
+        $this->data['SourceEndpointOwnerID'] = $value;
+        $this->options['query']['SourceEndpoint.OwnerID'] = $value;
 
         return $this;
     }
@@ -816,192 +558,23 @@ class DescribeMigrationJobDetail extends Rpc
      *
      * @return $this
      */
-    public function withMigrationModeStructureInitialization($value)
+    public function withSubscriptionDataTypeDML($value)
     {
-        $this->data['MigrationModeStructureInitialization'] = $value;
-        $this->options['query']['MigrationMode.StructureInitialization'] = $value;
+        $this->data['SubscriptionDataTypeDML'] = $value;
+        $this->options['query']['SubscriptionDataType.DML'] = $value;
 
         return $this;
     }
-}
-
-/**
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getMigrationJobName()
- * @method $this withMigrationJobName($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescirbeMigrationJobs extends Rpc
-{
-}
-
-/**
- * @method string getMigrationJobId()
- * @method $this withMigrationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteMigrationJob extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getRegion()
- * @method $this withRegion($value)
- * @method string getMigrationJobClass()
- * @method $this withMigrationJobClass($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateMigrationJob extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobId()
- * @method $this withSynchronizationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SuspendSynchronizationJob extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobId()
- * @method $this withSynchronizationJobId($value)
- * @method string getSynchronizationObjects()
- * @method $this withSynchronizationObjects($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifySynchronizationObject extends Rpc
-{
-}
-
-/**
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- */
-class DescribeSynchronizationObjectModifyStatus extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobName()
- * @method $this withSynchronizationJobName($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSynchronizationJobs extends Rpc
-{
-}
-
-/**
- * @method string getSubscriptionInstanceId()
- * @method $this withSubscriptionInstanceId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSubscriptionInstanceStatus extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobId()
- * @method $this withSynchronizationJobId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeInitializationStatus extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobId()
- * @method $this withSynchronizationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class StartSynchronizationJob extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobId()
- * @method $this withSynchronizationJobId($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeSynchronizationJobStatus extends Rpc
-{
-}
-
-/**
- * @method string getSynchronizationJobId()
- * @method $this withSynchronizationJobId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteSynchronizationJob extends Rpc
-{
-}
-
-/**
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getDestRegion()
- * @method $this withDestRegion($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getSynchronizationJobClass()
- * @method $this withSynchronizationJobClass($value)
- * @method string getNetworkType()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSourceRegion()
- * @method $this withSourceRegion($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getUsedTime()
- * @method $this withUsedTime($value)
- * @method string getSourceEndpointInstanceType()
- * @method string getDestinationEndpointInstanceType()
- */
-class CreateSynchronizationJob extends Rpc
-{
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withNetworkType($value)
+    public function withSourceEndpointRole($value)
     {
-        $this->data['NetworkType'] = $value;
-        $this->options['query']['networkType'] = $value;
+        $this->data['SourceEndpointRole'] = $value;
+        $this->options['query']['SourceEndpoint.Role'] = $value;
 
         return $this;
     }
@@ -1024,10 +597,10 @@ class CreateSynchronizationJob extends Rpc
      *
      * @return $this
      */
-    public function withDestinationEndpointInstanceType($value)
+    public function withSubscriptionDataTypeDDL($value)
     {
-        $this->data['DestinationEndpointInstanceType'] = $value;
-        $this->options['query']['DestinationEndpoint.InstanceType'] = $value;
+        $this->data['SubscriptionDataTypeDDL'] = $value;
+        $this->options['query']['SubscriptionDataType.DDL'] = $value;
 
         return $this;
     }
@@ -1319,4 +892,434 @@ class ConfigureSynchronizationJob extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getMigrationJobClass()
+ * @method $this withMigrationJobClass($value)
+ */
+class CreateMigrationJob extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ */
+class CreateSubscriptionInstance extends Rpc
+{
+}
+
+/**
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getDestRegion()
+ * @method $this withDestRegion($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getNetworkType()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getUsedTime()
+ * @method $this withUsedTime($value)
+ * @method string getSourceEndpointInstanceType()
+ * @method string getSynchronizationJobClass()
+ * @method $this withSynchronizationJobClass($value)
+ * @method string getSourceRegion()
+ * @method $this withSourceRegion($value)
+ * @method string getPayType()
+ * @method $this withPayType($value)
+ * @method string getDestinationEndpointInstanceType()
+ */
+class CreateSynchronizationJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNetworkType($value)
+    {
+        $this->data['NetworkType'] = $value;
+        $this->options['query']['networkType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceEndpointInstanceType($value)
+    {
+        $this->data['SourceEndpointInstanceType'] = $value;
+        $this->options['query']['SourceEndpoint.InstanceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDestinationEndpointInstanceType($value)
+    {
+        $this->data['DestinationEndpointInstanceType'] = $value;
+        $this->options['query']['DestinationEndpoint.InstanceType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteMigrationJob extends Rpc
+{
+}
+
+/**
+ * @method string getSubscriptionInstanceId()
+ * @method $this withSubscriptionInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteSubscriptionInstance extends Rpc
+{
+}
+
+/**
+ * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteSynchronizationJob extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMigrationJobName()
+ * @method $this withMigrationJobName($value)
+ */
+class DescirbeMigrationJobs extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeInitializationStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getMigrationModeDataInitialization()
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMigrationModeStructureInitialization()
+ * @method string getMigrationModeDataSynchronization()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeMigrationJobDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMigrationModeDataInitialization($value)
+    {
+        $this->data['MigrationModeDataInitialization'] = $value;
+        $this->options['query']['MigrationMode.DataInitialization'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMigrationModeStructureInitialization($value)
+    {
+        $this->data['MigrationModeStructureInitialization'] = $value;
+        $this->options['query']['MigrationMode.StructureInitialization'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMigrationModeDataSynchronization($value)
+    {
+        $this->data['MigrationModeDataSynchronization'] = $value;
+        $this->options['query']['MigrationMode.DataSynchronization'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMigrationJobName()
+ * @method $this withMigrationJobName($value)
+ */
+class DescribeMigrationJobs extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeMigrationJobStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSubscriptionInstanceName()
+ * @method $this withSubscriptionInstanceName($value)
+ */
+class DescribeSubscriptionInstances extends Rpc
+{
+}
+
+/**
+ * @method string getSubscriptionInstanceId()
+ * @method $this withSubscriptionInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeSubscriptionInstanceStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getSubscriptionInstanceId()
+ * @method $this withSubscriptionInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeSubscriptionObjectModifyStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSynchronizationJobName()
+ * @method $this withSynchronizationJobName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeSynchronizationJobs extends Rpc
+{
+}
+
+/**
+ * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeSynchronizationJobStatus extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DescribeSynchronizationObjectModifyStatus extends Rpc
+{
+}
+
+/**
+ * @method string getSubscriptionInstanceId()
+ * @method $this withSubscriptionInstanceId($value)
+ * @method string getConsumptionTimestamp()
+ * @method $this withConsumptionTimestamp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyConsumptionTimestamp extends Rpc
+{
+}
+
+/**
+ * @method string getMigrationObject()
+ * @method $this withMigrationObject($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyMigrationObject extends Rpc
+{
+}
+
+/**
+ * @method string getSubscriptionObject()
+ * @method $this withSubscriptionObject($value)
+ * @method string getSubscriptionInstanceId()
+ * @method $this withSubscriptionInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifySubscriptionObject extends Rpc
+{
+}
+
+/**
+ * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
+ * @method string getSynchronizationObjects()
+ * @method $this withSynchronizationObjects($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifySynchronizationObject extends Rpc
+{
+}
+
+/**
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartMigrationJob extends Rpc
+{
+}
+
+/**
+ * @method string getSubscriptionInstanceId()
+ * @method $this withSubscriptionInstanceId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartSubscriptionInstance extends Rpc
+{
+}
+
+/**
+ * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StartSynchronizationJob extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StopMigrationJob extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getMigrationJobId()
+ * @method $this withMigrationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SuspendMigrationJob extends Rpc
+{
+}
+
+/**
+ * @method string getSynchronizationJobId()
+ * @method $this withSynchronizationJobId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class SuspendSynchronizationJob extends Rpc
+{
 }
