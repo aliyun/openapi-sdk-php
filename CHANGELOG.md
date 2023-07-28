@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## 1.8.1920 - 2023-7-28
+- Add ErrorCode.
+- Support DescribeResubmitConfig and ModifyResubmitConfig.
+- Support DescribeSQAConfig and ModifySQAConfig.
+- Set default value.
+- Support Api TagList.
+- Modify parameters and response for ResubmitConfig API.
+- Update CancelActiveOperationTasks.
+- DescribeActiveOperationTasks Response add field TaskParams.
+- Add patameters for DescribeVswitches and DescribeVpcs.
+- Add regionId.
+
+
 ## 1.8.1919 - 2023-7-28
 - PatchBaseline Support Tags.
 
