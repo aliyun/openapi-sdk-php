@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1919 - 2023-7-28
+- PatchBaseline Support Tags.
+
+
 ## 1.8.1918 - 2023-7-28
 - Update SDK version.
 
