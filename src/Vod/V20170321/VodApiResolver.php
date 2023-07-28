@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddAITemplate addAITemplate(array $options = [])
  * @method AddCategory addCategory(array $options = [])
  * @method AddEditingProject addEditingProject(array $options = [])
+ * @method AddEditingProjectMaterials addEditingProjectMaterials(array $options = [])
  * @method AddTranscodeTemplateGroup addTranscodeTemplateGroup(array $options = [])
  * @method AddVodDomain addVodDomain(array $options = [])
  * @method AddVodTemplate addVodTemplate(array $options = [])
@@ -30,6 +31,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCategory deleteCategory(array $options = [])
  * @method DeleteDynamicImage deleteDynamicImage(array $options = [])
  * @method DeleteEditingProject deleteEditingProject(array $options = [])
+ * @method DeleteEditingProjectMaterials deleteEditingProjectMaterials(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
  * @method DeleteMessageCallback deleteMessageCallback(array $options = [])
  * @method DeleteMezzanines deleteMezzanines(array $options = [])
@@ -223,6 +225,26 @@ class AddCategory extends Rpc
  * @method $this withTimeline($value)
  */
 class AddEditingProject extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMaterialType()
+ * @method $this withMaterialType($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaterialIds()
+ * @method $this withMaterialIds($value)
+ */
+class AddEditingProjectMaterials extends Rpc
 {
 }
 
@@ -563,6 +585,26 @@ class DeleteEditingProject extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getMaterialType()
+ * @method $this withMaterialType($value)
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMaterialIds()
+ * @method $this withMaterialIds($value)
+ */
+class DeleteEditingProjectMaterials extends Rpc
+{
+}
+
+/**
  * @method string getImageURLs()
  * @method $this withImageURLs($value)
  * @method string getImageType()
@@ -663,6 +705,8 @@ class DeleteVodDomain extends Rpc
  * @method $this withDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getEnv()
+ * @method $this withEnv($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getConfigId()
@@ -2361,6 +2405,8 @@ class UpdateWatermark extends Rpc
 /**
  * @method string getMessageCallback()
  * @method $this withMessageCallback($value)
+ * @method string getSessionId()
+ * @method $this withSessionId($value)
  * @method string getStorageLocation()
  * @method $this withStorageLocation($value)
  * @method string getUserData()

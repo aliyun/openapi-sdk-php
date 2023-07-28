@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1921 - 2023-7-28
+- Latest version for php.
+
+
 ## 1.8.1920 - 2023-7-28
 - Add ErrorCode.
 - Support DescribeResubmitConfig and ModifyResubmitConfig.
