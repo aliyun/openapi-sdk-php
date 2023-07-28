@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1918 - 2023-7-28
+- Update SDK version.
+
+
 ## 1.8.1917 - 2023-7-28
 - Update SDK version.
 
