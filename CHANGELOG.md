@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1923 - 2023-7-29
+- Fix bug ram.
+- Add minor version error.
+- Support to select the minor version of the kernel when the modify instance error reports that the kernel version does not support it.
+
+
 ## 1.8.1922 - 2023-7-28
 - Fix bug ram.
 - Add minor version error.
