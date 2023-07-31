@@ -7,6 +7,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CancelVideoTask cancelVideoTask(array $options = [])
  * @method CloseTimedResetOperate closeTimedResetOperate(array $options = [])
+ * @method Create2dAvatar create2dAvatar(array $options = [])
+ * @method DeleteAvatar deleteAvatar(array $options = [])
  * @method DuplexDecision duplexDecision(array $options = [])
  * @method GetVideoTaskInfo getVideoTaskInfo(array $options = [])
  * @method LicenseAuth licenseAuth(array $options = [])
@@ -25,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitAudioTo3DAvatarVideoTask submitAudioTo3DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo2DAvatarVideoTask submitTextTo2DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo3DAvatarVideoTask submitTextTo3DAvatarVideoTask(array $options = [])
+ * @method Update2dAvatar update2dAvatar(array $options = [])
  */
 class AvatarApiResolver extends ApiResolver
 {
@@ -62,6 +65,88 @@ class CancelVideoTask extends Rpc
  */
 class CloseTimedResetOperate extends Rpc
 {
+}
+
+/**
+ * @method string getImage()
+ * @method $this withImage($value)
+ * @method string getOrientation()
+ * @method $this withOrientation($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getVideo()
+ * @method $this withVideo($value)
+ * @method string getPortrait()
+ * @method $this withPortrait($value)
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
+ * @method string getTransparent()
+ * @method $this withTransparent($value)
+ * @method string getCallbackParams()
+ * @method $this withCallbackParams($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getExtParamsCLS()
+ * @method string getCallback()
+ * @method $this withCallback($value)
+ * @method string getCallbackParamsCLS()
+ */
+class Create2dAvatar extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackParamsCLS($value)
+    {
+        $this->data['CallbackParamsCLS'] = $value;
+        $this->options['query']['CallbackParams_CLS'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getExtParamsCLS()
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
+ */
+class DeleteAvatar extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -122,12 +207,25 @@ class LicenseAuth extends Rpc
  * @method $this withCode($value)
  * @method string getTenantId()
  * @method $this withTenantId($value)
+ * @method string getExtParamsCLS()
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
  */
 class QueryAvatar extends Rpc
 {
 
-    /** @var string */
-    public $method = 'GET';
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -139,9 +237,25 @@ class QueryAvatar extends Rpc
  * @method $this withTenantId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getExtParamsCLS()
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
  */
 class QueryAvatarList extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -453,6 +567,64 @@ class SubmitTextTo2DAvatarVideoTask extends Rpc
  * @method string getCallbackParamsCLS()
  */
 class SubmitTextTo3DAvatarVideoTask extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackParamsCLS($value)
+    {
+        $this->data['CallbackParamsCLS'] = $value;
+        $this->options['query']['CallbackParams_CLS'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getImage()
+ * @method $this withImage($value)
+ * @method string getOrientation()
+ * @method $this withOrientation($value)
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getVideo()
+ * @method $this withVideo($value)
+ * @method string getPortrait()
+ * @method $this withPortrait($value)
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
+ * @method string getTransparent()
+ * @method $this withTransparent($value)
+ * @method string getCallbackParams()
+ * @method $this withCallbackParams($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getExtParamsCLS()
+ * @method string getCallback()
+ * @method $this withCallback($value)
+ * @method string getCallbackParamsCLS()
+ */
+class Update2dAvatar extends Rpc
 {
 
     /**
