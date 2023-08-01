@@ -122,6 +122,7 @@ namespace AlibabaCloud;
  * @method static Geoip\Geoip geoip()
  * @method static Goodstech\Goodstech goodstech()
  * @method static Gpdb\Gpdb gpdb()
+ * @method static Grace\Grace grace()
  * @method static Green\Green green()
  * @method static HBase\HBase hBase()
  * @method static HPC\HPC hPC()
