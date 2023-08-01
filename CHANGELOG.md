@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1930 - 2023-8-1
+- CreateLaunchTemplate, CreateLaunchTemplateVersion, DescribeLaunchTemplateVersions support DeletionProtection.
+
+
 ## 1.8.1929 - 2023-8-1
 - Initialize SDK.
 
