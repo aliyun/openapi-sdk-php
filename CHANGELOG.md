@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 1.8.1927 - 2023-8-1
+- Support resourcegroup id.
+- Support resourceGroup id.
+- Support resource group.
+- Support resrouce group.
+- Support resource group id.
+- Support region id.
+- Support RegionId Ram Auth.
+- Support resrouce group id.
+
+
 ## 1.8.1926 - 2023-7-31
 - Fix bug ram.
 - Add minor version error.

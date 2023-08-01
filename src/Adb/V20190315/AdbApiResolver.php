@@ -2146,6 +2146,8 @@ class ModifyElasticPlan extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getEnableBackupLog()
  * @method $this withEnableBackupLog($value)
  * @method string getResourceOwnerAccount()
