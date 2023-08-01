@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1932 - 2023-8-1
+- Update by SDK platform.
+
+
 ## 1.8.1931 - 2023-8-1
 - Support resoruce group id.
 - Support resource group id.
