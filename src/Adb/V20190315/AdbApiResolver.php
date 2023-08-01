@@ -2170,6 +2170,8 @@ class ModifyLogBackupPolicy extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSwitchTime()
  * @method $this withSwitchTime($value)
  * @method string getResourceOwnerAccount()

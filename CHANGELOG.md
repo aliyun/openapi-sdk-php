@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1931 - 2023-8-1
+- Support resoruce group id.
+- Support resource group id.
+
+
 ## 1.8.1930 - 2023-8-1
 - CreateLaunchTemplate, CreateLaunchTemplateVersion, DescribeLaunchTemplateVersions support DeletionProtection.
 
