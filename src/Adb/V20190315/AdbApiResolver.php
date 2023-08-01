@@ -1117,6 +1117,8 @@ class DescribeDownloadRecords extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()

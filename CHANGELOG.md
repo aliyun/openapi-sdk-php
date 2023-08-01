@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1928 - 2023-8-1
+- Support resource group id.
+
+
 ## 1.8.1927 - 2023-8-1
 - Support resourcegroup id.
 - Support resourceGroup id.
