@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1935 - 2023-8-2
+-Fix return message field type
+-Support subtitleEmbeded
+-Support mp4 alphaUrl
+
+
 ## 1.8.1934 - 2023-8-2
 - Add Cloud Disk Encryption.
 
