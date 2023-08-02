@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1937 - 2023-8-2
+- Fixed bug.
+
+
 ## 1.8.1936 - 2023-8-2
 - Support tag policy.
 
