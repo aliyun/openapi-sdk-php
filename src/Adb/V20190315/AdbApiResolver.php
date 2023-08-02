@@ -260,6 +260,7 @@ class CreateAccount extends Rpc
  * @method $this withMode($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method array getTag()
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getBackupSetID()
@@ -311,6 +312,26 @@ class CreateAccount extends Rpc
  */
 class CreateDBCluster extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**

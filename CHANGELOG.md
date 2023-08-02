@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1936 - 2023-8-2
+- Support tag policy.
+
+
 ## 1.8.1935 - 2023-8-2
 -Fix return message field type
 -Support subtitleEmbeded
