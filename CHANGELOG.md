@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1933 - 2023-8-2
+-Fix return message field type
+-Support subtitleEmbeded
+-Support mp4 alphaUrl
+
+
 ## 1.8.1932 - 2023-8-1
 - Update by SDK platform.
 
