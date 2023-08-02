@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1934 - 2023-8-2
+- Add Cloud Disk Encryption.
+
+
 ## 1.8.1933 - 2023-8-2
 -Fix return message field type
 -Support subtitleEmbeded
