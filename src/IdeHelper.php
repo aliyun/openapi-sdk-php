@@ -207,6 +207,7 @@ namespace AlibabaCloud;
  * @method static ROS\ROS rOS()
  * @method static Ram\Ram ram()
  * @method static Rds\Rds rds()
+ * @method static RdsData\RdsData rdsData()
  * @method static Reid\Reid reid()
  * @method static ReidCloud\ReidCloud reidCloud()
  * @method static ResourceCenter\ResourceCenter resourceCenter()

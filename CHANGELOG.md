@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1939 - 2023-8-3
+- Automatically generate sdk tasks.
+
+
 ## 1.8.1938 - 2023-8-3
 - Support region id.
 
