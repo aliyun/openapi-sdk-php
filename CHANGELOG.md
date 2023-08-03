@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1938 - 2023-8-3
+- Support region id.
+
+
 ## 1.8.1937 - 2023-8-2
 - Fixed bug.
 
