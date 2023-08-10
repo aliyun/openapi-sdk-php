@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1942 - 2023-8-10
+- Update MergeVideoModelFace and MergeVideoFace.
+
+
 ## 1.8.1941 - 2023-8-9
 - 发布资源清单下载、高级搜索、合规趋势统计等API.
 

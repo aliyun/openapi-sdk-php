@@ -1214,6 +1214,7 @@ class InterpolateVideoFrame extends Rpc
  * @method string getPostURL()
  * @method string getAsync()
  * @method string getVideoURL()
+ * @method string getAddWatermark()
  */
 class MergeVideoFace extends Rpc
 {
@@ -1269,6 +1270,19 @@ class MergeVideoFace extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAddWatermark($value)
+    {
+        $this->data['AddWatermark'] = $value;
+        $this->options['form_params']['AddWatermark'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1277,6 +1291,7 @@ class MergeVideoFace extends Rpc
  * @method string getUserId()
  * @method string getTemplateId()
  * @method string getAsync()
+ * @method string getAddWatermark()
  */
 class MergeVideoModelFace extends Rpc
 {
@@ -1352,6 +1367,19 @@ class MergeVideoModelFace extends Rpc
     {
         $this->data['Async'] = $value;
         $this->options['form_params']['Async'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAddWatermark($value)
+    {
+        $this->data['AddWatermark'] = $value;
+        $this->options['form_params']['AddWatermark'] = $value;
 
         return $this;
     }
