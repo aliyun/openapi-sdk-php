@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1943 - 2023-8-10
+- UpdateHubClusterFeature support ArgoCDHAEnabled.
+
+
 ## 1.8.1942 - 2023-8-10
 - Update MergeVideoModelFace and MergeVideoFace.
 
