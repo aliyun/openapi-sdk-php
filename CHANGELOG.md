@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1946 - 2023-8-15
+- Update endpoints.
+
+
 ## 1.8.1945 - 2023-8-10
 - Generated 2021-01-01 for `Ft`.
 
