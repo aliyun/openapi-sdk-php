@@ -70,6 +70,7 @@ namespace AlibabaCloud;
  * @method static Config\Config config()
  * @method static Cr\Cr cr()
  * @method static Crm\Crm crm()
+ * @method static Csas\Csas csas()
  * @method static CusanalyticScOnline\CusanalyticScOnline cusanalyticScOnline()
  * @method static DBFS\DBFS dBFS()
  * @method static DataworksPublic\DataworksPublic dataworksPublic()

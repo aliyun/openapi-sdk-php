@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1947 - 2023-8-16
+- Supported dynamicRoute.
+
+
 ## 1.8.1946 - 2023-8-15
 - Update endpoints.
 
