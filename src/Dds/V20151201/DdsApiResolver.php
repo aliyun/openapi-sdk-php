@@ -24,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAuditLogFilter describeAuditLogFilter(array $options = [])
  * @method DescribeAuditPolicy describeAuditPolicy(array $options = [])
  * @method DescribeAuditRecords describeAuditRecords(array $options = [])
+ * @method DescribeAvailabilityZones describeAvailabilityZones(array $options = [])
  * @method DescribeAvailableEngineVersion describeAvailableEngineVersion(array $options = [])
  * @method DescribeAvailableResource describeAvailableResource(array $options = [])
  * @method DescribeBackupDBs describeBackupDBs(array $options = [])
@@ -780,6 +781,44 @@ class DescribeAuditPolicy extends Rpc
  * @method $this withOrderType($value)
  */
 class DescribeAuditRecords extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getExcludeZoneId()
+ * @method $this withExcludeZoneId($value)
+ * @method string getExcludeSecondaryZoneId()
+ * @method $this withExcludeSecondaryZoneId($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getMongoType()
+ * @method $this withMongoType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStorageSupport()
+ * @method $this withStorageSupport($value)
+ * @method string getDbType()
+ * @method $this withDbType($value)
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class DescribeAvailabilityZones extends Rpc
 {
 }
 

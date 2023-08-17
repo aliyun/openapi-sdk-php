@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1949 - 2023-8-17
+- Update by SDK platform.
+
+
 ## 1.8.1948 - 2023-8-17
 - Supported CommandLine for StartTerminalSession.
 
