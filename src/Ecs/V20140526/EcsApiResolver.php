@@ -1255,6 +1255,8 @@ class CopyImage extends Rpc
  * @method $this withRetentionDays($value)
  * @method string getKMSKeyId()
  * @method $this withKMSKeyId($value)
+ * @method string getDestinationStorageLocationArn()
+ * @method $this withDestinationStorageLocationArn($value)
  */
 class CopySnapshot extends Rpc
 {
@@ -15455,6 +15457,10 @@ class StartInstances extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCommandLine()
+ * @method $this withCommandLine($value)
+ * @method string getTargetServer()
+ * @method $this withTargetServer($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()

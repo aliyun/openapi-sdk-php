@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1948 - 2023-8-17
+- Supported CommandLine for StartTerminalSession.
+
+
 ## 1.8.1947 - 2023-8-16
 - Supported dynamicRoute.
 
