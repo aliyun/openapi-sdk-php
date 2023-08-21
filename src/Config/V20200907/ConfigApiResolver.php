@@ -34,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteConfigDeliveryChannel deleteConfigDeliveryChannel(array $options = [])
  * @method DeleteConfigRules deleteConfigRules(array $options = [])
  * @method DeleteRemediations deleteRemediations(array $options = [])
+ * @method DescribeRemediation describeRemediation(array $options = [])
  * @method DetachAggregateConfigRuleToCompliancePack detachAggregateConfigRuleToCompliancePack(array $options = [])
  * @method DetachConfigRuleToCompliancePack detachConfigRuleToCompliancePack(array $options = [])
  * @method EvaluatePreConfigRules evaluatePreConfigRules(array $options = [])
@@ -488,6 +489,7 @@ class CreateAggregateConfigDeliveryChannel extends Rpc
  * @method string getMaximumExecutionFrequency()
  * @method string getFolderIdsScope()
  * @method string getExcludeResourceIdsScope()
+ * @method string getConditions()
  */
 class CreateAggregateConfigRule extends Rpc
 {
@@ -748,6 +750,19 @@ class CreateAggregateConfigRule extends Rpc
     {
         $this->data['ExcludeResourceIdsScope'] = $value;
         $this->options['form_params']['ExcludeResourceIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConditions($value)
+    {
+        $this->data['Conditions'] = $value;
+        $this->options['form_params']['Conditions'] = $value;
 
         return $this;
     }
@@ -1166,6 +1181,7 @@ class CreateConfigDeliveryChannel extends Rpc
  * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
  * @method string getExcludeResourceIdsScope()
+ * @method string getConditions()
  */
 class CreateConfigRule extends Rpc
 {
@@ -1374,6 +1390,19 @@ class CreateConfigRule extends Rpc
     {
         $this->data['ExcludeResourceIdsScope'] = $value;
         $this->options['form_params']['ExcludeResourceIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConditions($value)
+    {
+        $this->data['Conditions'] = $value;
+        $this->options['form_params']['Conditions'] = $value;
 
         return $this;
     }
@@ -1896,6 +1925,19 @@ class DeleteRemediations extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getConfigRuleId()
+ * @method $this withConfigRuleId($value)
+ * @method string getRemediationId()
+ * @method $this withRemediationId($value)
+ */
+class DescribeRemediation extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -3957,6 +3999,7 @@ class UpdateAggregateConfigDeliveryChannel extends Rpc
  * @method string getMaximumExecutionFrequency()
  * @method string getFolderIdsScope()
  * @method string getExcludeResourceIdsScope()
+ * @method string getConditions()
  */
 class UpdateAggregateConfigRule extends Rpc
 {
@@ -4204,6 +4247,19 @@ class UpdateAggregateConfigRule extends Rpc
     {
         $this->data['ExcludeResourceIdsScope'] = $value;
         $this->options['form_params']['ExcludeResourceIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConditions($value)
+    {
+        $this->data['Conditions'] = $value;
+        $this->options['form_params']['Conditions'] = $value;
 
         return $this;
     }
@@ -4595,6 +4651,7 @@ class UpdateConfigDeliveryChannel extends Rpc
  * @method string getTagKeyLogicScope()
  * @method string getMaximumExecutionFrequency()
  * @method string getExcludeResourceIdsScope()
+ * @method string getConditions()
  */
 class UpdateConfigRule extends Rpc
 {
@@ -4790,6 +4847,19 @@ class UpdateConfigRule extends Rpc
     {
         $this->data['ExcludeResourceIdsScope'] = $value;
         $this->options['form_params']['ExcludeResourceIdsScope'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConditions($value)
+    {
+        $this->data['Conditions'] = $value;
+        $this->options['form_params']['Conditions'] = $value;
 
         return $this;
     }
