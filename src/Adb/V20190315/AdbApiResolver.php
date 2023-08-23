@@ -84,6 +84,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
  * @method KillProcess killProcess(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
+ * @method MigrateDBCluster migrateDBCluster(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyAuditLogConfig modifyAuditLogConfig(array $options = [])
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
@@ -771,6 +772,8 @@ class DescribeColumns extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getDBClusterVersion()
@@ -779,6 +782,8 @@ class DescribeColumns extends Rpc
  * @method $this withOwnerId($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
+ * @method string getMigrate()
+ * @method $this withMigrate($value)
  */
 class DescribeComputeResource extends Rpc
 {
@@ -1842,6 +1847,22 @@ class ListTagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class MigrateDBCluster extends Rpc
+{
 }
 
 /**
