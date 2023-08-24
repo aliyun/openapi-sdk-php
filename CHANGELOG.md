@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1953 - 2023-8-24
+- Supported recommand serialization format flat.
+
+
 ## 1.8.1952 - 2023-8-23
 - Support DryRunCluster For LakeVersion.
 
