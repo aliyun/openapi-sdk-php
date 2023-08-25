@@ -7,8 +7,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method CreateDatabase createDatabase(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
+ * @method CreateLabel createLabel(array $options = [])
+ * @method CreateMySqlDataSource createMySqlDataSource(array $options = [])
+ * @method CreateOceanBaseDataSource createOceanBaseDataSource(array $options = [])
  * @method CreateOmsMysqlDataSource createOmsMysqlDataSource(array $options = [])
  * @method CreateOmsOpenAPIProject createOmsOpenAPIProject(array $options = [])
+ * @method CreateProject createProject(array $options = [])
  * @method CreateSecurityIpGroup createSecurityIpGroup(array $options = [])
  * @method CreateTenant createTenant(array $options = [])
  * @method CreateTenantReadOnlyConnection createTenantReadOnlyConnection(array $options = [])
@@ -17,6 +21,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDatabases deleteDatabases(array $options = [])
  * @method DeleteInstances deleteInstances(array $options = [])
  * @method DeleteOmsOpenAPIProject deleteOmsOpenAPIProject(array $options = [])
+ * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSecurityIpGroup deleteSecurityIpGroup(array $options = [])
  * @method DeleteTenants deleteTenants(array $options = [])
  * @method DeleteTenantSecurityIpGroup deleteTenantSecurityIpGroup(array $options = [])
@@ -45,6 +50,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeOutlineBinding describeOutlineBinding(array $options = [])
  * @method DescribeParameters describeParameters(array $options = [])
  * @method DescribeParametersHistory describeParametersHistory(array $options = [])
+ * @method DescribeProject describeProject(array $options = [])
+ * @method DescribeProjectComponents describeProjectComponents(array $options = [])
+ * @method DescribeProjectProgress describeProjectProgress(array $options = [])
+ * @method DescribeProjectStepMetric describeProjectStepMetric(array $options = [])
+ * @method DescribeProjectSteps describeProjectSteps(array $options = [])
  * @method DescribeRecommendIndex describeRecommendIndex(array $options = [])
  * @method DescribeSecurityIpGroups describeSecurityIpGroups(array $options = [])
  * @method DescribeSlowSQLHistoryList describeSlowSQLHistoryList(array $options = [])
@@ -65,7 +75,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTimeZones describeTimeZones(array $options = [])
  * @method DescribeTopSQLList describeTopSQLList(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
+ * @method GetUploadOssUrl getUploadOssUrl(array $options = [])
  * @method KillProcessList killProcessList(array $options = [])
+ * @method ListAllLabels listAllLabels(array $options = [])
+ * @method ListDataSource listDataSource(array $options = [])
+ * @method ListProjectFullVerifyResult listProjectFullVerifyResult(array $options = [])
+ * @method ListProjects listProjects(array $options = [])
+ * @method ListWorkerInstances listWorkerInstances(array $options = [])
  * @method ModifyDatabaseDescription modifyDatabaseDescription(array $options = [])
  * @method ModifyDatabaseUserRoles modifyDatabaseUserRoles(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
@@ -83,12 +99,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyTenantUserRoles modifyTenantUserRoles(array $options = [])
  * @method ModifyTenantUserStatus modifyTenantUserStatus(array $options = [])
  * @method ReleaseOmsOpenAPIProject releaseOmsOpenAPIProject(array $options = [])
+ * @method ReleaseProject releaseProject(array $options = [])
  * @method ResetOmsOpenAPIProject resetOmsOpenAPIProject(array $options = [])
  * @method ResumeOmsOpenAPIProject resumeOmsOpenAPIProject(array $options = [])
+ * @method ResumeProject resumeProject(array $options = [])
  * @method SearchOmsOpenAPIMonitorMetric searchOmsOpenAPIMonitorMetric(array $options = [])
  * @method SearchOmsOpenAPIProjects searchOmsOpenAPIProjects(array $options = [])
  * @method StartOmsOpenAPIProject startOmsOpenAPIProject(array $options = [])
+ * @method StartProject startProject(array $options = [])
+ * @method StartProjectsByLabel startProjectsByLabel(array $options = [])
  * @method StopOmsOpenAPIProject stopOmsOpenAPIProject(array $options = [])
+ * @method StopProject stopProject(array $options = [])
+ * @method StopProjectsByLabel stopProjectsByLabel(array $options = [])
  * @method SwitchoverInstance switchoverInstance(array $options = [])
  */
 class OceanBaseProApiResolver extends ApiResolver
@@ -405,6 +427,416 @@ class CreateInstance extends Rpc
 }
 
 /**
+ * @method string getName()
+ */
+class CreateLabel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSchema()
+ * @method string getDescription()
+ * @method string getType()
+ * @method string getPassword()
+ * @method string getDgInstanceId()
+ * @method string getIp()
+ * @method string getInstanceId()
+ * @method string getPort()
+ * @method string getVpcId()
+ * @method string getName()
+ * @method string getUserName()
+ */
+class CreateMySqlDataSource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchema($value)
+    {
+        $this->data['Schema'] = $value;
+        $this->options['form_params']['Schema'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPassword($value)
+    {
+        $this->data['Password'] = $value;
+        $this->options['form_params']['Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDgInstanceId($value)
+    {
+        $this->data['DgInstanceId'] = $value;
+        $this->options['form_params']['DgInstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['form_params']['Ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPort($value)
+    {
+        $this->data['Port'] = $value;
+        $this->options['form_params']['Port'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcId($value)
+    {
+        $this->data['VpcId'] = $value;
+        $this->options['form_params']['VpcId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserName($value)
+    {
+        $this->data['UserName'] = $value;
+        $this->options['form_params']['UserName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCluster()
+ * @method string getDrcUserName()
+ * @method string getLogProxyIp()
+ * @method string getDescription()
+ * @method string getType()
+ * @method string getPassword()
+ * @method string getInnerDrcPassword()
+ * @method string getTenant()
+ * @method string getConfigUrl()
+ * @method string getIp()
+ * @method string getPort()
+ * @method string getVpcId()
+ * @method string getName()
+ * @method string getDrcPassword()
+ * @method string getLogProxyPort()
+ * @method string getUserName()
+ */
+class CreateOceanBaseDataSource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCluster($value)
+    {
+        $this->data['Cluster'] = $value;
+        $this->options['form_params']['Cluster'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDrcUserName($value)
+    {
+        $this->data['DrcUserName'] = $value;
+        $this->options['form_params']['DrcUserName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogProxyIp($value)
+    {
+        $this->data['LogProxyIp'] = $value;
+        $this->options['form_params']['LogProxyIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPassword($value)
+    {
+        $this->data['Password'] = $value;
+        $this->options['form_params']['Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInnerDrcPassword($value)
+    {
+        $this->data['InnerDrcPassword'] = $value;
+        $this->options['form_params']['InnerDrcPassword'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenant($value)
+    {
+        $this->data['Tenant'] = $value;
+        $this->options['form_params']['Tenant'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConfigUrl($value)
+    {
+        $this->data['ConfigUrl'] = $value;
+        $this->options['form_params']['ConfigUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIp($value)
+    {
+        $this->data['Ip'] = $value;
+        $this->options['form_params']['Ip'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPort($value)
+    {
+        $this->data['Port'] = $value;
+        $this->options['form_params']['Port'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcId($value)
+    {
+        $this->data['VpcId'] = $value;
+        $this->options['form_params']['VpcId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDrcPassword($value)
+    {
+        $this->data['DrcPassword'] = $value;
+        $this->options['form_params']['DrcPassword'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogProxyPort($value)
+    {
+        $this->data['LogProxyPort'] = $value;
+        $this->options['form_params']['LogProxyPort'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserName($value)
+    {
+        $this->data['UserName'] = $value;
+        $this->options['form_params']['UserName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSchema()
  * @method string getDescription()
  * @method string getDgDatabaseId()
@@ -713,6 +1145,264 @@ class CreateOmsOpenAPIProject extends Rpc
 }
 
 /**
+ * @method string getSinkEndpointId()
+ * @method string getUseOss()
+ * @method string getOssKey()
+ * @method string getSourceEndpointId()
+ * @method string getType()
+ * @method string getFullTransferConfig()
+ * @method string getEnableStructTransfer()
+ * @method string getTransferMapping()
+ * @method string getWorkerGradeId()
+ * @method string getCommonTransferConfig()
+ * @method string getStructTransferConfig()
+ * @method string getEnableIncrTransfer()
+ * @method string getEnableFullTransfer()
+ * @method string getEnableFullVerify()
+ * @method string getName()
+ * @method string getLabelIds()
+ * @method string getIncrTransferConfig()
+ * @method string getEnableReverseIncrTransfer()
+ */
+class CreateProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSinkEndpointId($value)
+    {
+        $this->data['SinkEndpointId'] = $value;
+        $this->options['form_params']['SinkEndpointId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUseOss($value)
+    {
+        $this->data['UseOss'] = $value;
+        $this->options['form_params']['UseOss'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOssKey($value)
+    {
+        $this->data['OssKey'] = $value;
+        $this->options['form_params']['OssKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceEndpointId($value)
+    {
+        $this->data['SourceEndpointId'] = $value;
+        $this->options['form_params']['SourceEndpointId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFullTransferConfig($value)
+    {
+        $this->data['FullTransferConfig'] = $value;
+        $this->options['form_params']['FullTransferConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableStructTransfer($value)
+    {
+        $this->data['EnableStructTransfer'] = $value;
+        $this->options['form_params']['EnableStructTransfer'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTransferMapping($value)
+    {
+        $this->data['TransferMapping'] = $value;
+        $this->options['form_params']['TransferMapping'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkerGradeId($value)
+    {
+        $this->data['WorkerGradeId'] = $value;
+        $this->options['form_params']['WorkerGradeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommonTransferConfig($value)
+    {
+        $this->data['CommonTransferConfig'] = $value;
+        $this->options['form_params']['CommonTransferConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStructTransferConfig($value)
+    {
+        $this->data['StructTransferConfig'] = $value;
+        $this->options['form_params']['StructTransferConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableIncrTransfer($value)
+    {
+        $this->data['EnableIncrTransfer'] = $value;
+        $this->options['form_params']['EnableIncrTransfer'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableFullTransfer($value)
+    {
+        $this->data['EnableFullTransfer'] = $value;
+        $this->options['form_params']['EnableFullTransfer'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableFullVerify($value)
+    {
+        $this->data['EnableFullVerify'] = $value;
+        $this->options['form_params']['EnableFullVerify'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabelIds($value)
+    {
+        $this->data['LabelIds'] = $value;
+        $this->options['form_params']['LabelIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIncrTransferConfig($value)
+    {
+        $this->data['IncrTransferConfig'] = $value;
+        $this->options['form_params']['IncrTransferConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableReverseIncrTransfer($value)
+    {
+        $this->data['EnableReverseIncrTransfer'] = $value;
+        $this->options['form_params']['EnableReverseIncrTransfer'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSecurityIps()
  * @method string getSecurityIpGroupName()
  * @method string getInstanceId()
@@ -935,12 +1625,40 @@ class CreateTenant extends Rpc
 }
 
 /**
- * @method string getInstanceId()
  * @method string getTenantId()
+ * @method string getVSwitchId()
+ * @method string getInstanceId()
+ * @method string getVpcId()
  * @method string getZoneId()
  */
 class CreateTenantReadOnlyConnection extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVSwitchId($value)
+    {
+        $this->data['VSwitchId'] = $value;
+        $this->options['form_params']['VSwitchId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -960,10 +1678,10 @@ class CreateTenantReadOnlyConnection extends Rpc
      *
      * @return $this
      */
-    public function withTenantId($value)
+    public function withVpcId($value)
     {
-        $this->data['TenantId'] = $value;
-        $this->options['form_params']['TenantId'] = $value;
+        $this->data['VpcId'] = $value;
+        $this->options['form_params']['VpcId'] = $value;
 
         return $this;
     }
@@ -1046,12 +1764,12 @@ class CreateTenantSecurityIpGroup extends Rpc
 
 /**
  * @method string getRoles()
- * @method string getUserType()
  * @method string getDescription()
  * @method string getUserPassword()
- * @method string getInstanceId()
  * @method string getTenantId()
  * @method string getEncryptionType()
+ * @method string getUserType()
+ * @method string getInstanceId()
  * @method string getUserName()
  */
 class CreateTenantUser extends Rpc
@@ -1066,19 +1784,6 @@ class CreateTenantUser extends Rpc
     {
         $this->data['Roles'] = $value;
         $this->options['form_params']['Roles'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withUserType($value)
-    {
-        $this->data['UserType'] = $value;
-        $this->options['form_params']['UserType'] = $value;
 
         return $this;
     }
@@ -1114,19 +1819,6 @@ class CreateTenantUser extends Rpc
      *
      * @return $this
      */
-    public function withInstanceId($value)
-    {
-        $this->data['InstanceId'] = $value;
-        $this->options['form_params']['InstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withTenantId($value)
     {
         $this->data['TenantId'] = $value;
@@ -1144,6 +1836,32 @@ class CreateTenantUser extends Rpc
     {
         $this->data['EncryptionType'] = $value;
         $this->options['form_params']['EncryptionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserType($value)
+    {
+        $this->data['UserType'] = $value;
+        $this->options['form_params']['UserType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -1301,6 +2019,26 @@ class DeleteOmsOpenAPIProject extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class DeleteProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
 
         return $this;
     }
@@ -1483,6 +2221,7 @@ class DeleteTenantUsers extends Rpc
  * @method string getFilterCondition()
  * @method string getEndTime()
  * @method string getNodeIp()
+ * @method string getInstanceId()
  * @method string getDbName()
  * @method string getSearchKeyWord()
  * @method string getSortColumn()
@@ -1652,6 +2391,19 @@ class DescribeAnomalySQLList extends Rpc
      *
      * @return $this
      */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withDbName($value)
     {
         $this->data['DbName'] = $value;
@@ -1812,6 +2564,7 @@ class DescribeAvailableMemResource extends Rpc
 
 /**
  * @method string getTenantMode()
+ * @method string getInstanceId()
  * @method string getSeries()
  */
 class DescribeCharset extends Rpc
@@ -1826,6 +2579,19 @@ class DescribeCharset extends Rpc
     {
         $this->data['TenantMode'] = $value;
         $this->options['form_params']['TenantMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -1937,7 +2703,6 @@ class DescribeDatabases extends Rpc
 /**
  * @method string getPageNumber()
  * @method string getInstanceId()
- * @method string getPageSize()
  */
 class DescribeInstance extends Rpc
 {
@@ -1964,19 +2729,6 @@ class DescribeInstance extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -2335,7 +3087,9 @@ class DescribeNodeMetrics extends Rpc
 /**
  * @method string getStartTime()
  * @method string getSearchRule()
+ * @method string getMergeDynamicSql()
  * @method string getCurrent()
+ * @method string getDynamicSql()
  * @method string getSqlTextLength()
  * @method string getTenantId()
  * @method string getPageSize()
@@ -2384,10 +3138,36 @@ class DescribeOasAnomalySQLList extends Rpc
      *
      * @return $this
      */
+    public function withMergeDynamicSql($value)
+    {
+        $this->data['MergeDynamicSql'] = $value;
+        $this->options['form_params']['MergeDynamicSql'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withCurrent($value)
     {
         $this->data['Current'] = $value;
         $this->options['form_params']['Current'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDynamicSql($value)
+    {
+        $this->data['DynamicSql'] = $value;
+        $this->options['form_params']['DynamicSql'] = $value;
 
         return $this;
     }
@@ -2565,6 +3345,8 @@ class DescribeOasAnomalySQLList extends Rpc
 /**
  * @method string getStartTime()
  * @method string getSearchRule()
+ * @method string getMergeDynamicSql()
+ * @method string getDynamicSql()
  * @method string getSqlTextLength()
  * @method string getTenantId()
  * @method string getSearchValue()
@@ -2603,6 +3385,32 @@ class DescribeOasSlowSQLList extends Rpc
     {
         $this->data['SearchRule'] = $value;
         $this->options['form_params']['SearchRule'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMergeDynamicSql($value)
+    {
+        $this->data['MergeDynamicSql'] = $value;
+        $this->options['form_params']['MergeDynamicSql'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDynamicSql($value)
+    {
+        $this->data['DynamicSql'] = $value;
+        $this->options['form_params']['DynamicSql'] = $value;
 
         return $this;
     }
@@ -2765,15 +3573,55 @@ class DescribeOasSlowSQLList extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method string getDynamicSql()
+ * @method string getTenantId()
  * @method string getSqlId()
  * @method string getEndTime()
- * @method string getStartTime()
  * @method string getInstanceId()
  * @method string getDbName()
- * @method string getTenantId()
  */
 class DescribeOasSQLDetails extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDynamicSql($value)
+    {
+        $this->data['DynamicSql'] = $value;
+        $this->options['form_params']['DynamicSql'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2806,19 +3654,6 @@ class DescribeOasSQLDetails extends Rpc
      *
      * @return $this
      */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withInstanceId($value)
     {
         $this->data['InstanceId'] = $value;
@@ -2839,23 +3674,11 @@ class DescribeOasSQLDetails extends Rpc
 
         return $this;
     }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTenantId($value)
-    {
-        $this->data['TenantId'] = $value;
-        $this->options['form_params']['TenantId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
  * @method string getStartTime()
+ * @method string getDynamicSql()
  * @method string getTenantId()
  * @method string getSqlId()
  * @method string getEndTime()
@@ -2876,6 +3699,19 @@ class DescribeOasSQLHistoryList extends Rpc
     {
         $this->data['StartTime'] = $value;
         $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDynamicSql($value)
+    {
+        $this->data['DynamicSql'] = $value;
+        $this->options['form_params']['DynamicSql'] = $value;
 
         return $this;
     }
@@ -2974,6 +3810,7 @@ class DescribeOasSQLHistoryList extends Rpc
 
 /**
  * @method string getStartTime()
+ * @method string getDynamicSql()
  * @method string getTenantId()
  * @method string getSqlId()
  * @method string getEndTime()
@@ -2993,6 +3830,19 @@ class DescribeOasSQLPlans extends Rpc
     {
         $this->data['StartTime'] = $value;
         $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDynamicSql($value)
+    {
+        $this->data['DynamicSql'] = $value;
+        $this->options['form_params']['DynamicSql'] = $value;
 
         return $this;
     }
@@ -3079,6 +3929,8 @@ class DescribeOasSQLPlans extends Rpc
 /**
  * @method string getStartTime()
  * @method string getSearchRule()
+ * @method string getMergeDynamicSql()
+ * @method string getDynamicSql()
  * @method string getSqlTextLength()
  * @method string getTenantId()
  * @method string getSearchValue()
@@ -3117,6 +3969,32 @@ class DescribeOasTopSQLList extends Rpc
     {
         $this->data['SearchRule'] = $value;
         $this->options['form_params']['SearchRule'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMergeDynamicSql($value)
+    {
+        $this->data['MergeDynamicSql'] = $value;
+        $this->options['form_params']['MergeDynamicSql'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDynamicSql($value)
+    {
+        $this->data['DynamicSql'] = $value;
+        $this->options['form_params']['DynamicSql'] = $value;
 
         return $this;
     }
@@ -3645,6 +4523,190 @@ class DescribeParametersHistory extends Rpc
 }
 
 /**
+ * @method string getId()
+ */
+class DescribeProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class DescribeProjectComponents extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class DescribeProjectProgress extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMetricType()
+ * @method string getStepName()
+ * @method string getAggregator()
+ * @method string getMaxPointNum()
+ * @method string getEndTimestamp()
+ * @method string getBeginTimestamp()
+ * @method string getProjectId()
+ */
+class DescribeProjectStepMetric extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricType($value)
+    {
+        $this->data['MetricType'] = $value;
+        $this->options['form_params']['MetricType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStepName($value)
+    {
+        $this->data['StepName'] = $value;
+        $this->options['form_params']['StepName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAggregator($value)
+    {
+        $this->data['Aggregator'] = $value;
+        $this->options['form_params']['Aggregator'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxPointNum($value)
+    {
+        $this->data['MaxPointNum'] = $value;
+        $this->options['form_params']['MaxPointNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTimestamp($value)
+    {
+        $this->data['EndTimestamp'] = $value;
+        $this->options['form_params']['EndTimestamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBeginTimestamp($value)
+    {
+        $this->data['BeginTimestamp'] = $value;
+        $this->options['form_params']['BeginTimestamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class DescribeProjectSteps extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSQLId()
  * @method string getInstanceId()
  * @method string getTenantId()
@@ -3713,41 +4775,15 @@ class DescribeSecurityIpGroups extends Rpc
 }
 
 /**
- * @method string getSQLId()
- * @method string getEndTime()
  * @method string getStartTime()
  * @method string getPageNumber()
  * @method string getTenantId()
  * @method string getPageSize()
+ * @method string getSQLId()
+ * @method string getEndTime()
  */
 class DescribeSlowSQLHistoryList extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSQLId($value)
-    {
-        $this->data['SQLId'] = $value;
-        $this->options['form_params']['SQLId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEndTime($value)
-    {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -3797,6 +4833,32 @@ class DescribeSlowSQLHistoryList extends Rpc
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSQLId($value)
+    {
+        $this->data['SQLId'] = $value;
+        $this->options['form_params']['SQLId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
 
         return $this;
     }
@@ -4177,15 +5239,41 @@ class DescribeSQLPlans extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method string getTenantId()
  * @method string getSqlId()
  * @method string getEndTime()
- * @method string getStartTime()
  * @method string getInstanceId()
  * @method string getDbName()
- * @method string getTenantId()
  */
 class DescribeSQLSamples extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -4218,19 +5306,6 @@ class DescribeSQLSamples extends Rpc
      *
      * @return $this
      */
-    public function withStartTime($value)
-    {
-        $this->data['StartTime'] = $value;
-        $this->options['form_params']['StartTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withInstanceId($value)
     {
         $this->data['InstanceId'] = $value;
@@ -4248,19 +5323,6 @@ class DescribeSQLSamples extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTenantId($value)
-    {
-        $this->data['TenantId'] = $value;
-        $this->options['form_params']['TenantId'] = $value;
 
         return $this;
     }
@@ -4638,8 +5700,24 @@ class DescribeTenantTags extends Rpc
     }
 }
 
+/**
+ * @method string getTenantId()
+ */
 class DescribeTenantUserRoles extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5007,6 +6085,40 @@ class DescribeZones extends Rpc
 }
 
 /**
+ * @method string getType()
+ * @method string getEffectiveTimeMinutes()
+ */
+class GetUploadOssUrl extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEffectiveTimeMinutes($value)
+    {
+        $this->data['EffectiveTimeMinutes'] = $value;
+        $this->options['form_params']['EffectiveTimeMinutes'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSessionList()
  * @method string getInstanceId()
  * @method string getTenantId()
@@ -5049,6 +6161,454 @@ class KillProcessList extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+class ListAllLabels extends Rpc
+{
+}
+
+/**
+ * @method string getTypes()
+ * @method string getSearchKey()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getSortField()
+ * @method string getOrder()
+ */
+class ListDataSource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTypes($value)
+    {
+        $this->data['Types'] = $value;
+        $this->options['form_params']['Types'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchKey($value)
+    {
+        $this->data['SearchKey'] = $value;
+        $this->options['form_params']['SearchKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortField($value)
+    {
+        $this->data['SortField'] = $value;
+        $this->options['form_params']['SortField'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['form_params']['Order'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDestSchemas()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getSourceSchemas()
+ * @method string getProjectId()
+ * @method string getStatus()
+ */
+class ListProjectFullVerifyResult extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDestSchemas($value)
+    {
+        $this->data['DestSchemas'] = $value;
+        $this->options['form_params']['DestSchemas'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceSchemas($value)
+    {
+        $this->data['SourceSchemas'] = $value;
+        $this->options['form_params']['SourceSchemas'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSearchKey()
+ * @method string getType()
+ * @method string getVisibleSubProject()
+ * @method string getPageNumber()
+ * @method string getSinkEndpointTypes()
+ * @method string getPageSize()
+ * @method string getOrder()
+ * @method string getSourceEndpointTypes()
+ * @method string getSortField()
+ * @method string getLabelIds()
+ * @method string getStatus()
+ */
+class ListProjects extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSearchKey($value)
+    {
+        $this->data['SearchKey'] = $value;
+        $this->options['form_params']['SearchKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVisibleSubProject($value)
+    {
+        $this->data['VisibleSubProject'] = $value;
+        $this->options['form_params']['VisibleSubProject'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSinkEndpointTypes($value)
+    {
+        $this->data['SinkEndpointTypes'] = $value;
+        $this->options['form_params']['SinkEndpointTypes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['form_params']['Order'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceEndpointTypes($value)
+    {
+        $this->data['SourceEndpointTypes'] = $value;
+        $this->options['form_params']['SourceEndpointTypes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortField($value)
+    {
+        $this->data['SortField'] = $value;
+        $this->options['form_params']['SortField'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabelIds($value)
+    {
+        $this->data['LabelIds'] = $value;
+        $this->options['form_params']['LabelIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getOnlyBindable()
+ * @method string getPageNumber()
+ * @method string getSpecs()
+ * @method string getInstanceName()
+ * @method string getPageSize()
+ * @method string getSourceType()
+ * @method string getDestType()
+ */
+class ListWorkerInstances extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOnlyBindable($value)
+    {
+        $this->data['OnlyBindable'] = $value;
+        $this->options['form_params']['OnlyBindable'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpecs($value)
+    {
+        $this->data['Specs'] = $value;
+        $this->options['form_params']['Specs'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceName($value)
+    {
+        $this->data['InstanceName'] = $value;
+        $this->options['form_params']['InstanceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceType($value)
+    {
+        $this->data['SourceType'] = $value;
+        $this->options['form_params']['SourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDestType($value)
+    {
+        $this->data['DestType'] = $value;
+        $this->options['form_params']['DestType'] = $value;
 
         return $this;
     }
@@ -5470,10 +7030,9 @@ class ModifySecurityIps extends Rpc
  * @method string getUserVSwitchId()
  * @method string getMasterIntranetAddressZone()
  * @method string getTenantId()
+ * @method string getTenantEndpointId()
  * @method string getInstanceId()
  * @method string getPrimaryZone()
- * @method string getModifyType()
- * @method string getPrimaryZoneDeployType()
  */
 class ModifyTenantPrimaryZone extends Rpc
 {
@@ -5522,6 +7081,19 @@ class ModifyTenantPrimaryZone extends Rpc
      *
      * @return $this
      */
+    public function withTenantEndpointId($value)
+    {
+        $this->data['TenantEndpointId'] = $value;
+        $this->options['form_params']['TenantEndpointId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withInstanceId($value)
     {
         $this->data['InstanceId'] = $value;
@@ -5539,32 +7111,6 @@ class ModifyTenantPrimaryZone extends Rpc
     {
         $this->data['PrimaryZone'] = $value;
         $this->options['form_params']['PrimaryZone'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withModifyType($value)
-    {
-        $this->data['ModifyType'] = $value;
-        $this->options['form_params']['ModifyType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPrimaryZoneDeployType($value)
-    {
-        $this->data['PrimaryZoneDeployType'] = $value;
-        $this->options['form_params']['PrimaryZoneDeployType'] = $value;
 
         return $this;
     }
@@ -6081,6 +7627,26 @@ class ReleaseOmsOpenAPIProject extends Rpc
 }
 
 /**
+ * @method string getId()
+ */
+class ReleaseProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageNumber()
  * @method string getPageSize()
  * @method string getWorkerGradeId()
@@ -6199,6 +7765,26 @@ class ResumeOmsOpenAPIProject extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class ResumeProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
 
         return $this;
     }
@@ -6503,6 +8089,46 @@ class StartOmsOpenAPIProject extends Rpc
 }
 
 /**
+ * @method string getId()
+ */
+class StartProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class StartProjectsByLabel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageNumber()
  * @method string getPageSize()
  * @method string getWorkerGradeId()
@@ -6559,6 +8185,46 @@ class StopOmsOpenAPIProject extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class StopProject extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getId()
+ */
+class StopProjectsByLabel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
 
         return $this;
     }

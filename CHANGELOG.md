@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1954 - 2023-8-25
+- Update SDK.
+
+
 ## 1.8.1953 - 2023-8-24
 - Supported recommand serialization format flat.
 
