@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1955 - 2023-8-28
+- Support elastic network interface.
+
+
 ## 1.8.1954 - 2023-8-25
 - Update SDK.
 
