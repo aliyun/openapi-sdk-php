@@ -16,6 +16,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryAvatarList queryAvatarList(array $options = [])
  * @method QueryRunningInstance queryRunningInstance(array $options = [])
  * @method QueryTimedResetOperateStatus queryTimedResetOperateStatus(array $options = [])
+ * @method QueryVideoTaskInfo queryVideoTaskInfo(array $options = [])
  * @method SendCommand sendCommand(array $options = [])
  * @method SendMessage sendMessage(array $options = [])
  * @method SendText sendText(array $options = [])
@@ -277,6 +278,30 @@ class QueryRunningInstance extends Rpc
  * @method $this withTenantId($value)
  */
 class QueryTimedResetOperateStatus extends Rpc
+{
+}
+
+/**
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getOrderById()
+ * @method $this withOrderById($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTaskUuid()
+ * @method $this withTaskUuid($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class QueryVideoTaskInfo extends Rpc
 {
 }
 

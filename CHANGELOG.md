@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1956 - 2023-8-28
+- add make stage, preview url
+
+
 ## 1.8.1955 - 2023-8-28
 - Support elastic network interface.
 
