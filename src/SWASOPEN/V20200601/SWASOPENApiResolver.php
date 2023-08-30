@@ -6,12 +6,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AllocatePublicConnection allocatePublicConnection(array $options = [])
+ * @method CreateCommand createCommand(array $options = [])
  * @method CreateCustomImage createCustomImage(array $options = [])
  * @method CreateFirewallRule createFirewallRule(array $options = [])
  * @method CreateFirewallRules createFirewallRules(array $options = [])
  * @method CreateInstanceKeyPair createInstanceKeyPair(array $options = [])
  * @method CreateInstances createInstances(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
+ * @method DeleteCommand deleteCommand(array $options = [])
  * @method DeleteCustomImage deleteCustomImage(array $options = [])
  * @method DeleteFirewallRule deleteFirewallRule(array $options = [])
  * @method DeleteInstanceKeyPair deleteInstanceKeyPair(array $options = [])
@@ -19,6 +21,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSnapshots deleteSnapshots(array $options = [])
  * @method DescribeCloudAssistantStatus describeCloudAssistantStatus(array $options = [])
  * @method DescribeCloudMonitorAgentStatuses describeCloudMonitorAgentStatuses(array $options = [])
+ * @method DescribeCommandInvocations describeCommandInvocations(array $options = [])
+ * @method DescribeCommands describeCommands(array $options = [])
  * @method DescribeDatabaseErrorLogs describeDatabaseErrorLogs(array $options = [])
  * @method DescribeDatabaseInstanceMetricData describeDatabaseInstanceMetricData(array $options = [])
  * @method DescribeDatabaseInstanceParameters describeDatabaseInstanceParameters(array $options = [])
@@ -35,6 +39,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableFirewallRule enableFirewallRule(array $options = [])
  * @method InstallCloudAssistant installCloudAssistant(array $options = [])
  * @method InstallCloudMonitorAgent installCloudMonitorAgent(array $options = [])
+ * @method InvokeCommand invokeCommand(array $options = [])
  * @method ListCustomImages listCustomImages(array $options = [])
  * @method ListDisks listDisks(array $options = [])
  * @method ListFirewallRules listFirewallRules(array $options = [])
@@ -68,6 +73,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopDatabaseInstance stopDatabaseInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method StopInstances stopInstances(array $options = [])
+ * @method UpdateCommandAttribute updateCommandAttribute(array $options = [])
  * @method UpdateDiskAttribute updateDiskAttribute(array $options = [])
  * @method UpdateInstanceAttribute updateInstanceAttribute(array $options = [])
  * @method UpdateSnapshotAttribute updateSnapshotAttribute(array $options = [])
@@ -100,6 +106,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withDatabaseInstanceId($value)
  */
 class AllocatePublicConnection extends Rpc
+{
+}
+
+/**
+ * @method string getWorkingDir()
+ * @method $this withWorkingDir($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getCommandContent()
+ * @method $this withCommandContent($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getEnableParameter()
+ * @method $this withEnableParameter($value)
+ */
+class CreateCommand extends Rpc
 {
 }
 
@@ -198,6 +224,14 @@ class CreateSnapshot extends Rpc
 }
 
 /**
+ * @method string getCommandId()
+ * @method $this withCommandId($value)
+ */
+class DeleteCommand extends Rpc
+{
+}
+
+/**
  * @method string getImageId()
  * @method $this withImageId($value)
  * @method string getClientToken()
@@ -268,6 +302,46 @@ class DescribeCloudAssistantStatus extends Rpc
  * @method $this withInstanceIds($value)
  */
 class DescribeCloudMonitorAgentStatuses extends Rpc
+{
+}
+
+/**
+ * @method string getCommandId()
+ * @method $this withCommandId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getInvokeId()
+ * @method $this withInvokeId($value)
+ * @method string getCommandName()
+ * @method $this withCommandName($value)
+ * @method string getCommandType()
+ * @method $this withCommandType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInvocationStatus()
+ * @method $this withInvocationStatus($value)
+ */
+class DescribeCommandInvocations extends Rpc
+{
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getCommandId()
+ * @method $this withCommandId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getProvider()
+ * @method $this withProvider($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeCommands extends Rpc
 {
 }
 
@@ -472,6 +546,20 @@ class InstallCloudAssistant extends Rpc
  * @method $this withForce($value)
  */
 class InstallCloudMonitorAgent extends Rpc
+{
+}
+
+/**
+ * @method string getCommandId()
+ * @method $this withCommandId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ */
+class InvokeCommand extends Rpc
 {
 }
 
@@ -870,6 +958,22 @@ class StopInstance extends Rpc
  * @method $this withInstanceIds($value)
  */
 class StopInstances extends Rpc
+{
+}
+
+/**
+ * @method string getWorkingDir()
+ * @method $this withWorkingDir($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getCommandId()
+ * @method $this withCommandId($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdateCommandAttribute extends Rpc
 {
 }
 
