@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1958 - 2023-8-31
+- Supported connector visualization manage.
+
+
 ## 1.8.1957 - 2023-8-30
 - Add new apis.
 

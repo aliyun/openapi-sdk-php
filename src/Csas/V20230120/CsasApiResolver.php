@@ -919,6 +919,8 @@ class ListPolicesForUserGroup extends Rpc
  * @method $this withAddress($value)
  * @method string getTagId()
  * @method $this withTagId($value)
+ * @method string getConnectorId()
+ * @method $this withConnectorId($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getApplicationIds()
