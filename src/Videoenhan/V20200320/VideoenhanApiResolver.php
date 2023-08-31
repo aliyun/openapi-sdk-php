@@ -1211,6 +1211,7 @@ class InterpolateVideoFrame extends Rpc
 
 /**
  * @method string getReferenceURL()
+ * @method string getEnhance()
  * @method string getPostURL()
  * @method string getAsync()
  * @method string getVideoURL()
@@ -1228,6 +1229,19 @@ class MergeVideoFace extends Rpc
     {
         $this->data['ReferenceURL'] = $value;
         $this->options['form_params']['ReferenceURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnhance($value)
+    {
+        $this->data['Enhance'] = $value;
+        $this->options['form_params']['Enhance'] = $value;
 
         return $this;
     }

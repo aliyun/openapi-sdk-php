@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1959 - 2023-8-31
+- Update MergeVideoFace.
+
+
 ## 1.8.1958 - 2023-8-31
 - Supported connector visualization manage.
 
