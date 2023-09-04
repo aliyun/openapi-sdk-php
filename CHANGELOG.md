@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1962 - 2023-9-4
+- Support ListNodeInfos4Pod.
+
+
 ## 1.8.1961 - 2023-9-4
 - Support ListNodeInfos4Pod.
 

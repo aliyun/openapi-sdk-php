@@ -35,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetFabricTopology getFabricTopology(array $options = [])
  * @method GetLniPrivateIpAddress getLniPrivateIpAddress(array $options = [])
  * @method GetNetworkInterface getNetworkInterface(array $options = [])
+ * @method GetNodeInfoForPod getNodeInfoForPod(array $options = [])
  * @method GetSubnet getSubnet(array $options = [])
  * @method GetVcc getVcc(array $options = [])
  * @method GetVccGrantRule getVccGrantRule(array $options = [])
@@ -51,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstancesByNcd listInstancesByNcd(array $options = [])
  * @method ListLniPrivateIpAddress listLniPrivateIpAddress(array $options = [])
  * @method ListNetworkInterfaces listNetworkInterfaces(array $options = [])
+ * @method ListNodeInfosForPod listNodeInfosForPod(array $options = [])
  * @method ListSubnets listSubnets(array $options = [])
  * @method ListVccGrantRules listVccGrantRules(array $options = [])
  * @method ListVccRouteEntries listVccRouteEntries(array $options = [])
@@ -1754,6 +1756,26 @@ class GetNetworkInterface extends Rpc
 }
 
 /**
+ * @method string getNodeId()
+ */
+class GetNodeInfoForPod extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSubnetId()
  * @method string getVpdId()
  */
@@ -3146,6 +3168,40 @@ class ListNetworkInterfaces extends Rpc
     {
         $this->data['NetworkInterfaceId'] = $value;
         $this->options['form_params']['NetworkInterfaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ * @method string getNodeId()
+ */
+class ListNodeInfosForPod extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['form_params']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
 
         return $this;
     }
