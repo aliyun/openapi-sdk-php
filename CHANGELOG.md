@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1963 - 2023-9-6
+- Parameter changes in SubmitServerlessJob.
+
+
 ## 1.8.1962 - 2023-9-4
 - Support ListNodeInfos4Pod.
 

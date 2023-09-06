@@ -330,6 +330,8 @@ class AddNodes extends Rpc
  * @method $this withClusterId($value)
  * @method string getNetworkInterfaceTrafficMode()
  * @method $this withNetworkInterfaceTrafficMode($value)
+ * @method string getUseESS()
+ * @method $this withUseESS($value)
  */
 class AddQueue extends Rpc
 {
@@ -2757,6 +2759,9 @@ class SetAutoScaleConfig extends Rpc
 			if(isset($depth1Value['SpotStrategy'])){
 				$this->options['query']['Queues.' . ($depth1 + 1) . '.SpotStrategy'] = $depth1Value['SpotStrategy'];
 			}
+			if(isset($depth1Value['AutoMinNodesPerCycle'])){
+				$this->options['query']['Queues.' . ($depth1 + 1) . '.AutoMinNodesPerCycle'] = $depth1Value['AutoMinNodesPerCycle'];
+			}
 			foreach ($depth1Value['DataDisks'] as $depth2 => $depth2Value) {
 				if(isset($depth2Value['DataDiskDeleteWithInstance'])){
 					$this->options['query']['Queues.' . ($depth1 + 1) . '.DataDisks.' . ($depth2 + 1) . '.DataDiskDeleteWithInstance'] = $depth2Value['DataDiskDeleteWithInstance'];
@@ -3493,6 +3498,8 @@ class UpdateClusterVolumes extends Rpc
  * @method $this withQueueName($value)
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getNetworkInterfaceTrafficMode()
+ * @method $this withNetworkInterfaceTrafficMode($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getComputeInstanceType()
