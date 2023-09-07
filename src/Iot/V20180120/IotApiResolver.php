@@ -9756,6 +9756,10 @@ class GetDestination extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -9796,6 +9800,10 @@ class GetDeviceShadow extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
@@ -10300,6 +10308,10 @@ class GetParserDataSource extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getApiProduct()
@@ -11560,6 +11572,8 @@ class InvokeDataAPIService extends Rpc
  * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
+ * @method string getQos()
+ * @method $this withQos($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getIdentifier()
@@ -11782,6 +11796,10 @@ class ListDataSourceItem extends Rpc
 /**
  * @method string getSearchName()
  * @method $this withSearchName($value)
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()
@@ -11838,6 +11856,8 @@ class ListDestination extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method string getRealTripartiteKey()
  * @method string getJobId()
  * @method string getNextToken()
  * @method $this withNextToken($value)
@@ -11860,6 +11880,32 @@ class ListDestination extends Rpc
  */
 class ListDeviceDistributeJob extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealTenantId($value)
+    {
+        $this->data['RealTenantId'] = $value;
+        $this->options['form_params']['RealTenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealTripartiteKey($value)
+    {
+        $this->data['RealTripartiteKey'] = $value;
+        $this->options['form_params']['RealTripartiteKey'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -11902,6 +11948,8 @@ class ListDeviceDistributeJob extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method string getRealTripartiteKey()
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getSourceInstanceId()
@@ -11921,6 +11969,32 @@ class ListDeviceDistributeJob extends Rpc
  */
 class ListDistributedDevice extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealTenantId($value)
+    {
+        $this->data['RealTenantId'] = $value;
+        $this->options['form_params']['RealTenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealTripartiteKey($value)
+    {
+        $this->data['RealTripartiteKey'] = $value;
+        $this->options['form_params']['RealTripartiteKey'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -11996,6 +12070,10 @@ class ListDistributedProduct extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()
@@ -12172,6 +12250,10 @@ class ListOTAJobByFirmware extends Rpc
 /**
  * @method string getAuthConfig()
  * @method $this withAuthConfig($value)
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -12594,6 +12676,10 @@ class ListProductTags extends Rpc
 /**
  * @method string getSearchName()
  * @method $this withSearchName($value)
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getIotInstanceId()
@@ -12636,6 +12722,10 @@ class ListRule extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getApiProduct()
@@ -13340,6 +13430,8 @@ class PrintByTemplate extends Rpc
  * @method $this withMessageExpiryInterval($value)
  * @method string getResponseTopic()
  * @method $this withResponseTopic($value)
+ * @method string getTopicAlias()
+ * @method $this withTopicAlias($value)
  * @method string getTopicFullName()
  * @method $this withTopicFullName($value)
  * @method string getPayloadFormatIndicator()
@@ -13895,6 +13987,10 @@ class QueryClientIds extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getGroupId()
@@ -14604,6 +14700,10 @@ class QueryDeviceFile extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
@@ -14800,8 +14900,12 @@ class QueryDeviceGroupInfo extends Rpc
 
 /**
  * @method array getGroupTypes()
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
  * @method string getSuperGroupId()
  * @method $this withSuperGroupId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getPageSize()
@@ -14859,6 +14963,10 @@ class QueryDeviceGroupList extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getGroupType()
  * @method $this withGroupType($value)
  * @method string getIotInstanceId()
@@ -15775,6 +15883,10 @@ class QueryDeviceStatistics extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -16423,6 +16535,10 @@ class QueryImportedDeviceByApplyId extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getIotInstanceId()
@@ -16461,6 +16577,10 @@ class QueryJob extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getJobId()
  * @method $this withJobId($value)
  * @method string getIotInstanceId()
@@ -16626,6 +16746,10 @@ class QueryMessageInfo extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getFirmwareId()
@@ -19042,6 +19166,10 @@ class QuerySummarySceneRuleLog extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getGroupId()
@@ -19080,6 +19208,10 @@ class QuerySuperDeviceGroup extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getTaskId()
@@ -19810,8 +19942,12 @@ class ReleaseEdgeDriverVersion extends Rpc
 /**
  * @method string getTemplate()
  * @method $this withTemplate($value)
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
  * @method string getCategoryKey()
  * @method $this withCategoryKey($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getTemplateIdentifier()
  * @method $this withTemplateIdentifier($value)
  * @method string getIotInstanceId()
@@ -20185,7 +20321,6 @@ class ReupgradeOTATask extends Rpc
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getRequestBase64Byte()
- * @method $this withRequestBase64Byte($value)
  * @method string getProductKey()
  * @method $this withProductKey($value)
  * @method string getContentType()
@@ -20199,6 +20334,19 @@ class ReupgradeOTATask extends Rpc
  */
 class RRpc extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestBase64Byte($value)
+    {
+        $this->data['RequestBase64Byte'] = $value;
+        $this->options['form_params']['RequestBase64Byte'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -20316,6 +20464,10 @@ class SaveScript extends Rpc
 }
 
 /**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
@@ -20410,6 +20562,8 @@ class SetDeviceGroupTags extends Rpc
  * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
+ * @method string getQos()
+ * @method $this withQos($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
@@ -22200,6 +22354,10 @@ class UpdateDeviceGroup extends Rpc
 /**
  * @method string getShadowMessage()
  * @method $this withShadowMessage($value)
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()
