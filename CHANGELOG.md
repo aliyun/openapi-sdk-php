@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1966 - 2023-9-11
+- Update by SDK platform.
+
+
 ## 1.8.1965 - 2023-9-11
 - add Instance, NetworkRule, Policy, ApplicationAccessPoint, ClientKey OpenAPIs
 

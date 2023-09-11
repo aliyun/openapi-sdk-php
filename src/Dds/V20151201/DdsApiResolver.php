@@ -273,6 +273,8 @@ class CreateBackup extends Rpc
  * @method $this withSecurityIPList($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method string getProvisionedIops()
+ * @method $this withProvisionedIops($value)
  * @method string getAutoRenew()
  * @method $this withAutoRenew($value)
  * @method string getZoneId()
@@ -471,6 +473,8 @@ class CreateNodeBatch extends Rpc
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method array getMongos()
+ * @method string getProvisionedIops()
+ * @method $this withProvisionedIops($value)
  * @method string getAutoRenew()
  * @method $this withAutoRenew($value)
  * @method string getZoneId()
@@ -843,6 +847,8 @@ class DescribeAvailableEngineVersion extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
@@ -2690,6 +2696,8 @@ class TagResources extends Rpc
  * @method $this withAutoRenew($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
  */
 class TransformInstanceChargeType extends Rpc
 {
