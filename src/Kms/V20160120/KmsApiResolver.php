@@ -14,20 +14,32 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CertificatePrivateKeySign certificatePrivateKeySign(array $options = [])
  * @method CertificatePublicKeyEncrypt certificatePublicKeyEncrypt(array $options = [])
  * @method CertificatePublicKeyVerify certificatePublicKeyVerify(array $options = [])
+ * @method ConnectKmsInstance connectKmsInstance(array $options = [])
  * @method CreateAlias createAlias(array $options = [])
+ * @method CreateApplicationAccessPoint createApplicationAccessPoint(array $options = [])
  * @method CreateCertificate createCertificate(array $options = [])
+ * @method CreateClientKey createClientKey(array $options = [])
  * @method CreateKey createKey(array $options = [])
  * @method CreateKeyVersion createKeyVersion(array $options = [])
+ * @method CreateNetworkRule createNetworkRule(array $options = [])
+ * @method CreatePolicy createPolicy(array $options = [])
  * @method CreateSecret createSecret(array $options = [])
  * @method Decrypt decrypt(array $options = [])
  * @method DeleteAlias deleteAlias(array $options = [])
+ * @method DeleteApplicationAccessPoint deleteApplicationAccessPoint(array $options = [])
  * @method DeleteCertificate deleteCertificate(array $options = [])
+ * @method DeleteClientKey deleteClientKey(array $options = [])
  * @method DeleteKeyMaterial deleteKeyMaterial(array $options = [])
+ * @method DeleteNetworkRule deleteNetworkRule(array $options = [])
+ * @method DeletePolicy deletePolicy(array $options = [])
  * @method DeleteSecret deleteSecret(array $options = [])
  * @method DescribeAccountKmsStatus describeAccountKmsStatus(array $options = [])
+ * @method DescribeApplicationAccessPoint describeApplicationAccessPoint(array $options = [])
  * @method DescribeCertificate describeCertificate(array $options = [])
  * @method DescribeKey describeKey(array $options = [])
  * @method DescribeKeyVersion describeKeyVersion(array $options = [])
+ * @method DescribeNetworkRule describeNetworkRule(array $options = [])
+ * @method DescribePolicy describePolicy(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSecret describeSecret(array $options = [])
  * @method DisableKey disableKey(array $options = [])
@@ -38,6 +50,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateDataKey generateDataKey(array $options = [])
  * @method GenerateDataKeyWithoutPlaintext generateDataKeyWithoutPlaintext(array $options = [])
  * @method GetCertificate getCertificate(array $options = [])
+ * @method GetClientKey getClientKey(array $options = [])
+ * @method GetKmsInstance getKmsInstance(array $options = [])
  * @method GetParametersForImport getParametersForImport(array $options = [])
  * @method GetPublicKey getPublicKey(array $options = [])
  * @method GetRandomPassword getRandomPassword(array $options = [])
@@ -45,8 +59,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
  * @method ListAliases listAliases(array $options = [])
  * @method ListAliasesByKeyId listAliasesByKeyId(array $options = [])
+ * @method ListApplicationAccessPoints listApplicationAccessPoints(array $options = [])
+ * @method ListClientKeys listClientKeys(array $options = [])
  * @method ListKeys listKeys(array $options = [])
  * @method ListKeyVersions listKeyVersions(array $options = [])
+ * @method ListKmsInstances listKmsInstances(array $options = [])
+ * @method ListNetworkRules listNetworkRules(array $options = [])
+ * @method ListPolicies listPolicies(array $options = [])
  * @method ListResourceTags listResourceTags(array $options = [])
  * @method ListSecrets listSecrets(array $options = [])
  * @method ListSecretVersionIds listSecretVersionIds(array $options = [])
@@ -63,8 +82,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UntagResource untagResource(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateAlias updateAlias(array $options = [])
+ * @method UpdateApplicationAccessPoint updateApplicationAccessPoint(array $options = [])
  * @method UpdateCertificateStatus updateCertificateStatus(array $options = [])
  * @method UpdateKeyDescription updateKeyDescription(array $options = [])
+ * @method UpdateKmsInstanceBindVpc updateKmsInstanceBindVpc(array $options = [])
+ * @method UpdateNetworkRule updateNetworkRule(array $options = [])
+ * @method UpdatePolicy updatePolicy(array $options = [])
  * @method UpdateRotationPolicy updateRotationPolicy(array $options = [])
  * @method UpdateSecret updateSecret(array $options = [])
  * @method UpdateSecretRotationPolicy updateSecretRotationPolicy(array $options = [])
@@ -214,12 +237,42 @@ class CertificatePublicKeyVerify extends Rpc
 }
 
 /**
+ * @method string getKmsInstanceId()
+ * @method $this withKmsInstanceId($value)
+ * @method string getVSwitchIds()
+ * @method $this withVSwitchIds($value)
+ * @method string getKMProvider()
+ * @method $this withKMProvider($value)
+ * @method string getZoneIds()
+ * @method $this withZoneIds($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class ConnectKmsInstance extends Rpc
+{
+}
+
+/**
  * @method string getAliasName()
  * @method $this withAliasName($value)
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
 class CreateAlias extends Rpc
+{
+}
+
+/**
+ * @method string getPolicies()
+ * @method $this withPolicies($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getAuthenticationMethod()
+ * @method $this withAuthenticationMethod($value)
+ */
+class CreateApplicationAccessPoint extends Rpc
 {
 }
 
@@ -238,6 +291,20 @@ class CreateAlias extends Rpc
  * @method $this withSubjectAlternativeNames($value)
  */
 class CreateCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getNotBefore()
+ * @method $this withNotBefore($value)
+ * @method string getNotAfter()
+ * @method $this withNotAfter($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getAapName()
+ * @method $this withAapName($value)
+ */
+class CreateClientKey extends Rpc
 {
 }
 
@@ -270,6 +337,38 @@ class CreateKey extends Rpc
  * @method $this withKeyId($value)
  */
 class CreateKeyVersion extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSourcePrivateIp()
+ * @method $this withSourcePrivateIp($value)
+ */
+class CreateNetworkRule extends Rpc
+{
+}
+
+/**
+ * @method string getAccessControlRules()
+ * @method $this withAccessControlRules($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getResources()
+ * @method $this withResources($value)
+ * @method string getKmsInstance()
+ * @method $this withKmsInstance($value)
+ * @method string getPermissions()
+ * @method $this withPermissions($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreatePolicy extends Rpc
 {
 }
 
@@ -322,6 +421,14 @@ class DeleteAlias extends Rpc
 }
 
 /**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DeleteApplicationAccessPoint extends Rpc
+{
+}
+
+/**
  * @method string getCertificateId()
  * @method $this withCertificateId($value)
  */
@@ -330,10 +437,34 @@ class DeleteCertificate extends Rpc
 }
 
 /**
+ * @method string getClientKeyId()
+ * @method $this withClientKeyId($value)
+ */
+class DeleteClientKey extends Rpc
+{
+}
+
+/**
  * @method string getKeyId()
  * @method $this withKeyId($value)
  */
 class DeleteKeyMaterial extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DeleteNetworkRule extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DeletePolicy extends Rpc
 {
 }
 
@@ -350,6 +481,14 @@ class DeleteSecret extends Rpc
 }
 
 class DescribeAccountKmsStatus extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeApplicationAccessPoint extends Rpc
 {
 }
 
@@ -376,6 +515,22 @@ class DescribeKey extends Rpc
  * @method $this withKeyId($value)
  */
 class DescribeKeyVersion extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribeNetworkRule extends Rpc
+{
+}
+
+/**
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class DescribePolicy extends Rpc
 {
 }
 
@@ -494,6 +649,25 @@ class GetCertificate extends Rpc
 }
 
 /**
+ * @method string getClientKeyId()
+ * @method $this withClientKeyId($value)
+ */
+class GetClientKey extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getKmsInstanceId()
+ * @method $this withKmsInstanceId($value)
+ */
+class GetKmsInstance extends Rpc
+{
+}
+
+/**
  * @method string getKeyId()
  * @method $this withKeyId($value)
  * @method string getWrappingAlgorithm()
@@ -586,6 +760,27 @@ class ListAliasesByKeyId extends Rpc
 }
 
 /**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListApplicationAccessPoints extends Rpc
+{
+}
+
+/**
+ * @method string getAapName()
+ * @method $this withAapName($value)
+ */
+class ListClientKeys extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getFilters()
  * @method $this withFilters($value)
  * @method string getPageNumber()
@@ -606,6 +801,36 @@ class ListKeys extends Rpc
  * @method $this withPageSize($value)
  */
 class ListKeyVersions extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListKmsInstances extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListNetworkRules extends Rpc
+{
+}
+
+/**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ */
+class ListPolicies extends Rpc
 {
 }
 
@@ -898,6 +1123,18 @@ class UpdateAlias extends Rpc
 }
 
 /**
+ * @method string getPolicies()
+ * @method $this withPolicies($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdateApplicationAccessPoint extends Rpc
+{
+}
+
+/**
  * @method string getCertificateId()
  * @method $this withCertificateId($value)
  * @method string getStatus()
@@ -914,6 +1151,47 @@ class UpdateCertificateStatus extends Rpc
  * @method $this withDescription($value)
  */
 class UpdateKeyDescription extends Rpc
+{
+}
+
+/**
+ * @method string getKmsInstanceId()
+ * @method $this withKmsInstanceId($value)
+ * @method string getBindVpcs()
+ * @method $this withBindVpcs($value)
+ */
+class UpdateKmsInstanceBindVpc extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getSourcePrivateIp()
+ * @method $this withSourcePrivateIp($value)
+ */
+class UpdateNetworkRule extends Rpc
+{
+}
+
+/**
+ * @method string getAccessControlRules()
+ * @method $this withAccessControlRules($value)
+ * @method string getResources()
+ * @method $this withResources($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPermissions()
+ * @method $this withPermissions($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdatePolicy extends Rpc
 {
 }
 

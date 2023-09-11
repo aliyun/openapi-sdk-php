@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1965 - 2023-9-11
+- add Instance, NetworkRule, Policy, ApplicationAccessPoint, ClientKey OpenAPIs
+
+
 ## 1.8.1964 - 2023-9-7
 - Generated 2018-01-20 for `Iot`.
 
