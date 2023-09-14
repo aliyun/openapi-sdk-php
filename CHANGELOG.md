@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1967 - 2023-9-14
+- Update MergeVideoModelFace.
+
+
 ## 1.8.1966 - 2023-9-11
 - Update by SDK platform.
 

@@ -1303,6 +1303,7 @@ class MergeVideoFace extends Rpc
  * @method string getFaceImageURL()
  * @method array getMergeInfos()
  * @method string getUserId()
+ * @method string getEnhance()
  * @method string getTemplateId()
  * @method string getAsync()
  * @method string getAddWatermark()
@@ -1355,6 +1356,19 @@ class MergeVideoModelFace extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnhance($value)
+    {
+        $this->data['Enhance'] = $value;
+        $this->options['form_params']['Enhance'] = $value;
 
         return $this;
     }
