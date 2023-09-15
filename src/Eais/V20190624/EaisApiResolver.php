@@ -253,17 +253,40 @@ class DeleteEaisEi extends Rpc
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
- * @method string getInstanceName()
- * @method $this withInstanceName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method array getTag()
+ * @method string getClientInstanceId()
+ * @method $this withClientInstanceId($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
 class DescribeEais extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 class DescribeRegions extends Rpc

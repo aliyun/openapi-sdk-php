@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 1.8.1969 - 2023-9-15
+- Add openapi TagResources.
+- Add openapi UntagResources.
+- Add openapi ListTagResources.
+- Modify openapi DescribeEais.
+
+
 ## 1.8.1968 - 2023-9-15
 - Generated 2020-06-06 for `cams`.
 
