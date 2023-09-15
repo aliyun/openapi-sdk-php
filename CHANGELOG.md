@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1968 - 2023-9-15
+- Generated 2020-06-06 for `cams`.
+
+
 ## 1.8.1967 - 2023-9-14
 - Update MergeVideoModelFace.
 

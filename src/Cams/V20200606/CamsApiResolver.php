@@ -5,25 +5,34 @@ namespace AlibabaCloud\Cams\V20200606;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddChatappPhoneNumber addChatappPhoneNumber(array $options = [])
  * @method BeeBotAssociate beeBotAssociate(array $options = [])
  * @method BeeBotChat beeBotChat(array $options = [])
  * @method ChatappBindWaba chatappBindWaba(array $options = [])
  * @method ChatappEmbedSignUp chatappEmbedSignUp(array $options = [])
  * @method ChatappMigrationRegister chatappMigrationRegister(array $options = [])
  * @method ChatappMigrationVerified chatappMigrationVerified(array $options = [])
+ * @method ChatappPhoneNumberDeregister chatappPhoneNumberDeregister(array $options = [])
  * @method ChatappPhoneNumberRegister chatappPhoneNumberRegister(array $options = [])
  * @method ChatappSyncPhoneNumber chatappSyncPhoneNumber(array $options = [])
  * @method ChatappVerifyAndRegister chatappVerifyAndRegister(array $options = [])
  * @method CreateChatappMigrationInitiate createChatappMigrationInitiate(array $options = [])
  * @method CreateChatappTemplate createChatappTemplate(array $options = [])
  * @method DeleteChatappTemplate deleteChatappTemplate(array $options = [])
+ * @method EnableWhatsappROIMetric enableWhatsappROIMetric(array $options = [])
+ * @method GetChatappPhoneNumberMetric getChatappPhoneNumberMetric(array $options = [])
  * @method GetChatappTemplateDetail getChatappTemplateDetail(array $options = [])
+ * @method GetChatappTemplateMetric getChatappTemplateMetric(array $options = [])
  * @method GetChatappUploadAuthorization getChatappUploadAuthorization(array $options = [])
  * @method GetChatappVerifyCode getChatappVerifyCode(array $options = [])
  * @method GetMigrationVerifyCode getMigrationVerifyCode(array $options = [])
  * @method GetPhoneNumberVerificationStatus getPhoneNumberVerificationStatus(array $options = [])
+ * @method GetPreValidatePhoneId getPreValidatePhoneId(array $options = [])
+ * @method GetWhatsappConnectionCatalog getWhatsappConnectionCatalog(array $options = [])
  * @method IsvGetAppId isvGetAppId(array $options = [])
  * @method ListChatappTemplate listChatappTemplate(array $options = [])
+ * @method ListProduct listProduct(array $options = [])
+ * @method ListProductCatalog listProductCatalog(array $options = [])
  * @method ModifyChatappTemplate modifyChatappTemplate(array $options = [])
  * @method ModifyPhoneBusinessProfile modifyPhoneBusinessProfile(array $options = [])
  * @method QueryChatappBindWaba queryChatappBindWaba(array $options = [])
@@ -50,6 +59,86 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+}
+
+/**
+ * @method string getPreValidateId()
+ * @method string getVerifiedName()
+ * @method string getPhoneNumber()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getCc()
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ */
+class AddChatappPhoneNumber extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPreValidateId($value)
+    {
+        $this->data['PreValidateId'] = $value;
+        $this->options['form_params']['PreValidateId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerifiedName($value)
+    {
+        $this->data['VerifiedName'] = $value;
+        $this->options['form_params']['VerifiedName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNumber($value)
+    {
+        $this->data['PhoneNumber'] = $value;
+        $this->options['form_params']['PhoneNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCc($value)
+    {
+        $this->data['Cc'] = $value;
+        $this->options['form_params']['Cc'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -410,6 +499,44 @@ class ChatappMigrationVerified extends Rpc
  * @method $this withProdCode($value)
  * @method string getCustSpaceId()
  */
+class ChatappPhoneNumberDeregister extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNumber($value)
+    {
+        $this->data['PhoneNumber'] = $value;
+        $this->options['form_params']['PhoneNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCustSpaceId($value)
+    {
+        $this->data['CustSpaceId'] = $value;
+        $this->options['form_params']['CustSpaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ */
 class ChatappPhoneNumberRegister extends Rpc
 {
 
@@ -535,6 +662,7 @@ class CreateChatappMigrationInitiate extends Rpc
  * @method string getName()
  * @method string getAllowCategoryChange()
  * @method string getCategory()
+ * @method string getMessageSendTtlSeconds()
  */
 class CreateChatappTemplate extends Rpc
 {
@@ -668,6 +796,19 @@ class CreateChatappTemplate extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMessageSendTtlSeconds($value)
+    {
+        $this->data['MessageSendTtlSeconds'] = $value;
+        $this->options['form_params']['MessageSendTtlSeconds'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -685,6 +826,42 @@ class CreateChatappTemplate extends Rpc
  * @method $this withTemplateCode($value)
  */
 class DeleteChatappTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class EnableWhatsappROIMetric extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getEnd()
+ * @method $this withEnd($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getStart()
+ * @method $this withStart($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getGranularity()
+ * @method $this withGranularity($value)
+ */
+class GetChatappPhoneNumberMetric extends Rpc
 {
 }
 
@@ -707,6 +884,32 @@ class DeleteChatappTemplate extends Rpc
  * @method $this withTemplateCode($value)
  */
 class GetChatappTemplateDetail extends Rpc
+{
+}
+
+/**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getEnd()
+ * @method $this withEnd($value)
+ * @method string getIsvCode()
+ * @method $this withIsvCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getStart()
+ * @method $this withStart($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getGranularity()
+ * @method $this withGranularity($value)
+ * @method string getTemplateCode()
+ * @method $this withTemplateCode($value)
+ */
+class GetChatappTemplateMetric extends Rpc
 {
 }
 
@@ -845,6 +1048,66 @@ class GetPhoneNumberVerificationStatus extends Rpc
 }
 
 /**
+ * @method string getPhoneNumber()
+ * @method string getVerifyCode()
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ */
+class GetPreValidatePhoneId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPhoneNumber($value)
+    {
+        $this->data['PhoneNumber'] = $value;
+        $this->options['form_params']['PhoneNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerifyCode($value)
+    {
+        $this->data['VerifyCode'] = $value;
+        $this->options['form_params']['VerifyCode'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getMetaVersion()
+ * @method $this withMetaVersion($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getWabaId()
+ * @method $this withWabaId($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class GetWhatsappConnectionCatalog extends Rpc
+{
+}
+
+/**
  * @method string getProdCode()
  * @method $this withProdCode($value)
  * @method string getType()
@@ -895,6 +1158,68 @@ class ListChatappTemplate extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBefore()
+ * @method $this withBefore($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getMetaVersion()
+ * @method $this withMetaVersion($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getAfter()
+ * @method $this withAfter($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getWabaId()
+ * @method $this withWabaId($value)
+ * @method string getCatalogId()
+ * @method $this withCatalogId($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getFields()
+ * @method $this withFields($value)
+ */
+class ListProduct extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBefore()
+ * @method $this withBefore($value)
+ * @method string getExtendFunction()
+ * @method $this withExtendFunction($value)
+ * @method string getMetaVersion()
+ * @method $this withMetaVersion($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getAfter()
+ * @method $this withAfter($value)
+ * @method string getRouteName()
+ * @method $this withRouteName($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBusinessId()
+ * @method $this withBusinessId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ * @method string getFields()
+ * @method $this withFields($value)
+ */
+class ListProductCatalog extends Rpc
+{
+}
+
+/**
  * @method string getComponents()
  * @method string getLanguage()
  * @method string getCustWabaId()
@@ -907,6 +1232,7 @@ class ListChatappTemplate extends Rpc
  * @method $this withProdCode($value)
  * @method string getCustSpaceId()
  * @method string getCategory()
+ * @method string getMessageSendTtlSeconds()
  * @method string getTemplateCode()
  */
 class ModifyChatappTemplate extends Rpc
@@ -1012,6 +1338,19 @@ class ModifyChatappTemplate extends Rpc
     {
         $this->data['Category'] = $value;
         $this->options['form_params']['Category'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMessageSendTtlSeconds($value)
+    {
+        $this->data['MessageSendTtlSeconds'] = $value;
+        $this->options['form_params']['MessageSendTtlSeconds'] = $value;
 
         return $this;
     }
@@ -1333,6 +1672,7 @@ class SendChatappMassMessage extends Rpc
 }
 
 /**
+ * @method string getProductAction()
  * @method string getMessageType()
  * @method string getLanguage()
  * @method string getCustWabaId()
@@ -1364,6 +1704,19 @@ class SendChatappMassMessage extends Rpc
  */
 class SendChatappMessage extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductAction($value)
+    {
+        $this->data['ProductAction'] = $value;
+        $this->options['form_params']['ProductAction'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
