@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1970 - 2023-9-18
+- Public Api.
+
+
 ## 1.8.1969 - 2023-9-15
 - Add openapi TagResources.
 - Add openapi UntagResources.

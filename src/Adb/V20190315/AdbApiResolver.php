@@ -76,10 +76,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTables describeTables(array $options = [])
  * @method DescribeTableStatistics describeTableStatistics(array $options = [])
  * @method DescribeTaskInfo describeTaskInfo(array $options = [])
+ * @method DescribeVSwitches describeVSwitches(array $options = [])
  * @method DetachUserENI detachUserENI(array $options = [])
  * @method DisableAdviceService disableAdviceService(array $options = [])
  * @method DownloadDiagnosisRecords downloadDiagnosisRecords(array $options = [])
- * @method DryRunCluster dryRunCluster(array $options = [])
  * @method EnableAdviceService enableAdviceService(array $options = [])
  * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
  * @method KillProcess killProcess(array $options = [])
@@ -1653,6 +1653,28 @@ class DescribeTaskInfo extends Rpc
 }
 
 /**
+ * @method string getVswId()
+ * @method $this withVswId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class DescribeVSwitches extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -1711,40 +1733,6 @@ class DisableAdviceService extends Rpc
  * @method $this withUserName($value)
  */
 class DownloadDiagnosisRecords extends Rpc
-{
-}
-
-/**
- * @method string getDBClusterDescription()
- * @method $this withDBClusterDescription($value)
- * @method string getEnableDefaultResourcePool()
- * @method $this withEnableDefaultResourcePool($value)
- * @method string getStorageResource()
- * @method $this withStorageResource($value)
- * @method string getDBClusterNetworkType()
- * @method $this withDBClusterNetworkType($value)
- * @method string getPeriod()
- * @method $this withPeriod($value)
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getDBClusterVersion()
- * @method $this withDBClusterVersion($value)
- * @method string getUsedTime()
- * @method $this withUsedTime($value)
- * @method string getVSwitchId()
- * @method $this withVSwitchId($value)
- * @method string getVPCId()
- * @method $this withVPCId($value)
- * @method string getZoneId()
- * @method $this withZoneId($value)
- * @method string getComputeResource()
- * @method $this withComputeResource($value)
- * @method string getPayType()
- * @method $this withPayType($value)
- * @method string getOperation()
- * @method $this withOperation($value)
- */
-class DryRunCluster extends Rpc
 {
 }
 
