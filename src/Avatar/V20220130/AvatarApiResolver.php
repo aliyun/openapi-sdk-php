@@ -6,6 +6,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CancelVideoTask cancelVideoTask(array $options = [])
+ * @method ClientAuth clientAuth(array $options = [])
+ * @method ClientStart clientStart(array $options = [])
  * @method CloseTimedResetOperate closeTimedResetOperate(array $options = [])
  * @method Create2dAvatar create2dAvatar(array $options = [])
  * @method DeleteAvatar deleteAvatar(array $options = [])
@@ -17,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRunningInstance queryRunningInstance(array $options = [])
  * @method QueryTimedResetOperateStatus queryTimedResetOperateStatus(array $options = [])
  * @method QueryVideoTaskInfo queryVideoTaskInfo(array $options = [])
+ * @method Render3dAvatar render3dAvatar(array $options = [])
  * @method SendCommand sendCommand(array $options = [])
  * @method SendMessage sendMessage(array $options = [])
  * @method SendText sendText(array $options = [])
@@ -56,6 +59,40 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class CancelVideoTask extends Rpc
 {
+}
+
+/**
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ * @method string getDeviceType()
+ * @method $this withDeviceType($value)
+ * @method string getLicense()
+ * @method $this withLicense($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getDeviceInfo()
+ * @method $this withDeviceInfo($value)
+ */
+class ClientAuth extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class ClientStart extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -303,6 +340,21 @@ class QueryTimedResetOperateStatus extends Rpc
  */
 class QueryVideoTaskInfo extends Rpc
 {
+}
+
+/**
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class Render3dAvatar extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

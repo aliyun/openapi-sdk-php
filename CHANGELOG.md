@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1971 - 2023-9-18
+- add client SDK api
+
+
 ## 1.8.1970 - 2023-9-18
 - Public Api.
 
