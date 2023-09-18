@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1972 - 2023-9-18
+- Update by SDK platform.
+
+
 ## 1.8.1971 - 2023-9-18
 - add client SDK api
 
