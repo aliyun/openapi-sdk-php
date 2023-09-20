@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BackFill backFill(array $options = [])
  * @method BuyPayAsYouGoOrder buyPayAsYouGoOrder(array $options = [])
  * @method ChangeColumnSecLevel changeColumnSecLevel(array $options = [])
+ * @method ChangeColumnSecurityLevel changeColumnSecurityLevel(array $options = [])
  * @method ChangeLhDagOwner changeLhDagOwner(array $options = [])
  * @method CloseOrder closeOrder(array $options = [])
  * @method CreateAuthorityTemplate createAuthorityTemplate(array $options = [])
@@ -28,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLakeHouseSpace createLakeHouseSpace(array $options = [])
  * @method CreateLogicDatabase createLogicDatabase(array $options = [])
  * @method CreateOrder createOrder(array $options = [])
+ * @method CreateProcCorrectOrder createProcCorrectOrder(array $options = [])
  * @method CreateProxy createProxy(array $options = [])
  * @method CreateProxyAccess createProxyAccess(array $options = [])
  * @method CreatePublishGroupTask createPublishGroupTask(array $options = [])
@@ -62,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetApprovalDetail getApprovalDetail(array $options = [])
  * @method GetAuthorityTemplate getAuthorityTemplate(array $options = [])
  * @method GetAuthorityTemplateItem getAuthorityTemplateItem(array $options = [])
+ * @method GetClassificationTemplate getClassificationTemplate(array $options = [])
  * @method GetDataArchiveCount getDataArchiveCount(array $options = [])
  * @method GetDataArchiveOrderDetail getDataArchiveOrderDetail(array $options = [])
  * @method GetDatabase getDatabase(array $options = [])
@@ -147,6 +150,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSensitiveColumns listSensitiveColumns(array $options = [])
  * @method ListSensitiveColumnsDetail listSensitiveColumnsDetail(array $options = [])
  * @method ListSensitiveDataAuditLog listSensitiveDataAuditLog(array $options = [])
+ * @method ListSensitivityLevel listSensitivityLevel(array $options = [])
  * @method ListSLARules listSLARules(array $options = [])
  * @method ListSQLExecAuditLog listSQLExecAuditLog(array $options = [])
  * @method ListSQLReviewOriginSQL listSQLReviewOriginSQL(array $options = [])
@@ -400,6 +404,29 @@ class ChangeColumnSecLevel extends Rpc
 }
 
 /**
+ * @method string getNewSensitivityLevel()
+ * @method $this withNewSensitivityLevel($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getIsLogic()
+ * @method $this withIsLogic($value)
+ * @method string getColumnName()
+ * @method $this withColumnName($value)
+ * @method string getDbId()
+ * @method $this withDbId($value)
+ */
+class ChangeColumnSecurityLevel extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
@@ -629,6 +656,22 @@ class CreateOrder extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getParam()
+ * @method $this withParam($value)
+ * @method string getRelatedUserList()
+ * @method $this withRelatedUserList($value)
+ * @method string getAttachmentKey()
+ * @method $this withAttachmentKey($value)
+ * @method string getComment()
+ * @method $this withComment($value)
+ */
+class CreateProcCorrectOrder extends Rpc
+{
 }
 
 /**
@@ -1076,6 +1119,16 @@ class GetAuthorityTemplate extends Rpc
  * @method $this withTemplateId($value)
  */
 class GetAuthorityTemplateItem extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetClassificationTemplate extends Rpc
 {
 }
 
@@ -2190,6 +2243,24 @@ class ListSensitiveDataAuditLog extends Rpc
 }
 
 /**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class ListSensitivityLevel extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getDagId()
  * @method $this withDagId($value)
  * @method string getTid()
@@ -2472,6 +2543,8 @@ class ModifyDataCorrectExecSQL extends Rpc
  * @method $this withIsReset($value)
  * @method string getTid()
  * @method $this withTid($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
  * @method string getTableName()
  * @method $this withTableName($value)
  * @method string getSchemaName()
@@ -2566,6 +2639,8 @@ class ReDeployLhDagVersion extends Rpc
  * @method $this withTid($value)
  * @method string getOrderId()
  * @method $this withOrderId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class RefundPayAsYouGoOrder extends Rpc
 {
