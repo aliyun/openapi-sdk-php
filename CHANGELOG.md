@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1973 - 2023-9-20
+- Generated 2018-01-20 for `Linkvisual`.
+
+
 ## 1.8.1972 - 2023-9-18
 - Update by SDK platform.
 

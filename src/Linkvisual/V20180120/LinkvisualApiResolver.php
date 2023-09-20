@@ -3660,6 +3660,8 @@ class QueryTimeTemplateDetail extends Rpc
 }
 
 /**
+ * @method string getScheme()
+ * @method $this withScheme($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
