@@ -1461,6 +1461,7 @@ class QueryWabaBusinessInfo extends Rpc
  * @method string getChannelType()
  * @method string getFrom()
  * @method string getTag()
+ * @method string getFallBackRule()
  * @method string getTaskId()
  * @method string getIsvCode()
  * @method string getProdCode()
@@ -1562,6 +1563,19 @@ class SendChatappMassMessage extends Rpc
     {
         $this->data['Tag'] = $value;
         $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFallBackRule($value)
+    {
+        $this->data['FallBackRule'] = $value;
+        $this->options['form_params']['FallBackRule'] = $value;
 
         return $this;
     }
@@ -1688,6 +1702,7 @@ class SendChatappMassMessage extends Rpc
  * @method string getChannelType()
  * @method string getFrom()
  * @method string getTag()
+ * @method string getFallBackRule()
  * @method string getTrackingData()
  * @method string getTaskId()
  * @method string getIsvCode()
@@ -1831,6 +1846,19 @@ class SendChatappMessage extends Rpc
     {
         $this->data['Tag'] = $value;
         $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFallBackRule($value)
+    {
+        $this->data['FallBackRule'] = $value;
+        $this->options['form_params']['FallBackRule'] = $value;
 
         return $this;
     }
