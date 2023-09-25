@@ -310,6 +310,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryProjectShareDeviceList queryProjectShareDeviceList(array $options = [])
  * @method QuerySceneRule querySceneRule(array $options = [])
  * @method QuerySchedulePeriodList querySchedulePeriodList(array $options = [])
+ * @method QueryShareProductNameByProductKey queryShareProductNameByProductKey(array $options = [])
  * @method QuerySharePromotionActivityAuditResult querySharePromotionActivityAuditResult(array $options = [])
  * @method QueryShareTaskDeviceList queryShareTaskDeviceList(array $options = [])
  * @method QuerySolutionDeviceGroupPage querySolutionDeviceGroupPage(array $options = [])
@@ -354,6 +355,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ReplaceEdgeInstanceGateway replaceEdgeInstanceGateway(array $options = [])
  * @method RerunJob rerunJob(array $options = [])
  * @method ResetConsumerGroupPosition resetConsumerGroupPosition(array $options = [])
+ * @method ResetDeviceTimeline resetDeviceTimeline(array $options = [])
  * @method ResetThing resetThing(array $options = [])
  * @method RetrySoundCodeLabelBatch retrySoundCodeLabelBatch(array $options = [])
  * @method ReupgradeOTATask reupgradeOTATask(array $options = [])
@@ -11618,6 +11620,8 @@ class InvokeThingService extends Rpc
 }
 
 /**
+ * @method string getQos()
+ * @method $this withQos($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getIdentifier()
@@ -17278,6 +17282,68 @@ class QuerySchedulePeriodList extends Rpc
 }
 
 /**
+ * @method string getShareTaskCode()
+ * @method string getProductKey()
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QueryShareProductNameByProductKey extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShareTaskCode($value)
+    {
+        $this->data['ShareTaskCode'] = $value;
+        $this->options['form_params']['ShareTaskCode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductKey($value)
+    {
+        $this->data['ProductKey'] = $value;
+        $this->options['form_params']['ProductKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSharePromotionActivityId()
  * @method string getIotInstanceId()
  * @method string getShareTaskCode()
@@ -20158,6 +20224,50 @@ class ResetConsumerGroupPosition extends Rpc
  * @method $this withRealTenantId($value)
  * @method string getRealTripartiteKey()
  * @method $this withRealTripartiteKey($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class ResetDeviceTimeline extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getRealTenantId()
+ * @method $this withRealTenantId($value)
+ * @method string getRealTripartiteKey()
+ * @method $this withRealTripartiteKey($value)
  * @method string getIotId()
  * @method $this withIotId($value)
  * @method string getIotInstanceId()
@@ -20606,6 +20716,8 @@ class SetDeviceProperty extends Rpc
 }
 
 /**
+ * @method string getQos()
+ * @method $this withQos($value)
  * @method string getIotInstanceId()
  * @method $this withIotInstanceId($value)
  * @method string getProductKey()

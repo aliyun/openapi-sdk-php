@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1976 - 2023-9-25
+- Add Api ResetDeviceTimeline.
+
+
 ## 1.8.1975 - 2023-9-21
 - Generated 2020-06-06 for `cams`.
 
