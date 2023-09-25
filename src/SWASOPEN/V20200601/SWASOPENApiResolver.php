@@ -138,10 +138,12 @@ class CreateCommand extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
  * @method string getImageName()
  * @method $this withImageName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class CreateCustomImage extends Rpc
 {
@@ -734,10 +736,10 @@ class ModifyDatabaseInstanceParameter extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
- * @method string getSourceCidrIp()
- * @method $this withSourceCidrIp($value)
  * @method string getRemark()
  * @method $this withRemark($value)
+ * @method string getSourceCidrIp()
+ * @method $this withSourceCidrIp($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getRuleProtocol()
