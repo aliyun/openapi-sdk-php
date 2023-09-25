@@ -10,6 +10,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddProjectMemberToRole addProjectMemberToRole(array $options = [])
  * @method AddToMetaCategory addToMetaCategory(array $options = [])
  * @method ApprovePermissionApplyOrder approvePermissionApplyOrder(array $options = [])
+ * @method CallbackExtension callbackExtension(array $options = [])
  * @method ChangeResourceManagerResourceGroup changeResourceManagerResourceGroup(array $options = [])
  * @method CheckFileDeployment checkFileDeployment(array $options = [])
  * @method CheckMetaPartition checkMetaPartition(array $options = [])
@@ -24,6 +25,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDataServiceFolder createDataServiceFolder(array $options = [])
  * @method CreateDataServiceGroup createDataServiceGroup(array $options = [])
  * @method CreateDataSource createDataSource(array $options = [])
+ * @method CreateDIAlarmRule createDIAlarmRule(array $options = [])
+ * @method CreateDIJob createDIJob(array $options = [])
  * @method CreateDISyncTask createDISyncTask(array $options = [])
  * @method CreateExportMigration createExportMigration(array $options = [])
  * @method CreateFile createFile(array $options = [])
@@ -39,6 +42,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateQualityRelativeNode createQualityRelativeNode(array $options = [])
  * @method CreateQualityRule createQualityRule(array $options = [])
  * @method CreateRemind createRemind(array $options = [])
+ * @method CreateResourceFile createResourceFile(array $options = [])
  * @method CreateTable createTable(array $options = [])
  * @method CreateTableLevel createTableLevel(array $options = [])
  * @method CreateTableTheme createTableTheme(array $options = [])
@@ -49,6 +53,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteDataServiceApi deleteDataServiceApi(array $options = [])
  * @method DeleteDataServiceApiAuthority deleteDataServiceApiAuthority(array $options = [])
  * @method DeleteDataSource deleteDataSource(array $options = [])
+ * @method DeleteDIAlarmRule deleteDIAlarmRule(array $options = [])
+ * @method DeleteDIJob deleteDIJob(array $options = [])
  * @method DeleteDISyncTask deleteDISyncTask(array $options = [])
  * @method DeleteFile deleteFile(array $options = [])
  * @method DeleteFolder deleteFolder(array $options = [])
@@ -88,6 +94,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataSourceMeta getDataSourceMeta(array $options = [])
  * @method GetDDLJobStatus getDDLJobStatus(array $options = [])
  * @method GetDeployment getDeployment(array $options = [])
+ * @method GetDIAlarmRule getDIAlarmRule(array $options = [])
+ * @method GetDIJob getDIJob(array $options = [])
  * @method GetDISyncInstanceInfo getDISyncInstanceInfo(array $options = [])
  * @method GetDISyncTask getDISyncTask(array $options = [])
  * @method GetExtension getExtension(array $options = [])
@@ -161,8 +169,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListDataServicePublishedApis listDataServicePublishedApis(array $options = [])
  * @method ListDataSources listDataSources(array $options = [])
  * @method ListDeployments listDeployments(array $options = [])
+ * @method ListDIAlarmRules listDIAlarmRules(array $options = [])
+ * @method ListDIJobs listDIJobs(array $options = [])
  * @method ListDIProjectConfig listDIProjectConfig(array $options = [])
  * @method ListEnabledExtensionsForProject listEnabledExtensionsForProject(array $options = [])
+ * @method ListEntitiesByTags listEntitiesByTags(array $options = [])
+ * @method ListEntityTags listEntityTags(array $options = [])
  * @method ListExtensions listExtensions(array $options = [])
  * @method ListFiles listFiles(array $options = [])
  * @method ListFileType listFileType(array $options = [])
@@ -207,6 +219,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDISyncTaskConfigProcessResult queryDISyncTaskConfigProcessResult(array $options = [])
  * @method QueryPublicModelEngine queryPublicModelEngine(array $options = [])
  * @method RegisterLineageRelation registerLineageRelation(array $options = [])
+ * @method RemoveEntityTags removeEntityTags(array $options = [])
  * @method RemoveProjectMemberFromRole removeProjectMemberFromRole(array $options = [])
  * @method RestartInstance restartInstance(array $options = [])
  * @method ResumeInstance resumeInstance(array $options = [])
@@ -221,9 +234,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SearchMetaTables searchMetaTables(array $options = [])
  * @method SearchNodesByOutput searchNodesByOutput(array $options = [])
  * @method SetDataSourceShare setDataSourceShare(array $options = [])
+ * @method SetEntityTags setEntityTags(array $options = [])
  * @method SetSuccessInstance setSuccessInstance(array $options = [])
+ * @method StartDIJob startDIJob(array $options = [])
  * @method StartDISyncInstance startDISyncInstance(array $options = [])
  * @method StartMigration startMigration(array $options = [])
+ * @method StopDIJob stopDIJob(array $options = [])
  * @method StopDISyncInstance stopDISyncInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method SubmitDataServiceApi submitDataServiceApi(array $options = [])
@@ -240,6 +256,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateConnection updateConnection(array $options = [])
  * @method UpdateDataServiceApi updateDataServiceApi(array $options = [])
  * @method UpdateDataSource updateDataSource(array $options = [])
+ * @method UpdateDIAlarmRule updateDIAlarmRule(array $options = [])
+ * @method UpdateDIJob updateDIJob(array $options = [])
  * @method UpdateDIProjectConfig updateDIProjectConfig(array $options = [])
  * @method UpdateDISyncTask updateDISyncTask(array $options = [])
  * @method UpdateFile updateFile(array $options = [])
@@ -329,6 +347,8 @@ class AbolishDataServiceApi extends Rpc
 /**
  * @method string getEntityQualifiedName()
  * @method $this withEntityQualifiedName($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getCollectionQualifiedName()
  * @method $this withCollectionQualifiedName($value)
  */
@@ -370,6 +390,71 @@ class AddToMetaCategory extends Rpc
  */
 class ApprovePermissionApplyOrder extends Rpc
 {
+}
+
+/**
+ * @method string getCheckResult()
+ * @method string getMessageId()
+ * @method string getCheckMessage()
+ * @method string getExtensionCode()
+ */
+class CallbackExtension extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCheckResult($value)
+    {
+        $this->data['CheckResult'] = $value;
+        $this->options['form_params']['CheckResult'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMessageId($value)
+    {
+        $this->data['MessageId'] = $value;
+        $this->options['form_params']['MessageId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCheckMessage($value)
+    {
+        $this->data['CheckMessage'] = $value;
+        $this->options['form_params']['CheckMessage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtensionCode($value)
+    {
+        $this->data['ExtensionCode'] = $value;
+        $this->options['form_params']['ExtensionCode'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1458,6 +1543,272 @@ class CreateDataSource extends Rpc
 }
 
 /**
+ * @method string getMetricType()
+ * @method string getTriggerConditions()
+ * @method string getDescription()
+ * @method string getNotificationSettings()
+ * @method string getEnabled()
+ * @method string getDIJobId()
+ */
+class CreateDIAlarmRule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricType($value)
+    {
+        $this->data['MetricType'] = $value;
+        $this->options['form_params']['MetricType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTriggerConditions($value)
+    {
+        $this->data['TriggerConditions'] = $value;
+        $this->options['form_params']['TriggerConditions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotificationSettings($value)
+    {
+        $this->data['NotificationSettings'] = $value;
+        $this->options['form_params']['NotificationSettings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnabled($value)
+    {
+        $this->data['Enabled'] = $value;
+        $this->options['form_params']['Enabled'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIJobId($value)
+    {
+        $this->data['DIJobId'] = $value;
+        $this->options['form_params']['DIJobId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceDataSourceType()
+ * @method string getDescription()
+ * @method string getTransformationRules()
+ * @method string getDestinationDataSourceType()
+ * @method string getDestinationDataSourceSettings()
+ * @method string getSourceDataSourceSettings()
+ * @method string getResourceSettings()
+ * @method string getMigrationType()
+ * @method string getSystemDebug()
+ * @method $this withSystemDebug($value)
+ * @method string getProjectId()
+ * @method string getJobName()
+ * @method string getTableMappings()
+ * @method string getJobSettings()
+ */
+class CreateDIJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceDataSourceType($value)
+    {
+        $this->data['SourceDataSourceType'] = $value;
+        $this->options['form_params']['SourceDataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTransformationRules($value)
+    {
+        $this->data['TransformationRules'] = $value;
+        $this->options['form_params']['TransformationRules'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDestinationDataSourceType($value)
+    {
+        $this->data['DestinationDataSourceType'] = $value;
+        $this->options['form_params']['DestinationDataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDestinationDataSourceSettings($value)
+    {
+        $this->data['DestinationDataSourceSettings'] = $value;
+        $this->options['form_params']['DestinationDataSourceSettings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceDataSourceSettings($value)
+    {
+        $this->data['SourceDataSourceSettings'] = $value;
+        $this->options['form_params']['SourceDataSourceSettings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceSettings($value)
+    {
+        $this->data['ResourceSettings'] = $value;
+        $this->options['form_params']['ResourceSettings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMigrationType($value)
+    {
+        $this->data['MigrationType'] = $value;
+        $this->options['form_params']['MigrationType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->options['form_params']['JobName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTableMappings($value)
+    {
+        $this->data['TableMappings'] = $value;
+        $this->options['form_params']['TableMappings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobSettings($value)
+    {
+        $this->data['JobSettings'] = $value;
+        $this->options['form_params']['JobSettings'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTaskType()
  * @method $this withTaskType($value)
  * @method string getClientToken()
@@ -1579,6 +1930,7 @@ class CreateExportMigration extends Rpc
  * @method string getOwner()
  * @method string getAutoRerunIntervalMillis()
  * @method string getInputList()
+ * @method string getCreateFolderIfNotExists()
  * @method string getRerunMode()
  * @method string getConnectionName()
  * @method string getOutputParameters()
@@ -1765,6 +2117,19 @@ class CreateFile extends Rpc
     {
         $this->data['InputList'] = $value;
         $this->options['form_params']['InputList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCreateFolderIfNotExists($value)
+    {
+        $this->data['CreateFolderIfNotExists'] = $value;
+        $this->options['form_params']['CreateFolderIfNotExists'] = $value;
 
         return $this;
     }
@@ -3198,6 +3563,183 @@ class CreateRemind extends Rpc
 }
 
 /**
+ * @method string getFileType()
+ * @method string getContent()
+ * @method string getResourceFile()
+ * @method string getOriginResourceName()
+ * @method string getProjectId()
+ * @method string getStorageURL()
+ * @method string getOwner()
+ * @method string getRegisterToCalcEngine()
+ * @method string getUploadMode()
+ * @method string getFileName()
+ * @method string getFileFolderPath()
+ * @method string getFileDescription()
+ */
+class CreateResourceFile extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileType($value)
+    {
+        $this->data['FileType'] = $value;
+        $this->options['form_params']['FileType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withContent($value)
+    {
+        $this->data['Content'] = $value;
+        $this->options['form_params']['Content'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceFile($value)
+    {
+        $this->data['ResourceFile'] = $value;
+        $this->options['form_params']['ResourceFile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOriginResourceName($value)
+    {
+        $this->data['OriginResourceName'] = $value;
+        $this->options['form_params']['OriginResourceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStorageURL($value)
+    {
+        $this->data['StorageURL'] = $value;
+        $this->options['form_params']['StorageURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOwner($value)
+    {
+        $this->data['Owner'] = $value;
+        $this->options['form_params']['Owner'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRegisterToCalcEngine($value)
+    {
+        $this->data['RegisterToCalcEngine'] = $value;
+        $this->options['form_params']['RegisterToCalcEngine'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUploadMode($value)
+    {
+        $this->data['UploadMode'] = $value;
+        $this->options['form_params']['UploadMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileName($value)
+    {
+        $this->data['FileName'] = $value;
+        $this->options['form_params']['FileName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileFolderPath($value)
+    {
+        $this->data['FileFolderPath'] = $value;
+        $this->options['form_params']['FileFolderPath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileDescription($value)
+    {
+        $this->data['FileDescription'] = $value;
+        $this->options['form_params']['FileDescription'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSchema()
  * @method $this withSchema($value)
  * @method string getClientToken()
@@ -3349,6 +3891,7 @@ class CreateTableTheme extends Rpc
 }
 
 /**
+ * @method string getCreateFolderIfNotExists()
  * @method string getReturnValue()
  * @method string getResources()
  * @method string getFunctionType()
@@ -3364,6 +3907,19 @@ class CreateTableTheme extends Rpc
  */
 class CreateUdfFile extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCreateFolderIfNotExists($value)
+    {
+        $this->data['CreateFolderIfNotExists'] = $value;
+        $this->options['form_params']['CreateFolderIfNotExists'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -3728,6 +4284,46 @@ class DeleteDataServiceApiAuthority extends Rpc
  */
 class DeleteDataSource extends Rpc
 {
+}
+
+/**
+ * @method string getDIAlarmRuleId()
+ */
+class DeleteDIAlarmRule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIAlarmRuleId($value)
+    {
+        $this->data['DIAlarmRuleId'] = $value;
+        $this->options['form_params']['DIAlarmRuleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDIJobId()
+ */
+class DeleteDIJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIJobId($value)
+    {
+        $this->data['DIJobId'] = $value;
+        $this->options['form_params']['DIJobId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5038,6 +5634,60 @@ class GetDeployment extends Rpc
     {
         $this->data['ProjectIdentifier'] = $value;
         $this->options['form_params']['ProjectIdentifier'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDIAlarmRuleId()
+ */
+class GetDIAlarmRule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIAlarmRuleId($value)
+    {
+        $this->data['DIAlarmRuleId'] = $value;
+        $this->options['form_params']['DIAlarmRuleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDIJobId()
+ * @method string getWithDetails()
+ */
+class GetDIJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIJobId($value)
+    {
+        $this->data['DIJobId'] = $value;
+        $this->options['form_params']['DIJobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWithDetails($value)
+    {
+        $this->data['WithDetails'] = $value;
+        $this->options['form_params']['WithDetails'] = $value;
 
         return $this;
     }
@@ -6448,6 +7098,8 @@ class GetPermissionApplyOrderDetail extends Rpc
 }
 
 /**
+ * @method string getProjectIdentifier()
+ * @method $this withProjectIdentifier($value)
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
@@ -8132,6 +8784,144 @@ class ListDeployments extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method string getDIJobId()
+ * @method string getPageSize()
+ */
+class ListDIAlarmRules extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIJobId($value)
+    {
+        $this->data['DIJobId'] = $value;
+        $this->options['form_params']['DIJobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceDataSourceType()
+ * @method string getPageNumber()
+ * @method string getDestinationDataSourceType()
+ * @method string getPageSize()
+ * @method string getProjectId()
+ * @method string getJobName()
+ */
+class ListDIJobs extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceDataSourceType($value)
+    {
+        $this->data['SourceDataSourceType'] = $value;
+        $this->options['form_params']['SourceDataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDestinationDataSourceType($value)
+    {
+        $this->data['DestinationDataSourceType'] = $value;
+        $this->options['form_params']['DestinationDataSourceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobName($value)
+    {
+        $this->data['JobName'] = $value;
+        $this->options['form_params']['JobName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getDestinationType()
  * @method $this withDestinationType($value)
  * @method string getSourceType()
@@ -8192,6 +8982,34 @@ class ListEnabledExtensionsForProject extends Rpc
 }
 
 /**
+ * @method string getEntityType()
+ * @method $this withEntityType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ */
+class ListEntitiesByTags extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getQualifiedName()
+ * @method $this withQualifiedName($value)
+ */
+class ListEntityTags extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPageNumber()
@@ -8204,10 +9022,14 @@ class ListExtensions extends Rpc
 /**
  * @method string getOwner()
  * @method string getFileTypes()
+ * @method string getNeedContent()
+ * @method string getNeedAbsoluteFolderPath()
  * @method string getProjectIdentifier()
  * @method string getPageNumber()
+ * @method string getFileIdIn()
  * @method string getFileFolderPath()
  * @method string getPageSize()
+ * @method string getExactFileName()
  * @method string getKeyword()
  * @method string getProjectId()
  * @method string getUseType()
@@ -8247,6 +9069,32 @@ class ListFiles extends Rpc
      *
      * @return $this
      */
+    public function withNeedContent($value)
+    {
+        $this->data['NeedContent'] = $value;
+        $this->options['form_params']['NeedContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNeedAbsoluteFolderPath($value)
+    {
+        $this->data['NeedAbsoluteFolderPath'] = $value;
+        $this->options['form_params']['NeedAbsoluteFolderPath'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withProjectIdentifier($value)
     {
         $this->data['ProjectIdentifier'] = $value;
@@ -8273,6 +9121,19 @@ class ListFiles extends Rpc
      *
      * @return $this
      */
+    public function withFileIdIn($value)
+    {
+        $this->data['FileIdIn'] = $value;
+        $this->options['form_params']['FileIdIn'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withFileFolderPath($value)
     {
         $this->data['FileFolderPath'] = $value;
@@ -8290,6 +9151,19 @@ class ListFiles extends Rpc
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExactFileName($value)
+    {
+        $this->data['ExactFileName'] = $value;
+        $this->options['form_params']['ExactFileName'] = $value;
 
         return $this;
     }
@@ -10507,6 +11381,28 @@ class RegisterLineageRelation extends Rpc
 }
 
 /**
+ * @method string getQualifiedName()
+ * @method $this withQualifiedName($value)
+ * @method string getTagKeys()
+ */
+class RemoveEntityTags extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTagKeys($value)
+    {
+        $this->data['TagKeys'] = $value;
+        $this->options['form_params']['TagKeys'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getRoleCode()
  * @method $this withRoleCode($value)
  * @method string getUserId()
@@ -11254,6 +12150,28 @@ class SetDataSourceShare extends Rpc
 }
 
 /**
+ * @method string getQualifiedName()
+ * @method $this withQualifiedName($value)
+ * @method string getTags()
+ */
+class SetEntityTags extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['form_params']['Tags'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getProjectEnv()
  * @method string getInstanceId()
  */
@@ -11282,6 +12200,54 @@ class SetSuccessInstance extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getForceToRerun()
+ * @method string getDIJobId()
+ * @method string getRealtimeStartSettings()
+ */
+class StartDIJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withForceToRerun($value)
+    {
+        $this->data['ForceToRerun'] = $value;
+        $this->options['form_params']['ForceToRerun'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIJobId($value)
+    {
+        $this->data['DIJobId'] = $value;
+        $this->options['form_params']['DIJobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRealtimeStartSettings($value)
+    {
+        $this->data['RealtimeStartSettings'] = $value;
+        $this->options['form_params']['RealtimeStartSettings'] = $value;
 
         return $this;
     }
@@ -11330,6 +12296,26 @@ class StartMigration extends Rpc
     {
         $this->data['ProjectId'] = $value;
         $this->options['form_params']['ProjectId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDIJobId()
+ */
+class StopDIJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIJobId($value)
+    {
+        $this->data['DIJobId'] = $value;
+        $this->options['form_params']['DIJobId'] = $value;
 
         return $this;
     }
@@ -12275,6 +13261,186 @@ class UpdateDataSource extends Rpc
 
     /** @var string */
     public $method = 'PUT';
+}
+
+/**
+ * @method string getMetricType()
+ * @method string getTriggerConditions()
+ * @method string getDescription()
+ * @method string getNotificationSettings()
+ * @method string getEnabled()
+ * @method string getDIAlarmRuleId()
+ */
+class UpdateDIAlarmRule extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricType($value)
+    {
+        $this->data['MetricType'] = $value;
+        $this->options['form_params']['MetricType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTriggerConditions($value)
+    {
+        $this->data['TriggerConditions'] = $value;
+        $this->options['form_params']['TriggerConditions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNotificationSettings($value)
+    {
+        $this->data['NotificationSettings'] = $value;
+        $this->options['form_params']['NotificationSettings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnabled($value)
+    {
+        $this->data['Enabled'] = $value;
+        $this->options['form_params']['Enabled'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIAlarmRuleId($value)
+    {
+        $this->data['DIAlarmRuleId'] = $value;
+        $this->options['form_params']['DIAlarmRuleId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDescription()
+ * @method string getTransformationRules()
+ * @method string getDIJobId()
+ * @method string getResourceSettings()
+ * @method string getTableMappings()
+ * @method string getJobSettings()
+ */
+class UpdateDIJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTransformationRules($value)
+    {
+        $this->data['TransformationRules'] = $value;
+        $this->options['form_params']['TransformationRules'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDIJobId($value)
+    {
+        $this->data['DIJobId'] = $value;
+        $this->options['form_params']['DIJobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceSettings($value)
+    {
+        $this->data['ResourceSettings'] = $value;
+        $this->options['form_params']['ResourceSettings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTableMappings($value)
+    {
+        $this->data['TableMappings'] = $value;
+        $this->options['form_params']['TableMappings'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobSettings($value)
+    {
+        $this->data['JobSettings'] = $value;
+        $this->options['form_params']['JobSettings'] = $value;
+
+        return $this;
+    }
 }
 
 /**

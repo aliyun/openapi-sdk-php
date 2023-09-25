@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1977 - 2023-9-25
+- Support DIJob and DIAlarmRule related APIs.
+
+
 ## 1.8.1976 - 2023-9-25
 - Add Api ResetDeviceTimeline.
 
