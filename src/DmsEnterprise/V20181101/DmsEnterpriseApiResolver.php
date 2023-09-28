@@ -96,6 +96,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetOrderAttachmentFile getOrderAttachmentFile(array $options = [])
  * @method GetOrderBaseInfo getOrderBaseInfo(array $options = [])
  * @method GetOwnerApplyOrderDetail getOwnerApplyOrderDetail(array $options = [])
+ * @method GetPagedInstance getPagedInstance(array $options = [])
  * @method GetPermApplyOrderDetail getPermApplyOrderDetail(array $options = [])
  * @method GetPhysicalDatabase getPhysicalDatabase(array $options = [])
  * @method GetProxy getProxy(array $options = [])
@@ -175,6 +176,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method MoveTaskFlowToScenario moveTaskFlowToScenario(array $options = [])
  * @method OfflineTaskFlow offlineTaskFlow(array $options = [])
  * @method PauseDataCorrectSQLJob pauseDataCorrectSQLJob(array $options = [])
+ * @method PreviewWorkflow previewWorkflow(array $options = [])
  * @method PublishAndDeployTaskFlow publishAndDeployTaskFlow(array $options = [])
  * @method QueryDataTrackResultDownloadStatus queryDataTrackResultDownloadStatus(array $options = [])
  * @method ReDeployLhDagVersion reDeployLhDagVersion(array $options = [])
@@ -1512,6 +1514,19 @@ class GetOwnerApplyOrderDetail extends Rpc
  * @method string getOrderId()
  * @method $this withOrderId($value)
  */
+class GetPagedInstance extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
 class GetPermApplyOrderDetail extends Rpc
 {
 }
@@ -2595,6 +2610,16 @@ class OfflineTaskFlow extends Rpc
  * @method $this withOrderId($value)
  */
 class PauseDataCorrectSQLJob extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ */
+class PreviewWorkflow extends Rpc
 {
 }
 
