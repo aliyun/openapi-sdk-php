@@ -176,6 +176,7 @@ namespace AlibabaCloud;
  * @method static Multimediaai\Multimediaai multimediaai()
  * @method static NAS\NAS nAS()
  * @method static Netana\Netana netana()
+ * @method static Nlb\Nlb nlb()
  * @method static Nlp\Nlp nlp()
  * @method static NlpAutoml\NlpAutoml nlpAutoml()
  * @method static NlsCloudMeta\NlsCloudMeta nlsCloudMeta()
