@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1981 - 2023-10-8
+- Update to support new apis.
+
+
 ## 1.8.1980 - 2023-10-8
 - Generated 2022-04-30 for `Nlb`.
 
