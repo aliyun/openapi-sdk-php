@@ -1211,6 +1211,7 @@ class InterpolateVideoFrame extends Rpc
 
 /**
  * @method string getReferenceURL()
+ * @method string getWatermarkType()
  * @method string getEnhance()
  * @method string getPostURL()
  * @method string getAsync()
@@ -1229,6 +1230,19 @@ class MergeVideoFace extends Rpc
     {
         $this->data['ReferenceURL'] = $value;
         $this->options['form_params']['ReferenceURL'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWatermarkType($value)
+    {
+        $this->data['WatermarkType'] = $value;
+        $this->options['form_params']['WatermarkType'] = $value;
 
         return $this;
     }
@@ -1303,6 +1317,7 @@ class MergeVideoFace extends Rpc
  * @method string getFaceImageURL()
  * @method array getMergeInfos()
  * @method string getUserId()
+ * @method string getWatermarkType()
  * @method string getEnhance()
  * @method string getTemplateId()
  * @method string getAsync()
@@ -1356,6 +1371,19 @@ class MergeVideoModelFace extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWatermarkType($value)
+    {
+        $this->data['WatermarkType'] = $value;
+        $this->options['form_params']['WatermarkType'] = $value;
 
         return $this;
     }

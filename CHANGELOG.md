@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1982 - 2023-10-10
+- Update MergeVideoModelFace MergeVideoFace.
+
+
 ## 1.8.1981 - 2023-10-8
 - Update to support new apis.
 
