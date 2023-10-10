@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1984 - 2023-10-10
+- Support CreateProcCorrectAPI.
+
+
 ## 1.8.1983 - 2023-10-10
 - Update MergeImageFace.
 
