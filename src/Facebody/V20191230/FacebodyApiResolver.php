@@ -14,7 +14,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BodyPosture bodyPosture(array $options = [])
  * @method CompareFace compareFace(array $options = [])
  * @method CompareFaceWithMask compareFaceWithMask(array $options = [])
- * @method CountCrowd countCrowd(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
@@ -25,7 +24,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetectChefCap detectChefCap(array $options = [])
  * @method DetectFace detectFace(array $options = [])
  * @method DetectInfraredLivingFace detectInfraredLivingFace(array $options = [])
- * @method DetectIPCPedestrian detectIPCPedestrian(array $options = [])
  * @method DetectLivingFace detectLivingFace(array $options = [])
  * @method DetectPedestrian detectPedestrian(array $options = [])
  * @method DetectPedestrianIntrusion detectPedestrianIntrusion(array $options = [])
@@ -58,7 +56,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RetouchBody retouchBody(array $options = [])
  * @method RetouchSkin retouchSkin(array $options = [])
  * @method SearchFace searchFace(array $options = [])
- * @method SwapFacialFeatures swapFacialFeatures(array $options = [])
  * @method UpdateFaceEntity updateFaceEntity(array $options = [])
  * @method VerifyFaceMask verifyFaceMask(array $options = [])
  */
@@ -766,46 +763,6 @@ class CompareFaceWithMask extends Rpc
 /**
  * @method string getFormatResultToJson()
  * @method $this withFormatResultToJson($value)
- * @method string getIsShow()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getImageURL()
- */
-class CountCrowd extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIsShow($value)
-    {
-        $this->data['IsShow'] = $value;
-        $this->options['form_params']['IsShow'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
  * @method string getOssFile()
  * @method $this withOssFile($value)
  * @method string getRequestProxyBy()
@@ -1176,102 +1133,6 @@ class DetectInfraredLivingFace extends Rpc
 		}
 
 		return $this;
-    }
-}
-
-/**
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getContinueOnError()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getHeight()
- * @method string getImageData()
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getDataId()
- * @method string getImageURL()
- * @method string getWidth()
- */
-class DetectIPCPedestrian extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withContinueOnError($value)
-    {
-        $this->data['ContinueOnError'] = $value;
-        $this->options['form_params']['ContinueOnError'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withHeight($value)
-    {
-        $this->data['Height'] = $value;
-        $this->options['form_params']['Height'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageData($value)
-    {
-        $this->data['ImageData'] = $value;
-        $this->options['form_params']['ImageData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDataId($value)
-    {
-        $this->data['DataId'] = $value;
-        $this->options['form_params']['DataId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWidth($value)
-    {
-        $this->data['Width'] = $value;
-        $this->options['form_params']['Width'] = $value;
-
-        return $this;
     }
 }
 
@@ -2189,6 +2050,7 @@ class ListFaceEntities extends Rpc
  * @method $this withFormatResultToJson($value)
  * @method array getMergeInfos()
  * @method string getUserId()
+ * @method string getWatermarkType()
  * @method string getOssFile()
  * @method $this withOssFile($value)
  * @method string getTemplateId()
@@ -2230,6 +2092,19 @@ class MergeImageFace extends Rpc
     {
         $this->data['UserId'] = $value;
         $this->options['form_params']['UserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWatermarkType($value)
+    {
+        $this->data['WatermarkType'] = $value;
+        $this->options['form_params']['WatermarkType'] = $value;
 
         return $this;
     }
@@ -2925,88 +2800,6 @@ class SearchFace extends Rpc
     {
         $this->data['ImageUrl'] = $value;
         $this->options['form_params']['ImageUrl'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getTargetImageURL()
- * @method string getFormatResultToJson()
- * @method $this withFormatResultToJson($value)
- * @method string getSourceImageData()
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getSourceImageURL()
- * @method string getTargetImageData()
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getEditPart()
- */
-class SwapFacialFeatures extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetImageURL($value)
-    {
-        $this->data['TargetImageURL'] = $value;
-        $this->options['form_params']['TargetImageURL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceImageData($value)
-    {
-        $this->data['SourceImageData'] = $value;
-        $this->options['form_params']['SourceImageData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceImageURL($value)
-    {
-        $this->data['SourceImageURL'] = $value;
-        $this->options['form_params']['SourceImageURL'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTargetImageData($value)
-    {
-        $this->data['TargetImageData'] = $value;
-        $this->options['form_params']['TargetImageData'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEditPart($value)
-    {
-        $this->data['EditPart'] = $value;
-        $this->options['form_params']['EditPart'] = $value;
 
         return $this;
     }

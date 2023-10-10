@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1983 - 2023-10-10
+- Update MergeImageFace.
+
+
 ## 1.8.1982 - 2023-10-10
 - Update MergeVideoModelFace MergeVideoFace.
 
