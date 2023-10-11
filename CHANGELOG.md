@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1987 - 2023-10-11
+- Publish AssumeRoleWithOIDC API by adding more detail in response.
+
+
 ## 1.8.1986 - 2023-10-11
 - Support CreateProcCorrectAPI.
 
