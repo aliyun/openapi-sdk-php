@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1988 - 2023-10-11
+- Generated 2020-06-01 for `SWAS-OPEN`.
+
+
 ## 1.8.1987 - 2023-10-11
 - Publish AssumeRoleWithOIDC API by adding more detail in response.
 
