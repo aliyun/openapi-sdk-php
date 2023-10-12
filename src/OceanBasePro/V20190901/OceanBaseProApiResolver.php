@@ -35,9 +35,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceCreatableZone describeInstanceCreatableZone(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeInstanceSecurityConfigs describeInstanceSecurityConfigs(array $options = [])
+ * @method DescribeInstanceSSL describeInstanceSSL(array $options = [])
  * @method DescribeInstanceTags describeInstanceTags(array $options = [])
  * @method DescribeInstanceTenantModes describeInstanceTenantModes(array $options = [])
  * @method DescribeInstanceTopology describeInstanceTopology(array $options = [])
+ * @method DescribeMetricsData describeMetricsData(array $options = [])
  * @method DescribeNodeMetrics describeNodeMetrics(array $options = [])
  * @method DescribeOasAnomalySQLList describeOasAnomalySQLList(array $options = [])
  * @method DescribeOasSlowSQLList describeOasSlowSQLList(array $options = [])
@@ -90,6 +92,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstanceTags modifyInstanceTags(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
+ * @method ModifyTenantEncryption modifyTenantEncryption(array $options = [])
  * @method ModifyTenantPrimaryZone modifyTenantPrimaryZone(array $options = [])
  * @method ModifyTenantResource modifyTenantResource(array $options = [])
  * @method ModifyTenantSecurityIpGroup modifyTenantSecurityIpGroup(array $options = [])
@@ -2865,6 +2868,26 @@ class DescribeInstanceSecurityConfigs extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ */
+class DescribeInstanceSSL extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTags()
  * @method string getInstanceIds()
  */
@@ -2950,6 +2973,30 @@ class DescribeInstanceTopology extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getGroupByLabels()
+ * @method $this withGroupByLabels($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getSortOrder()
+ * @method $this withSortOrder($value)
+ * @method string getSortMetricKey()
+ * @method $this withSortMetricKey($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getLabels()
+ * @method $this withLabels($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMetrics()
+ * @method $this withMetrics($value)
+ */
+class DescribeMetricsData extends Rpc
+{
 }
 
 /**
@@ -7021,6 +7068,68 @@ class ModifySecurityIps extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEncryptionKeyId()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ * @method string getEncryptionType()
+ */
+class ModifyTenantEncryption extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEncryptionKeyId($value)
+    {
+        $this->data['EncryptionKeyId'] = $value;
+        $this->options['form_params']['EncryptionKeyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEncryptionType($value)
+    {
+        $this->data['EncryptionType'] = $value;
+        $this->options['form_params']['EncryptionType'] = $value;
 
         return $this;
     }
