@@ -83,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataTrackJobDegree getDataTrackJobDegree(array $options = [])
  * @method GetDataTrackJobTableMeta getDataTrackJobTableMeta(array $options = [])
  * @method GetDataTrackOrderDetail getDataTrackOrderDetail(array $options = [])
+ * @method GetDbExportDownloadURL getDbExportDownloadURL(array $options = [])
  * @method GetDBTaskSQLJobLog getDBTaskSQLJobLog(array $options = [])
  * @method GetDBTopology getDBTopology(array $options = [])
  * @method GetInstance getInstance(array $options = [])
@@ -1359,6 +1360,18 @@ class GetDataTrackJobTableMeta extends Rpc
  * @method $this withOrderId($value)
  */
 class GetDataTrackOrderDetail extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getOrderId()
+ * @method $this withOrderId($value)
+ * @method string getActionName()
+ * @method $this withActionName($value)
+ */
+class GetDbExportDownloadURL extends Rpc
 {
 }
 

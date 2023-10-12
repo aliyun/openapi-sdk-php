@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1990 - 2023-10-12
+- Support GetOrderBaseInfo to response AttachmentKey and OriginAttachmentName information.
+
+
 ## 1.8.1989 - 2023-10-12
 - Generated 2019-09-01 for `OceanBasePro`.
 
