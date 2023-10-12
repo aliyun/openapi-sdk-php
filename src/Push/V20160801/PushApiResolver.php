@@ -239,6 +239,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidImageUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidImageUrl'] = $depth1Value['AndroidImageUrl'];
 			}
+			if(isset($depth1Value['AndroidHonorTargetUserType'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidHonorTargetUserType'] = $depth1Value['AndroidHonorTargetUserType'];
+			}
 			if(isset($depth1Value['AndroidNotificationVivoChannel'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationVivoChannel'] = $depth1Value['AndroidNotificationVivoChannel'];
 			}
@@ -332,6 +335,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidXiaomiImageUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaomiImageUrl'] = $depth1Value['AndroidXiaomiImageUrl'];
 			}
+			if(isset($depth1Value['AndroidTargetUserType'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidTargetUserType'] = $depth1Value['AndroidTargetUserType'];
+			}
 			if(isset($depth1Value['AndroidPopupBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidPopupBody'] = $depth1Value['AndroidPopupBody'];
 			}
@@ -417,6 +423,8 @@ class MassPush extends Rpc
  * @method $this withExpireTime($value)
  * @method string getAndroidImageUrl()
  * @method $this withAndroidImageUrl($value)
+ * @method string getAndroidHonorTargetUserType()
+ * @method $this withAndroidHonorTargetUserType($value)
  * @method string getAndroidNotificationVivoChannel()
  * @method $this withAndroidNotificationVivoChannel($value)
  * @method string getIOSNotificationCategory()
@@ -473,6 +481,8 @@ class MassPush extends Rpc
  * @method $this withAndroidNotificationHonorChannel($value)
  * @method string getAndroidXiaomiImageUrl()
  * @method $this withAndroidXiaomiImageUrl($value)
+ * @method string getAndroidTargetUserType()
+ * @method $this withAndroidTargetUserType($value)
  * @method string getSmsTemplateName()
  * @method $this withSmsTemplateName($value)
  * @method string getAndroidPopupBody()
@@ -707,6 +717,8 @@ class Push extends Rpc
 }
 
 /**
+ * @method string getStoreOffline()
+ * @method $this withStoreOffline($value)
  * @method string getTitle()
  * @method $this withTitle($value)
  * @method string getBody()
@@ -725,6 +737,8 @@ class PushMessageToAndroid extends Rpc
 }
 
 /**
+ * @method string getStoreOffline()
+ * @method $this withStoreOffline($value)
  * @method string getTitle()
  * @method $this withTitle($value)
  * @method string getBody()
@@ -745,6 +759,8 @@ class PushMessageToiOS extends Rpc
 /**
  * @method string getExtParameters()
  * @method $this withExtParameters($value)
+ * @method string getStoreOffline()
+ * @method $this withStoreOffline($value)
  * @method string getTitle()
  * @method $this withTitle($value)
  * @method string getBody()

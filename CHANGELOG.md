@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.1991 - 2023-10-12
+- Supported AndroidTargetUserType. AndroidHonorTargetUserType for Push and MassPush.
+- Supported StoreOffline for PushNoticeToAndroid, PushMessageToAndroid and PushMessageToiOS.
+
+
 ## 1.8.1990 - 2023-10-12
 - Support GetOrderBaseInfo to response AttachmentKey and OriginAttachmentName information.
 
