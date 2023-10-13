@@ -66,7 +66,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSlowLogRecords describeSlowLogRecords(array $options = [])
  * @method DescribeSlowLogTrend describeSlowLogTrend(array $options = [])
  * @method DescribeSqlPattern describeSqlPattern(array $options = [])
- * @method DescribeSQLPatternAttribute describeSQLPatternAttribute(array $options = [])
  * @method DescribeSQLPatterns describeSQLPatterns(array $options = [])
  * @method DescribeSQLPlan describeSQLPlan(array $options = [])
  * @method DescribeSQLPlanTask describeSQLPlanTask(array $options = [])
@@ -864,10 +863,6 @@ class DescribeDBClusterNetInfo extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getKey()
- * @method $this withKey($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -876,8 +871,14 @@ class DescribeDBClusterNetInfo extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getResourcePools()
+ * @method $this withResourcePools($value)
+ * @method string getKey()
+ * @method $this withKey($value)
  */
 class DescribeDBClusterPerformance extends Rpc
 {
@@ -1457,22 +1458,6 @@ class DescribeSlowLogTrend extends Rpc
  * @method $this withOrder($value)
  */
 class DescribeSqlPattern extends Rpc
-{
-}
-
-/**
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getPatternId()
- * @method $this withPatternId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeSQLPatternAttribute extends Rpc
 {
 }
 

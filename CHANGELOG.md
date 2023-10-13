@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1992 - 2023-10-13
+- Public Api.
+
+
 ## 1.8.1991 - 2023-10-12
 - Supported AndroidTargetUserType. AndroidHonorTargetUserType for Push and MassPush.
 - Supported StoreOffline for PushNoticeToAndroid, PushMessageToAndroid and PushMessageToiOS.
