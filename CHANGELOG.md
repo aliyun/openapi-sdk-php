@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1995 - 2023-10-18
+- Update to support new apis.
+
+
 ## 1.8.1994 - 2023-10-18
 - Support Digital Watermark.
 

@@ -175,6 +175,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLivePackageConfig describeLivePackageConfig(array $options = [])
  * @method DescribeLiveProducerUsageData describeLiveProducerUsageData(array $options = [])
  * @method DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
+ * @method DescribeLivePushProxyLog describeLivePushProxyLog(array $options = [])
  * @method DescribeLivePushProxyUsageData describeLivePushProxyUsageData(array $options = [])
  * @method DescribeLiveRealtimeDeliveryAcc describeLiveRealtimeDeliveryAcc(array $options = [])
  * @method DescribeLiveRealtimeLogAuthorized describeLiveRealtimeLogAuthorized(array $options = [])
@@ -320,12 +321,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StartCasterScene startCasterScene(array $options = [])
  * @method StartEdgeTranscodeJob startEdgeTranscodeJob(array $options = [])
  * @method StartLiveDomain startLiveDomain(array $options = [])
+ * @method StartLiveMPUTask startLiveMPUTask(array $options = [])
  * @method StartLiveStreamMonitor startLiveStreamMonitor(array $options = [])
  * @method StartPlaylist startPlaylist(array $options = [])
  * @method StopCaster stopCaster(array $options = [])
  * @method StopCasterScene stopCasterScene(array $options = [])
  * @method StopEdgeTranscodeJob stopEdgeTranscodeJob(array $options = [])
  * @method StopLiveDomain stopLiveDomain(array $options = [])
+ * @method StopLiveMPUTask stopLiveMPUTask(array $options = [])
  * @method StopLiveStreamMonitor stopLiveStreamMonitor(array $options = [])
  * @method StopPlaylist stopPlaylist(array $options = [])
  * @method TagLiveResources tagLiveResources(array $options = [])
@@ -340,6 +343,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveCenterTransfer updateLiveCenterTransfer(array $options = [])
  * @method UpdateLiveDelayConfig updateLiveDelayConfig(array $options = [])
  * @method UpdateLiveDetectNotifyConfig updateLiveDetectNotifyConfig(array $options = [])
+ * @method UpdateLiveMPUTask updateLiveMPUTask(array $options = [])
  * @method UpdateLivePackageConfig updateLivePackageConfig(array $options = [])
  * @method UpdateLivePullStreamInfoConfig updateLivePullStreamInfoConfig(array $options = [])
  * @method UpdateLiveRecordNotifyConfig updateLiveRecordNotifyConfig(array $options = [])
@@ -1892,6 +1896,8 @@ class CreateLiveStreamMonitor extends Rpc
  * @method $this withAppName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getEndTimeIncluded()
+ * @method $this withEndTimeIncluded($value)
  * @method string getStreamName()
  * @method $this withStreamName($value)
  * @method string getOssBucket()
@@ -1902,8 +1908,6 @@ class CreateLiveStreamMonitor extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getIsExtend()
- * @method $this withIsExtend($value)
  */
 class CreateLiveStreamRecordIndexFiles extends Rpc
 {
@@ -3904,6 +3908,26 @@ class DescribeLiveProducerUsageData extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLivePullStreamConfig extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLivePushProxyLog extends Rpc
 {
 }
 
@@ -7270,6 +7294,8 @@ class SetLiveEdgeTransfer extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPullAppName()
  * @method $this withPullAppName($value)
+ * @method string getTranscodeLazy()
+ * @method $this withTranscodeLazy($value)
  * @method string getPullProtocol()
  * @method $this withPullProtocol($value)
  */
@@ -7450,6 +7476,30 @@ class StartLiveDomain extends Rpc
 }
 
 /**
+ * @method string getSingleSubParams()
+ * @method $this withSingleSubParams($value)
+ * @method string getSeiParams()
+ * @method $this withSeiParams($value)
+ * @method string getTranscodeParams()
+ * @method $this withTranscodeParams($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getMixMode()
+ * @method $this withMixMode($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getStreamURL()
+ * @method $this withStreamURL($value)
+ */
+class StartLiveMPUTask extends Rpc
+{
+}
+
+/**
  * @method string getMonitorId()
  * @method $this withMonitorId($value)
  * @method string getOwnerId()
@@ -7518,6 +7568,16 @@ class StopEdgeTranscodeJob extends Rpc
  * @method $this withSecurityToken($value)
  */
 class StopLiveDomain extends Rpc
+{
+}
+
+/**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class StopLiveMPUTask extends Rpc
 {
 }
 
@@ -7942,6 +8002,28 @@ class UpdateLiveDelayConfig extends Rpc
  * @method $this withOwnerId($value)
  */
 class UpdateLiveDetectNotifyConfig extends Rpc
+{
+}
+
+/**
+ * @method string getSingleSubParams()
+ * @method $this withSingleSubParams($value)
+ * @method string getSeiParams()
+ * @method $this withSeiParams($value)
+ * @method string getTranscodeParams()
+ * @method $this withTranscodeParams($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getMixMode()
+ * @method $this withMixMode($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getStreamURL()
+ * @method $this withStreamURL($value)
+ */
+class UpdateLiveMPUTask extends Rpc
 {
 }
 
