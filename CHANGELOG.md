@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1994 - 2023-10-18
+- Support Digital Watermark.
+
+
 ## 1.8.1993 - 2023-10-17
 - Generated 2023-03-13 for `xrEngine`.
 

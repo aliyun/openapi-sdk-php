@@ -75,6 +75,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAuditHistory getAuditHistory(array $options = [])
  * @method GetCategories getCategories(array $options = [])
  * @method GetDefaultAITemplate getDefaultAITemplate(array $options = [])
+ * @method GetDigitalWatermarkExtractResult getDigitalWatermarkExtractResult(array $options = [])
  * @method GetEditingProject getEditingProject(array $options = [])
  * @method GetEditingProjectMaterials getEditingProjectMaterials(array $options = [])
  * @method GetImageInfo getImageInfo(array $options = [])
@@ -134,6 +135,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitAIImageJob submitAIImageJob(array $options = [])
  * @method SubmitAIJob submitAIJob(array $options = [])
  * @method SubmitAIMediaAuditJob submitAIMediaAuditJob(array $options = [])
+ * @method SubmitDigitalWatermarkExtractJob submitDigitalWatermarkExtractJob(array $options = [])
  * @method SubmitDynamicImageJob submitDynamicImageJob(array $options = [])
  * @method SubmitMediaDNADeleteJob submitMediaDNADeleteJob(array $options = [])
  * @method SubmitPreprocessJobs submitPreprocessJobs(array $options = [])
@@ -1242,6 +1244,26 @@ class GetDefaultAITemplate extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExtractType()
+ * @method $this withExtractType($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class GetDigitalWatermarkExtractResult extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getFEExtendFlag()
  * @method $this withFEExtendFlag($value)
  * @method string getProjectId()
@@ -1407,10 +1429,14 @@ class GetMezzanineInfo extends Rpc
  * @method $this withFormats($value)
  * @method string getChannel()
  * @method $this withChannel($value)
+ * @method string getDigitalWatermarkType()
+ * @method $this withDigitalWatermarkType($value)
  * @method string getPlayerVersion()
  * @method $this withPlayerVersion($value)
  * @method string getRand()
  * @method $this withRand($value)
+ * @method string getTrace()
+ * @method $this withTrace($value)
  * @method string getReAuthInfo()
  * @method $this withReAuthInfo($value)
  * @method string getPlayConfig()
@@ -2113,6 +2139,24 @@ class SubmitAIJob extends Rpc
  * @method $this withMediaType($value)
  */
 class SubmitAIMediaAuditJob extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getExtractType()
+ * @method $this withExtractType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ */
+class SubmitDigitalWatermarkExtractJob extends Rpc
 {
 }
 
