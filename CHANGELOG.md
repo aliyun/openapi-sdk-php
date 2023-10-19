@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1997 - 2023-10-19
+- Support CreateAuthorityTemplate, UpdateAuthorityTemplate, GetAuthorityTemplateItem, GetAuthorityTemplate return TenantId information.
+
+
 ## 1.8.1996 - 2023-10-19
 - Coupon template
 - Carousel template
