@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.1996 - 2023-10-19
+- Coupon template
+- Carousel template
+- LTO template
+
+
 ## 1.8.1995 - 2023-10-18
 - Update to support new apis.
 

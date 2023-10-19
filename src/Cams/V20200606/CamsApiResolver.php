@@ -25,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetChatappTemplateMetric getChatappTemplateMetric(array $options = [])
  * @method GetChatappUploadAuthorization getChatappUploadAuthorization(array $options = [])
  * @method GetChatappVerifyCode getChatappVerifyCode(array $options = [])
+ * @method GetCommerceSetting getCommerceSetting(array $options = [])
  * @method GetMigrationVerifyCode getMigrationVerifyCode(array $options = [])
  * @method GetPhoneNumberVerificationStatus getPhoneNumberVerificationStatus(array $options = [])
  * @method GetPreValidatePhoneId getPreValidatePhoneId(array $options = [])
@@ -43,6 +44,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SendChatappMessage sendChatappMessage(array $options = [])
  * @method SubmitIsvCustomerTerms submitIsvCustomerTerms(array $options = [])
  * @method UpdateAccountWebhook updateAccountWebhook(array $options = [])
+ * @method UpdateCommerceSetting updateCommerceSetting(array $options = [])
  * @method UpdatePhoneWebhook updatePhoneWebhook(array $options = [])
  */
 class CamsApiResolver extends ApiResolver
@@ -59,6 +61,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'cams';
 }
 
 /**
@@ -989,6 +994,20 @@ class GetChatappVerifyCode extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class GetCommerceSetting extends Rpc
+{
 }
 
 /**
@@ -2046,6 +2065,24 @@ class SubmitIsvCustomerTerms extends Rpc
  * @method $this withCustSpaceId($value)
  */
 class UpdateAccountWebhook extends Rpc
+{
+}
+
+/**
+ * @method string getPhoneNumber()
+ * @method $this withPhoneNumber($value)
+ * @method string getApiCode()
+ * @method $this withApiCode($value)
+ * @method string getCatalogVisible()
+ * @method $this withCatalogVisible($value)
+ * @method string getCartEnable()
+ * @method $this withCartEnable($value)
+ * @method string getProdCode()
+ * @method $this withProdCode($value)
+ * @method string getCustSpaceId()
+ * @method $this withCustSpaceId($value)
+ */
+class UpdateCommerceSetting extends Rpc
 {
 }
 
