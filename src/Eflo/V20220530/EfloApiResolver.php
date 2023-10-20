@@ -91,6 +91,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getClientToken()
  * @method string getDescription()
  * @method string getAssignMac()
  * @method string getSubnetId()
@@ -100,6 +101,19 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class AssignPrivateIpAddress extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -215,14 +229,42 @@ class AssociateVpdCidrBlock extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method string getSecurityGroupId()
  * @method string getDescription()
+ * @method string getNodeId()
  * @method string getVSwitchId()
  * @method string getVpcId()
  * @method string getZoneId()
- * @method string getNodeId()
  */
 class CreateElasticNetworkInterface extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSecurityGroupId($value)
+    {
+        $this->data['SecurityGroupId'] = $value;
+        $this->options['form_params']['SecurityGroupId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -233,6 +275,19 @@ class CreateElasticNetworkInterface extends Rpc
     {
         $this->data['Description'] = $value;
         $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
 
         return $this;
     }
@@ -272,19 +327,6 @@ class CreateElasticNetworkInterface extends Rpc
     {
         $this->data['ZoneId'] = $value;
         $this->options['form_params']['ZoneId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNodeId($value)
-    {
-        $this->data['NodeId'] = $value;
-        $this->options['form_params']['NodeId'] = $value;
 
         return $this;
     }
@@ -1138,10 +1180,24 @@ class CreateVpdGrantRule extends Rpc
 }
 
 /**
+ * @method string getClientToken()
  * @method string getElasticNetworkInterfaceId()
  */
 class DeleteElasticNetworkInterface extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -3175,6 +3231,7 @@ class ListNetworkInterfaces extends Rpc
 
 /**
  * @method string getClusterId()
+ * @method string getZoneId()
  * @method string getNodeId()
  */
 class ListNodeInfosForPod extends Rpc
@@ -3189,6 +3246,19 @@ class ListNodeInfosForPod extends Rpc
     {
         $this->data['ClusterId'] = $value;
         $this->options['form_params']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withZoneId($value)
+    {
+        $this->data['ZoneId'] = $value;
+        $this->options['form_params']['ZoneId'] = $value;
 
         return $this;
     }
@@ -4384,6 +4454,7 @@ class QueryInstanceNcd extends Rpc
 
 /**
  * @method string getSubnetId()
+ * @method string getClientToken()
  * @method string getPrivateIpAddress()
  * @method string getIpName()
  * @method string getNetworkInterfaceId()
@@ -4400,6 +4471,19 @@ class UnAssignPrivateIpAddress extends Rpc
     {
         $this->data['SubnetId'] = $value;
         $this->options['form_params']['SubnetId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
 
         return $this;
     }
@@ -4479,11 +4563,25 @@ class UnAssociateVpdCidrBlock extends Rpc
 }
 
 /**
+ * @method string getClientToken()
  * @method string getDescription()
  * @method string getElasticNetworkInterfaceId()
  */
 class UpdateElasticNetworkInterface extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value

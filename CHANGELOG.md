@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1999 - 2023-10-20
+- Support ClientToken for Idemoptent.
+
+
 ## 1.8.1998 - 2023-10-20
 - Update by SDK platform.
 
