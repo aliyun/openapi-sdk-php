@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.1998 - 2023-10-20
+- Update by SDK platform.
+
+
 ## 1.8.1997 - 2023-10-19
 - Support CreateAuthorityTemplate, UpdateAuthorityTemplate, GetAuthorityTemplateItem, GetAuthorityTemplate return TenantId information.
 

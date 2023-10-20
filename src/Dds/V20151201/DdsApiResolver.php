@@ -30,6 +30,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBackupDBs describeBackupDBs(array $options = [])
  * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
  * @method DescribeBackups describeBackups(array $options = [])
+ * @method DescribeClusterBackups describeClusterBackups(array $options = [])
+ * @method DescribeClusterRecoverTime describeClusterRecoverTime(array $options = [])
  * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
  * @method DescribeDBInstanceEncryptionKey describeDBInstanceEncryptionKey(array $options = [])
  * @method DescribeDBInstanceMonitor describeDBInstanceMonitor(array $options = [])
@@ -96,6 +98,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RestoreDBInstance restoreDBInstance(array $options = [])
  * @method SwitchDBInstanceHA switchDBInstanceHA(array $options = [])
  * @method TagResources tagResources(array $options = [])
+ * @method TransferClusterBackup transferClusterBackup(array $options = [])
  * @method TransformInstanceChargeType transformInstanceChargeType(array $options = [])
  * @method TransformToPrePaid transformToPrePaid(array $options = [])
  * @method UntagResources untagResources(array $options = [])
@@ -950,6 +953,57 @@ class DescribeBackupPolicy extends Rpc
  */
 class DescribeBackups extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIsOnlyGetClusterBackUp()
+ * @method $this withIsOnlyGetClusterBackUp($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class DescribeClusterBackups extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeClusterRecoverTime extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2053,6 +2107,8 @@ class ModifyDBInstanceMonitor extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCategory()
+ * @method $this withCategory($value)
  */
 class ModifyDBInstanceNetExpireTime extends Rpc
 {
@@ -2667,6 +2723,24 @@ class TagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class TransferClusterBackup extends Rpc
+{
 }
 
 /**
