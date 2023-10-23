@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2000 - 2023-10-23
+- Generated 2019-03-15 for `adb`.
+
+
 ## 1.8.1999 - 2023-10-20
 - Support ClientToken for Idemoptent.
 
