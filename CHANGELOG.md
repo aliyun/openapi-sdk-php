@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2001 - 2023-10-25
+- Publish sdk.
+
+
 ## 1.8.2000 - 2023-10-23
 - Generated 2019-03-15 for `adb`.
 
