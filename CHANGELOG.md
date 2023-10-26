@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2003 - 2023-10-26
+- 增加StartSyncExecution
+
+
 ## 1.8.2002 - 2023-10-26
 - Generated 2016-07-14 for `CloudAPI`.
 
