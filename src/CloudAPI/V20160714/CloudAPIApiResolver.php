@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddAccessControlListEntry addAccessControlListEntry(array $options = [])
  * @method AddIpControlPolicyItem addIpControlPolicyItem(array $options = [])
  * @method AddTrafficSpecialControl addTrafficSpecialControl(array $options = [])
+ * @method AttachApiProduct attachApiProduct(array $options = [])
  * @method AttachPlugin attachPlugin(array $options = [])
  * @method BatchAbolishApis batchAbolishApis(array $options = [])
  * @method BatchDeployApis batchDeployApis(array $options = [])
@@ -34,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteAllTrafficSpecialControl deleteAllTrafficSpecialControl(array $options = [])
  * @method DeleteApi deleteApi(array $options = [])
  * @method DeleteApiGroup deleteApiGroup(array $options = [])
+ * @method DeleteApiProduct deleteApiProduct(array $options = [])
  * @method DeleteApiStageVariable deleteApiStageVariable(array $options = [])
  * @method DeleteApp deleteApp(array $options = [])
  * @method DeleteBackend deleteBackend(array $options = [])
@@ -65,6 +67,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeApiIpControls describeApiIpControls(array $options = [])
  * @method DescribeApiLatencyData describeApiLatencyData(array $options = [])
  * @method DescribeApiMarketAttributes describeApiMarketAttributes(array $options = [])
+ * @method DescribeApiProductApis describeApiProductApis(array $options = [])
+ * @method DescribeApiProductsByApp describeApiProductsByApp(array $options = [])
  * @method DescribeApiQpsData describeApiQpsData(array $options = [])
  * @method DescribeApis describeApis(array $options = [])
  * @method DescribeApisByApp describeApisByApp(array $options = [])
@@ -73,11 +77,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeApisBySignature describeApisBySignature(array $options = [])
  * @method DescribeApisByTrafficControl describeApisByTrafficControl(array $options = [])
  * @method DescribeApiSignatures describeApiSignatures(array $options = [])
+ * @method DescribeApisWithStageNameIntegratedByApp describeApisWithStageNameIntegratedByApp(array $options = [])
  * @method DescribeApiTrafficControls describeApiTrafficControls(array $options = [])
  * @method DescribeApiTrafficData describeApiTrafficData(array $options = [])
  * @method DescribeApp describeApp(array $options = [])
  * @method DescribeAppAttributes describeAppAttributes(array $options = [])
  * @method DescribeApps describeApps(array $options = [])
+ * @method DescribeAppsByApiProduct describeAppsByApiProduct(array $options = [])
  * @method DescribeAppSecurity describeAppSecurity(array $options = [])
  * @method DescribeAuthorizedApis describeAuthorizedApis(array $options = [])
  * @method DescribeAuthorizedApps describeAuthorizedApps(array $options = [])
@@ -91,9 +97,21 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDeployedApi describeDeployedApi(array $options = [])
  * @method DescribeDeployedApis describeDeployedApis(array $options = [])
  * @method DescribeDomain describeDomain(array $options = [])
+ * @method DescribeGroupLatency describeGroupLatency(array $options = [])
+ * @method DescribeGroupQps describeGroupQps(array $options = [])
+ * @method DescribeGroupTraffic describeGroupTraffic(array $options = [])
  * @method DescribeHistoryApis describeHistoryApis(array $options = [])
  * @method DescribeImportOASTask describeImportOASTask(array $options = [])
+ * @method DescribeInstanceDropConnections describeInstanceDropConnections(array $options = [])
+ * @method DescribeInstanceDropPacket describeInstanceDropPacket(array $options = [])
+ * @method DescribeInstanceHttpCode describeInstanceHttpCode(array $options = [])
+ * @method DescribeInstanceLatency describeInstanceLatency(array $options = [])
+ * @method DescribeInstanceNewConnections describeInstanceNewConnections(array $options = [])
+ * @method DescribeInstancePackets describeInstancePackets(array $options = [])
+ * @method DescribeInstanceQps describeInstanceQps(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
+ * @method DescribeInstanceSlbConnect describeInstanceSlbConnect(array $options = [])
+ * @method DescribeInstanceTraffic describeInstanceTraffic(array $options = [])
  * @method DescribeIpControlPolicyItems describeIpControlPolicyItems(array $options = [])
  * @method DescribeIpControls describeIpControls(array $options = [])
  * @method DescribeLogConfig describeLogConfig(array $options = [])
@@ -110,6 +128,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeSignatures describeSignatures(array $options = [])
  * @method DescribeSignaturesByApi describeSignaturesByApi(array $options = [])
+ * @method DescribeSummaryData describeSummaryData(array $options = [])
  * @method DescribeSystemParameters describeSystemParameters(array $options = [])
  * @method DescribeTrafficControls describeTrafficControls(array $options = [])
  * @method DescribeTrafficControlsByApi describeTrafficControlsByApi(array $options = [])
@@ -117,6 +136,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUpdateVpcInfoTask describeUpdateVpcInfoTask(array $options = [])
  * @method DescribeVpcAccesses describeVpcAccesses(array $options = [])
  * @method DescribeZones describeZones(array $options = [])
+ * @method DetachApiProduct detachApiProduct(array $options = [])
  * @method DetachPlugin detachPlugin(array $options = [])
  * @method DisableInstanceAccessControl disableInstanceAccessControl(array $options = [])
  * @method DryRunSwagger dryRunSwagger(array $options = [])
@@ -134,6 +154,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDataset modifyDataset(array $options = [])
  * @method ModifyDatasetItem modifyDatasetItem(array $options = [])
  * @method ModifyInstanceSpec modifyInstanceSpec(array $options = [])
+ * @method ModifyIntranetDomainPolicy modifyIntranetDomainPolicy(array $options = [])
  * @method ModifyIpControl modifyIpControl(array $options = [])
  * @method ModifyIpControlPolicyItem modifyIpControlPolicyItem(array $options = [])
  * @method ModifyLogConfig modifyLogConfig(array $options = [])
@@ -146,6 +167,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRequestLogs queryRequestLogs(array $options = [])
  * @method ReactivateDomain reactivateDomain(array $options = [])
  * @method RemoveAccessControlListEntry removeAccessControlListEntry(array $options = [])
+ * @method RemoveApiProductsAuthorities removeApiProductsAuthorities(array $options = [])
  * @method RemoveApisAuthorities removeApisAuthorities(array $options = [])
  * @method RemoveAppsAuthorities removeAppsAuthorities(array $options = [])
  * @method RemoveIpControlApis removeIpControlApis(array $options = [])
@@ -160,11 +182,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SdkGenerateByAppForRegion sdkGenerateByAppForRegion(array $options = [])
  * @method SdkGenerateByGroup sdkGenerateByGroup(array $options = [])
  * @method SetAccessControlListAttribute setAccessControlListAttribute(array $options = [])
+ * @method SetApiProductsAuthorities setApiProductsAuthorities(array $options = [])
  * @method SetApisAuthorities setApisAuthorities(array $options = [])
  * @method SetAppsAuthorities setAppsAuthorities(array $options = [])
  * @method SetDomain setDomain(array $options = [])
  * @method SetDomainCertificate setDomainCertificate(array $options = [])
  * @method SetDomainWebSocketStatus setDomainWebSocketStatus(array $options = [])
+ * @method SetGroupAuthAppCode setGroupAuthAppCode(array $options = [])
  * @method SetIpControlApis setIpControlApis(array $options = [])
  * @method SetSignatureApis setSignatureApis(array $options = [])
  * @method SetTrafficControlApis setTrafficControlApis(array $options = [])
@@ -173,6 +197,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SwitchApi switchApi(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
+ * @method ValidateVpcConnectivity validateVpcConnectivity(array $options = [])
  */
 class CloudAPIApiResolver extends ApiResolver
 {
@@ -247,6 +272,37 @@ class AddIpControlPolicyItem extends Rpc
  */
 class AddTrafficSpecialControl extends Rpc
 {
+}
+
+/**
+ * @method array getApis()
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getApiProductId()
+ * @method $this withApiProductId($value)
+ */
+class AttachApiProduct extends Rpc
+{
+
+    /**
+     * @param array $apis
+     *
+     * @return $this
+     */
+	public function withApis(array $apis)
+	{
+	    $this->data['Apis'] = $apis;
+		foreach ($apis as $depth1 => $depth1Value) {
+			if(isset($depth1Value['StageName'])){
+				$this->options['query']['Apis.' . ($depth1 + 1) . '.StageName'] = $depth1Value['StageName'];
+			}
+			if(isset($depth1Value['ApiId'])){
+				$this->options['query']['Apis.' . ($depth1 + 1) . '.ApiId'] = $depth1Value['ApiId'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -351,7 +407,6 @@ class CreateAccessControlList extends Rpc
  * @method string getWebSocketApiType()
  * @method $this withWebSocketApiType($value)
  * @method string getErrorCodeSamples()
- * @method $this withErrorCodeSamples($value)
  * @method string getAppCodeAuthType()
  * @method $this withAppCodeAuthType($value)
  * @method string getDescription()
@@ -361,29 +416,22 @@ class CreateAccessControlList extends Rpc
  * @method string getBackendId()
  * @method $this withBackendId($value)
  * @method string getConstantParameters()
- * @method $this withConstantParameters($value)
  * @method string getAuthType()
  * @method $this withAuthType($value)
  * @method string getAllowSignatureMethod()
  * @method $this withAllowSignatureMethod($value)
  * @method string getServiceParameters()
- * @method $this withServiceParameters($value)
  * @method string getFailResultSample()
- * @method $this withFailResultSample($value)
  * @method string getResourceOwnerToken()
  * @method $this withResourceOwnerToken($value)
  * @method string getSystemParameters()
- * @method $this withSystemParameters($value)
  * @method string getServiceParametersMap()
- * @method $this withServiceParametersMap($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getOpenIdConnectConfig()
  * @method $this withOpenIdConnectConfig($value)
  * @method string getRequestParameters()
- * @method $this withRequestParameters($value)
  * @method string getResultDescriptions()
- * @method $this withResultDescriptions($value)
  * @method string getVisibility()
  * @method $this withVisibility($value)
  * @method string getGroupId()
@@ -395,7 +443,6 @@ class CreateAccessControlList extends Rpc
  * @method string getApiName()
  * @method $this withApiName($value)
  * @method string getResultSample()
- * @method $this withResultSample($value)
  * @method string getBackendEnable()
  * @method $this withBackendEnable($value)
  * @method string getForceNonceCheck()
@@ -407,6 +454,123 @@ class CreateAccessControlList extends Rpc
  */
 class CreateApi extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withErrorCodeSamples($value)
+    {
+        $this->data['ErrorCodeSamples'] = $value;
+        $this->options['form_params']['ErrorCodeSamples'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConstantParameters($value)
+    {
+        $this->data['ConstantParameters'] = $value;
+        $this->options['form_params']['ConstantParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceParameters($value)
+    {
+        $this->data['ServiceParameters'] = $value;
+        $this->options['form_params']['ServiceParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFailResultSample($value)
+    {
+        $this->data['FailResultSample'] = $value;
+        $this->options['form_params']['FailResultSample'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSystemParameters($value)
+    {
+        $this->data['SystemParameters'] = $value;
+        $this->options['form_params']['SystemParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServiceParametersMap($value)
+    {
+        $this->data['ServiceParametersMap'] = $value;
+        $this->options['form_params']['ServiceParametersMap'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestParameters($value)
+    {
+        $this->data['RequestParameters'] = $value;
+        $this->options['form_params']['RequestParameters'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResultDescriptions($value)
+    {
+        $this->data['ResultDescriptions'] = $value;
+        $this->options['form_params']['ResultDescriptions'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResultSample($value)
+    {
+        $this->data['ResultSample'] = $value;
+        $this->options['form_params']['ResultSample'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -477,6 +641,8 @@ class CreateApiStageVariable extends Rpc
  * @method $this withAppOwnerUserId($value)
  * @method string getSource()
  * @method $this withSource($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
@@ -578,15 +744,22 @@ class CreateDatasetItem extends Rpc
 /**
  * @method string getInstanceSpec()
  * @method $this withInstanceSpec($value)
+ * @method string getInstanceCidr()
+ * @method $this withInstanceCidr($value)
  * @method string getHttpsPolicy()
  * @method $this withHttpsPolicy($value)
  * @method string getDuration()
  * @method $this withDuration($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method array getTag()
  * @method string getAutoPay()
  * @method $this withAutoPay($value)
+ * @method string getUserVpcId()
+ * @method $this withUserVpcId($value)
  * @method string getToken()
  * @method $this withToken($value)
+ * @method array getZoneVSwitchSecurityGroup()
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method string getZoneId()
@@ -613,6 +786,32 @@ class CreateInstance extends Rpc
 			}
 			if(isset($depth1Value['Key'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $zoneVSwitchSecurityGroup
+     *
+     * @return $this
+     */
+	public function withZoneVSwitchSecurityGroup(array $zoneVSwitchSecurityGroup)
+	{
+	    $this->data['ZoneVSwitchSecurityGroup'] = $zoneVSwitchSecurityGroup;
+		foreach ($zoneVSwitchSecurityGroup as $depth1 => $depth1Value) {
+			if(isset($depth1Value['VSwitchId'])){
+				$this->options['query']['ZoneVSwitchSecurityGroup.' . ($depth1 + 1) . '.VSwitchId'] = $depth1Value['VSwitchId'];
+			}
+			if(isset($depth1Value['CidrBlock'])){
+				$this->options['query']['ZoneVSwitchSecurityGroup.' . ($depth1 + 1) . '.CidrBlock'] = $depth1Value['CidrBlock'];
+			}
+			if(isset($depth1Value['SecurityGroupId'])){
+				$this->options['query']['ZoneVSwitchSecurityGroup.' . ($depth1 + 1) . '.SecurityGroupId'] = $depth1Value['SecurityGroupId'];
+			}
+			if(isset($depth1Value['ZoneId'])){
+				$this->options['query']['ZoneVSwitchSecurityGroup.' . ($depth1 + 1) . '.ZoneId'] = $depth1Value['ZoneId'];
 			}
 		}
 
@@ -843,6 +1042,16 @@ class DeleteApiGroup extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getApiProductId()
+ * @method $this withApiProductId($value)
+ */
+class DeleteApiProduct extends Rpc
+{
 }
 
 /**
@@ -1363,6 +1572,34 @@ class DescribeApiMarketAttributes extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getApiProductId()
+ * @method $this withApiProductId($value)
+ */
+class DescribeApiProductApis extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeApiProductsByApp extends Rpc
+{
+}
+
+/**
  * @method string getStageName()
  * @method $this withStageName($value)
  * @method string getGroupId()
@@ -1534,6 +1771,30 @@ class DescribeApiSignatures extends Rpc
 }
 
 /**
+ * @method string getMethod()
+ * @method $this withMethod($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getApiName()
+ * @method $this withApiName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getApiUid()
+ * @method $this withApiUid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeApisWithStageNameIntegratedByApp extends Rpc
+{
+}
+
+/**
  * @method string getStageName()
  * @method $this withStageName($value)
  * @method string getGroupId()
@@ -1597,6 +1858,10 @@ class DescribeApp extends Rpc
  * @method $this withSort($value)
  * @method string getEnableTagAuth()
  * @method $this withEnableTagAuth($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
+ * @method string getExcludeApiProductId()
+ * @method $this withExcludeApiProductId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getAppCode()
@@ -1641,6 +1906,22 @@ class DescribeAppAttributes extends Rpc
  * @method $this withPageSize($value)
  */
 class DescribeApps extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getApiProductId()
+ * @method $this withApiProductId($value)
+ */
+class DescribeAppsByApiProduct extends Rpc
 {
 }
 
@@ -1883,6 +2164,54 @@ class DescribeDomain extends Rpc
  * @method $this withStageName($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeGroupLatency extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeGroupQps extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeGroupTraffic extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getApiName()
@@ -1905,6 +2234,118 @@ class DescribeHistoryApis extends Rpc
  * @method $this withOperationId($value)
  */
 class DescribeImportOASTask extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSbcName()
+ * @method $this withSbcName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceDropConnections extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSbcName()
+ * @method $this withSbcName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceDropPacket extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceHttpCode extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceLatency extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSbcName()
+ * @method $this withSbcName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceNewConnections extends Rpc
+{
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSbcName()
+ * @method $this withSbcName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstancePackets extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceQps extends Rpc
 {
 }
 
@@ -1941,6 +2382,38 @@ class DescribeInstances extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSbcName()
+ * @method $this withSbcName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceSlbConnect extends Rpc
+{
+}
+
+/**
+ * @method string getStageName()
+ * @method $this withStageName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeInstanceTraffic extends Rpc
+{
 }
 
 /**
@@ -2087,8 +2560,12 @@ class DescribePlugins extends Rpc
  * @method $this withStageName($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getApiId()
  * @method $this withApiId($value)
  */
@@ -2203,6 +2680,16 @@ class DescribeSignaturesByApi extends Rpc
 }
 
 /**
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class DescribeSummaryData extends Rpc
+{
+}
+
+/**
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  */
@@ -2298,6 +2785,37 @@ class DescribeVpcAccesses extends Rpc
  */
 class DescribeZones extends Rpc
 {
+}
+
+/**
+ * @method array getApis()
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getApiProductId()
+ * @method $this withApiProductId($value)
+ */
+class DetachApiProduct extends Rpc
+{
+
+    /**
+     * @param array $apis
+     *
+     * @return $this
+     */
+	public function withApis(array $apis)
+	{
+	    $this->data['Apis'] = $apis;
+		foreach ($apis as $depth1 => $depth1Value) {
+			if(isset($depth1Value['StageName'])){
+				$this->options['query']['Apis.' . ($depth1 + 1) . '.StageName'] = $depth1Value['StageName'];
+			}
+			if(isset($depth1Value['ApiId'])){
+				$this->options['query']['Apis.' . ($depth1 + 1) . '.ApiId'] = $depth1Value['ApiId'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2667,6 +3185,8 @@ class ModifyApiConfiguration extends Rpc
  * @method $this withCompatibleFlags($value)
  * @method string getCustomTraceConfig()
  * @method $this withCustomTraceConfig($value)
+ * @method string getSupportSSE()
+ * @method $this withSupportSSE($value)
  */
 class ModifyApiGroup extends Rpc
 {
@@ -2707,6 +3227,8 @@ class ModifyApiGroupVpcWhitelist extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getSecurityToken()
@@ -2818,6 +3340,18 @@ class ModifyDatasetItem extends Rpc
  * @method $this withModifyAction($value)
  */
 class ModifyInstanceSpec extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getVpcIntranetEnable()
+ * @method $this withVpcIntranetEnable($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class ModifyIntranetDomainPolicy extends Rpc
 {
 }
 
@@ -3021,6 +3555,18 @@ class RemoveAccessControlListEntry extends Rpc
 }
 
 /**
+ * @method string getApiProductIds()
+ * @method $this withApiProductIds($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class RemoveApiProductsAuthorities extends Rpc
+{
+}
+
+/**
  * @method string getStageName()
  * @method $this withStageName($value)
  * @method string getGroupId()
@@ -3165,6 +3711,8 @@ class ResetAppCode extends Rpc
  * @method $this withNewAppSecret($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getNewAppKey()
+ * @method $this withNewAppKey($value)
  * @method string getAppKey()
  * @method $this withAppKey($value)
  */
@@ -3221,6 +3769,22 @@ class SdkGenerateByGroup extends Rpc
  * @method $this withSecurityToken($value)
  */
 class SetAccessControlListAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getApiProductIds()
+ * @method $this withApiProductIds($value)
+ * @method string getAuthValidTime()
+ * @method $this withAuthValidTime($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class SetApiProductsAuthorities extends Rpc
 {
 }
 
@@ -3323,6 +3887,18 @@ class SetDomainCertificate extends Rpc
  * @method $this withActionValue($value)
  */
 class SetDomainWebSocketStatus extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getAuthAppCode()
+ * @method $this withAuthAppCode($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ */
+class SetGroupAuthAppCode extends Rpc
 {
 }
 
@@ -3515,4 +4091,16 @@ class UntagResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getVpcAccessId()
+ * @method $this withVpcAccessId($value)
+ */
+class ValidateVpcConnectivity extends Rpc
+{
 }

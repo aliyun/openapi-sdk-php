@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2002 - 2023-10-26
+- Generated 2016-07-14 for `CloudAPI`.
+
+
 ## 1.8.2001 - 2023-10-25
 - Publish sdk.
 
