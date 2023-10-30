@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2004 - 2023-10-30
+- Update to support new apis.
+
+
 ## 1.8.2003 - 2023-10-26
 - 增加StartSyncExecution
 

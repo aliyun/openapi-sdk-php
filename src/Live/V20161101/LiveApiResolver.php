@@ -44,6 +44,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
  * @method CancelMuteAllGroupUser cancelMuteAllGroupUser(array $options = [])
  * @method CancelMuteGroupUser cancelMuteGroupUser(array $options = [])
+ * @method CheckLiveMessageUsersInGroup checkLiveMessageUsersInGroup(array $options = [])
+ * @method CheckLiveMessageUsersOnline checkLiveMessageUsersOnline(array $options = [])
  * @method CloseLiveShift closeLiveShift(array $options = [])
  * @method CopyCaster copyCaster(array $options = [])
  * @method CopyCasterSceneConfig copyCasterSceneConfig(array $options = [])
@@ -52,6 +54,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEdgeTranscodeJob createEdgeTranscodeJob(array $options = [])
  * @method CreateEventSub createEventSub(array $options = [])
  * @method CreateLiveDelayConfig createLiveDelayConfig(array $options = [])
+ * @method CreateLiveMessageApp createLiveMessageApp(array $options = [])
+ * @method CreateLiveMessageGroup createLiveMessageGroup(array $options = [])
  * @method CreateLiveRealTimeLogDelivery createLiveRealTimeLogDelivery(array $options = [])
  * @method CreateLiveStreamMonitor createLiveStreamMonitor(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
@@ -83,6 +87,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveDomainPlayMapping deleteLiveDomainPlayMapping(array $options = [])
  * @method DeleteLiveEdgeTransfer deleteLiveEdgeTransfer(array $options = [])
  * @method DeleteLiveLazyPullStreamInfoConfig deleteLiveLazyPullStreamInfoConfig(array $options = [])
+ * @method DeleteLiveMessageGroup deleteLiveMessageGroup(array $options = [])
  * @method DeleteLivePackageConfig deleteLivePackageConfig(array $options = [])
  * @method DeleteLivePullStreamInfoConfig deleteLivePullStreamInfoConfig(array $options = [])
  * @method DeleteLiveRealtimeLogDelivery deleteLiveRealtimeLogDelivery(array $options = [])
@@ -172,6 +177,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveHttpsDomainList describeLiveHttpsDomainList(array $options = [])
  * @method DescribeLiveIpInfo describeLiveIpInfo(array $options = [])
  * @method DescribeLiveLazyPullStreamConfig describeLiveLazyPullStreamConfig(array $options = [])
+ * @method DescribeLiveMessageApp describeLiveMessageApp(array $options = [])
+ * @method DescribeLiveMessageGroup describeLiveMessageGroup(array $options = [])
+ * @method DescribeLiveMessageGroupBand describeLiveMessageGroupBand(array $options = [])
  * @method DescribeLivePackageConfig describeLivePackageConfig(array $options = [])
  * @method DescribeLiveProducerUsageData describeLiveProducerUsageData(array $options = [])
  * @method DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
@@ -259,10 +267,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method HotLiveRtcStream hotLiveRtcStream(array $options = [])
  * @method InitializeAutoShowListTask initializeAutoShowListTask(array $options = [])
  * @method JoinMessageGroup joinMessageGroup(array $options = [])
+ * @method KickLiveMessageGroupUser kickLiveMessageGroupUser(array $options = [])
  * @method LeaveMessageGroup leaveMessageGroup(array $options = [])
  * @method ListEdgeTranscodeJob listEdgeTranscodeJob(array $options = [])
  * @method ListEdgeTranscodeTemplate listEdgeTranscodeTemplate(array $options = [])
  * @method ListLiveDelayConfig listLiveDelayConfig(array $options = [])
+ * @method ListLiveMessageApps listLiveMessageApps(array $options = [])
+ * @method ListLiveMessageGroupMessages listLiveMessageGroupMessages(array $options = [])
+ * @method ListLiveMessageGroups listLiveMessageGroups(array $options = [])
+ * @method ListLiveMessageGroupUsers listLiveMessageGroupUsers(array $options = [])
  * @method ListLiveRealtimeLogDelivery listLiveRealtimeLogDelivery(array $options = [])
  * @method ListLiveRealtimeLogDeliveryDomains listLiveRealtimeLogDeliveryDomains(array $options = [])
  * @method ListLiveRealtimeLogDeliveryInfos listLiveRealtimeLogDeliveryInfos(array $options = [])
@@ -279,6 +292,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyCasterProgram modifyCasterProgram(array $options = [])
  * @method ModifyCasterVideoResource modifyCasterVideoResource(array $options = [])
  * @method ModifyLiveDomainSchdmByProperty modifyLiveDomainSchdmByProperty(array $options = [])
+ * @method ModifyLiveMessageAppAudit modifyLiveMessageAppAudit(array $options = [])
+ * @method ModifyLiveMessageAppCallback modifyLiveMessageAppCallback(array $options = [])
+ * @method ModifyLiveMessageAppDisable modifyLiveMessageAppDisable(array $options = [])
+ * @method ModifyLiveMessageGroup modifyLiveMessageGroup(array $options = [])
+ * @method ModifyLiveMessageGroupBand modifyLiveMessageGroupBand(array $options = [])
+ * @method ModifyLiveMessageUserInfo modifyLiveMessageUserInfo(array $options = [])
  * @method ModifyLiveRealtimeLogDelivery modifyLiveRealtimeLogDelivery(array $options = [])
  * @method ModifyShowList modifyShowList(array $options = [])
  * @method ModifyStudioLayout modifyStudioLayout(array $options = [])
@@ -297,6 +316,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResumeLiveStream resumeLiveStream(array $options = [])
  * @method RollbackLiveStagingConfig rollbackLiveStagingConfig(array $options = [])
  * @method SendLike sendLike(array $options = [])
+ * @method SendLiveMessageGroup sendLiveMessageGroup(array $options = [])
+ * @method SendLiveMessageUser sendLiveMessageUser(array $options = [])
  * @method SendMessageToGroup sendMessageToGroup(array $options = [])
  * @method SendMessageToGroupUsers sendMessageToGroupUsers(array $options = [])
  * @method SendRoomNotification sendRoomNotification(array $options = [])
@@ -1677,6 +1698,38 @@ class CancelMuteGroupUser extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getUserIds()
+ * @method $this withUserIds($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class CheckLiveMessageUsersInGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getUserIds()
+ * @method $this withUserIds($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class CheckLiveMessageUsersOnline extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getStreamName()
@@ -1838,6 +1891,48 @@ class CreateEventSub extends Rpc
  */
 class CreateLiveDelayConfig extends Rpc
 {
+}
+
+/**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getAuditType()
+ * @method $this withAuditType($value)
+ * @method string getAuditUrl()
+ * @method $this withAuditUrl($value)
+ * @method string getEventCallbackUrl()
+ * @method $this withEventCallbackUrl($value)
+ */
+class CreateLiveMessageApp extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getGroupInfo()
+ * @method $this withGroupInfo($value)
+ * @method string getCreatorId()
+ * @method $this withCreatorId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getAdministrators()
+ * @method $this withAdministrators($value)
+ */
+class CreateLiveMessageGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2331,6 +2426,23 @@ class DeleteLiveEdgeTransfer extends Rpc
  */
 class DeleteLiveLazyPullStreamInfoConfig extends Rpc
 {
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getOperatorId()
+ * @method $this withOperatorId($value)
+ */
+class DeleteLiveMessageGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -3839,6 +3951,49 @@ class DescribeLiveIpInfo extends Rpc
  */
 class DescribeLiveLazyPullStreamConfig extends Rpc
 {
+}
+
+/**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeLiveMessageApp extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeLiveMessageGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeLiveMessageGroupBand extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -5494,6 +5649,23 @@ class JoinMessageGroup extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getKickoffUser()
+ * @method $this withKickoffUser($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class KickLiveMessageGroupUser extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getUserId()
  * @method string getBroadCastType()
  * @method string getBroadCastStatistics()
@@ -5625,6 +5797,86 @@ class ListEdgeTranscodeTemplate extends Rpc
  */
 class ListLiveDelayConfig extends Rpc
 {
+}
+
+/**
+ * @method string getSortType()
+ * @method $this withSortType($value)
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ */
+class ListLiveMessageApps extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getSortType()
+ * @method $this withSortType($value)
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMsgType()
+ * @method $this withMsgType($value)
+ */
+class ListLiveMessageGroupMessages extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getSortType()
+ * @method $this withSortType($value)
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class ListLiveMessageGroups extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getSortType()
+ * @method $this withSortType($value)
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListLiveMessageGroupUsers extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -6295,6 +6547,114 @@ class ModifyLiveDomainSchdmByProperty extends Rpc
 }
 
 /**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getAuditType()
+ * @method $this withAuditType($value)
+ * @method string getAuditUrl()
+ * @method $this withAuditUrl($value)
+ */
+class ModifyLiveMessageAppAudit extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getEventCallbackUrl()
+ * @method $this withEventCallbackUrl($value)
+ */
+class ModifyLiveMessageAppCallback extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getDisable()
+ * @method $this withDisable($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class ModifyLiveMessageAppDisable extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getGroupInfo()
+ * @method $this withGroupInfo($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getModifyInfo()
+ * @method $this withModifyInfo($value)
+ * @method string getAdminList()
+ * @method $this withAdminList($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getModifyAdmin()
+ * @method $this withModifyAdmin($value)
+ */
+class ModifyLiveMessageGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getBannedAll()
+ * @method $this withBannedAll($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getExceptUsers()
+ * @method $this withExceptUsers($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getBannnedUsers()
+ * @method $this withBannnedUsers($value)
+ */
+class ModifyLiveMessageGroupBand extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getUserMetaInfo()
+ * @method $this withUserMetaInfo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class ModifyLiveMessageUserInfo extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getDomainName()
@@ -6859,6 +7219,56 @@ class SendLike extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getSenderMetaInfo()
+ * @method $this withSenderMetaInfo($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getMsgTid()
+ * @method $this withMsgTid($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getSenderId()
+ * @method $this withSenderId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getMsgType()
+ * @method $this withMsgType($value)
+ */
+class SendLiveMessageGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getMsgTid()
+ * @method $this withMsgTid($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getSenderId()
+ * @method $this withSenderId($value)
+ * @method string getReceiverId()
+ * @method $this withReceiverId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getSenderInfo()
+ * @method $this withSenderInfo($value)
+ * @method string getMsgType()
+ * @method $this withMsgType($value)
+ */
+class SendLiveMessageUser extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
