@@ -21,6 +21,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLocalFileUploadJob createLocalFileUploadJob(array $options = [])
  * @method CreatePictureSearchApp createPictureSearchApp(array $options = [])
  * @method CreatePictureSearchJob createPictureSearchJob(array $options = [])
+ * @method CreateRecordDownloadByTimeJob createRecordDownloadByTimeJob(array $options = [])
  * @method CreateRecordPlan createRecordPlan(array $options = [])
  * @method CreateTimeTemplate createTimeTemplate(array $options = [])
  * @method DeleteEventRecordPlan deleteEventRecordPlan(array $options = [])
@@ -76,6 +77,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryPictureSearchJobResult queryPictureSearchJobResult(array $options = [])
  * @method QueryRecord queryRecord(array $options = [])
  * @method QueryRecordByRecordId queryRecordByRecordId(array $options = [])
+ * @method QueryRecordDownloadJobById queryRecordDownloadJobById(array $options = [])
+ * @method QueryRecordDownloadJobList queryRecordDownloadJobList(array $options = [])
  * @method QueryRecordDownloadUrl queryRecordDownloadUrl(array $options = [])
  * @method QueryRecordPlanDetail queryRecordPlanDetail(array $options = [])
  * @method QueryRecordPlanDeviceByDevice queryRecordPlanDeviceByDevice(array $options = [])
@@ -812,6 +815,56 @@ class CreatePictureSearchApp extends Rpc
  * @method $this withAppInstanceId($value)
  */
 class CreatePictureSearchJob extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getRecordType()
+ * @method $this withRecordType($value)
+ * @method string getStreamType()
+ * @method $this withStreamType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class CreateRecordDownloadByTimeJob extends Rpc
 {
 
     /**
@@ -3256,6 +3309,90 @@ class QueryRecord extends Rpc
  * @method $this withDeviceName($value)
  */
 class QueryRecordByRecordId extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class QueryRecordDownloadJobById extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryRecordDownloadJobList extends Rpc
 {
 
     /**
