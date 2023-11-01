@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2007 - 2023-11-1
+- Standardizing api.
+
+
 ## 1.8.2006 - 2023-11-1
 - Generated 2022-01-30 for `avatar`.
 
