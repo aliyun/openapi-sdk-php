@@ -29,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopInstance stopInstance(array $options = [])
  * @method SubmitAudioTo2DAvatarVideoTask submitAudioTo2DAvatarVideoTask(array $options = [])
  * @method SubmitAudioTo3DAvatarVideoTask submitAudioTo3DAvatarVideoTask(array $options = [])
+ * @method SubmitAvatarVideoTask submitAvatarVideoTask(array $options = [])
  * @method SubmitTextTo2DAvatarVideoTask submitTextTo2DAvatarVideoTask(array $options = [])
  * @method SubmitTextTo3DAvatarVideoTask submitTextTo3DAvatarVideoTask(array $options = [])
  * @method Update2dAvatar update2dAvatar(array $options = [])
@@ -537,6 +538,71 @@ class SubmitAudioTo2DAvatarVideoTask extends Rpc
  */
 class SubmitAudioTo3DAvatarVideoTask extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtParamsCLS($value)
+    {
+        $this->data['ExtParamsCLS'] = $value;
+        $this->options['query']['ExtParams_CLS'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallbackParamsCLS($value)
+    {
+        $this->data['CallbackParamsCLS'] = $value;
+        $this->options['query']['CallbackParams_CLS'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getCallbackParams()
+ * @method $this withCallbackParams($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getVideoParams()
+ * @method $this withVideoParams($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getExtParams()
+ * @method $this withExtParams($value)
+ * @method string getVideoParamsCLS()
+ * @method string getCallback()
+ * @method $this withCallback($value)
+ * @method string getExtParamsCLS()
+ * @method string getCallbackParamsCLS()
+ */
+class SubmitAvatarVideoTask extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoParamsCLS($value)
+    {
+        $this->data['VideoParamsCLS'] = $value;
+        $this->options['query']['VideoParams_CLS'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
