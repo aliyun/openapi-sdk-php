@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2008 - 2023-11-2
+- Latest version for php.
+
+
 ## 1.8.2007 - 2023-11-1
 - Standardizing api.
 
