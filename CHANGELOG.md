@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2009 - 2023-11-3
+- Support ClientToken for Idemoptent.
+
+
 ## 1.8.2008 - 2023-11-2
 - Latest version for php.
 
