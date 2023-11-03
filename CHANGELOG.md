@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2010 - 2023-11-3
+- Support ClientToken for Idemoptent.
+
+
 ## 1.8.2009 - 2023-11-3
 - Support ClientToken for Idemoptent.
 
