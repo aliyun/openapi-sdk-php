@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2011 - 2023-11-8
+- Support CreateInstance API.
+
+
 ## 1.8.2010 - 2023-11-3
 - Support ClientToken for Idemoptent.
 
