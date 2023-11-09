@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2012 - 2023-11-9
+- Generated 2022-01-30 for `avatar`.
+
+
 ## 1.8.2011 - 2023-11-8
 - Support CreateInstance API.
 
