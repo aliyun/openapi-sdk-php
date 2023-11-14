@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CompareFace compareFace(array $options = [])
  * @method CompareFaceWithMask compareFaceWithMask(array $options = [])
  * @method CreateFaceDb createFaceDb(array $options = [])
+ * @method DeepfakeFace deepfakeFace(array $options = [])
  * @method DeleteFace deleteFace(array $options = [])
  * @method DeleteFaceDb deleteFaceDb(array $options = [])
  * @method DeleteFaceEntity deleteFaceEntity(array $options = [])
@@ -783,6 +784,42 @@ class CreateFaceDb extends Rpc
         $this->options['form_params']['Name'] = $value;
 
         return $this;
+    }
+}
+
+/**
+ * @method string getFormatResultToJson()
+ * @method $this withFormatResultToJson($value)
+ * @method string getOssFile()
+ * @method $this withOssFile($value)
+ * @method array getTasks()
+ * @method string getRequestProxyBy()
+ * @method $this withRequestProxyBy($value)
+ */
+class DeepfakeFace extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $tasks
+     *
+     * @return $this
+     */
+	public function withTasks(array $tasks)
+	{
+	    $this->data['Tasks'] = $tasks;
+		foreach ($tasks as $depth1 => $depth1Value) {
+			if(isset($depth1Value['ImageURL'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageURL'] = $depth1Value['ImageURL'];
+			}
+			if(isset($depth1Value['ImageData'])){
+				$this->options['form_params']['Tasks.' . ($depth1 + 1) . '.ImageData'] = $depth1Value['ImageData'];
+			}
+		}
+
+		return $this;
     }
 }
 

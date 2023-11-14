@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2013 - 2023-11-14
+- Release DeepfakeFace.
+
+
 ## 1.8.2012 - 2023-11-9
 - Generated 2022-01-30 for `avatar`.
 
