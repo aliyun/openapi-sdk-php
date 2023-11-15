@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2014 - 2023-11-15
+- Latest version for php.
+
+
 ## 1.8.2013 - 2023-11-14
 - Release DeepfakeFace.
 

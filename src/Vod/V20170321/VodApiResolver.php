@@ -11,6 +11,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddEditingProjectMaterials addEditingProjectMaterials(array $options = [])
  * @method AddTranscodeTemplateGroup addTranscodeTemplateGroup(array $options = [])
  * @method AddVodDomain addVodDomain(array $options = [])
+ * @method AddVodStorageForApp addVodStorageForApp(array $options = [])
  * @method AddVodTemplate addVodTemplate(array $options = [])
  * @method AddWatermark addWatermark(array $options = [])
  * @method AttachAppPolicyToIdentity attachAppPolicyToIdentity(array $options = [])
@@ -283,6 +284,20 @@ class AddTranscodeTemplateGroup extends Rpc
  * @method $this withCheckUrl($value)
  */
 class AddVodDomain extends Rpc
+{
+}
+
+/**
+ * @method string getResourceRealOwnerId()
+ * @method $this withResourceRealOwnerId($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getStorageLocation()
+ * @method $this withStorageLocation($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class AddVodStorageForApp extends Rpc
 {
 }
 
@@ -1797,6 +1812,8 @@ class PreloadVodObjectCaches extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getTimeline()
  * @method $this withTimeline($value)
  */
