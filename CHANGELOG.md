@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2016 - 2023-11-16
+- Supported SortBy for ListUserDevices.
+
+
 ## 1.8.2015 - 2023-11-15
 - Latest version for php.
 
