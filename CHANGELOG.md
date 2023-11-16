@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2017 - 2023-11-16
+- 新增按时间下载本地录像接口.
+
+
 ## 1.8.2016 - 2023-11-16
 - Supported SortBy for ListUserDevices.
 

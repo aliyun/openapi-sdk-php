@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ClearFaceDeviceDB clearFaceDeviceDB(array $options = [])
  * @method CreateEventRecordPlan createEventRecordPlan(array $options = [])
  * @method CreateLocalFileUploadJob createLocalFileUploadJob(array $options = [])
+ * @method CreateLocalRecordDownloadByTimeJob createLocalRecordDownloadByTimeJob(array $options = [])
  * @method CreatePictureSearchApp createPictureSearchApp(array $options = [])
  * @method CreatePictureSearchJob createPictureSearchJob(array $options = [])
  * @method CreateRecordDownloadByTimeJob createRecordDownloadByTimeJob(array $options = [])
@@ -728,6 +729,56 @@ class CreateLocalFileUploadJob extends Rpc
 
 		return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSpeed()
+ * @method $this withSpeed($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getStreamType()
+ * @method $this withStreamType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class CreateLocalRecordDownloadByTimeJob extends Rpc
+{
 
     /**
      * @param string $value
