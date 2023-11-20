@@ -6,53 +6,70 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AllocateClusterPublicConnection allocateClusterPublicConnection(array $options = [])
+ * @method AttachUserENI attachUserENI(array $options = [])
  * @method BindAccount bindAccount(array $options = [])
+ * @method BindDBResourceGroupWithUser bindDBResourceGroupWithUser(array $options = [])
  * @method CheckBindRamUser checkBindRamUser(array $options = [])
+ * @method CheckSampleDataSet checkSampleDataSet(array $options = [])
  * @method CreateAccount createAccount(array $options = [])
  * @method CreateDBCluster createDBCluster(array $options = [])
  * @method CreateDBResourceGroup createDBResourceGroup(array $options = [])
+ * @method CreateElasticPlan createElasticPlan(array $options = [])
  * @method CreateOssSubDirectory createOssSubDirectory(array $options = [])
  * @method CreateSparkTemplate createSparkTemplate(array $options = [])
  * @method DeleteAccount deleteAccount(array $options = [])
  * @method DeleteDBCluster deleteDBCluster(array $options = [])
  * @method DeleteDBResourceGroup deleteDBResourceGroup(array $options = [])
+ * @method DeleteElasticPlan deleteElasticPlan(array $options = [])
  * @method DeleteProcessInstance deleteProcessInstance(array $options = [])
  * @method DeleteSparkTemplate deleteSparkTemplate(array $options = [])
  * @method DeleteSparkTemplateFile deleteSparkTemplateFile(array $options = [])
+ * @method DescribeAccountAllPrivileges describeAccountAllPrivileges(array $options = [])
+ * @method DescribeAccountPrivilegeObjects describeAccountPrivilegeObjects(array $options = [])
+ * @method DescribeAccountPrivileges describeAccountPrivileges(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
  * @method DescribeAdbMySqlColumns describeAdbMySqlColumns(array $options = [])
  * @method DescribeAdbMySqlSchemas describeAdbMySqlSchemas(array $options = [])
  * @method DescribeAdbMySqlTables describeAdbMySqlTables(array $options = [])
+ * @method DescribeAllDataSource describeAllDataSource(array $options = [])
  * @method DescribeApsActionLogs describeApsActionLogs(array $options = [])
  * @method DescribeApsResourceGroups describeApsResourceGroups(array $options = [])
- * @method DescribeAuditLogConfig describeAuditLogConfig(array $options = [])
  * @method DescribeAuditLogRecords describeAuditLogRecords(array $options = [])
- * @method DescribeBackupPolicy describeBackupPolicy(array $options = [])
- * @method DescribeBackups describeBackups(array $options = [])
  * @method DescribeClusterAccessWhiteList describeClusterAccessWhiteList(array $options = [])
  * @method DescribeClusterNetInfo describeClusterNetInfo(array $options = [])
+ * @method DescribeColumns describeColumns(array $options = [])
  * @method DescribeDBClusterAttribute describeDBClusterAttribute(array $options = [])
- * @method DescribeDBClusterForecast describeDBClusterForecast(array $options = [])
  * @method DescribeDBClusterHealthStatus describeDBClusterHealthStatus(array $options = [])
  * @method DescribeDBClusterPerformance describeDBClusterPerformance(array $options = [])
  * @method DescribeDBClusters describeDBClusters(array $options = [])
+ * @method DescribeDBClusterStatus describeDBClusterStatus(array $options = [])
  * @method DescribeDBResourceGroup describeDBResourceGroup(array $options = [])
  * @method DescribeDiagnosisDimensions describeDiagnosisDimensions(array $options = [])
  * @method DescribeDiagnosisRecords describeDiagnosisRecords(array $options = [])
  * @method DescribeDiagnosisSQLInfo describeDiagnosisSQLInfo(array $options = [])
  * @method DescribeDownloadRecords describeDownloadRecords(array $options = [])
+ * @method DescribeElasticPlanAttribute describeElasticPlanAttribute(array $options = [])
+ * @method DescribeElasticPlanJobs describeElasticPlanJobs(array $options = [])
+ * @method DescribeElasticPlans describeElasticPlans(array $options = [])
+ * @method DescribeElasticPlanSpecifications describeElasticPlanSpecifications(array $options = [])
+ * @method DescribeEnabledPrivileges describeEnabledPrivileges(array $options = [])
  * @method DescribePatternPerformance describePatternPerformance(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method DescribeSchemas describeSchemas(array $options = [])
  * @method DescribeSparkCodeLog describeSparkCodeLog(array $options = [])
  * @method DescribeSparkCodeOutput describeSparkCodeOutput(array $options = [])
  * @method DescribeSparkCodeWebUi describeSparkCodeWebUi(array $options = [])
  * @method DescribeSqlPattern describeSqlPattern(array $options = [])
- * @method DescribeSQLPatternAttribute describeSQLPatternAttribute(array $options = [])
  * @method DescribeSQLPatterns describeSQLPatterns(array $options = [])
  * @method DescribeTableAccessCount describeTableAccessCount(array $options = [])
+ * @method DescribeTables describeTables(array $options = [])
+ * @method DescribeUserQuota describeUserQuota(array $options = [])
+ * @method DetachUserENI detachUserENI(array $options = [])
+ * @method DisableElasticPlan disableElasticPlan(array $options = [])
  * @method DownloadDiagnosisRecords downloadDiagnosisRecords(array $options = [])
+ * @method EnableElasticPlan enableElasticPlan(array $options = [])
+ * @method ExistRunningSQLEngine existRunningSQLEngine(array $options = [])
  * @method GetDatabaseObjects getDatabaseObjects(array $options = [])
- * @method GetLakehouseValidResourceGroups getLakehouseValidResourceGroups(array $options = [])
  * @method GetSparkAppAttemptLog getSparkAppAttemptLog(array $options = [])
  * @method GetSparkAppInfo getSparkAppInfo(array $options = [])
  * @method GetSparkAppLog getSparkAppLog(array $options = [])
@@ -60,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetSparkAppState getSparkAppState(array $options = [])
  * @method GetSparkAppWebUiAddress getSparkAppWebUiAddress(array $options = [])
  * @method GetSparkConfigLogPath getSparkConfigLogPath(array $options = [])
+ * @method GetSparkDefinitions getSparkDefinitions(array $options = [])
  * @method GetSparkLogAnalyzeTask getSparkLogAnalyzeTask(array $options = [])
  * @method GetSparkSQLEngineState getSparkSQLEngineState(array $options = [])
  * @method GetSparkTemplateFileContent getSparkTemplateFileContent(array $options = [])
@@ -79,22 +97,25 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListSparkLogAnalyzeTasks listSparkLogAnalyzeTasks(array $options = [])
  * @method ListSparkTemplateFileIds listSparkTemplateFileIds(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
+ * @method ModifyAccountPrivileges modifyAccountPrivileges(array $options = [])
  * @method ModifyAuditLogConfig modifyAuditLogConfig(array $options = [])
- * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
  * @method ModifyClusterAccessWhiteList modifyClusterAccessWhiteList(array $options = [])
  * @method ModifyClusterConnectionString modifyClusterConnectionString(array $options = [])
  * @method ModifyDBCluster modifyDBCluster(array $options = [])
  * @method ModifyDBClusterDescription modifyDBClusterDescription(array $options = [])
  * @method ModifyDBClusterMaintainTime modifyDBClusterMaintainTime(array $options = [])
  * @method ModifyDBResourceGroup modifyDBResourceGroup(array $options = [])
+ * @method ModifyElasticPlan modifyElasticPlan(array $options = [])
  * @method PreloadSparkAppMetrics preloadSparkAppMetrics(array $options = [])
  * @method ReleaseClusterPublicConnection releaseClusterPublicConnection(array $options = [])
+ * @method RenameSparkTemplateFile renameSparkTemplateFile(array $options = [])
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method SetSparkAppLogRootPath setSparkAppLogRootPath(array $options = [])
  * @method StartSparkSQLEngine startSparkSQLEngine(array $options = [])
  * @method SubmitSparkApp submitSparkApp(array $options = [])
  * @method SubmitSparkLogAnalyzeTask submitSparkLogAnalyzeTask(array $options = [])
  * @method UnbindAccount unbindAccount(array $options = [])
+ * @method UnbindDBResourceGroupWithUser unbindDBResourceGroupWithUser(array $options = [])
  * @method UpdateSparkTemplateFile updateSparkTemplateFile(array $options = [])
  */
 class AdbApiResolver extends ApiResolver
@@ -129,6 +150,14 @@ class AllocateClusterPublicConnection extends Rpc
 /**
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
+ */
+class AttachUserENI extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
  * @method string getRamUser()
  * @method $this withRamUser($value)
  * @method string getAccountName()
@@ -139,10 +168,30 @@ class BindAccount extends Rpc
 }
 
 /**
+ * @method string getGroupUser()
+ * @method $this withGroupUser($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ */
+class BindDBResourceGroupWithUser extends Rpc
+{
+}
+
+/**
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
  */
 class CheckBindRamUser extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class CheckSampleDataSet extends Rpc
 {
 }
 
@@ -167,18 +216,29 @@ class CreateAccount extends Rpc
  * @method $this withDBClusterDescription($value)
  * @method string getEnableDefaultResourcePool()
  * @method $this withEnableDefaultResourcePool($value)
+ * @method string getSourceDbClusterId()
+ * @method $this withSourceDbClusterId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getStorageResource()
  * @method $this withStorageResource($value)
+ * @method array getTag()
  * @method string getDBClusterNetworkType()
  * @method $this withDBClusterNetworkType($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getDBClusterVersion()
  * @method $this withDBClusterVersion($value)
+ * @method string getRestoreToTime()
+ * @method $this withRestoreToTime($value)
+ * @method string getBackupSetId()
+ * @method $this withBackupSetId($value)
  * @method string getUsedTime()
  * @method $this withUsedTime($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
+ * @method string getRestoreType()
+ * @method $this withRestoreType($value)
  * @method string getVPCId()
  * @method $this withVPCId($value)
  * @method string getZoneId()
@@ -190,21 +250,75 @@ class CreateAccount extends Rpc
  */
 class CreateDBCluster extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
  * @method string getMinComputeResource()
  * @method $this withMinComputeResource($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
+ * @method string getMaxClusterCount()
+ * @method $this withMaxClusterCount($value)
  * @method string getGroupType()
  * @method $this withGroupType($value)
+ * @method string getMinClusterCount()
+ * @method $this withMinClusterCount($value)
+ * @method string getClusterMode()
+ * @method $this withClusterMode($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getClusterSizeResource()
+ * @method $this withClusterSizeResource($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
  * @method string getMaxComputeResource()
  * @method $this withMaxComputeResource($value)
  */
 class CreateDBResourceGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupName()
+ * @method $this withResourceGroupName($value)
+ * @method string getCronExpression()
+ * @method $this withCronExpression($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getEnabled()
+ * @method $this withEnabled($value)
+ * @method string getTargetSize()
+ * @method $this withTargetSize($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getAutoScale()
+ * @method $this withAutoScale($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ */
+class CreateElasticPlan extends Rpc
 {
 }
 
@@ -347,6 +461,16 @@ class DeleteDBResourceGroup extends Rpc
 }
 
 /**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ */
+class DeleteElasticPlan extends Rpc
+{
+}
+
+/**
  * @method string getProjectCode()
  * @method $this withProjectCode($value)
  * @method string getDBClusterId()
@@ -427,6 +551,62 @@ class DeleteSparkTemplateFile extends Rpc
 }
 
 /**
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getMarker()
+ * @method $this withMarker($value)
+ */
+class DescribeAccountAllPrivileges extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getColumnPrivilegeObject()
+ * @method $this withColumnPrivilegeObject($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getTablePrivilegeObject()
+ * @method $this withTablePrivilegeObject($value)
+ * @method string getPrivilegeType()
+ * @method $this withPrivilegeType($value)
+ * @method string getDatabasePrivilegeObject()
+ * @method $this withDatabasePrivilegeObject($value)
+ */
+class DescribeAccountPrivilegeObjects extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getColumnPrivilegeObject()
+ * @method $this withColumnPrivilegeObject($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getTablePrivilegeObject()
+ * @method $this withTablePrivilegeObject($value)
+ * @method string getPrivilegeType()
+ * @method $this withPrivilegeType($value)
+ * @method string getDatabasePrivilegeObject()
+ * @method $this withDatabasePrivilegeObject($value)
+ */
+class DescribeAccountPrivileges extends Rpc
+{
+}
+
+/**
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
  * @method string getOwnerId()
@@ -469,6 +649,18 @@ class DescribeAdbMySqlTables extends Rpc
 }
 
 /**
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ */
+class DescribeAllDataSource extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -487,8 +679,6 @@ class DescribeAdbMySqlTables extends Rpc
  * @method $this withPageNumber($value)
  * @method string getStage()
  * @method $this withStage($value)
- * @method string getProxyUser()
- * @method $this withProxyUser($value)
  * @method string getWorkloadId()
  * @method $this withWorkloadId($value)
  * @method string getPageSize()
@@ -520,22 +710,6 @@ class DescribeApsResourceGroups extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeAuditLogConfig extends Rpc
-{
 }
 
 /**
@@ -581,48 +755,6 @@ class DescribeAuditLogRecords extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeBackupPolicy extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeBackups extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -641,22 +773,22 @@ class DescribeClusterNetInfo extends Rpc
 }
 
 /**
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
  */
-class DescribeDBClusterAttribute extends Rpc
+class DescribeColumns extends Rpc
 {
 }
 
 /**
- * @method string getMetricType()
- * @method $this withMetricType($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  */
-class DescribeDBClusterForecast extends Rpc
+class DescribeDBClusterAttribute extends Rpc
 {
 }
 
@@ -695,10 +827,35 @@ class DescribeDBClusterPerformance extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getDBClusterIds()
  * @method $this withDBClusterIds($value)
  */
 class DescribeDBClusters extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+class DescribeDBClusterStatus extends Rpc
 {
 }
 
@@ -812,14 +969,85 @@ class DescribeDownloadRecords extends Rpc
 /**
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ */
+class DescribeElasticPlanAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupName()
+ * @method $this withResourceGroupName($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeElasticPlanJobs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupName()
+ * @method $this withResourceGroupName($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getEnabled()
+ * @method $this withEnabled($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ */
+class DescribeElasticPlans extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupName()
+ * @method $this withResourceGroupName($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getType()
+ * @method $this withType($value)
+ */
+class DescribeElasticPlanSpecifications extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class DescribeEnabledPrivileges extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
  * @method string getPatternId()
  * @method $this withPatternId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getKey()
- * @method $this withKey($value)
  */
 class DescribePatternPerformance extends Rpc
 {
@@ -838,6 +1066,14 @@ class DescribePatternPerformance extends Rpc
  * @method $this withAcceptLanguage($value)
  */
 class DescribeRegions extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class DescribeSchemas extends Rpc
 {
 }
 
@@ -894,22 +1130,6 @@ class DescribeSqlPattern extends Rpc
 /**
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
- * @method string getPatternId()
- * @method $this withPatternId($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getLang()
- * @method $this withLang($value)
- */
-class DescribeSQLPatternAttribute extends Rpc
-{
-}
-
-/**
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
@@ -948,41 +1168,124 @@ class DescribeTableAccessCount extends Rpc
 }
 
 /**
+ * @method string getSchemaName()
+ * @method $this withSchemaName($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class DescribeTables extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class DescribeUserQuota extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class DetachUserENI extends Rpc
+{
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ */
+class DisableElasticPlan extends Rpc
+{
+}
+
+/**
+ * @method string getQueryCondition()
+ * @method $this withQueryCondition($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getRawStartTime()
+ * @method $this withRawStartTime($value)
+ * @method string getRawEndTime()
+ * @method $this withRawEndTime($value)
+ * @method string getDatabase()
+ * @method $this withDatabase($value)
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getLang()
+ * @method $this withLang($value)
  * @method string getMaxScanSize()
  * @method $this withMaxScanSize($value)
  * @method string getResourceGroup()
  * @method $this withResourceGroup($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
- * @method string getQueryCondition()
- * @method $this withQueryCondition($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getRawStartTime()
- * @method $this withRawStartTime($value)
  * @method string getMinPeakMemory()
  * @method $this withMinPeakMemory($value)
- * @method string getRawEndTime()
- * @method $this withRawEndTime($value)
  * @method string getMinScanSize()
  * @method $this withMinScanSize($value)
- * @method string getDatabase()
- * @method $this withDatabase($value)
- * @method string getClientIp()
- * @method $this withClientIp($value)
  * @method string getMaxPeakMemory()
  * @method $this withMaxPeakMemory($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
- * @method string getLang()
- * @method $this withLang($value)
  * @method string getUserName()
  * @method $this withUserName($value)
  */
 class DownloadDiagnosisRecords extends Rpc
 {
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ */
+class EnableElasticPlan extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupName()
+ * @method string getDBClusterId()
+ */
+class ExistRunningSQLEngine extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupName($value)
+    {
+        $this->data['ResourceGroupName'] = $value;
+        $this->options['form_params']['ResourceGroupName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDBClusterId($value)
+    {
+        $this->data['DBClusterId'] = $value;
+        $this->options['form_params']['DBClusterId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1000,14 +1303,6 @@ class DownloadDiagnosisRecords extends Rpc
  * @method $this withPageSize($value)
  */
 class GetDatabaseObjects extends Rpc
-{
-}
-
-/**
- * @method string getGroupsInfo()
- * @method $this withGroupsInfo($value)
- */
-class GetLakehouseValidResourceGroups extends Rpc
 {
 }
 
@@ -1163,6 +1458,26 @@ class GetSparkAppWebUiAddress extends Rpc
  * @method string getDBClusterId()
  */
 class GetSparkConfigLogPath extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDBClusterId($value)
+    {
+        $this->data['DBClusterId'] = $value;
+        $this->options['form_params']['DBClusterId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDBClusterId()
+ */
+class GetSparkDefinitions extends Rpc
 {
 
     /**
@@ -1596,6 +1911,18 @@ class ModifyAccountDescription extends Rpc
 }
 
 /**
+ * @method string getAccountPrivileges()
+ * @method $this withAccountPrivileges($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ */
+class ModifyAccountPrivileges extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -1610,32 +1937,6 @@ class ModifyAccountDescription extends Rpc
  * @method $this withAuditLogStatus($value)
  */
 class ModifyAuditLogConfig extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getEnableBackupLog()
- * @method $this withEnableBackupLog($value)
- * @method string getPreferredBackupPeriod()
- * @method $this withPreferredBackupPeriod($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPreferredBackupTime()
- * @method $this withPreferredBackupTime($value)
- * @method string getBackupRetentionPeriod()
- * @method $this withBackupRetentionPeriod($value)
- * @method string getLogBackupRetentionPeriod()
- * @method $this withLogBackupRetentionPeriod($value)
- */
-class ModifyBackupPolicy extends Rpc
 {
 }
 
@@ -1670,6 +1971,8 @@ class ModifyClusterConnectionString extends Rpc
 }
 
 /**
+ * @method string getEnableDefaultResourcePool()
+ * @method $this withEnableDefaultResourcePool($value)
  * @method string getStorageResource()
  * @method $this withStorageResource($value)
  * @method string getResourceOwnerAccount()
@@ -1708,18 +2011,44 @@ class ModifyDBClusterMaintainTime extends Rpc
 }
 
 /**
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
  * @method string getMinComputeResource()
  * @method $this withMinComputeResource($value)
- * @method string getGroupName()
- * @method $this withGroupName($value)
+ * @method string getMaxClusterCount()
+ * @method $this withMaxClusterCount($value)
  * @method string getGroupType()
  * @method $this withGroupType($value)
+ * @method string getMinClusterCount()
+ * @method $this withMinClusterCount($value)
+ * @method string getClusterMode()
+ * @method $this withClusterMode($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getClusterSizeResource()
+ * @method $this withClusterSizeResource($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
  * @method string getMaxComputeResource()
  * @method $this withMaxComputeResource($value)
  */
 class ModifyDBResourceGroup extends Rpc
+{
+}
+
+/**
+ * @method string getCronExpression()
+ * @method $this withCronExpression($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getTargetSize()
+ * @method $this withTargetSize($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getElasticPlanName()
+ * @method $this withElasticPlanName($value)
+ */
+class ModifyElasticPlan extends Rpc
 {
 }
 
@@ -1749,6 +2078,21 @@ class PreloadSparkAppMetrics extends Rpc
  */
 class ReleaseClusterPublicConnection extends Rpc
 {
+}
+
+/**
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class RenameSparkTemplateFile extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2062,6 +2406,18 @@ class SubmitSparkLogAnalyzeTask extends Rpc
  * @method $this withAccountName($value)
  */
 class UnbindAccount extends Rpc
+{
+}
+
+/**
+ * @method string getGroupUser()
+ * @method $this withGroupUser($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ */
+class UnbindDBResourceGroupWithUser extends Rpc
 {
 }
 

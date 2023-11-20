@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2019 - 2023-11-20
+- Generated 2021-12-01 for `adb`.
+
+
 ## 1.8.2018 - 2023-11-20
 - GetDomainFields add request field
 
