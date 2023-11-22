@@ -63,6 +63,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateMessageApp createMessageApp(array $options = [])
  * @method CreateMessageGroup createMessageGroup(array $options = [])
  * @method CreateMixStream createMixStream(array $options = [])
+ * @method CreateRoomRealTimeStreamAddress createRoomRealTimeStreamAddress(array $options = [])
  * @method DeleteCaster deleteCaster(array $options = [])
  * @method DeleteCasterComponent deleteCasterComponent(array $options = [])
  * @method DeleteCasterEpisode deleteCasterEpisode(array $options = [])
@@ -152,6 +153,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainFrameRateAndBitRateData describeLiveDomainFrameRateAndBitRateData(array $options = [])
  * @method DescribeLiveDomainLimit describeLiveDomainLimit(array $options = [])
  * @method DescribeLiveDomainLog describeLiveDomainLog(array $options = [])
+ * @method DescribeLiveDomainLogExTtl describeLiveDomainLogExTtl(array $options = [])
  * @method DescribeLiveDomainMapping describeLiveDomainMapping(array $options = [])
  * @method DescribeLiveDomainMonitoringUsageData describeLiveDomainMonitoringUsageData(array $options = [])
  * @method DescribeLiveDomainOnlineUserNum describeLiveDomainOnlineUserNum(array $options = [])
@@ -174,6 +176,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDrmUsageData describeLiveDrmUsageData(array $options = [])
  * @method DescribeLiveEdgeTransfer describeLiveEdgeTransfer(array $options = [])
  * @method DescribeLiveGrtnDuration describeLiveGrtnDuration(array $options = [])
+ * @method DescribeLiveGrtnTrafficUsage describeLiveGrtnTrafficUsage(array $options = [])
  * @method DescribeLiveHttpsDomainList describeLiveHttpsDomainList(array $options = [])
  * @method DescribeLiveIpInfo describeLiveIpInfo(array $options = [])
  * @method DescribeLiveLazyPullStreamConfig describeLiveLazyPullStreamConfig(array $options = [])
@@ -218,6 +221,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamState describeLiveStreamState(array $options = [])
  * @method DescribeLiveStreamsTotalCount describeLiveStreamsTotalCount(array $options = [])
  * @method DescribeLiveStreamTranscodeInfo describeLiveStreamTranscodeInfo(array $options = [])
+ * @method DescribeLiveStreamTranscodeMetricData describeLiveStreamTranscodeMetricData(array $options = [])
  * @method DescribeLiveStreamTranscodeStreamNum describeLiveStreamTranscodeStreamNum(array $options = [])
  * @method DescribeLiveStreamWatermarkRules describeLiveStreamWatermarkRules(array $options = [])
  * @method DescribeLiveStreamWatermarks describeLiveStreamWatermarks(array $options = [])
@@ -1826,12 +1830,6 @@ class CreateEdgeTranscodeJob extends Rpc
 }
 
 /**
- * @method string getRole()
- * @method $this withRole($value)
- * @method string getClientToken()
- * @method $this withClientToken($value)
- * @method string getNeedCallbackAuthorization()
- * @method $this withNeedCallbackAuthorization($value)
  * @method array getUsers()
  * @method string getAppId()
  * @method $this withAppId($value)
@@ -2134,6 +2132,28 @@ class CreateMessageGroup extends Rpc
  */
 class CreateMixStream extends Rpc
 {
+}
+
+/**
+ * @method string getExpireTime()
+ * @method $this withExpireTime($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getDisplayName()
+ * @method $this withDisplayName($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ */
+class CreateRoomRealTimeStreamAddress extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -3517,6 +3537,26 @@ class DescribeLiveDomainLog extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveDomainLogExTtl extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -3910,6 +3950,26 @@ class DescribeLiveEdgeTransfer extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeLiveGrtnDuration extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getArea()
+ * @method $this withArea($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getField()
+ * @method $this withField($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeLiveGrtnTrafficUsage extends Rpc
 {
 }
 
@@ -4699,6 +4759,26 @@ class DescribeLiveStreamsTotalCount extends Rpc
  * @method $this withDomainTranscodeName($value)
  */
 class DescribeLiveStreamTranscodeInfo extends Rpc
+{
+}
+
+/**
+ * @method string getNextPageToken()
+ * @method $this withNextPageToken($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStreamTranscodeMetricData extends Rpc
 {
 }
 
@@ -7520,6 +7600,10 @@ class SetCasterChannel extends Rpc
  * @method $this withTranscodeConfig($value)
  * @method string getCasterName()
  * @method $this withCasterName($value)
+ * @method string getAutoSwitchUrgentOn()
+ * @method $this withAutoSwitchUrgentOn($value)
+ * @method string getAutoSwitchUrgentConfig()
+ * @method $this withAutoSwitchUrgentConfig($value)
  * @method string getUrgentLiveStreamUrl()
  * @method $this withUrgentLiveStreamUrl($value)
  * @method string getSideOutputUrl()
