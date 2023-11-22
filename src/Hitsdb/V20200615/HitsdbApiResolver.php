@@ -5,9 +5,11 @@ namespace AlibabaCloud\Hitsdb\V20200615;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CreateLdpsNamespace createLdpsNamespace(array $options = [])
  * @method CreateLindormInstance createLindormInstance(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method GetInstanceIpWhiteList getInstanceIpWhiteList(array $options = [])
+ * @method GetLdpsNamespacedQuota getLdpsNamespacedQuota(array $options = [])
  * @method GetLdpsResourceCost getLdpsResourceCost(array $options = [])
  * @method GetLindormInstance getLindormInstance(array $options = [])
  * @method GetLindormInstanceEngineList getLindormInstanceEngineList(array $options = [])
@@ -38,6 +40,26 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'hitsdb';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class CreateLdpsNamespace extends Rpc
+{
 }
 
 /**
@@ -163,6 +185,26 @@ class DescribeRegions extends Rpc
  * @method $this withInstanceId($value)
  */
 class GetInstanceIpWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class GetLdpsNamespacedQuota extends Rpc
 {
 }
 
@@ -508,6 +550,8 @@ class UntagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDelete()
+ * @method $this withDelete($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getResourceOwnerAccount()
@@ -530,8 +574,6 @@ class UpdateInstanceIpWhiteList extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPhoenixCoreNum()
- * @method $this withPhoenixCoreNum($value)
  * @method string getLogSpec()
  * @method $this withLogSpec($value)
  * @method string getSecurityToken()
@@ -556,8 +598,6 @@ class UpdateInstanceIpWhiteList extends Rpc
  * @method $this withLogSingleStorage($value)
  * @method string getZoneId()
  * @method $this withZoneId($value)
- * @method string getPhoenixCoreSpec()
- * @method $this withPhoenixCoreSpec($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getUpgradeType()
