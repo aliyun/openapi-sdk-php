@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2022 - 2023-11-23
+- Generated 2020-06-15 for `hitsdb`.
+
+
 ## 1.8.2021 - 2023-11-22
 - Lindorm open api.
 
