@@ -18,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstancePayType modifyInstancePayType(array $options = [])
  * @method ReleaseLindormInstance releaseLindormInstance(array $options = [])
  * @method RenewLindormInstance renewLindormInstance(array $options = [])
+ * @method SwitchLSQLV3MySQLService switchLSQLV3MySQLService(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateInstanceIpWhiteList updateInstanceIpWhiteList(array $options = [])
@@ -437,6 +438,26 @@ class ReleaseLindormInstance extends Rpc
  * @method $this withPricingCycle($value)
  */
 class RenewLindormInstance extends Rpc
+{
+}
+
+/**
+ * @method string getActionType()
+ * @method $this withActionType($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class SwitchLSQLV3MySQLService extends Rpc
 {
 }
 

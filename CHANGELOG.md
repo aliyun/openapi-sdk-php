@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2023 - 2023-11-29
+- SwitchLSQLV3MySQLService
+
+
 ## 1.8.2022 - 2023-11-23
 - Generated 2020-06-15 for `hitsdb`.
 
