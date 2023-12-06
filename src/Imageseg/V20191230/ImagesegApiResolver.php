@@ -9,24 +9,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method ParseFace parseFace(array $options = [])
  * @method RefineMask refineMask(array $options = [])
- * @method SegmentAnimal segmentAnimal(array $options = [])
  * @method SegmentBody segmentBody(array $options = [])
  * @method SegmentCloth segmentCloth(array $options = [])
  * @method SegmentCommodity segmentCommodity(array $options = [])
  * @method SegmentCommonImage segmentCommonImage(array $options = [])
- * @method SegmentFace segmentFace(array $options = [])
  * @method SegmentFood segmentFood(array $options = [])
- * @method SegmentFurniture segmentFurniture(array $options = [])
  * @method SegmentHair segmentHair(array $options = [])
  * @method SegmentHDBody segmentHDBody(array $options = [])
  * @method SegmentHDCommonImage segmentHDCommonImage(array $options = [])
  * @method SegmentHDSky segmentHDSky(array $options = [])
  * @method SegmentHead segmentHead(array $options = [])
- * @method SegmentLogo segmentLogo(array $options = [])
  * @method SegmentScene segmentScene(array $options = [])
  * @method SegmentSkin segmentSkin(array $options = [])
  * @method SegmentSky segmentSky(array $options = [])
- * @method SegmentVehicle segmentVehicle(array $options = [])
  */
 class ImagesegApiResolver extends ApiResolver
 {
@@ -42,6 +37,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'imageseg';
 }
 
 /**
@@ -153,20 +151,6 @@ class RefineMask extends Rpc
  * @method $this withOssFile($value)
  * @method string getRequestProxyBy()
  * @method $this withRequestProxyBy($value)
- * @method string getImageURL()
- * @method $this withImageURL($value)
- */
-class SegmentAnimal extends Rpc
-{
-}
-
-/**
- * @method string getReturnForm()
- * @method $this withReturnForm($value)
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
  * @method string getAsync()
  * @method string getImageURL()
  * @method $this withImageURL($value)
@@ -189,6 +173,9 @@ class SegmentBody extends Rpc
 }
 
 /**
+ * @method array getClothClass()
+ * @method string getReturnForm()
+ * @method $this withReturnForm($value)
  * @method string getOssFile()
  * @method $this withOssFile($value)
  * @method string getRequestProxyBy()
@@ -198,6 +185,21 @@ class SegmentBody extends Rpc
  */
 class SegmentCloth extends Rpc
 {
+
+    /**
+     * @param array $clothClass
+     *
+     * @return $this
+     */
+	public function withClothClass(array $clothClass)
+	{
+	    $this->data['ClothClass'] = $clothClass;
+		foreach ($clothClass as $i => $iValue) {
+			$this->options['query']['ClothClass.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -229,18 +231,6 @@ class SegmentCommonImage extends Rpc
 }
 
 /**
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getImageURL()
- * @method $this withImageURL($value)
- */
-class SegmentFace extends Rpc
-{
-}
-
-/**
  * @method string getReturnForm()
  * @method $this withReturnForm($value)
  * @method string getOssFile()
@@ -252,30 +242,6 @@ class SegmentFace extends Rpc
  */
 class SegmentFood extends Rpc
 {
-}
-
-/**
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getImageURL()
- */
-class SegmentFurniture extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -386,18 +352,6 @@ class SegmentHead extends Rpc
  * @method string getImageURL()
  * @method $this withImageURL($value)
  */
-class SegmentLogo extends Rpc
-{
-}
-
-/**
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getImageURL()
- * @method $this withImageURL($value)
- */
 class SegmentScene extends Rpc
 {
 }
@@ -436,28 +390,4 @@ class SegmentSkin extends Rpc
  */
 class SegmentSky extends Rpc
 {
-}
-
-/**
- * @method string getOssFile()
- * @method $this withOssFile($value)
- * @method string getRequestProxyBy()
- * @method $this withRequestProxyBy($value)
- * @method string getImageURL()
- */
-class SegmentVehicle extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
 }

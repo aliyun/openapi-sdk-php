@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2025 - 2023-12-6
+- Update SegmentCloth.
+
+
 ## 1.8.2024 - 2023-12-6
 - Update RecognizeIdentityCard.
 - Update RecognizeDriverLicense.
