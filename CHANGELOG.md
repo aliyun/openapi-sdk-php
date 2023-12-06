@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.2024 - 2023-12-6
+- Update RecognizeIdentityCard.
+- Update RecognizeDriverLicense.
+- Update RecognizeDrivingLicense.
+
+
 ## 1.8.2023 - 2023-11-29
 - SwitchLSQLV3MySQLService
 

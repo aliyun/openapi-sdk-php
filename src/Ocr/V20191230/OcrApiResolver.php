@@ -7,7 +7,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method GetAsyncJobResult getAsyncJobResult(array $options = [])
  * @method RecognizeBankCard recognizeBankCard(array $options = [])
- * @method RecognizeBusinessCard recognizeBusinessCard(array $options = [])
  * @method RecognizeBusinessLicense recognizeBusinessLicense(array $options = [])
  * @method RecognizeCharacter recognizeCharacter(array $options = [])
  * @method RecognizeDriverLicense recognizeDriverLicense(array $options = [])
@@ -17,7 +16,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RecognizePdf recognizePdf(array $options = [])
  * @method RecognizeQrCode recognizeQrCode(array $options = [])
  * @method RecognizeQuotaInvoice recognizeQuotaInvoice(array $options = [])
- * @method RecognizeStamp recognizeStamp(array $options = [])
  * @method RecognizeTable recognizeTable(array $options = [])
  * @method RecognizeTaxiInvoice recognizeTaxiInvoice(array $options = [])
  * @method RecognizeTicketInvoice recognizeTicketInvoice(array $options = [])
@@ -84,40 +82,6 @@ class GetAsyncJobResult extends Rpc
  * @method string getImageURL()
  */
 class RecognizeBankCard extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageType($value)
-    {
-        $this->data['ImageType'] = $value;
-        $this->options['form_params']['ImageType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getImageType()
- * @method string getImageURL()
- */
-class RecognizeBusinessCard extends Rpc
 {
 
     /**
@@ -470,40 +434,6 @@ class RecognizeQrCode extends Rpc
  */
 class RecognizeQuotaInvoice extends Rpc
 {
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageURL($value)
-    {
-        $this->data['ImageURL'] = $value;
-        $this->options['form_params']['ImageURL'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getImageType()
- * @method string getImageURL()
- */
-class RecognizeStamp extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withImageType($value)
-    {
-        $this->data['ImageType'] = $value;
-        $this->options['form_params']['ImageType'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
