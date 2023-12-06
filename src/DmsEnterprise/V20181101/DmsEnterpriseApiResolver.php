@@ -41,6 +41,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateTaskFlow createTaskFlow(array $options = [])
  * @method CreateUploadFileJob createUploadFileJob(array $options = [])
  * @method CreateUploadOSSFileJob createUploadOSSFileJob(array $options = [])
+ * @method DeleteAuthorityTemplate deleteAuthorityTemplate(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteLakeHouseSpace deleteLakeHouseSpace(array $options = [])
  * @method DeleteLhMembers deleteLhMembers(array $options = [])
@@ -121,6 +122,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GrantTemplateAuthority grantTemplateAuthority(array $options = [])
  * @method GrantUserPermission grantUserPermission(array $options = [])
  * @method InspectProxyAccessSecret inspectProxyAccessSecret(array $options = [])
+ * @method ListAuthorityTemplate listAuthorityTemplate(array $options = [])
  * @method ListClassificationTemplates listClassificationTemplates(array $options = [])
  * @method ListColumns listColumns(array $options = [])
  * @method ListDAGVersions listDAGVersions(array $options = [])
@@ -846,6 +848,16 @@ class CreateUploadFileJob extends Rpc
  * @method $this withUploadTarget($value)
  */
 class CreateUploadOSSFileJob extends Rpc
+{
+}
+
+/**
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class DeleteAuthorityTemplate extends Rpc
 {
 }
 
@@ -1801,6 +1813,20 @@ class InspectProxyAccessSecret extends Rpc
 }
 
 /**
+ * @method string getSearchKey()
+ * @method $this withSearchKey($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getTid()
+ * @method $this withTid($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListAuthorityTemplate extends Rpc
+{
+}
+
+/**
  * @method string getTid()
  * @method $this withTid($value)
  */
@@ -2687,54 +2713,56 @@ class RefundPayAsYouGoOrder extends Rpc
 /**
  * @method string getEcsRegion()
  * @method $this withEcsRegion($value)
- * @method string getDdlOnline()
- * @method $this withDdlOnline($value)
- * @method string getUseDsql()
- * @method $this withUseDsql($value)
  * @method string getNetworkType()
  * @method $this withNetworkType($value)
  * @method string getTid()
  * @method $this withTid($value)
- * @method string getSid()
- * @method $this withSid($value)
  * @method string getEnableSellSitd()
  * @method $this withEnableSellSitd($value)
- * @method string getDataLinkName()
- * @method $this withDataLinkName($value)
- * @method string getTemplateType()
- * @method $this withTemplateType($value)
  * @method string getInstanceSource()
  * @method $this withInstanceSource($value)
  * @method string getEnvType()
  * @method $this withEnvType($value)
  * @method string getHost()
  * @method $this withHost($value)
- * @method string getInstanceType()
- * @method $this withInstanceType($value)
  * @method string getQueryTimeout()
  * @method $this withQueryTimeout($value)
+ * @method string getDbaUidByString()
+ * @method $this withDbaUidByString($value)
  * @method string getEcsInstanceId()
  * @method $this withEcsInstanceId($value)
  * @method string getExportTimeout()
  * @method $this withExportTimeout($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ * @method string getSafeRule()
+ * @method $this withSafeRule($value)
+ * @method string getDdlOnline()
+ * @method $this withDdlOnline($value)
+ * @method string getUseDsql()
+ * @method $this withUseDsql($value)
+ * @method string getSid()
+ * @method $this withSid($value)
+ * @method string getDataLinkName()
+ * @method $this withDataLinkName($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getDatabasePassword()
  * @method $this withDatabasePassword($value)
  * @method string getInstanceAlias()
  * @method $this withInstanceAlias($value)
- * @method string getTemplateId()
- * @method $this withTemplateId($value)
  * @method string getDatabaseUser()
  * @method $this withDatabaseUser($value)
- * @method string getPort()
- * @method $this withPort($value)
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getDbaUid()
  * @method $this withDbaUid($value)
  * @method string getSkipTest()
  * @method $this withSkipTest($value)
- * @method string getSafeRule()
- * @method $this withSafeRule($value)
  */
 class RegisterInstance extends Rpc
 {

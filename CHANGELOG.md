@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2026 - 2023-12-6
+- Support CreateProcCorrectOrder request param of ExecMode.
+
+
 ## 1.8.2025 - 2023-12-6
 - Update SegmentCloth.
 
