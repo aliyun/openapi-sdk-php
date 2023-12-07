@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2027 - 2023-12-7
+- ECS SDK publish full package.
+
+
 ## 1.8.2026 - 2023-12-6
 - Support CreateProcCorrectOrder request param of ExecMode.
 
