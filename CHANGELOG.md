@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2028 - 2023-12-11
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.2027 - 2023-12-7
 - ECS SDK publish full package.
 

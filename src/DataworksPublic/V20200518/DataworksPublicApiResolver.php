@@ -3061,6 +3061,7 @@ class CreateQualityRelativeNode extends Rpc
 }
 
 /**
+ * @method string getTaskSetting()
  * @method string getTrend()
  * @method string getBlockType()
  * @method string getPropertyType()
@@ -3083,6 +3084,19 @@ class CreateQualityRelativeNode extends Rpc
  */
 class CreateQualityRule extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskSetting($value)
+    {
+        $this->data['TaskSetting'] = $value;
+        $this->options['form_params']['TaskSetting'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -6213,6 +6227,7 @@ class GetInstanceStatusCount extends Rpc
 
 /**
  * @method string getProjectEnv()
+ * @method string getSchedulerPeriod()
  * @method string getDagType()
  * @method string getBizDate()
  * @method string getSchedulerType()
@@ -6230,6 +6245,19 @@ class GetInstanceStatusStatistic extends Rpc
     {
         $this->data['ProjectEnv'] = $value;
         $this->options['form_params']['ProjectEnv'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSchedulerPeriod($value)
+    {
+        $this->data['SchedulerPeriod'] = $value;
+        $this->options['form_params']['SchedulerPeriod'] = $value;
 
         return $this;
     }
@@ -9654,6 +9682,7 @@ class ListInstanceHistory extends Rpc
  * @method string getOwner()
  * @method string getBizName()
  * @method string getBeginBizdate()
+ * @method string getOrderBy()
  * @method string getEndBizdate()
  * @method string getDagId()
  * @method string getPageNumber()
@@ -9716,6 +9745,19 @@ class ListInstances extends Rpc
     {
         $this->data['BeginBizdate'] = $value;
         $this->options['form_params']['BeginBizdate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrderBy($value)
+    {
+        $this->data['OrderBy'] = $value;
+        $this->options['form_params']['OrderBy'] = $value;
 
         return $this;
     }
@@ -14330,6 +14372,7 @@ class UpdateQualityFollower extends Rpc
 }
 
 /**
+ * @method string getTaskSetting()
  * @method string getTrend()
  * @method string getBlockType()
  * @method string getPropertyType()
@@ -14354,6 +14397,19 @@ class UpdateQualityFollower extends Rpc
  */
 class UpdateQualityRule extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTaskSetting($value)
+    {
+        $this->data['TaskSetting'] = $value;
+        $this->options['form_params']['TaskSetting'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
