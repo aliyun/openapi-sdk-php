@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2029 - 2023-12-12
+- CreateLindormInstance api support auto renew
+
+
 ## 1.8.2028 - 2023-12-11
 - Generated 2020-05-18 for `dataworks-public`.
 

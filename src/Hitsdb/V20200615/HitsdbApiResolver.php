@@ -5,23 +5,30 @@ namespace AlibabaCloud\Hitsdb\V20200615;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CreateLdpsComputeGroup createLdpsComputeGroup(array $options = [])
  * @method CreateLdpsNamespace createLdpsNamespace(array $options = [])
  * @method CreateLindormInstance createLindormInstance(array $options = [])
+ * @method DeleteLdpsComputeGroup deleteLdpsComputeGroup(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
+ * @method GetEngineDefaultAuth getEngineDefaultAuth(array $options = [])
  * @method GetInstanceIpWhiteList getInstanceIpWhiteList(array $options = [])
+ * @method GetLdpsComputeGroup getLdpsComputeGroup(array $options = [])
  * @method GetLdpsNamespacedQuota getLdpsNamespacedQuota(array $options = [])
  * @method GetLdpsResourceCost getLdpsResourceCost(array $options = [])
  * @method GetLindormInstance getLindormInstance(array $options = [])
  * @method GetLindormInstanceEngineList getLindormInstanceEngineList(array $options = [])
  * @method GetLindormInstanceList getLindormInstanceList(array $options = [])
+ * @method ListLdpsComputeGroups listLdpsComputeGroups(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyInstancePayType modifyInstancePayType(array $options = [])
  * @method ReleaseLindormInstance releaseLindormInstance(array $options = [])
  * @method RenewLindormInstance renewLindormInstance(array $options = [])
+ * @method RestartLdpsComputeGroup restartLdpsComputeGroup(array $options = [])
  * @method SwitchLSQLV3MySQLService switchLSQLV3MySQLService(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateInstanceIpWhiteList updateInstanceIpWhiteList(array $options = [])
+ * @method UpdateLdpsComputeGroup updateLdpsComputeGroup(array $options = [])
  * @method UpgradeLindormInstance upgradeLindormInstance(array $options = [])
  */
 class HitsdbApiResolver extends ApiResolver
@@ -54,6 +61,28 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getProperties()
+ * @method $this withProperties($value)
+ */
+class CreateLdpsComputeGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getNamespace()
@@ -68,10 +97,14 @@ class CreateLdpsNamespace extends Rpc
  * @method $this withArchVersion($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getAutoRenewDuration()
+ * @method $this withAutoRenewDuration($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getLogSpec()
  * @method $this withLogSpec($value)
+ * @method string getAutoRenewal()
+ * @method $this withAutoRenewal($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getTsdbNum()
@@ -162,10 +195,48 @@ class CreateLindormInstance extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteLdpsComputeGroup extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
 class DescribeRegions extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetEngineDefaultAuth extends Rpc
 {
 }
 
@@ -186,6 +257,26 @@ class DescribeRegions extends Rpc
  * @method $this withInstanceId($value)
  */
 class GetInstanceIpWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetLdpsComputeGroup extends Rpc
 {
 }
 
@@ -323,6 +414,24 @@ class GetLindormInstanceList extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListLdpsComputeGroups extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method array getTag()
@@ -438,6 +547,26 @@ class ReleaseLindormInstance extends Rpc
  * @method $this withPricingCycle($value)
  */
 class RenewLindormInstance extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class RestartLdpsComputeGroup extends Rpc
 {
 }
 
@@ -589,6 +718,28 @@ class UntagResources extends Rpc
  * @method $this withInstanceId($value)
  */
 class UpdateInstanceIpWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getProperties()
+ * @method $this withProperties($value)
+ */
+class UpdateLdpsComputeGroup extends Rpc
 {
 }
 
