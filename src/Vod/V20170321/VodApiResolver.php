@@ -2372,6 +2372,8 @@ class UpdateImageInfos extends Rpc
  * @method $this withMediaIds($value)
  * @method string getStorageClass()
  * @method $this withStorageClass($value)
+ * @method string getAllowUpdateWithoutTimeLimit()
+ * @method $this withAllowUpdateWithoutTimeLimit($value)
  */
 class UpdateMediaStorageClass extends Rpc
 {

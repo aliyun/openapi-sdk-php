@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2032 - 2023-12-13
+- Support Media StorageClass.
+
+
 ## 1.8.2031 - 2023-12-12
 - Generated 2023-09-30 for `tingwu`.
 
