@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2033 - 2023-12-13
+- Standardizing api.
+
+
 ## 1.8.2032 - 2023-12-13
 - Support Media StorageClass.
 
