@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2034 - 2023-12-13
+- Update to support new apis.
+
+
 ## 1.8.2033 - 2023-12-13
 - Standardizing api.
 

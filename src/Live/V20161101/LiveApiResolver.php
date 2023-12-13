@@ -150,6 +150,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainCertificateInfo describeLiveDomainCertificateInfo(array $options = [])
  * @method DescribeLiveDomainConfigs describeLiveDomainConfigs(array $options = [])
  * @method DescribeLiveDomainDetail describeLiveDomainDetail(array $options = [])
+ * @method DescribeLiveDomainEdgeLog describeLiveDomainEdgeLog(array $options = [])
  * @method DescribeLiveDomainFrameRateAndBitRateData describeLiveDomainFrameRateAndBitRateData(array $options = [])
  * @method DescribeLiveDomainLimit describeLiveDomainLimit(array $options = [])
  * @method DescribeLiveDomainLog describeLiveDomainLog(array $options = [])
@@ -275,6 +276,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method LeaveMessageGroup leaveMessageGroup(array $options = [])
  * @method ListEdgeTranscodeJob listEdgeTranscodeJob(array $options = [])
  * @method ListEdgeTranscodeTemplate listEdgeTranscodeTemplate(array $options = [])
+ * @method ListEventSub listEventSub(array $options = [])
+ * @method ListEventSubEvent listEventSubEvent(array $options = [])
  * @method ListLiveDelayConfig listLiveDelayConfig(array $options = [])
  * @method ListLiveMessageApps listLiveMessageApps(array $options = [])
  * @method ListLiveMessageGroupMessages listLiveMessageGroupMessages(array $options = [])
@@ -361,6 +364,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateCasterSceneAudio updateCasterSceneAudio(array $options = [])
  * @method UpdateCasterSceneConfig updateCasterSceneConfig(array $options = [])
  * @method UpdateEdgeTranscodeJob updateEdgeTranscodeJob(array $options = [])
+ * @method UpdateEventSub updateEventSub(array $options = [])
  * @method UpdateLiveAppRecordConfig updateLiveAppRecordConfig(array $options = [])
  * @method UpdateLiveAppSnapshotConfig updateLiveAppSnapshotConfig(array $options = [])
  * @method UpdateLiveAudioAuditConfig updateLiveAudioAuditConfig(array $options = [])
@@ -3495,6 +3499,26 @@ class DescribeLiveDomainDetail extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveDomainEdgeLog extends Rpc
+{
+}
+
+/**
  * @method string getQueryTime()
  * @method $this withQueryTime($value)
  * @method string getDomainName()
@@ -5866,6 +5890,44 @@ class ListEdgeTranscodeTemplate extends Rpc
 }
 
 /**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class ListEventSub extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getSubscribeId()
+ * @method $this withSubscribeId($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListEventSubEvent extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getPageSize()
@@ -7302,22 +7364,28 @@ class SendLike extends Rpc
 }
 
 /**
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getSenderMetaInfo()
  * @method $this withSenderMetaInfo($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getStaticsIncrease()
+ * @method $this withStaticsIncrease($value)
+ * @method string getMsgType()
+ * @method $this withMsgType($value)
+ * @method string getNoStorage()
+ * @method $this withNoStorage($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getWeight()
+ * @method $this withWeight($value)
  * @method string getDataCenter()
  * @method $this withDataCenter($value)
  * @method string getMsgTid()
  * @method $this withMsgTid($value)
- * @method string getBody()
- * @method $this withBody($value)
  * @method string getSenderId()
  * @method $this withSenderId($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getMsgType()
- * @method $this withMsgType($value)
  */
 class SendLiveMessageGroup extends Rpc
 {
@@ -8291,6 +8359,55 @@ class UpdateCasterSceneConfig extends Rpc
  */
 class UpdateEdgeTranscodeJob extends Rpc
 {
+}
+
+/**
+ * @method string getSubscribeId()
+ * @method $this withSubscribeId($value)
+ * @method array getUsers()
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getCallbackUrl()
+ * @method $this withCallbackUrl($value)
+ * @method string getChannelId()
+ * @method $this withChannelId($value)
+ * @method array getEvents()
+ */
+class UpdateEventSub extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $users
+     *
+     * @return $this
+     */
+	public function withUsers(array $users)
+	{
+	    $this->data['Users'] = $users;
+		foreach ($users as $i => $iValue) {
+			$this->options['query']['Users.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $events
+     *
+     * @return $this
+     */
+	public function withEvents(array $events)
+	{
+	    $this->data['Events'] = $events;
+		foreach ($events as $i => $iValue) {
+			$this->options['query']['Events.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
