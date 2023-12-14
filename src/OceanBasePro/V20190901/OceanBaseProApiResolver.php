@@ -29,6 +29,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAnomalySQLList describeAnomalySQLList(array $options = [])
  * @method DescribeAvailableCpuResource describeAvailableCpuResource(array $options = [])
  * @method DescribeAvailableMemResource describeAvailableMemResource(array $options = [])
+ * @method DescribeAvailableSpec describeAvailableSpec(array $options = [])
+ * @method DescribeAvailableZone describeAvailableZone(array $options = [])
  * @method DescribeCharset describeCharset(array $options = [])
  * @method DescribeDatabases describeDatabases(array $options = [])
  * @method DescribeInstance describeInstance(array $options = [])
@@ -66,6 +68,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSQLPlans describeSQLPlans(array $options = [])
  * @method DescribeSQLSamples describeSQLSamples(array $options = [])
  * @method DescribeTenant describeTenant(array $options = [])
+ * @method DescribeTenantEncryption describeTenantEncryption(array $options = [])
  * @method DescribeTenantMetrics describeTenantMetrics(array $options = [])
  * @method DescribeTenants describeTenants(array $options = [])
  * @method DescribeTenantSecurityConfigs describeTenantSecurityConfigs(array $options = [])
@@ -90,6 +93,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstanceNodeNum modifyInstanceNodeNum(array $options = [])
  * @method ModifyInstanceSpec modifyInstanceSpec(array $options = [])
  * @method ModifyInstanceTags modifyInstanceTags(array $options = [])
+ * @method ModifyInstanceTemporaryCapacity modifyInstanceTemporaryCapacity(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
  * @method ModifyTenantEncryption modifyTenantEncryption(array $options = [])
@@ -240,16 +244,19 @@ class CreateDatabase extends Rpc
 }
 
 /**
+ * @method string getIsolationOptimization()
  * @method string getInstanceClass()
  * @method string getResourceGroupId()
  * @method string getAutoRenewPeriod()
  * @method string getPeriod()
+ * @method string getDryRun()
  * @method string getDiskSize()
  * @method string getZones()
  * @method string getDiskType()
  * @method string getObVersion()
  * @method string getPeriodUnit()
  * @method string getInstanceName()
+ * @method string getReplicaMode()
  * @method string getAutoRenew()
  * @method string getSeries()
  * @method string getChargeType()
@@ -258,6 +265,19 @@ class CreateDatabase extends Rpc
  */
 class CreateInstance extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsolationOptimization($value)
+    {
+        $this->data['IsolationOptimization'] = $value;
+        $this->options['form_params']['IsolationOptimization'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -307,6 +327,19 @@ class CreateInstance extends Rpc
     {
         $this->data['Period'] = $value;
         $this->options['form_params']['Period'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['form_params']['DryRun'] = $value;
 
         return $this;
     }
@@ -385,6 +418,19 @@ class CreateInstance extends Rpc
     {
         $this->data['InstanceName'] = $value;
         $this->options['form_params']['InstanceName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReplicaMode($value)
+    {
+        $this->data['ReplicaMode'] = $value;
+        $this->options['form_params']['ReplicaMode'] = $value;
 
         return $this;
     }
@@ -1457,6 +1503,7 @@ class CreateSecurityIpGroup extends Rpc
  * @method string getCharset()
  * @method string getTenantMode()
  * @method string getMemory()
+ * @method string getLogDisk()
  * @method string getTimeZone()
  * @method string getDescription()
  * @method string getUserVSwitchId()
@@ -1466,6 +1513,7 @@ class CreateSecurityIpGroup extends Rpc
  * @method string getInstanceId()
  * @method string getPrimaryZone()
  * @method string getTenantName()
+ * @method string getReadOnlyZoneList()
  */
 class CreateTenant extends Rpc
 {
@@ -1505,6 +1553,19 @@ class CreateTenant extends Rpc
     {
         $this->data['Memory'] = $value;
         $this->options['form_params']['Memory'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogDisk($value)
+    {
+        $this->data['LogDisk'] = $value;
+        $this->options['form_params']['LogDisk'] = $value;
 
         return $this;
     }
@@ -1622,6 +1683,19 @@ class CreateTenant extends Rpc
     {
         $this->data['TenantName'] = $value;
         $this->options['form_params']['TenantName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReadOnlyZoneList($value)
+    {
+        $this->data['ReadOnlyZoneList'] = $value;
+        $this->options['form_params']['ReadOnlyZoneList'] = $value;
 
         return $this;
     }
@@ -1933,6 +2007,7 @@ class DeleteDatabases extends Rpc
 
 /**
  * @method string getBackupRetainMode()
+ * @method string getDryRun()
  * @method string getInstanceIds()
  */
 class DeleteInstances extends Rpc
@@ -1947,6 +2022,19 @@ class DeleteInstances extends Rpc
     {
         $this->data['BackupRetainMode'] = $value;
         $this->options['form_params']['BackupRetainMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['form_params']['DryRun'] = $value;
 
         return $this;
     }
@@ -2566,6 +2654,136 @@ class DescribeAvailableMemResource extends Rpc
 }
 
 /**
+ * @method string getUpgradeType()
+ * @method string getSpec()
+ * @method string getInstanceId()
+ */
+class DescribeAvailableSpec extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUpgradeType($value)
+    {
+        $this->data['UpgradeType'] = $value;
+        $this->options['form_params']['UpgradeType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpec($value)
+    {
+        $this->data['Spec'] = $value;
+        $this->options['form_params']['Spec'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSpec()
+ * @method string getObVersion()
+ * @method string getSeries()
+ * @method string getInstanceType()
+ * @method string getDeployType()
+ */
+class DescribeAvailableZone extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpec($value)
+    {
+        $this->data['Spec'] = $value;
+        $this->options['form_params']['Spec'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withObVersion($value)
+    {
+        $this->data['ObVersion'] = $value;
+        $this->options['form_params']['ObVersion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSeries($value)
+    {
+        $this->data['Series'] = $value;
+        $this->options['form_params']['Series'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceType($value)
+    {
+        $this->data['InstanceType'] = $value;
+        $this->options['form_params']['InstanceType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeployType($value)
+    {
+        $this->data['DeployType'] = $value;
+        $this->options['form_params']['DeployType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTenantMode()
  * @method string getInstanceId()
  * @method string getSeries()
@@ -2616,6 +2834,7 @@ class DescribeCharset extends Rpc
 /**
  * @method string getSearchKey()
  * @method string getPageNumber()
+ * @method string getInstanceId()
  * @method string getDatabaseName()
  * @method string getWithTables()
  * @method string getTenantId()
@@ -2646,6 +2865,19 @@ class DescribeDatabases extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -2849,6 +3081,7 @@ class DescribeInstances extends Rpc
 
 /**
  * @method string getInstanceId()
+ * @method string getCheckId()
  */
 class DescribeInstanceSecurityConfigs extends Rpc
 {
@@ -2862,6 +3095,19 @@ class DescribeInstanceSecurityConfigs extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCheckId($value)
+    {
+        $this->data['CheckId'] = $value;
+        $this->options['form_params']['CheckId'] = $value;
 
         return $this;
     }
@@ -5410,6 +5656,82 @@ class DescribeTenant extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ * @method string getPageSize()
+ * @method string getTenantName()
+ */
+class DescribeTenantEncryption extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantName($value)
+    {
+        $this->data['TenantName'] = $value;
+        $this->options['form_params']['TenantName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTenantIdList()
  * @method string getStartTime()
  * @method string getPageNumber()
@@ -5634,6 +5956,7 @@ class DescribeTenants extends Rpc
 /**
  * @method string getInstanceId()
  * @method string getTenantId()
+ * @method string getCheckId()
  */
 class DescribeTenantSecurityConfigs extends Rpc
 {
@@ -5660,6 +5983,19 @@ class DescribeTenantSecurityConfigs extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCheckId($value)
+    {
+        $this->data['CheckId'] = $value;
+        $this->options['form_params']['CheckId'] = $value;
 
         return $this;
     }
@@ -6820,11 +7156,25 @@ class ModifyInstanceName extends Rpc
 }
 
 /**
+ * @method string getDryRun()
  * @method string getNodeNum()
  * @method string getInstanceId()
  */
 class ModifyInstanceNodeNum extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['form_params']['DryRun'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -6856,6 +7206,7 @@ class ModifyInstanceNodeNum extends Rpc
 /**
  * @method string getAutoUseCoupon()
  * @method string getInstanceClass()
+ * @method string getDryRun()
  * @method string getDiskSize()
  * @method string getInstanceId()
  * @method string getLogDiskSize()
@@ -6885,6 +7236,19 @@ class ModifyInstanceSpec extends Rpc
     {
         $this->data['InstanceClass'] = $value;
         $this->options['form_params']['InstanceClass'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDryRun($value)
+    {
+        $this->data['DryRun'] = $value;
+        $this->options['form_params']['DryRun'] = $value;
 
         return $this;
     }
@@ -6945,6 +7309,54 @@ class ModifyInstanceTags extends Rpc
     {
         $this->data['Tags'] = $value;
         $this->options['form_params']['Tags'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDiskSize()
+ * @method string getSpec()
+ * @method string getInstanceId()
+ */
+class ModifyInstanceTemporaryCapacity extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDiskSize($value)
+    {
+        $this->data['DiskSize'] = $value;
+        $this->options['form_params']['DiskSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSpec($value)
+    {
+        $this->data['Spec'] = $value;
+        $this->options['form_params']['Spec'] = $value;
 
         return $this;
     }
@@ -7227,9 +7639,11 @@ class ModifyTenantPrimaryZone extends Rpc
 
 /**
  * @method string getMemory()
+ * @method string getLogDisk()
  * @method string getCpu()
  * @method string getInstanceId()
  * @method string getTenantId()
+ * @method string getReadOnlyZoneList()
  */
 class ModifyTenantResource extends Rpc
 {
@@ -7243,6 +7657,19 @@ class ModifyTenantResource extends Rpc
     {
         $this->data['Memory'] = $value;
         $this->options['form_params']['Memory'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLogDisk($value)
+    {
+        $this->data['LogDisk'] = $value;
+        $this->options['form_params']['LogDisk'] = $value;
 
         return $this;
     }
@@ -7282,6 +7709,19 @@ class ModifyTenantResource extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReadOnlyZoneList($value)
+    {
+        $this->data['ReadOnlyZoneList'] = $value;
+        $this->options['form_params']['ReadOnlyZoneList'] = $value;
 
         return $this;
     }
