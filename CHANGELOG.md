@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2036 - 2023-12-15
+- Update ScreenEC.
+
+
 ## 1.8.2035 - 2023-12-14
 - Generated 2019-09-01 for `OceanBasePro`.
 
