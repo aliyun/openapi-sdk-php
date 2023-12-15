@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2037 - 2023-12-15
+- SubmitSnapshotJob add parameter
+
+
 ## 1.8.2036 - 2023-12-15
 - Update ScreenEC.
 

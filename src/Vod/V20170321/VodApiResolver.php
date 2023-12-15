@@ -2224,6 +2224,8 @@ class SubmitPreprocessJobs extends Rpc
  * @method $this withSpecifiedOffsetTime($value)
  * @method string getSpriteSnapshotConfig()
  * @method $this withSpriteSnapshotConfig($value)
+ * @method string getSpecifiedOffsetTimes()
+ * @method $this withSpecifiedOffsetTimes($value)
  * @method string getSnapshotTemplateId()
  * @method $this withSnapshotTemplateId($value)
  * @method string getHeight()
