@@ -245,6 +245,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidNotificationVivoChannel'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationVivoChannel'] = $depth1Value['AndroidNotificationVivoChannel'];
 			}
+			if(isset($depth1Value['AndroidVivoReceiptId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidVivoReceiptId'] = $depth1Value['AndroidVivoReceiptId'];
+			}
 			if(isset($depth1Value['IOSNotificationCategory'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCategory'] = $depth1Value['IOSNotificationCategory'];
 			}
@@ -427,6 +430,8 @@ class MassPush extends Rpc
  * @method $this withAndroidHonorTargetUserType($value)
  * @method string getAndroidNotificationVivoChannel()
  * @method $this withAndroidNotificationVivoChannel($value)
+ * @method string getAndroidVivoReceiptId()
+ * @method $this withAndroidVivoReceiptId($value)
  * @method string getIOSNotificationCategory()
  * @method string getAndroidNotificationXiaomiChannel()
  * @method $this withAndroidNotificationXiaomiChannel($value)

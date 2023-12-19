@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2038 - 2023-12-19
+- Supported AndroidVivoReceiptId for Push and MassPush.
+
+
 ## 1.8.2037 - 2023-12-15
 - SubmitSnapshotJob add parameter
 
