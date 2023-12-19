@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2039 - 2023-12-19
+- Fix some bugs.
+
+
 ## 1.8.2038 - 2023-12-19
 - Supported AndroidVivoReceiptId for Push and MassPush.
 

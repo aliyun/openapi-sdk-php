@@ -44,6 +44,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'cas';
 }
 
 /**
@@ -279,6 +282,8 @@ class GetUserCertificateDetail extends Rpc
  * @method $this withSourceIp($value)
  * @method string getWarehouseId()
  * @method $this withWarehouseId($value)
+ * @method string getCertType()
+ * @method $this withCertType($value)
  * @method string getSourceType()
  * @method $this withSourceType($value)
  * @method string getKeyWord()
