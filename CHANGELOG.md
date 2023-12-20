@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2042 - 2023-12-20
+- Add RTMP device related interfaces.
+
+
 ## 1.8.2041 - 2023-12-20
 - Update RecognizeBankCard.
 

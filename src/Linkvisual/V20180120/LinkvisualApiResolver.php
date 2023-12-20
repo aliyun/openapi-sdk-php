@@ -14,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddFaceUserPicture addFaceUserPicture(array $options = [])
  * @method AddFaceUserToUserGroup addFaceUserToUserGroup(array $options = [])
  * @method AddRecordPlanDevice addRecordPlanDevice(array $options = [])
+ * @method BatchQueryVisionDeviceInfo batchQueryVisionDeviceInfo(array $options = [])
  * @method BindPictureSearchAppWithDevices bindPictureSearchAppWithDevices(array $options = [])
  * @method CheckFaceUserDoExistOnDevice checkFaceUserDoExistOnDevice(array $options = [])
  * @method ClearFaceDeviceDB clearFaceDeviceDB(array $options = [])
@@ -24,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreatePictureSearchJob createPictureSearchJob(array $options = [])
  * @method CreateRecordDownloadByTimeJob createRecordDownloadByTimeJob(array $options = [])
  * @method CreateRecordPlan createRecordPlan(array $options = [])
+ * @method CreateRtmpDevice createRtmpDevice(array $options = [])
  * @method CreateTimeTemplate createTimeTemplate(array $options = [])
  * @method DeleteEventRecordPlan deleteEventRecordPlan(array $options = [])
  * @method DeleteEventRecordPlanDevice deleteEventRecordPlanDevice(array $options = [])
@@ -37,6 +39,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRecord deleteRecord(array $options = [])
  * @method DeleteRecordPlan deleteRecordPlan(array $options = [])
  * @method DeleteRecordPlanDevice deleteRecordPlanDevice(array $options = [])
+ * @method DeleteRtmpDevice deleteRtmpDevice(array $options = [])
+ * @method DeleteRtmpKey deleteRtmpKey(array $options = [])
  * @method DeleteTimeTemplate deleteTimeTemplate(array $options = [])
  * @method DetectUserFaceByUrl detectUserFaceByUrl(array $options = [])
  * @method GetPictureSearchJobStatus getPictureSearchJobStatus(array $options = [])
@@ -87,8 +91,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRecordPlans queryRecordPlans(array $options = [])
  * @method QueryRecordUrl queryRecordUrl(array $options = [])
  * @method QueryRecordUrlByTime queryRecordUrlByTime(array $options = [])
+ * @method QueryRtmpKey queryRtmpKey(array $options = [])
  * @method QueryTimeTemplate queryTimeTemplate(array $options = [])
  * @method QueryTimeTemplateDetail queryTimeTemplateDetail(array $options = [])
+ * @method QueryVisionDeviceInfo queryVisionDeviceInfo(array $options = [])
  * @method QueryVoiceIntercom queryVoiceIntercom(array $options = [])
  * @method RemoveFaceDeviceFromDeviceGroup removeFaceDeviceFromDeviceGroup(array $options = [])
  * @method RemoveFaceUserFromUserGroup removeFaceUserFromUserGroup(array $options = [])
@@ -106,6 +112,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateInstanceInternetProtocol updateInstanceInternetProtocol(array $options = [])
  * @method UpdatePictureSearchApp updatePictureSearchApp(array $options = [])
  * @method UpdateRecordPlan updateRecordPlan(array $options = [])
+ * @method UpdateRtmpKey updateRtmpKey(array $options = [])
  * @method UpdateTimeTemplate updateTimeTemplate(array $options = [])
  */
 class LinkvisualApiResolver extends ApiResolver
@@ -479,6 +486,76 @@ class AddFaceUserToUserGroup extends Rpc
  */
 class AddRecordPlanDevice extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getDeviceNameList()
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method array getIotIdList()
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class BatchQueryVisionDeviceInfo extends Rpc
+{
+
+    /**
+     * @param array $deviceNameList
+     *
+     * @return $this
+     */
+	public function withDeviceNameList(array $deviceNameList)
+	{
+	    $this->data['DeviceNameList'] = $deviceNameList;
+		foreach ($deviceNameList as $i => $iValue) {
+			$this->options['query']['DeviceNameList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $iotIdList
+     *
+     * @return $this
+     */
+	public function withIotIdList(array $iotIdList)
+	{
+	    $this->data['IotIdList'] = $iotIdList;
+		foreach ($iotIdList as $i => $iValue) {
+			$this->options['query']['IotIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param string $value
@@ -954,6 +1031,58 @@ class CreateRecordDownloadByTimeJob extends Rpc
  * @method string getApiRevision()
  */
 class CreateRecordPlan extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getPushAuthKey()
+ * @method $this withPushAuthKey($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPushKeyExpireTime()
+ * @method $this withPushKeyExpireTime($value)
+ * @method string getPullAuthKey()
+ * @method $this withPullAuthKey($value)
+ * @method string getSubStreamName()
+ * @method $this withSubStreamName($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getPullKeyExpireTime()
+ * @method $this withPullKeyExpireTime($value)
+ */
+class CreateRtmpDevice extends Rpc
 {
 
     /**
@@ -1522,6 +1651,92 @@ class DeleteRecordPlan extends Rpc
  * @method $this withDeviceName($value)
  */
 class DeleteRecordPlanDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class DeleteRtmpDevice extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class DeleteRtmpKey extends Rpc
 {
 
     /**
@@ -3774,6 +3989,48 @@ class QueryRecordUrlByTime extends Rpc
 }
 
 /**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryRtmpKey extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getCurrentPage()
@@ -3818,6 +4075,48 @@ class QueryTimeTemplate extends Rpc
  * @method string getApiRevision()
  */
 class QueryTimeTemplateDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class QueryVisionDeviceInfo extends Rpc
 {
 
     /**
@@ -4572,6 +4871,56 @@ class UpdatePictureSearchApp extends Rpc
  * @method $this withPlanId($value)
  */
 class UpdateRecordPlan extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPushAuthKey()
+ * @method $this withPushAuthKey($value)
+ * @method string getIotId()
+ * @method $this withIotId($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getPushKeyExpireTime()
+ * @method $this withPushKeyExpireTime($value)
+ * @method string getPullAuthKey()
+ * @method $this withPullAuthKey($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ * @method string getPullKeyExpireTime()
+ * @method $this withPullKeyExpireTime($value)
+ */
+class UpdateRtmpKey extends Rpc
 {
 
     /**
