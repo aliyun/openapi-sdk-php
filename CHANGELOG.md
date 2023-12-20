@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2041 - 2023-12-20
+- Update RecognizeBankCard.
+
+
 ## 1.8.2040 - 2023-12-19
 - Fix some bugs.
 
