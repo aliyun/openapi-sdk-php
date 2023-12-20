@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2043 - 2023-12-20
+- Fix some bugs.
+
+
 ## 1.8.2042 - 2023-12-20
 - Add RTMP device related interfaces.
 
