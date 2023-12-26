@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2045 - 2023-12-26
+- Update to support new apis.
+
+
 ## 1.8.2044 - 2023-12-20
 - Generated 2023-09-30 for `tingwu`.
 
