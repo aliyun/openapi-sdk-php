@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2046 - 2023-12-28
+- Generated 2022-01-30 for `avatar`.
+
+
 ## 1.8.2045 - 2023-12-26
 - Update to support new apis.
 

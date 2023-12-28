@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ClientAuth clientAuth(array $options = [])
  * @method ClientStart clientStart(array $options = [])
  * @method CloseTimedResetOperate closeTimedResetOperate(array $options = [])
+ * @method ConfirmAvatar2dTrain confirmAvatar2dTrain(array $options = [])
  * @method Create2dAvatar create2dAvatar(array $options = [])
  * @method DeleteAvatar deleteAvatar(array $options = [])
  * @method DuplexDecision duplexDecision(array $options = [])
@@ -104,6 +105,21 @@ class ClientStart extends Rpc
  */
 class CloseTimedResetOperate extends Rpc
 {
+}
+
+/**
+ * @method string getConfirm()
+ * @method $this withConfirm($value)
+ * @method string getCode()
+ * @method $this withCode($value)
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ */
+class ConfirmAvatar2dTrain extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
