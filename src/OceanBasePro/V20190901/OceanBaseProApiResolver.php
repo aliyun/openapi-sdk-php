@@ -259,6 +259,8 @@ class CreateDatabase extends Rpc
  * @method string getReplicaMode()
  * @method string getAutoRenew()
  * @method string getSeries()
+ * @method string getPrimaryInstance()
+ * @method string getPrimaryRegion()
  * @method string getChargeType()
  * @method string getBid()
  * @method $this withBid($value)
@@ -457,6 +459,32 @@ class CreateInstance extends Rpc
     {
         $this->data['Series'] = $value;
         $this->options['form_params']['Series'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrimaryInstance($value)
+    {
+        $this->data['PrimaryInstance'] = $value;
+        $this->options['form_params']['PrimaryInstance'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrimaryRegion($value)
+    {
+        $this->data['PrimaryRegion'] = $value;
+        $this->options['form_params']['PrimaryRegion'] = $value;
 
         return $this;
     }
@@ -3232,6 +3260,7 @@ class DescribeInstanceTopology extends Rpc
  * @method $this withSortOrder($value)
  * @method string getSortMetricKey()
  * @method $this withSortMetricKey($value)
+ * @method string getReplicaType()
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getLabels()
@@ -3243,6 +3272,19 @@ class DescribeInstanceTopology extends Rpc
  */
 class DescribeMetricsData extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReplicaType($value)
+    {
+        $this->data['ReplicaType'] = $value;
+        $this->options['form_params']['ReplicaType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -7208,6 +7250,7 @@ class ModifyInstanceNodeNum extends Rpc
  * @method string getInstanceClass()
  * @method string getDryRun()
  * @method string getDiskSize()
+ * @method string getDiskType()
  * @method string getInstanceId()
  * @method string getLogDiskSize()
  */
@@ -7262,6 +7305,19 @@ class ModifyInstanceSpec extends Rpc
     {
         $this->data['DiskSize'] = $value;
         $this->options['form_params']['DiskSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDiskType($value)
+    {
+        $this->data['DiskType'] = $value;
+        $this->options['form_params']['DiskType'] = $value;
 
         return $this;
     }
@@ -7331,6 +7387,7 @@ class ModifyInstanceTags extends Rpc
  * @method string getDiskSize()
  * @method string getSpec()
  * @method string getInstanceId()
+ * @method string getAcceptLanguage()
  */
 class ModifyInstanceTemporaryCapacity extends Rpc
 {
@@ -7370,6 +7427,19 @@ class ModifyInstanceTemporaryCapacity extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcceptLanguage($value)
+    {
+        $this->data['AcceptLanguage'] = $value;
+        $this->options['form_params']['AcceptLanguage'] = $value;
 
         return $this;
     }
@@ -7548,15 +7618,30 @@ class ModifyTenantEncryption extends Rpc
 }
 
 /**
+ * @method string getTenantEndpointDirectId()
  * @method string getUserVSwitchId()
  * @method string getMasterIntranetAddressZone()
  * @method string getTenantId()
  * @method string getTenantEndpointId()
  * @method string getInstanceId()
  * @method string getPrimaryZone()
+ * @method string getUserDirectVSwitchId()
  */
 class ModifyTenantPrimaryZone extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantEndpointDirectId($value)
+    {
+        $this->data['TenantEndpointDirectId'] = $value;
+        $this->options['form_params']['TenantEndpointDirectId'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -7632,6 +7717,19 @@ class ModifyTenantPrimaryZone extends Rpc
     {
         $this->data['PrimaryZone'] = $value;
         $this->options['form_params']['PrimaryZone'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserDirectVSwitchId($value)
+    {
+        $this->data['UserDirectVSwitchId'] = $value;
+        $this->options['form_params']['UserDirectVSwitchId'] = $value;
 
         return $this;
     }
