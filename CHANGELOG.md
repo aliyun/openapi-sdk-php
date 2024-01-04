@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2049 - 2024-1-4
+- open GenerateDownloadDecryptkey.
+
+
 ## 1.8.2048 - 2024-1-4
 - Publish sdk.
 

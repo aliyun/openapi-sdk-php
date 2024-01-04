@@ -66,6 +66,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodUserDomains describeVodUserDomains(array $options = [])
  * @method DescribeVodVerifyContent describeVodVerifyContent(array $options = [])
  * @method DetachAppPolicyFromIdentity detachAppPolicyFromIdentity(array $options = [])
+ * @method GenerateDownloadSecretKey generateDownloadSecretKey(array $options = [])
  * @method GenerateKMSDataKey generateKMSDataKey(array $options = [])
  * @method GetAIImageJobs getAIImageJobs(array $options = [])
  * @method GetAIMediaAuditJob getAIMediaAuditJob(array $options = [])
@@ -1125,6 +1126,22 @@ class DescribeVodVerifyContent extends Rpc
  * @method $this withAppId($value)
  */
 class DetachAppPolicyFromIdentity extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAppDecryptKey()
+ * @method $this withAppDecryptKey($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getAppIdentification()
+ * @method $this withAppIdentification($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class GenerateDownloadSecretKey extends Rpc
 {
 }
 
