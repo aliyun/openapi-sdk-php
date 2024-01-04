@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2048 - 2024-1-4
+- Publish sdk.
+
+
 ## 1.8.2047 - 2023-12-28
 - Generated 2019-09-01 for `OceanBasePro`.
 

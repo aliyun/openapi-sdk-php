@@ -16,6 +16,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMobile getMobile(array $options = [])
  * @method GetPhoneWithToken getPhoneWithToken(array $options = [])
  * @method GetSmsAuthTokens getSmsAuthTokens(array $options = [])
+ * @method JyCreateVerifyScheme jyCreateVerifyScheme(array $options = [])
+ * @method JyQueryAppInfoBySceneCode jyQueryAppInfoBySceneCode(array $options = [])
  * @method QueryGateVerifyBillingPublic queryGateVerifyBillingPublic(array $options = [])
  * @method QueryGateVerifyStatisticPublic queryGateVerifyStatisticPublic(array $options = [])
  * @method QuerySendDetails querySendDetails(array $options = [])
@@ -201,10 +203,12 @@ class GetAuthorizationUrl extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
  * @method string getOrigin()
  * @method $this withOrigin($value)
+ * @method string getSceneCode()
+ * @method $this withSceneCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getUrl()
@@ -303,6 +307,56 @@ class GetPhoneWithToken extends Rpc
  */
 class GetSmsAuthTokens extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBundleId()
+ * @method $this withBundleId($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getPackSign()
+ * @method $this withPackSign($value)
+ * @method string getPackName()
+ * @method $this withPackName($value)
+ * @method string getCuApiCode()
+ * @method $this withCuApiCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getCtApiCode()
+ * @method $this withCtApiCode($value)
+ * @method string getOsType()
+ * @method $this withOsType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCmApiCode()
+ * @method $this withCmApiCode($value)
+ * @method string getSchemeName()
+ * @method $this withSchemeName($value)
+ */
+class JyCreateVerifyScheme extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSceneCode()
+ * @method $this withSceneCode($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class JyQueryAppInfoBySceneCode extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
