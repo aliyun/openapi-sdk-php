@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2050 - 2024-1-5
+- Support new feature.
+
+
 ## 1.8.2049 - 2024-1-4
 - open GenerateDownloadDecryptkey.
 
