@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2052 - 2024-1-8
+- Support share resource to service for RS.
+- Support display precheck information.
+
+
 ## 1.8.2051 - 2024-1-8
 - Add gb device create API.
 

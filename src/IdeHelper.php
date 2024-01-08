@@ -215,6 +215,7 @@ namespace AlibabaCloud;
  * @method static ReidCloud\ReidCloud reidCloud()
  * @method static ResourceCenter\ResourceCenter resourceCenter()
  * @method static ResourceManager\ResourceManager resourceManager()
+ * @method static ResourceSharing\ResourceSharing resourceSharing()
  * @method static RetailadvqaPublic\RetailadvqaPublic retailadvqaPublic()
  * @method static Retailcloud\Retailcloud retailcloud()
  * @method static Rtc\Rtc rtc()
