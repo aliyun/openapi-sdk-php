@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2051 - 2024-1-8
+- Add gb device create API.
+
+
 ## 1.8.2050 - 2024-1-5
 - Support new feature.
 

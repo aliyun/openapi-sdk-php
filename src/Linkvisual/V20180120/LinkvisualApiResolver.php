@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckFaceUserDoExistOnDevice checkFaceUserDoExistOnDevice(array $options = [])
  * @method ClearFaceDeviceDB clearFaceDeviceDB(array $options = [])
  * @method CreateEventRecordPlan createEventRecordPlan(array $options = [])
+ * @method CreateGbDevice createGbDevice(array $options = [])
  * @method CreateLocalFileUploadJob createLocalFileUploadJob(array $options = [])
  * @method CreateLocalRecordDownloadByTimeJob createLocalRecordDownloadByTimeJob(array $options = [])
  * @method CreatePictureSearchApp createPictureSearchApp(array $options = [])
@@ -739,6 +740,58 @@ class ClearFaceDeviceDB extends Rpc
  * @method string getApiRevision()
  */
 class CreateEventRecordPlan extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSubProductKey()
+ * @method $this withSubProductKey($value)
+ * @method string getGbId()
+ * @method $this withGbId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getDeviceType()
+ * @method $this withDeviceType($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getDeviceProtocol()
+ * @method $this withDeviceProtocol($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getMediaNetProtocol()
+ * @method $this withMediaNetProtocol($value)
+ * @method string getApiProduct()
+ * @method string getApiRevision()
+ */
+class CreateGbDevice extends Rpc
 {
 
     /**
