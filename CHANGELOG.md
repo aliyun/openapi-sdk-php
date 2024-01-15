@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2053 - 2024-1-15
+- Generated 2018-01-20 for `Linkvisual`.
+
+
 ## 1.8.2052 - 2024-1-8
 - Support share resource to service for RS.
 - Support display precheck information.
