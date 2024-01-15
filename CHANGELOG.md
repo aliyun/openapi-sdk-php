@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2054 - 2024-1-15
+- support UpdateSecurityGroup
+
+
 ## 1.8.2053 - 2024-1-15
 - Generated 2018-01-20 for `Linkvisual`.
 

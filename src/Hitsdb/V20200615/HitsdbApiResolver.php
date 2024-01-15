@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method GetEngineDefaultAuth getEngineDefaultAuth(array $options = [])
  * @method GetInstanceIpWhiteList getInstanceIpWhiteList(array $options = [])
+ * @method GetInstanceSecurityGroups getInstanceSecurityGroups(array $options = [])
  * @method GetLdpsComputeGroup getLdpsComputeGroup(array $options = [])
  * @method GetLdpsNamespacedQuota getLdpsNamespacedQuota(array $options = [])
  * @method GetLdpsResourceCost getLdpsResourceCost(array $options = [])
@@ -28,6 +29,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateInstanceIpWhiteList updateInstanceIpWhiteList(array $options = [])
+ * @method UpdateInstanceSecurityGroups updateInstanceSecurityGroups(array $options = [])
  * @method UpdateLdpsComputeGroup updateLdpsComputeGroup(array $options = [])
  * @method UpgradeLindormInstance upgradeLindormInstance(array $options = [])
  */
@@ -257,6 +259,24 @@ class GetEngineDefaultAuth extends Rpc
  * @method $this withInstanceId($value)
  */
 class GetInstanceIpWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetInstanceSecurityGroups extends Rpc
 {
 }
 
@@ -718,6 +738,26 @@ class UntagResources extends Rpc
  * @method $this withInstanceId($value)
  */
 class UpdateInstanceIpWhiteList extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSecurityGroups()
+ * @method $this withSecurityGroups($value)
+ */
+class UpdateInstanceSecurityGroups extends Rpc
 {
 }
 

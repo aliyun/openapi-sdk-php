@@ -1,1 +1,31 @@
-{"endpoint_map":{"ap-northeast-1":"linkvisual.aliyuncs.com","ap-northeast-2-pop":"linkvisual.aliyuncs.com","ap-south-1":"linkvisual.aliyuncs.com","ap-southeast-1":"linkvisual.aliyuncs.com","ap-southeast-2":"linkvisual.aliyuncs.com","ap-southeast-3":"linkvisual.aliyuncs.com","ap-southeast-5":"linkvisual.aliyuncs.com","cn-beijing":"linkvisual.aliyuncs.com","cn-beijing-finance-1":"linkvisual.aliyuncs.com","cn-beijing-finance-pop":"linkvisual.aliyuncs.com","cn-beijing-gov-1":"linkvisual.aliyuncs.com","cn-beijing-nu16-b01":"linkvisual.aliyuncs.com","cn-chengdu":"linkvisual.aliyuncs.com","cn-edge-1":"linkvisual.aliyuncs.com","cn-fujian":"linkvisual.aliyuncs.com","cn-haidian-cm12-c01":"linkvisual.aliyuncs.com","cn-hangzhou-bj-b01":"linkvisual.aliyuncs.com","cn-hangzhou-finance":"linkvisual.aliyuncs.com","cn-hangzhou-internal-prod-1":"linkvisual.aliyuncs.com","cn-hangzhou-internal-test-1":"linkvisual.aliyuncs.com","cn-hangzhou-internal-test-2":"linkvisual.aliyuncs.com","cn-hangzhou-internal-test-3":"linkvisual.aliyuncs.com","cn-hangzhou-test-306":"linkvisual.aliyuncs.com","cn-hongkong":"linkvisual.aliyuncs.com","cn-hongkong-finance-pop":"linkvisual.aliyuncs.com","cn-huhehaote":"linkvisual.aliyuncs.com","cn-north-2-gov-1":"linkvisual.aliyuncs.com","cn-qingdao":"linkvisual.aliyuncs.com","cn-qingdao-nebula":"linkvisual.aliyuncs.com","cn-shanghai-et15-b01":"linkvisual.aliyuncs.com","cn-shanghai-et2-b01":"linkvisual.aliyuncs.com","cn-shanghai-finance-1":"linkvisual.aliyuncs.com","cn-shanghai-inner":"linkvisual.aliyuncs.com","cn-shanghai-internal-test-1":"linkvisual.aliyuncs.com","cn-shenzhen":"linkvisual.aliyuncs.com","cn-shenzhen-finance-1":"linkvisual.aliyuncs.com","cn-shenzhen-inner":"linkvisual.aliyuncs.com","cn-shenzhen-st4-d01":"linkvisual.aliyuncs.com","cn-shenzhen-su18-b01":"linkvisual.aliyuncs.com","cn-wuhan":"linkvisual.aliyuncs.com","cn-yushanfang":"linkvisual.aliyuncs.com","cn-zhangbei-na61-b01":"linkvisual.aliyuncs.com","cn-zhangjiakou":"linkvisual.aliyuncs.com","cn-zhangjiakou-na62-a01":"linkvisual.aliyuncs.com","cn-zhengzhou-nebula-1":"linkvisual.aliyuncs.com","eu-central-1":"linkvisual.aliyuncs.com","eu-west-1":"linkvisual.aliyuncs.com","eu-west-1-oxs":"linkvisual.aliyuncs.com","me-east-1":"linkvisual.aliyuncs.com","rus-west-1-pop":"linkvisual.aliyuncs.com","us-east-1":"linkvisual.aliyuncs.com","us-west-1":"linkvisual.aliyuncs.com"},"endpoint_regional":"regional","standard":{"cn-hangzhou":"linkvisual.cn-hangzhou.aliyuncs.com","cn-shanghai":"linkvisual.cn-shanghai.aliyuncs.com"},"regions":["ap-northeast-1","ap-northeast-2-pop","ap-south-1","ap-southeast-1","ap-southeast-2","ap-southeast-3","ap-southeast-5","cn-beijing","cn-beijing-finance-1","cn-beijing-finance-pop","cn-beijing-gov-1","cn-beijing-nu16-b01","cn-chengdu","cn-edge-1","cn-fujian","cn-haidian-cm12-c01","cn-hangzhou","cn-hangzhou-bj-b01","cn-hangzhou-finance","cn-hangzhou-internal-prod-1","cn-hangzhou-internal-test-1","cn-hangzhou-internal-test-2","cn-hangzhou-internal-test-3","cn-hangzhou-test-306","cn-hongkong","cn-hongkong-finance-pop","cn-huhehaote","cn-north-2-gov-1","cn-qingdao","cn-qingdao-nebula","cn-shanghai","cn-shanghai-et15-b01","cn-shanghai-et2-b01","cn-shanghai-finance-1","cn-shanghai-inner","cn-shanghai-internal-test-1","cn-shenzhen","cn-shenzhen-finance-1","cn-shenzhen-inner","cn-shenzhen-st4-d01","cn-shenzhen-su18-b01","cn-wuhan","cn-yushanfang","cn-zhangbei-na61-b01","cn-zhangjiakou","cn-zhangjiakou-na62-a01","cn-zhengzhou-nebula-1","eu-central-1","eu-west-1","eu-west-1-oxs","me-east-1","rus-west-1-pop","us-east-1","us-west-1"],"endpoint_health":[]}
+{
+  "endpoint_map" : {
+  },
+  "endpoint_regional" : "regional",
+  "standard" : {
+    "cn-qingdao" : "hitsdb.cn-qingdao.aliyuncs.com",
+    "cn-beijing" : "hitsdb.cn-beijing.aliyuncs.com",
+    "cn-chengdu" : "hitsdb.cn-chengdu.aliyuncs.com",
+    "cn-zhangjiakou" : "hitsdb.cn-zhangjiakou.aliyuncs.com",
+    "cn-huhehaote" : "hitsdb.cn-huhehaote.aliyuncs.com",
+    "cn-hangzhou" : "hitsdb.cn-hangzhou.aliyuncs.com",
+    "cn-shanghai" : "hitsdb.cn-shanghai.aliyuncs.com",
+    "cn-shenzhen" : "hitsdb.cn-shenzhen.aliyuncs.com",
+    "cn-heyuan" : "hitsdb.cn-heyuan.aliyuncs.com",
+    "cn-wulanchabu" : "hitsdb.cn-wulanchabu.aliyuncs.com",
+    "cn-hongkong" : "hitsdb.cn-hongkong.aliyuncs.com",
+    "ap-southeast-1" : "hitsdb.ap-southeast-1.aliyuncs.com",
+    "ap-southeast-2" : "hitsdb.ap-southeast-2.aliyuncs.com",
+    "ap-southeast-3" : "hitsdb.ap-southeast-3.aliyuncs.com",
+    "ap-southeast-5" : "hitsdb.ap-southeast-5.aliyuncs.com",
+    "ap-northeast-1" : "hitsdb.ap-northeast-1.aliyuncs.com",
+    "eu-west-1" : "hitsdb.eu-west-1.aliyuncs.com",
+    "us-west-1" : "hitsdb.us-west-1.aliyuncs.com",
+    "us-east-1" : "hitsdb.us-east-1.aliyuncs.com",
+    "eu-central-1" : "hitsdb.eu-central-1.aliyuncs.com",
+    "ap-south-1" : "hitsdb.ap-south-1.aliyuncs.com",
+    "cn-north-2-gov-1" : "hitsdb.cn-north-2-gov-1.aliyuncs.com"
+  },
+  "regions" : [ "cn-qingdao", "cn-beijing", "cn-chengdu", "cn-zhangjiakou", "cn-huhehaote", "cn-hangzhou", "cn-shanghai", "cn-shenzhen", "cn-heyuan", "cn-wulanchabu", "cn-hongkong", "ap-southeast-1", "ap-southeast-2", "ap-southeast-3", "ap-southeast-5", "ap-northeast-1", "eu-west-1", "us-west-1", "us-east-1", "eu-central-1", "ap-south-1", "cn-hangzhou-finance", "cn-shanghai-finance-1", "cn-shenzhen-finance-1", "cn-north-2-gov-1", "ap-northeast-2-pop", "cn-beijing-finance-1", "cn-beijing-finance-pop", "cn-beijing-gov-1", "cn-beijing-nu16-b01", "cn-edge-1", "cn-fujian", "cn-haidian-cm12-c01", "cn-hangzhou-bj-b01", "cn-hangzhou-internal-prod-1", "cn-hangzhou-internal-test-1", "cn-hangzhou-internal-test-2", "cn-hangzhou-internal-test-3", "cn-hangzhou-test-306", "cn-hongkong-finance-pop", "cn-huhehaote-nebula-1", "cn-qingdao-nebula", "cn-shanghai-et15-b01", "cn-shanghai-et2-b01", "cn-shanghai-inner", "cn-shanghai-internal-test-1", "cn-shenzhen-inner", "cn-shenzhen-st4-d01", "cn-shenzhen-su18-b01", "cn-wuhan", "cn-yushanfang", "cn-zhangbei", "cn-zhangbei-na61-b01", "cn-zhangjiakou-na62-a01", "cn-zhengzhou-nebula-1", "eu-west-1-oxs", "me-east-1", "rus-west-1-pop" ],
+  "endpoint_health" : [ ]
+}
