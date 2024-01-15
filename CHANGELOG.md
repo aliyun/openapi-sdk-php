@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2056 - 2024-1-15
+- BatchPub Support MQTT5.
+
+
 ## 1.8.2055 - 2024-1-15
 - Update to support new apis.
 
