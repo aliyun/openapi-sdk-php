@@ -89,6 +89,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveEdgeTransfer deleteLiveEdgeTransfer(array $options = [])
  * @method DeleteLiveLazyPullStreamInfoConfig deleteLiveLazyPullStreamInfoConfig(array $options = [])
  * @method DeleteLiveMessageGroup deleteLiveMessageGroup(array $options = [])
+ * @method DeleteLiveMessageGroupMessage deleteLiveMessageGroupMessage(array $options = [])
+ * @method DeleteLiveMessageUserMessage deleteLiveMessageUserMessage(array $options = [])
  * @method DeleteLivePackageConfig deleteLivePackageConfig(array $options = [])
  * @method DeleteLivePullStreamInfoConfig deleteLivePullStreamInfoConfig(array $options = [])
  * @method DeleteLiveRealtimeLogDelivery deleteLiveRealtimeLogDelivery(array $options = [])
@@ -293,6 +295,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListMessageGroupUserById listMessageGroupUserById(array $options = [])
  * @method ListPlaylist listPlaylist(array $options = [])
  * @method ListPlaylistItems listPlaylistItems(array $options = [])
+ * @method MiguLivePullToPushStart miguLivePullToPushStart(array $options = [])
+ * @method MiguLivePullToPushStatus miguLivePullToPushStatus(array $options = [])
  * @method ModifyCasterComponent modifyCasterComponent(array $options = [])
  * @method ModifyCasterEpisode modifyCasterEpisode(array $options = [])
  * @method ModifyCasterLayout modifyCasterLayout(array $options = [])
@@ -2463,6 +2467,48 @@ class DeleteLiveLazyPullStreamInfoConfig extends Rpc
  * @method $this withOperatorId($value)
  */
 class DeleteLiveMessageGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getMessageId()
+ * @method $this withMessageId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getDeleterId()
+ * @method $this withDeleterId($value)
+ * @method string getDeleterInfo()
+ * @method $this withDeleterInfo($value)
+ */
+class DeleteLiveMessageGroupMessage extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getMessageId()
+ * @method $this withMessageId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getReceiverId()
+ * @method $this withReceiverId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getDeleterId()
+ * @method $this withDeleterId($value)
+ * @method string getDeleterInfo()
+ * @method $this withDeleterInfo($value)
+ */
+class DeleteLiveMessageUserMessage extends Rpc
 {
 
     /** @var string */
@@ -6429,6 +6475,30 @@ class ListPlaylistItems extends Rpc
 }
 
 /**
+ * @method string getMiguData()
+ * @method $this withMiguData($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class MiguLivePullToPushStart extends Rpc
+{
+}
+
+/**
+ * @method string getMiguData()
+ * @method $this withMiguData($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class MiguLivePullToPushStatus extends Rpc
+{
+}
+
+/**
  * @method string getImageLayerContent()
  * @method $this withImageLayerContent($value)
  * @method string getComponentName()
@@ -7162,6 +7232,8 @@ class RealTimeRecordCommand extends Rpc
  * @method $this withSource($value)
  * @method string getMode()
  * @method $this withMode($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getStreamName()
@@ -7172,6 +7244,8 @@ class RealTimeRecordCommand extends Rpc
  * @method $this withOwnerId($value)
  * @method string getCommand()
  * @method $this withCommand($value)
+ * @method string getSnapshotType()
+ * @method $this withSnapshotType($value)
  * @method string getInterval()
  * @method $this withInterval($value)
  */
@@ -7370,6 +7444,8 @@ class SendLike extends Rpc
  * @method $this withBody($value)
  * @method string getStaticsIncrease()
  * @method $this withStaticsIncrease($value)
+ * @method string getNoCache()
+ * @method $this withNoCache($value)
  * @method string getMsgType()
  * @method $this withMsgType($value)
  * @method string getNoStorage()

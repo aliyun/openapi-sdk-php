@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2055 - 2024-1-15
+- Update to support new apis.
+
+
 ## 1.8.2054 - 2024-1-15
 - support UpdateSecurityGroup
 
