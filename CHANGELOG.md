@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2058 - 2024-1-16
+- Generated 2023-08-01 for `AiMiaoBi`.
+
+
 ## 1.8.2057 - 2024-1-16
 - Generated 2018-01-20 for `Linkvisual`.
 

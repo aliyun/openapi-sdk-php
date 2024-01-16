@@ -18,6 +18,7 @@ namespace AlibabaCloud;
  * @method static AddressPurification\AddressPurification addressPurification()
  * @method static Aegis\Aegis aegis()
  * @method static Afs\Afs afs()
+ * @method static AiMiaoBi\AiMiaoBi aiMiaoBi()
  * @method static Aiccs\Aiccs aiccs()
  * @method static Airec\Airec airec()
  * @method static Alb\Alb alb()
