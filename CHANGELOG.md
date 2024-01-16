@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2057 - 2024-1-16
+- Generated 2018-01-20 for `Linkvisual`.
+
+
 ## 1.8.2056 - 2024-1-15
 - BatchPub Support MQTT5.
 
