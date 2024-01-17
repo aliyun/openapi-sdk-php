@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelVideoTask cancelVideoTask(array $options = [])
  * @method ClientAuth clientAuth(array $options = [])
  * @method ClientStart clientStart(array $options = [])
+ * @method ClientUnbindDevice clientUnbindDevice(array $options = [])
  * @method CloseTimedResetOperate closeTimedResetOperate(array $options = [])
  * @method ConfirmAvatar2dTrain confirmAvatar2dTrain(array $options = [])
  * @method Create2dAvatar create2dAvatar(array $options = [])
@@ -91,6 +92,19 @@ class ClientAuth extends Rpc
  * @method $this withTenantId($value)
  */
 class ClientStart extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getTenantId()
+ * @method $this withTenantId($value)
+ * @method string getDeviceId()
+ * @method $this withDeviceId($value)
+ */
+class ClientUnbindDevice extends Rpc
 {
 
     /** @var string */
@@ -483,6 +497,8 @@ class StopInstance extends Rpc
 /**
  * @method string getApp()
  * @method $this withApp($value)
+ * @method string getAudioInfo()
+ * @method $this withAudioInfo($value)
  * @method string getAvatarInfo()
  * @method $this withAvatarInfo($value)
  * @method string getTitle()
@@ -535,6 +551,8 @@ class SubmitAudioTo2DAvatarVideoTask extends Rpc
 /**
  * @method string getApp()
  * @method $this withApp($value)
+ * @method string getAudioInfo()
+ * @method $this withAudioInfo($value)
  * @method string getAvatarInfo()
  * @method $this withAvatarInfo($value)
  * @method string getTitle()

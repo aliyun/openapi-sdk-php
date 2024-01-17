@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2059 - 2024-1-17
+- support unbind device
+
+
 ## 1.8.2058 - 2024-1-16
 - Generated 2023-08-01 for `AiMiaoBi`.
 
