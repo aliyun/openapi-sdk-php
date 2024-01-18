@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2060 - 2024-1-18
+- Add DescribeClusterBackupList OpenAPI.
+
+
 ## 1.8.2059 - 2024-1-17
 - support unbind device
 
