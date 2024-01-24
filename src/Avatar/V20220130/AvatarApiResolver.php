@@ -459,6 +459,8 @@ class SendVaml extends Rpc
 /**
  * @method string getApp()
  * @method $this withApp($value)
+ * @method string getTextRequest()
+ * @method $this withTextRequest($value)
  * @method string getTenantId()
  * @method $this withTenantId($value)
  * @method string getBizId()
