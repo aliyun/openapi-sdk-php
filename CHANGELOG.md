@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2062 - 2024-1-30
+- Publish sdk.
+
+
 ## 1.8.2061 - 2024-1-24
 - support start params
 
