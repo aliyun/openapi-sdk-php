@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2068 - 2024-2-1
+- Bugfix: change response code type to string for StartEventStreaming.
+
+
 ## 1.8.2067 - 2024-2-1
 - Support DryRun for DeleteInstance.
 - Support DryRun for ModifyInstanceSpec.

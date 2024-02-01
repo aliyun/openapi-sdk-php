@@ -117,6 +117,7 @@ namespace AlibabaCloud;
  * @method static Ens\Ens ens()
  * @method static EsServerless\EsServerless esServerless()
  * @method static Ess\Ess ess()
+ * @method static Eventbridge\Eventbridge eventbridge()
  * @method static Facebody\Facebody facebody()
  * @method static Fnf\Fnf fnf()
  * @method static Foas\Foas foas()
