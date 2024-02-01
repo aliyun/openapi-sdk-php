@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2067 - 2024-2-1
+- Support DryRun for DeleteInstance.
+- Support DryRun for ModifyInstanceSpec.
+
+
 ## 1.8.2066 - 2024-2-1
 - Generated 2018-01-20 for `Linkvisual`.
 
