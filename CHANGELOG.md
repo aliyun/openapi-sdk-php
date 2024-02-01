@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2065 - 2024-2-1
+- Describe tcpOptionAddress.
+
+
 ## 1.8.2064 - 2024-1-31
 - Update to support new apis.
 

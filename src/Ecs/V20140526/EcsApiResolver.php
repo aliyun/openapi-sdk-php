@@ -4214,6 +4214,8 @@ class CreateNatGateway extends Rpc
  * @method $this withVisible($value)
  * @method string getIpv6AddressCount()
  * @method $this withIpv6AddressCount($value)
+ * @method string getRxQueueSize()
+ * @method $this withRxQueueSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getVSwitchId()
@@ -4231,6 +4233,8 @@ class CreateNatGateway extends Rpc
  * @method $this withIpv6PrefixCount($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getTxQueueSize()
+ * @method $this withTxQueueSize($value)
  * @method string getDeleteOnRelease()
  * @method $this withDeleteOnRelease($value)
  * @method string getResourceOwnerAccount()
@@ -5757,6 +5761,8 @@ class DescribeAccountAttributes extends Rpc
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -5768,6 +5774,8 @@ class DescribeAccountAttributes extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  * @method string getActivationId()
  * @method $this withActivationId($value)
  */
@@ -5844,6 +5852,8 @@ class DescribeAutoProvisioningGroupInstances extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getAutoProvisioningGroupStatus()
@@ -6152,6 +6162,8 @@ class DescribeClassicLinkInstances extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
@@ -6163,6 +6175,8 @@ class DescribeClassicLinkInstances extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method array getInstanceId()
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  */
 class DescribeCloudAssistantStatus extends Rpc
 {
@@ -6212,6 +6226,8 @@ class DescribeClusters extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getProvider()
  * @method $this withProvider($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getContentEncoding()
  * @method $this withContentEncoding($value)
  * @method string getPageSize()
@@ -6227,6 +6243,8 @@ class DescribeClusters extends Rpc
  * @method $this withOwnerId($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  */
 class DescribeCommands extends Rpc
 {
@@ -8494,6 +8512,8 @@ class DescribeInstanceVncUrl extends Rpc
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getContentEncoding()
  * @method $this withContentEncoding($value)
  * @method string getPageSize()
@@ -8513,6 +8533,8 @@ class DescribeInstanceVncUrl extends Rpc
  * @method $this withInvokeRecordStatus($value)
  * @method string getIncludeHistory()
  * @method $this withIncludeHistory($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  */
 class DescribeInvocationResults extends Rpc
 {
@@ -8551,6 +8573,8 @@ class DescribeInvocationResults extends Rpc
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getContentEncoding()
  * @method $this withContentEncoding($value)
  * @method string getRepeatMode()
@@ -8574,6 +8598,8 @@ class DescribeInvocationResults extends Rpc
  * @method $this withCommandType($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  */
 class DescribeInvocations extends Rpc
 {
@@ -8606,6 +8632,8 @@ class DescribeInvocations extends Rpc
  * @method $this withKeyPairFingerPrint($value)
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
+ * @method string getIncludePublicKey()
+ * @method $this withIncludePublicKey($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
@@ -8784,6 +8812,8 @@ class DescribeLimitation extends Rpc
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -8798,6 +8828,8 @@ class DescribeLimitation extends Rpc
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
  * @method array getInstanceId()
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  * @method string getInstanceIp()
  * @method $this withInstanceIp($value)
  * @method string getActivationId()
@@ -10058,6 +10090,8 @@ class DescribeSecurityGroups extends Rpc
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method array getTag()
@@ -10075,6 +10109,8 @@ class DescribeSecurityGroups extends Rpc
  * @method $this withInvocationStatus($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  */
 class DescribeSendFileResults extends Rpc
 {
@@ -11391,6 +11427,7 @@ class InstallCloudAssistant extends Rpc
  * @method $this withRepeatMode($value)
  * @method string getWindowsPasswordName()
  * @method $this withWindowsPasswordName($value)
+ * @method array getResourceTag()
  * @method array getTag()
  * @method string getTimed()
  * @method $this withTimed($value)
@@ -11428,6 +11465,26 @@ class InvokeCommand extends Rpc
 			}
 			if(isset($depth1Value['Scope'])){
 				$this->options['query']['SystemTag.' . ($depth1 + 1) . '.Scope'] = $depth1Value['Scope'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceTag
+     *
+     * @return $this
+     */
+	public function withResourceTag(array $resourceTag)
+	{
+	    $this->data['ResourceTag'] = $resourceTag;
+		foreach ($resourceTag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['ResourceTag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['ResourceTag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
 			}
 		}
 
@@ -11535,6 +11592,8 @@ class LeaveSecurityGroup extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
@@ -11546,6 +11605,8 @@ class LeaveSecurityGroup extends Rpc
  * @method array getInstanceId()
  * @method string getName()
  * @method $this withName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  */
 class ListPluginStatus extends Rpc
 {
@@ -12599,6 +12660,7 @@ class ModifyInstanceAttachmentAttributes extends Rpc
  * @method $this withPassword($value)
  * @method string getHostName()
  * @method $this withHostName($value)
+ * @method string getCpuOptionsTopologyType()
  * @method string getEnableJumboFrame()
  * @method $this withEnableJumboFrame($value)
  * @method string getResourceOwnerAccount()
@@ -12619,6 +12681,19 @@ class ModifyInstanceAttachmentAttributes extends Rpc
  */
 class ModifyInstanceAttribute extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCpuOptionsTopologyType($value)
+    {
+        $this->data['CpuOptionsTopologyType'] = $value;
+        $this->options['query']['CpuOptions.TopologyType'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param array $securityGroupIds
@@ -12844,6 +12919,8 @@ class ModifyInstanceMetadataOptions extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPromotionOptions()
+ * @method $this withPromotionOptions($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getNetworkChargeType()
@@ -13071,12 +13148,16 @@ class ModifyManagedInstance extends Rpc
  * @method $this withDescription($value)
  * @method string getNetworkInterfaceName()
  * @method $this withNetworkInterfaceName($value)
+ * @method string getTxQueueSize()
+ * @method $this withTxQueueSize($value)
  * @method string getDeleteOnRelease()
  * @method $this withDeleteOnRelease($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getRxQueueSize()
+ * @method $this withRxQueueSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getNetworkInterfaceId()
@@ -13238,6 +13319,8 @@ class ModifyPrefixList extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPromotionOptions()
+ * @method $this withPromotionOptions($value)
  * @method array getDisk()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -14721,6 +14804,7 @@ class RevokeSecurityGroupEgress extends Rpc
  * @method $this withContentEncoding($value)
  * @method string getWindowsPasswordName()
  * @method $this withWindowsPasswordName($value)
+ * @method array getResourceTag()
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -14763,6 +14847,26 @@ class RunCommand extends Rpc
 	    $this->data['InstanceId'] = $instanceId;
 		foreach ($instanceId as $i => $iValue) {
 			$this->options['query']['InstanceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceTag
+     *
+     * @return $this
+     */
+	public function withResourceTag(array $resourceTag)
+	{
+	    $this->data['ResourceTag'] = $resourceTag;
+		foreach ($resourceTag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['ResourceTag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['ResourceTag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
 		}
 
 		return $this;
@@ -14860,6 +14964,7 @@ class RunCommand extends Rpc
  * @method $this withKeyPairName($value)
  * @method string getSpotPriceLimit()
  * @method $this withSpotPriceLimit($value)
+ * @method string getCpuOptionsTopologyType()
  * @method string getStorageSetPartitionNumber()
  * @method $this withStorageSetPartitionNumber($value)
  * @method array getTag()
@@ -15107,6 +15212,19 @@ class RunInstances extends Rpc
     }
 
     /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCpuOptionsTopologyType($value)
+    {
+        $this->data['CpuOptionsTopologyType'] = $value;
+        $this->options['query']['CpuOptions.TopologyType'] = $value;
+
+        return $this;
+    }
+
+    /**
      * @param array $tag
      *
      * @return $this
@@ -15274,6 +15392,12 @@ class RunInstances extends Rpc
 			}
 			if(isset($depth1Value['NetworkInterfaceId'])){
 				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.NetworkInterfaceId'] = $depth1Value['NetworkInterfaceId'];
+			}
+			if(isset($depth1Value['RxQueueSize'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.RxQueueSize'] = $depth1Value['RxQueueSize'];
+			}
+			if(isset($depth1Value['TxQueueSize'])){
+				$this->options['query']['NetworkInterface.' . ($depth1 + 1) . '.TxQueueSize'] = $depth1Value['TxQueueSize'];
 			}
 		}
 
