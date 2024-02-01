@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2066 - 2024-2-1
+- Generated 2018-01-20 for `Linkvisual`.
+
+
 ## 1.8.2065 - 2024-2-1
 - Describe tcpOptionAddress.
 
