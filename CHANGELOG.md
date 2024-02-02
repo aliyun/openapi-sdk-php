@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2069 - 2024-2-2
+- Add UnsubscribeTopic.
+
+
 ## 1.8.2068 - 2024-2-1
 - Bugfix: change response code type to string for StartEventStreaming.
 

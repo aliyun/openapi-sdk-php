@@ -399,6 +399,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnbindLicenseProduct unbindLicenseProduct(array $options = [])
  * @method UnbindRoleFromEdgeInstance unbindRoleFromEdgeInstance(array $options = [])
  * @method UnbindSceneRuleFromEdgeInstance unbindSceneRuleFromEdgeInstance(array $options = [])
+ * @method UnsubscribeTopic unsubscribeTopic(array $options = [])
  * @method UpdateConsumerGroup updateConsumerGroup(array $options = [])
  * @method UpdateDestination updateDestination(array $options = [])
  * @method UpdateDeviceGroup updateDeviceGroup(array $options = [])
@@ -22865,6 +22866,62 @@ class UnbindSceneRuleFromEdgeInstance extends Rpc
         $this->options['form_params']['ApiProduct'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiRevision($value)
+    {
+        $this->data['ApiRevision'] = $value;
+        $this->options['form_params']['ApiRevision'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getIotInstanceId()
+ * @method $this withIotInstanceId($value)
+ * @method string getProductKey()
+ * @method $this withProductKey($value)
+ * @method string getApiProduct()
+ * @method array getTopic()
+ * @method string getApiRevision()
+ * @method string getDeviceName()
+ * @method $this withDeviceName($value)
+ */
+class UnsubscribeTopic extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiProduct($value)
+    {
+        $this->data['ApiProduct'] = $value;
+        $this->options['form_params']['ApiProduct'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $topic
+     *
+     * @return $this
+     */
+	public function withTopic(array $topic)
+	{
+	    $this->data['Topic'] = $topic;
+		foreach ($topic as $i => $iValue) {
+			$this->options['query']['Topic.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
