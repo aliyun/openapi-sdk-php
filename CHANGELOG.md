@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2070 - 2024-2-18
+- Generated 2023-03-05 for `captcha`.
+
+
 ## 1.8.2069 - 2024-2-2
 - Add UnsubscribeTopic.
 

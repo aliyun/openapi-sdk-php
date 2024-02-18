@@ -46,6 +46,7 @@ namespace AlibabaCloud;
  * @method static CS\CS cS()
  * @method static CSB\CSB cSB()
  * @method static Cams\Cams cams()
+ * @method static Captcha\Captcha captcha()
  * @method static Cas\Cas cas()
  * @method static Cassandra\Cassandra cassandra()
  * @method static Cbn\Cbn cbn()
