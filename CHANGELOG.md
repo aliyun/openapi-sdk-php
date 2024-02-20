@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.2071 - 2024-2-20
+- Release GenerateCosplayImage.
+- Release GenerateTextDeformation.
+- Release GenerateTextTexture.
+- Release InteractiveFullSegmentation.
+- Release InteractiveScribbleSegmentation.
+
+
 ## 1.8.2070 - 2024-2-18
 - Generated 2023-03-05 for `captcha`.
 
