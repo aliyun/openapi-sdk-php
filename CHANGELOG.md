@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2072 - 2024-2-27
+- AllotDatasetAccelerationTask API add error code.
+- QueryUserInfoByAccount, QueryUserInfoByUserId, AddUser, UpdateUser, and QueryUserList APIs add query or response parameters.
+
+
 ## 1.8.2071 - 2024-2-20
 - Release GenerateCosplayImage.
 - Release GenerateTextDeformation.

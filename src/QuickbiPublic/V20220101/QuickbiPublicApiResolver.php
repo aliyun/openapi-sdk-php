@@ -184,6 +184,7 @@ class AddShareReport extends Rpc
  * @method $this withSignType($value)
  * @method string getAccountId()
  * @method $this withAccountId($value)
+ * @method string getRoleIds()
  * @method string getAccountName()
  * @method $this withAccountName($value)
  * @method string getPhone()
@@ -197,6 +198,19 @@ class AddShareReport extends Rpc
  */
 class AddUser extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRoleIds($value)
+    {
+        $this->data['RoleIds'] = $value;
+        $this->options['form_params']['RoleIds'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1060,6 +1074,8 @@ class QueryUserGroupMember extends Rpc
  * @method $this withAccountType($value)
  * @method string getSignType()
  * @method $this withSignType($value)
+ * @method string getParentAccountName()
+ * @method $this withParentAccountName($value)
  * @method string getAccount()
  * @method $this withAccount($value)
  */
@@ -1359,6 +1375,8 @@ class UpdateTicketNum extends Rpc
  * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getRoleIds()
+ * @method $this withRoleIds($value)
  * @method string getPhone()
  * @method $this withPhone($value)
  * @method string getNickName()
