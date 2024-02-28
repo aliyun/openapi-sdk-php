@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2073 - 2024-2-28
+- Fixed bugs for ListUserDefinedEventSources
+
+
 ## 1.8.2072 - 2024-2-27
 - AllotDatasetAccelerationTask API add error code.
 - QueryUserInfoByAccount, QueryUserInfoByUserId, AddUser, UpdateUser, and QueryUserList APIs add query or response parameters.
