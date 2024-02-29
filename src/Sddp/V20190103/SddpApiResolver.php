@@ -12,8 +12,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateSlrRole createSlrRole(array $options = [])
  * @method DeleteDataLimit deleteDataLimit(array $options = [])
  * @method DeleteRule deleteRule(array $options = [])
+ * @method DescribeCategoryTemplateList describeCategoryTemplateList(array $options = [])
  * @method DescribeCategoryTemplateRuleList describeCategoryTemplateRuleList(array $options = [])
  * @method DescribeColumns describeColumns(array $options = [])
+ * @method DescribeColumnsV2 describeColumnsV2(array $options = [])
  * @method DescribeConfigs describeConfigs(array $options = [])
  * @method DescribeDataAssets describeDataAssets(array $options = [])
  * @method DescribeDataLimitDetail describeDataLimitDetail(array $options = [])
@@ -21,17 +23,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDataLimitSet describeDataLimitSet(array $options = [])
  * @method DescribeDataMaskingRunHistory describeDataMaskingRunHistory(array $options = [])
  * @method DescribeDataMaskingTasks describeDataMaskingTasks(array $options = [])
+ * @method DescribeDataObjectColumnDetail describeDataObjectColumnDetail(array $options = [])
+ * @method DescribeDataObjectColumnDetailV2 describeDataObjectColumnDetailV2(array $options = [])
+ * @method DescribeDataObjects describeDataObjects(array $options = [])
+ * @method DescribeDocTypes describeDocTypes(array $options = [])
  * @method DescribeEventDetail describeEventDetail(array $options = [])
  * @method DescribeEvents describeEvents(array $options = [])
  * @method DescribeEventTypes describeEventTypes(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeInstanceSources describeInstanceSources(array $options = [])
  * @method DescribeOssObjectDetail describeOssObjectDetail(array $options = [])
+ * @method DescribeOssObjectDetailV2 describeOssObjectDetailV2(array $options = [])
  * @method DescribeOssObjects describeOssObjects(array $options = [])
  * @method DescribePackages describePackages(array $options = [])
+ * @method DescribeParentInstance describeParentInstance(array $options = [])
  * @method DescribeRiskLevels describeRiskLevels(array $options = [])
  * @method DescribeRules describeRules(array $options = [])
  * @method DescribeTables describeTables(array $options = [])
+ * @method DescribeTemplateAllRules describeTemplateAllRules(array $options = [])
  * @method DescribeUserStatus describeUserStatus(array $options = [])
  * @method DisableUserConfig disableUserConfig(array $options = [])
  * @method ExecDatamask execDatamask(array $options = [])
@@ -87,6 +96,8 @@ class CreateConfig extends Rpc
 /**
  * @method string getOcrStatus()
  * @method $this withOcrStatus($value)
+ * @method string getSamplingSize()
+ * @method $this withSamplingSize($value)
  * @method string getParentId()
  * @method $this withParentId($value)
  * @method string getPassword()
@@ -109,8 +120,12 @@ class CreateConfig extends Rpc
  * @method $this withAuditStatus($value)
  * @method string getAutoScan()
  * @method $this withAutoScan($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getLogStoreDay()
  * @method $this withLogStoreDay($value)
+ * @method string getCertificatePermission()
+ * @method $this withCertificatePermission($value)
  * @method string getResourceType()
  * @method $this withResourceType($value)
  * @method string getConnector()
@@ -141,8 +156,12 @@ class CreateDataLimit extends Rpc
  * @method $this withContent($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getMatchType()
+ * @method $this withMatchType($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getSupportForm()
+ * @method $this withSupportForm($value)
  * @method string getFeatureType()
  * @method $this withFeatureType($value)
  * @method string getRuleType()
@@ -185,6 +204,8 @@ class CreateRule extends Rpc
  * @method $this withScanRange($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getOssScanPath()
  * @method $this withOssScanPath($value)
  * @method string getResourceType()
@@ -197,6 +218,8 @@ class CreateScanTask extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
@@ -235,6 +258,24 @@ class DeleteRule extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getUsageScenario()
+ * @method $this withUsageScenario($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeCategoryTemplateList extends Rpc
+{
+}
+
+/**
  * @method string getRiskLevelId()
  * @method $this withRiskLevelId($value)
  * @method string getSourceIp()
@@ -243,6 +284,8 @@ class DeleteRule extends Rpc
  * @method $this withPageSize($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getParentCategoryIdList()
  * @method $this withParentCategoryIdList($value)
  * @method string getCurrentPage()
@@ -301,6 +344,48 @@ class DescribeColumns extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getRiskLevels()
+ * @method $this withRiskLevels($value)
+ * @method string getRuleName()
+ * @method $this withRuleName($value)
+ * @method string getQueryName()
+ * @method $this withQueryName($value)
+ * @method string getRiskLevelId()
+ * @method $this withRiskLevelId($value)
+ * @method string getSensLevelName()
+ * @method $this withSensLevelName($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTableId()
+ * @method $this withTableId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getRuleId()
+ * @method $this withRuleId($value)
+ */
+class DescribeColumnsV2 extends Rpc
+{
+}
+
+/**
  * @method string getFeatureType()
  * @method $this withFeatureType($value)
  * @method string getSourceIp()
@@ -337,6 +422,8 @@ class DescribeDataAssets extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getNetworkType()
  * @method $this withNetworkType($value)
  * @method string getSourceIp()
@@ -373,6 +460,8 @@ class DescribeDataLimitDetail extends Rpc
  * @method $this withEngineType($value)
  * @method string getAuditStatus()
  * @method $this withAuditStatus($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getCurrentPage()
@@ -385,14 +474,16 @@ class DescribeDataLimits extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  * @method string getParentId()
  * @method $this withParentId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
  */
 class DescribeDataLimitSet extends Rpc
 {
@@ -455,6 +546,102 @@ class DescribeDataMaskingTasks extends Rpc
 }
 
 /**
+ * @method string getProductId()
+ * @method $this withProductId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class DescribeDataObjectColumnDetail extends Rpc
+{
+}
+
+/**
+ * @method string getProductId()
+ * @method $this withProductId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ */
+class DescribeDataObjectColumnDetailV2 extends Rpc
+{
+}
+
+/**
+ * @method string getFileType()
+ * @method $this withFileType($value)
+ * @method string getRiskLevels()
+ * @method $this withRiskLevels($value)
+ * @method string getQueryName()
+ * @method $this withQueryName($value)
+ * @method string getDomainId()
+ * @method $this withDomainId($value)
+ * @method string getParentCategoryIds()
+ * @method $this withParentCategoryIds($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getProductIds()
+ * @method $this withProductIds($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getServiceRegionId()
+ * @method $this withServiceRegionId($value)
+ * @method string getModelTagIds()
+ * @method $this withModelTagIds($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getFileCategoryCode()
+ * @method $this withFileCategoryCode($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getModelIds()
+ * @method $this withModelIds($value)
+ */
+class DescribeDataObjects extends Rpc
+{
+}
+
+/**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeDocTypes extends Rpc
+{
+}
+
+/**
  * @method string getFeatureType()
  * @method $this withFeatureType($value)
  * @method string getSourceIp()
@@ -469,6 +656,8 @@ class DescribeEventDetail extends Rpc
 }
 
 /**
+ * @method string getWarnLevel()
+ * @method $this withWarnLevel($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
  * @method string getStartTime()
@@ -513,6 +702,8 @@ class DescribeEvents extends Rpc
 /**
  * @method string getResourceId()
  * @method $this withResourceId($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getParentTypeId()
  * @method $this withParentTypeId($value)
  * @method string getSourceIp()
@@ -577,6 +768,8 @@ class DescribeEventTypes extends Rpc
  * @method $this withCurrentPage($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getNeedModelTag()
+ * @method $this withNeedModelTag($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
  * @method string getLastFinishTimeEnd()
@@ -609,6 +802,8 @@ class DescribeInstances extends Rpc
  * @method $this withAuditStatus($value)
  * @method string getAuthStatus()
  * @method $this withAuthStatus($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
  * @method string getAuthed()
@@ -623,16 +818,30 @@ class DescribeInstanceSources extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getFeatureType()
- * @method $this withFeatureType($value)
  */
 class DescribeOssObjectDetail extends Rpc
+{
+}
+
+/**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeOssObjectDetailV2 extends Rpc
 {
 }
 
@@ -661,8 +870,12 @@ class DescribeOssObjectDetail extends Rpc
  * @method $this withFeatureType($value)
  * @method string getOrderBy()
  * @method $this withOrderBy($value)
+ * @method string getFileCategoryCode()
+ * @method $this withFileCategoryCode($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getRuleIds()
  * @method $this withRuleIds($value)
  * @method string getInstanceId()
@@ -713,8 +926,44 @@ class DescribePackages extends Rpc
 }
 
 /**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCheckStatus()
+ * @method $this withCheckStatus($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ * @method string getServiceRegionId()
+ * @method $this withServiceRegionId($value)
+ * @method string getEngineType()
+ * @method $this withEngineType($value)
+ * @method string getClusterStatus()
+ * @method $this withClusterStatus($value)
+ * @method string getAuthStatus()
+ * @method $this withAuthStatus($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getDbName()
+ * @method $this withDbName($value)
+ */
+class DescribeParentInstance extends Rpc
+{
+}
+
+/**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getCustomType()
  * @method $this withCustomType($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
@@ -737,12 +986,18 @@ class DescribeRiskLevels extends Rpc
  * @method $this withSourceIp($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getMatchType()
+ * @method $this withMatchType($value)
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getKeywordCompatible()
  * @method $this withKeywordCompatible($value)
+ * @method string getSupportForm()
+ * @method $this withSupportForm($value)
  * @method string getRuleType()
  * @method $this withRuleType($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getContentCategory()
@@ -807,6 +1062,8 @@ class DescribeRules extends Rpc
  * @method $this withEndTime($value)
  * @method string getCurrentPage()
  * @method $this withCurrentPage($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  * @method string getRuleIds()
  * @method $this withRuleIds($value)
  * @method string getInstanceId()
@@ -823,6 +1080,22 @@ class DescribeTables extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class DescribeTemplateAllRules extends Rpc
+{
+}
+
+/**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
@@ -835,6 +1108,8 @@ class DescribeUserStatus extends Rpc
 /**
  * @method string getCode()
  * @method $this withCode($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
@@ -847,6 +1122,8 @@ class DisableUserConfig extends Rpc
 /**
  * @method string getData()
  * @method $this withData($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  * @method string getSourceIp()
@@ -875,6 +1152,9 @@ class ManualTriggerMaskingProcess extends Rpc
 /**
  * @method string getModifyPassword()
  * @method $this withModifyPassword($value)
+ * @method array getVSwitchIdList()
+ * @method string getSamplingSize()
+ * @method $this withSamplingSize($value)
  * @method string getPassword()
  * @method $this withPassword($value)
  * @method string getSourceIp()
@@ -891,6 +1171,9 @@ class ManualTriggerMaskingProcess extends Rpc
  * @method $this withAuditStatus($value)
  * @method string getAutoScan()
  * @method $this withAutoScan($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
+ * @method array getSecurityGroupIdList()
  * @method string getLogStoreDay()
  * @method $this withLogStoreDay($value)
  * @method string getResourceType()
@@ -899,11 +1182,43 @@ class ManualTriggerMaskingProcess extends Rpc
  * @method $this withConnector($value)
  * @method string getPort()
  * @method $this withPort($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
  * @method string getUserName()
  * @method $this withUserName($value)
  */
 class ModifyDataLimit extends Rpc
 {
+
+    /**
+     * @param array $vSwitchIdList
+     *
+     * @return $this
+     */
+	public function withVSwitchIdList(array $vSwitchIdList)
+	{
+	    $this->data['VSwitchIdList'] = $vSwitchIdList;
+		foreach ($vSwitchIdList as $i => $iValue) {
+			$this->options['query']['VSwitchIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $securityGroupIdList
+     *
+     * @return $this
+     */
+	public function withSecurityGroupIdList(array $securityGroupIdList)
+	{
+	    $this->data['SecurityGroupIdList'] = $securityGroupIdList;
+		foreach ($securityGroupIdList as $i => $iValue) {
+			$this->options['query']['SecurityGroupIdList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -947,6 +1262,8 @@ class ModifyEventStatus extends Rpc
 /**
  * @method string getSubTypeIds()
  * @method $this withSubTypeIds($value)
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getLang()
@@ -957,6 +1274,8 @@ class ModifyEventTypeStatus extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getReportTaskStatus()
@@ -983,10 +1302,14 @@ class ModifyReportTaskStatus extends Rpc
  * @method $this withContent($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getMatchType()
+ * @method $this withMatchType($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getLang()
  * @method $this withLang($value)
+ * @method string getSupportForm()
+ * @method $this withSupportForm($value)
  * @method string getFeatureType()
  * @method $this withFeatureType($value)
  * @method string getRuleType()
@@ -1027,14 +1350,14 @@ class ModifyRuleStatus extends Rpc
 }
 
 /**
+ * @method string getFeatureType()
+ * @method $this withFeatureType($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getId()
  * @method $this withId($value)
  * @method string getLang()
  * @method $this withLang($value)
- * @method string getFeatureType()
- * @method $this withFeatureType($value)
  */
 class StopMaskingProcess extends Rpc
 {
