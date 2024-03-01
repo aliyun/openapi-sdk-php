@@ -160,6 +160,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainMapping describeLiveDomainMapping(array $options = [])
  * @method DescribeLiveDomainMonitoringUsageData describeLiveDomainMonitoringUsageData(array $options = [])
  * @method DescribeLiveDomainOnlineUserNum describeLiveDomainOnlineUserNum(array $options = [])
+ * @method DescribeLiveDomainPublishErrorCode describeLiveDomainPublishErrorCode(array $options = [])
  * @method DescribeLiveDomainPushBpsData describeLiveDomainPushBpsData(array $options = [])
  * @method DescribeLiveDomainPushTrafficData describeLiveDomainPushTrafficData(array $options = [])
  * @method DescribeLiveDomainPvUvData describeLiveDomainPvUvData(array $options = [])
@@ -230,6 +231,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamWatermarks describeLiveStreamWatermarks(array $options = [])
  * @method DescribeLiveTagResources describeLiveTagResources(array $options = [])
  * @method DescribeLiveTopDomainsByFlow describeLiveTopDomainsByFlow(array $options = [])
+ * @method DescribeLiveUpVideoAudioInfo describeLiveUpVideoAudioInfo(array $options = [])
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
@@ -293,6 +295,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListMessageGroup listMessageGroup(array $options = [])
  * @method ListMessageGroupUser listMessageGroupUser(array $options = [])
  * @method ListMessageGroupUserById listMessageGroupUserById(array $options = [])
+ * @method ListMuteGroupUser listMuteGroupUser(array $options = [])
  * @method ListPlaylist listPlaylist(array $options = [])
  * @method ListPlaylistItems listPlaylistItems(array $options = [])
  * @method MiguLivePullToPushStart miguLivePullToPushStart(array $options = [])
@@ -3197,6 +3200,8 @@ class DescribeLiveAudioAuditNotifyConfig extends Rpc
  * @method string getStreamSuffix()
  * @method string getStartTime()
  * @method string getRequestType()
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getStreamName()
  * @method string getApp()
  * @method string getPhase()
@@ -3674,6 +3679,22 @@ class DescribeLiveDomainOnlineUserNum extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveDomainPublishErrorCode extends Rpc
+{
+}
+
+/**
  * @method string getLocationNameEn()
  * @method $this withLocationNameEn($value)
  * @method string getStartTime()
@@ -3931,6 +3952,8 @@ class DescribeLiveDomainTranscodeData extends Rpc
 
 /**
  * @method string getPushdomain()
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
  * @method string getApp()
  * @method string getTemplateName()
  */
@@ -4952,6 +4975,20 @@ class DescribeLiveTagResources extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveTopDomainsByFlow extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStream()
+ * @method $this withStream($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveUpVideoAudioInfo extends Rpc
 {
 }
 
@@ -6007,6 +6044,10 @@ class ListLiveMessageApps extends Rpc
  * @method $this withSortType($value)
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMsgType()
+ * @method $this withMsgType($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
@@ -6017,10 +6058,6 @@ class ListLiveMessageApps extends Rpc
  * @method $this withDataCenter($value)
  * @method string getAppId()
  * @method $this withAppId($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getMsgType()
- * @method $this withMsgType($value)
  */
 class ListLiveMessageGroupMessages extends Rpc
 {
@@ -6417,6 +6454,82 @@ class ListMessageGroupUserById extends Rpc
     {
         $this->data['UserIdList'] = $value;
         $this->options['form_params']['UserIdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppId($value)
+    {
+        $this->data['AppId'] = $value;
+        $this->options['form_params']['AppId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageNum()
+ * @method string getPageSize()
+ * @method string getOperatorUserId()
+ * @method string getGroupId()
+ * @method string getAppId()
+ */
+class ListMuteGroupUser extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNum($value)
+    {
+        $this->data['PageNum'] = $value;
+        $this->options['form_params']['PageNum'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorUserId($value)
+    {
+        $this->data['OperatorUserId'] = $value;
+        $this->options['form_params']['OperatorUserId'] = $value;
 
         return $this;
     }

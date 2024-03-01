@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2075 - 2024-3-1
+- Update to support new apis.
+
+
 ## 1.8.2074 - 2024-2-29
 - Generated 2019-01-03 for `Sddp`.
 
