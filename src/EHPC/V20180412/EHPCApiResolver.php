@@ -154,6 +154,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2018-04-12';
+
+    /** @var string */
+    public $serviceCode = 'ehs';
 }
 
 /**
@@ -402,6 +405,8 @@ class AddUsers extends Rpc
  * @method $this withJobQueue($value)
  * @method string getSystemDiskType()
  * @method $this withSystemDiskType($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getCores()
  * @method $this withCores($value)
  * @method string getSystemDiskSize()
@@ -1808,6 +1813,10 @@ class GetVisualServiceStatus extends Rpc
 {
 }
 
+/**
+ * @method string getServiceName()
+ * @method $this withServiceName($value)
+ */
 class InitializeEHPC extends Rpc
 {
 }
