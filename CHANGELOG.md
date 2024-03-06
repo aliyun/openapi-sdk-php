@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2077 - 2024-3-6
+- Update to support new apis.
+
+
 ## 1.8.2076 - 2024-3-5
 - Support UserData parameter for ApplyNodes interface.
 
