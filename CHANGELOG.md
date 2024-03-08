@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2078 - 2024-3-8
+- Generated 2015-12-01 for `Dds`.
+
+
 ## 1.8.2077 - 2024-3-6
 - Update to support new apis.
 
