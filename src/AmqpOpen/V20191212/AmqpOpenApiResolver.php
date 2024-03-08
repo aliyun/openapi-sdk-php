@@ -27,6 +27,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListQueues listQueues(array $options = [])
  * @method ListQueueUpStreamBindings listQueueUpStreamBindings(array $options = [])
  * @method ListVirtualHosts listVirtualHosts(array $options = [])
+ * @method UpdateInstance updateInstance(array $options = [])
  * @method UpdateInstanceName updateInstanceName(array $options = [])
  */
 class AmqpOpenApiResolver extends ApiResolver
@@ -363,12 +364,20 @@ class CreateExchange extends Rpc
  * @method $this withMaxConnections($value)
  * @method string getSupportTracing()
  * @method $this withSupportTracing($value)
+ * @method string getServerlessChargeType()
+ * @method $this withServerlessChargeType($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
+ * @method string getRenewStatus()
+ * @method $this withRenewStatus($value)
  * @method string getAutoRenewPeriod()
  * @method $this withAutoRenewPeriod($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
+ * @method string getRenewalDurationUnit()
+ * @method $this withRenewalDurationUnit($value)
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getAutoRenew()
  * @method $this withAutoRenew($value)
  * @method string getSupportEip()
@@ -978,6 +987,38 @@ class ListVirtualHosts extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getMaxPrivateTps()
+ * @method $this withMaxPrivateTps($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getStorageSize()
+ * @method $this withStorageSize($value)
+ * @method string getQueueCapacity()
+ * @method $this withQueueCapacity($value)
+ * @method string getTracingStorageTime()
+ * @method $this withTracingStorageTime($value)
+ * @method string getMaxConnections()
+ * @method $this withMaxConnections($value)
+ * @method string getSupportTracing()
+ * @method $this withSupportTracing($value)
+ * @method string getServerlessChargeType()
+ * @method $this withServerlessChargeType($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSupportEip()
+ * @method $this withSupportEip($value)
+ * @method string getModifyType()
+ * @method $this withModifyType($value)
+ * @method string getMaxEipTps()
+ * @method $this withMaxEipTps($value)
+ */
+class UpdateInstance extends Rpc
+{
 }
 
 /**

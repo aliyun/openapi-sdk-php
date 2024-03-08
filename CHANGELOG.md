@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2079 - 2024-3-8
+- Support CreateInstance API.
+- Support UpdateInstance API.
+
+
 ## 1.8.2078 - 2024-3-8
 - Generated 2015-12-01 for `Dds`.
 
