@@ -1905,6 +1905,8 @@ class CreateLiveDelayConfig extends Rpc
 /**
  * @method string getDataCenter()
  * @method $this withDataCenter($value)
+ * @method string getMsgLifeCycle()
+ * @method $this withMsgLifeCycle($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  * @method string getAuditType()

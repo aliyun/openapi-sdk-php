@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2080 - 2024-3-13
+- Update to support new apis.
+
+
 ## 1.8.2079 - 2024-3-8
 - Support CreateInstance API.
 - Support UpdateInstance API.
