@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteInstanceKeyPair deleteInstanceKeyPair(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
  * @method DeleteSnapshots deleteSnapshots(array $options = [])
+ * @method DescribeCloudAssistantAttributes describeCloudAssistantAttributes(array $options = [])
  * @method DescribeCloudAssistantStatus describeCloudAssistantStatus(array $options = [])
  * @method DescribeCloudMonitorAgentStatuses describeCloudMonitorAgentStatuses(array $options = [])
  * @method DescribeCommandInvocations describeCommandInvocations(array $options = [])
@@ -51,6 +52,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPlans listPlans(array $options = [])
  * @method ListRegions listRegions(array $options = [])
  * @method ListSnapshots listSnapshots(array $options = [])
+ * @method ListTagResources listTagResources(array $options = [])
  * @method LoginInstance loginInstance(array $options = [])
  * @method ModifyDatabaseInstanceDescription modifyDatabaseInstanceDescription(array $options = [])
  * @method ModifyDatabaseInstanceParameter modifyDatabaseInstanceParameter(array $options = [])
@@ -73,6 +75,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopDatabaseInstance stopDatabaseInstance(array $options = [])
  * @method StopInstance stopInstance(array $options = [])
  * @method StopInstances stopInstances(array $options = [])
+ * @method TagResources tagResources(array $options = [])
+ * @method UntagResources untagResources(array $options = [])
  * @method UpdateCommandAttribute updateCommandAttribute(array $options = [])
  * @method UpdateDiskAttribute updateDiskAttribute(array $options = [])
  * @method UpdateInstanceAttribute updateInstanceAttribute(array $options = [])
@@ -120,6 +124,7 @@ class AllocatePublicConnection extends Rpc
  * @method $this withCommandContent($value)
  * @method string getTimeout()
  * @method $this withTimeout($value)
+ * @method array getTag()
  * @method string getName()
  * @method $this withName($value)
  * @method string getEnableParameter()
@@ -127,6 +132,26 @@ class AllocatePublicConnection extends Rpc
  */
 class CreateCommand extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -142,11 +167,32 @@ class CreateCommand extends Rpc
  * @method $this withPlatform($value)
  * @method string getImageName()
  * @method $this withImageName($value)
+ * @method array getTag()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class CreateCustomImage extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -172,9 +218,30 @@ class CreateFirewallRule extends Rpc
  * @method $this withInstanceId($value)
  * @method string getFirewallRules()
  * @method $this withFirewallRules($value)
+ * @method array getTag()
  */
 class CreateFirewallRules extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -220,9 +287,30 @@ class CreateInstances extends Rpc
  * @method $this withSnapshotName($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method array getTag()
  */
 class CreateSnapshot extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -293,6 +381,18 @@ class DeleteSnapshots extends Rpc
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
+class DescribeCloudAssistantAttributes extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
 class DescribeCloudAssistantStatus extends Rpc
 {
 }
@@ -338,13 +438,34 @@ class DescribeCommandInvocations extends Rpc
  * @method $this withPageNumber($value)
  * @method string getProvider()
  * @method $this withProvider($value)
- * @method string getName()
- * @method $this withName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
+ * @method string getName()
+ * @method $this withName($value)
  */
 class DescribeCommands extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -576,13 +697,36 @@ class InvokeCommand extends Rpc
  * @method $this withImageNames($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getImageIds()
  * @method $this withImageIds($value)
  */
 class ListCustomImages extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -596,9 +740,30 @@ class ListCustomImages extends Rpc
  * @method $this withPageSize($value)
  * @method string getDiskIds()
  * @method $this withDiskIds($value)
+ * @method array getTag()
  */
 class ListDisks extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -608,9 +773,32 @@ class ListDisks extends Rpc
  * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getFirewallRuleId()
+ * @method $this withFirewallRuleId($value)
+ * @method array getTag()
  */
 class ListFirewallRules extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -634,12 +822,13 @@ class ListInstancePlansModification extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getInstanceIds()
- * @method $this withInstanceIds($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPublicIpAddresses()
  * @method $this withPublicIpAddresses($value)
+ * @method array getTag()
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
  * @method string getChargeType()
  * @method $this withChargeType($value)
  * @method string getStatus()
@@ -647,6 +836,26 @@ class ListInstancePlansModification extends Rpc
  */
 class ListInstances extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -673,6 +882,10 @@ class ListPlans extends Rpc
 {
 }
 
+/**
+ * @method string getAcceptLanguage()
+ * @method $this withAcceptLanguage($value)
+ */
 class ListRegions extends Rpc
 {
 }
@@ -680,19 +893,89 @@ class ListRegions extends Rpc
 /**
  * @method string getSnapshotIds()
  * @method $this withSnapshotIds($value)
- * @method string getSourceDiskType()
- * @method $this withSourceDiskType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method array getTag()
+ * @method string getSourceDiskType()
+ * @method $this withSourceDiskType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListSnapshots extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getTag()
+ */
+class ListTagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -961,6 +1244,97 @@ class StopInstance extends Rpc
  */
 class StopInstances extends Rpc
 {
+}
+
+/**
+ * @method array getResourceId()
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTag()
+ */
+class TagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getAll()
+ * @method $this withAll($value)
+ * @method array getResourceId()
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method array getTagKey()
+ */
+class UntagResources extends Rpc
+{
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $tagKey
+     *
+     * @return $this
+     */
+	public function withTagKey(array $tagKey)
+	{
+	    $this->data['TagKey'] = $tagKey;
+		foreach ($tagKey as $i => $iValue) {
+			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

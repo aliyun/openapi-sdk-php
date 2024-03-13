@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2083 - 2024-3-13
+- Generated 2020-06-01 for `SWAS-OPEN`.
+
+
 ## 1.8.2082 - 2024-3-13
 - Update QueryFaceImageTemplate.
 
