@@ -2270,12 +2270,16 @@ class PedestrianDetectAttribute extends Rpc
  * @method $this withFormatResultToJson($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getOssFile()
  * @method $this withOssFile($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
  * @method string getRequestProxyBy()
  * @method $this withRequestProxyBy($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
  */
 class QueryFaceImageTemplate extends Rpc
 {

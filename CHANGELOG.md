@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2082 - 2024-3-13
+- Update QueryFaceImageTemplate.
+
+
 ## 1.8.2081 - 2024-3-13
 - Update QueryFaceVideoTemplate.
 
