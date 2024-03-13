@@ -1444,8 +1444,12 @@ class MergeVideoModelFace extends Rpc
 /**
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
  */
 class QueryFaceVideoTemplate extends Rpc
 {
