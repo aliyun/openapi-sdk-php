@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2084 - 2024-3-14
+- Fixed bugs for PauseEventStreaming and DeleteEventStreaming
+
+
 ## 1.8.2083 - 2024-3-13
 - Generated 2020-06-01 for `SWAS-OPEN`.
 
