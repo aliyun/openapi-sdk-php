@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2085 - 2024-3-19
+- Add QueryWorkspaceRoleConfig, ListWorkspaceRoleUsers, ListWorkspaceRoles, QueryOrganizationRoleConfig, ListOrganizationRoleUsers and ListOrganizationRoles APIs.
+
+
 ## 1.8.2084 - 2024-3-14
 - Fixed bugs for PauseEventStreaming and DeleteEventStreaming
 
