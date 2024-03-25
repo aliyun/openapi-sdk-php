@@ -26,6 +26,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTemplate deleteTemplate(array $options = [])
  * @method DeleteTemplates deleteTemplates(array $options = [])
  * @method DeployApplicationGroup deployApplicationGroup(array $options = [])
+ * @method DescribeApplicationGroupBill describeApplicationGroupBill(array $options = [])
  * @method DescribeRegions describeRegions(array $options = [])
  * @method GenerateExecutionPolicy generateExecutionPolicy(array $options = [])
  * @method GetApplication getApplication(array $options = [])
@@ -148,6 +149,8 @@ class ContinueDeployApplicationGroup extends Rpc
  * @method $this withTags($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getServiceId()
+ * @method $this withServiceId($value)
  */
 class CreateApplication extends Rpc
 {
@@ -236,6 +239,8 @@ class CreateParameter extends Rpc
  * @method $this withApprovalRules($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getRejectedPatchesAction()
  * @method $this withRejectedPatchesAction($value)
  * @method string getApprovedPatchesEnableNonSecurity()
@@ -324,6 +329,8 @@ class CreateTemplate extends Rpc
 }
 
 /**
+ * @method string getRetainResource()
+ * @method $this withRetainResource($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getForce()
@@ -334,6 +341,8 @@ class DeleteApplication extends Rpc
 }
 
 /**
+ * @method string getRetainResource()
+ * @method $this withRetainResource($value)
  * @method string getApplicationName()
  * @method $this withApplicationName($value)
  * @method string getName()
@@ -418,6 +427,24 @@ class DeployApplicationGroup extends Rpc
 }
 
 /**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getBillingCycle()
+ * @method $this withBillingCycle($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeApplicationGroupBill extends Rpc
+{
+}
+
+/**
  * @method string getAcceptLanguage()
  * @method $this withAcceptLanguage($value)
  */
@@ -426,6 +453,8 @@ class DescribeRegions extends Rpc
 }
 
 /**
+ * @method string getTemplateContent()
+ * @method $this withTemplateContent($value)
  * @method string getTemplateVersion()
  * @method $this withTemplateVersion($value)
  * @method string getRamRole()
@@ -854,6 +883,8 @@ class ListParameterVersions extends Rpc
 /**
  * @method string getSources()
  * @method $this withSources($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getShareType()
@@ -1048,6 +1079,8 @@ class ListTaskExecutions extends Rpc
  * @method $this withTags($value)
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
+ * @method string getIsFavorite()
+ * @method $this withIsFavorite($value)
  * @method string getTemplateFormat()
  * @method $this withTemplateFormat($value)
  * @method string getSortField()
@@ -1278,8 +1311,12 @@ class UpdateApplicationGroup extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getTags()
+ * @method $this withTags($value)
  * @method string getExecutionId()
  * @method $this withExecutionId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getParameters()
  * @method $this withParameters($value)
  */
@@ -1346,6 +1383,8 @@ class UpdateParameter extends Rpc
  * @method $this withApprovalRules($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getRejectedPatchesAction()
  * @method $this withRejectedPatchesAction($value)
  * @method string getApprovedPatchesEnableNonSecurity()

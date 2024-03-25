@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2086 - 2024-3-25
+- Generated 2019-06-01 for `oos`.
+
+
 ## 1.8.2085 - 2024-3-19
 - Add QueryWorkspaceRoleConfig, ListWorkspaceRoleUsers, ListWorkspaceRoles, QueryOrganizationRoleConfig, ListOrganizationRoleUsers and ListOrganizationRoles APIs.
 
