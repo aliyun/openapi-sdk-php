@@ -5,22 +5,25 @@ namespace AlibabaCloud\OceanBasePro\V20190901;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CancelProjectModifyRecord cancelProjectModifyRecord(array $options = [])
+ * @method CreateBackupSetDownloadLink createBackupSetDownloadLink(array $options = [])
  * @method CreateDatabase createDatabase(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateLabel createLabel(array $options = [])
  * @method CreateMySqlDataSource createMySqlDataSource(array $options = [])
  * @method CreateOceanBaseDataSource createOceanBaseDataSource(array $options = [])
  * @method CreateOmsMysqlDataSource createOmsMysqlDataSource(array $options = [])
- * @method CreateOmsOpenAPIProject createOmsOpenAPIProject(array $options = [])
  * @method CreateProject createProject(array $options = [])
+ * @method CreateProjectModifyRecords createProjectModifyRecords(array $options = [])
+ * @method CreateRdsPostgreSQLDataSource createRdsPostgreSQLDataSource(array $options = [])
  * @method CreateSecurityIpGroup createSecurityIpGroup(array $options = [])
  * @method CreateTenant createTenant(array $options = [])
  * @method CreateTenantReadOnlyConnection createTenantReadOnlyConnection(array $options = [])
  * @method CreateTenantSecurityIpGroup createTenantSecurityIpGroup(array $options = [])
  * @method CreateTenantUser createTenantUser(array $options = [])
  * @method DeleteDatabases deleteDatabases(array $options = [])
+ * @method DeleteDataSource deleteDataSource(array $options = [])
  * @method DeleteInstances deleteInstances(array $options = [])
- * @method DeleteOmsOpenAPIProject deleteOmsOpenAPIProject(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSecurityIpGroup deleteSecurityIpGroup(array $options = [])
  * @method DeleteTenants deleteTenants(array $options = [])
@@ -31,7 +34,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAvailableMemResource describeAvailableMemResource(array $options = [])
  * @method DescribeAvailableSpec describeAvailableSpec(array $options = [])
  * @method DescribeAvailableZone describeAvailableZone(array $options = [])
+ * @method DescribeBackupSetDownloadLink describeBackupSetDownloadLink(array $options = [])
  * @method DescribeCharset describeCharset(array $options = [])
+ * @method DescribeDataBackupSet describeDataBackupSet(array $options = [])
  * @method DescribeDatabases describeDatabases(array $options = [])
  * @method DescribeInstance describeInstance(array $options = [])
  * @method DescribeInstanceCreatableZone describeInstanceCreatableZone(array $options = [])
@@ -49,8 +54,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeOasSQLHistoryList describeOasSQLHistoryList(array $options = [])
  * @method DescribeOasSQLPlans describeOasSQLPlans(array $options = [])
  * @method DescribeOasTopSQLList describeOasTopSQLList(array $options = [])
- * @method DescribeOmsOpenAPIProject describeOmsOpenAPIProject(array $options = [])
- * @method DescribeOmsOpenAPIProjectSteps describeOmsOpenAPIProjectSteps(array $options = [])
  * @method DescribeOutlineBinding describeOutlineBinding(array $options = [])
  * @method DescribeParameters describeParameters(array $options = [])
  * @method DescribeParametersHistory describeParametersHistory(array $options = [])
@@ -60,6 +63,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeProjectStepMetric describeProjectStepMetric(array $options = [])
  * @method DescribeProjectSteps describeProjectSteps(array $options = [])
  * @method DescribeRecommendIndex describeRecommendIndex(array $options = [])
+ * @method DescribeSampleSqlRawTexts describeSampleSqlRawTexts(array $options = [])
  * @method DescribeSecurityIpGroups describeSecurityIpGroups(array $options = [])
  * @method DescribeSlowSQLHistoryList describeSlowSQLHistoryList(array $options = [])
  * @method DescribeSlowSQLList describeSlowSQLList(array $options = [])
@@ -85,6 +89,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAllLabels listAllLabels(array $options = [])
  * @method ListDataSource listDataSource(array $options = [])
  * @method ListProjectFullVerifyResult listProjectFullVerifyResult(array $options = [])
+ * @method ListProjectModifyRecords listProjectModifyRecords(array $options = [])
  * @method ListProjects listProjects(array $options = [])
  * @method ListWorkerInstances listWorkerInstances(array $options = [])
  * @method ModifyDatabaseDescription modifyDatabaseDescription(array $options = [])
@@ -105,18 +110,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyTenantUserPassword modifyTenantUserPassword(array $options = [])
  * @method ModifyTenantUserRoles modifyTenantUserRoles(array $options = [])
  * @method ModifyTenantUserStatus modifyTenantUserStatus(array $options = [])
- * @method ReleaseOmsOpenAPIProject releaseOmsOpenAPIProject(array $options = [])
  * @method ReleaseProject releaseProject(array $options = [])
- * @method ResetOmsOpenAPIProject resetOmsOpenAPIProject(array $options = [])
- * @method ResumeOmsOpenAPIProject resumeOmsOpenAPIProject(array $options = [])
+ * @method ReleaseWorkerInstance releaseWorkerInstance(array $options = [])
  * @method ResumeProject resumeProject(array $options = [])
- * @method SearchOmsOpenAPIMonitorMetric searchOmsOpenAPIMonitorMetric(array $options = [])
- * @method SearchOmsOpenAPIProjects searchOmsOpenAPIProjects(array $options = [])
- * @method StartOmsOpenAPIProject startOmsOpenAPIProject(array $options = [])
+ * @method RetryProjectModifyRecords retryProjectModifyRecords(array $options = [])
  * @method StartProject startProject(array $options = [])
  * @method StartProjectsByLabel startProjectsByLabel(array $options = [])
- * @method StopOmsOpenAPIProject stopOmsOpenAPIProject(array $options = [])
  * @method StopProject stopProject(array $options = [])
+ * @method StopProjectModifyRecords stopProjectModifyRecords(array $options = [])
  * @method StopProjectsByLabel stopProjectsByLabel(array $options = [])
  * @method SwitchoverInstance switchoverInstance(array $options = [])
  */
@@ -137,6 +138,60 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'oceanbase';
+}
+
+/**
+ * @method string getId()
+ */
+class CancelProjectModifyRecord extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBackupSetId()
+ * @method string getInstanceId()
+ */
+class CreateBackupSetDownloadLink extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBackupSetId($value)
+    {
+        $this->data['BackupSetId'] = $value;
+        $this->options['form_params']['BackupSetId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1076,152 +1131,6 @@ class CreateOmsMysqlDataSource extends Rpc
 }
 
 /**
- * @method string getDestConfig()
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getTransferMapping()
- * @method string getTransferStepConfig()
- * @method string getWorkerGradeId()
- * @method string getProjectName()
- * @method string getSourceConfig()
- * @method string getBusinessName()
- * @method string getLabelIds()
- */
-class CreateOmsOpenAPIProject extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDestConfig($value)
-    {
-        $this->data['DestConfig'] = $value;
-        $this->options['form_params']['DestConfig'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTransferMapping($value)
-    {
-        $this->data['TransferMapping'] = $value;
-        $this->options['form_params']['TransferMapping'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTransferStepConfig($value)
-    {
-        $this->data['TransferStepConfig'] = $value;
-        $this->options['form_params']['TransferStepConfig'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectName($value)
-    {
-        $this->data['ProjectName'] = $value;
-        $this->options['form_params']['ProjectName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceConfig($value)
-    {
-        $this->data['SourceConfig'] = $value;
-        $this->options['form_params']['SourceConfig'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBusinessName($value)
-    {
-        $this->data['BusinessName'] = $value;
-        $this->options['form_params']['BusinessName'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLabelIds($value)
-    {
-        $this->data['LabelIds'] = $value;
-        $this->options['form_params']['LabelIds'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getSinkEndpointId()
  * @method string getUseOss()
  * @method string getOssKey()
@@ -1231,6 +1140,7 @@ class CreateOmsOpenAPIProject extends Rpc
  * @method string getEnableStructTransfer()
  * @method string getTransferMapping()
  * @method string getWorkerGradeId()
+ * @method string getId()
  * @method string getCommonTransferConfig()
  * @method string getStructTransferConfig()
  * @method string getEnableIncrTransfer()
@@ -1366,6 +1276,19 @@ class CreateProject extends Rpc
      *
      * @return $this
      */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withCommonTransferConfig($value)
     {
         $this->data['CommonTransferConfig'] = $value;
@@ -1474,6 +1397,133 @@ class CreateProject extends Rpc
     {
         $this->data['EnableReverseIncrTransfer'] = $value;
         $this->options['form_params']['EnableReverseIncrTransfer'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDatabases()
+ * @method string getId()
+ */
+class CreateProjectModifyRecords extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDatabases($value)
+    {
+        $this->data['Databases'] = $value;
+        $this->options['form_params']['Databases'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDescription()
+ * @method string getPassword()
+ * @method string getInstanceId()
+ * @method string getDatabaseName()
+ * @method string getName()
+ * @method string getUserName()
+ */
+class CreateRdsPostgreSQLDataSource extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPassword($value)
+    {
+        $this->data['Password'] = $value;
+        $this->options['form_params']['Password'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDatabaseName($value)
+    {
+        $this->data['DatabaseName'] = $value;
+        $this->options['form_params']['DatabaseName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserName($value)
+    {
+        $this->data['UserName'] = $value;
+        $this->options['form_params']['UserName'] = $value;
 
         return $this;
     }
@@ -2034,6 +2084,26 @@ class DeleteDatabases extends Rpc
 }
 
 /**
+ * @method string getId()
+ */
+class DeleteDataSource extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getBackupRetainMode()
  * @method string getDryRun()
  * @method string getInstanceIds()
@@ -2076,68 +2146,6 @@ class DeleteInstances extends Rpc
     {
         $this->data['InstanceIds'] = $value;
         $this->options['form_params']['InstanceIds'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
- */
-class DeleteOmsOpenAPIProject extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
 
         return $this;
     }
@@ -2812,6 +2820,43 @@ class DescribeAvailableZone extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method string getDownloadTaskId()
+ */
+class DescribeBackupSetDownloadLink extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDownloadTaskId($value)
+    {
+        $this->data['DownloadTaskId'] = $value;
+        $this->options['form_params']['DownloadTaskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTenantMode()
  * @method string getInstanceId()
  * @method string getSeries()
@@ -2854,6 +2899,110 @@ class DescribeCharset extends Rpc
     {
         $this->data['Series'] = $value;
         $this->options['form_params']['Series'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getBackupObjectType()
+ * @method string getEndTime()
+ * @method string getInstanceId()
+ * @method string getStatus()
+ */
+class DescribeDataBackupSet extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBackupObjectType($value)
+    {
+        $this->data['BackupObjectType'] = $value;
+        $this->options['form_params']['BackupObjectType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
 
         return $this;
     }
@@ -4492,130 +4641,6 @@ class DescribeOasTopSQLList extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
- */
-class DescribeOmsOpenAPIProject extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
- */
-class DescribeOmsOpenAPIProjectSteps extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getSQLId()
  * @method string getInstanceId()
  * @method string getDatabaseName()
@@ -5084,6 +5109,127 @@ class DescribeRecommendIndex extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getTraceId()
+ * @method string getStartTime()
+ * @method string getTenantId()
+ * @method string getLimit()
+ * @method string getSqlId()
+ * @method string getEndTime()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ */
+class DescribeSampleSqlRawTexts extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTraceId($value)
+    {
+        $this->data['TraceId'] = $value;
+        $this->options['form_params']['TraceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
 
         return $this;
     }
@@ -6776,6 +6922,26 @@ class ListProjectFullVerifyResult extends Rpc
 }
 
 /**
+ * @method string getId()
+ */
+class ListProjectModifyRecords extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSearchKey()
  * @method string getType()
  * @method string getVisibleSubProject()
@@ -6785,6 +6951,7 @@ class ListProjectFullVerifyResult extends Rpc
  * @method string getOrder()
  * @method string getSourceEndpointTypes()
  * @method string getSortField()
+ * @method string getNeedRelatedInfo()
  * @method string getLabelIds()
  * @method string getStatus()
  */
@@ -6904,6 +7071,19 @@ class ListProjects extends Rpc
     {
         $this->data['SortField'] = $value;
         $this->options['form_params']['SortField'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNeedRelatedInfo($value)
+    {
+        $this->data['NeedRelatedInfo'] = $value;
+        $this->options['form_params']['NeedRelatedInfo'] = $value;
 
         return $this;
     }
@@ -7625,6 +7805,7 @@ class ModifyTenantEncryption extends Rpc
  * @method string getTenantEndpointId()
  * @method string getInstanceId()
  * @method string getPrimaryZone()
+ * @method string getVpcId()
  * @method string getUserDirectVSwitchId()
  */
 class ModifyTenantPrimaryZone extends Rpc
@@ -7717,6 +7898,19 @@ class ModifyTenantPrimaryZone extends Rpc
     {
         $this->data['PrimaryZone'] = $value;
         $this->options['form_params']['PrimaryZone'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcId($value)
+    {
+        $this->data['VpcId'] = $value;
+        $this->options['form_params']['VpcId'] = $value;
 
         return $this;
     }
@@ -8212,68 +8406,6 @@ class ModifyTenantUserStatus extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
- */
-class ReleaseOmsOpenAPIProject extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
  * @method string getId()
  */
 class ReleaseProject extends Rpc
@@ -8294,12 +8426,9 @@ class ReleaseProject extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
+ * @method string getId()
  */
-class ResetOmsOpenAPIProject extends Rpc
+class ReleaseWorkerInstance extends Rpc
 {
 
     /**
@@ -8307,111 +8436,10 @@ class ResetOmsOpenAPIProject extends Rpc
      *
      * @return $this
      */
-    public function withPageNumber($value)
+    public function withId($value)
     {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
- */
-class ResumeOmsOpenAPIProject extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
 
         return $this;
     }
@@ -8438,16 +8466,9 @@ class ResumeProject extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method string getBeginTime()
- * @method string getMaxPointNum()
- * @method string getPageNumber()
- * @method string getMetric()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
+ * @method string getId()
  */
-class SearchOmsOpenAPIMonitorMetric extends Rpc
+class RetryProjectModifyRecords extends Rpc
 {
 
     /**
@@ -8455,281 +8476,10 @@ class SearchOmsOpenAPIMonitorMetric extends Rpc
      *
      * @return $this
      */
-    public function withEndTime($value)
+    public function withId($value)
     {
-        $this->data['EndTime'] = $value;
-        $this->options['form_params']['EndTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withBeginTime($value)
-    {
-        $this->data['BeginTime'] = $value;
-        $this->options['form_params']['BeginTime'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMaxPointNum($value)
-    {
-        $this->data['MaxPointNum'] = $value;
-        $this->options['form_params']['MaxPointNum'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withMetric($value)
-    {
-        $this->data['Metric'] = $value;
-        $this->options['form_params']['Metric'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getDestDbTypes()
- * @method string getStatusList()
- * @method string getSearchKey()
- * @method string getPageNumber()
- * @method string getSourceDbTypes()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getLabelIds()
- */
-class SearchOmsOpenAPIProjects extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withDestDbTypes($value)
-    {
-        $this->data['DestDbTypes'] = $value;
-        $this->options['form_params']['DestDbTypes'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withStatusList($value)
-    {
-        $this->data['StatusList'] = $value;
-        $this->options['form_params']['StatusList'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSearchKey($value)
-    {
-        $this->data['SearchKey'] = $value;
-        $this->options['form_params']['SearchKey'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withSourceDbTypes($value)
-    {
-        $this->data['SourceDbTypes'] = $value;
-        $this->options['form_params']['SourceDbTypes'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withLabelIds($value)
-    {
-        $this->data['LabelIds'] = $value;
-        $this->options['form_params']['LabelIds'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
- */
-class StartOmsOpenAPIProject extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageNumber($value)
-    {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
 
         return $this;
     }
@@ -8776,12 +8526,9 @@ class StartProjectsByLabel extends Rpc
 }
 
 /**
- * @method string getPageNumber()
- * @method string getPageSize()
- * @method string getWorkerGradeId()
- * @method string getProjectId()
+ * @method string getId()
  */
-class StopOmsOpenAPIProject extends Rpc
+class StopProject extends Rpc
 {
 
     /**
@@ -8789,49 +8536,10 @@ class StopOmsOpenAPIProject extends Rpc
      *
      * @return $this
      */
-    public function withPageNumber($value)
+    public function withId($value)
     {
-        $this->data['PageNumber'] = $value;
-        $this->options['form_params']['PageNumber'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPageSize($value)
-    {
-        $this->data['PageSize'] = $value;
-        $this->options['form_params']['PageSize'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withWorkerGradeId($value)
-    {
-        $this->data['WorkerGradeId'] = $value;
-        $this->options['form_params']['WorkerGradeId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withProjectId($value)
-    {
-        $this->data['ProjectId'] = $value;
-        $this->options['form_params']['ProjectId'] = $value;
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
 
         return $this;
     }
@@ -8840,7 +8548,7 @@ class StopOmsOpenAPIProject extends Rpc
 /**
  * @method string getId()
  */
-class StopProject extends Rpc
+class StopProjectModifyRecords extends Rpc
 {
 
     /**

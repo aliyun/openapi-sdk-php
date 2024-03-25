@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2088 - 2024-3-25
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2087 - 2024-3-25
 - Fix API
 
