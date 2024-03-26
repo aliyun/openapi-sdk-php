@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2090 - 2024-3-26
+- Supported ECR Attachment.
+
+
 ## 1.8.2089 - 2024-3-25
 - update api
 
