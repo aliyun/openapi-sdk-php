@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2091 - 2024-3-26
+- DeleteFlow、DeleteSchedule Parameters move to body.
+
+
 ## 1.8.2090 - 2024-3-26
 - Supported ECR Attachment.
 

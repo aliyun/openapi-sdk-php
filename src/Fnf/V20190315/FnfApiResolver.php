@@ -241,20 +241,56 @@ class CreateSchedule extends Rpc
 
 /**
  * @method string getName()
- * @method $this withName($value)
  */
 class DeleteFlow extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['form_params']['Name'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getScheduleName()
- * @method $this withScheduleName($value)
  * @method string getFlowName()
- * @method $this withFlowName($value)
  */
 class DeleteSchedule extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScheduleName($value)
+    {
+        $this->data['ScheduleName'] = $value;
+        $this->options['form_params']['ScheduleName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFlowName($value)
+    {
+        $this->data['FlowName'] = $value;
+        $this->options['form_params']['FlowName'] = $value;
+
+        return $this;
+    }
 }
 
 /**
