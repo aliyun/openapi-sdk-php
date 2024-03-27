@@ -106,10 +106,28 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method string getDryRun()
  * @method $this withDryRun($value)
  * @method string getAclEntries()
- * @method $this withAclEntries($value)
  */
 class AddEntriesToAcl extends Rpc
 {
+    /**
+     * @param array $aclEntries
+     *
+     * @return $this
+     */
+    public function withAclEntries(array $aclEntries)
+    {
+        $this->data['AclEntries'] = $aclEntries;
+        foreach ($aclEntries as $depth1 => $depth1Value) {
+            if(isset($depth1Value['Entry'])){
+                $this->options['query']['AclEntries.' . ($depth1 + 1) . '.Entry'] = $depth1Value['Entry'];
+            }
+            if(isset($depth1Value['EntryDescription'])){
+                $this->options['query']['AclEntries.' . ($depth1 + 1) . '.EntryDescription'] = $depth1Value['EntryDescription'];
+            }
+        }
+
+        return $this;
+    }
 }
 
 /**
