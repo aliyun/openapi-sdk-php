@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.2092 - 2024-3-28
+- Add min_access_level and organization_alis fields.
+- Add CreateCommitWithMultipleFiles api.
+- Add CreateComment api.
+
+
 ## 1.8.2091 - 2024-3-26
 - DeleteFlow、DeleteSchedule Parameters move to body.
 
