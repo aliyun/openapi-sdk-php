@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2093 - 2024-3-29
+- ListOrderConsumeStatisticRecords  add applicationExternalId serviceCode.
+
+
 ## 1.8.2092 - 2024-3-28
 - Add min_access_level and organization_alis fields.
 - Add CreateCommitWithMultipleFiles api.

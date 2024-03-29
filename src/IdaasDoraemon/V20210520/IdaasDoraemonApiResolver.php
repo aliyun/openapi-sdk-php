@@ -17,6 +17,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListOrderConsumeStatisticRecords listOrderConsumeStatisticRecords(array $options = [])
  * @method ListPwnedPasswords listPwnedPasswords(array $options = [])
  * @method ListUsers listUsers(array $options = [])
+ * @method QuerySmsReports querySmsReports(array $options = [])
+ * @method QuerySmsUps querySmsUps(array $options = [])
  * @method RegisterAuthenticator registerAuthenticator(array $options = [])
  * @method ServiceInvoke serviceInvoke(array $options = [])
  * @method UpdateAuthenticatorAttribute updateAuthenticatorAttribute(array $options = [])
@@ -40,6 +42,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     protected $scheme = 'https';
+
+    /** @var string */
+    public $serviceCode = 'idaasauth';
 }
 
 /**
@@ -221,8 +226,12 @@ class ListCostUnitOrders extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getServiceCode()
+ * @method $this withServiceCode($value)
  * @method string getStatisticTimeMax()
  * @method $this withStatisticTimeMax($value)
+ * @method string getApplicationExternalId()
+ * @method $this withApplicationExternalId($value)
  */
 class ListOrderConsumeStatisticRecords extends Rpc
 {
@@ -250,6 +259,32 @@ class ListPwnedPasswords extends Rpc
  */
 class ListUsers extends Rpc
 {
+}
+
+/**
+ * @method string getEventId()
+ * @method $this withEventId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class QuerySmsReports extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+class QuerySmsUps extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'http';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
