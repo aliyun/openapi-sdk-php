@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2094 - 2024-4-1
+- Generated 2013-02-21 for `Slb`.
+
+
 ## 1.8.2093 - 2024-3-29
 - ListOrderConsumeStatisticRecords  add applicationExternalId serviceCode.
 
