@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2095 - 2024-4-3
+- Generated 2019-03-07 for `Cloudauth`.
+
+
 ## 1.8.2094 - 2024-4-1
 - Generated 2013-02-21 for `Slb`.
 

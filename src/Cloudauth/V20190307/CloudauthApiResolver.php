@@ -5,6 +5,7 @@ namespace AlibabaCloud\Cloudauth\V20190307;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AIGCFaceVerify aIGCFaceVerify(array $options = [])
  * @method CompareFaces compareFaces(array $options = [])
  * @method CompareFaceVerify compareFaceVerify(array $options = [])
  * @method ContrastFaceVerify contrastFaceVerify(array $options = [])
@@ -13,12 +14,17 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDeviceInfo describeDeviceInfo(array $options = [])
  * @method DescribeFaceVerify describeFaceVerify(array $options = [])
  * @method DescribeOssUploadToken describeOssUploadToken(array $options = [])
+ * @method DescribePageFaceVerifyData describePageFaceVerifyData(array $options = [])
+ * @method DescribeSmartStatisticsPageList describeSmartStatisticsPageList(array $options = [])
  * @method DescribeVerifyResult describeVerifyResult(array $options = [])
  * @method DescribeVerifySDK describeVerifySDK(array $options = [])
  * @method DescribeVerifyToken describeVerifyToken(array $options = [])
  * @method DetectFaceAttributes detectFaceAttributes(array $options = [])
+ * @method Id2MetaVerify id2MetaVerify(array $options = [])
  * @method InitFaceVerify initFaceVerify(array $options = [])
  * @method LivenessFaceVerify livenessFaceVerify(array $options = [])
+ * @method Mobile3MetaDetailVerify mobile3MetaDetailVerify(array $options = [])
+ * @method Mobile3MetaSimpleVerify mobile3MetaSimpleVerify(array $options = [])
  * @method ModifyDeviceInfo modifyDeviceInfo(array $options = [])
  * @method VerifyMaterial verifyMaterial(array $options = [])
  */
@@ -39,6 +45,38 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'cloudauth';
+}
+
+/**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getOssObjectName()
+ * @method $this withOssObjectName($value)
+ * @method string getFaceContrastPicture()
+ * @method string getOuterOrderNo()
+ * @method $this withOuterOrderNo($value)
+ * @method string getFaceContrastPictureUrl()
+ * @method $this withFaceContrastPictureUrl($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getOssBucketName()
+ * @method $this withOssBucketName($value)
+ */
+class AIGCFaceVerify extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaceContrastPicture($value)
+    {
+        $this->data['FaceContrastPicture'] = $value;
+        $this->options['form_params']['FaceContrastPicture'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -328,6 +366,7 @@ class CompareFaceVerify extends Rpc
  * @method string getDeviceToken()
  * @method string getUserId()
  * @method string getCertifyId()
+ * @method string getEncryptType()
  * @method string getCertNo()
  * @method string getOuterOrderNo()
  * @method string getCertType()
@@ -407,6 +446,19 @@ class ContrastFaceVerify extends Rpc
     {
         $this->data['CertifyId'] = $value;
         $this->options['form_params']['CertifyId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEncryptType($value)
+    {
+        $this->data['EncryptType'] = $value;
+        $this->options['form_params']['EncryptType'] = $value;
 
         return $this;
     }
@@ -653,6 +705,44 @@ class DescribeOssUploadToken extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribePageFaceVerifyData extends Rpc
+{
+}
+
+/**
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getServiceCode()
+ * @method $this withServiceCode($value)
+ * @method string getSceneId()
+ * @method $this withSceneId($value)
+ */
+class DescribeSmartStatisticsPageList extends Rpc
+{
+}
+
+/**
  * @method string getBizType()
  * @method $this withBizType($value)
  * @method string getBizId()
@@ -745,13 +835,40 @@ class DetectFaceAttributes extends Rpc
 }
 
 /**
+ * @method string getParamType()
+ * @method $this withParamType($value)
+ * @method string getIdentifyNum()
+ * @method $this withIdentifyNum($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class Id2MetaVerify extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getBirthday()
+ * @method $this withBirthday($value)
  * @method string getProductCode()
  * @method $this withProductCode($value)
  * @method string getFaceContrastPicture()
+ * @method string getReadImg()
+ * @method $this withReadImg($value)
+ * @method string getRarelyCharacters()
+ * @method $this withRarelyCharacters($value)
+ * @method string getVoluntaryCustomizedContent()
+ * @method $this withVoluntaryCustomizedContent($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getCertifyId()
  * @method $this withCertifyId($value)
+ * @method string getEncryptType()
+ * @method $this withEncryptType($value)
+ * @method string getMode()
+ * @method $this withMode($value)
  * @method string getCertNo()
  * @method $this withCertNo($value)
  * @method string getOuterOrderNo()
@@ -761,17 +878,27 @@ class DetectFaceAttributes extends Rpc
  * @method string getFaceContrastPictureUrl()
  * @method $this withFaceContrastPictureUrl($value)
  * @method string getModel()
+ * @method string getSuitableType()
+ * @method $this withSuitableType($value)
+ * @method string getCertifyUrlStyle()
+ * @method $this withCertifyUrlStyle($value)
  * @method string getMetaInfo()
  * @method $this withMetaInfo($value)
  * @method string getOssObjectName()
  * @method $this withOssObjectName($value)
+ * @method string getValidityDate()
+ * @method $this withValidityDate($value)
  * @method string getCertName()
  * @method $this withCertName($value)
  * @method string getIp()
  * @method $this withIp($value)
  * @method string getMobile()
  * @method $this withMobile($value)
+ * @method string getFaceGuardOutput()
+ * @method $this withFaceGuardOutput($value)
  * @method string getAuthId()
+ * @method string getProcedurePriority()
+ * @method $this withProcedurePriority($value)
  * @method string getSceneId()
  * @method $this withSceneId($value)
  * @method string getOssBucketName()
@@ -1030,6 +1157,40 @@ class LivenessFaceVerify extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getParamType()
+ * @method $this withParamType($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
+ * @method string getIdentifyNum()
+ * @method $this withIdentifyNum($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class Mobile3MetaDetailVerify extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getParamType()
+ * @method $this withParamType($value)
+ * @method string getMobile()
+ * @method $this withMobile($value)
+ * @method string getIdentifyNum()
+ * @method $this withIdentifyNum($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class Mobile3MetaSimpleVerify extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
