@@ -34,6 +34,7 @@ namespace AlibabaCloud;
  * @method static Apds\Apds apds()
  * @method static AppMallsService\AppMallsService appMallsService()
  * @method static AppstreamCenter\AppstreamCenter appstreamCenter()
+ * @method static Aps\Aps aps()
  * @method static Avatar\Avatar avatar()
  * @method static Baas\Baas baas()
  * @method static BatchCompute\BatchCompute batchCompute()
