@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2096 - 2024-4-3
+- Supported use group by freedom
+
+
 ## 1.8.2095 - 2024-4-3
 - Generated 2019-03-07 for `Cloudauth`.
 

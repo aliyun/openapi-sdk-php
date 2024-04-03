@@ -20,6 +20,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteTopic deleteTopic(array $options = [])
  * @method DescribeAcls describeAcls(array $options = [])
  * @method DescribeSaslUsers describeSaslUsers(array $options = [])
+ * @method EnableAutoGroupCreation enableAutoGroupCreation(array $options = [])
+ * @method EnableAutoTopicCreation enableAutoTopicCreation(array $options = [])
  * @method GetAllInstanceIdList getAllInstanceIdList(array $options = [])
  * @method GetAllowedIpList getAllowedIpList(array $options = [])
  * @method GetConsumerList getConsumerList(array $options = [])
@@ -28,17 +30,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetQuotaTip getQuotaTip(array $options = [])
  * @method GetTopicList getTopicList(array $options = [])
  * @method GetTopicStatus getTopicStatus(array $options = [])
+ * @method GetTopicSubscribeStatus getTopicSubscribeStatus(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
  * @method ModifyPartitionNum modifyPartitionNum(array $options = [])
  * @method ModifyTopicRemark modifyTopicRemark(array $options = [])
+ * @method QueryMessage queryMessage(array $options = [])
  * @method ReleaseInstance releaseInstance(array $options = [])
+ * @method ReopenInstance reopenInstance(array $options = [])
  * @method StartInstance startInstance(array $options = [])
+ * @method StopInstance stopInstance(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateAllowedIp updateAllowedIp(array $options = [])
  * @method UpdateConsumerOffset updateConsumerOffset(array $options = [])
  * @method UpdateInstanceConfig updateInstanceConfig(array $options = [])
+ * @method UpdateTopicConfig updateTopicConfig(array $options = [])
  * @method UpgradeInstanceVersion upgradeInstanceVersion(array $options = [])
  * @method UpgradePostPayOrder upgradePostPayOrder(array $options = [])
  * @method UpgradePrePayOrder upgradePrePayOrder(array $options = [])
@@ -57,6 +64,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'alikafka';
 }
 
 /**
@@ -84,12 +94,18 @@ class ConvertPostPayOrder extends Rpc
  * @method $this withAclResourcePatternType($value)
  * @method string getAclResourceType()
  * @method $this withAclResourceType($value)
+ * @method string getAclOperationTypes()
+ * @method $this withAclOperationTypes($value)
  * @method string getAclOperationType()
  * @method $this withAclOperationType($value)
  * @method string getAclResourceName()
  * @method $this withAclResourceName($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getHost()
+ * @method $this withHost($value)
+ * @method string getAclPermissionType()
+ * @method $this withAclPermissionType($value)
  * @method string getUsername()
  * @method $this withUsername($value)
  */
@@ -184,13 +200,19 @@ class CreatePostPayOrder extends Rpc
  * @method $this withIoMax($value)
  * @method string getEipMax()
  * @method $this withEipMax($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
  * @method string getSpecType()
  * @method $this withSpecType($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getConfluentConfig()
+ * @method $this withConfluentConfig($value)
  * @method array getTag()
  * @method string getPartitionNum()
  * @method $this withPartitionNum($value)
+ * @method string getPaidType()
+ * @method $this withPaidType($value)
  * @method string getDiskSize()
  * @method $this withDiskSize($value)
  * @method string getIoMaxSpec()
@@ -233,6 +255,8 @@ class CreatePrePayOrder extends Rpc
  * @method $this withPassword($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getMechanism()
+ * @method $this withMechanism($value)
  * @method string getUsername()
  * @method $this withUsername($value)
  */
@@ -290,12 +314,18 @@ class CreateTopic extends Rpc
  * @method $this withAclResourcePatternType($value)
  * @method string getAclResourceType()
  * @method $this withAclResourceType($value)
+ * @method string getAclOperationTypes()
+ * @method $this withAclOperationTypes($value)
  * @method string getAclOperationType()
  * @method $this withAclOperationType($value)
  * @method string getAclResourceName()
  * @method $this withAclResourceName($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getHost()
+ * @method $this withHost($value)
+ * @method string getAclPermissionType()
+ * @method $this withAclPermissionType($value)
  * @method string getUsername()
  * @method $this withUsername($value)
  */
@@ -326,6 +356,8 @@ class DeleteInstance extends Rpc
  * @method $this withType($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getMechanism()
+ * @method $this withMechanism($value)
  * @method string getUsername()
  * @method $this withUsername($value)
  */
@@ -348,10 +380,16 @@ class DeleteTopic extends Rpc
  * @method $this withAclResourcePatternType($value)
  * @method string getAclResourceType()
  * @method $this withAclResourceType($value)
+ * @method string getAclOperationType()
+ * @method $this withAclOperationType($value)
  * @method string getAclResourceName()
  * @method $this withAclResourceName($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getHost()
+ * @method $this withHost($value)
+ * @method string getAclPermissionType()
+ * @method $this withAclPermissionType($value)
  * @method string getUsername()
  * @method $this withUsername($value)
  */
@@ -364,6 +402,28 @@ class DescribeAcls extends Rpc
  * @method $this withInstanceId($value)
  */
 class DescribeSaslUsers extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ */
+class EnableAutoGroupCreation extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getOperate()
+ * @method $this withOperate($value)
+ * @method string getPartitionNum()
+ * @method $this withPartitionNum($value)
+ */
+class EnableAutoTopicCreation extends Rpc
 {
 }
 
@@ -483,6 +543,16 @@ class GetTopicStatus extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ */
+class GetTopicSubscribeStatus extends Rpc
+{
+}
+
+/**
  * @method array getResourceId()
  * @method string getResourceType()
  * @method $this withResourceType($value)
@@ -552,15 +622,36 @@ class ModifyPartitionNum extends Rpc
 }
 
 /**
+ * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getTopic()
  * @method $this withTopic($value)
- * @method string getRemark()
- * @method $this withRemark($value)
  */
 class ModifyTopicRemark extends Rpc
 {
+}
+
+/**
+ * @method string getOffset()
+ * @method $this withOffset($value)
+ * @method string getBeginTime()
+ * @method $this withBeginTime($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPartition()
+ * @method $this withPartition($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ */
+class QueryMessage extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -576,6 +667,15 @@ class ReleaseInstance extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ReopenInstance extends Rpc
+{
+}
+
+/**
+ * @method array getVSwitchIds()
  * @method string getSelectedZones()
  * @method $this withSelectedZones($value)
  * @method string getIsEipInner()
@@ -616,6 +716,29 @@ class ReleaseInstance extends Rpc
  * @method $this withUsername($value)
  */
 class StartInstance extends Rpc
+{
+
+    /**
+     * @param array $vSwitchIds
+     *
+     * @return $this
+     */
+	public function withVSwitchIds(array $vSwitchIds)
+	{
+	    $this->data['VSwitchIds'] = $vSwitchIds;
+		foreach ($vSwitchIds as $i => $iValue) {
+			$this->options['query']['VSwitchIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class StopInstance extends Rpc
 {
 }
 
@@ -755,6 +878,20 @@ class UpdateInstanceConfig extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTopic()
+ * @method $this withTopic($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ * @method string getValue()
+ * @method $this withValue($value)
+ */
+class UpdateTopicConfig extends Rpc
+{
+}
+
+/**
  * @method string getTargetVersion()
  * @method $this withTargetVersion($value)
  * @method string getInstanceId()
@@ -765,6 +902,8 @@ class UpgradeInstanceVersion extends Rpc
 }
 
 /**
+ * @method string getServerlessConfig()
+ * @method $this withServerlessConfig($value)
  * @method string getDiskSize()
  * @method $this withDiskSize($value)
  * @method string getIoMax()
@@ -789,24 +928,28 @@ class UpgradePostPayOrder extends Rpc
 }
 
 /**
- * @method string getDiskSize()
- * @method $this withDiskSize($value)
  * @method string getIoMax()
  * @method $this withIoMax($value)
  * @method string getEipModel()
  * @method $this withEipModel($value)
- * @method string getIoMaxSpec()
- * @method $this withIoMaxSpec($value)
- * @method string getTopicQuota()
- * @method $this withTopicQuota($value)
  * @method string getEipMax()
  * @method $this withEipMax($value)
  * @method string getSpecType()
  * @method $this withSpecType($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getConfluentConfig()
+ * @method $this withConfluentConfig($value)
  * @method string getPartitionNum()
  * @method $this withPartitionNum($value)
+ * @method string getPaidType()
+ * @method $this withPaidType($value)
+ * @method string getDiskSize()
+ * @method $this withDiskSize($value)
+ * @method string getIoMaxSpec()
+ * @method $this withIoMaxSpec($value)
+ * @method string getTopicQuota()
+ * @method $this withTopicQuota($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class UpgradePrePayOrder extends Rpc
 {
