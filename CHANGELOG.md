@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2098 - 2024-4-11
+- Generated 2020-06-06 for `cams`.
+
+
 ## 1.8.2097 - 2024-4-3
 - Generated 2024-03-25 for `aps`.
 
