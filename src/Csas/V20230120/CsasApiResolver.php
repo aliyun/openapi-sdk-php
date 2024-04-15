@@ -34,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPolicesForPrivateAccessApplication listPolicesForPrivateAccessApplication(array $options = [])
  * @method ListPolicesForPrivateAccessTag listPolicesForPrivateAccessTag(array $options = [])
  * @method ListPolicesForUserGroup listPolicesForUserGroup(array $options = [])
+ * @method ListPopTrafficStatistics listPopTrafficStatistics(array $options = [])
  * @method ListPrivateAccessApplications listPrivateAccessApplications(array $options = [])
  * @method ListPrivateAccessApplicationsForDynamicRoute listPrivateAccessApplicationsForDynamicRoute(array $options = [])
  * @method ListPrivateAccessPolices listPrivateAccessPolices(array $options = [])
@@ -48,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUserGroups listUserGroups(array $options = [])
  * @method ListUserGroupsForPrivateAccessPolicy listUserGroupsForPrivateAccessPolicy(array $options = [])
  * @method ListUserGroupsForRegistrationPolicy listUserGroupsForRegistrationPolicy(array $options = [])
+ * @method ListUsers listUsers(array $options = [])
  * @method UpdateDynamicRoute updateDynamicRoute(array $options = [])
  * @method UpdateExcessiveDeviceRegistrationApplicationsStatus updateExcessiveDeviceRegistrationApplicationsStatus(array $options = [])
  * @method UpdatePrivateAccessApplication updatePrivateAccessApplication(array $options = [])
@@ -56,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateUserDevicesSharingStatus updateUserDevicesSharingStatus(array $options = [])
  * @method UpdateUserDevicesStatus updateUserDevicesStatus(array $options = [])
  * @method UpdateUserGroup updateUserGroup(array $options = [])
+ * @method UpdateUsersStatus updateUsersStatus(array $options = [])
  */
 class CsasApiResolver extends ApiResolver
 {
@@ -375,6 +378,7 @@ class CreatePrivateAccessApplication extends Rpc
  * @method $this withSourceIp($value)
  * @method string getCustomUserAttributes()
  * @method string getTagIds()
+ * @method string getDeviceAttributeId()
  * @method string getUserGroupIds()
  * @method string getPolicyAction()
  * @method string getPriority()
@@ -425,6 +429,19 @@ class CreatePrivateAccessPolicy extends Rpc
     {
         $this->data['TagIds'] = $value;
         $this->options['form_params']['TagIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceAttributeId($value)
+    {
+        $this->data['DeviceAttributeId'] = $value;
+        $this->options['form_params']['DeviceAttributeId'] = $value;
 
         return $this;
     }
@@ -1161,6 +1178,21 @@ class ListPolicesForUserGroup extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class ListPopTrafficStatistics extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPolicyId()
@@ -1199,6 +1231,8 @@ class ListPrivateAccessApplicationsForDynamicRoute extends Rpc
 /**
  * @method string getPolicyIds()
  * @method $this withPolicyIds($value)
+ * @method string getTagName()
+ * @method $this withTagName($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getPageSize()
@@ -1213,6 +1247,8 @@ class ListPrivateAccessApplicationsForDynamicRoute extends Rpc
  * @method $this withCurrentPage($value)
  * @method string getPolicyAction()
  * @method $this withPolicyAction($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getStatus()
@@ -1405,6 +1441,28 @@ class ListUserGroupsForPrivateAccessPolicy extends Rpc
  * @method $this withSourceIp($value)
  */
 class ListUserGroupsForRegistrationPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getFuzzyUsername()
+ * @method $this withFuzzyUsername($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDepartment()
+ * @method $this withDepartment($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getPreciseUsername()
+ * @method $this withPreciseUsername($value)
+ * @method string getSaseUserIds()
+ * @method $this withSaseUserIds($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListUsers extends Rpc
 {
 }
 
@@ -1756,6 +1814,7 @@ class UpdatePrivateAccessApplication extends Rpc
  * @method string getPolicyId()
  * @method string getCustomUserAttributes()
  * @method string getTagIds()
+ * @method string getDeviceAttributeId()
  * @method string getUserGroupIds()
  * @method string getPolicyAction()
  * @method string getPriority()
@@ -1819,6 +1878,19 @@ class UpdatePrivateAccessPolicy extends Rpc
     {
         $this->data['TagIds'] = $value;
         $this->options['form_params']['TagIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceAttributeId($value)
+    {
+        $this->data['DeviceAttributeId'] = $value;
+        $this->options['form_params']['DeviceAttributeId'] = $value;
 
         return $this;
     }
@@ -2250,4 +2322,19 @@ class UpdateUserGroup extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getSaseUserIds()
+ * @method $this withSaseUserIds($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateUsersStatus extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
