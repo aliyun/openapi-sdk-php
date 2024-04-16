@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2100 - 2024-4-16
+- Support Container for CreateJob.
+
+
 ## 1.8.2099 - 2024-4-15
 - Generated 2023-01-20 for `csas`.
 
