@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2102 - 2024-4-22
+- Update DetectFace.
+
+
 ## 1.8.2101 - 2024-4-22
 - Generated 2019-05-06 for `sae`.
 
