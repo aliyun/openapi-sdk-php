@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2103 - 2024-4-23
+- Generated 2021-06-01 for `ComputeNest`.
+
+
 ## 1.8.2102 - 2024-4-22
 - Update DetectFace.
 
