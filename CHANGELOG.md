@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2104 - 2024-4-25
+- E-HPC Instant Computing Service Release, supporting mirroring and job management.
+
+
 ## 1.8.2103 - 2024-4-23
 - Generated 2021-06-01 for `ComputeNest`.
 
