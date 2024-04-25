@@ -51,14 +51,26 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodAIData describeVodAIData(array $options = [])
  * @method DescribeVodCertificateList describeVodCertificateList(array $options = [])
  * @method DescribeVodDomainBpsData describeVodDomainBpsData(array $options = [])
+ * @method DescribeVodDomainBpsDataByLayer describeVodDomainBpsDataByLayer(array $options = [])
  * @method DescribeVodDomainCertificateInfo describeVodDomainCertificateInfo(array $options = [])
  * @method DescribeVodDomainConfigs describeVodDomainConfigs(array $options = [])
  * @method DescribeVodDomainDetail describeVodDomainDetail(array $options = [])
+ * @method DescribeVodDomainHitRateData describeVodDomainHitRateData(array $options = [])
  * @method DescribeVodDomainLog describeVodDomainLog(array $options = [])
+ * @method DescribeVodDomainRealTimeBpsData describeVodDomainRealTimeBpsData(array $options = [])
+ * @method DescribeVodDomainRealTimeByteHitRateData describeVodDomainRealTimeByteHitRateData(array $options = [])
+ * @method DescribeVodDomainRealTimeDetailData describeVodDomainRealTimeDetailData(array $options = [])
+ * @method DescribeVodDomainRealTimeHttpCodeData describeVodDomainRealTimeHttpCodeData(array $options = [])
+ * @method DescribeVodDomainRealTimeQpsData describeVodDomainRealTimeQpsData(array $options = [])
+ * @method DescribeVodDomainRealTimeReqHitRateData describeVodDomainRealTimeReqHitRateData(array $options = [])
+ * @method DescribeVodDomainRealTimeTrafficData describeVodDomainRealTimeTrafficData(array $options = [])
+ * @method DescribeVodDomainReqHitRateData describeVodDomainReqHitRateData(array $options = [])
  * @method DescribeVodDomainSrcBpsData describeVodDomainSrcBpsData(array $options = [])
  * @method DescribeVodDomainSrcTrafficData describeVodDomainSrcTrafficData(array $options = [])
  * @method DescribeVodDomainTrafficData describeVodDomainTrafficData(array $options = [])
  * @method DescribeVodDomainUsageData describeVodDomainUsageData(array $options = [])
+ * @method DescribeVodMediaPlayData describeVodMediaPlayData(array $options = [])
+ * @method DescribeVodRangeDataByLocateAndIspService describeVodRangeDataByLocateAndIspService(array $options = [])
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
  * @method DescribeVodRefreshTasks describeVodRefreshTasks(array $options = [])
  * @method DescribeVodStorageData describeVodStorageData(array $options = [])
@@ -851,6 +863,28 @@ class DescribeVodDomainBpsData extends Rpc
 }
 
 /**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getLayer()
+ * @method $this withLayer($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVodDomainBpsDataByLayer extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -889,6 +923,22 @@ class DescribeVodDomainDetail extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVodDomainHitRateData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -901,6 +951,159 @@ class DescribeVodDomainDetail extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeVodDomainLog extends Rpc
+{
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainRealTimeBpsData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainRealTimeByteHitRateData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getMerge()
+ * @method $this withMerge($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getMergeLocIsp()
+ * @method $this withMergeLocIsp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getField()
+ * @method $this withField($value)
+ */
+class DescribeVodDomainRealTimeDetailData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainRealTimeHttpCodeData extends Rpc
+{
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainRealTimeQpsData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainRealTimeReqHitRateData extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodDomainRealTimeTrafficData extends Rpc
+{
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVodDomainReqHitRateData extends Rpc
 {
 }
 
@@ -979,6 +1182,48 @@ class DescribeVodDomainUsageData extends Rpc
 }
 
 /**
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPlayDate()
+ * @method $this withPlayDate($value)
+ * @method string getOs()
+ * @method $this withOs($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getOrderName()
+ * @method $this withOrderName($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getTerminalType()
+ * @method $this withTerminalType($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class DescribeVodMediaPlayData extends Rpc
+{
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeVodRangeDataByLocateAndIspService extends Rpc
+{
+}
+
+/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSecurityToken()
@@ -1027,6 +1272,8 @@ class DescribeVodRefreshTasks extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
  * @method string getRegion()
@@ -1047,6 +1294,8 @@ class DescribeVodStorageData extends Rpc
  * @method $this withSpecification($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getInterval()
  * @method $this withInterval($value)
  * @method string getRegion()
@@ -1879,12 +2128,14 @@ class RefreshUploadVideo extends Rpc
 /**
  * @method string getObjectPath()
  * @method $this withObjectPath($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getObjectType()
  * @method $this withObjectType($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  */
 class RefreshVodObjectCaches extends Rpc
 {
