@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2106 - 2024-4-26
+- Add SupportedBootModes for DescribeInstanceTypes.
+
+
 ## 1.8.2105 - 2024-4-25
 - Generated 2017-03-21 for `vod`.
 
