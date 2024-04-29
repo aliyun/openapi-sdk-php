@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2107 - 2024-4-29
+- Update to support new apis.
+
+
 ## 1.8.2106 - 2024-4-26
 - Add SupportedBootModes for DescribeInstanceTypes.
 
