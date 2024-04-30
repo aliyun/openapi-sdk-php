@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2108 - 2024-4-30
+- Generated 2018-01-15 for `dcdn`.
+
+
 ## 1.8.2107 - 2024-4-29
 - Update to support new apis.
 
