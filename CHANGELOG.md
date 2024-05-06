@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2110 - 2024-5-6
+- Update HDENI and LENI API.
+
+
 ## 1.8.2109 - 2024-4-30
 - Generated 2014-08-15 for `Rds`.
 
