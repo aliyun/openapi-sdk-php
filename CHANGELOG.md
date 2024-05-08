@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2111 - 2024-5-8
+-Fixed DescribeVodMediaPlayData接口返回数据类型错误
+
+
 ## 1.8.2110 - 2024-5-6
 - Update HDENI and LENI API.
 

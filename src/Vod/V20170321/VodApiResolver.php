@@ -57,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodDomainDetail describeVodDomainDetail(array $options = [])
  * @method DescribeVodDomainHitRateData describeVodDomainHitRateData(array $options = [])
  * @method DescribeVodDomainLog describeVodDomainLog(array $options = [])
+ * @method DescribeVodDomainQpsData describeVodDomainQpsData(array $options = [])
  * @method DescribeVodDomainRealTimeBpsData describeVodDomainRealTimeBpsData(array $options = [])
  * @method DescribeVodDomainRealTimeByteHitRateData describeVodDomainRealTimeByteHitRateData(array $options = [])
  * @method DescribeVodDomainRealTimeDetailData describeVodDomainRealTimeDetailData(array $options = [])
@@ -951,6 +952,26 @@ class DescribeVodDomainHitRateData extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeVodDomainLog extends Rpc
+{
+}
+
+/**
+ * @method string getLocationNameEn()
+ * @method $this withLocationNameEn($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getIspNameEn()
+ * @method $this withIspNameEn($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeVodDomainQpsData extends Rpc
 {
 }
 
