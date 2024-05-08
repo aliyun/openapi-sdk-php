@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2112 - 2024-5-8
+- Support key policy and secret policy OpenAPI.
+
+
 ## 1.8.2111 - 2024-5-8
 -Fixed DescribeVodMediaPlayData接口返回数据类型错误
 

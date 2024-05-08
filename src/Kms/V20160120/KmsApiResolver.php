@@ -51,10 +51,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateDataKeyWithoutPlaintext generateDataKeyWithoutPlaintext(array $options = [])
  * @method GetCertificate getCertificate(array $options = [])
  * @method GetClientKey getClientKey(array $options = [])
+ * @method GetKeyPolicy getKeyPolicy(array $options = [])
  * @method GetKmsInstance getKmsInstance(array $options = [])
  * @method GetParametersForImport getParametersForImport(array $options = [])
  * @method GetPublicKey getPublicKey(array $options = [])
  * @method GetRandomPassword getRandomPassword(array $options = [])
+ * @method GetSecretPolicy getSecretPolicy(array $options = [])
  * @method GetSecretValue getSecretValue(array $options = [])
  * @method ImportKeyMaterial importKeyMaterial(array $options = [])
  * @method ListAliases listAliases(array $options = [])
@@ -77,6 +79,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RotateSecret rotateSecret(array $options = [])
  * @method ScheduleKeyDeletion scheduleKeyDeletion(array $options = [])
  * @method SetDeletionProtection setDeletionProtection(array $options = [])
+ * @method SetKeyPolicy setKeyPolicy(array $options = [])
+ * @method SetSecretPolicy setSecretPolicy(array $options = [])
  * @method TagResource tagResource(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method UntagResource untagResource(array $options = [])
@@ -327,6 +331,8 @@ class CreateClientKey extends Rpc
  * @method $this withKeyUsage($value)
  * @method string getDKMSInstanceId()
  * @method $this withDKMSInstanceId($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
  */
 class CreateKey extends Rpc
 {
@@ -397,6 +403,8 @@ class CreatePolicy extends Rpc
  * @method $this withSecretName($value)
  * @method string getSecretDataType()
  * @method $this withSecretDataType($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
  */
 class CreateSecret extends Rpc
 {
@@ -660,6 +668,16 @@ class GetClientKey extends Rpc
 }
 
 /**
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ */
+class GetKeyPolicy extends Rpc
+{
+}
+
+/**
  * @method string getKmsInstanceId()
  * @method $this withKmsInstanceId($value)
  */
@@ -706,6 +724,16 @@ class GetPublicKey extends Rpc
  * @method $this withExcludeUppercase($value)
  */
 class GetRandomPassword extends Rpc
+{
+}
+
+/**
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ */
+class GetSecretPolicy extends Rpc
 {
 }
 
@@ -994,6 +1022,30 @@ class ScheduleKeyDeletion extends Rpc
  * @method $this withProtectedResourceArn($value)
  */
 class SetDeletionProtection extends Rpc
+{
+}
+
+/**
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
+ */
+class SetKeyPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getPolicyName()
+ * @method $this withPolicyName($value)
+ * @method string getSecretName()
+ * @method $this withSecretName($value)
+ * @method string getPolicy()
+ * @method $this withPolicy($value)
+ */
+class SetSecretPolicy extends Rpc
 {
 }
 
