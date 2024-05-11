@@ -138,6 +138,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveAudioAuditConfig describeLiveAudioAuditConfig(array $options = [])
  * @method DescribeLiveAudioAuditNotifyConfig describeLiveAudioAuditNotifyConfig(array $options = [])
  * @method DescribeLiveCdnDiagnoseInfo describeLiveCdnDiagnoseInfo(array $options = [])
+ * @method DescribeLiveCenterStreamRateData describeLiveCenterStreamRateData(array $options = [])
  * @method DescribeLiveCenterTransfer describeLiveCenterTransfer(array $options = [])
  * @method DescribeLiveCertificateDetail describeLiveCertificateDetail(array $options = [])
  * @method DescribeLiveCertificateList describeLiveCertificateList(array $options = [])
@@ -3333,6 +3334,22 @@ class DescribeLiveCdnDiagnoseInfo extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ */
+class DescribeLiveCenterStreamRateData extends Rpc
+{
 }
 
 /**

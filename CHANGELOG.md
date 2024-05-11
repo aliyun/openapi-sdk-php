@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2113 - 2024-5-11
+- Update to support new apis.
+
+
 ## 1.8.2112 - 2024-5-8
 - Support key policy and secret policy OpenAPI.
 
