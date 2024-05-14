@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2114 - 2024-5-14
+- Upgrade SDK.
+
+
 ## 1.8.2113 - 2024-5-11
 - Update to support new apis.
 
