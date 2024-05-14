@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2115 - 2024-5-14
+- Support ExecutorId for CreateJob and ListJobExecutors.
+
+
 ## 1.8.2114 - 2024-5-14
 - Upgrade SDK.
 
