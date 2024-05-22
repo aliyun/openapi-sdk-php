@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2116 - 2024-5-22
+- DescribeDBInstances, add cpuType.
+
+
 ## 1.8.2115 - 2024-5-14
 - Support ExecutorId for CreateJob and ListJobExecutors.
 
