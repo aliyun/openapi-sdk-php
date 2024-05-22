@@ -23,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeVisibilityModel changeVisibilityModel(array $options = [])
  * @method CheckReadable checkReadable(array $options = [])
  * @method CreateTicket createTicket(array $options = [])
+ * @method CreateTicket4Copilot createTicket4Copilot(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
  * @method DelayTicketExpireTime delayTicketExpireTime(array $options = [])
  * @method DeleteDataLevelPermissionRuleUsers deleteDataLevelPermissionRuleUsers(array $options = [])
@@ -41,11 +42,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListCubeDataLevelPermissionConfig listCubeDataLevelPermissionConfig(array $options = [])
  * @method ListDataLevelPermissionWhiteList listDataLevelPermissionWhiteList(array $options = [])
  * @method ListFavoriteReports listFavoriteReports(array $options = [])
+ * @method ListOrganizationRoles listOrganizationRoles(array $options = [])
+ * @method ListOrganizationRoleUsers listOrganizationRoleUsers(array $options = [])
  * @method ListPortalMenuAuthorization listPortalMenuAuthorization(array $options = [])
  * @method ListPortalMenus listPortalMenus(array $options = [])
  * @method ListRecentViewReports listRecentViewReports(array $options = [])
  * @method ListSharedReports listSharedReports(array $options = [])
  * @method ListUserGroupsByUserId listUserGroupsByUserId(array $options = [])
+ * @method ListWorkspaceRoles listWorkspaceRoles(array $options = [])
+ * @method ListWorkspaceRoleUsers listWorkspaceRoleUsers(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
  * @method QueryComponentPerformance queryComponentPerformance(array $options = [])
  * @method QueryCubeOptimization queryCubeOptimization(array $options = [])
@@ -57,6 +62,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDatasetSwitchInfo queryDatasetSwitchInfo(array $options = [])
  * @method QueryEmbeddedInfo queryEmbeddedInfo(array $options = [])
  * @method QueryEmbeddedStatus queryEmbeddedStatus(array $options = [])
+ * @method QueryOrganizationRoleConfig queryOrganizationRoleConfig(array $options = [])
  * @method QueryOrganizationWorkspaceList queryOrganizationWorkspaceList(array $options = [])
  * @method QueryReadableResourcesListByUserId queryReadableResourcesListByUserId(array $options = [])
  * @method QueryReportPerformance queryReportPerformance(array $options = [])
@@ -75,6 +81,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryWorksBloodRelationship queryWorksBloodRelationship(array $options = [])
  * @method QueryWorksByOrganization queryWorksByOrganization(array $options = [])
  * @method QueryWorksByWorkspace queryWorksByWorkspace(array $options = [])
+ * @method QueryWorkspaceRoleConfig queryWorkspaceRoleConfig(array $options = [])
  * @method QueryWorkspaceUserList queryWorkspaceUserList(array $options = [])
  * @method ResultCallback resultCallback(array $options = [])
  * @method SaveFavorites saveFavorites(array $options = [])
@@ -452,6 +459,28 @@ class CreateTicket extends Rpc
 }
 
 /**
+ * @method string getCopilotId()
+ * @method $this withCopilotId($value)
+ * @method string getExpireTime()
+ * @method $this withExpireTime($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getTicketNum()
+ * @method $this withTicketNum($value)
+ */
+class CreateTicket4Copilot extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getAccessPoint()
@@ -704,6 +733,34 @@ class ListFavoriteReports extends Rpc
 }
 
 /**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class ListOrganizationRoles extends Rpc
+{
+}
+
+/**
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class ListOrganizationRoleUsers extends Rpc
+{
+}
+
+/**
  * @method string getDataPortalId()
  * @method $this withDataPortalId($value)
  * @method string getAccessPoint()
@@ -778,6 +835,38 @@ class ListSharedReports extends Rpc
  * @method $this withUserId($value)
  */
 class ListUserGroupsByUserId extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class ListWorkspaceRoles extends Rpc
+{
+}
+
+/**
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class ListWorkspaceRoleUsers extends Rpc
 {
 }
 
@@ -948,6 +1037,18 @@ class QueryEmbeddedInfo extends Rpc
  * @method $this withSignType($value)
  */
 class QueryEmbeddedStatus extends Rpc
+{
+}
+
+/**
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class QueryOrganizationRoleConfig extends Rpc
 {
 }
 
@@ -1225,6 +1326,18 @@ class QueryWorksByOrganization extends Rpc
  * @method $this withStatus($value)
  */
 class QueryWorksByWorkspace extends Rpc
+{
+}
+
+/**
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class QueryWorkspaceRoleConfig extends Rpc
 {
 }
 

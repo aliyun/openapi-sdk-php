@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2117 - 2024-5-22
+- Add CreateTicket4Copilot API.
+- QueryDatasetList and QueryDatasetInfo APIs add response parameters.
+
+
 ## 1.8.2116 - 2024-5-22
 - DescribeDBInstances, add cpuType.
 
