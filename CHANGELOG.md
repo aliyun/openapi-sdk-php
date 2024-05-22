@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2118 - 2024-5-22
+- Support Spot Instance.
+
+
 ## 1.8.2117 - 2024-5-22
 - Add CreateTicket4Copilot API.
 - QueryDatasetList and QueryDatasetInfo APIs add response parameters.
