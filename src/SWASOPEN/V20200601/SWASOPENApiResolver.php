@@ -15,7 +15,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateSnapshot createSnapshot(array $options = [])
  * @method DeleteCommand deleteCommand(array $options = [])
  * @method DeleteCustomImage deleteCustomImage(array $options = [])
+ * @method DeleteCustomImages deleteCustomImages(array $options = [])
  * @method DeleteFirewallRule deleteFirewallRule(array $options = [])
+ * @method DeleteFirewallRules deleteFirewallRules(array $options = [])
  * @method DeleteInstanceKeyPair deleteInstanceKeyPair(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
  * @method DeleteSnapshots deleteSnapshots(array $options = [])
@@ -334,12 +336,34 @@ class DeleteCustomImage extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getImageIds()
+ * @method $this withImageIds($value)
+ */
+class DeleteCustomImages extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
  */
 class DeleteFirewallRule extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getRuleIds()
+ * @method $this withRuleIds($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteFirewallRules extends Rpc
 {
 }
 

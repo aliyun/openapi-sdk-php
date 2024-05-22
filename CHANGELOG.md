@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2119 - 2024-5-22
+- Generated 2020-06-01 for `SWAS-OPEN`.
+
+
 ## 1.8.2118 - 2024-5-22
 - Support Spot Instance.
 
