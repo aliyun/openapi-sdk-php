@@ -848,6 +848,8 @@ class AttachClassicLinkVpc extends Rpc
  * @method $this withOwnerId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getForce()
+ * @method $this withForce($value)
  * @method string getDevice()
  * @method $this withDevice($value)
  */
@@ -1450,6 +1452,7 @@ class CreateActivation extends Rpc
  * @method $this withValidFrom($value)
  * @method string getAutoProvisioningGroupName()
  * @method $this withAutoProvisioningGroupName($value)
+ * @method string getLaunchConfigurationAdditionalInfo()
  */
 class CreateAutoProvisioningGroup extends Rpc
 {
@@ -2048,6 +2051,19 @@ class CreateAutoProvisioningGroup extends Rpc
 		}
 
 		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLaunchConfigurationAdditionalInfo($value)
+    {
+        $this->data['LaunchConfigurationAdditionalInfo'] = $value;
+        $this->options['query']['LaunchConfiguration.AdditionalInfo'] = $value;
+
+        return $this;
     }
 }
 
@@ -4237,6 +4253,8 @@ class CreateNatGateway extends Rpc
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method array getIpv4Prefix()
+ * @method string getNetworkInterfaceTrafficConfig()
+ * @method $this withNetworkInterfaceTrafficConfig($value)
  * @method string getSecondaryPrivateIpAddressCount()
  * @method $this withSecondaryPrivateIpAddressCount($value)
  * @method string getBusinessType()
@@ -4284,6 +4302,8 @@ class CreateNatGateway extends Rpc
  * @method $this withNetworkInterfaceTrafficMode($value)
  * @method string getIpv4PrefixCount()
  * @method $this withIpv4PrefixCount($value)
+ * @method string getConnectionTrackingConfiguration()
+ * @method $this withConnectionTrackingConfiguration($value)
  * @method string getPrimaryIpAddress()
  * @method $this withPrimaryIpAddress($value)
  */
@@ -10164,6 +10184,8 @@ class DescribeSavingsPlanPrice extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSecurityGroupId()
  * @method $this withSecurityGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getDirection()
  * @method $this withDirection($value)
  * @method string getResourceOwnerAccount()
@@ -10172,6 +10194,8 @@ class DescribeSavingsPlanPrice extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
  */
 class DescribeSecurityGroupAttribute extends Rpc
 {
@@ -11650,6 +11674,8 @@ class InstallCloudAssistant extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getTerminationMode()
+ * @method $this withTerminationMode($value)
  * @method array getInstanceId()
  * @method string getContainerId()
  * @method $this withContainerId($value)
@@ -12909,6 +12935,8 @@ class ModifyInstanceAttachmentAttributes extends Rpc
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method array getSecurityGroupIds()
+ * @method string getAdditionalInfo()
+ * @method $this withAdditionalInfo($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getInstanceName()
@@ -13427,6 +13455,8 @@ class ModifyManagedInstance extends Rpc
  * @method array getSecurityGroupId()
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getNetworkInterfaceTrafficConfig()
+ * @method $this withNetworkInterfaceTrafficConfig($value)
  * @method string getNetworkInterfaceName()
  * @method $this withNetworkInterfaceName($value)
  * @method string getTxQueueSize()
@@ -13441,6 +13471,8 @@ class ModifyManagedInstance extends Rpc
  * @method $this withRxQueueSize($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getConnectionTrackingConfiguration()
+ * @method $this withConnectionTrackingConfiguration($value)
  * @method string getNetworkInterfaceId()
  * @method $this withNetworkInterfaceId($value)
  */
@@ -15090,6 +15122,8 @@ class RevokeSecurityGroupEgress extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getTerminationMode()
+ * @method $this withTerminationMode($value)
  * @method string getEnableParameter()
  * @method $this withEnableParameter($value)
  * @method string getUsername()
@@ -15259,6 +15293,8 @@ class RunCommand extends Rpc
  * @method array getHostNames()
  * @method string getCapacityReservationPreference()
  * @method $this withCapacityReservationPreference($value)
+ * @method string getAdditionalInfo()
+ * @method $this withAdditionalInfo($value)
  * @method string getVSwitchId()
  * @method $this withVSwitchId($value)
  * @method string getInstanceName()

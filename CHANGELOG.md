@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2121 - 2024-5-23
+- Add SnapshotLinkId for DescribeSnapshots.
+
+
 ## 1.8.2120 - 2024-5-23
 - Generated 2019-09-01 for `OceanBasePro`.
 
