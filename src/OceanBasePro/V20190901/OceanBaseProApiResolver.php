@@ -5,6 +5,7 @@ namespace AlibabaCloud\OceanBasePro\V20190901;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method BatchKillProcessList batchKillProcessList(array $options = [])
  * @method CancelProjectModifyRecord cancelProjectModifyRecord(array $options = [])
  * @method CreateBackupSetDownloadLink createBackupSetDownloadLink(array $options = [])
  * @method CreateDatabase createDatabase(array $options = [])
@@ -17,6 +18,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateProjectModifyRecords createProjectModifyRecords(array $options = [])
  * @method CreateRdsPostgreSQLDataSource createRdsPostgreSQLDataSource(array $options = [])
  * @method CreateSecurityIpGroup createSecurityIpGroup(array $options = [])
+ * @method CreateTag createTag(array $options = [])
+ * @method CreateTagValue createTagValue(array $options = [])
  * @method CreateTenant createTenant(array $options = [])
  * @method CreateTenantReadOnlyConnection createTenantReadOnlyConnection(array $options = [])
  * @method CreateTenantSecurityIpGroup createTenantSecurityIpGroup(array $options = [])
@@ -26,6 +29,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteInstances deleteInstances(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method DeleteSecurityIpGroup deleteSecurityIpGroup(array $options = [])
+ * @method DeleteTag deleteTag(array $options = [])
+ * @method DeleteTagValue deleteTagValue(array $options = [])
  * @method DeleteTenants deleteTenants(array $options = [])
  * @method DeleteTenantSecurityIpGroup deleteTenantSecurityIpGroup(array $options = [])
  * @method DeleteTenantUsers deleteTenantUsers(array $options = [])
@@ -57,6 +62,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeOutlineBinding describeOutlineBinding(array $options = [])
  * @method DescribeParameters describeParameters(array $options = [])
  * @method DescribeParametersHistory describeParametersHistory(array $options = [])
+ * @method DescribeProcessStatsComposition describeProcessStatsComposition(array $options = [])
  * @method DescribeProject describeProject(array $options = [])
  * @method DescribeProjectComponents describeProjectComponents(array $options = [])
  * @method DescribeProjectProgress describeProjectProgress(array $options = [])
@@ -71,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSQLHistoryList describeSQLHistoryList(array $options = [])
  * @method DescribeSQLPlans describeSQLPlans(array $options = [])
  * @method DescribeSQLSamples describeSQLSamples(array $options = [])
+ * @method DescribeTagValues describeTagValues(array $options = [])
  * @method DescribeTenant describeTenant(array $options = [])
  * @method DescribeTenantEncryption describeTenantEncryption(array $options = [])
  * @method DescribeTenantMetrics describeTenantMetrics(array $options = [])
@@ -101,6 +108,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstanceTemporaryCapacity modifyInstanceTemporaryCapacity(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])
  * @method ModifySecurityIps modifySecurityIps(array $options = [])
+ * @method ModifyTagName modifyTagName(array $options = [])
+ * @method ModifyTagValueName modifyTagValueName(array $options = [])
  * @method ModifyTenantEncryption modifyTenantEncryption(array $options = [])
  * @method ModifyTenantPrimaryZone modifyTenantPrimaryZone(array $options = [])
  * @method ModifyTenantResource modifyTenantResource(array $options = [])
@@ -120,6 +129,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopProjectModifyRecords stopProjectModifyRecords(array $options = [])
  * @method StopProjectsByLabel stopProjectsByLabel(array $options = [])
  * @method SwitchoverInstance switchoverInstance(array $options = [])
+ * @method UpdateProjectConfig updateProjectConfig(array $options = [])
  */
 class OceanBaseProApiResolver extends ApiResolver
 {
@@ -138,6 +148,54 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'oceanbase';
+}
+
+/**
+ * @method string getSessionList()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class BatchKillProcessList extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionList($value)
+    {
+        $this->data['SessionList'] = $value;
+        $this->options['form_params']['SessionList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -314,6 +372,7 @@ class CreateDatabase extends Rpc
  * @method string getReplicaMode()
  * @method string getAutoRenew()
  * @method string getSeries()
+ * @method string getCpuArch()
  * @method string getPrimaryInstance()
  * @method string getPrimaryRegion()
  * @method string getChargeType()
@@ -514,6 +573,19 @@ class CreateInstance extends Rpc
     {
         $this->data['Series'] = $value;
         $this->options['form_params']['Series'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCpuArch($value)
+    {
+        $this->data['CpuArch'] = $value;
+        $this->options['form_params']['CpuArch'] = $value;
 
         return $this;
     }
@@ -1143,6 +1215,7 @@ class CreateOmsMysqlDataSource extends Rpc
  * @method string getId()
  * @method string getCommonTransferConfig()
  * @method string getStructTransferConfig()
+ * @method string getReverseIncrTransferConfig()
  * @method string getEnableIncrTransfer()
  * @method string getEnableFullTransfer()
  * @method string getEnableFullVerify()
@@ -1306,6 +1379,19 @@ class CreateProject extends Rpc
     {
         $this->data['StructTransferConfig'] = $value;
         $this->options['form_params']['StructTransferConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReverseIncrTransferConfig($value)
+    {
+        $this->data['ReverseIncrTransferConfig'] = $value;
+        $this->options['form_params']['ReverseIncrTransferConfig'] = $value;
 
         return $this;
     }
@@ -1578,6 +1664,88 @@ class CreateSecurityIpGroup extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method string getKey()
+ */
+class CreateTag extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['form_params']['Key'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method string getValue()
+ * @method string getKey()
+ */
+class CreateTagValue extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValue($value)
+    {
+        $this->data['Value'] = $value;
+        $this->options['form_params']['Value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['form_params']['Key'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getCharset()
  * @method string getTenantMode()
  * @method string getMemory()
@@ -1590,6 +1758,8 @@ class CreateSecurityIpGroup extends Rpc
  * @method string getUnitNum()
  * @method string getInstanceId()
  * @method string getPrimaryZone()
+ * @method string getUserVpcOwnerId()
+ * @method string getCreateParams()
  * @method string getTenantName()
  * @method string getReadOnlyZoneList()
  */
@@ -1748,6 +1918,32 @@ class CreateTenant extends Rpc
     {
         $this->data['PrimaryZone'] = $value;
         $this->options['form_params']['PrimaryZone'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserVpcOwnerId($value)
+    {
+        $this->data['UserVpcOwnerId'] = $value;
+        $this->options['form_params']['UserVpcOwnerId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCreateParams($value)
+    {
+        $this->data['CreateParams'] = $value;
+        $this->options['form_params']['CreateParams'] = $value;
 
         return $this;
     }
@@ -2200,6 +2396,60 @@ class DeleteSecurityIpGroup extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getKey()
+ */
+class DeleteTag extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['form_params']['Key'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getValue()
+ * @method string getKey()
+ */
+class DeleteTagValue extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValue($value)
+    {
+        $this->data['Value'] = $value;
+        $this->options['form_params']['Value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['form_params']['Key'] = $value;
 
         return $this;
     }
@@ -2742,9 +2992,10 @@ class DescribeAvailableSpec extends Rpc
 
 /**
  * @method string getSpec()
+ * @method string getInstanceType()
  * @method string getObVersion()
  * @method string getSeries()
- * @method string getInstanceType()
+ * @method string getCpuArch()
  * @method string getDeployType()
  */
 class DescribeAvailableZone extends Rpc
@@ -2762,6 +3013,19 @@ class DescribeAvailableZone extends Rpc
     {
         $this->data['Spec'] = $value;
         $this->options['form_params']['Spec'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceType($value)
+    {
+        $this->data['InstanceType'] = $value;
+        $this->options['form_params']['InstanceType'] = $value;
 
         return $this;
     }
@@ -2797,10 +3061,10 @@ class DescribeAvailableZone extends Rpc
      *
      * @return $this
      */
-    public function withInstanceType($value)
+    public function withCpuArch($value)
     {
-        $this->data['InstanceType'] = $value;
-        $this->options['form_params']['InstanceType'] = $value;
+        $this->data['CpuArch'] = $value;
+        $this->options['form_params']['CpuArch'] = $value;
 
         return $this;
     }
@@ -4293,7 +4557,9 @@ class DescribeOasSQLHistoryList extends Rpc
 }
 
 /**
+ * @method string getReturnBriefInfo()
  * @method string getStartTime()
+ * @method string getPlanUnionHash()
  * @method string getDynamicSql()
  * @method string getTenantId()
  * @method string getSqlId()
@@ -4310,10 +4576,36 @@ class DescribeOasSQLPlans extends Rpc
      *
      * @return $this
      */
+    public function withReturnBriefInfo($value)
+    {
+        $this->data['ReturnBriefInfo'] = $value;
+        $this->options['form_params']['ReturnBriefInfo'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withStartTime($value)
     {
         $this->data['StartTime'] = $value;
         $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPlanUnionHash($value)
+    {
+        $this->data['PlanUnionHash'] = $value;
+        $this->options['form_params']['PlanUnionHash'] = $value;
 
         return $this;
     }
@@ -4877,6 +5169,124 @@ class DescribeParametersHistory extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getUId()
+ * @method string getSqlText()
+ * @method string getClientIp()
+ * @method string getTenantId()
+ * @method string getServerIp()
+ * @method string getUsers()
+ * @method string getInstanceId()
+ * @method string getStatus()
+ */
+class DescribeProcessStatsComposition extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUId($value)
+    {
+        $this->data['UId'] = $value;
+        $this->options['form_params']['UId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlText($value)
+    {
+        $this->data['SqlText'] = $value;
+        $this->options['form_params']['SqlText'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientIp($value)
+    {
+        $this->data['ClientIp'] = $value;
+        $this->options['form_params']['ClientIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withServerIp($value)
+    {
+        $this->data['ServerIp'] = $value;
+        $this->options['form_params']['ServerIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUsers($value)
+    {
+        $this->data['Users'] = $value;
+        $this->options['form_params']['Users'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
 
         return $this;
     }
@@ -5720,6 +6130,7 @@ class DescribeSQLPlans extends Rpc
 }
 
 /**
+ * @method string getReturnSqlText()
  * @method string getStartTime()
  * @method string getTenantId()
  * @method string getSqlId()
@@ -5729,6 +6140,19 @@ class DescribeSQLPlans extends Rpc
  */
 class DescribeSQLSamples extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReturnSqlText($value)
+    {
+        $this->data['ReturnSqlText'] = $value;
+        $this->options['form_params']['ReturnSqlText'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -5804,6 +6228,26 @@ class DescribeSQLSamples extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getResourceType()
+ */
+class DescribeTagValues extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceType($value)
+    {
+        $this->data['ResourceType'] = $value;
+        $this->options['form_params']['ResourceType'] = $value;
 
         return $this;
     }
@@ -6623,6 +7067,7 @@ class DescribeTopSQLList extends Rpc
 
 /**
  * @method string getSeries()
+ * @method string getCpuArch()
  * @method string getDeployType()
  */
 class DescribeZones extends Rpc
@@ -6637,6 +7082,19 @@ class DescribeZones extends Rpc
     {
         $this->data['Series'] = $value;
         $this->options['form_params']['Series'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCpuArch($value)
+    {
+        $this->data['CpuArch'] = $value;
+        $this->options['form_params']['CpuArch'] = $value;
 
         return $this;
     }
@@ -7736,6 +8194,88 @@ class ModifySecurityIps extends Rpc
 }
 
 /**
+ * @method string getNewKey()
+ * @method string getKey()
+ */
+class ModifyTagName extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNewKey($value)
+    {
+        $this->data['NewKey'] = $value;
+        $this->options['form_params']['NewKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['form_params']['Key'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNewValue()
+ * @method string getValue()
+ * @method string getKey()
+ */
+class ModifyTagValueName extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNewValue($value)
+    {
+        $this->data['NewValue'] = $value;
+        $this->options['form_params']['NewValue'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withValue($value)
+    {
+        $this->data['Value'] = $value;
+        $this->options['form_params']['Value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['form_params']['Key'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getEncryptionKeyId()
  * @method string getInstanceId()
  * @method string getTenantId()
@@ -7806,6 +8346,7 @@ class ModifyTenantEncryption extends Rpc
  * @method string getInstanceId()
  * @method string getPrimaryZone()
  * @method string getVpcId()
+ * @method string getUserVpcOwnerId()
  * @method string getUserDirectVSwitchId()
  */
 class ModifyTenantPrimaryZone extends Rpc
@@ -7911,6 +8452,19 @@ class ModifyTenantPrimaryZone extends Rpc
     {
         $this->data['VpcId'] = $value;
         $this->options['form_params']['VpcId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserVpcOwnerId($value)
+    {
+        $this->data['UserVpcOwnerId'] = $value;
+        $this->options['form_params']['UserVpcOwnerId'] = $value;
 
         return $this;
     }
@@ -8628,6 +9182,68 @@ class SwitchoverInstance extends Rpc
     {
         $this->data['TargetInstanceId'] = $value;
         $this->options['form_params']['TargetInstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getReverseIncrTransferConfig()
+ * @method string getFullTransferConfig()
+ * @method string getId()
+ * @method string getIncrTransferConfig()
+ */
+class UpdateProjectConfig extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReverseIncrTransferConfig($value)
+    {
+        $this->data['ReverseIncrTransferConfig'] = $value;
+        $this->options['form_params']['ReverseIncrTransferConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFullTransferConfig($value)
+    {
+        $this->data['FullTransferConfig'] = $value;
+        $this->options['form_params']['FullTransferConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withId($value)
+    {
+        $this->data['Id'] = $value;
+        $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIncrTransferConfig($value)
+    {
+        $this->data['IncrTransferConfig'] = $value;
+        $this->options['form_params']['IncrTransferConfig'] = $value;
 
         return $this;
     }

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2120 - 2024-5-23
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2119 - 2024-5-22
 - Generated 2020-06-01 for `SWAS-OPEN`.
 
