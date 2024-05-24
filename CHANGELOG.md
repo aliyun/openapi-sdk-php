@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2122 - 2024-5-24
+- Update to support new apis.
+
+
 ## 1.8.2121 - 2024-5-23
 - Add SnapshotLinkId for DescribeSnapshots.
 

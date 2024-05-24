@@ -56,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLiveDelayConfig createLiveDelayConfig(array $options = [])
  * @method CreateLiveMessageApp createLiveMessageApp(array $options = [])
  * @method CreateLiveMessageGroup createLiveMessageGroup(array $options = [])
+ * @method CreateLivePrivateLine createLivePrivateLine(array $options = [])
  * @method CreateLiveRealTimeLogDelivery createLiveRealTimeLogDelivery(array $options = [])
  * @method CreateLiveStreamMonitor createLiveStreamMonitor(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
@@ -92,6 +93,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveMessageGroupMessage deleteLiveMessageGroupMessage(array $options = [])
  * @method DeleteLiveMessageUserMessage deleteLiveMessageUserMessage(array $options = [])
  * @method DeleteLivePackageConfig deleteLivePackageConfig(array $options = [])
+ * @method DeleteLivePrivateLine deleteLivePrivateLine(array $options = [])
  * @method DeleteLivePullStreamInfoConfig deleteLivePullStreamInfoConfig(array $options = [])
  * @method DeleteLiveRealtimeLogDelivery deleteLiveRealtimeLogDelivery(array $options = [])
  * @method DeleteLiveRealTimeLogLogstore deleteLiveRealTimeLogLogstore(array $options = [])
@@ -190,6 +192,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveMessageGroup describeLiveMessageGroup(array $options = [])
  * @method DescribeLiveMessageGroupBand describeLiveMessageGroupBand(array $options = [])
  * @method DescribeLivePackageConfig describeLivePackageConfig(array $options = [])
+ * @method DescribeLivePrivateLineAreas describeLivePrivateLineAreas(array $options = [])
+ * @method DescribeLivePrivateLineAvailGA describeLivePrivateLineAvailGA(array $options = [])
  * @method DescribeLiveProducerUsageData describeLiveProducerUsageData(array $options = [])
  * @method DescribeLivePullStreamConfig describeLivePullStreamConfig(array $options = [])
  * @method DescribeLivePushProxyLog describeLivePushProxyLog(array $options = [])
@@ -210,6 +214,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamDelayConfig describeLiveStreamDelayConfig(array $options = [])
  * @method DescribeLiveStreamDetailFrameRateAndBitRateData describeLiveStreamDetailFrameRateAndBitRateData(array $options = [])
  * @method DescribeLiveStreamHistoryUserNum describeLiveStreamHistoryUserNum(array $options = [])
+ * @method DescribeLiveStreamMerge describeLiveStreamMerge(array $options = [])
  * @method DescribeLiveStreamMetricDetailData describeLiveStreamMetricDetailData(array $options = [])
  * @method DescribeLiveStreamMonitorList describeLiveStreamMonitorList(array $options = [])
  * @method DescribeLiveStreamOptimizedFeatureConfig describeLiveStreamOptimizedFeatureConfig(array $options = [])
@@ -238,6 +243,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
+ * @method DescribeMeterLiveBypassDuration describeMeterLiveBypassDuration(array $options = [])
  * @method DescribeMeterLiveInteractionDau describeMeterLiveInteractionDau(array $options = [])
  * @method DescribeMeterLiveRtcDuration describeMeterLiveRtcDuration(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
@@ -1952,6 +1958,32 @@ class CreateLiveMessageGroup extends Rpc
 }
 
 /**
+ * @method string getMaxBandwidth()
+ * @method $this withMaxBandwidth($value)
+ * @method string getReuse()
+ * @method $this withReuse($value)
+ * @method string getAccelerationArea()
+ * @method $this withAccelerationArea($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVideoCenter()
+ * @method $this withVideoCenter($value)
+ * @method string getAccelerationType()
+ * @method $this withAccelerationType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateLivePrivateLine extends Rpc
+{
+}
+
+/**
  * @method string getProject()
  * @method $this withProject($value)
  * @method string getDomainName()
@@ -2536,6 +2568,22 @@ class DeleteLiveMessageUserMessage extends Rpc
  * @method $this withOwnerId($value)
  */
 class DeleteLivePackageConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAccelerationType()
+ * @method $this withAccelerationType($value)
+ */
+class DeleteLivePrivateLine extends Rpc
 {
 }
 
@@ -4211,6 +4259,36 @@ class DescribeLivePackageConfig extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLivePrivateLineAreas extends Rpc
+{
+}
+
+/**
+ * @method string getAccelerationArea()
+ * @method $this withAccelerationArea($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getVideoCenter()
+ * @method $this withVideoCenter($value)
+ * @method string getIsGaInstance()
+ * @method $this withIsGaInstance($value)
+ */
+class DescribeLivePrivateLineAvailGA extends Rpc
+{
+}
+
+/**
  * @method string getInstance()
  * @method $this withInstance($value)
  * @method string getStartTime()
@@ -4560,6 +4638,22 @@ class DescribeLiveStreamDetailFrameRateAndBitRateData extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeLiveStreamHistoryUserNum extends Rpc
+{
+}
+
+/**
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveStreamMerge extends Rpc
 {
 }
 
@@ -5117,6 +5211,23 @@ class DescribeLiveUserDomains extends Rpc
  */
 class DescribeLiveUserTags extends Rpc
 {
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeMeterLiveBypassDuration extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -6147,6 +6258,8 @@ class ListLiveMessageGroupMessages extends Rpc
 /**
  * @method string getSortType()
  * @method $this withSortType($value)
+ * @method string getGroupStatus()
+ * @method $this withGroupStatus($value)
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
  * @method string getDataCenter()
