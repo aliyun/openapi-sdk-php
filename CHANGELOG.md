@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2124 - 2024-5-27
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2123 - 2024-5-24
 - Generated 2015-12-01 for `Dds`.
 
