@@ -10,6 +10,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssociateWebCert associateWebCert(array $options = [])
  * @method AttachSceneDefenseObject attachSceneDefenseObject(array $options = [])
  * @method ConfigL7RsPolicy configL7RsPolicy(array $options = [])
+ * @method ConfigLayer4RealLimit configLayer4RealLimit(array $options = [])
  * @method ConfigLayer4Remark configLayer4Remark(array $options = [])
  * @method ConfigLayer4RuleBakMode configLayer4RuleBakMode(array $options = [])
  * @method ConfigLayer4RulePolicy configLayer4RulePolicy(array $options = [])
@@ -62,9 +63,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainAttackEvents describeDomainAttackEvents(array $options = [])
  * @method DescribeDomainOverview describeDomainOverview(array $options = [])
  * @method DescribeDomainQPSList describeDomainQPSList(array $options = [])
- * @method DescribeDomainQpsWithCache describeDomainQpsWithCache(array $options = [])
  * @method DescribeDomainResource describeDomainResource(array $options = [])
  * @method DescribeDomains describeDomains(array $options = [])
+ * @method DescribeDomainSecurityProfile describeDomainSecurityProfile(array $options = [])
  * @method DescribeDomainStatusCodeCount describeDomainStatusCodeCount(array $options = [])
  * @method DescribeDomainStatusCodeList describeDomainStatusCodeList(array $options = [])
  * @method DescribeDomainTopAttackList describeDomainTopAttackList(array $options = [])
@@ -73,9 +74,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainViewTopCostTime describeDomainViewTopCostTime(array $options = [])
  * @method DescribeDomainViewTopUrl describeDomainViewTopUrl(array $options = [])
  * @method DescribeElasticBandwidthSpec describeElasticBandwidthSpec(array $options = [])
+ * @method DescribeElasticQps describeElasticQps(array $options = [])
+ * @method DescribeElasticQpsRecord describeElasticQpsRecord(array $options = [])
+ * @method DescribeHeaders describeHeaders(array $options = [])
  * @method DescribeHealthCheckList describeHealthCheckList(array $options = [])
  * @method DescribeHealthCheckStatus describeHealthCheckStatus(array $options = [])
  * @method DescribeInstanceDetails describeInstanceDetails(array $options = [])
+ * @method DescribeInstanceExt describeInstanceExt(array $options = [])
  * @method DescribeInstanceIds describeInstanceIds(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeInstanceSpecs describeInstanceSpecs(array $options = [])
@@ -91,6 +96,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePort describePort(array $options = [])
  * @method DescribePortAttackMaxFlow describePortAttackMaxFlow(array $options = [])
  * @method DescribePortAutoCcStatus describePortAutoCcStatus(array $options = [])
+ * @method DescribePortCcAttackTopIP describePortCcAttackTopIP(array $options = [])
  * @method DescribePortConnsCount describePortConnsCount(array $options = [])
  * @method DescribePortConnsList describePortConnsList(array $options = [])
  * @method DescribePortFlowList describePortFlowList(array $options = [])
@@ -101,6 +107,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSceneDefenseObjects describeSceneDefenseObjects(array $options = [])
  * @method DescribeSceneDefensePolicies describeSceneDefensePolicies(array $options = [])
  * @method DescribeSchedulerRules describeSchedulerRules(array $options = [])
+ * @method DescribeSlaEventList describeSlaEventList(array $options = [])
  * @method DescribeSlsAuthStatus describeSlsAuthStatus(array $options = [])
  * @method DescribeSlsLogstoreInfo describeSlsLogstoreInfo(array $options = [])
  * @method DescribeSlsOpenStatus describeSlsOpenStatus(array $options = [])
@@ -108,6 +115,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSystemLog describeSystemLog(array $options = [])
  * @method DescribeTagKeys describeTagKeys(array $options = [])
  * @method DescribeTagResources describeTagResources(array $options = [])
+ * @method DescribeTotalAttackMaxFlow describeTotalAttackMaxFlow(array $options = [])
  * @method DescribeUdpReflect describeUdpReflect(array $options = [])
  * @method DescribeUnBlackholeCount describeUnBlackholeCount(array $options = [])
  * @method DescribeUnBlockCount describeUnBlockCount(array $options = [])
@@ -122,6 +130,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeWebCustomPorts describeWebCustomPorts(array $options = [])
  * @method DescribeWebInstanceRelations describeWebInstanceRelations(array $options = [])
  * @method DescribeWebPreciseAccessRule describeWebPreciseAccessRule(array $options = [])
+ * @method DescribeWebReportTopIp describeWebReportTopIp(array $options = [])
  * @method DescribeWebRules describeWebRules(array $options = [])
  * @method DetachSceneDefenseObject detachSceneDefenseObject(array $options = [])
  * @method DisableSceneDefensePolicy disableSceneDefensePolicy(array $options = [])
@@ -135,18 +144,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableWebAccessLogConfig enableWebAccessLogConfig(array $options = [])
  * @method EnableWebCC enableWebCC(array $options = [])
  * @method EnableWebCCRule enableWebCCRule(array $options = [])
+ * @method ModifyBizBandWidthMode modifyBizBandWidthMode(array $options = [])
  * @method ModifyBlackholeStatus modifyBlackholeStatus(array $options = [])
  * @method ModifyBlockStatus modifyBlockStatus(array $options = [])
  * @method ModifyCnameReuse modifyCnameReuse(array $options = [])
  * @method ModifyDomainResource modifyDomainResource(array $options = [])
  * @method ModifyElasticBandWidth modifyElasticBandWidth(array $options = [])
+ * @method ModifyElasticBizBandWidth modifyElasticBizBandWidth(array $options = [])
+ * @method ModifyElasticBizQps modifyElasticBizQps(array $options = [])
  * @method ModifyFullLogTtl modifyFullLogTtl(array $options = [])
+ * @method ModifyHeaders modifyHeaders(array $options = [])
  * @method ModifyHealthCheckConfig modifyHealthCheckConfig(array $options = [])
  * @method ModifyHttp2Enable modifyHttp2Enable(array $options = [])
  * @method ModifyInstanceRemark modifyInstanceRemark(array $options = [])
  * @method ModifyNetworkRuleAttribute modifyNetworkRuleAttribute(array $options = [])
+ * @method ModifyOcspStatus modifyOcspStatus(array $options = [])
  * @method ModifyPort modifyPort(array $options = [])
  * @method ModifyPortAutoCcStatus modifyPortAutoCcStatus(array $options = [])
+ * @method ModifyQpsMode modifyQpsMode(array $options = [])
  * @method ModifySceneDefensePolicy modifySceneDefensePolicy(array $options = [])
  * @method ModifySchedulerRule modifySchedulerRule(array $options = [])
  * @method ModifyTlsConfig modifyTlsConfig(array $options = [])
@@ -180,6 +195,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'ddoscoo';
 }
 
 /**
@@ -212,22 +230,110 @@ class AddAutoCcWhitelist extends Rpc
 
 /**
  * @method string getCert()
- * @method $this withCert($value)
  * @method string getCertId()
- * @method $this withCertId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getKey()
- * @method $this withKey($value)
+ * @method string getCertRegion()
  * @method string getCertName()
- * @method $this withCertName($value)
+ * @method string getCertIdentifier()
  * @method string getDomain()
- * @method $this withDomain($value)
  */
 class AssociateWebCert extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCert($value)
+    {
+        $this->data['Cert'] = $value;
+        $this->options['form_params']['Cert'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertId($value)
+    {
+        $this->data['CertId'] = $value;
+        $this->options['form_params']['CertId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withKey($value)
+    {
+        $this->data['Key'] = $value;
+        $this->options['form_params']['Key'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertRegion($value)
+    {
+        $this->data['CertRegion'] = $value;
+        $this->options['form_params']['CertRegion'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertName($value)
+    {
+        $this->data['CertName'] = $value;
+        $this->options['form_params']['CertName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertIdentifier($value)
+    {
+        $this->data['CertIdentifier'] = $value;
+        $this->options['form_params']['CertIdentifier'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomain($value)
+    {
+        $this->data['Domain'] = $value;
+        $this->options['form_params']['Domain'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -245,6 +351,8 @@ class AttachSceneDefenseObject extends Rpc
 }
 
 /**
+ * @method string getUpstreamRetry()
+ * @method $this withUpstreamRetry($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
@@ -255,6 +363,18 @@ class AttachSceneDefenseObject extends Rpc
  * @method $this withPolicy($value)
  */
 class ConfigL7RsPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLimitValue()
+ * @method $this withLimitValue($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ConfigLayer4RealLimit extends Rpc
 {
 }
 
@@ -407,7 +527,8 @@ class CreateAsyncTask extends Rpc
  * @method $this withRsType($value)
  * @method array getRealServers()
  * @method array getInstanceIds()
- * @method array getProxyTypes()
+ * @method string getProxyTypes()
+ * @method $this withProxyTypes($value)
  * @method string getDomain()
  * @method $this withDomain($value)
  */
@@ -439,26 +560,6 @@ class CreateDomainResource extends Rpc
 	    $this->data['InstanceIds'] = $instanceIds;
 		foreach ($instanceIds as $i => $iValue) {
 			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $proxyTypes
-     *
-     * @return $this
-     */
-	public function withProxyTypes(array $proxyTypes)
-	{
-	    $this->data['ProxyTypes'] = $proxyTypes;
-		foreach ($proxyTypes as $depth1 => $depth1Value) {
-			foreach ($depth1Value['ProxyPorts'] as $i => $iValue) {
-				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyPorts.' . ($i + 1)] = $iValue;
-			}
-			if(isset($depth1Value['ProxyType'])){
-				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyType'] = $depth1Value['ProxyType'];
-			}
 		}
 
 		return $this;
@@ -971,6 +1072,8 @@ class DescribeAutoCcWhitelist extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getIpVersion()
+ * @method $this withIpVersion($value)
  */
 class DescribeBackSourceCidr extends Rpc
 {
@@ -1275,22 +1378,6 @@ class DescribeDomainQPSList extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getSourceIp()
- * @method $this withSourceIp($value)
- * @method string getDomain()
- * @method $this withDomain($value)
- */
-class DescribeDomainQpsWithCache extends Rpc
-{
-}
-
-/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSourceIp()
@@ -1348,6 +1435,16 @@ class DescribeDomains extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeDomainSecurityProfile extends Rpc
+{
 }
 
 /**
@@ -1479,6 +1576,50 @@ class DescribeElasticBandwidthSpec extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeElasticQps extends Rpc
+{
+}
+
+/**
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DescribeElasticQpsRecord extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeHeaders extends Rpc
+{
+}
+
+/**
  * @method string getNetworkRules()
  * @method $this withNetworkRules($value)
  * @method string getSourceIp()
@@ -1520,6 +1661,23 @@ class DescribeInstanceDetails extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeInstanceExt extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1876,6 +2034,22 @@ class DescribePortAutoCcStatus extends Rpc
 }
 
 /**
+ * @method string getStartTimestamp()
+ * @method $this withStartTimestamp($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getLimit()
+ * @method $this withLimit($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getPort()
+ * @method $this withPort($value)
+ */
+class DescribePortCcAttackTopIP extends Rpc
+{
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getResourceGroupId()
@@ -2140,6 +2314,26 @@ class DescribeSchedulerRules extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getIp()
+ * @method $this withIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeSlaEventList extends Rpc
+{
+}
+
+/**
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getSourceIp()
@@ -2268,6 +2462,36 @@ class DescribeTagResources extends Rpc
 	    $this->data['ResourceIds'] = $resourceIds;
 		foreach ($resourceIds as $i => $iValue) {
 			$this->options['query']['ResourceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method array getInstanceIds()
+ */
+class DescribeTotalAttackMaxFlow extends Rpc
+{
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
 		}
 
 		return $this;
@@ -2535,6 +2759,26 @@ class DescribeWebPreciseAccessRule extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getTop()
+ * @method $this withTop($value)
+ * @method string getQueryType()
+ * @method $this withQueryType($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeWebReportTopIp extends Rpc
+{
+}
+
+/**
  * @method string getCname()
  * @method $this withCname($value)
  * @method string getPageNumber()
@@ -2713,6 +2957,18 @@ class EnableWebCCRule extends Rpc
 }
 
 /**
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyBizBandWidthMode extends Rpc
+{
+}
+
+/**
  * @method string getBlackholeStatus()
  * @method $this withBlackholeStatus($value)
  * @method string getInstanceId()
@@ -2780,8 +3036,9 @@ class ModifyCnameReuse extends Rpc
  * @method string getRsType()
  * @method $this withRsType($value)
  * @method array getRealServers()
- * @method array getProxyTypes()
  * @method array getInstanceIds()
+ * @method string getProxyTypes()
+ * @method $this withProxyTypes($value)
  * @method string getDomain()
  * @method $this withDomain($value)
  */
@@ -2798,26 +3055,6 @@ class ModifyDomainResource extends Rpc
 	    $this->data['RealServers'] = $realServers;
 		foreach ($realServers as $i => $iValue) {
 			$this->options['query']['RealServers.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $proxyTypes
-     *
-     * @return $this
-     */
-	public function withProxyTypes(array $proxyTypes)
-	{
-	    $this->data['ProxyTypes'] = $proxyTypes;
-		foreach ($proxyTypes as $depth1 => $depth1Value) {
-			foreach ($depth1Value['ProxyPorts'] as $i => $iValue) {
-				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyPorts.' . ($i + 1)] = $iValue;
-			}
-			if(isset($depth1Value['ProxyType'])){
-				$this->options['query']['ProxyTypes.' . ($depth1 + 1) . '.ProxyType'] = $depth1Value['ProxyType'];
-			}
 		}
 
 		return $this;
@@ -2852,6 +3089,34 @@ class ModifyElasticBandWidth extends Rpc
 }
 
 /**
+ * @method string getElasticBizBandwidth()
+ * @method $this withElasticBizBandwidth($value)
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyElasticBizBandWidth extends Rpc
+{
+}
+
+/**
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getOpsElasticQps()
+ * @method $this withOpsElasticQps($value)
+ */
+class ModifyElasticBizQps extends Rpc
+{
+}
+
+/**
  * @method string getTtl()
  * @method $this withTtl($value)
  * @method string getResourceGroupId()
@@ -2862,6 +3127,20 @@ class ModifyElasticBandWidth extends Rpc
  * @method $this withLang($value)
  */
 class ModifyFullLogTtl extends Rpc
+{
+}
+
+/**
+ * @method string getCustomHeaders()
+ * @method $this withCustomHeaders($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class ModifyHeaders extends Rpc
 {
 }
 
@@ -2926,6 +3205,18 @@ class ModifyNetworkRuleAttribute extends Rpc
 /**
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getEnable()
+ * @method $this withEnable($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class ModifyOcspStatus extends Rpc
+{
+}
+
+/**
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
  * @method string getBackendPort()
  * @method $this withBackendPort($value)
  * @method string getFrontendProtocol()
@@ -2968,6 +3259,18 @@ class ModifyPort extends Rpc
  * @method $this withLang($value)
  */
 class ModifyPortAutoCcStatus extends Rpc
+{
+}
+
+/**
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class ModifyQpsMode extends Rpc
 {
 }
 

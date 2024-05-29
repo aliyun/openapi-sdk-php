@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2126 - 2024-5-29
+- Support body
+
+
 ## 1.8.2125 - 2024-5-27
 - Generated 2019-09-01 for `OceanBasePro`.
 
