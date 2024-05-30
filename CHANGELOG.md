@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2128 - 2024-5-30
+- Update QueryFaceVideoTemplate.
+
+
 ## 1.8.2127 - 2024-5-30
 - Generated 2021-05-21 for `ComputeNestSupplier`.
 
