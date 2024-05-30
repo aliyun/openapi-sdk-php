@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2129 - 2024-5-30
+- Generated 2014-05-15 for `Slb`.
+
+
 ## 1.8.2128 - 2024-5-30
 - Update QueryFaceVideoTemplate.
 
