@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2127 - 2024-5-30
+- Generated 2021-05-21 for `ComputeNestSupplier`.
+
+
 ## 1.8.2126 - 2024-5-29
 - Support body
 
