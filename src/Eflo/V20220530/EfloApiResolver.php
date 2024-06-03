@@ -1759,7 +1759,9 @@ class GetErRouteMap extends Rpc
 }
 
 /**
+ * @method string getClusterId()
  * @method string getVpdId()
+ * @method string getVpcId()
  * @method array getLniIds()
  * @method array getNodeIds()
  */
@@ -1771,10 +1773,36 @@ class GetFabricTopology extends Rpc
      *
      * @return $this
      */
+    public function withClusterId($value)
+    {
+        $this->data['ClusterId'] = $value;
+        $this->options['form_params']['ClusterId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withVpdId($value)
     {
         $this->data['VpdId'] = $value;
         $this->options['form_params']['VpdId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcId($value)
+    {
+        $this->data['VpcId'] = $value;
+        $this->options['form_params']['VpcId'] = $value;
 
         return $this;
     }

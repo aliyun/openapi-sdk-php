@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2130 - 2024-6-3
+- Supported gateway for hdeni api.
+
+
 ## 1.8.2129 - 2024-5-30
 - Generated 2014-05-15 for `Slb`.
 
