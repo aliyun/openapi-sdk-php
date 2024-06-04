@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2131 - 2024-6-4
+- Update to support new apis.
+
+
 ## 1.8.2130 - 2024-6-3
 - Supported gateway for hdeni api.
 

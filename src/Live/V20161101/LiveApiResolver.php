@@ -13,6 +13,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddCasterProgram addCasterProgram(array $options = [])
  * @method AddCasterVideoResource addCasterVideoResource(array $options = [])
  * @method AddCustomLiveStreamTranscode addCustomLiveStreamTranscode(array $options = [])
+ * @method AddLiveAIProduceRules addLiveAIProduceRules(array $options = [])
+ * @method AddLiveAISubtitle addLiveAISubtitle(array $options = [])
  * @method AddLiveAppRecordConfig addLiveAppRecordConfig(array $options = [])
  * @method AddLiveAppSnapshotConfig addLiveAppSnapshotConfig(array $options = [])
  * @method AddLiveAudioAuditConfig addLiveAudioAuditConfig(array $options = [])
@@ -65,6 +67,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateMessageGroup createMessageGroup(array $options = [])
  * @method CreateMixStream createMixStream(array $options = [])
  * @method CreateRoomRealTimeStreamAddress createRoomRealTimeStreamAddress(array $options = [])
+ * @method CreateRtcAsrTask createRtcAsrTask(array $options = [])
  * @method DeleteCaster deleteCaster(array $options = [])
  * @method DeleteCasterComponent deleteCasterComponent(array $options = [])
  * @method DeleteCasterEpisode deleteCasterEpisode(array $options = [])
@@ -77,6 +80,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCustomTemplate deleteCustomTemplate(array $options = [])
  * @method DeleteEdgeTranscodeJob deleteEdgeTranscodeJob(array $options = [])
  * @method DeleteEventSub deleteEventSub(array $options = [])
+ * @method DeleteLiveAIProduceRules deleteLiveAIProduceRules(array $options = [])
+ * @method DeleteLiveAISubtitle deleteLiveAISubtitle(array $options = [])
  * @method DeleteLiveAppRecordConfig deleteLiveAppRecordConfig(array $options = [])
  * @method DeleteLiveAppSnapshotConfig deleteLiveAppSnapshotConfig(array $options = [])
  * @method DeleteLiveAudioAuditConfig deleteLiveAudioAuditConfig(array $options = [])
@@ -137,6 +142,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainWithIntegrity describeDomainWithIntegrity(array $options = [])
  * @method DescribeForbidPushStreamRoomList describeForbidPushStreamRoomList(array $options = [])
  * @method DescribeHlsLiveStreamRealTimeBpsData describeHlsLiveStreamRealTimeBpsData(array $options = [])
+ * @method DescribeLiveAIProduceRules describeLiveAIProduceRules(array $options = [])
+ * @method DescribeLiveAISubtitle describeLiveAISubtitle(array $options = [])
  * @method DescribeLiveAudioAuditConfig describeLiveAudioAuditConfig(array $options = [])
  * @method DescribeLiveAudioAuditNotifyConfig describeLiveAudioAuditNotifyConfig(array $options = [])
  * @method DescribeLiveCdnDiagnoseInfo describeLiveCdnDiagnoseInfo(array $options = [])
@@ -294,6 +301,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListEventSubEvent listEventSubEvent(array $options = [])
  * @method ListLiveDelayConfig listLiveDelayConfig(array $options = [])
  * @method ListLiveMessageApps listLiveMessageApps(array $options = [])
+ * @method ListLiveMessageGroupByPage listLiveMessageGroupByPage(array $options = [])
  * @method ListLiveMessageGroupMessages listLiveMessageGroupMessages(array $options = [])
  * @method ListLiveMessageGroups listLiveMessageGroups(array $options = [])
  * @method ListLiveMessageGroupUsers listLiveMessageGroupUsers(array $options = [])
@@ -331,6 +339,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PlayChoosenShow playChoosenShow(array $options = [])
  * @method PublishLiveStagingConfigToProduction publishLiveStagingConfigToProduction(array $options = [])
  * @method QueryMessageApp queryMessageApp(array $options = [])
+ * @method QueryRtcAsrTasks queryRtcAsrTasks(array $options = [])
  * @method QuerySnapshotCallbackAuth querySnapshotCallbackAuth(array $options = [])
  * @method RealTimeRecordCommand realTimeRecordCommand(array $options = [])
  * @method RealTimeSnapshotCommand realTimeSnapshotCommand(array $options = [])
@@ -377,12 +386,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopLiveMPUTask stopLiveMPUTask(array $options = [])
  * @method StopLiveStreamMonitor stopLiveStreamMonitor(array $options = [])
  * @method StopPlaylist stopPlaylist(array $options = [])
+ * @method StopRtcAsrTask stopRtcAsrTask(array $options = [])
  * @method TagLiveResources tagLiveResources(array $options = [])
  * @method UnTagLiveResources unTagLiveResources(array $options = [])
  * @method UpdateCasterSceneAudio updateCasterSceneAudio(array $options = [])
  * @method UpdateCasterSceneConfig updateCasterSceneConfig(array $options = [])
  * @method UpdateEdgeTranscodeJob updateEdgeTranscodeJob(array $options = [])
  * @method UpdateEventSub updateEventSub(array $options = [])
+ * @method UpdateLiveAIProduceRules updateLiveAIProduceRules(array $options = [])
+ * @method UpdateLiveAISubtitle updateLiveAISubtitle(array $options = [])
  * @method UpdateLiveAppRecordConfig updateLiveAppRecordConfig(array $options = [])
  * @method UpdateLiveAppSnapshotConfig updateLiveAppSnapshotConfig(array $options = [])
  * @method UpdateLiveAudioAuditConfig updateLiveAudioAuditConfig(array $options = [])
@@ -784,6 +796,70 @@ class AddCasterVideoResource extends Rpc
  * @method $this withKmsKeyID($value)
  */
 class AddCustomLiveStreamTranscode extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSubtitleName()
+ * @method $this withSubtitleName($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIsLazy()
+ * @method $this withIsLazy($value)
+ * @method string getLiveTemplate()
+ * @method $this withLiveTemplate($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getIsOrigin()
+ * @method $this withIsOrigin($value)
+ */
+class AddLiveAIProduceRules extends Rpc
+{
+}
+
+/**
+ * @method string getSrcLanguage()
+ * @method $this withSrcLanguage($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getFontName()
+ * @method $this withFontName($value)
+ * @method string getSubtitleName()
+ * @method $this withSubtitleName($value)
+ * @method string getFontSizeNormalized()
+ * @method $this withFontSizeNormalized($value)
+ * @method string getFontColor()
+ * @method $this withFontColor($value)
+ * @method string getShowSourceLan()
+ * @method $this withShowSourceLan($value)
+ * @method string getPositionNormalized()
+ * @method $this withPositionNormalized($value)
+ * @method string getBorderWidthNormalized()
+ * @method $this withBorderWidthNormalized($value)
+ * @method string getMaxLines()
+ * @method $this withMaxLines($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getWordPerLine()
+ * @method $this withWordPerLine($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBgWidthNormalized()
+ * @method $this withBgWidthNormalized($value)
+ * @method string getBgColor()
+ * @method $this withBgColor($value)
+ * @method string getDstLanguage()
+ * @method $this withDstLanguage($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ * @method string getCopyFrom()
+ * @method $this withCopyFrom($value)
+ */
+class AddLiveAISubtitle extends Rpc
 {
 }
 
@@ -2207,6 +2283,42 @@ class CreateRoomRealTimeStreamAddress extends Rpc
 }
 
 /**
+ * @method string getAuthKey()
+ * @method $this withAuthKey($value)
+ * @method string getLanguage()
+ * @method $this withLanguage($value)
+ * @method string getMode()
+ * @method $this withMode($value)
+ * @method string getTranslateEnabled()
+ * @method $this withTranslateEnabled($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method string getStreamURL()
+ * @method $this withStreamURL($value)
+ * @method string getTargetLanguages()
+ * @method $this withTargetLanguages($value)
+ * @method string getAutoTerminateEnabled()
+ * @method $this withAutoTerminateEnabled($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRtcUserId()
+ * @method $this withRtcUserId($value)
+ * @method string getReportInterval()
+ * @method $this withReportInterval($value)
+ * @method string getAutoTerminateDelay()
+ * @method $this withAutoTerminateDelay($value)
+ * @method string getSDKAppID()
+ * @method $this withSDKAppID($value)
+ * @method string getCallbackURL()
+ * @method $this withCallbackURL($value)
+ * @method string getChannelID()
+ * @method $this withChannelID($value)
+ */
+class CreateRtcAsrTask extends Rpc
+{
+}
+
+/**
  * @method string getCasterId()
  * @method $this withCasterId($value)
  * @method string getOwnerId()
@@ -2337,6 +2449,34 @@ class DeleteEdgeTranscodeJob extends Rpc
  * @method $this withAppId($value)
  */
 class DeleteEventSub extends Rpc
+{
+}
+
+/**
+ * @method string getRulesId()
+ * @method $this withRulesId($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSuffixName()
+ * @method $this withSuffixName($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DeleteLiveAIProduceRules extends Rpc
+{
+}
+
+/**
+ * @method string getSubtitleName()
+ * @method $this withSubtitleName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSubtitleId()
+ * @method $this withSubtitleId($value)
+ */
+class DeleteLiveAISubtitle extends Rpc
 {
 }
 
@@ -3224,6 +3364,42 @@ class DescribeHlsLiveStreamRealTimeBpsData extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getRulesId()
+ * @method $this withRulesId($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSuffixName()
+ * @method $this withSuffixName($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class DescribeLiveAIProduceRules extends Rpc
+{
+}
+
+/**
+ * @method string getSubtitleName()
+ * @method $this withSubtitleName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSubtitleId()
+ * @method $this withSubtitleId($value)
+ */
+class DescribeLiveAISubtitle extends Rpc
+{
 }
 
 /**
@@ -6231,6 +6407,30 @@ class ListLiveMessageApps extends Rpc
 /**
  * @method string getSortType()
  * @method $this withSortType($value)
+ * @method string getGroupStatus()
+ * @method $this withGroupStatus($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListLiveMessageGroupByPage extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getSortType()
+ * @method $this withSortType($value)
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
  * @method string getPageSize()
@@ -7506,6 +7706,16 @@ class QueryMessageApp extends Rpc
 }
 
 /**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class QueryRtcAsrTasks extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getOwnerId()
@@ -8560,6 +8770,16 @@ class StopPlaylist extends Rpc
 }
 
 /**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class StopRtcAsrTask extends Rpc
+{
+}
+
+/**
  * @method array getTag()
  * @method array getResourceId()
  * @method string getOwnerId()
@@ -8804,6 +9024,74 @@ class UpdateEventSub extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSubtitleName()
+ * @method $this withSubtitleName($value)
+ * @method string getRulesId()
+ * @method $this withRulesId($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getIsLazy()
+ * @method $this withIsLazy($value)
+ * @method string getLiveTemplate()
+ * @method $this withLiveTemplate($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getIsOrigin()
+ * @method $this withIsOrigin($value)
+ * @method string getSubtitleId()
+ * @method $this withSubtitleId($value)
+ */
+class UpdateLiveAIProduceRules extends Rpc
+{
+}
+
+/**
+ * @method string getSrcLanguage()
+ * @method $this withSrcLanguage($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getFontName()
+ * @method $this withFontName($value)
+ * @method string getSubtitleName()
+ * @method $this withSubtitleName($value)
+ * @method string getFontSizeNormalized()
+ * @method $this withFontSizeNormalized($value)
+ * @method string getFontColor()
+ * @method $this withFontColor($value)
+ * @method string getShowSourceLan()
+ * @method $this withShowSourceLan($value)
+ * @method string getPositionNormalized()
+ * @method $this withPositionNormalized($value)
+ * @method string getBorderWidthNormalized()
+ * @method $this withBorderWidthNormalized($value)
+ * @method string getMaxLines()
+ * @method $this withMaxLines($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getWordPerLine()
+ * @method $this withWordPerLine($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getBgWidthNormalized()
+ * @method $this withBgWidthNormalized($value)
+ * @method string getBgColor()
+ * @method $this withBgColor($value)
+ * @method string getDstLanguage()
+ * @method $this withDstLanguage($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ * @method string getSubtitleId()
+ * @method $this withSubtitleId($value)
+ */
+class UpdateLiveAISubtitle extends Rpc
+{
 }
 
 /**
