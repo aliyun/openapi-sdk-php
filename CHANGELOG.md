@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2133 - 2024-6-6
+- ListOrderConsumeStatisticRecords  add applicationExternalId serviceCode.
+
+
 ## 1.8.2132 - 2024-6-5
 - Support dms dg.
 
