@@ -6,20 +6,27 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AttachApplication2Connector attachApplication2Connector(array $options = [])
+ * @method CreateClientUser createClientUser(array $options = [])
  * @method CreateDynamicRoute createDynamicRoute(array $options = [])
+ * @method CreateIdpDepartment createIdpDepartment(array $options = [])
  * @method CreatePrivateAccessApplication createPrivateAccessApplication(array $options = [])
  * @method CreatePrivateAccessPolicy createPrivateAccessPolicy(array $options = [])
  * @method CreatePrivateAccessTag createPrivateAccessTag(array $options = [])
  * @method CreateRegistrationPolicy createRegistrationPolicy(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
+ * @method DeleteClientUser deleteClientUser(array $options = [])
  * @method DeleteDynamicRoute deleteDynamicRoute(array $options = [])
+ * @method DeleteIdpDepartment deleteIdpDepartment(array $options = [])
  * @method DeletePrivateAccessApplication deletePrivateAccessApplication(array $options = [])
  * @method DeletePrivateAccessPolicy deletePrivateAccessPolicy(array $options = [])
  * @method DeletePrivateAccessTag deletePrivateAccessTag(array $options = [])
  * @method DeleteRegistrationPolicies deleteRegistrationPolicies(array $options = [])
  * @method DeleteUserGroup deleteUserGroup(array $options = [])
  * @method DetachApplication2Connector detachApplication2Connector(array $options = [])
+ * @method GetActiveIdpConfig getActiveIdpConfig(array $options = [])
+ * @method GetClientUser getClientUser(array $options = [])
  * @method GetDynamicRoute getDynamicRoute(array $options = [])
+ * @method GetIdpConfig getIdpConfig(array $options = [])
  * @method GetPrivateAccessApplication getPrivateAccessApplication(array $options = [])
  * @method GetPrivateAccessPolicy getPrivateAccessPolicy(array $options = [])
  * @method GetRegistrationPolicy getRegistrationPolicy(array $options = [])
@@ -27,10 +34,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetUserGroup getUserGroup(array $options = [])
  * @method ListApplicationsForPrivateAccessPolicy listApplicationsForPrivateAccessPolicy(array $options = [])
  * @method ListApplicationsForPrivateAccessTag listApplicationsForPrivateAccessTag(array $options = [])
+ * @method ListClientUsers listClientUsers(array $options = [])
  * @method ListConnectors listConnectors(array $options = [])
  * @method ListDynamicRouteRegions listDynamicRouteRegions(array $options = [])
  * @method ListDynamicRoutes listDynamicRoutes(array $options = [])
  * @method ListExcessiveDeviceRegistrationApplications listExcessiveDeviceRegistrationApplications(array $options = [])
+ * @method ListIdpConfigs listIdpConfigs(array $options = [])
+ * @method ListIdpDepartments listIdpDepartments(array $options = [])
  * @method ListPolicesForPrivateAccessApplication listPolicesForPrivateAccessApplication(array $options = [])
  * @method ListPolicesForPrivateAccessTag listPolicesForPrivateAccessTag(array $options = [])
  * @method ListPolicesForUserGroup listPolicesForUserGroup(array $options = [])
@@ -50,8 +60,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUserGroupsForPrivateAccessPolicy listUserGroupsForPrivateAccessPolicy(array $options = [])
  * @method ListUserGroupsForRegistrationPolicy listUserGroupsForRegistrationPolicy(array $options = [])
  * @method ListUsers listUsers(array $options = [])
+ * @method RevokeUserSession revokeUserSession(array $options = [])
+ * @method UpdateClientUser updateClientUser(array $options = [])
+ * @method UpdateClientUserPassword updateClientUserPassword(array $options = [])
+ * @method UpdateClientUserStatus updateClientUserStatus(array $options = [])
  * @method UpdateDynamicRoute updateDynamicRoute(array $options = [])
  * @method UpdateExcessiveDeviceRegistrationApplicationsStatus updateExcessiveDeviceRegistrationApplicationsStatus(array $options = [])
+ * @method UpdateIdpDepartment updateIdpDepartment(array $options = [])
  * @method UpdatePrivateAccessApplication updatePrivateAccessApplication(array $options = [])
  * @method UpdatePrivateAccessPolicy updatePrivateAccessPolicy(array $options = [])
  * @method UpdateRegistrationPolicy updateRegistrationPolicy(array $options = [])
@@ -110,6 +125,29 @@ class AttachApplication2Connector extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getMobileNumber()
+ * @method $this withMobileNumber($value)
+ * @method string getDepartmentId()
+ * @method $this withDepartmentId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getIdpConfigId()
+ * @method $this withIdpConfigId($value)
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ */
+class CreateClientUser extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -261,6 +299,19 @@ class CreateDynamicRoute extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getIdpConfigId()
+ * @method $this withIdpConfigId($value)
+ * @method string getDepartmentName()
+ * @method $this withDepartmentName($value)
+ */
+class CreateIdpDepartment extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -809,12 +860,36 @@ class CreateUserGroup extends Rpc
 }
 
 /**
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class DeleteClientUser extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
  * @method string getDynamicRouteId()
  * @method $this withDynamicRouteId($value)
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  */
 class DeleteDynamicRoute extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getDepartmentId()
+ * @method $this withDepartmentId($value)
+ * @method string getIdpConfigId()
+ * @method $this withIdpConfigId($value)
+ */
+class DeleteIdpDepartment extends Rpc
 {
 
     /** @var string */
@@ -985,6 +1060,20 @@ class DetachApplication2Connector extends Rpc
     }
 }
 
+class GetActiveIdpConfig extends Rpc
+{
+}
+
+/**
+ * @method string getIdpConfigId()
+ * @method $this withIdpConfigId($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ */
+class GetClientUser extends Rpc
+{
+}
+
 /**
  * @method string getDynamicRouteId()
  * @method $this withDynamicRouteId($value)
@@ -992,6 +1081,14 @@ class DetachApplication2Connector extends Rpc
  * @method $this withSourceIp($value)
  */
 class GetDynamicRoute extends Rpc
+{
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ */
+class GetIdpConfig extends Rpc
 {
 }
 
@@ -1062,6 +1159,28 @@ class ListApplicationsForPrivateAccessPolicy extends Rpc
  * @method $this withSourceIp($value)
  */
 class ListApplicationsForPrivateAccessTag extends Rpc
+{
+}
+
+/**
+ * @method string getMobileNumber()
+ * @method $this withMobileNumber($value)
+ * @method string getDepartmentId()
+ * @method $this withDepartmentId($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getIdpConfigId()
+ * @method $this withIdpConfigId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListClientUsers extends Rpc
 {
 }
 
@@ -1144,6 +1263,30 @@ class ListDynamicRoutes extends Rpc
  * @method $this withUsername($value)
  */
 class ListExcessiveDeviceRegistrationApplications extends Rpc
+{
+}
+
+/**
+ * @method string getInclude()
+ * @method $this withInclude($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListIdpConfigs extends Rpc
+{
+}
+
+/**
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getIdpConfigId()
+ * @method $this withIdpConfigId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListIdpDepartments extends Rpc
 {
 }
 
@@ -1381,6 +1524,8 @@ class ListTagsForPrivateAccessPolicy extends Rpc
  * @method $this withNacStatuses($value)
  * @method string getDepartment()
  * @method $this withDepartment($value)
+ * @method string getInnerIp()
+ * @method $this withInnerIp($value)
  * @method string getIaStatuses()
  * @method $this withIaStatuses($value)
  * @method string getDeviceBelong()
@@ -1464,6 +1609,66 @@ class ListUserGroupsForRegistrationPolicy extends Rpc
  */
 class ListUsers extends Rpc
 {
+}
+
+/**
+ * @method string getIdpId()
+ * @method $this withIdpId($value)
+ * @method string getExternalIds()
+ * @method $this withExternalIds($value)
+ */
+class RevokeUserSession extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getMobileNumber()
+ * @method $this withMobileNumber($value)
+ * @method string getDepartmentId()
+ * @method $this withDepartmentId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getEmail()
+ * @method $this withEmail($value)
+ */
+class UpdateClientUser extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getPassword()
+ * @method $this withPassword($value)
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ */
+class UpdateClientUserPassword extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
+ * @method string getId()
+ * @method $this withId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class UpdateClientUserStatus extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -1682,6 +1887,21 @@ class UpdateExcessiveDeviceRegistrationApplicationsStatus extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getDepartmentId()
+ * @method $this withDepartmentId($value)
+ * @method string getIdpConfigId()
+ * @method $this withIdpConfigId($value)
+ * @method string getDepartmentName()
+ * @method $this withDepartmentName($value)
+ */
+class UpdateIdpDepartment extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**

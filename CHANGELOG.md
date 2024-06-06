@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2134 - 2024-6-6
+- Generated 2023-01-20 for `csas`.
+
+
 ## 1.8.2133 - 2024-6-6
 - ListOrderConsumeStatisticRecords  add applicationExternalId serviceCode.
 
