@@ -21,8 +21,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeletePrivateAccessPolicy deletePrivateAccessPolicy(array $options = [])
  * @method DeletePrivateAccessTag deletePrivateAccessTag(array $options = [])
  * @method DeleteRegistrationPolicies deleteRegistrationPolicies(array $options = [])
+ * @method DeleteUserDevices deleteUserDevices(array $options = [])
  * @method DeleteUserGroup deleteUserGroup(array $options = [])
  * @method DetachApplication2Connector detachApplication2Connector(array $options = [])
+ * @method ExportUserDevices exportUserDevices(array $options = [])
  * @method GetActiveIdpConfig getActiveIdpConfig(array $options = [])
  * @method GetClientUser getClientUser(array $options = [])
  * @method GetDynamicRoute getDynamicRoute(array $options = [])
@@ -997,6 +999,31 @@ class DeleteRegistrationPolicies extends Rpc
 }
 
 /**
+ * @method string getDeviceTags()
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ */
+class DeleteUserDevices extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceTags($value)
+    {
+        $this->data['DeviceTags'] = $value;
+        $this->options['form_params']['DeviceTags'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getUserGroupId()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
@@ -1055,6 +1082,227 @@ class DetachApplication2Connector extends Rpc
     {
         $this->data['ApplicationIds'] = $value;
         $this->options['form_params']['ApplicationIds'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMac()
+ * @method string getDeviceTypes()
+ * @method string getHostname()
+ * @method string getAppStatuses()
+ * @method string getDlpStatuses()
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getSaseUserId()
+ * @method string getNacStatuses()
+ * @method string getDepartment()
+ * @method string getIaStatuses()
+ * @method string getDeviceBelong()
+ * @method string getSharingStatus()
+ * @method string getDeviceTags()
+ * @method string getDeviceStatuses()
+ * @method string getPaStatuses()
+ * @method string getUsername()
+ */
+class ExportUserDevices extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMac($value)
+    {
+        $this->data['Mac'] = $value;
+        $this->options['form_params']['Mac'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceTypes($value)
+    {
+        $this->data['DeviceTypes'] = $value;
+        $this->options['form_params']['DeviceTypes'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHostname($value)
+    {
+        $this->data['Hostname'] = $value;
+        $this->options['form_params']['Hostname'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppStatuses($value)
+    {
+        $this->data['AppStatuses'] = $value;
+        $this->options['form_params']['AppStatuses'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDlpStatuses($value)
+    {
+        $this->data['DlpStatuses'] = $value;
+        $this->options['form_params']['DlpStatuses'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSaseUserId($value)
+    {
+        $this->data['SaseUserId'] = $value;
+        $this->options['form_params']['SaseUserId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNacStatuses($value)
+    {
+        $this->data['NacStatuses'] = $value;
+        $this->options['form_params']['NacStatuses'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDepartment($value)
+    {
+        $this->data['Department'] = $value;
+        $this->options['form_params']['Department'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIaStatuses($value)
+    {
+        $this->data['IaStatuses'] = $value;
+        $this->options['form_params']['IaStatuses'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceBelong($value)
+    {
+        $this->data['DeviceBelong'] = $value;
+        $this->options['form_params']['DeviceBelong'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSharingStatus($value)
+    {
+        $this->data['SharingStatus'] = $value;
+        $this->options['form_params']['SharingStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceTags($value)
+    {
+        $this->data['DeviceTags'] = $value;
+        $this->options['form_params']['DeviceTags'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceStatuses($value)
+    {
+        $this->data['DeviceStatuses'] = $value;
+        $this->options['form_params']['DeviceStatuses'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPaStatuses($value)
+    {
+        $this->data['PaStatuses'] = $value;
+        $this->options['form_params']['PaStatuses'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUsername($value)
+    {
+        $this->data['Username'] = $value;
+        $this->options['form_params']['Username'] = $value;
 
         return $this;
     }
