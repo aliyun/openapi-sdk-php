@@ -34,7 +34,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddLiveStreamTranscode addLiveStreamTranscode(array $options = [])
  * @method AddLiveStreamWatermark addLiveStreamWatermark(array $options = [])
  * @method AddLiveStreamWatermarkRule addLiveStreamWatermarkRule(array $options = [])
- * @method AddMultiRateConfig addMultiRateConfig(array $options = [])
  * @method AddPlaylistItems addPlaylistItems(array $options = [])
  * @method AddRtsLiveStreamTranscode addRtsLiveStreamTranscode(array $options = [])
  * @method AddShowIntoShowList addShowIntoShowList(array $options = [])
@@ -62,12 +61,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateLiveRealTimeLogDelivery createLiveRealTimeLogDelivery(array $options = [])
  * @method CreateLiveStreamMonitor createLiveStreamMonitor(array $options = [])
  * @method CreateLiveStreamRecordIndexFiles createLiveStreamRecordIndexFiles(array $options = [])
- * @method CreateLiveTranscodeTemplate createLiveTranscodeTemplate(array $options = [])
  * @method CreateMessageApp createMessageApp(array $options = [])
  * @method CreateMessageGroup createMessageGroup(array $options = [])
  * @method CreateMixStream createMixStream(array $options = [])
  * @method CreateRoomRealTimeStreamAddress createRoomRealTimeStreamAddress(array $options = [])
  * @method CreateRtcAsrTask createRtcAsrTask(array $options = [])
+ * @method CreateRtcMPUEventSub createRtcMPUEventSub(array $options = [])
  * @method DeleteCaster deleteCaster(array $options = [])
  * @method DeleteCasterComponent deleteCasterComponent(array $options = [])
  * @method DeleteCasterEpisode deleteCasterEpisode(array $options = [])
@@ -117,10 +116,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteLiveStreamWatermarkRule deleteLiveStreamWatermarkRule(array $options = [])
  * @method DeleteMessageApp deleteMessageApp(array $options = [])
  * @method DeleteMixStream deleteMixStream(array $options = [])
- * @method DeleteMultiRateConfig deleteMultiRateConfig(array $options = [])
  * @method DeletePlaylist deletePlaylist(array $options = [])
  * @method DeletePlaylistItems deletePlaylistItems(array $options = [])
  * @method DeleteRoom deleteRoom(array $options = [])
+ * @method DeleteRtcAsrTask deleteRtcAsrTask(array $options = [])
+ * @method DeleteRtcMPUEventSub deleteRtcMPUEventSub(array $options = [])
  * @method DeleteSnapshotCallbackAuth deleteSnapshotCallbackAuth(array $options = [])
  * @method DeleteSnapshotFiles deleteSnapshotFiles(array $options = [])
  * @method DeleteStudioLayout deleteStudioLayout(array $options = [])
@@ -255,8 +255,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeMeterLiveRtcDuration describeMeterLiveRtcDuration(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRoomKickoutUserList describeRoomKickoutUserList(array $options = [])
- * @method DescribeRoomList describeRoomList(array $options = [])
  * @method DescribeRoomStatus describeRoomStatus(array $options = [])
+ * @method DescribeRtcMPUEventSub describeRtcMPUEventSub(array $options = [])
  * @method DescribeRTSNativeSDKFirstFrameCost describeRTSNativeSDKFirstFrameCost(array $options = [])
  * @method DescribeRTSNativeSDKFirstFrameDelay describeRTSNativeSDKFirstFrameDelay(array $options = [])
  * @method DescribeRTSNativeSDKPlayFailStatus describeRTSNativeSDKPlayFailStatus(array $options = [])
@@ -287,8 +287,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMessageApp getMessageApp(array $options = [])
  * @method GetMessageGroup getMessageGroup(array $options = [])
  * @method GetMessageToken getMessageToken(array $options = [])
- * @method GetMultiRateConfig getMultiRateConfig(array $options = [])
- * @method GetMultiRateConfigList getMultiRateConfigList(array $options = [])
  * @method GetTranscodeTaskStatus getTranscodeTaskStatus(array $options = [])
  * @method HotLiveRtcStream hotLiveRtcStream(array $options = [])
  * @method InitializeAutoShowListTask initializeAutoShowListTask(array $options = [])
@@ -316,6 +314,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListMuteGroupUser listMuteGroupUser(array $options = [])
  * @method ListPlaylist listPlaylist(array $options = [])
  * @method ListPlaylistItems listPlaylistItems(array $options = [])
+ * @method ListRtcMPUEventSubRecord listRtcMPUEventSubRecord(array $options = [])
  * @method MiguLivePullToPushStart miguLivePullToPushStart(array $options = [])
  * @method MiguLivePullToPushStatus miguLivePullToPushStatus(array $options = [])
  * @method ModifyCasterComponent modifyCasterComponent(array $options = [])
@@ -342,7 +341,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRtcAsrTasks queryRtcAsrTasks(array $options = [])
  * @method QuerySnapshotCallbackAuth querySnapshotCallbackAuth(array $options = [])
  * @method RealTimeRecordCommand realTimeRecordCommand(array $options = [])
- * @method RealTimeSnapshotCommand realTimeSnapshotCommand(array $options = [])
  * @method RemoveShowFromShowList removeShowFromShowList(array $options = [])
  * @method RemoveTerminals removeTerminals(array $options = [])
  * @method RestartCaster restartCaster(array $options = [])
@@ -368,7 +366,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetLiveMpuTaskSei setLiveMpuTaskSei(array $options = [])
  * @method SetLiveStreamBlock setLiveStreamBlock(array $options = [])
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
- * @method SetLiveStreamOptimizedFeatureConfig setLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method SetLiveStreamPreloadTasks setLiveStreamPreloadTasks(array $options = [])
  * @method SetLiveStreamsNotifyUrlConfig setLiveStreamsNotifyUrlConfig(array $options = [])
  * @method SetSnapshotCallbackAuth setSnapshotCallbackAuth(array $options = [])
@@ -416,6 +413,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateMessageApp updateMessageApp(array $options = [])
  * @method UpdateMessageGroup updateMessageGroup(array $options = [])
  * @method UpdateMixStream updateMixStream(array $options = [])
+ * @method UpdateRtcMPUEventSub updateRtcMPUEventSub(array $options = [])
  * @method VerifyLiveDomainOwner verifyLiveDomainOwner(array $options = [])
  */
 class LiveApiResolver extends ApiResolver
@@ -1366,28 +1364,6 @@ class AddLiveStreamWatermarkRule extends Rpc
 }
 
 /**
- * @method string getApp()
- * @method $this withApp($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getTemplates()
- * @method $this withTemplates($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getIsLazy()
- * @method $this withIsLazy($value)
- * @method string getAvFormat()
- * @method $this withAvFormat($value)
- * @method string getIsTimeAlign()
- * @method $this withIsTimeAlign($value)
- */
-class AddMultiRateConfig extends Rpc
-{
-}
-
-/**
  * @method string getProgramItems()
  * @method $this withProgramItems($value)
  * @method string getProgramId()
@@ -2133,20 +2109,6 @@ class CreateLiveStreamRecordIndexFiles extends Rpc
 }
 
 /**
- * @method string getType()
- * @method $this withType($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- * @method string getTemplateConfig()
- * @method $this withTemplateConfig($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CreateLiveTranscodeTemplate extends Rpc
-{
-}
-
-/**
  * @method string getExtension()
  * @method string getAppConfig()
  * @method string getAppName()
@@ -2315,6 +2277,18 @@ class CreateRoomRealTimeStreamAddress extends Rpc
  * @method $this withChannelID($value)
  */
 class CreateRtcAsrTask extends Rpc
+{
+}
+
+/**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getCallbackUrl()
+ * @method $this withCallbackUrl($value)
+ * @method string getChannelIds()
+ * @method $this withChannelIds($value)
+ */
+class CreateRtcMPUEventSub extends Rpc
 {
 }
 
@@ -3000,24 +2974,6 @@ class DeleteMixStream extends Rpc
 }
 
 /**
- * @method string getDeleteAll()
- * @method $this withDeleteAll($value)
- * @method string getApp()
- * @method $this withApp($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getTemplates()
- * @method $this withTemplates($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DeleteMultiRateConfig extends Rpc
-{
-}
-
-/**
  * @method string getProgramId()
  * @method $this withProgramId($value)
  * @method string getOwnerId()
@@ -3048,6 +3004,24 @@ class DeletePlaylistItems extends Rpc
  * @method $this withAppId($value)
  */
 class DeleteRoom extends Rpc
+{
+}
+
+/**
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteRtcAsrTask extends Rpc
+{
+}
+
+/**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DeleteRtcMPUEventSub extends Rpc
 {
 }
 
@@ -3393,6 +3367,8 @@ class DescribeLiveAIProduceRules extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getIsDefault()
+ * @method $this withIsDefault($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSubtitleId()
@@ -5493,32 +5469,6 @@ class DescribeRoomKickoutUserList extends Rpc
 }
 
 /**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getAnchorId()
- * @method $this withAnchorId($value)
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getRoomStatus()
- * @method $this withRoomStatus($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOrder()
- * @method $this withOrder($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DescribeRoomList extends Rpc
-{
-}
-
-/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getRoomId()
@@ -5527,6 +5477,14 @@ class DescribeRoomList extends Rpc
  * @method $this withAppId($value)
  */
 class DescribeRoomStatus extends Rpc
+{
+}
+
+/**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class DescribeRtcMPUEventSub extends Rpc
 {
 }
 
@@ -6038,30 +5996,6 @@ class GetMessageToken extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getApp()
- * @method $this withApp($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetMultiRateConfig extends Rpc
-{
-}
-
-/**
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class GetMultiRateConfigList extends Rpc
-{
 }
 
 /**
@@ -6979,6 +6913,24 @@ class ListPlaylistItems extends Rpc
 }
 
 /**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSubId()
+ * @method $this withSubId($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListRtcMPUEventSubRecord extends Rpc
+{
+}
+
+/**
  * @method string getMiguData()
  * @method $this withMiguData($value)
  * @method string getDomainName()
@@ -7742,32 +7694,6 @@ class RealTimeRecordCommand extends Rpc
 }
 
 /**
- * @method string getSource()
- * @method $this withSource($value)
- * @method string getMode()
- * @method $this withMode($value)
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getAppName()
- * @method $this withAppName($value)
- * @method string getStreamName()
- * @method $this withStreamName($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getCommand()
- * @method $this withCommand($value)
- * @method string getSnapshotType()
- * @method $this withSnapshotType($value)
- * @method string getInterval()
- * @method $this withInterval($value)
- */
-class RealTimeSnapshotCommand extends Rpc
-{
-}
-
-/**
  * @method string getIsBatchMode()
  * @method array getShowIdList()
  * @method string getCasterId()
@@ -8522,22 +8448,6 @@ class SetLiveStreamBlock extends Rpc
  * @method $this withHlsDelay($value)
  */
 class SetLiveStreamDelayConfig extends Rpc
-{
-}
-
-/**
- * @method string getConfigStatus()
- * @method $this withConfigStatus($value)
- * @method string getConfigName()
- * @method $this withConfigName($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getConfigValue()
- * @method $this withConfigValue($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SetLiveStreamOptimizedFeatureConfig extends Rpc
 {
 }
 
@@ -9680,6 +9590,18 @@ class UpdateMessageGroup extends Rpc
  * @method $this withOwnerId($value)
  */
 class UpdateMixStream extends Rpc
+{
+}
+
+/**
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getCallbackUrl()
+ * @method $this withCallbackUrl($value)
+ * @method string getChannelIds()
+ * @method $this withChannelIds($value)
+ */
+class UpdateRtcMPUEventSub extends Rpc
 {
 }
 

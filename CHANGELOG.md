@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2137 - 2024-6-14
+- Update to support new apis.
+
+
 ## 1.8.2136 - 2024-6-14
 - Generated 2019-09-01 for `OceanBasePro`.
 
