@@ -81,6 +81,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTenant describeTenant(array $options = [])
  * @method DescribeTenantEncryption describeTenantEncryption(array $options = [])
  * @method DescribeTenantMetrics describeTenantMetrics(array $options = [])
+ * @method DescribeTenantReadableScn describeTenantReadableScn(array $options = [])
  * @method DescribeTenants describeTenants(array $options = [])
  * @method DescribeTenantSecurityConfigs describeTenantSecurityConfigs(array $options = [])
  * @method DescribeTenantSecurityIpGroups describeTenantSecurityIpGroups(array $options = [])
@@ -104,6 +105,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyInstanceName modifyInstanceName(array $options = [])
  * @method ModifyInstanceNodeNum modifyInstanceNodeNum(array $options = [])
  * @method ModifyInstanceSpec modifyInstanceSpec(array $options = [])
+ * @method ModifyInstanceSSL modifyInstanceSSL(array $options = [])
  * @method ModifyInstanceTags modifyInstanceTags(array $options = [])
  * @method ModifyInstanceTemporaryCapacity modifyInstanceTemporaryCapacity(array $options = [])
  * @method ModifyParameters modifyParameters(array $options = [])
@@ -3378,6 +3380,7 @@ class DescribeDatabases extends Rpc
 
 /**
  * @method string getPageNumber()
+ * @method string getMaxConnectionLimit()
  * @method string getInstanceId()
  */
 class DescribeInstance extends Rpc
@@ -3392,6 +3395,19 @@ class DescribeInstance extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxConnectionLimit($value)
+    {
+        $this->data['MaxConnectionLimit'] = $value;
+        $this->options['form_params']['MaxConnectionLimit'] = $value;
 
         return $this;
     }
@@ -6496,6 +6512,43 @@ class DescribeTenantMetrics extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class DescribeTenantReadableScn extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getSearchKey()
  * @method string getPageNumber()
  * @method string getInstanceId()
@@ -7891,6 +7944,7 @@ class ModifyInstanceNodeNum extends Rpc
  * @method string getDiskType()
  * @method string getInstanceId()
  * @method string getLogDiskSize()
+ * @method string getUpgradeSpecNative()
  */
 class ModifyInstanceSpec extends Rpc
 {
@@ -7982,6 +8036,53 @@ class ModifyInstanceSpec extends Rpc
     {
         $this->data['LogDiskSize'] = $value;
         $this->options['form_params']['LogDiskSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUpgradeSpecNative($value)
+    {
+        $this->data['UpgradeSpecNative'] = $value;
+        $this->options['form_params']['UpgradeSpecNative'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getEnableSSL()
+ */
+class ModifyInstanceSSL extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnableSSL($value)
+    {
+        $this->data['EnableSSL'] = $value;
+        $this->options['form_params']['EnableSSL'] = $value;
 
         return $this;
     }

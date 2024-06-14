@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2136 - 2024-6-14
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2135 - 2024-6-11
 - Generated 2023-01-20 for `csas`.
 
