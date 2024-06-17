@@ -272,6 +272,8 @@ class CreateDB extends Rpc
  * @method $this withDnClass($value)
  * @method string getUsedTime()
  * @method $this withUsedTime($value)
+ * @method string getDnStorageSpace()
+ * @method $this withDnStorageSpace($value)
  * @method string getPrimaryZone()
  * @method $this withPrimaryZone($value)
  * @method string getSeries()
@@ -432,16 +434,16 @@ class DescribeBackupSet extends Rpc
 /**
  * @method string getDBInstanceName()
  * @method $this withDBInstanceName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getDestCrossRegion()
- * @method $this withDestCrossRegion($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getDestCrossRegion()
+ * @method $this withDestCrossRegion($value)
  */
 class DescribeBackupSetList extends Rpc
 {
@@ -1011,14 +1013,14 @@ class RestartDBInstance extends Rpc
 /**
  * @method string getDBInstanceName()
  * @method $this withDBInstanceName($value)
- * @method string getTargetPrimaryRegionId()
- * @method $this withTargetPrimaryRegionId($value)
  * @method string getSwitchTimeMode()
  * @method $this withSwitchTimeMode($value)
- * @method string getTargetPrimaryAzoneId()
- * @method $this withTargetPrimaryAzoneId($value)
  * @method string getSwitchTime()
  * @method $this withSwitchTime($value)
+ * @method string getTargetPrimaryRegionId()
+ * @method $this withTargetPrimaryRegionId($value)
+ * @method string getTargetPrimaryAzoneId()
+ * @method $this withTargetPrimaryAzoneId($value)
  */
 class SwitchDBInstanceHA extends Rpc
 {

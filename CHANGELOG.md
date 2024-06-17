@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2138 - 2024-6-17
+- CreateDBInstance add DNStorageSpace
+
+
 ## 1.8.2137 - 2024-6-14
 - Update to support new apis.
 
