@@ -6,12 +6,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AllocatePublicConnection allocatePublicConnection(array $options = [])
+ * @method AttachKeyPair attachKeyPair(array $options = [])
  * @method CreateCommand createCommand(array $options = [])
  * @method CreateCustomImage createCustomImage(array $options = [])
  * @method CreateFirewallRule createFirewallRule(array $options = [])
  * @method CreateFirewallRules createFirewallRules(array $options = [])
  * @method CreateInstanceKeyPair createInstanceKeyPair(array $options = [])
  * @method CreateInstances createInstances(array $options = [])
+ * @method CreateKeyPair createKeyPair(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
  * @method DeleteCommand deleteCommand(array $options = [])
  * @method DeleteCustomImage deleteCustomImage(array $options = [])
@@ -19,6 +21,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFirewallRule deleteFirewallRule(array $options = [])
  * @method DeleteFirewallRules deleteFirewallRules(array $options = [])
  * @method DeleteInstanceKeyPair deleteInstanceKeyPair(array $options = [])
+ * @method DeleteKeyPairs deleteKeyPairs(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
  * @method DeleteSnapshots deleteSnapshots(array $options = [])
  * @method DescribeCloudAssistantAttributes describeCloudAssistantAttributes(array $options = [])
@@ -38,8 +41,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInvocations describeInvocations(array $options = [])
  * @method DescribeMonitorData describeMonitorData(array $options = [])
  * @method DescribeSecurityAgentStatus describeSecurityAgentStatus(array $options = [])
+ * @method DetachKeyPair detachKeyPair(array $options = [])
  * @method DisableFirewallRule disableFirewallRule(array $options = [])
  * @method EnableFirewallRule enableFirewallRule(array $options = [])
+ * @method ImportKeyPair importKeyPair(array $options = [])
  * @method InstallCloudAssistant installCloudAssistant(array $options = [])
  * @method InstallCloudMonitorAgent installCloudMonitorAgent(array $options = [])
  * @method InvokeCommand invokeCommand(array $options = [])
@@ -51,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListInstances listInstances(array $options = [])
  * @method ListInstanceStatus listInstanceStatus(array $options = [])
  * @method ListInstancesTrafficPackages listInstancesTrafficPackages(array $options = [])
+ * @method ListKeyPairs listKeyPairs(array $options = [])
  * @method ListPlans listPlans(array $options = [])
  * @method ListRegions listRegions(array $options = [])
  * @method ListSnapshots listSnapshots(array $options = [])
@@ -116,6 +122,35 @@ class AllocatePublicConnection extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method array getInstanceIds()
+ */
+class AttachKeyPair extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getWorkingDir()
  * @method $this withWorkingDir($value)
  * @method string getDescription()
@@ -126,6 +161,8 @@ class AllocatePublicConnection extends Rpc
  * @method $this withCommandContent($value)
  * @method string getTimeout()
  * @method $this withTimeout($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method array getTag()
  * @method string getName()
  * @method $this withName($value)
@@ -165,6 +202,8 @@ class CreateCommand extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResoureGroupId()
+ * @method $this withResoureGroupId($value)
  * @method string getPlatform()
  * @method $this withPlatform($value)
  * @method string getImageName()
@@ -285,8 +324,23 @@ class CreateInstances extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ */
+class CreateKeyPair extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getSnapshotName()
  * @method $this withSnapshotName($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
  * @method array getTag()
@@ -378,6 +432,33 @@ class DeleteInstanceKeyPair extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method array getKeyPairNames()
+ */
+class DeleteKeyPairs extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $keyPairNames
+     *
+     * @return $this
+     */
+	public function withKeyPairNames(array $keyPairNames)
+	{
+	    $this->data['KeyPairNames'] = $keyPairNames;
+		foreach ($keyPairNames as $i => $iValue) {
+			$this->options['query']['KeyPairNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getSnapshotId()
  * @method $this withSnapshotId($value)
  * @method string getClientToken()
@@ -460,6 +541,8 @@ class DescribeCommandInvocations extends Rpc
  * @method $this withCommandId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getProvider()
  * @method $this withProvider($value)
  * @method string getPageSize()
@@ -647,6 +730,35 @@ class DescribeSecurityAgentStatus extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method array getInstanceIds()
+ */
+class DetachKeyPair extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getRemark()
  * @method $this withRemark($value)
  * @method string getInstanceId()
@@ -672,6 +784,21 @@ class DisableFirewallRule extends Rpc
  */
 class EnableFirewallRule extends Rpc
 {
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPublicKeyBody()
+ * @method $this withPublicKeyBody($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ */
+class ImportKeyPair extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -754,17 +881,19 @@ class ListCustomImages extends Rpc
 }
 
 /**
- * @method string getDiskType()
- * @method $this withDiskType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDiskIds()
  * @method $this withDiskIds($value)
  * @method array getTag()
+ * @method string getDiskType()
+ * @method $this withDiskType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListDisks extends Rpc
 {
@@ -846,11 +975,15 @@ class ListInstancePlansModification extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPublicIpAddresses()
  * @method $this withPublicIpAddresses($value)
  * @method array getTag()
+ * @method string getInstanceName()
+ * @method $this withInstanceName($value)
  * @method string getInstanceIds()
  * @method $this withInstanceIds($value)
  * @method string getChargeType()
@@ -902,6 +1035,26 @@ class ListInstancesTrafficPackages extends Rpc
 {
 }
 
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getKeyPairName()
+ * @method $this withKeyPairName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListKeyPairs extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
 class ListPlans extends Rpc
 {
 }
@@ -919,6 +1072,8 @@ class ListRegions extends Rpc
  * @method $this withSnapshotIds($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDiskId()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2139 - 2024-6-17
+- Generated 2020-06-01 for `SWAS-OPEN`.
+
+
 ## 1.8.2138 - 2024-6-17
 - CreateDBInstance add DNStorageSpace
 
