@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2142 - 2024-6-18
+- Update to support new apis.
+
+
 ## 1.8.2141 - 2024-6-18
 - Supported modification of securityGroupId for UpdateElasticNetworkInterface API.
 

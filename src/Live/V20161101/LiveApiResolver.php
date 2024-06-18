@@ -315,6 +315,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPlaylist listPlaylist(array $options = [])
  * @method ListPlaylistItems listPlaylistItems(array $options = [])
  * @method ListRtcMPUEventSubRecord listRtcMPUEventSubRecord(array $options = [])
+ * @method ListRtcMPUTaskDetail listRtcMPUTaskDetail(array $options = [])
  * @method MiguLivePullToPushStart miguLivePullToPushStart(array $options = [])
  * @method MiguLivePullToPushStatus miguLivePullToPushStatus(array $options = [])
  * @method ModifyCasterComponent modifyCasterComponent(array $options = [])
@@ -6927,6 +6928,20 @@ class ListPlaylistItems extends Rpc
  * @method $this withPageSize($value)
  */
 class ListRtcMPUEventSubRecord extends Rpc
+{
+}
+
+/**
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class ListRtcMPUTaskDetail extends Rpc
 {
 }
 
