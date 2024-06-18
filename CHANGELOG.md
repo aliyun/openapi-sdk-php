@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2143 - 2024-6-18
+- Add status operation api.
+
+
 ## 1.8.2142 - 2024-6-18
 - Update to support new apis.
 

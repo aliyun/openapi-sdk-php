@@ -14,6 +14,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListServiceInstanceLogs listServiceInstanceLogs(array $options = [])
  * @method ListServiceInstanceResources listServiceInstanceResources(array $options = [])
  * @method ListServiceInstances listServiceInstances(array $options = [])
+ * @method RestartServiceInstance restartServiceInstance(array $options = [])
+ * @method StartServiceInstance startServiceInstance(array $options = [])
+ * @method StopServiceInstance stopServiceInstance(array $options = [])
  */
 class ComputeNestApiResolver extends ApiResolver
 {
@@ -339,4 +342,34 @@ class ListServiceInstances extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getServiceInstanceId()
+ * @method $this withServiceInstanceId($value)
+ */
+class RestartServiceInstance extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getServiceInstanceId()
+ * @method $this withServiceInstanceId($value)
+ */
+class StartServiceInstance extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getServiceInstanceId()
+ * @method $this withServiceInstanceId($value)
+ */
+class StopServiceInstance extends Rpc
+{
 }
