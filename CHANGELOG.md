@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2140 - 2024-6-18
+- Generated 2020-02-02 for `polardbx`.
+
+
 ## 1.8.2139 - 2024-6-17
 - Generated 2020-06-01 for `SWAS-OPEN`.
 
