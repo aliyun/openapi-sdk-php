@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2141 - 2024-6-18
+- Supported modification of securityGroupId for UpdateElasticNetworkInterface API.
+
+
 ## 1.8.2140 - 2024-6-18
 - Generated 2020-02-02 for `polardbx`.
 

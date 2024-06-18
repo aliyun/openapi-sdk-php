@@ -403,6 +403,7 @@ class CreateElasticNetworkInterface extends Rpc
  * @method string getDescription()
  * @method string getErName()
  * @method string getMasterZoneId()
+ * @method string getResourceGroupId()
  */
 class CreateEr extends Rpc
 {
@@ -442,6 +443,19 @@ class CreateEr extends Rpc
     {
         $this->data['MasterZoneId'] = $value;
         $this->options['form_params']['MasterZoneId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -2465,6 +2479,7 @@ class ListElasticNetworkInterfaces extends Rpc
 /**
  * @method string getPageNumber()
  * @method string getResourceTenantId()
+ * @method string getResourceGroupId()
  * @method string getAutoReceiveAllRoute()
  * @method string getPageSize()
  * @method string getInstanceType()
@@ -2500,6 +2515,19 @@ class ListErAttachments extends Rpc
     {
         $this->data['ResourceTenantId'] = $value;
         $this->options['form_params']['ResourceTenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -2626,6 +2654,7 @@ class ListErAttachments extends Rpc
  * @method string getIgnoreDetailedRouteEntry()
  * @method string getPageNumber()
  * @method string getRouteType()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
  * @method string getNextHopId()
  * @method string getNextHopType()
@@ -2673,6 +2702,19 @@ class ListErRouteEntries extends Rpc
     {
         $this->data['RouteType'] = $value;
         $this->options['form_params']['RouteType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -2787,6 +2829,7 @@ class ListErRouteEntries extends Rpc
  * @method string getReceptionInstanceId()
  * @method string getErRouteMapNum()
  * @method string getPageNumber()
+ * @method string getResourceGroupId()
  * @method string getRouteMapAction()
  * @method string getTransmissionInstanceType()
  * @method string getPageSize()
@@ -2849,6 +2892,19 @@ class ListErRouteMaps extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -2987,6 +3043,7 @@ class ListErRouteMaps extends Rpc
 /**
  * @method string getMasterZoneId()
  * @method string getPageNumber()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
  * @method string getInstanceType()
  * @method string getErId()
@@ -3019,6 +3076,19 @@ class ListErs extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -3827,6 +3897,7 @@ class ListVccGrantRules extends Rpc
  * @method string getIgnoreDetailedRouteEntry()
  * @method string getPageNumber()
  * @method string getRouteType()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
  * @method string getNextHopId()
  * @method string getVccId()
@@ -3874,6 +3945,19 @@ class ListVccRouteEntries extends Rpc
     {
         $this->data['RouteType'] = $value;
         $this->options['form_params']['RouteType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -4328,6 +4412,7 @@ class ListVpdGrantRules extends Rpc
  * @method string getIgnoreDetailedRouteEntry()
  * @method string getPageNumber()
  * @method string getRouteType()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
  * @method string getNextHopId()
  * @method string getNextHopType()
@@ -4375,6 +4460,19 @@ class ListVpdRouteEntries extends Rpc
     {
         $this->data['RouteType'] = $value;
         $this->options['form_params']['RouteType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -4873,6 +4971,7 @@ class UnAssociateVpdCidrBlock extends Rpc
 
 /**
  * @method string getClientToken()
+ * @method string getSecurityGroupId()
  * @method string getDescription()
  * @method string getElasticNetworkInterfaceId()
  */
@@ -4888,6 +4987,19 @@ class UpdateElasticNetworkInterface extends Rpc
     {
         $this->data['ClientToken'] = $value;
         $this->options['form_params']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSecurityGroupId($value)
+    {
+        $this->data['SecurityGroupId'] = $value;
+        $this->options['form_params']['SecurityGroupId'] = $value;
 
         return $this;
     }
