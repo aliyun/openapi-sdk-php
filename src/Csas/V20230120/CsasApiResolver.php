@@ -14,6 +14,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreatePrivateAccessTag createPrivateAccessTag(array $options = [])
  * @method CreateRegistrationPolicy createRegistrationPolicy(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
+ * @method CreateWmBaseImage createWmBaseImage(array $options = [])
+ * @method CreateWmEmbedTask createWmEmbedTask(array $options = [])
+ * @method CreateWmExtractTask createWmExtractTask(array $options = [])
+ * @method CreateWmInfoMapping createWmInfoMapping(array $options = [])
  * @method DeleteClientUser deleteClientUser(array $options = [])
  * @method DeleteDynamicRoute deleteDynamicRoute(array $options = [])
  * @method DeleteIdpDepartment deleteIdpDepartment(array $options = [])
@@ -34,6 +38,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRegistrationPolicy getRegistrationPolicy(array $options = [])
  * @method GetUserDevice getUserDevice(array $options = [])
  * @method GetUserGroup getUserGroup(array $options = [])
+ * @method GetWmEmbedTask getWmEmbedTask(array $options = [])
+ * @method GetWmExtractTask getWmExtractTask(array $options = [])
  * @method ListApplicationsForPrivateAccessPolicy listApplicationsForPrivateAccessPolicy(array $options = [])
  * @method ListApplicationsForPrivateAccessTag listApplicationsForPrivateAccessTag(array $options = [])
  * @method ListClientUsers listClientUsers(array $options = [])
@@ -62,6 +68,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUserGroupsForPrivateAccessPolicy listUserGroupsForPrivateAccessPolicy(array $options = [])
  * @method ListUserGroupsForRegistrationPolicy listUserGroupsForRegistrationPolicy(array $options = [])
  * @method ListUsers listUsers(array $options = [])
+ * @method LookupWmInfoMapping lookupWmInfoMapping(array $options = [])
  * @method RevokeUserSession revokeUserSession(array $options = [])
  * @method UpdateClientUser updateClientUser(array $options = [])
  * @method UpdateClientUserPassword updateClientUserPassword(array $options = [])
@@ -435,6 +442,7 @@ class CreatePrivateAccessApplication extends Rpc
  * @method string getUserGroupIds()
  * @method string getPolicyAction()
  * @method string getPriority()
+ * @method string getDeviceAttributeAction()
  * @method string getApplicationIds()
  * @method string getUserGroupMode()
  * @method string getName()
@@ -534,6 +542,19 @@ class CreatePrivateAccessPolicy extends Rpc
     {
         $this->data['Priority'] = $value;
         $this->options['form_params']['Priority'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceAttributeAction($value)
+    {
+        $this->data['DeviceAttributeAction'] = $value;
+        $this->options['form_params']['DeviceAttributeAction'] = $value;
 
         return $this;
     }
@@ -856,6 +877,528 @@ class CreateUserGroup extends Rpc
     {
         $this->data['Attributes'] = $value;
         $this->options['form_params']['Attributes'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getScale()
+ * @method string getApiType()
+ * @method string getWmInfoUint()
+ * @method string getWmInfoSize()
+ * @method string getWmInfoBytesB64()
+ * @method string getWmType()
+ * @method string getWidth()
+ * @method string getOpacity()
+ * @method string getHeight()
+ */
+class CreateWmBaseImage extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScale($value)
+    {
+        $this->data['Scale'] = $value;
+        $this->options['form_params']['Scale'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiType($value)
+    {
+        $this->data['ApiType'] = $value;
+        $this->options['form_params']['ApiType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoUint($value)
+    {
+        $this->data['WmInfoUint'] = $value;
+        $this->options['form_params']['WmInfoUint'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoSize($value)
+    {
+        $this->data['WmInfoSize'] = $value;
+        $this->options['form_params']['WmInfoSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoBytesB64($value)
+    {
+        $this->data['WmInfoBytesB64'] = $value;
+        $this->options['form_params']['WmInfoBytesB64'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmType($value)
+    {
+        $this->data['WmType'] = $value;
+        $this->options['form_params']['WmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWidth($value)
+    {
+        $this->data['Width'] = $value;
+        $this->options['form_params']['Width'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOpacity($value)
+    {
+        $this->data['Opacity'] = $value;
+        $this->options['form_params']['Opacity'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withHeight($value)
+    {
+        $this->data['Height'] = $value;
+        $this->options['form_params']['Height'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getVideoIsLong()
+ * @method string getApiType()
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getImageEmbedLevel()
+ * @method string getWmType()
+ * @method string getDocumentControl()
+ * @method string getImageEmbedJpegQuality()
+ * @method string getWatermarkInfoUint()
+ * @method string getWmInfoUint()
+ * @method string getFilename()
+ * @method string getWmInfoSize()
+ * @method string getWmInfoBytesB64()
+ * @method string getFileUrl()
+ * @method string getVideoBitrate()
+ */
+class CreateWmEmbedTask extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoIsLong($value)
+    {
+        $this->data['VideoIsLong'] = $value;
+        $this->options['form_params']['VideoIsLong'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiType($value)
+    {
+        $this->data['ApiType'] = $value;
+        $this->options['form_params']['ApiType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageEmbedLevel($value)
+    {
+        $this->data['ImageEmbedLevel'] = $value;
+        $this->options['form_params']['ImageEmbedLevel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmType($value)
+    {
+        $this->data['WmType'] = $value;
+        $this->options['form_params']['WmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDocumentControl($value)
+    {
+        $this->data['DocumentControl'] = $value;
+        $this->options['form_params']['DocumentControl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageEmbedJpegQuality($value)
+    {
+        $this->data['ImageEmbedJpegQuality'] = $value;
+        $this->options['form_params']['ImageEmbedJpegQuality'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWatermarkInfoUint($value)
+    {
+        $this->data['WatermarkInfoUint'] = $value;
+        $this->options['form_params']['WatermarkInfoUint'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoUint($value)
+    {
+        $this->data['WmInfoUint'] = $value;
+        $this->options['form_params']['WmInfoUint'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilename($value)
+    {
+        $this->data['Filename'] = $value;
+        $this->options['form_params']['Filename'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoSize($value)
+    {
+        $this->data['WmInfoSize'] = $value;
+        $this->options['form_params']['WmInfoSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoBytesB64($value)
+    {
+        $this->data['WmInfoBytesB64'] = $value;
+        $this->options['form_params']['WmInfoBytesB64'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileUrl($value)
+    {
+        $this->data['FileUrl'] = $value;
+        $this->options['form_params']['FileUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoBitrate($value)
+    {
+        $this->data['VideoBitrate'] = $value;
+        $this->options['form_params']['VideoBitrate'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getVideoIsLong()
+ * @method string getDocumentIsCapture()
+ * @method string getVideoSpeed()
+ * @method string getApiType()
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getWmType()
+ * @method string getImageDetectLevel()
+ * @method string getFilename()
+ * @method string getWmInfoSize()
+ * @method string getFileUrl()
+ */
+class CreateWmExtractTask extends Rpc
+{
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoIsLong($value)
+    {
+        $this->data['VideoIsLong'] = $value;
+        $this->options['form_params']['VideoIsLong'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDocumentIsCapture($value)
+    {
+        $this->data['DocumentIsCapture'] = $value;
+        $this->options['form_params']['DocumentIsCapture'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVideoSpeed($value)
+    {
+        $this->data['VideoSpeed'] = $value;
+        $this->options['form_params']['VideoSpeed'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiType($value)
+    {
+        $this->data['ApiType'] = $value;
+        $this->options['form_params']['ApiType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmType($value)
+    {
+        $this->data['WmType'] = $value;
+        $this->options['form_params']['WmType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageDetectLevel($value)
+    {
+        $this->data['ImageDetectLevel'] = $value;
+        $this->options['form_params']['ImageDetectLevel'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilename($value)
+    {
+        $this->data['Filename'] = $value;
+        $this->options['form_params']['Filename'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoSize($value)
+    {
+        $this->data['WmInfoSize'] = $value;
+        $this->options['form_params']['WmInfoSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFileUrl($value)
+    {
+        $this->data['FileUrl'] = $value;
+        $this->options['form_params']['FileUrl'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getWmInfoSize()
+ * @method string getWmInfoBytesB64()
+ * @method string getWmType()
+ */
+class CreateWmInfoMapping extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoSize($value)
+    {
+        $this->data['WmInfoSize'] = $value;
+        $this->options['form_params']['WmInfoSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmInfoBytesB64($value)
+    {
+        $this->data['WmInfoBytesB64'] = $value;
+        $this->options['form_params']['WmInfoBytesB64'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWmType($value)
+    {
+        $this->data['WmType'] = $value;
+        $this->options['form_params']['WmType'] = $value;
 
         return $this;
     }
@@ -1391,6 +1934,30 @@ class GetUserGroup extends Rpc
 }
 
 /**
+ * @method string getApiType()
+ * @method $this withApiType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetWmEmbedTask extends Rpc
+{
+}
+
+/**
+ * @method string getApiType()
+ * @method $this withApiType($value)
+ * @method string getSourceIp()
+ * @method $this withSourceIp($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetWmExtractTask extends Rpc
+{
+}
+
+/**
  * @method string getPolicyIds()
  * @method $this withPolicyIds($value)
  * @method string getSourceIp()
@@ -1860,6 +2427,21 @@ class ListUsers extends Rpc
 }
 
 /**
+ * @method string getWmInfoUint()
+ * @method $this withWmInfoUint($value)
+ * @method string getWmInfoSize()
+ * @method $this withWmInfoSize($value)
+ * @method string getWmType()
+ * @method $this withWmType($value)
+ */
+class LookupWmInfoMapping extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getIdpId()
  * @method $this withIdpId($value)
  * @method string getExternalIds()
@@ -2286,6 +2868,7 @@ class UpdatePrivateAccessApplication extends Rpc
  * @method string getUserGroupIds()
  * @method string getPolicyAction()
  * @method string getPriority()
+ * @method string getDeviceAttributeAction()
  * @method string getApplicationIds()
  * @method string getUserGroupMode()
  * @method string getModifyType()
@@ -2398,6 +2981,19 @@ class UpdatePrivateAccessPolicy extends Rpc
     {
         $this->data['Priority'] = $value;
         $this->options['form_params']['Priority'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDeviceAttributeAction($value)
+    {
+        $this->data['DeviceAttributeAction'] = $value;
+        $this->options['form_params']['DeviceAttributeAction'] = $value;
 
         return $this;
     }

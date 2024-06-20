@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2144 - 2024-6-20
+- Generated 2023-01-20 for `csas`.
+
+
 ## 1.8.2143 - 2024-6-18
 - Add status operation api.
 
