@@ -65,6 +65,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'schedulerx2';
 }
 
 /**
@@ -216,6 +219,8 @@ class BatchEnableJobs extends Rpc
  * @method $this withGroupId($value)
  * @method string getAppType()
  * @method $this withAppType($value)
+ * @method string getAppVersion()
+ * @method $this withAppVersion($value)
  * @method string getMonitorConfigJson()
  * @method $this withMonitorConfigJson($value)
  * @method string getNamespace()
@@ -775,14 +780,14 @@ class CreateNamespace extends Rpc
 }
 
 /**
- * @method string getGroupId()
- * @method $this withGroupId($value)
- * @method string getStrategyContent()
- * @method $this withStrategyContent($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getStrategyContent()
+ * @method $this withStrategyContent($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getNamespace()
@@ -1195,14 +1200,18 @@ class GetJobInstance extends Rpc
 /**
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
- * @method string getGroupId()
- * @method $this withGroupId($value)
  * @method string getStartTimestamp()
  * @method $this withStartTimestamp($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
  * @method string getEndTimestamp()
  * @method $this withEndTimestamp($value)
  * @method string getJobId()
  * @method $this withJobId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  * @method string getStatus()
@@ -1251,12 +1260,12 @@ class GetLog extends Rpc
  * @method $this withMetricType($value)
  * @method string getNamespaceSource()
  * @method $this withNamespaceSource($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getOperate()
  * @method $this withOperate($value)
  * @method string getNamespace()
@@ -1396,9 +1405,9 @@ class ListWorkflowInstance extends Rpc
 /**
  * @method string getNamespaceSource()
  * @method string getDataTime()
- * @method string getGroupId()
  * @method string getStartDate()
  * @method string getJobId()
+ * @method string getGroupId()
  * @method string getEndDate()
  * @method string getNamespace()
  */
@@ -1436,19 +1445,6 @@ class RerunJob extends Rpc
      *
      * @return $this
      */
-    public function withGroupId($value)
-    {
-        $this->data['GroupId'] = $value;
-        $this->options['form_params']['GroupId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withStartDate($value)
     {
         $this->data['StartDate'] = $value;
@@ -1466,6 +1462,19 @@ class RerunJob extends Rpc
     {
         $this->data['JobId'] = $value;
         $this->options['form_params']['JobId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
 
         return $this;
     }
@@ -1594,6 +1603,8 @@ class StopInstance extends Rpc
  * @method $this withMetricsThresholdJson($value)
  * @method string getGroupId()
  * @method $this withGroupId($value)
+ * @method string getAppVersion()
+ * @method $this withAppVersion($value)
  * @method string getNamespace()
  * @method $this withNamespace($value)
  * @method string getXattrs()

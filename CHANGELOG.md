@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.2145 - 2024-6-25
+- Create AppGroup Support Set AppVersion.
+- Update AppGroup Support Set AppVersion.
+- List AppGroup Support return AppVersion.
+
+
 ## 1.8.2144 - 2024-6-20
 - Generated 2023-01-20 for `csas`.
 
