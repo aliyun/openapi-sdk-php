@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2146 - 2024-6-26
+- Supported AssumeRoleProxyChain for CreateHighDensityElasticNetworkInterface.
+
+
 ## 1.8.2145 - 2024-6-25
 - Create AppGroup Support Set AppVersion.
 - Update AppGroup Support Set AppVersion.
