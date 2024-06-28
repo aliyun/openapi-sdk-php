@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2147 - 2024-6-28
+- Add QueryAuditLog, QueryApprovalInfo, DataSourceBlood, DataSetBlood and QueryDataServiceList APIs.
+- QueryUserInfoByAccount API updates error code.
+
+
 ## 1.8.2146 - 2024-6-26
 - Supported AssumeRoleProxyChain for CreateHighDensityElasticNetworkInterface.
 

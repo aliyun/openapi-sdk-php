@@ -25,6 +25,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateTicket createTicket(array $options = [])
  * @method CreateTicket4Copilot createTicket4Copilot(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
+ * @method DataSetBlood dataSetBlood(array $options = [])
+ * @method DataSourceBlood dataSourceBlood(array $options = [])
  * @method DelayTicketExpireTime delayTicketExpireTime(array $options = [])
  * @method DeleteDataLevelPermissionRuleUsers deleteDataLevelPermissionRuleUsers(array $options = [])
  * @method DeleteDataLevelRuleConfig deleteDataLevelRuleConfig(array $options = [])
@@ -52,10 +54,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListWorkspaceRoles listWorkspaceRoles(array $options = [])
  * @method ListWorkspaceRoleUsers listWorkspaceRoleUsers(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
+ * @method QueryApprovalInfo queryApprovalInfo(array $options = [])
+ * @method QueryAuditLog queryAuditLog(array $options = [])
  * @method QueryComponentPerformance queryComponentPerformance(array $options = [])
  * @method QueryCubeOptimization queryCubeOptimization(array $options = [])
  * @method QueryCubePerformance queryCubePerformance(array $options = [])
  * @method QueryDataService queryDataService(array $options = [])
+ * @method QueryDataServiceList queryDataServiceList(array $options = [])
  * @method QueryDatasetDetailInfo queryDatasetDetailInfo(array $options = [])
  * @method QueryDatasetInfo queryDatasetInfo(array $options = [])
  * @method QueryDatasetList queryDatasetList(array $options = [])
@@ -501,6 +506,34 @@ class CreateUserGroup extends Rpc
 }
 
 /**
+ * @method string getDataSetIds()
+ * @method $this withDataSetIds($value)
+ * @method string getWorksType()
+ * @method $this withWorksType($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class DataSetBlood extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getDataSourceId()
+ * @method $this withDataSourceId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class DataSourceBlood extends Rpc
+{
+}
+
+/**
  * @method string getExpireTime()
  * @method $this withExpireTime($value)
  * @method string getTicket()
@@ -887,6 +920,48 @@ class ModifyApiDatasourceParameters extends Rpc
 }
 
 /**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPage()
+ * @method $this withPage($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class QueryApprovalInfo extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getOperatorTypes()
+ * @method $this withOperatorTypes($value)
+ * @method string getLogType()
+ * @method $this withLogType($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getOperatorId()
+ * @method $this withOperatorId($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class QueryAuditLog extends Rpc
+{
+}
+
+/**
  * @method string getReportId()
  * @method $this withReportId($value)
  * @method string getAccessPoint()
@@ -957,6 +1032,24 @@ class QueryCubePerformance extends Rpc
  * @method $this withApiId($value)
  */
 class QueryDataService extends Rpc
+{
+}
+
+/**
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class QueryDataServiceList extends Rpc
 {
 }
 
@@ -1488,6 +1581,8 @@ class UpdateTicketNum extends Rpc
  * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getIsDeleted()
+ * @method $this withIsDeleted($value)
  * @method string getRoleIds()
  * @method $this withRoleIds($value)
  * @method string getPhone()
