@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method BatchKillProcessList batchKillProcessList(array $options = [])
+ * @method BatchKillSessionList batchKillSessionList(array $options = [])
  * @method CancelProjectModifyRecord cancelProjectModifyRecord(array $options = [])
  * @method CreateBackupSetDownloadLink createBackupSetDownloadLink(array $options = [])
  * @method CreateDatabase createDatabase(array $options = [])
@@ -71,6 +72,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRecommendIndex describeRecommendIndex(array $options = [])
  * @method DescribeSampleSqlRawTexts describeSampleSqlRawTexts(array $options = [])
  * @method DescribeSecurityIpGroups describeSecurityIpGroups(array $options = [])
+ * @method DescribeSessionList describeSessionList(array $options = [])
  * @method DescribeSlowSQLHistoryList describeSlowSQLHistoryList(array $options = [])
  * @method DescribeSlowSQLList describeSlowSQLList(array $options = [])
  * @method DescribeSQLDetails describeSQLDetails(array $options = [])
@@ -159,6 +161,57 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class BatchKillProcessList extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSessionList($value)
+    {
+        $this->data['SessionList'] = $value;
+        $this->options['form_params']['SessionList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSessionList()
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class BatchKillSessionList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 
     /**
      * @param string $value
@@ -656,6 +709,7 @@ class CreateLabel extends Rpc
  * @method string getSchema()
  * @method string getDescription()
  * @method string getType()
+ * @method string getUseSsl()
  * @method string getPassword()
  * @method string getDgInstanceId()
  * @method string getIp()
@@ -703,6 +757,19 @@ class CreateMySqlDataSource extends Rpc
     {
         $this->data['Type'] = $value;
         $this->options['form_params']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUseSsl($value)
+    {
+        $this->data['UseSsl'] = $value;
+        $this->options['form_params']['UseSsl'] = $value;
 
         return $this;
     }
@@ -5682,6 +5749,43 @@ class DescribeSecurityIpGroups extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class DescribeSessionList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getStartTime()
  * @method string getPageNumber()
  * @method string getTenantId()
@@ -9289,6 +9393,7 @@ class SwitchoverInstance extends Rpc
 }
 
 /**
+ * @method string getCommonTransferConfig()
  * @method string getReverseIncrTransferConfig()
  * @method string getFullTransferConfig()
  * @method string getId()
@@ -9296,6 +9401,19 @@ class SwitchoverInstance extends Rpc
  */
 class UpdateProjectConfig extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommonTransferConfig($value)
+    {
+        $this->data['CommonTransferConfig'] = $value;
+        $this->options['form_params']['CommonTransferConfig'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
