@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2151 - 2024-7-3
+- Supported APIs DescribeSDG,PreloadRegionSDG,UnloadRegionSDG,DeployInstanceSDG,RemoveInstanceSDG.
+
+
 ## 1.8.2150 - 2024-7-3
 - Generated 2023-01-20 for `csas`.
 
