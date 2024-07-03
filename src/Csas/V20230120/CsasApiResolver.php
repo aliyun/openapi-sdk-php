@@ -49,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListExcessiveDeviceRegistrationApplications listExcessiveDeviceRegistrationApplications(array $options = [])
  * @method ListIdpConfigs listIdpConfigs(array $options = [])
  * @method ListIdpDepartments listIdpDepartments(array $options = [])
+ * @method ListNacUserCert listNacUserCert(array $options = [])
  * @method ListPolicesForPrivateAccessApplication listPolicesForPrivateAccessApplication(array $options = [])
  * @method ListPolicesForPrivateAccessTag listPolicesForPrivateAccessTag(array $options = [])
  * @method ListPolicesForUserGroup listPolicesForUserGroup(array $options = [])
@@ -76,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateDynamicRoute updateDynamicRoute(array $options = [])
  * @method UpdateExcessiveDeviceRegistrationApplicationsStatus updateExcessiveDeviceRegistrationApplicationsStatus(array $options = [])
  * @method UpdateIdpDepartment updateIdpDepartment(array $options = [])
+ * @method UpdateNacUserCertStatus updateNacUserCertStatus(array $options = [])
  * @method UpdatePrivateAccessApplication updatePrivateAccessApplication(array $options = [])
  * @method UpdatePrivateAccessPolicy updatePrivateAccessPolicy(array $options = [])
  * @method UpdateRegistrationPolicy updateRegistrationPolicy(array $options = [])
@@ -95,6 +97,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $version = '2023-01-20';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -105,9 +110,6 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class AttachApplication2Connector extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -154,9 +156,6 @@ class AttachApplication2Connector extends Rpc
  */
 class CreateClientUser extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -175,9 +174,6 @@ class CreateClientUser extends Rpc
  */
 class CreateDynamicRoute extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -318,9 +314,6 @@ class CreateDynamicRoute extends Rpc
  */
 class CreateIdpDepartment extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -336,9 +329,6 @@ class CreateIdpDepartment extends Rpc
  */
 class CreatePrivateAccessApplication extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -451,9 +441,6 @@ class CreatePrivateAccessApplication extends Rpc
  */
 class CreatePrivateAccessPolicy extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -634,9 +621,6 @@ class CreatePrivateAccessPolicy extends Rpc
 class CreatePrivateAccessTag extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -681,9 +665,6 @@ class CreatePrivateAccessTag extends Rpc
  */
 class CreateRegistrationPolicy extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -839,9 +820,6 @@ class CreateRegistrationPolicy extends Rpc
 class CreateUserGroup extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -898,9 +876,6 @@ class CreateWmBaseImage extends Rpc
 
     /** @var string */
     public $scheme = 'https';
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1039,9 +1014,6 @@ class CreateWmBaseImage extends Rpc
  */
 class CreateWmEmbedTask extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1229,9 +1201,6 @@ class CreateWmEmbedTask extends Rpc
 class CreateWmExtractTask extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1361,9 +1330,6 @@ class CreateWmInfoMapping extends Rpc
     /** @var string */
     public $scheme = 'https';
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1410,9 +1376,6 @@ class CreateWmInfoMapping extends Rpc
  */
 class DeleteClientUser extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1423,9 +1386,6 @@ class DeleteClientUser extends Rpc
  */
 class DeleteDynamicRoute extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1436,9 +1396,6 @@ class DeleteDynamicRoute extends Rpc
  */
 class DeleteIdpDepartment extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -1448,9 +1405,6 @@ class DeleteIdpDepartment extends Rpc
  */
 class DeletePrivateAccessApplication extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1474,9 +1428,6 @@ class DeletePrivateAccessApplication extends Rpc
 class DeletePrivateAccessPolicy extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1498,9 +1449,6 @@ class DeletePrivateAccessPolicy extends Rpc
  */
 class DeletePrivateAccessTag extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1524,9 +1472,6 @@ class DeletePrivateAccessTag extends Rpc
 class DeleteRegistrationPolicies extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1548,9 +1493,6 @@ class DeleteRegistrationPolicies extends Rpc
  */
 class DeleteUserDevices extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1574,9 +1516,6 @@ class DeleteUserDevices extends Rpc
 class DeleteUserGroup extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -1599,9 +1538,6 @@ class DeleteUserGroup extends Rpc
  */
 class DetachApplication2Connector extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1651,9 +1587,6 @@ class DetachApplication2Connector extends Rpc
  */
 class ExportUserDevices extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -1853,6 +1786,9 @@ class ExportUserDevices extends Rpc
 
 class GetActiveIdpConfig extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1863,6 +1799,9 @@ class GetActiveIdpConfig extends Rpc
  */
 class GetClientUser extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1873,6 +1812,9 @@ class GetClientUser extends Rpc
  */
 class GetDynamicRoute extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1881,6 +1823,9 @@ class GetDynamicRoute extends Rpc
  */
 class GetIdpConfig extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1891,6 +1836,9 @@ class GetIdpConfig extends Rpc
  */
 class GetPrivateAccessApplication extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1901,6 +1849,9 @@ class GetPrivateAccessApplication extends Rpc
  */
 class GetPrivateAccessPolicy extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1911,6 +1862,9 @@ class GetPrivateAccessPolicy extends Rpc
  */
 class GetRegistrationPolicy extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1921,6 +1875,9 @@ class GetRegistrationPolicy extends Rpc
  */
 class GetUserDevice extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1931,6 +1888,9 @@ class GetUserDevice extends Rpc
  */
 class GetUserGroup extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1943,6 +1903,9 @@ class GetUserGroup extends Rpc
  */
 class GetWmEmbedTask extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1955,6 +1918,9 @@ class GetWmEmbedTask extends Rpc
  */
 class GetWmExtractTask extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1965,6 +1931,9 @@ class GetWmExtractTask extends Rpc
  */
 class ListApplicationsForPrivateAccessPolicy extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1975,6 +1944,9 @@ class ListApplicationsForPrivateAccessPolicy extends Rpc
  */
 class ListApplicationsForPrivateAccessTag extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1997,6 +1969,9 @@ class ListApplicationsForPrivateAccessTag extends Rpc
  */
 class ListClientUsers extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2017,6 +1992,9 @@ class ListClientUsers extends Rpc
  */
 class ListConnectors extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2025,6 +2003,9 @@ class ListConnectors extends Rpc
  */
 class ListDynamicRouteRegions extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2051,6 +2032,9 @@ class ListDynamicRouteRegions extends Rpc
  */
 class ListDynamicRoutes extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2079,6 +2063,9 @@ class ListDynamicRoutes extends Rpc
  */
 class ListExcessiveDeviceRegistrationApplications extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2091,6 +2078,9 @@ class ListExcessiveDeviceRegistrationApplications extends Rpc
  */
 class ListIdpConfigs extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2103,6 +2093,34 @@ class ListIdpConfigs extends Rpc
  */
 class ListIdpDepartments extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getDeviceType()
+ * @method $this withDeviceType($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDepartment()
+ * @method $this withDepartment($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ListNacUserCert extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2113,6 +2131,9 @@ class ListIdpDepartments extends Rpc
  */
 class ListPolicesForPrivateAccessApplication extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2123,6 +2144,9 @@ class ListPolicesForPrivateAccessApplication extends Rpc
  */
 class ListPolicesForPrivateAccessTag extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2133,6 +2157,9 @@ class ListPolicesForPrivateAccessTag extends Rpc
  */
 class ListPolicesForUserGroup extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2148,6 +2175,9 @@ class ListPopTrafficStatistics extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2174,6 +2204,9 @@ class ListPopTrafficStatistics extends Rpc
  */
 class ListPrivateAccessApplications extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2184,6 +2217,9 @@ class ListPrivateAccessApplications extends Rpc
  */
 class ListPrivateAccessApplicationsForDynamicRoute extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2214,6 +2250,9 @@ class ListPrivateAccessApplicationsForDynamicRoute extends Rpc
  */
 class ListPrivateAccessPolices extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2236,6 +2275,9 @@ class ListPrivateAccessPolices extends Rpc
  */
 class ListPrivateAccessTags extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2246,6 +2288,9 @@ class ListPrivateAccessTags extends Rpc
  */
 class ListPrivateAccessTagsForDynamicRoute extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2272,6 +2317,9 @@ class ListPrivateAccessTagsForDynamicRoute extends Rpc
  */
 class ListRegistrationPolicies extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2282,6 +2330,9 @@ class ListRegistrationPolicies extends Rpc
  */
 class ListRegistrationPoliciesForUserGroup extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2296,6 +2347,9 @@ class ListRegistrationPoliciesForUserGroup extends Rpc
  */
 class ListSoftwareForUserDevice extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2306,6 +2360,9 @@ class ListSoftwareForUserDevice extends Rpc
  */
 class ListTagsForPrivateAccessApplication extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2316,6 +2373,9 @@ class ListTagsForPrivateAccessApplication extends Rpc
  */
 class ListTagsForPrivateAccessPolicy extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2362,6 +2422,9 @@ class ListTagsForPrivateAccessPolicy extends Rpc
  */
 class ListUserDevices extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2382,6 +2445,9 @@ class ListUserDevices extends Rpc
  */
 class ListUserGroups extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2392,6 +2458,9 @@ class ListUserGroups extends Rpc
  */
 class ListUserGroupsForPrivateAccessPolicy extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2402,6 +2471,9 @@ class ListUserGroupsForPrivateAccessPolicy extends Rpc
  */
 class ListUserGroupsForRegistrationPolicy extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2424,6 +2496,9 @@ class ListUserGroupsForRegistrationPolicy extends Rpc
  */
 class ListUsers extends Rpc
 {
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2439,6 +2514,9 @@ class LookupWmInfoMapping extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -2449,9 +2527,6 @@ class LookupWmInfoMapping extends Rpc
  */
 class RevokeUserSession extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2468,9 +2543,6 @@ class RevokeUserSession extends Rpc
  */
 class UpdateClientUser extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2483,9 +2555,6 @@ class UpdateClientUser extends Rpc
  */
 class UpdateClientUserPassword extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2496,9 +2565,6 @@ class UpdateClientUserPassword extends Rpc
  */
 class UpdateClientUserStatus extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
 
 /**
@@ -2519,9 +2585,6 @@ class UpdateClientUserStatus extends Rpc
  */
 class UpdateDynamicRoute extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -2689,9 +2752,6 @@ class UpdateDynamicRoute extends Rpc
 class UpdateExcessiveDeviceRegistrationApplicationsStatus extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -2729,9 +2789,43 @@ class UpdateExcessiveDeviceRegistrationApplicationsStatus extends Rpc
  */
 class UpdateIdpDepartment extends Rpc
 {
+}
+
+/**
+ * @method string getIdList()
+ * @method string getStatus()
+ */
+class UpdateNacUserCertStatus extends Rpc
+{
 
     /** @var string */
-    public $method = 'POST';
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIdList($value)
+    {
+        $this->data['IdList'] = $value;
+        $this->options['form_params']['IdList'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStatus($value)
+    {
+        $this->data['Status'] = $value;
+        $this->options['form_params']['Status'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -2748,9 +2842,6 @@ class UpdateIdpDepartment extends Rpc
  */
 class UpdatePrivateAccessApplication extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -2877,9 +2968,6 @@ class UpdatePrivateAccessApplication extends Rpc
  */
 class UpdatePrivateAccessPolicy extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -3083,9 +3171,6 @@ class UpdatePrivateAccessPolicy extends Rpc
 class UpdateRegistrationPolicy extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -3252,9 +3337,6 @@ class UpdateRegistrationPolicy extends Rpc
 class UpdateUserDevicesSharingStatus extends Rpc
 {
 
-    /** @var string */
-    public $method = 'POST';
-
     /**
      * @param string $value
      *
@@ -3290,9 +3372,6 @@ class UpdateUserDevicesSharingStatus extends Rpc
  */
 class UpdateUserDevicesStatus extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -3331,9 +3410,6 @@ class UpdateUserDevicesStatus extends Rpc
  */
 class UpdateUserGroup extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 
     /**
      * @param string $value
@@ -3398,7 +3474,4 @@ class UpdateUserGroup extends Rpc
  */
 class UpdateUsersStatus extends Rpc
 {
-
-    /** @var string */
-    public $method = 'POST';
 }
