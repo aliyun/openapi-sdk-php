@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2152 - 2024-7-4
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2151 - 2024-7-3
 - Supported APIs DescribeSDG,PreloadRegionSDG,UnloadRegionSDG,DeployInstanceSDG,RemoveInstanceSDG.
 
