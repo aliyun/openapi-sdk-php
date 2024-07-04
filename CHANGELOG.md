@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2153 - 2024-7-4
+- Publish Api：GetNisNetworkRanking
+- Publish Api：GetNisNetworkMetrics
+
+
 ## 1.8.2152 - 2024-7-4
 - Generated 2019-09-01 for `OceanBasePro`.
 
