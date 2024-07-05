@@ -39,7 +39,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddShowIntoShowList addShowIntoShowList(array $options = [])
  * @method AddStudioLayout addStudioLayout(array $options = [])
  * @method AddTrancodeSEI addTrancodeSEI(array $options = [])
- * @method AllowPushStream allowPushStream(array $options = [])
  * @method BatchDeleteLiveDomainConfigs batchDeleteLiveDomainConfigs(array $options = [])
  * @method BatchGetOnlineUsers batchGetOnlineUsers(array $options = [])
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
@@ -118,7 +117,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteMixStream deleteMixStream(array $options = [])
  * @method DeletePlaylist deletePlaylist(array $options = [])
  * @method DeletePlaylistItems deletePlaylistItems(array $options = [])
- * @method DeleteRoom deleteRoom(array $options = [])
  * @method DeleteRtcAsrTask deleteRtcAsrTask(array $options = [])
  * @method DeleteRtcMPUEventSub deleteRtcMPUEventSub(array $options = [])
  * @method DeleteSnapshotCallbackAuth deleteSnapshotCallbackAuth(array $options = [])
@@ -140,7 +138,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeChannelUsers describeChannelUsers(array $options = [])
  * @method DescribeDomainUsageData describeDomainUsageData(array $options = [])
  * @method DescribeDomainWithIntegrity describeDomainWithIntegrity(array $options = [])
- * @method DescribeForbidPushStreamRoomList describeForbidPushStreamRoomList(array $options = [])
  * @method DescribeHlsLiveStreamRealTimeBpsData describeHlsLiveStreamRealTimeBpsData(array $options = [])
  * @method DescribeLiveAIProduceRules describeLiveAIProduceRules(array $options = [])
  * @method DescribeLiveAISubtitle describeLiveAISubtitle(array $options = [])
@@ -254,8 +251,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeMeterLiveInteractionDau describeMeterLiveInteractionDau(array $options = [])
  * @method DescribeMeterLiveRtcDuration describeMeterLiveRtcDuration(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
- * @method DescribeRoomKickoutUserList describeRoomKickoutUserList(array $options = [])
- * @method DescribeRoomStatus describeRoomStatus(array $options = [])
  * @method DescribeRtcMPUEventSub describeRtcMPUEventSub(array $options = [])
  * @method DescribeRTSNativeSDKFirstFrameCost describeRTSNativeSDKFirstFrameCost(array $options = [])
  * @method DescribeRTSNativeSDKFirstFrameDelay describeRTSNativeSDKFirstFrameDelay(array $options = [])
@@ -278,7 +273,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EffectCasterVideoResource effectCasterVideoResource(array $options = [])
  * @method EnableLiveRealtimeLogDelivery enableLiveRealtimeLogDelivery(array $options = [])
  * @method ForbidLiveStream forbidLiveStream(array $options = [])
- * @method ForbidPushStream forbidPushStream(array $options = [])
  * @method GetAllCustomTemplates getAllCustomTemplates(array $options = [])
  * @method GetCustomTemplate getCustomTemplate(array $options = [])
  * @method GetEdgeTranscodeJob getEdgeTranscodeJob(array $options = [])
@@ -342,6 +336,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryRtcAsrTasks queryRtcAsrTasks(array $options = [])
  * @method QuerySnapshotCallbackAuth querySnapshotCallbackAuth(array $options = [])
  * @method RealTimeRecordCommand realTimeRecordCommand(array $options = [])
+ * @method RecoverLiveMessageDeletedGroup recoverLiveMessageDeletedGroup(array $options = [])
  * @method RemoveShowFromShowList removeShowFromShowList(array $options = [])
  * @method RemoveTerminals removeTerminals(array $options = [])
  * @method RestartCaster restartCaster(array $options = [])
@@ -353,8 +348,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SendLiveMessageUser sendLiveMessageUser(array $options = [])
  * @method SendMessageToGroup sendMessageToGroup(array $options = [])
  * @method SendMessageToGroupUsers sendMessageToGroupUsers(array $options = [])
- * @method SendRoomNotification sendRoomNotification(array $options = [])
- * @method SendRoomUserNotification sendRoomUserNotification(array $options = [])
  * @method SetCasterChannel setCasterChannel(array $options = [])
  * @method SetCasterConfig setCasterConfig(array $options = [])
  * @method SetCasterSceneConfig setCasterSceneConfig(array $options = [])
@@ -1543,18 +1536,6 @@ class AddStudioLayout extends Rpc
  * @method $this withDelay($value)
  */
 class AddTrancodeSEI extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class AllowPushStream extends Rpc
 {
 }
 
@@ -2997,18 +2978,6 @@ class DeletePlaylistItems extends Rpc
 }
 
 /**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DeleteRoom extends Rpc
-{
-}
-
-/**
  * @method string getTaskId()
  * @method $this withTaskId($value)
  * @method string getOwnerId()
@@ -3308,22 +3277,6 @@ class DescribeDomainWithIntegrity extends Rpc
 
     /** @var string */
     public $method = 'GET';
-}
-
-/**
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOrder()
- * @method $this withOrder($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DescribeForbidPushStreamRoomList extends Rpc
-{
 }
 
 /**
@@ -5452,36 +5405,6 @@ class DescribeMixStreamList extends Rpc
 }
 
 /**
- * @method string getPageNum()
- * @method $this withPageNum($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
- * @method string getOrder()
- * @method $this withOrder($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DescribeRoomKickoutUserList extends Rpc
-{
-}
-
-/**
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class DescribeRoomStatus extends Rpc
-{
-}
-
-/**
  * @method string getAppId()
  * @method $this withAppId($value)
  */
@@ -5808,22 +5731,6 @@ class EnableLiveRealtimeLogDelivery extends Rpc
  * @method $this withOneshot($value)
  */
 class ForbidLiveStream extends Rpc
-{
-}
-
-/**
- * @method string getUserData()
- * @method $this withUserData($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class ForbidPushStream extends Rpc
 {
 }
 
@@ -7709,6 +7616,21 @@ class RealTimeRecordCommand extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class RecoverLiveMessageDeletedGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getIsBatchMode()
  * @method array getShowIdList()
  * @method string getCasterId()
@@ -8134,44 +8056,6 @@ class SendMessageToGroupUsers extends Rpc
 
         return $this;
     }
-}
-
-/**
- * @method string getData()
- * @method $this withData($value)
- * @method string getAppUid()
- * @method $this withAppUid($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class SendRoomNotification extends Rpc
-{
-}
-
-/**
- * @method string getData()
- * @method $this withData($value)
- * @method string getToAppUid()
- * @method $this withToAppUid($value)
- * @method string getAppUid()
- * @method $this withAppUid($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPriority()
- * @method $this withPriority($value)
- * @method string getRoomId()
- * @method $this withRoomId($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- */
-class SendRoomUserNotification extends Rpc
-{
 }
 
 /**

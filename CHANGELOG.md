@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2154 - 2024-7-5
+- Update to support new apis.
+
+
 ## 1.8.2153 - 2024-7-4
 - Publish Api：GetNisNetworkRanking
 - Publish Api：GetNisNetworkMetrics
