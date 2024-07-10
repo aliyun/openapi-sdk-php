@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2155 - 2024-7-10
+- Added param for ActivateLicenseResponse .
+
+
 ## 1.8.2154 - 2024-7-5
 - Update to support new apis.
 

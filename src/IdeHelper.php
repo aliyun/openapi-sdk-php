@@ -180,6 +180,7 @@ namespace AlibabaCloud;
  * @method static MoPen\MoPen moPen()
  * @method static MoguanSdk\MoguanSdk moguanSdk()
  * @method static Mse\Mse mse()
+ * @method static Mseap\Mseap mseap()
  * @method static Mts\Mts mts()
  * @method static Multimediaai\Multimediaai multimediaai()
  * @method static NAS\NAS nAS()
