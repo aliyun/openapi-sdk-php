@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2156 - 2024-7-16
+- Generated 2020-06-01 for `SWAS-OPEN`.
+
+
 ## 1.8.2155 - 2024-7-10
 - Added param for ActivateLicenseResponse .
 

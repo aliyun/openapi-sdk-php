@@ -5,12 +5,16 @@ namespace AlibabaCloud\SWASOPEN\V20200601;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddCustomImageShareAccount addCustomImageShareAccount(array $options = [])
  * @method AllocatePublicConnection allocatePublicConnection(array $options = [])
+ * @method ApplyFirewallTemplate applyFirewallTemplate(array $options = [])
  * @method AttachKeyPair attachKeyPair(array $options = [])
  * @method CreateCommand createCommand(array $options = [])
  * @method CreateCustomImage createCustomImage(array $options = [])
  * @method CreateFirewallRule createFirewallRule(array $options = [])
  * @method CreateFirewallRules createFirewallRules(array $options = [])
+ * @method CreateFirewallTemplate createFirewallTemplate(array $options = [])
+ * @method CreateFirewallTemplateRules createFirewallTemplateRules(array $options = [])
  * @method CreateInstanceKeyPair createInstanceKeyPair(array $options = [])
  * @method CreateInstances createInstances(array $options = [])
  * @method CreateKeyPair createKeyPair(array $options = [])
@@ -20,6 +24,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteCustomImages deleteCustomImages(array $options = [])
  * @method DeleteFirewallRule deleteFirewallRule(array $options = [])
  * @method DeleteFirewallRules deleteFirewallRules(array $options = [])
+ * @method DeleteFirewallTemplateRules deleteFirewallTemplateRules(array $options = [])
+ * @method DeleteFirewallTemplates deleteFirewallTemplates(array $options = [])
  * @method DeleteInstanceKeyPair deleteInstanceKeyPair(array $options = [])
  * @method DeleteKeyPairs deleteKeyPairs(array $options = [])
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
@@ -34,6 +40,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDatabaseInstanceParameters describeDatabaseInstanceParameters(array $options = [])
  * @method DescribeDatabaseInstances describeDatabaseInstances(array $options = [])
  * @method DescribeDatabaseSlowLogRecords describeDatabaseSlowLogRecords(array $options = [])
+ * @method DescribeFirewallTemplateApplyResults describeFirewallTemplateApplyResults(array $options = [])
+ * @method DescribeFirewallTemplateRulesApplyResult describeFirewallTemplateRulesApplyResult(array $options = [])
+ * @method DescribeFirewallTemplates describeFirewallTemplates(array $options = [])
  * @method DescribeInstanceKeyPair describeInstanceKeyPair(array $options = [])
  * @method DescribeInstancePasswordsSetting describeInstancePasswordsSetting(array $options = [])
  * @method DescribeInstanceVncUrl describeInstanceVncUrl(array $options = [])
@@ -49,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InstallCloudMonitorAgent installCloudMonitorAgent(array $options = [])
  * @method InvokeCommand invokeCommand(array $options = [])
  * @method ListCustomImages listCustomImages(array $options = [])
+ * @method ListCustomImageShareAccounts listCustomImageShareAccounts(array $options = [])
  * @method ListDisks listDisks(array $options = [])
  * @method ListFirewallRules listFirewallRules(array $options = [])
  * @method ListImages listImages(array $options = [])
@@ -65,11 +75,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDatabaseInstanceDescription modifyDatabaseInstanceDescription(array $options = [])
  * @method ModifyDatabaseInstanceParameter modifyDatabaseInstanceParameter(array $options = [])
  * @method ModifyFirewallRule modifyFirewallRule(array $options = [])
+ * @method ModifyFirewallTemplate modifyFirewallTemplate(array $options = [])
  * @method ModifyImageShareStatus modifyImageShareStatus(array $options = [])
  * @method ModifyInstanceVncPassword modifyInstanceVncPassword(array $options = [])
  * @method RebootInstance rebootInstance(array $options = [])
  * @method RebootInstances rebootInstances(array $options = [])
  * @method ReleasePublicConnection releasePublicConnection(array $options = [])
+ * @method RemoveCustomImageShareAccount removeCustomImageShareAccount(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method ResetDatabaseAccountPassword resetDatabaseAccountPassword(array $options = [])
  * @method ResetDisk resetDisk(array $options = [])
@@ -112,6 +124,35 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method array getAccount()
+ */
+class AddCustomImageShareAccount extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $account
+     *
+     * @return $this
+     */
+	public function withAccount(array $account)
+	{
+	    $this->data['Account'] = $account;
+		foreach ($account as $i => $iValue) {
+			$this->options['query']['Account.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getDatabaseInstanceId()
@@ -119,6 +160,34 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  */
 class AllocatePublicConnection extends Rpc
 {
+}
+
+/**
+ * @method string getFirewallTemplateId()
+ * @method $this withFirewallTemplateId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getInstanceIds()
+ */
+class ApplyFirewallTemplate extends Rpc
+{
+
+    /**
+     * @param array $instanceIds
+     *
+     * @return $this
+     */
+	public function withInstanceIds(array $instanceIds)
+	{
+	    $this->data['InstanceIds'] = $instanceIds;
+		foreach ($instanceIds as $i => $iValue) {
+			$this->options['query']['InstanceIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -286,6 +355,78 @@ class CreateFirewallRules extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method array getFirewallRule()
+ */
+class CreateFirewallTemplate extends Rpc
+{
+
+    /**
+     * @param array $firewallRule
+     *
+     * @return $this
+     */
+	public function withFirewallRule(array $firewallRule)
+	{
+	    $this->data['FirewallRule'] = $firewallRule;
+		foreach ($firewallRule as $depth1 => $depth1Value) {
+			if(isset($depth1Value['RuleProtocol'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.RuleProtocol'] = $depth1Value['RuleProtocol'];
+			}
+			if(isset($depth1Value['Port'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['SourceCidrIp'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.SourceCidrIp'] = $depth1Value['SourceCidrIp'];
+			}
+			if(isset($depth1Value['Remark'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.Remark'] = $depth1Value['Remark'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getFirewallTemplateId()
+ * @method $this withFirewallTemplateId($value)
+ * @method array getFirewallRule()
+ */
+class CreateFirewallTemplateRules extends Rpc
+{
+
+    /**
+     * @param array $firewallRule
+     *
+     * @return $this
+     */
+	public function withFirewallRule(array $firewallRule)
+	{
+	    $this->data['FirewallRule'] = $firewallRule;
+		foreach ($firewallRule as $depth1 => $depth1Value) {
+			if(isset($depth1Value['RuleProtocol'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.RuleProtocol'] = $depth1Value['RuleProtocol'];
+			}
+			if(isset($depth1Value['Port'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['SourceCidrIp'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.SourceCidrIp'] = $depth1Value['SourceCidrIp'];
+			}
+			if(isset($depth1Value['Remark'])){
+				$this->options['query']['FirewallRule.' . ($depth1 + 1) . '.Remark'] = $depth1Value['Remark'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getKeyPairName()
@@ -419,6 +560,60 @@ class DeleteFirewallRule extends Rpc
  */
 class DeleteFirewallRules extends Rpc
 {
+}
+
+/**
+ * @method string getFirewallTemplateId()
+ * @method $this withFirewallTemplateId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getFirewallTemplateRuleId()
+ */
+class DeleteFirewallTemplateRules extends Rpc
+{
+
+    /**
+     * @param array $firewallTemplateRuleId
+     *
+     * @return $this
+     */
+	public function withFirewallTemplateRuleId(array $firewallTemplateRuleId)
+	{
+	    $this->data['FirewallTemplateRuleId'] = $firewallTemplateRuleId;
+		foreach ($firewallTemplateRuleId as $i => $iValue) {
+			$this->options['query']['FirewallTemplateRuleId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method array getFirewallTemplateId()
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteFirewallTemplates extends Rpc
+{
+
+    /**
+     * @param array $firewallTemplateId
+     *
+     * @return $this
+     */
+	public function withFirewallTemplateId(array $firewallTemplateId)
+	{
+	    $this->data['FirewallTemplateId'] = $firewallTemplateId;
+		foreach ($firewallTemplateId as $i => $iValue) {
+			$this->options['query']['FirewallTemplateId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -642,6 +837,80 @@ class DescribeDatabaseSlowLogRecords extends Rpc
 }
 
 /**
+ * @method string getFirewallTemplateId()
+ * @method $this withFirewallTemplateId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method array getTaskId()
+ */
+class DescribeFirewallTemplateApplyResults extends Rpc
+{
+
+    /**
+     * @param array $taskId
+     *
+     * @return $this
+     */
+	public function withTaskId(array $taskId)
+	{
+	    $this->data['TaskId'] = $taskId;
+		foreach ($taskId as $i => $iValue) {
+			$this->options['query']['TaskId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getFirewallTemplateId()
+ * @method $this withFirewallTemplateId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class DescribeFirewallTemplateRulesApplyResult extends Rpc
+{
+}
+
+/**
+ * @method array getFirewallTemplateId()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeFirewallTemplates extends Rpc
+{
+
+    /**
+     * @param array $firewallTemplateId
+     *
+     * @return $this
+     */
+	public function withFirewallTemplateId(array $firewallTemplateId)
+	{
+	    $this->data['FirewallTemplateId'] = $firewallTemplateId;
+		foreach ($firewallTemplateId as $i => $iValue) {
+			$this->options['query']['FirewallTemplateId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getInstanceId()
@@ -852,7 +1121,11 @@ class InvokeCommand extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getShare()
+ * @method $this withShare($value)
  * @method array getTag()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getImageIds()
  * @method $this withImageIds($value)
  */
@@ -878,6 +1151,23 @@ class ListCustomImages extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListCustomImageShareAccounts extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1162,6 +1452,8 @@ class ListTagResources extends Rpc
  * @method $this withPassword($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getPort()
+ * @method $this withPort($value)
  * @method string getUsername()
  * @method $this withUsername($value)
  */
@@ -1213,6 +1505,52 @@ class ModifyDatabaseInstanceParameter extends Rpc
  */
 class ModifyFirewallRule extends Rpc
 {
+}
+
+/**
+ * @method string getFirewallTemplateId()
+ * @method $this withFirewallTemplateId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method array getFirewallTemplateRule()
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class ModifyFirewallTemplate extends Rpc
+{
+
+    /**
+     * @param array $firewallTemplateRule
+     *
+     * @return $this
+     */
+	public function withFirewallTemplateRule(array $firewallTemplateRule)
+	{
+	    $this->data['FirewallTemplateRule'] = $firewallTemplateRule;
+		foreach ($firewallTemplateRule as $depth1 => $depth1Value) {
+			if(isset($depth1Value['FirewallTemplateRuleId'])){
+				$this->options['query']['FirewallTemplateRule.' . ($depth1 + 1) . '.FirewallTemplateRuleId'] = $depth1Value['FirewallTemplateRuleId'];
+			}
+			if(isset($depth1Value['RuleProtocol'])){
+				$this->options['query']['FirewallTemplateRule.' . ($depth1 + 1) . '.RuleProtocol'] = $depth1Value['RuleProtocol'];
+			}
+			if(isset($depth1Value['Port'])){
+				$this->options['query']['FirewallTemplateRule.' . ($depth1 + 1) . '.Port'] = $depth1Value['Port'];
+			}
+			if(isset($depth1Value['SourceCidrIp'])){
+				$this->options['query']['FirewallTemplateRule.' . ($depth1 + 1) . '.SourceCidrIp'] = $depth1Value['SourceCidrIp'];
+			}
+			if(isset($depth1Value['Remark'])){
+				$this->options['query']['FirewallTemplateRule.' . ($depth1 + 1) . '.Remark'] = $depth1Value['Remark'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1269,6 +1607,35 @@ class RebootInstances extends Rpc
  */
 class ReleasePublicConnection extends Rpc
 {
+}
+
+/**
+ * @method string getImageId()
+ * @method $this withImageId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method array getAccount()
+ */
+class RemoveCustomImageShareAccount extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $account
+     *
+     * @return $this
+     */
+	public function withAccount(array $account)
+	{
+	    $this->data['Account'] = $account;
+		foreach ($account as $i => $iValue) {
+			$this->options['query']['Account.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
