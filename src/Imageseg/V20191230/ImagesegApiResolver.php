@@ -178,6 +178,8 @@ class SegmentBody extends Rpc
  * @method $this withReturnForm($value)
  * @method string getOssFile()
  * @method $this withOssFile($value)
+ * @method string getOutMode()
+ * @method $this withOutMode($value)
  * @method string getRequestProxyBy()
  * @method $this withRequestProxyBy($value)
  * @method string getImageURL()
