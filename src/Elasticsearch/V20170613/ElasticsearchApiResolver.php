@@ -16,8 +16,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CloseHttps closeHttps(array $options = [])
  * @method CloseManagedIndex closeManagedIndex(array $options = [])
  * @method CreateCollector createCollector(array $options = [])
+ * @method CreateComponentIndex createComponentIndex(array $options = [])
  * @method CreateDataStream createDataStream(array $options = [])
- * @method CreateDataTasks createDataTasks(array $options = [])
  * @method CreateILMPolicy createILMPolicy(array $options = [])
  * @method CreateIndexTemplate createIndexTemplate(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
@@ -27,9 +27,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateVpcEndpoint createVpcEndpoint(array $options = [])
  * @method DeactivateZones deactivateZones(array $options = [])
  * @method DeleteCollector deleteCollector(array $options = [])
+ * @method DeleteComponentIndex deleteComponentIndex(array $options = [])
  * @method DeleteConnectedCluster deleteConnectedCluster(array $options = [])
  * @method DeleteDataStream deleteDataStream(array $options = [])
  * @method DeleteDataTask deleteDataTask(array $options = [])
+ * @method DeleteDeprecatedTemplate deleteDeprecatedTemplate(array $options = [])
  * @method DeleteILMPolicy deleteILMPolicy(array $options = [])
  * @method DeleteIndexTemplate deleteIndexTemplate(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
@@ -40,9 +42,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAckOperator describeAckOperator(array $options = [])
  * @method DescribeApm describeApm(array $options = [])
  * @method DescribeCollector describeCollector(array $options = [])
+ * @method DescribeComponentIndex describeComponentIndex(array $options = [])
  * @method DescribeConnectableClusters describeConnectableClusters(array $options = [])
+ * @method DescribeDeprecatedTemplate describeDeprecatedTemplate(array $options = [])
  * @method DescribeDiagnoseReport describeDiagnoseReport(array $options = [])
  * @method DescribeDiagnosisSettings describeDiagnosisSettings(array $options = [])
+ * @method DescribeDynamicSettings describeDynamicSettings(array $options = [])
  * @method DescribeElasticsearchHealth describeElasticsearchHealth(array $options = [])
  * @method DescribeILMPolicy describeILMPolicy(array $options = [])
  * @method DescribeIndexTemplate describeIndexTemplate(array $options = [])
@@ -56,6 +61,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTemplates describeTemplates(array $options = [])
  * @method DescribeXpackMonitorConfig describeXpackMonitorConfig(array $options = [])
  * @method DiagnoseInstance diagnoseInstance(array $options = [])
+ * @method DisableKibanaPvlNetwork disableKibanaPvlNetwork(array $options = [])
+ * @method EnableKibanaPvlNetwork enableKibanaPvlNetwork(array $options = [])
  * @method EstimatedLogstashRestartTime estimatedLogstashRestartTime(array $options = [])
  * @method EstimatedRestartTime estimatedRestartTime(array $options = [])
  * @method GetClusterDataInformation getClusterDataInformation(array $options = [])
@@ -64,6 +71,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEmonGrafanaDashboards getEmonGrafanaDashboards(array $options = [])
  * @method GetEmonMonitorData getEmonMonitorData(array $options = [])
  * @method GetOpenStoreUsage getOpenStoreUsage(array $options = [])
+ * @method GetRegionalInstanceConfig getRegionalInstanceConfig(array $options = [])
  * @method GetRegionConfiguration getRegionConfiguration(array $options = [])
  * @method GetSuggestShrinkableNodes getSuggestShrinkableNodes(array $options = [])
  * @method GetTransferableNodes getTransferableNodes(array $options = [])
@@ -77,18 +85,22 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method InterruptLogstashTask interruptLogstashTask(array $options = [])
  * @method ListAckClusters listAckClusters(array $options = [])
  * @method ListAckNamespaces listAckNamespaces(array $options = [])
+ * @method ListActionRecords listActionRecords(array $options = [])
  * @method ListAllNode listAllNode(array $options = [])
  * @method ListAlternativeSnapshotRepos listAlternativeSnapshotRepos(array $options = [])
  * @method ListApm listApm(array $options = [])
  * @method ListAvailableEsInstanceIds listAvailableEsInstanceIds(array $options = [])
  * @method ListCollectors listCollectors(array $options = [])
+ * @method ListComponentIndices listComponentIndices(array $options = [])
  * @method ListConnectedClusters listConnectedClusters(array $options = [])
  * @method ListDataStreams listDataStreams(array $options = [])
  * @method ListDataTasks listDataTasks(array $options = [])
  * @method ListDefaultCollectorConfigurations listDefaultCollectorConfigurations(array $options = [])
+ * @method ListDeprecatedTemplates listDeprecatedTemplates(array $options = [])
  * @method ListDiagnoseIndices listDiagnoseIndices(array $options = [])
  * @method ListDiagnoseReport listDiagnoseReport(array $options = [])
  * @method ListDiagnoseReportIds listDiagnoseReportIds(array $options = [])
+ * @method ListDiagnosisItems listDiagnosisItems(array $options = [])
  * @method ListDictInformation listDictInformation(array $options = [])
  * @method ListDicts listDicts(array $options = [])
  * @method ListEcsInstances listEcsInstances(array $options = [])
@@ -96,8 +108,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListILMPolicies listILMPolicies(array $options = [])
  * @method ListIndexTemplates listIndexTemplates(array $options = [])
  * @method ListInstance listInstance(array $options = [])
+ * @method ListInstanceHistoryEvents listInstanceHistoryEvents(array $options = [])
  * @method ListInstanceIndices listInstanceIndices(array $options = [])
  * @method ListKibanaPlugins listKibanaPlugins(array $options = [])
+ * @method ListKibanaPvlNetwork listKibanaPvlNetwork(array $options = [])
  * @method ListLogstash listLogstash(array $options = [])
  * @method ListLogstashLog listLogstashLog(array $options = [])
  * @method ListLogstashPlugins listLogstashPlugins(array $options = [])
@@ -152,9 +166,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateBlackIps updateBlackIps(array $options = [])
  * @method UpdateCollector updateCollector(array $options = [])
  * @method UpdateCollectorName updateCollectorName(array $options = [])
+ * @method UpdateComponentIndex updateComponentIndex(array $options = [])
  * @method UpdateDescription updateDescription(array $options = [])
  * @method UpdateDiagnosisSettings updateDiagnosisSettings(array $options = [])
  * @method UpdateDict updateDict(array $options = [])
+ * @method UpdateDynamicSettings updateDynamicSettings(array $options = [])
  * @method UpdateExtendConfig updateExtendConfig(array $options = [])
  * @method UpdateExtendfiles updateExtendfiles(array $options = [])
  * @method UpdateHotIkDicts updateHotIkDicts(array $options = [])
@@ -163,6 +179,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateInstance updateInstance(array $options = [])
  * @method UpdateInstanceChargeType updateInstanceChargeType(array $options = [])
  * @method UpdateInstanceSettings updateInstanceSettings(array $options = [])
+ * @method UpdateKibanaPvlNetwork updateKibanaPvlNetwork(array $options = [])
  * @method UpdateKibanaSettings updateKibanaSettings(array $options = [])
  * @method UpdateKibanaWhiteIps updateKibanaWhiteIps(array $options = [])
  * @method UpdateLogstash updateLogstash(array $options = [])
@@ -209,6 +226,7 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class ActivateZones extends Roa
 {
@@ -227,12 +245,26 @@ class ActivateZones extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class AddConnectableCluster extends Roa
 {
@@ -251,16 +283,43 @@ class AddConnectableCluster extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getBody()
  */
 class AddSnapshotRepo extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/snapshot-repos';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -445,6 +504,7 @@ class CloseManagedIndex extends Roa
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  */
 class CreateCollector extends Roa
 {
@@ -463,12 +523,64 @@ class CreateCollector extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method string getBody()
+ */
+class CreateComponentIndex extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/component-index/[name]';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->pathParameters['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class CreateDataStream extends Roa
 {
@@ -487,27 +599,16 @@ class CreateDataStream extends Roa
 
         return $this;
     }
-}
-
-/**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getClientToken()
- */
-class CreateDataTasks extends Roa
-{
-    /** @var string */
-    public $pathPattern = '/openapi/instances/[InstanceId]/data-task';
 
     /**
      * @param string $value
      *
      * @return $this
      */
-    public function withClientToken($value)
+    public function withBody($value)
     {
-        $this->data['ClientToken'] = $value;
-        $this->options['query']['ClientToken'] = $value;
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -517,6 +618,7 @@ class CreateDataTasks extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class CreateILMPolicy extends Roa
 {
@@ -535,12 +637,26 @@ class CreateILMPolicy extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class CreateIndexTemplate extends Roa
 {
@@ -559,10 +675,24 @@ class CreateIndexTemplate extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  */
 class CreateInstance extends Roa
 {
@@ -581,10 +711,24 @@ class CreateInstance extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  */
 class CreateLogstash extends Roa
 {
@@ -603,6 +747,19 @@ class CreateLogstash extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -610,6 +767,7 @@ class CreateLogstash extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method string getTrigger()
+ * @method string getBody()
  */
 class CreatePipelines extends Roa
 {
@@ -641,12 +799,26 @@ class CreatePipelines extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getClientToken()
+ * @method string getBody()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getClientToken()
  */
 class CreateSnapshot extends Roa
 {
@@ -665,6 +837,19 @@ class CreateSnapshot extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -672,6 +857,7 @@ class CreateSnapshot extends Roa
  * @method $this withInstanceId($value)
  * @method string getDryRun()
  * @method string getClientToken()
+ * @method string getBody()
  */
 class CreateVpcEndpoint extends Roa
 {
@@ -703,12 +889,26 @@ class CreateVpcEndpoint extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class DeactivateZones extends Roa
 {
@@ -724,6 +924,19 @@ class DeactivateZones extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -751,6 +964,33 @@ class DeleteCollector extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ */
+class DeleteComponentIndex extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/component-index/[name]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->pathParameters['name'] = $value;
 
         return $this;
     }
@@ -862,6 +1102,33 @@ class DeleteDataTask extends Roa
     {
         $this->data['TaskId'] = $value;
         $this->options['query']['taskId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ */
+class DeleteDeprecatedTemplate extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/deprecated-templates/[name]';
+
+    /** @var string */
+    public $method = 'DELETE';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->pathParameters['name'] = $value;
 
         return $this;
     }
@@ -1144,6 +1411,33 @@ class DescribeCollector extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getName()
+ */
+class DescribeComponentIndex extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/component-index/[name]';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->pathParameters['name'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getAlreadySetItems()
  */
 class DescribeConnectableClusters extends Roa
@@ -1163,6 +1457,33 @@ class DescribeConnectableClusters extends Roa
     {
         $this->data['AlreadySetItems'] = $value;
         $this->options['query']['alreadySetItems'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ */
+class DescribeDeprecatedTemplate extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/deprecated-templates/[name]';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->pathParameters['name'] = $value;
 
         return $this;
     }
@@ -1222,6 +1543,19 @@ class DescribeDiagnosisSettings extends Roa
 
         return $this;
     }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeDynamicSettings extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dynamic-settings';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1401,6 +1735,7 @@ class DescribeXpackMonitorConfig extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method string getLang()
+ * @method string getBody()
  */
 class DiagnoseInstance extends Roa
 {
@@ -1432,12 +1767,66 @@ class DiagnoseInstance extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DisableKibanaPvlNetwork extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/disable-kibana-private';
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getBody()
+ */
+class EnableKibanaPvlNetwork extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/enable-kibana-private';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getForce()
+ * @method string getBody()
  */
 class EstimatedLogstashRestartTime extends Roa
 {
@@ -1456,12 +1845,26 @@ class EstimatedLogstashRestartTime extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getForce()
+ * @method string getBody()
  */
 class EstimatedRestartTime extends Roa
 {
@@ -1480,12 +1883,41 @@ class EstimatedRestartTime extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
+/**
+ * @method string getBody()
+ */
 class GetClusterDataInformation extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/cluster/data-information';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1502,6 +1934,7 @@ class GetElastictask extends Roa
 }
 
 /**
+ * @method string getBody()
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
@@ -1512,9 +1945,23 @@ class GetEmonGrafanaAlerts extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getBody()
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
@@ -1525,9 +1972,23 @@ class GetEmonGrafanaDashboards extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
+ * @method string getBody()
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
@@ -1535,6 +1996,19 @@ class GetEmonMonitorData extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/emon/projects/[ProjectId]/metrics/query';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1545,6 +2019,18 @@ class GetOpenStoreUsage extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/openstore/usage';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+class GetRegionalInstanceConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/regions/instance-config';
+
+    /** @var string */
+    public $scheme = 'https';
 
     /** @var string */
     public $method = 'GET';
@@ -1673,6 +2159,7 @@ class GetTransferableNodes extends Roa
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  */
 class InitializeOperationRole extends Roa
 {
@@ -1691,12 +2178,26 @@ class InitializeOperationRole extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getClientToken()
  * @method string getClusterId()
  * @method $this withClusterId($value)
+ * @method string getBody()
  */
 class InstallAckOperator extends Roa
 {
@@ -1715,12 +2216,26 @@ class InstallAckOperator extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class InstallKibanaSystemPlugin extends Roa
 {
@@ -1739,12 +2254,26 @@ class InstallKibanaSystemPlugin extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class InstallLogstashSystemPlugin extends Roa
 {
@@ -1763,12 +2292,26 @@ class InstallLogstashSystemPlugin extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class InstallSystemPlugin extends Roa
 {
@@ -1787,16 +2330,43 @@ class InstallSystemPlugin extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getBody()
  */
 class InstallUserPlugins extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/plugins/user/actions/install';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1936,6 +2506,131 @@ class ListAckNamespaces extends Roa
     {
         $this->data['Page'] = $value;
         $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getFilter()
+ * @method string getActionNames()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getRequestId()
+ * @method string getEndTime()
+ * @method string getPage()
+ * @method string getStartTime()
+ * @method string getUserId()
+ */
+class ListActionRecords extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/action-records';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilter($value)
+    {
+        $this->data['Filter'] = $value;
+        $this->options['query']['filter'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withActionNames($value)
+    {
+        $this->data['ActionNames'] = $value;
+        $this->options['query']['actionNames'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRequestId($value)
+    {
+        $this->data['RequestId'] = $value;
+        $this->options['query']['requestId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['query']['endTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['query']['startTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserId($value)
+    {
+        $this->data['UserId'] = $value;
+        $this->options['query']['userId'] = $value;
 
         return $this;
     }
@@ -2187,6 +2882,61 @@ class ListCollectors extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getName()
+ * @method string getPage()
+ */
+class ListComponentIndices extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/component-index';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class ListConnectedClusters extends Roa
 {
@@ -2299,6 +3049,61 @@ class ListDefaultCollectorConfigurations extends Roa
     {
         $this->data['SourceType'] = $value;
         $this->options['query']['sourceType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getName()
+ * @method string getPage()
+ */
+class ListDeprecatedTemplates extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/deprecated-templates';
+
+    /** @var string */
+    public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
 
         return $this;
     }
@@ -2524,6 +3329,31 @@ class ListDiagnoseReportIds extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLang($value)
+    {
+        $this->data['Lang'] = $value;
+        $this->options['query']['lang'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getLang()
+ */
+class ListDiagnosisItems extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/diagnosis/items';
+
+    /** @var string */
+    public $method = 'GET';
 
     /**
      * @param string $value
@@ -2773,6 +3603,8 @@ class ListILMPolicies extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getSize()
+ * @method string getPage()
  * @method string getIndexTemplate()
  */
 class ListIndexTemplates extends Roa
@@ -2782,6 +3614,32 @@ class ListIndexTemplates extends Roa
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
 
     /**
      * @param string $value
@@ -2800,7 +3658,9 @@ class ListIndexTemplates extends Roa
 /**
  * @method string getDescription()
  * @method string getInstanceCategory()
+ * @method string getInnerapiOwnerId()
  * @method string getTags()
+ * @method string getProductType()
  * @method string getResourceGroupId()
  * @method string getInstanceId()
  * @method string getSize()
@@ -2849,10 +3709,36 @@ class ListInstance extends Roa
      *
      * @return $this
      */
+    public function withInnerapiOwnerId($value)
+    {
+        $this->data['InnerapiOwnerId'] = $value;
+        $this->options['query']['innerapiOwnerId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withTags($value)
     {
         $this->data['Tags'] = $value;
         $this->options['query']['tags'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProductType($value)
+    {
+        $this->data['ProductType'] = $value;
+        $this->options['query']['productType'] = $value;
 
         return $this;
     }
@@ -2957,6 +3843,168 @@ class ListInstance extends Roa
     {
         $this->data['PaymentType'] = $value;
         $this->options['query']['paymentType'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getEventFinashEndTime()
+ * @method string getInstanceId()
+ * @method string getSize()
+ * @method string getEventExecuteStartTime()
+ * @method string getEventFinashStartTime()
+ * @method string getNodeIP()
+ * @method string getPage()
+ * @method string getEventCreateEndTime()
+ * @method string getBody()
+ * @method string getEventCreateStartTime()
+ * @method string getEventExecuteEndTime()
+ */
+class ListInstanceHistoryEvents extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/events';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventFinashEndTime($value)
+    {
+        $this->data['EventFinashEndTime'] = $value;
+        $this->options['query']['eventFinashEndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['query']['instanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSize($value)
+    {
+        $this->data['Size'] = $value;
+        $this->options['query']['size'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventExecuteStartTime($value)
+    {
+        $this->data['EventExecuteStartTime'] = $value;
+        $this->options['query']['eventExecuteStartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventFinashStartTime($value)
+    {
+        $this->data['EventFinashStartTime'] = $value;
+        $this->options['query']['eventFinashStartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeIP($value)
+    {
+        $this->data['NodeIP'] = $value;
+        $this->options['query']['nodeIP'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPage($value)
+    {
+        $this->data['Page'] = $value;
+        $this->options['query']['page'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventCreateEndTime($value)
+    {
+        $this->data['EventCreateEndTime'] = $value;
+        $this->options['query']['eventCreateEndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventCreateStartTime($value)
+    {
+        $this->data['EventCreateStartTime'] = $value;
+        $this->options['query']['eventCreateStartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEventExecuteEndTime($value)
+    {
+        $this->data['EventExecuteEndTime'] = $value;
+        $this->options['query']['eventExecuteEndTime'] = $value;
 
         return $this;
     }
@@ -3101,6 +4149,22 @@ class ListKibanaPlugins extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListKibanaPvlNetwork extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/get-kibana-private';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
  * @method string getResourceGroupId()
  * @method string getInstanceId()
  * @method string getSize()
@@ -3108,6 +4172,7 @@ class ListKibanaPlugins extends Roa
  * @method string getPage()
  * @method string getOwnerId()
  * @method string getVersion()
+ * @method string getTags()
  */
 class ListLogstash extends Roa
 {
@@ -3204,6 +4269,19 @@ class ListLogstash extends Roa
     {
         $this->data['Version'] = $value;
         $this->options['query']['version'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['query']['tags'] = $value;
 
         return $this;
     }
@@ -3516,11 +4594,25 @@ class ListPipeline extends Roa
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getBody()
  */
 class ListPipelineIds extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/pipeline-ids';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -3908,6 +5000,7 @@ class ListVpcEndpoints extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getDryRun()
+ * @method string getBody()
  */
 class MigrateToOtherZone extends Roa
 {
@@ -3926,10 +5019,24 @@ class MigrateToOtherZone extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  * @method string getResId()
  * @method $this withResId($value)
  */
@@ -3950,22 +5057,50 @@ class ModifyDeployMachine extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getBody()
  */
 class ModifyElastictask extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/elastic-task';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class ModifyInstanceMaintainTime extends Roa
 {
@@ -3984,46 +5119,31 @@ class ModifyInstanceMaintainTime extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
- * @method string getModifyMode()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getNodeType()
  * @method string getClientToken()
- * @method string getNetworkType()
+ * @method string getBody()
  */
 class ModifyWhiteIps extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/modify-white-ips';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withModifyMode($value)
-    {
-        $this->data['ModifyMode'] = $value;
-        $this->options['form_params']['modifyMode'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNodeType($value)
-    {
-        $this->data['NodeType'] = $value;
-        $this->options['form_params']['nodeType'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -4043,10 +5163,10 @@ class ModifyWhiteIps extends Roa
      *
      * @return $this
      */
-    public function withNetworkType($value)
+    public function withBody($value)
     {
-        $this->data['NetworkType'] = $value;
-        $this->options['form_params']['networkType'] = $value;
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -4056,6 +5176,7 @@ class ModifyWhiteIps extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class MoveResourceGroup extends Roa
 {
@@ -4071,6 +5192,19 @@ class MoveResourceGroup extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -4141,6 +5275,7 @@ class OpenHttps extends Roa
 /**
  * @method string getAlarmGroupId()
  * @method $this withAlarmGroupId($value)
+ * @method string getBody()
  * @method string getProjectId()
  * @method $this withProjectId($value)
  */
@@ -4148,6 +5283,19 @@ class PostEmonTryAlarmRule extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/emon/projects/[ProjectId]/alarm-groups/[AlarmGroupId]/alarm-rules/_test';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4179,6 +5327,7 @@ class RecommendTemplates extends Roa
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  * @method string getResId()
  * @method $this withResId($value)
  */
@@ -4196,6 +5345,19 @@ class ReinstallCollector extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -4230,6 +5392,7 @@ class RemoveApm extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class RenewInstance extends Roa
 {
@@ -4248,12 +5411,26 @@ class RenewInstance extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class RenewLogstash extends Roa
 {
@@ -4269,6 +5446,19 @@ class RenewLogstash extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -4303,6 +5493,7 @@ class RestartCollector extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method string getForce()
+ * @method string getBody()
  */
 class RestartInstance extends Roa
 {
@@ -4334,6 +5525,19 @@ class RestartInstance extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4341,6 +5545,7 @@ class RestartInstance extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method string getForce()
+ * @method string getBody()
  */
 class RestartLogstash extends Roa
 {
@@ -4369,6 +5574,19 @@ class RestartLogstash extends Roa
     {
         $this->data['Force'] = $value;
         $this->options['query']['force'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -4452,6 +5670,7 @@ class RolloverDataStream extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class RunPipelines extends Roa
 {
@@ -4470,6 +5689,19 @@ class RunPipelines extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4478,6 +5710,8 @@ class RunPipelines extends Roa
  * @method $this withInstanceId($value)
  * @method string getNodeType()
  * @method string getClientToken()
+ * @method string getCount()
+ * @method string getBody()
  */
 class ShrinkNode extends Roa
 {
@@ -4519,6 +5753,32 @@ class ShrinkNode extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCount($value)
+    {
+        $this->data['Count'] = $value;
+        $this->options['query']['count'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -4620,6 +5880,7 @@ class StopCollector extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class StopPipelines extends Roa
 {
@@ -4638,12 +5899,41 @@ class StopPipelines extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
+/**
+ * @method string getBody()
+ */
 class TagResources extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/tags';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -4685,43 +5975,15 @@ class TransferNode extends Roa
 }
 
 /**
- * @method string getActionType()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
- * @method string getNodeType()
  * @method string getClientToken()
- * @method string getNetworkType()
+ * @method string getBody()
  */
 class TriggerNetwork extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/actions/network-trigger';
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withActionType($value)
-    {
-        $this->data['ActionType'] = $value;
-        $this->options['form_params']['actionType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withNodeType($value)
-    {
-        $this->data['NodeType'] = $value;
-        $this->options['form_params']['nodeType'] = $value;
-
-        return $this;
-    }
 
     /**
      * @param string $value
@@ -4741,10 +6003,10 @@ class TriggerNetwork extends Roa
      *
      * @return $this
      */
-    public function withNetworkType($value)
+    public function withBody($value)
     {
-        $this->data['NetworkType'] = $value;
-        $this->options['form_params']['networkType'] = $value;
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -4754,6 +6016,7 @@ class TriggerNetwork extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UninstallKibanaPlugin extends Roa
 {
@@ -4772,12 +6035,26 @@ class UninstallKibanaPlugin extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UninstallLogstashPlugin extends Roa
 {
@@ -4796,12 +6073,27 @@ class UninstallLogstashPlugin extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getForce()
+ * @method string getBody()
  */
 class UninstallPlugin extends Roa
 {
@@ -4820,11 +6112,38 @@ class UninstallPlugin extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withForce($value)
+    {
+        $this->data['Force'] = $value;
+        $this->options['query']['force'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getAll()
  * @method string getTagKeys()
+ * @method string getBody()
  * @method string getResourceType()
  * @method string getResourceIds()
  */
@@ -4867,6 +6186,19 @@ class UntagResources extends Roa
      *
      * @return $this
      */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withResourceType($value)
     {
         $this->data['ResourceType'] = $value;
@@ -4893,6 +6225,7 @@ class UntagResources extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateAdminPassword extends Roa
 {
@@ -4911,12 +6244,26 @@ class UpdateAdminPassword extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateAdvancedSetting extends Roa
 {
@@ -4935,12 +6282,26 @@ class UpdateAdvancedSetting extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateAliwsDict extends Roa
 {
@@ -4959,6 +6320,19 @@ class UpdateAliwsDict extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['clientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -5029,6 +6403,7 @@ class UpdateBlackIps extends Roa
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  * @method string getResId()
  * @method $this withResId($value)
  */
@@ -5052,10 +6427,24 @@ class UpdateCollector extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getClientToken()
+ * @method string getBody()
  * @method string getResId()
  * @method $this withResId($value)
  */
@@ -5073,6 +6462,60 @@ class UpdateCollectorName extends Roa
     {
         $this->data['ClientToken'] = $value;
         $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method string getBody()
+ */
+class UpdateComponentIndex extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/component-index/[name]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->pathParameters['name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -5121,6 +6564,7 @@ class UpdateDescription extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method string getLang()
+ * @method string getBody()
  */
 class UpdateDiagnosisSettings extends Roa
 {
@@ -5155,12 +6599,26 @@ class UpdateDiagnosisSettings extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateDict extends Roa
 {
@@ -5182,12 +6640,81 @@ class UpdateDict extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getMode()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getClientToken()
+ * @method string getBody()
+ */
+class UpdateDynamicSettings extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/dynamic-settings';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMode($value)
+    {
+        $this->data['Mode'] = $value;
+        $this->options['query']['mode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withClientToken($value)
+    {
+        $this->data['ClientToken'] = $value;
+        $this->options['query']['ClientToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateExtendConfig extends Roa
 {
@@ -5206,12 +6733,26 @@ class UpdateExtendConfig extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateExtendfiles extends Roa
 {
@@ -5233,12 +6774,26 @@ class UpdateExtendfiles extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateHotIkDicts extends Roa
 {
@@ -5260,6 +6815,19 @@ class UpdateHotIkDicts extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5268,6 +6836,7 @@ class UpdateHotIkDicts extends Roa
  * @method string getClientToken()
  * @method string getPolicyName()
  * @method $this withPolicyName($value)
+ * @method string getBody()
  */
 class UpdateILMPolicy extends Roa
 {
@@ -5289,12 +6858,26 @@ class UpdateILMPolicy extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  * @method string getIndexTemplate()
  * @method $this withIndexTemplate($value)
  */
@@ -5318,6 +6901,19 @@ class UpdateIndexTemplate extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5325,6 +6921,8 @@ class UpdateIndexTemplate extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getForce()
+ * @method string getBody()
  * @method string getOrderActionType()
  */
 class UpdateInstance extends Roa
@@ -5366,6 +6964,32 @@ class UpdateInstance extends Roa
      *
      * @return $this
      */
+    public function withForce($value)
+    {
+        $this->data['Force'] = $value;
+        $this->options['query']['force'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withOrderActionType($value)
     {
         $this->data['OrderActionType'] = $value;
@@ -5379,6 +7003,7 @@ class UpdateInstance extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateInstanceChargeType extends Roa
 {
@@ -5397,12 +7022,26 @@ class UpdateInstanceChargeType extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateInstanceSettings extends Roa
 {
@@ -5421,12 +7060,67 @@ class UpdateInstanceSettings extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPvlId()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getBody()
+ */
+class UpdateKibanaPvlNetwork extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/openapi/instances/[InstanceId]/actions/update-kibana-private';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPvlId($value)
+    {
+        $this->data['PvlId'] = $value;
+        $this->options['query']['pvlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateKibanaSettings extends Roa
 {
@@ -5445,6 +7139,19 @@ class UpdateKibanaSettings extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5452,6 +7159,7 @@ class UpdateKibanaSettings extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateKibanaWhiteIps extends Roa
 {
@@ -5483,12 +7191,26 @@ class UpdateKibanaWhiteIps extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateLogstash extends Roa
 {
@@ -5510,12 +7232,26 @@ class UpdateLogstash extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateLogstashChargeType extends Roa
 {
@@ -5534,12 +7270,26 @@ class UpdateLogstashChargeType extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateLogstashDescription extends Roa
 {
@@ -5558,12 +7308,26 @@ class UpdateLogstashDescription extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateLogstashSettings extends Roa
 {
@@ -5582,12 +7346,26 @@ class UpdateLogstashSettings extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdatePipelineManagementConfig extends Roa
 {
@@ -5606,6 +7384,19 @@ class UpdatePipelineManagementConfig extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5613,6 +7404,7 @@ class UpdatePipelineManagementConfig extends Roa
  * @method $this withInstanceId($value)
  * @method string getClientToken()
  * @method string getTrigger()
+ * @method string getBody()
  */
 class UpdatePipelines extends Roa
 {
@@ -5647,6 +7439,19 @@ class UpdatePipelines extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5654,6 +7459,7 @@ class UpdatePipelines extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdatePrivateNetworkWhiteIps extends Roa
 {
@@ -5685,12 +7491,26 @@ class UpdatePrivateNetworkWhiteIps extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdatePublicNetwork extends Roa
 {
@@ -5709,6 +7529,19 @@ class UpdatePublicNetwork extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5716,6 +7549,7 @@ class UpdatePublicNetwork extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdatePublicWhiteIps extends Roa
 {
@@ -5747,12 +7581,26 @@ class UpdatePublicWhiteIps extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateReadWritePolicy extends Roa
 {
@@ -5771,22 +7619,50 @@ class UpdateReadWritePolicy extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getBody()
  */
 class UpdateSnapshotSetting extends Roa
 {
     /** @var string */
     public $pathPattern = '/openapi/instances/[InstanceId]/snapshot-setting';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateSynonymsDicts extends Roa
 {
@@ -5808,6 +7684,19 @@ class UpdateSynonymsDicts extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5816,6 +7705,7 @@ class UpdateSynonymsDicts extends Roa
  * @method string getClientToken()
  * @method string getTemplateName()
  * @method $this withTemplateName($value)
+ * @method string getBody()
  */
 class UpdateTemplate extends Roa
 {
@@ -5834,6 +7724,19 @@ class UpdateTemplate extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5841,6 +7744,7 @@ class UpdateTemplate extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateWhiteIps extends Roa
 {
@@ -5872,12 +7776,26 @@ class UpdateWhiteIps extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class UpdateXpackMonitorConfig extends Roa
 {
@@ -5896,6 +7814,19 @@ class UpdateXpackMonitorConfig extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5903,8 +7834,7 @@ class UpdateXpackMonitorConfig extends Roa
  * @method $this withInstanceId($value)
  * @method string getDryRun()
  * @method string getClientToken()
- * @method string getType()
- * @method string getVersion()
+ * @method string getBody()
  */
 class UpgradeEngineVersion extends Roa
 {
@@ -5942,23 +7872,10 @@ class UpgradeEngineVersion extends Roa
      *
      * @return $this
      */
-    public function withType($value)
+    public function withBody($value)
     {
-        $this->data['Type'] = $value;
-        $this->options['form_params']['type'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withVersion($value)
-    {
-        $this->data['Version'] = $value;
-        $this->options['form_params']['version'] = $value;
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }
@@ -5968,6 +7885,7 @@ class UpgradeEngineVersion extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getClientToken()
+ * @method string getBody()
  */
 class ValidateConnection extends Roa
 {
@@ -5986,6 +7904,19 @@ class ValidateConnection extends Roa
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -5993,6 +7924,8 @@ class ValidateConnection extends Roa
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getNodeType()
+ * @method string getCount()
+ * @method string getBody()
  */
 class ValidateShrinkNodes extends Roa
 {
@@ -6021,6 +7954,32 @@ class ValidateShrinkNodes extends Roa
     {
         $this->data['NodeType'] = $value;
         $this->options['query']['nodeType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCount($value)
+    {
+        $this->data['Count'] = $value;
+        $this->options['query']['count'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
 
         return $this;
     }

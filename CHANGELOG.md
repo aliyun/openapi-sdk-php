@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2160 - 2024-7-22
+- Support kibana Pvl private link operation.
+
+
 ## 1.8.2159 - 2024-7-19
 - Account management add SourceBiz parameters.
 
