@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2161 - 2024-7-23
+- Update water-mark params
+
+
 ## 1.8.2160 - 2024-7-22
 - Support kibana Pvl private link operation.
 

@@ -43,7 +43,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListJob listJob(array $options = [])
  * @method ListMediaWorkflowExecutions listMediaWorkflowExecutions(array $options = [])
  * @method QueryAnalysisJobList queryAnalysisJobList(array $options = [])
- * @method QueryEditingJobList queryEditingJobList(array $options = [])
+ * @method QueryCopyrightExtractJob queryCopyrightExtractJob(array $options = [])
+ * @method QueryCopyrightJob queryCopyrightJob(array $options = [])
  * @method QueryFpDBDeleteJobList queryFpDBDeleteJobList(array $options = [])
  * @method QueryFpFileDeleteJobList queryFpFileDeleteJobList(array $options = [])
  * @method QueryFpShotJobList queryFpShotJobList(array $options = [])
@@ -61,26 +62,32 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySmarttagTemplateList querySmarttagTemplateList(array $options = [])
  * @method QuerySnapshotJobList querySnapshotJobList(array $options = [])
  * @method QueryTemplateList queryTemplateList(array $options = [])
- * @method QueryVideoQualityJob queryVideoQualityJob(array $options = [])
+ * @method QueryTraceAbJob queryTraceAbJob(array $options = [])
+ * @method QueryTraceExtractJob queryTraceExtractJob(array $options = [])
+ * @method QueryTraceM3u8Job queryTraceM3u8Job(array $options = [])
  * @method QueryWaterMarkTemplateList queryWaterMarkTemplateList(array $options = [])
  * @method RegisterCustomFace registerCustomFace(array $options = [])
  * @method RegisterCustomView registerCustomView(array $options = [])
- * @method ReportFpShotJobResult reportFpShotJobResult(array $options = [])
  * @method SearchMediaWorkflow searchMediaWorkflow(array $options = [])
  * @method SearchPipeline searchPipeline(array $options = [])
  * @method SearchTemplate searchTemplate(array $options = [])
  * @method SearchWaterMarkTemplate searchWaterMarkTemplate(array $options = [])
  * @method SubmitAnalysisJob submitAnalysisJob(array $options = [])
+ * @method SubmitCopyrightExtractJob submitCopyrightExtractJob(array $options = [])
+ * @method SubmitCopyrightJob submitCopyrightJob(array $options = [])
  * @method SubmitFpDBDeleteJob submitFpDBDeleteJob(array $options = [])
  * @method SubmitFpFileDeleteJob submitFpFileDeleteJob(array $options = [])
  * @method SubmitFpShotJob submitFpShotJob(array $options = [])
+ * @method SubmitImageCopyright submitImageCopyright(array $options = [])
  * @method SubmitIProductionJob submitIProductionJob(array $options = [])
  * @method SubmitJobs submitJobs(array $options = [])
  * @method SubmitMediaCensorJob submitMediaCensorJob(array $options = [])
  * @method SubmitMediaInfoJob submitMediaInfoJob(array $options = [])
  * @method SubmitSmarttagJob submitSmarttagJob(array $options = [])
  * @method SubmitSnapshotJob submitSnapshotJob(array $options = [])
- * @method SubmitVideoQualityJob submitVideoQualityJob(array $options = [])
+ * @method SubmitTraceAbJob submitTraceAbJob(array $options = [])
+ * @method SubmitTraceExtractJob submitTraceExtractJob(array $options = [])
+ * @method SubmitTraceM3u8Job submitTraceM3u8Job(array $options = [])
  * @method TagCustomPerson tagCustomPerson(array $options = [])
  * @method UnbindInputBucket unbindInputBucket(array $options = [])
  * @method UnbindOutputBucket unbindOutputBucket(array $options = [])
@@ -210,6 +217,8 @@ class AddMediaWorkflow extends Rpc
  * @method $this withRole($value)
  * @method string getSpeed()
  * @method $this withSpeed($value)
+ * @method string getExtendConfig()
+ * @method $this withExtendConfig($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -356,14 +365,14 @@ class BindOutputBucket extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
- * @method string getJobId()
- * @method $this withJobId($value)
  */
 class CancelJob extends Rpc
 {
@@ -794,12 +803,16 @@ class ListFpShotDB extends Rpc
  * @method $this withFpDBId($value)
  * @method string getNextPageToken()
  * @method $this withNextPageToken($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -890,18 +903,28 @@ class QueryAnalysisJobList extends Rpc
 }
 
 /**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getJobIds()
- * @method $this withJobIds($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
  */
-class QueryEditingJobList extends Rpc
+class QueryCopyrightExtractJob extends Rpc
+{
+}
+
+/**
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getCreateTimeEnd()
+ * @method $this withCreateTimeEnd($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCreateTimeStart()
+ * @method $this withCreateTimeStart($value)
+ */
+class QueryCopyrightJob extends Rpc
 {
 }
 
@@ -988,6 +1011,8 @@ class QueryIProductionJob extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getIncludePipelineInfo()
+ * @method $this withIncludePipelineInfo($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1028,8 +1053,6 @@ class QueryMediaCensorJobDetail extends Rpc
  * @method $this withNextPageToken($value)
  * @method string getStartOfJobCreatedTimeRange()
  * @method $this withStartOfJobCreatedTimeRange($value)
- * @method string getJobId()
- * @method $this withJobId($value)
  * @method string getState()
  * @method $this withState($value)
  * @method string getEndOfJobCreatedTimeRange()
@@ -1044,6 +1067,8 @@ class QueryMediaCensorJobDetail extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
  */
 class QueryMediaCensorJobList extends Rpc
 {
@@ -1228,6 +1253,8 @@ class QuerySnapshotJobList extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getTemplateIds()
  * @method $this withTemplateIds($value)
+ * @method string getForFrontend()
+ * @method $this withForFrontend($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -1240,12 +1267,40 @@ class QueryTemplateList extends Rpc
 }
 
 /**
- * @method string getUserId()
- * @method $this withUserId($value)
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
  * @method string getJobId()
  * @method $this withJobId($value)
  */
-class QueryVideoQualityJob extends Rpc
+class QueryTraceAbJob extends Rpc
+{
+}
+
+/**
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ */
+class QueryTraceExtractJob extends Rpc
+{
+}
+
+/**
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getMessageId()
+ * @method $this withMessageId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getCreateTimeEnd()
+ * @method $this withCreateTimeEnd($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCreateTimeStart()
+ * @method $this withCreateTimeStart($value)
+ */
+class QueryTraceM3u8Job extends Rpc
 {
 }
 
@@ -1310,26 +1365,6 @@ class RegisterCustomView extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getResult()
- * @method $this withResult($value)
- * @method string getJobId()
- * @method $this withJobId($value)
- * @method string getDetails()
- * @method $this withDetails($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ReportFpShotJobResult extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1370,18 +1405,24 @@ class SearchPipeline extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getForFrontend()
+ * @method $this withForFrontend($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getState()
  * @method $this withState($value)
+ * @method string getNamePrefix()
+ * @method $this withNamePrefix($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getTemplateId()
+ * @method $this withTemplateId($value)
  */
 class SearchTemplate extends Rpc
 {
@@ -1428,6 +1469,52 @@ class SearchWaterMarkTemplate extends Rpc
  * @method $this withInput($value)
  */
 class SubmitAnalysisJob extends Rpc
+{
+}
+
+/**
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getCallBack()
+ * @method $this withCallBack($value)
+ */
+class SubmitCopyrightExtractJob extends Rpc
+{
+}
+
+/**
+ * @method string getVisibleMessage()
+ * @method $this withVisibleMessage($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getOutput()
+ * @method $this withOutput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getTotalTime()
+ * @method $this withTotalTime($value)
+ * @method string getCallBack()
+ * @method $this withCallBack($value)
+ */
+class SubmitCopyrightJob extends Rpc
 {
 }
 
@@ -1496,6 +1583,24 @@ class SubmitFpFileDeleteJob extends Rpc
  * @method $this withInput($value)
  */
 class SubmitFpShotJob extends Rpc
+{
+}
+
+/**
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getMessage()
+ * @method $this withMessage($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getOutput()
+ * @method $this withOutput($value)
+ * @method string getInput()
+ * @method $this withInput($value)
+ */
+class SubmitImageCopyright extends Rpc
 {
 }
 
@@ -1630,6 +1735,8 @@ class SubmitMediaInfoJob extends Rpc
  * @method $this withParams($value)
  * @method string getTemplateId()
  * @method $this withTemplateId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
  * @method string getPipelineId()
  * @method $this withPipelineId($value)
  * @method string getContentType()
@@ -1666,28 +1773,58 @@ class SubmitSnapshotJob extends Rpc
 }
 
 /**
- * @method string getJobParams()
- * @method $this withJobParams($value)
- * @method string getUserId()
- * @method $this withUserId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getOutput()
  * @method $this withOutput($value)
  * @method string getUserData()
  * @method $this withUserData($value)
- * @method string getNotifyUrl()
- * @method $this withNotifyUrl($value)
- * @method string getSourceType()
- * @method $this withSourceType($value)
- * @method string getModelId()
- * @method $this withModelId($value)
- * @method string getPipelineId()
- * @method $this withPipelineId($value)
+ * @method string getCipherBase64ed()
+ * @method $this withCipherBase64ed($value)
+ * @method string getLevel()
+ * @method $this withLevel($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
  * @method string getInput()
  * @method $this withInput($value)
- * @method string getScheduleParams()
- * @method $this withScheduleParams($value)
+ * @method string getTotalTime()
+ * @method $this withTotalTime($value)
+ * @method string getCallBack()
+ * @method $this withCallBack($value)
  */
-class SubmitVideoQualityJob extends Rpc
+class SubmitTraceAbJob extends Rpc
+{
+}
+
+/**
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getUrl()
+ * @method $this withUrl($value)
+ * @method string getInput()
+ * @method $this withInput($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
+ * @method string getCallBack()
+ * @method $this withCallBack($value)
+ */
+class SubmitTraceExtractJob extends Rpc
+{
+}
+
+/**
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getOutput()
+ * @method $this withOutput($value)
+ * @method string getTrace()
+ * @method $this withTrace($value)
+ * @method string getKeyUri()
+ * @method $this withKeyUri($value)
+ */
+class SubmitTraceM3u8Job extends Rpc
 {
 }
 
@@ -1866,6 +2003,10 @@ class UpdateMediaPublishState extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getTriggerMode()
+ * @method $this withTriggerMode($value)
+ * @method string getName()
+ * @method $this withName($value)
  */
 class UpdateMediaWorkflow extends Rpc
 {
@@ -1896,6 +2037,8 @@ class UpdateMediaWorkflowTriggerMode extends Rpc
  * @method $this withRole($value)
  * @method string getState()
  * @method $this withState($value)
+ * @method string getExtendConfig()
+ * @method $this withExtendConfig($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
