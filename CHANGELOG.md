@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2163 - 2024-7-24
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2162 - 2024-7-23
 - Generated 2014-08-15 for `Rds`.
 

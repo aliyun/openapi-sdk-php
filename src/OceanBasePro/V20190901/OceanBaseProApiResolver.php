@@ -79,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSQLHistoryList describeSQLHistoryList(array $options = [])
  * @method DescribeSQLPlans describeSQLPlans(array $options = [])
  * @method DescribeSQLSamples describeSQLSamples(array $options = [])
+ * @method DescribeSQLTuningAdvices describeSQLTuningAdvices(array $options = [])
  * @method DescribeTagValues describeTagValues(array $options = [])
  * @method DescribeTenant describeTenant(array $options = [])
  * @method DescribeTenantEncryption describeTenantEncryption(array $options = [])
@@ -6348,6 +6349,110 @@ class DescribeSQLSamples extends Rpc
     {
         $this->data['DbName'] = $value;
         $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getStartTime()
+ * @method string getTenantId()
+ * @method string getSqlId()
+ * @method string getEndTime()
+ * @method string getInstanceId()
+ * @method string getDbName()
+ * @method string getAcceptLanguage()
+ */
+class DescribeSQLTuningAdvices extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSqlId($value)
+    {
+        $this->data['SqlId'] = $value;
+        $this->options['form_params']['SqlId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDbName($value)
+    {
+        $this->data['DbName'] = $value;
+        $this->options['form_params']['DbName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAcceptLanguage($value)
+    {
+        $this->data['AcceptLanguage'] = $value;
+        $this->options['form_params']['AcceptLanguage'] = $value;
 
         return $this;
     }
