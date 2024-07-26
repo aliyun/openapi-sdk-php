@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2164 - 2024-7-26
+- Supported C#.
+
+
 ## 1.8.2163 - 2024-7-24
 - Generated 2019-09-01 for `OceanBasePro`.
 
