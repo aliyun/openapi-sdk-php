@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2165 - 2024-7-29
+- Update DescribeApiMetering API.
+
+
 ## 1.8.2164 - 2024-7-26
 - Supported C#.
 

@@ -45,6 +45,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'yunmarket';
 }
 
 /**
@@ -419,10 +422,10 @@ class DescribeProjectOperateLogs extends Rpc
 /**
  * @method string getTemplateForm()
  * @method $this withTemplateForm($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getRemark()
  * @method $this withRemark($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
@@ -431,10 +434,10 @@ class FinishCurrentProjectNode extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getRemark()
  * @method $this withRemark($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
@@ -451,10 +454,10 @@ class PushMeteringData extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getRemark()
  * @method $this withRemark($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
@@ -463,10 +466,10 @@ class ResumeProject extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
  * @method string getRemark()
  * @method $this withRemark($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getNodeId()
  * @method $this withNodeId($value)
  */
