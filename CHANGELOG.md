@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2168 - 2024-8-1
+- add openapi for Personalized Text to Image ablity init version.
+
+
 ## 1.8.2167 - 2024-8-1
 - Generated 2015-12-01 for `Dds`.
 
