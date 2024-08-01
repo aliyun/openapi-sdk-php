@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2166 - 2024-8-1
+- Update to support new apis.
+
+
 ## 1.8.2165 - 2024-7-29
 - Update DescribeApiMetering API.
 

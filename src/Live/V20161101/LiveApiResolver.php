@@ -154,7 +154,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDetectPornData describeLiveDetectPornData(array $options = [])
  * @method DescribeLiveDomainBpsData describeLiveDomainBpsData(array $options = [])
  * @method DescribeLiveDomainBpsDataByLayer describeLiveDomainBpsDataByLayer(array $options = [])
- * @method DescribeLiveDomainBpsDataByTimeStamp describeLiveDomainBpsDataByTimeStamp(array $options = [])
  * @method DescribeLiveDomainByCertificate describeLiveDomainByCertificate(array $options = [])
  * @method DescribeLiveDomainCertificateInfo describeLiveDomainCertificateInfo(array $options = [])
  * @method DescribeLiveDomainConfigs describeLiveDomainConfigs(array $options = [])
@@ -187,7 +186,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDrmUsageData describeLiveDrmUsageData(array $options = [])
  * @method DescribeLiveEdgeTransfer describeLiveEdgeTransfer(array $options = [])
  * @method DescribeLiveGrtnDuration describeLiveGrtnDuration(array $options = [])
- * @method DescribeLiveGrtnTrafficUsage describeLiveGrtnTrafficUsage(array $options = [])
  * @method DescribeLiveHttpsDomainList describeLiveHttpsDomainList(array $options = [])
  * @method DescribeLiveInteractionMetricData describeLiveInteractionMetricData(array $options = [])
  * @method DescribeLiveIpInfo describeLiveIpInfo(array $options = [])
@@ -221,7 +219,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamMerge describeLiveStreamMerge(array $options = [])
  * @method DescribeLiveStreamMetricDetailData describeLiveStreamMetricDetailData(array $options = [])
  * @method DescribeLiveStreamMonitorList describeLiveStreamMonitorList(array $options = [])
- * @method DescribeLiveStreamOptimizedFeatureConfig describeLiveStreamOptimizedFeatureConfig(array $options = [])
  * @method DescribeLiveStreamPreloadTasks describeLiveStreamPreloadTasks(array $options = [])
  * @method DescribeLiveStreamPushMetricDetailData describeLiveStreamPushMetricDetailData(array $options = [])
  * @method DescribeLiveStreamRecordContent describeLiveStreamRecordContent(array $options = [])
@@ -362,6 +359,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetLiveStreamDelayConfig setLiveStreamDelayConfig(array $options = [])
  * @method SetLiveStreamPreloadTasks setLiveStreamPreloadTasks(array $options = [])
  * @method SetLiveStreamsNotifyUrlConfig setLiveStreamsNotifyUrlConfig(array $options = [])
+ * @method SetShowListBackground setShowListBackground(array $options = [])
  * @method SetSnapshotCallbackAuth setSnapshotCallbackAuth(array $options = [])
  * @method StartCaster startCaster(array $options = [])
  * @method StartCasterScene startCasterScene(array $options = [])
@@ -3663,22 +3661,6 @@ class DescribeLiveDomainBpsDataByLayer extends Rpc
 }
 
 /**
- * @method string getLocationNames()
- * @method $this withLocationNames($value)
- * @method string getIspNames()
- * @method $this withIspNames($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getTimePoint()
- * @method $this withTimePoint($value)
- */
-class DescribeLiveDomainBpsDataByTimeStamp extends Rpc
-{
-}
-
-/**
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getSSLStatus()
@@ -4220,26 +4202,6 @@ class DescribeLiveEdgeTransfer extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeLiveGrtnDuration extends Rpc
-{
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getArea()
- * @method $this withArea($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getField()
- * @method $this withField($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getInterval()
- * @method $this withInterval($value)
- */
-class DescribeLiveGrtnTrafficUsage extends Rpc
 {
 }
 
@@ -4804,18 +4766,6 @@ class DescribeLiveStreamMonitorList extends Rpc
 }
 
 /**
- * @method string getConfigName()
- * @method $this withConfigName($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveStreamOptimizedFeatureConfig extends Rpc
-{
-}
-
-/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNum()
@@ -5028,6 +4978,8 @@ class DescribeLiveStreamsNotifyUrlConfig extends Rpc
  * @method $this withAppName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getIsGetCurrentRate()
+ * @method $this withIsGetCurrentRate($value)
  * @method string getStreamName()
  * @method $this withStreamName($value)
  * @method string getQueryType()
@@ -8387,6 +8339,22 @@ class SetLiveStreamPreloadTasks extends Rpc
  * @method $this withNotifyAuthKey($value)
  */
 class SetLiveStreamsNotifyUrlConfig extends Rpc
+{
+}
+
+/**
+ * @method string getMaterialId()
+ * @method $this withMaterialId($value)
+ * @method string getCasterId()
+ * @method $this withCasterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getResourceUrl()
+ * @method $this withResourceUrl($value)
+ */
+class SetShowListBackground extends Rpc
 {
 }
 
