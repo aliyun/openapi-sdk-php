@@ -107,7 +107,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RenewDBInstance renewDBInstance(array $options = [])
  * @method ResetAccountPassword resetAccountPassword(array $options = [])
  * @method RestartDBInstance restartDBInstance(array $options = [])
- * @method RestoreDBInstance restoreDBInstance(array $options = [])
+ * @method RestartNode restartNode(array $options = [])
  * @method SwitchDBInstanceHA switchDBInstanceHA(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TransferClusterBackup transferClusterBackup(array $options = [])
@@ -2036,8 +2036,12 @@ class ListTagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSecondaryZoneId()
+ * @method $this withSecondaryZoneId($value)
  * @method string getEffectiveTime()
  * @method $this withEffectiveTime($value)
+ * @method string getHiddenZoneId()
+ * @method $this withHiddenZoneId($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
@@ -2842,18 +2846,20 @@ class RestartDBInstance extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getRoleId()
+ * @method $this withRoleId($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
- * @method string getBackupId()
- * @method $this withBackupId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
-class RestoreDBInstance extends Rpc
+class RestartNode extends Rpc
 {
 }
 
