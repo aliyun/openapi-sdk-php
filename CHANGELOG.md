@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2169 - 2024-8-5
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2168 - 2024-8-1
 - add openapi for Personalized Text to Image ablity init version.
 
