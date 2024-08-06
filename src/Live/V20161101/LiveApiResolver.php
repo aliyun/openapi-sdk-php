@@ -8423,6 +8423,12 @@ class StartLiveDomain extends Rpc
 /**
  * @method string getSingleSubParams()
  * @method $this withSingleSubParams($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getStreamURL()
+ * @method $this withStreamURL($value)
+ * @method string getMultiStreamURL()
+ * @method $this withMultiStreamURL($value)
  * @method string getSeiParams()
  * @method $this withSeiParams($value)
  * @method string getTranscodeParams()
@@ -8435,10 +8441,6 @@ class StartLiveDomain extends Rpc
  * @method $this withMixMode($value)
  * @method string getChannelId()
  * @method $this withChannelId($value)
- * @method string getTaskId()
- * @method $this withTaskId($value)
- * @method string getStreamURL()
- * @method $this withStreamURL($value)
  */
 class StartLiveMPUTask extends Rpc
 {
@@ -9078,6 +9080,8 @@ class UpdateLiveDetectNotifyConfig extends Rpc
 }
 
 /**
+ * @method string getMultiStreamURL()
+ * @method $this withMultiStreamURL($value)
  * @method string getSingleSubParams()
  * @method $this withSingleSubParams($value)
  * @method string getSeiParams()

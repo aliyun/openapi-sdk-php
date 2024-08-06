@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2171 - 2024-8-6
+- Update to support new apis.
+
+
 ## 1.8.2170 - 2024-8-5
 - Offline remote write related APIs.
 - Mark the managedPrometheus related APIs as deprecated.
