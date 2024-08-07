@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2172 - 2024-8-7
+- Add QueryData, ModifyCopilotEmbedConfig, QueryCopilotEmbedConfig and QueryDataRange APIs.
+
+
 ## 1.8.2171 - 2024-8-6
 - Update to support new apis.
 

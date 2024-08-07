@@ -54,11 +54,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListWorkspaceRoles listWorkspaceRoles(array $options = [])
  * @method ListWorkspaceRoleUsers listWorkspaceRoleUsers(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
+ * @method ModifyCopilotEmbedConfig modifyCopilotEmbedConfig(array $options = [])
  * @method QueryApprovalInfo queryApprovalInfo(array $options = [])
  * @method QueryAuditLog queryAuditLog(array $options = [])
  * @method QueryComponentPerformance queryComponentPerformance(array $options = [])
+ * @method QueryCopilotEmbedConfig queryCopilotEmbedConfig(array $options = [])
  * @method QueryCubeOptimization queryCubeOptimization(array $options = [])
  * @method QueryCubePerformance queryCubePerformance(array $options = [])
+ * @method QueryData queryData(array $options = [])
+ * @method QueryDataRange queryDataRange(array $options = [])
  * @method QueryDataService queryDataService(array $options = [])
  * @method QueryDataServiceList queryDataServiceList(array $options = [])
  * @method QueryDatasetDetailInfo queryDatasetDetailInfo(array $options = [])
@@ -920,6 +924,24 @@ class ModifyApiDatasourceParameters extends Rpc
 }
 
 /**
+ * @method string getCopilotId()
+ * @method $this withCopilotId($value)
+ * @method string getAgentName()
+ * @method $this withAgentName($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getDataRange()
+ * @method $this withDataRange($value)
+ * @method string getModuleName()
+ * @method $this withModuleName($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class ModifyCopilotEmbedConfig extends Rpc
+{
+}
+
+/**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
  * @method string getPageSize()
@@ -990,6 +1012,18 @@ class QueryComponentPerformance extends Rpc
  * @method $this withAccessPoint($value)
  * @method string getSignType()
  * @method $this withSignType($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class QueryCopilotEmbedConfig extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorkspaceId()
  * @method $this withWorkspaceId($value)
  */
@@ -1017,6 +1051,41 @@ class QueryCubeOptimization extends Rpc
  */
 class QueryCubePerformance extends Rpc
 {
+}
+
+/**
+ * @method string getReturnFields()
+ * @method $this withReturnFields($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getConditions()
+ * @method $this withConditions($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getApiId()
+ * @method $this withApiId($value)
+ */
+class QueryData extends Rpc
+{
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class QueryDataRange extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
