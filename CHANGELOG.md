@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2173 - 2024-8-12
+- Generated 2020-06-01 for `SWAS-OPEN`.
+
+
 ## 1.8.2172 - 2024-8-7
 - Add QueryData, ModifyCopilotEmbedConfig, QueryCopilotEmbedConfig and QueryDataRange APIs.
 
