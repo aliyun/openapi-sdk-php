@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2175 - 2024-8-13
+- Support DryRun parameter OpenAPI.
+
+
 ## 1.8.2174 - 2024-8-13
 -DescribeVodCertificateDetail, DescribeVodCertificateList增加返回参数
 
