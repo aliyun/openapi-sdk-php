@@ -11,7 +11,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AllocateReadWriteSplittingConnection allocateReadWriteSplittingConnection(array $options = [])
  * @method AttachWhitelistTemplateToInstance attachWhitelistTemplateToInstance(array $options = [])
  * @method CalculateDBInstanceWeight calculateDBInstanceWeight(array $options = [])
- * @method CancelImport cancelImport(array $options = [])
  * @method CheckAccountNameAvailable checkAccountNameAvailable(array $options = [])
  * @method CheckCloudResourceAuthorized checkCloudResourceAuthorized(array $options = [])
  * @method CheckCreateDdrDBInstance checkCreateDdrDBInstance(array $options = [])
@@ -220,7 +219,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBDescription modifyDBDescription(array $options = [])
  * @method ModifyDBInstanceAutoUpgradeMinorVersion modifyDBInstanceAutoUpgradeMinorVersion(array $options = [])
  * @method ModifyDBInstanceConfig modifyDBInstanceConfig(array $options = [])
- * @method ModifyDBInstanceConnectionMode modifyDBInstanceConnectionMode(array $options = [])
  * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
  * @method ModifyDBInstanceDelayedReplicationTime modifyDBInstanceDelayedReplicationTime(array $options = [])
  * @method ModifyDBInstanceDeletionProtection modifyDBInstanceDeletionProtection(array $options = [])
@@ -234,7 +232,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBInstanceNetworkExpireTime modifyDBInstanceNetworkExpireTime(array $options = [])
  * @method ModifyDBInstanceNetworkType modifyDBInstanceNetworkType(array $options = [])
  * @method ModifyDBInstancePayType modifyDBInstancePayType(array $options = [])
- * @method ModifyDBInstanceProxyConfiguration modifyDBInstanceProxyConfiguration(array $options = [])
  * @method ModifyDBInstanceSecurityGroupRule modifyDBInstanceSecurityGroupRule(array $options = [])
  * @method ModifyDBInstanceSpec modifyDBInstanceSpec(array $options = [])
  * @method ModifyDBInstanceSSL modifyDBInstanceSSL(array $options = [])
@@ -288,7 +285,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SwitchDBInstanceHA switchDBInstanceHA(array $options = [])
  * @method SwitchDBInstanceNetType switchDBInstanceNetType(array $options = [])
  * @method SwitchDBInstanceVpc switchDBInstanceVpc(array $options = [])
- * @method SwitchGuardToMasterInstance switchGuardToMasterInstance(array $options = [])
  * @method TagResources tagResources(array $options = [])
  * @method TerminateMigrateTask terminateMigrateTask(array $options = [])
  * @method TransformDBInstancePayType transformDBInstancePayType(array $options = [])
@@ -600,26 +596,6 @@ class AttachWhitelistTemplateToInstance extends Rpc
  * @method $this withDBInstanceId($value)
  */
 class CalculateDBInstanceWeight extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getImportId()
- * @method $this withImportId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class CancelImport extends Rpc
 {
 }
 
@@ -1080,6 +1056,8 @@ class CreateDatabase extends Rpc
  * @method $this withSystemDBCharset($value)
  * @method string getConnectionString()
  * @method $this withConnectionString($value)
+ * @method string getAutoCreateProxy()
+ * @method $this withAutoCreateProxy($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
  * @method string getDeletionProtection()
@@ -1834,6 +1812,8 @@ class CreatePostgresExtensions extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceStorage()
  * @method $this withDBInstanceStorage($value)
+ * @method string getAutoCreateProxy()
+ * @method $this withAutoCreateProxy($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
  * @method string getDeletionProtection()
@@ -6315,24 +6295,6 @@ class ModifyDBInstanceConfig extends Rpc
 }
 
 /**
- * @method string getConnectionMode()
- * @method $this withConnectionMode($value)
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class ModifyDBInstanceConnectionMode extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getConnectionStringPrefix()
@@ -6619,24 +6581,6 @@ class ModifyDBInstanceNetworkType extends Rpc
  * @method $this withPayType($value)
  */
 class ModifyDBInstancePayType extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getProxyConfigurationValue()
- * @method $this withProxyConfigurationValue($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getProxyConfigurationKey()
- * @method $this withProxyConfigurationKey($value)
- */
-class ModifyDBInstanceProxyConfiguration extends Rpc
 {
 }
 
@@ -8211,24 +8155,6 @@ class SwitchDBInstanceNetType extends Rpc
  * @method $this withVPCId($value)
  */
 class SwitchDBInstanceVpc extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SwitchGuardToMasterInstance extends Rpc
 {
 }
 

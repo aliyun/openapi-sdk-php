@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2177 - 2024-8-13
+- Support RDS Custom.
+
+
 ## 1.8.2176 - 2024-8-13
 - Update to support new apis.
 
