@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2174 - 2024-8-13
+-DescribeVodCertificateDetail, DescribeVodCertificateList增加返回参数
+
+
 ## 1.8.2173 - 2024-8-12
 - Generated 2020-06-01 for `SWAS-OPEN`.
 

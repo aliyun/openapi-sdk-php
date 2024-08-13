@@ -75,6 +75,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
  * @method DescribeVodRefreshTasks describeVodRefreshTasks(array $options = [])
  * @method DescribeVodStorageData describeVodStorageData(array $options = [])
+ * @method DescribeVodTieringStorageData describeVodTieringStorageData(array $options = [])
+ * @method DescribeVodTieringStorageRetrievalData describeVodTieringStorageRetrievalData(array $options = [])
  * @method DescribeVodTranscodeData describeVodTranscodeData(array $options = [])
  * @method DescribeVodUserDomains describeVodUserDomains(array $options = [])
  * @method DescribeVodVerifyContent describeVodVerifyContent(array $options = [])
@@ -418,6 +420,8 @@ class CancelUrlUploadJobs extends Rpc
  * @method $this withDescription($value)
  * @method string getResourceRealOwnerId()
  * @method $this withResourceRealOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getAppName()
  * @method $this withAppName($value)
  */
@@ -1307,6 +1311,48 @@ class DescribeVodStorageData extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStorageClass()
+ * @method $this withStorageClass($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeVodTieringStorageData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStorageClass()
+ * @method $this withStorageClass($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeVodTieringStorageRetrievalData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getStorage()
  * @method $this withStorage($value)
  * @method string getEndTime()
@@ -1921,6 +1967,8 @@ class ListAITemplate extends Rpc
 /**
  * @method string getResourceRealOwnerId()
  * @method $this withResourceRealOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getTag()
@@ -2069,10 +2117,16 @@ class MoveAppResource extends Rpc
 /**
  * @method string getObjectPath()
  * @method $this withObjectPath($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
+ * @method string getL2Preload()
+ * @method $this withL2Preload($value)
+ * @method string getArea()
+ * @method $this withArea($value)
+ * @method string getWithHeader()
+ * @method $this withWithHeader($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  */
 class PreloadVodObjectCaches extends Rpc
 {
