@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2176 - 2024-8-13
+- Update to support new apis.
+
+
 ## 1.8.2175 - 2024-8-13
 - Support DryRun parameter OpenAPI.
 
