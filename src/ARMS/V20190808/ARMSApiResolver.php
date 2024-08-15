@@ -1947,10 +1947,16 @@ class CreateOrUpdateNotificationPolicy extends Rpc
 /**
  * @method string getProxyUserId()
  * @method string getMatchingRules()
+ * @method string getTimeSlots()
+ * @method $this withTimeSlots($value)
  * @method string getAreaCodes()
+ * @method string getEffectiveTimeType()
+ * @method $this withEffectiveTimeType($value)
  * @method string getName()
  * @method string getId()
  * @method string getState()
+ * @method string getTimePeriod()
+ * @method $this withTimePeriod($value)
  */
 class CreateOrUpdateSilencePolicy extends Rpc
 {

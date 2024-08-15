@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2178 - 2024-8-15
+- Support effective time for CreateOrUpdateSilencePolicy interface.
+- Fix spelling errors in the field SupportAuthTypes.
+
+
 ## 1.8.2177 - 2024-8-13
 - Support RDS Custom.
 
