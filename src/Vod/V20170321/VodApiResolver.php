@@ -57,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodDomainDetail describeVodDomainDetail(array $options = [])
  * @method DescribeVodDomainHitRateData describeVodDomainHitRateData(array $options = [])
  * @method DescribeVodDomainLog describeVodDomainLog(array $options = [])
+ * @method DescribeVodDomainMax95BpsData describeVodDomainMax95BpsData(array $options = [])
  * @method DescribeVodDomainQpsData describeVodDomainQpsData(array $options = [])
  * @method DescribeVodDomainRealTimeBpsData describeVodDomainRealTimeBpsData(array $options = [])
  * @method DescribeVodDomainRealTimeByteHitRateData describeVodDomainRealTimeByteHitRateData(array $options = [])
@@ -957,6 +958,30 @@ class DescribeVodDomainHitRateData extends Rpc
  */
 class DescribeVodDomainLog extends Rpc
 {
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getCycle()
+ * @method $this withCycle($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getTimePoint()
+ * @method $this withTimePoint($value)
+ */
+class DescribeVodDomainMax95BpsData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**

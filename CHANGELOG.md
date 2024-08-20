@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2179 - 2024-8-20
+增加DescribeVodDomainMax95BpsData
+
+
 ## 1.8.2178 - 2024-8-15
 - Support effective time for CreateOrUpdateSilencePolicy interface.
 - Fix spelling errors in the field SupportAuthTypes.
