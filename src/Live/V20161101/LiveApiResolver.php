@@ -24,6 +24,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddLiveDomain addLiveDomain(array $options = [])
  * @method AddLiveDomainMapping addLiveDomainMapping(array $options = [])
  * @method AddLiveDomainPlayMapping addLiveDomainPlayMapping(array $options = [])
+ * @method AddLiveMessageGroupBand addLiveMessageGroupBand(array $options = [])
  * @method AddLivePackageConfig addLivePackageConfig(array $options = [])
  * @method AddLivePullStreamInfoConfig addLivePullStreamInfoConfig(array $options = [])
  * @method AddLiveRecordNotifyConfig addLiveRecordNotifyConfig(array $options = [])
@@ -39,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddShowIntoShowList addShowIntoShowList(array $options = [])
  * @method AddStudioLayout addStudioLayout(array $options = [])
  * @method AddTrancodeSEI addTrancodeSEI(array $options = [])
+ * @method BanLiveMessageGroup banLiveMessageGroup(array $options = [])
  * @method BatchDeleteLiveDomainConfigs batchDeleteLiveDomainConfigs(array $options = [])
  * @method BatchGetOnlineUsers batchGetOnlineUsers(array $options = [])
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
@@ -132,7 +134,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCasterSceneAudio describeCasterSceneAudio(array $options = [])
  * @method DescribeCasterScenes describeCasterScenes(array $options = [])
  * @method DescribeCasterStreamUrl describeCasterStreamUrl(array $options = [])
- * @method DescribeCasterSyncGroup describeCasterSyncGroup(array $options = [])
  * @method DescribeCasterVideoResources describeCasterVideoResources(array $options = [])
  * @method DescribeChannelParticipants describeChannelParticipants(array $options = [])
  * @method DescribeChannelUsers describeChannelUsers(array $options = [])
@@ -174,14 +175,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveDomainRealTimeHttpCodeData describeLiveDomainRealTimeHttpCodeData(array $options = [])
  * @method DescribeLiveDomainRealtimeLogDelivery describeLiveDomainRealtimeLogDelivery(array $options = [])
  * @method DescribeLiveDomainRealTimeTrafficData describeLiveDomainRealTimeTrafficData(array $options = [])
- * @method DescribeLiveDomainRecordData describeLiveDomainRecordData(array $options = [])
  * @method DescribeLiveDomainRecordUsageData describeLiveDomainRecordUsageData(array $options = [])
  * @method DescribeLiveDomainSnapshotData describeLiveDomainSnapshotData(array $options = [])
  * @method DescribeLiveDomainStagingConfig describeLiveDomainStagingConfig(array $options = [])
  * @method DescribeLiveDomainStreamTranscodeData describeLiveDomainStreamTranscodeData(array $options = [])
  * @method DescribeLiveDomainTimeShiftData describeLiveDomainTimeShiftData(array $options = [])
  * @method DescribeLiveDomainTrafficData describeLiveDomainTrafficData(array $options = [])
- * @method DescribeLiveDomainTranscodeData describeLiveDomainTranscodeData(array $options = [])
  * @method DescribeLiveDomainTranscodeParams describeLiveDomainTranscodeParams(array $options = [])
  * @method DescribeLiveDrmUsageData describeLiveDrmUsageData(array $options = [])
  * @method DescribeLiveEdgeTransfer describeLiveEdgeTransfer(array $options = [])
@@ -238,15 +237,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamTranscodeStreamNum describeLiveStreamTranscodeStreamNum(array $options = [])
  * @method DescribeLiveStreamWatermarkRules describeLiveStreamWatermarkRules(array $options = [])
  * @method DescribeLiveStreamWatermarks describeLiveStreamWatermarks(array $options = [])
- * @method DescribeLiveTagResources describeLiveTagResources(array $options = [])
  * @method DescribeLiveTopDomainsByFlow describeLiveTopDomainsByFlow(array $options = [])
  * @method DescribeLiveUpVideoAudioInfo describeLiveUpVideoAudioInfo(array $options = [])
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
  * @method DescribeMeterLiveBypassDuration describeMeterLiveBypassDuration(array $options = [])
- * @method DescribeMeterLiveInteractionDau describeMeterLiveInteractionDau(array $options = [])
- * @method DescribeMeterLiveRtcDuration describeMeterLiveRtcDuration(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRtcMPUEventSub describeRtcMPUEventSub(array $options = [])
  * @method DescribeRTSNativeSDKFirstFrameCost describeRTSNativeSDKFirstFrameCost(array $options = [])
@@ -334,6 +330,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySnapshotCallbackAuth querySnapshotCallbackAuth(array $options = [])
  * @method RealTimeRecordCommand realTimeRecordCommand(array $options = [])
  * @method RecoverLiveMessageDeletedGroup recoverLiveMessageDeletedGroup(array $options = [])
+ * @method RemoveLiveMessageGroupBand removeLiveMessageGroupBand(array $options = [])
  * @method RemoveShowFromShowList removeShowFromShowList(array $options = [])
  * @method RemoveTerminals removeTerminals(array $options = [])
  * @method RestartCaster restartCaster(array $options = [])
@@ -348,8 +345,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetCasterChannel setCasterChannel(array $options = [])
  * @method SetCasterConfig setCasterConfig(array $options = [])
  * @method SetCasterSceneConfig setCasterSceneConfig(array $options = [])
- * @method SetCasterSyncGroup setCasterSyncGroup(array $options = [])
- * @method SetCasterTimedEvent setCasterTimedEvent(array $options = [])
  * @method SetLiveDomainCertificate setLiveDomainCertificate(array $options = [])
  * @method SetLiveDomainStagingConfig setLiveDomainStagingConfig(array $options = [])
  * @method SetLiveEdgeTransfer setLiveEdgeTransfer(array $options = [])
@@ -376,8 +371,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopLiveStreamMonitor stopLiveStreamMonitor(array $options = [])
  * @method StopPlaylist stopPlaylist(array $options = [])
  * @method StopRtcAsrTask stopRtcAsrTask(array $options = [])
- * @method TagLiveResources tagLiveResources(array $options = [])
- * @method UnTagLiveResources unTagLiveResources(array $options = [])
+ * @method UnbanLiveMessageGroup unbanLiveMessageGroup(array $options = [])
  * @method UpdateCasterSceneAudio updateCasterSceneAudio(array $options = [])
  * @method UpdateCasterSceneConfig updateCasterSceneConfig(array $options = [])
  * @method UpdateEdgeTranscodeJob updateEdgeTranscodeJob(array $options = [])
@@ -401,7 +395,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveStreamMonitor updateLiveStreamMonitor(array $options = [])
  * @method UpdateLiveStreamWatermark updateLiveStreamWatermark(array $options = [])
  * @method UpdateLiveStreamWatermarkRule updateLiveStreamWatermarkRule(array $options = [])
- * @method UpdateLiveTopLevelDomain updateLiveTopLevelDomain(array $options = [])
  * @method UpdateMessageApp updateMessageApp(array $options = [])
  * @method UpdateMessageGroup updateMessageGroup(array $options = [])
  * @method UpdateMixStream updateMixStream(array $options = [])
@@ -1106,6 +1099,23 @@ class AddLiveDomainPlayMapping extends Rpc
 }
 
 /**
+ * @method string getBannedUsers()
+ * @method $this withBannedUsers($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class AddLiveMessageGroupBand extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getSegmentNum()
  * @method $this withSegmentNum($value)
  * @method string getProtocol()
@@ -1538,6 +1548,23 @@ class AddTrancodeSEI extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getExceptUsers()
+ * @method $this withExceptUsers($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class BanLiveMessageGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getFunctionNames()
  * @method $this withFunctionNames($value)
  * @method string getDomainNames()
@@ -1832,6 +1859,8 @@ class CopyCasterSceneConfig extends Rpc
 /**
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getCasterName()
  * @method $this withCasterName($value)
  * @method string getCasterTemplate()
@@ -3130,6 +3159,8 @@ class DescribeCasterProgram extends Rpc
  * @method $this withStartTime($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getCasterName()
  * @method $this withCasterName($value)
  * @method string getPageSize()
@@ -3184,16 +3215,6 @@ class DescribeCasterScenes extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeCasterStreamUrl extends Rpc
-{
-}
-
-/**
- * @method string getCasterId()
- * @method $this withCasterId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeCasterSyncGroup extends Rpc
 {
 }
 
@@ -3980,22 +4001,6 @@ class DescribeLiveDomainRealTimeTrafficData extends Rpc
 /**
  * @method string getStartTime()
  * @method $this withStartTime($value)
- * @method string getRecordType()
- * @method $this withRecordType($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveDomainRecordData extends Rpc
-{
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
  * @method string getSplitBy()
  * @method $this withSplitBy($value)
  * @method string getDomainName()
@@ -4092,20 +4097,6 @@ class DescribeLiveDomainTimeShiftData extends Rpc
  * @method $this withInterval($value)
  */
 class DescribeLiveDomainTrafficData extends Rpc
-{
-}
-
-/**
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class DescribeLiveDomainTranscodeData extends Rpc
 {
 }
 
@@ -5130,55 +5121,6 @@ class DescribeLiveStreamWatermarks extends Rpc
 }
 
 /**
- * @method string getScope()
- * @method $this withScope($value)
- * @method array getTag()
- * @method array getResourceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- */
-class DescribeLiveTagResources extends Rpc
-{
-
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-	public function withTag(array $tag)
-	{
-	    $this->data['Tag'] = $tag;
-		foreach ($tag as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Key'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-			}
-			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-	public function withResourceId(array $resourceId)
-	{
-	    $this->data['ResourceId'] = $resourceId;
-		foreach ($resourceId as $i => $iValue) {
-			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getLimit()
@@ -5286,50 +5228,6 @@ class DescribeMeterLiveBypassDuration extends Rpc
 
     /** @var string */
     public $scheme = 'https';
-}
-
-/**
- * @method string getStartTs()
- * @method $this withStartTs($value)
- * @method string getServiceArea()
- * @method $this withServiceArea($value)
- * @method string getAppId()
- * @method $this withAppId($value)
- * @method string getEndTs()
- * @method $this withEndTs($value)
- * @method string getInterval()
- * @method $this withInterval($value)
- */
-class DescribeMeterLiveInteractionDau extends Rpc
-{
-}
-
-/**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getServiceArea()
- * @method $this withServiceArea($value)
- * @method string getAppId()
- * @method string getInterval()
- * @method $this withInterval($value)
- */
-class DescribeMeterLiveRtcDuration extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAppId($value)
-    {
-        $this->data['AppId'] = $value;
-        $this->options['query']['appId'] = $value;
-
-        return $this;
-    }
 }
 
 /**
@@ -7583,6 +7481,23 @@ class RecoverLiveMessageDeletedGroup extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getUnbannedUsers()
+ * @method $this withUnbannedUsers($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ */
+class RemoveLiveMessageGroupBand extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getIsBatchMode()
  * @method array getShowIdList()
  * @method string getCasterId()
@@ -8111,60 +8026,6 @@ class SetCasterSceneConfig extends Rpc
 }
 
 /**
- * @method string getCasterId()
- * @method $this withCasterId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method array getSyncGroup()
- */
-class SetCasterSyncGroup extends Rpc
-{
-
-    /**
-     * @param array $syncGroup
-     *
-     * @return $this
-     */
-	public function withSyncGroup(array $syncGroup)
-	{
-	    $this->data['SyncGroup'] = $syncGroup;
-		foreach ($syncGroup as $depth1 => $depth1Value) {
-			if(isset($depth1Value['HostResourceId'])){
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.HostResourceId'] = $depth1Value['HostResourceId'];
-			}
-			if(isset($depth1Value['Mode'])){
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.Mode'] = $depth1Value['Mode'];
-			}
-			foreach ($depth1Value['ResourceIds'] as $i => $iValue) {
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.ResourceIds.' . ($i + 1)] = $iValue;
-			}
-			if(isset($depth1Value['SyncDelayThreshold'])){
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncDelayThreshold'] = $depth1Value['SyncDelayThreshold'];
-			}
-			foreach ($depth1Value['SyncOffsets'] as $i => $iValue) {
-				$this->options['query']['SyncGroup.' . ($depth1 + 1) . '.SyncOffsets.' . ($i + 1)] = $iValue;
-			}
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getEventName()
- * @method $this withEventName($value)
- * @method string getStartTimeUTC()
- * @method $this withStartTimeUTC($value)
- * @method string getCasterId()
- * @method $this withCasterId($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class SetCasterTimedEvent extends Rpc
-{
-}
-
-/**
  * @method string getSSLProtocol()
  * @method $this withSSLProtocol($value)
  * @method string getSecurityToken()
@@ -8559,94 +8420,18 @@ class StopRtcAsrTask extends Rpc
 }
 
 /**
- * @method array getTag()
- * @method array getResourceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getDataCenter()
+ * @method $this withDataCenter($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  */
-class TagLiveResources extends Rpc
+class UnbanLiveMessageGroup extends Rpc
 {
 
-    /**
-     * @param array $tag
-     *
-     * @return $this
-     */
-	public function withTag(array $tag)
-	{
-	    $this->data['Tag'] = $tag;
-		foreach ($tag as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Key'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-			}
-			if(isset($depth1Value['Value'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
-			}
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-	public function withResourceId(array $resourceId)
-	{
-	    $this->data['ResourceId'] = $resourceId;
-		foreach ($resourceId as $i => $iValue) {
-			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-}
-
-/**
- * @method string getAll()
- * @method $this withAll($value)
- * @method array getResourceId()
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
- * @method array getTagKey()
- */
-class UnTagLiveResources extends Rpc
-{
-
-    /**
-     * @param array $resourceId
-     *
-     * @return $this
-     */
-	public function withResourceId(array $resourceId)
-	{
-	    $this->data['ResourceId'] = $resourceId;
-		foreach ($resourceId as $i => $iValue) {
-			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
-
-    /**
-     * @param array $tagKey
-     *
-     * @return $this
-     */
-	public function withTagKey(array $tagKey)
-	{
-	    $this->data['TagKey'] = $tagKey;
-		foreach ($tagKey as $i => $iValue) {
-			$this->options['query']['TagKey.' . ($i + 1)] = $iValue;
-		}
-
-		return $this;
-    }
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -9321,20 +9106,6 @@ class UpdateLiveStreamWatermark extends Rpc
  * @method $this withRuleId($value)
  */
 class UpdateLiveStreamWatermarkRule extends Rpc
-{
-}
-
-/**
- * @method string getTopLevelDomain()
- * @method $this withTopLevelDomain($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getSecurityToken()
- * @method $this withSecurityToken($value)
- */
-class UpdateLiveTopLevelDomain extends Rpc
 {
 }
 

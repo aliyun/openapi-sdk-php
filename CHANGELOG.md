@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2181 - 2024-8-22
+- Update to support new apis.
+
+
 ## 1.8.2180 - 2024-8-21
 - Support record for ecs.
 
