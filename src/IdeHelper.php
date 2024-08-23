@@ -133,6 +133,7 @@ namespace AlibabaCloud;
  * @method static Ga\Ga ga()
  * @method static Geoip\Geoip geoip()
  * @method static Goodstech\Goodstech goodstech()
+ * @method static Governance\Governance governance()
  * @method static Gpdb\Gpdb gpdb()
  * @method static Grace\Grace grace()
  * @method static Green\Green green()
