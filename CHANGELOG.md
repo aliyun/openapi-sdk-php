@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2182 - 2024-8-23
+- Generated 2017-11-10 for `Ens`.
+
+
 ## 1.8.2181 - 2024-8-22
 - Update to support new apis.
 

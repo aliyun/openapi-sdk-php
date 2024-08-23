@@ -48,6 +48,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateSecurityGroup createSecurityGroup(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
  * @method CreateSnatEntry createSnatEntry(array $options = [])
+ * @method CreateStorageGateway createStorageGateway(array $options = [])
+ * @method CreateStorageVolume createStorageVolume(array $options = [])
  * @method CreateVSwitch createVSwitch(array $options = [])
  * @method DeleteApplication deleteApplication(array $options = [])
  * @method DeleteBucket deleteBucket(array $options = [])
@@ -74,6 +76,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteSnapshot deleteSnapshot(array $options = [])
  * @method DeleteSnatEntry deleteSnatEntry(array $options = [])
  * @method DeleteSnatIpForSnatEntry deleteSnatIpForSnatEntry(array $options = [])
+ * @method DeleteStorageGateway deleteStorageGateway(array $options = [])
+ * @method DeleteStorageVolume deleteStorageVolume(array $options = [])
  * @method DeleteVSwitch deleteVSwitch(array $options = [])
  * @method DeployInstanceSDG deployInstanceSDG(array $options = [])
  * @method DeploySDG deploySDG(array $options = [])
@@ -159,6 +163,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSnapshots describeSnapshots(array $options = [])
  * @method DescribeSnatAttribute describeSnatAttribute(array $options = [])
  * @method DescribeSnatTableEntries describeSnatTableEntries(array $options = [])
+ * @method DescribeStorageGateway describeStorageGateway(array $options = [])
+ * @method DescribeStorageVolume describeStorageVolume(array $options = [])
  * @method DescribeUserBandWidthData describeUserBandWidthData(array $options = [])
  * @method DescribeVSwitches describeVSwitches(array $options = [])
  * @method DetachDisk detachDisk(array $options = [])
@@ -197,6 +203,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifySnapshotAttribute modifySnapshotAttribute(array $options = [])
  * @method ModifyVSwitchAttribute modifyVSwitchAttribute(array $options = [])
  * @method PreloadRegionSDG preloadRegionSDG(array $options = [])
+ * @method PrepareUpload prepareUpload(array $options = [])
  * @method PushApplicationData pushApplicationData(array $options = [])
  * @method PutBucket putBucket(array $options = [])
  * @method PutBucketAcl putBucketAcl(array $options = [])
@@ -816,6 +823,8 @@ class CreateLoadBalancer extends Rpc
  * @method $this withLoadBalancerId($value)
  * @method string getHealthCheckInterval()
  * @method $this withHealthCheckInterval($value)
+ * @method string getBackendServerPort()
+ * @method $this withBackendServerPort($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getUnhealthyThreshold()
@@ -868,6 +877,8 @@ class CreateLoadBalancerHTTPListener extends Rpc
  * @method $this withLoadBalancerId($value)
  * @method string getHealthCheckInterval()
  * @method $this withHealthCheckInterval($value)
+ * @method string getBackendServerPort()
+ * @method $this withBackendServerPort($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getUnhealthyThreshold()
@@ -944,6 +955,8 @@ class CreateLoadBalancerTCPListener extends Rpc
 /**
  * @method string getProtocol()
  * @method $this withProtocol($value)
+ * @method string getEstablishedTimeout()
+ * @method $this withEstablishedTimeout($value)
  * @method string getLoadBalancerId()
  * @method $this withLoadBalancerId($value)
  * @method string getHealthCheckReq()
@@ -1117,6 +1130,40 @@ class CreateSnapshot extends Rpc
  * @method $this withSnatEntryName($value)
  */
 class CreateSnatEntry extends Rpc
+{
+}
+
+/**
+ * @method string getOrderDetails()
+ * @method $this withOrderDetails($value)
+ */
+class CreateStorageGateway extends Rpc
+{
+}
+
+/**
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ * @method string getAuthUser()
+ * @method $this withAuthUser($value)
+ * @method string getVolumeName()
+ * @method $this withVolumeName($value)
+ * @method string getAuthPassword()
+ * @method $this withAuthPassword($value)
+ * @method string getAuthProtocol()
+ * @method $this withAuthProtocol($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getIsEnable()
+ * @method $this withIsEnable($value)
+ * @method string getIsAuth()
+ * @method $this withIsAuth($value)
+ * @method string getStorageId()
+ * @method $this withStorageId($value)
+ */
+class CreateStorageVolume extends Rpc
 {
 }
 
@@ -1375,6 +1422,22 @@ class DeleteSnatEntry extends Rpc
  * @method $this withSnatEntryId($value)
  */
 class DeleteSnatIpForSnatEntry extends Rpc
+{
+}
+
+/**
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ */
+class DeleteStorageGateway extends Rpc
+{
+}
+
+/**
+ * @method string getVolumeId()
+ * @method $this withVolumeId($value)
+ */
+class DeleteStorageVolume extends Rpc
 {
 }
 
@@ -2502,6 +2565,14 @@ class DescribeSDG extends Rpc
 }
 
 /**
+ * @method string getRegionIds()
+ * @method $this withRegionIds($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ * @method string getDeploymentType()
+ * @method $this withDeploymentType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getSDGId()
@@ -2514,9 +2585,6 @@ class DescribeSDGDeploymentStatus extends Rpc
 
     /** @var string */
     public $scheme = 'https';
-
-    /** @var string */
-    public $method = 'GET';
 }
 
 /**
@@ -2628,6 +2696,44 @@ class DescribeSnatTableEntries extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ * @method string getGatewayType()
+ * @method $this withGatewayType($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class DescribeStorageGateway extends Rpc
+{
+}
+
+/**
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getGatewayId()
+ * @method $this withGatewayId($value)
+ * @method string getVolumeId()
+ * @method $this withVolumeId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getIsEnable()
+ * @method $this withIsEnable($value)
+ * @method string getStorageId()
+ * @method $this withStorageId($value)
+ */
+class DescribeStorageVolume extends Rpc
+{
 }
 
 /**
@@ -3175,6 +3281,26 @@ class PreloadRegionSDG extends Rpc
 
     /** @var string */
     public $scheme = 'https';
+}
+
+/**
+ * @method string getClientIp()
+ * @method $this withClientIp($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getAdditionType()
+ * @method $this withAdditionType($value)
+ * @method string getBucketName()
+ * @method $this withBucketName($value)
+ * @method string getStation()
+ * @method $this withStation($value)
+ * @method string getObjectKey()
+ * @method $this withObjectKey($value)
+ * @method string getStorageCost()
+ * @method $this withStorageCost($value)
+ */
+class PrepareUpload extends Rpc
+{
 }
 
 /**
@@ -4142,6 +4268,8 @@ class SetLoadBalancerTCPListenerAttribute extends Rpc
 /**
  * @method string getProtocol()
  * @method $this withProtocol($value)
+ * @method string getEstablishedTimeout()
+ * @method $this withEstablishedTimeout($value)
  * @method string getLoadBalancerId()
  * @method $this withLoadBalancerId($value)
  * @method string getHealthCheckReq()
