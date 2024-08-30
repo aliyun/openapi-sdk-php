@@ -5,6 +5,7 @@ namespace AlibabaCloud\Kms\V20160120;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AdvanceEncrypt advanceEncrypt(array $options = [])
  * @method AsymmetricDecrypt asymmetricDecrypt(array $options = [])
  * @method AsymmetricEncrypt asymmetricEncrypt(array $options = [])
  * @method AsymmetricSign asymmetricSign(array $options = [])
@@ -118,6 +119,24 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'kms';
+}
+
+/**
+ * @method string getPaddingMode()
+ * @method $this withPaddingMode($value)
+ * @method string getAad()
+ * @method $this withAad($value)
+ * @method string getKeyId()
+ * @method $this withKeyId($value)
+ * @method string getPlaintext()
+ * @method $this withPlaintext($value)
+ * @method string getIv()
+ * @method $this withIv($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ */
+class AdvanceEncrypt extends Rpc
+{
 }
 
 /**

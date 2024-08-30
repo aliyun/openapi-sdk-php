@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2186 - 2024-8-30
+- Generated 2016-01-20 for `Kms`.
+
+
 ## 1.8.2185 - 2024-8-30
 - 增加国际一口价相关接口.
 - GetIntlFixPriceDomainListUrl.
