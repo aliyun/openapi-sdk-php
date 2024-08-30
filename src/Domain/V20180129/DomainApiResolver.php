@@ -11,18 +11,23 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelOperationAudit cancelOperationAudit(array $options = [])
  * @method CancelQualificationVerification cancelQualificationVerification(array $options = [])
  * @method CancelTask cancelTask(array $options = [])
+ * @method ChangeResourceGroup changeResourceGroup(array $options = [])
  * @method CheckDomain checkDomain(array $options = [])
  * @method CheckDomainSunriseClaim checkDomainSunriseClaim(array $options = [])
+ * @method CheckIntlFixPriceDomainStatus checkIntlFixPriceDomainStatus(array $options = [])
  * @method CheckMaxYearOfServerLock checkMaxYearOfServerLock(array $options = [])
  * @method CheckProcessingServerLockApply checkProcessingServerLockApply(array $options = [])
  * @method CheckTransferInFeasibility checkTransferInFeasibility(array $options = [])
  * @method ConfirmTransferInEmail confirmTransferInEmail(array $options = [])
+ * @method CreateIntlFixedPriceDomainOrder createIntlFixedPriceDomainOrder(array $options = [])
  * @method DeleteContactTemplates deleteContactTemplates(array $options = [])
  * @method DeleteDomainGroup deleteDomainGroup(array $options = [])
  * @method DeleteEmailVerification deleteEmailVerification(array $options = [])
  * @method DeleteRegistrantProfile deleteRegistrantProfile(array $options = [])
+ * @method DomainSpecialBizCancel domainSpecialBizCancel(array $options = [])
  * @method EmailVerified emailVerified(array $options = [])
  * @method FuzzyMatchDomainSensitiveWord fuzzyMatchDomainSensitiveWord(array $options = [])
+ * @method GetIntlFixPriceDomainListUrl getIntlFixPriceDomainListUrl(array $options = [])
  * @method GetOperationOssUploadPolicy getOperationOssUploadPolicy(array $options = [])
  * @method GetQualificationUploadPolicy getQualificationUploadPolicy(array $options = [])
  * @method ListEmailVerification listEmailVerification(array $options = [])
@@ -40,6 +45,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDomainGroupList queryDomainGroupList(array $options = [])
  * @method QueryDomainList queryDomainList(array $options = [])
  * @method QueryDomainRealNameVerificationInfo queryDomainRealNameVerificationInfo(array $options = [])
+ * @method QueryDomainSpecialBizDetail queryDomainSpecialBizDetail(array $options = [])
+ * @method QueryDomainSpecialBizInfoByDomain queryDomainSpecialBizInfoByDomain(array $options = [])
  * @method QueryDomainSuffix queryDomainSuffix(array $options = [])
  * @method QueryDSRecord queryDSRecord(array $options = [])
  * @method QueryEmailVerification queryEmailVerification(array $options = [])
@@ -47,6 +54,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryFailingReasonListForQualification queryFailingReasonListForQualification(array $options = [])
  * @method QueryFailReasonForDomainRealNameVerification queryFailReasonForDomainRealNameVerification(array $options = [])
  * @method QueryFailReasonForRegistrantProfileRealNameVerification queryFailReasonForRegistrantProfileRealNameVerification(array $options = [])
+ * @method QueryIntlFixedPriceOrderList queryIntlFixedPriceOrderList(array $options = [])
  * @method QueryLocalEnsAssociation queryLocalEnsAssociation(array $options = [])
  * @method QueryOperationAuditInfoDetail queryOperationAuditInfoDetail(array $options = [])
  * @method QueryOperationAuditInfoList queryOperationAuditInfoList(array $options = [])
@@ -65,11 +73,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResendEmailVerification resendEmailVerification(array $options = [])
  * @method ResetQualificationVerification resetQualificationVerification(array $options = [])
  * @method SaveBatchDomainRemark saveBatchDomainRemark(array $options = [])
+ * @method SaveBatchTaskForApplyQuickTransferOutOpenly saveBatchTaskForApplyQuickTransferOutOpenly(array $options = [])
  * @method SaveBatchTaskForCreatingOrderActivate saveBatchTaskForCreatingOrderActivate(array $options = [])
  * @method SaveBatchTaskForCreatingOrderRedeem saveBatchTaskForCreatingOrderRedeem(array $options = [])
  * @method SaveBatchTaskForCreatingOrderRenew saveBatchTaskForCreatingOrderRenew(array $options = [])
  * @method SaveBatchTaskForCreatingOrderTransfer saveBatchTaskForCreatingOrderTransfer(array $options = [])
  * @method SaveBatchTaskForDomainNameProxyService saveBatchTaskForDomainNameProxyService(array $options = [])
+ * @method SaveBatchTaskForGenerateDomainCertificate saveBatchTaskForGenerateDomainCertificate(array $options = [])
  * @method SaveBatchTaskForModifyingDomainDns saveBatchTaskForModifyingDomainDns(array $options = [])
  * @method SaveBatchTaskForReserveDropListDomain saveBatchTaskForReserveDropListDomain(array $options = [])
  * @method SaveBatchTaskForTransferProhibitionLock saveBatchTaskForTransferProhibitionLock(array $options = [])
@@ -80,6 +90,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SaveRegistrantProfile saveRegistrantProfile(array $options = [])
  * @method SaveRegistrantProfileRealNameVerification saveRegistrantProfileRealNameVerification(array $options = [])
  * @method SaveSingleTaskForAddingDSRecord saveSingleTaskForAddingDSRecord(array $options = [])
+ * @method SaveSingleTaskForApplyQuickTransferOutOpenly saveSingleTaskForApplyQuickTransferOutOpenly(array $options = [])
  * @method SaveSingleTaskForApprovingTransferOut saveSingleTaskForApprovingTransferOut(array $options = [])
  * @method SaveSingleTaskForAssociatingEns saveSingleTaskForAssociatingEns(array $options = [])
  * @method SaveSingleTaskForCancelingTransferIn saveSingleTaskForCancelingTransferIn(array $options = [])
@@ -93,9 +104,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SaveSingleTaskForDeletingDSRecord saveSingleTaskForDeletingDSRecord(array $options = [])
  * @method SaveSingleTaskForDisassociatingEns saveSingleTaskForDisassociatingEns(array $options = [])
  * @method SaveSingleTaskForDomainNameProxyService saveSingleTaskForDomainNameProxyService(array $options = [])
+ * @method SaveSingleTaskForGenerateDomainCertificate saveSingleTaskForGenerateDomainCertificate(array $options = [])
  * @method SaveSingleTaskForModifyingDnsHost saveSingleTaskForModifyingDnsHost(array $options = [])
  * @method SaveSingleTaskForModifyingDSRecord saveSingleTaskForModifyingDSRecord(array $options = [])
  * @method SaveSingleTaskForQueryingTransferAuthorizationCode saveSingleTaskForQueryingTransferAuthorizationCode(array $options = [])
+ * @method SaveSingleTaskForReserveDropListDomain saveSingleTaskForReserveDropListDomain(array $options = [])
  * @method SaveSingleTaskForSaveArtExtension saveSingleTaskForSaveArtExtension(array $options = [])
  * @method SaveSingleTaskForSynchronizingDnsHost saveSingleTaskForSynchronizingDnsHost(array $options = [])
  * @method SaveSingleTaskForSynchronizingDSRecord saveSingleTaskForSynchronizingDSRecord(array $options = [])
@@ -109,6 +122,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID saveTaskForUpdatingRegistrantInfoByRegistrantProfileID(array $options = [])
  * @method ScrollDomainList scrollDomainList(array $options = [])
  * @method SetDefaultRegistrantProfile setDefaultRegistrantProfile(array $options = [])
+ * @method SetupDomainAutoRenew setupDomainAutoRenew(array $options = [])
+ * @method SubmitDomainSpecialBizCredentials submitDomainSpecialBizCredentials(array $options = [])
  * @method SubmitEmailVerification submitEmailVerification(array $options = [])
  * @method SubmitOperationAuditInfo submitOperationAuditInfo(array $options = [])
  * @method SubmitOperationCredentials submitOperationCredentials(array $options = [])
@@ -134,6 +149,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
+
+    /** @var string */
+    public $serviceCode = 'domain';
 }
 
 /**
@@ -225,6 +243,22 @@ class CancelTask extends Rpc
 }
 
 /**
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class ChangeResourceGroup extends Rpc
+{
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getFeeCurrency()
@@ -250,6 +284,17 @@ class CheckDomain extends Rpc
  */
 class CheckDomainSunriseClaim extends Rpc
 {
+}
+
+/**
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class CheckIntlFixPriceDomainStatus extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -323,6 +368,23 @@ class ConfirmTransferInEmail extends Rpc
 }
 
 /**
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getContactId()
+ * @method $this withContactId($value)
+ * @method string getExpectedPrice()
+ * @method $this withExpectedPrice($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ */
+class CreateIntlFixedPriceDomainOrder extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getRegistrantProfileIds()
@@ -369,6 +431,28 @@ class DeleteRegistrantProfile extends Rpc
 }
 
 /**
+ * @method string getBizId()
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ */
+class DomainSpecialBizCancel extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getLang()
@@ -390,6 +474,17 @@ class EmailVerified extends Rpc
  */
 class FuzzyMatchDomainSensitiveWord extends Rpc
 {
+}
+
+/**
+ * @method string getListDate()
+ * @method $this withListDate($value)
+ */
+class GetIntlFixPriceDomainListUrl extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -443,6 +538,8 @@ class ListEmailVerification extends Rpc
  * @method $this withPageNum($value)
  * @method string getBeginStartDate()
  * @method $this withBeginStartDate($value)
+ * @method string getOrderByType()
+ * @method $this withOrderByType($value)
  * @method string getServerLockStatus()
  * @method $this withServerLockStatus($value)
  * @method string getStartExpireDate()
@@ -453,6 +550,8 @@ class ListEmailVerification extends Rpc
  * @method $this withLang($value)
  * @method string getDomainName()
  * @method $this withDomainName($value)
+ * @method string getOrderBy()
+ * @method $this withOrderBy($value)
  * @method string getEndStartDate()
  * @method $this withEndStartDate($value)
  * @method string getUserClientIp()
@@ -505,10 +604,13 @@ class PollTaskResult extends Rpc
  * @method $this withExcluded($value)
  * @method string getStartLength()
  * @method $this withStartLength($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getExcludedSuffix()
  * @method $this withExcludedSuffix($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getExcludedPrefix()
@@ -541,6 +643,8 @@ class PollTaskResult extends Rpc
  * @method $this withEndRegistrationDate($value)
  * @method string getForm()
  * @method $this withForm($value)
+ * @method string getIsPremiumDomain()
+ * @method $this withIsPremiumDomain($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
  * @method string getRegistrationDateSort()
@@ -552,6 +656,26 @@ class PollTaskResult extends Rpc
  */
 class QueryAdvancedDomainList extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -663,14 +787,19 @@ class QueryDomainGroupList extends Rpc
 /**
  * @method string getProductDomainType()
  * @method $this withProductDomainType($value)
+ * @method string getCcompany()
+ * @method $this withCcompany($value)
  * @method string getOrderKeyType()
  * @method $this withOrderKeyType($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getOrderByType()
  * @method $this withOrderByType($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getLang()
  * @method $this withLang($value)
  * @method string getQueryType()
@@ -692,6 +821,26 @@ class QueryDomainGroupList extends Rpc
  */
 class QueryDomainList extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -706,6 +855,64 @@ class QueryDomainList extends Rpc
  */
 class QueryDomainRealNameVerificationInfo extends Rpc
 {
+}
+
+/**
+ * @method string getBizId()
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ */
+class QueryDomainSpecialBizDetail extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDomainName()
+ * @method string getBizType()
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ */
+class QueryDomainSpecialBizInfoByDomain extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDomainName($value)
+    {
+        $this->data['DomainName'] = $value;
+        $this->options['form_params']['DomainName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizType($value)
+    {
+        $this->data['BizType'] = $value;
+        $this->options['form_params']['BizType'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -797,6 +1004,23 @@ class QueryFailReasonForRegistrantProfileRealNameVerification extends Rpc
 }
 
 /**
+ * @method string getCurrentPage()
+ * @method $this withCurrentPage($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class QueryIntlFixedPriceOrderList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getDomainName()
  * @method $this withDomainName($value)
  * @method string getUserClientIp()
@@ -867,6 +1091,8 @@ class QueryRegistrantProfileRealNameVerificationInfo extends Rpc
 /**
  * @method string getRegistrantProfileId()
  * @method $this withRegistrantProfileId($value)
+ * @method string getRemark()
+ * @method $this withRemark($value)
  * @method string getPageNum()
  * @method $this withPageNum($value)
  * @method string getPageSize()
@@ -1103,6 +1329,35 @@ class SaveBatchDomainRemark extends Rpc
 }
 
 /**
+ * @method array getDomainNames()
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class SaveBatchTaskForApplyQuickTransferOutOpenly extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $domainNames
+     *
+     * @return $this
+     */
+	public function withDomainNames(array $domainNames)
+	{
+	    $this->data['DomainNames'] = $domainNames;
+		foreach ($domainNames as $i => $iValue) {
+			$this->options['query']['DomainNames.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method array getOrderActivateParam()
  * @method string getCouponNo()
  * @method $this withCouponNo($value)
@@ -1155,6 +1410,9 @@ class SaveBatchTaskForCreatingOrderActivate extends Rpc
 			}
 			if(isset($depth1Value['ZhCity'])){
 				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.ZhCity'] = $depth1Value['ZhCity'];
+			}
+			if(isset($depth1Value['ResourceGroupId'])){
+				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.ResourceGroupId'] = $depth1Value['ResourceGroupId'];
 			}
 			if(isset($depth1Value['TelExt'])){
 				$this->options['query']['OrderActivateParam.' . ($depth1 + 1) . '.TelExt'] = $depth1Value['TelExt'];
@@ -1368,6 +1626,18 @@ class SaveBatchTaskForDomainNameProxyService extends Rpc
 }
 
 /**
+ * @method string getDomainNames()
+ * @method $this withDomainNames($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class SaveBatchTaskForGenerateDomainCertificate extends Rpc
+{
+}
+
+/**
  * @method array getDomainName()
  * @method string getAliyunDns()
  * @method $this withAliyunDns($value)
@@ -1428,6 +1698,12 @@ class SaveBatchTaskForReserveDropListDomain extends Rpc
 	{
 	    $this->data['Domains'] = $domains;
 		foreach ($domains as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Dns2'])){
+				$this->options['query']['Domains.' . ($depth1 + 1) . '.Dns2'] = $depth1Value['Dns2'];
+			}
+			if(isset($depth1Value['Dns1'])){
+				$this->options['query']['Domains.' . ($depth1 + 1) . '.Dns1'] = $depth1Value['Dns1'];
+			}
 			if(isset($depth1Value['DomainName'])){
 				$this->options['query']['Domains.' . ($depth1 + 1) . '.DomainName'] = $depth1Value['DomainName'];
 			}
@@ -1735,6 +2011,21 @@ class SaveSingleTaskForAddingDSRecord extends Rpc
  * @method string getLang()
  * @method $this withLang($value)
  */
+class SaveSingleTaskForApplyQuickTransferOutOpenly extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
 class SaveSingleTaskForApprovingTransferOut extends Rpc
 {
 }
@@ -1810,30 +2101,48 @@ class SaveSingleTaskForCreatingDnsHost extends Rpc
 /**
  * @method string getCountry()
  * @method $this withCountry($value)
+ * @method string getDns2()
+ * @method $this withDns2($value)
+ * @method string getDns1()
+ * @method $this withDns1($value)
+ * @method string getCouponNo()
+ * @method $this withCouponNo($value)
+ * @method string getZhCity()
+ * @method $this withZhCity($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getTelExt()
+ * @method $this withTelExt($value)
+ * @method string getProvince()
+ * @method $this withProvince($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getZhAddress()
+ * @method $this withZhAddress($value)
+ * @method string getTelephone()
+ * @method $this withTelephone($value)
+ * @method string getZhProvince()
+ * @method $this withZhProvince($value)
+ * @method string getRegistrantOrganization()
+ * @method $this withRegistrantOrganization($value)
+ * @method string getPromotionNo()
+ * @method $this withPromotionNo($value)
+ * @method string getRegistrantName()
+ * @method $this withRegistrantName($value)
+ * @method string getUsePromotion()
+ * @method $this withUsePromotion($value)
  * @method string getSubscriptionDuration()
  * @method $this withSubscriptionDuration($value)
  * @method string getPermitPremiumActivation()
  * @method $this withPermitPremiumActivation($value)
  * @method string getCity()
  * @method $this withCity($value)
- * @method string getDns2()
- * @method $this withDns2($value)
- * @method string getDns1()
- * @method $this withDns1($value)
  * @method string getRegistrantProfileId()
  * @method $this withRegistrantProfileId($value)
- * @method string getCouponNo()
- * @method $this withCouponNo($value)
  * @method string getAliyunDns()
  * @method $this withAliyunDns($value)
- * @method string getZhCity()
- * @method $this withZhCity($value)
- * @method string getTelExt()
- * @method $this withTelExt($value)
  * @method string getZhRegistrantName()
  * @method $this withZhRegistrantName($value)
- * @method string getProvince()
- * @method $this withProvince($value)
  * @method string getPostalCode()
  * @method $this withPostalCode($value)
  * @method string getLang()
@@ -1846,32 +2155,16 @@ class SaveSingleTaskForCreatingDnsHost extends Rpc
  * @method $this withAddress($value)
  * @method string getTelArea()
  * @method $this withTelArea($value)
- * @method string getDomainName()
- * @method $this withDomainName($value)
- * @method string getZhAddress()
- * @method $this withZhAddress($value)
  * @method string getRegistrantType()
  * @method $this withRegistrantType($value)
- * @method string getTelephone()
- * @method $this withTelephone($value)
  * @method string getTrademarkDomainActivation()
  * @method $this withTrademarkDomainActivation($value)
  * @method string getUseCoupon()
  * @method $this withUseCoupon($value)
- * @method string getZhProvince()
- * @method $this withZhProvince($value)
- * @method string getRegistrantOrganization()
- * @method $this withRegistrantOrganization($value)
- * @method string getPromotionNo()
- * @method $this withPromotionNo($value)
  * @method string getEnableDomainProxy()
  * @method $this withEnableDomainProxy($value)
  * @method string getUserClientIp()
  * @method $this withUserClientIp($value)
- * @method string getRegistrantName()
- * @method $this withRegistrantName($value)
- * @method string getUsePromotion()
- * @method $this withUsePromotion($value)
  */
 class SaveSingleTaskForCreatingOrderActivate extends Rpc
 {
@@ -2004,6 +2297,18 @@ class SaveSingleTaskForDomainNameProxyService extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ * @method string getLang()
+ * @method $this withLang($value)
+ */
+class SaveSingleTaskForGenerateDomainCertificate extends Rpc
+{
+}
+
+/**
  * @method array getIp()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -2063,6 +2368,23 @@ class SaveSingleTaskForModifyingDSRecord extends Rpc
  */
 class SaveSingleTaskForQueryingTransferAuthorizationCode extends Rpc
 {
+}
+
+/**
+ * @method string getDns2()
+ * @method $this withDns2($value)
+ * @method string getDns1()
+ * @method $this withDns1($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getContactTemplateId()
+ * @method $this withContactTemplateId($value)
+ */
+class SaveSingleTaskForReserveDropListDomain extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2356,6 +2678,8 @@ class SaveTaskForUpdatingRegistrantInfoByRegistrantProfileID extends Rpc
  * @method $this withExcluded($value)
  * @method string getStartLength()
  * @method $this withStartLength($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getExcludedSuffix()
  * @method $this withExcludedSuffix($value)
  * @method string getPageSize()
@@ -2407,6 +2731,66 @@ class ScrollDomainList extends Rpc
  */
 class SetDefaultRegistrantProfile extends Rpc
 {
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getOperation()
+ * @method $this withOperation($value)
+ */
+class SetupDomainAutoRenew extends Rpc
+{
+}
+
+/**
+ * @method string getCredentials()
+ * @method string getExtend()
+ * @method string getBizId()
+ * @method string getUserClientIp()
+ * @method $this withUserClientIp($value)
+ */
+class SubmitDomainSpecialBizCredentials extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCredentials($value)
+    {
+        $this->data['Credentials'] = $value;
+        $this->options['form_params']['Credentials'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExtend($value)
+    {
+        $this->data['Extend'] = $value;
+        $this->options['form_params']['Extend'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBizId($value)
+    {
+        $this->data['BizId'] = $value;
+        $this->options['form_params']['BizId'] = $value;
+
+        return $this;
+    }
 }
 
 /**

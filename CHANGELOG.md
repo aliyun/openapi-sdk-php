@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.8.2185 - 2024-8-30
+- 增加国际一口价相关接口.
+- GetIntlFixPriceDomainListUrl.
+- CheckIntlFixPriceDomainStatus.
+- CreateIntlFixedPriceDomainOrder.
+- QueryIntlFixedPriceOrderList.
+
+
 ## 1.8.2184 - 2024-8-28
 - Generated 2015-12-01 for `Dds`.
 
