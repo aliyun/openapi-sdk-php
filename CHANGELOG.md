@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2187 - 2024-9-2
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2186 - 2024-8-30
 - Generated 2016-01-20 for `Kms`.
 

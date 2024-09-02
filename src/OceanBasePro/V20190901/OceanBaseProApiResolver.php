@@ -40,6 +40,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAvailableMemResource describeAvailableMemResource(array $options = [])
  * @method DescribeAvailableSpec describeAvailableSpec(array $options = [])
  * @method DescribeAvailableZone describeAvailableZone(array $options = [])
+ * @method DescribeBackupEncryptedString describeBackupEncryptedString(array $options = [])
  * @method DescribeBackupSetDownloadLink describeBackupSetDownloadLink(array $options = [])
  * @method DescribeCharset describeCharset(array $options = [])
  * @method DescribeDataBackupSet describeDataBackupSet(array $options = [])
@@ -49,6 +50,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstances describeInstances(array $options = [])
  * @method DescribeInstanceSecurityConfigs describeInstanceSecurityConfigs(array $options = [])
  * @method DescribeInstanceSSL describeInstanceSSL(array $options = [])
+ * @method DescribeInstanceSummary describeInstanceSummary(array $options = [])
  * @method DescribeInstanceTags describeInstanceTags(array $options = [])
  * @method DescribeInstanceTenantModes describeInstanceTenantModes(array $options = [])
  * @method DescribeInstanceTopology describeInstanceTopology(array $options = [])
@@ -70,6 +72,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeProjectStepMetric describeProjectStepMetric(array $options = [])
  * @method DescribeProjectSteps describeProjectSteps(array $options = [])
  * @method DescribeRecommendIndex describeRecommendIndex(array $options = [])
+ * @method DescribeRestorableTenants describeRestorableTenants(array $options = [])
  * @method DescribeSampleSqlRawTexts describeSampleSqlRawTexts(array $options = [])
  * @method DescribeSecurityIpGroups describeSecurityIpGroups(array $options = [])
  * @method DescribeSessionList describeSessionList(array $options = [])
@@ -80,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeSQLPlans describeSQLPlans(array $options = [])
  * @method DescribeSQLSamples describeSQLSamples(array $options = [])
  * @method DescribeSQLTuningAdvices describeSQLTuningAdvices(array $options = [])
+ * @method DescribeStandbyCreateMode describeStandbyCreateMode(array $options = [])
  * @method DescribeTagValues describeTagValues(array $options = [])
  * @method DescribeTenant describeTenant(array $options = [])
  * @method DescribeTenantEncryption describeTenantEncryption(array $options = [])
@@ -3155,6 +3159,43 @@ class DescribeAvailableZone extends Rpc
 
 /**
  * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class DescribeBackupEncryptedString extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
  * @method string getDownloadTaskId()
  */
 class DescribeBackupSetDownloadLink extends Rpc
@@ -3653,6 +3694,40 @@ class DescribeInstanceSSL extends Rpc
     {
         $this->data['InstanceId'] = $value;
         $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ */
+class DescribeInstanceSummary extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['form_params']['PageSize'] = $value;
 
         return $this;
     }
@@ -4406,6 +4481,7 @@ class DescribeOasSlowSQLList extends Rpc
 
 /**
  * @method string getStartTime()
+ * @method string getParseTable()
  * @method string getDynamicSql()
  * @method string getTenantId()
  * @method string getSqlId()
@@ -4425,6 +4501,19 @@ class DescribeOasSQLDetails extends Rpc
     {
         $this->data['StartTime'] = $value;
         $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParseTable($value)
+    {
+        $this->data['ParseTable'] = $value;
+        $this->options['form_params']['ParseTable'] = $value;
 
         return $this;
     }
@@ -5609,6 +5698,110 @@ class DescribeRecommendIndex extends Rpc
 }
 
 /**
+ * @method string getRestoreMode()
+ * @method string getRestoreObjectType()
+ * @method string getIsOnline()
+ * @method string getIsRemote()
+ * @method string getMethod()
+ * @method string getInstanceId()
+ * @method string getSetId()
+ */
+class DescribeRestorableTenants extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRestoreMode($value)
+    {
+        $this->data['RestoreMode'] = $value;
+        $this->options['form_params']['RestoreMode'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRestoreObjectType($value)
+    {
+        $this->data['RestoreObjectType'] = $value;
+        $this->options['form_params']['RestoreObjectType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsOnline($value)
+    {
+        $this->data['IsOnline'] = $value;
+        $this->options['form_params']['IsOnline'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIsRemote($value)
+    {
+        $this->data['IsRemote'] = $value;
+        $this->options['form_params']['IsRemote'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMethod($value)
+    {
+        $this->data['Method'] = $value;
+        $this->options['form_params']['Method'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSetId($value)
+    {
+        $this->data['SetId'] = $value;
+        $this->options['form_params']['SetId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTraceId()
  * @method string getStartTime()
  * @method string getTenantId()
@@ -6453,6 +6646,43 @@ class DescribeSQLTuningAdvices extends Rpc
     {
         $this->data['AcceptLanguage'] = $value;
         $this->options['form_params']['AcceptLanguage'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method string getTenantId()
+ */
+class DescribeStandbyCreateMode extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTenantId($value)
+    {
+        $this->data['TenantId'] = $value;
+        $this->options['form_params']['TenantId'] = $value;
 
         return $this;
     }
