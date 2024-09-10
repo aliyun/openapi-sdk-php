@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2188 - 2024-9-10
+- Update EBS default encrypted APIs from private to public.
+
+
 ## 1.8.2187 - 2024-9-2
 - Generated 2019-09-01 for `OceanBasePro`.
 

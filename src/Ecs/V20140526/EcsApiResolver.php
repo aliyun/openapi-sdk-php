@@ -138,6 +138,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDiagnosticMetricSets describeDiagnosticMetricSets(array $options = [])
  * @method DescribeDiagnosticReportAttributes describeDiagnosticReportAttributes(array $options = [])
  * @method DescribeDiagnosticReports describeDiagnosticReports(array $options = [])
+ * @method DescribeDiskDefaultKMSKeyId describeDiskDefaultKMSKeyId(array $options = [])
+ * @method DescribeDiskEncryptionByDefaultStatus describeDiskEncryptionByDefaultStatus(array $options = [])
  * @method DescribeDiskMonitorData describeDiskMonitorData(array $options = [])
  * @method DescribeDisks describeDisks(array $options = [])
  * @method DescribeDisksFullStatus describeDisksFullStatus(array $options = [])
@@ -232,9 +234,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DetachKeyPair detachKeyPair(array $options = [])
  * @method DetachNetworkInterface detachNetworkInterface(array $options = [])
  * @method DisableActivation disableActivation(array $options = [])
+ * @method DisableDiskEncryptionByDefault disableDiskEncryptionByDefault(array $options = [])
  * @method EipFillParams eipFillParams(array $options = [])
  * @method EipFillProduct eipFillProduct(array $options = [])
  * @method EipNotifyPaid eipNotifyPaid(array $options = [])
+ * @method EnableDiskEncryptionByDefault enableDiskEncryptionByDefault(array $options = [])
  * @method EnablePhysicalConnection enablePhysicalConnection(array $options = [])
  * @method ExportImage exportImage(array $options = [])
  * @method ExportSnapshot exportSnapshot(array $options = [])
@@ -266,6 +270,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDiagnosticMetricSet modifyDiagnosticMetricSet(array $options = [])
  * @method ModifyDiskAttribute modifyDiskAttribute(array $options = [])
  * @method ModifyDiskChargeType modifyDiskChargeType(array $options = [])
+ * @method ModifyDiskDefaultKMSKeyId modifyDiskDefaultKMSKeyId(array $options = [])
  * @method ModifyDiskDeployment modifyDiskDeployment(array $options = [])
  * @method ModifyDiskSpec modifyDiskSpec(array $options = [])
  * @method ModifyEipAddressAttribute modifyEipAddressAttribute(array $options = [])
@@ -329,11 +334,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveBandwidthPackageIps removeBandwidthPackageIps(array $options = [])
  * @method RemoveTags removeTags(array $options = [])
  * @method RenewDedicatedHosts renewDedicatedHosts(array $options = [])
+ * @method RenewElasticityAssurances renewElasticityAssurances(array $options = [])
  * @method RenewInstance renewInstance(array $options = [])
  * @method RenewReservedInstances renewReservedInstances(array $options = [])
  * @method ReplaceSystemDisk replaceSystemDisk(array $options = [])
  * @method ReportInstancesStatus reportInstancesStatus(array $options = [])
  * @method ResetDisk resetDisk(array $options = [])
+ * @method ResetDiskDefaultKMSKeyId resetDiskDefaultKMSKeyId(array $options = [])
  * @method ResetDisks resetDisks(array $options = [])
  * @method ResizeDisk resizeDisk(array $options = [])
  * @method RevokeSecurityGroup revokeSecurityGroup(array $options = [])
@@ -341,7 +348,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RunCommand runCommand(array $options = [])
  * @method RunInstances runInstances(array $options = [])
  * @method SendFile sendFile(array $options = [])
- * @method StartElasticityAssurance startElasticityAssurance(array $options = [])
  * @method StartImagePipelineExecution startImagePipelineExecution(array $options = [])
  * @method StartInstance startInstance(array $options = [])
  * @method StartInstances startInstances(array $options = [])
@@ -846,6 +852,8 @@ class AttachClassicLinkVpc extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAdditionalInfo()
+ * @method $this withAdditionalInfo($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getForce()
@@ -1242,6 +1250,8 @@ class CopyImage extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getSnapshotId()
  * @method $this withSnapshotId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getDestinationRegionId()
  * @method $this withDestinationRegionId($value)
  * @method string getResourceGroupId()
@@ -3471,6 +3481,8 @@ class CreateKeyPair extends Rpc
  * @method array getTemplateTag()
  * @method array getTag()
  * @method string getSystemDiskAutoSnapshotPolicyId()
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getIpv6AddressCount()
@@ -3486,8 +3498,12 @@ class CreateKeyPair extends Rpc
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
  * @method string getSystemDiskBurstingEnabled()
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
  * @method string getZoneId()
@@ -3858,6 +3874,8 @@ class CreateLaunchTemplate extends Rpc
  * @method string getSystemDiskIops()
  * @method array getTag()
  * @method string getSystemDiskAutoSnapshotPolicyId()
+ * @method string getAutoRenewPeriod()
+ * @method $this withAutoRenewPeriod($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getLaunchTemplateId()
@@ -3873,8 +3891,12 @@ class CreateLaunchTemplate extends Rpc
  * @method string getPrivateIpAddress()
  * @method $this withPrivateIpAddress($value)
  * @method string getSystemDiskBurstingEnabled()
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
  * @method string getInstanceName()
  * @method $this withInstanceName($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
  * @method string getInternetChargeType()
  * @method $this withInternetChargeType($value)
  * @method string getZoneId()
@@ -4261,6 +4283,8 @@ class CreateNatGateway extends Rpc
  * @method $this withBusinessType($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getEnhancedNetwork()
+ * @method $this withEnhancedNetwork($value)
  * @method array getTag()
  * @method string getNetworkInterfaceName()
  * @method $this withNetworkInterfaceName($value)
@@ -4826,6 +4850,8 @@ class CreateSnapshot extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getInstantAccess()
  * @method $this withInstantAccess($value)
  * @method array getExcludeDiskId()
@@ -6752,6 +6778,22 @@ class DescribeDiagnosticReports extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class DescribeDiskDefaultKMSKeyId extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ */
+class DescribeDiskEncryptionByDefaultStatus extends Rpc
+{
 }
 
 /**
@@ -9447,6 +9489,8 @@ class DescribePrefixLists extends Rpc
  * @method $this withAssuranceTimes($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPromotionOptions()
+ * @method $this withPromotionOptions($value)
  * @method string getInstanceCpuCoreCount()
  * @method $this withInstanceCpuCoreCount($value)
  * @method string getSpotStrategy()
@@ -11298,6 +11342,14 @@ class DisableActivation extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ */
+class DisableDiskEncryptionByDefault extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getData()
  * @method string getClientToken()
  * @method $this withClientToken($value)
@@ -11389,6 +11441,20 @@ class EipNotifyPaid extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class EnableDiskEncryptionByDefault extends Rpc
+{
 }
 
 /**
@@ -11683,6 +11749,8 @@ class InstallCloudAssistant extends Rpc
  * @method $this withParameters($value)
  * @method string getUsername()
  * @method $this withUsername($value)
+ * @method string getLauncher()
+ * @method $this withLauncher($value)
  */
 class InvokeCommand extends Rpc
 {
@@ -12387,6 +12455,8 @@ class ModifyDedicatedHostClusterAttribute extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPromotionOptions()
+ * @method $this withPromotionOptions($value)
  * @method string getDetailFee()
  * @method $this withDetailFee($value)
  * @method string getPeriodUnit()
@@ -12549,6 +12619,16 @@ class ModifyDiskAttribute extends Rpc
  * @method $this withInstanceId($value)
  */
 class ModifyDiskChargeType extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getKMSKeyId()
+ * @method $this withKMSKeyId($value)
+ */
+class ModifyDiskDefaultKMSKeyId extends Rpc
 {
 }
 
@@ -12923,7 +13003,11 @@ class ModifyInstanceAttachmentAttributes extends Rpc
  * @method $this withPassword($value)
  * @method string getHostName()
  * @method $this withHostName($value)
+ * @method string getPrivateDnsNameOptions()
+ * @method $this withPrivateDnsNameOptions($value)
  * @method string getCpuOptionsTopologyType()
+ * @method string getOSNameEn()
+ * @method $this withOSNameEn($value)
  * @method string getEnableJumboFrame()
  * @method $this withEnableJumboFrame($value)
  * @method string getResourceOwnerAccount()
@@ -13041,6 +13125,8 @@ class ModifyInstanceAutoRenewAttribute extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getPromotionOptions()
+ * @method $this withPromotionOptions($value)
  * @method string getPeriodUnit()
  * @method $this withPeriodUnit($value)
  * @method string getInstanceIds()
@@ -13457,6 +13543,8 @@ class ModifyManagedInstance extends Rpc
  * @method $this withDescription($value)
  * @method string getNetworkInterfaceTrafficConfig()
  * @method $this withNetworkInterfaceTrafficConfig($value)
+ * @method string getEnhancedNetwork()
+ * @method $this withEnhancedNetwork($value)
  * @method string getNetworkInterfaceName()
  * @method $this withNetworkInterfaceName($value)
  * @method string getTxQueueSize()
@@ -14219,6 +14307,8 @@ class ModifyVSwitchAttribute extends Rpc
  * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
  * @method string getPlatform()
  * @method $this withPlatform($value)
  * @method string getResourceGroupId()
@@ -14652,6 +14742,47 @@ class RenewDedicatedHosts extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method array getPrivatePoolOptionsId()
+ * @method string getPeriod()
+ * @method $this withPeriod($value)
+ * @method string getAutoPay()
+ * @method $this withAutoPay($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPeriodUnit()
+ * @method $this withPeriodUnit($value)
+ */
+class RenewElasticityAssurances extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param array $privatePoolOptionsId
+     *
+     * @return $this
+     */
+	public function withPrivatePoolOptionsId(array $privatePoolOptionsId)
+	{
+	    $this->data['PrivatePoolOptionsId'] = $privatePoolOptionsId;
+		foreach ($privatePoolOptionsId as $i => $iValue) {
+			$this->options['query']['PrivatePoolOptions.Id.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getPeriod()
  * @method $this withPeriod($value)
  * @method string getResourceOwnerAccount()
@@ -14888,6 +15019,14 @@ class ResetDisk extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ */
+class ResetDiskDefaultKMSKeyId extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
  * @method string getResourceOwnerAccount()
@@ -15103,6 +15242,8 @@ class RevokeSecurityGroupEgress extends Rpc
  * @method $this withContainerId($value)
  * @method string getParameters()
  * @method $this withParameters($value)
+ * @method string getLauncher()
+ * @method $this withLauncher($value)
  * @method string getContainerName()
  * @method $this withContainerName($value)
  * @method string getClientToken()
@@ -15248,6 +15389,8 @@ class RunCommand extends Rpc
  * @method string getSystemDiskPerformanceLevel()
  * @method string getPasswordInherit()
  * @method $this withPasswordInherit($value)
+ * @method string getPrivateDnsNameOptions()
+ * @method $this withPrivateDnsNameOptions($value)
  * @method string getInstanceType()
  * @method $this withInstanceType($value)
  * @method array getArn()
@@ -15877,34 +16020,6 @@ class SendFile extends Rpc
 		}
 
 		return $this;
-    }
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
- * @method string getPrivatePoolOptionsId()
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- */
-class StartElasticityAssurance extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withPrivatePoolOptionsId($value)
-    {
-        $this->data['PrivatePoolOptionsId'] = $value;
-        $this->options['query']['PrivatePoolOptions.Id'] = $value;
-
-        return $this;
     }
 }
 
