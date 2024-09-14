@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2189 - 2024-9-14
+- Update EBS default encrypted APIs from private to public.
+- Support describe and modify source dest check property of ENI.
+
+
 ## 1.8.2188 - 2024-9-10
 - Update EBS default encrypted APIs from private to public.
 

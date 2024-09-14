@@ -13545,6 +13545,8 @@ class ModifyManagedInstance extends Rpc
  * @method $this withNetworkInterfaceTrafficConfig($value)
  * @method string getEnhancedNetwork()
  * @method $this withEnhancedNetwork($value)
+ * @method string getSourceDestCheck()
+ * @method $this withSourceDestCheck($value)
  * @method string getNetworkInterfaceName()
  * @method $this withNetworkInterfaceName($value)
  * @method string getTxQueueSize()
