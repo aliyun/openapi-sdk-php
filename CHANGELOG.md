@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2190 - 2024-9-18
+- Add API Ram meta.
+
+
 ## 1.8.2189 - 2024-9-14
 - Update EBS default encrypted APIs from private to public.
 - Support describe and modify source dest check property of ENI.
