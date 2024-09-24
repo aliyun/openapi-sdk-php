@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2191 - 2024-9-24
+- Generated 2024-02-22 for `OssSddp`.
+
+
 ## 1.8.2190 - 2024-9-18
 - Add API Ram meta.
 

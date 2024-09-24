@@ -206,6 +206,7 @@ namespace AlibabaCloud;
  * @method static Openanalytics\Openanalytics openanalytics()
  * @method static OpenanalyticsOpen\OpenanalyticsOpen openanalyticsOpen()
  * @method static OssAdmin\OssAdmin ossAdmin()
+ * @method static OssSddp\OssSddp ossSddp()
  * @method static Ots\Ots ots()
  * @method static OutboundBot\OutboundBot outboundBot()
  * @method static PTS\PTS pTS()
