@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2192 - 2024-9-26
+- Update to support new apis.
+
+
 ## 1.8.2191 - 2024-9-24
 - Generated 2024-02-22 for `OssSddp`.
 

@@ -372,8 +372,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopPlaylist stopPlaylist(array $options = [])
  * @method StopRtcAsrTask stopRtcAsrTask(array $options = [])
  * @method UnbanLiveMessageGroup unbanLiveMessageGroup(array $options = [])
+ * @method UpdateCasterResourceGroup updateCasterResourceGroup(array $options = [])
  * @method UpdateCasterSceneAudio updateCasterSceneAudio(array $options = [])
  * @method UpdateCasterSceneConfig updateCasterSceneConfig(array $options = [])
+ * @method UpdateCustomLiveStreamTranscode updateCustomLiveStreamTranscode(array $options = [])
  * @method UpdateEdgeTranscodeJob updateEdgeTranscodeJob(array $options = [])
  * @method UpdateEventSub updateEventSub(array $options = [])
  * @method UpdateLiveAIProduceRules updateLiveAIProduceRules(array $options = [])
@@ -393,12 +395,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateLiveSnapshotDetectPornConfig updateLiveSnapshotDetectPornConfig(array $options = [])
  * @method UpdateLiveSnapshotNotifyConfig updateLiveSnapshotNotifyConfig(array $options = [])
  * @method UpdateLiveStreamMonitor updateLiveStreamMonitor(array $options = [])
+ * @method UpdateLiveStreamTranscode updateLiveStreamTranscode(array $options = [])
  * @method UpdateLiveStreamWatermark updateLiveStreamWatermark(array $options = [])
  * @method UpdateLiveStreamWatermarkRule updateLiveStreamWatermarkRule(array $options = [])
  * @method UpdateMessageApp updateMessageApp(array $options = [])
  * @method UpdateMessageGroup updateMessageGroup(array $options = [])
  * @method UpdateMixStream updateMixStream(array $options = [])
  * @method UpdateRtcMPUEventSub updateRtcMPUEventSub(array $options = [])
+ * @method UpdateRtsLiveStreamTranscode updateRtsLiveStreamTranscode(array $options = [])
  * @method VerifyLiveDomainOwner verifyLiveDomainOwner(array $options = [])
  */
 class LiveApiResolver extends ApiResolver
@@ -1049,6 +1053,8 @@ class AddLiveDetectNotifyConfig extends Rpc
 }
 
 /**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getScope()
@@ -5163,6 +5169,8 @@ class DescribeLiveUserBillPrediction extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getPageSize()
@@ -8439,6 +8447,21 @@ class UnbanLiveMessageGroup extends Rpc
  * @method $this withCasterId($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ */
+class UpdateCasterResourceGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getCasterId()
+ * @method $this withCasterId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method array getAudioLayer()
  * @method string getSceneId()
  * @method $this withSceneId($value)
@@ -8519,6 +8542,56 @@ class UpdateCasterSceneConfig extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
+ * @method string getResWithSource()
+ * @method $this withResWithSource($value)
+ * @method string getLazy()
+ * @method $this withLazy($value)
+ * @method string getGop()
+ * @method $this withGop($value)
+ * @method string getAudioCodec()
+ * @method $this withAudioCodec($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getAudioProfile()
+ * @method $this withAudioProfile($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getEncryptParameters()
+ * @method $this withEncryptParameters($value)
+ * @method string getAudioChannelNum()
+ * @method $this withAudioChannelNum($value)
+ * @method string getProfile()
+ * @method $this withProfile($value)
+ * @method string getFPS()
+ * @method $this withFPS($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getExtWithSource()
+ * @method $this withExtWithSource($value)
+ * @method string getBitrateWithSource()
+ * @method $this withBitrateWithSource($value)
+ * @method string getAudioRate()
+ * @method $this withAudioRate($value)
+ * @method string getFpsWithSource()
+ * @method $this withFpsWithSource($value)
+ * @method string getAudioBitrate()
+ * @method $this withAudioBitrate($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ * @method string getVideoBitrate()
+ * @method $this withVideoBitrate($value)
+ */
+class UpdateCustomLiveStreamTranscode extends Rpc
+{
 }
 
 /**
@@ -9064,6 +9137,32 @@ class UpdateLiveStreamMonitor extends Rpc
 }
 
 /**
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
+ * @method string getLazy()
+ * @method $this withLazy($value)
+ * @method string getMix()
+ * @method $this withMix($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getEncryptParameters()
+ * @method $this withEncryptParameters($value)
+ * @method string getWatermark()
+ * @method $this withWatermark($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getWaterPattern()
+ * @method $this withWaterPattern($value)
+ * @method string getOnlyAudio()
+ * @method $this withOnlyAudio($value)
+ */
+class UpdateLiveStreamTranscode extends Rpc
+{
+}
+
+/**
  * @method string getYOffset()
  * @method $this withYOffset($value)
  * @method string getPictureUrl()
@@ -9244,6 +9343,50 @@ class UpdateMixStream extends Rpc
  * @method $this withChannelIds($value)
  */
 class UpdateRtcMPUEventSub extends Rpc
+{
+}
+
+/**
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
+ * @method string getDeleteBframes()
+ * @method $this withDeleteBframes($value)
+ * @method string getLazy()
+ * @method $this withLazy($value)
+ * @method string getGop()
+ * @method $this withGop($value)
+ * @method string getOpus()
+ * @method $this withOpus($value)
+ * @method string getAudioCodec()
+ * @method $this withAudioCodec($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getAudioProfile()
+ * @method $this withAudioProfile($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getApp()
+ * @method $this withApp($value)
+ * @method string getAudioChannelNum()
+ * @method $this withAudioChannelNum($value)
+ * @method string getProfile()
+ * @method $this withProfile($value)
+ * @method string getFPS()
+ * @method $this withFPS($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAudioRate()
+ * @method $this withAudioRate($value)
+ * @method string getAudioBitrate()
+ * @method $this withAudioBitrate($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ * @method string getVideoBitrate()
+ * @method $this withVideoBitrate($value)
+ */
+class UpdateRtsLiveStreamTranscode extends Rpc
 {
 }
 
