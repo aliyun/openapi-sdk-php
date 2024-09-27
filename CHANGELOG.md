@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2193 - 2024-9-27
+- Support command audit for ecs.
+
+
 ## 1.8.2192 - 2024-9-26
 - Update to support new apis.
 
