@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2194 - 2024-9-29
+- Generated 2020-05-18 for `dataworks-public`.
+
+
 ## 1.8.2193 - 2024-9-27
 - Support command audit for ecs.
 
