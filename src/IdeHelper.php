@@ -288,6 +288,7 @@ namespace AlibabaCloud;
  * @method static WelfareInner\WelfareInner welfareInner()
  * @method static Wfts\Wfts wfts()
  * @method static Workorder\Workorder workorder()
+ * @method static Wss\Wss wss()
  * @method static XrEngine\XrEngine xrEngine()
  * @method static Xspace\Xspace xspace()
  * @method static Xtrace\Xtrace xtrace()

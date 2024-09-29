@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2195 - 2024-9-29
+- Generated 2021-12-21 for `wss`.
+
+
 ## 1.8.2194 - 2024-9-29
 - Generated 2020-05-18 for `dataworks-public`.
 
