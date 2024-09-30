@@ -238,6 +238,8 @@ class DetachPolicy extends Rpc
  * @method $this withUserType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getOpenType()
+ * @method $this withOpenType($value)
  */
 class DisablePolicyType extends Rpc
 {
@@ -254,6 +256,8 @@ class DisablePolicyType extends Rpc
  * @method $this withUserType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getOpenType()
+ * @method $this withOpenType($value)
  */
 class EnablePolicyType extends Rpc
 {
@@ -336,6 +340,8 @@ class GetPolicy extends Rpc
  * @method $this withUserType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getOpenType()
+ * @method $this withOpenType($value)
  */
 class GetPolicyEnableStatus extends Rpc
 {

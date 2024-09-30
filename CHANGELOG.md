@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2196 - 2024-9-30
+- Generated 2018-08-28 for `Tag`.
+
+
 ## 1.8.2195 - 2024-9-29
 - Generated 2021-12-21 for `wss`.
 
