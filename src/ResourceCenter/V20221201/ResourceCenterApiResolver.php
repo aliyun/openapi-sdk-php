@@ -5,23 +5,38 @@ namespace AlibabaCloud\ResourceCenter\V20221201;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AssociateDefaultFilter associateDefaultFilter(array $options = [])
+ * @method CreateFilter createFilter(array $options = [])
+ * @method CreateSavedQuery createSavedQuery(array $options = [])
+ * @method DeleteFilter deleteFilter(array $options = [])
+ * @method DeleteSavedQuery deleteSavedQuery(array $options = [])
  * @method DisableMultiAccountResourceCenter disableMultiAccountResourceCenter(array $options = [])
  * @method DisableResourceCenter disableResourceCenter(array $options = [])
+ * @method DisassociateDefaultFilter disassociateDefaultFilter(array $options = [])
  * @method EnableMultiAccountResourceCenter enableMultiAccountResourceCenter(array $options = [])
  * @method EnableResourceCenter enableResourceCenter(array $options = [])
+ * @method ExecuteMultiAccountSQLQuery executeMultiAccountSQLQuery(array $options = [])
+ * @method ExecuteSQLQuery executeSQLQuery(array $options = [])
+ * @method GetExampleQuery getExampleQuery(array $options = [])
  * @method GetMultiAccountResourceCenterServiceStatus getMultiAccountResourceCenterServiceStatus(array $options = [])
  * @method GetMultiAccountResourceConfiguration getMultiAccountResourceConfiguration(array $options = [])
  * @method GetResourceCenterServiceStatus getResourceCenterServiceStatus(array $options = [])
  * @method GetResourceConfiguration getResourceConfiguration(array $options = [])
  * @method GetResourceCounts getResourceCounts(array $options = [])
+ * @method GetSavedQuery getSavedQuery(array $options = [])
+ * @method ListExampleQueries listExampleQueries(array $options = [])
+ * @method ListFilters listFilters(array $options = [])
  * @method ListMultiAccountResourceGroups listMultiAccountResourceGroups(array $options = [])
  * @method ListMultiAccountTagKeys listMultiAccountTagKeys(array $options = [])
  * @method ListMultiAccountTagValues listMultiAccountTagValues(array $options = [])
  * @method ListResourceTypes listResourceTypes(array $options = [])
+ * @method ListSavedQueries listSavedQueries(array $options = [])
  * @method ListTagKeys listTagKeys(array $options = [])
  * @method ListTagValues listTagValues(array $options = [])
  * @method SearchMultiAccountResources searchMultiAccountResources(array $options = [])
  * @method SearchResources searchResources(array $options = [])
+ * @method UpdateFilter updateFilter(array $options = [])
+ * @method UpdateSavedQuery updateSavedQuery(array $options = [])
  */
 class ResourceCenterApiResolver extends ApiResolver
 {
@@ -39,11 +54,67 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 }
 
+/**
+ * @method string getFilterName()
+ * @method $this withFilterName($value)
+ */
+class AssociateDefaultFilter extends Rpc
+{
+}
+
+/**
+ * @method string getFilterName()
+ * @method $this withFilterName($value)
+ * @method string getFilterConfiguration()
+ * @method $this withFilterConfiguration($value)
+ */
+class CreateFilter extends Rpc
+{
+}
+
+/**
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateSavedQuery extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getFilterName()
+ * @method $this withFilterName($value)
+ */
+class DeleteFilter extends Rpc
+{
+}
+
+/**
+ * @method string getQueryId()
+ * @method $this withQueryId($value)
+ */
+class DeleteSavedQuery extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
 class DisableMultiAccountResourceCenter extends Rpc
 {
 }
 
 class DisableResourceCenter extends Rpc
+{
+}
+
+class DisassociateDefaultFilter extends Rpc
 {
 }
 
@@ -63,19 +134,64 @@ class EnableResourceCenter extends Rpc
 {
 }
 
+/**
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ExecuteMultiAccountSQLQuery extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ExecuteSQLQuery extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getQueryId()
+ * @method $this withQueryId($value)
+ */
+class GetExampleQuery extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
 class GetMultiAccountResourceCenterServiceStatus extends Rpc
 {
 }
 
 /**
- * @method string getResourceId()
- * @method $this withResourceId($value)
- * @method string getResourceType()
- * @method $this withResourceType($value)
  * @method string getAccountId()
  * @method $this withAccountId($value)
  * @method string getResourceRegionId()
  * @method $this withResourceRegionId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
  */
 class GetMultiAccountResourceConfiguration extends Rpc
 {
@@ -99,6 +215,8 @@ class GetResourceConfiguration extends Rpc
 
 /**
  * @method array getFilter()
+ * @method string getView()
+ * @method $this withView($value)
  * @method string getGroupByKey()
  * @method $this withGroupByKey($value)
  */
@@ -130,11 +248,39 @@ class GetResourceCounts extends Rpc
 }
 
 /**
- * @method string getAccountId()
- * @method $this withAccountId($value)
- * @method array getResourceGroupIds()
+ * @method string getQueryId()
+ * @method $this withQueryId($value)
+ */
+class GetSavedQuery extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListExampleQueries extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+class ListFilters extends Rpc
+{
+}
+
+/**
+ * @method string getAccountId()
+ * @method $this withAccountId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method array getResourceGroupIds()
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
  */
@@ -222,6 +368,19 @@ class ListResourceTypes extends Rpc
 /**
  * @method string getNextToken()
  * @method $this withNextToken($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListSavedQueries extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
  * @method string getMatchType()
  * @method $this withMatchType($value)
  * @method string getMaxResults()
@@ -290,6 +449,8 @@ class SearchMultiAccountResources extends Rpc
 /**
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getView()
+ * @method $this withView($value)
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getSortCriterion()
@@ -323,4 +484,31 @@ class SearchResources extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getFilterName()
+ * @method $this withFilterName($value)
+ * @method string getFilterConfiguration()
+ * @method $this withFilterConfiguration($value)
+ */
+class UpdateFilter extends Rpc
+{
+}
+
+/**
+ * @method string getExpression()
+ * @method $this withExpression($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getQueryId()
+ * @method $this withQueryId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class UpdateSavedQuery extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }

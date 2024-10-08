@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2197 - 2024-10-8
+- Generated 2022-12-01 for `ResourceCenter`.
+
+
 ## 1.8.2196 - 2024-9-30
 - Generated 2018-08-28 for `Tag`.
 
