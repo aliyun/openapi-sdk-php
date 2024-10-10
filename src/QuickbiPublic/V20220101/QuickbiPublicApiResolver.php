@@ -37,7 +37,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteUserGroupMember deleteUserGroupMember(array $options = [])
  * @method DeleteUserGroupMembers deleteUserGroupMembers(array $options = [])
  * @method DeleteUserTagMeta deleteUserTagMeta(array $options = [])
+ * @method GetMailTaskStatus getMailTaskStatus(array $options = [])
  * @method GetUserGroupInfo getUserGroupInfo(array $options = [])
+ * @method GetWorksEmbedList getWorksEmbedList(array $options = [])
  * @method ListApiDatasource listApiDatasource(array $options = [])
  * @method ListByUserGroupId listByUserGroupId(array $options = [])
  * @method ListCollections listCollections(array $options = [])
@@ -53,6 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUserGroupsByUserId listUserGroupsByUserId(array $options = [])
  * @method ListWorkspaceRoles listWorkspaceRoles(array $options = [])
  * @method ListWorkspaceRoleUsers listWorkspaceRoleUsers(array $options = [])
+ * @method ManualRunMailTask manualRunMailTask(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
  * @method ModifyCopilotEmbedConfig modifyCopilotEmbedConfig(array $options = [])
  * @method QueryApprovalInfo queryApprovalInfo(array $options = [])
@@ -674,11 +677,51 @@ class DeleteUserTagMeta extends Rpc
  * @method $this withAccessPoint($value)
  * @method string getSignType()
  * @method $this withSignType($value)
+ * @method string getMailId()
+ * @method $this withMailId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class GetMailTaskStatus extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getKeyword()
  * @method $this withKeyword($value)
  */
 class GetUserGroupInfo extends Rpc
 {
+}
+
+/**
+ * @method string getWsId()
+ * @method $this withWsId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getWorksType()
+ * @method $this withWorksType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class GetWorksEmbedList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -905,6 +948,21 @@ class ListWorkspaceRoles extends Rpc
  */
 class ListWorkspaceRoleUsers extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getMailId()
+ * @method $this withMailId($value)
+ */
+class ManualRunMailTask extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

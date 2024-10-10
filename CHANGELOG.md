@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2199 - 2024-10-10
+- Add ManualRunMailTask, GetMailTaskStatus and GetWorksEmbedList apis.
+
+
 ## 1.8.2198 - 2024-10-10
 - Support Android badge.
 - Support Harmony badge.
