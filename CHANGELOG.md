@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.2198 - 2024-10-10
+- Support Android badge.
+- Support Harmony badge.
+- Support Harmony Extension Push Message.
+
+
 ## 1.8.2197 - 2024-10-8
 - Generated 2022-12-01 for `ResourceCenter`.
 

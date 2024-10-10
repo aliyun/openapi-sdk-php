@@ -203,6 +203,12 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidPopupActivity'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidPopupActivity'] = $depth1Value['AndroidPopupActivity'];
 			}
+			if(isset($depth1Value['HarmonyNotifyId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyNotifyId'] = $depth1Value['HarmonyNotifyId'];
+			}
+			if(isset($depth1Value['HarmonyRenderStyle'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyRenderStyle'] = $depth1Value['HarmonyRenderStyle'];
+			}
 			if(isset($depth1Value['IOSRemindBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemindBody'] = $depth1Value['IOSRemindBody'];
 			}
@@ -242,6 +248,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidHonorTargetUserType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidHonorTargetUserType'] = $depth1Value['AndroidHonorTargetUserType'];
 			}
+			if(isset($depth1Value['HarmonyRemindBody'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyRemindBody'] = $depth1Value['HarmonyRemindBody'];
+			}
 			if(isset($depth1Value['AndroidNotificationVivoChannel'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationVivoChannel'] = $depth1Value['AndroidNotificationVivoChannel'];
 			}
@@ -253,6 +262,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['AndroidNotificationXiaomiChannel'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidNotificationXiaomiChannel'] = $depth1Value['AndroidNotificationXiaomiChannel'];
+			}
+			if(isset($depth1Value['HarmonyAction'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyAction'] = $depth1Value['HarmonyAction'];
 			}
 			if(isset($depth1Value['StoreOffline'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.StoreOffline'] = $depth1Value['StoreOffline'];
@@ -269,8 +281,14 @@ class MassPush extends Rpc
 			if(isset($depth1Value['JobKey'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.JobKey'] = $depth1Value['JobKey'];
 			}
+			if(isset($depth1Value['HarmonyReceiptId'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyReceiptId'] = $depth1Value['HarmonyReceiptId'];
+			}
 			if(isset($depth1Value['AndroidOpenUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidOpenUrl'] = $depth1Value['AndroidOpenUrl'];
+			}
+			if(isset($depth1Value['AndroidBadgeSetNum'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBadgeSetNum'] = $depth1Value['AndroidBadgeSetNum'];
 			}
 			if(isset($depth1Value['AndroidXiaoMiNotifyBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyBody'] = $depth1Value['AndroidXiaoMiNotifyBody'];
@@ -281,6 +299,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidXiaomiBigPictureUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaomiBigPictureUrl'] = $depth1Value['AndroidXiaomiBigPictureUrl'];
 			}
+			if(isset($depth1Value['HarmonyCategory'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyCategory'] = $depth1Value['HarmonyCategory'];
+			}
 			if(isset($depth1Value['IOSRemind'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSRemind'] = $depth1Value['IOSRemind'];
 			}
@@ -290,8 +311,14 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidHuaweiTargetUserType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidHuaweiTargetUserType'] = $depth1Value['AndroidHuaweiTargetUserType'];
 			}
+			if(isset($depth1Value['HarmonyRemind'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyRemind'] = $depth1Value['HarmonyRemind'];
+			}
 			if(isset($depth1Value['AndroidMusic'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidMusic'] = $depth1Value['AndroidMusic'];
+			}
+			if(isset($depth1Value['HarmonyExtensionPush'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyExtensionPush'] = $depth1Value['HarmonyExtensionPush'];
 			}
 			if(isset($depth1Value['IOSNotificationCollapseId'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSNotificationCollapseId'] = $depth1Value['IOSNotificationCollapseId'];
@@ -305,8 +332,14 @@ class MassPush extends Rpc
 			if(isset($depth1Value['IOSInterruptionLevel'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSInterruptionLevel'] = $depth1Value['IOSInterruptionLevel'];
 			}
+			if(isset($depth1Value['HarmonyExtensionExtraData'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyExtensionExtraData'] = $depth1Value['HarmonyExtensionExtraData'];
+			}
 			if(isset($depth1Value['AndroidExtParameters'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidExtParameters'] = $depth1Value['AndroidExtParameters'];
+			}
+			if(isset($depth1Value['HarmonyImageUrl'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyImageUrl'] = $depth1Value['HarmonyImageUrl'];
 			}
 			if(isset($depth1Value['IOSBadge'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSBadge'] = $depth1Value['IOSBadge'];
@@ -320,14 +353,29 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidOpenType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidOpenType'] = $depth1Value['AndroidOpenType'];
 			}
+			if(isset($depth1Value['HarmonyRemindTitle'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyRemindTitle'] = $depth1Value['HarmonyRemindTitle'];
+			}
 			if(isset($depth1Value['Title'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Title'] = $depth1Value['Title'];
+			}
+			if(isset($depth1Value['AndroidBadgeClass'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBadgeClass'] = $depth1Value['AndroidBadgeClass'];
+			}
+			if(isset($depth1Value['HarmonyBadgeAddNum'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyBadgeAddNum'] = $depth1Value['HarmonyBadgeAddNum'];
+			}
+			if(isset($depth1Value['HarmonyTestMessage'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyTestMessage'] = $depth1Value['HarmonyTestMessage'];
 			}
 			if(isset($depth1Value['AndroidRenderStyle'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidRenderStyle'] = $depth1Value['AndroidRenderStyle'];
 			}
 			if(isset($depth1Value['IOSExtParameters'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.iOSExtParameters'] = $depth1Value['IOSExtParameters'];
+			}
+			if(isset($depth1Value['AndroidBadgeAddNum'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBadgeAddNum'] = $depth1Value['AndroidBadgeAddNum'];
 			}
 			if(isset($depth1Value['AndroidHuaweiReceiptId'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidHuaweiReceiptId'] = $depth1Value['AndroidHuaweiReceiptId'];
@@ -341,8 +389,14 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidTargetUserType'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidTargetUserType'] = $depth1Value['AndroidTargetUserType'];
 			}
+			if(isset($depth1Value['HarmonyUri'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyUri'] = $depth1Value['HarmonyUri'];
+			}
 			if(isset($depth1Value['AndroidPopupBody'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidPopupBody'] = $depth1Value['AndroidPopupBody'];
+			}
+			if(isset($depth1Value['HarmonyExtParameters'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyExtParameters'] = $depth1Value['HarmonyExtParameters'];
 			}
 			if(isset($depth1Value['AndroidBigPictureUrl'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigPictureUrl'] = $depth1Value['AndroidBigPictureUrl'];
@@ -356,8 +410,14 @@ class MassPush extends Rpc
 			if(isset($depth1Value['SendChannels'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.SendChannels'] = $depth1Value['SendChannels'];
 			}
+			if(isset($depth1Value['HarmonyActionType'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyActionType'] = $depth1Value['HarmonyActionType'];
+			}
 			if(isset($depth1Value['Target'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.Target'] = $depth1Value['Target'];
+			}
+			if(isset($depth1Value['HarmonyNotificationSlotType'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyNotificationSlotType'] = $depth1Value['HarmonyNotificationSlotType'];
 			}
 			if(isset($depth1Value['AndroidBigTitle'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidBigTitle'] = $depth1Value['AndroidBigTitle'];
@@ -368,6 +428,9 @@ class MassPush extends Rpc
 			if(isset($depth1Value['AndroidRemind'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidRemind'] = $depth1Value['AndroidRemind'];
 			}
+			if(isset($depth1Value['HarmonyInboxContent'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyInboxContent'] = $depth1Value['HarmonyInboxContent'];
+			}
 			if(isset($depth1Value['AndroidActivity'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidActivity'] = $depth1Value['AndroidActivity'];
 			}
@@ -376,6 +439,9 @@ class MassPush extends Rpc
 			}
 			if(isset($depth1Value['TargetValue'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.TargetValue'] = $depth1Value['TargetValue'];
+			}
+			if(isset($depth1Value['HarmonyBadgeSetNum'])){
+				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.HarmonyBadgeSetNum'] = $depth1Value['HarmonyBadgeSetNum'];
 			}
 			if(isset($depth1Value['AndroidXiaoMiNotifyTitle'])){
 				$this->options['form_params']['PushTask.' . ($depth1 + 1) . '.AndroidXiaoMiNotifyTitle'] = $depth1Value['AndroidXiaoMiNotifyTitle'];
@@ -392,115 +458,66 @@ class MassPush extends Rpc
 /**
  * @method string getAndroidNotificationBarType()
  * @method $this withAndroidNotificationBarType($value)
- * @method string getSmsSendPolicy()
- * @method $this withSmsSendPolicy($value)
- * @method string getBody()
- * @method $this withBody($value)
  * @method string getDeviceType()
  * @method $this withDeviceType($value)
  * @method string getPushTime()
  * @method $this withPushTime($value)
  * @method string getSendSpeed()
  * @method $this withSendSpeed($value)
- * @method string getAndroidNotificationHuaweiChannel()
- * @method $this withAndroidNotificationHuaweiChannel($value)
- * @method string getAndroidPopupActivity()
- * @method $this withAndroidPopupActivity($value)
  * @method string getIOSRemindBody()
  * @method string getTrim()
  * @method $this withTrim($value)
- * @method string getAndroidMessageVivoCategory()
- * @method $this withAndroidMessageVivoCategory($value)
- * @method string getAndroidNotifyType()
- * @method $this withAndroidNotifyType($value)
  * @method string getAndroidPopupTitle()
  * @method $this withAndroidPopupTitle($value)
- * @method string getAndroidMessageHuaweiCategory()
- * @method $this withAndroidMessageHuaweiCategory($value)
- * @method string getIOSMusic()
  * @method string getIOSApnsEnv()
- * @method string getIOSMutableContent()
  * @method string getAndroidNotificationBarPriority()
  * @method $this withAndroidNotificationBarPriority($value)
  * @method string getExpireTime()
  * @method $this withExpireTime($value)
  * @method string getAndroidImageUrl()
  * @method $this withAndroidImageUrl($value)
- * @method string getAndroidHonorTargetUserType()
- * @method $this withAndroidHonorTargetUserType($value)
- * @method string getAndroidNotificationVivoChannel()
- * @method $this withAndroidNotificationVivoChannel($value)
  * @method string getAndroidVivoReceiptId()
  * @method $this withAndroidVivoReceiptId($value)
  * @method string getIOSNotificationCategory()
- * @method string getAndroidNotificationXiaomiChannel()
- * @method $this withAndroidNotificationXiaomiChannel($value)
- * @method string getStoreOffline()
- * @method $this withStoreOffline($value)
- * @method string getIOSRelevanceScore()
- * @method string getSmsParams()
- * @method $this withSmsParams($value)
- * @method string getAndroidVivoPushMode()
- * @method $this withAndroidVivoPushMode($value)
- * @method string getAndroidInboxBody()
- * @method $this withAndroidInboxBody($value)
- * @method string getJobKey()
- * @method $this withJobKey($value)
- * @method string getAndroidOpenUrl()
- * @method $this withAndroidOpenUrl($value)
- * @method string getAndroidXiaoMiNotifyBody()
- * @method $this withAndroidXiaoMiNotifyBody($value)
- * @method string getIOSSubtitle()
  * @method string getAndroidXiaomiBigPictureUrl()
  * @method $this withAndroidXiaomiBigPictureUrl($value)
+ * @method string getHarmonyCategory()
+ * @method $this withHarmonyCategory($value)
  * @method string getIOSRemind()
  * @method string getIOSNotificationThreadId()
  * @method string getAndroidHuaweiTargetUserType()
  * @method $this withAndroidHuaweiTargetUserType($value)
- * @method string getAndroidMusic()
- * @method $this withAndroidMusic($value)
- * @method string getIOSNotificationCollapseId()
  * @method string getAndroidMessageHuaweiUrgency()
  * @method $this withAndroidMessageHuaweiUrgency($value)
- * @method string getPushType()
- * @method $this withPushType($value)
  * @method string getIOSInterruptionLevel()
  * @method string getAndroidExtParameters()
  * @method $this withAndroidExtParameters($value)
  * @method string getIOSBadge()
- * @method string getAndroidBigBody()
- * @method $this withAndroidBigBody($value)
  * @method string getIOSBadgeAutoIncrement()
  * @method string getAndroidOpenType()
  * @method $this withAndroidOpenType($value)
- * @method string getTitle()
- * @method $this withTitle($value)
+ * @method string getHarmonyRemindTitle()
+ * @method $this withHarmonyRemindTitle($value)
+ * @method string getAndroidBadgeClass()
+ * @method $this withAndroidBadgeClass($value)
  * @method string getSmsDelaySecs()
  * @method $this withSmsDelaySecs($value)
  * @method string getAndroidRenderStyle()
  * @method $this withAndroidRenderStyle($value)
  * @method string getIOSExtParameters()
- * @method string getAndroidHuaweiReceiptId()
- * @method $this withAndroidHuaweiReceiptId($value)
- * @method string getAndroidNotificationHonorChannel()
- * @method $this withAndroidNotificationHonorChannel($value)
  * @method string getAndroidXiaomiImageUrl()
  * @method $this withAndroidXiaomiImageUrl($value)
- * @method string getAndroidTargetUserType()
- * @method $this withAndroidTargetUserType($value)
  * @method string getSmsTemplateName()
  * @method $this withSmsTemplateName($value)
- * @method string getAndroidPopupBody()
- * @method $this withAndroidPopupBody($value)
+ * @method string getHarmonyUri()
+ * @method $this withHarmonyUri($value)
+ * @method string getHarmonyExtParameters()
+ * @method $this withHarmonyExtParameters($value)
  * @method string getAndroidBigPictureUrl()
  * @method $this withAndroidBigPictureUrl($value)
  * @method string getIOSSilentNotification()
- * @method string getAndroidNotificationGroup()
- * @method $this withAndroidNotificationGroup($value)
- * @method string getSendChannels()
- * @method $this withSendChannels($value)
- * @method string getTarget()
- * @method $this withTarget($value)
+ * @method string getHarmonyNotificationSlotType()
+ * @method $this withHarmonyNotificationSlotType($value)
  * @method string getAndroidBigTitle()
  * @method $this withAndroidBigTitle($value)
  * @method string getAndroidNotificationChannel()
@@ -517,8 +534,101 @@ class MassPush extends Rpc
  * @method $this withAppKey($value)
  * @method string getTargetValue()
  * @method $this withTargetValue($value)
+ * @method string getHarmonyBadgeSetNum()
+ * @method $this withHarmonyBadgeSetNum($value)
  * @method string getAndroidXiaoMiNotifyTitle()
  * @method $this withAndroidXiaoMiNotifyTitle($value)
+ * @method string getSmsSendPolicy()
+ * @method $this withSmsSendPolicy($value)
+ * @method string getBody()
+ * @method $this withBody($value)
+ * @method string getAndroidNotificationHuaweiChannel()
+ * @method $this withAndroidNotificationHuaweiChannel($value)
+ * @method string getAndroidPopupActivity()
+ * @method $this withAndroidPopupActivity($value)
+ * @method string getHarmonyNotifyId()
+ * @method $this withHarmonyNotifyId($value)
+ * @method string getHarmonyRenderStyle()
+ * @method $this withHarmonyRenderStyle($value)
+ * @method string getAndroidMessageVivoCategory()
+ * @method $this withAndroidMessageVivoCategory($value)
+ * @method string getAndroidNotifyType()
+ * @method $this withAndroidNotifyType($value)
+ * @method string getAndroidMessageHuaweiCategory()
+ * @method $this withAndroidMessageHuaweiCategory($value)
+ * @method string getIOSMusic()
+ * @method string getIOSMutableContent()
+ * @method string getAndroidHonorTargetUserType()
+ * @method $this withAndroidHonorTargetUserType($value)
+ * @method string getHarmonyRemindBody()
+ * @method $this withHarmonyRemindBody($value)
+ * @method string getAndroidNotificationVivoChannel()
+ * @method $this withAndroidNotificationVivoChannel($value)
+ * @method string getAndroidNotificationXiaomiChannel()
+ * @method $this withAndroidNotificationXiaomiChannel($value)
+ * @method string getHarmonyAction()
+ * @method $this withHarmonyAction($value)
+ * @method string getStoreOffline()
+ * @method $this withStoreOffline($value)
+ * @method string getIOSRelevanceScore()
+ * @method string getSmsParams()
+ * @method $this withSmsParams($value)
+ * @method string getAndroidVivoPushMode()
+ * @method $this withAndroidVivoPushMode($value)
+ * @method string getAndroidInboxBody()
+ * @method $this withAndroidInboxBody($value)
+ * @method string getJobKey()
+ * @method $this withJobKey($value)
+ * @method string getHarmonyReceiptId()
+ * @method $this withHarmonyReceiptId($value)
+ * @method string getAndroidOpenUrl()
+ * @method $this withAndroidOpenUrl($value)
+ * @method string getAndroidBadgeSetNum()
+ * @method $this withAndroidBadgeSetNum($value)
+ * @method string getAndroidXiaoMiNotifyBody()
+ * @method $this withAndroidXiaoMiNotifyBody($value)
+ * @method string getIOSSubtitle()
+ * @method string getHarmonyRemind()
+ * @method $this withHarmonyRemind($value)
+ * @method string getAndroidMusic()
+ * @method $this withAndroidMusic($value)
+ * @method string getHarmonyExtensionPush()
+ * @method $this withHarmonyExtensionPush($value)
+ * @method string getIOSNotificationCollapseId()
+ * @method string getPushType()
+ * @method $this withPushType($value)
+ * @method string getHarmonyExtensionExtraData()
+ * @method $this withHarmonyExtensionExtraData($value)
+ * @method string getHarmonyImageUrl()
+ * @method $this withHarmonyImageUrl($value)
+ * @method string getAndroidBigBody()
+ * @method $this withAndroidBigBody($value)
+ * @method string getTitle()
+ * @method $this withTitle($value)
+ * @method string getHarmonyBadgeAddNum()
+ * @method $this withHarmonyBadgeAddNum($value)
+ * @method string getHarmonyTestMessage()
+ * @method $this withHarmonyTestMessage($value)
+ * @method string getAndroidBadgeAddNum()
+ * @method $this withAndroidBadgeAddNum($value)
+ * @method string getAndroidHuaweiReceiptId()
+ * @method $this withAndroidHuaweiReceiptId($value)
+ * @method string getAndroidNotificationHonorChannel()
+ * @method $this withAndroidNotificationHonorChannel($value)
+ * @method string getAndroidTargetUserType()
+ * @method $this withAndroidTargetUserType($value)
+ * @method string getAndroidPopupBody()
+ * @method $this withAndroidPopupBody($value)
+ * @method string getAndroidNotificationGroup()
+ * @method $this withAndroidNotificationGroup($value)
+ * @method string getSendChannels()
+ * @method $this withSendChannels($value)
+ * @method string getHarmonyActionType()
+ * @method $this withHarmonyActionType($value)
+ * @method string getTarget()
+ * @method $this withTarget($value)
+ * @method string getHarmonyInboxContent()
+ * @method $this withHarmonyInboxContent($value)
  * @method string getAndroidXiaoMiActivity()
  * @method $this withAndroidXiaoMiActivity($value)
  */
@@ -543,19 +653,6 @@ class Push extends Rpc
      *
      * @return $this
      */
-    public function withIOSMusic($value)
-    {
-        $this->data['IOSMusic'] = $value;
-        $this->options['query']['iOSMusic'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withIOSApnsEnv($value)
     {
         $this->data['IOSApnsEnv'] = $value;
@@ -569,49 +666,10 @@ class Push extends Rpc
      *
      * @return $this
      */
-    public function withIOSMutableContent($value)
-    {
-        $this->data['IOSMutableContent'] = $value;
-        $this->options['query']['iOSMutableContent'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withIOSNotificationCategory($value)
     {
         $this->data['IOSNotificationCategory'] = $value;
         $this->options['query']['iOSNotificationCategory'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIOSRelevanceScore($value)
-    {
-        $this->data['IOSRelevanceScore'] = $value;
-        $this->options['query']['iOSRelevanceScore'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIOSSubtitle($value)
-    {
-        $this->data['IOSSubtitle'] = $value;
-        $this->options['query']['iOSSubtitle'] = $value;
 
         return $this;
     }
@@ -638,19 +696,6 @@ class Push extends Rpc
     {
         $this->data['IOSNotificationThreadId'] = $value;
         $this->options['query']['iOSNotificationThreadId'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withIOSNotificationCollapseId($value)
-    {
-        $this->data['IOSNotificationCollapseId'] = $value;
-        $this->options['query']['iOSNotificationCollapseId'] = $value;
 
         return $this;
     }
@@ -719,15 +764,80 @@ class Push extends Rpc
 
         return $this;
     }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSMusic($value)
+    {
+        $this->data['IOSMusic'] = $value;
+        $this->options['query']['iOSMusic'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSMutableContent($value)
+    {
+        $this->data['IOSMutableContent'] = $value;
+        $this->options['query']['iOSMutableContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSRelevanceScore($value)
+    {
+        $this->data['IOSRelevanceScore'] = $value;
+        $this->options['query']['iOSRelevanceScore'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSSubtitle($value)
+    {
+        $this->data['IOSSubtitle'] = $value;
+        $this->options['query']['iOSSubtitle'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIOSNotificationCollapseId($value)
+    {
+        $this->data['IOSNotificationCollapseId'] = $value;
+        $this->options['query']['iOSNotificationCollapseId'] = $value;
+
+        return $this;
+    }
 }
 
 /**
- * @method string getStoreOffline()
- * @method $this withStoreOffline($value)
  * @method string getTitle()
  * @method $this withTitle($value)
  * @method string getBody()
  * @method $this withBody($value)
+ * @method string getStoreOffline()
+ * @method $this withStoreOffline($value)
  * @method string getJobKey()
  * @method $this withJobKey($value)
  * @method string getTarget()
@@ -742,12 +852,12 @@ class PushMessageToAndroid extends Rpc
 }
 
 /**
- * @method string getStoreOffline()
- * @method $this withStoreOffline($value)
  * @method string getTitle()
  * @method $this withTitle($value)
  * @method string getBody()
  * @method $this withBody($value)
+ * @method string getStoreOffline()
+ * @method $this withStoreOffline($value)
  * @method string getJobKey()
  * @method $this withJobKey($value)
  * @method string getTarget()
@@ -762,14 +872,14 @@ class PushMessageToiOS extends Rpc
 }
 
 /**
- * @method string getExtParameters()
- * @method $this withExtParameters($value)
- * @method string getStoreOffline()
- * @method $this withStoreOffline($value)
  * @method string getTitle()
  * @method $this withTitle($value)
  * @method string getBody()
  * @method $this withBody($value)
+ * @method string getExtParameters()
+ * @method $this withExtParameters($value)
+ * @method string getStoreOffline()
+ * @method $this withStoreOffline($value)
  * @method string getJobKey()
  * @method $this withJobKey($value)
  * @method string getTarget()
@@ -784,14 +894,14 @@ class PushNoticeToAndroid extends Rpc
 }
 
 /**
- * @method string getExtParameters()
- * @method $this withExtParameters($value)
- * @method string getApnsEnv()
- * @method $this withApnsEnv($value)
  * @method string getTitle()
  * @method $this withTitle($value)
  * @method string getBody()
  * @method $this withBody($value)
+ * @method string getExtParameters()
+ * @method $this withExtParameters($value)
+ * @method string getApnsEnv()
+ * @method $this withApnsEnv($value)
  * @method string getJobKey()
  * @method $this withJobKey($value)
  * @method string getTarget()
