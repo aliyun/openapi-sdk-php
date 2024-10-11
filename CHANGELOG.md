@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2200 - 2024-10-11
+- GetPlayInfo Add EncryptMode.
+
+
 ## 1.8.2199 - 2024-10-10
 - Add ManualRunMailTask, GetMailTaskStatus and GetWorksEmbedList apis.
 

@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchStartVodDomain batchStartVodDomain(array $options = [])
  * @method BatchStopVodDomain batchStopVodDomain(array $options = [])
  * @method CancelUrlUploadJobs cancelUrlUploadJobs(array $options = [])
+ * @method ChangeResourceGroup changeResourceGroup(array $options = [])
  * @method CreateAppInfo createAppInfo(array $options = [])
  * @method CreateAudit createAudit(array $options = [])
  * @method CreateUploadAttachedMedia createUploadAttachedMedia(array $options = [])
@@ -75,6 +76,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodRangeDataByLocateAndIspService describeVodRangeDataByLocateAndIspService(array $options = [])
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
  * @method DescribeVodRefreshTasks describeVodRefreshTasks(array $options = [])
+ * @method DescribeVodSSLCertificateList describeVodSSLCertificateList(array $options = [])
  * @method DescribeVodStorageData describeVodStorageData(array $options = [])
  * @method DescribeVodTieringStorageData describeVodTieringStorageData(array $options = [])
  * @method DescribeVodTieringStorageRetrievalData describeVodTieringStorageRetrievalData(array $options = [])
@@ -149,6 +151,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetEditingProjectMaterials setEditingProjectMaterials(array $options = [])
  * @method SetMessageCallback setMessageCallback(array $options = [])
  * @method SetVodDomainCertificate setVodDomainCertificate(array $options = [])
+ * @method SetVodDomainSSLCertificate setVodDomainSSLCertificate(array $options = [])
  * @method SubmitAIImageAuditJob submitAIImageAuditJob(array $options = [])
  * @method SubmitAIImageJob submitAIImageJob(array $options = [])
  * @method SubmitAIJob submitAIJob(array $options = [])
@@ -413,6 +416,22 @@ class BatchStopVodDomain extends Rpc
  * @method $this withUploadUrls($value)
  */
 class CancelUrlUploadJobs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getResourceRegionId()
+ * @method $this withResourceRegionId($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getService()
+ * @method $this withService($value)
+ */
+class ChangeResourceGroup extends Rpc
 {
 }
 
@@ -1309,6 +1328,31 @@ class DescribeVodRefreshQuota extends Rpc
  */
 class DescribeVodRefreshTasks extends Rpc
 {
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMatchType()
+ * @method $this withMatchType($value)
+ * @method string getAlgorithm()
+ * @method $this withAlgorithm($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getSearchKeyword()
+ * @method $this withSearchKeyword($value)
+ */
+class DescribeVodSSLCertificateList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2443,6 +2487,37 @@ class SetMessageCallback extends Rpc
  */
 class SetVodDomainCertificate extends Rpc
 {
+}
+
+/**
+ * @method string getSSLProtocol()
+ * @method $this withSSLProtocol($value)
+ * @method string getCertId()
+ * @method $this withCertId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getCertType()
+ * @method $this withCertType($value)
+ * @method string getSSLPri()
+ * @method $this withSSLPri($value)
+ * @method string getCertRegion()
+ * @method $this withCertRegion($value)
+ * @method string getCertName()
+ * @method $this withCertName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getEnv()
+ * @method $this withEnv($value)
+ * @method string getSSLPub()
+ * @method $this withSSLPub($value)
+ */
+class SetVodDomainSSLCertificate extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
