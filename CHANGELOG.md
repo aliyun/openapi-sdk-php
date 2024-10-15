@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2201 - 2024-10-15
+- Add ResourcePoolOptions.Strategy for CreateAutoProvisioningGroup.
+
+
 ## 1.8.2200 - 2024-10-11
 - GetPlayInfo Add EncryptMode.
 
