@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2202 - 2024-10-16
+- Gwlb Open API released.
+
+
 ## 1.8.2201 - 2024-10-15
 - Add ResourcePoolOptions.Strategy for CreateAutoProvisioningGroup.
 

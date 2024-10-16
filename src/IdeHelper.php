@@ -137,6 +137,7 @@ namespace AlibabaCloud;
  * @method static Gpdb\Gpdb gpdb()
  * @method static Grace\Grace grace()
  * @method static Green\Green green()
+ * @method static Gwlb\Gwlb gwlb()
  * @method static HBase\HBase hBase()
  * @method static HPC\HPC hPC()
  * @method static Hiknoengine\Hiknoengine hiknoengine()
