@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2204 - 2024-10-18
+- Gwlb Open API released.
+
+
 ## 1.8.2203 - 2024-10-17
 - 基于转移码的转出接口
 - SaveSingleTaskForTransferOutByAuthorizationCode
