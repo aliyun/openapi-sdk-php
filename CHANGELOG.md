@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2205 - 2024-10-22
+- Add openapi StartEaiJupyter.
+- Add openapi StopEaiJupyter.
+
+
 ## 1.8.2204 - 2024-10-18
 - Gwlb Open API released.
 
