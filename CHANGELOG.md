@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2206 - 2024-10-23
+ListUsers，ListUserBasicInfos api新增支持status字段
+
+
 ## 1.8.2205 - 2024-10-22
 - Add openapi StartEaiJupyter.
 - Add openapi StopEaiJupyter.
