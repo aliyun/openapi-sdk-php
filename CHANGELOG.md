@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2208 - 2024-10-24
+- Publish sdk.
+
+
 ## 1.8.2207 - 2024-10-23
 - Update Endpoint.
 

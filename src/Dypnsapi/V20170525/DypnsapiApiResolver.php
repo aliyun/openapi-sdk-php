@@ -121,10 +121,14 @@ class CreateSchemeConfig extends Rpc
  * @method $this withRouteName($value)
  * @method string getEmail()
  * @method $this withEmail($value)
+ * @method string getHmSignName()
+ * @method $this withHmSignName($value)
  * @method string getPackSign()
  * @method $this withPackSign($value)
  * @method string getPackName()
  * @method $this withPackName($value)
+ * @method string getHmAppIdentifier()
+ * @method $this withHmAppIdentifier($value)
  * @method string getCuApiCode()
  * @method $this withCuApiCode($value)
  * @method string getSceneType()
@@ -145,6 +149,8 @@ class CreateSchemeConfig extends Rpc
  * @method $this withSchemeName($value)
  * @method string getSmsSignName()
  * @method $this withSmsSignName($value)
+ * @method string getHmPackageName()
+ * @method $this withHmPackageName($value)
  */
 class CreateVerifyScheme extends Rpc
 {
@@ -207,12 +213,22 @@ class GetAuthorizationUrl extends Rpc
  * @method $this withOrigin($value)
  * @method string getSceneCode()
  * @method $this withSceneCode($value)
+ * @method string getCuApiCode()
+ * @method $this withCuApiCode($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getCtApiCode()
+ * @method $this withCtApiCode($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getVersion()
+ * @method $this withVersion($value)
  * @method string getUrl()
  * @method $this withUrl($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getCmApiCode()
+ * @method $this withCmApiCode($value)
  */
 class GetAuthToken extends Rpc
 {
