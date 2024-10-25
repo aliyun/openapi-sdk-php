@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2209 - 2024-10-25
+- Generated 2017-11-10 for `Ens`.
+
+
 ## 1.8.2208 - 2024-10-24
 - Publish sdk.
 
