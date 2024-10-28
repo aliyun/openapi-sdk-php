@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2210 - 2024-10-28
+- Support Fileset for BmCPFS.
+- Support Fileset Quota for BmCPFS.
+
+
 ## 1.8.2209 - 2024-10-25
 - Generated 2017-11-10 for `Ens`.
 
