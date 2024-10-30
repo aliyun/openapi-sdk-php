@@ -322,7 +322,11 @@ class CreateIdpDepartment extends Rpc
  * @method string getProtocol()
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
+ * @method string getL7ProxyDomainCustom()
+ * @method string getL7ProxyDomainPrivate()
+ * @method string getBrowserAccessStatus()
  * @method string getTagIds()
+ * @method string getL7ProxyDomainAutomaticPrefix()
  * @method string getPortRanges()
  * @method string getName()
  * @method string getStatus()
@@ -374,10 +378,62 @@ class CreatePrivateAccessApplication extends Rpc
      *
      * @return $this
      */
+    public function withL7ProxyDomainCustom($value)
+    {
+        $this->data['L7ProxyDomainCustom'] = $value;
+        $this->options['form_params']['L7ProxyDomainCustom'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withL7ProxyDomainPrivate($value)
+    {
+        $this->data['L7ProxyDomainPrivate'] = $value;
+        $this->options['form_params']['L7ProxyDomainPrivate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBrowserAccessStatus($value)
+    {
+        $this->data['BrowserAccessStatus'] = $value;
+        $this->options['form_params']['BrowserAccessStatus'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withTagIds($value)
     {
         $this->data['TagIds'] = $value;
         $this->options['form_params']['TagIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withL7ProxyDomainAutomaticPrefix($value)
+    {
+        $this->data['L7ProxyDomainAutomaticPrefix'] = $value;
+        $this->options['form_params']['L7ProxyDomainAutomaticPrefix'] = $value;
 
         return $this;
     }
@@ -1006,6 +1062,8 @@ class CreateWmBaseImage extends Rpc
  * @method string getImageEmbedJpegQuality()
  * @method string getWatermarkInfoUint()
  * @method string getWmInfoUint()
+ * @method string getCsvControl()
+ * @method $this withCsvControl($value)
  * @method string getFilename()
  * @method string getWmInfoSize()
  * @method string getWmInfoBytesB64()
@@ -1194,6 +1252,8 @@ class CreateWmEmbedTask extends Rpc
  * @method $this withSourceIp($value)
  * @method string getWmType()
  * @method string getImageDetectLevel()
+ * @method string getCsvControl()
+ * @method $this withCsvControl($value)
  * @method string getFilename()
  * @method string getWmInfoSize()
  * @method string getFileUrl()
@@ -2197,6 +2257,8 @@ class ListPopTrafficStatistics extends Rpc
  * @method $this withCurrentPage($value)
  * @method string getApplicationIds()
  * @method $this withApplicationIds($value)
+ * @method string getAccessModes()
+ * @method $this withAccessModes($value)
  * @method string getName()
  * @method $this withName($value)
  * @method string getStatus()
@@ -2835,7 +2897,10 @@ class UpdateNacUserCertStatus extends Rpc
  * @method string getSourceIp()
  * @method $this withSourceIp($value)
  * @method string getApplicationId()
+ * @method string getL7ProxyDomainCustom()
+ * @method string getL7ProxyDomainPrivate()
  * @method string getTagIds()
+ * @method string getL7ProxyDomainAutomaticPrefix()
  * @method string getPortRanges()
  * @method string getModifyType()
  * @method string getStatus()
@@ -2900,10 +2965,49 @@ class UpdatePrivateAccessApplication extends Rpc
      *
      * @return $this
      */
+    public function withL7ProxyDomainCustom($value)
+    {
+        $this->data['L7ProxyDomainCustom'] = $value;
+        $this->options['form_params']['L7ProxyDomainCustom'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withL7ProxyDomainPrivate($value)
+    {
+        $this->data['L7ProxyDomainPrivate'] = $value;
+        $this->options['form_params']['L7ProxyDomainPrivate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withTagIds($value)
     {
         $this->data['TagIds'] = $value;
         $this->options['form_params']['TagIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withL7ProxyDomainAutomaticPrefix($value)
+    {
+        $this->data['L7ProxyDomainAutomaticPrefix'] = $value;
+        $this->options['form_params']['L7ProxyDomainAutomaticPrefix'] = $value;
 
         return $this;
     }
