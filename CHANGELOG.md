@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2213 - 2024-10-30
+- Update to support new apis.
+
+
 ## 1.8.2212 - 2024-10-30
 - Generated 2023-01-20 for `csas`.
 

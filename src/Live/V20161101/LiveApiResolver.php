@@ -46,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method BatchSetLiveDomainConfigs batchSetLiveDomainConfigs(array $options = [])
  * @method CancelMuteAllGroupUser cancelMuteAllGroupUser(array $options = [])
  * @method CancelMuteGroupUser cancelMuteGroupUser(array $options = [])
+ * @method ChangeLiveDomainResourceGroup changeLiveDomainResourceGroup(array $options = [])
  * @method CheckLiveMessageUsersInGroup checkLiveMessageUsersInGroup(array $options = [])
  * @method CheckLiveMessageUsersOnline checkLiveMessageUsersOnline(array $options = [])
  * @method CloseLiveShift closeLiveShift(array $options = [])
@@ -238,6 +239,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveStreamWatermarkRules describeLiveStreamWatermarkRules(array $options = [])
  * @method DescribeLiveStreamWatermarks describeLiveStreamWatermarks(array $options = [])
  * @method DescribeLiveTopDomainsByFlow describeLiveTopDomainsByFlow(array $options = [])
+ * @method DescribeLiveTrafficDomainLog describeLiveTrafficDomainLog(array $options = [])
  * @method DescribeLiveUpVideoAudioInfo describeLiveUpVideoAudioInfo(array $options = [])
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
@@ -789,6 +791,8 @@ class AddCustomLiveStreamTranscode extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getSuffix()
+ * @method $this withSuffix($value)
  * @method string getSubtitleName()
  * @method $this withSubtitleName($value)
  * @method string getApp()
@@ -797,6 +801,8 @@ class AddCustomLiveStreamTranscode extends Rpc
  * @method $this withOwnerId($value)
  * @method string getIsLazy()
  * @method $this withIsLazy($value)
+ * @method string getStudioName()
+ * @method $this withStudioName($value)
  * @method string getLiveTemplate()
  * @method $this withLiveTemplate($value)
  * @method string getDomain()
@@ -1059,6 +1065,7 @@ class AddLiveDetectNotifyConfig extends Rpc
  * @method $this withSecurityToken($value)
  * @method string getScope()
  * @method $this withScope($value)
+ * @method array getTag()
  * @method string getTopLevelDomain()
  * @method $this withTopLevelDomain($value)
  * @method string getOwnerAccount()
@@ -1076,6 +1083,26 @@ class AddLiveDetectNotifyConfig extends Rpc
  */
 class AddLiveDomain extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -1789,6 +1816,21 @@ class CancelMuteGroupUser extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getNewResourceGroupId()
+ * @method $this withNewResourceGroupId($value)
+ */
+class ChangeLiveDomainResourceGroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getGroupId()
  * @method $this withGroupId($value)
  * @method string getDataCenter()
@@ -1869,6 +1911,7 @@ class CopyCasterSceneConfig extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getCasterName()
  * @method $this withCasterName($value)
+ * @method array getTag()
  * @method string getCasterTemplate()
  * @method $this withCasterTemplate($value)
  * @method string getExpireTime()
@@ -1886,6 +1929,26 @@ class CopyCasterSceneConfig extends Rpc
  */
 class CreateCaster extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -3171,6 +3234,7 @@ class DescribeCasterProgram extends Rpc
  * @method $this withCasterName($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method array getTag()
  * @method string getNormType()
  * @method $this withNormType($value)
  * @method string getCasterId()
@@ -3188,6 +3252,26 @@ class DescribeCasterProgram extends Rpc
  */
 class DescribeCasters extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -5138,6 +5222,27 @@ class DescribeLiveStreamWatermarks extends Rpc
  */
 class DescribeLiveTopDomainsByFlow extends Rpc
 {
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveTrafficDomainLog extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -8666,6 +8771,8 @@ class UpdateEventSub extends Rpc
 /**
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getSuffix()
+ * @method $this withSuffix($value)
  * @method string getSubtitleName()
  * @method $this withSubtitleName($value)
  * @method string getRulesId()
@@ -8676,6 +8783,8 @@ class UpdateEventSub extends Rpc
  * @method $this withOwnerId($value)
  * @method string getIsLazy()
  * @method $this withIsLazy($value)
+ * @method string getStudioName()
+ * @method $this withStudioName($value)
  * @method string getLiveTemplate()
  * @method $this withLiveTemplate($value)
  * @method string getDomain()
