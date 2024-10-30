@@ -2320,6 +2320,8 @@ class CreateCapacityReservation extends Rpc
  * @method $this withName($value)
  * @method string getEnableParameter()
  * @method $this withEnableParameter($value)
+ * @method string getLauncher()
+ * @method $this withLauncher($value)
  */
 class CreateCommand extends Rpc
 {
@@ -12243,6 +12245,8 @@ class ModifyCloudAssistantSettings extends Rpc
  * @method $this withOwnerId($value)
  * @method string getName()
  * @method $this withName($value)
+ * @method string getLauncher()
+ * @method $this withLauncher($value)
  */
 class ModifyCommand extends Rpc
 {
@@ -12944,6 +12948,8 @@ class ModifyInstanceAttachmentAttributes extends Rpc
  * @method string getPrivateDnsNameOptions()
  * @method $this withPrivateDnsNameOptions($value)
  * @method string getCpuOptionsTopologyType()
+ * @method string getImageOptions()
+ * @method $this withImageOptions($value)
  * @method string getOSNameEn()
  * @method $this withOSNameEn($value)
  * @method string getEnableJumboFrame()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2211 - 2024-10-30
+- Support describe and modify NVMe on instance.
+
+
 ## 1.8.2210 - 2024-10-28
 - Support Fileset for BmCPFS.
 - Support Fileset Quota for BmCPFS.
