@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2214 - 2024-10-30
+- Update to support new apis.
+
+
 ## 1.8.2213 - 2024-10-30
 - Update to support new apis.
 
