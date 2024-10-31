@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2215 - 2024-10-31
+- DescribeInstanceTypes add CpuOptions.
+
+
 ## 1.8.2214 - 2024-10-30
 - Update to support new apis.
 
