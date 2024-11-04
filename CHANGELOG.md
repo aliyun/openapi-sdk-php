@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2216 - 2024-11-4
+- Support Ipv4LocalAddresses and Ipv6LocalAddresses.
+
+
 ## 1.8.2215 - 2024-10-31
 - DescribeInstanceTypes add CpuOptions.
 
