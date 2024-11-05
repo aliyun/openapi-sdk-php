@@ -62,6 +62,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRegions describeRegions(array $options = [])
  * @method DescribeRenewalPrice describeRenewalPrice(array $options = [])
  * @method DescribeReplicaSetRole describeReplicaSetRole(array $options = [])
+ * @method DescribeRestoreDBInstanceList describeRestoreDBInstanceList(array $options = [])
  * @method DescribeRoleZoneInfo describeRoleZoneInfo(array $options = [])
  * @method DescribeRunningLogRecords describeRunningLogRecords(array $options = [])
  * @method DescribeSecurityGroupConfiguration describeSecurityGroupConfiguration(array $options = [])
@@ -199,6 +200,8 @@ class CheckCloudResourceAuthorized extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEngineVersion()
+ * @method $this withEngineVersion($value)
  * @method string getSrcRegion()
  * @method $this withSrcRegion($value)
  * @method string getResourceGroupId()
@@ -1745,6 +1748,31 @@ class DescribeReplicaSetRole extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getCreationTimeAfter()
+ * @method $this withCreationTimeAfter($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeRestoreDBInstanceList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
@@ -3075,6 +3103,8 @@ class UntagResources extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
@@ -3091,6 +3121,8 @@ class UpgradeDBInstanceEngineVersion extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
