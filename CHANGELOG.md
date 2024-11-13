@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2218 - 2024-11-13
+- Supported AndroidMessageOppoCategory, AndroidMessageOppoNotifyLevel for Push and MassPush.
+
+
 ## 1.8.2217 - 2024-11-5
 - Generated 2015-12-01 for `Dds`.
 
