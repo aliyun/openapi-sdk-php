@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2219 - 2024-11-14
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.2218 - 2024-11-13
 - Supported AndroidMessageOppoCategory, AndroidMessageOppoNotifyLevel for Push and MassPush.
 

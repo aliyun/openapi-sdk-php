@@ -56,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCustomTemplate createCustomTemplate(array $options = [])
  * @method CreateEdgeTranscodeJob createEdgeTranscodeJob(array $options = [])
  * @method CreateEventSub createEventSub(array $options = [])
+ * @method CreateLiveAIStudio createLiveAIStudio(array $options = [])
  * @method CreateLiveDelayConfig createLiveDelayConfig(array $options = [])
  * @method CreateLiveMessageApp createLiveMessageApp(array $options = [])
  * @method CreateLiveMessageGroup createLiveMessageGroup(array $options = [])
@@ -82,6 +83,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteEdgeTranscodeJob deleteEdgeTranscodeJob(array $options = [])
  * @method DeleteEventSub deleteEventSub(array $options = [])
  * @method DeleteLiveAIProduceRules deleteLiveAIProduceRules(array $options = [])
+ * @method DeleteLiveAIStudio deleteLiveAIStudio(array $options = [])
  * @method DeleteLiveAISubtitle deleteLiveAISubtitle(array $options = [])
  * @method DeleteLiveAppRecordConfig deleteLiveAppRecordConfig(array $options = [])
  * @method DeleteLiveAppSnapshotConfig deleteLiveAppSnapshotConfig(array $options = [])
@@ -142,6 +144,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDomainWithIntegrity describeDomainWithIntegrity(array $options = [])
  * @method DescribeHlsLiveStreamRealTimeBpsData describeHlsLiveStreamRealTimeBpsData(array $options = [])
  * @method DescribeLiveAIProduceRules describeLiveAIProduceRules(array $options = [])
+ * @method DescribeLiveAIStudio describeLiveAIStudio(array $options = [])
  * @method DescribeLiveAISubtitle describeLiveAISubtitle(array $options = [])
  * @method DescribeLiveAudioAuditConfig describeLiveAudioAuditConfig(array $options = [])
  * @method DescribeLiveAudioAuditNotifyConfig describeLiveAudioAuditNotifyConfig(array $options = [])
@@ -312,6 +315,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyCasterLayout modifyCasterLayout(array $options = [])
  * @method ModifyCasterProgram modifyCasterProgram(array $options = [])
  * @method ModifyCasterVideoResource modifyCasterVideoResource(array $options = [])
+ * @method ModifyLiveAIStudio modifyLiveAIStudio(array $options = [])
  * @method ModifyLiveDomainSchdmByProperty modifyLiveDomainSchdmByProperty(array $options = [])
  * @method ModifyLiveMessageAppAudit modifyLiveMessageAppAudit(array $options = [])
  * @method ModifyLiveMessageAppCallback modifyLiveMessageAppCallback(array $options = [])
@@ -2026,6 +2030,43 @@ class CreateEventSub extends Rpc
 }
 
 /**
+ * @method string getBackgroundResourceId()
+ * @method $this withBackgroundResourceId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getMediaLayout()
+ * @method $this withMediaLayout($value)
+ * @method string getBackgroundType()
+ * @method $this withBackgroundType($value)
+ * @method string getMattingType()
+ * @method $this withMattingType($value)
+ * @method string getMediaResourceUrl()
+ * @method $this withMediaResourceUrl($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getBackgroundResourceUrl()
+ * @method $this withBackgroundResourceUrl($value)
+ * @method string getMediaResourceId()
+ * @method $this withMediaResourceId($value)
+ * @method string getMattingLayout()
+ * @method $this withMattingLayout($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStudioName()
+ * @method $this withStudioName($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ * @method string getMediaType()
+ * @method $this withMediaType($value)
+ */
+class CreateLiveAIStudio extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getDelayTime()
  * @method $this withDelayTime($value)
  * @method string getStream()
@@ -2518,6 +2559,19 @@ class DeleteEventSub extends Rpc
  */
 class DeleteLiveAIProduceRules extends Rpc
 {
+}
+
+/**
+ * @method string getStudioId()
+ * @method $this withStudioId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DeleteLiveAIStudio extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -3421,6 +3475,25 @@ class DescribeHlsLiveStreamRealTimeBpsData extends Rpc
  */
 class DescribeLiveAIProduceRules extends Rpc
 {
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStudioId()
+ * @method $this withStudioId($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStudioName()
+ * @method $this withStudioName($value)
+ */
+class DescribeLiveAIStudio extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -7088,6 +7161,43 @@ class ModifyCasterVideoResource extends Rpc
 }
 
 /**
+ * @method string getBackgroundResourceId()
+ * @method $this withBackgroundResourceId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getMediaLayout()
+ * @method $this withMediaLayout($value)
+ * @method string getBackgroundType()
+ * @method $this withBackgroundType($value)
+ * @method string getMattingType()
+ * @method $this withMattingType($value)
+ * @method string getMediaResourceUrl()
+ * @method $this withMediaResourceUrl($value)
+ * @method string getHeight()
+ * @method $this withHeight($value)
+ * @method string getBackgroundResourceUrl()
+ * @method $this withBackgroundResourceUrl($value)
+ * @method string getMediaResourceId()
+ * @method $this withMediaResourceId($value)
+ * @method string getMattingLayout()
+ * @method $this withMattingLayout($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getStudioName()
+ * @method $this withStudioName($value)
+ * @method string getWidth()
+ * @method $this withWidth($value)
+ * @method string getMediaType()
+ * @method $this withMediaType($value)
+ */
+class ModifyLiveAIStudio extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getProperty()
  * @method $this withProperty($value)
  * @method string getDomainName()
@@ -8403,6 +8513,8 @@ class StartLiveDomain extends Rpc
  * @method $this withStreamURL($value)
  * @method string getMultiStreamURL()
  * @method $this withMultiStreamURL($value)
+ * @method string getMaxIdleTime()
+ * @method $this withMaxIdleTime($value)
  * @method string getSeiParams()
  * @method $this withSeiParams($value)
  * @method string getTranscodeParams()
