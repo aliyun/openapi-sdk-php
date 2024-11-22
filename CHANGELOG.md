@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2221 - 2024-11-22
+- Generated 2021-11-11 for `qianzhou`.
+
+
 ## 1.8.2220 - 2024-11-19
 - Init.
 

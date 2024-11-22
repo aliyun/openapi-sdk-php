@@ -221,6 +221,7 @@ namespace AlibabaCloud;
  * @method static ProductCatalog\ProductCatalog productCatalog()
  * @method static Push\Push push()
  * @method static Pvtz\Pvtz pvtz()
+ * @method static Qianzhou\Qianzhou qianzhou()
  * @method static Qualitycheck\Qualitycheck qualitycheck()
  * @method static QuickbiPublic\QuickbiPublic quickbiPublic()
  * @method static Quotas\Quotas quotas()
