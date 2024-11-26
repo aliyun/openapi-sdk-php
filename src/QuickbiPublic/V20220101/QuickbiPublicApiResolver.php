@@ -100,6 +100,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDataLevelPermissionExtraConfig setDataLevelPermissionExtraConfig(array $options = [])
  * @method SetDataLevelPermissionRuleConfig setDataLevelPermissionRuleConfig(array $options = [])
  * @method SetDataLevelPermissionWhiteList setDataLevelPermissionWhiteList(array $options = [])
+ * @method SmartqQueryAbility smartqQueryAbility(array $options = [])
  * @method UpdateDataLevelPermissionStatus updateDataLevelPermissionStatus(array $options = [])
  * @method UpdateEmbeddedStatus updateEmbeddedStatus(array $options = [])
  * @method UpdateTicketNum updateTicketNum(array $options = [])
@@ -1649,6 +1650,25 @@ class SetDataLevelPermissionRuleConfig extends Rpc
  */
 class SetDataLevelPermissionWhiteList extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getUserQuestion()
+ * @method $this withUserQuestion($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ */
+class SmartqQueryAbility extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

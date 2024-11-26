@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2223 - 2024-11-26
+- Add SmartqQueryAbility api.
+
+
 ## 1.8.2222 - 2024-11-26
 - Update DescribeApiMetering API.
 
