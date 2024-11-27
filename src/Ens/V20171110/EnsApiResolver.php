@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssociateHaVip associateHaVip(array $options = [])
  * @method AttachDisk attachDisk(array $options = [])
  * @method AttachEnsInstances attachEnsInstances(array $options = [])
+ * @method AttachInstanceSDG attachInstanceSDG(array $options = [])
  * @method AttachNetworkInterface attachNetworkInterface(array $options = [])
  * @method AuthorizeSecurityGroup authorizeSecurityGroup(array $options = [])
  * @method AuthorizeSecurityGroupEgress authorizeSecurityGroupEgress(array $options = [])
@@ -33,6 +34,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateEpnInstance createEpnInstance(array $options = [])
  * @method CreateFileSystem createFileSystem(array $options = [])
  * @method CreateForwardEntry createForwardEntry(array $options = [])
+ * @method CreateHaVip createHaVip(array $options = [])
  * @method CreateImage createImage(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateInstanceActiveOpsTask createInstanceActiveOpsTask(array $options = [])
@@ -47,6 +49,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateNetwork createNetwork(array $options = [])
  * @method CreateNetworkAcl createNetworkAcl(array $options = [])
  * @method CreateNetworkAclEntry createNetworkAclEntry(array $options = [])
+ * @method CreateNetworkInterface createNetworkInterface(array $options = [])
  * @method CreateSDG createSDG(array $options = [])
  * @method CreateSecurityGroup createSecurityGroup(array $options = [])
  * @method CreateSnapshot createSnapshot(array $options = [])
@@ -65,6 +68,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteEpnInstance deleteEpnInstance(array $options = [])
  * @method DeleteFileSystem deleteFileSystem(array $options = [])
  * @method DeleteForwardEntry deleteForwardEntry(array $options = [])
+ * @method DeleteHaVips deleteHaVips(array $options = [])
  * @method DeleteImage deleteImage(array $options = [])
  * @method DeleteKeyPairs deleteKeyPairs(array $options = [])
  * @method DeleteLoadBalancerListener deleteLoadBalancerListener(array $options = [])
@@ -73,6 +77,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteNetwork deleteNetwork(array $options = [])
  * @method DeleteNetworkAcl deleteNetworkAcl(array $options = [])
  * @method DeleteNetworkAclEntry deleteNetworkAclEntry(array $options = [])
+ * @method DeleteNetworkInterfaces deleteNetworkInterfaces(array $options = [])
  * @method DeleteObject deleteObject(array $options = [])
  * @method DeleteSDG deleteSDG(array $options = [])
  * @method DeleteSecurityGroup deleteSecurityGroup(array $options = [])
@@ -114,6 +119,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeEnsRegions describeEnsRegions(array $options = [])
  * @method DescribeEnsResourceUsage describeEnsResourceUsage(array $options = [])
  * @method DescribeEnsRouteEntryList describeEnsRouteEntryList(array $options = [])
+ * @method DescribeEnsRouteTables describeEnsRouteTables(array $options = [])
  * @method DescribeEnsSaleControl describeEnsSaleControl(array $options = [])
  * @method DescribeEnsSaleControlAvailableResource describeEnsSaleControlAvailableResource(array $options = [])
  * @method DescribeEnsSaleControlStock describeEnsSaleControlStock(array $options = [])
@@ -134,6 +140,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceBandwidthDetail describeInstanceBandwidthDetail(array $options = [])
  * @method DescribeInstanceMonitorData describeInstanceMonitorData(array $options = [])
  * @method DescribeInstances describeInstances(array $options = [])
+ * @method DescribeInstanceSDGStatus describeInstanceSDGStatus(array $options = [])
  * @method DescribeInstanceSpec describeInstanceSpec(array $options = [])
  * @method DescribeInstanceTypes describeInstanceTypes(array $options = [])
  * @method DescribeInstanceVncUrl describeInstanceVncUrl(array $options = [])
@@ -179,6 +186,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUserBandWidthData describeUserBandWidthData(array $options = [])
  * @method DescribeVSwitches describeVSwitches(array $options = [])
  * @method DetachDisk detachDisk(array $options = [])
+ * @method DetachInstanceSDG detachInstanceSDG(array $options = [])
  * @method DetachNetworkInterface detachNetworkInterface(array $options = [])
  * @method DistApplicationData distApplicationData(array $options = [])
  * @method ExportBillDetailData exportBillDetailData(array $options = [])
@@ -217,6 +225,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifySecurityGroupAttribute modifySecurityGroupAttribute(array $options = [])
  * @method ModifySnapshotAttribute modifySnapshotAttribute(array $options = [])
  * @method ModifyVSwitchAttribute modifyVSwitchAttribute(array $options = [])
+ * @method MountInstanceSDG mountInstanceSDG(array $options = [])
  * @method PreloadRegionSDG preloadRegionSDG(array $options = [])
  * @method PrepareUpload prepareUpload(array $options = [])
  * @method PushApplicationData pushApplicationData(array $options = [])
@@ -278,6 +287,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnassociateHaVip unassociateHaVip(array $options = [])
  * @method UnassociateNetworkAcl unassociateNetworkAcl(array $options = [])
  * @method UnloadRegionSDG unloadRegionSDG(array $options = [])
+ * @method UnmountInstanceSDG unmountInstanceSDG(array $options = [])
  * @method UntagResources untagResources(array $options = [])
  * @method UpdateEnsSaleControl updateEnsSaleControl(array $options = [])
  * @method UpgradeAICInstanceImage upgradeAICInstanceImage(array $options = [])
@@ -422,6 +432,19 @@ class AttachEnsInstances extends Rpc
 }
 
 /**
+ * @method string getSDGId()
+ * @method $this withSDGId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class AttachInstanceSDG extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getNetworkInterfaceId()
@@ -550,6 +573,8 @@ class CreateApplication extends Rpc
  * @method $this withInstanceType($value)
  * @method string getAmount()
  * @method $this withAmount($value)
+ * @method string getEnvironmentVar()
+ * @method $this withEnvironmentVar($value)
  * @method string getNameSpace()
  * @method $this withNameSpace($value)
  * @method string getServerName()
@@ -762,6 +787,25 @@ class CreateFileSystem extends Rpc
  */
 class CreateForwardEntry extends Rpc
 {
+}
+
+/**
+ * @method string getIpAddress()
+ * @method $this withIpAddress($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAmount()
+ * @method $this withAmount($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateHaVip extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1199,6 +1243,20 @@ class CreateNetworkAclEntry extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getSecurityGroupIds()
+ * @method $this withSecurityGroupIds($value)
+ * @method string getVSwitchId()
+ * @method $this withVSwitchId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateNetworkInterface extends Rpc
+{
+}
+
+/**
  * @method string getFromSDGId()
  * @method $this withFromSDGId($value)
  * @method string getDescription()
@@ -1453,6 +1511,17 @@ class DeleteForwardEntry extends Rpc
 }
 
 /**
+ * @method string getHaVipIds()
+ * @method $this withHaVipIds($value)
+ */
+class DeleteHaVips extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getImageId()
  * @method $this withImageId($value)
  */
@@ -1523,6 +1592,14 @@ class DeleteNetworkAcl extends Rpc
  * @method $this withNetworkAclEntryId($value)
  */
 class DeleteNetworkAclEntry extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkInterfaceIds()
+ * @method $this withNetworkInterfaceIds($value)
+ */
+class DeleteNetworkInterfaces extends Rpc
 {
 }
 
@@ -2059,6 +2136,22 @@ class DescribeEnsRouteEntryList extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEnsRegionId()
+ * @method $this withEnsRegionId($value)
+ * @method string getRouteTableId()
+ * @method $this withRouteTableId($value)
+ * @method string getNetworkId()
+ * @method $this withNetworkId($value)
+ */
+class DescribeEnsRouteTables extends Rpc
+{
+}
+
+/**
  * @method string getCustomAccount()
  * @method $this withCustomAccount($value)
  * @method string getCommodityCode()
@@ -2397,6 +2490,28 @@ class DescribeInstanceMonitorData extends Rpc
  */
 class DescribeInstances extends Rpc
 {
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSDGIds()
+ * @method $this withSDGIds($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeInstanceSDGStatus extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 class DescribeInstanceSpec extends Rpc
@@ -2963,18 +3078,22 @@ class DescribeServerLoadBalancerMonitor extends Rpc
 }
 
 /**
- * @method string getSnapshotId()
- * @method $this withSnapshotId($value)
- * @method string getPageNumber()
- * @method $this withPageNumber($value)
  * @method string getEnsRegionId()
  * @method $this withEnsRegionId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSnapshotId()
+ * @method $this withSnapshotId($value)
+ * @method string getSnapshotName()
+ * @method $this withSnapshotName($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getEnsRegionIds()
+ * @method $this withEnsRegionIds($value)
  */
 class DescribeSnapshots extends Rpc
 {
@@ -3097,6 +3216,19 @@ class DescribeVSwitches extends Rpc
  */
 class DetachDisk extends Rpc
 {
+}
+
+/**
+ * @method string getSDGId()
+ * @method $this withSDGId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class DetachInstanceSDG extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -3626,6 +3758,19 @@ class ModifySnapshotAttribute extends Rpc
  */
 class ModifyVSwitchAttribute extends Rpc
 {
+}
+
+/**
+ * @method string getSDGId()
+ * @method $this withSDGId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class MountInstanceSDG extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -4849,6 +4994,19 @@ class UnassociateNetworkAcl extends Rpc
  * @method $this withNamespaces($value)
  */
 class UnloadRegionSDG extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getSDGId()
+ * @method $this withSDGId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class UnmountInstanceSDG extends Rpc
 {
 
     /** @var string */

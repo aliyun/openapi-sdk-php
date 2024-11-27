@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2224 - 2024-11-27
+- Generated 2017-11-10 for `Ens`.
+
+
 ## 1.8.2223 - 2024-11-26
 - Add SmartqQueryAbility api.
 
