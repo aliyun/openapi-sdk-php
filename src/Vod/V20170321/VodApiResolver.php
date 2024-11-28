@@ -2689,6 +2689,8 @@ class SubmitSnapshotJob extends Rpc
 }
 
 /**
+ * @method string getSessionId()
+ * @method $this withSessionId($value)
  * @method string getUserData()
  * @method $this withUserData($value)
  * @method string getVideoId()
@@ -2845,6 +2847,8 @@ class UpdateTranscodeTemplateGroup extends Rpc
  * @method $this withTitle($value)
  * @method string getCoverURL()
  * @method $this withCoverURL($value)
+ * @method string getUserData()
+ * @method $this withUserData($value)
  * @method string getDownloadSwitch()
  * @method $this withDownloadSwitch($value)
  * @method string getCateId()

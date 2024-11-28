@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2225 - 2024-11-28
+- SubmitTranscodeJobs Add SessionId.
+
+
 ## 1.8.2224 - 2024-11-27
 - Generated 2017-11-10 for `Ens`.
 
