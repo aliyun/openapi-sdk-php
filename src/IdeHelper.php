@@ -213,6 +213,7 @@ namespace AlibabaCloud;
  * @method static Ots\Ots ots()
  * @method static OutboundBot\OutboundBot outboundBot()
  * @method static PTS\PTS pTS()
+ * @method static PaiFeatureStore\PaiFeatureStore paiFeatureStore()
  * @method static PetaData\PetaData petaData()
  * @method static Polardb\Polardb polardb()
  * @method static Polardbx\Polardbx polardbx()

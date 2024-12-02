@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2226 - 2024-12-2
+- Add LabelPriorityLevel in UpdateModelFeature API.
+
+
 ## 1.8.2225 - 2024-11-28
 - SubmitTranscodeJobs Add SessionId.
 
