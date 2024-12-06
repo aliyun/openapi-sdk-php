@@ -247,6 +247,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
+ * @method DescribeLiveVerifyContent describeLiveVerifyContent(array $options = [])
  * @method DescribeMeterLiveBypassDuration describeMeterLiveBypassDuration(array $options = [])
  * @method DescribeMixStreamList describeMixStreamList(array $options = [])
  * @method DescribeRtcMPUEventSub describeRtcMPUEventSub(array $options = [])
@@ -308,6 +309,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPlaylistItems listPlaylistItems(array $options = [])
  * @method ListRtcMPUEventSubRecord listRtcMPUEventSubRecord(array $options = [])
  * @method ListRtcMPUTaskDetail listRtcMPUTaskDetail(array $options = [])
+ * @method LiveUpstreamQosData liveUpstreamQosData(array $options = [])
  * @method MiguLivePullToPushStart miguLivePullToPushStart(array $options = [])
  * @method MiguLivePullToPushStatus miguLivePullToPushStatus(array $options = [])
  * @method ModifyCasterComponent modifyCasterComponent(array $options = [])
@@ -377,6 +379,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method StopLiveStreamMonitor stopLiveStreamMonitor(array $options = [])
  * @method StopPlaylist stopPlaylist(array $options = [])
  * @method StopRtcAsrTask stopRtcAsrTask(array $options = [])
+ * @method TagLiveResources tagLiveResources(array $options = [])
  * @method UnbanLiveMessageGroup unbanLiveMessageGroup(array $options = [])
  * @method UpdateCasterResourceGroup updateCasterResourceGroup(array $options = [])
  * @method UpdateCasterSceneAudio updateCasterSceneAudio(array $options = [])
@@ -5400,6 +5403,16 @@ class DescribeLiveUserTags extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLiveVerifyContent extends Rpc
+{
+}
+
+/**
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getStartTime()
@@ -6886,6 +6899,35 @@ class ListRtcMPUEventSubRecord extends Rpc
  */
 class ListRtcMPUTaskDetail extends Rpc
 {
+}
+
+/**
+ * @method string getCdnDomains()
+ * @method $this withCdnDomains($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getCdnProvinces()
+ * @method $this withCdnProvinces($value)
+ * @method string getKwaiSidcs()
+ * @method $this withKwaiSidcs($value)
+ * @method string getKwaiTsc()
+ * @method $this withKwaiTsc($value)
+ * @method string getUpstreamDomains()
+ * @method $this withUpstreamDomains($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getCdnIsps()
+ * @method $this withCdnIsps($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class LiveUpstreamQosData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -8642,6 +8684,53 @@ class StopPlaylist extends Rpc
  */
 class StopRtcAsrTask extends Rpc
 {
+}
+
+/**
+ * @method array getTag()
+ * @method array getResourceId()
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class TagLiveResources extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param array $resourceId
+     *
+     * @return $this
+     */
+	public function withResourceId(array $resourceId)
+	{
+	    $this->data['ResourceId'] = $resourceId;
+		foreach ($resourceId as $i => $iValue) {
+			$this->options['query']['ResourceId.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**

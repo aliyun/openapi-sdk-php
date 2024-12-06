@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2228 - 2024-12-6
+- Generated 2016-11-01 for `live`.
+
+
 ## 1.8.2227 - 2024-12-6
 -Release GetJobDetail, ListJobInfo.
 -Modify GetTranscodeTask.
