@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2227 - 2024-12-6
+-Release GetJobDetail, ListJobInfo.
+-Modify GetTranscodeTask.
+
+
 ## 1.8.2226 - 2024-12-2
 - Add LabelPriorityLevel in UpdateModelFeature API.
 

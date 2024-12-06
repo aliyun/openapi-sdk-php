@@ -100,6 +100,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetEditingProjectMaterials getEditingProjectMaterials(array $options = [])
  * @method GetImageInfo getImageInfo(array $options = [])
  * @method GetImageInfos getImageInfos(array $options = [])
+ * @method GetJobDetail getJobDetail(array $options = [])
  * @method GetMediaAuditAudioResultDetail getMediaAuditAudioResultDetail(array $options = [])
  * @method GetMediaAuditResult getMediaAuditResult(array $options = [])
  * @method GetMediaAuditResultDetail getMediaAuditResultDetail(array $options = [])
@@ -127,6 +128,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListAppPoliciesForIdentity listAppPoliciesForIdentity(array $options = [])
  * @method ListAuditSecurityIp listAuditSecurityIp(array $options = [])
  * @method ListDynamicImage listDynamicImage(array $options = [])
+ * @method ListJobInfo listJobInfo(array $options = [])
  * @method ListLiveRecordVideo listLiveRecordVideo(array $options = [])
  * @method ListSnapshots listSnapshots(array $options = [])
  * @method ListTranscodeTask listTranscodeTask(array $options = [])
@@ -1741,6 +1743,16 @@ class GetImageInfos extends Rpc
 }
 
 /**
+ * @method string getJobType()
+ * @method $this withJobType($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ */
+class GetJobDetail extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -1890,6 +1902,8 @@ class GetTranscodeSummary extends Rpc
 /**
  * @method string getTranscodeTaskId()
  * @method $this withTranscodeTaskId($value)
+ * @method string getJobIds()
+ * @method $this withJobIds($value)
  */
 class GetTranscodeTask extends Rpc
 {
@@ -2076,6 +2090,16 @@ class ListAuditSecurityIp extends Rpc
  * @method $this withVideoId($value)
  */
 class ListDynamicImage extends Rpc
+{
+}
+
+/**
+ * @method string getMediaId()
+ * @method $this withMediaId($value)
+ * @method string getJobType()
+ * @method $this withJobType($value)
+ */
+class ListJobInfo extends Rpc
 {
 }
 
