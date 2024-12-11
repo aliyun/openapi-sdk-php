@@ -384,7 +384,6 @@ class CreateRule extends Rpc
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getRules()
- * @method $this withRules($value)
  * @method string getListenerId()
  * @method $this withListenerId($value)
  * @method string getDryRun()
@@ -392,6 +391,19 @@ class CreateRule extends Rpc
  */
 class CreateRules extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRules($value)
+    {
+        $this->data['Rules'] = $value;
+        $this->options['form_params']['Rules'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -415,6 +427,8 @@ class CreateSecurityPolicy extends Rpc
 }
 
 /**
+ * @method string getCrossZoneEnabled()
+ * @method $this withCrossZoneEnabled($value)
  * @method string getServerGroupName()
  * @method $this withServerGroupName($value)
  * @method string getClientToken()
@@ -1434,12 +1448,24 @@ class UpdateRuleAttribute extends Rpc
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getRules()
- * @method $this withRules($value)
  * @method string getDryRun()
  * @method $this withDryRun($value)
  */
 class UpdateRulesAttribute extends Rpc
 {
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withRules($value)
+    {
+        $this->data['Rules'] = $value;
+        $this->options['form_params']['Rules'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1461,6 +1487,8 @@ class UpdateSecurityPolicyAttribute extends Rpc
 }
 
 /**
+ * @method string getCrossZoneEnabled()
+ * @method $this withCrossZoneEnabled($value)
  * @method string getServerGroupName()
  * @method $this withServerGroupName($value)
  * @method string getClientToken()

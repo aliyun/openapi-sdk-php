@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2229 - 2024-12-11
+- Support fromData for UpdateRulesAttribute and Createrules
+
+
 ## 1.8.2228 - 2024-12-6
 - Generated 2016-11-01 for `live`.
 
