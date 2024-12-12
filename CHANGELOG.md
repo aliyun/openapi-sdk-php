@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2230 - 2024-12-12
+- Supported Pageable of ListDataLakeDatabase API.
+
+
 ## 1.8.2229 - 2024-12-11
 - Support fromData for UpdateRulesAttribute and Createrules
 
