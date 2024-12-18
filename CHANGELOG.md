@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2231 - 2024-12-18
+- Add Support Real time mock table.
+
+
 ## 1.8.2230 - 2024-12-12
 - Supported Pageable of ListDataLakeDatabase API.
 
