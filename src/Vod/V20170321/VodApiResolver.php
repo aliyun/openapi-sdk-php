@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AddVodTemplate addVodTemplate(array $options = [])
  * @method AddWatermark addWatermark(array $options = [])
  * @method AttachAppPolicyToIdentity attachAppPolicyToIdentity(array $options = [])
+ * @method BatchGetMediaInfos batchGetMediaInfos(array $options = [])
  * @method BatchSetVodDomainConfigs batchSetVodDomainConfigs(array $options = [])
  * @method BatchStartVodDomain batchStartVodDomain(array $options = [])
  * @method BatchStopVodDomain batchStopVodDomain(array $options = [])
@@ -45,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteVodSpecificConfig deleteVodSpecificConfig(array $options = [])
  * @method DeleteVodTemplate deleteVodTemplate(array $options = [])
  * @method DeleteWatermark deleteWatermark(array $options = [])
+ * @method DescribeMediaDistribution describeMediaDistribution(array $options = [])
  * @method DescribePlayTopVideos describePlayTopVideos(array $options = [])
  * @method DescribePlayUserAvg describePlayUserAvg(array $options = [])
  * @method DescribePlayUserTotal describePlayUserTotal(array $options = [])
@@ -368,6 +370,14 @@ class AddWatermark extends Rpc
  * @method $this withAppId($value)
  */
 class AttachAppPolicyToIdentity extends Rpc
+{
+}
+
+/**
+ * @method string getMediaIds()
+ * @method $this withMediaIds($value)
+ */
+class BatchGetMediaInfos extends Rpc
 {
 }
 
@@ -787,6 +797,23 @@ class DeleteVodTemplate extends Rpc
  */
 class DeleteWatermark extends Rpc
 {
+}
+
+/**
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getStorageClass()
+ * @method $this withStorageClass($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
+ */
+class DescribeMediaDistribution extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2979,6 +3006,8 @@ class UploadMediaByURL extends Rpc
  * @method $this withStreamURL($value)
  * @method string getMediaId()
  * @method $this withMediaId($value)
+ * @method string getUploadMetadata()
+ * @method $this withUploadMetadata($value)
  */
 class UploadStreamByURL extends Rpc
 {

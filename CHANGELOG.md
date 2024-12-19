@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2232 - 2024-12-19
+- Add BatchGetMediaInfos.
+- Modify UploadStreamByURL.
+
+
 ## 1.8.2231 - 2024-12-18
 - Add Support Real time mock table.
 
