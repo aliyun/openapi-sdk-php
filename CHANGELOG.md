@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2234 - 2024-12-24
+- Supported Jumbo for HDENI and LENI.
+
+
 ## 1.8.2233 - 2024-12-23
 - Generated 2020-06-16 for `Alb`.
 
