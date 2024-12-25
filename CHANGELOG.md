@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2235 - 2024-12-25
+-- Supported DeleteEip
+
+
 ## 1.8.2234 - 2024-12-24
 - Supported Jumbo for HDENI and LENI.
 

@@ -62,6 +62,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteBucketLifecycle deleteBucketLifecycle(array $options = [])
  * @method DeleteDeviceInternetPort deleteDeviceInternetPort(array $options = [])
  * @method DeleteDisk deleteDisk(array $options = [])
+ * @method DeleteEip deleteEip(array $options = [])
  * @method DeleteEnsRouteEntry deleteEnsRouteEntry(array $options = [])
  * @method DeleteEnsSaleConditionControl deleteEnsSaleConditionControl(array $options = [])
  * @method DeleteEnsSaleControl deleteEnsSaleControl(array $options = [])
@@ -224,6 +225,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyPrepayInstanceSpec modifyPrepayInstanceSpec(array $options = [])
  * @method ModifySecurityGroupAttribute modifySecurityGroupAttribute(array $options = [])
  * @method ModifySnapshotAttribute modifySnapshotAttribute(array $options = [])
+ * @method ModifySnatEntry modifySnatEntry(array $options = [])
  * @method ModifyVSwitchAttribute modifyVSwitchAttribute(array $options = [])
  * @method MountInstanceSDG mountInstanceSDG(array $options = [])
  * @method PreloadRegionSDG preloadRegionSDG(array $options = [])
@@ -1318,6 +1320,8 @@ class CreateSnapshot extends Rpc
  * @method $this withIdleTimeout($value)
  * @method string getSnatEntryName()
  * @method $this withSnatEntryName($value)
+ * @method string getIspAffinity()
+ * @method $this withIspAffinity($value)
  */
 class CreateSnatEntry extends Rpc
 {
@@ -1442,6 +1446,14 @@ class DeleteDeviceInternetPort extends Rpc
  * @method $this withDiskId($value)
  */
 class DeleteDisk extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteEip extends Rpc
 {
 }
 
@@ -2449,6 +2461,8 @@ class DescribeInstanceMonitorData extends Rpc
 }
 
 /**
+ * @method string getServiceStatus()
+ * @method $this withServiceStatus($value)
  * @method string getOrderByParams()
  * @method $this withOrderByParams($value)
  * @method string getEnsRegionId()
@@ -3745,6 +3759,18 @@ class ModifySecurityGroupAttribute extends Rpc
  * @method $this withSnapshotName($value)
  */
 class ModifySnapshotAttribute extends Rpc
+{
+}
+
+/**
+ * @method string getSnatEntryId()
+ * @method $this withSnatEntryId($value)
+ * @method string getSnatEntryName()
+ * @method $this withSnatEntryName($value)
+ * @method string getIspAffinity()
+ * @method $this withIspAffinity($value)
+ */
+class ModifySnatEntry extends Rpc
 {
 }
 
