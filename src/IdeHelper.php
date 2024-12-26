@@ -247,6 +247,7 @@ namespace AlibabaCloud;
  * @method static SasApi\SasApi sasApi()
  * @method static Sasti\Sasti sasti()
  * @method static Scdn\Scdn scdn()
+ * @method static SchedulerX3\SchedulerX3 schedulerX3()
  * @method static Schedulerx2\Schedulerx2 schedulerx2()
  * @method static Scsp\Scsp scsp()
  * @method static Sddp\Sddp sddp()

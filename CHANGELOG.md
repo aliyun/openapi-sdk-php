@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.8.2236 - 2024-12-26
+- CreateJob and UpdateJob support ExecutorBlockStrategy.
+- TimeType support fixed_delay.
+- ListJobs support return LastExecuteEndTime, LastExecuteStatus and CurrentExecuteStatus.
+
+
 ## 1.8.2235 - 2024-12-25
 -- Supported DeleteEip
 
