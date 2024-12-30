@@ -37,6 +37,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteUserGroupMember deleteUserGroupMember(array $options = [])
  * @method DeleteUserGroupMembers deleteUserGroupMembers(array $options = [])
  * @method DeleteUserTagMeta deleteUserTagMeta(array $options = [])
+ * @method GetDataSourceConnectionInfo getDataSourceConnectionInfo(array $options = [])
  * @method GetMailTaskStatus getMailTaskStatus(array $options = [])
  * @method GetUserGroupInfo getUserGroupInfo(array $options = [])
  * @method GetWorksEmbedList getWorksEmbedList(array $options = [])
@@ -45,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListCollections listCollections(array $options = [])
  * @method ListCubeDataLevelPermissionConfig listCubeDataLevelPermissionConfig(array $options = [])
  * @method ListDataLevelPermissionWhiteList listDataLevelPermissionWhiteList(array $options = [])
+ * @method ListDataSource listDataSource(array $options = [])
  * @method ListFavoriteReports listFavoriteReports(array $options = [])
  * @method ListOrganizationRoles listOrganizationRoles(array $options = [])
  * @method ListOrganizationRoleUsers listOrganizationRoleUsers(array $options = [])
@@ -71,15 +73,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDatasetDetailInfo queryDatasetDetailInfo(array $options = [])
  * @method QueryDatasetInfo queryDatasetInfo(array $options = [])
  * @method QueryDatasetList queryDatasetList(array $options = [])
+ * @method QueryDatasetSmartqStatus queryDatasetSmartqStatus(array $options = [])
  * @method QueryDatasetSwitchInfo queryDatasetSwitchInfo(array $options = [])
  * @method QueryEmbeddedInfo queryEmbeddedInfo(array $options = [])
  * @method QueryEmbeddedStatus queryEmbeddedStatus(array $options = [])
+ * @method QueryLlmCubeWithThemeListByUserId queryLlmCubeWithThemeListByUserId(array $options = [])
  * @method QueryOrganizationRoleConfig queryOrganizationRoleConfig(array $options = [])
  * @method QueryOrganizationWorkspaceList queryOrganizationWorkspaceList(array $options = [])
  * @method QueryReadableResourcesListByUserId queryReadableResourcesListByUserId(array $options = [])
  * @method QueryReportPerformance queryReportPerformance(array $options = [])
  * @method QueryShareList queryShareList(array $options = [])
  * @method QuerySharesToUserList querySharesToUserList(array $options = [])
+ * @method QuerySmartqPermissionByCubeId querySmartqPermissionByCubeId(array $options = [])
  * @method QueryTicketInfo queryTicketInfo(array $options = [])
  * @method QueryUserGroupListByParentId queryUserGroupListByParentId(array $options = [])
  * @method QueryUserGroupMember queryUserGroupMember(array $options = [])
@@ -100,6 +105,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDataLevelPermissionExtraConfig setDataLevelPermissionExtraConfig(array $options = [])
  * @method SetDataLevelPermissionRuleConfig setDataLevelPermissionRuleConfig(array $options = [])
  * @method SetDataLevelPermissionWhiteList setDataLevelPermissionWhiteList(array $options = [])
+ * @method SmartqAuthorize smartqAuthorize(array $options = [])
+ * @method SmartqAuthTransfer smartqAuthTransfer(array $options = [])
  * @method SmartqQueryAbility smartqQueryAbility(array $options = [])
  * @method UpdateDataLevelPermissionStatus updateDataLevelPermissionStatus(array $options = [])
  * @method UpdateEmbeddedStatus updateEmbeddedStatus(array $options = [])
@@ -370,14 +377,14 @@ class BatchAddFeishuUsers extends Rpc
  * @method $this withDataPortalId($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getMenuIds()
+ * @method $this withMenuIds($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getUserGroupIds()
  * @method $this withUserGroupIds($value)
  * @method string getUserIds()
  * @method $this withUserIds($value)
- * @method string getMenuIds()
- * @method $this withMenuIds($value)
  */
 class CancelAuthorizationMenu extends Rpc
 {
@@ -674,6 +681,21 @@ class DeleteUserTagMeta extends Rpc
 }
 
 /**
+ * @method string getDsId()
+ * @method $this withDsId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class GetDataSourceConnectionInfo extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
  * @method string getSignType()
@@ -793,6 +815,23 @@ class ListCubeDataLevelPermissionConfig extends Rpc
  */
 class ListDataLevelPermissionWhiteList extends Rpc
 {
+}
+
+/**
+ * @method string getDsType()
+ * @method $this withDsType($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class ListDataSource extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1235,6 +1274,21 @@ class QueryDatasetList extends Rpc
  * @method string getCubeId()
  * @method $this withCubeId($value)
  */
+class QueryDatasetSmartqStatus extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ */
 class QueryDatasetSwitchInfo extends Rpc
 {
 }
@@ -1259,6 +1313,21 @@ class QueryEmbeddedInfo extends Rpc
  */
 class QueryEmbeddedStatus extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class QueryLlmCubeWithThemeListByUserId extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1349,6 +1418,23 @@ class QueryShareList extends Rpc
  */
 class QuerySharesToUserList extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ */
+class QuerySmartqPermissionByCubeId extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1653,6 +1739,46 @@ class SetDataLevelPermissionWhiteList extends Rpc
 }
 
 /**
+ * @method string getLlmCubeThemes()
+ * @method $this withLlmCubeThemes($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getLlmCubes()
+ * @method $this withLlmCubes($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getOperationType()
+ * @method $this withOperationType($value)
+ * @method string getExpireDay()
+ * @method $this withExpireDay($value)
+ * @method string getUserIds()
+ * @method $this withUserIds($value)
+ */
+class SmartqAuthorize extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getTargetUserIds()
+ * @method $this withTargetUserIds($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getOriginUserId()
+ * @method $this withOriginUserId($value)
+ */
+class SmartqAuthTransfer extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
  * @method string getSignType()
@@ -1798,10 +1924,12 @@ class UpdateUserTagValue extends Rpc
  * @method $this withRoleId($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getRoleIds()
+ * @method $this withRoleIds($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorkspaceId()
  * @method $this withWorkspaceId($value)
  */

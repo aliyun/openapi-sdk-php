@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2237 - 2024-12-30
+- Add SmartQ APIs.
+- Add GetDataSourceConnectionInfo, QueryDatasetList APIs.
+
+
 ## 1.8.2236 - 2024-12-26
 - CreateJob and UpdateJob support ExecutorBlockStrategy.
 - TimeType support fixed_delay.
