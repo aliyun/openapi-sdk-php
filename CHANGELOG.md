@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2238 - 2025-1-8
+- Modify BatchGetMediaInfos.
+
+
 ## 1.8.2237 - 2024-12-30
 - Add SmartQ APIs.
 - Add GetDataSourceConnectionInfo, QueryDatasetList APIs.
