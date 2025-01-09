@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2239 - 2025-1-9
+- Supported GetInstanceLicense.
+
+
 ## 1.8.2238 - 2025-1-8
 - Modify BatchGetMediaInfos.
 

@@ -118,6 +118,7 @@ namespace AlibabaCloud;
  * @method static Eflo\Eflo eflo()
  * @method static EfloController\EfloController efloController()
  * @method static EhpcInstant\EhpcInstant ehpcInstant()
+ * @method static Eiam\Eiam eiam()
  * @method static Eipanycast\Eipanycast eipanycast()
  * @method static Elasticsearch\Elasticsearch elasticsearch()
  * @method static Emap\Emap emap()
