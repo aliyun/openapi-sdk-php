@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2240 - 2025-1-14
+- Generated 2023-01-20 for `csas`.
+
+
 ## 1.8.2239 - 2025-1-9
 - Supported GetInstanceLicense.
 
