@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2241 - 2025-1-20
+- Generated 2017-08-01 for `polardb`.
+
+
 ## 1.8.2240 - 2025-1-14
 - Generated 2023-01-20 for `csas`.
 

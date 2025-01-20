@@ -5,6 +5,7 @@ namespace AlibabaCloud\Polardb\V20170801;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method CancelActiveOperationTasks cancelActiveOperationTasks(array $options = [])
  * @method CancelScheduleTasks cancelScheduleTasks(array $options = [])
  * @method CheckAccountName checkAccountName(array $options = [])
  * @method CheckDBName checkDBName(array $options = [])
@@ -13,6 +14,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CloseAITask closeAITask(array $options = [])
  * @method CloseDBClusterMigration closeDBClusterMigration(array $options = [])
  * @method CreateAccount createAccount(array $options = [])
+ * @method CreateActivationCode createActivationCode(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
  * @method CreateColdStorageInstance createColdStorageInstance(array $options = [])
  * @method CreateDatabase createDatabase(array $options = [])
@@ -23,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDBNodes createDBNodes(array $options = [])
  * @method CreateGlobalDatabaseNetwork createGlobalDatabaseNetwork(array $options = [])
  * @method CreateGlobalSecurityIPGroup createGlobalSecurityIPGroup(array $options = [])
+ * @method CreateOrGetVirtualLicenseOrder createOrGetVirtualLicenseOrder(array $options = [])
  * @method CreateParameterGroup createParameterGroup(array $options = [])
  * @method CreateServiceLinkedRole createServiceLinkedRole(array $options = [])
  * @method CreateStoragePlan createStoragePlan(array $options = [])
@@ -39,6 +42,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteMaskingRules deleteMaskingRules(array $options = [])
  * @method DeleteParameterGroup deleteParameterGroup(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
+ * @method DescribeActivationCodeDetails describeActivationCodeDetails(array $options = [])
+ * @method DescribeActivationCodes describeActivationCodes(array $options = [])
+ * @method DescribeActiveOperationTasks describeActiveOperationTasks(array $options = [])
  * @method DescribeAITaskStatus describeAITaskStatus(array $options = [])
  * @method DescribeAutoRenewAttribute describeAutoRenewAttribute(array $options = [])
  * @method DescribeBackupLogs describeBackupLogs(array $options = [])
@@ -75,6 +81,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeGlobalDatabaseNetworks describeGlobalDatabaseNetworks(array $options = [])
  * @method DescribeGlobalSecurityIPGroup describeGlobalSecurityIPGroup(array $options = [])
  * @method DescribeGlobalSecurityIPGroupRelation describeGlobalSecurityIPGroupRelation(array $options = [])
+ * @method DescribeLicenseOrderDetails describeLicenseOrderDetails(array $options = [])
+ * @method DescribeLicenseOrders describeLicenseOrders(array $options = [])
  * @method DescribeLogBackupPolicy describeLogBackupPolicy(array $options = [])
  * @method DescribeMaskingRules describeMaskingRules(array $options = [])
  * @method DescribeMetaList describeMetaList(array $options = [])
@@ -101,6 +109,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ManuallyStartDBCluster manuallyStartDBCluster(array $options = [])
  * @method ModifyAccountDescription modifyAccountDescription(array $options = [])
  * @method ModifyAccountPassword modifyAccountPassword(array $options = [])
+ * @method ModifyActiveOperationTasks modifyActiveOperationTasks(array $options = [])
  * @method ModifyAutoRenewAttribute modifyAutoRenewAttribute(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
  * @method ModifyDBCluster modifyDBCluster(array $options = [])
@@ -118,6 +127,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyDBClusterResourceGroup modifyDBClusterResourceGroup(array $options = [])
  * @method ModifyDBClusterServerlessConf modifyDBClusterServerlessConf(array $options = [])
  * @method ModifyDBClusterSSL modifyDBClusterSSL(array $options = [])
+ * @method ModifyDBClusterStoragePerformance modifyDBClusterStoragePerformance(array $options = [])
  * @method ModifyDBClusterStorageSpace modifyDBClusterStorageSpace(array $options = [])
  * @method ModifyDBClusterTDE modifyDBClusterTDE(array $options = [])
  * @method ModifyDBDescription modifyDBDescription(array $options = [])
@@ -138,6 +148,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RemoveDBClusterFromGDN removeDBClusterFromGDN(array $options = [])
  * @method ResetAccount resetAccount(array $options = [])
  * @method ResetGlobalDatabaseNetwork resetGlobalDatabaseNetwork(array $options = [])
+ * @method RestartDBLink restartDBLink(array $options = [])
  * @method RestartDBNode restartDBNode(array $options = [])
  * @method RestoreTable restoreTable(array $options = [])
  * @method RevokeAccountPrivilege revokeAccountPrivilege(array $options = [])
@@ -146,7 +157,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method TempModifyDBNode tempModifyDBNode(array $options = [])
  * @method TransformDBClusterPayType transformDBClusterPayType(array $options = [])
  * @method UntagResources untagResources(array $options = [])
- * @method UpgradeDBClusterMinorVersion upgradeDBClusterMinorVersion(array $options = [])
  * @method UpgradeDBClusterVersion upgradeDBClusterVersion(array $options = [])
  */
 class PolardbApiResolver extends ApiResolver
@@ -166,6 +176,30 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'polardb';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTaskIds()
+ * @method $this withTaskIds($value)
+ * @method string getUid()
+ * @method $this withUid($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getEngineType()
+ * @method $this withEngineType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CancelActiveOperationTasks extends Rpc
+{
 }
 
 /**
@@ -330,8 +364,37 @@ class CreateAccount extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAliyunOrderId()
+ * @method $this withAliyunOrderId($value)
+ * @method string getMacAddress()
+ * @method $this withMacAddress($value)
+ * @method string getSystemIdentifier()
+ * @method $this withSystemIdentifier($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ */
+class CreateActivationCode extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getDataLevel2BackupRetentionPeriod()
+ * @method $this withDataLevel2BackupRetentionPeriod($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -453,6 +516,8 @@ class CreateDatabase extends Rpc
  * @method $this withAllowShutDown($value)
  * @method string getLowerCaseTableNames()
  * @method $this withLowerCaseTableNames($value)
+ * @method string getStorageEncryption()
+ * @method $this withStorageEncryption($value)
  * @method string getScaleRoNumMax()
  * @method $this withScaleRoNumMax($value)
  * @method string getStandbyAZ()
@@ -463,6 +528,8 @@ class CreateDatabase extends Rpc
  * @method $this withDefaultTimeZone($value)
  * @method string getClusterNetworkType()
  * @method $this withClusterNetworkType($value)
+ * @method string getStorageEncryptionKey()
+ * @method $this withStorageEncryptionKey($value)
  * @method string getParameterGroupId()
  * @method $this withParameterGroupId($value)
  * @method string getEngine()
@@ -483,6 +550,10 @@ class CreateDatabase extends Rpc
  * @method $this withLooseXEngineUseMemoryPct($value)
  * @method string getUsedTime()
  * @method $this withUsedTime($value)
+ * @method string getBurstingEnabled()
+ * @method $this withBurstingEnabled($value)
+ * @method string getTargetMinorVersion()
+ * @method $this withTargetMinorVersion($value)
  * @method string getDBNodeNum()
  * @method $this withDBNodeNum($value)
  * @method string getStorageUpperBound()
@@ -537,10 +608,18 @@ class CreateDBCluster extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getPolarSccWaitTimeout()
+ * @method $this withPolarSccWaitTimeout($value)
  * @method string getReadWriteMode()
  * @method $this withReadWriteMode($value)
  * @method string getEndpointType()
  * @method $this withEndpointType($value)
+ * @method string getPolarSccTimeoutAction()
+ * @method $this withPolarSccTimeoutAction($value)
+ * @method string getEndpointSubCluster()
+ * @method $this withEndpointSubCluster($value)
+ * @method string getStandbyVSwitchId()
+ * @method $this withStandbyVSwitchId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -557,6 +636,8 @@ class CreateDBCluster extends Rpc
  * @method $this withVSwitchId($value)
  * @method string getNodes()
  * @method $this withNodes($value)
+ * @method string getSccMode()
+ * @method $this withSccMode($value)
  * @method string getVPCId()
  * @method $this withVPCId($value)
  */
@@ -705,6 +786,8 @@ class CreateDBNodes extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
  * @method string getSecurityToken()
  * @method $this withSecurityToken($value)
  * @method string getGDNDescription()
@@ -715,8 +798,14 @@ class CreateDBNodes extends Rpc
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEnableGlobalDomainName()
+ * @method $this withEnableGlobalDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getAccountPassword()
+ * @method $this withAccountPassword($value)
+ * @method string getDBName()
+ * @method $this withDBName($value)
  */
 class CreateGlobalDatabaseNetwork extends Rpc
 {
@@ -746,6 +835,25 @@ class CreateGlobalDatabaseNetwork extends Rpc
  */
 class CreateGlobalSecurityIPGroup extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CreateOrGetVirtualLicenseOrder extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1068,6 +1176,92 @@ class DeleteParameterGroup extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeAccounts extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getActivationCodeId()
+ * @method $this withActivationCodeId($value)
+ * @method string getAliyunOrderId()
+ * @method $this withAliyunOrderId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeActivationCodeDetails extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAliyunOrderId()
+ * @method $this withAliyunOrderId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeActivationCodes extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getChangeLevel()
+ * @method $this withChangeLevel($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getProductName()
+ * @method $this withProductName($value)
+ * @method string getEngineType()
+ * @method $this withEngineType($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getAllowCancel()
+ * @method $this withAllowCancel($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getDBType()
+ * @method $this withDBType($value)
+ * @method string getAllowChange()
+ * @method $this withAllowChange($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class DescribeActiveOperationTasks extends Rpc
 {
 }
 
@@ -1456,6 +1650,8 @@ class DescribeDBClusterParameters extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getKey()
  * @method $this withKey($value)
  * @method string getResourceOwnerAccount()
@@ -1470,6 +1666,8 @@ class DescribeDBClusterParameters extends Rpc
  * @method $this withOwnerId($value)
  * @method string getMetric()
  * @method $this withMetric($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeDBClusterPerformance extends Rpc
 {
@@ -1561,6 +1759,8 @@ class DescribeDBClusterServerlessConf extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getEndpointId()
+ * @method $this withEndpointId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -1679,6 +1879,8 @@ class DescribeDBLinks extends Rpc
  * @method $this withDBNodeId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getKey()
  * @method $this withKey($value)
  * @method string getResourceOwnerAccount()
@@ -1693,6 +1895,8 @@ class DescribeDBLinks extends Rpc
  * @method $this withOwnerId($value)
  * @method string getMetric()
  * @method $this withMetric($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeDBNodePerformance extends Rpc
 {
@@ -1719,8 +1923,14 @@ class DescribeDBNodesParameters extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getDBNodeId()
+ * @method $this withDBNodeId($value)
+ * @method string getDBEndpointId()
+ * @method $this withDBEndpointId($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
+ * @method string getType()
+ * @method $this withType($value)
  * @method string getKey()
  * @method $this withKey($value)
  * @method string getResourceOwnerAccount()
@@ -1735,6 +1945,8 @@ class DescribeDBNodesParameters extends Rpc
  * @method $this withOwnerId($value)
  * @method string getMetric()
  * @method $this withMetric($value)
+ * @method string getInterval()
+ * @method $this withInterval($value)
  */
 class DescribeDBProxyPerformance extends Rpc
 {
@@ -1817,6 +2029,8 @@ class DescribeGlobalDatabaseNetwork extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getDBType()
+ * @method $this withDBType($value)
  */
 class DescribeGlobalDatabaseNetworks extends Rpc
 {
@@ -1860,6 +2074,54 @@ class DescribeGlobalSecurityIPGroup extends Rpc
  */
 class DescribeGlobalSecurityIPGroupRelation extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getAliyunOrderId()
+ * @method $this withAliyunOrderId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeLicenseOrderDetails extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getVirtualOrder()
+ * @method $this withVirtualOrder($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getAliyunOrderId()
+ * @method $this withAliyunOrderId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getPurchaseChannel()
+ * @method $this withPurchaseChannel($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getPackageType()
+ * @method $this withPackageType($value)
+ */
+class DescribeLicenseOrders extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2100,6 +2362,8 @@ class DescribeScheduleTasks extends Rpc
  * @method $this withPageNumber($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -2328,10 +2592,14 @@ class EvaluateRegionResource extends Rpc
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getTargetZoneType()
+ * @method $this withTargetZoneType($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getTargetDBNodeId()
  * @method $this withTargetDBNodeId($value)
+ * @method string getIsForce()
+ * @method $this withIsForce($value)
  */
 class FailoverDBCluster extends Rpc
 {
@@ -2453,6 +2721,8 @@ class ModifyAccountDescription extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getPasswordType()
+ * @method $this withPasswordType($value)
  * @method string getAccountName()
  * @method $this withAccountName($value)
  * @method string getNewAccountPassword()
@@ -2467,6 +2737,32 @@ class ModifyAccountDescription extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifyAccountPassword extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getTaskIds()
+ * @method $this withTaskIds($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getSwitchTime()
+ * @method $this withSwitchTime($value)
+ * @method string getEngineType()
+ * @method $this withEngineType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getImmediateStart()
+ * @method $this withImmediateStart($value)
+ */
+class ModifyActiveOperationTasks extends Rpc
 {
 }
 
@@ -2537,8 +2833,12 @@ class ModifyBackupPolicy extends Rpc
 }
 
 /**
+ * @method string getModifyRowCompression()
+ * @method $this withModifyRowCompression($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getTableMeta()
+ * @method $this withTableMeta($value)
  * @method string getStandbyHAMode()
  * @method $this withStandbyHAMode($value)
  * @method string getResourceOwnerAccount()
@@ -2547,6 +2847,8 @@ class ModifyBackupPolicy extends Rpc
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getDBNodeCrashList()
+ * @method $this withDBNodeCrashList($value)
  * @method string getFaultSimulateMode()
  * @method $this withFaultSimulateMode($value)
  * @method string getOwnerId()
@@ -2555,8 +2857,14 @@ class ModifyBackupPolicy extends Rpc
  * @method $this withCompressStorage($value)
  * @method string getStorageUpperBound()
  * @method $this withStorageUpperBound($value)
+ * @method string getPreferredSimulateStartTime()
+ * @method $this withPreferredSimulateStartTime($value)
+ * @method string getImciAutoIndex()
+ * @method $this withImciAutoIndex($value)
  * @method string getStorageAutoScale()
  * @method $this withStorageAutoScale($value)
+ * @method string getFaultInjectionType()
+ * @method $this withFaultInjectionType($value)
  * @method string getDataSyncMode()
  * @method $this withDataSyncMode($value)
  */
@@ -2599,6 +2907,8 @@ class ModifyDBClusterAccessWhitelist extends Rpc
  * @method $this withPlannedEndTime($value)
  * @method string getDBNodeIds()
  * @method $this withDBNodeIds($value)
+ * @method string getClearBinlog()
+ * @method $this withClearBinlog($value)
  * @method string getParameterGroupId()
  * @method $this withParameterGroupId($value)
  * @method string getResourceOwnerAccount()
@@ -2611,6 +2921,8 @@ class ModifyDBClusterAccessWhitelist extends Rpc
  * @method $this withOwnerId($value)
  * @method string getPlannedStartTime()
  * @method $this withPlannedStartTime($value)
+ * @method string getStandbyClusterIdListNeedToSync()
+ * @method $this withStandbyClusterIdListNeedToSync($value)
  * @method string getParameters()
  * @method $this withParameters($value)
  * @method string getFromTimeService()
@@ -2681,8 +2993,12 @@ class ModifyDBClusterDescription extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getDBEndpointId()
  * @method $this withDBEndpointId($value)
+ * @method string getPolarSccWaitTimeout()
+ * @method $this withPolarSccWaitTimeout($value)
  * @method string getReadWriteMode()
  * @method $this withReadWriteMode($value)
+ * @method string getPolarSccTimeoutAction()
+ * @method $this withPolarSccTimeoutAction($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
@@ -2697,6 +3013,8 @@ class ModifyDBClusterDescription extends Rpc
  * @method $this withOwnerId($value)
  * @method string getNodes()
  * @method $this withNodes($value)
+ * @method string getSccMode()
+ * @method $this withSccMode($value)
  */
 class ModifyDBClusterEndpoint extends Rpc
 {
@@ -2769,6 +3087,8 @@ class ModifyDBClusterMonitor extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getPlannedEndTime()
  * @method $this withPlannedEndTime($value)
+ * @method string getClearBinlog()
+ * @method $this withClearBinlog($value)
  * @method string getParameterGroupId()
  * @method $this withParameterGroupId($value)
  * @method string getResourceOwnerAccount()
@@ -2847,24 +3167,34 @@ class ModifyDBClusterResourceGroup extends Rpc
  * @method $this withScaleRoNumMax($value)
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getServerlessRuleMode()
+ * @method $this withServerlessRuleMode($value)
  * @method string getScaleApRoNumMax()
  * @method $this withScaleApRoNumMax($value)
  * @method string getScaleMax()
  * @method $this withScaleMax($value)
  * @method string getPlannedEndTime()
  * @method $this withPlannedEndTime($value)
+ * @method string getServerlessRuleCpuEnlargeThreshold()
+ * @method $this withServerlessRuleCpuEnlargeThreshold($value)
  * @method string getSecondsUntilAutoPause()
  * @method $this withSecondsUntilAutoPause($value)
  * @method string getScaleApRoNumMin()
  * @method $this withScaleApRoNumMin($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
  * @method string getScaleMin()
  * @method $this withScaleMin($value)
+ * @method string getCrontabJobId()
+ * @method $this withCrontabJobId($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getServerlessRuleCpuShrinkThreshold()
+ * @method $this withServerlessRuleCpuShrinkThreshold($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPlannedStartTime()
@@ -2883,24 +3213,60 @@ class ModifyDBClusterServerlessConf extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getServerKey()
+ * @method $this withServerKey($value)
+ * @method string getClientCrlEnabled()
+ * @method $this withClientCrlEnabled($value)
  * @method string getDBEndpointId()
  * @method $this withDBEndpointId($value)
+ * @method string getACL()
+ * @method $this withACL($value)
+ * @method string getServerCert()
+ * @method $this withServerCert($value)
+ * @method string getClientCACert()
+ * @method $this withClientCACert($value)
  * @method string getSSLAutoRotate()
  * @method $this withSSLAutoRotate($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
+ * @method string getCAType()
+ * @method $this withCAType($value)
  * @method string getDBClusterId()
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getClientCACertEnabled()
+ * @method $this withClientCACertEnabled($value)
+ * @method string getClientCrl()
+ * @method $this withClientCrl($value)
  * @method string getNetType()
  * @method $this withNetType($value)
  * @method string getSSLEnabled()
  * @method $this withSSLEnabled($value)
  */
 class ModifyDBClusterSSL extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getStorageType()
+ * @method $this withStorageType($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getBurstingEnabled()
+ * @method $this withBurstingEnabled($value)
+ * @method string getProvisionedIops()
+ * @method $this withProvisionedIops($value)
+ * @method string getModifyType()
+ * @method $this withModifyType($value)
+ */
+class ModifyDBClusterStoragePerformance extends Rpc
 {
 }
 
@@ -2943,6 +3309,8 @@ class ModifyDBClusterStorageSpace extends Rpc
  * @method $this withEncryptionKey($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getEnableAutomaticRotation()
+ * @method $this withEnableAutomaticRotation($value)
  * @method string getRoleArn()
  * @method $this withRoleArn($value)
  * @method string getEncryptNewTables()
@@ -3023,6 +3391,8 @@ class ModifyDBEndpointAddress extends Rpc
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getPlannedFlashingOffTime()
+ * @method $this withPlannedFlashingOffTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPlannedStartTime()
@@ -3069,6 +3439,8 @@ class ModifyDBNodeHotReplicaMode extends Rpc
  * @method $this withDBClusterId($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getPlannedFlashingOffTime()
+ * @method $this withPlannedFlashingOffTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPlannedStartTime()
@@ -3146,6 +3518,8 @@ class ModifyDBNodesParameters extends Rpc
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getEnableGlobalDomainName()
+ * @method $this withEnableGlobalDomainName($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  */
@@ -3386,6 +3760,24 @@ class ResetAccount extends Rpc
  * @method $this withOwnerId($value)
  */
 class ResetGlobalDatabaseNetwork extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getDBClusterId()
+ * @method $this withDBClusterId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class RestartDBLink extends Rpc
 {
 }
 
@@ -3650,28 +4042,6 @@ class UntagResources extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
- * @method string getPlannedEndTime()
- * @method $this withPlannedEndTime($value)
- * @method string getResourceOwnerAccount()
- * @method $this withResourceOwnerAccount($value)
- * @method string getDBClusterId()
- * @method $this withDBClusterId($value)
- * @method string getOwnerAccount()
- * @method $this withOwnerAccount($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
- * @method string getPlannedStartTime()
- * @method $this withPlannedStartTime($value)
- * @method string getFromTimeService()
- * @method $this withFromTimeService($value)
- */
-class UpgradeDBClusterMinorVersion extends Rpc
-{
-}
-
-/**
- * @method string getResourceOwnerId()
- * @method $this withResourceOwnerId($value)
  * @method string getUpgradeType()
  * @method $this withUpgradeType($value)
  * @method string getPlannedEndTime()
@@ -3684,12 +4054,16 @@ class UpgradeDBClusterMinorVersion extends Rpc
  * @method $this withUpgradeLabel($value)
  * @method string getOwnerAccount()
  * @method $this withOwnerAccount($value)
+ * @method string getPlannedFlashingOffTime()
+ * @method $this withPlannedFlashingOffTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getPlannedStartTime()
  * @method $this withPlannedStartTime($value)
  * @method string getTargetDBRevisionVersionCode()
  * @method $this withTargetDBRevisionVersionCode($value)
+ * @method string getTargetProxyRevisionVersionCode()
+ * @method $this withTargetProxyRevisionVersionCode($value)
  * @method string getUpgradePolicy()
  * @method $this withUpgradePolicy($value)
  * @method string getFromTimeService()
