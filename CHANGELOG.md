@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2242 - 2025-2-6
+- Rebuild.
+
+
 ## 1.8.2241 - 2025-1-20
 - Generated 2017-08-01 for `polardb`.
 
