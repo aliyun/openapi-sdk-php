@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2243 - 2025-2-7
+- Add ModifyInstanceProperties.
+
+
 ## 1.8.2242 - 2025-2-6
 - Rebuild.
 
