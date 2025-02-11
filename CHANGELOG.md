@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2244 - 2025-2-11
+- Generated 2019-03-07 for `Cloudauth`.
+
+
 ## 1.8.2243 - 2025-2-7
 - Add ModifyInstanceProperties.
 
