@@ -1679,6 +1679,8 @@ class ResetDisk extends Rpc
  * @method $this withImageId($value)
  * @method string getClientToken()
  * @method $this withClientToken($value)
+ * @method string getLoginCredentials()
+ * @method $this withLoginCredentials($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
