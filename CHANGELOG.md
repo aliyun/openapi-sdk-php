@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2246 - 2025-3-3
+- Add auto grouping apis.
+
+
 ## 1.8.2245 - 2025-2-11
 - Generated 2020-06-01 for `SWAS-OPEN`.
 
