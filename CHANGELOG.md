@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2248 - 2025-3-12
+- Unified upgrade SDK.
+
+
 ## 1.8.2247 - 2025-3-11
 - Generated 2019-01-23 for `Drds`.
 
