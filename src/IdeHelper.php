@@ -263,6 +263,7 @@ namespace AlibabaCloud;
  * @method static Sms\Sms sms()
  * @method static SmsIntl\SmsIntl smsIntl()
  * @method static Snsuapi\Snsuapi snsuapi()
+ * @method static Sophonsoar\Sophonsoar sophonsoar()
  * @method static Sts\Sts sts()
  * @method static Tag\Tag tag()
  * @method static TagINner\TagINner tagINner()

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2250 - 2025-3-14
+- Generated 2022-07-28 for `sophonsoar`.
+
+
 ## 1.8.2249 - 2025-3-14
 - Add API errors.
 - QueryUserList API add return parameter.
