@@ -259,12 +259,12 @@ class AddUserGroupMember extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getUserGroupIds()
  * @method $this withUserGroupIds($value)
- * @method string getUserId()
- * @method $this withUserId($value)
  */
 class AddUserGroupMembers extends Rpc
 {
@@ -293,10 +293,10 @@ class AddUserTagMeta extends Rpc
  * @method $this withRoleId($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorkspaceId()
  * @method $this withWorkspaceId($value)
  */
@@ -393,10 +393,10 @@ class CancelAuthorizationMenu extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorksId()
  * @method $this withWorksId($value)
  */
@@ -409,10 +409,10 @@ class CancelCollection extends Rpc
  * @method $this withReportId($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getShareToIds()
  * @method $this withShareToIds($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getShareToType()
  * @method $this withShareToType($value)
  */
@@ -423,14 +423,14 @@ class CancelReportShare extends Rpc
 /**
  * @method string getDataPortalId()
  * @method $this withDataPortalId($value)
- * @method string getShowOnlyWithAccess()
- * @method $this withShowOnlyWithAccess($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getMenuIds()
  * @method $this withMenuIds($value)
+ * @method string getShowOnlyWithAccess()
+ * @method $this withShowOnlyWithAccess($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class ChangeVisibilityModel extends Rpc
 {
@@ -439,10 +439,10 @@ class ChangeVisibilityModel extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorksId()
  * @method $this withWorksId($value)
  */
@@ -521,16 +521,16 @@ class CreateUserGroup extends Rpc
 }
 
 /**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getDataSetIds()
  * @method $this withDataSetIds($value)
  * @method string getWorksType()
  * @method $this withWorksType($value)
- * @method string getAccessPoint()
- * @method $this withAccessPoint($value)
  * @method string getSignType()
  * @method $this withSignType($value)
- * @method string getUserId()
- * @method $this withUserId($value)
  */
 class DataSetBlood extends Rpc
 {
@@ -549,12 +549,12 @@ class DataSourceBlood extends Rpc
 }
 
 /**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
  * @method string getExpireTime()
  * @method $this withExpireTime($value)
  * @method string getTicket()
  * @method $this withTicket($value)
- * @method string getAccessPoint()
- * @method $this withAccessPoint($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  */
@@ -577,12 +577,12 @@ class DeleteDataLevelPermissionRuleUsers extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getRuleId()
  * @method $this withRuleId($value)
- * @method string getCubeId()
- * @method $this withCubeId($value)
  */
 class DeleteDataLevelRuleConfig extends Rpc
 {
@@ -601,14 +601,14 @@ class DeleteTicket extends Rpc
 }
 
 /**
- * @method string getTransferUserId()
- * @method $this withTransferUserId($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getTransferUserId()
+ * @method $this withTransferUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class DeleteUser extends Rpc
 {
@@ -617,10 +617,10 @@ class DeleteUser extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorkspaceId()
  * @method $this withWorkspaceId($value)
  */
@@ -643,12 +643,12 @@ class DeleteUserGroup extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getUserGroupId()
  * @method $this withUserGroupId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
- * @method string getUserId()
- * @method $this withUserId($value)
  */
 class DeleteUserGroupMember extends Rpc
 {
@@ -657,12 +657,12 @@ class DeleteUserGroupMember extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getUserGroupIds()
  * @method $this withUserGroupIds($value)
- * @method string getUserId()
- * @method $this withUserId($value)
  */
 class DeleteUserGroupMembers extends Rpc
 {
@@ -698,12 +698,12 @@ class GetDataSourceConnectionInfo extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getMailId()
  * @method $this withMailId($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class GetMailTaskStatus extends Rpc
 {
@@ -790,38 +790,38 @@ class ListCollections extends Rpc
 }
 
 /**
- * @method string getRuleType()
- * @method $this withRuleType($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getCubeId()
  * @method $this withCubeId($value)
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class ListCubeDataLevelPermissionConfig extends Rpc
 {
 }
 
 /**
- * @method string getRuleType()
- * @method $this withRuleType($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getCubeId()
  * @method $this withCubeId($value)
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class ListDataLevelPermissionWhiteList extends Rpc
 {
 }
 
 /**
- * @method string getDsType()
- * @method $this withDsType($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getDsType()
+ * @method $this withDsType($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getWorkspaceId()
@@ -897,10 +897,10 @@ class ListPortalMenuAuthorization extends Rpc
  * @method $this withDataPortalId($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class ListPortalMenus extends Rpc
 {
@@ -1172,12 +1172,12 @@ class QueryData extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getType()
  * @method $this withType($value)
  * @method string getKeyword()
  * @method $this withKeyword($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class QueryDataRange extends Rpc
 {
@@ -1423,12 +1423,12 @@ class QuerySharesToUserList extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getCubeId()
  * @method $this withCubeId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class QuerySmartqPermissionByCubeId extends Rpc
 {
@@ -1464,12 +1464,12 @@ class QueryUserGroupListByParentId extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
  * @method string getUserGroupId()
  * @method $this withUserGroupId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
- * @method string getKeyword()
- * @method $this withKeyword($value)
  */
 class QueryUserGroupMember extends Rpc
 {
@@ -1480,10 +1480,10 @@ class QueryUserGroupMember extends Rpc
  * @method $this withAccessPoint($value)
  * @method string getAccountType()
  * @method $this withAccountType($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getParentAccountName()
  * @method $this withParentAccountName($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getAccount()
  * @method $this withAccount($value)
  */
@@ -1527,10 +1527,10 @@ class QueryUserList extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorkspaceId()
  * @method $this withWorkspaceId($value)
  */
@@ -1669,12 +1669,12 @@ class QueryWorkspaceUserList extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getHandleReason()
  * @method $this withHandleReason($value)
  * @method string getApplicationId()
  * @method $this withApplicationId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -1683,14 +1683,14 @@ class ResultCallback extends Rpc
 }
 
 /**
- * @method string getWorksType()
- * @method $this withWorksType($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
+ * @method string getWorksType()
+ * @method $this withWorksType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getWorksId()
  * @method $this withWorksId($value)
  */
@@ -1701,14 +1701,14 @@ class SaveFavorites extends Rpc
 /**
  * @method string getMissHitPolicy()
  * @method $this withMissHitPolicy($value)
- * @method string getRuleType()
- * @method $this withRuleType($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getCubeId()
  * @method $this withCubeId($value)
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class SetDataLevelPermissionExtraConfig extends Rpc
 {
@@ -1781,14 +1781,14 @@ class SmartqAuthTransfer extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getUserQuestion()
  * @method $this withUserQuestion($value)
  * @method string getCubeId()
  * @method $this withCubeId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class SmartqQueryAbility extends Rpc
 {
@@ -1800,14 +1800,14 @@ class SmartqQueryAbility extends Rpc
 /**
  * @method string getIsOpen()
  * @method $this withIsOpen($value)
- * @method string getRuleType()
- * @method $this withRuleType($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
- * @method string getSignType()
- * @method $this withSignType($value)
  * @method string getCubeId()
  * @method $this withCubeId($value)
+ * @method string getRuleType()
+ * @method $this withRuleType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  */
 class UpdateDataLevelPermissionStatus extends Rpc
 {
@@ -1828,10 +1828,10 @@ class UpdateEmbeddedStatus extends Rpc
 }
 
 /**
- * @method string getTicket()
- * @method $this withTicket($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getTicket()
+ * @method $this withTicket($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getTicketNum()
@@ -1874,12 +1874,12 @@ class UpdateUser extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getUserGroupName()
+ * @method $this withUserGroupName($value)
  * @method string getUserGroupId()
  * @method $this withUserGroupId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
- * @method string getUserGroupName()
- * @method $this withUserGroupName($value)
  * @method string getUserGroupDescription()
  * @method $this withUserGroupDescription($value)
  */
@@ -1888,32 +1888,32 @@ class UpdateUserGroup extends Rpc
 }
 
 /**
- * @method string getTagId()
- * @method $this withTagId($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getTagName()
+ * @method $this withTagName($value)
+ * @method string getTagId()
+ * @method $this withTagId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getTagDescription()
  * @method $this withTagDescription($value)
- * @method string getTagName()
- * @method $this withTagName($value)
  */
 class UpdateUserTagMeta extends Rpc
 {
 }
 
 /**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
  * @method string getTagValue()
  * @method $this withTagValue($value)
  * @method string getTagId()
  * @method $this withTagId($value)
- * @method string getAccessPoint()
- * @method $this withAccessPoint($value)
  * @method string getSignType()
  * @method $this withSignType($value)
- * @method string getUserId()
- * @method $this withUserId($value)
  */
 class UpdateUserTagValue extends Rpc
 {

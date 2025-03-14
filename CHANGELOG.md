@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2249 - 2025-3-14
+- Add API errors.
+- QueryUserList API add return parameter.
+
+
 ## 1.8.2248 - 2025-3-12
 - Unified upgrade SDK.
 
