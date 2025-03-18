@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2251 - 2025-3-18
+- Supported DescribeImageSharePermission.
+
+
 ## 1.8.2250 - 2025-3-14
 - Generated 2022-07-28 for `sophonsoar`.
 
