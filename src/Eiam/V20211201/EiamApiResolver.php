@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AuthorizeApplicationToUsers authorizeApplicationToUsers(array $options = [])
  * @method CreateApplication createApplication(array $options = [])
  * @method CreateApplicationClientSecret createApplicationClientSecret(array $options = [])
+ * @method CreateConditionalAccessPolicy createConditionalAccessPolicy(array $options = [])
  * @method CreateDomain createDomain(array $options = [])
  * @method CreateDomainProxyToken createDomainProxyToken(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
@@ -22,6 +23,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateUser createUser(array $options = [])
  * @method DeleteApplication deleteApplication(array $options = [])
  * @method DeleteApplicationClientSecret deleteApplicationClientSecret(array $options = [])
+ * @method DeleteConditionalAccessPolicy deleteConditionalAccessPolicy(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DeleteDomainProxyToken deleteDomainProxyToken(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
@@ -36,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableApplicationClientSecret disableApplicationClientSecret(array $options = [])
  * @method DisableApplicationProvisioning disableApplicationProvisioning(array $options = [])
  * @method DisableApplicationSso disableApplicationSso(array $options = [])
+ * @method DisableConditionalAccessPolicy disableConditionalAccessPolicy(array $options = [])
  * @method DisableDomainProxyToken disableDomainProxyToken(array $options = [])
  * @method DisableIdentityProviderUdPull disableIdentityProviderUdPull(array $options = [])
  * @method DisableInitDomainAutoRedirect disableInitDomainAutoRedirect(array $options = [])
@@ -45,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableApplicationClientSecret enableApplicationClientSecret(array $options = [])
  * @method EnableApplicationProvisioning enableApplicationProvisioning(array $options = [])
  * @method EnableApplicationSso enableApplicationSso(array $options = [])
+ * @method EnableConditionalAccessPolicy enableConditionalAccessPolicy(array $options = [])
  * @method EnableDomainProxyToken enableDomainProxyToken(array $options = [])
  * @method EnableIdentityProviderUdPull enableIdentityProviderUdPull(array $options = [])
  * @method EnableInitDomainAutoRedirect enableInitDomainAutoRedirect(array $options = [])
@@ -54,6 +58,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetApplicationProvisioningConfig getApplicationProvisioningConfig(array $options = [])
  * @method GetApplicationProvisioningScope getApplicationProvisioningScope(array $options = [])
  * @method GetApplicationSsoConfig getApplicationSsoConfig(array $options = [])
+ * @method GetConditionalAccessPolicy getConditionalAccessPolicy(array $options = [])
  * @method GetDomain getDomain(array $options = [])
  * @method GetDomainDnsChallenge getDomainDnsChallenge(array $options = [])
  * @method GetForgetPasswordConfiguration getForgetPasswordConfiguration(array $options = [])
@@ -75,6 +80,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListApplications listApplications(array $options = [])
  * @method ListApplicationsForOrganizationalUnit listApplicationsForOrganizationalUnit(array $options = [])
  * @method ListApplicationsForUser listApplicationsForUser(array $options = [])
+ * @method ListConditionalAccessPolicies listConditionalAccessPolicies(array $options = [])
+ * @method ListConditionalAccessPoliciesForNetworkZone listConditionalAccessPoliciesForNetworkZone(array $options = [])
  * @method ListDomainProxyTokens listDomainProxyTokens(array $options = [])
  * @method ListDomains listDomains(array $options = [])
  * @method ListEiamInstances listEiamInstances(array $options = [])
@@ -119,6 +126,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnlockUser unlockUser(array $options = [])
  * @method UpdateApplicationAuthorizationType updateApplicationAuthorizationType(array $options = [])
  * @method UpdateApplicationDescription updateApplicationDescription(array $options = [])
+ * @method UpdateConditionalAccessPolicy updateConditionalAccessPolicy(array $options = [])
+ * @method UpdateConditionalAccessPolicyDescription updateConditionalAccessPolicyDescription(array $options = [])
  * @method UpdateGroup updateGroup(array $options = [])
  * @method UpdateGroupDescription updateGroupDescription(array $options = [])
  * @method UpdateIdentityProvider updateIdentityProvider(array $options = [])
@@ -240,6 +249,32 @@ class CreateApplication extends Rpc
  * @method $this withApplicationId($value)
  */
 class CreateApplicationClientSecret extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getConditionsConfig()
+ * @method $this withConditionsConfig($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getConditionalAccessPolicyType()
+ * @method $this withConditionalAccessPolicyType($value)
+ * @method string getDecisionType()
+ * @method $this withDecisionType($value)
+ * @method string getEvaluateAt()
+ * @method $this withEvaluateAt($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getDecisionConfig()
+ * @method $this withDecisionConfig($value)
+ * @method string getConditionalAccessPolicyName()
+ * @method $this withConditionalAccessPolicyName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateConditionalAccessPolicy extends Rpc
 {
 }
 
@@ -418,6 +453,16 @@ class DeleteApplicationClientSecret extends Rpc
 }
 
 /**
+ * @method string getConditionalAccessPolicyId()
+ * @method $this withConditionalAccessPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteConditionalAccessPolicy extends Rpc
+{
+}
+
+/**
  * @method string getDomainId()
  * @method $this withDomainId($value)
  * @method string getInstanceId()
@@ -560,6 +605,16 @@ class DisableApplicationSso extends Rpc
 }
 
 /**
+ * @method string getConditionalAccessPolicyId()
+ * @method $this withConditionalAccessPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DisableConditionalAccessPolicy extends Rpc
+{
+}
+
+/**
  * @method string getDomainProxyTokenId()
  * @method $this withDomainProxyTokenId($value)
  * @method string getDomainId()
@@ -652,6 +707,16 @@ class EnableApplicationSso extends Rpc
 }
 
 /**
+ * @method string getConditionalAccessPolicyId()
+ * @method $this withConditionalAccessPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class EnableConditionalAccessPolicy extends Rpc
+{
+}
+
+/**
  * @method string getDomainProxyTokenId()
  * @method $this withDomainProxyTokenId($value)
  * @method string getDomainId()
@@ -738,6 +803,16 @@ class GetApplicationProvisioningScope extends Rpc
  * @method $this withApplicationId($value)
  */
 class GetApplicationSsoConfig extends Rpc
+{
+}
+
+/**
+ * @method string getConditionalAccessPolicyId()
+ * @method $this withConditionalAccessPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetConditionalAccessPolicy extends Rpc
 {
 }
 
@@ -909,8 +984,12 @@ class ListApplicationClientSecrets extends Rpc
 }
 
 /**
+ * @method string getResourceServerStatus()
+ * @method $this withResourceServerStatus($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getM2MClientStatus()
+ * @method $this withM2MClientStatus($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getAuthorizationType()
@@ -921,6 +1000,8 @@ class ListApplicationClientSecrets extends Rpc
  * @method $this withApplicationIds($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getSsoType()
+ * @method $this withSsoType($value)
  * @method string getStatus()
  * @method $this withStatus($value)
  */
@@ -959,6 +1040,30 @@ class ListApplicationsForOrganizationalUnit extends Rpc
  * @method $this withQueryMode($value)
  */
 class ListApplicationsForUser extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListConditionalAccessPolicies extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkZoneId()
+ * @method $this withNetworkZoneId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListConditionalAccessPoliciesForNetworkZone extends Rpc
 {
 }
 
@@ -1583,6 +1688,38 @@ class UpdateApplicationAuthorizationType extends Rpc
  * @method $this withInstanceId($value)
  */
 class UpdateApplicationDescription extends Rpc
+{
+}
+
+/**
+ * @method string getConditionsConfig()
+ * @method $this withConditionsConfig($value)
+ * @method string getDecisionType()
+ * @method $this withDecisionType($value)
+ * @method string getConditionalAccessPolicyId()
+ * @method $this withConditionalAccessPolicyId($value)
+ * @method string getPriority()
+ * @method $this withPriority($value)
+ * @method string getDecisionConfig()
+ * @method $this withDecisionConfig($value)
+ * @method string getConditionalAccessPolicyName()
+ * @method $this withConditionalAccessPolicyName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateConditionalAccessPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getConditionalAccessPolicyId()
+ * @method $this withConditionalAccessPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateConditionalAccessPolicyDescription extends Rpc
 {
 }
 

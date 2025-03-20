@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2252 - 2025-3-20
+- Support Conditional Access Policy.
+
+
 ## 1.8.2251 - 2025-3-18
 - Supported DescribeImageSharePermission.
 
