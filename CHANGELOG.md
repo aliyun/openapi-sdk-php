@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2255 - 2025-3-21
+- Generated 2019-03-07 for `Cloudauth`.
+
+
 ## 1.8.2254 - 2025-3-21
 - Support Conditional Access Policy.
 
