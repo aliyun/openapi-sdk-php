@@ -1570,6 +1570,8 @@ class SetForgetPasswordConfiguration extends Rpc
  * @method $this withLdapUdPullConfig($value)
  * @method string getIdentityProviderId()
  * @method $this withIdentityProviderId($value)
+ * @method string getPeriodicSyncConfig()
+ * @method $this withPeriodicSyncConfig($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getPullProtectedRule()

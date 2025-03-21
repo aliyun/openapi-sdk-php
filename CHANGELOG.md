@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2254 - 2025-3-21
+- Support Conditional Access Policy.
+
+
 ## 1.8.2253 - 2025-3-21
 - GetDailyPlayRegionStatis
 
