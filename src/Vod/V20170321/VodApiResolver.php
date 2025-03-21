@@ -74,6 +74,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeVodDomainSrcTrafficData describeVodDomainSrcTrafficData(array $options = [])
  * @method DescribeVodDomainTrafficData describeVodDomainTrafficData(array $options = [])
  * @method DescribeVodDomainUsageData describeVodDomainUsageData(array $options = [])
+ * @method DescribeVodEditingUsageData describeVodEditingUsageData(array $options = [])
  * @method DescribeVodMediaPlayData describeVodMediaPlayData(array $options = [])
  * @method DescribeVodRangeDataByLocateAndIspService describeVodRangeDataByLocateAndIspService(array $options = [])
  * @method DescribeVodRefreshQuota describeVodRefreshQuota(array $options = [])
@@ -96,6 +97,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetAttachedMediaInfo getAttachedMediaInfo(array $options = [])
  * @method GetAuditHistory getAuditHistory(array $options = [])
  * @method GetCategories getCategories(array $options = [])
+ * @method GetDailyPlayRegionStatis getDailyPlayRegionStatis(array $options = [])
  * @method GetDefaultAITemplate getDefaultAITemplate(array $options = [])
  * @method GetDigitalWatermarkExtractResult getDigitalWatermarkExtractResult(array $options = [])
  * @method GetEditingProject getEditingProject(array $options = [])
@@ -456,6 +458,8 @@ class ChangeResourceGroup extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getAppName()
  * @method $this withAppName($value)
+ * @method string getTag()
+ * @method $this withTag($value)
  */
 class CreateAppInfo extends Rpc
 {
@@ -1280,6 +1284,28 @@ class DescribeVodDomainUsageData extends Rpc
 }
 
 /**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSplitBy()
+ * @method $this withSplitBy($value)
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getSpecification()
+ * @method $this withSpecification($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeVodEditingUsageData extends Rpc
+{
+}
+
+/**
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getPlayDate()
@@ -1379,9 +1405,6 @@ class DescribeVodRefreshTasks extends Rpc
  */
 class DescribeVodSSLCertificateList extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 }
 
 /**
@@ -1417,6 +1440,8 @@ class DescribeVodStorageData extends Rpc
  * @method $this withOwnerId($value)
  * @method string getStorageClass()
  * @method $this withStorageClass($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -1438,6 +1463,8 @@ class DescribeVodTieringStorageData extends Rpc
  * @method $this withOwnerId($value)
  * @method string getStorageClass()
  * @method $this withStorageClass($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
  * @method string getRegion()
  * @method $this withRegion($value)
  */
@@ -1677,6 +1704,19 @@ class GetAuditHistory extends Rpc
  */
 class GetCategories extends Rpc
 {
+}
+
+/**
+ * @method string getDate()
+ * @method $this withDate($value)
+ * @method string getMediaRegion()
+ * @method $this withMediaRegion($value)
+ */
+class GetDailyPlayRegionStatis extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2566,9 +2606,6 @@ class SetVodDomainCertificate extends Rpc
  */
 class SetVodDomainSSLCertificate extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 }
 
 /**
