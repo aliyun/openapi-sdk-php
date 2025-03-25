@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2256 - 2025-3-25
+- Generated 2020-06-01 for `SWAS-OPEN`.
+
+
 ## 1.8.2255 - 2025-3-21
 - Generated 2019-03-07 for `Cloudauth`.
 

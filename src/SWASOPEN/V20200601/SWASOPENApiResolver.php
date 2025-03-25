@@ -1263,6 +1263,8 @@ class ListInstancePlansModification extends Rpc
 }
 
 /**
+ * @method string getPlanType()
+ * @method $this withPlanType($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
