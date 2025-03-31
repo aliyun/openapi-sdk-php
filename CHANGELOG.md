@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2259 - 2025-3-31
+- Add parameters to control different role.
+
+
 ## 1.8.2258 - 2025-3-28
 - New Version.
 
