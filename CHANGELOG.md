@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2260 - 2025-4-2
+- Generated 2025-02-28 for `AIPodcast`.
+
+
 ## 1.8.2259 - 2025-3-31
 - Add parameters to control different role.
 
