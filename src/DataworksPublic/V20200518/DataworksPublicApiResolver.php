@@ -10454,6 +10454,7 @@ class ListExtensions extends Rpc
  * @method string getOwner()
  * @method string getFileTypes()
  * @method string getNeedContent()
+ * @method string getCommitStatus()
  * @method string getNeedAbsoluteFolderPath()
  * @method string getProjectIdentifier()
  * @method string getPageNumber()
@@ -10505,6 +10506,19 @@ class ListFiles extends Rpc
     {
         $this->data['NeedContent'] = $value;
         $this->options['form_params']['NeedContent'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCommitStatus($value)
+    {
+        $this->data['CommitStatus'] = $value;
+        $this->options['form_params']['CommitStatus'] = $value;
 
         return $this;
     }
