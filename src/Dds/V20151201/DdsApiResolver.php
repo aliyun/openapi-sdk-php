@@ -9,6 +9,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AllocatePublicNetworkAddress allocatePublicNetworkAddress(array $options = [])
  * @method CheckCloudResourceAuthorized checkCloudResourceAuthorized(array $options = [])
  * @method CheckRecoveryCondition checkRecoveryCondition(array $options = [])
+ * @method CheckServiceLinkedRole checkServiceLinkedRole(array $options = [])
  * @method CreateAccount createAccount(array $options = [])
  * @method CreateBackup createBackup(array $options = [])
  * @method CreateDBInstance createDBInstance(array $options = [])
@@ -20,7 +21,10 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteGlobalSecurityIPGroup deleteGlobalSecurityIPGroup(array $options = [])
  * @method DeleteNode deleteNode(array $options = [])
  * @method DescribeAccounts describeAccounts(array $options = [])
+ * @method DescribeActiveOperationMaintenanceConfig describeActiveOperationMaintenanceConfig(array $options = [])
+ * @method DescribeActiveOperationTask describeActiveOperationTask(array $options = [])
  * @method DescribeActiveOperationTaskCount describeActiveOperationTaskCount(array $options = [])
+ * @method DescribeActiveOperationTaskRegion describeActiveOperationTaskRegion(array $options = [])
  * @method DescribeActiveOperationTasks describeActiveOperationTasks(array $options = [])
  * @method DescribeActiveOperationTaskType describeActiveOperationTaskType(array $options = [])
  * @method DescribeAuditLogFilter describeAuditLogFilter(array $options = [])
@@ -42,6 +46,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDBInstancePerformance describeDBInstancePerformance(array $options = [])
  * @method DescribeDBInstances describeDBInstances(array $options = [])
  * @method DescribeDBInstancesOverview describeDBInstancesOverview(array $options = [])
+ * @method DescribeDBInstanceSpecInfo describeDBInstanceSpecInfo(array $options = [])
  * @method DescribeDBInstanceSSL describeDBInstanceSSL(array $options = [])
  * @method DescribeDBInstanceSwitchLog describeDBInstanceSwitchLog(array $options = [])
  * @method DescribeDBInstanceTDEInfo describeDBInstanceTDEInfo(array $options = [])
@@ -81,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyAuditLogFilter modifyAuditLogFilter(array $options = [])
  * @method ModifyAuditPolicy modifyAuditPolicy(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
+ * @method ModifyDBInstanceConfig modifyDBInstanceConfig(array $options = [])
  * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
  * @method ModifyDBInstanceDescription modifyDBInstanceDescription(array $options = [])
  * @method ModifyDBInstanceDiskType modifyDBInstanceDiskType(array $options = [])
@@ -232,6 +238,18 @@ class CheckRecoveryCondition extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class CheckServiceLinkedRole extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getAccountName()
@@ -246,6 +264,8 @@ class CheckRecoveryCondition extends Rpc
  * @method $this withOwnerId($value)
  * @method string getAccountPassword()
  * @method $this withAccountPassword($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
  */
 class CreateAccount extends Rpc
 {
@@ -711,6 +731,46 @@ class DescribeAccounts extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeActiveOperationMaintenanceConfig extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getProductId()
+ * @method $this withProductId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getIsHistory()
+ * @method $this withIsHistory($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getRegion()
+ * @method $this withRegion($value)
+ */
+class DescribeActiveOperationTask extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getResourceOwnerAccount()
@@ -727,12 +787,32 @@ class DescribeActiveOperationTaskCount extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getIsHistory()
+ * @method $this withIsHistory($value)
+ * @method string getTaskType()
+ * @method $this withTaskType($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeActiveOperationTaskRegion extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getProductId()
  * @method $this withProductId($value)
  * @method string getChangeLevel()
  * @method $this withChangeLevel($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getInsName()
  * @method $this withInsName($value)
  * @method string getPageSize()
@@ -863,6 +943,8 @@ class DescribeAuditRecords extends Rpc
  * @method $this withResourceGroupId($value)
  * @method string getExcludeZoneId()
  * @method $this withExcludeZoneId($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
  * @method string getExcludeSecondaryZoneId()
  * @method $this withExcludeSecondaryZoneId($value)
  * @method string getInstanceChargeType()
@@ -1289,6 +1371,8 @@ class DescribeDBInstances extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getShowTags()
+ * @method $this withShowTags($value)
  * @method string getNetworkType()
  * @method $this withNetworkType($value)
  * @method string getEngineVersion()
@@ -1320,6 +1404,27 @@ class DescribeDBInstances extends Rpc
  */
 class DescribeDBInstancesOverview extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getInstanceClass()
+ * @method $this withInstanceClass($value)
+ * @method string getSecurityToken()
+ * @method $this withSecurityToken($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeDBInstanceSpecInfo extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1457,6 +1562,8 @@ class DescribeGlobalSecurityIPGroupRelation extends Rpc
  * @method $this withToStartTime($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  * @method string getInstanceType()
@@ -1487,6 +1594,8 @@ class DescribeHistoryTasks extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getToStartTime()
  * @method $this withToStartTime($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
  * @method string getToExecTime()
@@ -2124,6 +2233,8 @@ class MigrateToOtherZone extends Rpc
  * @method $this withOwnerAccount($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getCharacterType()
+ * @method $this withCharacterType($value)
  */
 class ModifyAccountDescription extends Rpc
 {
@@ -2132,6 +2243,8 @@ class ModifyAccountDescription extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getSwitchTime()
  * @method $this withSwitchTime($value)
  * @method string getResourceOwnerAccount()
@@ -2245,6 +2358,29 @@ class ModifyAuditPolicy extends Rpc
  */
 class ModifyBackupPolicy extends Rpc
 {
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getConfigName()
+ * @method $this withConfigName($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getConfigValue()
+ * @method $this withConfigValue($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBInstanceConfig extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
