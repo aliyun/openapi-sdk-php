@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2263 - 2025-4-14
+- Add SmartqQueryAbility api request parameters.
+
+
 ## 1.8.2262 - 2025-4-8
 - Generated 2015-12-01 for `Dds`.
 

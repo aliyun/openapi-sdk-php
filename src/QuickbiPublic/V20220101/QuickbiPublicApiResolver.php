@@ -1792,9 +1792,6 @@ class SmartqAuthTransfer extends Rpc
  */
 class SmartqQueryAbility extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 }
 
 /**
