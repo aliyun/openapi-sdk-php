@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2264 - 2025-4-15
+- Generate SDK unified.
+
+
 ## 1.8.2263 - 2025-4-14
 - Add SmartqQueryAbility api request parameters.
 
