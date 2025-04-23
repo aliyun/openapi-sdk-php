@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2265 - 2025-4-23
+- Generated 2021-03-08 for `eds-user`.
+
+
 ## 1.8.2264 - 2025-4-15
 - Generate SDK unified.
 

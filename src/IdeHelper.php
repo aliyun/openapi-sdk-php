@@ -115,6 +115,7 @@ namespace AlibabaCloud;
  * @method static EcsInc\EcsInc ecsInc()
  * @method static EcsWorkbench\EcsWorkbench ecsWorkbench()
  * @method static Edas\Edas edas()
+ * @method static EdsUser\EdsUser edsUser()
  * @method static EduCloud\EduCloud eduCloud()
  * @method static Eflo\Eflo eflo()
  * @method static EfloController\EfloController efloController()
