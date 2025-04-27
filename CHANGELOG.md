@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2267 - 2025-4-27
+- Generated 2021-03-08 for `eds-user`.
+
+
 ## 1.8.2266 - 2025-4-25
 - Generated 2014-08-28 for `Ess`.
 

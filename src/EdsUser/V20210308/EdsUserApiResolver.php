@@ -11,11 +11,14 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CheckUsedPropertyValue checkUsedPropertyValue(array $options = [])
  * @method CreateOrg createOrg(array $options = [])
  * @method CreateProperty createProperty(array $options = [])
+ * @method CreateResourceGroup createResourceGroup(array $options = [])
  * @method CreateUsers createUsers(array $options = [])
+ * @method DeleteResourceGroup deleteResourceGroup(array $options = [])
  * @method DeleteUserPropertyValue deleteUserPropertyValue(array $options = [])
  * @method DescribeMfaDevices describeMfaDevices(array $options = [])
  * @method DescribeOrgByLayer describeOrgByLayer(array $options = [])
  * @method DescribeOrgs describeOrgs(array $options = [])
+ * @method DescribeResourceGroups describeResourceGroups(array $options = [])
  * @method DescribeUsers describeUsers(array $options = [])
  * @method FilterUsers filterUsers(array $options = [])
  * @method GetManagerInfoByAuthCode getManagerInfoByAuthCode(array $options = [])
@@ -209,6 +212,18 @@ class CreateProperty extends Rpc
 }
 
 /**
+ * @method string getResourceGroupName()
+ * @method $this withResourceGroupName($value)
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
+ * @method string getIsResourceGroupWithOfficeSite()
+ * @method $this withIsResourceGroupWithOfficeSite($value)
+ */
+class CreateResourceGroup extends Rpc
+{
+}
+
+/**
  * @method string getAutoLockTime()
  * @method $this withAutoLockTime($value)
  * @method string getIsLocalAdmin()
@@ -271,6 +286,18 @@ class CreateUsers extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getResourceGroupIds()
+ * @method $this withResourceGroupIds($value)
+ */
+class DeleteResourceGroup extends Rpc
+{
 }
 
 /**
@@ -410,6 +437,24 @@ class DescribeOrgByLayer extends Rpc
  * @method $this withMaxResults($value)
  */
 class DescribeOrgs extends Rpc
+{
+}
+
+/**
+ * @method string getResourceGroupName()
+ * @method $this withResourceGroupName($value)
+ * @method string getNeedContainResourceGroupWithOfficeSite()
+ * @method $this withNeedContainResourceGroupWithOfficeSite($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPlatform()
+ * @method $this withPlatform($value)
+ * @method string getResourceGroupIds()
+ * @method $this withResourceGroupIds($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class DescribeResourceGroups extends Rpc
 {
 }
 
