@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2269 - 2025-5-13
+- Add Api ReadSchedulerxDesignateDetail.
+
+
 ## 1.8.2268 - 2025-5-6
 - Generated 2021-05-17 for `Itag`.
 
