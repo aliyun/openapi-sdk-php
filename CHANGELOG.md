@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2270 - 2025-5-14
+- Update water-mark params.
+
+
 ## 1.8.2269 - 2025-5-13
 - Add Api ReadSchedulerxDesignateDetail.
 
