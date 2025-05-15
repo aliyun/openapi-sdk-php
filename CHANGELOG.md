@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2271 - 2025-5-15
+- Supported CreateFixedPriceSelectedOrder return block domain.
+
+
 ## 1.8.2270 - 2025-5-14
 - Update water-mark params.
 
