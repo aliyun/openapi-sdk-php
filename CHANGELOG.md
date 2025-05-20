@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2272 - 2025-5-20
+- Added param for ActivateLicenseResponse .
+
+
 ## 1.8.2271 - 2025-5-15
 - Supported CreateFixedPriceSelectedOrder return block domain.
 

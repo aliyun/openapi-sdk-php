@@ -19,6 +19,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method PullTask pullTask(array $options = [])
  * @method PushRpaTask pushRpaTask(array $options = [])
  * @method PushRpaTaskDetail pushRpaTaskDetail(array $options = [])
+ * @method SendNotificationForPartner sendNotificationForPartner(array $options = [])
  * @method SetRedisValue setRedisValue(array $options = [])
  * @method UpdateAgreementStatus updateAgreementStatus(array $options = [])
  */
@@ -517,6 +518,31 @@ class PushRpaTask extends Rpc
  */
 class PushRpaTaskDetail extends Rpc
 {
+}
+
+/**
+ * @method string getTrackId()
+ * @method $this withTrackId($value)
+ * @method string getSmartSubChannels()
+ * @method $this withSmartSubChannels($value)
+ * @method string getChannelType()
+ * @method $this withChannelType($value)
+ * @method string getNotifyType()
+ * @method $this withNotifyType($value)
+ * @method string getNotifycationEventType()
+ * @method $this withNotifycationEventType($value)
+ * @method string getSendTarget()
+ * @method $this withSendTarget($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getParamMap()
+ * @method $this withParamMap($value)
+ */
+class SendNotificationForPartner extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
