@@ -11,6 +11,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GenerateUploadFilePolicyForPartner generateUploadFilePolicyForPartner(array $options = [])
  * @method GetNodeByFlowId getNodeByFlowId(array $options = [])
  * @method GetNodeByTemplateId getNodeByTemplateId(array $options = [])
+ * @method GetPlatformUserInfoForPartner getPlatformUserInfoForPartner(array $options = [])
  * @method GetProxyByType getProxyByType(array $options = [])
  * @method GetRedisValue getRedisValue(array $options = [])
  * @method GetVariable getVariable(array $options = [])
@@ -196,6 +197,21 @@ class GetNodeByFlowId extends Rpc
  */
 class GetNodeByTemplateId extends Rpc
 {
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPlatformType()
+ * @method $this withPlatformType($value)
+ */
+class GetPlatformUserInfoForPartner extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

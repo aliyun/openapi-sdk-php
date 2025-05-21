@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2273 - 2025-5-21
+- Added param for ActivateLicenseResponse .
+
+
 ## 1.8.2272 - 2025-5-20
 - Added param for ActivateLicenseResponse .
 
