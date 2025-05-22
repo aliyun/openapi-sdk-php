@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2274 - 2025-5-22
+- Generated 2014-08-15 for `Rds`.
+
+
 ## 1.8.2273 - 2025-5-21
 - Added param for ActivateLicenseResponse .
 
