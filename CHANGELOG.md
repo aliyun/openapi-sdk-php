@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2275 - 2025-5-28
+- Add api request parameters and error code.
+
+
 ## 1.8.2274 - 2025-5-22
 - Generated 2014-08-15 for `Rds`.
 

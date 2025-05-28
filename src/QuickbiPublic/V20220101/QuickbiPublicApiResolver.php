@@ -25,6 +25,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateTicket createTicket(array $options = [])
  * @method CreateTicket4Copilot createTicket4Copilot(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
+ * @method DataInterpretation dataInterpretation(array $options = [])
  * @method DataSetBlood dataSetBlood(array $options = [])
  * @method DataSourceBlood dataSourceBlood(array $options = [])
  * @method DelayTicketExpireTime delayTicketExpireTime(array $options = [])
@@ -518,6 +519,29 @@ class CreateTicket4Copilot extends Rpc
  */
 class CreateUserGroup extends Rpc
 {
+}
+
+/**
+ * @method string getPromptForceOverride()
+ * @method $this withPromptForceOverride($value)
+ * @method string getData()
+ * @method $this withData($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserQuestion()
+ * @method $this withUserQuestion($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserPrompt()
+ * @method $this withUserPrompt($value)
+ * @method string getModelCode()
+ * @method $this withModelCode($value)
+ */
+class DataInterpretation extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1745,6 +1769,8 @@ class SetDataLevelPermissionWhiteList extends Rpc
  * @method $this withAccessPoint($value)
  * @method string getLlmCubes()
  * @method $this withLlmCubes($value)
+ * @method string getCubeIds()
+ * @method $this withCubeIds($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  * @method string getOperationType()
