@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2276 - 2025-5-30
+- Generated 2025-02-28 for `AIPodcast`.
+
+
 ## 1.8.2275 - 2025-5-28
 - Add api request parameters and error code.
 
