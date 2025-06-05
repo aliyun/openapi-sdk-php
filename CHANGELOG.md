@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2277 - 2025-6-5
+- init sdk
+
+
 ## 1.8.2276 - 2025-5-30
 - Generated 2025-02-28 for `AIPodcast`.
 
