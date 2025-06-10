@@ -43,6 +43,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListNamespaces listNamespaces(array $options = [])
  * @method ListWorkflowInstance listWorkflowInstance(array $options = [])
  * @method ReadSchedulerxDesignateDetail readSchedulerxDesignateDetail(array $options = [])
+ * @method ReadSchedulerxDesignateInfo readSchedulerxDesignateInfo(array $options = [])
  * @method RerunJob rerunJob(array $options = [])
  * @method RetryJobInstance retryJobInstance(array $options = [])
  * @method RevokePermission revokePermission(array $options = [])
@@ -1452,6 +1453,23 @@ class ListWorkflowInstance extends Rpc
  * @method $this withNamespace($value)
  */
 class ReadSchedulerxDesignateDetail extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getNamespaceSource()
+ * @method $this withNamespaceSource($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getJobId()
+ * @method $this withJobId($value)
+ * @method string getNamespace()
+ * @method $this withNamespace($value)
+ */
+class ReadSchedulerxDesignateInfo extends Rpc
 {
 
     /** @var string */

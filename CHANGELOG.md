@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2278 - 2025-6-10
+- Add API ReadSchedulerxDesignateInfo.
+
+
 ## 1.8.2277 - 2025-6-5
 - init sdk
 
