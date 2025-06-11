@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2279 - 2025-6-11
+支持创建RTC WHIP推流地址
+
+
 ## 1.8.2278 - 2025-6-10
 - Add API ReadSchedulerxDesignateInfo.
 
