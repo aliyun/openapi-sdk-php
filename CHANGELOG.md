@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2280 - 2025-6-11
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2279 - 2025-6-11
 支持创建RTC WHIP推流地址
 
