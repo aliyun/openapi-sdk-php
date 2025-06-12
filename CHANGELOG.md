@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2281 - 2025-6-12
+- Support restart node list and re-elect zookeeper.
+
+
 ## 1.8.2280 - 2025-6-11
 - Generated 2019-09-01 for `OceanBasePro`.
 
