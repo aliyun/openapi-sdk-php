@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2282 - 2025-6-13
+- Generated 2015-05-01 for `Ram`.
+
+
 ## 1.8.2281 - 2025-6-12
 - Support restart node list and re-elect zookeeper.
 
