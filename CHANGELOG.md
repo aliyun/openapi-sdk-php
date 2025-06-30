@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2283 - 2025-6-30
+- Public AssumeRole AssumeRoleWithSAML AssumeRoleWithOIDC for supporting sourceIdentity.
+
+
 ## 1.8.2282 - 2025-6-13
 - Generated 2015-05-01 for `Ram`.
 
