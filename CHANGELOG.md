@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2284 - 2025-7-2
+- Generated 2021-03-08 for `eds-user`.
+
+
 ## 1.8.2283 - 2025-6-30
 - Public AssumeRole AssumeRoleWithSAML AssumeRoleWithOIDC for supporting sourceIdentity.
 

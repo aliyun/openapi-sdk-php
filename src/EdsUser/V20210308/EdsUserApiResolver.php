@@ -9,12 +9,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ChangeUserPassword changeUserPassword(array $options = [])
  * @method CheckUsedProperty checkUsedProperty(array $options = [])
  * @method CheckUsedPropertyValue checkUsedPropertyValue(array $options = [])
+ * @method CreateGroup createGroup(array $options = [])
  * @method CreateOrg createOrg(array $options = [])
  * @method CreateProperty createProperty(array $options = [])
  * @method CreateResourceGroup createResourceGroup(array $options = [])
  * @method CreateUsers createUsers(array $options = [])
  * @method DeleteResourceGroup deleteResourceGroup(array $options = [])
  * @method DeleteUserPropertyValue deleteUserPropertyValue(array $options = [])
+ * @method DescribeGroups describeGroups(array $options = [])
+ * @method DescribeGroupUser describeGroupUser(array $options = [])
  * @method DescribeMfaDevices describeMfaDevices(array $options = [])
  * @method DescribeOrgByLayer describeOrgByLayer(array $options = [])
  * @method DescribeOrgs describeOrgs(array $options = [])
@@ -27,10 +30,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListPropertyValue listPropertyValue(array $options = [])
  * @method LockMfaDevice lockMfaDevice(array $options = [])
  * @method LockUsers lockUsers(array $options = [])
+ * @method ModifyGroup modifyGroup(array $options = [])
  * @method ModifyOrg modifyOrg(array $options = [])
  * @method ModifyUser modifyUser(array $options = [])
  * @method MoveOrg moveOrg(array $options = [])
+ * @method MoveUserOrg moveUserOrg(array $options = [])
  * @method QuerySyncStatusByAliUid querySyncStatusByAliUid(array $options = [])
+ * @method RemoveGroup removeGroup(array $options = [])
  * @method RemoveMfaDevice removeMfaDevice(array $options = [])
  * @method RemoveOrg removeOrg(array $options = [])
  * @method RemoveProperty removeProperty(array $options = [])
@@ -41,6 +47,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UnlockMfaDevice unlockMfaDevice(array $options = [])
  * @method UnlockUsers unlockUsers(array $options = [])
  * @method UpdateProperty updateProperty(array $options = [])
+ * @method UserBatchJoinGroup userBatchJoinGroup(array $options = [])
+ * @method UserBatchQuitGroup userBatchQuitGroup(array $options = [])
  */
 class EdsUserApiResolver extends ApiResolver
 {
@@ -160,6 +168,20 @@ class CheckUsedProperty extends Rpc
  * @method $this withPropertyId($value)
  */
 class CheckUsedPropertyValue extends Rpc
+{
+}
+
+/**
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getParentGroupId()
+ * @method $this withParentGroupId($value)
+ * @method string getSolutionId()
+ * @method $this withSolutionId($value)
+ */
+class CreateGroup extends Rpc
 {
 }
 
@@ -349,6 +371,32 @@ class DeleteUserPropertyValue extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getGroupName()
+ * @method $this withGroupName($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getSolutionId()
+ * @method $this withSolutionId($value)
+ */
+class DescribeGroups extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getBizType()
+ * @method $this withBizType($value)
+ * @method string getSolutionId()
+ * @method $this withSolutionId($value)
+ */
+class DescribeGroupUser extends Rpc
+{
+}
+
+/**
  * @method array getEndUserIds()
  * @method array getSerialNumbers()
  * @method string getAdDomain()
@@ -476,6 +524,8 @@ class DescribeResourceGroups extends Rpc
  * @method string getMaxResults()
  * @method $this withMaxResults($value)
  * @method string getShowExtras()
+ * @method string getStatus()
+ * @method $this withStatus($value)
  */
 class DescribeUsers extends Rpc
 {
@@ -749,6 +799,16 @@ class LockUsers extends Rpc
 }
 
 /**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getNewGroupName()
+ * @method $this withNewGroupName($value)
+ */
+class ModifyGroup extends Rpc
+{
+}
+
+/**
  * @method string getIcon()
  * @method $this withIcon($value)
  * @method string getOrgId()
@@ -806,7 +866,51 @@ class MoveOrg extends Rpc
     }
 }
 
+/**
+ * @method array getEndUserIds()
+ * @method string getOrgId()
+ */
+class MoveUserOrg extends Rpc
+{
+
+    /**
+     * @param array $endUserIds
+     *
+     * @return $this
+     */
+	public function withEndUserIds(array $endUserIds)
+	{
+	    $this->data['EndUserIds'] = $endUserIds;
+		foreach ($endUserIds as $i => $iValue) {
+			$this->options['form_params']['EndUserIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrgId($value)
+    {
+        $this->data['OrgId'] = $value;
+        $this->options['form_params']['OrgId'] = $value;
+
+        return $this;
+    }
+}
+
 class QuerySyncStatusByAliUid extends Rpc
+{
+}
+
+/**
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ */
+class RemoveGroup extends Rpc
 {
 }
 
@@ -1070,5 +1174,77 @@ class UpdateProperty extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method array getEndUserIds()
+ * @method string getGroupId()
+ */
+class UserBatchJoinGroup extends Rpc
+{
+
+    /**
+     * @param array $endUserIds
+     *
+     * @return $this
+     */
+	public function withEndUserIds(array $endUserIds)
+	{
+	    $this->data['EndUserIds'] = $endUserIds;
+		foreach ($endUserIds as $i => $iValue) {
+			$this->options['form_params']['EndUserIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method array getEndUserIds()
+ * @method string getGroupId()
+ */
+class UserBatchQuitGroup extends Rpc
+{
+
+    /**
+     * @param array $endUserIds
+     *
+     * @return $this
+     */
+	public function withEndUserIds(array $endUserIds)
+	{
+	    $this->data['EndUserIds'] = $endUserIds;
+		foreach ($endUserIds as $i => $iValue) {
+			$this->options['form_params']['EndUserIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupId($value)
+    {
+        $this->data['GroupId'] = $value;
+        $this->options['form_params']['GroupId'] = $value;
+
+        return $this;
     }
 }
