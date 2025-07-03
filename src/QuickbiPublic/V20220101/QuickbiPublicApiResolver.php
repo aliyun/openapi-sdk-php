@@ -1082,6 +1082,8 @@ class QueryApprovalInfo extends Rpc
 }
 
 /**
+ * @method string getAccessSourceFlag()
+ * @method $this withAccessSourceFlag($value)
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
  * @method string getStartDate()
@@ -1100,6 +1102,8 @@ class QueryApprovalInfo extends Rpc
  * @method $this withOperatorId($value)
  * @method string getWorkspaceId()
  * @method $this withWorkspaceId($value)
+ * @method string getUserAccessDevice()
+ * @method $this withUserAccessDevice($value)
  */
 class QueryAuditLog extends Rpc
 {

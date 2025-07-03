@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2285 - 2025-7-3
+- QueryAuditLog API add request parameters.
+
+
 ## 1.8.2284 - 2025-7-2
 - Generated 2021-03-08 for `eds-user`.
 
