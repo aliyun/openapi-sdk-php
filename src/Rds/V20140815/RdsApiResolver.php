@@ -109,6 +109,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeCloudMigrationPrecheckResult describeCloudMigrationPrecheckResult(array $options = [])
  * @method DescribeCloudMigrationResult describeCloudMigrationResult(array $options = [])
  * @method DescribeCollationTimeZones describeCollationTimeZones(array $options = [])
+ * @method DescribeComputeBurstConfig describeComputeBurstConfig(array $options = [])
  * @method DescribeCrossBackupMetaList describeCrossBackupMetaList(array $options = [])
  * @method DescribeCrossRegionBackupDBInstance describeCrossRegionBackupDBInstance(array $options = [])
  * @method DescribeCrossRegionBackups describeCrossRegionBackups(array $options = [])
@@ -184,6 +185,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePostgresExtensions describePostgresExtensions(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
  * @method DescribeQuickSaleConfig describeQuickSaleConfig(array $options = [])
+ * @method DescribeRCCloudAssistantStatus describeRCCloudAssistantStatus(array $options = [])
  * @method DescribeRCClusterConfig describeRCClusterConfig(array $options = [])
  * @method DescribeRCClusterNodes describeRCClusterNodes(array $options = [])
  * @method DescribeRCClusters describeRCClusters(array $options = [])
@@ -198,11 +200,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRCInstanceTypeFamilies describeRCInstanceTypeFamilies(array $options = [])
  * @method DescribeRCInstanceTypes describeRCInstanceTypes(array $options = [])
  * @method DescribeRCInstanceVncUrl describeRCInstanceVncUrl(array $options = [])
+ * @method DescribeRCInvocationResults describeRCInvocationResults(array $options = [])
  * @method DescribeRCMetricList describeRCMetricList(array $options = [])
  * @method DescribeRCNodePool describeRCNodePool(array $options = [])
  * @method DescribeRCSecurityGroupList describeRCSecurityGroupList(array $options = [])
  * @method DescribeRCSecurityGroupPermission describeRCSecurityGroupPermission(array $options = [])
  * @method DescribeRCSnapshots describeRCSnapshots(array $options = [])
+ * @method DescribeRCVCluster describeRCVCluster(array $options = [])
  * @method DescribeRdsResourceSettings describeRdsResourceSettings(array $options = [])
  * @method DescribeReadDBInstanceDelay describeReadDBInstanceDelay(array $options = [])
  * @method DescribeRegionInfos describeRegionInfos(array $options = [])
@@ -227,6 +231,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeUpgradeMajorVersionPrecheckTask describeUpgradeMajorVersionPrecheckTask(array $options = [])
  * @method DescribeUpgradeMajorVersionTasks describeUpgradeMajorVersionTasks(array $options = [])
  * @method DescribeVSwitches describeVSwitches(array $options = [])
+ * @method DescribeVSwitchList describeVSwitchList(array $options = [])
  * @method DescribeWhitelistTemplate describeWhitelistTemplate(array $options = [])
  * @method DescribeWhitelistTemplateLinkedInstance describeWhitelistTemplateLinkedInstance(array $options = [])
  * @method DestroyDBInstance destroyDBInstance(array $options = [])
@@ -239,6 +244,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GrantAccountPrivilege grantAccountPrivilege(array $options = [])
  * @method GrantOperatorPermission grantOperatorPermission(array $options = [])
  * @method ImportUserBackupFile importUserBackupFile(array $options = [])
+ * @method InstallRCCloudAssistant installRCCloudAssistant(array $options = [])
  * @method ListClasses listClasses(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListUserBackupFiles listUserBackupFiles(array $options = [])
@@ -256,7 +262,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyActiveOperationTasks modifyActiveOperationTasks(array $options = [])
  * @method ModifyADInfo modifyADInfo(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
+ * @method ModifyBackupSetExpireTime modifyBackupSetExpireTime(array $options = [])
  * @method ModifyCollationTimeZone modifyCollationTimeZone(array $options = [])
+ * @method ModifyComputeBurstConfig modifyComputeBurstConfig(array $options = [])
  * @method ModifyCustinsResource modifyCustinsResource(array $options = [])
  * @method ModifyDasInstanceConfig modifyDasInstanceConfig(array $options = [])
  * @method ModifyDatabaseConfig modifyDatabaseConfig(array $options = [])
@@ -324,6 +332,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RebuildReplicationLink rebuildReplicationLink(array $options = [])
  * @method ReceiveDBInstance receiveDBInstance(array $options = [])
  * @method RecoveryDBInstance recoveryDBInstance(array $options = [])
+ * @method RedeployRCInstance redeployRCInstance(array $options = [])
  * @method ReleaseInstanceConnection releaseInstanceConnection(array $options = [])
  * @method ReleaseInstancePublicConnection releaseInstancePublicConnection(array $options = [])
  * @method ReleaseReadWriteSplittingConnection releaseReadWriteSplittingConnection(array $options = [])
@@ -340,6 +349,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method RevokeAccountPrivilege revokeAccountPrivilege(array $options = [])
  * @method RevokeOperatorPermission revokeOperatorPermission(array $options = [])
  * @method RevokeRCSecurityGroupPermission revokeRCSecurityGroupPermission(array $options = [])
+ * @method RunRCCommand runRCCommand(array $options = [])
  * @method RunRCInstances runRCInstances(array $options = [])
  * @method StartDBInstance startDBInstance(array $options = [])
  * @method StartRCInstance startRCInstance(array $options = [])
@@ -1114,6 +1124,8 @@ class CreateAccount extends Rpc
  * @method $this withOwnerId($value)
  * @method string getBackupMethod()
  * @method $this withBackupMethod($value)
+ * @method string getBackupRetentionPeriod()
+ * @method $this withBackupRetentionPeriod($value)
  * @method string getDBName()
  * @method $this withDBName($value)
  */
@@ -1271,6 +1283,8 @@ class CreateDatabase extends Rpc
  * @method $this withClientToken($value)
  * @method string getTargetDedicatedHostIdForSlave()
  * @method $this withTargetDedicatedHostIdForSlave($value)
+ * @method string getExternalReplication()
+ * @method $this withExternalReplication($value)
  * @method string getZoneIdSlave1()
  * @method $this withZoneIdSlave1($value)
  * @method string getZoneIdSlave2()
@@ -2160,10 +2174,13 @@ class CreateRCNodePool extends Rpc
  * @method $this withInstantAccess($value)
  * @method string getDescription()
  * @method $this withDescription($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
  * @method string getInstantAccessRetentionDays()
  * @method $this withInstantAccessRetentionDays($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method array getTag()
  * @method string getZoneId()
  * @method $this withZoneId($value)
  * @method string getRetentionDays()
@@ -2171,6 +2188,26 @@ class CreateRCNodePool extends Rpc
  */
 class CreateRCSnapshot extends Rpc
 {
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -3336,6 +3373,24 @@ class DescribeCollationTimeZones extends Rpc
 }
 
 /**
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ */
+class DescribeComputeBurstConfig extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getPattern()
@@ -3883,6 +3938,8 @@ class DescribeDBInstanceReplication extends Rpc
  * @method $this withPageNumber($value)
  * @method string getExpired()
  * @method $this withExpired($value)
+ * @method string getQueryAutoRenewal()
+ * @method $this withQueryAutoRenewal($value)
  * @method string getEngine()
  * @method $this withEngine($value)
  * @method string getNextToken()
@@ -5361,6 +5418,24 @@ class DescribeQuickSaleConfig extends Rpc
 }
 
 /**
+ * @method string getOSType()
+ * @method $this withOSType($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeRCCloudAssistantStatus extends Rpc
+{
+}
+
+/**
  * @method string getVpcId()
  * @method $this withVpcId($value)
  * @method string getTemporaryDurationMinutes()
@@ -5479,6 +5554,8 @@ class DescribeRCImageList extends Rpc
  * @method $this withPrivateIpAddress($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getMaxDisksResults()
+ * @method $this withMaxDisksResults($value)
  */
 class DescribeRCInstanceAttribute extends Rpc
 {
@@ -5743,6 +5820,36 @@ class DescribeRCInstanceVncUrl extends Rpc
 }
 
 /**
+ * @method string getCommandId()
+ * @method $this withCommandId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getContentEncoding()
+ * @method $this withContentEncoding($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getTag()
+ * @method $this withTag($value)
+ * @method string getInvokeId()
+ * @method $this withInvokeId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getInvokeRecordStatus()
+ * @method $this withInvokeRecordStatus($value)
+ * @method string getIncludeHistory()
+ * @method $this withIncludeHistory($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class DescribeRCInvocationResults extends Rpc
+{
+}
+
+/**
  * @method string getExpress()
  * @method $this withExpress($value)
  * @method string getStartTime()
@@ -5809,8 +5916,37 @@ class DescribeRCSecurityGroupPermission extends Rpc
  * @method $this withPageSize($value)
  * @method string getDiskId()
  * @method $this withDiskId($value)
+ * @method array getTag()
  */
 class DescribeRCSnapshots extends Rpc
+{
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DescribeRCVCluster extends Rpc
 {
 }
 
@@ -6377,6 +6513,34 @@ class DescribeVSwitches extends Rpc
 }
 
 /**
+ * @method array getVSwitchIds()
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class DescribeVSwitchList extends Rpc
+{
+
+    /**
+     * @param array $vSwitchIds
+     *
+     * @return $this
+     */
+	public function withVSwitchIds(array $vSwitchIds)
+	{
+	    $this->data['VSwitchIds'] = $vSwitchIds;
+		foreach ($vSwitchIds as $i => $iValue) {
+			$this->options['query']['VSwitchIds.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceOwnerAccount()
@@ -6559,8 +6723,12 @@ class GrantOperatorPermission extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSourceInfo()
+ * @method $this withSourceInfo($value)
  * @method string getEngineVersion()
  * @method $this withEngineVersion($value)
+ * @method string getMode()
+ * @method $this withMode($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getDBInstanceId()
@@ -6575,6 +6743,10 @@ class GrantOperatorPermission extends Rpc
  * @method $this withBucketRegion($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getMasterInfo()
+ * @method $this withMasterInfo($value)
+ * @method string getBuildReplication()
+ * @method $this withBuildReplication($value)
  * @method string getRestoreSize()
  * @method $this withRestoreSize($value)
  * @method string getZoneId()
@@ -6583,6 +6755,14 @@ class GrantOperatorPermission extends Rpc
  * @method $this withComment($value)
  */
 class ImportUserBackupFile extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ */
+class InstallRCCloudAssistant extends Rpc
 {
 }
 
@@ -7209,6 +7389,28 @@ class ModifyBackupPolicy extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getExpectExpireTime()
+ * @method $this withExpectExpireTime($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getBackupId()
+ * @method $this withBackupId($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyBackupSetExpireTime extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
  * @method string getTimezone()
  * @method $this withTimezone($value)
  * @method string getDBInstanceId()
@@ -7221,6 +7423,52 @@ class ModifyBackupPolicy extends Rpc
  * @method $this withOwnerId($value)
  */
 class ModifyCollationTimeZone extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getCpuShrinkThreshold()
+ * @method $this withCpuShrinkThreshold($value)
+ * @method string getBurstStatus()
+ * @method $this withBurstStatus($value)
+ * @method string getPeriodScaleMemory()
+ * @method $this withPeriodScaleMemory($value)
+ * @method string getSwitchTimeMode()
+ * @method $this withSwitchTimeMode($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getPeriodScaleCpus()
+ * @method $this withPeriodScaleCpus($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getSwitchTime()
+ * @method $this withSwitchTime($value)
+ * @method string getScaleType()
+ * @method $this withScaleType($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ * @method string getMemoryEnlargeThreshold()
+ * @method $this withMemoryEnlargeThreshold($value)
+ * @method string getCrontabJobId()
+ * @method $this withCrontabJobId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ * @method string getScaleMaxMemory()
+ * @method $this withScaleMaxMemory($value)
+ * @method string getMemoryShrinkThreshold()
+ * @method $this withMemoryShrinkThreshold($value)
+ * @method string getScaleMaxCpus()
+ * @method $this withScaleMaxCpus($value)
+ * @method string getCpuEnlargeThreshold()
+ * @method $this withCpuEnlargeThreshold($value)
+ */
+class ModifyComputeBurstConfig extends Rpc
 {
 }
 
@@ -8338,16 +8586,22 @@ class ModifyRCInstance extends Rpc
 }
 
 /**
- * @method string getReboot()
- * @method $this withReboot($value)
  * @method string getSecurityGroupId()
  * @method $this withSecurityGroupId($value)
+ * @method string getDeletionProtection()
+ * @method $this withDeletionProtection($value)
  * @method string getPassword()
  * @method $this withPassword($value)
  * @method string getHostName()
  * @method $this withHostName($value)
+ * @method string getReboot()
+ * @method $this withReboot($value)
+ * @method string getSecurityGroupIds()
+ * @method $this withSecurityGroupIds($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
  */
 class ModifyRCInstanceAttribute extends Rpc
 {
@@ -8914,6 +9168,16 @@ class RecoveryDBInstance extends Rpc
 }
 
 /**
+ * @method string getForceStop()
+ * @method $this withForceStop($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class RedeployRCInstance extends Rpc
+{
+}
+
+/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getDBInstanceId()
@@ -9422,12 +9686,66 @@ class RevokeRCSecurityGroupPermission extends Rpc
 }
 
 /**
+ * @method string getResourceTags()
+ * @method $this withResourceTags($value)
+ * @method string getContainerName()
+ * @method $this withContainerName($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getWorkingDir()
+ * @method $this withWorkingDir($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getType()
+ * @method $this withType($value)
+ * @method string getCommandContent()
+ * @method $this withCommandContent($value)
+ * @method string getTimeout()
+ * @method $this withTimeout($value)
+ * @method string getFrequency()
+ * @method $this withFrequency($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getContentEncoding()
+ * @method $this withContentEncoding($value)
+ * @method string getRepeatMode()
+ * @method $this withRepeatMode($value)
+ * @method string getWindowsPasswordName()
+ * @method $this withWindowsPasswordName($value)
+ * @method string getKeepCommand()
+ * @method $this withKeepCommand($value)
+ * @method string getTags()
+ * @method $this withTags($value)
+ * @method string getTerminationMode()
+ * @method $this withTerminationMode($value)
+ * @method string getInstanceIds()
+ * @method $this withInstanceIds($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getContainerId()
+ * @method $this withContainerId($value)
+ * @method string getParameters()
+ * @method $this withParameters($value)
+ * @method string getEnableParameter()
+ * @method $this withEnableParameter($value)
+ * @method string getUsername()
+ * @method $this withUsername($value)
+ * @method string getLauncher()
+ * @method $this withLauncher($value)
+ */
+class RunRCCommand extends Rpc
+{
+}
+
+/**
  * @method string getCreateExtraParam()
  * @method $this withCreateExtraParam($value)
  * @method string getSecurityEnhancementStrategy()
  * @method $this withSecurityEnhancementStrategy($value)
  * @method string getKeyPairName()
  * @method $this withKeyPairName($value)
+ * @method string getDeletionProtection()
+ * @method $this withDeletionProtection($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
  * @method string getPassword()
@@ -9683,10 +10001,20 @@ class SwitchDBInstanceVpc extends Rpc
 /**
  * @method string getDBInstanceName()
  * @method $this withDBInstanceName($value)
- * @method string getOwnerId()
- * @method $this withOwnerId($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getType()
  * @method $this withType($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
  * @method string getSwitchoverTimeout()
  * @method $this withSwitchoverTimeout($value)
  */
