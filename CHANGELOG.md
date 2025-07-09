@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2287 - 2025-7-9
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2286 - 2025-7-4
 - Supported param and error code.
 

@@ -4150,6 +4150,7 @@ class DescribeInstanceTopology extends Rpc
  * @method string getSortMetricKey()
  * @method $this withSortMetricKey($value)
  * @method string getReplicaType()
+ * @method string getMetricScope()
  * @method string getEndTime()
  * @method $this withEndTime($value)
  * @method string getLabels()
@@ -4171,6 +4172,19 @@ class DescribeMetricsData extends Rpc
     {
         $this->data['ReplicaType'] = $value;
         $this->options['form_params']['ReplicaType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetricScope($value)
+    {
+        $this->data['MetricScope'] = $value;
+        $this->options['form_params']['MetricScope'] = $value;
 
         return $this;
     }
@@ -6666,6 +6680,7 @@ class DescribeSlowSQLList extends Rpc
 
 /**
  * @method string getStartTime()
+ * @method string getOperatorType()
  * @method string getPageNumber()
  * @method string getTenantId()
  * @method string getPageSize()
@@ -6687,6 +6702,19 @@ class DescribeSqlAuditStat extends Rpc
     {
         $this->data['StartTime'] = $value;
         $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOperatorType($value)
+    {
+        $this->data['OperatorType'] = $value;
+        $this->options['form_params']['OperatorType'] = $value;
 
         return $this;
     }
@@ -9529,6 +9557,7 @@ class ModifyTenantPrimaryZone extends Rpc
  * @method string getCpu()
  * @method string getInstanceId()
  * @method string getTenantId()
+ * @method string getIops()
  * @method string getReadOnlyZoneList()
  */
 class ModifyTenantResource extends Rpc
@@ -9595,6 +9624,19 @@ class ModifyTenantResource extends Rpc
     {
         $this->data['TenantId'] = $value;
         $this->options['form_params']['TenantId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withIops($value)
+    {
+        $this->data['Iops'] = $value;
+        $this->options['form_params']['Iops'] = $value;
 
         return $this;
     }
