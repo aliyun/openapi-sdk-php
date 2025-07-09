@@ -298,6 +298,7 @@ namespace AlibabaCloud;
  * @method static Vpc\Vpc vpc()
  * @method static Vs\Vs vs()
  * @method static WafOpenapi\WafOpenapi wafOpenapi()
+ * @method static WebsiteBuild\WebsiteBuild websiteBuild()
  * @method static WelfareInner\WelfareInner welfareInner()
  * @method static Wfts\Wfts wfts()
  * @method static Workorder\Workorder workorder()
