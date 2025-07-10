@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2291 - 2025-7-10
+- AMP version.
+
+
 ## 1.8.2290 - 2025-7-10
 - AMP version.
 
