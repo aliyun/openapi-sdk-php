@@ -12,9 +12,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ContrastFaceVerify contrastFaceVerify(array $options = [])
  * @method CreateAuthKey createAuthKey(array $options = [])
  * @method CreateVerifySetting createVerifySetting(array $options = [])
+ * @method CredentialProductVerifyV2 credentialProductVerifyV2(array $options = [])
  * @method CredentialVerify credentialVerify(array $options = [])
+ * @method CredentialVerifyV2 credentialVerifyV2(array $options = [])
  * @method DeepfakeDetect deepfakeDetect(array $options = [])
  * @method DeleteFaceVerifyResult deleteFaceVerifyResult(array $options = [])
+ * @method DescribeCardVerify describeCardVerify(array $options = [])
  * @method DescribeDeviceInfo describeDeviceInfo(array $options = [])
  * @method DescribeFaceGuardRisk describeFaceGuardRisk(array $options = [])
  * @method DescribeFaceVerify describeFaceVerify(array $options = [])
@@ -28,9 +31,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method Id2MetaPeriodVerify id2MetaPeriodVerify(array $options = [])
  * @method Id2MetaStandardVerify id2MetaStandardVerify(array $options = [])
  * @method Id2MetaVerify id2MetaVerify(array $options = [])
+ * @method Id2MetaVerifyWithOCR id2MetaVerifyWithOCR(array $options = [])
+ * @method InitCardVerify initCardVerify(array $options = [])
  * @method InitFaceVerify initFaceVerify(array $options = [])
  * @method InsertWhiteListSetting insertWhiteListSetting(array $options = [])
  * @method LivenessFaceVerify livenessFaceVerify(array $options = [])
+ * @method Mobile2MetaVerify mobile2MetaVerify(array $options = [])
  * @method Mobile3MetaDetailStandardVerify mobile3MetaDetailStandardVerify(array $options = [])
  * @method Mobile3MetaDetailVerify mobile3MetaDetailVerify(array $options = [])
  * @method Mobile3MetaSimpleStandardVerify mobile3MetaSimpleStandardVerify(array $options = [])
@@ -718,6 +724,36 @@ class CreateVerifySetting extends Rpc
 /**
  * @method string getProductCode()
  * @method $this withProductCode($value)
+ * @method string getCredType()
+ * @method $this withCredType($value)
+ * @method string getImageFile()
+ * @method string getCredName()
+ * @method $this withCredName($value)
+ * @method string getMerchantId()
+ * @method $this withMerchantId($value)
+ * @method string getImageUrl()
+ * @method $this withImageUrl($value)
+ */
+class CredentialProductVerifyV2 extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageFile($value)
+    {
+        $this->data['ImageFile'] = $value;
+        $this->options['form_params']['ImageFile'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
  * @method string getIsOCR()
  * @method $this withIsOCR($value)
  * @method string getIsCheck()
@@ -762,6 +798,66 @@ class CredentialVerify extends Rpc
 }
 
 /**
+ * @method string getProductCode()
+ * @method $this withProductCode($value)
+ * @method string getIsOcr()
+ * @method $this withIsOcr($value)
+ * @method string getIsCheck()
+ * @method $this withIsCheck($value)
+ * @method string getImageContext()
+ * @method string getCredType()
+ * @method $this withCredType($value)
+ * @method string getImageFile()
+ * @method string getPromptModel()
+ * @method $this withPromptModel($value)
+ * @method string getIdentifyNum()
+ * @method $this withIdentifyNum($value)
+ * @method string getCredName()
+ * @method $this withCredName($value)
+ * @method string getMerchantId()
+ * @method $this withMerchantId($value)
+ * @method string getMerchantDetail()
+ * @method $this withMerchantDetail($value)
+ * @method string getImageUrl()
+ * @method $this withImageUrl($value)
+ * @method string getCertNum()
+ * @method $this withCertNum($value)
+ * @method string getPrompt()
+ * @method $this withPrompt($value)
+ * @method string getUserName()
+ * @method $this withUserName($value)
+ */
+class CredentialVerifyV2 extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageContext($value)
+    {
+        $this->data['ImageContext'] = $value;
+        $this->options['form_params']['ImageContext'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withImageFile($value)
+    {
+        $this->data['ImageFile'] = $value;
+        $this->options['form_params']['ImageFile'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getFaceBase64()
  * @method string getOuterOrderNo()
  * @method $this withOuterOrderNo($value)
@@ -794,6 +890,14 @@ class DeepfakeDetect extends Rpc
  * @method $this withCertifyId($value)
  */
 class DeleteFaceVerifyResult extends Rpc
+{
+}
+
+/**
+ * @method string getCertifyId()
+ * @method $this withCertifyId($value)
+ */
+class DescribeCardVerify extends Rpc
 {
 }
 
@@ -1187,6 +1291,94 @@ class Id2MetaVerify extends Rpc
 }
 
 /**
+ * @method string getCertNationalUrl()
+ * @method string getCertFile()
+ * @method string getCertUrl()
+ * @method string getCertNationalFile()
+ */
+class Id2MetaVerifyWithOCR extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertNationalUrl($value)
+    {
+        $this->data['CertNationalUrl'] = $value;
+        $this->options['form_params']['CertNationalUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertFile($value)
+    {
+        $this->data['CertFile'] = $value;
+        $this->options['form_params']['CertFile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertUrl($value)
+    {
+        $this->data['CertUrl'] = $value;
+        $this->options['form_params']['CertUrl'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCertNationalFile($value)
+    {
+        $this->data['CertNationalFile'] = $value;
+        $this->options['form_params']['CertNationalFile'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getDocScanMode()
+ * @method $this withDocScanMode($value)
+ * @method string getVerifyMeta()
+ * @method $this withVerifyMeta($value)
+ * @method string getPictureSave()
+ * @method $this withPictureSave($value)
+ * @method string getMerchantBizId()
+ * @method $this withMerchantBizId($value)
+ * @method string getModel()
+ * @method $this withModel($value)
+ * @method string getCardPageNumber()
+ * @method $this withCardPageNumber($value)
+ * @method string getCardType()
+ * @method $this withCardType($value)
+ * @method string getMetaInfo()
+ * @method $this withMetaInfo($value)
+ * @method string getCallbackToken()
+ * @method $this withCallbackToken($value)
+ * @method string getCallbackUrl()
+ * @method $this withCallbackUrl($value)
+ */
+class InitCardVerify extends Rpc
+{
+}
+
+/**
  * @method string getFaceContrastPicture()
  * @method string getReadImg()
  * @method $this withReadImg($value)
@@ -1525,6 +1717,54 @@ class LivenessFaceVerify extends Rpc
     {
         $this->data['Crop'] = $value;
         $this->options['form_params']['Crop'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getParamType()
+ * @method string getMobile()
+ * @method string getUserName()
+ */
+class Mobile2MetaVerify extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withParamType($value)
+    {
+        $this->data['ParamType'] = $value;
+        $this->options['form_params']['ParamType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMobile($value)
+    {
+        $this->data['Mobile'] = $value;
+        $this->options['form_params']['Mobile'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUserName($value)
+    {
+        $this->data['UserName'] = $value;
+        $this->options['form_params']['UserName'] = $value;
 
         return $this;
     }
