@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2290 - 2025-7-10
+- AMP version.
+
+
 ## 1.8.2289 - 2025-7-10
 - Generated 2019-03-07 for `Cloudauth`.
 
