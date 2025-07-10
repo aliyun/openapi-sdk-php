@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2294 - 2025-7-10
+- Generated 2016-04-28 for `Vpc`.
+
+
 ## 1.8.2293 - 2025-7-10
 - AMP version.
 
