@@ -82,6 +82,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryOrganizationRoleConfig queryOrganizationRoleConfig(array $options = [])
  * @method QueryOrganizationWorkspaceList queryOrganizationWorkspaceList(array $options = [])
  * @method QueryReadableResourcesListByUserId queryReadableResourcesListByUserId(array $options = [])
+ * @method QueryReadableResourcesListByUserIdV2 queryReadableResourcesListByUserIdV2(array $options = [])
  * @method QueryReportPerformance queryReportPerformance(array $options = [])
  * @method QueryShareList queryShareList(array $options = [])
  * @method QuerySharesToUserList querySharesToUserList(array $options = [])
@@ -1398,6 +1399,25 @@ class QueryOrganizationWorkspaceList extends Rpc
  */
 class QueryReadableResourcesListByUserId extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getWorkType()
+ * @method $this withWorkType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class QueryReadableResourcesListByUserIdV2 extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
