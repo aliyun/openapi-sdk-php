@@ -176,6 +176,7 @@ namespace AlibabaCloud;
  * @method static JarvisPublic\JarvisPublic jarvisPublic()
  * @method static Kms\Kms kms()
  * @method static Ledgerdb\Ledgerdb ledgerdb()
+ * @method static LingMou\LingMou lingMou()
  * @method static LinkFace\LinkFace linkFace()
  * @method static LinkWAN\LinkWAN linkWAN()
  * @method static Linkedmall\Linkedmall linkedmall()

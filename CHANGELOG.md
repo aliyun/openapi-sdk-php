@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2296 - 2025-7-16
+- Add Support For Create Chat Session.
+
+
 ## 1.8.2295 - 2025-7-14
 - Add QueryReadableResourcesListByUserIdV2 API.
 
