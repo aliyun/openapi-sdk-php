@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2297 - 2025-7-17
+- Update GetInstance and ListInstances.
+
+
 ## 1.8.2296 - 2025-7-16
 - Add Support For Create Chat Session.
 

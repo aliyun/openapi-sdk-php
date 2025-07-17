@@ -6,11 +6,13 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method CheckInstanceDatasource checkInstanceDatasource(array $options = [])
+ * @method CheckModelFeatureFGFeature checkModelFeatureFGFeature(array $options = [])
  * @method CreateDatasource createDatasource(array $options = [])
  * @method CreateFeatureEntity createFeatureEntity(array $options = [])
  * @method CreateFeatureView createFeatureView(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateLabelTable createLabelTable(array $options = [])
+ * @method CreateLLMConfig createLLMConfig(array $options = [])
  * @method CreateModelFeature createModelFeature(array $options = [])
  * @method CreateProject createProject(array $options = [])
  * @method CreateServiceIdentityRole createServiceIdentityRole(array $options = [])
@@ -18,6 +20,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteFeatureEntity deleteFeatureEntity(array $options = [])
  * @method DeleteFeatureView deleteFeatureView(array $options = [])
  * @method DeleteLabelTable deleteLabelTable(array $options = [])
+ * @method DeleteLLMConfig deleteLLMConfig(array $options = [])
  * @method DeleteModelFeature deleteModelFeature(array $options = [])
  * @method DeleteProject deleteProject(array $options = [])
  * @method ExportModelFeatureTrainingSetTable exportModelFeatureTrainingSetTable(array $options = [])
@@ -27,6 +30,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetFeatureView getFeatureView(array $options = [])
  * @method GetInstance getInstance(array $options = [])
  * @method GetLabelTable getLabelTable(array $options = [])
+ * @method GetLLMConfig getLLMConfig(array $options = [])
  * @method GetModelFeature getModelFeature(array $options = [])
  * @method GetModelFeatureFGFeature getModelFeatureFGFeature(array $options = [])
  * @method GetModelFeatureFGInfo getModelFeatureFGInfo(array $options = [])
@@ -34,6 +38,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetProjectFeatureEntity getProjectFeatureEntity(array $options = [])
  * @method GetServiceIdentityRole getServiceIdentityRole(array $options = [])
  * @method GetTask getTask(array $options = [])
+ * @method ListDatasourceFeatureViews listDatasourceFeatureViews(array $options = [])
  * @method ListDatasources listDatasources(array $options = [])
  * @method ListDatasourceTables listDatasourceTables(array $options = [])
  * @method ListFeatureEntities listFeatureEntities(array $options = [])
@@ -43,15 +48,19 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListFeatureViews listFeatureViews(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListLabelTables listLabelTables(array $options = [])
+ * @method ListLLMConfigs listLLMConfigs(array $options = [])
  * @method ListModelFeatureAvailableFeatures listModelFeatureAvailableFeatures(array $options = [])
  * @method ListModelFeatures listModelFeatures(array $options = [])
+ * @method ListProjectFeatures listProjectFeatures(array $options = [])
  * @method ListProjectFeatureViews listProjectFeatureViews(array $options = [])
  * @method ListProjects listProjects(array $options = [])
  * @method ListTaskLogs listTaskLogs(array $options = [])
  * @method ListTasks listTasks(array $options = [])
  * @method PublishFeatureViewTable publishFeatureViewTable(array $options = [])
+ * @method StopTask stopTask(array $options = [])
  * @method UpdateDatasource updateDatasource(array $options = [])
  * @method UpdateLabelTable updateLabelTable(array $options = [])
+ * @method UpdateLLMConfig updateLLMConfig(array $options = [])
  * @method UpdateModelFeature updateModelFeature(array $options = [])
  * @method UpdateModelFeatureFGFeature updateModelFeatureFGFeature(array $options = [])
  * @method UpdateProject updateProject(array $options = [])
@@ -95,6 +104,21 @@ class CheckInstanceDatasource extends Roa
 
         return $this;
     }
+}
+
+/**
+ * @method string getModelFeatureId()
+ * @method $this withModelFeatureId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CheckModelFeatureFGFeature extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/modelfeatures/[ModelFeatureId]/action/checkfgfeature';
+
+    /** @var string */
+    public $method = 'POST';
 }
 
 /**
@@ -212,6 +236,36 @@ class CreateLabelTable extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v1/instances/[InstanceId]/labeltables';
+
+    /** @var string */
+    public $method = 'POST';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBody()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateLLMConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/llmconfigs';
+
+    /** @var string */
+    public $scheme = 'https';
 
     /** @var string */
     public $method = 'POST';
@@ -370,6 +424,24 @@ class DeleteLabelTable extends Roa
 }
 
 /**
+ * @method string getLLMConfigId()
+ * @method $this withLLMConfigId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteLLMConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/llmconfigs/[LLMConfigId]';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'DELETE';
+}
+
+/**
  * @method string getModelFeatureId()
  * @method $this withModelFeatureId($value)
  * @method string getInstanceId()
@@ -501,6 +573,21 @@ class GetLabelTable extends Roa
 }
 
 /**
+ * @method string getLLMConfigId()
+ * @method $this withLLMConfigId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetLLMConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/llmconfigs/[LLMConfigId]';
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getModelFeatureId()
  * @method $this withModelFeatureId($value)
  * @method string getInstanceId()
@@ -582,6 +669,203 @@ class GetTask extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v1/instances/[InstanceId]/tasks/[TaskId]';
+}
+
+/**
+ * @method string getType()
+ * @method string getStartDate()
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getProjectId()
+ * @method string getOrder()
+ * @method string getAll()
+ * @method string getProjectName()
+ * @method string getShowStorageUsage()
+ * @method string getVerbose()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getEndDate()
+ * @method string getDatasourceId()
+ * @method $this withDatasourceId($value)
+ * @method string getName()
+ * @method string getSortBy()
+ */
+class ListDatasourceFeatureViews extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/datasources/[DatasourceId]/featureviews';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withType($value)
+    {
+        $this->data['Type'] = $value;
+        $this->options['query']['Type'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartDate($value)
+    {
+        $this->data['StartDate'] = $value;
+        $this->options['query']['StartDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectId($value)
+    {
+        $this->data['ProjectId'] = $value;
+        $this->options['query']['ProjectId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['query']['Order'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAll($value)
+    {
+        $this->data['All'] = $value;
+        $this->options['query']['All'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withProjectName($value)
+    {
+        $this->data['ProjectName'] = $value;
+        $this->options['query']['ProjectName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withShowStorageUsage($value)
+    {
+        $this->data['ShowStorageUsage'] = $value;
+        $this->options['query']['ShowStorageUsage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVerbose($value)
+    {
+        $this->data['Verbose'] = $value;
+        $this->options['query']['Verbose'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndDate($value)
+    {
+        $this->data['EndDate'] = $value;
+        $this->options['query']['EndDate'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortBy($value)
+    {
+        $this->data['SortBy'] = $value;
+        $this->options['query']['SortBy'] = $value;
+
+        return $this;
+    }
 }
 
 /**
@@ -1215,6 +1499,131 @@ class ListLabelTables extends Roa
 }
 
 /**
+ * @method string getPageNumber()
+ * @method string getNextToken()
+ * @method string getPageSize()
+ * @method string getOrder()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method string getMaxResults()
+ * @method string getSortBy()
+ * @method string getWorkspaceId()
+ */
+class ListLLMConfigs extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/llmconfigs';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNextToken($value)
+    {
+        $this->data['NextToken'] = $value;
+        $this->options['query']['NextToken'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['query']['Order'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMaxResults($value)
+    {
+        $this->data['MaxResults'] = $value;
+        $this->options['query']['MaxResults'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortBy($value)
+    {
+        $this->data['SortBy'] = $value;
+        $this->options['query']['SortBy'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkspaceId($value)
+    {
+        $this->data['WorkspaceId'] = $value;
+        $this->options['query']['WorkspaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getModelFeatureId()
  * @method $this withModelFeatureId($value)
  * @method string getFeatureName()
@@ -1343,6 +1752,119 @@ class ListModelFeatures extends Roa
     {
         $this->data['Order'] = $value;
         $this->options['query']['Order'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getPageNumber()
+ * @method string getPageSize()
+ * @method string getProjectId()
+ * @method $this withProjectId($value)
+ * @method string getOrder()
+ * @method string getFilter()
+ * @method string getAliasName()
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getName()
+ * @method string getSortBy()
+ */
+class ListProjectFeatures extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/projects/[ProjectId]/features';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageNumber($value)
+    {
+        $this->data['PageNumber'] = $value;
+        $this->options['query']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPageSize($value)
+    {
+        $this->data['PageSize'] = $value;
+        $this->options['query']['PageSize'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOrder($value)
+    {
+        $this->data['Order'] = $value;
+        $this->options['query']['Order'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFilter($value)
+    {
+        $this->data['Filter'] = $value;
+        $this->options['query']['Filter'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAliasName($value)
+    {
+        $this->data['AliasName'] = $value;
+        $this->options['query']['AliasName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withName($value)
+    {
+        $this->data['Name'] = $value;
+        $this->options['query']['Name'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortBy($value)
+    {
+        $this->data['SortBy'] = $value;
+        $this->options['query']['SortBy'] = $value;
 
         return $this;
     }
@@ -1646,6 +2168,24 @@ class PublishFeatureViewTable extends Roa
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getTaskId()
+ * @method $this withTaskId($value)
+ */
+class StopTask extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/tasks/[TaskId]/action/stop';
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /** @var string */
+    public $method = 'POST';
+}
+
+/**
  * @method string getBody()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -1685,6 +2225,38 @@ class UpdateLabelTable extends Roa
 {
     /** @var string */
     public $pathPattern = '/api/v1/instances/[InstanceId]/labeltables/[LabelTableId]';
+
+    /** @var string */
+    public $method = 'PUT';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withBody($value)
+    {
+        $this->data['Body'] = $value;
+        $this->options['form_params']['body'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getBody()
+ * @method string getLLMConfigId()
+ * @method $this withLLMConfigId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateLLMConfig extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/api/v1/instances/[InstanceId]/llmconfigs/[LLMConfigId]';
+
+    /** @var string */
+    public $scheme = 'https';
 
     /** @var string */
     public $method = 'PUT';
