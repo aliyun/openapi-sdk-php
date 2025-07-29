@@ -252,6 +252,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeLiveUpVideoAudioInfo describeLiveUpVideoAudioInfo(array $options = [])
  * @method DescribeLiveUserBillPrediction describeLiveUserBillPrediction(array $options = [])
  * @method DescribeLiveUserDomains describeLiveUserDomains(array $options = [])
+ * @method DescribeLiveUserStreamMetricData describeLiveUserStreamMetricData(array $options = [])
  * @method DescribeLiveUserTags describeLiveUserTags(array $options = [])
  * @method DescribeLiveUserTrafficLog describeLiveUserTrafficLog(array $options = [])
  * @method DescribeLiveVerifyContent describeLiveVerifyContent(array $options = [])
@@ -5560,6 +5561,31 @@ class DescribeLiveUserDomains extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getProtocol()
+ * @method $this withProtocol($value)
+ * @method string getAppName()
+ * @method $this withAppName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStreamName()
+ * @method $this withStreamName($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ */
+class DescribeLiveUserStreamMetricData extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
