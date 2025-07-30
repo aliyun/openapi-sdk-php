@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2302 - 2025-7-30
+- Backup OpenAPI update.
+
+
 ## 1.8.2301 - 2025-7-30
 - Generated 2025-07-09 for `CioMarketPop`.
 
