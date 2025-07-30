@@ -59,6 +59,7 @@ namespace AlibabaCloud;
  * @method static Cdn\Cdn cdn()
  * @method static Cds\Cds cds()
  * @method static Chatbot\Chatbot chatbot()
+ * @method static CioMarketPop\CioMarketPop cioMarketPop()
  * @method static Clickhouse\Clickhouse clickhouse()
  * @method static CloudAPI\CloudAPI cloudAPI()
  * @method static CloudPhoto\CloudPhoto cloudPhoto()

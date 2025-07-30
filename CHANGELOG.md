@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2301 - 2025-7-30
+- Generated 2025-07-09 for `CioMarketPop`.
+
+
 ## 1.8.2300 - 2025-7-29
 - Generated 2016-11-01 for `live`.
 
