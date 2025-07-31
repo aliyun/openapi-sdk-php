@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2303 - 2025-7-31
+- Generated 2015-12-01 for `Dds`.
+
+
 ## 1.8.2302 - 2025-7-30
 - Backup OpenAPI update.
 

@@ -86,6 +86,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyAuditLogFilter modifyAuditLogFilter(array $options = [])
  * @method ModifyAuditPolicy modifyAuditPolicy(array $options = [])
  * @method ModifyBackupPolicy modifyBackupPolicy(array $options = [])
+ * @method ModifyDBInstanceAttribute modifyDBInstanceAttribute(array $options = [])
  * @method ModifyDBInstanceConfig modifyDBInstanceConfig(array $options = [])
  * @method ModifyDBInstanceConnectionString modifyDBInstanceConnectionString(array $options = [])
  * @method ModifyDBInstanceDescription modifyDBInstanceDescription(array $options = [])
@@ -284,6 +285,8 @@ class CreateAccount extends Rpc
  * @method $this withOwnerId($value)
  * @method string getBackupMethod()
  * @method $this withBackupMethod($value)
+ * @method string getBackupRetentionPeriod()
+ * @method $this withBackupRetentionPeriod($value)
  */
 class CreateBackup extends Rpc
 {
@@ -2355,8 +2358,28 @@ class ModifyAuditPolicy extends Rpc
  * @method $this withCrossLogRetentionType($value)
  * @method string getLogBackupRetentionPeriod()
  * @method $this withLogBackupRetentionPeriod($value)
+ * @method string getPreserveOneEachHour()
+ * @method $this withPreserveOneEachHour($value)
  */
 class ModifyBackupPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getDBInstanceReleaseProtection()
+ * @method $this withDBInstanceReleaseProtection($value)
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class ModifyDBInstanceAttribute extends Rpc
 {
 }
 
@@ -2580,6 +2603,8 @@ class ModifyDBInstanceSpec extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
@@ -2598,6 +2623,8 @@ class ModifyDBInstanceSSL extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getResourceOwnerAccount()
@@ -2800,6 +2827,8 @@ class ModifyNodeSpecBatch extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getNodeId()
@@ -2992,6 +3021,8 @@ class ResetAccountPassword extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getNodeId()
@@ -3012,6 +3043,8 @@ class RestartDBInstance extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getRoleId()
  * @method $this withRoleId($value)
+ * @method string getSwitchMode()
+ * @method $this withSwitchMode($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getNodeId()
