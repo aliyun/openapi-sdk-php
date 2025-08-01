@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2304 - 2025-8-1
+- Add image search api.
+
+
 ## 1.8.2303 - 2025-7-31
 - Generated 2015-12-01 for `Dds`.
 
