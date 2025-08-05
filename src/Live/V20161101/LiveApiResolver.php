@@ -1331,6 +1331,8 @@ class AddLiveSnapshotNotifyConfig extends Rpc
  * @method $this withProtocol($value)
  * @method string getAppName()
  * @method $this withAppName($value)
+ * @method string getLiveMerger()
+ * @method $this withLiveMerger($value)
  * @method string getInStreamName2()
  * @method $this withInStreamName2($value)
  * @method string getStreamName()
@@ -1343,6 +1345,8 @@ class AddLiveSnapshotNotifyConfig extends Rpc
  * @method $this withEndTime($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
+ * @method string getMergeParameters()
+ * @method $this withMergeParameters($value)
  */
 class AddLiveStreamMerge extends Rpc
 {
@@ -8969,8 +8973,12 @@ class StartPlaylist extends Rpc
  * @method $this withSubscribeParams($value)
  * @method string getRecordParams()
  * @method $this withRecordParams($value)
+ * @method string getMaxIdleTime()
+ * @method $this withMaxIdleTime($value)
  * @method string getMixTranscodeParams()
  * @method $this withMixTranscodeParams($value)
+ * @method string getNotifyAuthKey()
+ * @method $this withNotifyAuthKey($value)
  * @method string getAppId()
  * @method $this withAppId($value)
  * @method string getChannelId()
