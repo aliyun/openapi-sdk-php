@@ -57,6 +57,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeInstanceTenantModes describeInstanceTenantModes(array $options = [])
  * @method DescribeInstanceTopology describeInstanceTopology(array $options = [])
  * @method DescribeMetricsData describeMetricsData(array $options = [])
+ * @method DescribeMetricsDataV2 describeMetricsDataV2(array $options = [])
  * @method DescribeNodeMetrics describeNodeMetrics(array $options = [])
  * @method DescribeOasAnomalySQLList describeOasAnomalySQLList(array $options = [])
  * @method DescribeOasSlowSQLList describeOasSlowSQLList(array $options = [])
@@ -4185,6 +4186,155 @@ class DescribeMetricsData extends Rpc
     {
         $this->data['MetricScope'] = $value;
         $this->options['form_params']['MetricScope'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getGroupByLabels()
+ * @method string getStartTime()
+ * @method string getLimit()
+ * @method string getSortOrder()
+ * @method string getSortMetricKey()
+ * @method string getReplicaType()
+ * @method string getEndTime()
+ * @method string getLabels()
+ * @method string getInstanceId()
+ * @method string getMetrics()
+ */
+class DescribeMetricsDataV2 extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withGroupByLabels($value)
+    {
+        $this->data['GroupByLabels'] = $value;
+        $this->options['form_params']['GroupByLabels'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStartTime($value)
+    {
+        $this->data['StartTime'] = $value;
+        $this->options['form_params']['StartTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLimit($value)
+    {
+        $this->data['Limit'] = $value;
+        $this->options['form_params']['Limit'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortOrder($value)
+    {
+        $this->data['SortOrder'] = $value;
+        $this->options['form_params']['SortOrder'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSortMetricKey($value)
+    {
+        $this->data['SortMetricKey'] = $value;
+        $this->options['form_params']['SortMetricKey'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withReplicaType($value)
+    {
+        $this->data['ReplicaType'] = $value;
+        $this->options['form_params']['ReplicaType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEndTime($value)
+    {
+        $this->data['EndTime'] = $value;
+        $this->options['form_params']['EndTime'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabels($value)
+    {
+        $this->data['Labels'] = $value;
+        $this->options['form_params']['Labels'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withMetrics($value)
+    {
+        $this->data['Metrics'] = $value;
+        $this->options['form_params']['Metrics'] = $value;
 
         return $this;
     }

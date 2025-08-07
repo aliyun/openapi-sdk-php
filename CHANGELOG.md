@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2306 - 2025-8-7
+- Generated 2019-09-01 for `OceanBasePro`.
+
+
 ## 1.8.2305 - 2025-8-5
 - Generated 2016-11-01 for `live`.
 
