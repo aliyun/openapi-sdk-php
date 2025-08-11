@@ -67,6 +67,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryCopilotEmbedConfig queryCopilotEmbedConfig(array $options = [])
  * @method QueryCubeOptimization queryCubeOptimization(array $options = [])
  * @method QueryCubePerformance queryCubePerformance(array $options = [])
+ * @method QueryDashboardNl2sql queryDashboardNl2sql(array $options = [])
  * @method QueryData queryData(array $options = [])
  * @method QueryDataRange queryDataRange(array $options = [])
  * @method QueryDataService queryDataService(array $options = [])
@@ -78,6 +79,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QueryDatasetSwitchInfo queryDatasetSwitchInfo(array $options = [])
  * @method QueryEmbeddedInfo queryEmbeddedInfo(array $options = [])
  * @method QueryEmbeddedStatus queryEmbeddedStatus(array $options = [])
+ * @method QueryLastAccelerationEngineJob queryLastAccelerationEngineJob(array $options = [])
  * @method QueryLlmCubeWithThemeListByUserId queryLlmCubeWithThemeListByUserId(array $options = [])
  * @method QueryOrganizationRoleConfig queryOrganizationRoleConfig(array $options = [])
  * @method QueryOrganizationWorkspaceList queryOrganizationWorkspaceList(array $options = [])
@@ -1187,6 +1189,23 @@ class QueryCubePerformance extends Rpc
  * @method $this withUserId($value)
  * @method string getSignType()
  * @method $this withSignType($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class QueryDashboardNl2sql extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
  * @method string getReturnFields()
  * @method $this withReturnFields($value)
  * @method string getConditions()
@@ -1342,6 +1361,21 @@ class QueryEmbeddedInfo extends Rpc
  */
 class QueryEmbeddedStatus extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ */
+class QueryLastAccelerationEngineJob extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

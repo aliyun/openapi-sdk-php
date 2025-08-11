@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2308 - 2025-8-11
+- Add QueryDashboardNl2sql, QueryLastAccelerationEngineJob APIs.
+
+
 ## 1.8.2307 - 2025-8-11
 - Generated 2014-08-15 for `Rds`.
 
