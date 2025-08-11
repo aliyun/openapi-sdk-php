@@ -41,7 +41,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateDBNodes createDBNodes(array $options = [])
  * @method CreateDBProxyEndpointAddress createDBProxyEndpointAddress(array $options = [])
  * @method CreateDdrInstance createDdrInstance(array $options = [])
- * @method CreateDiagnosticReport createDiagnosticReport(array $options = [])
  * @method CreateGADInstance createGADInstance(array $options = [])
  * @method CreateGadInstanceMember createGadInstanceMember(array $options = [])
  * @method CreateMaskingRules createMaskingRules(array $options = [])
@@ -82,6 +81,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteRCInstances deleteRCInstances(array $options = [])
  * @method DeleteRCNodePool deleteRCNodePool(array $options = [])
  * @method DeleteRCSnapshot deleteRCSnapshot(array $options = [])
+ * @method DeleteRCVCluster deleteRCVCluster(array $options = [])
  * @method DeleteReplicationLink deleteReplicationLink(array $options = [])
  * @method DeleteSecret deleteSecret(array $options = [])
  * @method DeleteSlot deleteSlot(array $options = [])
@@ -149,7 +149,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeDedicatedHostGroups describeDedicatedHostGroups(array $options = [])
  * @method DescribeDedicatedHosts describeDedicatedHosts(array $options = [])
  * @method DescribeDetachedBackups describeDetachedBackups(array $options = [])
- * @method DescribeDiagnosticReportList describeDiagnosticReportList(array $options = [])
  * @method DescribeDTCSecurityIpHostsForSQLServer describeDTCSecurityIpHostsForSQLServer(array $options = [])
  * @method DescribeErrorLogs describeErrorLogs(array $options = [])
  * @method DescribeEvents describeEvents(array $options = [])
@@ -185,6 +184,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribePostgresExtensions describePostgresExtensions(array $options = [])
  * @method DescribePrice describePrice(array $options = [])
  * @method DescribeQuickSaleConfig describeQuickSaleConfig(array $options = [])
+ * @method DescribeRCAvailableResource describeRCAvailableResource(array $options = [])
  * @method DescribeRCCloudAssistantStatus describeRCCloudAssistantStatus(array $options = [])
  * @method DescribeRCClusterConfig describeRCClusterConfig(array $options = [])
  * @method DescribeRCClusterNodes describeRCClusterNodes(array $options = [])
@@ -203,6 +203,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeRCInvocationResults describeRCInvocationResults(array $options = [])
  * @method DescribeRCMetricList describeRCMetricList(array $options = [])
  * @method DescribeRCNodePool describeRCNodePool(array $options = [])
+ * @method DescribeRCResourcesModification describeRCResourcesModification(array $options = [])
  * @method DescribeRCSecurityGroupList describeRCSecurityGroupList(array $options = [])
  * @method DescribeRCSecurityGroupPermission describeRCSecurityGroupPermission(array $options = [])
  * @method DescribeRCSnapshots describeRCSnapshots(array $options = [])
@@ -246,6 +247,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ImportUserBackupFile importUserBackupFile(array $options = [])
  * @method InstallRCCloudAssistant installRCCloudAssistant(array $options = [])
  * @method ListClasses listClasses(array $options = [])
+ * @method ListRCVClusters listRCVClusters(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListUserBackupFiles listUserBackupFiles(array $options = [])
  * @method LockAccount lockAccount(array $options = [])
@@ -313,6 +315,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ModifyRCInstanceKeyPair modifyRCInstanceKeyPair(array $options = [])
  * @method ModifyRCInstanceNetworkSpec modifyRCInstanceNetworkSpec(array $options = [])
  * @method ModifyRCSecurityGroupPermission modifyRCSecurityGroupPermission(array $options = [])
+ * @method ModifyRCVCluster modifyRCVCluster(array $options = [])
  * @method ModifyReadonlyInstanceDelayReplicationTime modifyReadonlyInstanceDelayReplicationTime(array $options = [])
  * @method ModifyReadWriteSplittingConnection modifyReadWriteSplittingConnection(array $options = [])
  * @method ModifyResourceGroup modifyResourceGroup(array $options = [])
@@ -1623,20 +1626,6 @@ class CreateDdrInstance extends Rpc
 }
 
 /**
- * @method string getEndTime()
- * @method $this withEndTime($value)
- * @method string getStartTime()
- * @method $this withStartTime($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- * @method string getCategory()
- * @method $this withCategory($value)
- */
-class CreateDiagnosticReport extends Rpc
-{
-}
-
-/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getCentralRdsDtsAdminAccount()
@@ -2279,6 +2268,8 @@ class CreateRCSnapshot extends Rpc
  * @method $this withBurstingEnabled($value)
  * @method string getVPCId()
  * @method $this withVPCId($value)
+ * @method string getIsAnalyticReadOnlyIns()
+ * @method $this withIsAnalyticReadOnlyIns($value)
  * @method string getCategory()
  * @method $this withCategory($value)
  * @method string getPayType()
@@ -2761,6 +2752,14 @@ class DeleteRCNodePool extends Rpc
  * @method $this withForce($value)
  */
 class DeleteRCSnapshot extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ */
+class DeleteRCVCluster extends Rpc
 {
 }
 
@@ -4647,16 +4646,6 @@ class DescribeDetachedBackups extends Rpc
 }
 
 /**
- * @method string getResourceGroupId()
- * @method $this withResourceGroupId($value)
- * @method string getDBInstanceId()
- * @method $this withDBInstanceId($value)
- */
-class DescribeDiagnosticReportList extends Rpc
-{
-}
-
-/**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
  * @method string getResourceGroupId()
@@ -5418,6 +5407,42 @@ class DescribeQuickSaleConfig extends Rpc
 }
 
 /**
+ * @method string getMemory()
+ * @method $this withMemory($value)
+ * @method string getIoOptimized()
+ * @method $this withIoOptimized($value)
+ * @method string getDataDiskCategory()
+ * @method $this withDataDiskCategory($value)
+ * @method string getCores()
+ * @method $this withCores($value)
+ * @method string getSystemDiskCategory()
+ * @method $this withSystemDiskCategory($value)
+ * @method string getScope()
+ * @method $this withScope($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getNetworkCategory()
+ * @method $this withNetworkCategory($value)
+ * @method string getInstanceChargeType()
+ * @method $this withInstanceChargeType($value)
+ * @method string getDedicatedHostId()
+ * @method $this withDedicatedHostId($value)
+ * @method string getSpotDuration()
+ * @method $this withSpotDuration($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ * @method string getSpotStrategy()
+ * @method $this withSpotStrategy($value)
+ * @method string getDestinationResource()
+ * @method $this withDestinationResource($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ */
+class DescribeRCAvailableResource extends Rpc
+{
+}
+
+/**
  * @method string getOSType()
  * @method $this withOSType($value)
  * @method string getPageNumber()
@@ -5887,6 +5912,28 @@ class DescribeRCNodePool extends Rpc
 
     /** @var string */
     public $method = 'GET';
+}
+
+/**
+ * @method string getMemory()
+ * @method $this withMemory($value)
+ * @method string getCores()
+ * @method $this withCores($value)
+ * @method string getInstanceType()
+ * @method $this withInstanceType($value)
+ * @method string getOperationType()
+ * @method $this withOperationType($value)
+ * @method string getDestinationResource()
+ * @method $this withDestinationResource($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getZoneId()
+ * @method $this withZoneId($value)
+ * @method string getConditionss()
+ * @method $this withConditionss($value)
+ */
+class DescribeRCResourcesModification extends Rpc
+{
 }
 
 /**
@@ -6788,6 +6835,10 @@ class ListClasses extends Rpc
 {
 }
 
+class ListRCVClusters extends Rpc
+{
+}
+
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
@@ -7111,9 +7162,6 @@ class MigrateDBInstance extends Rpc
  */
 class MigrateDBNodes extends Rpc
 {
-
-    /** @var string */
-    public $scheme = 'https';
 }
 
 /**
@@ -7621,6 +7669,8 @@ class ModifyDBInstanceConfig extends Rpc
  * @method $this withGeneralGroupName($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
+ * @method string getRetainVip()
+ * @method $this withRetainVip($value)
  * @method string getResourceOwnerAccount()
  * @method $this withResourceOwnerAccount($value)
  * @method string getOwnerAccount()
@@ -7633,6 +7683,8 @@ class ModifyDBInstanceConfig extends Rpc
  * @method $this withCurrentConnectionString($value)
  * @method string getPort()
  * @method $this withPort($value)
+ * @method string getTargetDBInstanceId()
+ * @method $this withTargetDBInstanceId($value)
  */
 class ModifyDBInstanceConnectionString extends Rpc
 {
@@ -8700,6 +8752,16 @@ class ModifyRCInstanceNetworkSpec extends Rpc
  * @method $this withSecurityGroupRuleId($value)
  */
 class ModifyRCSecurityGroupPermission extends Rpc
+{
+}
+
+/**
+ * @method string getClusterId()
+ * @method $this withClusterId($value)
+ * @method string getSupportDiskPerformanceLevel()
+ * @method $this withSupportDiskPerformanceLevel($value)
+ */
+class ModifyRCVCluster extends Rpc
 {
 }
 
