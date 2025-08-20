@@ -167,6 +167,7 @@ namespace AlibabaCloud;
  * @method static Imm\Imm imm()
  * @method static Ims\Ims ims()
  * @method static IndustryBrain\IndustryBrain industryBrain()
+ * @method static IntlMarket\IntlMarket intlMarket()
  * @method static Iot\Iot iot()
  * @method static Iqa\Iqa iqa()
  * @method static Itag\Itag itag()
