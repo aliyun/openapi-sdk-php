@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2312 - 2025-8-20
+- Add Chat Session Query Support.
+- Add Chat Session Close Support.
+
+
 ## 1.8.2311 - 2025-8-20
 - Generated 2025-08-12 for `IntlMarket`.
 
