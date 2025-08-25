@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2313 - 2025-8-25
+- Generated 2021-12-01 for `Eiam`.
+
+
 ## 1.8.2312 - 2025-8-20
 - Add Chat Session Query Support.
 - Add Chat Session Close Support.

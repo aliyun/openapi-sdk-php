@@ -125,6 +125,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetUserPrimaryOrganizationalUnit setUserPrimaryOrganizationalUnit(array $options = [])
  * @method UnlockUser unlockUser(array $options = [])
  * @method UpdateApplicationAuthorizationType updateApplicationAuthorizationType(array $options = [])
+ * @method UpdateApplicationClientSecretExpirationTime updateApplicationClientSecretExpirationTime(array $options = [])
  * @method UpdateApplicationDescription updateApplicationDescription(array $options = [])
  * @method UpdateConditionalAccessPolicy updateConditionalAccessPolicy(array $options = [])
  * @method UpdateConditionalAccessPolicyDescription updateConditionalAccessPolicyDescription(array $options = [])
@@ -243,10 +244,12 @@ class CreateApplication extends Rpc
 }
 
 /**
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getExpirationTime()
+ * @method $this withExpirationTime($value)
  * @method string getApplicationId()
  * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  */
 class CreateApplicationClientSecret extends Rpc
 {
@@ -317,6 +320,8 @@ class CreateGroup extends Rpc
 /**
  * @method string getDingtalkAppConfig()
  * @method $this withDingtalkAppConfig($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getNetworkAccessEndpointId()
  * @method $this withNetworkAccessEndpointId($value)
  * @method string getAutoUpdateUserConfig()
@@ -395,6 +400,8 @@ class CreateOrganizationalUnit extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getPhoneNumber()
  * @method $this withPhoneNumber($value)
  * @method string getDescription()
@@ -1486,6 +1493,8 @@ class SetApplicationGrantScope extends Rpc
 }
 
 /**
+ * @method string getNetworkAccessEndpointId()
+ * @method $this withNetworkAccessEndpointId($value)
  * @method string getProvisionProtocolType()
  * @method $this withProvisionProtocolType($value)
  * @method string getApplicationId()
@@ -1682,6 +1691,20 @@ class UpdateApplicationAuthorizationType extends Rpc
 }
 
 /**
+ * @method string getExpirationTime()
+ * @method $this withExpirationTime($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getSecretId()
+ * @method $this withSecretId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateApplicationClientSecretExpirationTime extends Rpc
+{
+}
+
+/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getApplicationId()
@@ -1694,6 +1717,8 @@ class UpdateApplicationDescription extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getConditionsConfig()
  * @method $this withConditionsConfig($value)
  * @method string getDecisionType()
@@ -1714,6 +1739,8 @@ class UpdateConditionalAccessPolicy extends Rpc
 }
 
 /**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getConditionalAccessPolicyId()
@@ -1754,6 +1781,8 @@ class UpdateGroupDescription extends Rpc
 /**
  * @method string getDingtalkAppConfig()
  * @method $this withDingtalkAppConfig($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
  * @method string getNetworkAccessEndpointId()
  * @method $this withNetworkAccessEndpointId($value)
  * @method string getLogoUrl()
