@@ -317,6 +317,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListMuteGroupUser listMuteGroupUser(array $options = [])
  * @method ListPlaylist listPlaylist(array $options = [])
  * @method ListPlaylistItems listPlaylistItems(array $options = [])
+ * @method ListRTCLiveRooms listRTCLiveRooms(array $options = [])
  * @method ListRtcMPUEventSubRecord listRtcMPUEventSubRecord(array $options = [])
  * @method ListRtcMPUTaskDetail listRtcMPUTaskDetail(array $options = [])
  * @method LiveUpstreamQosData liveUpstreamQosData(array $options = [])
@@ -7115,6 +7116,21 @@ class ListPlaylist extends Rpc
  */
 class ListPlaylistItems extends Rpc
 {
+}
+
+/**
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getAppId()
+ * @method $this withAppId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListRTCLiveRooms extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

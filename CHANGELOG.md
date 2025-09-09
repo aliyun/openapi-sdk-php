@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2314 - 2025-9-9
+- support query rtc live rooms
+
+
 ## 1.8.2313 - 2025-8-25
 - Generated 2021-12-01 for `Eiam`.
 
