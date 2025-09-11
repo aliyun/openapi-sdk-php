@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2315 - 2025-9-11
+- Add some APIs.
+
+
 ## 1.8.2314 - 2025-9-9
 - support query rtc live rooms
 

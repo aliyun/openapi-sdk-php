@@ -7,6 +7,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 /**
  * @method AddDataLevelPermissionRuleUsers addDataLevelPermissionRuleUsers(array $options = [])
  * @method AddDataLevelPermissionWhiteList addDataLevelPermissionWhiteList(array $options = [])
+ * @method AddDataSource addDataSource(array $options = [])
  * @method AddShareReport addShareReport(array $options = [])
  * @method AddUser addUser(array $options = [])
  * @method AddUserGroupMember addUserGroupMember(array $options = [])
@@ -21,7 +22,11 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CancelCollection cancelCollection(array $options = [])
  * @method CancelReportShare cancelReportShare(array $options = [])
  * @method ChangeVisibilityModel changeVisibilityModel(array $options = [])
+ * @method CheckDatasetExisted checkDatasetExisted(array $options = [])
+ * @method CheckOrganizationMember checkOrganizationMember(array $options = [])
  * @method CheckReadable checkReadable(array $options = [])
+ * @method CreateCubeBySql createCubeBySql(array $options = [])
+ * @method CreateDataset createDataset(array $options = [])
  * @method CreateTicket createTicket(array $options = [])
  * @method CreateTicket4Copilot createTicket4Copilot(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
@@ -58,6 +63,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUserGroupsByUserId listUserGroupsByUserId(array $options = [])
  * @method ListWorkspaceRoles listWorkspaceRoles(array $options = [])
  * @method ListWorkspaceRoleUsers listWorkspaceRoleUsers(array $options = [])
+ * @method ListWorkspaceUserRolesByUserId listWorkspaceUserRolesByUserId(array $options = [])
  * @method ManualRunMailTask manualRunMailTask(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
  * @method ModifyCopilotEmbedConfig modifyCopilotEmbedConfig(array $options = [])
@@ -112,7 +118,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SmartqAuthorize smartqAuthorize(array $options = [])
  * @method SmartqAuthTransfer smartqAuthTransfer(array $options = [])
  * @method SmartqQueryAbility smartqQueryAbility(array $options = [])
+ * @method UpdateCubeBySql updateCubeBySql(array $options = [])
  * @method UpdateDataLevelPermissionStatus updateDataLevelPermissionStatus(array $options = [])
+ * @method UpdateDataSource updateDataSource(array $options = [])
  * @method UpdateEmbeddedStatus updateEmbeddedStatus(array $options = [])
  * @method UpdateTicketNum updateTicketNum(array $options = [])
  * @method UpdateUser updateUser(array $options = [])
@@ -176,6 +184,21 @@ class AddDataLevelPermissionRuleUsers extends Rpc
  */
 class AddDataLevelPermissionWhiteList extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getAddModel()
+ * @method $this withAddModel($value)
+ */
+class AddDataSource extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -443,6 +466,36 @@ class ChangeVisibilityModel extends Rpc
 /**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ */
+class CheckDatasetExisted extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class CheckOrganizationMember extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
  * @method string getUserId()
  * @method $this withUserId($value)
  * @method string getSignType()
@@ -452,6 +505,54 @@ class ChangeVisibilityModel extends Rpc
  */
 class CheckReadable extends Rpc
 {
+}
+
+/**
+ * @method string getDsId()
+ * @method $this withDsId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getCaption()
+ * @method $this withCaption($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getCustomSql()
+ * @method $this withCustomSql($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class CreateCubeBySql extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDsId()
+ * @method $this withDsId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getTableName()
+ * @method $this withTableName($value)
+ * @method string getTargetDirectoryId()
+ * @method $this withTargetDirectoryId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserDefineCubeName()
+ * @method $this withUserDefineCubeName($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class CreateDataset extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1015,6 +1116,21 @@ class ListWorkspaceRoles extends Rpc
  */
 class ListWorkspaceRoleUsers extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ */
+class ListWorkspaceUserRolesByUserId extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1879,6 +1995,29 @@ class SmartqQueryAbility extends Rpc
 }
 
 /**
+ * @method string getDsId()
+ * @method $this withDsId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getCustomSql()
+ * @method $this withCustomSql($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class UpdateCubeBySql extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getIsOpen()
  * @method $this withIsOpen($value)
  * @method string getAccessPoint()
@@ -1892,6 +2031,21 @@ class SmartqQueryAbility extends Rpc
  */
 class UpdateDataLevelPermissionStatus extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getUpdateModel()
+ * @method $this withUpdateModel($value)
+ */
+class UpdateDataSource extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
