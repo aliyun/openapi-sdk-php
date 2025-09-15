@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.8.2316 - 2025-9-15
+- Add CreateExternalCACertificate.
+- Add ListPcaCaCertificate.
+
+
 ## 1.8.2315 - 2025-9-11
 - Add some APIs.
 
