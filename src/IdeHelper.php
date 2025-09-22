@@ -34,6 +34,7 @@ namespace AlibabaCloud;
  * @method static Aliyuncvc\Aliyuncvc aliyuncvc()
  * @method static AmqpOpen\AmqpOpen amqpOpen()
  * @method static AntiddosPublic\AntiddosPublic antiddosPublic()
+ * @method static AnyTrans\AnyTrans anyTrans()
  * @method static Apds\Apds apds()
  * @method static AppMallsService\AppMallsService appMallsService()
  * @method static AppstreamCenter\AppstreamCenter appstreamCenter()

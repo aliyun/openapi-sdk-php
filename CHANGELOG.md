@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2318 - 2025-9-22
+- Generated 2025-07-07 for `AnyTrans`.
+
+
 ## 1.8.2317 - 2025-9-17
 - Generated 2022-12-30 for `marketplaceIntl`.
 
