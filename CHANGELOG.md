@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2321 - 2025-10-20
+- Supported Brand.
+
+
 ## 1.8.2320 - 2025-10-17
 - Generated 2017-08-01 for `polardb`.
 

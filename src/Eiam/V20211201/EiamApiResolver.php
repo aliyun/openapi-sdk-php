@@ -5,6 +5,7 @@ namespace AlibabaCloud\Eiam\V20211201;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method AddApplicationAccountToUser addApplicationAccountToUser(array $options = [])
  * @method AddUsersToGroup addUsersToGroup(array $options = [])
  * @method AddUserToOrganizationalUnits addUserToOrganizationalUnits(array $options = [])
  * @method AuthorizeApplicationToGroups authorizeApplicationToGroups(array $options = [])
@@ -12,62 +13,88 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AuthorizeApplicationToUsers authorizeApplicationToUsers(array $options = [])
  * @method CreateApplication createApplication(array $options = [])
  * @method CreateApplicationClientSecret createApplicationClientSecret(array $options = [])
+ * @method CreateApplicationFederatedCredential createApplicationFederatedCredential(array $options = [])
+ * @method CreateApplicationToken createApplicationToken(array $options = [])
+ * @method CreateBrand createBrand(array $options = [])
  * @method CreateConditionalAccessPolicy createConditionalAccessPolicy(array $options = [])
  * @method CreateDomain createDomain(array $options = [])
  * @method CreateDomainProxyToken createDomainProxyToken(array $options = [])
+ * @method CreateFederatedCredentialProvider createFederatedCredentialProvider(array $options = [])
  * @method CreateGroup createGroup(array $options = [])
  * @method CreateIdentityProvider createIdentityProvider(array $options = [])
  * @method CreateInstance createInstance(array $options = [])
  * @method CreateNetworkAccessEndpoint createNetworkAccessEndpoint(array $options = [])
+ * @method CreateNetworkZone createNetworkZone(array $options = [])
  * @method CreateOrganizationalUnit createOrganizationalUnit(array $options = [])
  * @method CreateUser createUser(array $options = [])
  * @method DeleteApplication deleteApplication(array $options = [])
  * @method DeleteApplicationClientSecret deleteApplicationClientSecret(array $options = [])
+ * @method DeleteApplicationFederatedCredential deleteApplicationFederatedCredential(array $options = [])
+ * @method DeleteApplicationToken deleteApplicationToken(array $options = [])
+ * @method DeleteBrand deleteBrand(array $options = [])
  * @method DeleteConditionalAccessPolicy deleteConditionalAccessPolicy(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DeleteDomainProxyToken deleteDomainProxyToken(array $options = [])
+ * @method DeleteFederatedCredentialProvider deleteFederatedCredentialProvider(array $options = [])
  * @method DeleteGroup deleteGroup(array $options = [])
  * @method DeleteIdentityProvider deleteIdentityProvider(array $options = [])
  * @method DeleteInstance deleteInstance(array $options = [])
  * @method DeleteNetworkAccessEndpoint deleteNetworkAccessEndpoint(array $options = [])
+ * @method DeleteNetworkZone deleteNetworkZone(array $options = [])
  * @method DeleteOrganizationalUnit deleteOrganizationalUnit(array $options = [])
  * @method DeleteOrganizationalUnitChildren deleteOrganizationalUnitChildren(array $options = [])
  * @method DeleteUser deleteUser(array $options = [])
  * @method DisableApplication disableApplication(array $options = [])
  * @method DisableApplicationApiInvoke disableApplicationApiInvoke(array $options = [])
  * @method DisableApplicationClientSecret disableApplicationClientSecret(array $options = [])
+ * @method DisableApplicationFederatedCredential disableApplicationFederatedCredential(array $options = [])
  * @method DisableApplicationProvisioning disableApplicationProvisioning(array $options = [])
  * @method DisableApplicationSso disableApplicationSso(array $options = [])
+ * @method DisableApplicationToken disableApplicationToken(array $options = [])
+ * @method DisableBrand disableBrand(array $options = [])
  * @method DisableConditionalAccessPolicy disableConditionalAccessPolicy(array $options = [])
  * @method DisableDomainProxyToken disableDomainProxyToken(array $options = [])
+ * @method DisableFederatedCredentialProvider disableFederatedCredentialProvider(array $options = [])
+ * @method DisableIdentityProviderAuthn disableIdentityProviderAuthn(array $options = [])
  * @method DisableIdentityProviderUdPull disableIdentityProviderUdPull(array $options = [])
  * @method DisableInitDomainAutoRedirect disableInitDomainAutoRedirect(array $options = [])
  * @method DisableUser disableUser(array $options = [])
  * @method EnableApplication enableApplication(array $options = [])
  * @method EnableApplicationApiInvoke enableApplicationApiInvoke(array $options = [])
  * @method EnableApplicationClientSecret enableApplicationClientSecret(array $options = [])
+ * @method EnableApplicationFederatedCredential enableApplicationFederatedCredential(array $options = [])
  * @method EnableApplicationProvisioning enableApplicationProvisioning(array $options = [])
  * @method EnableApplicationSso enableApplicationSso(array $options = [])
+ * @method EnableApplicationToken enableApplicationToken(array $options = [])
+ * @method EnableBrand enableBrand(array $options = [])
  * @method EnableConditionalAccessPolicy enableConditionalAccessPolicy(array $options = [])
  * @method EnableDomainProxyToken enableDomainProxyToken(array $options = [])
+ * @method EnableFederatedCredentialProvider enableFederatedCredentialProvider(array $options = [])
+ * @method EnableIdentityProviderAuthn enableIdentityProviderAuthn(array $options = [])
  * @method EnableIdentityProviderUdPull enableIdentityProviderUdPull(array $options = [])
  * @method EnableInitDomainAutoRedirect enableInitDomainAutoRedirect(array $options = [])
  * @method EnableUser enableUser(array $options = [])
  * @method GetApplication getApplication(array $options = [])
+ * @method GetApplicationFederatedCredential getApplicationFederatedCredential(array $options = [])
  * @method GetApplicationGrantScope getApplicationGrantScope(array $options = [])
  * @method GetApplicationProvisioningConfig getApplicationProvisioningConfig(array $options = [])
  * @method GetApplicationProvisioningScope getApplicationProvisioningScope(array $options = [])
  * @method GetApplicationSsoConfig getApplicationSsoConfig(array $options = [])
+ * @method GetApplicationTemplate getApplicationTemplate(array $options = [])
+ * @method GetBrand getBrand(array $options = [])
  * @method GetConditionalAccessPolicy getConditionalAccessPolicy(array $options = [])
  * @method GetDomain getDomain(array $options = [])
  * @method GetDomainDnsChallenge getDomainDnsChallenge(array $options = [])
+ * @method GetFederatedCredentialProvider getFederatedCredentialProvider(array $options = [])
  * @method GetForgetPasswordConfiguration getForgetPasswordConfiguration(array $options = [])
  * @method GetGroup getGroup(array $options = [])
  * @method GetIdentityProvider getIdentityProvider(array $options = [])
  * @method GetIdentityProviderUdPullConfiguration getIdentityProviderUdPullConfiguration(array $options = [])
  * @method GetInstance getInstance(array $options = [])
  * @method GetInstanceLicense getInstanceLicense(array $options = [])
+ * @method GetLoginRedirectApplicationForBrand getLoginRedirectApplicationForBrand(array $options = [])
  * @method GetNetworkAccessEndpoint getNetworkAccessEndpoint(array $options = [])
+ * @method GetNetworkZone getNetworkZone(array $options = [])
  * @method GetOrganizationalUnit getOrganizationalUnit(array $options = [])
  * @method GetPasswordComplexityConfiguration getPasswordComplexityConfiguration(array $options = [])
  * @method GetPasswordExpirationConfiguration getPasswordExpirationConfiguration(array $options = [])
@@ -76,25 +103,40 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetRootOrganizationalUnit getRootOrganizationalUnit(array $options = [])
  * @method GetSynchronizationJob getSynchronizationJob(array $options = [])
  * @method GetUser getUser(array $options = [])
+ * @method ListApplicationAccounts listApplicationAccounts(array $options = [])
+ * @method ListApplicationAccountsForUser listApplicationAccountsForUser(array $options = [])
  * @method ListApplicationClientSecrets listApplicationClientSecrets(array $options = [])
+ * @method ListApplicationFederatedCredentials listApplicationFederatedCredentials(array $options = [])
+ * @method ListApplicationFederatedCredentialsForProvider listApplicationFederatedCredentialsForProvider(array $options = [])
  * @method ListApplications listApplications(array $options = [])
+ * @method ListApplicationsForGroup listApplicationsForGroup(array $options = [])
+ * @method ListApplicationsForNetworkAccessEndpoint listApplicationsForNetworkAccessEndpoint(array $options = [])
+ * @method ListApplicationsForNetworkZone listApplicationsForNetworkZone(array $options = [])
  * @method ListApplicationsForOrganizationalUnit listApplicationsForOrganizationalUnit(array $options = [])
  * @method ListApplicationsForUser listApplicationsForUser(array $options = [])
+ * @method ListApplicationSupportedProvisionProtocolTypes listApplicationSupportedProvisionProtocolTypes(array $options = [])
+ * @method ListApplicationTokens listApplicationTokens(array $options = [])
+ * @method ListBrands listBrands(array $options = [])
  * @method ListConditionalAccessPolicies listConditionalAccessPolicies(array $options = [])
+ * @method ListConditionalAccessPoliciesForApplication listConditionalAccessPoliciesForApplication(array $options = [])
  * @method ListConditionalAccessPoliciesForNetworkZone listConditionalAccessPoliciesForNetworkZone(array $options = [])
+ * @method ListConditionalAccessPoliciesForUser listConditionalAccessPoliciesForUser(array $options = [])
  * @method ListDomainProxyTokens listDomainProxyTokens(array $options = [])
  * @method ListDomains listDomains(array $options = [])
  * @method ListEiamInstances listEiamInstances(array $options = [])
  * @method ListEiamRegions listEiamRegions(array $options = [])
+ * @method ListFederatedCredentialProviders listFederatedCredentialProviders(array $options = [])
  * @method ListGroups listGroups(array $options = [])
  * @method ListGroupsForApplication listGroupsForApplication(array $options = [])
  * @method ListGroupsForUser listGroupsForUser(array $options = [])
  * @method ListIdentityProviders listIdentityProviders(array $options = [])
+ * @method ListIdentityProvidersForNetworkAccessEndpoint listIdentityProvidersForNetworkAccessEndpoint(array $options = [])
  * @method ListInstances listInstances(array $options = [])
  * @method ListNetworkAccessEndpointAvailableRegions listNetworkAccessEndpointAvailableRegions(array $options = [])
  * @method ListNetworkAccessEndpointAvailableZones listNetworkAccessEndpointAvailableZones(array $options = [])
  * @method ListNetworkAccessEndpoints listNetworkAccessEndpoints(array $options = [])
  * @method ListNetworkAccessPaths listNetworkAccessPaths(array $options = [])
+ * @method ListNetworkZones listNetworkZones(array $options = [])
  * @method ListOrganizationalUnitParents listOrganizationalUnitParents(array $options = [])
  * @method ListOrganizationalUnits listOrganizationalUnits(array $options = [])
  * @method ListOrganizationalUnitsForApplication listOrganizationalUnitsForApplication(array $options = [])
@@ -104,7 +146,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListUsersForApplication listUsersForApplication(array $options = [])
  * @method ListUsersForGroup listUsersForGroup(array $options = [])
  * @method ObtainApplicationClientSecret obtainApplicationClientSecret(array $options = [])
+ * @method ObtainApplicationToken obtainApplicationToken(array $options = [])
  * @method ObtainDomainProxyToken obtainDomainProxyToken(array $options = [])
+ * @method RemoveApplicationAccountFromUser removeApplicationAccountFromUser(array $options = [])
  * @method RemoveUserFromOrganizationalUnits removeUserFromOrganizationalUnits(array $options = [])
  * @method RemoveUsersFromGroup removeUsersFromGroup(array $options = [])
  * @method RevokeApplicationFromGroups revokeApplicationFromGroups(array $options = [])
@@ -118,6 +162,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetDefaultDomain setDefaultDomain(array $options = [])
  * @method SetForgetPasswordConfiguration setForgetPasswordConfiguration(array $options = [])
  * @method SetIdentityProviderUdPullConfiguration setIdentityProviderUdPullConfiguration(array $options = [])
+ * @method SetLoginRedirectApplicationForBrand setLoginRedirectApplicationForBrand(array $options = [])
  * @method SetPasswordComplexityConfiguration setPasswordComplexityConfiguration(array $options = [])
  * @method SetPasswordExpirationConfiguration setPasswordExpirationConfiguration(array $options = [])
  * @method SetPasswordHistoryConfiguration setPasswordHistoryConfiguration(array $options = [])
@@ -127,13 +172,24 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateApplicationAuthorizationType updateApplicationAuthorizationType(array $options = [])
  * @method UpdateApplicationClientSecretExpirationTime updateApplicationClientSecretExpirationTime(array $options = [])
  * @method UpdateApplicationDescription updateApplicationDescription(array $options = [])
+ * @method UpdateApplicationFederatedCredential updateApplicationFederatedCredential(array $options = [])
+ * @method UpdateApplicationFederatedCredentialDescription updateApplicationFederatedCredentialDescription(array $options = [])
+ * @method UpdateApplicationInfo updateApplicationInfo(array $options = [])
+ * @method UpdateApplicationTokenExpirationTime updateApplicationTokenExpirationTime(array $options = [])
+ * @method UpdateBrand updateBrand(array $options = [])
  * @method UpdateConditionalAccessPolicy updateConditionalAccessPolicy(array $options = [])
  * @method UpdateConditionalAccessPolicyDescription updateConditionalAccessPolicyDescription(array $options = [])
+ * @method UpdateDomainBrand updateDomainBrand(array $options = [])
+ * @method UpdateDomainIcpNumber updateDomainIcpNumber(array $options = [])
+ * @method UpdateFederatedCredentialProvider updateFederatedCredentialProvider(array $options = [])
+ * @method UpdateFederatedCredentialProviderDescription updateFederatedCredentialProviderDescription(array $options = [])
  * @method UpdateGroup updateGroup(array $options = [])
  * @method UpdateGroupDescription updateGroupDescription(array $options = [])
  * @method UpdateIdentityProvider updateIdentityProvider(array $options = [])
  * @method UpdateInstanceDescription updateInstanceDescription(array $options = [])
  * @method UpdateNetworkAccessEndpointName updateNetworkAccessEndpointName(array $options = [])
+ * @method UpdateNetworkZone updateNetworkZone(array $options = [])
+ * @method UpdateNetworkZoneDescription updateNetworkZoneDescription(array $options = [])
  * @method UpdateOrganizationalUnit updateOrganizationalUnit(array $options = [])
  * @method UpdateOrganizationalUnitDescription updateOrganizationalUnitDescription(array $options = [])
  * @method UpdateOrganizationalUnitParentId updateOrganizationalUnitParentId(array $options = [])
@@ -161,6 +217,22 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $serviceCode = 'eiam';
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationUserAttributes()
+ * @method $this withApplicationUserAttributes($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getApplicationUsername()
+ * @method $this withApplicationUsername($value)
+ */
+class AddApplicationAccountToUser extends Rpc
+{
 }
 
 /**
@@ -256,6 +328,52 @@ class CreateApplicationClientSecret extends Rpc
 }
 
 /**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getAttributeMappings()
+ * @method $this withAttributeMappings($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationFederatedCredentialName()
+ * @method $this withApplicationFederatedCredentialName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getVerificationCondition()
+ * @method $this withVerificationCondition($value)
+ * @method string getApplicationFederatedCredentialType()
+ * @method $this withApplicationFederatedCredentialType($value)
+ */
+class CreateApplicationFederatedCredential extends Rpc
+{
+}
+
+/**
+ * @method string getExpirationTime()
+ * @method $this withExpirationTime($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationTokenType()
+ * @method $this withApplicationTokenType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateApplicationToken extends Rpc
+{
+}
+
+/**
+ * @method string getBrandName()
+ * @method $this withBrandName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateBrand extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getConditionsConfig()
@@ -300,6 +418,28 @@ class CreateDomain extends Rpc
  * @method $this withInstanceId($value)
  */
 class CreateDomainProxyToken extends Rpc
+{
+}
+
+/**
+ * @method string getOidcProviderConfig()
+ * @method $this withOidcProviderConfig($value)
+ * @method string getFederatedCredentialProviderName()
+ * @method $this withFederatedCredentialProviderName($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNetworkAccessEndpointId()
+ * @method $this withNetworkAccessEndpointId($value)
+ * @method string getPrivateCaProviderConfig()
+ * @method $this withPrivateCaProviderConfig($value)
+ * @method string getFederatedCredentialProviderType()
+ * @method $this withFederatedCredentialProviderType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPkcs7ProviderConfig()
+ * @method $this withPkcs7ProviderConfig($value)
+ */
+class CreateFederatedCredentialProvider extends Rpc
 {
 }
 
@@ -384,6 +524,28 @@ class CreateNetworkAccessEndpoint extends Rpc
 }
 
 /**
+ * @method string getNetworkZoneType()
+ * @method $this withNetworkZoneType($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getIpv6Cidrs()
+ * @method $this withIpv6Cidrs($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNetworkZoneName()
+ * @method $this withNetworkZoneName($value)
+ * @method string getIpv4Cidrs()
+ * @method $this withIpv4Cidrs($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class CreateNetworkZone extends Rpc
+{
+}
+
+/**
  * @method string getOrganizationalUnitExternalId()
  * @method $this withOrganizationalUnitExternalId($value)
  * @method string getDescription()
@@ -460,6 +622,40 @@ class DeleteApplicationClientSecret extends Rpc
 }
 
 /**
+ * @method string getApplicationFederatedCredentialId()
+ * @method $this withApplicationFederatedCredentialId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteApplicationFederatedCredential extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationTokenId()
+ * @method $this withApplicationTokenId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteApplicationToken extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ */
+class DeleteBrand extends Rpc
+{
+}
+
+/**
  * @method string getConditionalAccessPolicyId()
  * @method $this withConditionalAccessPolicyId($value)
  * @method string getInstanceId()
@@ -488,6 +684,16 @@ class DeleteDomain extends Rpc
  * @method $this withInstanceId($value)
  */
 class DeleteDomainProxyToken extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ */
+class DeleteFederatedCredentialProvider extends Rpc
 {
 }
 
@@ -526,6 +732,16 @@ class DeleteInstance extends Rpc
  * @method $this withInstanceId($value)
  */
 class DeleteNetworkAccessEndpoint extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkZoneId()
+ * @method $this withNetworkZoneId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteNetworkZone extends Rpc
 {
 }
 
@@ -592,6 +808,18 @@ class DisableApplicationClientSecret extends Rpc
 }
 
 /**
+ * @method string getApplicationFederatedCredentialId()
+ * @method $this withApplicationFederatedCredentialId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DisableApplicationFederatedCredential extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getApplicationId()
@@ -608,6 +836,28 @@ class DisableApplicationProvisioning extends Rpc
  * @method $this withApplicationId($value)
  */
 class DisableApplicationSso extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationTokenId()
+ * @method $this withApplicationTokenId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DisableApplicationToken extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ */
+class DisableBrand extends Rpc
 {
 }
 
@@ -630,6 +880,26 @@ class DisableConditionalAccessPolicy extends Rpc
  * @method $this withInstanceId($value)
  */
 class DisableDomainProxyToken extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ */
+class DisableFederatedCredentialProvider extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIdentityProviderId()
+ * @method $this withIdentityProviderId($value)
+ */
+class DisableIdentityProviderAuthn extends Rpc
 {
 }
 
@@ -694,6 +964,18 @@ class EnableApplicationClientSecret extends Rpc
 }
 
 /**
+ * @method string getApplicationFederatedCredentialId()
+ * @method $this withApplicationFederatedCredentialId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class EnableApplicationFederatedCredential extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getApplicationId()
@@ -710,6 +992,28 @@ class EnableApplicationProvisioning extends Rpc
  * @method $this withApplicationId($value)
  */
 class EnableApplicationSso extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationTokenId()
+ * @method $this withApplicationTokenId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class EnableApplicationToken extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ */
+class EnableBrand extends Rpc
 {
 }
 
@@ -732,6 +1036,26 @@ class EnableConditionalAccessPolicy extends Rpc
  * @method $this withInstanceId($value)
  */
 class EnableDomainProxyToken extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ */
+class EnableFederatedCredentialProvider extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIdentityProviderId()
+ * @method $this withIdentityProviderId($value)
+ */
+class EnableIdentityProviderAuthn extends Rpc
 {
 }
 
@@ -770,6 +1094,18 @@ class EnableUser extends Rpc
  * @method $this withApplicationId($value)
  */
 class GetApplication extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationFederatedCredentialId()
+ * @method $this withApplicationFederatedCredentialId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetApplicationFederatedCredential extends Rpc
 {
 }
 
@@ -814,6 +1150,24 @@ class GetApplicationSsoConfig extends Rpc
 }
 
 /**
+ * @method string getApplicationTemplateId()
+ * @method $this withApplicationTemplateId($value)
+ */
+class GetApplicationTemplate extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ */
+class GetBrand extends Rpc
+{
+}
+
+/**
  * @method string getConditionalAccessPolicyId()
  * @method $this withConditionalAccessPolicyId($value)
  * @method string getInstanceId()
@@ -840,6 +1194,16 @@ class GetDomain extends Rpc
  * @method $this withDomain($value)
  */
 class GetDomainDnsChallenge extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ */
+class GetFederatedCredentialProvider extends Rpc
 {
 }
 
@@ -901,12 +1265,32 @@ class GetInstanceLicense extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ */
+class GetLoginRedirectApplicationForBrand extends Rpc
+{
+}
+
+/**
  * @method string getNetworkAccessEndpointId()
  * @method $this withNetworkAccessEndpointId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class GetNetworkAccessEndpoint extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkZoneId()
+ * @method $this withNetworkZoneId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetNetworkZone extends Rpc
 {
 }
 
@@ -981,12 +1365,72 @@ class GetUser extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListApplicationAccounts extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListApplicationAccountsForUser extends Rpc
+{
+}
+
+/**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getApplicationId()
  * @method $this withApplicationId($value)
  */
 class ListApplicationClientSecrets extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getApplicationFederatedCredentialType()
+ * @method $this withApplicationFederatedCredentialType($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListApplicationFederatedCredentials extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListApplicationFederatedCredentialsForProvider extends Rpc
 {
 }
 
@@ -1013,6 +1457,52 @@ class ListApplicationClientSecrets extends Rpc
  * @method $this withStatus($value)
  */
 class ListApplications extends Rpc
+{
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getGroupId()
+ * @method $this withGroupId($value)
+ * @method string getApplicationIds()
+ * @method $this withApplicationIds($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListApplicationsForGroup extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkAccessEndpointId()
+ * @method $this withNetworkAccessEndpointId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListApplicationsForNetworkAccessEndpoint extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getNetworkZoneId()
+ * @method $this withNetworkZoneId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListApplicationsForNetworkZone extends Rpc
 {
 }
 
@@ -1051,6 +1541,42 @@ class ListApplicationsForUser extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ */
+class ListApplicationSupportedProvisionProtocolTypes extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationTokenType()
+ * @method $this withApplicationTokenType($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListApplicationTokens extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListBrands extends Rpc
+{
+}
+
+/**
  * @method string getNextToken()
  * @method $this withNextToken($value)
  * @method string getPreviousToken()
@@ -1065,12 +1591,32 @@ class ListConditionalAccessPolicies extends Rpc
 }
 
 /**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ */
+class ListConditionalAccessPoliciesForApplication extends Rpc
+{
+}
+
+/**
  * @method string getNetworkZoneId()
  * @method $this withNetworkZoneId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
 class ListConditionalAccessPoliciesForNetworkZone extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ListConditionalAccessPoliciesForUser extends Rpc
 {
 }
 
@@ -1087,6 +1633,8 @@ class ListDomainProxyTokens extends Rpc
 /**
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
  */
 class ListDomains extends Rpc
 {
@@ -1103,6 +1651,24 @@ class ListEiamInstances extends Rpc
 }
 
 class ListEiamRegions extends Rpc
+{
+}
+
+/**
+ * @method string getFederatedCredentialProviderName()
+ * @method $this withFederatedCredentialProviderName($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getFederatedCredentialProviderType()
+ * @method $this withFederatedCredentialProviderType($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListFederatedCredentialProviders extends Rpc
 {
 }
 
@@ -1169,6 +1735,20 @@ class ListIdentityProviders extends Rpc
 }
 
 /**
+ * @method string getNetworkAccessEndpointId()
+ * @method $this withNetworkAccessEndpointId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListIdentityProvidersForNetworkAccessEndpoint extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1221,6 +1801,22 @@ class ListNetworkAccessEndpoints extends Rpc
  * @method $this withInstanceId($value)
  */
 class ListNetworkAccessPaths extends Rpc
+{
+}
+
+/**
+ * @method string getNetworkZoneIds()
+ * @method $this withNetworkZoneIds($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListNetworkZones extends Rpc
 {
 }
 
@@ -1389,6 +1985,18 @@ class ObtainApplicationClientSecret extends Rpc
 }
 
 /**
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationTokenId()
+ * @method $this withApplicationTokenId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ObtainApplicationToken extends Rpc
+{
+}
+
+/**
  * @method string getDomainProxyTokenId()
  * @method $this withDomainProxyTokenId($value)
  * @method string getDomainId()
@@ -1397,6 +2005,20 @@ class ObtainApplicationClientSecret extends Rpc
  * @method $this withInstanceId($value)
  */
 class ObtainDomainProxyToken extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationAccountId()
+ * @method $this withApplicationAccountId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class RemoveApplicationAccountFromUser extends Rpc
 {
 }
 
@@ -1593,6 +2215,18 @@ class SetIdentityProviderUdPullConfiguration extends Rpc
 }
 
 /**
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class SetLoginRedirectApplicationForBrand extends Rpc
+{
+}
+
+/**
  * @method string getPasswordMinLength()
  * @method $this withPasswordMinLength($value)
  * @method string getPasswordComplexityRules()
@@ -1717,6 +2351,80 @@ class UpdateApplicationDescription extends Rpc
 }
 
 /**
+ * @method string getApplicationFederatedCredentialId()
+ * @method $this withApplicationFederatedCredentialId($value)
+ * @method string getAttributeMappings()
+ * @method $this withAttributeMappings($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getVerificationCondition()
+ * @method $this withVerificationCondition($value)
+ */
+class UpdateApplicationFederatedCredential extends Rpc
+{
+}
+
+/**
+ * @method string getApplicationFederatedCredentialId()
+ * @method $this withApplicationFederatedCredentialId($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateApplicationFederatedCredentialDescription extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getLogoUrl()
+ * @method $this withLogoUrl($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationName()
+ * @method $this withApplicationName($value)
+ * @method string getApplicationVisibility()
+ * @method $this withApplicationVisibility($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateApplicationInfo extends Rpc
+{
+}
+
+/**
+ * @method string getExpirationTime()
+ * @method $this withExpirationTime($value)
+ * @method string getApplicationId()
+ * @method $this withApplicationId($value)
+ * @method string getApplicationTokenId()
+ * @method $this withApplicationTokenId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateApplicationTokenExpirationTime extends Rpc
+{
+}
+
+/**
+ * @method string getBrandName()
+ * @method $this withBrandName($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateBrand extends Rpc
+{
+}
+
+/**
  * @method string getClientToken()
  * @method $this withClientToken($value)
  * @method string getConditionsConfig()
@@ -1749,6 +2457,62 @@ class UpdateConditionalAccessPolicy extends Rpc
  * @method $this withInstanceId($value)
  */
 class UpdateConditionalAccessPolicyDescription extends Rpc
+{
+}
+
+/**
+ * @method string getDomainId()
+ * @method $this withDomainId($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateDomainBrand extends Rpc
+{
+}
+
+/**
+ * @method string getDomainId()
+ * @method $this withDomainId($value)
+ * @method string getIcpNumber()
+ * @method $this withIcpNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateDomainIcpNumber extends Rpc
+{
+}
+
+/**
+ * @method string getOidcProviderConfig()
+ * @method $this withOidcProviderConfig($value)
+ * @method string getFederatedCredentialProviderName()
+ * @method $this withFederatedCredentialProviderName($value)
+ * @method string getNetworkAccessEndpointId()
+ * @method $this withNetworkAccessEndpointId($value)
+ * @method string getPrivateCaProviderConfig()
+ * @method $this withPrivateCaProviderConfig($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPkcs7ProviderConfig()
+ * @method $this withPkcs7ProviderConfig($value)
+ */
+class UpdateFederatedCredentialProvider extends Rpc
+{
+}
+
+/**
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getFederatedCredentialProviderId()
+ * @method $this withFederatedCredentialProviderId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateFederatedCredentialProviderDescription extends Rpc
 {
 }
 
@@ -1825,6 +2589,40 @@ class UpdateInstanceDescription extends Rpc
  * @method $this withInstanceId($value)
  */
 class UpdateNetworkAccessEndpointName extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getIpv6Cidrs()
+ * @method $this withIpv6Cidrs($value)
+ * @method string getNetworkZoneId()
+ * @method $this withNetworkZoneId($value)
+ * @method string getNetworkZoneName()
+ * @method $this withNetworkZoneName($value)
+ * @method string getIpv4Cidrs()
+ * @method $this withIpv4Cidrs($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getVpcId()
+ * @method $this withVpcId($value)
+ */
+class UpdateNetworkZone extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getNetworkZoneId()
+ * @method $this withNetworkZoneId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UpdateNetworkZoneDescription extends Rpc
 {
 }
 
