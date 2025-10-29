@@ -344,6 +344,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method OpenLiveShift openLiveShift(array $options = [])
  * @method PlayChoosenShow playChoosenShow(array $options = [])
  * @method PublishLiveStagingConfigToProduction publishLiveStagingConfigToProduction(array $options = [])
+ * @method PutRecordStorageLifeCycle putRecordStorageLifeCycle(array $options = [])
  * @method QueryLiveDomainMultiStreamList queryLiveDomainMultiStreamList(array $options = [])
  * @method QueryMessageApp queryMessageApp(array $options = [])
  * @method QueryRtcAsrTasks queryRtcAsrTasks(array $options = [])
@@ -784,6 +785,8 @@ class AddCasterVideoResource extends Rpc
  * @method $this withBitrateWithSource($value)
  * @method string getDomain()
  * @method $this withDomain($value)
+ * @method string getDeInterlaced()
+ * @method $this withDeInterlaced($value)
  * @method string getTemplate()
  * @method $this withTemplate($value)
  * @method string getLazy()
@@ -7883,6 +7886,57 @@ class PublishLiveStagingConfigToProduction extends Rpc
 }
 
 /**
+ * @method string getStreamIds()
+ * @method string getUnixTimestamp()
+ * @method string getTag()
+ */
+class PutRecordStorageLifeCycle extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStreamIds($value)
+    {
+        $this->data['StreamIds'] = $value;
+        $this->options['form_params']['StreamIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withUnixTimestamp($value)
+    {
+        $this->data['UnixTimestamp'] = $value;
+        $this->options['form_params']['UnixTimestamp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTag($value)
+    {
+        $this->data['Tag'] = $value;
+        $this->options['form_params']['Tag'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -9144,11 +9198,11 @@ class TagLiveResources extends Rpc
 	{
 	    $this->data['Tag'] = $tag;
 		foreach ($tag as $depth1 => $depth1Value) {
-			if(isset($depth1Value['Key'])){
-				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
-			}
 			if(isset($depth1Value['Value'])){
 				$this->options['query']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['query']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
 			}
 		}
 
@@ -9333,46 +9387,48 @@ class UpdateCasterSceneConfig extends Rpc
 }
 
 /**
- * @method string getTemplate()
- * @method $this withTemplate($value)
  * @method string getResWithSource()
  * @method $this withResWithSource($value)
- * @method string getLazy()
- * @method $this withLazy($value)
  * @method string getGop()
  * @method $this withGop($value)
  * @method string getAudioCodec()
  * @method $this withAudioCodec($value)
- * @method string getTemplateType()
- * @method $this withTemplateType($value)
- * @method string getAudioProfile()
- * @method $this withAudioProfile($value)
  * @method string getHeight()
  * @method $this withHeight($value)
  * @method string getApp()
  * @method $this withApp($value)
- * @method string getEncryptParameters()
- * @method $this withEncryptParameters($value)
- * @method string getAudioChannelNum()
- * @method $this withAudioChannelNum($value)
  * @method string getProfile()
  * @method $this withProfile($value)
- * @method string getFPS()
- * @method $this withFPS($value)
  * @method string getOwnerId()
  * @method $this withOwnerId($value)
  * @method string getExtWithSource()
  * @method $this withExtWithSource($value)
  * @method string getBitrateWithSource()
  * @method $this withBitrateWithSource($value)
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getDeInterlaced()
+ * @method $this withDeInterlaced($value)
+ * @method string getTemplate()
+ * @method $this withTemplate($value)
+ * @method string getLazy()
+ * @method $this withLazy($value)
+ * @method string getTemplateType()
+ * @method $this withTemplateType($value)
+ * @method string getAudioProfile()
+ * @method $this withAudioProfile($value)
+ * @method string getEncryptParameters()
+ * @method $this withEncryptParameters($value)
+ * @method string getAudioChannelNum()
+ * @method $this withAudioChannelNum($value)
+ * @method string getFPS()
+ * @method $this withFPS($value)
  * @method string getAudioRate()
  * @method $this withAudioRate($value)
  * @method string getFpsWithSource()
  * @method $this withFpsWithSource($value)
  * @method string getAudioBitrate()
  * @method $this withAudioBitrate($value)
- * @method string getDomain()
- * @method $this withDomain($value)
  * @method string getWidth()
  * @method $this withWidth($value)
  * @method string getVideoBitrate()
