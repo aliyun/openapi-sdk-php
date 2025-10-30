@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method AddApplicationAccountToUser addApplicationAccountToUser(array $options = [])
+ * @method AddCustomPrivacyPoliciesToBrand addCustomPrivacyPoliciesToBrand(array $options = [])
  * @method AddUsersToGroup addUsersToGroup(array $options = [])
  * @method AddUserToOrganizationalUnits addUserToOrganizationalUnits(array $options = [])
  * @method AuthorizeApplicationToGroups authorizeApplicationToGroups(array $options = [])
@@ -17,6 +18,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateApplicationToken createApplicationToken(array $options = [])
  * @method CreateBrand createBrand(array $options = [])
  * @method CreateConditionalAccessPolicy createConditionalAccessPolicy(array $options = [])
+ * @method CreateCustomPrivacyPolicy createCustomPrivacyPolicy(array $options = [])
  * @method CreateDomain createDomain(array $options = [])
  * @method CreateDomainProxyToken createDomainProxyToken(array $options = [])
  * @method CreateFederatedCredentialProvider createFederatedCredentialProvider(array $options = [])
@@ -33,6 +35,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteApplicationToken deleteApplicationToken(array $options = [])
  * @method DeleteBrand deleteBrand(array $options = [])
  * @method DeleteConditionalAccessPolicy deleteConditionalAccessPolicy(array $options = [])
+ * @method DeleteCustomPrivacyPolicy deleteCustomPrivacyPolicy(array $options = [])
  * @method DeleteDomain deleteDomain(array $options = [])
  * @method DeleteDomainProxyToken deleteDomainProxyToken(array $options = [])
  * @method DeleteFederatedCredentialProvider deleteFederatedCredentialProvider(array $options = [])
@@ -53,6 +56,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DisableApplicationToken disableApplicationToken(array $options = [])
  * @method DisableBrand disableBrand(array $options = [])
  * @method DisableConditionalAccessPolicy disableConditionalAccessPolicy(array $options = [])
+ * @method DisableCustomPrivacyPolicy disableCustomPrivacyPolicy(array $options = [])
  * @method DisableDomainProxyToken disableDomainProxyToken(array $options = [])
  * @method DisableFederatedCredentialProvider disableFederatedCredentialProvider(array $options = [])
  * @method DisableIdentityProviderAuthn disableIdentityProviderAuthn(array $options = [])
@@ -68,6 +72,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method EnableApplicationToken enableApplicationToken(array $options = [])
  * @method EnableBrand enableBrand(array $options = [])
  * @method EnableConditionalAccessPolicy enableConditionalAccessPolicy(array $options = [])
+ * @method EnableCustomPrivacyPolicy enableCustomPrivacyPolicy(array $options = [])
  * @method EnableDomainProxyToken enableDomainProxyToken(array $options = [])
  * @method EnableFederatedCredentialProvider enableFederatedCredentialProvider(array $options = [])
  * @method EnableIdentityProviderAuthn enableIdentityProviderAuthn(array $options = [])
@@ -83,6 +88,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetApplicationTemplate getApplicationTemplate(array $options = [])
  * @method GetBrand getBrand(array $options = [])
  * @method GetConditionalAccessPolicy getConditionalAccessPolicy(array $options = [])
+ * @method GetCustomPrivacyPolicy getCustomPrivacyPolicy(array $options = [])
  * @method GetDomain getDomain(array $options = [])
  * @method GetDomainDnsChallenge getDomainDnsChallenge(array $options = [])
  * @method GetFederatedCredentialProvider getFederatedCredentialProvider(array $options = [])
@@ -121,6 +127,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListConditionalAccessPoliciesForApplication listConditionalAccessPoliciesForApplication(array $options = [])
  * @method ListConditionalAccessPoliciesForNetworkZone listConditionalAccessPoliciesForNetworkZone(array $options = [])
  * @method ListConditionalAccessPoliciesForUser listConditionalAccessPoliciesForUser(array $options = [])
+ * @method ListCustomPrivacyPolicies listCustomPrivacyPolicies(array $options = [])
+ * @method ListCustomPrivacyPoliciesForBrand listCustomPrivacyPoliciesForBrand(array $options = [])
  * @method ListDomainProxyTokens listDomainProxyTokens(array $options = [])
  * @method ListDomains listDomains(array $options = [])
  * @method ListEiamInstances listEiamInstances(array $options = [])
@@ -149,6 +157,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ObtainApplicationToken obtainApplicationToken(array $options = [])
  * @method ObtainDomainProxyToken obtainDomainProxyToken(array $options = [])
  * @method RemoveApplicationAccountFromUser removeApplicationAccountFromUser(array $options = [])
+ * @method RemoveCustomPrivacyPoliciesFromBrand removeCustomPrivacyPoliciesFromBrand(array $options = [])
  * @method RemoveUserFromOrganizationalUnits removeUserFromOrganizationalUnits(array $options = [])
  * @method RemoveUsersFromGroup removeUsersFromGroup(array $options = [])
  * @method RevokeApplicationFromGroups revokeApplicationFromGroups(array $options = [])
@@ -179,6 +188,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateBrand updateBrand(array $options = [])
  * @method UpdateConditionalAccessPolicy updateConditionalAccessPolicy(array $options = [])
  * @method UpdateConditionalAccessPolicyDescription updateConditionalAccessPolicyDescription(array $options = [])
+ * @method UpdateCustomPrivacyPolicy updateCustomPrivacyPolicy(array $options = [])
  * @method UpdateDomainBrand updateDomainBrand(array $options = [])
  * @method UpdateDomainIcpNumber updateDomainIcpNumber(array $options = [])
  * @method UpdateFederatedCredentialProvider updateFederatedCredentialProvider(array $options = [])
@@ -232,6 +242,18 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
  * @method $this withApplicationUsername($value)
  */
 class AddApplicationAccountToUser extends Rpc
+{
+}
+
+/**
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ * @method string getCustomPrivacyPolicyIds()
+ * @method $this withCustomPrivacyPolicyIds($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class AddCustomPrivacyPoliciesToBrand extends Rpc
 {
 }
 
@@ -396,6 +418,26 @@ class CreateBrand extends Rpc
  * @method $this withInstanceId($value)
  */
 class CreateConditionalAccessPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDefaultLanguageCode()
+ * @method $this withDefaultLanguageCode($value)
+ * @method string getUserConsentType()
+ * @method $this withUserConsentType($value)
+ * @method string getCustomPrivacyPolicyContents()
+ * @method $this withCustomPrivacyPolicyContents($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCustomPrivacyPolicyName()
+ * @method $this withCustomPrivacyPolicyName($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class CreateCustomPrivacyPolicy extends Rpc
 {
 }
 
@@ -666,6 +708,16 @@ class DeleteConditionalAccessPolicy extends Rpc
 }
 
 /**
+ * @method string getCustomPrivacyPolicyId()
+ * @method $this withCustomPrivacyPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteCustomPrivacyPolicy extends Rpc
+{
+}
+
+/**
  * @method string getDomainId()
  * @method $this withDomainId($value)
  * @method string getInstanceId()
@@ -872,6 +924,16 @@ class DisableConditionalAccessPolicy extends Rpc
 }
 
 /**
+ * @method string getCustomPrivacyPolicyId()
+ * @method $this withCustomPrivacyPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DisableCustomPrivacyPolicy extends Rpc
+{
+}
+
+/**
  * @method string getDomainProxyTokenId()
  * @method $this withDomainProxyTokenId($value)
  * @method string getDomainId()
@@ -1028,6 +1090,16 @@ class EnableConditionalAccessPolicy extends Rpc
 }
 
 /**
+ * @method string getCustomPrivacyPolicyId()
+ * @method $this withCustomPrivacyPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class EnableCustomPrivacyPolicy extends Rpc
+{
+}
+
+/**
  * @method string getDomainProxyTokenId()
  * @method $this withDomainProxyTokenId($value)
  * @method string getDomainId()
@@ -1174,6 +1246,16 @@ class GetBrand extends Rpc
  * @method $this withInstanceId($value)
  */
 class GetConditionalAccessPolicy extends Rpc
+{
+}
+
+/**
+ * @method string getCustomPrivacyPolicyId()
+ * @method $this withCustomPrivacyPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class GetCustomPrivacyPolicy extends Rpc
 {
 }
 
@@ -1621,6 +1703,38 @@ class ListConditionalAccessPoliciesForUser extends Rpc
 }
 
 /**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getCustomPrivacyPolicyNameStartsWith()
+ * @method $this withCustomPrivacyPolicyNameStartsWith($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListCustomPrivacyPolicies extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListCustomPrivacyPoliciesForBrand extends Rpc
+{
+}
+
+/**
  * @method string getDomainId()
  * @method $this withDomainId($value)
  * @method string getInstanceId()
@@ -2019,6 +2133,18 @@ class ObtainDomainProxyToken extends Rpc
  * @method $this withInstanceId($value)
  */
 class RemoveApplicationAccountFromUser extends Rpc
+{
+}
+
+/**
+ * @method string getBrandId()
+ * @method $this withBrandId($value)
+ * @method string getCustomPrivacyPolicyIds()
+ * @method $this withCustomPrivacyPolicyIds($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class RemoveCustomPrivacyPoliciesFromBrand extends Rpc
 {
 }
 
@@ -2457,6 +2583,24 @@ class UpdateConditionalAccessPolicy extends Rpc
  * @method $this withInstanceId($value)
  */
 class UpdateConditionalAccessPolicyDescription extends Rpc
+{
+}
+
+/**
+ * @method string getDefaultLanguageCode()
+ * @method $this withDefaultLanguageCode($value)
+ * @method string getUserConsentType()
+ * @method $this withUserConsentType($value)
+ * @method string getCustomPrivacyPolicyContents()
+ * @method $this withCustomPrivacyPolicyContents($value)
+ * @method string getCustomPrivacyPolicyId()
+ * @method $this withCustomPrivacyPolicyId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCustomPrivacyPolicyName()
+ * @method $this withCustomPrivacyPolicyName($value)
+ */
+class UpdateCustomPrivacyPolicy extends Rpc
 {
 }
 

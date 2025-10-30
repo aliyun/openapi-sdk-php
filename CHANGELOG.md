@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2323 - 2025-10-30
+- Supported Custom Privacy Policy.
+
+
 ## 1.8.2322 - 2025-10-29
 - Generated 2016-11-01 for `live`.
 
