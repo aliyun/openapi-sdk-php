@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2324 - 2025-11-3
+- Generated 2015-12-01 for `Dds`.
+
+
 ## 1.8.2323 - 2025-10-30
 - Supported Custom Privacy Policy.
 
