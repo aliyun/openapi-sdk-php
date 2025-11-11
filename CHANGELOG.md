@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2325 - 2025-11-11
+- Supported bind idp user api.
+
+
 ## 1.8.2324 - 2025-11-3
 - Generated 2015-12-01 for `Dds`.
 

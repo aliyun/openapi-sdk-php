@@ -12,6 +12,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AuthorizeApplicationToGroups authorizeApplicationToGroups(array $options = [])
  * @method AuthorizeApplicationToOrganizationalUnits authorizeApplicationToOrganizationalUnits(array $options = [])
  * @method AuthorizeApplicationToUsers authorizeApplicationToUsers(array $options = [])
+ * @method BindUserAuthnSourceMapping bindUserAuthnSourceMapping(array $options = [])
  * @method CreateApplication createApplication(array $options = [])
  * @method CreateApplicationClientSecret createApplicationClientSecret(array $options = [])
  * @method CreateApplicationFederatedCredential createApplicationFederatedCredential(array $options = [])
@@ -150,6 +151,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListOrganizationalUnitsForApplication listOrganizationalUnitsForApplication(array $options = [])
  * @method ListRegions listRegions(array $options = [])
  * @method ListSynchronizationJobs listSynchronizationJobs(array $options = [])
+ * @method ListUserAuthnSourceMappings listUserAuthnSourceMappings(array $options = [])
  * @method ListUsers listUsers(array $options = [])
  * @method ListUsersForApplication listUsersForApplication(array $options = [])
  * @method ListUsersForGroup listUsersForGroup(array $options = [])
@@ -177,6 +179,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SetPasswordHistoryConfiguration setPasswordHistoryConfiguration(array $options = [])
  * @method SetPasswordInitializationConfiguration setPasswordInitializationConfiguration(array $options = [])
  * @method SetUserPrimaryOrganizationalUnit setUserPrimaryOrganizationalUnit(array $options = [])
+ * @method UnbindUserAuthnSourceMapping unbindUserAuthnSourceMapping(array $options = [])
  * @method UnlockUser unlockUser(array $options = [])
  * @method UpdateApplicationAuthorizationType updateApplicationAuthorizationType(array $options = [])
  * @method UpdateApplicationClientSecretExpirationTime updateApplicationClientSecretExpirationTime(array $options = [])
@@ -314,6 +317,20 @@ class AuthorizeApplicationToOrganizationalUnits extends Rpc
  * @method $this withUserIds($value)
  */
 class AuthorizeApplicationToUsers extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getIdentityProviderId()
+ * @method $this withIdentityProviderId($value)
+ * @method string getUserExternalId()
+ * @method $this withUserExternalId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class BindUserAuthnSourceMapping extends Rpc
 {
 }
 
@@ -2015,6 +2032,26 @@ class ListSynchronizationJobs extends Rpc
 }
 
 /**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getIdentityProviderId()
+ * @method $this withIdentityProviderId($value)
+ * @method string getPreviousToken()
+ * @method $this withPreviousToken($value)
+ * @method string getUserExternalId()
+ * @method $this withUserExternalId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListUserAuthnSourceMappings extends Rpc
+{
+}
+
+/**
  * @method string getPhoneNumber()
  * @method $this withPhoneNumber($value)
  * @method string getPhoneRegion()
@@ -2425,6 +2462,20 @@ class SetPasswordInitializationConfiguration extends Rpc
  * @method $this withOrganizationalUnitId($value)
  */
 class SetUserPrimaryOrganizationalUnit extends Rpc
+{
+}
+
+/**
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getIdentityProviderId()
+ * @method $this withIdentityProviderId($value)
+ * @method string getUserExternalId()
+ * @method $this withUserExternalId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class UnbindUserAuthnSourceMapping extends Rpc
 {
 }
 
