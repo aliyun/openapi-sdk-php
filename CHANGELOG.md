@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2326 - 2025-11-17
+- Add some APIs.
+
+
 ## 1.8.2325 - 2025-11-11
 - Supported bind idp user api.
 

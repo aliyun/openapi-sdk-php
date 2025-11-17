@@ -30,6 +30,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateTicket createTicket(array $options = [])
  * @method CreateTicket4Copilot createTicket4Copilot(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
+ * @method CreateWorkspace createWorkspace(array $options = [])
  * @method DataInterpretation dataInterpretation(array $options = [])
  * @method DataSetBlood dataSetBlood(array $options = [])
  * @method DataSourceBlood dataSourceBlood(array $options = [])
@@ -47,6 +48,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetMailTaskStatus getMailTaskStatus(array $options = [])
  * @method GetUserGroupInfo getUserGroupInfo(array $options = [])
  * @method GetWorksEmbedList getWorksEmbedList(array $options = [])
+ * @method ListAccelerationOfWorkspace listAccelerationOfWorkspace(array $options = [])
  * @method ListApiDatasource listApiDatasource(array $options = [])
  * @method ListByUserGroupId listByUserGroupId(array $options = [])
  * @method ListCollections listCollections(array $options = [])
@@ -67,6 +69,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ManualRunMailTask manualRunMailTask(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
  * @method ModifyCopilotEmbedConfig modifyCopilotEmbedConfig(array $options = [])
+ * @method ModifyDashboardNl2sqlStatus modifyDashboardNl2sqlStatus(array $options = [])
+ * @method QueryAccelerationLogByCubeId queryAccelerationLogByCubeId(array $options = [])
  * @method QueryApprovalInfo queryApprovalInfo(array $options = [])
  * @method QueryAuditLog queryAuditLog(array $options = [])
  * @method QueryComponentPerformance queryComponentPerformance(array $options = [])
@@ -626,6 +630,35 @@ class CreateUserGroup extends Rpc
 }
 
 /**
+ * @method string getAllowViewAll()
+ * @method $this withAllowViewAll($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getWorkspaceName()
+ * @method $this withWorkspaceName($value)
+ * @method string getWorkspaceDescription()
+ * @method $this withWorkspaceDescription($value)
+ * @method string getOnlyAdminCreateDatasource()
+ * @method $this withOnlyAdminCreateDatasource($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getAllowShare()
+ * @method $this withAllowShare($value)
+ * @method string getDefaultShareToAll()
+ * @method $this withDefaultShareToAll($value)
+ * @method string getAllowPublish()
+ * @method $this withAllowPublish($value)
+ * @method string getUseComment()
+ * @method $this withUseComment($value)
+ */
+class CreateWorkspace extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getPromptForceOverride()
  * @method $this withPromptForceOverride($value)
  * @method string getData()
@@ -869,6 +902,29 @@ class GetUserGroupInfo extends Rpc
  * @method $this withPageNo($value)
  */
 class GetWorksEmbedList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getCubeName()
+ * @method $this withCubeName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCreatorId()
+ * @method $this withCreatorId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ * @method string getWorkspaceId()
+ * @method $this withWorkspaceId($value)
+ */
+class ListAccelerationOfWorkspace extends Rpc
 {
 
     /** @var string */
@@ -1180,6 +1236,46 @@ class ModifyApiDatasourceParameters extends Rpc
  */
 class ModifyCopilotEmbedConfig extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getDashboardIds()
+ * @method $this withDashboardIds($value)
+ * @method string getStatus()
+ * @method $this withStatus($value)
+ */
+class ModifyDashboardNl2sqlStatus extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getStartDate()
+ * @method $this withStartDate($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getCubeId()
+ * @method $this withCubeId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getEndDate()
+ * @method $this withEndDate($value)
+ * @method string getPageNo()
+ * @method $this withPageNo($value)
+ */
+class QueryAccelerationLogByCubeId extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1987,6 +2083,8 @@ class SmartqAuthTransfer extends Rpc
  * @method $this withUserQuestion($value)
  * @method string getCubeId()
  * @method $this withCubeId($value)
+ * @method string getMultipleCubeIds()
+ * @method $this withMultipleCubeIds($value)
  * @method string getSignType()
  * @method $this withSignType($value)
  */
