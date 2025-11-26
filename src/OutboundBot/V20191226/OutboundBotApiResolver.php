@@ -5,12 +5,17 @@ namespace AlibabaCloud\OutboundBot\V20191226;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
- * @method ApplyNumberDistrictInfoParsingResult applyNumberDistrictInfoParsingResult(array $options = [])
  * @method AssignJobs assignJobs(array $options = [])
+ * @method AssignJobsAsync assignJobsAsync(array $options = [])
  * @method CancelJobs cancelJobs(array $options = [])
  * @method ChangeResourceGroup changeResourceGroup(array $options = [])
+ * @method CreateAgentProfile createAgentProfile(array $options = [])
+ * @method CreateAnnotationMission createAnnotationMission(array $options = [])
  * @method CreateBatchJobs createBatchJobs(array $options = [])
  * @method CreateBatchRepeatJob createBatchRepeatJob(array $options = [])
+ * @method CreateBeebotIntent createBeebotIntent(array $options = [])
+ * @method CreateBeebotIntentLgf createBeebotIntentLgf(array $options = [])
+ * @method CreateBeebotIntentUserSay createBeebotIntentUserSay(array $options = [])
  * @method CreateDialogueFlow createDialogueFlow(array $options = [])
  * @method CreateDownloadUrl createDownloadUrl(array $options = [])
  * @method CreateGlobalQuestion createGlobalQuestion(array $options = [])
@@ -20,14 +25,15 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateJobDataParsingTask createJobDataParsingTask(array $options = [])
  * @method CreateJobGroup createJobGroup(array $options = [])
  * @method CreateJobGroupExportTask createJobGroupExportTask(array $options = [])
- * @method CreateNumberDistrictInfoDownloadUrl createNumberDistrictInfoDownloadUrl(array $options = [])
- * @method CreateNumberDistrictInfoParsingTask createNumberDistrictInfoParsingTask(array $options = [])
- * @method CreateOutboundCallNumber createOutboundCallNumber(array $options = [])
  * @method CreateScript createScript(array $options = [])
  * @method CreateScriptWaveform createScriptWaveform(array $options = [])
  * @method CreateTag createTag(array $options = [])
  * @method CreateTaskExportTask createTaskExportTask(array $options = [])
+ * @method DeleteAgentProfiles deleteAgentProfiles(array $options = [])
  * @method DeleteAllNumberDistrictInfo deleteAllNumberDistrictInfo(array $options = [])
+ * @method DeleteBeebotIntent deleteBeebotIntent(array $options = [])
+ * @method DeleteBeebotIntentLgf deleteBeebotIntentLgf(array $options = [])
+ * @method DeleteBeebotIntentUserSay deleteBeebotIntentUserSay(array $options = [])
  * @method DeleteContactBlockList deleteContactBlockList(array $options = [])
  * @method DeleteContactWhiteList deleteContactWhiteList(array $options = [])
  * @method DeleteDialogueFlow deleteDialogueFlow(array $options = [])
@@ -39,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteScript deleteScript(array $options = [])
  * @method DeleteScriptRecording deleteScriptRecording(array $options = [])
  * @method DeleteScriptWaveform deleteScriptWaveform(array $options = [])
+ * @method DescribeBeebotIntent describeBeebotIntent(array $options = [])
  * @method DescribeDialogueNodeStatistics describeDialogueNodeStatistics(array $options = [])
  * @method DescribeDsReports describeDsReports(array $options = [])
  * @method DescribeGlobalQuestion describeGlobalQuestion(array $options = [])
@@ -50,7 +57,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeJobDataParsingTaskProgress describeJobDataParsingTaskProgress(array $options = [])
  * @method DescribeJobGroup describeJobGroup(array $options = [])
  * @method DescribeJobGroupExportTaskProgress describeJobGroupExportTaskProgress(array $options = [])
- * @method DescribeNumberDistrictInfoStatus describeNumberDistrictInfoStatus(array $options = [])
  * @method DescribeScript describeScript(array $options = [])
  * @method DescribeScriptVoiceConfig describeScriptVoiceConfig(array $options = [])
  * @method DescribeTagHitsSummary describeTagHitsSummary(array $options = [])
@@ -58,34 +64,48 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeTTSConfig describeTTSConfig(array $options = [])
  * @method DescribeTTSDemo describeTTSDemo(array $options = [])
  * @method Dialogue dialogue(array $options = [])
- * @method DismissNumberDistrictInfoParsingResult dismissNumberDistrictInfoParsingResult(array $options = [])
  * @method DownloadRecording downloadRecording(array $options = [])
  * @method DownloadScriptRecording downloadScriptRecording(array $options = [])
  * @method DuplicateScript duplicateScript(array $options = [])
  * @method ExportScript exportScript(array $options = [])
  * @method GenerateUploadUrl generateUploadUrl(array $options = [])
  * @method GetAfterAnswerDelayPlayback getAfterAnswerDelayPlayback(array $options = [])
+ * @method GetAgentProfile getAgentProfile(array $options = [])
+ * @method GetAgentProfileTemplate getAgentProfileTemplate(array $options = [])
+ * @method GetAnnotationMissionSummary getAnnotationMissionSummary(array $options = [])
+ * @method GetAnnotationMissionTagInfoList getAnnotationMissionTagInfoList(array $options = [])
  * @method GetAsrServerInfo getAsrServerInfo(array $options = [])
+ * @method GetAssignJobsAsyncResult getAssignJobsAsyncResult(array $options = [])
  * @method GetBaseStrategyPeriod getBaseStrategyPeriod(array $options = [])
  * @method GetConcurrentConversationQuota getConcurrentConversationQuota(array $options = [])
  * @method GetContactBlockList getContactBlockList(array $options = [])
  * @method GetContactWhiteList getContactWhiteList(array $options = [])
  * @method GetCurrentConcurrency getCurrentConcurrency(array $options = [])
- * @method GetEffectiveDays getEffectiveDays(array $options = [])
  * @method GetEmptyNumberNoMoreCallsInfo getEmptyNumberNoMoreCallsInfo(array $options = [])
+ * @method GetJobDataUploadParams getJobDataUploadParams(array $options = [])
  * @method GetMaxAttemptsPerDay getMaxAttemptsPerDay(array $options = [])
  * @method GetNumberDistrictInfoTemplateDownloadUrl getNumberDistrictInfoTemplateDownloadUrl(array $options = [])
+ * @method GetRealtimeConcurrencyReport getRealtimeConcurrencyReport(array $options = [])
  * @method GetSummaryInfo getSummaryInfo(array $options = [])
  * @method GetTaskByUuid getTaskByUuid(array $options = [])
  * @method GetVersion getVersion(array $options = [])
  * @method ImportScript importScript(array $options = [])
  * @method InflightTaskTimeout inflightTaskTimeout(array $options = [])
+ * @method ListAgentProfiles listAgentProfiles(array $options = [])
  * @method ListAllTenantBindNumberBinding listAllTenantBindNumberBinding(array $options = [])
+ * @method ListAnnotationMission listAnnotationMission(array $options = [])
+ * @method ListAnnotationMissionSession listAnnotationMissionSession(array $options = [])
+ * @method ListApiPlugins listApiPlugins(array $options = [])
+ * @method ListBeebotIntent listBeebotIntent(array $options = [])
+ * @method ListBeebotIntentLgf listBeebotIntentLgf(array $options = [])
+ * @method ListBeebotIntentUserSay listBeebotIntentUserSay(array $options = [])
  * @method ListChatbotInstances listChatbotInstances(array $options = [])
  * @method ListDialogueFlows listDialogueFlows(array $options = [])
  * @method ListDownloadTasks listDownloadTasks(array $options = [])
+ * @method ListFlashSmsTemplates listFlashSmsTemplates(array $options = [])
  * @method ListGlobalQuestions listGlobalQuestions(array $options = [])
  * @method ListInstances listInstances(array $options = [])
+ * @method ListIntentions listIntentions(array $options = [])
  * @method ListIntents listIntents(array $options = [])
  * @method ListJobGroups listJobGroups(array $options = [])
  * @method ListJobGroupsAsync listJobGroupsAsync(array $options = [])
@@ -93,14 +113,18 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListJobsByGroup listJobsByGroup(array $options = [])
  * @method ListOutboundCallNumbers listOutboundCallNumbers(array $options = [])
  * @method ListResourceTags listResourceTags(array $options = [])
- * @method ListSchedulerInstances listSchedulerInstances(array $options = [])
  * @method ListScriptPublishHistories listScriptPublishHistories(array $options = [])
  * @method ListScriptRecording listScriptRecording(array $options = [])
  * @method ListScripts listScripts(array $options = [])
  * @method ListScriptVoiceConfigs listScriptVoiceConfigs(array $options = [])
  * @method ListTagResources listTagResources(array $options = [])
  * @method ListTags listTags(array $options = [])
+ * @method ModifyAgentProfile modifyAgentProfile(array $options = [])
+ * @method ModifyAnnotationMission modifyAnnotationMission(array $options = [])
  * @method ModifyBatchJobs modifyBatchJobs(array $options = [])
+ * @method ModifyBeebotIntent modifyBeebotIntent(array $options = [])
+ * @method ModifyBeebotIntentLgf modifyBeebotIntentLgf(array $options = [])
+ * @method ModifyBeebotIntentUserSay modifyBeebotIntentUserSay(array $options = [])
  * @method ModifyDialogueFlow modifyDialogueFlow(array $options = [])
  * @method ModifyEmptyNumberNoMoreCallsInfo modifyEmptyNumberNoMoreCallsInfo(array $options = [])
  * @method ModifyGlobalQuestion modifyGlobalQuestion(array $options = [])
@@ -122,6 +146,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ResumeJobs resumeJobs(array $options = [])
  * @method RollbackScript rollbackScript(array $options = [])
  * @method SaveAfterAnswerDelayPlayback saveAfterAnswerDelayPlayback(array $options = [])
+ * @method SaveAnnotationMissionSessionList saveAnnotationMissionSessionList(array $options = [])
+ * @method SaveAnnotationMissionTagInfoList saveAnnotationMissionTagInfoList(array $options = [])
  * @method SaveBaseStrategyPeriod saveBaseStrategyPeriod(array $options = [])
  * @method SaveContactBlockList saveContactBlockList(array $options = [])
  * @method SaveContactWhiteList saveContactWhiteList(array $options = [])
@@ -156,14 +182,9 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 
     /** @var string */
     public $method = 'POST';
-}
 
-/**
- * @method string getVersionId()
- * @method $this withVersionId($value)
- */
-class ApplyNumberDistrictInfoParsingResult extends Rpc
-{
+    /** @var string */
+    public $serviceCode = 'outboundbot';
 }
 
 /**
@@ -213,6 +234,85 @@ class AssignJobs extends Rpc
 		}
 
 		return $this;
+    }
+}
+
+/**
+ * @method string getJobsJson()
+ * @method string getCallingNumber()
+ * @method string getInstanceId()
+ * @method string getStrategyJson()
+ * @method string getJobGroupId()
+ */
+class AssignJobsAsync extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobsJson($value)
+    {
+        $this->data['JobsJson'] = $value;
+        $this->options['form_params']['JobsJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCallingNumber($value)
+    {
+        $this->data['CallingNumber'] = $value;
+        $this->options['form_params']['CallingNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withStrategyJson($value)
+    {
+        $this->data['StrategyJson'] = $value;
+        $this->options['form_params']['StrategyJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withJobGroupId($value)
+    {
+        $this->data['JobGroupId'] = $value;
+        $this->options['form_params']['JobGroupId'] = $value;
+
+        return $this;
     }
 }
 
@@ -273,6 +373,267 @@ class ChangeResourceGroup extends Rpc
 }
 
 /**
+ * @method string getModelConfig()
+ * @method string getAppIp()
+ * @method string getDescription()
+ * @method string getAgentProfileTemplateId()
+ * @method string getScriptId()
+ * @method string getVariablesJson()
+ * @method string getInstructionJson()
+ * @method string getScenario()
+ * @method string getModel()
+ * @method string getLabelsJson()
+ * @method string getFaqCategoryIds()
+ * @method string getInstanceId()
+ * @method string getPromptJson()
+ * @method string getPrompt()
+ */
+class CreateAgentProfile extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelConfig($value)
+    {
+        $this->data['ModelConfig'] = $value;
+        $this->options['form_params']['ModelConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppIp($value)
+    {
+        $this->data['AppIp'] = $value;
+        $this->options['form_params']['AppIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgentProfileTemplateId($value)
+    {
+        $this->data['AgentProfileTemplateId'] = $value;
+        $this->options['form_params']['AgentProfileTemplateId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScriptId($value)
+    {
+        $this->data['ScriptId'] = $value;
+        $this->options['form_params']['ScriptId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVariablesJson($value)
+    {
+        $this->data['VariablesJson'] = $value;
+        $this->options['form_params']['VariablesJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstructionJson($value)
+    {
+        $this->data['InstructionJson'] = $value;
+        $this->options['form_params']['InstructionJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScenario($value)
+    {
+        $this->data['Scenario'] = $value;
+        $this->options['form_params']['Scenario'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModel($value)
+    {
+        $this->data['Model'] = $value;
+        $this->options['form_params']['Model'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabelsJson($value)
+    {
+        $this->data['LabelsJson'] = $value;
+        $this->options['form_params']['LabelsJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaqCategoryIds($value)
+    {
+        $this->data['FaqCategoryIds'] = $value;
+        $this->options['form_params']['FaqCategoryIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPromptJson($value)
+    {
+        $this->data['PromptJson'] = $value;
+        $this->options['form_params']['PromptJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrompt($value)
+    {
+        $this->data['Prompt'] = $value;
+        $this->options['form_params']['Prompt'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSessionEndReasonFilterListJsonString()
+ * @method $this withSessionEndReasonFilterListJsonString($value)
+ * @method string getSamplingType()
+ * @method $this withSamplingType($value)
+ * @method array getSessionEndReasonFilterList()
+ * @method string getAnnotationMissionDataSourceType()
+ * @method $this withAnnotationMissionDataSourceType($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getAnnotationMissionDebugDataSourceListJsonString()
+ * @method $this withAnnotationMissionDebugDataSourceListJsonString($value)
+ * @method string getConversationTimeEndFilter()
+ * @method $this withConversationTimeEndFilter($value)
+ * @method string getConversationTimeStartFilter()
+ * @method $this withConversationTimeStartFilter($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
+ * @method string getExcludeOtherSession()
+ * @method $this withExcludeOtherSession($value)
+ * @method string getFinished()
+ * @method $this withFinished($value)
+ * @method string getSamplingRate()
+ * @method $this withSamplingRate($value)
+ * @method string getAgentKey()
+ * @method $this withAgentKey($value)
+ * @method string getAnnotationMissionName()
+ * @method $this withAnnotationMissionName($value)
+ * @method string getChatbotId()
+ * @method $this withChatbotId($value)
+ * @method string getAnnotationMissionDebugDataSourceList()
+ * @method $this withAnnotationMissionDebugDataSourceList($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getSamplingCount()
+ * @method $this withSamplingCount($value)
+ */
+class CreateAnnotationMission extends Rpc
+{
+
+    /**
+     * @param array $sessionEndReasonFilterList
+     *
+     * @return $this
+     */
+	public function withSessionEndReasonFilterList(array $sessionEndReasonFilterList)
+	{
+	    $this->data['SessionEndReasonFilterList'] = $sessionEndReasonFilterList;
+		foreach ($sessionEndReasonFilterList as $i => $iValue) {
+			$this->options['query']['SessionEndReasonFilterList.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getJobFilePath()
  * @method $this withJobFilePath($value)
  * @method string getScriptId()
@@ -321,10 +682,13 @@ class CreateBatchJobs extends Rpc
  * @method $this withFilterStatus($value)
  * @method string getStrategyJson()
  * @method $this withStrategyJson($value)
+ * @method array getRecallCallingNumber()
  * @method string getRingingDuration()
  * @method $this withRingingDuration($value)
  * @method string getPriority()
  * @method $this withPriority($value)
+ * @method string getFlashSmsExtras()
+ * @method $this withFlashSmsExtras($value)
  * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -337,6 +701,21 @@ class CreateBatchJobs extends Rpc
  */
 class CreateBatchRepeatJob extends Rpc
 {
+
+    /**
+     * @param array $recallCallingNumber
+     *
+     * @return $this
+     */
+	public function withRecallCallingNumber(array $recallCallingNumber)
+	{
+	    $this->data['RecallCallingNumber'] = $recallCallingNumber;
+		foreach ($recallCallingNumber as $i => $iValue) {
+			$this->options['query']['RecallCallingNumber.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $callingNumber
@@ -352,6 +731,42 @@ class CreateBatchRepeatJob extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getIntentDefinition()
+ * @method $this withIntentDefinition($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class CreateBeebotIntent extends Rpc
+{
+}
+
+/**
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getLgfDefinition()
+ * @method $this withLgfDefinition($value)
+ */
+class CreateBeebotIntentLgf extends Rpc
+{
+}
+
+/**
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserSayDefinition()
+ * @method $this withUserSayDefinition($value)
+ */
+class CreateBeebotIntentUserSay extends Rpc
+{
 }
 
 /**
@@ -486,6 +901,7 @@ class CreateJobDataParsingTask extends Rpc
  * @method $this withScriptId($value)
  * @method string getStrategyJson()
  * @method $this withStrategyJson($value)
+ * @method array getRecallCallingNumber()
  * @method string getRingingDuration()
  * @method $this withRingingDuration($value)
  * @method string getScenarioId()
@@ -494,6 +910,8 @@ class CreateJobDataParsingTask extends Rpc
  * @method $this withPriority($value)
  * @method string getJobGroupDescription()
  * @method $this withJobGroupDescription($value)
+ * @method string getFlashSmsExtras()
+ * @method $this withFlashSmsExtras($value)
  * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -502,6 +920,21 @@ class CreateJobDataParsingTask extends Rpc
  */
 class CreateJobGroup extends Rpc
 {
+
+    /**
+     * @param array $recallCallingNumber
+     *
+     * @return $this
+     */
+	public function withRecallCallingNumber(array $recallCallingNumber)
+	{
+	    $this->data['RecallCallingNumber'] = $recallCallingNumber;
+		foreach ($recallCallingNumber as $i => $iValue) {
+			$this->options['query']['RecallCallingNumber.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $callingNumber
@@ -546,55 +979,35 @@ class CreateJobGroupExportTask extends Rpc
 }
 
 /**
- * @method string getVersionId()
- * @method $this withVersionId($value)
- */
-class CreateNumberDistrictInfoDownloadUrl extends Rpc
-{
-}
-
-/**
- * @method string getFileSize()
- * @method $this withFileSize($value)
- * @method string getFilePath()
- * @method $this withFilePath($value)
- */
-class CreateNumberDistrictInfoParsingTask extends Rpc
-{
-}
-
-/**
- * @method string getRateLimitCount()
- * @method $this withRateLimitCount($value)
- * @method string getNumber()
- * @method $this withNumber($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
- * @method string getRateLimitPeriod()
- * @method $this withRateLimitPeriod($value)
- */
-class CreateOutboundCallNumber extends Rpc
-{
-}
-
-/**
  * @method string getTtsConfig()
  * @method $this withTtsConfig($value)
  * @method string getIndustry()
  * @method $this withIndustry($value)
  * @method string getScriptName()
  * @method $this withScriptName($value)
+ * @method string getNluEngine()
+ * @method $this withNluEngine($value)
  * @method string getScene()
  * @method $this withScene($value)
+ * @method string getNluAccessType()
+ * @method $this withNluAccessType($value)
  * @method array getScriptWaveform()
  * @method string getAsrConfig()
  * @method $this withAsrConfig($value)
+ * @method string getAgentLlm()
+ * @method $this withAgentLlm($value)
  * @method string getMiniPlaybackConfigListJsonString()
  * @method $this withMiniPlaybackConfigListJsonString($value)
  * @method string getEmotionEnable()
  * @method $this withEmotionEnable($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
  * @method string getNewBargeInEnable()
  * @method $this withNewBargeInEnable($value)
+ * @method string getAgentKey()
+ * @method $this withAgentKey($value)
+ * @method string getScriptNluProfileJsonString()
+ * @method $this withScriptNluProfileJsonString($value)
  * @method string getMiniPlaybackEnable()
  * @method $this withMiniPlaybackEnable($value)
  * @method string getChatbotId()
@@ -706,6 +1119,8 @@ class CreateTag extends Rpc
  * @method $this withHasHangUpByRejection($value)
  * @method string getHasReachedEndOfFlow()
  * @method $this withHasReachedEndOfFlow($value)
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getRecordingDurationGte()
@@ -732,7 +1147,84 @@ class CreateTaskExportTask extends Rpc
     public $method = 'GET';
 }
 
+/**
+ * @method string getAppIp()
+ * @method string getAgentProfileIds()
+ */
+class DeleteAgentProfiles extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppIp($value)
+    {
+        $this->data['AppIp'] = $value;
+        $this->options['form_params']['AppIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgentProfileIds($value)
+    {
+        $this->data['AgentProfileIds'] = $value;
+        $this->options['form_params']['AgentProfileIds'] = $value;
+
+        return $this;
+    }
+}
+
 class DeleteAllNumberDistrictInfo extends Rpc
+{
+}
+
+/**
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteBeebotIntent extends Rpc
+{
+}
+
+/**
+ * @method string getLgfId()
+ * @method $this withLgfId($value)
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DeleteBeebotIntentLgf extends Rpc
+{
+}
+
+/**
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserSayId()
+ * @method $this withUserSayId($value)
+ */
+class DeleteBeebotIntentUserSay extends Rpc
 {
 }
 
@@ -855,6 +1347,18 @@ class DeleteScriptRecording extends Rpc
  * @method $this withInstanceId($value)
  */
 class DeleteScriptWaveform extends Rpc
+{
+}
+
+/**
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class DescribeBeebotIntent extends Rpc
 {
 }
 
@@ -992,10 +1496,6 @@ class DescribeJobGroupExportTaskProgress extends Rpc
 {
 }
 
-class DescribeNumberDistrictInfoStatus extends Rpc
-{
-}
-
 /**
  * @method string getScriptId()
  * @method $this withScriptId($value)
@@ -1049,18 +1549,30 @@ class DescribeTTSConfig extends Rpc
 /**
  * @method string getVoice()
  * @method $this withVoice($value)
- * @method string getVolume()
- * @method $this withVolume($value)
+ * @method string getSecretKey()
+ * @method $this withSecretKey($value)
  * @method string getScriptId()
  * @method $this withScriptId($value)
- * @method string getInstanceId()
- * @method $this withInstanceId($value)
+ * @method string getAccessKey()
+ * @method $this withAccessKey($value)
+ * @method string getEngine()
+ * @method $this withEngine($value)
  * @method string getText()
  * @method $this withText($value)
- * @method string getSpeechRate()
- * @method $this withSpeechRate($value)
  * @method string getPitchRate()
  * @method $this withPitchRate($value)
+ * @method string getAliCustomizedVoice()
+ * @method $this withAliCustomizedVoice($value)
+ * @method string getNlsServiceType()
+ * @method $this withNlsServiceType($value)
+ * @method string getVolume()
+ * @method $this withVolume($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAppKey()
+ * @method $this withAppKey($value)
+ * @method string getSpeechRate()
+ * @method $this withSpeechRate($value)
  */
 class DescribeTTSDemo extends Rpc
 {
@@ -1093,14 +1605,6 @@ class DescribeTTSDemo extends Rpc
  * @method $this withActionKey($value)
  */
 class Dialogue extends Rpc
-{
-}
-
-/**
- * @method string getVersionId()
- * @method $this withVersionId($value)
- */
-class DismissNumberDistrictInfoParsingResult extends Rpc
 {
 }
 
@@ -1171,6 +1675,114 @@ class GetAfterAnswerDelayPlayback extends Rpc
 }
 
 /**
+ * @method string getAppIp()
+ * @method string getAgentProfileId()
+ * @method string getInstanceId()
+ */
+class GetAgentProfile extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppIp($value)
+    {
+        $this->data['AppIp'] = $value;
+        $this->options['form_params']['AppIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgentProfileId($value)
+    {
+        $this->data['AgentProfileId'] = $value;
+        $this->options['form_params']['AgentProfileId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAppIp()
+ * @method string getAgentProfileTemplateId()
+ */
+class GetAgentProfileTemplate extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppIp($value)
+    {
+        $this->data['AppIp'] = $value;
+        $this->options['form_params']['AppIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgentProfileTemplateId($value)
+    {
+        $this->data['AgentProfileTemplateId'] = $value;
+        $this->options['form_params']['AgentProfileTemplateId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAnnotationMissionId()
+ * @method $this withAnnotationMissionId($value)
+ */
+class GetAnnotationMissionSummary extends Rpc
+{
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ */
+class GetAnnotationMissionTagInfoList extends Rpc
+{
+}
+
+/**
  * @method string getStrategyLevel()
  * @method $this withStrategyLevel($value)
  * @method string getEntryId()
@@ -1178,6 +1790,17 @@ class GetAfterAnswerDelayPlayback extends Rpc
  */
 class GetAsrServerInfo extends Rpc
 {
+}
+
+/**
+ * @method string getAsyncTaskId()
+ * @method $this withAsyncTaskId($value)
+ */
+class GetAssignJobsAsyncResult extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1236,17 +1859,23 @@ class GetCurrentConcurrency extends Rpc
  * @method string getEntryId()
  * @method $this withEntryId($value)
  */
-class GetEffectiveDays extends Rpc
+class GetEmptyNumberNoMoreCallsInfo extends Rpc
 {
 }
 
 /**
- * @method string getStrategyLevel()
- * @method $this withStrategyLevel($value)
- * @method string getEntryId()
- * @method $this withEntryId($value)
+ * @method string getBusiType()
+ * @method $this withBusiType($value)
+ * @method string getPath()
+ * @method $this withPath($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getFileName()
+ * @method $this withFileName($value)
+ * @method string getUniqueId()
+ * @method $this withUniqueId($value)
  */
-class GetEmptyNumberNoMoreCallsInfo extends Rpc
+class GetJobDataUploadParams extends Rpc
 {
 }
 
@@ -1262,6 +1891,23 @@ class GetMaxAttemptsPerDay extends Rpc
 
 class GetNumberDistrictInfoTemplateDownloadUrl extends Rpc
 {
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getJobGroupId()
+ * @method $this withJobGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class GetRealtimeConcurrencyReport extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
 }
 
 /**
@@ -1308,6 +1954,8 @@ class GetVersion extends Rpc
 /**
  * @method string getSignatureUrl()
  * @method $this withSignatureUrl($value)
+ * @method string getNluEngine()
+ * @method $this withNluEngine($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
@@ -1328,6 +1976,57 @@ class InflightTaskTimeout extends Rpc
 }
 
 /**
+ * @method string getAppIp()
+ * @method string getScriptId()
+ * @method string getInstanceId()
+ */
+class ListAgentProfiles extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppIp($value)
+    {
+        $this->data['AppIp'] = $value;
+        $this->options['form_params']['AppIp'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScriptId($value)
+    {
+        $this->data['ScriptId'] = $value;
+        $this->options['form_params']['ScriptId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getTenant()
  * @method $this withTenant($value)
  */
@@ -1336,6 +2035,133 @@ class ListAllTenantBindNumberBinding extends Rpc
 }
 
 /**
+ * @method string getCreateTimeStartFilter()
+ * @method $this withCreateTimeStartFilter($value)
+ * @method string getAnnotationStatusListStringFilter()
+ * @method $this withAnnotationStatusListStringFilter($value)
+ * @method string getAnnotationMissionId()
+ * @method $this withAnnotationMissionId($value)
+ * @method string getAnnotationMissionName()
+ * @method $this withAnnotationMissionName($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getCreateTimeEndFilter()
+ * @method $this withCreateTimeEndFilter($value)
+ * @method array getAnnotationStatusListFilter()
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ */
+class ListAnnotationMission extends Rpc
+{
+
+    /**
+     * @param array $annotationStatusListFilter
+     *
+     * @return $this
+     */
+	public function withAnnotationStatusListFilter(array $annotationStatusListFilter)
+	{
+	    $this->data['AnnotationStatusListFilter'] = $annotationStatusListFilter;
+		foreach ($annotationStatusListFilter as $i => $iValue) {
+			$this->options['query']['AnnotationStatusListFilter.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getAnnotationMissionSessionId()
+ * @method $this withAnnotationMissionSessionId($value)
+ * @method string getAnnotationMissionId()
+ * @method $this withAnnotationMissionId($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getIncludeStatusListJsonString()
+ * @method $this withIncludeStatusListJsonString($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ */
+class ListAnnotationMissionSession extends Rpc
+{
+}
+
+/**
+ * @method string getUuidsJson()
+ * @method $this withUuidsJson($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListApiPlugins extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getIntentName()
+ * @method $this withIntentName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListBeebotIntent extends Rpc
+{
+}
+
+/**
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getLgfText()
+ * @method $this withLgfText($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListBeebotIntentLgf extends Rpc
+{
+}
+
+/**
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getContent()
+ * @method $this withContent($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ */
+class ListBeebotIntentUserSay extends Rpc
+{
+}
+
+/**
+ * @method string getAgentKey()
+ * @method $this withAgentKey($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getPageSize()
@@ -1358,10 +2184,27 @@ class ListDialogueFlows extends Rpc
 /**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
  * @method string getPageSize()
  * @method $this withPageSize($value)
  */
 class ListDownloadTasks extends Rpc
+{
+
+    /** @var string */
+    public $method = 'GET';
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getProviderId()
+ * @method $this withProviderId($value)
+ * @method string getConfigId()
+ * @method $this withConfigId($value)
+ */
+class ListFlashSmsTemplates extends Rpc
 {
 
     /** @var string */
@@ -1383,8 +2226,14 @@ class ListGlobalQuestions extends Rpc
 }
 
 /**
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
  * @method string getResourceGroupId()
  * @method $this withResourceGroupId($value)
+ * @method string getName()
+ * @method $this withName($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
  * @method array getTag()
  */
 class ListInstances extends Rpc
@@ -1412,6 +2261,30 @@ class ListInstances extends Rpc
 }
 
 /**
+ * @method string getUserNick()
+ * @method $this withUserNick($value)
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getAnnotationMissionDataSourceType()
+ * @method $this withAnnotationMissionDataSourceType($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getPageIndex()
+ * @method $this withPageIndex($value)
+ * @method string getBotId()
+ * @method $this withBotId($value)
+ */
+class ListIntentions extends Rpc
+{
+}
+
+/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getScriptId()
@@ -1434,6 +2307,8 @@ class ListIntents extends Rpc
  * @method $this withSearchText($value)
  * @method string getEndTime()
  * @method $this withEndTime($value)
+ * @method string getOnlyMinConcurrencyEnabled()
+ * @method $this withOnlyMinConcurrencyEnabled($value)
  * @method string getStartTime()
  * @method $this withStartTime($value)
  * @method string getPageNumber()
@@ -1527,14 +2402,6 @@ class ListResourceTags extends Rpc
 }
 
 /**
- * @method string getInstanceOwnerId()
- * @method $this withInstanceOwnerId($value)
- */
-class ListSchedulerInstances extends Rpc
-{
-}
-
-/**
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
  * @method string getScriptId()
@@ -1549,6 +2416,8 @@ class ListScriptPublishHistories extends Rpc
 }
 
 /**
+ * @method string getRefIdsJson()
+ * @method $this withRefIdsJson($value)
  * @method string getUuidsJson()
  * @method $this withUuidsJson($value)
  * @method string getStatesJson()
@@ -1569,8 +2438,12 @@ class ListScriptRecording extends Rpc
 }
 
 /**
+ * @method string getScriptName()
+ * @method $this withScriptName($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
+ * @method string getNluEngine()
+ * @method $this withNluEngine($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getPageSize()
@@ -1652,6 +2525,211 @@ class ListTags extends Rpc
 }
 
 /**
+ * @method string getModelConfig()
+ * @method string getDescription()
+ * @method string getVariablesJson()
+ * @method string getInstructionJson()
+ * @method string getScenario()
+ * @method string getApiPluginJson()
+ * @method string getModel()
+ * @method string getLabelsJson()
+ * @method string getAgentProfileId()
+ * @method string getFaqCategoryIds()
+ * @method string getInstanceId()
+ * @method string getPromptJson()
+ * @method string getPrompt()
+ */
+class ModifyAgentProfile extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModelConfig($value)
+    {
+        $this->data['ModelConfig'] = $value;
+        $this->options['form_params']['ModelConfig'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withDescription($value)
+    {
+        $this->data['Description'] = $value;
+        $this->options['form_params']['Description'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVariablesJson($value)
+    {
+        $this->data['VariablesJson'] = $value;
+        $this->options['form_params']['VariablesJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstructionJson($value)
+    {
+        $this->data['InstructionJson'] = $value;
+        $this->options['form_params']['InstructionJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScenario($value)
+    {
+        $this->data['Scenario'] = $value;
+        $this->options['form_params']['Scenario'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withApiPluginJson($value)
+    {
+        $this->data['ApiPluginJson'] = $value;
+        $this->options['form_params']['ApiPluginJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withModel($value)
+    {
+        $this->data['Model'] = $value;
+        $this->options['form_params']['Model'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withLabelsJson($value)
+    {
+        $this->data['LabelsJson'] = $value;
+        $this->options['form_params']['LabelsJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAgentProfileId($value)
+    {
+        $this->data['AgentProfileId'] = $value;
+        $this->options['form_params']['AgentProfileId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFaqCategoryIds($value)
+    {
+        $this->data['FaqCategoryIds'] = $value;
+        $this->options['form_params']['FaqCategoryIds'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPromptJson($value)
+    {
+        $this->data['PromptJson'] = $value;
+        $this->options['form_params']['PromptJson'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withPrompt($value)
+    {
+        $this->data['Prompt'] = $value;
+        $this->options['form_params']['Prompt'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getAnnotationStatus()
+ * @method $this withAnnotationStatus($value)
+ * @method string getDelete()
+ * @method $this withDelete($value)
+ * @method string getAnnotationMissionId()
+ * @method $this withAnnotationMissionId($value)
+ * @method string getAnnotationMissionName()
+ * @method $this withAnnotationMissionName($value)
+ */
+class ModifyAnnotationMission extends Rpc
+{
+}
+
+/**
  * @method string getDescription()
  * @method $this withDescription($value)
  * @method string getJobFilePath()
@@ -1689,6 +2767,48 @@ class ModifyBatchJobs extends Rpc
 
 		return $this;
     }
+}
+
+/**
+ * @method string getIntentDefinition()
+ * @method $this withIntentDefinition($value)
+ * @method string getIntentId()
+ * @method $this withIntentId($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ */
+class ModifyBeebotIntent extends Rpc
+{
+}
+
+/**
+ * @method string getLgfId()
+ * @method $this withLgfId($value)
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getLgfDefinition()
+ * @method $this withLgfDefinition($value)
+ */
+class ModifyBeebotIntentLgf extends Rpc
+{
+}
+
+/**
+ * @method string getScriptId()
+ * @method $this withScriptId($value)
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getUserSayId()
+ * @method $this withUserSayId($value)
+ * @method string getUserSayDefinition()
+ * @method $this withUserSayDefinition($value)
+ */
+class ModifyBeebotIntentUserSay extends Rpc
+{
 }
 
 /**
@@ -1808,6 +2928,7 @@ class ModifyIntent extends Rpc
  * @method $this withScriptId($value)
  * @method string getStrategyJson()
  * @method $this withStrategyJson($value)
+ * @method array getRecallCallingNumber()
  * @method string getRingingDuration()
  * @method $this withRingingDuration($value)
  * @method string getScenarioId()
@@ -1816,6 +2937,8 @@ class ModifyIntent extends Rpc
  * @method $this withJobGroupStatus($value)
  * @method string getPriority()
  * @method $this withPriority($value)
+ * @method string getFlashSmsExtras()
+ * @method $this withFlashSmsExtras($value)
  * @method array getCallingNumber()
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
@@ -1828,6 +2951,21 @@ class ModifyIntent extends Rpc
  */
 class ModifyJobGroup extends Rpc
 {
+
+    /**
+     * @param array $recallCallingNumber
+     *
+     * @return $this
+     */
+	public function withRecallCallingNumber(array $recallCallingNumber)
+	{
+	    $this->data['RecallCallingNumber'] = $recallCallingNumber;
+		foreach ($recallCallingNumber as $i => $iValue) {
+			$this->options['query']['RecallCallingNumber.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 
     /**
      * @param array $callingNumber
@@ -1862,27 +3000,41 @@ class ModifyOutboundCallNumber extends Rpc
 }
 
 /**
+ * @method string getChatConfig()
+ * @method $this withChatConfig($value)
  * @method string getTtsConfig()
  * @method $this withTtsConfig($value)
  * @method string getIndustry()
  * @method $this withIndustry($value)
  * @method string getScriptName()
  * @method $this withScriptName($value)
+ * @method string getNluEngine()
+ * @method $this withNluEngine($value)
+ * @method string getLabelConfig()
+ * @method $this withLabelConfig($value)
  * @method string getScene()
  * @method $this withScene($value)
  * @method string getScriptId()
  * @method $this withScriptId($value)
+ * @method string getNluAccessType()
+ * @method $this withNluAccessType($value)
  * @method array getScriptWaveform()
  * @method string getAsrConfig()
  * @method $this withAsrConfig($value)
+ * @method string getAgentLlm()
+ * @method $this withAgentLlm($value)
  * @method string getMiniPlaybackConfigListJsonString()
  * @method $this withMiniPlaybackConfigListJsonString($value)
  * @method string getEmotionEnable()
  * @method $this withEmotionEnable($value)
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
  * @method string getNlsConfig()
  * @method $this withNlsConfig($value)
  * @method string getNewBargeInEnable()
  * @method $this withNewBargeInEnable($value)
+ * @method string getAgentKey()
+ * @method $this withAgentKey($value)
  * @method string getMiniPlaybackEnable()
  * @method $this withMiniPlaybackEnable($value)
  * @method string getChatbotId()
@@ -1974,6 +3126,8 @@ class ModifyTagGroups extends Rpc
  * @method $this withAppKey($value)
  * @method string getSpeechRate()
  * @method $this withSpeechRate($value)
+ * @method string getPitchRate()
+ * @method $this withPitchRate($value)
  */
 class ModifyTTSConfig extends Rpc
 {
@@ -2032,27 +3186,49 @@ class QueryJobs extends Rpc
 /**
  * @method string getHasReachedEndOfFlowFilter()
  * @method $this withHasReachedEndOfFlowFilter($value)
- * @method string getHasAnsweredFilter()
- * @method $this withHasAnsweredFilter($value)
- * @method string getTaskStatusFilter()
- * @method $this withTaskStatusFilter($value)
+ * @method string getEndActualTimeFilter()
+ * @method $this withEndActualTimeFilter($value)
  * @method string getPageNumber()
  * @method $this withPageNumber($value)
- * @method string getQueryText()
- * @method $this withQueryText($value)
  * @method string getHasHangUpByRejectionFilter()
  * @method $this withHasHangUpByRejectionFilter($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getStartActualTimeFilter()
+ * @method $this withStartActualTimeFilter($value)
+ * @method string getHasAnsweredFilter()
+ * @method $this withHasAnsweredFilter($value)
+ * @method array getLabelsJson()
+ * @method string getTaskStatusFilter()
+ * @method $this withTaskStatusFilter($value)
+ * @method string getQueryText()
+ * @method $this withQueryText($value)
+ * @method string getJobFailureReasonsFilter()
+ * @method $this withJobFailureReasonsFilter($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getJobStatusFilter()
  * @method $this withJobStatusFilter($value)
- * @method string getPageSize()
- * @method $this withPageSize($value)
  * @method string getJobGroupId()
  * @method $this withJobGroupId($value)
  */
 class QueryJobsWithResult extends Rpc
 {
+
+    /**
+     * @param array $labelsJson
+     *
+     * @return $this
+     */
+	public function withLabelsJson(array $labelsJson)
+	{
+	    $this->data['LabelsJson'] = $labelsJson;
+		foreach ($labelsJson as $i => $iValue) {
+			$this->options['query']['LabelsJson.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2190,8 +3366,335 @@ class SaveAfterAnswerDelayPlayback extends Rpc
 }
 
 /**
+ * @method string getAgentId()
+ * @method $this withAgentId($value)
+ * @method string getUserNick()
+ * @method $this withUserNick($value)
+ * @method string getAgentKey()
+ * @method $this withAgentKey($value)
+ * @method string getAnnotationMissionDataSourceType()
+ * @method $this withAnnotationMissionDataSourceType($value)
+ * @method string getEnvironment()
+ * @method $this withEnvironment($value)
+ * @method array getAnnotationMissionSessionList()
+ * @method string getAnnotationMissionSessionListJsonString()
+ * @method $this withAnnotationMissionSessionListJsonString($value)
+ */
+class SaveAnnotationMissionSessionList extends Rpc
+{
+
+    /**
+     * @param array $annotationMissionSessionList
+     *
+     * @return $this
+     */
+	public function withAnnotationMissionSessionList(array $annotationMissionSessionList)
+	{
+	    $this->data['AnnotationMissionSessionList'] = $annotationMissionSessionList;
+		foreach ($annotationMissionSessionList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['AnnotationMissionId'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionId'] = $depth1Value['AnnotationMissionId'];
+			}
+			if(isset($depth1Value['JobId'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.JobId'] = $depth1Value['JobId'];
+			}
+			if(isset($depth1Value['CreateTime'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.CreateTime'] = $depth1Value['CreateTime'];
+			}
+			if(isset($depth1Value['ScriptId'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.ScriptId'] = $depth1Value['ScriptId'];
+			}
+			if(isset($depth1Value['ModifiedTime'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.ModifiedTime'] = $depth1Value['ModifiedTime'];
+			}
+			if(isset($depth1Value['InstanceId'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.InstanceId'] = $depth1Value['InstanceId'];
+			}
+			if(isset($depth1Value['AnnotationMissionSessionId'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionSessionId'] = $depth1Value['AnnotationMissionSessionId'];
+			}
+			foreach ($depth1Value['AnnotationMissionChatList'] as $depth2 => $depth2Value) {
+				if(isset($depth2Value['CreateTime'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.CreateTime'] = $depth2Value['CreateTime'];
+				}
+				if(isset($depth2Value['TagAnnotationStatus'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.TagAnnotationStatus'] = $depth2Value['TagAnnotationStatus'];
+				}
+				if(isset($depth2Value['AsrAnnotationStatus'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AsrAnnotationStatus'] = $depth2Value['AsrAnnotationStatus'];
+				}
+				if(isset($depth2Value['AnnotationAsrResult'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationAsrResult'] = $depth2Value['AnnotationAsrResult'];
+				}
+				if(isset($depth2Value['AnnotationMissionSessionId'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionSessionId'] = $depth2Value['AnnotationMissionSessionId'];
+				}
+				if(isset($depth2Value['SubStatus'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.SubStatus'] = $depth2Value['SubStatus'];
+				}
+				if(isset($depth2Value['AnnotationMissionChatId'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatId'] = $depth2Value['AnnotationMissionChatId'];
+				}
+				if(isset($depth2Value['AnnotationStatus'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationStatus'] = $depth2Value['AnnotationStatus'];
+				}
+				foreach ($depth2Value['AnnotationMissionChatVocabularyInfoList'] as $depth3 => $depth3Value) {
+					if(isset($depth3Value['CreateTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.CreateTime'] = $depth3Value['CreateTime'];
+					}
+					if(isset($depth3Value['AnnotationMissionSessionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.AnnotationMissionSessionId'] = $depth3Value['AnnotationMissionSessionId'];
+					}
+					if(isset($depth3Value['VocabularyId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.VocabularyId'] = $depth3Value['VocabularyId'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatId'] = $depth3Value['AnnotationMissionChatId'];
+					}
+					if(isset($depth3Value['Delete'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.Delete'] = $depth3Value['Delete'];
+					}
+					if(isset($depth3Value['AnnotationMissionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.AnnotationMissionId'] = $depth3Value['AnnotationMissionId'];
+					}
+					if(isset($depth3Value['ModifiedTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.ModifiedTime'] = $depth3Value['ModifiedTime'];
+					}
+					if(isset($depth3Value['InstanceId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.InstanceId'] = $depth3Value['InstanceId'];
+					}
+					if(isset($depth3Value['Vocabulary'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.Vocabulary'] = $depth3Value['Vocabulary'];
+					}
+					if(isset($depth3Value['VocabularyName'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.VocabularyName'] = $depth3Value['VocabularyName'];
+					}
+					if(isset($depth3Value['Create'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.Create'] = $depth3Value['Create'];
+					}
+					if(isset($depth3Value['VocabularyWeight'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.VocabularyWeight'] = $depth3Value['VocabularyWeight'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatVocabularyInfoId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatVocabularyInfoId'] = $depth3Value['AnnotationMissionChatVocabularyInfoId'];
+					}
+					if(isset($depth3Value['VocabularyDescription'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatVocabularyInfoList.' . ($depth3 + 1) . '.VocabularyDescription'] = $depth3Value['VocabularyDescription'];
+					}
+				}
+				if(isset($depth2Value['SequenceId'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.SequenceId'] = $depth2Value['SequenceId'];
+				}
+				foreach ($depth2Value['AnnotationMissionChatIntentUserSayInfoList'] as $depth3 => $depth3Value) {
+					if(isset($depth3Value['CreateTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.CreateTime'] = $depth3Value['CreateTime'];
+					}
+					if(isset($depth3Value['AnnotationMissionSessionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.AnnotationMissionSessionId'] = $depth3Value['AnnotationMissionSessionId'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatId'] = $depth3Value['AnnotationMissionChatId'];
+					}
+					if(isset($depth3Value['IntentId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.IntentId'] = $depth3Value['IntentId'];
+					}
+					if(isset($depth3Value['DialogId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.DialogId'] = $depth3Value['DialogId'];
+					}
+					if(isset($depth3Value['Delete'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.Delete'] = $depth3Value['Delete'];
+					}
+					if(isset($depth3Value['Content'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.Content'] = $depth3Value['Content'];
+					}
+					if(isset($depth3Value['AnnotationMissionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.AnnotationMissionId'] = $depth3Value['AnnotationMissionId'];
+					}
+					if(isset($depth3Value['ModifiedTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.ModifiedTime'] = $depth3Value['ModifiedTime'];
+					}
+					if(isset($depth3Value['InstanceId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.InstanceId'] = $depth3Value['InstanceId'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatIntentUserSayInfoId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatIntentUserSayInfoId'] = $depth3Value['AnnotationMissionChatIntentUserSayInfoId'];
+					}
+					if(isset($depth3Value['Create'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.Create'] = $depth3Value['Create'];
+					}
+					if(isset($depth3Value['BotId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatIntentUserSayInfoList.' . ($depth3 + 1) . '.BotId'] = $depth3Value['BotId'];
+					}
+				}
+				if(isset($depth2Value['AnnotationMissionId'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionId'] = $depth2Value['AnnotationMissionId'];
+				}
+				if(isset($depth2Value['ModifiedTime'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.ModifiedTime'] = $depth2Value['ModifiedTime'];
+				}
+				if(isset($depth2Value['InstanceId'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.InstanceId'] = $depth2Value['InstanceId'];
+				}
+				if(isset($depth2Value['IntentAnnotationStatus'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.IntentAnnotationStatus'] = $depth2Value['IntentAnnotationStatus'];
+				}
+				if(isset($depth2Value['OccurTime'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.OccurTime'] = $depth2Value['OccurTime'];
+				}
+				if(isset($depth2Value['Answer'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.Answer'] = $depth2Value['Answer'];
+				}
+				foreach ($depth2Value['AnnotationMissionChatCustomizationDataInfoList'] as $depth3 => $depth3Value) {
+					if(isset($depth3Value['CreateTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.CreateTime'] = $depth3Value['CreateTime'];
+					}
+					if(isset($depth3Value['AnnotationMissionSessionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.AnnotationMissionSessionId'] = $depth3Value['AnnotationMissionSessionId'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatId'] = $depth3Value['AnnotationMissionChatId'];
+					}
+					if(isset($depth3Value['CustomizationDataId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.CustomizationDataId'] = $depth3Value['CustomizationDataId'];
+					}
+					if(isset($depth3Value['Delete'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.Delete'] = $depth3Value['Delete'];
+					}
+					if(isset($depth3Value['Content'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.Content'] = $depth3Value['Content'];
+					}
+					if(isset($depth3Value['AnnotationMissionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.AnnotationMissionId'] = $depth3Value['AnnotationMissionId'];
+					}
+					if(isset($depth3Value['CustomizationDataWeight'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.CustomizationDataWeight'] = $depth3Value['CustomizationDataWeight'];
+					}
+					if(isset($depth3Value['ModifiedTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.ModifiedTime'] = $depth3Value['ModifiedTime'];
+					}
+					if(isset($depth3Value['InstanceId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.InstanceId'] = $depth3Value['InstanceId'];
+					}
+					if(isset($depth3Value['Create'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.Create'] = $depth3Value['Create'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatCustomizationDataInfoId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatCustomizationDataInfoId'] = $depth3Value['AnnotationMissionChatCustomizationDataInfoId'];
+					}
+					if(isset($depth3Value['CustomizationDataDescription'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.CustomizationDataDescription'] = $depth3Value['CustomizationDataDescription'];
+					}
+					if(isset($depth3Value['CustomizationDataName'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatCustomizationDataInfoList.' . ($depth3 + 1) . '.CustomizationDataName'] = $depth3Value['CustomizationDataName'];
+					}
+				}
+				foreach ($depth2Value['AnnotationMissionChatTagInfoList'] as $depth3 => $depth3Value) {
+					if(isset($depth3Value['AnnotationMissionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.AnnotationMissionId'] = $depth3Value['AnnotationMissionId'];
+					}
+					if(isset($depth3Value['AnnotationMissionTagInfoId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.AnnotationMissionTagInfoId'] = $depth3Value['AnnotationMissionTagInfoId'];
+					}
+					if(isset($depth3Value['CreateTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.CreateTime'] = $depth3Value['CreateTime'];
+					}
+					if(isset($depth3Value['AnnotationMissionTagInfoName'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.AnnotationMissionTagInfoName'] = $depth3Value['AnnotationMissionTagInfoName'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatTagInfoId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatTagInfoId'] = $depth3Value['AnnotationMissionChatTagInfoId'];
+					}
+					if(isset($depth3Value['ModifiedTime'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.ModifiedTime'] = $depth3Value['ModifiedTime'];
+					}
+					if(isset($depth3Value['InstanceId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.InstanceId'] = $depth3Value['InstanceId'];
+					}
+					if(isset($depth3Value['AnnotationMissionSessionId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.AnnotationMissionSessionId'] = $depth3Value['AnnotationMissionSessionId'];
+					}
+					if(isset($depth3Value['AnnotationMissionChatId'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.AnnotationMissionChatId'] = $depth3Value['AnnotationMissionChatId'];
+					}
+					if(isset($depth3Value['Create'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.Create'] = $depth3Value['Create'];
+					}
+					if(isset($depth3Value['Delete'])){
+						$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.AnnotationMissionChatTagInfoList.' . ($depth3 + 1) . '.Delete'] = $depth3Value['Delete'];
+					}
+				}
+				if(isset($depth2Value['OriginalAsrResult'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.OriginalAsrResult'] = $depth2Value['OriginalAsrResult'];
+				}
+				if(isset($depth2Value['TranslationError'])){
+					$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationMissionChatList.' . ($depth2 + 1) . '.TranslationError'] = $depth2Value['TranslationError'];
+				}
+			}
+			if(isset($depth1Value['AnnotationStatus'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.AnnotationStatus'] = $depth1Value['AnnotationStatus'];
+			}
+			if(isset($depth1Value['JobGroupId'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.JobGroupId'] = $depth1Value['JobGroupId'];
+			}
+			if(isset($depth1Value['SessionId'])){
+				$this->options['query']['AnnotationMissionSessionList.' . ($depth1 + 1) . '.SessionId'] = $depth1Value['SessionId'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ * @method $this withInstanceId($value)
+ * @method string getAnnotationMissionTagInfoListJsonString()
+ * @method $this withAnnotationMissionTagInfoListJsonString($value)
+ * @method string getReset()
+ * @method $this withReset($value)
+ * @method array getAnnotationMissionTagInfoList()
+ */
+class SaveAnnotationMissionTagInfoList extends Rpc
+{
+
+    /**
+     * @param array $annotationMissionTagInfoList
+     *
+     * @return $this
+     */
+	public function withAnnotationMissionTagInfoList(array $annotationMissionTagInfoList)
+	{
+	    $this->data['AnnotationMissionTagInfoList'] = $annotationMissionTagInfoList;
+		foreach ($annotationMissionTagInfoList as $depth1 => $depth1Value) {
+			if(isset($depth1Value['AnnotationMissionTagInfoId'])){
+				$this->options['query']['AnnotationMissionTagInfoList.' . ($depth1 + 1) . '.AnnotationMissionTagInfoId'] = $depth1Value['AnnotationMissionTagInfoId'];
+			}
+			if(isset($depth1Value['AnnotationMissionTagInfoName'])){
+				$this->options['query']['AnnotationMissionTagInfoList.' . ($depth1 + 1) . '.AnnotationMissionTagInfoName'] = $depth1Value['AnnotationMissionTagInfoName'];
+			}
+			if(isset($depth1Value['InstanceId'])){
+				$this->options['query']['AnnotationMissionTagInfoList.' . ($depth1 + 1) . '.InstanceId'] = $depth1Value['InstanceId'];
+			}
+			if(isset($depth1Value['AnnotationMissionTagInfoDescription'])){
+				$this->options['query']['AnnotationMissionTagInfoList.' . ($depth1 + 1) . '.AnnotationMissionTagInfoDescription'] = $depth1Value['AnnotationMissionTagInfoDescription'];
+			}
+			if(isset($depth1Value['TenantId'])){
+				$this->options['query']['AnnotationMissionTagInfoList.' . ($depth1 + 1) . '.TenantId'] = $depth1Value['TenantId'];
+			}
+			if(isset($depth1Value['Delete'])){
+				$this->options['query']['AnnotationMissionTagInfoList.' . ($depth1 + 1) . '.Delete'] = $depth1Value['Delete'];
+			}
+		}
+
+		return $this;
+    }
+}
+
+/**
  * @method string getStrategyLevel()
  * @method $this withStrategyLevel($value)
+ * @method string getOnlyWorkdays()
+ * @method $this withOnlyWorkdays($value)
  * @method string getEntryId()
  * @method $this withEntryId($value)
  * @method string getOnlyWeekdays()
@@ -2324,6 +3827,9 @@ class SaveMaxAttemptsPerDay extends Rpc
  * @method $this withJobGroupNameQuery($value)
  * @method string getTaskId()
  * @method $this withTaskId($value)
+ * @method array getLabelsJson()
+ * @method string getCallingNumber()
+ * @method $this withCallingNumber($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  * @method string getRecordingDurationGte()
@@ -2348,6 +3854,21 @@ class SearchTask extends Rpc
 
     /** @var string */
     public $method = 'GET';
+
+    /**
+     * @param array $labelsJson
+     *
+     * @return $this
+     */
+	public function withLabelsJson(array $labelsJson)
+	{
+	    $this->data['LabelsJson'] = $labelsJson;
+		foreach ($labelsJson as $i => $iValue) {
+			$this->options['query']['LabelsJson.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
+    }
 }
 
 /**
@@ -2417,6 +3938,8 @@ class SubmitRecording extends Rpc
  * @method $this withScriptId($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
+ * @method string getFrom()
+ * @method $this withFrom($value)
  */
 class SubmitScriptReview extends Rpc
 {

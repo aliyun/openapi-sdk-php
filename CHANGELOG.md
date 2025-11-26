@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2328 - 2025-11-26
+- Generated 2019-12-26 for `OutboundBot`.
+
+
 ## 1.8.2327 - 2025-11-26
 - Generated 2025-07-07 for `AnyTrans`.
 
