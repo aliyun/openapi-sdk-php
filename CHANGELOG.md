@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2327 - 2025-11-26
+- Generated 2025-07-07 for `AnyTrans`.
+
+
 ## 1.8.2326 - 2025-11-17
 - Add some APIs.
 

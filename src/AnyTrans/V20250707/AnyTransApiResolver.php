@@ -6,6 +6,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
  * @method BatchTranslate batchTranslate(array $options = [])
+ * @method BatchTranslateForHtml batchTranslateForHtml(array $options = [])
  * @method GetDocTranslateTask getDocTranslateTask(array $options = [])
  * @method GetHtmlTranslateTask getHtmlTranslateTask(array $options = [])
  * @method GetImageTranslateTask getImageTranslateTask(array $options = [])
@@ -14,6 +15,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SubmitHtmlTranslateTask submitHtmlTranslateTask(array $options = [])
  * @method SubmitImageTranslateTask submitImageTranslateTask(array $options = [])
  * @method SubmitLongTextTranslateTask submitLongTextTranslateTask(array $options = [])
+ * @method TermEdit termEdit(array $options = [])
+ * @method TermQuery termQuery(array $options = [])
  * @method TextTranslate textTranslate(array $options = [])
  */
 class AnyTransApiResolver extends ApiResolver
@@ -40,6 +43,7 @@ class Roa extends \AlibabaCloud\Client\Resolver\Roa
  * @method string getSourceLanguage()
  * @method string getFormat()
  * @method string getScene()
+ * @method string getAppName()
  * @method string getTargetLanguage()
  * @method string getText()
  * @method string getWorkspaceId()
@@ -97,6 +101,139 @@ class BatchTranslate extends Roa
     {
         $this->data['Scene'] = $value;
         $this->options['form_params']['scene'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['form_params']['appName'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['targetLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkspaceId($value)
+    {
+        $this->data['WorkspaceId'] = $value;
+        $this->options['form_params']['workspaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExt()
+ * @method string getSourceLanguage()
+ * @method string getFormat()
+ * @method string getScene()
+ * @method string getAppName()
+ * @method string getTargetLanguage()
+ * @method string getText()
+ * @method string getWorkspaceId()
+ */
+class BatchTranslateForHtml extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/anytrans/translate/batchForHtml';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExt($value)
+    {
+        $this->data['Ext'] = $value;
+        $this->options['form_params']['ext'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['sourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withFormat($value)
+    {
+        $this->data['Format'] = $value;
+        $this->options['form_params']['format'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScene($value)
+    {
+        $this->data['Scene'] = $value;
+        $this->options['form_params']['scene'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withAppName($value)
+    {
+        $this->data['AppName'] = $value;
+        $this->options['form_params']['appName'] = $value;
 
         return $this;
     }
@@ -652,6 +789,162 @@ class SubmitLongTextTranslateTask extends Roa
     {
         $this->data['Format'] = $value;
         $this->options['form_params']['format'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScene($value)
+    {
+        $this->data['Scene'] = $value;
+        $this->options['form_params']['scene'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['targetLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withText($value)
+    {
+        $this->data['Text'] = $value;
+        $this->options['form_params']['text'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkspaceId($value)
+    {
+        $this->data['WorkspaceId'] = $value;
+        $this->options['form_params']['workspaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getExt()
+ * @method string getSourceLanguage()
+ * @method string getScene()
+ * @method string getTargetLanguage()
+ * @method string getWorkspaceId()
+ */
+class TermEdit extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/anytrans/translate/intervene/edit';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withExt($value)
+    {
+        $this->data['Ext'] = $value;
+        $this->options['form_params']['ext'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['sourceLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withScene($value)
+    {
+        $this->data['Scene'] = $value;
+        $this->options['form_params']['scene'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTargetLanguage($value)
+    {
+        $this->data['TargetLanguage'] = $value;
+        $this->options['form_params']['targetLanguage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withWorkspaceId($value)
+    {
+        $this->data['WorkspaceId'] = $value;
+        $this->options['form_params']['workspaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getSourceLanguage()
+ * @method string getScene()
+ * @method string getTargetLanguage()
+ * @method string getText()
+ * @method string getWorkspaceId()
+ */
+class TermQuery extends Roa
+{
+    /** @var string */
+    public $pathPattern = '/anytrans/translate/intervene/query';
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withSourceLanguage($value)
+    {
+        $this->data['SourceLanguage'] = $value;
+        $this->options['form_params']['sourceLanguage'] = $value;
 
         return $this;
     }
