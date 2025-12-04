@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2329 - 2025-12-4
+- Add some APIs.
+
+
 ## 1.8.2328 - 2025-11-26
 - Generated 2019-12-26 for `OutboundBot`.
 
