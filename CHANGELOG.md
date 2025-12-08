@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2330 - 2025-12-8
+- Generated 2017-03-21 for `vod`.
+
+
 ## 1.8.2329 - 2025-12-4
 - Add some APIs.
 
