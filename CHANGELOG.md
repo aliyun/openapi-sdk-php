@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2331 - 2025-12-11
+- Generated 2025-07-07 for `AnyTrans`.
+
+
 ## 1.8.2330 - 2025-12-8
 - Generated 2017-03-21 for `vod`.
 
