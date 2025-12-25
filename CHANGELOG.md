@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2332 - 2025-12-25
+- Generated 2022-06-16 for `cloud-siem`.
+
+
 ## 1.8.2331 - 2025-12-11
 - Generated 2025-07-07 for `AnyTrans`.
 

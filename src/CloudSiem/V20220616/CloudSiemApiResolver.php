@@ -29,7 +29,6 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeAuth describeAuth(array $options = [])
  * @method DescribeAutomateResponseConfigCounter describeAutomateResponseConfigCounter(array $options = [])
  * @method DescribeAutomateResponseConfigFeature describeAutomateResponseConfigFeature(array $options = [])
- * @method DescribeAutomateResponseConfigPlayBooks describeAutomateResponseConfigPlayBooks(array $options = [])
  * @method DescribeCloudSiemAssets describeCloudSiemAssets(array $options = [])
  * @method DescribeCloudSiemAssetsCounter describeCloudSiemAssetsCounter(array $options = [])
  * @method DescribeCloudSiemEventDetail describeCloudSiemEventDetail(array $options = [])
@@ -902,6 +901,7 @@ class DescribeAggregateFunction extends Rpc
 /**
  * @method string getRoleFor()
  * @method string getAlertName()
+ * @method array getAlertStatus()
  * @method string getEntityName()
  * @method string getAssetName()
  * @method string getEntityId()
@@ -947,6 +947,21 @@ class DescribeAlerts extends Rpc
         $this->options['form_params']['AlertName'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $alertStatus
+     *
+     * @return $this
+     */
+	public function withAlertStatus(array $alertStatus)
+	{
+	    $this->data['AlertStatus'] = $alertStatus;
+		foreach ($alertStatus as $i => $iValue) {
+			$this->options['form_params']['AlertStatus.' . ($i + 1)] = $iValue;
+		}
+
+		return $this;
     }
 
     /**
@@ -1992,68 +2007,6 @@ class DescribeAutomateResponseConfigFeature extends Rpc
     {
         $this->data['RoleType'] = $value;
         $this->options['form_params']['RoleType'] = $value;
-
-        return $this;
-    }
-}
-
-/**
- * @method string getRoleFor()
- * @method string getAutoResponseType()
- * @method string getRoleType()
- * @method string getEntityType()
- */
-class DescribeAutomateResponseConfigPlayBooks extends Rpc
-{
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRoleFor($value)
-    {
-        $this->data['RoleFor'] = $value;
-        $this->options['form_params']['RoleFor'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withAutoResponseType($value)
-    {
-        $this->data['AutoResponseType'] = $value;
-        $this->options['form_params']['AutoResponseType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withRoleType($value)
-    {
-        $this->data['RoleType'] = $value;
-        $this->options['form_params']['RoleType'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withEntityType($value)
-    {
-        $this->data['EntityType'] = $value;
-        $this->options['form_params']['EntityType'] = $value;
 
         return $this;
     }
@@ -3876,6 +3829,7 @@ class ListAllProds extends Rpc
  * @method string getAutoResponseType()
  * @method string getRoleType()
  * @method string getId()
+ * @method string getResponseRuleType()
  * @method string getCurrentPage()
  * @method string getPlaybookUuid()
  * @method string getStatus()
@@ -3983,6 +3937,19 @@ class ListAutomateResponseConfigs extends Rpc
     {
         $this->data['Id'] = $value;
         $this->options['form_params']['Id'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResponseRuleType($value)
+    {
+        $this->data['ResponseRuleType'] = $value;
+        $this->options['form_params']['ResponseRuleType'] = $value;
 
         return $this;
     }
@@ -5032,6 +4999,7 @@ class ListDisposeStrategy extends Rpc
  * @method string getRoleType()
  * @method string getAssetUuid()
  * @method string getCurrentPage()
+ * @method string getTags()
  * @method string getIsMalwareEntity()
  * @method string getEntityType()
  * @method string getEntityUuid()
@@ -5144,6 +5112,19 @@ class ListEntities extends Rpc
     {
         $this->data['CurrentPage'] = $value;
         $this->options['form_params']['CurrentPage'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTags($value)
+    {
+        $this->data['Tags'] = $value;
+        $this->options['form_params']['Tags'] = $value;
 
         return $this;
     }
@@ -6202,6 +6183,7 @@ class PostCustomizeRuleTest extends Rpc
  * @method string getEventDispose()
  * @method string getReceiverInfo()
  * @method string getRoleType()
+ * @method string getOwner()
  * @method string getThreatLevel()
  * @method string getIncidentUuid()
  * @method string getStatus()
@@ -6270,6 +6252,19 @@ class PostEventDisposeAndWhiteruleList extends Rpc
     {
         $this->data['RoleType'] = $value;
         $this->options['form_params']['RoleType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withOwner($value)
+    {
+        $this->data['Owner'] = $value;
+        $this->options['form_params']['Owner'] = $value;
 
         return $this;
     }
