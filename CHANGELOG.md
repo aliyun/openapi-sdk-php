@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2333 - 2025-12-29
+- Generated 2015-12-01 for `Dds`.
+
+
 ## 1.8.2332 - 2025-12-25
 - Generated 2022-06-16 for `cloud-siem`.
 
