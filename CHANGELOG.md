@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2334 - 2025-12-29
+- SDK update.
+
+
 ## 1.8.2333 - 2025-12-29
 - Generated 2015-12-01 for `Dds`.
 

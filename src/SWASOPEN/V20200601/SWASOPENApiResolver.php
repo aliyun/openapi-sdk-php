@@ -1757,6 +1757,8 @@ class StartInstances extends Rpc
 }
 
 /**
+ * @method string getCommandLine()
+ * @method $this withCommandLine($value)
  * @method string getInstanceId()
  * @method $this withInstanceId($value)
  */
