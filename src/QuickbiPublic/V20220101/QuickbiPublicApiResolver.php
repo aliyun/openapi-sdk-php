@@ -45,6 +45,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteUserGroupMembers deleteUserGroupMembers(array $options = [])
  * @method DeleteUserTagMeta deleteUserTagMeta(array $options = [])
  * @method GetDataSourceConnectionInfo getDataSourceConnectionInfo(array $options = [])
+ * @method GetMailTaskList getMailTaskList(array $options = [])
  * @method GetMailTaskStatus getMailTaskStatus(array $options = [])
  * @method GetUserGroupInfo getUserGroupInfo(array $options = [])
  * @method GetWorksEmbedList getWorksEmbedList(array $options = [])
@@ -63,6 +64,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListRecentViewReports listRecentViewReports(array $options = [])
  * @method ListSharedReports listSharedReports(array $options = [])
  * @method ListUserGroupsByUserId listUserGroupsByUserId(array $options = [])
+ * @method ListWhitePortalMenu listWhitePortalMenu(array $options = [])
  * @method ListWorkspaceRoles listWorkspaceRoles(array $options = [])
  * @method ListWorkspaceRoleUsers listWorkspaceRoleUsers(array $options = [])
  * @method ListWorkspaceUserRolesByUserId listWorkspaceUserRolesByUserId(array $options = [])
@@ -100,6 +102,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method QuerySharesToUserList querySharesToUserList(array $options = [])
  * @method QuerySmartqPermissionByCubeId querySmartqPermissionByCubeId(array $options = [])
  * @method QueryTicketInfo queryTicketInfo(array $options = [])
+ * @method QueryUserByMobileAccount queryUserByMobileAccount(array $options = [])
  * @method QueryUserGroupListByParentId queryUserGroupListByParentId(array $options = [])
  * @method QueryUserGroupMember queryUserGroupMember(array $options = [])
  * @method QueryUserInfoByAccount queryUserInfoByAccount(array $options = [])
@@ -857,6 +860,27 @@ class GetDataSourceConnectionInfo extends Rpc
 }
 
 /**
+ * @method string getPaused()
+ * @method $this withPaused($value)
+ * @method string getUserNick()
+ * @method $this withUserNick($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class GetMailTaskList extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
  * @method string getMailId()
@@ -1140,6 +1164,21 @@ class ListSharedReports extends Rpc
  */
 class ListUserGroupsByUserId extends Rpc
 {
+}
+
+/**
+ * @method string getDataportalId()
+ * @method $this withDataportalId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class ListWhitePortalMenu extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1741,6 +1780,23 @@ class QuerySmartqPermissionByCubeId extends Rpc
  */
 class QueryTicketInfo extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getMobileUserId()
+ * @method $this withMobileUserId($value)
+ * @method string getMobileType()
+ * @method $this withMobileType($value)
+ */
+class QueryUserByMobileAccount extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

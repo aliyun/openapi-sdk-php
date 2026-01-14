@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2335 - 2026-1-14
+- Add some APIs.
+
+
 ## 1.8.2334 - 2025-12-29
 - SDK update.
 
