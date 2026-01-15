@@ -5,12 +5,33 @@ namespace AlibabaCloud\WebsiteBuild\V20250429;
 use AlibabaCloud\Client\Resolver\ApiResolver;
 
 /**
+ * @method BindAppDomain bindAppDomain(array $options = [])
+ * @method CreateAppInstance createAppInstance(array $options = [])
+ * @method CreateAppInstanceTicket createAppInstanceTicket(array $options = [])
  * @method CreateLogoTask createLogoTask(array $options = [])
+ * @method DeleteAppDomainCertificate deleteAppDomainCertificate(array $options = [])
+ * @method DeleteAppDomainRedirect deleteAppDomainRedirect(array $options = [])
+ * @method DescribeAppDomainDnsRecord describeAppDomainDnsRecord(array $options = [])
+ * @method DispatchConsoleAPIForPartner dispatchConsoleAPIForPartner(array $options = [])
+ * @method GetAppInstance getAppInstance(array $options = [])
  * @method GetCreateLogoTask getCreateLogoTask(array $options = [])
+ * @method GetDomainInfoForPartner getDomainInfoForPartner(array $options = [])
+ * @method GetIcpFilingInfoForPartner getIcpFilingInfoForPartner(array $options = [])
+ * @method GetUserAccessTokenForPartner getUserAccessTokenForPartner(array $options = [])
+ * @method GetUserTmpIdentityForPartner getUserTmpIdentityForPartner(array $options = [])
+ * @method ListAppDomainRedirectRecords listAppDomainRedirectRecords(array $options = [])
+ * @method ListAppInstanceDomains listAppInstanceDomains(array $options = [])
+ * @method ListAppInstances listAppInstances(array $options = [])
+ * @method ModifyAppInstanceSpec modifyAppInstanceSpec(array $options = [])
  * @method OperateAppInstanceForPartner operateAppInstanceForPartner(array $options = [])
  * @method OperateAppServiceForPartner operateAppServiceForPartner(array $options = [])
+ * @method RefreshAppInstanceTicket refreshAppInstanceTicket(array $options = [])
+ * @method RefundAppInstanceForPartner refundAppInstanceForPartner(array $options = [])
+ * @method RenewAppInstance renewAppInstance(array $options = [])
  * @method SearchImage searchImage(array $options = [])
+ * @method SetAppDomainCertificate setAppDomainCertificate(array $options = [])
  * @method SyncAppInstanceForPartner syncAppInstanceForPartner(array $options = [])
+ * @method UnbindAppDomain unbindAppDomain(array $options = [])
  */
 class WebsiteBuildApiResolver extends ApiResolver
 {
@@ -32,6 +53,56 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getOperateType()
+ * @method $this withOperateType($value)
+ */
+class BindAppDomain extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getSiteVersion()
+ * @method $this withSiteVersion($value)
+ * @method string getDeployArea()
+ * @method $this withDeployArea($value)
+ * @method string getQuantity()
+ * @method $this withQuantity($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
+ * @method string getAutoRenew()
+ * @method $this withAutoRenew($value)
+ * @method string getApplicationType()
+ * @method $this withApplicationType($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
+ * @method string getPaymentType()
+ * @method $this withPaymentType($value)
+ */
+class CreateAppInstance extends Rpc
+{
+}
+
+/**
+ * @method string getClientId()
+ * @method $this withClientId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class CreateAppInstanceTicket extends Rpc
+{
+}
+
+/**
  * @method string getNegativePrompt()
  * @method $this withNegativePrompt($value)
  * @method string getPrompt()
@@ -46,10 +117,196 @@ class CreateLogoTask extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class DeleteAppDomainCertificate extends Rpc
+{
+}
+
+/**
+ * @method string getRecordId()
+ * @method $this withRecordId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class DeleteAppDomainRedirect extends Rpc
+{
+}
+
+/**
+ * @method string getPurpose()
+ * @method $this withPurpose($value)
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class DescribeAppDomainDnsRecord extends Rpc
+{
+}
+
+/**
+ * @method string getProduct()
+ * @method $this withProduct($value)
+ * @method string getLiveToken()
+ * @method $this withLiveToken($value)
+ * @method string getSiteHost()
+ * @method $this withSiteHost($value)
+ * @method string getParams()
+ * @method $this withParams($value)
+ * @method string getOperation()
+ * @method $this withOperation($value)
+ */
+class DispatchConsoleAPIForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetAppInstance extends Rpc
+{
+}
+
+/**
  * @method string getTaskId()
  * @method $this withTaskId($value)
  */
 class GetCreateLogoTask extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetDomainInfoForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getDomain()
+ * @method $this withDomain($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetIcpFilingInfoForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getTicket()
+ * @method $this withTicket($value)
+ * @method string getSiteHost()
+ * @method $this withSiteHost($value)
+ */
+class GetUserAccessTokenForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getAuthPurpose()
+ * @method $this withAuthPurpose($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
+ * @method string getServiceLinkedRole()
+ * @method $this withServiceLinkedRole($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class GetUserTmpIdentityForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ */
+class ListAppDomainRedirectRecords extends Rpc
+{
+}
+
+/**
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOrderColumn()
+ * @method $this withOrderColumn($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class ListAppInstanceDomains extends Rpc
+{
+}
+
+/**
+ * @method string getStatusList()
+ * @method $this withStatusList($value)
+ * @method string getPageNum()
+ * @method $this withPageNum($value)
+ * @method string getOrderColumn()
+ * @method $this withOrderColumn($value)
+ * @method string getNextToken()
+ * @method $this withNextToken($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getEndTimeBegin()
+ * @method $this withEndTimeBegin($value)
+ * @method string getQuery()
+ * @method $this withQuery($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
+ * @method string getEndTimeEnd()
+ * @method $this withEndTimeEnd($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getMaxResults()
+ * @method $this withMaxResults($value)
+ * @method string getOrderType()
+ * @method $this withOrderType($value)
+ */
+class ListAppInstances extends Rpc
+{
+}
+
+/**
+ * @method string getDeployArea()
+ * @method $this withDeployArea($value)
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getSiteVersion()
+ * @method $this withSiteVersion($value)
+ * @method string getApplicationType()
+ * @method $this withApplicationType($value)
+ * @method string getPaymentType()
+ * @method $this withPaymentType($value)
+ */
+class ModifyAppInstanceSpec extends Rpc
 {
 }
 
@@ -74,6 +331,48 @@ class OperateAppInstanceForPartner extends Rpc
  * @method $this withOperateEvent($value)
  */
 class OperateAppServiceForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getUuid()
+ * @method $this withUuid($value)
+ * @method string getToken()
+ * @method $this withToken($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class RefreshAppInstanceTicket extends Rpc
+{
+}
+
+/**
+ * @method string getRefundReason()
+ * @method $this withRefundReason($value)
+ * @method string getUserId()
+ * @method $this withUserId($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class RefundAppInstanceForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getClientToken()
+ * @method $this withClientToken($value)
+ * @method string getDuration()
+ * @method $this withDuration($value)
+ * @method string getExtend()
+ * @method $this withExtend($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getPricingCycle()
+ * @method $this withPricingCycle($value)
+ * @method string getPaymentType()
+ * @method $this withPaymentType($value)
+ */
+class RenewAppInstance extends Rpc
 {
 }
 
@@ -114,6 +413,24 @@ class SearchImage extends Rpc
 }
 
 /**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getPublicKey()
+ * @method $this withPublicKey($value)
+ * @method string getCertificateType()
+ * @method $this withCertificateType($value)
+ * @method string getPrivateKey()
+ * @method $this withPrivateKey($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ * @method string getCertificateName()
+ * @method $this withCertificateName($value)
+ */
+class SetAppDomainCertificate extends Rpc
+{
+}
+
+/**
  * @method string getAppInstance()
  * @method $this withAppInstance($value)
  * @method string getSourceBizId()
@@ -126,5 +443,15 @@ class SearchImage extends Rpc
  * @method $this withSourceType($value)
  */
 class SyncAppInstanceForPartner extends Rpc
+{
+}
+
+/**
+ * @method string getDomainName()
+ * @method $this withDomainName($value)
+ * @method string getBizId()
+ * @method $this withBizId($value)
+ */
+class UnbindAppDomain extends Rpc
 {
 }
