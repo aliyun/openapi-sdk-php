@@ -11,7 +11,7 @@ English | [简体中文](/README-zh-CN.md)
 
 ![AlibabaCloud](https://aliyunsdk-pages.alicdn.com/icons/AlibabaCloud.svg)
 
-The Alibaba Cloud V1.0 SDK has entered End-of-Support (March 1, 2025) and is no longer recommended for use. New users should directly use the V2.0 PHP SDK; users who have already integrated the V1.0 PHP SDK are also advised to migrate to the V2.0 PHP SDK. V2.0 PHP SDK is available here: https://github.com/aliyun/alibabacloud-php-sdk, for usage, please refer to [Help Center Documentation](https://help.aliyun.com/zh/sdk/developer-reference/v2-php-integrated-sdk) and [Alibaba Cloud OpenAPI Developer Portal](https://next.api.aliyun.com/).
+The Alibaba Cloud V1.0 PHP SDK has entered the basic security maintenance phase and is no longer recommended for use. New users should directly use the V2.0 PHP SDK; users who have already integrated the V1.0 PHP SDK are also advised to migrate to the V2.0 PHP SDK. V2.0 PHP SDK is available here: https://github.com/aliyun/alibabacloud-php-sdk, for usage, please refer to [Help Center Documentation](https://help.aliyun.com/zh/sdk/developer-reference/v2-php-integrated-sdk) and [Alibaba Cloud OpenAPI Developer Portal](https://next.api.aliyun.com/).
 
 ## Release Notes
 
