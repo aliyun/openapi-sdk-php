@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2338 - 2026-4-2
+- Support RdmaIpBlocks.
+
+
 ## 1.8.2337 - 2026-3-6
 - Add GetDataServiceConfig.
 

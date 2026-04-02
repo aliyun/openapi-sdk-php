@@ -8,6 +8,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method AssignLeniPrivateIpAddress assignLeniPrivateIpAddress(array $options = [])
  * @method AssignPrivateIpAddress assignPrivateIpAddress(array $options = [])
  * @method AssociateVpdCidrBlock associateVpdCidrBlock(array $options = [])
+ * @method AttachElasticNetworkInterface attachElasticNetworkInterface(array $options = [])
  * @method CreateElasticNetworkInterface createElasticNetworkInterface(array $options = [])
  * @method CreateEr createEr(array $options = [])
  * @method CreateErAttachment createErAttachment(array $options = [])
@@ -28,6 +29,8 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DeleteVpd deleteVpd(array $options = [])
  * @method DeleteVpdGrantRule deleteVpdGrantRule(array $options = [])
  * @method DescribeSlr describeSlr(array $options = [])
+ * @method DetachElasticNetworkInterface detachElasticNetworkInterface(array $options = [])
+ * @method GetDestinationCidrBlock getDestinationCidrBlock(array $options = [])
  * @method GetElasticNetworkInterface getElasticNetworkInterface(array $options = [])
  * @method GetEr getEr(array $options = [])
  * @method GetErAttachment getErAttachment(array $options = [])
@@ -65,6 +68,9 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListVpdRouteEntries listVpdRouteEntries(array $options = [])
  * @method ListVpds listVpds(array $options = [])
  * @method QueryInstanceNcd queryInstanceNcd(array $options = [])
+ * @method RefundVcc refundVcc(array $options = [])
+ * @method RetryVcc retryVcc(array $options = [])
+ * @method SwitchVccConnection switchVccConnection(array $options = [])
  * @method UnassignLeniPrivateIpAddress unassignLeniPrivateIpAddress(array $options = [])
  * @method UnAssignPrivateIpAddress unAssignPrivateIpAddress(array $options = [])
  * @method UnAssociateVpdCidrBlock unAssociateVpdCidrBlock(array $options = [])
@@ -297,9 +303,45 @@ class AssociateVpdCidrBlock extends Rpc
 }
 
 /**
+ * @method string getNodeId()
+ * @method string getElasticNetworkInterfaceId()
+ */
+class AttachElasticNetworkInterface extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withElasticNetworkInterfaceId($value)
+    {
+        $this->data['ElasticNetworkInterfaceId'] = $value;
+        $this->options['form_params']['ElasticNetworkInterfaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method string getSecurityGroupId()
  * @method string getDescription()
+ * @method string getResourceGroupId()
+ * @method array getTag()
  * @method string getNodeId()
  * @method string getEnableJumboFrame()
  * @method string getVSwitchId()
@@ -346,6 +388,39 @@ class CreateElasticNetworkInterface extends Rpc
         $this->options['form_params']['Description'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
     }
 
     /**
@@ -416,9 +491,10 @@ class CreateElasticNetworkInterface extends Rpc
 
 /**
  * @method string getDescription()
- * @method string getErName()
  * @method string getMasterZoneId()
  * @method string getResourceGroupId()
+ * @method array getTag()
+ * @method string getErName()
  */
 class CreateEr extends Rpc
 {
@@ -432,19 +508,6 @@ class CreateEr extends Rpc
     {
         $this->data['Description'] = $value;
         $this->options['form_params']['Description'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withErName($value)
-    {
-        $this->data['ErName'] = $value;
-        $this->options['form_params']['ErName'] = $value;
 
         return $this;
     }
@@ -471,6 +534,39 @@ class CreateEr extends Rpc
     {
         $this->data['ResourceGroupId'] = $value;
         $this->options['form_params']['ResourceGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withErName($value)
+    {
+        $this->data['ErName'] = $value;
+        $this->options['form_params']['ErName'] = $value;
 
         return $this;
     }
@@ -1379,6 +1475,7 @@ class DeleteErAttachment extends Rpc
 
 /**
  * @method string getErId()
+ * @method string getErRouteMapId()
  * @method array getErRouteMapIds()
  */
 class DeleteErRouteMap extends Rpc
@@ -1393,6 +1490,19 @@ class DeleteErRouteMap extends Rpc
     {
         $this->data['ErId'] = $value;
         $this->options['form_params']['ErId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withErRouteMapId($value)
+    {
+        $this->data['ErRouteMapId'] = $value;
+        $this->options['form_params']['ErRouteMapId'] = $value;
 
         return $this;
     }
@@ -1654,6 +1764,60 @@ class DescribeSlr extends Rpc
     {
         $this->data['ResourceGroupId'] = $value;
         $this->options['form_params']['ResourceGroupId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getNodeId()
+ * @method string getElasticNetworkInterfaceId()
+ */
+class DetachElasticNetworkInterface extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withNodeId($value)
+    {
+        $this->data['NodeId'] = $value;
+        $this->options['form_params']['NodeId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withElasticNetworkInterfaceId($value)
+    {
+        $this->data['ElasticNetworkInterfaceId'] = $value;
+        $this->options['form_params']['ElasticNetworkInterfaceId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getInstanceId()
+ */
+class GetDestinationCidrBlock extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withInstanceId($value)
+    {
+        $this->data['InstanceId'] = $value;
+        $this->options['form_params']['InstanceId'] = $value;
 
         return $this;
     }
@@ -2040,9 +2204,9 @@ class GetSubnet extends Rpc
 /**
  * @method string getClientToken()
  * @method string getPageNumber()
- * @method string getEnablePage()
  * @method string getPageSize()
  * @method string getVccId()
+ * @method string getEnablePage()
  */
 class GetVcc extends Rpc
 {
@@ -2078,19 +2242,6 @@ class GetVcc extends Rpc
      *
      * @return $this
      */
-    public function withEnablePage($value)
-    {
-        $this->data['EnablePage'] = $value;
-        $this->options['form_params']['EnablePage'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
     public function withPageSize($value)
     {
         $this->data['PageSize'] = $value;
@@ -2108,6 +2259,19 @@ class GetVcc extends Rpc
     {
         $this->data['VccId'] = $value;
         $this->options['form_params']['VccId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withEnablePage($value)
+    {
+        $this->data['EnablePage'] = $value;
+        $this->options['form_params']['EnablePage'] = $value;
 
         return $this;
     }
@@ -2349,7 +2513,9 @@ class InitializeVcc extends Rpc
  * @method string getNetworkType()
  * @method string getType()
  * @method string getPageNumber()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
+ * @method array getTag()
  * @method string getNodeId()
  * @method string getIp()
  * @method string getVSwitchId()
@@ -2405,12 +2571,45 @@ class ListElasticNetworkInterfaces extends Rpc
      *
      * @return $this
      */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPageSize($value)
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
     }
 
     /**
@@ -3075,6 +3274,7 @@ class ListErRouteMaps extends Rpc
  * @method string getResourceGroupId()
  * @method string getPageSize()
  * @method string getInstanceType()
+ * @method array getTag()
  * @method string getErId()
  * @method string getErName()
  * @method string getInstanceId()
@@ -3146,6 +3346,26 @@ class ListErs extends Rpc
         $this->options['form_params']['InstanceType'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
     }
 
     /**
@@ -3251,6 +3471,7 @@ class ListInstancesByNcd extends Rpc
 
 /**
  * @method string getPageNumber()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
  * @method string getPrivateIpAddress()
  * @method string getIpName()
@@ -3269,6 +3490,19 @@ class ListLeniPrivateIpAddresses extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -3342,6 +3576,7 @@ class ListLeniPrivateIpAddresses extends Rpc
 /**
  * @method string getDescription()
  * @method string getPageNumber()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
  * @method string getIp()
  * @method string getEnablePage()
@@ -3373,6 +3608,19 @@ class ListLniPrivateIpAddress extends Rpc
     {
         $this->data['PageNumber'] = $value;
         $this->options['form_params']['PageNumber'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
 
         return $this;
     }
@@ -3445,7 +3693,9 @@ class ListLniPrivateIpAddress extends Rpc
 
 /**
  * @method string getPageNumber()
+ * @method string getResourceGroupId()
  * @method string getPageSize()
+ * @method array getTag()
  * @method string getNodeId()
  * @method string getSubnetId()
  * @method string getIp()
@@ -3474,12 +3724,45 @@ class ListNetworkInterfaces extends Rpc
      *
      * @return $this
      */
+    public function withResourceGroupId($value)
+    {
+        $this->data['ResourceGroupId'] = $value;
+        $this->options['form_params']['ResourceGroupId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
     public function withPageSize($value)
     {
         $this->data['PageSize'] = $value;
         $this->options['form_params']['PageSize'] = $value;
 
         return $this;
+    }
+
+    /**
+     * @param array $tag
+     *
+     * @return $this
+     */
+	public function withTag(array $tag)
+	{
+	    $this->data['Tag'] = $tag;
+		foreach ($tag as $depth1 => $depth1Value) {
+			if(isset($depth1Value['Value'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Value'] = $depth1Value['Value'];
+			}
+			if(isset($depth1Value['Key'])){
+				$this->options['form_params']['Tag.' . ($depth1 + 1) . '.Key'] = $depth1Value['Key'];
+			}
+		}
+
+		return $this;
     }
 
     /**
@@ -3778,10 +4061,10 @@ class ListSubnets extends Rpc
 
 /**
  * @method string getFrom()
- * @method string getTo()
  * @method string getVccId()
  * @method string getMetricName()
  * @method string getDirection()
+ * @method string getTo()
  */
 class ListVccFlowInfos extends Rpc
 {
@@ -3795,19 +4078,6 @@ class ListVccFlowInfos extends Rpc
     {
         $this->data['From'] = $value;
         $this->options['form_params']['From'] = $value;
-
-        return $this;
-    }
-
-    /**
-     * @param string $value
-     *
-     * @return $this
-     */
-    public function withTo($value)
-    {
-        $this->data['To'] = $value;
-        $this->options['form_params']['To'] = $value;
 
         return $this;
     }
@@ -3847,6 +4117,19 @@ class ListVccFlowInfos extends Rpc
     {
         $this->data['Direction'] = $value;
         $this->options['form_params']['Direction'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withTo($value)
+    {
+        $this->data['To'] = $value;
+        $this->options['form_params']['To'] = $value;
 
         return $this;
     }
@@ -4917,6 +5200,122 @@ class QueryInstanceNcd extends Rpc
 }
 
 /**
+ * @method string getVccId()
+ */
+class RefundVcc extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVccId($value)
+    {
+        $this->data['VccId'] = $value;
+        $this->options['form_params']['VccId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getVccId()
+ */
+class RetryVcc extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVccId($value)
+    {
+        $this->data['VccId'] = $value;
+        $this->options['form_params']['VccId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
+ * @method string getCenId()
+ * @method string getVccId()
+ * @method string getConnectionType()
+ * @method string getVSwitchId()
+ * @method string getVpcId()
+ */
+class SwitchVccConnection extends Rpc
+{
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withCenId($value)
+    {
+        $this->data['CenId'] = $value;
+        $this->options['form_params']['CenId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVccId($value)
+    {
+        $this->data['VccId'] = $value;
+        $this->options['form_params']['VccId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withConnectionType($value)
+    {
+        $this->data['ConnectionType'] = $value;
+        $this->options['form_params']['ConnectionType'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVSwitchId($value)
+    {
+        $this->data['VSwitchId'] = $value;
+        $this->options['form_params']['VSwitchId'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     *
+     * @return $this
+     */
+    public function withVpcId($value)
+    {
+        $this->data['VpcId'] = $value;
+        $this->options['form_params']['VpcId'] = $value;
+
+        return $this;
+    }
+}
+
+/**
  * @method string getClientToken()
  * @method string getIpName()
  * @method string getElasticNetworkInterfaceId()
@@ -4965,8 +5364,8 @@ class UnassignLeniPrivateIpAddress extends Rpc
 }
 
 /**
- * @method string getSubnetId()
  * @method string getClientToken()
+ * @method string getSubnetId()
  * @method string getPrivateIpAddress()
  * @method string getIpName()
  * @method string getNetworkInterfaceId()
@@ -4979,10 +5378,10 @@ class UnAssignPrivateIpAddress extends Rpc
      *
      * @return $this
      */
-    public function withSubnetId($value)
+    public function withClientToken($value)
     {
-        $this->data['SubnetId'] = $value;
-        $this->options['form_params']['SubnetId'] = $value;
+        $this->data['ClientToken'] = $value;
+        $this->options['form_params']['ClientToken'] = $value;
 
         return $this;
     }
@@ -4992,10 +5391,10 @@ class UnAssignPrivateIpAddress extends Rpc
      *
      * @return $this
      */
-    public function withClientToken($value)
+    public function withSubnetId($value)
     {
-        $this->data['ClientToken'] = $value;
-        $this->options['form_params']['ClientToken'] = $value;
+        $this->data['SubnetId'] = $value;
+        $this->options['form_params']['SubnetId'] = $value;
 
         return $this;
     }
