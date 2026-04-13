@@ -42,6 +42,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method DescribeBackups describeBackups(array $options = [])
  * @method DescribeBackupStorage describeBackupStorage(array $options = [])
  * @method DescribeBackupTasks describeBackupTasks(array $options = [])
+ * @method DescribeBinlogFiles describeBinlogFiles(array $options = [])
  * @method DescribeClusterBackups describeClusterBackups(array $options = [])
  * @method DescribeClusterRecoverTime describeClusterRecoverTime(array $options = [])
  * @method DescribeDBInstanceAttribute describeDBInstanceAttribute(array $options = [])
@@ -1236,6 +1237,40 @@ class DescribeBackupStorage extends Rpc
  * @method $this withOwnerId($value)
  */
 class DescribeBackupTasks extends Rpc
+{
+}
+
+/**
+ * @method string getResourceOwnerId()
+ * @method $this withResourceOwnerId($value)
+ * @method string getBinlogId()
+ * @method $this withBinlogId($value)
+ * @method string getStartTime()
+ * @method $this withStartTime($value)
+ * @method string getSrcRegion()
+ * @method $this withSrcRegion($value)
+ * @method string getPageNumber()
+ * @method $this withPageNumber($value)
+ * @method string getResourceGroupId()
+ * @method $this withResourceGroupId($value)
+ * @method string getPageSize()
+ * @method $this withPageSize($value)
+ * @method string getDBInstanceId()
+ * @method $this withDBInstanceId($value)
+ * @method string getNodeId()
+ * @method $this withNodeId($value)
+ * @method string getDestRegion()
+ * @method $this withDestRegion($value)
+ * @method string getResourceOwnerAccount()
+ * @method $this withResourceOwnerAccount($value)
+ * @method string getOwnerAccount()
+ * @method $this withOwnerAccount($value)
+ * @method string getEndTime()
+ * @method $this withEndTime($value)
+ * @method string getOwnerId()
+ * @method $this withOwnerId($value)
+ */
+class DescribeBinlogFiles extends Rpc
 {
 }
 
@@ -2489,6 +2524,8 @@ class ModifyAuditLogFilter extends Rpc
  * @method $this withResourceOwnerId($value)
  * @method string getStoragePeriod()
  * @method $this withStoragePeriod($value)
+ * @method string getHotStoragePeriod()
+ * @method $this withHotStoragePeriod($value)
  * @method string getAuditLogSwitchSource()
  * @method $this withAuditLogSwitchSource($value)
  * @method string getDBInstanceId()
@@ -2631,6 +2668,8 @@ class ModifyDBInstanceConfig extends Rpc
 /**
  * @method string getResourceOwnerId()
  * @method $this withResourceOwnerId($value)
+ * @method string getNetworkType()
+ * @method $this withNetworkType($value)
  * @method string getDBInstanceId()
  * @method $this withDBInstanceId($value)
  * @method string getNodeId()
@@ -2647,6 +2686,10 @@ class ModifyDBInstanceConfig extends Rpc
  * @method $this withOwnerId($value)
  * @method string getCurrentConnectionString()
  * @method $this withCurrentConnectionString($value)
+ * @method string getPortModifyOnly()
+ * @method $this withPortModifyOnly($value)
+ * @method string getForceModifySuffix()
+ * @method $this withForceModifySuffix($value)
  */
 class ModifyDBInstanceConnectionString extends Rpc
 {

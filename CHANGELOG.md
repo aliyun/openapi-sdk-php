@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2339 - 2026-4-13
+- Remove the default value for the `ReplicationFactor` parameter in the `ModifyDBInstanceSpec` API.
+
+
 ## 1.8.2338 - 2026-4-2
 - Support RdmaIpBlocks.
 
