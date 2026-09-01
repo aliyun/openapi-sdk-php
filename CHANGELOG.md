@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2345 - 2026-9-1
+- Generated 2022-01-01 for `quickbi-public`.
+
+
 ## 1.8.2344 - 2026-7-2
 - Add and update some APIs.
 

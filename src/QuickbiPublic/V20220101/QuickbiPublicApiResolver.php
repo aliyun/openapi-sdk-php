@@ -160,7 +160,7 @@ class Rpc extends \AlibabaCloud\Client\Resolver\Rpc
     public $method = 'POST';
 
     /** @var string */
-    public $serviceCode = '2.2.0';
+    public $serviceCode = 'QuickBI';
 }
 
 /**
