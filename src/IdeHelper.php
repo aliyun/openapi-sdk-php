@@ -9,6 +9,7 @@ namespace AlibabaCloud;
  *
  * @method static AIMath\AIMath aIMath()
  * @method static AIPodcast\AIPodcast aIPodcast()
+ * @method static AIRegistry\AIRegistry aIRegistry()
  * @method static ARMS\ARMS aRMS()
  * @method static ARMS4FINANCE\ARMS4FINANCE aRMS4FINANCE()
  * @method static Aas\Aas aas()
