@@ -55,6 +55,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method IpWhiteListConfig ipWhiteListConfig(array $options = [])
  * @method ListAccelerationOfWorkspace listAccelerationOfWorkspace(array $options = [])
  * @method ListApiDatasource listApiDatasource(array $options = [])
+ * @method ListAuthConfigByResource listAuthConfigByResource(array $options = [])
  * @method ListByUserGroupId listByUserGroupId(array $options = [])
  * @method ListCollections listCollections(array $options = [])
  * @method ListCubeDataLevelPermissionConfig listCubeDataLevelPermissionConfig(array $options = [])
@@ -131,6 +132,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method SmartqAuthTransfer smartqAuthTransfer(array $options = [])
  * @method SmartqQueryAbility smartqQueryAbility(array $options = [])
  * @method TransferUsergroup transferUsergroup(array $options = [])
+ * @method UpdateAuthorizationAttributes updateAuthorizationAttributes(array $options = [])
  * @method UpdateCubeBySql updateCubeBySql(array $options = [])
  * @method UpdateDataLevelPermissionStatus updateDataLevelPermissionStatus(array $options = [])
  * @method UpdateDataSource updateDataSource(array $options = [])
@@ -1081,6 +1083,29 @@ class ListAccelerationOfWorkspace extends Rpc
  */
 class ListApiDatasource extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getHasAuth()
+ * @method $this withHasAuth($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getWorksType()
+ * @method $this withWorksType($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getShareToType()
+ * @method $this withShareToType($value)
+ */
+class ListAuthConfigByResource extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -2282,6 +2307,27 @@ class SmartqQueryAbility extends Rpc
  * @method $this withSignType($value)
  */
 class TransferUsergroup extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getUsePermissionType()
+ * @method $this withUsePermissionType($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getResourceId()
+ * @method $this withResourceId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getEditPermissionType()
+ * @method $this withEditPermissionType($value)
+ * @method string getResourceType()
+ * @method $this withResourceType($value)
+ */
+class UpdateAuthorizationAttributes extends Rpc
 {
 
     /** @var string */

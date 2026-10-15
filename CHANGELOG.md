@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2347 - 2026-10-15
+- Generated 2022-01-01 for `quickbi-public`.
+
+
 ## 1.8.2346 - 2026-10-9
 - Open RedraftSkillVersion.
 
