@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2348 - 2026-10-20
+- Remove the default value for the `ReplicationFactor` parameter in the `ModifyDBInstanceSpec` API.
+
+
 ## 1.8.2347 - 2026-10-15
 - Generated 2022-01-01 for `quickbi-public`.
 
