@@ -2,7 +2,7 @@
 
 ## Unreleased
 - Add offline Signature V2 regression tests for product SDK requests and independent MNS signing.
-- Support loading a local Client checkout in tests and document the candidate Client verification steps.
+- Support loading a local Client checkout in tests.
 
 ## 1.8.2347 - 2026-10-15
 - Generated 2022-01-01 for `quickbi-public`.
