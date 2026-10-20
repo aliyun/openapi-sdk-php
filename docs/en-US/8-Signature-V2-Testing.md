@@ -1,3 +1,5 @@
+[中文](/docs/zh-CN/8-Signature-V2-Testing.md)
+
 # Signature V2 regression tests
 
 The default HMAC signer is provided by `alibabacloud/client`. Install a Client
