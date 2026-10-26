@@ -30,6 +30,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method CreateCubeBySql createCubeBySql(array $options = [])
  * @method CreateDataset createDataset(array $options = [])
  * @method CreateTicket createTicket(array $options = [])
+ * @method CreateTicket4AiPro createTicket4AiPro(array $options = [])
  * @method CreateTicket4Copilot createTicket4Copilot(array $options = [])
  * @method CreateUserGroup createUserGroup(array $options = [])
  * @method CreateWorkspace createWorkspace(array $options = [])
@@ -75,10 +76,12 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method ListWorkspaceRoleUsers listWorkspaceRoleUsers(array $options = [])
  * @method ListWorkspaceUserRolesByUserId listWorkspaceUserRolesByUserId(array $options = [])
  * @method ManualRunMailTask manualRunMailTask(array $options = [])
+ * @method ModifyAiproEmbedConfig modifyAiproEmbedConfig(array $options = [])
  * @method ModifyApiDatasourceParameters modifyApiDatasourceParameters(array $options = [])
  * @method ModifyCopilotEmbedConfig modifyCopilotEmbedConfig(array $options = [])
  * @method ModifyDashboardNl2sqlStatus modifyDashboardNl2sqlStatus(array $options = [])
  * @method QueryAccelerationLogByCubeId queryAccelerationLogByCubeId(array $options = [])
+ * @method QueryAiproEmbedConfig queryAiproEmbedConfig(array $options = [])
  * @method QueryApprovalInfo queryApprovalInfo(array $options = [])
  * @method QueryAuditLog queryAuditLog(array $options = [])
  * @method QueryComponentPerformance queryComponentPerformance(array $options = [])
@@ -136,6 +139,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateCubeBySql updateCubeBySql(array $options = [])
  * @method UpdateDataLevelPermissionStatus updateDataLevelPermissionStatus(array $options = [])
  * @method UpdateDataSource updateDataSource(array $options = [])
+ * @method UpdateDataSourceProperties updateDataSourceProperties(array $options = [])
  * @method UpdateEmbeddedStatus updateEmbeddedStatus(array $options = [])
  * @method UpdateTicketNum updateTicketNum(array $options = [])
  * @method UpdateUser updateUser(array $options = [])
@@ -664,6 +668,35 @@ class CreateTicket extends Rpc
 
         return $this;
     }
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getAccountType()
+ * @method $this withAccountType($value)
+ * @method string getCustomParam()
+ * @method $this withCustomParam($value)
+ * @method string getSystemUid()
+ * @method $this withSystemUid($value)
+ * @method string getAccountName()
+ * @method $this withAccountName($value)
+ * @method string getExpireTime()
+ * @method $this withExpireTime($value)
+ * @method string getAiProId()
+ * @method $this withAiProId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getTicketNum()
+ * @method $this withTicketNum($value)
+ * @method string getQuickBIUserId()
+ * @method $this withQuickBIUserId($value)
+ */
+class CreateTicket4AiPro extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**
@@ -1392,6 +1425,33 @@ class ManualRunMailTask extends Rpc
 }
 
 /**
+ * @method string getUploadEnabled()
+ * @method $this withUploadEnabled($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getShowName()
+ * @method $this withShowName($value)
+ * @method string getAiProId()
+ * @method $this withAiProId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getChatHistoryStatus()
+ * @method $this withChatHistoryStatus($value)
+ * @method string getMemoryEnabled()
+ * @method $this withMemoryEnabled($value)
+ * @method string getAgentName()
+ * @method $this withAgentName($value)
+ * @method string getConfig()
+ * @method $this withConfig($value)
+ */
+class ModifyAiproEmbedConfig extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
  * @method string getAccessPoint()
  * @method $this withAccessPoint($value)
  * @method string getSignType()
@@ -1459,6 +1519,21 @@ class ModifyDashboardNl2sqlStatus extends Rpc
  * @method $this withPageNo($value)
  */
 class QueryAccelerationLogByCubeId extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getKeyword()
+ * @method $this withKeyword($value)
+ */
+class QueryAiproEmbedConfig extends Rpc
 {
 
     /** @var string */
@@ -2384,6 +2459,27 @@ class UpdateDataLevelPermissionStatus extends Rpc
  * @method $this withUpdateModel($value)
  */
 class UpdateDataSource extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getDsId()
+ * @method $this withDsId($value)
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getDescription()
+ * @method $this withDescription($value)
+ * @method string getShowName()
+ * @method $this withShowName($value)
+ * @method string getQuickBIOwnerId()
+ * @method $this withQuickBIOwnerId($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ */
+class UpdateDataSourceProperties extends Rpc
 {
 
     /** @var string */
