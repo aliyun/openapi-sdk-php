@@ -29,6 +29,17 @@ if (!ini_get('date.timezone')) {
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
+$clientPath = getenv('ALIBABACLOUD_CLIENT_PATH');
+if ($clientPath !== false) {
+    $clientPath = realpath($clientPath);
+    if ($clientPath === false || !is_file($clientPath . '/src/AlibabaCloud.php')) {
+        throw new RuntimeException('ALIBABACLOUD_CLIENT_PATH must point to an openapi-sdk-php-client checkout');
+    }
+    $clientLoader = new Composer\Autoload\ClassLoader();
+    $clientLoader->addPsr4('AlibabaCloud\\Client\\', $clientPath . '/src');
+    $clientLoader->register(true);
+}
+
 $env = dirname(__DIR__) . DIRECTORY_SEPARATOR . '.env';
 if (is_readable($env)) {
     (new Dotenv())->load($env);
