@@ -58,7 +58,9 @@ class HttpHelper
         }
 
         $body = curl_exec($ch);
-        libxml_disable_entity_loader();
+        if (\PHP_VERSION_ID < 80000) {
+            libxml_disable_entity_loader(true);
+        }
         $json     = json_encode(simplexml_load_string($body, 'SimpleXMLElement', LIBXML_NOCDATA));
         $response = new Response(
             curl_getinfo($ch, CURLINFO_HTTP_CODE),
