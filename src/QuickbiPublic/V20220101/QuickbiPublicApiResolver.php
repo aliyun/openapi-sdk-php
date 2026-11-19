@@ -51,6 +51,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method GetDataSourceConnectionInfo getDataSourceConnectionInfo(array $options = [])
  * @method GetMailTaskList getMailTaskList(array $options = [])
  * @method GetMailTaskStatus getMailTaskStatus(array $options = [])
+ * @method GetPersonalICode getPersonalICode(array $options = [])
  * @method GetUserGroupInfo getUserGroupInfo(array $options = [])
  * @method GetWorksEmbedList getWorksEmbedList(array $options = [])
  * @method IpWhiteListConfig ipWhiteListConfig(array $options = [])
@@ -141,6 +142,7 @@ use AlibabaCloud\Client\Resolver\ApiResolver;
  * @method UpdateDataSource updateDataSource(array $options = [])
  * @method UpdateDataSourceProperties updateDataSourceProperties(array $options = [])
  * @method UpdateEmbeddedStatus updateEmbeddedStatus(array $options = [])
+ * @method UpdatePersonalICode updatePersonalICode(array $options = [])
  * @method UpdateTicketNum updateTicketNum(array $options = [])
  * @method UpdateUser updateUser(array $options = [])
  * @method UpdateUserGroup updateUserGroup(array $options = [])
@@ -1019,6 +1021,21 @@ class GetMailTaskList extends Rpc
  * @method $this withSignType($value)
  */
 class GetMailTaskStatus extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getQuickBIUserId()
+ * @method $this withQuickBIUserId($value)
+ */
+class GetPersonalICode extends Rpc
 {
 
     /** @var string */
@@ -2498,6 +2515,21 @@ class UpdateDataSourceProperties extends Rpc
  */
 class UpdateEmbeddedStatus extends Rpc
 {
+}
+
+/**
+ * @method string getAccessPoint()
+ * @method $this withAccessPoint($value)
+ * @method string getSignType()
+ * @method $this withSignType($value)
+ * @method string getQuickBIUserId()
+ * @method $this withQuickBIUserId($value)
+ */
+class UpdatePersonalICode extends Rpc
+{
+
+    /** @var string */
+    public $scheme = 'https';
 }
 
 /**

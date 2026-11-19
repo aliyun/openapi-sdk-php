@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.8.2350 - 2026-11-19
+- Generated 2022-01-01 for `quickbi-public`.
+
+
 ## 1.8.2349 - 2026-10-26
 - Generated 2022-01-01 for `quickbi-public`.
 
